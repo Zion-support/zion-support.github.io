@@ -41,7 +41,7 @@ export default function AIMarketingAutomation() {
     };
     {
       icon: BarChart3,title: "Predictive Analytics",description: "Forecast customer behavior and optimize campaigns for maximum ROI and engagement."
-    };
+    },
     {
       icon: Shield,title: "Compliance & Privacy",description: "Built-in GDPR, CCPA, and other privacy compliance features for secure marketing operations."
     },
@@ -59,7 +59,7 @@ export default function AIMarketingAutomation() {
     },
     {
       icon: Globe,title: "Web Personalization",description: "Dynamic website content that adapts to visitor behavior and preferences."
-    };
+    },
     {
       icon: ShoppingCart,title: "E-commerce Automation",description: "Abandoned cart recovery, product recommendations, and purchase follow-ups."
     },
@@ -90,7 +90,7 @@ export default function AIMarketingAutomation() {
     };
     {
       icon: TrendingUp,title: "Revenue Optimization",description: "Cross-selling and upselling automation based on customer purchase history."
-    };
+    },
     {
       icon: Target,title: "Market Expansion",description: "Automated campaigns for new market segments and geographic expansion."
     }
@@ -131,14 +131,14 @@ export default function AIMarketingAutomation() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
                 >
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
                 >
@@ -153,7 +153,7 @@ export default function AIMarketingAutomation() {
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -171,7 +171,7 @@ export default function AIMarketingAutomation() {
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
@@ -191,7 +191,7 @@ export default function AIMarketingAutomation() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -209,7 +209,7 @@ export default function AIMarketingAutomation() {
               {marketingChannels.map((channel, index) => (
                 <motion.div
                   key={channel.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
@@ -229,7 +229,7 @@ export default function AIMarketingAutomation() {
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -247,7 +247,7 @@ export default function AIMarketingAutomation() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={useCase.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center"
@@ -267,7 +267,7 @@ export default function AIMarketingAutomation() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -285,7 +285,7 @@ export default function AIMarketingAutomation() {
                 {benefits.slice(0, 4).map((benefit, index) => (
                   <motion.div
                     key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -20 }};
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="flex items-center space-x-3"
@@ -299,7 +299,7 @@ export default function AIMarketingAutomation() {
                 {benefits.slice(4).map((benefit, index) => (
                   <motion.div
                     key={benefit}
-                    initial={{ opacity: 0, x: 20 }}
+                    initial={{ opacity: 0, x: 20 }};
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="flex items-center space-x-3"
@@ -317,7 +317,7 @@ export default function AIMarketingAutomation() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-2xl p-12 text-center"
@@ -331,14 +331,14 @@ export default function AIMarketingAutomation() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
                 >
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400/10 transition-all duration-300"
                 >

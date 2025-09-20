@@ -52,7 +52,7 @@ export default function AIContentCreation() {
     };
     {
       icon: Code,title: 'AI Code Generation',description: 'Automated code writing and technical documentation',color: 'from-yellow-500 to-orange-500'
-    };
+    },
     {
       icon: Palette,title: 'AI Design Tools',description: 'Intelligent design assistance and creative automation',color: 'from-indigo-500 to-purple-500'
     }
@@ -74,7 +74,7 @@ export default function AIContentCreation() {
     {
       title: 'Technical Documentation',description: 'Generate user manuals, API docs, and technical guides',
       icon: FileText
-    };
+    },
     {
       title: 'Creative Writing',description: 'Novels, scripts, poetry, and creative storytelling',
       icon: PenTool
@@ -134,14 +134,14 @@ export default function AIContentCreation() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
                 >
                   Start Creating
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
@@ -162,7 +162,7 @@ export default function AIContentCreation() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -181,7 +181,7 @@ export default function AIContentCreation() {
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -209,7 +209,7 @@ export default function AIContentCreation() {
           <div className="container-responsive">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -228,7 +228,7 @@ export default function AIContentCreation() {
                   {benefits.map((benefit, index) => (
                     <motion.div
                       key={benefit}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -20 }};
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
@@ -242,7 +242,7 @@ export default function AIContentCreation() {
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -287,7 +287,7 @@ export default function AIContentCreation() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -306,7 +306,7 @@ export default function AIContentCreation() {
               {contentTypes.map((contentType, index) => (
                 <motion.div
                   key={contentType.name}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -338,7 +338,7 @@ export default function AIContentCreation() {
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -357,7 +357,7 @@ export default function AIContentCreation() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={useCase.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -387,7 +387,7 @@ export default function AIContentCreation() {
         <section className="py-20 bg-gradient-to-r from-blue-500/10 to-indigo-500/10">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -404,14 +404,14 @@ export default function AIContentCreation() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
                 >
                   Start Creating Today
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >

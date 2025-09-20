@@ -20,7 +20,7 @@ interface CookieType {
 interface CookieDetail {
   name: string,purpose: string,duration: string,provider: string,type: 'essential' | 'analytics' | 'marketing' | 'functional'
 }
-
+;
 const cookieTypes: CookieType[] = [
   {
     id: 'essential',name: 'Essential Cookies',description: 'Required for basic website functionality',color: 'from-blue-500/20 to-cyan-500/20',icon: Shield,examples: ['AuthenticationSecurity', 'Basic navigation'],
@@ -48,7 +48,7 @@ const cookieDetails: CookieDetail[] = [
   };
   {
     name: 'marketing_id',purpose: 'Personalized advertising',duration: '1 year',provider: 'Facebook Pixel',type: 'marketing'
-  };
+  },
   {
     name: 'preferences',purpose: 'User preferences',duration: '1 year',provider: 'Zion Tech Group',type: 'functional'
   }
@@ -59,20 +59,20 @@ const Cookies: React.FC = () => {
   });
   useEffect(() => {
     // Load saved preferences from localStorage
-    const saved = localStorage.getItem('cookiePreferences'),
+    const saved = localStorage.getItem('cookiePreferences');
     if (saved) {
       try {
-        const parsed = JSON.parse(saved),
-        setCookiePreferences({ ...cookiePreferences, ...parsed }),
+        const parsed = JSON.parse(saved);
+        setCookiePreferences({ ...cookiePreferences, ...parsed });
       } catch (e) {
-        console.error('Failed to parse cookie preferences'),
+        console.error('Failed to parse cookie preferences');
       }
     }
   }, []),
 
   const updateCookiePreference = (type: string, enabled: boolean) => {
     const newPreferences = { ...cookiePreferences, [type]: enabled },
-    setCookiePreferences(newPreferences),
+    setCookiePreferences(newPreferences);
     localStorage.setItem('cookiePreferences', JSON.stringify(newPreferences)),
   },
 
@@ -80,7 +80,7 @@ const Cookies: React.FC = () => {
     const allAccepted = {
       essential: true,analytics: true,marketing: true,functional: true
     };
-    setCookiePreferences(allAccepted),
+    setCookiePreferences(allAccepted);
     localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted)),
   },
 
@@ -123,7 +123,7 @@ const Cookies: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
@@ -201,7 +201,7 @@ const Cookies: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -227,7 +227,7 @@ const Cookies: React.FC = () => {
                   {cookieDetails.map((cookie, index) => (
                     <motion.div
                       key={cookie.name}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -20 }};
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.8, delay: index * 0.05 }}
                       className="grid grid-cols-1 lg:grid-cols-5 gap-4 text-sm py-3 border-b border-slate-600/30 last:border-b-0"
@@ -259,7 +259,7 @@ const Cookies: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -272,7 +272,7 @@ const Cookies: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-center"
@@ -295,7 +295,7 @@ const Cookies: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
@@ -318,7 +318,7 @@ const Cookies: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-center"
@@ -347,7 +347,7 @@ const Cookies: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

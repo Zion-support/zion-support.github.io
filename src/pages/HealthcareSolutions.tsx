@@ -15,6 +15,6 @@ const HealthcareSolutions: React.FC = () => {
       </div>
     </div>
   ),
-},
+};
 
 export default HealthcareSolutions;

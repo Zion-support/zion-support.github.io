@@ -7,7 +7,7 @@ interface SkeletonProps {
   rounded?: boolean,
   animated?: boolean,
 }
-
+;
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
   height = 'h-4', 
@@ -16,12 +16,12 @@ const Skeleton: React.FC<SkeletonProps> = ({
   animated = true 
 }) => {
   const baseClasses = `${height} ${width} bg-gray-200 dark: bg-gray-700 ${rounded ? 'rounded' : ''}`;
-  const classes = `${baseClasses} ${className}`,
+  const classes = `${baseClasses} ${className}`;
   
   if (!animated) {
-    return <div className={classes} />,
+    return <div className={classes} />;
   }
-  
+  ;
   return (
     <motion.div
       className={classes}
@@ -59,7 +59,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <Skeleton height="h-12" width="w-32" />
             </div>
           </div>
-        ),
+        );
         
       case 'card':
         return (
@@ -130,7 +130,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <Skeleton height="h-10" width="w-24" />
             </div>
           </div>
-        ),
+        );
         
       default: return <Skeleton />
     }
@@ -140,7 +140,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
       {renderSkeleton()}
     </div>
   ),
-},
+};
 
 // Specialized skeleton components
 export const HeroSkeleton: React.FC = () => (

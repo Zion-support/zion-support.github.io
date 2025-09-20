@@ -8,17 +8,17 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from "lucide-react";
 import SEO from "@/components/SEO";
 export default function ServicesPricingGuide() {
-    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory),
     const getPriceTier = (price) => {
         if (price < 10000)
-            return 'Starter',
+            return 'Starter';
         if (price < 25000)
             return 'Professional',
         return 'Enterprise',
-    },
+    };
     const getPriceTierColor = (tier) => {
         switch (tier) {
             case 'Starter': return 'bg-green-500';
@@ -29,14 +29,14 @@ export default function ServicesPricingGuide() {
     };
     const getServiceIcon = (category) => {
         switch (category) {
-            case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>,
+            case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>;
             case 'Cloud Services': return <Globe className="w-5 h-5 text-green-500"/>,
             case 'Cybersecurity': return <Shield className="w-5 h-5 text-red-500"/>,
             case 'Data & Analytics': return <TrendingUp className="w-5 h-5 text-purple-500"/>,
             case 'Digital Transformation': return <Zap className="w-5 h-5 text-yellow-500"/>,
             case 'IoT & Edge Computing': return <Globe className="w-5 h-5 text-indigo-500"/>,
             case 'Blockchain & Web3': return <TrendingUp className="w-5 h-5 text-orange-500"/>,
-            case 'AR/VR & Metaverse': return <Globe className="w-5 h-5 text-pink-500"/>,
+            case 'AR/VR & Metaverse': return <Globe className="w-5 h-5 text-pink-500"/>;
             default: return <TrendingUp className="w-5 h-5 text-gray-500"/>
         }
     };

@@ -11,7 +11,7 @@ export default function CustomerExperience() {
     };
     {
       icon: Users,title: 'Personalization',description: 'Tailored experiences for every customer'
-    };
+    },
     {
       icon: Star,title: 'Loyalty Programs',description: 'Reward and retain your best customers'
     }
@@ -25,7 +25,7 @@ export default function CustomerExperience() {
     };
     {
       title: 'Automated Engagement',description: 'Smart workflows for customer interactions',icon: Zap
-    };
+    },
     {
       title: 'Performance Analytics',description: 'Track and improve customer experience metrics',icon: TrendingUp
     }
@@ -74,7 +74,7 @@ export default function CustomerExperience() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -92,7 +92,7 @@ export default function CustomerExperience() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -113,7 +113,7 @@ export default function CustomerExperience() {
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -131,7 +131,7 @@ export default function CustomerExperience() {
             {capabilities.map((capability, index) => (
               <motion.div
                 key={capability.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -156,7 +156,7 @@ export default function CustomerExperience() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

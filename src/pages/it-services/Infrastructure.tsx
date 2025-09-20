@@ -11,7 +11,7 @@ export default function Infrastructure() {
     };
     {
       icon: Shield,title: 'Security First',description: 'Protect your infrastructure with enterprise-grade security'
-    };
+    },
     {
       icon: Zap,title: 'High Performance',description: 'Lightning-fast systems and applications'
     }
@@ -25,7 +25,7 @@ export default function Infrastructure() {
     };
     {
       title: 'Cloud Migration',description: 'Seamless transition to cloud infrastructure',icon: Cloud
-    };
+    },
     {
       title: 'Disaster Recovery',description: 'Business continuity and backup solutions',icon: Shield
     }
@@ -74,7 +74,7 @@ export default function Infrastructure() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -92,7 +92,7 @@ export default function Infrastructure() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -113,7 +113,7 @@ export default function Infrastructure() {
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -131,7 +131,7 @@ export default function Infrastructure() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -156,7 +156,7 @@ export default function Infrastructure() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

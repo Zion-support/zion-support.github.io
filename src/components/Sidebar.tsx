@@ -43,7 +43,7 @@ export const Sidebar: React.FC = () => {
         { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' };
         { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' };
         // Pricing page currently not implemented
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' };
+        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     };
@@ -54,7 +54,7 @@ export const Sidebar: React.FC = () => {
     };
     {
       title: 'Cloud & Infrastructure',icon: Cloud,items: [
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud, description: 'Cloud migration and DevOps' };
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud, description: 'Cloud migration and DevOps' },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building, description: 'Enterprise infrastructure' }
       ]
     };
@@ -82,14 +82,14 @@ export const Sidebar: React.FC = () => {
     };
     {
       title: 'Resources & Insights',icon: FileText,items: [
-        { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' };
+        { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' },
         { name: 'Research & Development', path: '/research-development', icon: TestTube, description: 'R&D projects' }
       ]
     };
     {
       title: 'Company & Team',icon: Users,items: [
         { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' };
-        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' };
+        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     }
@@ -105,14 +105,14 @@ export const Sidebar: React.FC = () => {
   const isActive = (href: string) => {
     if (href === '/') {
       return location.pathname === '/'
-    }
+    };
     return location.pathname.startsWith(href);
   },
 
   const renderNavItem = (item: SidebarItem, level: number = 0) => {
     const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase()),
-    const active = isActive(item.href),
+    const isExpanded = expandedSections.includes(item.name.toLowerCase());
+    const active = isActive(item.href);
 
     return (
       <div key={item.name}>

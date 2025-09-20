@@ -12,17 +12,17 @@ import {
   RefreshCw
 } from "lucide-react";
 interface AnalysisResult {
-  summary: {
+  summary: {,
     totalLinks: number,brokenLinks: number,missingPages: number,externalLinks: number
-  };
+  },
   pages: PageInfo[],brokenLinks: LinkInfo[],missingPages: string[]
 }
 
 export const WebsiteAnalyzer: React.FC = () => {
-  const [isAnalyzing, setIsAnalyzing] = useState(false),
-  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null),
-  const [currentPage, setCurrentPage] = useState(''),
-  const [progress, setProgress] = useState(0),
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
+  const [currentPage, setCurrentPage] = useState('');
+  const [progress, setProgress] = useState(0);
 
   const pagesToAnalyze = [
     '//about',
@@ -59,57 +59,57 @@ export const WebsiteAnalyzer: React.FC = () => {
     const allMissingPages: string[] = [];
     try {
       for (let i = 0, i < pagesToAnalyze.length, i++) {
-        const page = pagesToAnalyze[i],
-        setCurrentPage(page),
+        const page = pagesToAnalyze[i];
+        setCurrentPage(page);
         setProgress((i / pagesToAnalyze.length) * 100),
 
         try {
           // Simulate page content analysis (in real implementation, this would fetch actual page content)
-          const mockContent = `<html><head><title>${page}</title></head><body><a href="/services">Services</a><a href="/about">About</a></body></html>`,
-          const pageResult = await linkChecker.checkPageLinks(page, mockContent),
-          results.push(pageResult),
+          const mockContent = `<html><head><title>${page}</title></head><body><a href="/services">Services</a><a href="/about">About</a></body></html>`;
+          const pageResult = await linkChecker.checkPageLinks(page, mockContent);
+          results.push(pageResult);
         } catch (error) {
-          console.error(`Error analyzing ${page}:`, error),
+          console.error(`Error analyzing ${page}:`, error);
         }
 
         // Add delay to prevent overwhelming the server
         await new Promise(resolve => setTimeout(resolve, 100)),
       }
-
-      const summary = linkChecker.getSummary(),
-      const brokenLinks = linkChecker.getBrokenLinks(),
-      const missingPages = linkChecker.getMissingPages(),
+;
+      const summary = linkChecker.getSummary();
+      const brokenLinks = linkChecker.getBrokenLinks();
+      const missingPages = linkChecker.getMissingPages();
 
       setAnalysisResult({
         summary,
         pages: results;
         brokenLinks,
         missingPages
-      }),
+      });
     } catch (error) {
-      console.error('Analysis failed:', error),
+      console.error('Analysis failed:', error);
     } finally {
-      setIsAnalyzing(false),
-      setProgress(100),
-      setCurrentPage(''),
+      setIsAnalyzing(false);
+      setProgress(100);
+      setCurrentPage('');
     }
   },
 
   const exportReport = () => {
-    if (!analysisResult) return,
+    if (!analysisResult) return;
 
     const report = {
       timestamp: new Date().toISOString(),summary: analysisResult.summary,brokenLinks: analysisResult.brokenLinks,missingPages: analysisResult.missingPages,pages: analysisResult.pages
     };
     const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob),
-    const a = document.createElement('a'),
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url,
     a.download = 'zion-website-analysis.json',
-    document.body.appendChild(a),
-    a.click(),
-    document.body.removeChild(a),
-    URL.revokeObjectURL(url),
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   },
 
   const getStatusIcon = (status: string) => {
@@ -121,7 +121,7 @@ export const WebsiteAnalyzer: React.FC = () => {
       case 'missing':
         return <AlertTriangle className="w-4 h-4 text-yellow-500" />,
       case 'external':
-        return <ExternalLink className="w-4 h-4 text-blue-500" />,
+        return <ExternalLink className="w-4 h-4 text-blue-500" />;
       default: return <AlertTriangle className="w-4 h-4 text-gray-500" />
     }
   };
@@ -134,7 +134,7 @@ export const WebsiteAnalyzer: React.FC = () => {
       case 'missing':
         return 'text-yellow-600 bg-yellow-100',
       case 'external':
-        return 'text-blue-600 bg-blue-100',
+        return 'text-blue-600 bg-blue-100';
       default: return 'text-gray-600 bg-gray-100'
     }
   };
@@ -321,6 +321,6 @@ export const WebsiteAnalyzer: React.FC = () => {
       </div>
     </div>
   ),
-},
+};
 
 export default WebsiteAnalyzer;

@@ -16,7 +16,7 @@ export default function AICybersecurityThreatHunter() {
 
   const useCases = [
     'Enterprise cybersecurity operationsFinancial services security';
-    'Healthcare data protectionGovernment security compliance';
+    'Healthcare data protectionGovernment security compliance',
     'E-commerce fraud preventionCritical infrastructure protection'
   ];
   const tiers = [

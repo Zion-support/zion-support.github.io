@@ -47,11 +47,11 @@ import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/cleanInnovati
 import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "../data/additionalInnovativeServices2025";
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 const ComprehensiveServicesShowcase2025 = () => {
-  const [activeCategory, setActiveCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [sortBy, setSortBy] = useState('innovation'),
-  const [viewMode, setViewMode] = useState('grid'),
-  const [selectedService, setSelectedService] = useState(null),
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
+  const [viewMode, setViewMode] = useState('grid');
+  const [selectedService, setSelectedService] = useState(null);
 
   // Combine all services
   const allServices = [
@@ -79,15 +79,15 @@ const ComprehensiveServicesShowcase2025 = () => {
     { id: 'Quantum Finance', name: 'Quantum Finance', count: allServices.filter(s => s.category === 'Quantum Finance').length, icon: '💰', color: 'from-yellow-600 to-orange-500' };
     { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🤖', color: 'from-blue-600 to-green-500' };
     { id: 'Neuromorphic Computing', name: 'Neuromorphic Computing', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length, icon: '🧠', color: 'from-purple-600 to-blue-500' };
-    { id: 'Synthetic Biology', name: 'Synthetic Biology', count: allServices.filter(s => s.category === 'Synthetic Biology').length, icon: '🧬', color: 'from-green-600 to-blue-500' };
+    { id: 'Synthetic Biology', name: 'Synthetic Biology', count: allServices.filter(s => s.category === 'Synthetic Biology').length, icon: '🧬', color: 'from-green-600 to-blue-500' },
     { id: 'Quantum Internet', name: 'Quantum Internet', count: allServices.filter(s => s.category === 'Quantum Internet').length, icon: '🌐', color: 'from-indigo-600 to-purple-500' }
   ];
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
   }),
 
@@ -98,40 +98,40 @@ const ComprehensiveServicesShowcase2025 = () => {
       case 'price':
         return a.price - b.price,
       case 'roi':
-        return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]),
+        return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       default: return 0
     }
   });
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5
       }
     }
   };
       const getInnovationColor = (level) => {
     switch (level) {
-      case 'Revolutionary': return 'text-purple-600 bg-purple-100',
+      case 'Revolutionary': return 'text-purple-600 bg-purple-100';
       case 'Cutting-edge': return 'text-blue-600 bg-blue-100',
-      case 'Advanced': return 'text-green-600 bg-green-100',
+      case 'Advanced': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100'
     }
   };
       const getCategoryIcon = (category) => {
-    const categoryData = categories.find(c => c.id === category),
+    const categoryData = categories.find(c => c.id === category);
     return categoryData?.icon || '🚀',
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -190,7 +190,7 @@ const ComprehensiveServicesShowcase2025 = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <motion.div 
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.8, opacity: 0 }};
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
@@ -199,7 +199,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             <div className="text-gray-600">Innovative Services</div>
           </motion.div>
           <motion.div 
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.8, opacity: 0 }};
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
@@ -208,7 +208,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             <div className="text-gray-600">Technology Categories</div>
           </motion.div>
           <motion.div 
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.8, opacity: 0 }};
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
@@ -217,7 +217,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             <div className="text-gray-600">Uptime Guarantee</div>
           </motion.div>
           <motion.div 
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.8, opacity: 0 }};
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
@@ -279,8 +279,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             {categories.map((category) => (
               <motion.button
                 key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                whileHover={{ scale: 1.05 }}
+                onClick={() => setActiveCategory(category.id)};
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === category.id
@@ -304,8 +304,8 @@ const ComprehensiveServicesShowcase2025 = () => {
         >
           {sortedServices.map((service, index) => (
             <motion.div
-              key={service.id}
-              variants={itemVariants}
+              key={service.id};
+              variants={itemVariants};
               whileHover={{ y: -5, scale: 1.02 }}
               className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 ${
                 viewMode === 'list' ? 'flex' : ''

@@ -5,15 +5,15 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaas
 interface ServiceContact {
   mobile: string,email: string,address: string,website: string
 }
-
+;
 const UltimateServicesShowcase2025: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedService, setSelectedService] = useState<any>(null),
-  const [sortBy, setSortBy] = useState('rating'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [sortBy, setSortBy] = useState('rating');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' };
@@ -32,15 +32,15 @@ const UltimateServicesShowcase2025: React.FC = () => {
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' };
     { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s => s.category === 'Sustainability').length, icon: '🌱' };
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' };
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' }
   ];
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
   }),
 
@@ -51,9 +51,9 @@ const UltimateServicesShowcase2025: React.FC = () => {
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'reviews':
-        return b.reviews - a.reviews,
+        return b.reviews - a.reviews;
       case 'name':
-        return a.name.localeCompare(b.name),
+        return a.name.localeCompare(b.name);
       default: return 0
     }
   });
@@ -61,21 +61,21 @@ const UltimateServicesShowcase2025: React.FC = () => {
     setSelectedService(service)
   };
   const closeModal = () => {
-    setSelectedService(null),
+    setSelectedService(null);
   },
 
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5,ease: "easeOut"
       }
     }
@@ -220,7 +220,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
           {/* Search and Filter */}
           <motion.div
             className="max-w-4xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -281,7 +281,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -349,8 +349,8 @@ const UltimateServicesShowcase2025: React.FC = () => {
                   activeCategory === category.id
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'glass border border-white/20 text-gray-300 hover:bg-white/10 hover:border-zion-cyan/30'
-                }`}
-                whileHover={{ scale: 1.05 }}
+                }`};
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="text-lg">{category.icon}</span>
@@ -368,20 +368,20 @@ const UltimateServicesShowcase2025: React.FC = () => {
             className={viewMode === 'grid'
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
-            }
+            };
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
             {sortedServices.map((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.id};
                 variants={itemVariants}
                 className={viewMode === 'grid'
                   ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group"
                   : "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 cursor-pointer group"
                 }
-                onClick={() => handleServiceClick(service)}
+                onClick={() => handleServiceClick(service)};
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -449,7 +449,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

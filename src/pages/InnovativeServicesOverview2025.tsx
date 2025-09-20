@@ -59,7 +59,7 @@ const InnovativeServicesOverview2025 = () => {
     {
       name: 'Zero Trust Network Access',description: 'Enterprise-grade security with zero trust principles',price: '$2,000/month',
       path: '/services/zero-trust-network-access'
-    };
+    },
     {
       name: 'AI Workflow Orchestrator',description: 'Intelligent business process automation',price: '$1,800/month',
       path: '/services/ai-workflow-orchestrator'
@@ -92,7 +92,7 @@ const InnovativeServicesOverview2025 = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >
@@ -100,7 +100,7 @@ const InnovativeServicesOverview2025 = () => {
                 Explore Services
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
@@ -116,7 +116,7 @@ const InnovativeServicesOverview2025 = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -133,7 +133,7 @@ const InnovativeServicesOverview2025 = () => {
             {serviceCategories.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-8 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"
@@ -190,7 +190,7 @@ const InnovativeServicesOverview2025 = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -207,7 +207,7 @@ const InnovativeServicesOverview2025 = () => {
             {additionalServices.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"
@@ -231,7 +231,7 @@ const InnovativeServicesOverview2025 = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

@@ -14,21 +14,21 @@ export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
         : cartItem
     );
   }
-
+;
   return [...cart, item],
-},
+};
 
 export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => {
   return cart.filter(item => item.id !== itemId)
 };
 export const updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[] => {
   if (quantity <= 0) {
-    return removeFromCart(cart, itemId),
+    return removeFromCart(cart, itemId);
   }
-
+;
   return cart.map(item =>
     item.id === itemId ? { ...item, quantity } : item
-  ),
+  );
 };
 export const clearCart = (): CartItem[] => {
   return [];
@@ -40,13 +40,13 @@ export const getCartKey = (userId: string): string => {
 export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]): CartItem[] => {
   const merged = [...existingItems];
   newItems.forEach(newItem => {
-    const existingIndex = merged.findIndex(item => item.id === newItem.id),
+    const existingIndex = merged.findIndex(item => item.id === newItem.id);
     if (existingIndex >= 0 && merged[existingIndex]) {
       merged[existingIndex].quantity += newItem.quantity
     } else {
-      merged.push(newItem),
+      merged.push(newItem);
     }
   }),
 
-  return merged,
+  return merged;
 };

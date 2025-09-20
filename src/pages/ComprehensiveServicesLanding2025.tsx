@@ -59,11 +59,11 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
       case 'Quantum Computing':
         return <Box className="w-8 h-8" />,
       case 'IoT & Edge Computing':
-        return <Network className="w-8 h-8" />,
+        return <Network className="w-8 h-8" />;
       case 'Blockchain & Web3':
-        return <Wallet className="w-8 h-8" />,
+        return <Wallet className="w-8 h-8" />;
       case 'Sustainability & Technology':
-        return <Leaf className="w-8 h-8" />,
+        return <Leaf className="w-8 h-8" />;
       default: return <Sparkles className="w-8 h-8" />
     }
   };
@@ -88,21 +88,21 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
       case 'Blockchain & Web3':
         return 'from-yellow-500 to-orange-500',
       case 'Sustainability & Technology':
-        return 'from-green-500 to-teal-500',
+        return 'from-green-500 to-teal-500';
       default: return 'from-gray-500 to-slate-500'
     }
   };
-  const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category))),
+  const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
   const servicesByCategory = categories.map(category => ({
     category,
     services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),icon: getCategoryIcon(category),color: getCategoryColor(category)
   }));
-  const totalServices = INNOVATIVE_SERVICES_2025.length,
+  const totalServices = INNOVATIVE_SERVICES_2025.length;
   const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0),
   const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {
     const roi = parseInt(service.roi.replace('%', '')),
     return sum + roi,
-  }, 0) / totalServices,
+  }, 0) / totalServices;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -351,7 +351,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
               };
               {
                 icon: <Users className="w-8 h-8" />,title: 'Expert Support',description: '24/7 technical support and dedicated account management'
-              };
+              },
               {
                 icon: <Shield className="w-8 h-8" />,title: 'Enterprise Security',description: 'Bank-grade security with compliance certifications and best practices'
               }

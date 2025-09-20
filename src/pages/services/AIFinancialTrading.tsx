@@ -44,7 +44,7 @@ export default function AIFinancialTrading() {
     };
     {
       icon: Shield,title: "Risk Management",description: "Intelligent risk assessment and automated stop-loss mechanisms"
-    };
+    },
     {
       icon: Zap,title: "High-Frequency Trading",description: "Ultra-fast execution with microsecond precision for optimal trade timing"
     }
@@ -58,7 +58,7 @@ export default function AIFinancialTrading() {
     };
     {
       name: "Mean Reversion",description: "Statistical analysis for price correction opportunities",successRate: "82.7%",avgReturn: "15.8%",icon: BarChart
-    };
+    },
     {
       name: "Sentiment Analysis",description: "Social media and news sentiment-driven trading decisions",successRate: "79.5%",avgReturn: "18.3%",icon: BrainCircuit
     }
@@ -76,7 +76,7 @@ export default function AIFinancialTrading() {
     {
       name: "Starter",price: "$4,500",
       period: "/month",features: [
-        "Up to $100K portfolio";
+        "Up to $100K portfolio",
         "5 trading strategies",
         "Basic risk management",
         "Email support",
@@ -86,7 +86,7 @@ export default function AIFinancialTrading() {
     {
       name: "Professional",price: "$9,500",
       period: "/month",features: [
-        "Up to $1M portfolio";
+        "Up to $1M portfolio",
         "15 trading strategies",
         "Advanced risk management",
         "Priority support",
@@ -97,7 +97,7 @@ export default function AIFinancialTrading() {
     {
       name: "Enterprise",price: "$25,000",
       period: "/month",features: [
-        "Unlimited portfolio size";
+        "Unlimited portfolio size",
         "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
@@ -144,14 +144,14 @@ export default function AIFinancialTrading() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
               >
                 Start Trading Today
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
               >
@@ -166,7 +166,7 @@ export default function AIFinancialTrading() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -184,7 +184,7 @@ export default function AIFinancialTrading() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 group"
@@ -204,7 +204,7 @@ export default function AIFinancialTrading() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -222,7 +222,7 @@ export default function AIFinancialTrading() {
             {tradingStrategies.map((strategy, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300"
@@ -257,7 +257,7 @@ export default function AIFinancialTrading() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -274,7 +274,7 @@ export default function AIFinancialTrading() {
             {supportedAssets.map((asset, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 text-center hover:border-green-400/50 transition-all duration-300"
@@ -291,7 +291,7 @@ export default function AIFinancialTrading() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -308,7 +308,7 @@ export default function AIFinancialTrading() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
@@ -325,7 +325,7 @@ export default function AIFinancialTrading() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -342,7 +342,7 @@ export default function AIFinancialTrading() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
@@ -377,7 +377,7 @@ export default function AIFinancialTrading() {
                 </ul>
 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     index === 1
@@ -397,7 +397,7 @@ export default function AIFinancialTrading() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -410,14 +410,14 @@ export default function AIFinancialTrading() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-green-400/10 transition-all duration-300"
               >

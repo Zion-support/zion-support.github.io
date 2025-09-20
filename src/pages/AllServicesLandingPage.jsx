@@ -10,7 +10,7 @@ import SEO from "@/components/SEO";
 export default function AllServicesLandingPage() {
     const getCategoryIcon = (category) => {
         switch (category) {
-            case 'AI Services': return '🤖',
+            case 'AI Services': return '🤖';
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
@@ -19,25 +19,25 @@ export default function AllServicesLandingPage() {
     };
     const getCategoryIconComponent = (category) => {
         switch (category) {
-            case 'AI Services': return <Brain className="h-6 w-6"/>,
+            case 'AI Services': return <Brain className="h-6 w-6"/>;
             case 'Micro SAAS': return <Cloud className="h-6 w-6"/>,
             case 'IT Services': return <Code className="h-6 w-6"/>,
-            case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>,
+            case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>;
             default: return <Settings className="h-6 w-6"/>
         }
     };
     const getPricingModelColor = (model) => {
         switch (model) {
-            case 'subscription': return 'bg-blue-100 text-blue-800',
+            case 'subscription': return 'bg-blue-100 text-blue-800';
             case 'project-based': return 'bg-purple-100 text-purple-800',
             case 'one-time': return 'bg-green-100 text-green-800',
-            case 'usage-based': return 'bg-orange-100 text-orange-800',
+            case 'usage-based': return 'bg-orange-100 text-orange-800';
             default: return 'bg-gray-100 text-gray-800'
         }
     };
     const getServiceIcon = (subcategory) => {
         switch (subcategory) {
-            case 'Customer Service': return <MessageSquare className="h-5 w-5"/>,
+            case 'Customer Service': return <MessageSquare className="h-5 w-5"/>;
             case 'Analytics': return <BarChart3 className="h-5 w-5"/>,
             case 'Content Creation': return <FileText className="h-5 w-5"/>,
             case 'Inventory Management': return <Database className="h-5 w-5"/>,
@@ -47,7 +47,7 @@ export default function AllServicesLandingPage() {
             case 'Cybersecurity': return <Lock className="h-5 w-5"/>,
             case 'DevOps': return <Code className="h-5 w-5"/>,
             case 'Transformation': return <ArrowUpRight className="h-5 w-5"/>,
-            case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>,
+            case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>;
             default: return <Settings className="h-5 w-5"/>
         }
     };

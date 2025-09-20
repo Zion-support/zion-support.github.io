@@ -82,7 +82,7 @@ export default function FAQ() {
     { id: 'general', name: 'General Questions', icon: HelpCircle, count: faqData.general.length };
     { id: 'services', name: 'Services & Solutions', icon: Zap, count: faqData.services.length };
     { id: 'pricing', name: 'Pricing & Billing', icon: DollarSign, count: faqData.pricing.length };
-    { id: 'implementation', name: 'Implementation', icon: Settings, count: faqData.implementation.length };
+    { id: 'implementation', name: 'Implementation', icon: Settings, count: faqData.implementation.length },
     { id: 'support', name: 'Support & Maintenance', icon: MessageCircle, count: faqData.support.length }
   ];
   const filteredFAQs = Object.entries(faqData).reduce((acc, [category, questions]) => {
@@ -90,11 +90,11 @@ export default function FAQ() {
       const filtered = questions.filter(q => 
         q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         q.answer.toLowerCase().includes(searchQuery.toLowerCase())
-      ),
+      );
       if (filtered.length > 0) {
         acc[category] = filtered,
       }
-    }
+    };
     return acc,
   }, {}),
 
@@ -120,7 +120,7 @@ export default function FAQ() {
               <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"> Questions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find answers to common questions about our services, pricing, implementation process, 
+              Find answers to common questions about our services, pricing, implementation process; 
               and support options. Can't find what you're looking for? Contact our team.
             </p>
             
@@ -228,7 +228,7 @@ export default function FAQ() {
                 };
                 {
                   title: 'Phone Support',description: 'Speak directly with our experts',icon: Phone,color: 'from-green-500 to-emerald-500',action: 'Call Now',link: 'tel:+1-800-ZION-TECH'
-                };
+                },
                 {
                   title: 'Email Support',description: 'Send us a detailed message',icon: Mail,color: 'from-purple-500 to-pink-500',action: 'Send Email',link: 'mailto:support@ziontechgroup.com'
                 }
@@ -280,7 +280,7 @@ export default function FAQ() {
               };
               {
                 title: 'Blog & Insights',description: 'Latest industry trends and tips',icon: BookOpen,color: 'from-purple-500 to-pink-500',link: '/blog'
-              };
+              },
               {
                 title: 'Support Center',description: 'Comprehensive help resources',icon: HelpCircle,color: 'from-orange-500 to-red-500',link: '/support'
               }
@@ -312,7 +312,7 @@ export default function FAQ() {
 
 // FAQ Item Component
 function FAQItem({ question, answer }: { question: string, answer: string }) {
-  const [isOpen, setIsOpen] = useState(false),
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg overflow-hidden">

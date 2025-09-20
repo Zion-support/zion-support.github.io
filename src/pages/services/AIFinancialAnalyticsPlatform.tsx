@@ -16,7 +16,7 @@ export default function AIFinancialAnalyticsPlatform() {
 
   const useCases = [
     'Investment portfolio managementCorporate financial planning';
-    'Risk management and complianceTrading strategy optimization';
+    'Risk management and complianceTrading strategy optimization',
     'Mergers and acquisitions analysisFinancial market research'
   ];
   const tiers = [

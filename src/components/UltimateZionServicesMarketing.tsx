@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
 const UltimateZionServicesMarketing: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
     { 
@@ -22,7 +22,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
     };
     { 
       id: 'micro-saas',name: 'Micro SAAS Solutions',icon: '💻',color: 'from-blue-600 to-indigo-600',description: 'Intelligent business automation and optimization',marketSize: '$15.8 billion by 2027',growthRate: '200% annually'
-    };
+    },
     { 
       id: 'it-services',name: 'Enterprise IT Services',icon: '🖥️',color: 'from-gray-600 to-slate-600',description: 'Advanced infrastructure and DevOps solutions',marketSize: '$25.2 billion by 2027',growthRate: '150% annually'
     }
@@ -30,9 +30,9 @@ const UltimateZionServicesMarketing: React.FC = () => {
   const getServicesByCategory = (categoryId: string) => {
     if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId)
-  },
+  };
 
-  const selectedServices = getServicesByCategory(selectedCategory),
+  const selectedServices = getServicesByCategory(selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -41,7 +41,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6" 
-            initial={{ opacity: 0, y: 20 }} 
+            initial={{ opacity: 0, y: 20 }} ;
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.6 }}
           >
@@ -54,7 +54,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
           
           <motion.p 
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" 
-            initial={{ opacity: 0, y: 20 }} 
+            initial={{ opacity: 0, y: 20 }} ;
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.6, delay: 0.2 }}
           >
@@ -65,7 +65,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
           {/* Company Highlights */}
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" 
-            initial={{ opacity: 0, y: 20 }} 
+            initial={{ opacity: 0, y: 20 }} ;
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.6, delay: 0.4 }}
           >
@@ -94,7 +94,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
           {/* Contact Information */}
           <motion.div 
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-4xl mx-auto border border-purple-400/30" 
-            initial={{ opacity: 0, y: 20 }} 
+            initial={{ opacity: 0, y: 20 }} ;
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.6, delay: 0.6 }}
           >
@@ -137,7 +137,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="flex flex-wrap gap-4 justify-center" 
-            initial={{ opacity: 0, y: 20 }} 
+            initial={{ opacity: 0, y: 20 }} ;
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.6 }}
           >
@@ -165,12 +165,12 @@ const UltimateZionServicesMarketing: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             {(() => {
               const category = categories.find(c => c.id === selectedCategory);
-              if (!category) return null,
+              if (!category) return null;
               
               return (
                 <motion.div 
                   className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -205,7 +205,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -215,9 +215,9 @@ const UltimateZionServicesMarketing: React.FC = () => {
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" 
             variants={{
-              hidden: { opacity: 0 };
-              visible: {
-                opacity: 1,transition: {
+              hidden: { opacity: 0 },
+              visible: {,
+                opacity: 1,transition: {,
                   staggerChildren: 0.1,delayChildren: 0.2
                 }
               }
@@ -228,10 +228,10 @@ const UltimateZionServicesMarketing: React.FC = () => {
           >
             {selectedServices.map((service, index) => (
               <motion.div 
-                key={service.id} 
+                key={service.id} ;
                 variants={{
-                  hidden: { opacity: 0, y: 20 };
-                  visible: {
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {,
                     opacity: 1,y: 0,transition: { duration: 0.5 }
                   }
                 }}
@@ -368,7 +368,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >

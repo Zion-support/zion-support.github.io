@@ -269,7 +269,7 @@ import {
 const blockchainSolutions = [
   {
     id: 1,title: "Enterprise Blockchain Platform",description: "Custom blockchain platform designed for enterprise use cases and requirements.",icon: Building,features: [
-      "Custom blockchain";
+      "Custom blockchain",
       "Smart contracts",
       "Consensus mechanisms",
       "Scalability solutions"
@@ -279,7 +279,7 @@ const blockchainSolutions = [
   },
   {
     id: 2,title: "Supply Chain Blockchain",description: "Transparent and traceable supply chain solutions using blockchain technology.",icon: Package,features: [
-      "Supply chain tracking";
+      "Supply chain tracking",
       "Product verification",
       "Transparency",
       "Compliance management"
@@ -289,7 +289,7 @@ const blockchainSolutions = [
   },
   {
     id: 3,title: "Financial Blockchain Solutions",description: "Blockchain-based financial services and payment solutions.",icon: DollarSign,features: [
-      "Digital payments";
+      "Digital payments",
       "Cross-border transfers",
       "Asset tokenization",
       "Regulatory compliance"
@@ -299,7 +299,7 @@ const blockchainSolutions = [
   },
   {
     id: 4,title: "Identity Management Blockchain",description: "Decentralized identity management and verification systems.",icon: Shield,features: [
-      "Digital identity";
+      "Digital identity",
       "Verification",
       "Privacy protection",
       "Access control"
@@ -309,7 +309,7 @@ const blockchainSolutions = [
   },
   {
     id: 5,title: "Smart Contract Development",description: "Custom smart contract development for business automation.",icon: Code,features: [
-      "Smart contracts";
+      "Smart contracts",
       "Business logic",
       "Automation",
       "Security audit"
@@ -319,7 +319,7 @@ const blockchainSolutions = [
   },
   {
     id: 6,title: "Blockchain Integration Services",description: "Integration services for existing enterprise systems with blockchain.",icon: Wrench,features: [
-      "System integration";
+      "System integration",
       "API development",
       "Data migration",
       "Legacy support"
@@ -338,7 +338,7 @@ const blockchainTechnologies = [
   };
   {
     name: "Consensus Mechanisms",description: "Blockchain consensus and validation protocols",icon: Network,useCase: "Network Security",reliability: "High"
-  };
+  },
   {
     name: "Cryptography",description: "Advanced cryptographic security solutions",icon: Lock,useCase: "Security & Privacy",reliability: "High"
   }
@@ -351,7 +351,7 @@ const successStories = [
   {
     id: 2,company: "Digital Bank International",industry: "Finance",challenge: "Required blockchain-based cross-border payment system",solution: "Implemented blockchain payment platform with smart contracts",results: "80% faster payments, 70% cost reduction, 100% transparency, better compliance",
     logo: "DBI"
-  };
+  },
   {
     id: 3,company: "Healthcare Identity Solutions",industry: "Healthcare",challenge: "Needed secure patient identity management system",solution: "Built blockchain-based identity management platform",results: "100% data security, 90% faster verification, better privacy, improved compliance",
     logo: "HIS"
@@ -366,7 +366,7 @@ const processSteps = [
   };
   {
     step: 3,title: "Platform Development",description: "Build and deploy blockchain platform and applications",icon: Wrench,duration: "16-48 weeks"
-  };
+  },
   {
     step: 4,title: "Testing & Deployment",description: "Test blockchain systems and deploy to production",icon: Gauge,duration: "4-8 weeks"
   }
@@ -388,7 +388,7 @@ const blockchainBenefits = [
 ],
 
 export default function BlockchainEnterpriseSolutions() {
-  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
   const categories = ['AllPlatform', 'Supply ChainFinancial', 'IdentitySmart Contracts', 'Integration'];
   const filteredSolutions = selectedCategory === 'All'
@@ -452,7 +452,7 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -467,7 +467,7 @@ export default function BlockchainEnterpriseSolutions() {
             {blockchainBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
@@ -498,7 +498,7 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -513,7 +513,7 @@ export default function BlockchainEnterpriseSolutions() {
             {blockchainTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
@@ -545,7 +545,7 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -560,7 +560,7 @@ export default function BlockchainEnterpriseSolutions() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
@@ -589,7 +589,7 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -621,7 +621,7 @@ export default function BlockchainEnterpriseSolutions() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
@@ -678,7 +678,7 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -693,7 +693,7 @@ export default function BlockchainEnterpriseSolutions() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -739,7 +739,7 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"

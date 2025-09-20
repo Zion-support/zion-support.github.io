@@ -32,7 +32,7 @@ export default function AIContentGenerator() {
     },
     {
       icon: Search,title: 'SEO-Optimized Content',description: 'AI automatically optimizes content for search engines with keyword research and semantic analysis'
-    };
+    },
     {
       icon: Target,title: 'Audience Targeting',description: 'Content tailored to specific demographics, industries, and customer personas'
     },
@@ -49,7 +49,7 @@ export default function AIContentGenerator() {
   const pricing = [
     {
       name: 'Creator',price: '$49',period: '/month',description: 'Perfect for individual creators and small businesses',features: [
-        'Up to 50 AI-generated articles per monthBasic image generation (10 images/month)';
+        'Up to 50 AI-generated articles per monthBasic image generation (10 images/month)',
         'SEO optimization toolsContent templates',
         'Email supportBasic analytics'
       ],
@@ -57,7 +57,7 @@ export default function AIContentGenerator() {
     };
     {
       name: 'Professional',price: '$149',period: '/month',description: 'Ideal for marketing teams and growing businesses',features: [
-        'Up to 200 AI-generated articles per monthAdvanced image generation (50 images/month)';
+        'Up to 200 AI-generated articles per monthAdvanced image generation (50 images/month)',
         'Video script generationMulti-language support',
         'Priority supportAdvanced analytics dashboard',
         'API accessTeam collaboration tools'
@@ -66,7 +66,7 @@ export default function AIContentGenerator() {
     };
     {
       name: 'Enterprise',price: '$399',period: '/month',description: 'For large organizations with high content demands',features: [
-        'Unlimited AI-generated contentUnlimited image generation';
+        'Unlimited AI-generated contentUnlimited image generation',
         'Custom AI model trainingWhite-label solution',
         'Dedicated account managerSLA guarantees',
         'Advanced security featuresCustom integrations'
@@ -116,7 +116,7 @@ export default function AIContentGenerator() {
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -134,7 +134,7 @@ export default function AIContentGenerator() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
@@ -154,7 +154,7 @@ export default function AIContentGenerator() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -172,7 +172,7 @@ export default function AIContentGenerator() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
@@ -189,7 +189,7 @@ export default function AIContentGenerator() {
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -207,7 +207,7 @@ export default function AIContentGenerator() {
               {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
@@ -259,7 +259,7 @@ export default function AIContentGenerator() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"

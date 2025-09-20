@@ -31,7 +31,7 @@ const features = [
   };
   {
     icon: Zap,title: 'Rapid Implementation',description: 'Quick turnaround times without compromising quality or thoroughness.',color: 'from-yellow-500 to-orange-500'
-  };
+  },
   {
     icon: Cloud,title: 'Cloud-Native',description: 'Modern cloud-first approach for scalable and flexible solutions.',color: 'from-indigo-500 to-purple-500'
   }
@@ -57,15 +57,15 @@ const consultingServices = [
   };
   {
     icon: Lock,title: 'Compliance & Governance',description: 'Ensure your technology solutions meet industry standards and regulatory requirements.'
-  };
+  },
   {
     icon: Users,title: 'Team Training',description: 'Comprehensive training programs to upskill your team and maximize technology adoption.'
   }
 ];
 const containerVariants = {
-  hidden: { opacity: 0 };
-  visible: {
-    opacity: 1,transition: {
+  hidden: { opacity: 0 },
+  visible: {,
+    opacity: 1,transition: {,
       staggerChildren: 0.1
     }
   }
@@ -113,7 +113,7 @@ export default function ITConsulting() {
               </Link>
               <motion.button
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 <span>Explore Services</span>
@@ -129,7 +129,7 @@ export default function ITConsulting() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -147,7 +147,7 @@ export default function ITConsulting() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -168,7 +168,7 @@ export default function ITConsulting() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -193,7 +193,7 @@ export default function ITConsulting() {
             {consultingServices.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -232,7 +232,7 @@ export default function ITConsulting() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

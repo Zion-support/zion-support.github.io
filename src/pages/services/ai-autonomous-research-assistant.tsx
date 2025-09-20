@@ -44,7 +44,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
     };
     {
       icon: Users,title: 'Collaborative Research',description: 'Multi-user platform for team-based research and knowledge sharing'
-    };
+    },
     {
       icon: Clock,title: '24/7 Research',description: 'Continuous research operations without human intervention'
     }
@@ -64,7 +64,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
     };
     {
       icon: Globe,title: 'Global Collaboration',description: 'Connect with researchers worldwide through our platform'
-    };
+    },
     {
       icon: Smartphone,title: 'Mobile Access',description: 'Access your research assistant from anywhere, anytime'
     }

@@ -26,7 +26,7 @@ const InnovativeServices: React.FC = () => {
   const innovations = [
     {
       id: 'ai-automation',title: 'AI Business Automation',description: 'Revolutionary AI-powered business process automation that transforms your operations',icon: Brain,features: [
-        'Intelligent workflow automationPredictive analytics integration';
+        'Intelligent workflow automationPredictive analytics integration',
         'Real-time decision makingScalable AI infrastructure'
       ],
       benefits: ['300% efficiency increase24/7 autonomous operation', 'Cost reduction up to 60%'],
@@ -34,7 +34,7 @@ const InnovativeServices: React.FC = () => {
     };
     {
       id: 'quantum-computing',title: 'Quantum Computing Services',description: 'Next-generation quantum computing solutions for complex problem-solving',icon: Atom,features: [
-        'Quantum algorithm optimizationCryptographic security';
+        'Quantum algorithm optimizationCryptographic security',
         'Molecular simulationFinancial modeling'
       ],
       benefits: ['1000x faster computationUnbreakable encryption', 'Revolutionary breakthroughs'],
@@ -43,7 +43,7 @@ const InnovativeServices: React.FC = () => {
     {
       id: 'blockchain',title: 'Enterprise Blockchain',description: 'Secure, scalable blockchain solutions for enterprise applications',
       icon: Lock,features: [
-        'Smart contract developmentDeFi platform creation';
+        'Smart contract developmentDeFi platform creation',
         'Supply chain transparencyDigital asset management'
       ],
       benefits: ['Immutable securityTransparent operations', 'Reduced costs'],
@@ -51,7 +51,7 @@ const InnovativeServices: React.FC = () => {
     };
     {
       id: 'iot-edge',title: 'IoT Edge Computing',description: 'Intelligent IoT solutions with edge computing for real-time processing',icon: Wifi,features: [
-        'Edge AI processingReal-time analytics';
+        'Edge AI processingReal-time analytics',
         'Predictive maintenanceSmart city solutions'
       ],
       benefits: ['Reduced latencyLower bandwidth costs', 'Enhanced security'],
@@ -59,7 +59,7 @@ const InnovativeServices: React.FC = () => {
     };
     {
       id: 'cybersecurity',title: 'Zero Trust Security',description: 'Advanced cybersecurity platform with zero-trust architecture',icon: Shield,features: [
-        'Multi-factor authenticationBehavioral analytics';
+        'Multi-factor authenticationBehavioral analytics',
         'Threat intelligenceIncident response automation'
       ],
       benefits: ['99.99% threat preventionReal-time monitoring', 'Compliance ready'],
@@ -67,7 +67,7 @@ const InnovativeServices: React.FC = () => {
     };
     {
       id: 'digital-twin',title: 'Digital Twin Technology',description: 'Create virtual replicas of physical systems for simulation and optimization',icon: Eye,features: [
-        '3D modeling and simulationReal-time monitoring';
+        '3D modeling and simulationReal-time monitoring',
         'Predictive maintenancePerformance optimization'
       ],
       benefits: ['Reduced downtimeOptimized performance', 'Cost savings'],
@@ -75,7 +75,7 @@ const InnovativeServices: React.FC = () => {
     };
     {
       id: 'metaverse',title: 'Metaverse & VR',description: 'Immersive virtual reality and metaverse development platform',icon: Globe2,features: [
-        'VR application developmentMetaverse platform creation';
+        'VR application developmentMetaverse platform creation',
         '3D content creationVirtual event hosting'
       ],
       benefits: ['Enhanced user engagementNew revenue streams', 'Innovative experiences'],
@@ -83,7 +83,7 @@ const InnovativeServices: React.FC = () => {
     };
     {
       id: 'green-tech',title: 'Green Tech Solutions',description: 'Sustainable technology solutions for environmental impact reduction',icon: Leaf,features: [
-        'Renewable energy optimizationCarbon footprint tracking';
+        'Renewable energy optimizationCarbon footprint tracking',
         'Sustainable infrastructureGreen data centers'
       ],
       benefits: ['Environmental impactCost savings', 'Regulatory compliance'],
@@ -93,7 +93,7 @@ const InnovativeServices: React.FC = () => {
   const stats = [
     { label: 'Innovation Projects', value: '500+', icon: Rocket };
     { label: 'AI Models Deployed', value: '1000+', icon: Brain };
-    { label: 'Quantum Breakthroughs', value: '50+', icon: Atom };
+    { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },
     { label: 'Client Success Rate', value: '99.8%', icon: Award }
   ];
   return (
@@ -117,14 +117,14 @@ const InnovativeServices: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Explore Innovations
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
@@ -223,7 +223,7 @@ const InnovativeServices: React.FC = () => {
                   </div>
 
                   <motion.button
-                    whileHover={{ scale: 1.02 }}
+                    whileHover={{ scale: 1.02 }};
                     whileTap={{ scale: 0.98 }}
                     className="w-full py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-gradient-to-r hover:from-zion-cyan/30 hover:to-zion-purple/30 transition-all duration-300"
                   >
@@ -252,14 +252,14 @@ const InnovativeServices: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Start Your Project
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover: bg-zion-cyan hover:text-white transition-all duration-300"
               >

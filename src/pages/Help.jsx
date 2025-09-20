@@ -18,7 +18,7 @@ import {
   ChevronUp
 } from "lucide-react";
 export default function Help() {
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [searchQuery, setSearchQuery] = useState('');
   const [openCategories, setOpenCategories] = useState([]);
   const toggleCategory = (category) => {
     setOpenCategories(prev => 
@@ -35,7 +35,7 @@ export default function Help() {
         };
         {
           title: 'Understanding the marketplace',description: 'Learn how our AI and tech marketplace works',url: '/help/marketplace-guide'
-        };
+        },
         {
           title: 'First steps for new users',description: 'Essential information to get you started quickly',url: '/help/first-steps'
         }
@@ -48,7 +48,7 @@ export default function Help() {
         };
         {
           title: 'Security settings and two-factor authentication',description: 'Protect your account with enhanced security features',url: '/help/security-settings'
-        };
+        },
         {
           title: 'Managing notifications and preferences',description: 'Customize how and when you receive updates',url: '/help/notifications'
         }
@@ -61,7 +61,7 @@ export default function Help() {
         };
         {
           title: 'Finding and hiring talent',description: 'Discover and connect with skilled professionals',url: '/help/hiring-talent'
-        };
+        },
         {
           title: 'Payment and billing explained',description: 'Understanding our payment system and fees',url: '/help/payments'
         }
@@ -74,7 +74,7 @@ export default function Help() {
         };
         {
           title: 'Cybersecurity services guide',description: 'Protect your business with our security solutions',url: '/help/cybersecurity'
-        };
+        },
         {
           title: 'Cloud and infrastructure services',description: 'Scalable cloud solutions for your business needs',url: '/help/cloud-services'
         }
@@ -87,7 +87,7 @@ export default function Help() {
         };
         {
           title: 'Payment methods and options',description: 'Accepted payment methods and processing times',url: '/help/payment-methods'
-        };
+        },
         {
           title: 'Refund and cancellation policies',description: 'Our policies for refunds and service cancellations',url: '/help/refund-policy'
         }
@@ -100,7 +100,7 @@ export default function Help() {
         };
         {
           title: 'Privacy settings and controls',description: 'Manage your privacy preferences and data sharing',url: '/help/privacy-controls'
-        };
+        },
         {
           title: 'Reporting security issues',description: 'How to report security concerns or vulnerabilities',url: '/help/security-reporting'
         }
@@ -113,13 +113,13 @@ export default function Help() {
     };
     {
       title: 'Marketplace best practices',description: 'Tips for success in our technology marketplace',category: 'Marketplace Features',readTime: '8 min read'
-    };
+    },
     {
       title: 'Account security essentials',description: 'Protect your account with these security best practices',category: 'Security & Privacy',readTime: '6 min read'
     }
   ];
   const filteredCategories = helpCategories.map(category => ({
-    ...category,
+    ...category;
     articles: category.articles.filter(article =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())

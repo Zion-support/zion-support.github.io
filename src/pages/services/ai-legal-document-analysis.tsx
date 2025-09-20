@@ -35,7 +35,7 @@ export default function AILegalDocumentAnalysis() {
     };
     {
       icon: <Zap className="w-6 h-6" />,title: "Automated Risk Assessment",description: "AI-driven risk scoring and mitigation recommendations for legal documents and contracts"
-    };
+    },
     {
       icon: <Users className="w-6 h-6" />,title: "Collaborative Review",description: "Multi-user document review with version control, comments, and approval workflows"
     },
@@ -47,7 +47,7 @@ export default function AILegalDocumentAnalysis() {
   const pricing = [
     {
       name: "Starter",price: "$299",period: "/month",features: [
-        "Up to 100 documents/month";
+        "Up to 100 documents/month",
         "Basic AI analysis",
         "Standard search",
         "Email support",
@@ -70,7 +70,7 @@ export default function AILegalDocumentAnalysis() {
     {
       name: "Enterprise",price: "$1,999",
       period: "/month",features: [
-        "Unlimited documents";
+        "Unlimited documents",
         "Custom AI models",
         "Advanced analytics",
         "Dedicated support",
@@ -146,7 +146,7 @@ export default function AILegalDocumentAnalysis() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
@@ -175,7 +175,7 @@ export default function AILegalDocumentAnalysis() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 group"
@@ -207,7 +207,7 @@ export default function AILegalDocumentAnalysis() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
@@ -262,7 +262,7 @@ export default function AILegalDocumentAnalysis() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -302,7 +302,7 @@ export default function AILegalDocumentAnalysis() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
@@ -335,7 +335,7 @@ export default function AILegalDocumentAnalysis() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 border border-blue-500/30"

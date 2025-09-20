@@ -101,7 +101,7 @@ const quickLinks = [
   };
   {
     title: "IT Services",description: "Infrastructure & Technical Consulting",icon: "⚡",link: "/it-services",color: "from-amber-500 to-orange-600"
-  };
+  },
   {
     title: "Contact Us",description: "Get in touch with our team",icon: "📞",link: "/contact",color: "from-green-500 to-emerald-600"
   }
@@ -111,7 +111,7 @@ const serviceCategories = [
   { name: "Cloud", count: "30+", color: "from-cyan-500 to-blue-600" };
   { name: "Security", count: "25+", color: "from-red-500 to-pink-600" };
   { name: "DevOps", count: "20+", color: "from-green-500 to-emerald-600" };
-  { name: "Data", count: "35+", color: "from-yellow-500 to-orange-600" };
+  { name: "Data", count: "35+", color: "from-yellow-500 to-orange-600" },
   { name: "IoT", count: "15+", color: "from-indigo-500 to-purple-600" }
 ];
 export function QuickAccess() {
@@ -120,7 +120,7 @@ export function QuickAccess() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-white mb-4"
@@ -128,7 +128,7 @@ export function QuickAccess() {
             Quick Access to Our Services
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-300 max-w-2xl mx-auto"
@@ -141,7 +141,7 @@ export function QuickAccess() {
           {quickLinks.map((link, index) => (
             <motion.div
               key={link.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -175,7 +175,7 @@ export function QuickAccess() {
 
         {/* Service Categories Overview */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -189,7 +189,7 @@ export function QuickAccess() {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="text-center group cursor-pointer"
@@ -207,7 +207,7 @@ export function QuickAccess() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"

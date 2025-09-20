@@ -20,12 +20,12 @@ import {
   CheckCircle
 } from "lucide-react";
 interface Service {
-  id: string,title: string,description: string,icon: React.ComponentType<{ className?: string }>;
+  id: string,title: string,description: string,icon: React.ComponentType<{ className?: string }>,
   category: string,features: string[],pricing: string,rating: number,reviews: number,color: string;
   popular?: boolean,
   link: string
 }
-
+;
 const services: Service[] = [
   {
     id: 'ai-business-intelligence',title: 'AI Business Intelligence Platform',description: 'Advanced analytics with AI-powered insights and predictive modeling',icon: Brain,category: 'AI & Machine Learning',features: ['Real-time analyticsPredictive modeling', 'Custom dashboardsAPI integration'],
@@ -76,8 +76,8 @@ const categories = [
 ],
 
 export const EnhancedServiceShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Services'),
-  const [hoveredService, setHoveredService] = useState<string | null>(null),
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -88,17 +88,17 @@ export const EnhancedServiceShowcase: React.FC = () => {
       };
       { threshold: 0.1 }
     );
-    const element = document.getElementById('service-showcase'),
+    const element = document.getElementById('service-showcase');
     if (element) {
-      observer.observe(element),
+      observer.observe(element);
     }
-
-    return () => observer.disconnect(),
+;
+    return () => observer.disconnect();
   }, []),
 
   const filteredServices = selectedCategory === 'All Services'
     ? services
-    : services.filter(service => service.category === selectedCategory),
+    : services.filter(service => service.category === selectedCategory);
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -111,7 +111,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
         }`}
       />
     )),
-  },
+  };
 
   return (
     <section id="service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -172,7 +172,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{
                   duration: 0.6,delay: index * 0.1,type: "spring",stiffness: 100
-                }}
+                }};
                 whileHover={{ y: -10 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}

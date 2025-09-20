@@ -7,31 +7,31 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
-    const [activeTab, setActiveTab] = useState("pending"),
-    const [reviews, setReviews] = useState([]),
-    const [isLoading, setIsLoading] = useState(true),
+    const [activeTab, setActiveTab] = useState("pending");
+    const [reviews, setReviews] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const fetchReviews = async () => {
-        setIsLoading(true),
+        setIsLoading(true);
         try {
             // In a real application, you would fetch reviews from an API
             // For now, let's simulate a delay and return empty data
-            await new Promise(resolve => setTimeout(resolve, 1000)),
-            setReviews([]),
-            setIsLoading(false),
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            setReviews([]);
+            setIsLoading(false);
         }
         catch (error) {
-            console.error("Error fetching reviews:", error),
+            console.error("Error fetching reviews:", error);
             toast({
                 title: "Error",description: "Failed to load reviews. Please try again later.",variant: "destructive"
             });
-            setIsLoading(false),
+            setIsLoading(false);
         }
     },
     useEffect(() => {
-        fetchReviews(),
+        fetchReviews();
     }, [activeTab]),
     const handleRefresh = () => {
-        fetchReviews(),
+        fetchReviews();
     },
     return (<>
       <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>
@@ -79,7 +79,7 @@ function ReviewsModerationContent() {
         </Card>
       </main>
       
-    </>),
+    </>);
 }
 export default function ReviewsModeration() {
     return (<ProtectedRoute>

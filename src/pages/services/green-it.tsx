@@ -18,7 +18,7 @@ export default function GreenIT() {
     };
     {
       icon: Shield,title: 'Environmental Compliance',description: 'Built-in compliance monitoring for environmental regulations and sustainability standards.'
-    };
+    },
     {
       icon: TrendingUp,title: 'Performance Monitoring',description: 'Real-time tracking of environmental impact and sustainability metrics for continuous improvement.'
     }
@@ -38,7 +38,7 @@ export default function GreenIT() {
     };
     {
       title: 'Energy Management Systems',description: 'AI-powered monitoring and optimization of IT infrastructure energy consumption.',icon: Zap
-    };
+    },
     {
       title: 'Circular IT Practices',description: 'Implement recycling, refurbishment, and responsible disposal of IT equipment.',
       icon: Leaf
@@ -88,7 +88,7 @@ export default function GreenIT() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -106,7 +106,7 @@ export default function GreenIT() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
@@ -126,7 +126,7 @@ export default function GreenIT() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -144,7 +144,7 @@ export default function GreenIT() {
             {solutions.map((solution, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-200"
@@ -168,7 +168,7 @@ export default function GreenIT() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
@@ -190,7 +190,7 @@ export default function GreenIT() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="relative"
@@ -218,7 +218,7 @@ export default function GreenIT() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"

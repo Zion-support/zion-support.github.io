@@ -28,9 +28,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   unreadCount?: number,
   className?: string,
 }) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
-  const [isServicesOpen, setIsServicesOpen] = useState(false),
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false),
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -39,13 +39,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);
-        setIsCompanyOpen(false),
+        setIsCompanyOpen(false);
         setActiveDropdown(null)
       }
     },
 
-    document.addEventListener('mousedown', handleClickOutside),
-    return () => document.removeEventListener('mousedown', handleClickOutside),
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []),
 
   const baseLinks: NavigationLink[] = [
@@ -73,7 +73,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
         { key: 'micro-crm', href: '/services/micro-crm', name: 'Micro CRM', matches: (p: string) => p.startsWith('/services/micro-crm') };
         { key: 'website-analytics', href: '/services/website-analytics', name: 'Website Analytics', matches: (p: string) => p.startsWith('/services/website-analytics') };
         { key: 'it-helpdesk', href: '/services/it-helpdesk', name: 'IT Helpdesk', matches: (p: string) => p.startsWith('/services/it-helpdesk') };
-        { key: 'affiliate-tracking', href: '/services/affiliate-tracking', name: 'Affiliate Tracking', matches: (p: string) => p.startsWith('/services/affiliate-tracking') };
+        { key: 'affiliate-tracking', href: '/services/affiliate-tracking', name: 'Affiliate Tracking', matches: (p: string) => p.startsWith('/services/affiliate-tracking') },
         { key: 'mobile-survey', href: '/services/mobile-survey', name: 'Mobile Survey', matches: (p: string) => p.startsWith('/services/mobile-survey') }
       ]
     };

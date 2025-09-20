@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 export default function CreatePostPage() {
-    const navigate = useNavigate(),
+    const navigate = useNavigate();
     const { toast } = useToast();
     const [searchParams] = useSearchParams();
     // Get category from URL query params if available
@@ -21,7 +21,7 @@ export default function CreatePostPage() {
                 title: "Post created",description: "Your post has been published successfully"
             });
             // Redirect to the forum category
-            navigate(`/community/category/${values.categoryId}`),
+            navigate(`/community/category/${values.categoryId}`);
         }
         catch (error) {
             toast({
@@ -30,7 +30,7 @@ export default function CreatePostPage() {
         }
     },
     return (<SEO title="Create New Post | Community Forum | Zion AI Marketplace" description="Create a new discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, create post, new thread"/>
-        ,
+        ;
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">

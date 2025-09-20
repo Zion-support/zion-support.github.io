@@ -33,7 +33,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		id: 'ai-rag-intranet',name: 'Private RAG Intranet Search',category: 'AI',tagline: 'Secure enterprise knowledge search with citations',description:
 			"Implement retrieval augmented generation (RAG) across Google Drive, Confluence, Jira, Slack, and SharePoint with granular ACLs, citations, and redaction.",
 		features: [
-			'Connectors for major SaaS suitesRow-level permissions with secure enclaves';
+			'Connectors for major SaaS suitesRow-level permissions with secure enclaves',
 			'Vector + BM25 hybrid retrievalInline citations and source previews',
 			'LLM neutrality (OpenAI, Anthropic, Vertex AI)'
 		],
@@ -45,7 +45,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		id: 'sase-zero-trust',name: 'SASE + Zero Trust Deployment',category: 'Security',tagline: 'Cloud-delivered security with identity-aware access',description:
 			"End-to-end design and rollout of SASE/Zero Trust: ZTNA, SWG, CASB, DNS, EDR, MFA/IdP, with policy baselines and playbooks.",
 		features: [
-			'Okta/Azure AD SSO + MFACloudflare/Zscaler policy configuration';
+			'Okta/Azure AD SSO + MFACloudflare/Zscaler policy configuration',
 			'Endpoint baselines (macOS/Windows/Linux)Incident response runbooks',
 			'Compliance-ready logging (SIEM)'
 		],
@@ -57,7 +57,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		description:
 			"Blueprint, automate, and migrate workloads to AWS/GCP/Azure with Terraform, GitHub Actions, Argo, Prometheus/Grafana, and cost governance.",
 		features: [
-			'Terraform modules and policy as codeGolden CI/CD pipelines and preview envs';
+			'Terraform modules and policy as codeGolden CI/CD pipelines and preview envs',
 			'Kubernetes hardening and autoscalingObservability SLOs with error budgets',
 			'FinOps guardrails and budgets'
 		],
@@ -70,7 +70,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		description:
 			"Generate clusters and briefs, optimize internal linking, and monitor SERP movements with automated on-page audits.",
 		features: [
-			'Entity extraction and topical clusteringProgrammatic briefs and outlines';
+			'Entity extraction and topical clusteringProgrammatic briefs and outlines',
 			'On-page scoring and internal linksCompetitor gap analysis',
 			'GSC and GA4 integrations'
 		],
@@ -80,7 +80,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		id: 'sales-enrichment-b2b',name: 'B2B Sales Enrichment API',category: 'SAAS',tagline: 'Firmographics + intent + routing',description:
 			"Real-time company/person enrichment with intent signals, de-duplication, and territory routing for CRMs.",
 		features: [
-			'Firmographic and technographic datasetsEmail/domain verification';
+			'Firmographic and technographic datasetsEmail/domain verification',
 			'Lead-to-account matchingWebhook and batch APIs',
 			'Fair routing with SLAs'
 		],
@@ -89,7 +89,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 	// Vertical AI solutions
 	{
 		id: 'healthcare-doc-copilot',name: 'Healthcare Documentation Copilot',category: 'AI',tagline: 'Ambient scribing with PHI safeguards',description: "Ambient clinical scribing and coding assistance with HIPAA/SOC 2 controls and EHR integration.",features: [
-			'Speaker diarization and clinical nomenclaturePHI redaction and consent capture';
+			'Speaker diarization and clinical nomenclaturePHI redaction and consent capture',
 			'Coding suggestions (ICD-10/CPT)EHR integration (FHIR/HL7)',
 			'Audit trails and rollback'
 		],
@@ -100,7 +100,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		description:
 			"Automated cloud cost analysis, recommendations, and budgets across AWS/GCP/Azure with alerting and reports.",
 		features: [
-			'Commitment planning and usage forecastingRightsizing and idle detection';
+			'Commitment planning and usage forecastingRightsizing and idle detection',
 			'Per-team/showback dashboardsPolicy-based shutdowns',
 			'Jira/Slack notifications'
 		],
@@ -112,7 +112,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		description:
 			"Secure SDLC enablement with pipelines, SBOM/SCA, secrets scanning, IaC security, and continuous governance.",
 		features: [
-			'SAST/DAST integration (Snyk/OWASP/Zap)SBOM + license compliance';
+			'SAST/DAST integration (Snyk/OWASP/Zap)SBOM + license compliance',
 			'IaC security (tfsec/Checkov)Secrets detection and policy',
 			'Purple-team playbooks'
 		],
@@ -124,7 +124,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		id: 'realtime-analytics-stack',name: 'Real-time Analytics Stack',category: 'Analytics',tagline: 'Event pipelines with low-latency dashboards',description:
 			"Implement streaming ingestion (Kafka/PubSub), dbt metrics, and dashboarding with governance and lineage.",
 		features: [
-			'Lakehouse architecture and ELTMetrics layer and semantic models';
+			'Lakehouse architecture and ELTMetrics layer and semantic models',
 			'Row-level security and PII maskingIncident playbooks and SLAs',
 			'Cost controls and archival tiers'
 		],
@@ -137,7 +137,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		description:
 			"Automate contract review, risks detection, and redlines using policy playbooks, with approvals and CRM handoff.",
 		features: [
-			'Clause library with risk scoringPlaybooks per contract type';
+			'Clause library with risk scoringPlaybooks per contract type',
 			'Counterparty negotiation workspaceSalesforce/HubSpot sync',
 			'Audit logs and e-sign triggers'
 		],
@@ -148,7 +148,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		description:
 			"Monitor models and prompts with eval suites, drift detection, lineage, approval workflows, and rollback.",
 		features: [
-			'Online/offline evaluation harnessPrompt library and regression tests';
+			'Online/offline evaluation harnessPrompt library and regression tests',
 			'Drift and bias detectionIncident management and approvals',
 			'Cost and latency tracking'
 		],
@@ -160,7 +160,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		description:
 			"Harden Microsoft 365 with secure defaults, DLP policies, SPF/DKIM/DMARC, and attack simulation.",
 		features: [
-			'Conditional access and device baselinesEmail security (SPF/DKIM/DMARC)';
+			'Conditional access and device baselinesEmail security (SPF/DKIM/DMARC)',
 			'DLP policies and sensitivity labelsAttack simulation and training',
 			'Compliance score improvements'
 		],
@@ -171,7 +171,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		id: 'helpdesk-ai-coach',name: 'Helpdesk AI Coach',category: 'SAAS',tagline: 'Live guidance for agents with macros and KB sync',description:
 			"Agent assist with suggested responses, macro automation, and live policy checks integrated into Zendesk/Jira/ServiceNow.",
 		features: [
-			'Live macros and KB syncPolicy and SLA awareness';
+			'Live macros and KB syncPolicy and SLA awareness',
 			'Auto-summarization and taggingQuality scoring and coaching',
 			'GDPR/SOC 2 ready'
 		],

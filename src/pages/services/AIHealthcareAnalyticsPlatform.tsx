@@ -337,7 +337,7 @@ const AIHealthcareAnalyticsPlatform = () => {
     };
     {
       icon: Shield,title: 'HIPAA-Compliant Security',description: 'Enterprise-grade security with full HIPAA compliance and data encryption'
-    };
+    },
     {
       icon: BarChart4,title: 'Population Health Insights',description: 'Comprehensive analytics for population health management and public health'
     }
@@ -357,7 +357,7 @@ const AIHealthcareAnalyticsPlatform = () => {
     },
     {
       industry: 'Specialty Clinics',description: 'Streamline specialty care workflows and improve treatment outcomes'
-    };
+    },
     {
       industry: 'Health Insurance',description: 'Risk assessment, fraud detection, and population health management'
     }
@@ -367,7 +367,7 @@ const AIHealthcareAnalyticsPlatform = () => {
     {
       plan: 'Starter',price: '$2,800/month',
       features: [
-        'Up to 50 providersBasic AI analytics';
+        'Up to 50 providersBasic AI analytics',
         'Patient monitoringClinical decision support',
         'Basic reportingEmail support'
       ]
@@ -375,7 +375,7 @@ const AIHealthcareAnalyticsPlatform = () => {
     {
       plan: 'Professional',price: '$5,500/month',
       features: [
-        'Up to 200 providersAdvanced AI analytics';
+        'Up to 200 providersAdvanced AI analytics',
         'Population health insightsCustom workflows',
         'Advanced reportingPriority support',
         'API access'
@@ -384,7 +384,7 @@ const AIHealthcareAnalyticsPlatform = () => {
     {
       plan: 'Enterprise',price: '$12,000/month',
       features: [
-        'Unlimited providersFull AI capabilities';
+        'Unlimited providersFull AI capabilities',
         'Custom integrationsWhite-label options',
         'Dedicated health manager24/7 phone support',
         'Custom training'
@@ -410,7 +410,7 @@ const AIHealthcareAnalyticsPlatform = () => {
     };
     {
       metric: '30%',label: 'Cost Reduction'
-    };
+    },
     {
       metric: '50%',label: 'Decision Enhancement'
     }
@@ -451,7 +451,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >
@@ -459,7 +459,7 @@ const AIHealthcareAnalyticsPlatform = () => {
                 Watch Demo
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
@@ -478,7 +478,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             {keyMetrics.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
@@ -495,7 +495,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -512,7 +512,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"
@@ -532,7 +532,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -549,7 +549,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
@@ -566,7 +566,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -583,7 +583,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20"
@@ -600,7 +600,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -617,7 +617,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             {complianceStandards.map((standard, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-pink-400/40 transition-all duration-300"
@@ -633,7 +633,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -650,7 +650,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
@@ -689,7 +689,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -706,7 +706,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300"
@@ -722,7 +722,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -734,7 +734,7 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >
@@ -742,7 +742,7 @@ const AIHealthcareAnalyticsPlatform = () => {
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
@@ -758,7 +758,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

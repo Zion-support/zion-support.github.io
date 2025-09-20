@@ -90,44 +90,44 @@ import { revolutionary2025SpecializedITAIServices } from "../data/revolutionary-
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices],
 const Revolutionary2025ServicesShowcase: React.FC = () => {
-  const [services, setServices] = useState<any[]>(ALL_SERVICES),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
-  const [selectedROI, setSelectedROI] = useState('all'),
-  const [sortBy, setSortBy] = useState('title'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'comparison'>('grid'),
-  const [selectedServices, setSelectedServices] = useState<string[]>([]),
+  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [selectedROI, setSelectedROI] = useState('all');
+  const [sortBy, setSortBy] = useState('title');
+  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'comparison'>('grid');
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   // Filter services based on search and filters
   useEffect(() => {
-    let filtered = ALL_SERVICES,
+    let filtered = ALL_SERVICES;
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       ),
-    }
+    };
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory);
+    };
     if (selectedPriceRange !== 'all') {
-      const [min, max] = selectedPriceRange.split('-').map(Number),
+      const [min, max] = selectedPriceRange.split('-').map(Number);
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, '')),
         if (max) {
-          return price >= min && price <= max,
-        }
+          return price >= min && price <= max;
+        };
         return price >= min,
-      }),
-    }
+      });
+    };
     if (selectedROI !== 'all') {
-      const [min, max] = selectedROI.split('-').map(Number),
+      const [min, max] = selectedROI.split('-').map(Number);
       filtered = filtered.filter(service => {
-        const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0'),
+        const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');
         if (max) {
-          return roi >= min && roi <= max,
-        }
+          return roi >= min && roi <= max;
+        };
         return roi >= min,
       }),
     }
@@ -139,13 +139,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         case 'rating':
           return b.rating - a.rating,
         case 'customers':
-          return b.customers - a.customers,
+          return b.customers - a.customers;
         default: return a.name.localeCompare(b.name)
       }
     });
-    setServices(filtered),
+    setServices(filtered);
   }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]),
-  const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category))),
+  const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
   const handleServiceSelect = (serviceId: string) => {
     setSelectedServices(prev =>
       prev.includes(serviceId)
@@ -153,7 +153,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         : [...prev, serviceId]
     ),
   },
-  const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id)),
+  const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -172,7 +172,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               Cutting-edge AI, Quantum Computing, and Autonomous Technology Solutions
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Discover our revolutionary micro SAAS services that combine the power of artificial intelligence,
+              Discover our revolutionary micro SAAS services that combine the power of artificial intelligence;
               quantum computing, and autonomous operations to transform your business.
             </p>
           </motion.div>
@@ -279,7 +279,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -294,7 +294,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -313,7 +313,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-6 rounded-xl border border-purple-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -334,7 +334,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -365,7 +365,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -380,7 +380,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-violet-600/20 to-purple-700/20 p-6 rounded-xl border border-violet-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -407,7 +407,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -434,7 +434,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -473,7 +473,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -567,7 +567,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <motion.div
                   key={service.id}
                   className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -618,7 +618,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <motion.div
                   key={service.id}
                   className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -773,7 +773,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -805,7 +805,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-8 rounded-xl border-2 border-blue-500/50 transform scale-105"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -844,7 +844,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
@@ -918,7 +918,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -931,7 +931,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -944,7 +944,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -957,7 +957,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
@@ -972,7 +972,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-indigo-600/20 to-purple-700/20 p-6 rounded-xl border border-indigo-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -995,7 +995,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-pink-700/20 p-6 rounded-xl border border-purple-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -1018,7 +1018,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-pink-600/20 to-red-700/20 p-6 rounded-xl border border-pink-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -1059,7 +1059,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -1069,7 +1069,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -1079,7 +1079,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -1089,7 +1089,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
@@ -1101,7 +1101,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-emerald-600/20 to-teal-700/20 p-6 rounded-xl border border-emerald-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -1112,7 +1112,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-teal-600/20 to-cyan-700/20 p-6 rounded-xl border border-teal-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -1123,7 +1123,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-cyan-600/20 to-blue-700/20 p-6 rounded-xl border border-cyan-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -1147,7 +1147,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -1157,7 +1157,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -1167,7 +1167,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -1177,7 +1177,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
@@ -1189,7 +1189,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             <motion.div
               className="bg-gradient-to-r from-amber-600/20 to-orange-700/20 p-6 rounded-xl border border-amber-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -1200,7 +1200,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-orange-600/20 to-red-700/20 p-6 rounded-xl border border-orange-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -1211,7 +1211,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -1233,7 +1233,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1280,7 +1280,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             <div className="space-y-16">
               <motion.div
                 className="relative flex items-center"
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -50 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -1301,7 +1301,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               </motion.div>
               <motion.div
                 className="relative flex items-center"
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: 50 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
@@ -1322,7 +1322,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               </motion.div>
               <motion.div
                 className="relative flex items-center"
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -50 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
@@ -1343,7 +1343,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               </motion.div>
               <motion.div
                 className="relative flex items-center"
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: 50 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
@@ -1378,7 +1378,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -1391,7 +1391,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -1404,7 +1404,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -1417,7 +1417,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
@@ -1458,7 +1458,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -1468,7 +1468,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -1478,7 +1478,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -1488,7 +1488,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
@@ -1511,7 +1511,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -1531,7 +1531,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-cyan-600/20 to-blue-700/20 p-8 rounded-xl border border-cyan-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -1551,7 +1551,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
@@ -1624,10 +1624,10 @@ const Grid = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
   </svg>
-),
+);
 const List = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
   </svg>
-),
+);
 export default Revolutionary2025ServicesShowcase;

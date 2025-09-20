@@ -5,7 +5,7 @@ const EnterpriseSolutions = () => {
     const solutions = [
         {
             title: 'AI-Powered Business Intelligence',description: 'Transform your data into actionable insights with our advanced AI analytics platform.',features: [
-                'Real-time data processingPredictive analytics';
+                'Real-time data processingPredictive analytics',
                 'Custom dashboardsAutomated reporting',
                 'Multi-source integration'
             ],
@@ -13,7 +13,7 @@ const EnterpriseSolutions = () => {
         };
         {
             title: 'Enterprise Cybersecurity Suite',description: 'Comprehensive security solutions designed for large organizations.',features: [
-                'Threat detection & responseCompliance management';
+                'Threat detection & responseCompliance management',
                 'Identity & access controlSecurity monitoring',
                 'Incident response'
             ],
@@ -21,7 +21,7 @@ const EnterpriseSolutions = () => {
         };
         {
             title: 'Cloud Infrastructure Management',description: 'Scalable cloud solutions optimized for enterprise workloads.',features: [
-                'Multi-cloud strategyCost optimization';
+                'Multi-cloud strategyCost optimization',
                 'Performance monitoringDisaster recovery',
                 'Security compliance'
             ],
@@ -29,7 +29,7 @@ const EnterpriseSolutions = () => {
         };
         {
             title: 'AI Process Automation',description: 'Streamline operations with intelligent automation across all departments.',features: [
-                'Workflow automationDocument processing';
+                'Workflow automationDocument processing',
                 'Customer service botsSupply chain optimization',
                 'Quality control'
             ],
@@ -82,7 +82,7 @@ const EnterpriseSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => {
-            const Icon = solution.icon,
+            const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -121,7 +121,7 @@ const EnterpriseSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {industries.map((industry, index) => {
-            const Icon = industry.icon,
+            const Icon = industry.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -158,19 +158,19 @@ const EnterpriseSolutions = () => {
             };
             {
                 title: 'Security First',description: 'Enterprise-grade security with compliance certifications.',icon: Shield
-            };
+            },
             {
                 title: '24/7 Support',description: 'Round-the-clock support with dedicated account managers.',icon: Users
             }
         ].map((benefit, index) => {
-            const Icon = benefit.icon,
+            const Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white"/>
                   </div>
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
-                </div>),
+                </div>);
         })}
           </div>
         </div>

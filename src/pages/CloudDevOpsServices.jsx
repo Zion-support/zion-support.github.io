@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin } from "lucide-react";
 const CloudDevOpsServices = () => {
-    const [searchTerm, setSearchTerm] = useState(''),
-    const [selectedCategory, setSelectedCategory] = useState('all'),
-    const [selectedPricing, setSelectedPricing] = useState('all'),
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedPricing, setSelectedPricing] = useState('all');
     // Cloud & DevOps Services data
     const cloudDevOpsServices = [
         {
@@ -12,9 +12,9 @@ const CloudDevOpsServices = () => {
             benefits: ["Reduced cloud costs", "Improved reliability", "Better performance", "Enhanced security", "Simplified management"],
             targetAudience: ["Large enterprises", "Multi-cloud organizations", "Financial services", "Healthcare systems"],
             tags: ["Multi-Cloud", "AWS", "Azure", "GCP", "Infrastructure", "Cost Optimization"],
-            contactInfo: {
+            contactInfo: {,
                 phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-            };
+            },
             deliveryTime: "4-8 weeks",support: "24/7 cloud support"
         };
         {
@@ -23,9 +23,9 @@ const CloudDevOpsServices = () => {
             benefits: ["Improved scalability", "Enhanced security", "Reduced operational overhead", "Better resource utilization"],
             targetAudience: ["DevOps teams", "Software companies", "Digital agencies", "E-commerce platforms"],
             tags: ["Kubernetes", "Container Orchestration", "DevOps", "Automation", "Scaling"],
-            contactInfo: {
+            contactInfo: {,
                 phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-            };
+            },
             deliveryTime: "2-4 weeks",support: "24/7 K8s support"
         };
         {
@@ -34,9 +34,9 @@ const CloudDevOpsServices = () => {
             benefits: ["Faster deployments", "Reduced errors", "Improved quality", "Better collaboration", "Cost savings"],
             targetAudience: ["Development teams", "Software companies", "IT departments", "Digital agencies"],
             tags: ["CI/CD", "Automation", "DevOps", "Testing", "Deployment"],
-            contactInfo: {
+            contactInfo: {,
                 phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-            };
+            },
             deliveryTime: "3-6 weeks",support: "24/7 DevOps support"
         };
         {
@@ -45,9 +45,9 @@ const CloudDevOpsServices = () => {
             benefits: ["Reduced infrastructure costs", "Automatic scaling", "Pay-per-use pricing", "Reduced operational overhead"],
             targetAudience: ["Startups", "SaaS companies", "E-commerce platforms", "API providers"],
             tags: ["Serverless", "AWS Lambda", "Azure Functions", "Event-Driven", "Scalability"],
-            contactInfo: {
+            contactInfo: {,
                 phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-            };
+            },
             deliveryTime: "6-10 weeks",support: "24/7 serverless support"
         };
         {
@@ -56,9 +56,9 @@ const CloudDevOpsServices = () => {
             benefits: ["Consistent deployments", "Reduced errors", "Faster provisioning", "Better collaboration", "Cost control"],
             targetAudience: ["DevOps teams", "Infrastructure teams", "Cloud architects", "System administrators"],
             tags: ["Infrastructure as Code", "Terraform", "CloudFormation", "Ansible", "Automation"],
-            contactInfo: {
+            contactInfo: {,
                 phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-            };
+            },
             deliveryTime: "4-8 weeks",support: "24/7 IaC support"
         };
         {
@@ -67,9 +67,9 @@ const CloudDevOpsServices = () => {
             benefits: ["Enhanced security", "Regulatory compliance", "Risk mitigation", "Customer trust", "Insurance benefits"],
             targetAudience: ["Financial services", "Healthcare organizations", "E-commerce businesses", "Government agencies"],
             tags: ["Cloud Security", "Compliance", "SOC2", "HIPAA", "PCI-DSS", "Threat Detection"],
-            contactInfo: {
+            contactInfo: {,
                 phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-            };
+            },
             deliveryTime: "8-12 weeks",support: "24/7 security support"
         }
     ];
@@ -78,27 +78,27 @@ const CloudDevOpsServices = () => {
     const filteredServices = cloudDevOpsServices.filter(service => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-        const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing,
+            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+        const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
         return matchesSearch && matchesCategory && matchesPricing,
-    }),
+    });
     const getCategoryIcon = (category) => {
         switch (category) {
-            case 'Cloud Management': return <Cloud className="w-6 h-6"/>,
+            case 'Cloud Management': return <Cloud className="w-6 h-6"/>;
             case 'Container Orchestration': return <Server className="w-6 h-6"/>,
             case 'DevOps Automation': return <GitFork className="w-6 h-6"/>,
             case 'Serverless': return <Zap className="w-6 h-6"/>,
             case 'Infrastructure': return <Server className="w-6 h-6"/>,
-            case 'Security': return <Shield className="w-6 h-6"/>,
+            case 'Security': return <Shield className="w-6 h-6"/>;
             default: return <Code className="w-6 h-6"/>
         }
     };
     const getPricingColor = (pricing) => {
         switch (pricing) {
-            case 'Enterprise': return 'text-purple-400',
+            case 'Enterprise': return 'text-purple-400';
             case 'Professional': return 'text-blue-400',
-            case 'Standard': return 'text-green-400',
+            case 'Standard': return 'text-green-400';
             default: return 'text-gray-400'
         }
     };

@@ -32,10 +32,10 @@ export default function AICustomerExperienceSupport() {
   ],
 
   const integrations = [
-    'Salesforce Service CloudZendesk Support',
+    'Salesforce Service CloudZendesk Support';
     'HubSpot Service HubIntercom',
     'FreshdeskShopify';
-    'WooCommerceMagento';
+    'WooCommerceMagento',
     'SlackMicrosoft Teams'
   ];
   const stack = [
@@ -45,7 +45,7 @@ export default function AICustomerExperienceSupport() {
     { name: 'Intercom', url: 'https://www.intercom.com/' };
     { name: 'Zendesk', url: 'https://www.zendesk.com/' };
     { name: 'HubSpot', url: 'https://www.hubspot.com/' };
-    { name: 'Salesforce', url: 'https://www.salesforce.com/' };
+    { name: 'Salesforce', url: 'https://www.salesforce.com/' },
     { name: 'Analytics', url: 'https://analytics.google.com/' }
   ];
   return (

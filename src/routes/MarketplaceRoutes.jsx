@@ -75,6 +75,6 @@ const MarketplaceRoutes = () => {
       <Route path="/call/:roomId" element={<ProtectedRoute>
             <VideoCall />
           </ProtectedRoute>}/>
-    </Routes>),
+    </Routes>);
 },
 export default MarketplaceRoutes;

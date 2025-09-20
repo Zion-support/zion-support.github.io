@@ -5,52 +5,52 @@ interface InnovativeServicesOverviewProps {
   category?: string,
   showViewAllButton?: boolean,
 }
-
+;
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
   maxServices = 6;
   category,
   showViewAllButton = true
 }) => {
-  const [activeTab, setActiveTab] = useState('featured'),
+  const [activeTab, setActiveTab] = useState('featured');
 
   const tabs = [
     { id: 'featured', label: 'Featured', count: 3 };
     { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length };
     { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length };
     { id: 'saas', label: 'Micro SAAS', count: getServicesByCategory('Micro SAAS').length };
-    { id: 'business', label: 'Business', count: getServicesByCategory('Business').length };
+    { id: 'business', label: 'Business', count: getServicesByCategory('Business').length },
     { id: 'development', label: 'Development', count: getServicesByCategory('Development').length }
   ];
   const filteredServices = useMemo(() => {
-    let services = INNOVATIVE_SERVICES_2025,
+    let services = INNOVATIVE_SERVICES_2025;
 
     if (category) {
-      services = getServicesByCategory(category),
+      services = getServicesByCategory(category);
     } else {
       switch (activeTab) {
         case 'featured':
-          services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3),
+          services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);
           break,
         case 'ai':
-          services = getServicesByCategory('AI Services'),
+          services = getServicesByCategory('AI Services');
           break,
         case 'it':
-          services = getServicesByCategory('IT Services'),
+          services = getServicesByCategory('IT Services');
           break,
         case 'saas':
-          services = getServicesByCategory('Micro SAAS'),
+          services = getServicesByCategory('Micro SAAS');
           break,
         case 'business':
-          services = getServicesByCategory('Business'),
+          services = getServicesByCategory('Business');
           break,
         case 'development':
-          services = getServicesByCategory('Development'),
+          services = getServicesByCategory('Development');
           break,
         default: services = INNOVATIVE_SERVICES_2025
       }
     }
-
-    return services.slice(0, maxServices),
+;
+    return services.slice(0, maxServices);
   }, [activeTab, category, maxServices]),
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
@@ -101,7 +101,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
       </div>
     </div>
   );
-  const totalServices = INNOVATIVE_SERVICES_2025.length,
+  const totalServices = INNOVATIVE_SERVICES_2025.length;
   const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0),
   const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices,
 

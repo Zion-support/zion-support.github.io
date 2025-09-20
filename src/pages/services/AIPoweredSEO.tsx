@@ -39,7 +39,7 @@ const AIPoweredSEO = () => {
     };
     {
       icon: BarChart3,title: "Performance Tracking",description: "Real-time SEO performance monitoring and analytics dashboard."
-    };
+    },
     {
       icon: Globe,title: "Local SEO",description: "AI-driven local search optimization and Google My Business management."
     }
@@ -70,7 +70,7 @@ const AIPoweredSEO = () => {
     };
     {
       stage: "Optimization",description: "Continuous improvement based on AI insights and data",icon: TrendingUp
-    };
+    },
     {
       stage: "Reporting",description: "Comprehensive reporting and ROI measurement",icon: Eye
     }
@@ -129,14 +129,14 @@ const AIPoweredSEO = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
               >
                 Start SEO Audit
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300"
               >
@@ -151,7 +151,7 @@ const AIPoweredSEO = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -169,7 +169,7 @@ const AIPoweredSEO = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-purple-400/30 transition-all duration-300 hover:transform hover:scale-105"
@@ -189,7 +189,7 @@ const AIPoweredSEO = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -210,7 +210,7 @@ const AIPoweredSEO = () => {
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -20 }};
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
@@ -255,7 +255,7 @@ const AIPoweredSEO = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -273,7 +273,7 @@ const AIPoweredSEO = () => {
             {seoProcess.map((stage, index) => (
               <motion.div
                 key={stage.stage}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-purple-400/30 transition-all duration-300"
@@ -295,7 +295,7 @@ const AIPoweredSEO = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -313,7 +313,7 @@ const AIPoweredSEO = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-purple-400/30 transition-all duration-300"
@@ -335,7 +335,7 @@ const AIPoweredSEO = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10 p-12 rounded-2xl border border-purple-400/20 text-center"
@@ -349,14 +349,14 @@ const AIPoweredSEO = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover: bg-purple-400/10 transition-all duration-300"
               >

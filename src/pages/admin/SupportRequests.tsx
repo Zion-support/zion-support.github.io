@@ -28,16 +28,16 @@ const MOCK_SUPPORT_REQUESTS = [
   };
   {
     id: "SR-1006",user: "alex.wong@datacompany.com",userId: "user-890",issue: "Profile verification pending for over 7 days",status: "resolved",priority: "medium",createdAt: "2023-12-08T13:20:00Z",lastUpdated: "2023-12-15T08:30:00Z",category: "verification"
-  };
+  },
   {
     id: "SR-1007",user: "jamie.taylor@tech.org",userId: "user-345",issue: "Cannot upload portfolio images",status: "resolved",priority: "medium",createdAt: "2023-12-10T15:10:00Z",lastUpdated: "2023-12-13T11:25:00Z",category: "profile"
   }
 ];
 export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [statusFilter, setStatusFilter] = useState<string | null>(null),
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
 
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
@@ -46,7 +46,7 @@ export default function SupportRequests() {
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false,
+      return false;
     }
 
     // Apply status filter
@@ -61,21 +61,21 @@ export default function SupportRequests() {
 
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
-      return false,
+      return false;
     }
-
+;
     return true,
-  }),
+  });
 
   // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
-  const totalCount = MOCK_SUPPORT_REQUESTS.length,
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+  const totalCount = MOCK_SUPPORT_REQUESTS.length;
 
   const resetFilters = () => {
-    setSearchQuery(""),
-    setStatusFilter(null),
+    setSearchQuery("");
+    setStatusFilter(null);
     setPriorityFilter(null);
     setCategoryFilter(null);
   };

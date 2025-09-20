@@ -7,15 +7,15 @@ import { specializedIndustryServices } from "../../data/specialized-industry-ser
 import { allServices } from "../../data/services";
 import { Link } from "react-router-dom";
 export default function ServicesOverview() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedIndustry, setSelectedIndustry] = useState('all'),
-  const [sortBy, setSortBy] = useState('name'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedIndustry, setSelectedIndustry] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
 
   // Combine all services
   const allAvailableServices = [
     ...enhancedServices2025;
-    ...specializedIndustryServices;
+    ...specializedIndustryServices,
     ...allServices
   ];
   // Categories for filtering
@@ -30,7 +30,7 @@ export default function ServicesOverview() {
     { id: 'Healthcare', name: 'Healthcare', icon: FileText };
     { id: 'Education', name: 'Education', icon: GraduationCap };
     { id: 'Marketing', name: 'Marketing', icon: ShoppingCart };
-    { id: 'Development', name: 'Development', icon: Building };
+    { id: 'Development', name: 'Development', icon: Building },
     { id: 'SAAS', name: 'SAAS Solutions', icon: Cloud }
   ];
   // Industries for filtering
@@ -45,7 +45,7 @@ export default function ServicesOverview() {
     { id: 'Transportation', name: 'Transportation', icon: Car };
     { id: 'Retail', name: 'Retail', icon: ShoppingCart };
     { id: 'Hospitality', name: 'Hospitality', icon: Hotel };
-    { id: 'Education', name: 'Education', icon: GraduationCap };
+    { id: 'Education', name: 'Education', icon: GraduationCap },
     { id: 'Finance', name: 'Finance', icon: DollarSign }
   ];
   // Filter and sort services
@@ -53,20 +53,20 @@ export default function ServicesOverview() {
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline?.toLowerCase().includes(searchTerm.toLowerCase()),
+                           service.tagline?.toLowerCase().includes(searchTerm.toLowerCase());
       
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       
       const matchesIndustry = selectedIndustry === 'all' || 
                              (service.industry && service.industry === selectedIndustry) ||
-                             (!service.industry && selectedIndustry === 'all'),
+                             (!service.industry && selectedIndustry === 'all');
       
-      return matchesSearch && matchesCategory && matchesIndustry,
+      return matchesSearch && matchesCategory && matchesIndustry;
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name),
+          return a.name.localeCompare(b.name);
         case 'price-low':
           return (a.pricing?.starter || 0) - (b.pricing?.starter || 0),
         case 'price-high':
@@ -348,7 +348,7 @@ export default function ServicesOverview() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-4xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -358,7 +358,7 @@ export default function ServicesOverview() {
           
           <motion.p 
             className="text-xl text-gray-300 mb-8"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
@@ -368,7 +368,7 @@ export default function ServicesOverview() {
 
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
@@ -401,7 +401,7 @@ export default function ServicesOverview() {
 
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}

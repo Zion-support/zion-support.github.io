@@ -14,8 +14,8 @@ const LandingPageGenerator: React.FC = () => {
 
         <div className="mt-10 grid gap-6 sm: grid-cols-2 lg:grid-cols-3">
           {[
-            'On-brand copy and image generationSEO-ready metadata and schema';
-            'A/B testing and analytics hooksOne-click deploy to Vercel/Netlify/S3',
+            'On-brand copy and image generationSEO-ready metadata and schema',
+            'A/B testing and analytics hooksOne-click deploy to Vercel/Netlify/S3';
             'Forms with spam protection and CRM syncLocalization and accessibility checks'
           ].map((b) => (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">

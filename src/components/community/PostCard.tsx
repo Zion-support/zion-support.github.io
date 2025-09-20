@@ -1,7 +1,7 @@
 import React from "react";
 interface PostCardProps {
-  post: {
-    id: string,title: string,content: string,authorName: string,createdAt: string,likes: number,replies: number,views: number,author: {
+  post: {,
+    id: string,title: string,content: string,authorName: string,createdAt: string,likes: number,replies: number,views: number,author: {,
       name: string,avatar: string
     };
   },

@@ -33,7 +33,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
     };
     {
       icon: Target,title: 'Churn Prediction & Prevention',description: 'Machine learning algorithms to identify at-risk customers and recommend retention strategies.',price: '$249/month'
-    };
+    },
     {
       icon: BarChart3,title: 'ROI Optimization Insights',description: 'Data-driven recommendations to maximize customer lifetime value and marketing effectiveness.',price: '$179/month'
     }
@@ -57,7 +57,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
     };
     {
       name: 'Enterprise',price: '$799',period: '/month',description: 'For large organizations requiring enterprise-grade customer analytics',features: [
-        'Unlimited customer interactionsCustom AI models';
+        'Unlimited customer interactionsCustom AI models',
         'White-label solution24/7 dedicated support',
         'Advanced security featuresSLA guarantees'
       ],
@@ -114,7 +114,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button 
                 className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-emerald-500/25 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 <Play className="w-5 h-5" />
@@ -122,7 +122,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               </motion.button>
               <motion.button 
                 className="px-8 py-4 border border-emerald-500/30 text-emerald-300 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 <Settings className="w-5 h-5" />
@@ -135,7 +135,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
         {/* Features Grid */}
         <motion.section 
           className="py-20 px-6"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -155,10 +155,10 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                 <motion.div
                   key={feature.title}
                   className="group relative p-6 rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm hover:border-emerald-500/40 transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true }};
                   whileHover={{ y: -5, scale: 1.02 }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-teal-500/5 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -189,7 +189,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
         {/* Analytics Capabilities */}
         <motion.section 
           className="py-20 px-6 bg-gradient-to-br from-emerald-900/20 via-slate-900/50 to-teal-900/20"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -209,7 +209,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                 <motion.div
                   key={capability}
                   className="flex items-start gap-4 p-4 rounded-xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10"
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   viewport={{ once: true }}
@@ -227,7 +227,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
         {/* Pricing Section */}
         <motion.section 
           className="py-20 px-6"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -251,10 +251,10 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                       ? 'border-emerald-500 bg-gradient-to-br from-emerald-500/20 to-teal-500/20' 
                       : 'border-emerald-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
                   }`}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true }};
                   whileHover={{ y: -5, scale: 1.02 }}
                 >
                   {plan.popular && (
@@ -288,8 +288,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                       plan.popular
                         ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700'
                         : 'border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10'
-                    }`}
-                    whileHover={{ scale: 1.02 }}
+                    }`};
+                    whileHover={{ scale: 1.02 }};
                     whileTap={{ scale: 0.98 }}
                   >
                     Get Started
@@ -303,7 +303,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
         {/* Benefits Section */}
         <motion.section 
           className="py-20 px-6 bg-gradient-to-br from-emerald-900/20 via-slate-900/50 to-teal-900/20"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -323,7 +323,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                 <motion.div
                   key={benefit}
                   className="flex items-start gap-4 p-6 rounded-xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10"
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   viewport={{ once: true }}
@@ -341,7 +341,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
         {/* CTA Section */}
         <motion.section 
           className="py-20 px-6 text-center"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -356,7 +356,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button 
                 className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-emerald-500/25 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 Start Free Trial
@@ -364,7 +364,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               </motion.button>
               <motion.button 
                 className="px-8 py-4 border border-emerald-500/30 text-emerald-300 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 <Users className="w-5 h-5" />

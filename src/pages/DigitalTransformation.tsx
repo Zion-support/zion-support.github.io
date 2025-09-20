@@ -27,7 +27,7 @@ import {
   Heart
 } from "lucide-react";
 const DigitalTransformation = () => {
-  const [selectedPhase, setSelectedPhase] = useState(0),
+  const [selectedPhase, setSelectedPhase] = useState(0);
 
   const transformationServices = [
     {
@@ -59,7 +59,7 @@ const DigitalTransformation = () => {
     {
       phase: "01",title: "Discovery & Assessment",description: "Evaluate current state, identify opportunities, and assess digital maturity",
       duration: "2-4 weeks",activities: [
-        "Current state analysis";
+        "Current state analysis",
         "Digital maturity assessment",
         "Stakeholder interviews",
         "Technology audit",
@@ -68,7 +68,7 @@ const DigitalTransformation = () => {
     },
     {
       phase: "02",title: "Strategy Development",description: "Create comprehensive digital transformation roadmap and business case",duration: "4-6 weeks",activities: [
-        "Digital strategy formulation";
+        "Digital strategy formulation",
         "Technology roadmap creation",
         "Change management planning",
         "ROI analysis and business case",
@@ -77,7 +77,7 @@ const DigitalTransformation = () => {
     },
     {
       phase: "03",title: "Pilot & Validation",description: "Implement proof-of-concept and validate approach with stakeholders",duration: "6-8 weeks",activities: [
-        "Proof-of-concept development";
+        "Proof-of-concept development",
         "Pilot implementation",
         "Stakeholder validation",
         "Performance measurement",
@@ -86,7 +86,7 @@ const DigitalTransformation = () => {
     },
     {
       phase: "04",title: "Full Implementation",description: "Execute transformation plan with phased rollout and continuous optimization",duration: "6-18 months",activities: [
-        "Phased rollout execution";
+        "Phased rollout execution",
         "Change management implementation",
         "Performance monitoring",
         "Continuous optimization",
@@ -103,7 +103,7 @@ const DigitalTransformation = () => {
     {
       content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",name: "Lisa Chang",role: "COO, TechFlow Solutions",
       rating: 5
-    };
+    },
     {
       content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",
       name: "Marcus Johnson",role: "CTO, DigitalFirst Inc",
@@ -113,7 +113,7 @@ const DigitalTransformation = () => {
   const stats = [
     { number: "85%", label: "Average efficiency improvement" };
     { number: "3.2x", label: "Faster time to market" };
-    { number: "40%", label: "Cost reduction achieved" };
+    { number: "40%", label: "Cost reduction achieved" },
     { number: "92%", label: "Customer satisfaction increase" }
   ];
   return (

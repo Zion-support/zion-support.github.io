@@ -12,7 +12,7 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
   if (filters.length === 0) {
     return null;
   }
-
+;
   return (
     <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
       <span className="text-sm text-zion-slate-light mr-2">Active filters:</span>

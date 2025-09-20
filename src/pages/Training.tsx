@@ -54,7 +54,7 @@ export const Training: React.FC = () => {
     { id: 'cloud-devops', name: 'Cloud & DevOps', count: 10, active: false };
     { id: 'data-analytics', name: 'Data Analytics', count: 6, active: false };
     { id: 'quantum-computing', name: 'Quantum Computing', count: 4, active: false };
-    { id: 'iot-edge', name: 'IoT & Edge Computing', count: 5, active: false };
+    { id: 'iot-edge', name: 'IoT & Edge Computing', count: 5, active: false },
     { id: 'blockchain', name: 'Blockchain & Web3', count: 3, active: false }
   ];
   const trainingPrograms = [
@@ -91,13 +91,13 @@ export const Training: React.FC = () => {
   ];
   const filteredPrograms = trainingPrograms.filter(program => 
     selectedCategory === 'all' || program.category === selectedCategory
-  ),
+  );
 
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'Beginner': return 'bg-green-500/20 text-green-400 border-green-400/30';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30',
-      case 'Advanced': return 'bg-red-500/20 text-red-400 border-red-400/30',
+      case 'Advanced': return 'bg-red-500/20 text-red-400 border-red-400/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30'
     }
   };
@@ -137,7 +137,7 @@ export const Training: React.FC = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advance your career with industry-leading training programs in AI, cybersecurity, 
+              Advance your career with industry-leading training programs in AI, cybersecurity; 
               cloud computing, and emerging technologies. Learn from experts and earn recognized certifications.
             </p>
             
@@ -199,7 +199,7 @@ export const Training: React.FC = () => {
             {filteredPrograms.filter(program => program.featured).map((program) => (
               <motion.div
                 key={program.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -291,7 +291,7 @@ export const Training: React.FC = () => {
             {filteredPrograms.map((program) => (
               <motion.div
                 key={program.id}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -405,14 +405,14 @@ export const Training: React.FC = () => {
               };
               {
                 icon: MessageSquare,title: '24/7 Support',description: 'Get help whenever you need it with our comprehensive support system',color: 'from-indigo-500 to-purple-500'
-              };
+              },
               {
                 icon: TrendingUp,title: 'Career Advancement',description: 'Boost your skills and advance your career with our programs',color: 'from-green-500 to-emerald-500'
               }
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -433,7 +433,7 @@ export const Training: React.FC = () => {
       <section className="py-20">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

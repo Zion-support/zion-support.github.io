@@ -20,7 +20,7 @@ export default function AIContentOptimizer() {
     };
     {
       title: "Automated A/B Testing",description: "Test different content variations automatically to find what resonates best with your audience",icon: Target,color: "from-indigo-500 to-blue-500"
-    };
+    },
     {
       title: "Content Repurposing Engine",description: "Transform one piece of content into multiple formats for different channels and audiences",icon: PenTool,color: "from-teal-500 to-cyan-500"
     }
@@ -28,7 +28,7 @@ export default function AIContentOptimizer() {
   const pricingPlans = [
     {
       name: "Creator",price: "$19",period: "/month",description: "Perfect for individual content creators",features: [
-        "Up to 10 content pieces/month";
+        "Up to 10 content pieces/month",
         "Basic SEO optimization",
         "Content performance tracking",
         "Email support",
@@ -38,7 +38,7 @@ export default function AIContentOptimizer() {
     };
     {
       name: "Professional",price: "$49",period: "/month",description: "Ideal for growing content teams",features: [
-        "Up to 100 content pieces/month";
+        "Up to 100 content pieces/month",
         "Advanced AI optimization",
         "Multi-platform analytics",
         "Priority support",
@@ -49,7 +49,7 @@ export default function AIContentOptimizer() {
     };
     {
       name: "Enterprise",price: "$149",period: "/month",description: "For large content operations",features: [
-        "Unlimited content pieces";
+        "Unlimited content pieces",
         "Custom AI models",
         "White-label solution",
         "Dedicated support",
@@ -65,7 +65,7 @@ export default function AIContentOptimizer() {
     };
     {
       title: "50% Higher Engagement Rates",description: "Optimized content resonates better with target audiences",icon: Users,metric: "50%"
-    };
+    },
     {
       title: "80% Time Savings",description: "Automated optimization reduces manual content work",icon: Zap,metric: "80%"
     }
@@ -80,7 +80,7 @@ export default function AIContentOptimizer() {
     {
       title: "Email Marketing",description: "Optimize email subject lines and content for better open rates",icon: PenTool, // Changed from Mail to PenTool for consistency with other icons
       color: "from-orange-500 to-red-500"
-    };
+    },
     {
       title: "Landing Pages",description: "Create high-converting landing pages with AI optimization",icon: Target,color: "from-green-500 to-emerald-500"
     }
@@ -128,7 +128,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -146,10 +146,10 @@ export default function AIContentOptimizer() {
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -168,7 +168,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -186,7 +186,7 @@ export default function AIContentOptimizer() {
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -207,7 +207,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -225,7 +225,7 @@ export default function AIContentOptimizer() {
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -247,7 +247,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -267,10 +267,10 @@ export default function AIContentOptimizer() {
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'
                 }`}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 {plan.popular && (
@@ -316,7 +316,7 @@ export default function AIContentOptimizer() {
       <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}

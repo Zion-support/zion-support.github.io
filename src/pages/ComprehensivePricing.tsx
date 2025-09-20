@@ -12,7 +12,7 @@ const contactInfo = {
 const pricingTiers = [
   {
     name: 'Starter',price: '$999',period: '/month',description: 'Perfect for small businesses and startups',features: [
-      'Basic AI automationStandard support';
+      'Basic AI automationStandard support',
       'Core integrationsBasic analytics',
       'Email support'
     ],
@@ -21,7 +21,7 @@ const pricingTiers = [
   {
     name: 'Professional',price: '$2,999',
     period: '/month',description: 'Ideal for growing businesses',features: [
-      'Advanced AI featuresPriority support';
+      'Advanced AI featuresPriority support',
       'Custom integrationsAdvanced analytics',
       'Phone & email supportTraining sessions'
     ],
@@ -30,7 +30,7 @@ const pricingTiers = [
   {
     name: 'Enterprise',price: '$7,999',
     period: '/month',description: 'For large organizations',features: [
-      'Full AI suite24/7 dedicated support';
+      'Full AI suite24/7 dedicated support',
       'Custom developmentEnterprise analytics',
       'Dedicated account managerCustom training programs',
       'SLA guarantees'
@@ -39,20 +39,20 @@ const pricingTiers = [
   }
 ];
 export default function ComprehensivePricing() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
 
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027],
 
   // Get unique categories
-  const categories = Array.from(new Set(allServices.map(service => service.category))),
+  const categories = Array.from(new Set(allServices.map(service => service.category)));
 
   // Filter services based on selection
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 
-    let matchesPrice = true,
+    let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
       const price = parseInt(service.price.replace(/[^0-9]/g, '')),
       switch (selectedPriceRange) {
@@ -70,13 +70,13 @@ export default function ComprehensivePricing() {
           break,
       }
     }
-
+;
     return matchesCategory && matchesPrice,
   }),
 
   const getPriceRangeLabel = (range: string) => {
     switch (range) {
-      case 'under-1000': return 'Under $1,000',
+      case 'under-1000': return 'Under $1,000';
       case '1000-3000': return '$1,000 - $3,000';
       case '3000-5000': return '$3,000 - $5,000';
       case 'over-5000': return 'Over $5,000';
@@ -286,7 +286,7 @@ export default function ComprehensivePricing() {
               <Button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSelectedPriceRange('all'),
+                  setSelectedPriceRange('all');
                 }}
                 className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
               >

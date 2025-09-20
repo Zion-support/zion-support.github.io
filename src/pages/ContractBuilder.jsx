@@ -14,6 +14,6 @@ function ContractBuilderPage() {
         
         
       </>
-    </ProtectedRoute>),
+    </ProtectedRoute>);
 }
 export default ContractBuilderPage;

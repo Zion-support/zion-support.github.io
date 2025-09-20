@@ -21,7 +21,7 @@ import {
   ExternalLink
 } from "lucide-react";
 const AILegalDocumentAnalyzer: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview'),
+  const [activeTab, setActiveTab] = useState('overview');
 
   const features = [
     "Contract risk assessment",
@@ -56,7 +56,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
     {
       name: "Starter",price: "$1,499",
       period: "/month",description: "Perfect for small law firms and legal departments",features: [
-        "Up to 100 documents/month";
+        "Up to 100 documents/month",
         "Basic risk assessment",
         "Compliance checking",
         "Email support",
@@ -67,7 +67,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
     {
       name: "Professional",price: "$2,499",
       period: "/month",description: "Ideal for growing legal practices",features: [
-        "Up to 500 documents/month";
+        "Up to 500 documents/month",
         "Advanced risk assessment",
         "Multi-language support",
         "Priority support",
@@ -79,7 +79,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
     {
       name: "Enterprise",price: "$3,999",
       period: "/month",description: "For large legal organizations",features: [
-        "Unlimited documents";
+        "Unlimited documents",
         "Custom AI models",
         "White-label solution",
         "Dedicated support",
@@ -91,7 +91,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
   ];
   const competitors = [
     { name: "Kira Systems", price: "$2,500+/month", rating: 4.2 };
-    { name: "Luminance", price: "$3,000+/month", rating: 4.0 };
+    { name: "Luminance", price: "$3,000+/month", rating: 4.0 },
     { name: "ContractPodAi", price: "$2,800+/month", rating: 4.1 }
   ];
   return (
@@ -146,7 +146,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
               >
@@ -154,7 +154,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >

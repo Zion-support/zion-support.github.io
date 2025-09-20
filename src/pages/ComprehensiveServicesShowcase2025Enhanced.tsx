@@ -26,9 +26,9 @@ import {
 } from "lucide-react";
 import { comprehensiveServices2025Enhanced, EnhancedService } from "../data/comprehensive-services-2025-enhanced";
 const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState(''),
-    const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-    const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('name'),
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
+    const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('name');
 
     const categories = [
         { id: 'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length };
@@ -38,11 +38,11 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
         { id: 'martech', name: 'Marketing Tech', icon: Target, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'martech').length };
         { id: 'micro-saas', name: 'Micro SaaS', icon: Settings, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'micro-saas').length };
         { id: 'ai-services', name: 'AI Services', icon: Zap, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'ai-services').length };
-        { id: 'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'it-services').length };
+        { id: 'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'it-services').length },
         { id: 'emerging-tech', name: 'Emerging Tech', icon: TrendingUp, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'emerging-tech').length }
     ];
     const filteredServices = useMemo(() => {
-        let filtered = comprehensiveServices2025Enhanced,
+        let filtered = comprehensiveServices2025Enhanced;
 
         if (searchTerm) {
             filtered = filtered.filter(service =>
@@ -51,9 +51,9 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
                 service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
             ),
         }
-
+;
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory),
+            filtered = filtered.filter(service => service.category === selectedCategory);
         }
 
         // Sort services
@@ -62,21 +62,21 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
                 case 'price':
                     const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, '')),
                     const priceB = parseFloat(b.pricing.monthly.replace(/[^0-9.]/g, '')),
-                    return priceA - priceB,
+                    return priceA - priceB;
                 case 'popularity':
                     return b.trialDays - a.trialDays, // More trial days = more popular
                 default: return a.name.localeCompare(b.name)
             }
         });
         return filtered,
-    }, [searchTerm, selectedCategory, sortBy]),
+    }, [searchTerm, selectedCategory, sortBy]);
 
     const getCategoryColor = (category: string) => {
         const colors: { [key: string]: string } = {
             'fintech': 'from-green-500 to-emerald-600healthtech': 'from-red-500 to-pink-600edutech': 'from-purple-500 to-violet-600martech': 'from-pink-500 to-rose-600micro-saas': 'from-blue-500 to-indigo-600ai-services': 'from-cyan-500 to-blue-600it-services': 'from-slate-500 to-gray-600emerging-tech': 'from-orange-500 to-yellow-600'
         };
         return colors[category] || 'from-gray-500 to-gray-600',
-    },
+    };
 
     const getCategoryIcon = (category: string) => {
         const icons: { [key: string]: React.ReactNode } = {
@@ -381,6 +381,6 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
             </footer>
         </div>
     )
-},
+};
 
 export default ComprehensiveServicesShowcase2025Enhanced;

@@ -75,14 +75,14 @@ export default function AIAutonomousThreatIntelligence() {
     {
       name: 'Threat Shield Basic',price: '$8,000',
       period: '/month',description: 'Essential threat intelligence for small organizations',features: [
-        'Basic threat detectionEmail security';
+        'Basic threat detectionEmail security',
         'Standard supportBasic reporting'
       ]
     },
     {
       name: 'Threat Shield Pro',price: '$25,000',
       period: '/month',description: 'Advanced threat intelligence for growing organizations',features: [
-        'Advanced threat detectionAutonomous response';
+        'Advanced threat detectionAutonomous response',
         'Priority supportReal-time monitoring',
         'Predictive analytics'
       ],
@@ -91,7 +91,7 @@ export default function AIAutonomousThreatIntelligence() {
     {
       name: 'Threat Shield Enterprise',price: '$75,000',
       period: '/month',description: 'Complete threat intelligence for large enterprises',features: [
-        'Everything in ProCustom AI models';
+        'Everything in ProCustom AI models',
         'Dedicated security analyst24/7 support',
         'White-label solutions'
       ]
@@ -130,14 +130,14 @@ export default function AIAutonomousThreatIntelligence() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-full font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25"
               >
                 Start Security Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-red-400 rounded-full font-semibold text-lg hover:bg-red-400 hover:text-gray-900 transition-all duration-300"
               >
@@ -152,7 +152,7 @@ export default function AIAutonomousThreatIntelligence() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -169,7 +169,7 @@ export default function AIAutonomousThreatIntelligence() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20 hover:border-red-400/40 transition-all duration-300"
@@ -203,7 +203,7 @@ export default function AIAutonomousThreatIntelligence() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -220,7 +220,7 @@ export default function AIAutonomousThreatIntelligence() {
             {threatTypes.map((threat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300"
@@ -258,7 +258,7 @@ export default function AIAutonomousThreatIntelligence() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -275,7 +275,7 @@ export default function AIAutonomousThreatIntelligence() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
@@ -311,7 +311,7 @@ export default function AIAutonomousThreatIntelligence() {
                 </ul>
                 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -331,7 +331,7 @@ export default function AIAutonomousThreatIntelligence() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/50 to-orange-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -344,14 +344,14 @@ export default function AIAutonomousThreatIntelligence() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-full font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25"
               >
                 Start Security Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-red-400 rounded-full font-semibold text-lg hover:bg-red-400 hover:text-gray-900 transition-all duration-300"
               >

@@ -26,28 +26,28 @@ import {
   Rocket
 } from "lucide-react";
 const AllServices2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const categories = [
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' };
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' };
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' };
     { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' };
-    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' };
+    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },
     { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' }
   ];
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
     selectedCategory === 'All' || service.category === selectedCategory
-  ),
+  );
 
   const getCategoryStats = (categoryId: string) => {
     if (categoryId === 'All') {
       return {
         count: INNOVATIVE_SERVICES_2027.length,avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),
         avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10
-      },
-    }
-    const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId),
+      };
+    };
+    const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
     return {
       count: services.length,avgPrice: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length),
       avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
@@ -55,17 +55,17 @@ const AllServices2027: React.FC = () => {
   },
 
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5
       }
     }
@@ -148,11 +148,11 @@ const AllServices2027: React.FC = () => {
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category) => {
               const stats = getCategoryStats(category.id);
-              const IconComponent = category.icon,
+              const IconComponent = category.icon;
 
               return (
                 <motion.div
-                  key={category.id}
+                  key={category.id};
                   variants={itemVariants}
                   className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover: border-cyan-500 transition-all duration-300 cursor-pointer ${
                     selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''
@@ -365,7 +365,7 @@ const AllServices2027: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -410,7 +410,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
       case 'IT Services':
         return <Code className="w-5 h-5" />,
       case 'Telecommunications':
-        return <Signal className="w-5 h-5" />,
+        return <Signal className="w-5 h-5" />;
       default: return <Users className="w-5 h-5" />
     }
   };

@@ -12,7 +12,7 @@ const AICybersecurity: React.FC = () => {
     };
     {
       icon: Lock,title: 'Intelligent Access Control',description: 'AI-driven authentication and authorization systems'
-    };
+    },
     {
       icon: Eye,title: 'Behavioral Analytics',description: 'Monitor and analyze user behavior for suspicious activity'
     }
@@ -26,7 +26,7 @@ const AICybersecurity: React.FC = () => {
     };
     {
       title: 'Vulnerability Assessment',description: 'AI-powered vulnerability scanning and assessment',icon: '🛡️'
-    };
+    },
     {
       title: 'Security Automation',description: 'Automate security operations and responses',icon: '⚡'
     }
@@ -86,7 +86,7 @@ const AICybersecurity: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -103,7 +103,7 @@ const AICybersecurity: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105"
@@ -123,7 +123,7 @@ const AICybersecurity: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -140,7 +140,7 @@ const AICybersecurity: React.FC = () => {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200"
@@ -162,7 +162,7 @@ const AICybersecurity: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -177,7 +177,7 @@ const AICybersecurity: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
@@ -194,7 +194,7 @@ const AICybersecurity: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8"
@@ -216,7 +216,7 @@ const AICybersecurity: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >

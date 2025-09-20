@@ -21,16 +21,16 @@ const featuredListings = [
   }
 ];
 export function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All"),
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const filteredListings = selectedCategory === "All"
     ? featuredListings
     : featuredListings.filter(listing => listing.category === selectedCategory);
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.15,delayChildren: 0.1
       }
     }
@@ -40,14 +40,14 @@ export function FeaturedListingsSection() {
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>
-    )),
+    ));
   };
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -65,7 +65,7 @@ export function FeaturedListingsSection() {
             <motion.div 
               key={listing.id} 
               className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -136,7 +136,7 @@ export function FeaturedListingsSection() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}

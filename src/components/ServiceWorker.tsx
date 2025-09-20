@@ -16,11 +16,11 @@ export function ServiceWorker() {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-          console.log('SW registered: ', registration),
+          console.log('SW registered: ', registration);
           setSwState(prev => ({ ...prev, isInstalled: true }));
           // Check for updates
           registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing,
+            const newWorker = registration.installing;
             if (newWorker) {
               setSwState(prev => ({ ...prev, isInstalling: true }));
               newWorker.addEventListener('statechange', () => {
@@ -36,23 +36,23 @@ export function ServiceWorker() {
 
           // Handle updates
           navigator.serviceWorker.addEventListener('controllerchange', () => {
-            window.location.reload(),
+            window.location.reload();
           }),
         })
         .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError),
+          console.log('SW registration failed: ', registrationError);
         }),
     }
 
     // Online/offline detection
     const handleOnline = () => setSwState(prev => ({ ...prev, isOnline: true }));
     const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: false }));
-    window.addEventListener('online', handleOnline),
-    window.addEventListener('offline', handleOffline),
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
 
     return () => {
-      window.removeEventListener('online', handleOnline),
-      window.removeEventListener('offline', handleOffline),
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
     },
   }, []),
 
@@ -64,7 +64,7 @@ export function ServiceWorker() {
     }
   },
 
-  if (!swState.isInstalled) return null,
+  if (!swState.isInstalled) return null;
 
   return (
     <AnimatePresence>

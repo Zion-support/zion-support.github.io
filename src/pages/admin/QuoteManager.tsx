@@ -18,11 +18,11 @@ import {
   QuotesTable
 } from "@/components/admin/quotes";
 export default function QuoteManager() {
-  const { user } = useAuth(),
-  const isAdmin = user?.userType === 'admin',
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin';
 
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
-  const [showDetails, setShowDetails] = useState(false),
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
 
   const {
     quotes,
@@ -50,16 +50,16 @@ export default function QuoteManager() {
   },
 
   const handleResetFilters = () => {
-    setStatusFilter('all'),
-    setArchiveFilter('all'),
-    setSearchQuery(''),
+    setStatusFilter('all');
+    setArchiveFilter('all');
+    setSearchQuery('');
     setDateRange({ from: undefined, to: undefined });
   },
 
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />,
+    return <Navigate to="/unauthorized" replace />;
   }
-
+;
   return (
     <ProtectedRoute adminOnly>
       <div>
@@ -134,7 +134,7 @@ export default function QuoteManager() {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
-            setSelectedQuote(null),
+            setSelectedQuote(null);
           }}
         />
 

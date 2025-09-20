@@ -13,17 +13,17 @@ import SEO from "@/components/SEO";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 export default function JobDetails() {
     // Cast to specify the expected route param type since useParams may be untyped
-    const { jobId } = useParams(),
-    const { job, isLoading, error } = useJobDetails(jobId),
-    const { user, isAuthenticated } = useAuth(),
-    const navigate = useNavigate(),
-    const { isWhitelabel, brandName } = useWhitelabel(),
-    const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
+    const { jobId } = useParams();
+    const { job, isLoading, error } = useJobDetails(jobId);
+    const { user, isAuthenticated } = useAuth();
+    const navigate = useNavigate();
+    const { isWhitelabel, brandName } = useWhitelabel();
+    const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
     if (isLoading) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-      </div>),
-    }
+      </div>);
+    };
     if (error || !job) {
         return (<>
         
@@ -33,27 +33,27 @@ export default function JobDetails() {
           <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
         </div>
         
-      </>),
-    }
+      </>);
+    };
     const handleApply = () => {
         if (!isAuthenticated) {
-            toast.error("Please log in to apply for this job"),
+            toast.error("Please log in to apply for this job");
             navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
             return,
-        }
+        };
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-            toast.error("Only job seekers can apply for jobs"),
+            toast.error("Only job seekers can apply for jobs");
             return,
         }
-        setIsApplyModalOpen(true),
+        setIsApplyModalOpen(true);
     },
     const handleApplySuccess = async (appliedJobId) => {
-        toast.success("Application submitted successfully!"),
-        setIsApplyModalOpen(false),
+        toast.success("Application submitted successfully!");
+        setIsApplyModalOpen(false);
     },
     const formatBudget = (budget) => {
         if (!budget)
-            return "Not specified",
+            return "Not specified";
         return `$${budget.min} - $${budget.max}`;
     };
     const isOwnJob = user?.id === job.client_id;

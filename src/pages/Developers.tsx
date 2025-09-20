@@ -68,7 +68,7 @@ export default function Developers() {
     };
     {
       name: 'Java',description: 'Java SDK for enterprise applications',version: 'v1.5.0',downloads: '15K+',repository: 'https://github.com/ziontechgroup/java-sdk',documentation: '/docs/sdk/java'
-    };
+    },
     {
       name: 'Go',description: 'Go SDK for high-performance applications',version: 'v1.2.0',downloads: '8K+',repository: 'https://github.com/ziontechgroup/go-sdk',documentation: '/docs/sdk/go'
     }
@@ -82,7 +82,7 @@ export default function Developers() {
     };
     {
       name: 'API Documentation',description: 'Comprehensive API reference and guides',icon: BookOpen,href: '/docs',category: 'Reference'
-    };
+    },
     {
       name: 'Code Examples',description: 'Ready-to-use code samples and tutorials',icon: Terminal,href: '/examples',category: 'Learning'
     }
@@ -96,7 +96,7 @@ export default function Developers() {
     };
     {
       step: 3,title: 'Install & Configure',description: 'Install the SDK and configure with your API keys',action: 'Get Started',href: '/docs/quickstart'
-    };
+    },
     {
       step: 4,title: 'Make First Call',description: 'Test your integration with our sample endpoints',action: 'Try API',href: '/api-playground'
     }

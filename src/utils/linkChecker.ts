@@ -20,10 +20,10 @@ export class LinkChecker {
   // Check if a link is internal or external
   isInternalLink(url: string): boolean {
     try {
-      const urlObj = new URL(url, this.baseUrl),
+      const urlObj = new URL(url, this.baseUrl);
       return urlObj.hostname === new URL(this.baseUrl).hostname,
     } catch {
-      return false,
+      return false;
     }
   }
 
@@ -32,16 +32,16 @@ export class LinkChecker {
     try {
       if (url.startsWith('http')) {
         return url
-      }
+      };
       if (url.startsWith('/')) {
         return `${this.baseUrl}${url}`;
-      }
+      };
       if (url.startsWith('#')) {
-        return `${this.baseUrl}${basePage}${url}`,
-      }
+        return `${this.baseUrl}${basePage}${url}`;
+      };
       return `${this.baseUrl}${basePage}/${url}`,
     } catch {
-      return url,
+      return url;
     }
   }
 
@@ -49,13 +49,13 @@ export class LinkChecker {
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
     const links: LinkInfo[] = [];
     // Extract href attributes from anchor tags
-    const hrefRegex = /href=["']([^"']+)["']/g,
+    const hrefRegex = /href=["']([^"']+)["']/g;
     let match,
     
     while ((match = hrefRegex.exec(pageContent)) !== null) {
-      const url = match[1],
+      const url = match[1];
       if (url && !url.startsWith('javascript:') && !url.startsWith('mailto:') && !url.startsWith('tel:')) {
-        const normalizedUrl = this.normalizeUrl(url, pagePath),
+        const normalizedUrl = this.normalizeUrl(url, pagePath);
         links.push({
           url: normalizedUrl,status: 'working',page: pagePath,anchor: url.startsWith('#') ? url : undefined
         });
@@ -63,18 +63,18 @@ export class LinkChecker {
     }
 
     // Extract src attributes from img, script, and link tags
-    const srcRegex = /(src|href)=["']([^"']+)["']/g,
+    const srcRegex = /(src|href)=["']([^"']+)["']/g;
     while ((match = srcRegex.exec(pageContent)) !== null) {
-      const url = match[2],
+      const url = match[2];
       if (url && !url.startsWith('data:') && !url.startsWith('blob:')) {
-        const normalizedUrl = this.normalizeUrl(url, pagePath),
+        const normalizedUrl = this.normalizeUrl(url, pagePath);
         links.push({
           url: normalizedUrl,status: 'working',page: pagePath
         });
       }
     }
-
-    return links,
+;
+    return links;
   }
 
   // Check if a page exists
@@ -83,36 +83,36 @@ export class LinkChecker {
       const response = await fetch(url, { method: 'HEAD' });
       return response.ok,
     } catch {
-      return false,
+      return false;
     }
   }
 
   // Check all links on a page
   async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {
-    const links = this.extractLinks(pageContent, pagePath),
+    const links = this.extractLinks(pageContent, pagePath);
     const checkedLinks: LinkInfo[] = [];
     for (const link of links) {
       if (this.visitedUrls.has(link.url)) {
         continue
       }
 
-      this.visitedUrls.add(link.url),
+      this.visitedUrls.add(link.url);
 
       if (this.isInternalLink(link.url)) {
-        const exists = await this.checkPageExists(link.url),
+        const exists = await this.checkPageExists(link.url);
         if (exists) {
           link.status = 'working',
         } else {
           link.status = 'missing',
-          this.missingPages.push(link.url),
+          this.missingPages.push(link.url);
         }
       } else {
         link.status = 'external',
       }
 
-      checkedLinks.push(link),
+      checkedLinks.push(link);
     }
-
+;
     return {
       path: pagePath,title: this.extractPageTitle(pageContent),links: checkedLinks,exists: true
     };
@@ -138,7 +138,7 @@ export class LinkChecker {
 
   // Get all missing pages
   getMissingPages(): string[] {
-    return this.missingPages,
+    return this.missingPages;
   }
 }
 

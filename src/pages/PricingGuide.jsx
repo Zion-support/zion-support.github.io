@@ -6,13 +6,13 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from "lucide-react";
 import SEO from "@/components/SEO";
 export default function PricingGuide() {
-    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory),
     const getCategoryIcon = (category) => {
         const icons = {
-            'AI Development': <Brain className="w-6 h-6"/>,
+            'AI Development': <Brain className="w-6 h-6"/>;
             'Cloud Services': <Cloud className="w-6 h-6"/>,
             'DevOps': <Zap className="w-6 h-6"/>,
             'Cybersecurity': <Shield className="w-6 h-6"/>,
@@ -22,11 +22,11 @@ export default function PricingGuide() {
             'Managed Services': <Lock className="w-6 h-6"/>
         },
         return icons[category] || <Star className="w-6 h-6"/>,
-    },
+    };
     const formatPrice = (price) => {
         if (price >= 1000) {
             return `$${(price / 1000).toFixed(0)}K`;
-        }
+        };
         return `$${price}`;
     };
     const getMarketComparison = (price, category) => {

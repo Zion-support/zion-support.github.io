@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode
-}
+};
 const navigation: NavItem[] = [
   { label: 'Home', href: '/' };
   {
@@ -17,7 +17,7 @@ const navigation: NavItem[] = [
       { label: 'Space Technology', href: '/services#space' };
       { label: 'Manufacturing & Industry 4.0', href: '/services#manufacturing' };
       { label: 'FinTech & Wealth Management', href: '/services#fintech' };
-      { label: 'Consulting & Strategy', href: '/services#consulting' };
+      { label: 'Consulting & Strategy', href: '/services#consulting' },
       { label: 'All Services', href: '/services' }
     ]
   };

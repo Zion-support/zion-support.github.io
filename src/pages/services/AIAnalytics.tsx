@@ -11,7 +11,7 @@ export default function AIAnalytics() {
     };
     {
       icon: Zap,title: 'Real-time Insights',description: 'Instant data analysis and actionable intelligence'
-    };
+    },
     {
       icon: Eye,title: 'Data Visualization',description: 'Clear and intuitive data presentation'
     }
@@ -25,7 +25,7 @@ export default function AIAnalytics() {
     };
     {
       title: 'Natural Language Processing',description: 'Text analysis and language understanding systems',icon: Database
-    };
+    },
     {
       title: 'Computer Vision',description: 'Image and video analysis with AI',icon: Eye
     }
@@ -74,7 +74,7 @@ export default function AIAnalytics() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -92,7 +92,7 @@ export default function AIAnalytics() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -113,7 +113,7 @@ export default function AIAnalytics() {
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -131,7 +131,7 @@ export default function AIAnalytics() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -156,7 +156,7 @@ export default function AIAnalytics() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

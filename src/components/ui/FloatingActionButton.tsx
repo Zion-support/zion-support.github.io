@@ -13,7 +13,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
     };
     {
       icon: Phone,label: 'Call Us',href: 'tel:+1-800-ZION-TECH',color: 'from-green-500 to-emerald-500',delay: 0.2
-    };
+    },
     {
       icon: Mail,label: 'Email',href: 'mailto:info@ziontechgroup.com',color: 'from-purple-500 to-pink-500',delay: 0.3
     }

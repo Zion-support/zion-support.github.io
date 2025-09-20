@@ -120,7 +120,7 @@ export default function MachineLearning() {
     };
     {
       icon: Zap,title: 'Real-Time Learning',description: 'Continuous model improvement and adaptation',color: 'from-red-500 to-pink-500'
-    };
+    },
     {
       icon: Shield,title: 'AI Ethics & Safety',description: 'Responsible AI development and deployment',color: 'from-indigo-500 to-blue-500'
     }
@@ -140,7 +140,7 @@ export default function MachineLearning() {
     };
     {
       title: 'Recommendation Systems',description: 'Personalized product and content suggestions',icon: Target
-    };
+    },
     {
       title: 'Process Optimization',description: 'Streamline operations and reduce inefficiencies',icon: Activity
     }
@@ -219,14 +219,14 @@ export default function MachineLearning() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
                 >
                   Get Started
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
@@ -247,7 +247,7 @@ export default function MachineLearning() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -266,7 +266,7 @@ export default function MachineLearning() {
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -294,7 +294,7 @@ export default function MachineLearning() {
           <div className="container-responsive">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -313,7 +313,7 @@ export default function MachineLearning() {
                   {benefits.map((benefit, index) => (
                     <motion.div
                       key={benefit}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -20 }};
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
@@ -327,7 +327,7 @@ export default function MachineLearning() {
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -372,7 +372,7 @@ export default function MachineLearning() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -391,7 +391,7 @@ export default function MachineLearning() {
               {mlCapabilities.map((capability, index) => (
                 <motion.div
                   key={capability.name}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -423,7 +423,7 @@ export default function MachineLearning() {
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -442,7 +442,7 @@ export default function MachineLearning() {
               {industries.map((industry, index) => (
                 <motion.div
                   key={industry.name}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -472,7 +472,7 @@ export default function MachineLearning() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -491,7 +491,7 @@ export default function MachineLearning() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={useCase.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -521,7 +521,7 @@ export default function MachineLearning() {
         <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -538,14 +538,14 @@ export default function MachineLearning() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
                 >
                   Start Today
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >

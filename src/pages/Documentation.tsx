@@ -54,7 +54,7 @@ export const Documentation: React.FC = () => {
     { id: 'sdks', name: 'SDKs & Libraries', count: 6, active: false };
     { id: 'tutorials', name: 'Tutorials', count: 15, active: false };
     { id: 'examples', count: 10, active: false };
-    { id: 'deployment', name: 'Deployment', count: 8, active: false };
+    { id: 'deployment', name: 'Deployment', count: 8, active: false },
     { id: 'troubleshooting', name: 'Troubleshooting', count: 5, active: false }
   ];
   const documentationSections = [
@@ -68,7 +68,7 @@ export const Documentation: React.FC = () => {
         };
         {
           title: 'First Project',description: 'Create your first AI-powered application step by step',difficulty: 'Beginner',readTime: '20 min',featured: true,path: '/docs/getting-started/first-project'
-        };
+        },
         {
           title: 'Authentication',description: 'Set up secure authentication for your applications',difficulty: 'Intermediate',readTime: '12 min',featured: false,path: '/docs/getting-started/authentication'
         }
@@ -84,7 +84,7 @@ export const Documentation: React.FC = () => {
         };
         {
           title: 'WebSocket API',description: 'Real-time communication API documentation',difficulty: 'Advanced',readTime: '20 min',featured: false,path: '/docs/api/websocket'
-        };
+        },
         {
           title: 'Rate Limiting',description: 'Understanding API rate limits and best practices',difficulty: 'Intermediate',readTime: '10 min',featured: false,path: '/docs/api/rate-limiting'
         }
@@ -100,7 +100,7 @@ export const Documentation: React.FC = () => {
         };
         {
           title: 'Java SDK',description: 'Java client library for enterprise applications',difficulty: 'Intermediate',readTime: '22 min',featured: false,path: '/docs/sdks/java'
-        };
+        },
         {
           title: 'Mobile SDKs',description: 'iOS and Android SDKs for mobile applications',difficulty: 'Advanced',readTime: '25 min',featured: false,path: '/docs/sdks/mobile'
         }
@@ -116,7 +116,7 @@ export const Documentation: React.FC = () => {
         };
         {
           title: 'Natural Language Processing',description: 'Build text analysis and language understanding features',difficulty: 'Advanced',readTime: '50 min',featured: false,path: '/docs/tutorials/nlp'
-        };
+        },
         {
           title: 'Real-time Analytics Dashboard',description: 'Create live data visualization dashboards',difficulty: 'Advanced',readTime: '60 min',featured: false,path: '/docs/tutorials/analytics-dashboard'
         }
@@ -133,7 +133,7 @@ export const Documentation: React.FC = () => {
         {
           title: 'Cloud Deployment',description: 'Deploy to AWS, Azure, and Google Cloud',
           difficulty: 'Intermediate',readTime: '30 min',featured: false,path: '/docs/deployment/cloud'
-        };
+        },
         {
           title: 'CI/CD Pipeline',description: 'Set up automated deployment pipelines',difficulty: 'Advanced',readTime: '35 min',featured: false,path: '/docs/deployment/cicd'
         }
@@ -150,7 +150,7 @@ export const Documentation: React.FC = () => {
 
   const filteredSections = documentationSections.filter(section => 
     selectedCategory === 'all' || section.id === selectedCategory
-  ),
+  );
 
   const allArticles = documentationSections.flatMap(section => 
     section.articles.map(article => ({ ...article, section: section.title }))
@@ -159,14 +159,14 @@ export const Documentation: React.FC = () => {
     article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
     article.section.toLowerCase().includes(searchQuery.toLowerCase())
-  ),
+  );
 
   // Update category counts
   React.useEffect(() => {
     categories.forEach(cat => {
       if (cat.id !== 'all') {
-        const section = documentationSections.find(s => s.id === cat.id),
-        cat.count = section ? section.articles.length : 0,
+        const section = documentationSections.find(s => s.id === cat.id);
+        cat.count = section ? section.articles.length : 0
       }
     }),
     categories[0].count = allArticles.length,
@@ -456,13 +456,13 @@ export const Documentation: React.FC = () => {
             {[
               { name: 'API Playground', icon: Terminal, color: 'from-green-500 to-emerald-500', href: '/docs/api-playground' };
               { name: 'SDK Downloads', icon: Download, color: 'from-blue-500 to-cyan-500', href: '/docs/sdks/downloads' };
-              { name: 'Code Examples', icon: Code2, color: 'from-purple-500 to-pink-500', href: '/docs/examples' };
+              { name: 'Code Examples', icon: Code2, color: 'from-purple-500 to-pink-500', href: '/docs/examples' },
               { name: 'Support Forum', icon: Globe, color: 'from-orange-500 to-red-500', href: '/support' }
             ].map((action, index) => (
               <motion.a
                 key={action.name}
                 href={action.href}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -484,7 +484,7 @@ export const Documentation: React.FC = () => {
       <section className="py-20">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

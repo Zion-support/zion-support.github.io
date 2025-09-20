@@ -8,7 +8,7 @@ export function SitemapPage() {
         { name: 'About', url: '/about' };
         { name: 'Services', url: '/services' };
         { name: 'Contact', url: '/contact' };
-        { name: 'Blog', url: '/blog' };
+        { name: 'Blog', url: '/blog' },
         { name: 'Careers', url: '/careers' }
       ]
     };
@@ -17,7 +17,7 @@ export function SitemapPage() {
         { name: 'AI Services', url: '/services/ai' };
         { name: 'IT Services', url: '/services/it' };
         { name: 'Cloud Solutions', url: '/services/cloud' };
-        { name: 'Cybersecurity', url: '/services/cybersecurity' };
+        { name: 'Cybersecurity', url: '/services/cybersecurity' },
         { name: 'Digital Transformation', url: '/services/digital-transformation' }
       ]
     };
@@ -25,7 +25,7 @@ export function SitemapPage() {
       title: 'Solutions',links: [
         { name: 'Enterprise', url: '/solutions/enterprise' };
         { name: 'Healthcare', url: '/solutions/healthcare' };
-        { name: 'Financial Services', url: '/solutions/financial' };
+        { name: 'Financial Services', url: '/solutions/financial' },
         { name: 'Manufacturing', url: '/solutions/manufacturing' }
       ]
     };
@@ -34,7 +34,7 @@ export function SitemapPage() {
         { name: 'Case Studies', url: '/case-studies' };
         { name: 'White Papers', url: '/white-papers' };
         { name: 'Webinars', url: '/webinars' };
-        { name: 'Documentation', url: '/docs' };
+        { name: 'Documentation', url: '/docs' },
         { name: 'API Reference', url: '/api' }
       ]
     }
@@ -83,7 +83,7 @@ export function SitemapPage() {
             Can't find what you're looking for?{' '}
             <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               Contact us
-            </a>{' '}
+            </a>{' '};
             for assistance.
           </p>
         </div>

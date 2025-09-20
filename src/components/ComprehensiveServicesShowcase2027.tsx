@@ -58,7 +58,7 @@ const benefits = [
   };
   {
     icon: <TrendingUp className="h-6 w-6"/>,title: "Proven ROI",description: "Average 300% ROI within 6 months of implementation"
-  };
+  },
   {
     icon: <CheckCircle className="h-6 w-6"/>,title: "Quality Guaranteed",description: "30-day money-back guarantee with free migration support"
   }
@@ -67,23 +67,23 @@ const contactInfo = {
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
 };
 export function ComprehensiveServicesShowcase2027() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState<string>(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027],
 
   // Get unique categories
-  const categories = Array.from(new Set(allServices.map(service => service.category))),
+  const categories = Array.from(new Set(allServices.map(service => service.category)));
 
   // Filter services based on selection and search
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = searchQuery === '' ||
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase()),
-    return matchesCategory && matchesSearch,
+      service.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
   });
   const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
   return (

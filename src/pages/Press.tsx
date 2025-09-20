@@ -23,7 +23,7 @@ export default function Press() {
     { id: 'all', name: 'All News', count: 45 };
     { id: 'press-releases', name: 'Press Releases', count: 18 };
     { id: 'media-coverage', name: 'Media Coverage', count: 15 };
-    { id: 'awards', name: 'Awards & Recognition', count: 8 };
+    { id: 'awards', name: 'Awards & Recognition', count: 8 },
     { id: 'thought-leadership', name: 'Thought Leadership', count: 4 }
   ];
   const pressReleases = [
@@ -74,7 +74,7 @@ export default function Press() {
     };
     {
       id: 3,title: "Cybersecurity in the AI Era: Zion Tech Group's Defense Strategy",publication: "Wired",date: "2023-12-18",author: "Alex Rodriguez",category: "media-coverage",excerpt: "Comprehensive coverage of Zion Tech Group's AI-powered cybersecurity solutions and their effectiveness against modern threats.",url: "https://wired.com/ai-cybersecurity-zion",featured: false
-    };
+    },
     {
       id: 4,title: "Startup Spotlight: Zion Tech Group's Journey to AI Leadership",publication: "VentureBeat",date: "2023-12-12",author: "Emily Watson",category: "media-coverage",excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",url: "https://venturebeat.com/zion-tech-group-startup",featured: false
     }
@@ -85,26 +85,26 @@ export default function Press() {
     };
     {
       id: 2,title: "Best AI Solution Provider",organization: "Tech Innovation Awards",year: "2023",category: "awards",description: "Recognized for excellence in AI-powered business solutions",image: "/images/awards/tech-innovation.png"
-    };
+    },
     {
       id: 3,title: "Cybersecurity Excellence Award",organization: "InfoSec Awards",year: "2023",category: "awards",description: "Outstanding achievement in AI-powered cybersecurity solutions",image: "/images/awards/infosec.png"
     }
   ];
   const filteredContent = selectedCategory === 'all'
     ? [...pressReleases, ...mediaCoverage, ...awards]
-    : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory),
+    : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory);
 
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: {
+    hidden: { opacity: 0, y: 20 },
+    visible: {,
       opacity: 1,y: 0,transition: { duration: 0.6 }
     }
   };
@@ -169,7 +169,7 @@ export default function Press() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -193,7 +193,7 @@ export default function Press() {
               <motion.article
                 key={item.id}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-                variants={itemVariants}
+                variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className="p-8">
@@ -244,7 +244,7 @@ export default function Press() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -268,7 +268,7 @@ export default function Press() {
               <motion.article
                 key={item.id}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-                variants={itemVariants}
+                variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className="p-6">
@@ -309,7 +309,7 @@ export default function Press() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -331,7 +331,7 @@ export default function Press() {
           >
             <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
-              variants={itemVariants}
+              variants={itemVariants};
               whileHover={{ y: -5, scale: 1.02 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -346,7 +346,7 @@ export default function Press() {
 
             <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
-              variants={itemVariants}
+              variants={itemVariants};
               whileHover={{ y: -5, scale: 1.02 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -361,7 +361,7 @@ export default function Press() {
 
             <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
-              variants={itemVariants}
+              variants={itemVariants};
               whileHover={{ y: -5, scale: 1.02 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -376,7 +376,7 @@ export default function Press() {
 
             <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
-              variants={itemVariants}
+              variants={itemVariants};
               whileHover={{ y: -5, scale: 1.02 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -396,7 +396,7 @@ export default function Press() {
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -437,7 +437,7 @@ export default function Press() {
 
             <motion.button
               className="mt-8 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
             >
               Contact Media Team

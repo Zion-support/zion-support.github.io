@@ -59,7 +59,7 @@ export default function ComprehensiveImprovements2025() {
   const improvements = [
     {
       category: 'AI & Machine Learning Services',icon: Brain,color: 'from-zion-cyan to-zion-purple',items: [
-        'AI Workflow Orchestrator - Intelligent workflow automationAI Data Governance Platform - Comprehensive data compliance';
+        'AI Workflow Orchestrator - Intelligent workflow automationAI Data Governance Platform - Comprehensive data compliance',
         'AI Customer Experience Analytics - Advanced customer insightsAI Business Intelligence Analytics - ML-powered insights',
         'AI Compliance Assistant - Automated regulatory complianceAI Sales Copilot - Intelligent sales optimization',
         'AI-Powered SEO - Machine learning optimizationInterview Assessment AI - Candidate evaluation',
@@ -74,25 +74,25 @@ export default function ComprehensiveImprovements2025() {
     },
     {
       category: 'Cloud & DevOps Solutions',icon: Cloud,color: 'from-blue-500 to-cyan-500',items: [
-        'Cloud DevOps - Infrastructure automation & scalingIT Infrastructure - Enterprise infrastructure solutions';
+        'Cloud DevOps - Infrastructure automation & scalingIT Infrastructure - Enterprise infrastructure solutions',
         'FinOps Advisor - Cloud cost optimizationCloud FinOps Optimizer - Financial operations automation'
       ]
     },
     {
       category: 'Cybersecurity & Privacy',icon: Shield,color: 'from-red-500 to-orange-500',items: [
-        'AI Cybersecurity Platform - Advanced AI-powered securitySecurity Headers & CSP - Web security hardening';
+        'AI Cybersecurity Platform - Advanced AI-powered securitySecurity Headers & CSP - Web security hardening',
         'DSR Privacy Portal - GDPR/CCPA complianceZero Trust Network Access - Modern security architecture'
       ]
     },
     {
       category: 'Digital Transformation',icon: Zap,color: 'from-yellow-500 to-orange-500',items: [
-        'Digital Twin - Virtual system replicasDigital Transformation - Strategic technology consulting';
+        'Digital Twin - Virtual system replicasDigital Transformation - Strategic technology consulting',
         'IT Consulting - Technology strategy & planning'
       ]
     },
     {
       category: 'Emerging Technologies',icon: Atom,color: 'from-indigo-500 to-purple-500',items: [
-        'Quantum Computing - Next-gen computational powerIoT Edge Computing - Smart device networks';
+        'Quantum Computing - Next-gen computational powerIoT Edge Computing - Smart device networks',
         'Space Tech - Space technology solutionsGreen IT - Sustainable technology solutions'
       ]
     }
@@ -109,7 +109,7 @@ export default function ComprehensiveImprovements2025() {
     {
       title: 'Performance Optimized',description: 'Lazy loading, code splitting, and optimized animations',
       icon: Zap,color: 'from-yellow-500 to-orange-500'
-    };
+    },
     {
       title: 'Accessibility Enhanced',description: 'WCAG compliant with enhanced user experience',icon: Eye,color: 'from-green-500 to-emerald-500'
     }
@@ -173,7 +173,7 @@ export default function ComprehensiveImprovements2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -191,7 +191,7 @@ export default function ComprehensiveImprovements2025() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -214,7 +214,7 @@ export default function ComprehensiveImprovements2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -232,7 +232,7 @@ export default function ComprehensiveImprovements2025() {
               {improvements.map((category, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -265,7 +265,7 @@ export default function ComprehensiveImprovements2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -281,7 +281,7 @@ export default function ComprehensiveImprovements2025() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
@@ -293,7 +293,7 @@ export default function ComprehensiveImprovements2025() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
@@ -305,7 +305,7 @@ export default function ComprehensiveImprovements2025() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
@@ -318,7 +318,7 @@ export default function ComprehensiveImprovements2025() {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
@@ -339,7 +339,7 @@ export default function ComprehensiveImprovements2025() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}

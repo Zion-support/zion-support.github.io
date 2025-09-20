@@ -9,7 +9,7 @@ export default function AIHRTalentPlatform() {
 
   const benefits = [
     'Reduce time-to-hire by 60%Improve candidate quality by 40%';
-    'Reduce hiring costs by 30%Increase employee retention by 25%';
+    'Reduce hiring costs by 30%Increase employee retention by 25%',
     'Automate routine HR tasksData-driven decision making'
   ];
   const pricing = [

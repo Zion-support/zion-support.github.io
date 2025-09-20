@@ -59,7 +59,7 @@ const AIBusinessIntelligenceAnalytics = () => {
   const capabilities = [
     {
       category: "Data Analytics",items: [
-        "Real-time data processing and analysis";
+        "Real-time data processing and analysis",
         "Advanced statistical modeling",
         "Machine learning algorithms",
         "Predictive analytics and forecasting",
@@ -68,7 +68,7 @@ const AIBusinessIntelligenceAnalytics = () => {
     },
     {
       category: "Business Intelligence",items: [
-        "Interactive dashboards and reports";
+        "Interactive dashboards and reports",
         "KPI tracking and monitoring",
         "Performance benchmarking",
         "Trend analysis and insights",
@@ -77,7 +77,7 @@ const AIBusinessIntelligenceAnalytics = () => {
     },
     {
       category: "Data Integration",items: [
-        "Multi-source data connectors";
+        "Multi-source data connectors",
         "ETL/ELT data pipelines",
         "Real-time data streaming",
         "Data quality management",
@@ -86,7 +86,7 @@ const AIBusinessIntelligenceAnalytics = () => {
     },
     {
       category: "AI & Machine Learning",items: [
-        "Natural language processing";
+        "Natural language processing",
         "Automated insights generation",
         "Intelligent recommendations",
         "Pattern recognition",
@@ -110,7 +110,7 @@ const AIBusinessIntelligenceAnalytics = () => {
     {
       name: "Starter",price: "$19,999",
       period: "one-time setup",features: [
-        "Basic AI analytics platform";
+        "Basic AI analytics platform",
         "Up to 5 data sources",
         "Standard dashboards",
         "Basic reporting",
@@ -121,7 +121,7 @@ const AIBusinessIntelligenceAnalytics = () => {
     {
       name: "Professional",price: "$39,999",
       period: "one-time setup",features: [
-        "Advanced AI analytics";
+        "Advanced AI analytics",
         "Up to 20 data sources",
         "Custom dashboards",
         "Advanced reporting",
@@ -133,7 +133,7 @@ const AIBusinessIntelligenceAnalytics = () => {
     {
       name: "Enterprise",price: "$79,999",
       period: "one-time setup",features: [
-        "Full AI BI platform";
+        "Full AI BI platform",
         "Unlimited data sources",
         "Custom analytics workflows",
         "24/7 dedicated support",
@@ -203,7 +203,7 @@ const AIBusinessIntelligenceAnalytics = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -221,7 +221,7 @@ const AIBusinessIntelligenceAnalytics = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -241,7 +241,7 @@ const AIBusinessIntelligenceAnalytics = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -259,7 +259,7 @@ const AIBusinessIntelligenceAnalytics = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -279,7 +279,7 @@ const AIBusinessIntelligenceAnalytics = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -297,7 +297,7 @@ const AIBusinessIntelligenceAnalytics = () => {
             {capabilities.map((category, index) => (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -330,7 +330,7 @@ const AIBusinessIntelligenceAnalytics = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -348,7 +348,7 @@ const AIBusinessIntelligenceAnalytics = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.9 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -368,7 +368,7 @@ const AIBusinessIntelligenceAnalytics = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -386,7 +386,7 @@ const AIBusinessIntelligenceAnalytics = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -433,7 +433,7 @@ const AIBusinessIntelligenceAnalytics = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -449,7 +449,7 @@ const AIBusinessIntelligenceAnalytics = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
@@ -469,7 +469,7 @@ const AIBusinessIntelligenceAnalytics = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
@@ -489,7 +489,7 @@ const AIBusinessIntelligenceAnalytics = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}

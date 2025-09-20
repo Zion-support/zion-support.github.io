@@ -23,17 +23,17 @@ export class SitemapGenerator {
     const { baseUrl, urls } = this.config,
     
     const xmlUrls = urls.map(url => {
-      const lastmod = url.lastmod || new Date().toISOString().split('T')[0],
-      const changefreq = url.changefreq || 'weekly',
-      const priority = url.priority || 0.5,
+      const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
+      const changefreq = url.changefreq || 'weekly';
+      const priority = url.priority || 0.5;
       
       return `  <url>
     <loc>${baseUrl}${url.url}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
-  </url>`,
-    }).join('\n'),
+  </url>`;
+    }).join('\n');
 
     return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
@@ -47,25 +47,25 @@ ${xmlUrls}
   generateRobotsTxt(): string {
     const { baseUrl } = this.config,
     
-    return `User-agent: *
+    return `User-agent: *,
 Allow: /
 
 # Sitemaps
 Sitemap: ${baseUrl}/sitemap.xml
 
 # Disallow admin and private areas
-Disallow: /admin/
+Disallow: /admin/,
 Disallow: /private/
-Disallow: /api/
+Disallow: /api/,
 Disallow: /_next/
 Disallow: /server/
 
 # Allow important pages
-Allow: /
+Allow: /,
 Allow: /about
-Allow: /services
+Allow: /services,
 Allow: /contact
-Allow: /blog
+Allow: /blog,
 Allow: /careers
 
 # Crawl delay (optional)
@@ -81,8 +81,8 @@ Crawl-delay: 1`
       return `  <sitemap>
     <loc>${sitemap}</loc>
     <lastmod>${lastmod}</lastmod>
-  </sitemap>`,
-    }).join('\n'),
+  </sitemap>`;
+    }).join('\n');
 
     return `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
@@ -111,16 +111,16 @@ ${sitemapEntries}
         "query-input": "required name=search_term_string"
       },
       "sameAs": [
-        "https: //linkedin.com/company/zion-tech-group";
+        "https: //linkedin.com/company/zion-tech-group",
         "https: //twitter.com/ziontechgroup"
       ]
     };
-    return JSON.stringify(structuredData, null, 2),
+    return JSON.stringify(structuredData, null, 2);
   }
 }
 
 // Default sitemap configuration for Zion Tech Group
-export const defaultSitemapConfig: SitemapConfig = {
+export const defaultSitemapConfig: SitemapConfig = {,
   baseUrl: 'https://ziontechgroup.com',urls: [
     // Main pages
     { url: '/', priority: 1.0, changefreq: 'daily' };
@@ -156,7 +156,7 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/case-studies', priority: 0.6, changefreq: 'monthly' };
     { url: '/help-center', priority: 0.5, changefreq: 'monthly' };
     { url: '/faq', priority: 0.5, changefreq: 'monthly' };
-    { url: '/pricing', priority: 0.6, changefreq: 'monthly' };
+    { url: '/pricing', priority: 0.6, changefreq: 'monthly' },
     { url: '/marketplace', priority: 0.7, changefreq: 'weekly' }
   ]
 };

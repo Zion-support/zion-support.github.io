@@ -47,28 +47,28 @@ import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 import { ErrorBoundary } from "@/components/ui/ErrorBoundary";
 // Lazy load heavy components
-const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection")),
-const BenefitsSection = React.lazy(() => import("@/components/BenefitsSection")),
-const HowItWorksSection = React.lazy(() => import("@/components/HowItWorksSection")),
-const NewsletterSection = React.lazy(() => import("@/components/NewsletterSection")),
-const FeaturedListingsSection = React.lazy(() => import("@/components/FeaturedListingsSection")),
-const QuickAccess = React.lazy(() => import("@/components/home/QuickAccess")),
-const FeatureCTAs = React.lazy(() => import("@/components/home/FeatureCTAs")),
-const FeatureHighlights = React.lazy(() => import("@/components/home/FeatureHighlights")),
-const ITServiceRequestHero = React.lazy(() => import("@/components/home/ITServiceRequestHero")),
-const FloatingCTA = React.lazy(() => import("@/components/FloatingCTA")),
-const PricingSection = React.lazy(() => import("@/components/PricingSection")),
-const TechSolutionsSection = React.lazy(() => import("@/components/TechSolutionsSection")),
-const CaseStudiesSection = React.lazy(() => import("@/components/CaseStudiesSection")),
-const TeamExpertiseSection = React.lazy(() => import("@/components/TeamExpertiseSection")),
-const GlobalPresenceSection = React.lazy(() => import("@/components/GlobalPresenceSection")),
-const InnovationResearchSection = React.lazy(() => import("@/components/InnovationResearchSection")),
-const ClientSuccessStoriesSection = React.lazy(() => import("@/components/ClientSuccessStoriesSection")),
-const TechnologyStackSection = React.lazy(() => import("@/components/TechnologyStackSection")),
-const SecurityComplianceSection = React.lazy(() => import("@/components/SecurityComplianceSection")),
-const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowcase")),
-const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials")),
-const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase")),
+const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
+const BenefitsSection = React.lazy(() => import("@/components/BenefitsSection"));
+const HowItWorksSection = React.lazy(() => import("@/components/HowItWorksSection"));
+const NewsletterSection = React.lazy(() => import("@/components/NewsletterSection"));
+const FeaturedListingsSection = React.lazy(() => import("@/components/FeaturedListingsSection"));
+const QuickAccess = React.lazy(() => import("@/components/home/QuickAccess"));
+const FeatureCTAs = React.lazy(() => import("@/components/home/FeatureCTAs"));
+const FeatureHighlights = React.lazy(() => import("@/components/home/FeatureHighlights"));
+const ITServiceRequestHero = React.lazy(() => import("@/components/home/ITServiceRequestHero"));
+const FloatingCTA = React.lazy(() => import("@/components/FloatingCTA"));
+const PricingSection = React.lazy(() => import("@/components/PricingSection"));
+const TechSolutionsSection = React.lazy(() => import("@/components/TechSolutionsSection"));
+const CaseStudiesSection = React.lazy(() => import("@/components/CaseStudiesSection"));
+const TeamExpertiseSection = React.lazy(() => import("@/components/TeamExpertiseSection"));
+const GlobalPresenceSection = React.lazy(() => import("@/components/GlobalPresenceSection"));
+const InnovationResearchSection = React.lazy(() => import("@/components/InnovationResearchSection"));
+const ClientSuccessStoriesSection = React.lazy(() => import("@/components/ClientSuccessStoriesSection"));
+const TechnologyStackSection = React.lazy(() => import("@/components/TechnologyStackSection"));
+const SecurityComplianceSection = React.lazy(() => import("@/components/SecurityComplianceSection"));
+const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowcase"));
+const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials"));
+const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
 
 interface StatItem {
   value: string,label: string,description: string,icon: React.ComponentType<any>,color: string
@@ -91,16 +91,16 @@ interface MicroSaasService {
 }
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     // Simulate loading time for better UX
     const timer = setTimeout(() => {
-      setIsLoading(false),
+      setIsLoading(false);
     }, 1000),
 
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer);
   }, []),
 
   const handleError = useCallback((error: Error) => {
@@ -116,7 +116,7 @@ export default function Home() {
     };
     {
       value: "24/7",label: "Support Available",description: "Round-the-clock technical assistance",icon: Clock,color: "from-blue-400 to-indigo-500"
-    };
+    },
     {
       value: "99.9%",label: "Uptime Guarantee",description: "Reliable infrastructure and services",icon: Shield,color: "from-purple-400 to-pink-500"
     }
@@ -169,7 +169,7 @@ export default function Home() {
     {
       title: "Space Technology",description: "Satellite operations and space mission optimization",icon: Building,href: "/services/space-tech-optimization-platform",price: "$3,999/month",
       category: "Space Tech"
-    };
+    },
     {
       title: "Autonomous Vehicles",description: "Fleet management for autonomous vehicle operations",icon: Car,href: "/services/autonomous-vehicle-fleet-management",price: "$799/month",category: "Transportation"
     }
@@ -180,7 +180,7 @@ export default function Home() {
     };
     {
       title: "AI Marketing Automation",description: "Intelligent campaign optimization and audience targeting",icon: Target,href: "/services/ai-marketing-automation",price: "$299/month",category: "Marketing"
-    };
+    },
     {
       title: "AI Financial Advisor",description: "Automated financial planning and investment recommendations",icon: DollarSign,href: "/services/ai-financial-advisor",price: "$399/month",category: "Finance"
     }
@@ -193,9 +193,9 @@ export default function Home() {
           <p className="text-lg text-gray-300 mt-4">Preparing amazing experiences...</p>
         </div>
       </div>
-    ),
+    );
   }
-
+;
   if (error) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -212,7 +212,7 @@ export default function Home() {
       </div>
     )
   }
-
+;
   return (
     <ErrorBoundary onError={handleError}>
       <SEO 
@@ -228,7 +228,7 @@ export default function Home() {
         {/* Stats Section */}
         <motion.section 
           className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -239,7 +239,7 @@ export default function Home() {
                 <motion.div
                   key={stat.label}
                   className="text-center"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -259,7 +259,7 @@ export default function Home() {
         {/* AI Services Section */}
         <motion.section 
           className="py-20 px-4 sm:px-6 lg:px-8"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -279,7 +279,7 @@ export default function Home() {
                 <motion.div
                   key={service.title}
                   className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -312,7 +312,7 @@ export default function Home() {
         {/* Service Categories */}
         <motion.section 
           className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -332,7 +332,7 @@ export default function Home() {
                 <motion.div
                   key={category.name}
                   className="group cursor-pointer"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -359,7 +359,7 @@ export default function Home() {
         {/* Emerging Technology Solutions */}
         <motion.section 
           className="py-20 px-4 sm:px-6 lg:px-8"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -379,7 +379,7 @@ export default function Home() {
                 <motion.div
                   key={tech.title}
                   className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -406,7 +406,7 @@ export default function Home() {
         {/* Micro-SaaS Solutions */}
         <motion.section 
           className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -426,7 +426,7 @@ export default function Home() {
                 <motion.div
                   key={service.title}
                   className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}

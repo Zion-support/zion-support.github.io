@@ -12,24 +12,24 @@ class ResourceMonitor {
     if (this.isMonitoring) return,
     
     this.isMonitoring = true,
-    this.setupErrorListeners(),
-    this.setupResourceObservers(),
-    this.monitorCriticalResources(),
+    this.setupErrorListeners();
+    this.setupResourceObservers();
+    this.monitorCriticalResources();
     
-    console.log('🔍 Resource Monitor started'),
+    console.log('🔍 Resource Monitor started');
   }
 
   stop() {
     this.isMonitoring = false,
-    console.log('🔍 Resource Monitor stopped'),
+    console.log('🔍 Resource Monitor stopped');
   }
 
   private setupErrorListeners() {
     // Listen for script loading errors
     window.addEventListener('error', (event) => {
       if (event.target && event.target !== window) {
-        const target = event.target as HTMLElement,
-        const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).href,
+        const target = event.target as HTMLElement;
+        const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).href;
         
         if (url) {
           this.handleResourceError(url, this.getResourceType(target), event.error?.message || 'Unknown error'),
@@ -52,8 +52,8 @@ class ResourceMonitor {
         mutations.forEach((mutation) => {
           mutation.addedNodes.forEach((node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {
-              const element = node as HTMLElement,
-              this.monitorElement(element),
+              const element = node as HTMLElement;
+              this.monitorElement(element);
             }
           }),
         }),
@@ -78,13 +78,13 @@ class ResourceMonitor {
 
   private monitorScript(script: HTMLScriptElement) {
     script.addEventListener('error', () => {
-      this.handleResourceError(script.src, 'scriptScript loading failed'),
+      this.handleResourceError(script.src, 'scriptScript loading failed');
     }),
   }
 
   private monitorStylesheet(link: HTMLLinkElement) {
     link.addEventListener('error', () => {
-      this.handleResourceError(link.href, 'stylesheetStylesheet loading failed'),
+      this.handleResourceError(link.href, 'stylesheetStylesheet loading failed');
     }),
   }
 
@@ -97,7 +97,7 @@ class ResourceMonitor {
     ],
 
     criticalResources.forEach(resource => {
-      this.checkResourceHealth(resource),
+      this.checkResourceHealth(resource);
     }),
   }
 
@@ -105,13 +105,13 @@ class ResourceMonitor {
     try {
       const response = await fetch(url, { method: 'HEAD' });
       if (!response.ok) {
-        this.handleResourceError(url, 'other', `HTTP ${response.status}: ${response.statusText}`),
+        this.handleResourceError(url, 'other', `HTTP ${response.status}: ${response.statusText}`);
         return,
       }
-
-      const contentType = response.headers.get('content-type'),
+;
+      const contentType = response.headers.get('content-type');
       if (!contentType) {
-        this.handleResourceError(url, 'otherNo content-type header'),
+        this.handleResourceError(url, 'otherNo content-type header');
         return,
       }
 
@@ -129,41 +129,41 @@ class ResourceMonitor {
 
   private handleResourceError(url: string, type: ResourceError['type'], error: string) {
     const resourceError: ResourceError = {
-      url;
+      url,
       type,
       error,
       timestamp: Date.now()
     };
-    this.errors.push(resourceError),
-    console.error('🚨 Resource Error:', resourceError),
+    this.errors.push(resourceError);
+    console.error('🚨 Resource Error:', resourceError);
 
     // Attempt to retry loading
-    this.attemptRetry(url, type),
+    this.attemptRetry(url, type);
 
     // Report to analytics/monitoring service
-    this.reportError(resourceError),
+    this.reportError(resourceError);
   }
 
   private attemptRetry(url: string, type: ResourceError['type']) {
     const attempts = this.retryAttempts.get(url) || 0;
     if (attempts >= this.maxRetries) {
-      console.warn(`Max retry attempts reached for ${url}`),
+      console.warn(`Max retry attempts reached for ${url}`);
       return,
     }
 
-    this.retryAttempts.set(url, attempts + 1),
+    this.retryAttempts.set(url, attempts + 1);
     
     setTimeout(() => {
-      this.retryResource(url, type),
+      this.retryResource(url, type);
     }, Math.pow(2, attempts) * 1000), // Exponential backoff
   }
 
   private retryResource(url: string, type: ResourceError['type']) {
     console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
     if (type === 'script') {
-      this.loadScript(url),
+      this.loadScript(url);
     } else if (type === 'stylesheet') {
-      this.loadStylesheet(url),
+      this.loadStylesheet(url);
     }
   }
 
@@ -173,12 +173,12 @@ class ResourceMonitor {
     script.async = true,
     script.onload = () => {
 
-      this.retryAttempts.delete(src),
+      this.retryAttempts.delete(src);
     },
     script.onerror = () => {
       console.error(`❌ Script retry failed: ${src}`);
     },
-    document.head.appendChild(script),
+    document.head.appendChild(script);
   }
 
   private loadStylesheet(href: string) {
@@ -187,19 +187,19 @@ class ResourceMonitor {
     link.href = href,
     link.onload = () => {
 
-      this.retryAttempts.delete(href),
+      this.retryAttempts.delete(href);
     },
     link.onerror = () => {
       console.error(`❌ Stylesheet retry failed: ${href}`);
     },
-    document.head.appendChild(link),
+    document.head.appendChild(link);
   }
 
   private reportError(error: ResourceError) {
     // In production, send to monitoring service
     if (process.env.NODE_ENV === 'production') {
       // Example: Sentry, LogRocket, etc.
-      console.log('📊 Reporting error to monitoring service:', error),
+      console.log('📊 Reporting error to monitoring service:', error);
     }
   }
 
@@ -216,8 +216,8 @@ class ResourceMonitor {
   }
 
   clearErrors() {
-    this.errors = [],
-    this.retryAttempts.clear(),
+    this.errors = [];
+    this.retryAttempts.clear();
   }
 
   getErrorSummary() {
@@ -229,11 +229,11 @@ class ResourceMonitor {
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1,
     }),
 
-    return summary,
+    return summary;
   }
 }
 
 // Create singleton instance
-const resourceMonitor = new ResourceMonitor(),
+const resourceMonitor = new ResourceMonitor();
 
 export default resourceMonitor;

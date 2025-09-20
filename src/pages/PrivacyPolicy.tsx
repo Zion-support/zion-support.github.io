@@ -19,7 +19,7 @@ import {
   FileText
 } from "lucide-react";
 const PrivacyPolicy = () => {
-  const lastUpdated = '2025-01-15',
+  const lastUpdated = '2025-01-15';
   
   const sections = [
     {
@@ -54,7 +54,7 @@ const PrivacyPolicy = () => {
     };
     {
       id: 'changes',title: 'Changes to This Policy',icon: AlertTriangle,content: `We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.`
-    };
+    },
     {
       id: 'contact',title: 'Contact Us',icon: Mail,content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`
     }
@@ -97,7 +97,7 @@ const PrivacyPolicy = () => {
     };
     {
       measure: 'Employee Training',description: 'Regular security training for all employees to ensure data protection awareness',icon: Users
-    };
+    },
     {
       measure: 'Incident Response',description: 'Comprehensive incident response plan for handling security breaches',icon: AlertTriangle
     }
@@ -127,7 +127,7 @@ const PrivacyPolicy = () => {
 
             {/* Information We Collect */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
@@ -218,7 +218,7 @@ const PrivacyPolicy = () => {
 
             {/* How We Use Your Information */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
@@ -267,7 +267,7 @@ const PrivacyPolicy = () => {
 
             {/* Information Sharing and Disclosure */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
@@ -304,7 +304,7 @@ const PrivacyPolicy = () => {
 
             {/* Data Security */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
@@ -348,7 +348,7 @@ const PrivacyPolicy = () => {
 
             {/* Your Rights and Choices */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
@@ -397,7 +397,7 @@ const PrivacyPolicy = () => {
 
             {/* International Data Transfers */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
@@ -420,7 +420,7 @@ const PrivacyPolicy = () => {
 
             {/* Children's Privacy */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
@@ -443,7 +443,7 @@ const PrivacyPolicy = () => {
 
             {/* Changes to This Policy */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
@@ -483,7 +483,7 @@ const PrivacyPolicy = () => {
 
             {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
               viewport={{ once: true }}

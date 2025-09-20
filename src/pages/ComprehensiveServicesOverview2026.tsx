@@ -118,20 +118,20 @@ export default function ComprehensiveServicesOverview2026() {
     };
     {
       id: 'federated-learning',name: 'Federated Learning AI',description: 'Collaborative AI training across distributed data sources',icon: NetworkIcon,color: 'from-purple-500 to-blue-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Federated Learning'),marketSize: '$2.3 billion by 2027',avgROI: '500-1500%',innovationLevel: 'Advanced'
-    };
+    },
     {
       id: 'sustainable-technology',name: 'Sustainable Technology AI',description: 'AI solutions for environmental sustainability and green innovation',icon: LeafIcon,color: 'from-green-500 to-blue-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Sustainable Technology'),marketSize: '$1.2 trillion by 2027',avgROI: '300-800%',innovationLevel: 'Advanced'
     }
   ];
   const filteredCategories = selectedCategory === 'all'
     ? serviceCategories
-    : serviceCategories.filter(cat => cat.id === selectedCategory),
+    : serviceCategories.filter(cat => cat.id === selectedCategory);
 
   const toggleCategoryExpansion = (categoryId: string) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId)
   };
-  const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length,
-  const totalMarketSize = '$3.2+ trillion',
+  const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length;
+  const totalMarketSize = '$3.2+ trillion';
   const avgROI = '400-1500%';
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -402,7 +402,7 @@ export default function ComprehensiveServicesOverview2026() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

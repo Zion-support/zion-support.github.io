@@ -17,7 +17,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   rounded = 'rounded',
   animated = true
 }) => {
-  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`,
+  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
   
   if (animated) {
     return (
@@ -37,7 +37,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       </>
     );
   }
-  
+  ;
   return (
     <>
       {Array.from({ length: count }).map((_, index) => (
@@ -48,7 +48,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       ))}
     </>
   ),
-},
+};
 
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse">
@@ -132,7 +132,7 @@ export function TableSkeleton({
 
 interface ListSkeletonProps {
   items?: number,
-  className?: string,
+  className?: string;
   showAvatar?: boolean;
 }
 

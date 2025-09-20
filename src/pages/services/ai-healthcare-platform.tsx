@@ -35,7 +35,7 @@ const AIHealthcarePlatform: React.FC = () => {
     };
     {
       icon: Zap,title: 'Real-time Analytics',description: 'Instant insights and actionable intelligence for healthcare providers'
-    };
+    },
     {
       icon: Users,title: 'Multi-user Access',description: 'Role-based access control for doctors, nurses, and administrators'
     },
@@ -58,7 +58,7 @@ const AIHealthcarePlatform: React.FC = () => {
     },
     {
       icon: Database,title: 'Electronic Health Records',description: 'Intelligent EHR system with natural language processing capabilities'
-    };
+    },
     {
       icon: Lock,title: 'Secure Data Exchange',description: 'Blockchain-based secure sharing of patient data between facilities'
     }

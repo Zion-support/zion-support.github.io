@@ -40,29 +40,29 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showSettings = true,
   autoScroll = true
 }) => {
-  const [messages, setMessages] = useState<ChatMessage[]>([]),
-  const [inputValue, setInputValue] = useState(''),
-  const [isTyping, setIsTyping] = useState(false),
-  const [isOpen, setIsOpen] = useState(false),
-  const [showSettingsPanel, setShowSettingsPanel] = useState(false),
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [inputValue, setInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
   const [settings, setSettings] = useState({
     voiceEnabled: false,autoResponse: true,language: 'en',theme: 'dark',responseSpeed: 'normal'
   });
-  const [isListening, setIsListening] = useState(false),
+  const [isListening, setIsListening] = useState(false);
 
-  const messagesEndRef = useRef<HTMLDivElement>(null),
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
-        id: 'welcome',content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with: \n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",sender: 'bot',timestamp: new Date(),type: 'text',status: 'sent',metadata: {
+      const welcomeMessage: ChatMessage = {,
+        id: 'welcome',content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with: \n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",sender: 'bot',timestamp: new Date(),type: 'text',status: 'sent',metadata: {,
           confidence: 0.95,suggestions: ['Tell me about your servicesGet a quote', 'Technical supportContact information'],
           relatedServices: ['AI ConsultingCloud Solutions', 'Digital Transformation'],
           estimatedResponseTime: 2
         }
       };
-      setMessages([welcomeMessage]),
+      setMessages([welcomeMessage]);
     }
   }, [isOpen, messages.length]),
 
@@ -102,15 +102,15 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       }
     ],
 
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)],
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
-    const botMessage: ChatMessage = {
-      id: Date.now().toString(),content: randomResponse.content,sender: 'bot',timestamp: new Date(),type: 'text',status: 'sent',metadata: {
+    const botMessage: ChatMessage = {,
+      id: Date.now().toString(),content: randomResponse.content,sender: 'bot',timestamp: new Date(),type: 'text',status: 'sent',metadata: {,
         confidence: 0.85 + Math.random() * 0.1,suggestions: randomResponse.suggestions,relatedServices: randomResponse.relatedServices,estimatedResponseTime: 1 + Math.random() * 2
       }
     };
-    setMessages(prev => [...prev, botMessage]),
-    setIsTyping(false),
+    setMessages(prev => [...prev, botMessage]);
+    setIsTyping(false);
   },
 
   // Handle message submission
@@ -118,19 +118,19 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return,
 
-    const userMessage: ChatMessage = {
+    const userMessage: ChatMessage = {,
       id: Date.now().toString(),content: inputValue,sender: 'user',timestamp: new Date(),type: 'text',status: 'sent'
     };
-    setMessages(prev => [...prev, userMessage]),
-    setInputValue(''),
+    setMessages(prev => [...prev, userMessage]);
+    setInputValue('');
 
     // Generate AI response
-    await simulateAIResponse(inputValue),
+    await simulateAIResponse(inputValue);
   },
 
   // Handle voice input
   const toggleVoiceInput = () => {
-    setIsListening(!isListening),
+    setIsListening(!isListening);
     // In a real implementation, this would integrate with Web Speech API
   },
 
@@ -138,11 +138,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      const fileMessage: ChatMessage = {
-        id: Date.now().toString(),content: `Uploaded: ${file.name}`;
+      const fileMessage: ChatMessage = {,
+        id: Date.now().toString(),content: `Uploaded: ${file.name}`,
         sender: 'user',timestamp: new Date(),type: 'file',status: 'sent'
       };
-      setMessages(prev => [...prev, fileMessage]),
+      setMessages(prev => [...prev, fileMessage]);
     }
   },
 
@@ -161,8 +161,8 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
   // Clear chat
   const clearChat = () => {
-    setMessages([]),
-    setChatHistory([]),
+    setMessages([]);
+    setChatHistory([]);
   },
 
   return (
@@ -171,7 +171,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900"
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.1 }};
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle AI chatbot"
       >

@@ -13,7 +13,7 @@ import {
 const successStories = [
   {
     id: 1,client: "TechCorp Solutions",industry: "Technology",challenge: "Legacy systems causing 40% productivity loss",solution: "Modernized infrastructure with AI-powered automation",results: [
-      "Increased productivity by 60%";
+      "Increased productivity by 60%",
       "Reduced operational costs by 35%",
       "Improved customer satisfaction by 45%"
     ],
@@ -21,7 +21,7 @@ const successStories = [
   };
   {
     id: 2,client: "Global Finance Ltd",industry: "Financial Services",challenge: "Security vulnerabilities and compliance issues",solution: "Comprehensive cybersecurity and compliance platform",results: [
-      "100% compliance achievement";
+      "100% compliance achievement",
       "Zero security breaches",
       "Reduced audit time by 70%"
     ],
@@ -29,7 +29,7 @@ const successStories = [
   };
   {
     id: 3,client: "HealthTech Innovations",industry: "Healthcare",challenge: "Patient data management inefficiencies",solution: "AI-powered healthcare analytics platform",results: [
-      "Improved patient outcomes by 30%";
+      "Improved patient outcomes by 30%",
       "Reduced administrative overhead by 50%",
       "Enhanced data accuracy by 95%"
     ],
@@ -42,7 +42,7 @@ export function ClientSuccessStoriesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -61,7 +61,7 @@ export function ClientSuccessStoriesSection() {
             <motion.div
               key={story.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -137,7 +137,7 @@ export function ClientSuccessStoriesSection() {
         {/* Success Metrics */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -170,7 +170,7 @@ export function ClientSuccessStoriesSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}

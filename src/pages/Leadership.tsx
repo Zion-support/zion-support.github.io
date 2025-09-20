@@ -51,7 +51,7 @@ export default function Leadership() {
     };
     {
       icon: Shield,title: 'Trust & Security',description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
-    };
+    },
     {
       icon: Globe,title: 'Global Impact',description: 'We believe technology should make the world better for everyone, everywhere.'
     }
@@ -66,7 +66,7 @@ export default function Leadership() {
     };
     {
       metric: '95%',label: 'Client Satisfaction',description: 'Consistently high satisfaction ratings from our clients'
-    };
+    },
     {
       metric: '25+',label: 'Industry Awards',description: 'Recognition for innovation and excellence in technology'
     }

@@ -18,9 +18,9 @@ export default function ServiceDescriptionGenerator() {
     // Redirect to login if not authenticated
     if (!isAuthenticated) {
         return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace/>;
-    }
+    };
     const handleDescriptionSave = (editedDescription) => {
-        setGeneratedDescription(editedDescription),
+        setGeneratedDescription(editedDescription);
         // Here you could also save to database if needed
     },
     return (<div className="min-h-screen flex flex-col bg-zion-blue">

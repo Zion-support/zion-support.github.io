@@ -61,24 +61,24 @@ const InnovativeServicesHub: React.FC = () => {
     {
       title: 'Brain-Computer Interface Platform',description: 'Direct neural interface for human-computer interaction',category: 'Neurotech',price: '$100,000',
       roi: '1200%',delivery: '12 months'
-    };
+    },
     {
       title: 'Autonomous Space Mining System',description: 'AI-powered space exploration and resource extraction',category: 'Space Tech',price: '$500,000',
       roi: '2000%',delivery: '18 months'
     }
   ];
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5
       }
     }
@@ -182,7 +182,7 @@ const InnovativeServicesHub: React.FC = () => {
               <motion.div
                 key={category.id}
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
-                variants={itemVariants}
+                variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className="flex items-start gap-4 mb-6">
@@ -264,7 +264,7 @@ const InnovativeServicesHub: React.FC = () => {
               className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
+              transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }};
               whileHover={{ y: -5, scale: 1.02 }}
             >
               <div className="flex items-center gap-2 mb-3">

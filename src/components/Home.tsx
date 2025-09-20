@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 const Home: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [scrollY, setScrollY] = useState(0),
-  const [hoveredService, setHoveredService] = useState<number | null>(null),
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
 
   const handleScroll = useCallback(() => {
-    setScrollY(window.scrollY),
-  }, []),
+    setScrollY(window.scrollY);
+  }, []);
 
   useEffect(() => {
-    setIsLoaded(true),
+    setIsLoaded(true);
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll),
-  }, [handleScroll]),
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   const services = useMemo(() => [
     {
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
       title: "Space Technology",description: "Advanced aerospace and satellite solutions.",icon: "🚀",features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"],
       gradient: "from-sky-500 to-blue-500",price: "Starting at $15,000/month"
     }
-  ], []),
+  ], []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
@@ -55,9 +55,9 @@ const Home: React.FC = () => {
               key={i}
               className="absolute w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"
               style={{
-                left: `${Math.random() * 100}%`;
-                top: `${Math.random() * 100}%`;
-                animationDelay: `${Math.random() * 3}s`;
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
               }}
             />
@@ -171,11 +171,11 @@ const Home: React.FC = () => {
                     {
                       title: "Zion AI Platform 2.0 Released",date: "September 20, 2025",
                       excerpt: "Revolutionary new features including advanced quantum computing integration and enhanced AI capabilities.",category: "Product Update"
-                    };
+                    },
                     {
                       title: "Partnership with SpaceX Announced",date: "September 18, 2025",
                       excerpt: "Collaborating on next-generation space technology solutions for commercial and research applications.",category: "Partnership"
-                    };
+                    },
                     {
                       title: "Quantum Computing Breakthrough",date: "September 15, 2025",
                       excerpt: "Our research team achieves 99.9% quantum error correction, paving the way for practical quantum applications.",
@@ -217,11 +217,11 @@ const Home: React.FC = () => {
                     {
                       name: "Sarah Johnson",role: "CTO, TechCorp",
                       content: "Zion's AI solutions transformed our operations completely. The results exceeded our expectations.",rating: 5
-                    };
+                    },
                     {
                       name: "Michael Chen",role: "CEO, InnovateLab",
                       content: "Their quantum computing expertise gave us a competitive edge we never thought possible.",rating: 5
-                    };
+                    },
                     {
                       name: "Emily Rodriguez",role: "VP Engineering, SpaceTech",
                       content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",rating: 5

@@ -312,7 +312,7 @@ export default function RoboticsAutomation() {
     };
     {
       icon: Palette,title: 'Custom Solutions',description: 'Tailored robotics and automation for specific needs',color: 'from-red-500 to-pink-500'
-    };
+    },
     {
       icon: Network,title: 'IoT Integration',description: 'Connected devices and smart factory solutions',color: 'from-indigo-500 to-blue-500'
     }
@@ -333,7 +333,7 @@ export default function RoboticsAutomation() {
     };
     {
       title: 'Healthcare',description: 'Surgical robots and medical device automation',icon: Heart
-    };
+    },
     {
       title: 'Agriculture',description: 'Precision farming and crop management robots',icon: Globe
     }
@@ -368,7 +368,7 @@ export default function RoboticsAutomation() {
     };
     {
       name: 'Construction',icon: Building,description: 'Automated construction and building maintenance'
-    };
+    },
     {
       name: 'Energy',icon: Zap,description: 'Power plant automation and renewable energy systems'
     }
@@ -411,14 +411,14 @@ export default function RoboticsAutomation() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
                 >
                   Get Started
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
@@ -439,7 +439,7 @@ export default function RoboticsAutomation() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -458,7 +458,7 @@ export default function RoboticsAutomation() {
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -486,7 +486,7 @@ export default function RoboticsAutomation() {
           <div className="container-responsive">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -505,7 +505,7 @@ export default function RoboticsAutomation() {
                   {benefits.map((benefit, index) => (
                     <motion.div
                       key={benefit}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -20 }};
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
@@ -519,7 +519,7 @@ export default function RoboticsAutomation() {
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -564,7 +564,7 @@ export default function RoboticsAutomation() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -583,7 +583,7 @@ export default function RoboticsAutomation() {
               {automationCapabilities.map((capability, index) => (
                 <motion.div
                   key={capability.name}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -615,7 +615,7 @@ export default function RoboticsAutomation() {
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -634,7 +634,7 @@ export default function RoboticsAutomation() {
               {industries.map((industry, index) => (
                 <motion.div
                   key={industry.name}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -664,7 +664,7 @@ export default function RoboticsAutomation() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -683,7 +683,7 @@ export default function RoboticsAutomation() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={useCase.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -713,7 +713,7 @@ export default function RoboticsAutomation() {
         <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -730,14 +730,14 @@ export default function RoboticsAutomation() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
                 >
                   Start Today
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >

@@ -18,7 +18,7 @@ export default function QuantumComputingSolutions() {
     };
     {
       icon: Shield,title: 'Quantum Security',description: 'Quantum-resistant cryptography and quantum key distribution for enhanced security.'
-    };
+    },
     {
       icon: Users,title: 'Expert Consultation',description: 'Access to quantum computing experts and specialized implementation support.'
     }
@@ -38,7 +38,7 @@ export default function QuantumComputingSolutions() {
     };
     {
       title: 'Quantum Software Integration',description: 'Seamless integration of quantum computing capabilities into existing software systems.',icon: Cpu
-    };
+    },
     {
       title: 'Quantum Research & Development',description: 'Collaborative R&D programs to explore quantum computing applications for your industry.',icon: Lightbulb
     }
@@ -87,7 +87,7 @@ export default function QuantumComputingSolutions() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -105,7 +105,7 @@ export default function QuantumComputingSolutions() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hover:scale-105"
@@ -125,7 +125,7 @@ export default function QuantumComputingSolutions() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -143,7 +143,7 @@ export default function QuantumComputingSolutions() {
             {solutions.map((solution, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200"
@@ -167,7 +167,7 @@ export default function QuantumComputingSolutions() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
@@ -189,7 +189,7 @@ export default function QuantumComputingSolutions() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="relative"
@@ -217,7 +217,7 @@ export default function QuantumComputingSolutions() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"

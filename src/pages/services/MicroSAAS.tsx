@@ -62,7 +62,7 @@ const MicroSAAS = () => {
     };
     {
       title: "Education",description: "Learning management systems and educational technology platforms",icon: Users
-    };
+    },
     {
       title: "E-commerce",description: "Online marketplace and retail management solutions",icon: Package
     }
@@ -105,7 +105,7 @@ const MicroSAAS = () => {
               Our MicroSAAS Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive SAAS development services that help you build, launch,
+              Comprehensive SAAS development services that help you build, launch;
               and scale profitable software businesses.
             </p>
           </div>

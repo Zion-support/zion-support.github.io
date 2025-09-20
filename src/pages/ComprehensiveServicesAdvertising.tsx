@@ -113,15 +113,15 @@ export default function ComprehensiveServicesAdvertising() {
     { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' };
     { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' };
     { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' };
-    { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' };
+    { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
     { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
   ];
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
   }),
 
@@ -132,9 +132,9 @@ export default function ComprehensiveServicesAdvertising() {
       case 'price':
         return a.price - b.price,
       case 'reviews':
-        return b.reviewCount - a.reviewCount,
+        return b.reviewCount - a.reviewCount;
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       default: return b.rating - a.rating
     }
   });
@@ -163,7 +163,7 @@ export default function ComprehensiveServicesAdvertising() {
       case 'AI & Operations': return <Cpu className="w-6 h-6" />,
       case 'AI & Development': return <Code className="w-6 h-6" />,
       case 'AI & Education': return <Award className="w-6 h-6" />,
-      case 'AI & Entertainment': return <Sparkles className="w-6 h-6" />,
+      case 'AI & Entertainment': return <Sparkles className="w-6 h-6" />;
       default: return <Star className="w-6 h-6" />
     }
   };
@@ -260,7 +260,7 @@ export default function ComprehensiveServicesAdvertising() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -280,7 +280,7 @@ export default function ComprehensiveServicesAdvertising() {
 
           {/* Category Filter */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
@@ -305,7 +305,7 @@ export default function ComprehensiveServicesAdvertising() {
 
           {/* Search and Sort */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-8 flex flex-col md:flex-row gap-4 justify-between items-center"
@@ -335,7 +335,7 @@ export default function ComprehensiveServicesAdvertising() {
 
           {/* Services Grid */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -343,7 +343,7 @@ export default function ComprehensiveServicesAdvertising() {
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105 group"
@@ -445,7 +445,7 @@ export default function ComprehensiveServicesAdvertising() {
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
@@ -454,7 +454,7 @@ export default function ComprehensiveServicesAdvertising() {
           </motion.h2>
           
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 mb-8"
@@ -464,7 +464,7 @@ export default function ComprehensiveServicesAdvertising() {
           </motion.p>
 
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -487,7 +487,7 @@ export default function ComprehensiveServicesAdvertising() {
 
           {/* Contact Details */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"

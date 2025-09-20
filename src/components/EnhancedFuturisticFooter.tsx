@@ -89,7 +89,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Autonomous Entertainment Platform', href: '/services/ai-autonomous-entertainment-platform', featured: true };
         { name: 'AI Autonomous Metaverse Platform', href: '/services/ai-autonomous-metaverse-platform', featured: true };
         { name: 'AI Autonomous Space Technology', href: '/services/ai-autonomous-space-technology-platform', featured: true };
-        { name: 'AI Autonomous Green Technology', href: '/services/ai-autonomous-green-technology-platform', featured: true };
+        { name: 'AI Autonomous Green Technology', href: '/services/ai-autonomous-green-technology-platform', featured: true },
         { name: 'Blockchain Autonomous Governance', href: '/services/blockchain-autonomous-governance-platform', featured: true }
       ]
     };
@@ -111,7 +111,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Interview Assessment AI', href: '/services/interview-assessment-ai', featured: true };
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', featured: true };
         { name: 'Landing Page Generator', href: '/services/landing-page-generator', featured: true };
-        { name: 'Podcast Transcription', href: '/services/podcast-transcription', featured: true };
+        { name: 'Podcast Transcription', href: '/services/podcast-transcription', featured: true },
         { name: 'Website Analytics', href: '/services/website-analytics', featured: true }
       ]
     };
@@ -123,7 +123,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading-platform', featured: true };
         { name: 'Quantum AI Drug Discovery', href: '/services/quantum-ai-drug-discovery-platform', featured: true };
         { name: 'Quantum Technology', href: '/services/quantum-technology', featured: true };
-        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', featured: true };
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', featured: true },
         { name: 'Quantum Computing Elite', href: '/services/quantum-computing-elite', featured: true }
       ]
     };
@@ -133,7 +133,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Blockchain Solutions', href: '/services/blockchain', featured: true };
         { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', featured: true };
         { name: 'Checkout Performance Optimizer', href: '/services/checkout-performance-optimizer', featured: true };
-        { name: 'Price Intelligence Service', href: '/services/price-intelligence-service', featured: true };
+        { name: 'Price Intelligence Service', href: '/services/price-intelligence-service', featured: true },
         { name: 'Returns Management', href: '/services/returns-management', featured: true }
       ]
     };
@@ -149,7 +149,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Space Tech Solutions', href: '/services/space-tech', featured: true };
         { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', featured: true };
         { name: 'Security Headers CSP', href: '/services/security-headers-csp', featured: true };
-        { name: 'Incident Response Platform', href: '/services/incident-response-platform', featured: true };
+        { name: 'Incident Response Platform', href: '/services/incident-response-platform', featured: true },
         { name: 'Cybersecurity Solutions', href: '/services/cybersecurity', featured: true }
       ]
     };
@@ -165,7 +165,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Mobile Survey Tool', href: '/services/mobile-first-survey-tool', featured: true };
         { name: 'SEO Auditor', href: '/services/seo-auditor', featured: true };
         { name: 'Status Incident Hub', href: '/services/status-incident-hub', featured: true };
-        { name: 'IT Consulting', href: '/services/it-consulting', featured: true };
+        { name: 'IT Consulting', href: '/services/it-consulting', featured: true },
         { name: 'Transformation Solutions', href: '/services/transformation', featured: true }
       ]
     };
@@ -183,7 +183,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Pricing Guide 2027', href: '/pricing-guide-2027', featured: true };
         { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true };
         { name: 'Comprehensive Services Showcase', href: '/services/showcase-2030', featured: true };
-        { name: 'Enhanced Services Landing', href: '/services/enhanced', featured: true };
+        { name: 'Enhanced Services Landing', href: '/services/enhanced', featured: true },
         { name: 'Comprehensive Services Advertising', href: '/services/comprehensive-advertising', featured: true }
       ]
     };
@@ -195,7 +195,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Dashboard', href: '/dashboard', featured: true };
         { name: 'Login', href: '/login', featured: true };
         { name: 'Search', href: '/search', featured: true };
-        { name: 'Solutions', href: '/solutions', featured: true };
+        { name: 'Solutions', href: '/solutions', featured: true },
         { name: 'Resources', href: '/resources', featured: true }
       ]
     }
@@ -205,7 +205,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Contact', href: '/contact', icon: Mail };
     { name: 'Careers', href: '/careers', icon: Users };
     { name: 'Privacy Policy', href: '/privacy', icon: Shield };
-    { name: 'Terms of Service', href: '/terms', icon: FileText };
+    { name: 'Terms of Service', href: '/terms', icon: FileText },
     { name: 'Cookie Policy', href: '/cookies', icon: Settings }
   ];
   const contactInfo = {
@@ -216,7 +216,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' };
     { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-700' };
     { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-500' };
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-600' };
+    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-600' },
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-700 dark:hover:text-gray-300' }
   ];
   return (

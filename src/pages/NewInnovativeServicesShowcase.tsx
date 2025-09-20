@@ -27,7 +27,7 @@ export default function NewInnovativeServicesShowcase() {
     };
     {
       title: "AI & Healthcare",description: "Transformative healthcare analytics and clinical decision support",icon: TrendingUp,color: "from-green-500 to-blue-600"
-    };
+    },
     {
       title: "AI & FinTech",description: "Advanced trading platforms with intelligent risk management",icon: DollarSign,color: "from-green-500 to-emerald-600"
     }
@@ -43,7 +43,7 @@ export default function NewInnovativeServicesShowcase() {
     {
       title: "Proven ROI & Results",description: "Measurable improvements in efficiency, accuracy, and cost savings across all services",
       icon: TrendingUp
-    };
+    },
     {
       title: "Enterprise-Grade Security",description: "SOC 2, ISO 27001, and industry-specific compliance certifications for maximum security",
       icon: Shield

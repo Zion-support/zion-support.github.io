@@ -41,7 +41,7 @@ export default function CloudSolutions() {
     };
     {
       icon: Lock,title: "Enhanced Security",description: "Enterprise-grade security with advanced threat protection and compliance"
-    };
+    },
     {
       icon: Users,title: "24/7 Support",description: "Round-the-clock expert support for your cloud infrastructure needs"
     }
@@ -51,20 +51,20 @@ export default function CloudSolutions() {
     { name: "Azure", logo: "Azure", description: "Microsoft Azure" };
     { name: "GCP", logo: "GCP", description: "Google Cloud Platform" };
     { name: "Kubernetes", logo: "K8s", description: "Container Orchestration" };
-    { name: "Docker", logo: "Docker", description: "Containerization" };
+    { name: "Docker", logo: "Docker", description: "Containerization" },
     { name: "Terraform", logo: "TF", description: "Infrastructure as Code" }
   ];
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: {
+    hidden: { opacity: 0, y: 20 },
+    visible: {,
       opacity: 1,y: 0,transition: { duration: 0.6 }
     }
   };
@@ -90,7 +90,7 @@ export default function CloudSolutions() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with enterprise-grade cloud infrastructure, DevOps automation,
+              Transform your business with enterprise-grade cloud infrastructure, DevOps automation;
               and scalable solutions that drive innovation and growth.
             </p>
 
@@ -102,7 +102,7 @@ export default function CloudSolutions() {
             >
               <motion.button
                 className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 Get Started
@@ -110,7 +110,7 @@ export default function CloudSolutions() {
               </motion.button>
               <motion.button
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 <Play className="w-5 h-5" />
@@ -126,7 +126,7 @@ export default function CloudSolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -151,7 +151,7 @@ export default function CloudSolutions() {
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-                variants={itemVariants}
+                variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -180,7 +180,7 @@ export default function CloudSolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -223,7 +223,7 @@ export default function CloudSolutions() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -248,7 +248,7 @@ export default function CloudSolutions() {
               <motion.div
                 key={index}
                 className="text-center group"
-                variants={itemVariants}
+                variants={itemVariants};
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="w-20 h-20 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:border-zion-cyan/40 transition-colors duration-300">
@@ -266,7 +266,7 @@ export default function CloudSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -280,7 +280,7 @@ export default function CloudSolutions() {
             </p>
             <motion.button
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
             >
               Start Your Cloud Journey

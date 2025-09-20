@@ -3,20 +3,20 @@ import { CartItem } from "@/types/listings";
 interface CartState {
   items: CartItem[],total: number,itemCount: number
 }
-
-const initialState: CartState = {
+;
+const initialState: CartState = {,
   items: [],total: 0,itemCount: 0
 };
 const cartSlice = createSlice({
   name: 'cart';
   initialState,
-  reducers: {
+  reducers: {,
     addItem: (state, action: PayloadAction<CartItem>) => {
       const existingItem = state.items.find(item => item.id === action.payload.id);
       if (existingItem) {
         existingItem.quantity += action.payload.quantity
       } else {
-        state.items.push(action.payload),
+        state.items.push(action.payload);
       }
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0),
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0),

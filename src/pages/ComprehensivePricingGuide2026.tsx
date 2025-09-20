@@ -19,27 +19,27 @@ import {
 import SEO from "../components/SEO";
 import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026";
 const ComprehensivePricingGuide2026: React.FC = () => {
-  const [selectedService, setSelectedService] = useState<string>('all'),
-  const [selectedTier, setSelectedTier] = useState<string>('all'),
+  const [selectedService, setSelectedService] = useState<string>('all');
+  const [selectedTier, setSelectedTier] = useState<string>('all');
 
   const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)],
   const tiers = ['allStarter', 'ProfessionalEnterprise'],
 
   const filteredPricing = useMemo(() => {
-    let filtered = ALL_PRICING_GUIDES_2026,
+    let filtered = ALL_PRICING_GUIDES_2026;
 
     if (selectedService !== 'all') {
-      filtered = filtered.filter(service => service.serviceName === selectedService),
+      filtered = filtered.filter(service => service.serviceName === selectedService);
     }
-
+;
     return filtered,
-  }, [selectedService]),
+  }, [selectedService]);
 
   const getServiceIcon = (serviceName: string) => {
     switch (serviceName) {
       case 'QuantumFlow Pro': return <Cpu className="w-6 h-6" />;
       case 'NeuroSync AI': return <Brain className="w-6 h-6" />,
-      case 'BlockchainForge': return <Shield className="w-6 h-6" />,
+      case 'BlockchainForge': return <Shield className="w-6 h-6" />;
       default: return <Zap className="w-6 h-6" />
     }
   };
@@ -47,7 +47,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
     switch (tierName) {
       case 'Starter': return 'from-green-500 to-emerald-500';
       case 'Professional': return 'from-blue-500 to-cyan-500',
-      case 'Enterprise': return 'from-purple-500 to-pink-500',
+      case 'Enterprise': return 'from-purple-500 to-pink-500';
       default: return 'from-gray-500 to-gray-600'
     }
   };
@@ -341,7 +341,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 rounded-3xl p-12 border border-white/10"
@@ -383,7 +383,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/10"

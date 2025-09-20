@@ -78,19 +78,19 @@ export default function ComprehensivePricingGuide2030() {
     { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' };
     { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' };
     { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' };
-    { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' };
+    { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
     { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
   ];
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' };
     { id: 'budget', name: 'Budget ($1K - $10K)', range: '1K-10K' };
-    { id: 'mid-range', name: 'Mid-Range ($10K - $50K)', range: '10K-50K' };
+    { id: 'mid-range', name: 'Mid-Range ($10K - $50K)', range: '10K-50K' },
     { id: 'enterprise', name: 'Enterprise ($50K+)', range: '50K+' }
   ];
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     
-    let matchesPrice = true,
+    let matchesPrice = true;
     if (priceRange === 'budget') {
       matchesPrice = service.price >= 1000 && service.price < 10000,
     } else if (priceRange === 'mid-range') {
@@ -98,9 +98,9 @@ export default function ComprehensivePricingGuide2030() {
     } else if (priceRange === 'enterprise') {
       matchesPrice = service.price >= 50000,
     }
-    
+    ;
     return matchesCategory && matchesPrice,
-  }),
+  });
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -127,7 +127,7 @@ export default function ComprehensivePricingGuide2030() {
       case 'AI & Operations': return <Cpu className="w-6 h-6" />,
       case 'AI & Development': return <Code className="w-6 h-6" />,
       case 'AI & Education': return <Award className="w-6 h-6" />,
-      case 'AI & Entertainment': return <Sparkles className="w-6 h-6" />,
+      case 'AI & Entertainment': return <Sparkles className="w-6 h-6" />;
       default: return <Star className="w-6 h-6" />
     }
   };
@@ -202,7 +202,7 @@ export default function ComprehensivePricingGuide2030() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -221,7 +221,7 @@ export default function ComprehensivePricingGuide2030() {
 
           {/* Pricing Tiers */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
@@ -355,7 +355,7 @@ export default function ComprehensivePricingGuide2030() {
 
           {/* Filters */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-12"
@@ -396,17 +396,17 @@ export default function ComprehensivePricingGuide2030() {
 
           {/* Services Grid */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredServices.map((service, index) => {
-              const priceTier = getPriceTier(service.price),
+              const priceTier = getPriceTier(service.price);
               return (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-emerald-500/50 transition-all duration-300 transform hover:scale-105 group"
@@ -516,7 +516,7 @@ export default function ComprehensivePricingGuide2030() {
       <section className="py-20 px-4 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
@@ -525,7 +525,7 @@ export default function ComprehensivePricingGuide2030() {
           </motion.h2>
           
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 mb-8"
@@ -535,7 +535,7 @@ export default function ComprehensivePricingGuide2030() {
           </motion.p>
 
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -558,7 +558,7 @@ export default function ComprehensivePricingGuide2030() {
 
           {/* Contact Details */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"

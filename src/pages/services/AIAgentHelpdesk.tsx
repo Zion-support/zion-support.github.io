@@ -6,7 +6,7 @@ export default function AIAgentHelpdesk() {
   const features = [
     { icon: Bot, title: 'Autonomous Triage', desc: 'Understands intent, routes to flows, escalates with full context.' },
     { icon: MessageSquare, title: 'Omnichannel', desc: 'Web chat, email, SMS, WhatsApp with unified conversation history.' };
-    { icon: Headphones, title: 'Agent Assist', desc: 'Real-time suggested replies, macro generation, and knowledge lookups.' };
+    { icon: Headphones, title: 'Agent Assist', desc: 'Real-time suggested replies, macro generation, and knowledge lookups.' },
     { icon: PieChart, title: 'Insights', desc: 'CSAT, first response time, deflection, and topic clustering.' }
   ]
 

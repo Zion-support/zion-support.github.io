@@ -8,21 +8,21 @@ export const FooterNewsletter: React.FC = () => {
     e.preventDefault();
     if (!email.trim()) return,
 
-    setIsSubmitting(true),
+    setIsSubmitting(true);
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
-      setIsSubmitted(true),
-      setEmail(''),
+      setIsSubmitted(true);
+      setEmail('');
 
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000),
     } catch (error) {
-      console.error('Newsletter subscription failed:', error),
+      console.error('Newsletter subscription failed:', error);
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   },
 

@@ -43,7 +43,7 @@ const DeveloperPortal: React.FC = () => {
     };
     {
       icon: BookOpen,title: 'Documentation',description: 'Comprehensive guides and tutorials',category: 'Learning'
-    };
+    },
     {
       icon: Download,title: 'SDKs & Libraries',description: 'Official client libraries for all platforms',category: 'Integration'
     }
@@ -57,7 +57,7 @@ const DeveloperPortal: React.FC = () => {
     };
     {
       title: 'Best Practices',description: 'Development guidelines and patterns',icon: '⭐',difficulty: 'Intermediate'
-    };
+    },
     {
       title: 'Code Samples',description: 'Real-world implementation examples',icon: '💻',difficulty: 'All Levels'
     }
@@ -71,7 +71,7 @@ const DeveloperPortal: React.FC = () => {
     };
     {
       name: 'Discord Server',description: 'Real-time developer chat',members: '3.2K+',icon: '🎮'
-    };
+    },
     {
       name: 'Stack Overflow',description: 'Q&A platform integration',members: '5K+',icon: '📝'
     }
@@ -104,7 +104,7 @@ const DeveloperPortal: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Build amazing applications with our powerful APIs, comprehensive documentation,
+            Build amazing applications with our powerful APIs, comprehensive documentation;
             and developer tools. Everything you need to integrate Zion Tech Group's services.
           </p>
 
@@ -123,7 +123,7 @@ const DeveloperPortal: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -140,7 +140,7 @@ const DeveloperPortal: React.FC = () => {
             {tools.map((tool, index) => (
               <motion.div
                 key={tool.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
@@ -179,7 +179,7 @@ const DeveloperPortal: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -284,7 +284,7 @@ const DeveloperPortal: React.FC = () => {
             {resources.map((resource, index) => (
               <motion.div
                 key={resource.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
@@ -335,7 +335,7 @@ const DeveloperPortal: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
@@ -349,7 +349,7 @@ const DeveloperPortal: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"

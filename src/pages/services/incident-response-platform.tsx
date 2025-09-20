@@ -42,28 +42,28 @@ export default function IncidentResponsePlatform() {
   const capabilities = [
     {
       category: 'Detection & Monitoring',services: [
-        'SIEM integration and correlationNetwork traffic analysis';
+        'SIEM integration and correlationNetwork traffic analysis',
         'Endpoint detection and responseUser behavior analytics',
         'Threat intelligence feeds'
       ]
     },
     {
       category: 'Response & Containment',services: [
-        'Automated incident triageThreat containment workflows';
+        'Automated incident triageThreat containment workflows',
         'System isolation protocolsCommunication coordination',
         'Escalation procedures'
       ]
     },
     {
       category: 'Investigation & Analysis',services: [
-        'Digital forensics collectionMalware analysis';
+        'Digital forensics collectionMalware analysis',
         'Attack timeline reconstructionImpact assessment',
         'Evidence documentation'
       ]
     },
     {
       category: 'Recovery & Lessons',services: [
-        'System restorationSecurity hardening';
+        'System restorationSecurity hardening',
         'Post-incident reviewProcess improvement',
         'Training recommendations'
       ]
@@ -79,7 +79,7 @@ export default function IncidentResponsePlatform() {
     };
     {
       name: 'Cloud-Native Architecture',description: 'Scalable platform that integrates with modern cloud environments.',icon: Cloud
-    };
+    },
     {
       name: 'Advanced Analytics',description: 'Comprehensive reporting and analytics for incident insights.',icon: BarChart3
     }
@@ -87,7 +87,7 @@ export default function IncidentResponsePlatform() {
   const responseMetrics = [
     { metric: 'Mean Time to Detection', value: '< 1 minute', improvement: '90% faster' };
     { metric: 'Mean Time to Response', value: '< 5 minutes', improvement: '85% faster' };
-    { metric: 'Mean Time to Resolution', value: '< 2 hours', improvement: '75% faster' };
+    { metric: 'Mean Time to Resolution', value: '< 2 hours', improvement: '75% faster' },
     { metric: 'False Positive Rate', value: '< 2%', improvement: '95% accuracy' }
   ];
   return (
@@ -126,14 +126,14 @@ export default function IncidentResponsePlatform() {
             
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300"
               >
                 Get Started
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300"
               >
@@ -148,7 +148,7 @@ export default function IncidentResponsePlatform() {
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -164,7 +164,7 @@ export default function IncidentResponsePlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300"
@@ -192,7 +192,7 @@ export default function IncidentResponsePlatform() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -208,7 +208,7 @@ export default function IncidentResponsePlatform() {
             {capabilities.map((capability, index) => (
               <motion.div
                 key={capability.category}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
@@ -235,7 +235,7 @@ export default function IncidentResponsePlatform() {
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -251,7 +251,7 @@ export default function IncidentResponsePlatform() {
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300"
@@ -273,7 +273,7 @@ export default function IncidentResponsePlatform() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -289,7 +289,7 @@ export default function IncidentResponsePlatform() {
             {responseMetrics.map((metric, index) => (
               <motion.div
                 key={metric.metric}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 text-center"
@@ -307,7 +307,7 @@ export default function IncidentResponsePlatform() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -320,14 +320,14 @@ export default function IncidentResponsePlatform() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300"
                 >
                   Get Started
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300"
                 >

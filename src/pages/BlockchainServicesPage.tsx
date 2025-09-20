@@ -26,13 +26,13 @@ import {
   Check
 } from "lucide-react";
 const BlockchainServicesPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const blockchainServices = [
     {
       id: "smart-contracts",title: "Smart Contract Development",description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.",
       price: 3500,currency: "$",period: "/project",features: [
-        "Custom smart contract development";
+        "Custom smart contract development",
         "Security auditing & testing",
         "Gas optimization",
         "Multi-chain deployment",
@@ -44,7 +44,7 @@ const BlockchainServicesPage = () => {
     {
       id: "defi-platform",title: "DeFi Platform Development",description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.",
       price: 15000,currency: "$",period: "/platform",features: [
-        "DEX development";
+        "DEX development",
         "Lending protocols",
         "Yield farming",
         "Liquidity management",
@@ -56,7 +56,7 @@ const BlockchainServicesPage = () => {
     {
       id: "nft-marketplace",title: "NFT Marketplace Development",description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.",
       price: 8000,currency: "$",period: "/marketplace",features: [
-        "NFT minting & trading";
+        "NFT minting & trading",
         "Auction system",
         "Royalty distribution",
         "Multi-chain support",
@@ -68,7 +68,7 @@ const BlockchainServicesPage = () => {
     {
       id: "enterprise-blockchain",title: "Enterprise Blockchain Solutions",description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.",
       price: 25000,currency: "$",period: "/solution",features: [
-        "Private blockchain setup";
+        "Private blockchain setup",
         "Consensus mechanisms",
         "Identity management",
         "Supply chain tracking",
@@ -80,7 +80,7 @@ const BlockchainServicesPage = () => {
     {
       id: "blockchain-security",title: "Blockchain Security & Auditing",description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.",
       price: 5000,currency: "$",period: "/audit",features: [
-        "Smart contract auditing";
+        "Smart contract auditing",
         "Penetration testing",
         "Vulnerability assessment",
         "Security best practices",
@@ -91,7 +91,7 @@ const BlockchainServicesPage = () => {
     };
     {
       id: "cross-chain",title: "Cross-Chain Solutions",description: "Interoperability solutions enabling seamless asset and data transfer across different blockchain networks.",price: 12000,currency: "$",period: "/solution",features: [
-        "Bridge development";
+        "Bridge development",
         "Cross-chain messaging",
         "Asset interoperability",
         "Multi-chain wallets",
@@ -107,12 +107,12 @@ const BlockchainServicesPage = () => {
     { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length };
     { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length };
     { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s => s.category === 'Enterprise').length };
-    { id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length };
+    { id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length },
     { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s => s.category === 'Interoperability').length }
   ];
   const filteredServices = selectedCategory === 'all'
     ? blockchainServices
-    : blockchainServices.filter(service => service.category === selectedCategory),
+    : blockchainServices.filter(service => service.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -299,7 +299,7 @@ const BlockchainServicesPage = () => {
               };
               {
                 icon: CheckCircle,title: "Proven Track Record",description: "Successfully delivered blockchain solutions for companies across industries."
-              };
+              },
               {
                 icon: Globe,title: "Multi-Chain Support",description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
               }

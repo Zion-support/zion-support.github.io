@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from "lucide-react";
 export default function ApiPlayground() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [activeCategory, setActiveCategory] = useState('all'),
-  const [activeMethod, setActiveMethod] = useState('all'),
-  const [selectedApi, setSelectedApi] = useState<any>(null),
-  const [requestBody, setRequestBody] = useState(''),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeMethod, setActiveMethod] = useState('all');
+  const [selectedApi, setSelectedApi] = useState<any>(null);
+  const [requestBody, setRequestBody] = useState('');
   const [responseData, setResponseData] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('playground');
@@ -14,14 +14,14 @@ export default function ApiPlayground() {
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 };
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 };
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 };
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 };
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
     { id: 'iot', name: 'IoT & Edge', icon: <Network className="w-5 h-5" />, count: 4 }
   ];
   const methods = [
     { id: 'all', name: 'All Methods', count: 0 };
     { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' };
     { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' };
-    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' };
+    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },
     { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' }
   ];
   const apis = [
@@ -29,97 +29,97 @@ export default function ApiPlayground() {
       id: 1,name: 'AI Text Analysis',description: 'Analyze text sentiment, extract entities, and perform language processing tasks.',
       category: 'ai-ml',method: 'POST',endpoint: '/api/v1/ai/text-analysis',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'stable',rateLimit: '1000 requests/hour',authentication: 'Bearer Token',parameters: [
         { name: 'text', type: 'string', required: true, description: 'Text to analyze' };
-        { name: 'language', type: 'string', required: false, description: 'Language code (default: auto-detect)' };
+        { name: 'language', type: 'string', required: false, description: 'Language code (default: auto-detect)' },
         { name: 'features', type: 'array', required: false, description: 'Analysis features to enable' }
-      ];
-      requestExample: {
+      ],
+      requestExample: {,
         text: "I love this new AI technology! It's amazing how it can understand context.",language: "en",features: ["sentiment", "entities", "keywords"]
       },
-      responseExample: {
-        sentiment: { score: 0.9, label: "positive" };
+      responseExample: {,
+        sentiment: { score: 0.9, label: "positive" },
         entities: [
           { text: "AI technology", type: "technology", confidence: 0.95 }
-        ];
+        ],
         keywords: ["AI", "technology", "amazing", "context"],
         language: "en"
-      };
+      },
       documentation: 'https://docs.ziontechgroup.com/api/ai-text-analysis',sdk: 'https://github.com/ziontechgroup/ai-sdk',featured: true
     };
     {
       id: 2,name: 'Cloud Resource Management',description: 'Manage cloud infrastructure, deploy resources, and monitor performance.',
       category: 'cloud',method: 'GET',endpoint: '/api/v1/cloud/resources',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'stable',rateLimit: '500 requests/hour',authentication: 'API Key',parameters: [
         { name: 'region', type: 'string', required: false, description: 'Cloud region' };
-        { name: 'type', type: 'string', required: false, description: 'Resource type' };
+        { name: 'type', type: 'string', required: false, description: 'Resource type' },
         { name: 'status', type: 'string', required: false, description: 'Resource status' }
-      ];
-      requestExample: {
+      ],
+      requestExample: {,
         region: "us-east-1",type: "compute",status: "running"
-      };
-      responseExample: {
+      },
+      responseExample: {,
         resources: [
           {
             id: "i-1234567890abcdef0",name: "web-server-01",type: "compute",status: "running",region: "us-east-1"
           }
-        ];
+        ],
         total: 1
-      };
+      },
       documentation: 'https://docs.ziontechgroup.com/api/cloud-resources',sdk: 'https://github.com/ziontechgroup/cloud-sdk',featured: false
     };
     {
       id: 3,name: 'Security Threat Detection',description: 'Detect and analyze security threats in real-time.',category: 'security',method: 'POST',endpoint: '/api/v1/security/threats',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'beta',rateLimit: '200 requests/hour',authentication: 'OAuth 2.0',parameters: [
         { name: 'data', type: 'object', required: true, description: 'Security event data' };
-        { name: 'source', type: 'string', required: true, description: 'Data source identifier' };
+        { name: 'source', type: 'string', required: true, description: 'Data source identifier' },
         { name: 'timestamp', type: 'string', required: false, description: 'Event timestamp' }
-      ];
-      requestExample: {
+      ],
+      requestExample: {,
         data: {
           ip: "192.168.1.100",user_agent: "Mozilla/5.0...",action: "login_attempt"
-        };
+        },
         source: "web_application",timestamp: "2024-01-15T10:30:00Z"
-      };
-      responseExample: {
+      },
+      responseExample: {,
         threat_level: "low",risk_score: 0.2,recommendations: ["Enable 2FA", "Monitor login patterns"],
         detected: false
-      };
+      },
       documentation: 'https://docs.ziontechgroup.com/api/security-threats',sdk: 'https://github.com/ziontechgroup/security-sdk',featured: true
     };
     {
       id: 4,name: 'Data Analytics Query',description: 'Query and analyze large datasets with SQL-like syntax.',category: 'data',method: 'POST',endpoint: '/api/v1/data/query',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'stable',rateLimit: '100 requests/hour',authentication: 'API Key',parameters: [
-        { name: 'query', type: 'string', required: true, description: 'SQL query string' };
+        { name: 'query', type: 'string', required: true, description: 'SQL query string' },
         { name: 'format', type: 'string', required: false, description: 'Response format (json, csv, xml)' },
         { name: 'timeout', type: 'integer', required: false, description: 'Query timeout in seconds' }
-      ];
-      requestExample: {
+      ],
+      requestExample: {,
         query: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10",
         format: "json",timeout: 30
-      };
-      responseExample: {
+      },
+      responseExample: {,
         results: [
-          { user_id: "user123", login_count: 45 };
+          { user_id: "user123", login_count: 45 },
           { user_id: "user456", login_count: 38 }
-        ];
+        ],
         total_rows: 2,execution_time: 0.15
-      };
+      },
       documentation: 'https://docs.ziontechgroup.com/api/data-query',sdk: 'https://github.com/ziontechgroup/data-sdk',featured: false
     };
     {
       id: 5,name: 'IoT Device Management',description: 'Manage IoT devices, monitor sensors, and control actuators.',
       category: 'iot',method: 'GET',endpoint: '/api/v1/iot/devices',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'stable',rateLimit: '300 requests/hour',authentication: 'API Key',parameters: [
         { name: 'location', type: 'string', required: false, description: 'Device location' };
-        { name: 'type', type: 'string', required: false, description: 'Device type' };
+        { name: 'type', type: 'string', required: false, description: 'Device type' },
         { name: 'status', type: 'string', required: false, description: 'Device status' }
-      ];
-      requestExample: {
+      ],
+      requestExample: {,
         location: "building-a",type: "sensor",status: "active"
-      };
-      responseExample: {
+      },
+      responseExample: {,
         devices: [
           {
             id: "sensor-001",name: "Temperature Sensor A1",type: "sensor",location: "building-a",status: "active",last_reading: 22.5
           }
-        ];
+        ],
         total: 1
-      };
+      },
       documentation: 'https://docs.ziontechgroup.com/api/iot-devices',sdk: 'https://github.com/ziontechgroup/iot-sdk',featured: false
     }
   ];
@@ -134,13 +134,13 @@ export default function ApiPlayground() {
 
   const filteredApis = apis.filter(api => {
     const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         api.description.toLowerCase().includes(searchQuery.toLowerCase()),
+                         api.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesCategory = activeCategory === 'all' || api.category === category.id,
-    const matchesMethod = activeMethod === 'all' || api.method === method.id,
+    const matchesCategory = activeCategory === 'all' || api.category === category.id;
+    const matchesMethod = activeMethod === 'all' || api.method === method.id;
 
     return matchesSearch && matchesCategory && matchesMethod,
-  }),
+  });
 
   const getCategoryIcon = (categoryId: string) => {
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />
@@ -152,26 +152,26 @@ export default function ApiPlayground() {
     switch (status) {
       case 'stable': return 'text-green-400';
       case 'beta': return 'text-yellow-400',
-      case 'alpha': return 'text-red-400',
+      case 'alpha': return 'text-red-400';
       default: return 'text-zion-slate-light'
     }
   };
   const handleApiSelect = (api: any) => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2)),
-    setResponseData(''),
-    setActiveTab('playground'),
+    setResponseData('');
+    setActiveTab('playground');
   },
 
   const handleTestApi = async () => {
-    if (!selectedApi) return,
+    if (!selectedApi) return;
 
-    setIsLoading(true),
+    setIsLoading(true);
 
     // Simulate API call
     setTimeout(() => {
       setResponseData(JSON.stringify(selectedApi.responseExample, null, 2)),
-      setIsLoading(false),
+      setIsLoading(false);
     }, 1500),
   },
 
@@ -179,17 +179,17 @@ export default function ApiPlayground() {
     navigator.clipboard.writeText(text)
   };
   const downloadResponse = () => {
-    if (!responseData) return,
+    if (!responseData) return;
 
     const blob = new Blob([responseData], { type: 'application/json' });
-    const url = URL.createObjectURL(blob),
-    const a = document.createElement('a'),
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url,
     a.download = `${selectedApi?.name.toLowerCase().replace(/\s+/g, '-')}-response.json`,
-    document.body.appendChild(a),
-    a.click(),
-    document.body.removeChild(a),
-    URL.revokeObjectURL(url),
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

@@ -4,32 +4,32 @@ import SEO from "@/components/SEO";
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState";
 export default function TalentProfilePage() {
-    const { id } = useParams(),
-    const [profile, setProfile] = useState(null),
-    const [loading, setLoading] = useState(true),
-    const [error, setError] = useState(null),
+    const { id } = useParams();
+    const [profile, setProfile] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     useEffect(() => {
         const fetchProfile = async () => {
             if (!id) {
-                setError('Profile not found'),
-                setLoading(false),
+                setError('Profile not found');
+                setLoading(false);
                 return,
             }
             try {
-                const res = await fetch(`/api/talent/${id}`),
+                const res = await fetch(`/api/talent/${id}`);
                 if (!res.ok)
-                    throw new Error('Failed to load profile'),
-                const data = await res.json(),
-                setProfile(data.profile),
+                    throw new Error('Failed to load profile');
+                const data = await res.json();
+                setProfile(data.profile);
             }
             catch (err) {
-                setError('Profile not found'),
+                setError('Profile not found');
             }
             finally {
-                setLoading(false),
+                setLoading(false);
             }
         },
-        fetchProfile(),
+        fetchProfile();
     }, [id]);
     if (loading)
         return <ProfileLoadingState />;

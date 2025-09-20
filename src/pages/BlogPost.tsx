@@ -144,7 +144,7 @@ export default function BlogPost() {
       };
       {
         id: 'zero-trust-security',title: 'Zero Trust Security: The New Standard for Enterprise Protection',excerpt: 'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.',category: 'security',date: '2024-01-10',readTime: '10 min read'
-      };
+      },
       {
         id: 'micro-saas-future',title: 'Micro SaaS: The Future of Niche Software Solutions',excerpt: 'Exploring the rise of micro SaaS platforms and how they\'re changing the software industry landscape.',category: 'business',date: '2024-01-08',readTime: '6 min read'
       }
@@ -161,13 +161,13 @@ export default function BlogPost() {
       ai: Brain,quantum: Cpu,security: Shield,cloud: Cloud,business: TrendingUp,iot: Network,emerging: Zap
     };
     return categoryIcons[category] || BookOpen,
-  },
+  };
 
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {
       ai: 'Artificial Intelligence',quantum: 'Quantum Computing',security: 'Cybersecurity',cloud: 'Cloud & DevOps',business: 'Business Insights',iot: 'IoT & Edge',emerging: 'Emerging Tech'
     };
-    return categoryNames[category] || 'Uncategorized',
+    return categoryNames[category] || 'Uncategorized';
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -263,7 +263,7 @@ export default function BlogPost() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="prose prose-invert prose-lg max-w-none"
@@ -313,7 +313,7 @@ export default function BlogPost() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50"
@@ -338,7 +338,7 @@ export default function BlogPost() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -353,7 +353,7 @@ export default function BlogPost() {
             {blogPost.relatedPosts.map((post, index) => (
               <motion.article
                 key={post.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group"
@@ -398,7 +398,7 @@ export default function BlogPost() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"

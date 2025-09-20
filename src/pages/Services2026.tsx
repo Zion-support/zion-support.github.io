@@ -32,9 +32,9 @@ import {
 import SEO from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
 const Services2026: React.FC = () => {
-  const [query, setQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('innovation'),
+  const [query, setQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('innovation');
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026],
 
@@ -47,15 +47,15 @@ const Services2026: React.FC = () => {
     { id: 'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s => s.category === 'AI & Content').length };
     { id: 'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s => s.category === 'Digital Twin').length };
     { id: 'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s => s.category === 'AI & HR').length };
-    { id: 'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s => s.category === 'Sustainability').length };
+    { id: 'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s => s.category === 'Sustainability').length },
     { id: 'AI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter(s => s.category === 'AI & IoT').length }
   ];
   const filteredAndSorted = useMemo(() => {
-    let filtered = allServices,
+    let filtered = allServices;
 
     // Filter by search query
     if (query.trim()) {
-      const q = query.trim().toLowerCase(),
+      const q = query.trim().toLowerCase();
       filtered = filtered.filter(s =>
         s.title.toLowerCase().includes(q) ||
         s.description.toLowerCase().includes(q) ||
@@ -66,7 +66,7 @@ const Services2026: React.FC = () => {
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(s => s.category === selectedCategory),
+      filtered = filtered.filter(s => s.category === selectedCategory);
     }
 
     // Sort services
@@ -77,18 +77,18 @@ const Services2026: React.FC = () => {
         return filtered.sort((a, b) => {
           const innovationLevels = { 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 },
           return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0),
-        }),
+        });
       case 'roi':
         return filtered.sort((a, b) => {
-          const aROI = parseInt(a.roi.split('-')[0]),
-          const bROI = parseInt(b.roi.split('-')[0]),
+          const aROI = parseInt(a.roi.split('-')[0]);
+          const bROI = parseInt(b.roi.split('-')[0]);
           return bROI - aROI,
         }),
       default: return filtered
     }
-  }, [query, selectedCategory, sortBy, allServices]),
+  }, [query, selectedCategory, sortBy, allServices]);
 
-  const featuredServices = allServices.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3),
+  const featuredServices = allServices.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -207,7 +207,7 @@ const Services2026: React.FC = () => {
               {featuredServices.map((service) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 rounded-3xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20"
@@ -281,7 +281,7 @@ const Services2026: React.FC = () => {
             {filteredAndSorted.map((service) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/10"

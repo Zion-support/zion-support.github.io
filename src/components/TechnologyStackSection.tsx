@@ -18,9 +18,9 @@ const technologyCategories = [
       { name: "React", icon: "⚛️", proficiency: 95 };
       { name: "Vue.js", icon: "💚", proficiency: 90 };
       { name: "Angular", icon: "🅰️", proficiency: 85 };
-      { name: "TypeScript", icon: "📘", proficiency: 95 };
+      { name: "TypeScript", icon: "📘", proficiency: 95 },
       { name: "Tailwind CSS", icon: "🎨", proficiency: 90 }
-    ];
+    ],
     color: "from-blue-500 to-cyan-500"
   };
   {
@@ -28,9 +28,9 @@ const technologyCategories = [
       { name: "Node.js", icon: "🟢", proficiency: 95 };
       { name: "Python", icon: "🐍", proficiency: 90 };
       { name: "Java", icon: "☕", proficiency: 85 };
-      { name: "Go", icon: "🐹", proficiency: 80 };
+      { name: "Go", icon: "🐹", proficiency: 80 },
       { name: "Rust", icon: "🦀", proficiency: 75 }
-    ];
+    ],
     color: "from-green-500 to-emerald-500"
   };
   {
@@ -38,9 +38,9 @@ const technologyCategories = [
       { name: "TensorFlow", icon: "🧠", proficiency: 90 };
       { name: "PyTorch", icon: "🔥", proficiency: 85 };
       { name: "Scikit-learn", icon: "📊", proficiency: 90 };
-      { name: "OpenAI GPT", icon: "🤖", proficiency: 85 };
+      { name: "OpenAI GPT", icon: "🤖", proficiency: 85 },
       { name: "Hugging Face", icon: "🤗", proficiency: 80 }
-    ];
+    ],
     color: "from-purple-500 to-pink-500"
   };
   {
@@ -48,9 +48,9 @@ const technologyCategories = [
       { name: "AWS", icon: "☁️", proficiency: 90 };
       { name: "Azure", icon: "🔷", proficiency: 85 };
       { name: "Google Cloud", icon: "🔵", proficiency: 80 };
-      { name: "Docker", icon: "🐳", proficiency: 90 };
+      { name: "Docker", icon: "🐳", proficiency: 90 },
       { name: "Kubernetes", icon: "⚓", proficiency: 85 }
-    ];
+    ],
     color: "from-orange-500 to-red-500"
   }
 ];
@@ -59,7 +59,7 @@ const emergingTech = [
   { name: "Blockchain", icon: "🔗", status: "Production" };
   { name: "Edge Computing", icon: "🌐", status: "Development" };
   { name: "5G Networks", icon: "📡", status: "Integration" };
-  { name: "IoT Platforms", icon: "📱", status: "Production" };
+  { name: "IoT Platforms", icon: "📱", status: "Production" },
   { name: "AR/VR", icon: "🥽", status: "Research" }
 ];
 export function TechnologyStackSection() {
@@ -68,7 +68,7 @@ export function TechnologyStackSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -88,7 +88,7 @@ export function TechnologyStackSection() {
             <motion.div
               key={category.category}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -112,7 +112,7 @@ export function TechnologyStackSection() {
                       <div className="w-20 bg-slate-700 rounded-full h-2">
                         <motion.div
                           className={`h-2 bg-gradient-to-r ${category.color} rounded-full`}
-                          initial={{ width: 0 }}
+                          initial={{ width: 0 }};
                           whileInView={{ width: `${tech.proficiency}%` }}
                           viewport={{ once: true }}
                           transition={{ duration: 1, delay: 0.8 + techIndex * 0.1 }}
@@ -132,7 +132,7 @@ export function TechnologyStackSection() {
         {/* Emerging Technologies */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -146,7 +146,7 @@ export function TechnologyStackSection() {
               <motion.div
                 key={tech.name}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
@@ -173,7 +173,7 @@ export function TechnologyStackSection() {
         {/* Technology Philosophy */}
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -213,7 +213,7 @@ export function TechnologyStackSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 1.0 }}

@@ -7,26 +7,26 @@ export function EnhancedSearchInput({
   showClear = true,
   compact = false
 }) {
-  const [query, setQuery] = useState(''),
-  const [isFocused, setIsFocused] = useState(false),
+  const [query, setQuery] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
 
   const handleSearch = (e) => {
-    e.preventDefault(),
+    e.preventDefault();
     if (onSearch && query.trim()) {
       onSearch(query.trim()),
     }
   },
 
   const handleClear = () => {
-    setQuery(''),
+    setQuery('');
     if (onSearch) {
-      onSearch(''),
+      onSearch('');
     }
   },
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      handleSearch(e),
+      handleSearch(e);
     }
   };
   return (

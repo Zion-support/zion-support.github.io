@@ -15,7 +15,7 @@ export default function FinOpsAdvisor() {
     };
     {
       icon: CheckCircle,title: 'Resource Management',description: 'Optimize resource allocation and utilization'
-    };
+    },
     {
       icon: Settings,title: 'Automation',description: 'Automate cost monitoring and optimization'
     }
@@ -28,7 +28,7 @@ export default function FinOpsAdvisor() {
   const useCases = [
     { industry: 'E-commerce', description: 'Optimize seasonal scaling costs' };
     { industry: 'SaaS', description: 'Manage multi-tenant infrastructure costs' };
-    { industry: 'Healthcare', description: 'Ensure HIPAA-compliant cost optimization' };
+    { industry: 'Healthcare', description: 'Ensure HIPAA-compliant cost optimization' },
     { industry: 'Finance', description: 'Implement cost controls for regulatory compliance' }
   ];
   return (
@@ -76,7 +76,7 @@ export default function FinOpsAdvisor() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -94,7 +94,7 @@ export default function FinOpsAdvisor() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-500/30 transition-all duration-200"
@@ -114,7 +114,7 @@ export default function FinOpsAdvisor() {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -132,7 +132,7 @@ export default function FinOpsAdvisor() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-500/30 transition-all duration-200"
@@ -156,7 +156,7 @@ export default function FinOpsAdvisor() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -174,7 +174,7 @@ export default function FinOpsAdvisor() {
               {benefits.slice(0, 3).map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
@@ -188,7 +188,7 @@ export default function FinOpsAdvisor() {
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
                   key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
@@ -206,7 +206,7 @@ export default function FinOpsAdvisor() {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -224,7 +224,7 @@ export default function FinOpsAdvisor() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-emerald-500/30 transition-all duration-200"
@@ -244,7 +244,7 @@ export default function FinOpsAdvisor() {
       <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

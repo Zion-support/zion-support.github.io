@@ -57,7 +57,7 @@ export default function QuantumComputingSolutions() {
     };
     {
       icon: Zap,title: 'Real-time Optimization',description: 'Solve complex optimization problems in seconds instead of years.'
-    };
+    },
     {
       icon: TrendingUp,title: 'Scalable Solutions',description: 'From small quantum circuits to enterprise-scale quantum applications.'
     }
@@ -99,7 +99,7 @@ export default function QuantumComputingSolutions() {
   const pricing = [
     {
       name: 'Starter',price: '$299',period: '/month',description: 'Perfect for research and development teams',features: [
-        'Up to 100 qubitsBasic quantum algorithms';
+        'Up to 100 qubitsBasic quantum algorithms',
         'Standard supportDocumentation access',
         'Community forum'
       ],
@@ -107,7 +107,7 @@ export default function QuantumComputingSolutions() {
     };
     {
       name: 'Professional',price: '$799',period: '/month',description: 'Ideal for production quantum applications',features: [
-        'Up to 1000 qubitsAdvanced algorithms';
+        'Up to 1000 qubitsAdvanced algorithms',
         'Priority supportCustom development',
         'API accessPerformance monitoring',
         'SLA guarantees'
@@ -116,7 +116,7 @@ export default function QuantumComputingSolutions() {
     };
     {
       name: 'Enterprise',price: 'Custom',period: '',description: 'For large-scale quantum computing needs',features: [
-        'Unlimited qubitsCustom algorithms';
+        'Unlimited qubitsCustom algorithms',
         'Dedicated teamOn-premise options',
         'White-label solutionsTraining programs',
         '24/7 support'
@@ -133,7 +133,7 @@ export default function QuantumComputingSolutions() {
     };
     {
       icon: Shield,title: 'Future-Proof Security',description: 'Implement quantum-resistant cryptography before it becomes critical.'
-    };
+    },
     {
       icon: Users,title: 'Competitive Advantage',description: 'Stay ahead of the curve with cutting-edge quantum technology.'
     }
@@ -168,7 +168,7 @@ export default function QuantumComputingSolutions() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
@@ -176,7 +176,7 @@ export default function QuantumComputingSolutions() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
@@ -191,7 +191,7 @@ export default function QuantumComputingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -208,7 +208,7 @@ export default function QuantumComputingSolutions() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
@@ -228,7 +228,7 @@ export default function QuantumComputingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -245,7 +245,7 @@ export default function QuantumComputingSolutions() {
             {capabilities.map((capability, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all duration-300"
@@ -277,7 +277,7 @@ export default function QuantumComputingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -294,7 +294,7 @@ export default function QuantumComputingSolutions() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
@@ -321,7 +321,7 @@ export default function QuantumComputingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -338,7 +338,7 @@ export default function QuantumComputingSolutions() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border rounded-xl p-8 ${
@@ -374,7 +374,7 @@ export default function QuantumComputingSolutions() {
                 </ul>
 
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02 }};
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -394,7 +394,7 @@ export default function QuantumComputingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -411,7 +411,7 @@ export default function QuantumComputingSolutions() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -431,7 +431,7 @@ export default function QuantumComputingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -443,14 +443,14 @@ export default function QuantumComputingSolutions() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300"
               >

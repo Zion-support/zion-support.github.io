@@ -40,7 +40,7 @@ const QuantumComputingElite: React.FC = () => {
     };
     {
       icon: Users,title: "Multi-User Quantum Access",description: "Collaborative quantum computing with real-time sharing and resource optimization"
-    };
+    },
     {
       icon: Globe,title: "Global Quantum Network",description: "Access to quantum computers across multiple locations and cloud providers"
     }
@@ -49,7 +49,7 @@ const QuantumComputingElite: React.FC = () => {
     {
       name: "Quantum Starter",price: "$8,500",
       period: "/month",description: "Perfect for research institutions and startups",features: [
-        "Up to 100 qubit access";
+        "Up to 100 qubit access",
         "Basic quantum algorithms",
         "Standard quantum simulators",
         "Email support",
@@ -60,7 +60,7 @@ const QuantumComputingElite: React.FC = () => {
     {
       name: "Quantum Professional",price: "$18,000",
       period: "/month",description: "Ideal for growing businesses and research teams",features: [
-        "Up to 500 qubit access";
+        "Up to 500 qubit access",
         "Advanced quantum algorithms",
         "Custom quantum circuits",
         "Priority support",
@@ -73,7 +73,7 @@ const QuantumComputingElite: React.FC = () => {
     {
       name: "Quantum Enterprise",price: "$45,000",
       period: "/month",description: "For large organizations with complex quantum needs",features: [
-        "Unlimited qubit access";
+        "Unlimited qubit access",
         "Full quantum suite",
         "Custom quantum development",
         "24/7 dedicated support",
@@ -99,7 +99,7 @@ const QuantumComputingElite: React.FC = () => {
     };
     {
       title: "Supply Chain Optimization",description: "Complex logistics optimization and route planning using quantum algorithms"
-    };
+    },
     {
       title: "Climate Modeling",description: "Advanced climate simulations and weather forecasting with quantum computing power"
     }
@@ -161,7 +161,7 @@ const QuantumComputingElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -180,7 +180,7 @@ const QuantumComputingElite: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -201,7 +201,7 @@ const QuantumComputingElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -220,7 +220,7 @@ const QuantumComputingElite: React.FC = () => {
             {quantumApplications.map((app, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -238,7 +238,7 @@ const QuantumComputingElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -257,7 +257,7 @@ const QuantumComputingElite: React.FC = () => {
             {quantumTechnologies.map((tech, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -277,7 +277,7 @@ const QuantumComputingElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -296,7 +296,7 @@ const QuantumComputingElite: React.FC = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -348,7 +348,7 @@ const QuantumComputingElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

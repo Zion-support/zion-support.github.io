@@ -175,7 +175,7 @@ export default function AICybersecurityThreatIntelligence() {
   const pricingPlans = [
     {
       name: "Essential",price: "$799",period: "/month",description: "Perfect for small to medium businesses",features: [
-        "Up to 100 endpoints";
+        "Up to 100 endpoints",
         "Basic threat detection",
         "Email support",
         "Standard dashboard",
@@ -198,7 +198,7 @@ export default function AICybersecurityThreatIntelligence() {
     };
     {
       name: "Enterprise",price: "Custom",period: "",description: "For large organizations with complex security needs",features: [
-        "Unlimited endpoints";
+        "Unlimited endpoints",
         "Custom AI model training",
         "Dedicated security team",
         "24/7 phone support",
@@ -219,7 +219,7 @@ export default function AICybersecurityThreatIntelligence() {
     };
     {
       icon: <DollarSign className="w-8 h-8" />,title: "Cost Reduction",description: "Save up to 60% on security operations costs while improving protection levels"
-    };
+    },
     {
       icon: <TrendingUp className="w-8 h-8" />,title: "Proactive Defense",description: "Identify and prevent 90% of attacks before they can cause damage or data loss"
     }
@@ -236,7 +236,7 @@ export default function AICybersecurityThreatIntelligence() {
     {
       title: "Social Engineering",description: "AI-powered detection of phishing, spear-phishing, and social engineering campaigns",
       icon: <Users className="w-6 h-6" />
-    };
+    },
     {
       title: "Insider Threats",description: "Behavioral analysis to detect malicious insider activities and data exfiltration",icon: <Eye className="w-6 h-6" />
     }
@@ -250,7 +250,7 @@ export default function AICybersecurityThreatIntelligence() {
     };
     {
       icon: <DollarSign className="w-6 h-6" />,title: "Security ROI",current: "450%",improvement: "+180%",description: "Return on investment in security technology"
-    };
+    },
     {
       icon: <BarChart3 className="w-6 h-6" />,title: "False Positive Rate",current: "0.3%",improvement: "-85%",description: "Percentage of false security alerts"
     }
@@ -271,7 +271,7 @@ export default function AICybersecurityThreatIntelligence() {
     };
     {
       name: "PCI DSS",description: "Payment Card Industry Data Security Standard compliance",icon: <CheckCircle className="w-6 h-6" />
-    };
+    },
     {
       name: "NIST",description: "National Institute of Standards and Technology cybersecurity framework",icon: <CheckCircle className="w-6 h-6" />
     }

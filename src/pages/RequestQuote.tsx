@@ -42,10 +42,10 @@ export default function RequestQuote() {
   const [formData, setFormData] = useState({
     companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [] as string[],urgency: 'medium',preferredContact: 'email'
   });
-  const [formStep, setFormStep] = useState(1),
-  const [expandedService, setExpandedService] = useState<string | null>(null),
-  const [isSubmitting, setSubmitting] = useState(false),
-  const [submitted, setSubmitted] = useState(false),
+  const [formStep, setFormStep] = useState(1);
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [isSubmitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const companySizes = [
     '1-10 employees11-50 employees',
@@ -83,19 +83,19 @@ export default function RequestQuote() {
   const urgencyLevels = [
     { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' };
     { value: 'medium', label: 'Medium', description: 'Standard timeline', color: 'text-yellow-400' };
-    { value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange-400' };
+    { value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange-400' },
     { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400' }
   ];
   const contactMethods = [
     { value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' };
-    { value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' };
+    { value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' },
     { value: 'video', label: 'Video Call', icon: Users, description: 'Best for complex discussions' }
   ];
   const services = [
     {
       id: 'ai-ml',name: 'AI & Machine Learning',icon: Bot,description: 'Custom AI solutions, ML models, and intelligent automation',
       features: [
-        'Custom AI model developmentMachine learning pipelines';
+        'Custom AI model developmentMachine learning pipelines',
         'Natural language processingComputer vision solutions',
         'Predictive analyticsAI-powered automation'
       ],
@@ -105,7 +105,7 @@ export default function RequestQuote() {
     {
       id: 'cloud-devops',name: 'Cloud & DevOps',icon: Cloud,description: 'Cloud infrastructure, CI/CD pipelines, and infrastructure automation',
       features: [
-        'AWS/Azure/GCP setupKubernetes orchestration';
+        'AWS/Azure/GCP setupKubernetes orchestration',
         'CI/CD pipeline developmentInfrastructure as Code',
         'Monitoring & loggingSecurity & compliance'
       ],
@@ -115,7 +115,7 @@ export default function RequestQuote() {
     {
       id: 'web-development',name: 'Web Development',icon: Monitor,description: 'Modern web applications, e-commerce, and custom web solutions',
       features: [
-        'React/Next.js applicationsE-commerce platforms';
+        'React/Next.js applicationsE-commerce platforms',
         'Custom web portalsAPI development',
         'Performance optimizationSEO & accessibility'
       ],
@@ -124,7 +124,7 @@ export default function RequestQuote() {
     };
     {
       id: 'mobile-apps',name: 'Mobile Applications',icon: Smartphone,description: 'iOS and Android apps with cross-platform solutions',features: [
-        'Native iOS developmentNative Android development';
+        'Native iOS developmentNative Android development',
         'React Native appsFlutter applications',
         'App store optimizationPush notifications'
       ],
@@ -134,7 +134,7 @@ export default function RequestQuote() {
     {
       id: 'data-analytics',name: 'Data & Analytics',icon: BarChart3,description: 'Data warehousing, business intelligence, and advanced analytics',
       features: [
-        'Data warehouse designETL pipeline development';
+        'Data warehouse designETL pipeline development',
         'Business intelligence dashboardsAdvanced analytics',
         'Data visualizationPredictive modeling'
       ],
@@ -144,7 +144,7 @@ export default function RequestQuote() {
     {
       id: 'cybersecurity',name: 'Cybersecurity',icon: Shield,description: 'Security audits, compliance, and threat protection',
       features: [
-        'Security assessmentsPenetration testing';
+        'Security assessmentsPenetration testing',
         'Compliance frameworksThreat detection',
         'Incident responseSecurity training'
       ],
@@ -153,7 +153,7 @@ export default function RequestQuote() {
     };
     {
       id: 'micro-saas',name: 'Micro SaaS Solutions',icon: Package,description: 'Custom SaaS applications and business automation tools',features: [
-        'Custom SaaS platformsBusiness process automation';
+        'Custom SaaS platformsBusiness process automation',
         'Workflow managementUser management systems',
         'Subscription billingAnalytics & reporting'
       ],
@@ -163,7 +163,7 @@ export default function RequestQuote() {
     {
       id: 'integration',name: 'System Integration',icon: Settings,description: 'API development, third-party integrations, and data synchronization',
       features: [
-        'API developmentThird-party integrations';
+        'API developmentThird-party integrations',
         'Data synchronizationWebhook implementation',
         'Custom connectorsIntegration testing'
       ],
@@ -180,7 +180,7 @@ export default function RequestQuote() {
     };
     {
       icon: FileText,title: 'Detailed Proposals',description: 'Comprehensive project breakdowns and timelines'
-    };
+    },
     {
       icon: CheckCircle,title: 'Quality Guarantee',description: 'We stand behind our work with satisfaction guarantees'
     }
@@ -194,7 +194,7 @@ export default function RequestQuote() {
 
   const toggleService = (serviceId: string) => {
     setFormData(prev => ({
-      ...prev;
+      ...prev,
       services: prev.services.includes(serviceId)
         ? prev.services.filter(id => id !== serviceId)
         : [...prev.services, serviceId]
@@ -206,33 +206,33 @@ export default function RequestQuote() {
   };
   const nextStep = () => {
     if (formStep < 3) {
-      setFormStep(formStep + 1),
+      setFormStep(formStep + 1);
     }
   },
 
   const prevStep = () => {
     if (formStep > 1) {
-      setFormStep(formStep - 1),
+      setFormStep(formStep - 1);
     }
   },
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true),
+    setSubmitting(true);
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000)),
     
-    setSubmitting(false),
-    setSubmitted(true),
+    setSubmitting(false);
+    setSubmitted(true);
   },
 
   const resetForm = () => {
     setFormData({
       companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [],urgency: 'medium',preferredContact: 'email'
     });
-    setFormStep(1),
-    setSubmitted(false),
+    setFormStep(1);
+    setSubmitted(false);
   },
 
   if (submitted) {
@@ -308,7 +308,7 @@ export default function RequestQuote() {
       </div>
     )
   }
-
+;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -347,7 +347,7 @@ export default function RequestQuote() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -371,7 +371,7 @@ export default function RequestQuote() {
               {/* Form */}
               <div className="lg:col-span-2">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8 }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 p-8"
@@ -695,7 +695,7 @@ export default function RequestQuote() {
               {/* Services Sidebar */}
               <div className="lg:col-span-1">
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8 }}
                   className="space-y-6"
@@ -797,7 +797,7 @@ export default function RequestQuote() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

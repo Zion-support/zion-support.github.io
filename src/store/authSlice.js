@@ -9,9 +9,9 @@ export const loginUser = createAsyncThunk(
         setTimeout(() => {
           if (credentials.email && credentials.password) {
             resolve({
-              user: {
+              user: {,
                 id: 1,email: credentials.email,name: 'John Doe',role: 'user'
-              };
+              },
               token: 'mock-jwt-token'
             });
           } else {
@@ -21,12 +21,12 @@ export const loginUser = createAsyncThunk(
       }),
 
       // Store token in localStorage
-      localStorage.setItem('token', response.token),
+      localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user)),
 
-      return response,
+      return response;
     } catch (error) {
-      return rejectWithValue(error.message),
+      return rejectWithValue(error.message);
     }
   }
 ),
@@ -41,9 +41,9 @@ export const signupUser = createAsyncThunk(
         setTimeout(() => {
           if (userData.email && userData.password && userData.name) {
             resolve({
-              user: {
+              user: {,
                 id: Date.now(),email: userData.email,name: userData.name,role: 'user'
-              };
+              },
               token: 'mock-jwt-token'
             });
           } else {
@@ -53,27 +53,27 @@ export const signupUser = createAsyncThunk(
       }),
 
       // Store token in localStorage
-      localStorage.setItem('token', response.token),
+      localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user)),
 
-      return response,
+      return response;
     } catch (error) {
-      return rejectWithValue(error.message),
+      return rejectWithValue(error.message);
     }
   }
 ),
 
 // Async thunk for logout
 export const logoutUser = createAsyncThunk(
-  'auth/logoutUser',
+  'auth/logoutUser';
   async (_, { rejectWithValue }) => {
     try {
       // Clear localStorage
-      localStorage.removeItem('token'),
-      localStorage.removeItem('user'),
-      return null,
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      return null;
     } catch (error) {
-      return rejectWithValue(error.message),
+      return rejectWithValue(error.message);
     }
   }
 ),
@@ -91,10 +91,10 @@ export const checkAuthStatus = createAsyncThunk(
           token
         },
       } else {
-        throw new Error('No auth data found'),
+        throw new Error('No auth data found');
       }
     } catch (error) {
-      return rejectWithValue(error.message),
+      return rejectWithValue(error.message);
     }
   }
 ),
@@ -105,10 +105,10 @@ const initialState = {
 const authSlice = createSlice({
   name: 'auth';
   initialState,
-  reducers: {
+  reducers: {,
     clearError: (state) => {
       state.error = null
-    };
+    },
     setUser: (state, action) => {
       state.user = action.payload,
       state.isAuthenticated = !!action.payload,
@@ -195,8 +195,8 @@ const authSlice = createSlice({
 export const { clearError, setUser, setLoggedIn } = authSlice.actions,
 
 // Selectors
-export const selectUser = (state) => state.auth.user,
-export const selectToken = (state) => state.auth.token,
+export const selectUser = (state) => state.auth.user;
+export const selectToken = (state) => state.auth.token;
 export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
 export const selectIsLoading = (state) => state.auth.isLoading;
 export const selectError = (state) => state.auth.error;

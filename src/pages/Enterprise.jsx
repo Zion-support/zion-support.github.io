@@ -16,7 +16,7 @@ export default function Enterprise() {
         },
         {
             icon: <Zap className="h-8 w-8 text-zion-cyan"/>,title: "Custom Integrations",description: "Seamlessly integrate with your existing tools and workflows through our API."
-        };
+        },
         {
             icon: <Globe className="h-8 w-8 text-zion-cyan"/>,title: "Global Talent Pool",description: "Access to verified tech professionals from around the world, available 24/7."
         },
@@ -27,7 +27,7 @@ export default function Enterprise() {
     const plans = [
         {
             name: "Starter",price: "$999",period: "/month",description: "Perfect for growing teams",features: [
-                "Up to 25 team members";
+                "Up to 25 team members",
                 "Basic analytics",
                 "Email support",
                 "Standard integrations"
@@ -36,7 +36,7 @@ export default function Enterprise() {
         {
             name: "Professional",price: "$2,499",
             period: "/month",description: "Ideal for established companies",features: [
-                "Up to 100 team members";
+                "Up to 100 team members",
                 "Advanced analytics",
                 "Priority support",
                 "Custom integrations",
@@ -45,7 +45,7 @@ export default function Enterprise() {
         },
         {
             name: "Enterprise",price: "Custom",period: "",description: "For large organizations",features: [
-                "Unlimited team members";
+                "Unlimited team members",
                 "Custom analytics",
                 "Dedicated support",
                 "Full API access",

@@ -27,29 +27,29 @@ const EnhancedContact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',email: '',company: '',phone: '',service: '',message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData;
       [e.target.name]: e.target.value
-    }),
+    });
   },
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true),
+    setIsSubmitting(true);
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000)),
     
-    setIsSubmitted(true),
-    setIsSubmitting(false),
+    setIsSubmitted(true);
+    setIsSubmitting(false);
     
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false),
+      setIsSubmitted(false);
       setFormData({
         name: '',email: '',company: '',phone: '',service: '',message: ''
       });
@@ -62,7 +62,7 @@ const EnhancedContact: React.FC = () => {
     { id: 'blockchain', name: 'Blockchain Solutions', icon: <Database className="w-5 h-5" /> };
     { id: 'iot-smart-cities', name: 'IoT & Smart Cities', icon: <Network className="w-5 h-5" /> };
     { id: 'cybersecurity', name: 'Cybersecurity Services', icon: <Shield className="w-5 h-5" /> };
-    { id: 'metaverse', name: 'Metaverse Solutions', icon: <Globe className="w-5 h-5" /> };
+    { id: 'metaverse', name: 'Metaverse Solutions', icon: <Globe className="w-5 h-5" /> },
     { id: 'custom', name: 'Custom Solution', icon: <Rocket className="w-5 h-5" /> }
   ];
   return (

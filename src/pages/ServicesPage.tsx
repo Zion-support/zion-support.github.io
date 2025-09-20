@@ -49,16 +49,16 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/dat
 import { EXPANDED_MICRO_SAAS_SERVICES_2025 } from "@/data/expandedMicroSaasServices2025";
 import { SPECIALIZED_SERVICES_2025 } from "@/data/specializedServices2025";
 export default function ServicesPage() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
-  const [sortBy, setSortBy] = useState('featured'),
-  const [activeTab, setActiveTab] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+  const [activeTab, setActiveTab] = useState('all');
 
   // Combine all services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-    ...EXPANDED_MICRO_SAAS_SERVICES_2025;
+    ...EXPANDED_MICRO_SAAS_SERVICES_2025,
     ...SPECIALIZED_SERVICES_2025
   ];
   const categories = [
@@ -77,11 +77,11 @@ export default function ServicesPage() {
     { id: 'logistics', name: 'Logistics', icon: Truck, color: 'from-zion-orange to-zion-blue' };
     { id: 'legal', name: 'Legal Tech', icon: Scale, color: 'from-zion-purple to-zion-cyan' };
     { id: 'education', name: 'Education', icon: BookOpen, color: 'from-zion-cyan to-zion-green' };
-    { id: 'manufacturing', name: 'Manufacturing', icon: CpuIcon, color: 'from-zion-blue to-zion-orange' };
+    { id: 'manufacturing', name: 'Manufacturing', icon: CpuIcon, color: 'from-zion-blue to-zion-orange' },
     { id: 'real-estate', name: 'Real Estate', icon: Building, color: 'from-zion-purple to-zion-green' }
   ];
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
+    { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
     { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
     { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
@@ -91,27 +91,27 @@ export default function ServicesPage() {
     { id: 'featured', name: 'Featured' };
     { id: 'price-low', name: 'Price: Low to High' };
     { id: 'price-high', name: 'Price: High to Low' };
-    { id: 'newest', name: 'Newest' };
+    { id: 'newest', name: 'Newest' },
     { id: 'popular', name: 'Most Popular' }
   ];
   const tabs = [
     { id: 'all', name: 'All Services', count: allServices.length };
     { id: 'micro-saas', name: 'Micro SAAS', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length };
-    { id: 'expanded', name: 'Expanded Services', count: EXPANDED_MICRO_SAAS_SERVICES_2025.length };
+    { id: 'expanded', name: 'Expanded Services', count: EXPANDED_MICRO_SAAS_SERVICES_2025.length },
     { id: 'specialized', name: 'Specialized', count: SPECIALIZED_SERVICES_2025.length }
   ];
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
+                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
 
     const matchesCategory = selectedCategory === 'all' ||
-                           service.category.toLowerCase().includes(selectedCategory),
+                           service.category.toLowerCase().includes(selectedCategory);
 
     const matchesPrice = selectedPriceRange === 'all' ||
                         (selectedPriceRange === 'budget' && service.price <= 1000) ||
                         (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
-                        (selectedPriceRange === 'enterprise' && service.price > 5000),
+                        (selectedPriceRange === 'enterprise' && service.price > 5000);
 
     return matchesSearch && matchesCategory && matchesPrice,
   }),
@@ -122,26 +122,26 @@ export default function ServicesPage() {
       case 'price-low':
         return a.price - b.price,
       case 'price-high':
-        return b.price - a.price,
+        return b.price - a.price;
       case 'newest':
-        return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime(),
+        return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
       default: return 0
     }
   });
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' -'));
-    return cat ? cat.icon : Sparkles},
+    return cat ? cat.icon : Sparkles};
 
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' -'));
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue'},
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
 
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
       case 'Cutting-edge':
         return 'bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30';
       case 'Advanced':
-        return 'bg-zion-purple/20 text-zion-purple border-zion-purple/30',
+        return 'bg-zion-purple/20 text-zion-purple border-zion-purple/30';
       default: return 'bg-zion-blue/20 text-zion-blue border-zion-blue/30'
     }
   };
@@ -250,7 +250,7 @@ export default function ServicesPage() {
         <div className="container-responsive">
           <motion.div 
             className="flex flex-wrap gap-2 justify-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -278,7 +278,7 @@ export default function ServicesPage() {
           {/* Category Pills */}
           <motion.div
             className="flex flex-wrap gap-3 mb-8 justify-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -301,7 +301,7 @@ export default function ServicesPage() {
           {/* Advanced Filters */}
           <motion.div
             className="flex flex-col md:flex-row gap-4 items-center justify-between"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
@@ -360,7 +360,7 @@ export default function ServicesPage() {
                     className="card-neon group"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }};
                     whileHover={{ y: -10 }}
                   >
                     {/* Service Header */}
@@ -369,7 +369,7 @@ export default function ServicesPage() {
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
                           {(() => {
                             const IconComponent = getCategoryIcon(service.category);
-                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null,
+                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null;
                           })()}
                         </div>
                         <div className="text-right">
@@ -470,7 +470,7 @@ export default function ServicesPage() {
                 <button
                   onClick={() => {
                     setSearchQuery('');
-                    setSelectedCategory('all'),
+                    setSelectedCategory('all');
                     setSelectedPriceRange('all');
                   }}
                   className="btn-futuristic px-6 py-3"
@@ -488,7 +488,7 @@ export default function ServicesPage() {
         <div className="container-responsive">
           <motion.div
             className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -505,9 +505,9 @@ export default function ServicesPage() {
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -539,7 +539,7 @@ export default function ServicesPage() {
 
         <div className="container-responsive text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

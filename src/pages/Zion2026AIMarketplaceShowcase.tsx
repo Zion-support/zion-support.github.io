@@ -20,20 +20,20 @@ import {
 } from "lucide-react";
 import { zion2026AIMarketplaceServices } from "../../data/zion-2026-ai-marketplace-services";
 const Zion2026AIMarketplaceShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const categories = ['allAI Marketplace', 'AI IntegrationAI Automation', 'AI AnalyticsAI Development'],
 
   const filteredServices = useMemo(() => {
     return zion2026AIMarketplaceServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory,
     }),
-  }, [searchTerm, selectedCategory]),
+  }, [searchTerm, selectedCategory]);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -41,7 +41,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
       case 'AI Integration': return Zap,
       case 'AI Automation': return Shield,
       case 'AI Analytics': return BarChart3,
-      case 'AI Development': return Code,
+      case 'AI Development': return Code;
       default: return Globe
     }
   };
@@ -51,7 +51,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
       case 'AI Integration': return 'from-purple-500 to-pink-500',
       case 'AI Automation': return 'from-green-500 to-emerald-500',
       case 'AI Analytics': return 'from-orange-500 to-red-500',
-      case 'AI Development': return 'from-indigo-500 to-blue-500',
+      case 'AI Development': return 'from-indigo-500 to-blue-500';
       default: return 'from-gray-500 to-slate-500'
     }
   };
@@ -77,14 +77,14 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
               >
                 Explore Services
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-300"
               >
@@ -277,7 +277,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -291,7 +291,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center space-x-2"
               >
@@ -299,7 +299,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
                 <span>Call Now: +1 302 464 0950</span>
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover: border-gray-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
               >

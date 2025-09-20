@@ -41,7 +41,7 @@ export default function AIHealthcareAnalytics() {
     },
     {
       icon: <Shield className="w-6 h-6" />,title: "HIPAA-Compliant Security",description: "Enterprise-grade security with end-to-end encryption and full HIPAA compliance for patient data protection"
-    };
+    },
     {
       icon: <BarChart3 className="w-6 h-6" />,title: "Population Health Insights",description: "Comprehensive analytics for population health management, disease trends, and preventive care strategies"
     }
@@ -74,7 +74,7 @@ export default function AIHealthcareAnalytics() {
     {
       name: "Health System",price: "$2,999",
       period: "/month",features: [
-        "Unlimited patients";
+        "Unlimited patients",
         "Custom AI models",
         "Advanced analytics",
         "Dedicated support",
@@ -106,7 +106,7 @@ export default function AIHealthcareAnalytics() {
     {
       specialty: "Emergency Medicine",description: "Triage optimization, resource allocation, and patient flow management",
       improvement: "50% efficiency gain"
-    };
+    },
     {
       specialty: "Primary Care",description: "Preventive care planning, chronic disease management, and population health insights",
       improvement: "45% preventive care"
@@ -169,7 +169,7 @@ export default function AIHealthcareAnalytics() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
@@ -198,7 +198,7 @@ export default function AIHealthcareAnalytics() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300 group"
@@ -230,7 +230,7 @@ export default function AIHealthcareAnalytics() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300"
@@ -263,7 +263,7 @@ export default function AIHealthcareAnalytics() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
@@ -318,7 +318,7 @@ export default function AIHealthcareAnalytics() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -358,7 +358,7 @@ export default function AIHealthcareAnalytics() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
@@ -391,7 +391,7 @@ export default function AIHealthcareAnalytics() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-red-500/30"

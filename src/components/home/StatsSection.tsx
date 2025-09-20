@@ -1,14 +1,14 @@
 import { motion, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 interface Stat {
-  number: string,label: string,description: string,avatar: string,icon: React.ComponentType<{ className?: string }>;
+  number: string,label: string,description: string,avatar: string,icon: React.ComponentType<{ className?: string }>,
   color: string
 }
 
 interface StatsSectionProps {
   stats: Stat[]
 }
-
+;
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -18,16 +18,16 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
       const timer = setTimeout(() => {
         stats.forEach((stat, index) => {
           const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, '')),
-          const suffix = stat.number.replace(/[0-9]/g, ''),
+          const suffix = stat.number.replace(/[0-9]/g, '');
 
-          let current = 0,
-          const increment = targetNumber / 50,
+          let current = 0;
+          const increment = targetNumber / 50;
 
           const countTimer = setInterval(() => {
-            current += increment,
+            current += increment;
             if (current >= targetNumber) {
               current = targetNumber,
-              clearInterval(countTimer),
+              clearInterval(countTimer);
             }
 
             setCounts(prev => ({
@@ -38,7 +38,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         }),
       }, 500),
 
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer);
     }
   }, [isInView, stats]),
 
@@ -47,7 +47,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -65,10 +65,10 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             <motion.div
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true }};
               whileHover={{
                 y: -8,transition: { duration: 0.3 }
               }}
@@ -86,7 +86,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               {/* Animated number */}
               <motion.div
                 className="relative text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300"
-                initial={{ scale: 0.8 }}
+                initial={{ scale: 0.8 }};
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
                 viewport={{ once: true }}

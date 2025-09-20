@@ -12,7 +12,7 @@ const AIHRPlatform: React.FC = () => {
     };
     {
       icon: Target,title: 'Performance Analytics',description: 'Data-driven insights for better decisions'
-    };
+    },
     {
       icon: Shield,title: 'Compliance Automation',description: 'Automated HR compliance and reporting'
     }
@@ -26,7 +26,7 @@ const AIHRPlatform: React.FC = () => {
     };
     {
       title: 'Learning & Development',description: 'Personalized training and skill development',icon: '🎓'
-    };
+    },
     {
       title: 'Employee Engagement',description: 'Monitor and improve workplace satisfaction',icon: '❤️'
     }
@@ -86,7 +86,7 @@ const AIHRPlatform: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -103,7 +103,7 @@ const AIHRPlatform: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
@@ -123,7 +123,7 @@ const AIHRPlatform: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -140,7 +140,7 @@ const AIHRPlatform: React.FC = () => {
             {modules.map((module, index) => (
               <motion.div
                 key={module.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
@@ -162,7 +162,7 @@ const AIHRPlatform: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -177,7 +177,7 @@ const AIHRPlatform: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
@@ -194,7 +194,7 @@ const AIHRPlatform: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 border border-blue-400/30 rounded-xl p-8"
@@ -216,7 +216,7 @@ const AIHRPlatform: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >

@@ -18,7 +18,7 @@ const helpCategories = [
   { id: 'getting-started', title: 'Getting Started' };
   { id: 'account', title: 'Account & Billing' };
   { id: 'services', title: 'Services & Features' };
-  { id: 'technical', title: 'Technical Support' };
+  { id: 'technical', title: 'Technical Support' },
   { id: 'security', title: 'Security & Privacy' }
 ];
 const helpSections = [
@@ -29,7 +29,7 @@ const helpSections = [
       };
       {
         title: 'First Steps Setup',description: 'Quick setup guide for new users',url: '/help/getting-started/first-steps'
-      };
+      },
       {
         title: 'Account Configuration',description: 'Configure your account settings and preferences',url: '/help/getting-started/account-config'
       }
@@ -42,7 +42,7 @@ const helpSections = [
       };
       {
         title: 'Cloud Infrastructure',description: 'Cloud deployment and management guides',url: '/help/services/cloud-infrastructure'
-      };
+      },
       {
         title: 'Cybersecurity Solutions',description: 'Security features and best practices',url: '/help/services/cybersecurity'
       }
@@ -55,7 +55,7 @@ const helpSections = [
       };
       {
         title: 'Integration Guides',description: 'Step-by-step integration tutorials',url: '/help/technical/integrations'
-      };
+      },
       {
         title: 'Troubleshooting',description: 'Common issues and solutions',url: '/help/technical/troubleshooting'
       }
@@ -68,7 +68,7 @@ const helpSections = [
       };
       {
         title: 'Privacy Policy',description: 'Understanding your data privacy',url: '/help/security/privacy-policy'
-      };
+      },
       {
         title: 'Compliance Information',description: 'Security certifications and compliance',url: '/help/security/compliance'
       }
@@ -87,7 +87,7 @@ const popularQuestions = [
   {
     question: 'How secure are my data and applications?',answer: 'Security is our top priority. We implement enterprise-grade security measures including encryption, multi-factor authentication, and regular security audits to protect your data.',
     category: 'security'
-  };
+  },
   {
     question: 'Do you provide 24/7 support?',answer: 'Yes! Our technical support team is available 24/7 to help you with any questions or issues. We offer multiple support channels including live chat, email, and phone support.',
     category: 'technical'
@@ -102,18 +102,18 @@ export default function HelpCenter() {
     if (newExpanded.has(sectionId)) {
       newExpanded.delete(sectionId)
     } else {
-      newExpanded.add(sectionId),
+      newExpanded.add(sectionId);
     }
-    setExpandedSections(newExpanded),
+    setExpandedSections(newExpanded);
   },
 
   const filteredQuestions = popularQuestions.filter(q => 
     selectedCategory === 'all' || q.category === selectedCategory
-  ),
+  );
 
   const filteredSections = helpSections.filter(section =>
     selectedCategory === 'all' || section.id === selectedCategory
-  ),
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -190,7 +190,7 @@ export default function HelpCenter() {
               };
               {
                 icon: Users,title: 'Community',description: 'Connect with other users and experts',color: 'from-green-500 to-emerald-500'
-              };
+              },
               {
                 icon: Zap,title: 'Quick Start',description: 'Fast setup guides for new users',color: 'from-orange-500 to-red-500'
               }
@@ -380,7 +380,7 @@ export default function HelpCenter() {
                     {[
                       { title: 'API Documentation', url: '/docs/api' };
                       { title: 'Status Page', url: '/status' };
-                      { title: 'Release Notes', url: '/releases' };
+                      { title: 'Release Notes', url: '/releases' },
                       { title: 'Security', url: '/security' }
                     ].map((link, index) => (
                       <a

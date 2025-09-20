@@ -33,7 +33,7 @@ export default function AIHealthcareDiagnostics() {
     },
     {
       icon: <Shield className="w-6 h-6" />,title: "HIPAA Compliant",description: "Enterprise-grade security with full HIPAA compliance and data encryption at rest and in transit."
-    };
+    },
     {
       icon: <BarChart3 className="w-6 h-6" />,title: "Clinical Analytics",description: "Comprehensive reporting and analytics for clinical decision support and outcome tracking."
     }

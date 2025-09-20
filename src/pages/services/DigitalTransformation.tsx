@@ -39,7 +39,7 @@ export default function DigitalTransformation() {
     };
     {
       icon: Clock,title: 'Agile Implementation',description: 'Rapid deployment with iterative improvement cycles'
-    };
+    },
     {
       icon: Search,title: 'Performance Monitoring',description: 'Track transformation progress and measure ROI'
     }
@@ -59,7 +59,7 @@ export default function DigitalTransformation() {
     };
     {
       icon: Cloud,title: 'Cloud Migration',description: 'Migrate legacy systems to modern cloud platforms'
-    };
+    },
     {
       icon: Data,title: 'Data Analytics',description: 'Implement advanced analytics and business intelligence'
     }
@@ -73,7 +73,7 @@ export default function DigitalTransformation() {
     };
     {
       industry: 'Financial Services',description: 'Digital banking and fintech innovation'
-    };
+    },
     {
       industry: 'Retail',description: 'E-commerce and omnichannel retail transformation'
     }
@@ -153,7 +153,7 @@ export default function DigitalTransformation() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
@@ -173,7 +173,7 @@ export default function DigitalTransformation() {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -191,7 +191,7 @@ export default function DigitalTransformation() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
@@ -269,7 +269,7 @@ export default function DigitalTransformation() {
             {industries.map((industry, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-orange-500/30 transition-all duration-200"
@@ -300,7 +300,7 @@ export default function DigitalTransformation() {
             {[
               { step: '01', title: 'Assessment', description: 'Evaluate current state and identify transformation opportunities' };
               { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' };
-              { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' };
+              { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' },
               { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
             ].map((phase, index) => (
               <motion.div

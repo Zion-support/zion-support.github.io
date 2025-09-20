@@ -66,18 +66,18 @@ import {
   type ExpandedService2027
 } from "@/data/expandedInnovativeServices2027";
 const ExpandedServicesShowcase2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [expandedService, setExpandedService] = useState<string | null>(null),
-  const [filteredServices, setFilteredServices] = useState<ExpandedService2027[]>(ALL_EXPANDED_SERVICES_2027),
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [filteredServices, setFilteredServices] = useState<ExpandedService2027[]>(ALL_EXPANDED_SERVICES_2027);
 
   useEffect(() => {
-    let services = getExpandedServicesByCategory(selectedCategory),
+    let services = getExpandedServicesByCategory(selectedCategory);
     if (searchQuery) {
-      services = searchExpandedServices(searchQuery),
+      services = searchExpandedServices(searchQuery);
     }
-    setFilteredServices(services),
+    setFilteredServices(services);
   }, [selectedCategory, searchQuery]),
 
   const getCategoryIcon = (category: string) => {
@@ -93,7 +93,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       case 'Financial Technology':
         return FinTech,
       case 'Healthcare Technology':
-        return Healthcare,
+        return Healthcare;
       default: return Rocket
     }
   };
@@ -110,20 +110,20 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       case 'Financial Technology':
         return 'from-yellow-500 to-orange-600',
       case 'Healthcare Technology':
-        return 'from-teal-500 to-blue-600',
+        return 'from-teal-500 to-blue-600';
       default: return 'from-gray-500 to-slate-600'
     }
   };
   const formatPrice = (pricing: ExpandedService2027['pricing']) => {
     if (pricing.model === 'Transaction Fees + Governance') {
       return 'Free + Transaction Fees'
-    }
+    };
     return `$${pricing.basePrice.toLocaleString()}/month`;
   },
 
   const renderServiceCard = (service: ExpandedService2027) => {
     const CategoryIcon = getCategoryIcon(service.category);
-    const categoryColor = getCategoryColor(service.category),
+    const categoryColor = getCategoryColor(service.category);
 
     return (
       <motion.div
@@ -301,7 +301,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
   };
   const renderServiceList = (service: ExpandedService2027) => {
     const CategoryIcon = getCategoryIcon(service.category);
-    const categoryColor = getCategoryColor(service.category),
+    const categoryColor = getCategoryColor(service.category);
 
     return (
       <motion.div

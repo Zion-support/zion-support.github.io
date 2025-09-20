@@ -6,14 +6,14 @@
 import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
+  loadTime: number,
+  renderTime: number;,
+  memoryUsage: number,
   bundleSize: number;
 }
 
 class PerformanceOptimizer {
-  private metrics: PerformanceMetrics = {
+  private metrics: PerformanceMetrics = {,
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
@@ -55,7 +55,7 @@ class PerformanceOptimizer {
   }
 
   // Debounce function for performance optimization
-  debounce<T extends (...args: any[]) => any>(
+  debounce<T extends (...args: any[]) => any>(,
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -67,7 +67,7 @@ class PerformanceOptimizer {
   }
 
   // Throttle function for performance optimization
-  throttle<T extends (...args: any[]) => any>(
+  throttle<T extends (...args: any[]) => any>(,
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
@@ -134,7 +134,7 @@ class PerformanceOptimizer {
         this.metrics.memoryUsage = (performance as any).memory.usedJSHeapSize;
       }, 5000);
     }
-
+;
     return cleanup;
   }
 
@@ -166,7 +166,7 @@ export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
-    memoryUsage: 0,
+    memoryUsage: 0;
     bundleSize: 0
   });
 

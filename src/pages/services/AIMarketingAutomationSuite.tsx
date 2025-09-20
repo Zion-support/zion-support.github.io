@@ -16,7 +16,7 @@ export default function AIMarketingAutomationSuite() {
 
   const useCases = [
     'E-commerce marketing automationB2B lead generation campaigns';
-    'Customer retention programsProduct launch campaigns';
+    'Customer retention programsProduct launch campaigns',
     'Seasonal marketing campaignsAccount-based marketing (ABM)'
   ];
   const tiers = [

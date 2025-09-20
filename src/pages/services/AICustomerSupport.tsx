@@ -18,7 +18,7 @@ export default function AICustomerSupport() {
     };
     {
       title: "Knowledge Base Integration",description: "Seamlessly connects with your existing documentation to provide accurate answers instantly",icon: Shield,color: "from-indigo-500 to-blue-500"
-    };
+    },
     {
       title: "Omnichannel Support",description: "Unified support across chat, email, social media, and phone channels",
       icon: Smartphone,color: "from-teal-500 to-cyan-500"
@@ -48,7 +48,7 @@ export default function AICustomerSupport() {
     };
     {
       name: "Enterprise",price: "$299",period: "/month",description: "For large organizations",features: [
-        "Unlimited conversations";
+        "Unlimited conversations",
         "Custom AI models",
         "White-label solution",
         "Dedicated support",
@@ -65,7 +65,7 @@ export default function AICustomerSupport() {
     };
     {
       title: "70% Cost Reduction",description: "Automate routine inquiries and reduce support staff overhead",icon: TrendingUp,metric: "70%"
-    };
+    },
     {
       title: "95% Customer Satisfaction",description: "AI-powered support consistently delivers high-quality assistance",icon: Users,metric: "95%"
     }
@@ -79,7 +79,7 @@ export default function AICustomerSupport() {
     };
     {
       name: "Salesforce",description: "Sync customer data and support history automatically",icon: Users,color: "from-green-500 to-emerald-500"
-    };
+    },
     {
       name: "Shopify",description: "Provide instant support for e-commerce customers",icon: Globe,color: "from-orange-500 to-red-500"
     }
@@ -127,7 +127,7 @@ export default function AICustomerSupport() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -145,10 +145,10 @@ export default function AICustomerSupport() {
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -167,7 +167,7 @@ export default function AICustomerSupport() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -185,7 +185,7 @@ export default function AICustomerSupport() {
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -207,7 +207,7 @@ export default function AICustomerSupport() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -225,7 +225,7 @@ export default function AICustomerSupport() {
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -246,7 +246,7 @@ export default function AICustomerSupport() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -266,10 +266,10 @@ export default function AICustomerSupport() {
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
                 }`}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 {plan.popular && (
@@ -315,7 +315,7 @@ export default function AICustomerSupport() {
       <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}

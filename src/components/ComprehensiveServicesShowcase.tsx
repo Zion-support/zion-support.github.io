@@ -31,20 +31,20 @@ import { Link } from "react-router-dom";
 import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 interface Service {
-  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
+  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {,
     phone: string,email: string,website: string
   };
   technicalSpecs?: {
     technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[]
   };
-}
+};
 const ComprehensiveServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all'),
-  const [searchTerm, setSearchTerm] = useState<string>(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
   // Combine all services
   const allServices: Service[] = [
-    ...EXPANDED_INNOVATIVE_SERVICES_2025;
+    ...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ],
   // Get unique categories
@@ -56,18 +56,18 @@ const ComprehensiveServicesShowcase: React.FC = () => {
   const innovationLevels = useMemo(() => {
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))],
     return levels,
-  }, [allServices]),
+  }, [allServices]);
   // Filter services
   const filteredServices = useMemo(() => {
     return allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-      const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel,
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch,
     }),
-  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]),
+  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Analytics':
@@ -104,7 +104,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       case 'Sustainability & Energy':
         return <Zap className="h-6 w-6" />,
       case 'Autonomous Vehicles & Fleet Management':
-        return <Rocket className="h-6 w-6" />,
+        return <Rocket className="h-6 w-6" />;
       default: return <Star className="h-6 w-6" />
     }
   };
@@ -115,7 +115,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       case 'Advanced':
         return 'bg-gradient-to-r from-blue-600 to-cyan-600',
       case 'Professional':
-        return 'bg-gradient-to-r from-green-600 to-emerald-600',
+        return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gradient-to-r from-gray-600 to-slate-600'
     }
   };
@@ -360,8 +360,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               <button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSelectedInnovationLevel('all'),
-                  setSearchTerm(''),
+                  setSelectedInnovationLevel('all');
+                  setSearchTerm('');
                 }}
                 className="text-zion-cyan hover: text-zion-cyan-light font-medium"
               >

@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 interface ServiceShowcase {
 	id: string,title: string,description: string,icon: React.ComponentType<any>,color: string,features: string[],price: string,status: 'active' | 'beta' | 'new'
-}
+};
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller',title: 'Quantum AI Controller',description: 'Revolutionary AI controller using quantum computing for autonomous system management.',icon: Brain,color: 'from-purple-500 to-cyan-500',features: ['Quantum decision makingAutonomous learning', 'System optimization'],
@@ -52,12 +52,12 @@ const futuristicServices: ServiceShowcase[] = [
 	}
 ];
 export default function FuturisticServicesShowcase() {
-	const [currentService, setCurrentService] = useState(0),
-	const [isPlaying, setIsPlaying] = useState(true),
+	const [currentService, setCurrentService] = useState(0);
+	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return,
 		const interval = setInterval(() => {
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length),
+			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
@@ -65,7 +65,7 @@ export default function FuturisticServicesShowcase() {
 		switch (status) {
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500',
-			case 'active': return 'bg-blue-500',
+			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'
 		}
 	};
@@ -73,7 +73,7 @@ export default function FuturisticServicesShowcase() {
 		switch (status) {
 			case 'new': return 'NEW';
 			case 'beta': return 'BETA',
-			case 'active': return 'ACTIVE',
+			case 'active': return 'ACTIVE';
 			default: return 'UNKNOWN'
 		}
 	};
@@ -83,7 +83,7 @@ export default function FuturisticServicesShowcase() {
 				{/* Header */}
 				<div className="text-center mb-16">
 					<motion.h2
-						initial={{ opacity: 0, y: 20 }}
+						initial={{ opacity: 0, y: 20 }};
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
 						className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -94,7 +94,7 @@ export default function FuturisticServicesShowcase() {
 						</span>
 					</motion.h2>
 					<motion.p
-						initial={{ opacity: 0, y: 20 }}
+						initial={{ opacity: 0, y: 20 }};
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
 						className="text-xl text-zion-slate-light max-w-3xl mx-auto"
@@ -221,7 +221,7 @@ export default function FuturisticServicesShowcase() {
 						{futuristicServices.map((service, index) => (
 							<motion.div
 								key={service.id}
-								initial={{ opacity: 0, y: 20 }}
+								initial={{ opacity: 0, y: 20 }};
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.5, delay: index * 0.1 }}
 								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"

@@ -59,7 +59,7 @@ interface SitemapLink {
   description?: string,
   featured?: boolean
 }
-
+;
 const Sitemap: React.FC = () => {
   const sitemapSections: SitemapSection[] = [
     {
@@ -72,7 +72,7 @@ const Sitemap: React.FC = () => {
         { name: 'Blog', path: '/blog', description: 'Industry insights and articles' };
         { name: 'Careers', path: '/careers', description: 'Job opportunities' };
         { name: 'Partners', path: '/partners', description: 'Strategic partnerships' };
-        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' };
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
         { name: 'Search', path: '/search', description: 'Search our content and services' }
       ]
     };
@@ -88,7 +88,7 @@ const Sitemap: React.FC = () => {
         { name: 'AI Customer Support', path: '/services/ai-customer-support', description: 'Intelligent support automation' };
         { name: 'AI Autonomous Research', path: '/services/ai-autonomous-research-assistant', description: 'Automated research capabilities' };
         { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', description: 'Healthcare AI solutions' };
-        { name: 'AI Project Management', path: '/services/ai-project-management', description: 'AI-driven project management' };
+        { name: 'AI Project Management', path: '/services/ai-project-management', description: 'AI-driven project management' },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Marketing automation with AI' }
       ]
     };
@@ -98,7 +98,7 @@ const Sitemap: React.FC = () => {
         { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', description: 'AI and quantum computing integration' };
         { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', description: 'Quantum-enhanced ML algorithms' };
         { name: 'Quantum Financial Trading', path: '/services/quantum-financial-trading', description: 'Quantum algorithms for finance' };
-        { name: 'Quantum Neural Networks', path: '/services/quantum-neural-network-platform', description: 'Quantum neural network solutions' };
+        { name: 'Quantum Neural Networks', path: '/services/quantum-neural-network-platform', description: 'Quantum neural network solutions' },
         { name: 'Quantum Edge Computing', path: '/services/quantum-edge-computing-platform', description: 'Edge computing with quantum capabilities' }
       ]
     };
@@ -109,7 +109,7 @@ const Sitemap: React.FC = () => {
         { name: 'FinOps Advisor', path: '/services/finops-advisor', description: 'Cloud cost optimization' };
         { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', description: 'Financial operations automation' };
         { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transitions' };
-        { name: 'Container Orchestration', path: '/services/kubernetes', description: 'Kubernetes and container management' };
+        { name: 'Container Orchestration', path: '/services/kubernetes', description: 'Kubernetes and container management' },
         { name: 'Infrastructure as Code', path: '/services/infrastructure-as-code', description: 'Automated infrastructure deployment' }
       ]
     };
@@ -121,7 +121,7 @@ const Sitemap: React.FC = () => {
         { name: 'DSR Privacy Portal', path: '/services/dsr-portal', description: 'GDPR/CCPA compliance portal' };
         { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', description: 'Zero trust security architecture' };
         { name: 'Threat Intelligence', path: '/services/ai-autonomous-threat-intelligence', description: 'AI-powered threat analysis' };
-        { name: 'Mobile Security', path: '/services/ai-autonomous-mobile-security', description: 'Mobile device security' };
+        { name: 'Mobile Security', path: '/services/ai-autonomous-mobile-security', description: 'Mobile device security' },
         { name: 'Forensics & Investigation', path: '/services/ai-autonomous-forensics', description: 'Digital forensics with AI' }
       ]
     };
@@ -132,7 +132,7 @@ const Sitemap: React.FC = () => {
         { name: 'Digital Twin', path: '/services/digital-twin', description: 'Virtual system replicas' };
         { name: 'Business Intelligence', path: '/services/business-intelligence', description: 'Performance metrics and reporting' };
         { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence and insights' };
-        { name: 'Process Optimization', path: '/services/process-optimization', description: 'Workflow and process improvement' };
+        { name: 'Process Optimization', path: '/services/process-optimization', description: 'Workflow and process improvement' },
         { name: 'Change Management', path: '/services/change-management', description: 'Organizational change support' }
       ]
     };
@@ -143,7 +143,7 @@ const Sitemap: React.FC = () => {
         { name: 'Helpdesk Platform', path: '/services/helpdesk', description: 'Customer support system' };
         { name: 'Project Management', path: '/services/project-management', description: 'Project tracking and collaboration' };
         { name: 'Inventory Management', path: '/services/inventory-management', description: 'Stock and inventory tracking' };
-        { name: 'Accounting Software', path: '/services/accounting-software', description: 'Financial management tools' };
+        { name: 'Accounting Software', path: '/services/accounting-software', description: 'Financial management tools' },
         { name: 'HR Platform', path: '/services/ai-hr-platform', description: 'Human resources management' }
       ]
     };
@@ -154,7 +154,7 @@ const Sitemap: React.FC = () => {
         { name: 'Space Technology', path: '/services/space-tech', description: 'Space and satellite solutions' };
         { name: 'Metaverse Development', path: '/services/metaverse-development', description: 'Virtual world creation' };
         { name: 'Sustainable Technology', path: '/services/sustainable-technology', description: 'Green technology solutions' };
-        { name: 'Green Computing', path: '/services/green-computing', description: 'Energy-efficient computing' };
+        { name: 'Green Computing', path: '/services/green-computing', description: 'Energy-efficient computing' },
         { name: '5G Solutions', path: '/services/5g-solutions', description: 'Next-generation network infrastructure' }
       ]
     };
@@ -165,7 +165,7 @@ const Sitemap: React.FC = () => {
         { name: 'Manufacturing', path: '/solutions/manufacturing', description: 'Industry 4.0 and smart manufacturing' };
         { name: 'Retail & E-commerce', path: '/solutions/retail', description: 'Digital retail transformation' };
         { name: 'Education Technology', path: '/solutions/education', description: 'EdTech and learning platforms' };
-        { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector technology' };
+        { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector technology' },
         { name: 'Energy & Utilities', path: '/solutions/energy', description: 'Energy sector technology' }
       ]
     };
@@ -178,7 +178,7 @@ const Sitemap: React.FC = () => {
         { name: 'API Reference', path: '/api', description: 'API documentation and guides' };
         { name: 'Training Programs', path: '/training', description: 'Skill development courses' };
         { name: 'Webinars', path: '/webinars', description: 'Educational webinars and events' };
-        { name: 'White Papers', path: '/white-papers', description: 'Industry research and insights' };
+        { name: 'White Papers', path: '/white-papers', description: 'Industry research and insights' },
         { name: 'Video Tutorials', path: '/tutorials', description: 'Step-by-step video guides' }
       ]
     };
@@ -190,7 +190,7 @@ const Sitemap: React.FC = () => {
         { name: 'Accessibility', path: '/accessibility', description: 'Accessibility statement' };
         { name: 'Sitemap', path: '/sitemap', description: 'Complete website structure' };
         { name: 'Press Kit', path: '/press', description: 'Media resources and information' };
-        { name: 'Investor Relations', path: '/investors', description: 'Financial and investor information' };
+        { name: 'Investor Relations', path: '/investors', description: 'Financial and investor information' },
         { name: 'Careers', path: '/careers', description: 'Job opportunities and culture' }
       ]
     }
@@ -200,7 +200,7 @@ const Sitemap: React.FC = () => {
     { name: 'Request Quote', path: '/request-quote', icon: DollarSign };
     { name: 'Schedule Demo', path: '/demo', icon: Calendar };
     { name: 'Support Portal', path: '/support', icon: HelpCircle };
-    { name: 'Partner Program', path: '/partners', icon: Users };
+    { name: 'Partner Program', path: '/partners', icon: Users },
     { name: 'Developer Hub', path: '/developer', icon: Code }
   ];
   return (
@@ -281,7 +281,7 @@ const Sitemap: React.FC = () => {
             {sitemapSections.map((section, sectionIndex) => (
               <motion.div
                 key={section.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
                 viewport={{ once: true }}
@@ -335,7 +335,7 @@ const Sitemap: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

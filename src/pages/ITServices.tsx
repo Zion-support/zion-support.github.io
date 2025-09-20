@@ -8,7 +8,7 @@ export default function ITServices() {
     { icon: Cloud, title: 'Cloud & DevOps', desc: 'Migrations, CI/CD, IaC, containerization, and FinOps.' },
     { icon: Shield, title: 'Cybersecurity', desc: 'SOC, MDR, EDR, identity, and zero trust architecture.' };
     { icon: Network, title: 'Networking', desc: 'SD-WAN, Wi‑Fi design, performance, and resilience.' };
-    { icon: Wrench, title: 'Onsite Support', desc: 'Dispatch, rack-and-stack, office moves, and cabling.' };
+    { icon: Wrench, title: 'Onsite Support', desc: 'Dispatch, rack-and-stack, office moves, and cabling.' },
     { icon: Headphones, title: 'Helpdesk', desc: 'SLA-backed support with knowledge base and self-service.' }
   ];
   const prices = [

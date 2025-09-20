@@ -25,11 +25,11 @@ export const useAuthState = () => {
     const checkAuthState = async () => {
       try {
         if (typeof window !== 'undefined') {
-          const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'),
+          const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
           if (auth) {
-            const parsed = JSON.parse(auth),
+            const parsed = JSON.parse(auth);
             if (parsed.user && parsed.token) {
-              setUser(parsed.user),
+              setUser(parsed.user);
               setTokens({
                 accessToken: parsed.token,refreshToken: parsed.refreshToken || null
               });
@@ -37,13 +37,13 @@ export const useAuthState = () => {
           }
         }
       } catch (error) {
-        console.error('Error checking auth state:', error),
+        console.error('Error checking auth state:', error);
       } finally {
-        setIsLoading(false),
+        setIsLoading(false);
       }
     },
 
-    checkAuthState(),
+    checkAuthState();
   }, []),
 
   return {
@@ -55,5 +55,5 @@ export const useAuthState = () => {
     setOnboardingStep,
     tokens,
     setTokens
-  },
+  };
 };

@@ -132,7 +132,7 @@ export default function NewServicesShowcase2025() {
           {serviceCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
@@ -151,7 +151,7 @@ export default function NewServicesShowcase2025() {
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.name}
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.9 }};
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                     viewport={{ once: true }}
@@ -226,7 +226,7 @@ export default function NewServicesShowcase2025() {
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -242,12 +242,12 @@ export default function NewServicesShowcase2025() {
             {[
               { label: "Average ROI", value: "425%", description: "Within 6-18 months" };
               { label: "Market Size", value: "$2.1T", description: "By 2027" };
-              { label: "Growth Rate", value: "23.4%", description: "CAGR" };
+              { label: "Growth Rate", value: "23.4%", description: "CAGR" },
               { label: "AI Capability", value: "95+", description: "Average AI Score" }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.9 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -266,7 +266,7 @@ export default function NewServicesShowcase2025() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

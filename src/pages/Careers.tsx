@@ -16,14 +16,14 @@ import {
   ExternalLink
 } from "lucide-react";
 const Careers: React.FC = () => {
-  const [expandedJob, setExpandedJob] = useState<string | null>(null),
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),
+  const [expandedJob, setExpandedJob] = useState<string | null>(null);
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
 
   const departments = [
     { id: 'all', name: 'All Departments', count: 12 };
     { id: 'engineering', name: 'Engineering', count: 5 };
     { id: 'sales', name: 'Sales & Business Development', count: 3 };
-    { id: 'marketing', name: 'Marketing', count: 2 };
+    { id: 'marketing', name: 'Marketing', count: 2 },
     { id: 'operations', name: 'Operations', count: 2 }
   ];
   const jobListings = [
@@ -36,12 +36,12 @@ const Careers: React.FC = () => {
         'Strong problem-solving and communication skills'
       ],
       responsibilities: [
-        'Design and implement AI/ML solutionsOptimize model performance and scalability';
+        'Design and implement AI/ML solutionsOptimize model performance and scalability',
         'Collaborate with cross-functional teamsMentor junior engineers',
         'Stay current with AI/ML trends and technologies'
       ],
       benefits: [
-        'Competitive salary and equityFlexible work arrangements';
+        'Competitive salary and equityFlexible work arrangements',
         'Professional development budgetHealth, dental, and vision insurance',
         '401(k) with company match'
       ]
@@ -50,17 +50,17 @@ const Careers: React.FC = () => {
       id: 'ai-sales-engineer',title: 'AI Sales Engineer',department: 'sales',location: 'Remote / New York, NY',
       type: 'Full-time',salary: '$90,000 - $140,000',
       experience: '3+ years',description: 'Help clients understand and implement our AI solutions through technical expertise and sales acumen.',requirements: [
-        'Technical background in AI/ML or software engineeringExperience in B2B sales or sales engineering';
+        'Technical background in AI/ML or software engineeringExperience in B2B sales or sales engineering',
         'Strong presentation and communication skillsAbility to understand client needs and propose solutions',
         'Experience with CRM systems'
       ],
       responsibilities: [
-        'Conduct technical demonstrations and presentationsDevelop proof-of-concept solutions';
+        'Conduct technical demonstrations and presentationsDevelop proof-of-concept solutions',
         'Collaborate with sales and engineering teamsProvide technical support during sales process',
         'Build relationships with technical stakeholders'
       ],
       benefits: [
-        'Base salary plus commissionPerformance bonuses';
+        'Base salary plus commissionPerformance bonuses',
         'Company car allowanceHealth and wellness benefits',
         'Professional development opportunities'
       ]
@@ -70,17 +70,17 @@ const Careers: React.FC = () => {
       type: 'Full-time',salary: '$80,000 - $120,000',
       experience: '4+ years',description: 'Drive product positioning, messaging, and go-to-market strategies for our AI solutions.',
       requirements: [
-        'Experience in B2B SaaS product marketingStrong analytical and creative skills';
+        'Experience in B2B SaaS product marketingStrong analytical and creative skills',
         'Experience with market research and competitive analysisExcellent written and verbal communication',
         'Understanding of AI/ML technologies'
       ],
       responsibilities: [
-        'Develop product positioning and messagingCreate marketing collateral and campaigns';
+        'Develop product positioning and messagingCreate marketing collateral and campaigns',
         'Conduct market research and competitive analysisWork with product and sales teams',
         'Track and analyze marketing metrics'
       ],
       benefits: [
-        'Competitive salary and benefitsRemote work flexibility';
+        'Competitive salary and benefitsRemote work flexibility',
         'Marketing budget for tools and resourcesHealth and wellness benefits',
         'Professional development opportunities'
       ]
@@ -94,12 +94,12 @@ const Careers: React.FC = () => {
         'Understanding of security best practices'
       ],
       responsibilities: [
-        'Manage cloud infrastructure and servicesAutomate deployment and scaling processes';
+        'Manage cloud infrastructure and servicesAutomate deployment and scaling processes',
         'Monitor system performance and reliabilityImplement security and compliance measures',
         'Collaborate with development teams'
       ],
       benefits: [
-        'Competitive salary and equityRemote work flexibility';
+        'Competitive salary and equityRemote work flexibility',
         'Cloud certification reimbursementHealth and wellness benefits',
         'Professional development budget'
       ]
@@ -115,14 +115,14 @@ const Careers: React.FC = () => {
     };
     {
       icon: <Heart className="w-8 h-8 text-zion-cyan" />,title: 'Customer Focus',description: 'Our customers\' success is our success. We build solutions that truly make a difference.'
-    };
+    },
     {
       icon: <Globe className="w-8 h-8 text-zion-cyan" />,title: 'Global Impact',description: 'We\'re committed to creating technology that benefits society and the environment.'
     }
   ];
   const filteredJobs = selectedDepartment === 'all' 
     ? jobListings 
-    : jobListings.filter(job => job.department === selectedDepartment),
+    : jobListings.filter(job => job.department === selectedDepartment);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -169,7 +169,7 @@ const Careers: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -185,7 +185,7 @@ const Careers: React.FC = () => {
             {companyValues.map((value, index) => (
               <motion.div
                 key={value.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -206,7 +206,7 @@ const Careers: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -240,7 +240,7 @@ const Careers: React.FC = () => {
             {filteredJobs.map((job, index) => (
               <motion.div
                 key={job.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -355,7 +355,7 @@ const Careers: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -377,14 +377,14 @@ const Careers: React.FC = () => {
               };
               {
                 step: '3',title: 'Interview',description: 'Multiple rounds including technical and cultural fit'
-              };
+              },
               {
                 step: '4',title: 'Offer',description: 'Receive your offer and join the Zion Tech family'
               }
             ].map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -405,7 +405,7 @@ const Careers: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

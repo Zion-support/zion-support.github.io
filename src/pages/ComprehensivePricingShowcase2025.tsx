@@ -28,9 +28,9 @@ import {
 } from "lucide-react";
 import { comprehensivePricingGuide2025, ServicePricing } from "../data/comprehensive-pricing-guide-2025";
 const ComprehensivePricingShowcase2025: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState(''),
-    const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-    const [selectedService, setSelectedService] = useState<ServicePricing | null>(null),
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
+    const [selectedService, setSelectedService] = useState<ServicePricing | null>(null);
 
     const categories = [
         { id: 'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length };
@@ -39,11 +39,11 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
         { id: 'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s => s.category === 'Edutech').length };
         { id: 'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s => s.category === 'Martech').length };
         { id: 'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s => s.category === 'Micro SaaS').length };
-        { id: 'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s => s.category === 'AI Services').length };
+        { id: 'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s => s.category === 'AI Services').length },
         { id: 'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s => s.category === 'IT Services').length }
     ];
     const filteredServices = useMemo(() => {
-        let filtered = comprehensivePricingGuide2025,
+        let filtered = comprehensivePricingGuide2025;
 
         if (searchTerm) {
             filtered = filtered.filter(service =>
@@ -52,20 +52,20 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                 service.category.toLowerCase().includes(searchTerm.toLowerCase())
             ),
         }
-
+;
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory),
+            filtered = filtered.filter(service => service.category === selectedCategory);
         }
-
+;
         return filtered,
-    }, [searchTerm, selectedCategory]),
+    }, [searchTerm, selectedCategory]);
 
     const getCategoryColor = (category: string) => {
         const colors: { [key: string]: string } = {
             'Fintech': 'from-green-500 to-emerald-600Healthtech': 'from-red-500 to-pink-600Edutech': 'from-purple-500 to-violet-600Martech': 'from-pink-500 to-rose-600Micro SaaS': 'from-blue-500 to-indigo-600AI Services': 'from-cyan-500 to-blue-600IT Services': 'from-slate-500 to-gray-600'
         };
         return colors[category] || 'from-gray-500 to-gray-600',
-    },
+    };
 
     const getCategoryIcon = (category: string) => {
         const icons: { [key: string]: React.ReactNode } = {
@@ -409,6 +409,6 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </footer>
         </div>
     )
-},
+};
 
 export default ComprehensivePricingShowcase2025;

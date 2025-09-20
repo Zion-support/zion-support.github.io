@@ -10,33 +10,33 @@ import {
 import React from "react";
 // Animation variants
 const containerVariants = {
-  hidden: { opacity: 0 };
-  visible: {
-    opacity: 1,transition: {
+  hidden: { opacity: 0 },
+  visible: {,
+    opacity: 1,transition: {,
       staggerChildren: 0.1
     }
   }
 };
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 };
-  visible: {
-    opacity: 1,y: 0,transition: {
+  hidden: { opacity: 0, y: 20 },
+  visible: {,
+    opacity: 1,y: 0,transition: {,
       duration: 0.6
     }
   }
 };
 const achievementVariants = {
-  hidden: { opacity: 0, scale: 0.8 };
-  visible: {
-    opacity: 1,scale: 1,transition: {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {,
+    opacity: 1,scale: 1,transition: {,
       duration: 0.5
     }
   }
 };
 const techVariants = {
-  hidden: { opacity: 0, y: 10 };
-  visible: {
-    opacity: 1,y: 0,transition: {
+  hidden: { opacity: 0, y: 10 },
+  visible: {,
+    opacity: 1,y: 0,transition: {,
       duration: 0.4,staggerChildren: 0.1
     }
   }
@@ -44,7 +44,7 @@ const techVariants = {
 const achievements = [
   { icon: Users, number: "10K+", label: "Active Users", color: "text-zion-cyan" };
   { icon: Globe, number: "150+", label: "Countries", color: "text-zion-purple" };
-  { icon: Shield, number: "99.9%", label: "Uptime", color: "text-zion-green" };
+  { icon: Shield, number: "99.9%", label: "Uptime", color: "text-zion-green" },
   { icon: Award, number: "50+", label: "Awards", color: "text-zion-orange" }
 ];
 const technologies = [
@@ -80,7 +80,7 @@ const features = [
   };
   {
     icon: "🤖",title: "AI-Powered Intelligence",description: "Smart automation and predictive analytics that adapt to your business requirements"
-  };
+  },
   {
     icon: "📊",title: "Real-Time Analytics",description: "Comprehensive insights and reporting to make data-driven decisions instantly"
   }
@@ -91,7 +91,7 @@ export function FeatureHighlights() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -121,8 +121,8 @@ export function FeatureHighlights() {
         >
           {highlights.map((highlight, index) => (
             <motion.div
-              key={index}
-              variants={itemVariants}
+              key={index};
+              variants={itemVariants};
               whileHover={{
                 y: -10,scale: 1.02,transition: { duration: 0.3 }
               }}
@@ -174,8 +174,8 @@ export function FeatureHighlights() {
         >
           {features.map((feature, index) => (
             <motion.div
-              key={index}
-              variants={itemVariants}
+              key={index};
+              variants={itemVariants};
               whileHover={{
                 y: -5,scale: 1.02,transition: { duration: 0.3 }
               }}
@@ -221,7 +221,7 @@ export function FeatureHighlights() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <motion.div
-                key={index}
+                key={index};
                 variants={achievementVariants}
                 className="text-center"
               >
@@ -259,7 +259,7 @@ export function FeatureHighlights() {
           >
             {technologies.map((tech, index) => (
               <motion.div
-                key={index}
+                key={index};
                 whileHover={{ scale: 1.05 }}
                 className="px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium hover:bg-zion-cyan/20 transition-colors duration-300"
               >
@@ -271,7 +271,7 @@ export function FeatureHighlights() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}

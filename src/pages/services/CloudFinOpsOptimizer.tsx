@@ -65,7 +65,7 @@ const CloudFinOpsOptimizer = () => {
     };
     {
       icon: TrendingUp2,title: 'Predictive Modeling',description: 'Forecast future costs and identify optimization trends'
-    };
+    },
     {
       icon: Lightbulb,title: 'Smart Recommendations',description: 'Intelligent suggestions for cost savings and efficiency improvements'
     }
@@ -85,7 +85,7 @@ const CloudFinOpsOptimizer = () => {
     },
     {
       icon: BarChart3,title: 'Real-time Dashboards',description: 'Live monitoring and reporting of cloud costs and performance'
-    };
+    },
     {
       icon: Target,title: 'Goal Setting & Tracking',description: 'Set cost targets and track progress with automated alerts'
     }
@@ -99,7 +99,7 @@ const CloudFinOpsOptimizer = () => {
     };
     {
       industry: 'E-commerce',description: 'Balance performance with cost optimization'
-    };
+    },
     {
       industry: 'SaaS Platforms',description: 'Optimize costs for multi-tenant applications'
     }
@@ -149,7 +149,7 @@ const CloudFinOpsOptimizer = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -167,7 +167,7 @@ const CloudFinOpsOptimizer = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200"
@@ -187,7 +187,7 @@ const CloudFinOpsOptimizer = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -205,7 +205,7 @@ const CloudFinOpsOptimizer = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200"
@@ -229,7 +229,7 @@ const CloudFinOpsOptimizer = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -247,7 +247,7 @@ const CloudFinOpsOptimizer = () => {
               {benefits.slice(0, 3).map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
@@ -261,7 +261,7 @@ const CloudFinOpsOptimizer = () => {
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
                   key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
@@ -279,7 +279,7 @@ const CloudFinOpsOptimizer = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -297,7 +297,7 @@ const CloudFinOpsOptimizer = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-amber-500/30 transition-all duration-200"
@@ -317,7 +317,7 @@ const CloudFinOpsOptimizer = () => {
       <section className="py-20 bg-gradient-to-r from-amber-500/10 to-orange-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

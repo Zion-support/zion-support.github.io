@@ -31,7 +31,7 @@ const AIServicesPage = () => {
       id: 'ai-consciousness-simulator',name: 'AI Consciousness Simulator',tagline: 'Simulate and test AI consciousness emergence patterns',price: '$15,999',
       period: '/month',description: 'Advanced AI consciousness simulation platform for researchers, ethicists, and AI safety organizations. Test consciousness emergence, ethical boundaries, and safety protocols in controlled environments.',
       features: [
-        'Multi-dimensional consciousness mappingEthical boundary testing framework';
+        'Multi-dimensional consciousness mappingEthical boundary testing framework',
         'Consciousness emergence predictionSafety protocol validation',
         'Real-time consciousness monitoringEthical decision tree analysis',
         'Consciousness transfer protocolsSafety breach prevention',
@@ -47,7 +47,7 @@ const AIServicesPage = () => {
     {
       id: 'quantum-emotion-processor',name: 'Quantum Emotion Processor',tagline: 'Process and analyze emotions using quantum computing',price: '$12,999',
       period: '/month',description: 'Revolutionary quantum-powered emotional intelligence platform that processes human emotions with unprecedented accuracy and speed.',features: [
-        'Quantum emotion recognitionReal-time emotional analysis';
+        'Quantum emotion recognitionReal-time emotional analysis',
         'Multi-modal emotion processingEmotional pattern prediction',
         'Cross-cultural emotion mappingEmotional health monitoring',
         'Therapeutic intervention suggestionsEmotional intelligence training',
@@ -134,7 +134,7 @@ const AIServicesPage = () => {
               {aiSolutions.map((solution, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300"
@@ -161,7 +161,7 @@ const AIServicesPage = () => {
               {caseStudies.map((study, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"

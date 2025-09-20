@@ -16,20 +16,20 @@ export default function AIContentCreationSuite() {
 
   const useCases = [
     'Marketing and advertising agenciesE-commerce and retail brands';
-    'Publishing and media companiesEducational institutions';
+    'Publishing and media companiesEducational institutions',
     'Corporate communicationsSocial media management'
   ];
   const tiers = [
     {
       name: 'Creator',price: '$199/mo',details: [
-        'Up to 100 content pieces/monthBasic AI text generation';
+        'Up to 100 content pieces/monthBasic AI text generation',
         'Standard image creationEmail support',
         'Basic analytics'
       ]
     },
     {
       name: 'Professional',price: '$499/mo',details: [
-        'Up to 500 content pieces/monthAdvanced AI content creation';
+        'Up to 500 content pieces/monthAdvanced AI content creation',
         'Video generationPriority support',
         'Multi-language supportAdvanced analytics'
       ]
@@ -37,7 +37,7 @@ export default function AIContentCreationSuite() {
     {
       name: 'Enterprise',price: '$1,299/mo',
       details: [
-        'Unlimited content creationFull AI content suite';
+        'Unlimited content creationFull AI content suite',
         'Custom AI modelsDedicated support',
         'API accessWhite-label solutions'
       ]

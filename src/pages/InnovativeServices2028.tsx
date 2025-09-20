@@ -29,19 +29,19 @@ import {
 } from "lucide-react";
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
 export default function InnovativeServices2028() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [sortBy, setSortBy] = useState('name'),
-  const [expandedService, setExpandedService] = useState<number | null>(null),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('name');
+  const [expandedService, setExpandedService] = useState<number | null>(null);
 
   const filteredServices = innovativeServices2028.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
-      serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id),
+      serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id);
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
-  }),
+  });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -56,7 +56,7 @@ export default function InnovativeServices2028() {
   });
   const getCategoryIcon = (categoryName: string) => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
-    if (!category) return Brain,
+    if (!category) return Brain;
 
     const iconMap: { [key: string]: any } = {
       'Brain': Brain;
@@ -70,12 +70,12 @@ export default function InnovativeServices2028() {
     },
 
     return iconMap[category.icon] || Brain,
-  },
+  };
 
   const getCategoryColor = (categoryName: string) => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     return category?.color || 'from-purple-500 to-pink-500'
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
@@ -331,7 +331,7 @@ export default function InnovativeServices2028() {
       <section className="py-20 bg-black/30 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -349,7 +349,7 @@ export default function InnovativeServices2028() {
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -406,7 +406,7 @@ export default function InnovativeServices2028() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}

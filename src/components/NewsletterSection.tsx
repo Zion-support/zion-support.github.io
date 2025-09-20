@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap } from "lucide-react";
 const NewsletterSection: React.FC = () => {
-  const [email, setEmail] = useState(''),
-  const [isSubscribed, setIsSubscribed] = useState(false),
-  const [isLoading, setIsLoading] = useState(false),
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return,
 
-    setIsLoading(true),
+    setIsLoading(true);
 
     // Simulate API call
     setTimeout(() => {
-      setIsSubscribed(true),
-      setIsLoading(false),
+      setIsSubscribed(true);
+      setIsLoading(false);
       setEmail('')
     }, 1500),
   },
@@ -26,7 +26,7 @@ const NewsletterSection: React.FC = () => {
     };
     {
       icon: TrendingUp,title: "Industry Insights",description: "Get exclusive access to tech trends and analysis"
-    };
+    },
     {
       icon: Zap,title: "Early Access",description: "Be the first to know about beta programs and launches"
     }
@@ -60,14 +60,14 @@ const NewsletterSection: React.FC = () => {
       </section>
     )
   }
-
+;
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -30 }};
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -83,7 +83,7 @@ const NewsletterSection: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start"
@@ -107,7 +107,7 @@ const NewsletterSection: React.FC = () => {
 
           {/* Right Column - Newsletter Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 30 }};
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >

@@ -7,14 +7,14 @@ import App from "./App.tsx";
 import './index.css',
 
 const queryClient = new QueryClient({
-    defaultOptions: {
+    defaultOptions: {,
         queries: {
             staleTime: 5 * 60 * 1000, // 5 minutes
             retry: 1
         }
     }
 });
-const rootElement = document.getElementById('root'),
+const rootElement = document.getElementById('root');
 
 function renderApp() {
     const app = (
@@ -27,15 +27,15 @@ function renderApp() {
                 </QueryClientProvider>
             </HelmetProvider>
         </React.StrictMode>
-    ),
+    );
     
     if (rootElement?.hasChildNodes()) {
-        hydrateRoot(rootElement, app),
+        hydrateRoot(rootElement, app);
     } else if (rootElement) {
-        createRoot(rootElement).render(app),
+        createRoot(rootElement).render(app);
     }
 }
-
+;
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
@@ -47,15 +47,15 @@ function displayFatalError(message) {
 }
 
 try {
-    renderApp(),
+    renderApp();
 } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('Global error caught in main.jsx:', error),
-    displayFatalError(error.message),
+    console.error('Global error caught in main.jsx:', error);
+    displayFatalError(error.message);
 }
 
 window.addEventListener('error', (e) => {
     // eslint-disable-next-line no-console
-    console.error('Unhandled error:', e.error || e.message),
-    displayFatalError(e.message),
+    console.error('Unhandled error:', e.error || e.message);
+    displayFatalError(e.message);
 }),

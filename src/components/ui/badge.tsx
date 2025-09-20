@@ -6,7 +6,7 @@ interface BadgeProps {
   children: React.ReactNode;
   className?: string
 }
-
+;
 const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
   ({ variant = 'default', size = 'md', children, className, ...props }, ref) => {
     const baseClasses = 'inline-flex items-center rounded-full font-medium transition-colors focus: outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2';
@@ -33,6 +33,6 @@ const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
   }
 ),
 
-Badge.displayName = 'Badge',
+Badge.displayName = 'Badge';
 
 export { Badge };

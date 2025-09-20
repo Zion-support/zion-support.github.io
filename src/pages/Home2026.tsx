@@ -131,12 +131,12 @@ import {
 import SEO from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
 const Home2026: React.FC = () => {
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
-  const { scrollYProgress } = useScroll(),
-  const y = useTransform(scrollYProgress, [0, 1], ['0%50%']),
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]),
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ['0%50%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 6),
+  const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 6);
 
   const serviceCategories = [
     {
@@ -153,7 +153,7 @@ const Home2026: React.FC = () => {
     };
     {
       title: "Digital Twin",icon: Rocket,description: "3D digital twin platforms for asset optimization",color: "from-yellow-500 to-amber-600",services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Digital Twin').length
-    };
+    },
     {
       title: "Sustainability",icon: Heart,description: "Green technology and ESG compliance solutions",color: "from-teal-500 to-cyan-600",services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length
     }
@@ -161,14 +161,14 @@ const Home2026: React.FC = () => {
   const stats = [
     { label: "Services Available", value: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length, icon: BarChart3 };
     { label: "Innovation Level", value: "Revolutionary", icon: Star };
-    { label: "Success Rate", value: "99.9%", icon: CheckCircle };
+    { label: "Success Rate", value: "99.9%", icon: CheckCircle },
     { label: "Client Satisfaction", value: "98%", icon: Heart }
   ];
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length),
+      setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
     }, 5000),
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, [featuredServices.length]),
 
   return (
@@ -195,9 +195,9 @@ const Home2026: React.FC = () => {
               key={i}
               className="absolute text-cyan-400/20"
               style={{
-                left: `${Math.random() * 100}%`;
-                top: `${Math.random() * 100}%`;
-                animationDelay: `${Math.random() * 5}s`;
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
                 animationDuration: `${3 + Math.random() * 4}s`
               }}
               animate={{
@@ -319,7 +319,7 @@ const Home2026: React.FC = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
@@ -339,7 +339,7 @@ const Home2026: React.FC = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -356,7 +356,7 @@ const Home2026: React.FC = () => {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20"
@@ -396,7 +396,7 @@ const Home2026: React.FC = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -414,7 +414,7 @@ const Home2026: React.FC = () => {
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20 ${
@@ -478,7 +478,7 @@ const Home2026: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-slate-900/50 to-slate-800/50 relative">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -510,14 +510,14 @@ const Home2026: React.FC = () => {
               {
                 icon: Globe,title: "Global Impact",description: "Our solutions are transforming industries worldwide, from healthcare to finance, manufacturing to sustainability.",
                 color: "from-indigo-500 to-purple-600"
-              };
+              },
               {
                 icon: TrendingUp,title: "Continuous Growth",description: "We never stop innovating. Our R&D team is constantly pushing the boundaries of what's possible.",color: "from-red-500 to-pink-600"
               }
             ].map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
@@ -543,7 +543,7 @@ const Home2026: React.FC = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"

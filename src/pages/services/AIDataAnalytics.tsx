@@ -22,7 +22,7 @@ export default function AIDataAnalytics() {
     {
       title: "Multi-Source Data Integration",description: "Connect and analyze data from databases, APIs, cloud services, and third-party tools",
       icon: Database,color: "from-indigo-500 to-blue-500"
-    };
+    },
     {
       title: "Interactive Visualizations",description: "Create stunning, interactive dashboards that make complex data easy to understand",
       icon: PieChart,color: "from-teal-500 to-cyan-500"
@@ -52,7 +52,7 @@ export default function AIDataAnalytics() {
     };
     {
       name: "Enterprise",price: "$399",period: "/month",description: "For large organizations",features: [
-        "Unlimited data points";
+        "Unlimited data points",
         "Custom AI models",
         "White-label solution",
         "Dedicated support",
@@ -68,7 +68,7 @@ export default function AIDataAnalytics() {
     };
     {
       title: "40% Better Decision Making",description: "Data-driven insights lead to more informed business decisions",icon: Target,metric: "40%"
-    };
+    },
     {
       title: "90% Cost Reduction",description: "Automated analytics reduce manual data analysis overhead",icon: TrendingUp,metric: "90%"
     }
@@ -84,7 +84,7 @@ export default function AIDataAnalytics() {
     };
     {
       title: "Operational Intelligence",description: "Monitor and optimize business operations in real-time",icon: TrendingUp,color: "from-orange-500 to-red-500"
-    };
+    },
     {
       title: "Market Analysis",description: "Track competitors, market trends, and business opportunities",
       icon: Globe,color: "from-green-500 to-emerald-500"
@@ -99,7 +99,7 @@ export default function AIDataAnalytics() {
     };
     {
       name: "Shopify",description: "Analyze e-commerce performance and customer behavior",icon: Globe,color: "from-green-500 to-emerald-500"
-    };
+    },
     {
       name: "QuickBooks",description: "Connect financial data for comprehensive business analytics",icon: PieChart,color: "from-orange-500 to-red-500"
     }
@@ -147,7 +147,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -165,10 +165,10 @@ export default function AIDataAnalytics() {
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -187,7 +187,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -205,7 +205,7 @@ export default function AIDataAnalytics() {
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -226,7 +226,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -244,7 +244,7 @@ export default function AIDataAnalytics() {
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -266,7 +266,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -284,7 +284,7 @@ export default function AIDataAnalytics() {
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -305,7 +305,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -325,10 +325,10 @@ export default function AIDataAnalytics() {
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'
                 }`}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 {plan.popular && (
@@ -374,7 +374,7 @@ export default function AIDataAnalytics() {
       <section className="py-20 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}

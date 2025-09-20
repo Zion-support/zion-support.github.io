@@ -22,7 +22,7 @@ export const WhitePapers: React.FC = () => {
     };
     {
       id: 5,title: 'Data Analytics Revolution: From Insights to Actionable Intelligence',description: 'How modern data analytics platforms are transforming raw data into strategic business intelligence.',category: 'Data Analytics',author: 'Dr. Emily Watson',date: '2024-09-18',downloadCount: 1102,featured: false,icon: TrendingUp,color: 'from-orange-500 to-red-500'
-    };
+    },
     {
       id: 6,title: 'Digital Twin Technology: Bridging Physical and Digital Worlds',description: 'Comprehensive overview of digital twin applications across industries and their implementation strategies.',category: 'Digital Twin',author: 'James Wilson',date: '2024-08-12',downloadCount: 645,featured: false,icon: Target,color: 'from-purple-500 to-violet-500'
     }
@@ -33,7 +33,7 @@ export const WhitePapers: React.FC = () => {
     { name: 'Quantum Computing', count: whitePapers.filter(wp => wp.category === 'Quantum Computing').length, active: false };
     { name: 'Cybersecurity', count: whitePapers.filter(wp => wp.category === 'Cybersecurity').length, active: false };
     { name: 'Cloud & DevOps', count: whitePapers.filter(wp => wp.category === 'Cloud & DevOps').length, active: false };
-    { name: 'Data Analytics', count: whitePapers.filter(wp => wp.category === 'Data Analytics').length, active: false };
+    { name: 'Data Analytics', count: whitePapers.filter(wp => wp.category === 'Data Analytics').length, active: false },
     { name: 'Digital Twin', count: whitePapers.filter(wp => wp.category === 'Digital Twin').length, active: false }
   ];
   return (
@@ -126,7 +126,7 @@ export const WhitePapers: React.FC = () => {
             {whitePapers.filter(wp => wp.featured).map((paper) => (
               <motion.div
                 key={paper.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -182,7 +182,7 @@ export const WhitePapers: React.FC = () => {
             {whitePapers.map((paper) => (
               <motion.div
                 key={paper.id}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -246,7 +246,7 @@ export const WhitePapers: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

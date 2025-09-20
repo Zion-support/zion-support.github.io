@@ -11,7 +11,7 @@ export default function ComprehensivePricingGuide2029() {
   const pricingPlans = [
     {
       id: 'starter',name: 'Starter',description: 'Perfect for small businesses and startups',price: billingCycle === 'monthly' ? '$99' : '$990',period: billingCycle === 'monthly' ? '/month' : '/year',savings: billingCycle === 'yearly' ? 'Save 17%' : '',features: [
-        'Access to 5 core AI servicesBasic analytics and reporting';
+        'Access to 5 core AI servicesBasic analytics and reporting',
         'Email supportStandard integrations',
         'Community forum access'
       ],
@@ -20,7 +20,7 @@ export default function ComprehensivePricingGuide2029() {
     {
       id: 'professional',name: 'Professional',description: 'Ideal for growing businesses and teams',price: billingCycle === 'monthly' ? '$299' : '$2,990',
       period: billingCycle === 'monthly' ? '/month' : '/year',savings: billingCycle === 'yearly' ? 'Save 17%' : '',features: [
-        'Access to 15+ AI servicesAdvanced analytics and insights';
+        'Access to 15+ AI servicesAdvanced analytics and insights',
         'Priority email supportAdvanced integrations',
         'Custom workflowsTeam collaboration tools'
       ],
@@ -29,7 +29,7 @@ export default function ComprehensivePricingGuide2029() {
     {
       id: 'enterprise',name: 'Enterprise',description: 'For large organizations and enterprises',price: billingCycle === 'monthly' ? '$799' : '$7,990',
       period: billingCycle === 'monthly' ? '/month' : '/year',savings: billingCycle === 'yearly' ? 'Save 17%' : '',features: [
-        'Access to ALL AI servicesEnterprise-grade analytics';
+        'Access to ALL AI servicesEnterprise-grade analytics',
         '24/7 phone and email supportCustom integrations',
         'Advanced security featuresDedicated account manager',
         'Custom training and onboarding'
@@ -67,12 +67,12 @@ export default function ComprehensivePricingGuide2029() {
     };
     {
       name: 'Quantum Technology',icon: <Atom className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Quantum'))
-    };
+    },
     {
       name: 'Emerging Tech',icon: <Sparkles className="w-6 h-6" />,services: allServices.filter(s => !s.category.includes('AI') && !s.category.includes('Space') && !s.category.includes('Quantum'))
     }
   ];
-  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1,
+  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -131,7 +131,7 @@ export default function ComprehensivePricingGuide2029() {
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`relative ${plan.popular ? 'scale-105' : ''}`}
@@ -185,7 +185,7 @@ export default function ComprehensivePricingGuide2029() {
       {/* Service Categories Pricing */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -202,7 +202,7 @@ export default function ComprehensivePricingGuide2029() {
           {serviceCategories.map((category, index) => (
             <motion.div
               key={category.name}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
@@ -271,7 +271,7 @@ export default function ComprehensivePricingGuide2029() {
       {/* Enterprise Custom Pricing */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center"
@@ -303,14 +303,14 @@ export default function ComprehensivePricingGuide2029() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
             >
               Request Custom Quote
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
             >
@@ -323,7 +323,7 @@ export default function ComprehensivePricingGuide2029() {
       {/* FAQ Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
@@ -340,7 +340,7 @@ export default function ComprehensivePricingGuide2029() {
             };
             {
               question: "Do you offer volume discounts for enterprise customers?",answer: "Absolutely! Enterprise customers with multiple service subscriptions receive significant volume discounts. Contact our sales team for custom enterprise pricing."
-            };
+            },
             {
               question: "What's included in the support packages?",answer: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24/7 phone and email support with dedicated account management."
             },
@@ -353,7 +353,7 @@ export default function ComprehensivePricingGuide2029() {
           ].map((faq, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10"
@@ -376,14 +376,14 @@ export default function ComprehensivePricingGuide2029() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
             >
               Start Free Trial
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-300"
             >

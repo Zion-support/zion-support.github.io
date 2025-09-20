@@ -39,7 +39,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
     };
     {
       icon: Users,title: "Multi-User Collaboration",description: "Team-based analytics with real-time collaboration and sharing capabilities"
-    };
+    },
     {
       icon: Globe,title: "Global Data Integration",description: "Connect to 500+ data sources including CRM, ERP, databases, and cloud platforms"
     }
@@ -49,7 +49,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
     {
       name: "Starter",price: "$2,500",
       period: "/month",description: "Perfect for small businesses and startups",features: [
-        "Up to 10 data sources";
+        "Up to 10 data sources",
         "Basic AI analytics",
         "Standard reporting",
         "Email support",
@@ -59,7 +59,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
     {
       name: "Professional",price: "$5,000",
       period: "/month",description: "Ideal for growing businesses and teams",features: [
-        "Up to 50 data sources";
+        "Up to 50 data sources",
         "Advanced AI analytics",
         "Custom dashboards",
         "Priority support",
@@ -71,7 +71,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
     {
       name: "Enterprise",price: "$12,000",
       period: "/month",description: "For large organizations with complex needs",features: [
-        "Unlimited data sources";
+        "Unlimited data sources",
         "Full AI suite",
         "Custom development",
         "24/7 dedicated support",
@@ -142,7 +142,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -161,7 +161,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -182,7 +182,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -201,7 +201,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -253,7 +253,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -272,7 +272,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -290,7 +290,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

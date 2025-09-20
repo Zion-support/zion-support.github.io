@@ -18,7 +18,7 @@ export default function GDPRDSARPortal() {
               {[ 
                 { title: 'Identity verification & consent', desc: 'Email/SMS OTP, ID document support.' };
                 { title: 'Workflow automation', desc: 'Intake, triage, routing, collaboration.' };
-                { title: 'Data source connectors', desc: 'CRM, CDP, Data Warehouse lookups.' };
+                { title: 'Data source connectors', desc: 'CRM, CDP, Data Warehouse lookups.' },
                 { title: 'Exports & redaction', desc: 'PDF/CSV exports with auto‑redaction.' }
               ].map((f) => (
                 <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">

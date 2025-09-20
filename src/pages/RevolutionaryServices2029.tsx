@@ -4,19 +4,19 @@ import { Search, Filter, Star, Users, TrendingUp, Zap, Brain, Shield, Cloud, Roc
 import { SEO } from "@/components/SEO";
 import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from "../../data/revolutionary-2029-advanced-micro-saas-services";
 export default function RevolutionaryServices2029() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('All'),
-  const [sortBy, setSortBy] = useState('popularity'),
-  const [isPlaying, setIsPlaying] = useState(false),
-  const [volume, setVolume] = useState(0.5),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('popularity');
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(0.5);
 
   const categories = ['AllAI & Automation', 'Quantum Computing & AIAI & Security', 'AI & MarketingAI & Sales', 'AI & SupportAI & Analytics', 'IT & InfrastructureQuantum Computing & Finance', 'AI & Healthcare'],
 
   const filteredServices = REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchQuery.toLowerCase()),
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     return matchesSearch && matchesCategory,
   }),
 
@@ -25,7 +25,7 @@ export default function RevolutionaryServices2029() {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'price-high':
         return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
       case 'rating':
@@ -35,8 +35,8 @@ export default function RevolutionaryServices2029() {
       default: return 0
     }
   });
-  const togglePlay = () => setIsPlaying(!isPlaying),
-  const toggleMute = () => setVolume(volume > 0 ? 0 : 0.5),
+  const togglePlay = () => setIsPlaying(!isPlaying);
+  const toggleMute = () => setVolume(volume > 0 ? 0 : 0.5);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -64,7 +64,7 @@ export default function RevolutionaryServices2029() {
               duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 5
             }}
             style={{
-              left: `${Math.random() * 100}%`;
+              left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
             }}
           />
@@ -139,7 +139,7 @@ export default function RevolutionaryServices2029() {
               {[
                 { icon: Users, value: '1,200+', label: 'Active Customers' };
                 { icon: Star, value: '4.9/5', label: 'Average Rating' };
-                { icon: TrendingUp, value: '45%', label: 'Cost Reduction' };
+                { icon: TrendingUp, value: '45%', label: 'Cost Reduction' },
                 { icon: Zap, value: '24/7', label: 'AI Operations' }
               ].map((stat, index) => (
                 <div key={index} className="text-center">
@@ -339,7 +339,7 @@ export default function RevolutionaryServices2029() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -381,16 +381,16 @@ export default function RevolutionaryServices2029() {
         }
         @keyframes blob {
           0% {
-            transform: translate(0px, 0px) scale(1),
+            transform: translate(0px, 0px) scale(1);
           }
           33% {
-            transform: translate(30px, -50px) scale(1.1),
+            transform: translate(30px, -50px) scale(1.1);
           }
           66% {
-            transform: translate(-20px, 20px) scale(0.9),
+            transform: translate(-20px, 20px) scale(0.9);
           }
           100% {
-            transform: translate(0px, 0px) scale(1),
+            transform: translate(0px, 0px) scale(1);
           }
         }
         .line-clamp-3 {
@@ -398,11 +398,11 @@ export default function RevolutionaryServices2029() {
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical,overflow: hidden
         }
-        .slider: :-webkit-slider-thumb {
+        .slider: :-webkit-slider-thumb {,
           appearance: none,height: 20px,width: 20px;
           border-radius: 50%,background: #8b5cf6,cursor: pointer
         }
-        .slider: :-moz-range-thumb {
+        .slider: :-moz-range-thumb {,
           height: 20px,width: 20px;
           border-radius: 50%,background: #8b5cf6,cursor: pointer,border: none
         }

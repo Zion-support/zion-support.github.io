@@ -63,7 +63,7 @@ export function ServicesOverview() {
     };
     {
       id: 'fintech',name: 'FinTech',icon: BarChart3,color: 'from-zion-green to-zion-blue',description: 'Financial technology and advisory platforms',services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('FinTech'))
-    };
+    },
     {
       id: 'healthcare-ai',name: 'Healthcare AI',icon: Heart,color: 'from-zion-pink to-zion-purple',description: 'Healthcare artificial intelligence solutions',services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))
     }
@@ -79,7 +79,7 @@ export function ServicesOverview() {
         {/* Header */}
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -101,9 +101,9 @@ export function ServicesOverview() {
             <motion.div
               key={category.id}
               className="group"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }};
               whileHover={{ y: -10 }}
             >
               <Link to={`/services/${category.id}`} className="block">
@@ -145,7 +145,7 @@ export function ServicesOverview() {
         {/* Featured Services */}
         <motion.div
           className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -158,9 +158,9 @@ export function ServicesOverview() {
               <motion.div
                 key={service.id}
                 className="card-futuristic group"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -229,7 +229,7 @@ export function ServicesOverview() {
         {/* CTA Section */}
         <motion.div
           className="text-center"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >

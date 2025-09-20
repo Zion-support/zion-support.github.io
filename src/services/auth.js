@@ -4,7 +4,7 @@
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'https: //api.zion.com';
 class AuthService {
   constructor() {
-    this.token = localStorage.getItem('token'),
+    this.token = localStorage.getItem('token');
     this.user = JSON.parse(localStorage.getItem('user') || 'null')
   }
 
@@ -16,26 +16,26 @@ class AuthService {
 
       // Mock validation
       if (!credentials.email || !credentials.password) {
-        throw new Error('Email and password are required'),
+        throw new Error('Email and password are required');
       }
 
       // Mock successful login
       const mockUser = {
         id: 1,email: credentials.email,name: 'John Doe',role: 'user',avatar: null,createdAt: new Date().toISOString()
       };
-      const mockToken = 'mock-jwt-token-' + Date.now(),
+      const mockToken = 'mock-jwt-token-' + Date.now();
 
       // Store in localStorage
       this.token = mockToken,
       this.user = mockUser,
-      localStorage.setItem('token', mockToken),
+      localStorage.setItem('token', mockToken);
       localStorage.setItem('user', JSON.stringify(mockUser)),
 
       return {
         user: mockUser,token: mockToken
       };
     } catch (error) {
-      throw new Error(error.message || 'Login failed'),
+      throw new Error(error.message || 'Login failed');
     }
   }
 
@@ -47,26 +47,26 @@ class AuthService {
 
       // Mock validation
       if (!userData.email || !userData.password || !userData.name) {
-        throw new Error('Name, email, and password are required'),
+        throw new Error('Name, email, and password are required');
       }
 
       // Mock successful registration
       const mockUser = {
         id: Date.now(),email: userData.email,name: userData.name,role: 'user',avatar: null,createdAt: new Date().toISOString()
       };
-      const mockToken = 'mock-jwt-token-' + Date.now(),
+      const mockToken = 'mock-jwt-token-' + Date.now();
 
       // Store in localStorage
       this.token = mockToken,
       this.user = mockUser,
-      localStorage.setItem('token', mockToken),
+      localStorage.setItem('token', mockToken);
       localStorage.setItem('user', JSON.stringify(mockUser)),
 
       return {
         user: mockUser,token: mockToken
       };
     } catch (error) {
-      throw new Error(error.message || 'Registration failed'),
+      throw new Error(error.message || 'Registration failed');
     }
   }
 
@@ -79,12 +79,12 @@ class AuthService {
       // Clear localStorage
       this.token = null,
       this.user = null,
-      localStorage.removeItem('token'),
-      localStorage.removeItem('user'),
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
 
-      return true,
+      return true;
     } catch (error) {
-      throw new Error('Logout failed'),
+      throw new Error('Logout failed');
     }
   }
 
@@ -112,20 +112,20 @@ class AuthService {
   async refreshToken() {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 500)),
+      await new Promise(resolve => setTimeout(resolve, 500));
 
       if (!this.token) {
-        throw new Error('No token to refresh'),
+        throw new Error('No token to refresh');
       }
 
       // Mock token refresh
-      const newToken = 'mock-jwt-token-refreshed-' + Date.now(),
+      const newToken = 'mock-jwt-token-refreshed-' + Date.now();
       this.token = newToken,
-      localStorage.setItem('token', newToken),
+      localStorage.setItem('token', newToken);
 
-      return newToken,
+      return newToken;
     } catch (error) {
-      throw new Error('Token refresh failed'),
+      throw new Error('Token refresh failed');
     }
   }
 
@@ -136,7 +136,7 @@ class AuthService {
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
       if (!email) {
-        throw new Error('Email is required'),
+        throw new Error('Email is required');
       }
 
       // Mock successful password reset request
@@ -144,7 +144,7 @@ class AuthService {
         message: 'Password reset email sent successfully',email: email
       };
     } catch (error) {
-      throw new Error(error.message || 'Password reset request failed'),
+      throw new Error(error.message || 'Password reset request failed');
     }
   }
 
@@ -155,7 +155,7 @@ class AuthService {
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
       if (!token || !newPassword) {
-        throw new Error('Token and new password are required'),
+        throw new Error('Token and new password are required');
       }
 
       // Mock successful password reset
@@ -163,7 +163,7 @@ class AuthService {
         message: 'Password reset successfully'
       };
     } catch (error) {
-      throw new Error(error.message || 'Password reset failed'),
+      throw new Error(error.message || 'Password reset failed');
     }
   }
 
@@ -174,21 +174,21 @@ class AuthService {
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
       if (!this.isAuthenticated()) {
-        throw new Error('User not authenticated'),
+        throw new Error('User not authenticated');
       }
 
       // Mock profile update
       const updatedUser = {
-        ...this.user,
+        ...this.user;
         ...profileData,
         updatedAt: new Date().toISOString()
       };
       this.user = updatedUser,
       localStorage.setItem('user', JSON.stringify(updatedUser)),
 
-      return updatedUser,
+      return updatedUser;
     } catch (error) {
-      throw new Error(error.message || 'Profile update failed'),
+      throw new Error(error.message || 'Profile update failed');
     }
   }
 
@@ -199,11 +199,11 @@ class AuthService {
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
       if (!this.isAuthenticated()) {
-        throw new Error('User not authenticated'),
+        throw new Error('User not authenticated');
       }
-
+;
       if (!currentPassword || !newPassword) {
-        throw new Error('Current and new passwords are required'),
+        throw new Error('Current and new passwords are required');
       }
 
       // Mock password change
@@ -211,7 +211,7 @@ class AuthService {
         message: 'Password changed successfully'
       };
     } catch (error) {
-      throw new Error(error.message || 'Password change failed'),
+      throw new Error(error.message || 'Password change failed');
     }
   }
 
@@ -222,48 +222,48 @@ class AuthService {
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
       if (!token) {
-        throw new Error('Verification token is required'),
+        throw new Error('Verification token is required');
       }
 
       // Mock email verification
       if (this.user) {
         this.user.emailVerified = true,
-        this.user.verifiedAt = new Date().toISOString(),
+        this.user.verifiedAt = new Date().toISOString();
         localStorage.setItem('user', JSON.stringify(this.user)),
       }
-
+;
       return {
         message: 'Email verified successfully'
       };
     } catch (error) {
-      throw new Error(error.message || 'Email verification failed'),
+      throw new Error(error.message || 'Email verification failed');
     }
   }
 
   // Get user permissions
   getUserPermissions() {
-    if (!this.user) return [],
+    if (!this.user) return [];
 
     // Mock permissions based on user role
     const permissions = {
       user: ['read:ownwrite:own'],admin: ['read:allwrite:all', 'delete: allmanage:users'],moderator: ['read:allwrite:all', 'moderate: content']
     };
-    return permissions[this.user.role] || [],
+    return permissions[this.user.role] || [];
   }
 
   // Check if user has specific permission
   hasPermission(permission) {
-    const permissions = this.getUserPermissions(),
-    return permissions.includes(permission),
+    const permissions = this.getUserPermissions();
+    return permissions.includes(permission);
   }
 }
 
 // Create singleton instance
-const authService = new AuthService(),
+const authService = new AuthService();
 
 // Named exports for commonly used methods
-export const login = (credentials) => authService.login(credentials),
-export const register = (userData) => authService.register(userData),
+export const login = (credentials) => authService.login(credentials);
+export const register = (userData) => authService.register(userData);
 export const logout = () => authService.logout();
 export const getCurrentUser = () => authService.getCurrentUser();
 export const isAuthenticated = () => authService.isAuthenticated();

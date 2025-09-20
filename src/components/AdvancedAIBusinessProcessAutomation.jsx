@@ -3,7 +3,7 @@ import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle,
 const mockBusinessProcesses = [
     {
         id: 'bp-001',name: 'Invoice Processing & Approval',description: 'Automated invoice processing with AI-powered validation and approval workflows',category: 'finance',status: 'active',priority: 'high',automationLevel: 'fully-automated',aiInsights: [
-            'Pattern detected: 15% of invoices require manual reviewOptimization opportunity: Reduce approval time by 40%';
+            'Pattern detected: 15% of invoices require manual reviewOptimization opportunity: Reduce approval time by 40%',
             'Cost savings potential: $12,000/month through automation'
         ],
         efficiency: 92,costSavings: 12000,timeReduction: 65,stakeholders: ['Finance TeamAP Department', 'Vendors'],
@@ -11,34 +11,34 @@ const mockBusinessProcesses = [
             {
                 id: 'exec-001',timestamp: new Date('2024-01-15T10:30:00Z'),status: 'success',duration: 45,aiDecisions: ['Auto-approved 85% of invoicesFlagged 3 suspicious entries'],manualInterventions: 2,cost: 150,efficiency: 94
             }
-        ];
+        ],
         rules: [
             {
                 id: 'rule-001',name: 'Auto-approve under $1000',condition: 'amount < 1000 AND vendor_verified = true',action: 'auto_approve',priority: 1,isActive: true,aiOptimized: true,lastTriggered: new Date('2024-01-15T10:30:00Z'),triggerCount: 156
             }
-        ];
+        ],
         dependencies: ['vendor_verificationbudget_approval']
     };
     {
         id: 'bp-002',name: 'Employee Onboarding',description: 'Streamlined employee onboarding with automated document processing and task assignment',category: 'hr',status: 'active',priority: 'medium',automationLevel: 'semi-automated',aiInsights: [
-            'Bottleneck identified: IT setup takes 3 days on averageRecommendation: Implement parallel processing for faster onboarding';
+            'Bottleneck identified: IT setup takes 3 days on averageRecommendation: Implement parallel processing for faster onboarding',
             'Success rate: 98% completion within SLA'
         ],efficiency: 87,costSavings: 8000,timeReduction: 55,stakeholders: ['HR TeamIT Department', 'New Employees'],
         lastExecuted: new Date('2024-01-14T14:15:00Z'),nextExecution: new Date('2024-01-17T09:00:00Z'),executionHistory: [
             {
                 id: 'exec-002',timestamp: new Date('2024-01-14T14:15:00Z'),status: 'success',duration: 120,aiDecisions: ['Optimized task sequenceIdentified resource conflicts'],manualInterventions: 1,cost: 200,efficiency: 89
             }
-        ];
+        ],
         rules: [
             {
                 id: 'rule-002',name: 'Auto-assign IT tasks',condition: 'employee_type = "full_time" AND department != "contractor"',action: 'assign_it_tasks',priority: 2,isActive: true,aiOptimized: true,lastTriggered: new Date('2024-01-14T14:15:00Z'),triggerCount: 23
             }
-        ];
+        ],
         dependencies: ['background_checkdocument_verification']
     };
     {
         id: 'bp-003',name: 'Customer Support Ticket Routing',description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise',category: 'operations',status: 'active',priority: 'critical',automationLevel: 'fully-automated',aiInsights: [
-            'AI accuracy: 94% correct ticket classificationResponse time improved by 60%';
+            'AI accuracy: 94% correct ticket classificationResponse time improved by 60%',
             'Customer satisfaction increased by 25%'
         ],
         efficiency: 96,costSavings: 15000,timeReduction: 70,stakeholders: ['Support TeamCustomers', 'Product Team'],
@@ -46,26 +46,26 @@ const mockBusinessProcesses = [
             {
                 id: 'exec-003',timestamp: new Date('2024-01-15T16:45:00Z'),status: 'success',duration: 15,aiDecisions: ['Classified 47 tickets by priorityAssigned to optimal agents'],manualInterventions: 0,cost: 50,efficiency: 98
             }
-        ];
+        ],
         rules: [
             {
                 id: 'rule-003',name: 'Priority-based routing',condition: 'priority = "critical" AND category = "technical"',action: 'route_to_senior_agent',priority: 1,isActive: true,aiOptimized: true,lastTriggered: new Date('2024-01-15T16:45:00Z'),triggerCount: 8
             }
-        ];
+        ],
         dependencies: ['ticket_classificationagent_availability']
     }
 ];
 export function AdvancedAIBusinessProcessAutomation() {
-    const [isOpen, setIsOpen] = useState(false),
-    const [isMinimized, setIsMinimized] = useState(false),
-    const [isFullscreen, setIsFullscreen] = useState(false),
-    const [activeTab, setActiveTab] = useState('overview'),
-    const [selectedCategory, setSelectedCategory] = useState('all'),
-    const [selectedStatus, setSelectedStatus] = useState('all'),
-    const [searchQuery, setSearchQuery] = useState(''),
-    const [showAIInsights, setShowAIInsights] = useState(true),
-    const [showAutomation, setShowAutomation] = useState(true),
-    const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses),
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMinimized, setIsMinimized] = useState(false);
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [activeTab, setActiveTab] = useState('overview');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedStatus, setSelectedStatus] = useState('all');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [showAIInsights, setShowAIInsights] = useState(true);
+    const [showAutomation, setShowAutomation] = useState(true);
+    const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses);
     const [selectedProcess, setSelectedProcess] = useState(null);
     const [isExecuting, setIsExecuting] = useState(false);
     const containerRef = useRef(null);
@@ -95,12 +95,12 @@ export function AdvancedAIBusinessProcessAutomation() {
     };
     const getCategoryIcon = (category) => {
         switch (category) {
-            case 'finance': return <DollarSign className="w-4 h-4"/>,
+            case 'finance': return <DollarSign className="w-4 h-4"/>;
             case 'hr': return <Users className="w-4 h-4"/>,
             case 'operations': return <Settings className="w-4 h-4"/>,
             case 'sales': return <TrendingUp className="w-4 h-4"/>,
             case 'marketing': return <Target className="w-4 h-4"/>,
-            case 'it': return <Server className="w-4 h-4"/>,
+            case 'it': return <Server className="w-4 h-4"/>;
             default: return <FileText className="w-4 h-4"/>
         }
     };
@@ -110,25 +110,25 @@ export function AdvancedAIBusinessProcessAutomation() {
         }).format(amount);
     },
     const formatPercentage = (value) => {
-        return `${value}%`,
+        return `${value}%`;
     },
     const executeProcess = async (processId) => {
-        setIsExecuting(true),
+        setIsExecuting(true);
         // Simulate process execution
         await new Promise(resolve => setTimeout(resolve, 2000)),
-        setIsExecuting(false),
+        setIsExecuting(false);
         // Update process status
         setBusinessProcesses(prev => prev.map(p => p.id === processId
             ? { ...p, lastExecuted: new Date(), status: 'active' }
             : p));
     },
     const filteredProcesses = businessProcesses.filter(process => {
-        const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory,
-        const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus,
+        const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory;
+        const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus;
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            process.description.toLowerCase().includes(searchQuery.toLowerCase()),
+            process.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesStatus && matchesSearch,
-    }),
+    });
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hover: shadow-zion-blue/50 transition-all duration-300 z-50 group">
         <div className="flex items-center gap-3">
@@ -139,7 +139,7 @@ export function AdvancedAIBusinessProcessAutomation() {
           NEW
         </div>
       </button>)
-    }
+    };
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center gap-3 p-3">
@@ -150,7 +150,7 @@ export function AdvancedAIBusinessProcessAutomation() {
           </button>
         </div>
       </div>)
-    }
+    };
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">
@@ -454,7 +454,7 @@ export function AdvancedAIBusinessProcessAutomation() {
               </h3>
               <div className="space-y-4">
                 {businessProcesses.flatMap(process => process.rules.map(rule => ({
-                ...rule;
+                ...rule,
                 processName: process.name,processCategory: process.category
             }))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">
                     <div className="flex items-center gap-3">

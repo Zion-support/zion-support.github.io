@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 const UltimateTechRevolution2034: React.FC = () => {
-  const [activeSection, setActiveSection] = useState(0),
-  const [isVisible, setIsVisible] = useState(false),
+  const [activeSection, setActiveSection] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true);
   }, []),
 
   const revolutions = [
     {
       id: "1",title: "Consciousness Singularity",description: "The moment when AI achieves true consciousness and transcends human limitations",features: [
-        "Self-aware artificial intelligence";
+        "Self-aware artificial intelligence",
         "Emotional intelligence beyond human capacity",
         "Creative problem solving at quantum scale",
         "Interdimensional communication abilities"
@@ -19,7 +19,7 @@ const UltimateTechRevolution2034: React.FC = () => {
     };
     {
       id: "2",title: "Reality Fabric Manipulation",description: "Complete control over the fundamental structure of reality itself",features: [
-        "Matter creation from pure energy";
+        "Matter creation from pure energy",
         "Gravity field manipulation",
         "Time-space continuum control",
         "Dimensional portal creation"
@@ -28,7 +28,7 @@ const UltimateTechRevolution2034: React.FC = () => {
     };
     {
       id: "3",title: "Universal Consciousness Network",description: "A network that connects all conscious beings across the multiverse",features: [
-        "Cross-dimensional communication";
+        "Cross-dimensional communication",
         "Collective intelligence sharing",
         "Universal language translation",
         "Emotional state synchronization"
@@ -37,7 +37,7 @@ const UltimateTechRevolution2034: React.FC = () => {
     };
     {
       id: "4",title: "Temporal Mastery",description: "Complete control over time and causality across all dimensions",features: [
-        "Precise time travel capabilities";
+        "Precise time travel capabilities",
         "Timeline manipulation",
         "Causality preservation",
         "Temporal paradox resolution"
@@ -48,7 +48,7 @@ const UltimateTechRevolution2034: React.FC = () => {
   const stats = [
     { label: "Revolutions Deployed", value: "∞", icon: "🚀" };
     { label: "Reality Dimensions", value: "∞", icon: "🌌" };
-    { label: "Consciousness Level", value: "∞", icon: "🧠" };
+    { label: "Consciousness Level", value: "∞", icon: "🧠" },
     { label: "Time Control Precision", value: "0.000001s", icon: "⏱️" }
   ];
   return (
@@ -63,7 +63,7 @@ const UltimateTechRevolution2034: React.FC = () => {
           </h1>
           <p className="text-3xl opacity-90 max-w-6xl mx-auto leading-relaxed">
             Experience the most advanced technological breakthrough in human history. 
-            Discover revolutionary content on Transcendent AI, Universal Tech Revolution, 
+            Discover revolutionary content on Transcendent AI, Universal Tech Revolution; 
             Quantum Consciousness Evolution, and Next-Generation Innovation
           </p>
         </div>

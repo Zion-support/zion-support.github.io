@@ -1,13 +1,13 @@
 // Performance monitoring utilities
 export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
-  fn(),
-  const end = performance.now(),
-  console.log(`${name} took ${end - start} milliseconds`),
+  fn();
+  const end = performance.now();
+  console.log(`${name} took ${end - start} milliseconds`);
   return end - start,
 },
 
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: any[]) => any>(,
   func: T,wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
@@ -17,7 +17,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   },
 },
 
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: any[]) => any>(,
   func: T,limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;

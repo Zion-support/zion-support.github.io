@@ -91,7 +91,7 @@ const SpaceTech = () => {
     };
     {
       icon: Navigation,title: 'Space Navigation',description: 'Advanced positioning and navigation systems for space missions'
-    };
+    },
     {
       icon: Telescope,title: 'Space Observation',description: 'Earth observation and space monitoring capabilities'
     }
@@ -111,7 +111,7 @@ const SpaceTech = () => {
     };
     {
       icon: Star,title: 'Space Research',description: 'Scientific research and space exploration support'
-    };
+    },
     {
       icon: Globe2,title: 'Global Communications',description: 'Satellite communications and internet services'
     }
@@ -125,7 +125,7 @@ const SpaceTech = () => {
     };
     {
       industry: 'Agriculture',description: 'Crop monitoring and precision agriculture support'
-    };
+    },
     {
       industry: 'Defense & Security',description: 'Surveillance and national security applications'
     }
@@ -175,7 +175,7 @@ const SpaceTech = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -193,7 +193,7 @@ const SpaceTech = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
@@ -213,7 +213,7 @@ const SpaceTech = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -304,7 +304,7 @@ const SpaceTech = () => {
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

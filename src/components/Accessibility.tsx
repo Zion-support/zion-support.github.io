@@ -25,11 +25,11 @@ export function Accessibility() {
   });
   useEffect(() => {
     // Load settings from localStorage
-    const savedSettings = localStorage.getItem('accessibility-settings'),
+    const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      const parsed = JSON.parse(savedSettings),
-      setSettings(parsed),
-      applySettings(parsed),
+      const parsed = JSON.parse(savedSettings);
+      setSettings(parsed);
+      applySettings(parsed);
     }
 
     // Add keyboard shortcuts
@@ -39,22 +39,22 @@ export function Accessibility() {
           case '=':
           case '+':
             e.preventDefault();
-            increaseFontSize(),
+            increaseFontSize();
             break,
           case '-':
-            e.preventDefault(),
-            decreaseFontSize(),
+            e.preventDefault();
+            decreaseFontSize();
             break,
           case '0':
-            e.preventDefault(),
-            resetSettings(),
+            e.preventDefault();
+            resetSettings();
             break
         }
       }
     },
 
-    document.addEventListener('keydown', handleKeyDown),
-    return () => document.removeEventListener('keydown', handleKeyDown),
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []),
 
   const applySettings = (newSettings: AccessibilitySettings) => {
@@ -64,56 +64,56 @@ export function Accessibility() {
     
     // Apply high contrast
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast'),
+      root.classList.add('high-contrast');
     } else {
-      root.classList.remove('high-contrast'),
+      root.classList.remove('high-contrast');
     }
     
     // Apply reduced motion
     if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion'),
+      root.classList.add('reduced-motion');
     } else {
-      root.classList.remove('reduced-motion'),
+      root.classList.remove('reduced-motion');
     }
     
     // Apply theme
     if (newSettings.theme === 'light') {
-      root.classList.add('light-theme'),
-      root.classList.remove('dark-theme'),
+      root.classList.add('light-theme');
+      root.classList.remove('dark-theme');
     } else if (newSettings.theme === 'dark') {
-      root.classList.add('dark-theme'),
-      root.classList.remove('light-theme'),
+      root.classList.add('dark-theme');
+      root.classList.remove('light-theme');
     } else {
-      root.classList.remove('light-themedark-theme'),
+      root.classList.remove('light-themedark-theme');
     }
   },
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
     const newSettings = { ...settings, [key]: value },
-    setSettings(newSettings),
-    applySettings(newSettings),
+    setSettings(newSettings);
+    applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
   },
 
   const increaseFontSize = () => {
     if (settings.fontSize < 24) {
-      updateSetting('fontSize', settings.fontSize + 2),
+      updateSetting('fontSize', settings.fontSize + 2);
     }
   },
 
   const decreaseFontSize = () => {
     if (settings.fontSize > 12) {
-      updateSetting('fontSize', settings.fontSize - 2),
+      updateSetting('fontSize', settings.fontSize - 2);
     }
   },
 
   const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
+    const defaultSettings: AccessibilitySettings = {,
       fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
     };
-    setSettings(defaultSettings),
-    applySettings(defaultSettings),
-    localStorage.removeItem('accessibility-settings'),
+    setSettings(defaultSettings);
+    applySettings(defaultSettings);
+    localStorage.removeItem('accessibility-settings');
   },
 
   return (

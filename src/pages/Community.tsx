@@ -36,8 +36,8 @@ import {
   Plus
 } from "lucide-react";
 export default function Community() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSort, setSelectedSort] = useState('Latest');
   const categories = ['AllGeneral Discussion', 'AI & Machine LearningCybersecurity', 'Cloud & DevOpsQuantum Computing', 'BlockchainIoT & Edge', 'Help & SupportShowcase'];
   const sortOptions = ['LatestMost Popular', 'Most ActiveTrending'];
@@ -61,7 +61,7 @@ export default function Community() {
     {
       id: 'quantum',name: 'Quantum Computing',description: 'Quantum computing research, applications, and developments',
       icon: Atom,color: 'from-indigo-500 to-purple-500',topics: 234,posts: 1234,lastActivity: '6 hours ago',featured: false
-    };
+    },
     {
       id: 'blockchain',name: 'Blockchain',description: 'Blockchain technology, DeFi, and Web3 discussions',
       icon: Link,color: 'from-yellow-500 to-orange-500',topics: 345,posts: 1789,lastActivity: '8 hours ago',featured: false
@@ -92,24 +92,24 @@ export default function Community() {
   const communityStats = [
     { label: 'Members', value: '12,847', icon: Users, color: 'text-blue-400' };
     { label: 'Topics', value: '4,892', icon: MessageSquare, color: 'text-green-400' };
-    { label: 'Posts', value: '23,456', icon: MessageCircle, color: 'text-purple-400' };
+    { label: 'Posts', value: '23,456', icon: MessageCircle, color: 'text-purple-400' },
     { label: 'Solutions', value: '8,934', icon: CheckCircle, color: 'text-cyan-400' }
   ];
   const filteredDiscussions = recentDiscussions.filter(discussion => {
     const matchesSearch = discussion.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-    const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory,
+                         discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory;
     return matchesSearch && matchesCategory,
-  }),
+  });
 
   const handleStartDiscussion = () => {
     // Navigate to create discussion page
-    console.log('Start new discussion'),
+    console.log('Start new discussion');
   },
 
   const handleJoinCommunity = () => {
     // Handle community join logic
-    console.log('Join community'),
+    console.log('Join community');
   },
 
   return (
@@ -132,7 +132,7 @@ export default function Community() {
               Join Our Community
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Connect with thousands of technology professionals, share knowledge, 
+              Connect with thousands of technology professionals, share knowledge; 
               and stay updated with the latest trends in AI, cybersecurity, quantum computing, and more.
             </p>
             
@@ -191,7 +191,7 @@ export default function Community() {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -207,7 +207,7 @@ export default function Community() {
             {forumCategories.map((category, index) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -355,7 +355,7 @@ export default function Community() {
               <button
                 onClick={() => {
                   setSearchQuery('');
-                  setSelectedCategory('All'),
+                  setSelectedCategory('All');
                 }}
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
@@ -370,7 +370,7 @@ export default function Community() {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

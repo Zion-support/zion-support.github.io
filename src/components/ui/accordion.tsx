@@ -34,11 +34,11 @@ export function Accordion({
           return React.cloneElement(child, {
             isOpen: openItems.includes(child.props.value),onToggle: () => handleToggle(child.props.value)
           });
-        }
+        };
         return child,
       })}
     </div>
-  ),
+  );
 }
 
 interface AccordionItemProps {
@@ -59,7 +59,7 @@ export function AccordionItem({
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { isOpen, onToggle });
-        }
+        };
         return child;
       })}
     </div>
@@ -74,7 +74,7 @@ interface AccordionTriggerProps {
 }
 
 export function AccordionTrigger({
-  children;
+  children,
   className = '';
   isOpen = false;
   onToggle
@@ -101,7 +101,7 @@ interface AccordionContentProps {
 }
 
 export function AccordionContent({
-  children;
+  children,
   className = '';
   isOpen = false
 }: AccordionContentProps) {

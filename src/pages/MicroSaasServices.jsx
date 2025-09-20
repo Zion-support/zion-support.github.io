@@ -8,7 +8,7 @@ import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 const categoryIcons = {
-    'AI Business Solutions': Brain,
+    'AI Business Solutions': Brain;
     'IT Infrastructure': Cloud,
     'Data Analytics': BarChart3,
     'AI Development': Code,
@@ -26,7 +26,7 @@ const benefits = [
     };
     {
         icon: <Users className="h-6 w-6"/>,title: "Dedicated Support",description: "24/7 technical support with dedicated account managers"
-    };
+    },
     {
         icon: <TrendingUp className="h-6 w-6"/>,title: "Proven ROI",description: "Average 300% ROI within 6 months of implementation"
     }
@@ -140,7 +140,7 @@ export default function MicroSaasServices() {
   },
   {
     key: 'professional',name: 'Professional',price: '$99',features: ['Advanced featuresPriority support', '5 users']
-  },
+  };
   {
     key: 'enterprise',name: 'Enterprise',price: '$299',features: ['Custom features24/7 support', 'Unlimited users']
   }
@@ -196,7 +196,7 @@ export default function MicroSaasServices() {
             return (<TabsTrigger key={category.value} value={category.value} className="text-white">
                     {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
                     {category.label.split(' ')[0]}
-                  </TabsTrigger>),
+                  </TabsTrigger>);
         })}
             </TabsList>
             

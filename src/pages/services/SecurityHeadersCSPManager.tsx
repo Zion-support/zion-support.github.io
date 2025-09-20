@@ -16,7 +16,7 @@ export default function SecurityHeadersCSPManager() {
             {[
               { title: 'Policy templates', desc: 'Prebuilt strict, balanced and relaxed CSP profiles.' };
               { title: 'Per-app overrides', desc: 'Granular exceptions with expiry and approvals.' };
-              { title: 'Automated reports', desc: 'CSP report-uri ingestion with triage and fixes.' };
+              { title: 'Automated reports', desc: 'CSP report-uri ingestion with triage and fixes.' },
               { title: 'CI/CD integration', desc: 'Fail builds on insecure headers or CSP regressions.' }
             ].map((f) => (
               <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
@@ -30,7 +30,7 @@ export default function SecurityHeadersCSPManager() {
             <a className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200" href="https://securityheaders.com/" target="_blank" rel="noreferrer">
               SecurityHeaders.com <ExternalLink className="w-3 h-3"/>
             </a>
-            <a className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" target="_blank" rel="noreferrer">
+            <a className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" target="_blank" rel="noreferrer">,
               MDN: Content-Security-Policy <ExternalLink className="w-3 h-3"/>
             </a>
           </div>

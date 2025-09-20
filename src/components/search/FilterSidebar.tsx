@@ -15,7 +15,7 @@ interface FilterSidebarProps {
 }
 
 export function FilterSidebar({
-  filters;
+  filters,
   selectedFilters,
   onFilterChange,
   onClearFilters,

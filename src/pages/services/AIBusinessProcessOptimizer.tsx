@@ -16,7 +16,7 @@ export default function AIBusinessProcessOptimizer() {
 
   const useCases = [
     'Manufacturing process optimizationCustomer service workflow automation';
-    'Supply chain process improvementFinancial operations streamlining';
+    'Supply chain process improvementFinancial operations streamlining',
     'HR process automationSales process optimization'
   ];
   const tiers = [

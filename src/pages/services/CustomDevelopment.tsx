@@ -67,7 +67,7 @@ export default function CustomDevelopment() {
     };
     {
       title: 'Security',description: 'Enterprise-grade security measures built into every application.',icon: Shield
-    };
+    },
     {
       title: 'Support & Maintenance',description: 'Ongoing support and maintenance to ensure your applications run smoothly.',icon: Settings
     }
@@ -304,7 +304,7 @@ export default function CustomDevelopment() {
             {[
               { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' };
               { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' };
-              { step: '03', title: 'Development', description: 'Build the application using agile development practices' };
+              { step: '03', title: 'Development', description: 'Build the application using agile development practices' },
               { step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
             ].map((phase, index) => (
               <motion.div

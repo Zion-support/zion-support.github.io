@@ -113,10 +113,10 @@ export default function ComprehensiveServicesShowcase2029() {
     }
   ];
   const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
   }),
 
@@ -155,7 +155,7 @@ export default function ComprehensiveServicesShowcase2029() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              Experience the future of technology with our revolutionary AI-powered, quantum-secure, 
+              Experience the future of technology with our revolutionary AI-powered, quantum-secure; 
               and autonomous business solutions designed to transform industries and drive unprecedented growth.
             </p>
             
@@ -222,7 +222,7 @@ export default function ComprehensiveServicesShowcase2029() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -240,7 +240,7 @@ export default function ComprehensiveServicesShowcase2029() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -307,7 +307,7 @@ export default function ComprehensiveServicesShowcase2029() {
               <button
                 onClick={() => {
                   setSearchTerm('');
-                  setSelectedCategory('all'),
+                  setSelectedCategory('all');
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
@@ -322,7 +322,7 @@ export default function ComprehensiveServicesShowcase2029() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -338,7 +338,7 @@ export default function ComprehensiveServicesShowcase2029() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
@@ -358,7 +358,7 @@ export default function ComprehensiveServicesShowcase2029() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
@@ -378,7 +378,7 @@ export default function ComprehensiveServicesShowcase2029() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}

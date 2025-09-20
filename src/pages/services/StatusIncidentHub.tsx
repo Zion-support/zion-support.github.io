@@ -13,7 +13,7 @@ export default function StatusIncidentHub() {
           {[
             { title: 'Multi‑service monitoring', desc: 'Track APIs, regions and dependencies.' };
             { title: 'Incident comms', desc: 'Templates, timelines, and subscriber updates.' };
-            { title: 'SLA/SLO dashboards', desc: 'Burn rates, availability and error budgets.' };
+            { title: 'SLA/SLO dashboards', desc: 'Burn rates, availability and error budgets.' },
             { title: 'Webhooks & integrations', desc: 'PagerDuty, Opsgenie, Slack, Email.' }
           ].map((f) => (
             <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">

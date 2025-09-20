@@ -14,7 +14,7 @@ import {
 interface Stat {
   id: string,icon: React.ComponentType<any>,value: string,label: string,description: string,color: string,gradient: string
 }
-
+;
 const stats: Stat[] = [
   {
     id: 'clients',icon: Users,value: '500+',label: 'Global Clients',description: 'Serving businesses across 50+ countries',color: 'zion-cyan',gradient: 'from-zion-cyan to-zion-blue'
@@ -30,34 +30,34 @@ const stats: Stat[] = [
   };
   {
     id: 'innovation',icon: Zap,value: '50+',label: 'Patents & Innovations',description: 'Leading edge technology development',color: 'zion-purple',gradient: 'from-zion-purple to-zion-blue'
-  };
+  },
   {
     id: 'growth',icon: Rocket,value: '300%',label: 'Annual Growth',description: 'Rapidly expanding global presence',color: 'zion-blue',gradient: 'from-zion-blue to-zion-cyan'
   }
 ];
 export default function EnhancedStatsSection() {
   const [countedValues, setCountedValues] = useState<{ [key: string]: number }>({});
-  const controls = useAnimation(),
+  const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.3,triggerOnce: true
   });
   useEffect(() => {
     if (inView) {
-      controls.start('visible'),
+      controls.start('visible');
     }
   }, [controls, inView]),
 
   const animateCount = (target: string, duration: number = 2000) => {
     const numericValue = parseInt(target.replace(/[^0-9]/g, '')),
-    const start = 0,
+    const start = 0;
     const increment = numericValue / (duration / 16), // 60fps
 
-    let current = start,
+    let current = start;
     const timer = setInterval(() => {
-      current += increment,
+      current += increment;
       if (current >= numericValue) {
         current = numericValue,
-        clearInterval(timer),
+        clearInterval(timer);
       }
       setCountedValues(prev => ({
         ...prev,
@@ -66,15 +66,15 @@ export default function EnhancedStatsSection() {
     }, 16),
 
     return timer,
-  },
+  };
 
   useEffect(() => {
     if (inView) {
       stats.forEach((stat) => {
         const timer = setTimeout(() => {
-          animateCount(stat.value),
+          animateCount(stat.value);
         }, stats.indexOf(stat) * 200),
-        return () => clearTimeout(timer),
+        return () => clearTimeout(timer);
       }),
     }
   }, [inView]),
@@ -93,10 +93,10 @@ export default function EnhancedStatsSection() {
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
-          animate={controls}
+          animate={controls};
           variants={{
-            visible: {
-              opacity: 1,y: 0,transition: {
+            visible: {,
+              opacity: 1,y: 0,transition: {,
                 duration: 0.6
               }
             }
@@ -117,10 +117,10 @@ export default function EnhancedStatsSection() {
             <motion.div
               key={stat.id}
               initial={{ opacity: 0, y: 30 }}
-              animate={controls}
+              animate={controls};
               variants={{
-                visible: {
-                  opacity: 1,y: 0,transition: {
+                visible: {,
+                  opacity: 1,y: 0,transition: {,
                     duration: 0.6,delay: index * 0.1
                   }
                 }
@@ -139,7 +139,7 @@ export default function EnhancedStatsSection() {
 
                 {/* Icon */}
                 <motion.div
-                  className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
+                  className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`};
                   whileHover={{
                     rotate: 360,scale: 1.1
                   }}
@@ -185,10 +185,10 @@ export default function EnhancedStatsSection() {
         {/* Bottom Achievement Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={controls}
+          animate={controls};
           variants={{
-            visible: {
-              opacity: 1,y: 0,transition: {
+            visible: {,
+              opacity: 1,y: 0,transition: {,
                 duration: 0.6,delay: 0.6
               }
             }

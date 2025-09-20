@@ -39,28 +39,28 @@ export default function Partners() {
   const partnershipTypes = [
     {
       title: 'Technology Partners',description: 'Integrate with leading technology platforms and tools',icon: Cpu,color: 'from-blue-500 to-cyan-500',benefits: [
-        'Access to cutting-edge technologiesJoint go-to-market strategies';
+        'Access to cutting-edge technologiesJoint go-to-market strategies',
         'Technical integration supportCo-marketing opportunities'
       ],
       examples: ['Microsoft AzureAWS', 'Google CloudSalesforce']
     },
     {
       title: 'Solution Partners',description: 'Collaborate on comprehensive business solutions',icon: Target,color: 'from-green-500 to-emerald-500',benefits: [
-        'Joint solution developmentShared revenue opportunities';
+        'Joint solution developmentShared revenue opportunities',
         'Market expansion supportTraining and certification'
       ],
       examples: ['System IntegratorsConsulting Firms', 'VARsMSPs']
     },
     {
       title: 'Channel Partners',description: 'Resell and distribute our solutions',icon: Building,color: 'from-purple-500 to-pink-500',benefits: [
-        'Competitive pricing and marginsSales and technical training';
+        'Competitive pricing and marginsSales and technical training',
         'Marketing materials and supportDedicated partner success manager'
       ],
       examples: ['ResellersDistributors', 'AgentsBrokers']
     },
     {
       title: 'Strategic Partners',description: 'Long-term strategic alliances and joint ventures',icon: Star,color: 'from-orange-500 to-red-500',benefits: [
-        'Exclusive partnership agreementsJoint investment opportunities';
+        'Exclusive partnership agreementsJoint investment opportunities',
         'Shared intellectual propertyBoard-level collaboration'
       ],
       examples: ['Research InstitutionsUniversities', 'GovernmentIndustry Leaders']
@@ -97,7 +97,7 @@ export default function Partners() {
     };
     {
       title: 'Technology Access',description: 'Leverage cutting-edge AI and cloud solutions',icon: Brain,color: 'from-blue-500 to-cyan-500',metric: '100+'
-    };
+    },
     {
       title: 'Support & Training',description: 'Comprehensive partner enablement programs',icon: Users,color: 'from-orange-500 to-red-500',metric: '24/7'
     }
@@ -105,21 +105,21 @@ export default function Partners() {
   const successStories = [
     {
       partner: 'TechCorp Solutions',type: 'Solution Partner',industry: 'Healthcare',results: [
-        '200% revenue growth in first year15 new enterprise clients';
+        '200% revenue growth in first year15 new enterprise clients',
         '$2M+ in joint revenueMarket leader in healthcare AI'
       ],
       logo: '🏥',color: 'from-red-500 to-pink-500'
     };
     {
       partner: 'CloudFirst Systems',type: 'Technology Partner',industry: 'Financial Services',results: [
-        '300% increase in cloud adoption50+ successful migrations';
+        '300% increase in cloud adoption50+ successful migrations',
         '99.99% uptime achievedIndustry benchmark for security'
       ],
       logo: '☁️',color: 'from-blue-500 to-cyan-500'
     };
     {
       partner: 'InnovateLab Research',type: 'Strategic Partner',industry: 'Research & Development',results: [
-        '5 breakthrough AI algorithms10+ research publications';
+        '5 breakthrough AI algorithms10+ research publications',
         '$5M in research fundingPatent portfolio expansion'
       ],
       logo: '🔬',color: 'from-purple-500 to-violet-500'
@@ -128,14 +128,14 @@ export default function Partners() {
   const partnerPrograms = [
     {
       level: 'Bronze',requirements: 'Basic partnership agreement',benefits: [
-        'Marketing materials accessBasic training resources';
+        'Marketing materials accessBasic training resources',
         'Email supportPartner portal access'
       ],
       revenue: '$0 - $50K',color: 'from-amber-500 to-orange-500'
     };
     {
       level: 'Silver',requirements: '$50K+ annual revenue',benefits: [
-        'Everything in BronzeAdvanced training programs';
+        'Everything in BronzeAdvanced training programs',
         'Dedicated partner managerCo-marketing campaigns',
         'Technical support'
       ],
@@ -143,7 +143,7 @@ export default function Partners() {
     };
     {
       level: 'Gold',requirements: '$200K+ annual revenue',benefits: [
-        'Everything in SilverExclusive territory rights';
+        'Everything in SilverExclusive territory rights',
         'Custom marketing materialsPriority technical support',
         'Revenue sharing programs'
       ],
@@ -151,7 +151,7 @@ export default function Partners() {
     };
     {
       level: 'Platinum',requirements: '$1M+ annual revenue',benefits: [
-        'Everything in GoldStrategic planning sessions';
+        'Everything in GoldStrategic planning sessions',
         'Custom solution developmentExecutive sponsorship',
         'Exclusive market access'
       ],
@@ -211,7 +211,7 @@ export default function Partners() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -230,7 +230,7 @@ export default function Partners() {
             {partnershipTypes.map((type, index) => (
               <motion.div
                 key={type.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -281,7 +281,7 @@ export default function Partners() {
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -300,7 +300,7 @@ export default function Partners() {
             {partnerBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -322,7 +322,7 @@ export default function Partners() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -341,7 +341,7 @@ export default function Partners() {
             {partnerPrograms.map((program, index) => (
               <motion.div
                 key={program.level}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -383,7 +383,7 @@ export default function Partners() {
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -402,7 +402,7 @@ export default function Partners() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.partner}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -436,7 +436,7 @@ export default function Partners() {
         <div className="container-responsive">
           <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-700/50">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}

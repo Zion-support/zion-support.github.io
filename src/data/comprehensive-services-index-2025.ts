@@ -14,10 +14,10 @@ export const comprehensiveServicesIndex2025: ServiceIndex[] = [
     // New services from comprehensive-services-2025-enhanced.ts
     ...comprehensiveServices2025Enhanced.map(service => ({
         id: service.id,name: service.name,category: service.category,description: service.description,pricing: service.pricing.monthly,link: service.link,source: 'new' as const
-    }));
+    })),
     // Services from comprehensive-pricing-guide-2025.ts
     ...comprehensivePricingGuide2025.map(service => ({
-        id: service.id,name: service.name,category: service.category,description: service.description,pricing: service.pricing[0]?.price || 'Custom',link: `/services/${service.id}`;
+        id: service.id,name: service.name,category: service.category,description: service.description,pricing: service.pricing[0]?.price || 'Custom',link: `/services/${service.id}`,
         source: 'pricing-guide' as const
     }))
 ];
@@ -37,23 +37,23 @@ export const searchServices = (query: string) => {
         service.description.toLowerCase().includes(lowercaseQuery) ||
         service.category.toLowerCase().includes(lowercaseQuery)
     )
-},
+};
 
 // Get unique categories
 export const getUniqueCategories = () => {
-    const categories = comprehensiveServicesIndex2025.map(service => service.category),
+    const categories = comprehensiveServicesIndex2025.map(service => service.category);
     return [...new Set(categories)],
-},
+};
 
 // Get service statistics
 export const getServiceStats = () => {
-    const totalServices = comprehensiveServicesIndex2025.length,
-    const existingServices = getServicesBySource('existing').length,
+    const totalServices = comprehensiveServicesIndex2025.length;
+    const existingServices = getServicesBySource('existing').length;
     const newServices = getServicesBySource('new').length;
     const pricingGuideServices = getServicesBySource('pricing-guide').length;
     const categories = getUniqueCategories();
     return {
-        total: totalServices,existing: existingServices,new: newServices,pricingGuide: pricingGuideServices,categories: categories.length,categoryBreakdown: categories.map(category => ({
+        total: totalServices,existing: existingServices,new: newServices,pricingGuide: pricingGuideServices,categories: categories.length,categoryBreakdown: categories.map(category => ({,
             name: category,count: getServicesByCategory(category).length
         }))
     };

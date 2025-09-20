@@ -68,15 +68,15 @@ export default function ComprehensiveServicesShowcase2030() {
     { id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' };
     { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' };
     { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' };
-    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' };
+    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
     { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, icon: '💬', color: 'from-blue-500 to-purple-500' }
   ];
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
   }),
 
@@ -87,9 +87,9 @@ export default function ComprehensiveServicesShowcase2030() {
       case 'price':
         return a.price - b.price,
       case 'reviews':
-        return b.reviewCount - a.reviewCount,
+        return b.reviewCount - a.reviewCount;
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       default: return b.rating - a.rating
     }
   });
@@ -112,7 +112,7 @@ export default function ComprehensiveServicesShowcase2030() {
       case 'AI & Content':
         return <PenTool className="w-6 h-6" />,
       case 'AI & Customer Support':
-        return <UserCheck className="w-6 h-6" />,
+        return <UserCheck className="w-6 h-6" />;
       default: return <Brain className="w-6 h-6" />
     }
   };
@@ -396,7 +396,7 @@ export default function ComprehensiveServicesShowcase2030() {
               };
               {
                 icon: <Shield className="w-12 h-12 text-cyan-400" />,title: "Enterprise Security",description: "Bank-level security with SOC 2 compliance and 99.99% uptime"
-              };
+              },
               {
                 icon: <Users className="w-12 h-12 text-cyan-400" />,title: "Expert Support",description: "24/7 dedicated support team with deep technical expertise"
               }

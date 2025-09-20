@@ -27,29 +27,29 @@ import {
   ALL_REVOLUTIONARY_SERVICES_2026
 } from "../data/comprehensiveServices2026";
 const ComprehensiveServicesShowcase2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
   const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))],
   const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))],
   const filteredServices = useMemo(() => {
-    let filtered = ALL_REVOLUTIONARY_SERVICES_2026,
+    let filtered = ALL_REVOLUTIONARY_SERVICES_2026;
     if (searchTerm) {
-      const lowerQuery = searchTerm.toLowerCase(),
+      const lowerQuery = searchTerm.toLowerCase();
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(lowerQuery) ||
         service.description.toLowerCase().includes(lowerQuery) ||
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
       ),
-    }
+    };
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory);
+    };
     if (selectedInnovationLevel !== 'all') {
-      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel),
-    }
+      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
+    };
     return filtered,
-  }, [searchTerm, selectedCategory, selectedInnovationLevel]),
+  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
@@ -58,7 +58,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />,
       case 'Edge Computing': return <Network className="w-5 h-5" />,
       case 'Autonomous Systems': return <Brain className="w-5 h-5" />,
-      case 'Quantum AI': return <Zap className="w-5 h-5" />,
+      case 'Quantum AI': return <Zap className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />
     }
   };
@@ -66,7 +66,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     switch (level) {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600',
-      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600',
+      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600'
     }
   };
@@ -292,8 +292,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 <button
                   onClick={() => {
                     setSearchTerm('');
-                    setSelectedCategory('all'),
-                    setSelectedInnovationLevel('all'),
+                    setSelectedCategory('all');
+                    setSelectedInnovationLevel('all');
                   }}
                   className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
@@ -307,7 +307,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 rounded-3xl p-12 border border-white/10"

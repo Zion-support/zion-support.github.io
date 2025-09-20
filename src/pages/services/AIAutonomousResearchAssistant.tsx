@@ -41,11 +41,11 @@ import {
   MapPin
 } from "lucide-react";
 export default function AIAutonomousResearchAssistant() {
-  const [activeTab, setActiveTab] = useState('overview'),
-  const [isVisible, setIsVisible] = useState(false),
+  const [activeTab, setActiveTab] = useState('overview');
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true);
   }, []),
 
   const features = [
@@ -77,8 +77,8 @@ export default function AIAutonomousResearchAssistant() {
     "Academic research support"
   ];
   const technicalSpecs = {
-    technology: ["GPT-4", "BERT", "Python", "TensorFlow", "PyTorch", "React", "Node.js"];
-    integrations: ["PubMed", "arXiv", "Google Scholar", "Web of Science", "JSTOR"];
+    technology: ["GPT-4", "BERT", "Python", "TensorFlow", "PyTorch", "React", "Node.js"],
+    integrations: ["PubMed", "arXiv", "Google Scholar", "Web of Science", "JSTOR"],
     apiEndpoints: 200,uptime: "99.99%",security: ["SOC 2", "GDPR", "HIPAA", "Zero-trust architecture"]
   },
 
@@ -86,7 +86,7 @@ export default function AIAutonomousResearchAssistant() {
     monthly: "$4,999",
     yearly: "$49,999",
     enterprise: "Custom",features: [
-      "Full autonomous research capabilities";
+      "Full autonomous research capabilities",
       "Unlimited research domains",
       "Priority support",
       "Custom integrations",
@@ -117,7 +117,7 @@ export default function AIAutonomousResearchAssistant() {
                 duration: 3 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
               }}
               style={{
-                left: `${Math.random() * 100}%`;
+                left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`
               }}
             />

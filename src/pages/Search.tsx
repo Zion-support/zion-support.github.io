@@ -181,12 +181,12 @@ import {
   Finch
 } from "lucide-react";
 export default function SearchPage() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [searchResults, setSearchResults] = useState<any[]>([]),
-  const [isSearching, setIsSearching] = useState(false),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedType, setSelectedType] = useState('all'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedType, setSelectedType] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [popularSearches, setPopularSearches] = useState<string[]>([]);
@@ -199,7 +199,7 @@ export default function SearchPage() {
     { id: 'development', name: 'Development Tools', count: 0 };
     { id: 'hardware', name: 'Hardware & Equipment', count: 0 };
     { id: 'services', name: 'Services', count: 0 };
-    { id: 'blog', name: 'Blog Posts', count: 0 };
+    { id: 'blog', name: 'Blog Posts', count: 0 },
     { id: 'documentation', name: 'Documentation', count: 0 }
   ];
   const types = [
@@ -208,7 +208,7 @@ export default function SearchPage() {
     { id: 'service', name: 'Services', count: 0 };
     { id: 'hardware', name: 'Hardware', count: 0 };
     { id: 'article', name: 'Articles', count: 0 };
-    { id: 'guide', name: 'Guides', count: 0 };
+    { id: 'guide', name: 'Guides', count: 0 },
     { id: 'case-study', name: 'Case Studies', count: 0 }
   ];
   // Mock search data - in a real app, this would come from an API
@@ -266,7 +266,7 @@ export default function SearchPage() {
   ];
   useEffect(() => {
     // Load recent searches from localStorage
-    const saved = localStorage.getItem('recentSearches'),
+    const saved = localStorage.getItem('recentSearches');
     if (saved) {
       setRecentSearches(JSON.parse(saved)),
     }
@@ -277,7 +277,7 @@ export default function SearchPage() {
       'CybersecurityData analytics',
       'Machine learningDevOps services',
       'Green ITDigital transformation'
-    ]),
+    ]);
   }, []),
 
   const performSearch = async (query: string) => {
@@ -286,38 +286,38 @@ export default function SearchPage() {
       return
     }
 
-    setIsSearching(true),
+    setIsSearching(true);
     
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 500)),
     
     // Filter mock data based on search query
     const filtered = mockSearchData.filter(item => {
-      const searchTerm = query.toLowerCase(),
+      const searchTerm = query.toLowerCase();
       return (
         item.title.toLowerCase().includes(searchTerm) ||
         item.description.toLowerCase().includes(searchTerm) ||
         item.content.toLowerCase().includes(searchTerm) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchTerm))
       ),
-    }),
+    });
 
     // Apply category and type filters
-    let results = filtered,
+    let results = filtered;
     if (selectedCategory !== 'all') {
-      results = results.filter(item => item.category === selectedCategory),
-    }
+      results = results.filter(item => item.category === selectedCategory);
+    };
     if (selectedType !== 'all') {
-      results = results.filter(item => item.type === selectedType),
+      results = results.filter(item => item.type === selectedType);
     }
 
-    setSearchResults(results),
-    setIsSearching(false),
+    setSearchResults(results);
+    setIsSearching(false);
 
     // Save to recent searches
     if (query.trim() && !recentSearches.includes(query.trim())) {
       const newRecent = [query.trim(), ...recentSearches.slice(0, 4)],
-      setRecentSearches(newRecent),
+      setRecentSearches(newRecent);
       localStorage.setItem('recentSearches', JSON.stringify(newRecent)),
     }
   },
@@ -345,7 +345,7 @@ export default function SearchPage() {
       case 'hardware': return 'bg-gray-500/20 text-gray-400',
       case 'services': return 'bg-cyan-500/20 text-cyan-400',
       case 'blog': return 'bg-pink-500/20 text-pink-400',
-      case 'documentation': return 'bg-indigo-500/20 text-indigo-400',
+      case 'documentation': return 'bg-indigo-500/20 text-indigo-400';
       default: return 'bg-slate-500/20 text-slate-400'
     }
   };
@@ -356,30 +356,30 @@ export default function SearchPage() {
       case 'hardware': return 'bg-orange-500/20 text-orange-400',
       case 'article': return 'bg-purple-500/20 text-purple-400',
       case 'guide': return 'bg-cyan-500/20 text-cyan-400',
-      case 'case-study': return 'bg-pink-500/20 text-pink-400',
+      case 'case-study': return 'bg-pink-500/20 text-pink-400';
       default: return 'bg-slate-500/20 text-slate-400'
     }
   };
   const renderStars = (rating: number) => {
     const stars = [];
-    const fullStars = Math.floor(rating),
-    const hasHalfStar = rating % 1 !== 0,
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
     
     for (let i = 0, i < fullStars, i++) {
-      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />),
+      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />);
     }
-    
+    ;
     if (hasHalfStar) {
-      stars.push(<Star key="half" className="w-4 h-4 text-yellow-400 fill-current" />),
+      stars.push(<Star key="half" className="w-4 h-4 text-yellow-400 fill-current" />);
     }
-    
-    const emptyStars = 5 - Math.ceil(rating),
+    ;
+    const emptyStars = 5 - Math.ceil(rating);
     for (let i = 0, i < emptyStars, i++) {
-      stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />),
+      stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />);
     }
-    
+    ;
     return stars,
-  },
+  };
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -411,7 +411,7 @@ export default function SearchPage() {
               Find What You <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Need</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Search our comprehensive collection of technology solutions, services, 
+              Search our comprehensive collection of technology solutions, services; 
               articles, and resources to accelerate your digital transformation.
             </p>
           </motion.div>
@@ -492,8 +492,8 @@ export default function SearchPage() {
                       key={category.id}
                       onClick={() => {
                         setSelectedCategory(category.id);
-                        setSearchQuery(category.name),
-                        performSearch(category.name),
+                        setSearchQuery(category.name);
+                        performSearch(category.name);
                       }}
                       className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-xl hover: border-green-400/50 transition-all duration-300 hover:scale-105 text-left"
                     >
@@ -531,7 +531,7 @@ export default function SearchPage() {
                     value={selectedCategory}
                     onChange={(e) => {
                       setSelectedCategory(e.target.value);
-                      performSearch(searchQuery),
+                      performSearch(searchQuery);
                     }}
                     className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >
@@ -547,7 +547,7 @@ export default function SearchPage() {
                     value={selectedType}
                     onChange={(e) => {
                       setSelectedType(e.target.value);
-                      performSearch(searchQuery),
+                      performSearch(searchQuery);
                     }}
                     className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >

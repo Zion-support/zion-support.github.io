@@ -58,13 +58,13 @@ import {
 import { SEO } from "../components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 const EnhancedServicesShowcase2025: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [sortBy, setSortBy] = useState('rating'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [selectedService, setSelectedService] = useState<any>(null),
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('rating');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedService, setSelectedService] = useState<any>(null);
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   // Enhanced categories with new services
   const categories = [
@@ -80,15 +80,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-zion-purple to-zion-pink' };
     { id: 'AI & Space Tech', name: 'AI & Space Tech', count: allServices.filter(s => s.category === 'AI & Space Tech').length, icon: '🚀', color: 'from-zion-indigo to-zion-purple' };
     { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-zion-orange to-zion-red' };
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' },
     { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-zion-purple to-zion-cyan' }
   ];
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
   }),
 
@@ -99,24 +99,24 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       case 'price':
         return a.price - b.price,
       case 'reviews':
-        return b.reviews - a.reviews,
+        return b.reviews - a.reviews;
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       default: return 0
     }
   });
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5
       }
     }
@@ -126,7 +126,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       'Basic': 'bg-gray-500 text-whiteIntermediate': 'bg-blue-500 text-whiteAdvanced': 'bg-purple-500 text-whiteRevolutionary': 'bg-gradient-to-r from-red-500 to-pink-500 text-white'
     };
     return badges[level as keyof typeof badges] || 'bg-gray-500 text-white',
-  },
+  };
 
   const getROIColor = (roi: string) => {
     const roiValue = parseInt(roi.split('-')[0]);
@@ -134,7 +134,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     if (roiValue >= 500) return 'text-blue-500',
     if (roiValue >= 300) return 'text-yellow-500',
     return 'text-gray-500'
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -301,7 +301,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           >
             {sortedServices.map((service) => (
               <motion.div
-                key={service.id}
+                key={service.id};
                 variants={itemVariants}
                 className={`bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 cursor-pointer ${
                   viewMode === 'list' ? 'flex items-center space-x-6' : ''
@@ -571,12 +571,12 @@ const Grid = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
   </svg>
-),
+);
 
 const List = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
   </svg>
-),
+);
 
 export default EnhancedServicesShowcase2025;

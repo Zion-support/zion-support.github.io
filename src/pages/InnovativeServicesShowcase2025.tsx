@@ -30,33 +30,33 @@ import { SEO } from "@/components/SEO";
 import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServices2025";
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 export default function InnovativeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
   const allServices = [
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025;
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ];
   const innovationLevels = [
     { value: 'all', label: 'All Innovation Levels', color: 'bg-gray-500' };
     { value: 'Advanced', label: 'Advanced', color: 'bg-blue-500' };
-    { value: 'Cutting-edge', label: 'Cutting-edge', color: 'bg-purple-500' };
+    { value: 'Cutting-edge', label: 'Cutting-edge', color: 'bg-purple-500' },
     { value: 'Revolutionary', label: 'Revolutionary', color: 'bg-red-500' }
   ];
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
-    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel,
+    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
     
     return matchesSearch && matchesInnovation,
-  }),
+  });
 
   const getInnovationColor = (level: string) => {
     switch (level) {
       case 'Advanced': return 'bg-blue-500/20 text-blue-300 border-blue-500/30';
       case 'Cutting-edge': return 'bg-purple-500/20 text-purple-300 border-purple-500/30',
-      case 'Revolutionary': return 'bg-red-500/20 text-red-300 border-red-500/30',
+      case 'Revolutionary': return 'bg-red-500/20 text-red-300 border-red-500/30';
       default: return 'bg-gray-500/20 text-gray-300 border-gray-500/30'
     }
   };
@@ -64,13 +64,13 @@ export default function InnovativeServicesShowcase2025() {
     switch (level) {
       case 'Advanced': return <Zap className="w-5 h-5" />;
       case 'Cutting-edge': return <Brain className="w-5 h-5" />,
-      case 'Revolutionary': return <Rocket className="w-5 h-5" />,
+      case 'Revolutionary': return <Rocket className="w-5 h-5" />;
       default: return <Star className="w-5 h-5" />
     }
   };
   const featuredServices = filteredServices.filter(service => 
     service.innovationLevel === 'Revolutionary' || service.innovationLevel === 'Cutting-edge'
-  ),
+  );
 
   return (
     <>

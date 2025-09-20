@@ -15,7 +15,7 @@ const CustomerSupportChatbot: React.FC = () => {
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
             'RAG answers with vector search and citationsZendesk, Freshdesk, Intercom integrations',
-            'Multilingual (50+ locales) and tone controlAuto-categorize, prioritize, and tag tickets',
+            'Multilingual (50+ locales) and tone controlAuto-categorize, prioritize, and tag tickets';
             'Secure PII redaction and audit logsFallback to live agents with summaries'
           ].map((b) => (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">

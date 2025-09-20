@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { zionCuttingEdgeServices2029 } from "../../data/zion-2029-cutting-edge-services";
 import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech-services";
 // Section component for displaying service categories
-const Section: React.FC<{
+const Section: React.FC<{,
   icon: React.ReactNode,title: string,description: string,items: any[],gradient: string
 }> = ({ icon, title, description, items, gradient }) => (
   <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r ${gradient}`}>
@@ -45,7 +45,7 @@ const Section: React.FC<{
 // Service Card component
 const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index }) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: 20 }};
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     viewport={{ once: true }}
@@ -92,9 +92,9 @@ const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index
   </motion.div>
 );
 export default function ComprehensiveServices() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('popular'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('popular');
 
   // Combine all services
   const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029],
@@ -103,8 +103,8 @@ export default function ComprehensiveServices() {
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase() === selectedCategory.toLowerCase(),
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase() === selectedCategory.toLowerCase();
     return matchesSearch && matchesCategory,
   }),
 
@@ -112,7 +112,7 @@ export default function ComprehensiveServices() {
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
       case 'price-high':
         return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''));
       case 'rating':
@@ -126,8 +126,8 @@ export default function ComprehensiveServices() {
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))],
 
   // Sample data for sections
-  const microSaaS = allServices.filter(service => service.category === 'Micro SaaS').slice(0, 6),
-  const itServices = allServices.filter(service => service.category === 'IT Services').slice(0, 6),
+  const microSaaS = allServices.filter(service => service.category === 'Micro SaaS').slice(0, 6);
+  const itServices = allServices.filter(service => service.category === 'IT Services').slice(0, 6);
   const aiSolutions = allServices.filter(service => service.category === 'AI Solutions').slice(0, 6);
   return (
     <>

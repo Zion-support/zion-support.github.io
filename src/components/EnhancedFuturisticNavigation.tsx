@@ -220,18 +220,18 @@ import {
   Omega
 } from "lucide-react";
 export const EnhancedFuturisticNavigation: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-  const [scrolled, setScrolled] = useState(false),
-  const location = useLocation(),
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20),
+      setScrolled(window.scrollY > 20);
     },
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),
 
   useEffect(() => {
@@ -258,7 +258,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' };
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' };
         { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' };
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' };
+        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
         { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
       ]
     };
@@ -270,7 +270,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
         { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', icon: Globe, description: 'AI-powered supply chain management' };
         { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity', icon: ShieldCheck, description: 'Advanced threat protection' };
         { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge computing solutions' };
-        { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' };
+        { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' },
         { name: 'HR Management Suite', href: '/micro-saas/hr-platform', icon: Briefcase, description: 'Modern HR management platform' }
       ]
     };
@@ -280,7 +280,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
         { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' };
         { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' };
         { name: 'Onsite Support', href: '/it-services/onsite-support', icon: Wifi, description: '24/7 onsite technical support' };
-        { name: 'Green IT Solutions', href: '/it-services/green-it', icon: Heart, description: 'Sustainable IT infrastructure' };
+        { name: 'Green IT Solutions', href: '/it-services/green-it', icon: Heart, description: 'Sustainable IT infrastructure' },
         { name: '5G Network Solutions', href: '/it-services/5g-solutions', icon: Satellite, description: 'Next-gen network infrastructure' }
       ]
     };
@@ -290,7 +290,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
         { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' };
         { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' };
         { name: 'Biotechnology', href: '/emerging-tech/biotech', icon: Dna, description: 'Biotech and healthcare solutions' };
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech', icon: Microscope, description: 'Nanotechnology applications' };
+        { name: 'Nanotechnology', href: '/emerging-tech/nanotech', icon: Microscope, description: 'Nanotechnology applications' },
         { name: 'Augmented Reality', href: '/emerging-tech/ar-vr', icon: Eye, description: 'AR/VR development services' }
       ]
     };
@@ -300,7 +300,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
         { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' };
         { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' };
         { name: 'Professional Services', href: '/marketplace/services', icon: Briefcase, description: 'Expert professional services' };
-        { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' };
+        { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' },
         { name: 'Innovation Hub', href: '/marketplace/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
       ]
     };
@@ -308,7 +308,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       name: 'Comprehensive',href: '/services-overview',icon: BarChart3,color: 'from-zion-green to-zion-emerald',dropdown: [
         { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' };
         { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' };
-        { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' };
+        { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
         { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
       ]
     };

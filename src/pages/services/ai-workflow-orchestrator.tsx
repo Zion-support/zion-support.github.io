@@ -40,7 +40,7 @@ const AIWorkflowOrchestrator = () => {
     };
     {
       icon: BarChart3,title: "Advanced Analytics",description: "Comprehensive insights into workflow performance and optimization opportunities"
-    };
+    },
     {
       icon: Users,title: "Team Collaboration",description: "Seamless team coordination with real-time updates and communication tools"
     }
@@ -64,7 +64,7 @@ const AIWorkflowOrchestrator = () => {
     };
     {
       title: "Manufacturing",description: "Optimize production scheduling and quality control processes",icon: Settings
-    };
+    },
     {
       title: "Retail",description: "Automate inventory management and customer service workflows",icon: ShoppingCart
     }
@@ -73,7 +73,7 @@ const AIWorkflowOrchestrator = () => {
     {
       name: "Starter",price: "$2,500",
       period: "/month",description: "Perfect for small teams getting started with workflow automation",features: [
-        "Up to 100 workflow executions/month";
+        "Up to 100 workflow executions/month",
         "Basic AI decision making",
         "Standard security features",
         "Email support",
@@ -94,7 +94,7 @@ const AIWorkflowOrchestrator = () => {
     };
     {
       name: "Enterprise",price: "Custom",period: "",description: "Tailored solutions for large organizations with specific requirements",features: [
-        "Unlimited workflow executions";
+        "Unlimited workflow executions",
         "Custom AI model training",
         "Dedicated security team",
         "24/7 phone support",

@@ -9,21 +9,21 @@ import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, 
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from "@/data/comprehensiveServices";
 import SEO from "@/components/SEO";
 export default function ComprehensiveServicesPage() {
-    const [searchTerm, setSearchTerm] = useState(''),
-    const [selectedCategory, setSelectedCategory] = useState('all'),
-    const [selectedPricingTier, setSelectedPricingTier] = useState('all'),
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedPricingTier, setSelectedPricingTier] = useState('all');
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-            const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier,
+                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+            const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
             return matchesSearch && matchesCategory && matchesPricing,
         }),
-    }, [searchTerm, selectedCategory, selectedPricingTier]),
+    }, [searchTerm, selectedCategory, selectedPricingTier]);
     const getCategoryIcon = (categoryName) => {
-        return '💼',
+        return '💼';
     },
     const getServiceTypeColor = (type) => {
         const colorMap = {
@@ -201,8 +201,8 @@ export default function ComprehensiveServicesPage() {
               </div>
               <Button onClick={() => {
                 setSearchTerm('');
-                setSelectedCategory('all'),
-                setSelectedPricingTier('all'),
+                setSelectedCategory('all');
+                setSelectedPricingTier('all');
             }} variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                 Clear Filters
               </Button>
@@ -232,7 +232,7 @@ export default function ComprehensiveServicesPage() {
             };
             {
                 icon: <Building className="w-8 h-8"/>,title: "Proven Results",description: "Track record of successful implementations and measurable business outcomes"
-            };
+            },
             {
                 icon: <Users className="w-8 h-8"/>,title: "Expert Support",description: "24/7 technical support and dedicated account management for enterprise clients"
             }

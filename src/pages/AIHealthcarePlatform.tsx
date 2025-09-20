@@ -44,7 +44,7 @@ export default function AIHealthcarePlatform() {
     };
     {
       icon: Users,title: 'Care Team Collaboration',description: 'Seamless communication and coordination between healthcare providers',color: 'from-orange-500 to-red-500'
-    };
+    },
     {
       icon: Zap,title: 'Real-time Processing',description: 'Instant data analysis and decision support for critical care situations',color: 'from-yellow-500 to-orange-500'
     }
@@ -64,7 +64,7 @@ export default function AIHealthcarePlatform() {
     };
     {
       title: 'Medical Imaging',description: 'AI-enhanced radiology and pathology analysis for accurate diagnosis',icon: Eye
-    };
+    },
     {
       title: 'Patient Records',description: 'Intelligent electronic health records with predictive insights',icon: FileText
     }
@@ -107,14 +107,14 @@ export default function AIHealthcarePlatform() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25"
                 >
                   Schedule Demo
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
@@ -135,7 +135,7 @@ export default function AIHealthcarePlatform() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -154,7 +154,7 @@ export default function AIHealthcarePlatform() {
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -182,7 +182,7 @@ export default function AIHealthcarePlatform() {
           <div className="container-responsive">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -201,7 +201,7 @@ export default function AIHealthcarePlatform() {
                   {benefits.map((benefit, index) => (
                     <motion.div
                       key={benefit}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -20 }};
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
@@ -215,7 +215,7 @@ export default function AIHealthcarePlatform() {
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -260,7 +260,7 @@ export default function AIHealthcarePlatform() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -279,7 +279,7 @@ export default function AIHealthcarePlatform() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={useCase.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -309,7 +309,7 @@ export default function AIHealthcarePlatform() {
         <section className="py-20 bg-gradient-to-r from-red-500/10 to-pink-500/10">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -326,14 +326,14 @@ export default function AIHealthcarePlatform() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25"
                 >
                   Get Started Today
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >

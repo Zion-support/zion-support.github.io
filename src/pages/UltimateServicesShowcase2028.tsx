@@ -31,11 +31,11 @@ import {
 } from "lucide-react";
 import { INNOVATIVE_SERVICES_2028 } from "../data/innovativeServices2028";
 const UltimateServicesShowcase2028: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [sortBy, setSortBy] = useState('name'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [expandedService, setExpandedService] = useState<string | null>(null),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
 
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(INNOVATIVE_SERVICES_2028.map(service => service.category)))],
@@ -54,11 +54,11 @@ const UltimateServicesShowcase2028: React.FC = () => {
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.price - b.price,
+          return a.price - b.price;
         case 'category':
-          return a.category.localeCompare(b.category),
+          return a.category.localeCompare(b.category);
         case 'innovation':
-          return a.innovationLevel === 'revolutionary' ? 1 : -1,
+          return a.innovationLevel === 'revolutionary' ? 1 : -1;
         case 'name':
         default: return a.title.localeCompare(b.title)
       }
@@ -77,29 +77,29 @@ const UltimateServicesShowcase2028: React.FC = () => {
       'Marketing Automation': <TrendingUp className="w-5 h-5" />
     },
     return icons[category] || <Sparkles className="w-5 h-5" />,
-  },
+  };
 
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
       case 'revolutionary':
         return 'from-purple-500 to-pink-500';
       case 'cutting-edge':
-        return 'from-blue-500 to-cyan-500',
+        return 'from-blue-500 to-cyan-500';
       default: return 'from-green-500 to-emerald-500'
     }
   };
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5,ease: "easeOut"
       }
     }
@@ -124,7 +124,7 @@ const UltimateServicesShowcase2028: React.FC = () => {
                 duration: 6 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
               }}
               style={{
-                left: `${Math.random() * 100}%`;
+                left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`
               }}
             />
@@ -254,7 +254,7 @@ const UltimateServicesShowcase2028: React.FC = () => {
           >
             {filteredServices.map((service) => (
               <motion.div
-                key={service.id}
+                key={service.id};
                 variants={itemVariants}
                 className={`bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                   viewMode === 'list' ? 'flex' : ''

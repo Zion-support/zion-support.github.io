@@ -33,10 +33,10 @@ import {
 import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from "../data/enhancedMicroSaasServices2025";
 import { SEO } from "../components/SEO";
 const EnhancedPricing: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('price'),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('price');
 
-  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025,
+  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025;
   
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' };
@@ -46,21 +46,21 @@ const EnhancedPricing: React.FC = () => {
     { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: '🏥' };
     { id: 'Blockchain', name: 'Blockchain', icon: '🔗' };
     { id: 'IoT & Smart Cities', name: 'IoT & Smart Cities', icon: '🌐' };
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },
     { id: 'Metaverse', name: 'Metaverse', icon: '🌍' }
   ];
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => service.category === selectedCategory),
+    : allServices.filter(service => service.category === selectedCategory);
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
         return a.price - b.price,
       case 'roi':
-        return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', '')),
+        return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''));
       case 'innovation':
-        return b.innovationLevel.localeCompare(a.innovationLevel),
+        return b.innovationLevel.localeCompare(a.innovationLevel);
       default: return 0
     }
   });
@@ -73,7 +73,7 @@ const EnhancedPricing: React.FC = () => {
       case 'Blockchain': return <Database className="w-6 h-6" />,
       case 'IoT & Smart Cities': return <Network className="w-6 h-6" />,
       case 'Cybersecurity': return <ShieldCheck className="w-6 h-6" />,
-      case 'Metaverse': return <Globe className="w-6 h-6" />,
+      case 'Metaverse': return <Globe className="w-6 h-6" />;
       default: return <Rocket className="w-6 h-6" />
     }
   };
@@ -94,7 +94,7 @@ const EnhancedPricing: React.FC = () => {
     if (roiValue >= 300) return 'text-orange-400',
     if (roiValue >= 200) return 'text-yellow-400',
     return 'text-green-400',
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

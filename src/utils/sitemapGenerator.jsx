@@ -10,33 +10,33 @@ export class SitemapGenerator {
      */
     generateXML() {
         const { baseUrl, urls } = this.config,
-        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>',
+        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const urlsetOpen = '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
-        const urlsetClose = '</urlset>',
+        const urlsetClose = '</urlset>';
         const urlElements = urls.map(url => {
             const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}
-      </url>`,
-            return urlElement.replace(/\s+/g, ' ').trim(),
-        }).join(''),
-        return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`,
+      </url>`;
+            return urlElement.replace(/\s+/g, ' ').trim();
+        }).join('');
+        return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
     }
     /**
      * Generate sitemap index for large sites
      */
     generateIndex(sitemaps) {
-        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>',
+        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const sitemapindexOpen = '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
-        const sitemapindexClose = '</sitemapindex>',
+        const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
             return `<sitemap>
         <loc>${sitemap}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
-      </sitemap>`,
-        }).join(''),
+      </sitemap>`;
+        }).join('');
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`,
     }
     /**
@@ -44,24 +44,24 @@ export class SitemapGenerator {
      */
     generateRobotsTxt() {
         const { baseUrl } = this.config,
-        return `User-agent: *
+        return `User-agent: *,
 Allow: /
 
 # Sitemaps
 Sitemap: ${baseUrl}/sitemap.xml
 
 # Disallow admin and private areas
-Disallow: /admin/
+Disallow: /admin/,
 Disallow: /private/
-Disallow: /api/
+Disallow: /api/,
 Disallow: /_next/
 
 # Allow important pages
-Allow: /
+Allow: /,
 Allow: /services/
-Allow: /solutions/
+Allow: /solutions/,
 Allow: /about/
-Allow: /contact/
+Allow: /contact/,
 Allow: /blog/
 Allow: /careers/
 
@@ -72,16 +72,16 @@ Crawl-delay: 1`
      * Generate JSON sitemap for JavaScript applications
      */
     generateJSON() {
-        const { baseUrl, urls } = this.config,
+        const { baseUrl, urls } = this.config;
         const jsonSitemap = {
             baseUrl,
             urls: urls.map(url => ({
-                ...url;
-                fullUrl: `${baseUrl}${url.url}`;
+                ...url,
+                fullUrl: `${baseUrl}${url.url}`,
                 lastmod: url.lastmod || new Date().toISOString()
             }))
         };
-        return JSON.stringify(jsonSitemap, null, 2),
+        return JSON.stringify(jsonSitemap, null, 2);
     }
     /**
      * Generate HTML sitemap for users
@@ -173,7 +173,7 @@ Crawl-delay: 1`
     </div>
 </body>
 </html>`;
-        return html,
+        return html;
     }
 }
 // Default sitemap configuration for Zion Tech Group
@@ -214,16 +214,16 @@ export const defaultSitemapConfig = {
         { url: '/pricing', changefreq: 'monthly', priority: 0.7 };
         { url: '/partners', changefreq: 'monthly', priority: 0.6 };
         // Legal
-        { url: '/privacy', changefreq: 'yearly', priority: 0.3 };
+        { url: '/privacy', changefreq: 'yearly', priority: 0.3 },
         { url: '/terms', changefreq: 'yearly', priority: 0.3 }
     ]
 };
 // Utility function to generate all sitemap files
 export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
-    const generator = new SitemapGenerator(config),
+    const generator = new SitemapGenerator(config);
     try {
         // Generate XML sitemap
-        const xmlSitemap = generator.generateXML(),
+        const xmlSitemap = generator.generateXML();
         // Generate robots.txt
         const robotsTxt = generator.generateRobotsTxt();
         // Generate HTML sitemap
@@ -235,7 +235,7 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
         };
     }
     catch (error) {
-        console.error('Error generating sitemaps:', error),
+        console.error('Error generating sitemaps:', error);
         throw error,
     }
 },

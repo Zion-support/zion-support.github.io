@@ -7,14 +7,14 @@ interface User {
 interface AuthState {
   user: User | null,isAuthenticated: boolean,isLoading: boolean,error: string | null
 }
-
-const initialState: AuthState = {
+;
+const initialState: AuthState = {,
   user: null,isAuthenticated: false,isLoading: false,error: null
 };
 const authSlice = createSlice({
   name: 'auth';
   initialState,
-  reducers: {
+  reducers: {,
     setUser: (state, action: PayloadAction<User>) => {
       state.user = action.payload;
       state.isAuthenticated = true,
@@ -27,10 +27,10 @@ const authSlice = createSlice({
     },
     setLoading: (state, action: PayloadAction<boolean>) => {
       state.isLoading = action.payload
-    };
+    },
     setError: (state, action: PayloadAction<string>) => {
       state.error = action.payload
-    };
+    },
     clearError: (state) => {
       state.error = null
     }

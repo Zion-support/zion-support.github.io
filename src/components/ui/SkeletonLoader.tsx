@@ -23,7 +23,7 @@ export function Skeleton({
     pulse: 'animate-pulse',wave: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700',none: ''
   };
   const style = {
-    width: typeof width === 'number' ? `${width}px` : width;
+    width: typeof width === 'number' ? `${width}px` : width,
     height: typeof height === 'number' ? `${height}px` : height
   };
   return (
@@ -36,7 +36,7 @@ export function Skeleton({
       )}
       style={style}
     />
-  ),
+  );
 }
 
 // Predefined skeleton components for common use cases
@@ -45,7 +45,7 @@ export function SkeletonText({ lines = 3, className }: { lines?: number, classNa
     <div className={cn('space-y-2', className)}>
       {Array.from({ length: lines }).map((_, i) => (
         <Skeleton
-          key={i}
+          key={i};
           variant="text"
           width={i === lines - 1 ? '75%' : '100%'}
           className="h-4"
@@ -76,7 +76,7 @@ export function SkeletonCard({ className }: { className?: string }) {
 
 export function SkeletonTable({ rows = 5, columns = 4, className }: { 
   rows?: number, 
-  columns?: number, 
+  columns?: number; 
   className?: string 
 }) {
   return (
@@ -93,7 +93,7 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
         <div key={rowIndex} className="flex space-x-4">
           {Array.from({ length: columns }).map((_, colIndex) => (
             <Skeleton
-              key={colIndex}
+              key={colIndex};
               variant="text"
               width={colIndex === 0 ? 150 : 100}
               height={16}
@@ -102,7 +102,7 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
         </div>
       ))}
     </div>
-  ),
+  )
 }
 
 export function SkeletonGrid({ 

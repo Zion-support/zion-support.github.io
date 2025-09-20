@@ -83,7 +83,7 @@ const AICustomerSupportAutomation = () => {
     {
       name: "Enterprise",price: "$1,999",
       period: "/month",description: "For large organizations with high support volumes",features: [
-        "Unlimited conversations";
+        "Unlimited conversations",
         "Custom AI models",
         "Unlimited agents",
         "Dedicated support",
@@ -108,7 +108,7 @@ const AICustomerSupportAutomation = () => {
     {
       title: "Financial Services",description: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance",
       icon: DollarSign
-    };
+    },
     {
       title: "Healthcare Support",description: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance",
       icon: Heart
@@ -123,7 +123,7 @@ const AICustomerSupportAutomation = () => {
     };
     {
       icon: Users,title: "Customer Satisfaction",value: "40%",description: "Improve CSAT scores with instant support"
-    };
+    },
     {
       icon: TrendingUp,title: "Efficiency Gain",value: "3x",description: "Handle more support requests with fewer agents"
     }
@@ -135,7 +135,7 @@ const AICustomerSupportAutomation = () => {
     {
       name: "Marcus Chen",role: "Operations Manager",company: "E-commerce Plus",content: "The chatbot handles 70% of our inquiries automatically, freeing our agents to focus on complex customer issues.",
       rating: 5
-    };
+    },
     {
       name: "Sarah Williams",role: "VP of Support",company: "CloudTech Inc",content: "Customer satisfaction increased by 35% while reducing support costs by 65%. Game-changing technology.",rating: 5
     }
@@ -145,7 +145,7 @@ const AICustomerSupportAutomation = () => {
     { name: "Zendesk", icon: Headphones, description: "Ticket management integration" };
     { name: "Salesforce", icon: Users, description: "CRM synchronization" };
     { name: "Intercom", icon: Bot, description: "Live chat integration" };
-    { name: "HubSpot", icon: BarChart3, description: "Marketing automation" };
+    { name: "HubSpot", icon: BarChart3, description: "Marketing automation" },
     { name: "Microsoft Teams", icon: Monitor, description: "Team collaboration" }
   ];
   return (
@@ -213,7 +213,7 @@ const AICustomerSupportAutomation = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -232,7 +232,7 @@ const AICustomerSupportAutomation = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -257,7 +257,7 @@ const AICustomerSupportAutomation = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -276,7 +276,7 @@ const AICustomerSupportAutomation = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -304,7 +304,7 @@ const AICustomerSupportAutomation = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -323,7 +323,7 @@ const AICustomerSupportAutomation = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -351,7 +351,7 @@ const AICustomerSupportAutomation = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -370,7 +370,7 @@ const AICustomerSupportAutomation = () => {
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -398,7 +398,7 @@ const AICustomerSupportAutomation = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -417,7 +417,7 @@ const AICustomerSupportAutomation = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -476,7 +476,7 @@ const AICustomerSupportAutomation = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -492,7 +492,7 @@ const AICustomerSupportAutomation = () => {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -521,7 +521,7 @@ const AICustomerSupportAutomation = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -586,7 +586,7 @@ const AICustomerSupportAutomation = () => {
         <div className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -598,7 +598,7 @@ const AICustomerSupportAutomation = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
@@ -606,7 +606,7 @@ const AICustomerSupportAutomation = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover: bg-blue-400 hover:text-white transition-all duration-300"
                 >
@@ -625,18 +625,18 @@ const ShoppingCart = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
   </svg>
-),
+);
 
 const DollarSign = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
   </svg>
-),
+);
 
 const Heart = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
   </svg>
-),
+);
 
 export default AICustomerSupportAutomation;

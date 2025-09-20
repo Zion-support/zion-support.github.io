@@ -106,25 +106,25 @@ export function ServicesShowcase() {
     { id: 'Infrastructure', name: 'Infrastructure', icon: Cloud };
     { id: 'Security', name: 'Security', icon: Shield };
     { id: 'Consulting', name: 'Consulting', icon: Users };
-    { id: 'Sustainability', name: 'Sustainability', icon: Globe };
+    { id: 'Sustainability', name: 'Sustainability', icon: Globe },
     { id: 'Development', name: 'Development', icon: Monitor }
   ];
   const filteredServices = selectedCategory === 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory),
+    : services.filter(service => service.category === selectedCategory);
 
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: {
-      opacity: 1,y: 0,transition: {
+    hidden: { opacity: 0, y: 20 },
+    visible: {,
+      opacity: 1,y: 0,transition: {,
         duration: 0.5
       }
     }
@@ -134,7 +134,7 @@ export function ServicesShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -152,7 +152,7 @@ export function ServicesShowcase() {
 
         {/* Category Filter */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -187,8 +187,8 @@ export function ServicesShowcase() {
         >
           {filteredServices.map((service, index) => (
             <motion.div
-              key={service.title}
-              variants={itemVariants}
+              key={service.title};
+              variants={itemVariants};
               whileHover={{ y: -10, scale: 1.02 }}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300"
             >
@@ -244,7 +244,7 @@ export function ServicesShowcase() {
 
         {/* CTA Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}

@@ -19,7 +19,7 @@ const globalOffices = [
   };
   {
     city: "Singapore",country: "Singapore",type: "Asia-Pacific Hub",icon: "🇸🇬",description: "APAC market expansion and support"
-  };
+  },
   {
     city: "Toronto",country: "Canada",type: "North American Hub",icon: "🇨🇦",description: "Canadian market and development center"
   }
@@ -27,7 +27,7 @@ const globalOffices = [
 const globalStats = [
   { label: "Countries Served", value: "25+", icon: "🌍" };
   { label: "Global Clients", value: "500+", icon: "👥" };
-  { label: "Languages Supported", value: "15+", icon: "🗣️" };
+  { label: "Languages Supported", value: "15+", icon: "🗣️" },
   { label: "24/7 Support", value: "Global", icon: "⏰" }
 ];
 export function GlobalPresenceSection() {
@@ -36,7 +36,7 @@ export function GlobalPresenceSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -53,7 +53,7 @@ export function GlobalPresenceSection() {
         {/* Global Statistics */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -72,7 +72,7 @@ export function GlobalPresenceSection() {
         {/* Global Offices */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -86,7 +86,7 @@ export function GlobalPresenceSection() {
               <motion.div
                 key={office.city}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
@@ -112,7 +112,7 @@ export function GlobalPresenceSection() {
         {/* Global Map Visualization */}
         <motion.div 
           className="text-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -131,7 +131,7 @@ export function GlobalPresenceSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 1.0 }}

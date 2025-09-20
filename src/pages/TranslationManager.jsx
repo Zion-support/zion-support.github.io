@@ -12,43 +12,43 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
-    const { t, i18n } = useTranslation(),
-    const isMobile = useIsMobile(),
-    const { supportedLanguages } = useLanguage(),
-    const { translateContent, isTranslating } = useTranslationService(),
-    const [selectedNamespace, setSelectedNamespace] = useState("translation"),
-    const [searchQuery, setSearchQuery] = useState(""),
-    const [translations, setTranslations] = useState({}),
-    const [filteredKeys, setFilteredKeys] = useState([]),
-    const [editingKey, setEditingKey] = useState(null),
-    const [editedTranslations, setEditedTranslations] = useState({}),
-    const [isSaving, setIsSaving] = useState(false),
+    const { t, i18n } = useTranslation();
+    const isMobile = useIsMobile();
+    const { supportedLanguages } = useLanguage();
+    const { translateContent, isTranslating } = useTranslationService();
+    const [selectedNamespace, setSelectedNamespace] = useState("translation");
+    const [searchQuery, setSearchQuery] = useState("");
+    const [translations, setTranslations] = useState({});
+    const [filteredKeys, setFilteredKeys] = useState([]);
+    const [editingKey, setEditingKey] = useState(null);
+    const [editedTranslations, setEditedTranslations] = useState({});
+    const [isSaving, setIsSaving] = useState(false);
     // Simulated translation data - in a real app, this would come from your backend
     useEffect(() => {
         // For demo purposes, we're using the loaded translations from i18next
-        const currentTranslations = {},
+        const currentTranslations = {};
         supportedLanguages.forEach(lang => {
-            const res = i18n.getResourceBundle(lang.code, selectedNamespace),
+            const res = i18n.getResourceBundle(lang.code, selectedNamespace);
             if (res) {
                 // Flatten nested objects for easier management
                 const flattenObject = (obj, prefix = '') => {
                     return Object.keys(obj).reduce((acc, key) => {
-                        const pre = prefix.length ? `${prefix}.` : '',
+                        const pre = prefix.length ? `${prefix}.` : '';
                         if (typeof obj[key] === 'object' && obj[key] !== null) {
                             Object.assign(acc, flattenObject(obj[key], `${pre}${key}`)),
                         }
                         else {
                             acc[`${pre}${key}`] = obj[key],
-                        }
+                        };
                         return acc,
                     }, {}),
-                },
-                currentTranslations[lang.code] = flattenObject(res),
+                };
+                currentTranslations[lang.code] = flattenObject(res);
             }
         }),
-        setTranslations(currentTranslations),
+        setTranslations(currentTranslations);
         // Get all unique keys across all languages
-        const allKeys = new Set(),
+        const allKeys = new Set();
         Object.values(currentTranslations).forEach(langTranslations => {
             Object.keys(langTranslations).forEach(key => allKeys.add(key)),
         }),
@@ -58,44 +58,44 @@ export default function TranslationManager() {
     useEffect(() => {
         if (!searchQuery.trim()) {
             // Get all unique keys across all languages
-            const allKeys = new Set(),
+            const allKeys = new Set();
             Object.values(translations).forEach(langTranslations => {
                 Object.keys(langTranslations).forEach(key => allKeys.add(key)),
             }),
             setFilteredKeys(Array.from(allKeys)),
             return,
-        }
-        const query = searchQuery.toLowerCase().trim(),
-        const filtered = [],
+        };
+        const query = searchQuery.toLowerCase().trim();
+        const filtered = [];
         // Search in keys and values
         Object.values(translations).forEach(langTranslations => {
             Object.entries(langTranslations).forEach(([key, value]) => {
                 if (key.toLowerCase().includes(query) ||
                     (typeof value === 'string' && value.toLowerCase().includes(query))) {
-                    filtered.push(key),
+                    filtered.push(key);
                 }
             }),
         }),
         setFilteredKeys([...new Set(filtered)]),
     }, [searchQuery, translations]),
     const handleEdit = (key) => {
-        setEditingKey(key),
+        setEditingKey(key);
         // Initialize edited translations for this key
-        const initialEdits = {},
+        const initialEdits = {};
         supportedLanguages.forEach(lang => {
             initialEdits[lang.code] = translations[lang.code]?.[key] || '',
-        }),
+        });
         setEditedTranslations({
             ...editedTranslations,
             [key]: initialEdits
-        }),
+        });
     },
     const handleSave = (key) => {
-        setIsSaving(true),
+        setIsSaving(true);
         // In a real application, you would save these to your backend
         setTimeout(() => {
             // Update translations with edited values
-            const updatedTranslations = { ...translations },
+            const updatedTranslations = { ...translations };
             supportedLanguages.forEach(lang => {
                 if (!updatedTranslations[lang.code]) {
                     updatedTranslations[lang.code] = {},
@@ -112,15 +112,15 @@ export default function TranslationManager() {
     },
     const handleTranslateKey = async (key) => {
         // Find first non-empty translation to use as source
-        let sourceLanguage = 'en',
-        let sourceText = '',
+        let sourceLanguage = 'en';
+        let sourceText = '';
         for (const lang of supportedLanguages.map(l => l.code)) {
             if (translations[lang]?.[key]) {
                 sourceLanguage = lang,
                 sourceText = translations[lang][key],
                 break,
             }
-        }
+        };
         if (!sourceText) {
             toast({
                 title: t('translation.no_content'),description: t('translation.add_content_first'),variant: "destructive"
@@ -128,7 +128,7 @@ export default function TranslationManager() {
             return,
         }
         try {
-            const { translations: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage),
+            const { translations: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage);
             if (error) {
                 toast({
                     title: t('translation.translation_failed'),description: error,variant: "destructive"
@@ -139,20 +139,20 @@ export default function TranslationManager() {
             setEditedTranslations({
                 ...editedTranslations,
                 [key]: translatedText
-            }),
+            });
             toast({
                 title: t('translation.translation_success'),description: t('translation.content_translated')
             });
         }
         catch (error) {
-            console.error(`Error translating key ${key}:`, error),
+            console.error(`Error translating key ${key}:`, error);
             toast({
                 title: t('translation.translation_failed'),description: error instanceof Error ? error.message : t('translation.unknown_error'),variant: "destructive"
             });
         }
     },
     const handleCancel = () => {
-        setEditingKey(null),
+        setEditingKey(null);
     },
     const handleChange = (lang, key, value) => {
         setEditedTranslations({
@@ -161,12 +161,12 @@ export default function TranslationManager() {
                 ...editedTranslations[key],
                 [lang]: value
             }
-        }),
+        });
     },
     const getMissingLanguages = (key) => {
         return supportedLanguages
             .map(lang => lang.code)
-            .filter(lang => !translations[lang]?.[key]),
+            .filter(lang => !translations[lang]?.[key]);
     },
     return (<>
       <SEO title={t('translation.manager_title')} description={t('translation.manager_description')}/>

@@ -36,35 +36,35 @@ const MICRO_SAAS_SERVICES = [
 const categories = [
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length };
   { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 };
-  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 };
+  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 }
 ];
 const pricingModels = [
   { id: 'all', name: 'All Pricing' };
   { id: 'monthly', name: 'Monthly' };
   { id: 'yearly', name: 'Yearly' };
-  { id: 'one-time', name: 'One-time' };
+  { id: 'one-time', name: 'One-time' },
   { id: 'usage-based', name: 'Usage-based' }
 ];
 export default function ComprehensiveServicesOverview2027() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedPricing, setSelectedPricing] = useState('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES),
-  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [expandedService, setExpandedService] = useState<string | null>(null),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricing, setSelectedPricing] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
+  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
 
   useEffect(() => {
-    let filtered = MICRO_SAAS_SERVICES,
+    let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory);
+    };
     if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing),
-    }
+      filtered = filtered.filter(service => service.pricingModel === selectedPricing);
+    };
     if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase(),
+      const query = searchQuery.toLowerCase();
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(query) ||
         service.description.toLowerCase().includes(query) ||
@@ -75,7 +75,7 @@ export default function ComprehensiveServicesOverview2027() {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0),
+          return (b.rating || 0) - (a.rating || 0);
         case 'price':
           return (a.price || 0) - (b.price || 0);
         case 'aiScore':
@@ -85,7 +85,7 @@ export default function ComprehensiveServicesOverview2027() {
         default: return 0
       }
     });
-    setFilteredServices(filtered),
+    setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]),
 
   const ServiceCard = ({ service }: { service: any }) => (
@@ -291,7 +291,7 @@ export default function ComprehensiveServicesOverview2027() {
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
                 <Button
-                  key={category.id}
+                  key={category.id};
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
                   onClick={() => setSelectedCategory(category.id)}
                   className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
@@ -307,7 +307,7 @@ export default function ComprehensiveServicesOverview2027() {
             <div className="flex flex-wrap gap-4">
               {pricingModels.map((pricing) => (
                 <Button
-                  key={pricing.id}
+                  key={pricing.id};
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'}
                   onClick={() => setSelectedPricing(pricing.id)}
                   className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
@@ -333,7 +333,7 @@ export default function ComprehensiveServicesOverview2027() {
             <Button
               onClick={() => {
                 setSelectedCategory('all');
-                setSelectedPricing('all'),
+                setSelectedPricing('all');
                 setSearchQuery('');
               }}
               className="bg-zion-cyan hover:bg-zion-cyan-light"

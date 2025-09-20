@@ -31,14 +31,14 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   // Get the actual color value
   const getColorValue = () => {
     if (color === 'custom' && customColor) {
-      return customColor,
-    }
+      return customColor;
+    };
     return '',
-  },
+  };
 
   // Spinner variants
   const renderSpinner = () => {
-    const baseClasses = `${sizeClasses[size]} ${color === 'custom' ? '' : colorClasses[color]} animate-spin`,
+    const baseClasses = `${sizeClasses[size]} ${color === 'custom' ? '' : colorClasses[color]} animate-spin`;
     const customStyle = color === 'custom' ? { color: customColor } : {};
     switch (variant) {
       case 'dots':
@@ -52,7 +52,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       case 'pulse':
         return (
           <div className={`${baseClasses} bg-current rounded-full animate-pulse`} style={customStyle}></div>
-        ),
+        );
 
       case 'bars':
         return (
@@ -103,8 +103,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     sm: 'text-xs',md: 'text-sm',lg: 'text-base',xl: 'text-lg'
   };
   // Accessibility
-  const defaultAriaLabel = ariaLabel || `${text} ${variant} loading animation`,
-  const isSpinning = variant === 'spinner' || variant === 'ripple',
+  const defaultAriaLabel = ariaLabel || `${text} ${variant} loading animation`;
+  const isSpinning = variant === 'spinner' || variant === 'ripple';
 
   return (
     <div 
@@ -167,7 +167,7 @@ export const PageLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loadin
 );
 export const ButtonLoadingSpinner: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 'sm' }) => (
   <LoadingSpinner 
-    size={size} 
+    size={size} ;
     variant="spinner" 
     color="white"
     className="inline-flex"
@@ -199,7 +199,7 @@ export const FullScreenLoadingSpinner: React.FC<{ text?: string }> = ({ text = '
   </div>
 );
 // Loading overlay for components
-export const LoadingOverlay: React.FC<{ 
+export const LoadingOverlay: React.FC<{ ,
   isLoading: boolean,children: React.ReactNode;
   text?: string,
   overlay?: boolean
@@ -220,9 +220,9 @@ export const LoadingOverlay: React.FC<{
           />
         </div>
       </div>
-    ),
+    );
   }
-
+;
   return (
     <div className="flex items-center justify-center p-8">
       <LoadingSpinner 
@@ -233,7 +233,7 @@ export const LoadingOverlay: React.FC<{
       />
     </div>
   ),
-},
+};
 
 // Skeleton loading component
 export const Skeleton: React.FC<{ 

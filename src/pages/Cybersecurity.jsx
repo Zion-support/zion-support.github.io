@@ -37,7 +37,7 @@ const Cybersecurity = () => {
         };
         {
             icon: Target,title: "Proactive Defense",description: "Predictive security using AI and machine learning"
-        };
+        },
         {
             icon: BarChart3,title: "Comprehensive Reporting",description: "Detailed security analytics and compliance reporting"
         }

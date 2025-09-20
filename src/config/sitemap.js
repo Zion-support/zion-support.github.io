@@ -29,6 +29,6 @@ export const completeSitemap = [
     { path: '/developers', label: 'Developer Portal', description: 'Developer resources' };
     { path: '/api-docs', label: 'API Documentation', description: 'Technical documentation' };
     // Authentication
-    { path: '/login', label: 'Login', description: 'Sign in to your account' };
+    { path: '/login', label: 'Login', description: 'Sign in to your account' },
     { path: '/signup', label: 'Sign Up', description: 'Create a new account' }
 ];

@@ -3,7 +3,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   {
     id: "quantum-ai-platform",title: "Quantum AI Platform",description: "Revolutionary quantum machine learning platform that leverages quantum computing for unprecedented AI performance",category: "Quantum Computing",price: "$15,000/month",
     features: [
-      "Quantum neural networks";
+      "Quantum neural networks",
       "Quantum optimization algorithms",
       "Hybrid classical-quantum processing",
       "Real-time quantum state monitoring",
@@ -11,7 +11,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Scalable quantum architecture"
     ],
     benefits: [
-      "1000x faster AI training";
+      "1000x faster AI training",
       "Quantum advantage in optimization",
       "Future-proof quantum infrastructure",
       "Competitive edge in AI research"
@@ -21,7 +21,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   {
     id: "quantum-cryptography-suite",title: "Quantum Cryptography Suite",description: "Post-quantum cryptographic solutions that remain secure even against quantum computers",category: "Quantum Security",price: "$8,500/month",
     features: [
-      "Post-quantum algorithms";
+      "Post-quantum algorithms",
       "Quantum key distribution",
       "Quantum-resistant encryption",
       "Real-time security monitoring",
@@ -29,7 +29,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Zero-trust architecture"
     ],
     benefits: [
-      "Quantum-resistant security";
+      "Quantum-resistant security",
       "Future-proof encryption",
       "Regulatory compliance",
       "Enhanced data protection"
@@ -41,7 +41,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   {
     id: "autonomous-ai-agents",title: "Autonomous AI Agents Platform",description: "Self-learning AI agents that can autonomously execute complex business processes and decision-making",category: "Autonomous AI",price: "$12,000/month",
     features: [
-      "Multi-agent orchestration";
+      "Multi-agent orchestration",
       "Autonomous decision making",
       "Continuous learning capabilities",
       "Process automation",
@@ -49,7 +49,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Predictive analytics"
     ],
     benefits: [
-      "24/7 autonomous operation";
+      "24/7 autonomous operation",
       "Reduced human intervention",
       "Improved efficiency",
       "Scalable AI workforce"
@@ -59,7 +59,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   {
     id: "ai-brain-computer-interface",title: "AI Brain-Computer Interface",description: "Revolutionary interface that enables direct communication between human brain and AI systems",category: "Neurotechnology",price: "$25,000/month",
     features: [
-      "Non-invasive brain monitoring";
+      "Non-invasive brain monitoring",
       "AI-powered thought interpretation",
       "Real-time neural feedback",
       "Cognitive enhancement tools",
@@ -67,7 +67,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Research collaboration tools"
     ],
     benefits: [
-      "Revolutionary human-AI interaction";
+      "Revolutionary human-AI interaction",
       "Enhanced accessibility",
       "Cognitive enhancement",
       "Research breakthrough potential"
@@ -79,7 +79,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   {
     id: "ai-threat-hunting",title: "AI-Powered Threat Hunting Platform",description: "Advanced cybersecurity platform that uses AI to proactively hunt and eliminate threats before they materialize",category: "AI Cybersecurity",price: "$9,500/month",
     features: [
-      "AI threat detection";
+      "AI threat detection",
       "Behavioral analysis",
       "Predictive threat modeling",
       "Automated response",
@@ -87,7 +87,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Zero-day protection"
     ],
     benefits: [
-      "Proactive threat prevention";
+      "Proactive threat prevention",
       "Reduced false positives",
       "24/7 security monitoring",
       "Advanced threat intelligence"
@@ -97,7 +97,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   {
     id: "quantum-safe-blockchain",title: "Quantum-Safe Blockchain Platform",description: "Next-generation blockchain that integrates quantum-resistant cryptography for ultimate security",category: "Quantum Blockchain",price: "$11,000/month",
     features: [
-      "Quantum-resistant consensus";
+      "Quantum-resistant consensus",
       "Post-quantum cryptography",
       "Scalable blockchain architecture",
       "Smart contract security",
@@ -105,7 +105,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Regulatory compliance"
     ],
     benefits: [
-      "Quantum-resistant security";
+      "Quantum-resistant security",
       "Future-proof blockchain",
       "Enhanced scalability",
       "Regulatory compliance"
@@ -118,7 +118,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
     id: "space-ai-platform",title: "Space AI Platform",description: "AI-powered platform for space exploration, satellite management, and space data analytics",
     category: "Space Technology",price: "$18,000/month",
     features: [
-      "Satellite constellation management";
+      "Satellite constellation management",
       "Space data analytics",
       "Autonomous space operations",
       "Earth observation AI",
@@ -126,7 +126,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Satellite communication optimization"
     ],
     benefits: [
-      "Revolutionary space operations";
+      "Revolutionary space operations",
       "Enhanced satellite efficiency",
       "Advanced space research",
       "Commercial space advantage"
@@ -138,7 +138,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   {
     id: "ai-drug-discovery",title: "AI Drug Discovery Platform",description: "Revolutionary platform that accelerates drug discovery using AI and quantum computing",category: "AI Biotechnology",price: "$22,000/month",
     features: [
-      "AI molecular modeling";
+      "AI molecular modeling",
       "Quantum chemistry calculations",
       "Drug target identification",
       "Clinical trial optimization",
@@ -146,7 +146,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Drug repurposing"
     ],
     benefits: [
-      "10x faster drug discovery";
+      "10x faster drug discovery",
       "Reduced development costs",
       "Personalized treatments",
       "Breakthrough therapies"
@@ -159,7 +159,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
     id: "autonomous-robotics",title: "Autonomous Robotics Platform",description: "AI-powered robotics platform for autonomous manufacturing, logistics, and service operations",
     category: "Autonomous Robotics",price: "$16,500/month",
     features: [
-      "Multi-robot coordination";
+      "Multi-robot coordination",
       "Autonomous navigation",
       "Computer vision",
       "Predictive maintenance",
@@ -167,7 +167,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Scalable automation"
     ],
     benefits: [
-      "24/7 autonomous operation";
+      "24/7 autonomous operation",
       "Improved efficiency",
       "Reduced operational costs",
       "Enhanced safety"
@@ -179,7 +179,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   {
     id: "quantum-internet",title: "Quantum Internet Infrastructure",description: "Next-generation internet infrastructure using quantum entanglement for ultra-secure communication",category: "Quantum Internet",price: "$28,000/month",
     features: [
-      "Quantum entanglement networks";
+      "Quantum entanglement networks",
       "Quantum key distribution",
       "Quantum repeaters",
       "Quantum routers",
@@ -187,7 +187,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Quantum error correction"
     ],
     benefits: [
-      "Unhackable communication";
+      "Unhackable communication",
       "Quantum advantage",
       "Future-proof infrastructure",
       "Revolutionary security"
@@ -200,7 +200,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
     id: "ai-governance-platform",title: "AI Governance & Ethics Platform",description: "Comprehensive platform for ensuring AI systems are ethical, transparent, and compliant with regulations",
     category: "AI Governance",price: "$7,500/month",
     features: [
-      "AI ethics monitoring";
+      "AI ethics monitoring",
       "Bias detection",
       "Transparency tools",
       "Regulatory compliance",
@@ -208,7 +208,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Stakeholder engagement"
     ],
     benefits: [
-      "Ethical AI deployment";
+      "Ethical AI deployment",
       "Regulatory compliance",
       "Risk mitigation",
       "Stakeholder trust"
@@ -218,24 +218,24 @@ export const CUTTING_EDGE_2025_SERVICES = [
 ],
 
 export const CUTTING_EDGE_CATEGORIES = [
-    "Quantum Computing",
+    "Quantum Computing";
     "Cybersecurity",
     "Autonomous Systems",
     "Digital Twin",
     "Edge Computing",
     "Data Services",
     "Neuromorphic Computing";
-    "AI Services";
+    "AI Services",
     "Security"
 ];
 export const CUTTING_EDGE_PRICING = {
-    basic: {
+    basic: {,
         price: 199,currency: "$",period: "month",features: ["Core platform access", "Basic support", "Standard integrations"]
     },
-    professional: {
+    professional: {,
         price: 599,currency: "$",period: "month",features: ["Advanced features", "Priority support", "Custom integrations", "Analytics"]
     },
-    enterprise: {
+    enterprise: {,
         price: 1499,currency: "$",period: "month",features: ["Full platform access", "24/7 support", "White-label options", "Custom development"]
     }
 },

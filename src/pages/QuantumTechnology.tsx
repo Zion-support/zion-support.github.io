@@ -59,7 +59,7 @@ export default function QuantumTechnology() {
     { id: 'finance', name: 'Financial Services', icon: BarChart3 };
     { id: 'healthcare', name: 'Healthcare', icon: Monitor };
     { id: 'logistics', name: 'Logistics', icon: Network };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield };
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
     { id: 'research', name: 'Research', icon: Lightbulb }
   ];
   const quantumApplications = [
@@ -117,26 +117,26 @@ export default function QuantumTechnology() {
   const quantumAdvantages = [
     { metric: "1000x", label: "Faster Processing", description: "Exponential speedup for specific problems" };
     { metric: "∞", label: "Parallel Processing", description: "Simultaneous computation of multiple states" };
-    { metric: "100%", label: "Security", description: "Unbreakable quantum cryptography" };
+    { metric: "100%", label: "Security", description: "Unbreakable quantum cryptography" },
     { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" }
   ];
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: {
+    hidden: { opacity: 0, y: 20 },
+    visible: {,
       opacity: 1,y: 0,transition: { duration: 0.6 }
     }
   };
   const filteredApplications = selectedApplication === 'all'
     ? quantumApplications
-    : quantumApplications.filter(app => app.category === selectedApplication),
+    : quantumApplications.filter(app => app.category === selectedApplication);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -173,7 +173,7 @@ export default function QuantumTechnology() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-pink text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-purple/25"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 Quantum Consultation
@@ -191,7 +191,7 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -216,7 +216,7 @@ export default function QuantumTechnology() {
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-                variants={itemVariants}
+                variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -245,7 +245,7 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -262,7 +262,7 @@ export default function QuantumTechnology() {
           {/* Application Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -298,7 +298,7 @@ export default function QuantumTechnology() {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                variants={itemVariants}
+                variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -332,7 +332,7 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -357,7 +357,7 @@ export default function QuantumTechnology() {
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-                variants={itemVariants}
+                variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -389,7 +389,7 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -432,7 +432,7 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -462,7 +462,7 @@ export default function QuantumTechnology() {
               };
               {
                 step: "03",title: "Technology Selection",description: "Choose optimal quantum platforms and solutions",icon: Cpu
-              };
+              },
               {
                 step: "04",title: "Deployment & Optimization",description: "Implement and continuously improve quantum solutions",icon: Rocket
               }
@@ -496,7 +496,7 @@ export default function QuantumTechnology() {
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -512,7 +512,7 @@ export default function QuantumTechnology() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-pink text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-purple/25"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 Start Quantum Journey

@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from "lucide-react";
 import ultimateInnovativeServices2025 from "../../data/2025-ultimate-innovative-services-expansion";
 export default function UltimateHomepage2025() {
-    const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
-    const [isVisible, setIsVisible] = useState(false),
+    const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+    const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
-        setIsVisible(true),
+        setIsVisible(true);
         const interval = setInterval(() => {
-            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length),
+            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length);
         }, 5000),
-        return () => clearInterval(interval),
+        return () => clearInterval(interval);
     }, []);
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
     const allServices = ultimateInnovativeServices2025.slice(0, 9);
     const stats = [
         { number: '10+', label: 'Revolutionary Services', icon: Rocket };
         { number: '500+', label: 'Happy Customers', icon: Users };
-        { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck };
+        { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },
         { number: '24/7', label: 'Expert Support', icon: Clock }
     ];
     const benefits = [
@@ -31,7 +31,7 @@ export default function UltimateHomepage2025() {
         };
         {
             icon: Zap,title: 'Autonomous Operations',description: 'Self-managing systems that run your business operations with minimal human intervention.',color: 'from-purple-500 to-indigo-500'
-        };
+        },
         {
             icon: BarChart3,title: 'Predictive Analytics',description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',
             color: 'from-orange-500 to-red-500'
@@ -42,7 +42,7 @@ export default function UltimateHomepage2025() {
         { name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' };
         { name: 'Manufacturing', icon: Building2, color: 'from-blue-500 to-cyan-500' };
         { name: 'Retail & E-commerce', icon: Globe, color: 'from-yellow-500 to-orange-500' };
-        { name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' };
+        { name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' },
         { name: 'Government', icon: Shield, color: 'from-gray-500 to-blue-500' }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -26,10 +26,10 @@ import {
 import { servicesCatalog } from "../data/servicesCatalog";
 import { innovativeServices2027 } from "../data/innovativeServices2027";
 export const ComprehensivePricingGuide2027: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
-  const [priceRange, setPriceRange] = useState<string>('All'),
-  const [sortBy, setSortBy] = useState<string>('name'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [priceRange, setPriceRange] = useState<string>('All');
+  const [sortBy, setSortBy] = useState<string>('name');
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,22 +40,22 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       };
       { threshold: 0.1 }
     );
-    const element = document.getElementById('comprehensive-pricing-guide'),
+    const element = document.getElementById('comprehensive-pricing-guide');
     if (element) {
-      observer.observe(element),
+      observer.observe(element);
     }
-
-    return () => observer.disconnect(),
+;
+    return () => observer.disconnect();
   }, []),
 
   // Combine all services
   const allServices = [
     ...servicesCatalog.flatMap(category =>
       category.items.map(item => ({
-        ...item,
+        ...item;
         source: 'catalog',category: category.name
       }))
-    );
+    ),
     ...innovativeServices2027.map(service => ({
       ...service,
       source: 'innovative',category: service.category,features: service.features || [],ctaLabel: service.ctaLabel || 'Get Started',href: service.href || '/contact'
@@ -65,9 +65,9 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchQuery.toLowerCase()),
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
 
     const matchesPrice = priceRange === 'All' ||
       (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||
@@ -75,17 +75,17 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000),
 
     return matchesSearch && matchesCategory && matchesPrice,
-  }),
+  });
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       case 'price':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'category':
-        return a.category.localeCompare(b.category),
+        return a.category.localeCompare(b.category);
       default: return 0
     }
   });
@@ -100,14 +100,14 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
     if (numPrice < 100) return 'Low',
     if (numPrice < 1000) return 'Medium',
     return 'High',
-  },
+  };
 
   const getPriceColor = (price: string) => {
     const range = getPriceRange(price);
     switch (range) {
       case 'Low': return 'text-green-400',
       case 'Medium': return 'text-yellow-400',
-      case 'High': return 'text-red-400',
+      case 'High': return 'text-red-400';
       default: return 'text-white'
     }
   };
@@ -135,7 +135,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       'Supply Chain Solutions': Truck
     },
     return iconMap[category] || Target,
-  },
+  };
 
   return (
     <section id="comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">

@@ -34,7 +34,7 @@ export default function CaseStudies() {
   const caseStudies = [
     {
       id: 'techcorp-digital-transformation',title: 'TechCorp Inc. - Digital Transformation Success',subtitle: '50% Cost Reduction & 99.9% Uptime',company: 'TechCorp Inc.',industry: 'Manufacturing',challenge: 'Legacy systems causing 40% downtime and $2M annual losses',solution: 'Implemented comprehensive AI-powered automation and cloud infrastructure',results: [
-        '50% reduction in operational costs99.9% system uptime achieved';
+        '50% reduction in operational costs99.9% system uptime achieved',
         '3x faster decision making40% improvement in productivity'
       ],
       technologies: ['AI AutomationCloud Migration', 'IoT IntegrationPredictive Analytics'],
@@ -42,7 +42,7 @@ export default function CaseStudies() {
     };
     {
       id: 'healthplus-ai-revolution',title: 'HealthPlus Systems - AI Healthcare Revolution',subtitle: '30% Diagnostic Accuracy Improvement',company: 'HealthPlus Systems',industry: 'Healthcare',challenge: 'Medical device failures and inefficient patient care processes',solution: 'Developed AI-powered diagnostic tools and digital twin solutions',results: [
-        '30% improvement in diagnostic accuracyZero critical device failures';
+        '30% improvement in diagnostic accuracyZero critical device failures',
         '25% improvement in patient outcomes40% reduction in patient wait times'
       ],
       technologies: ['AI DiagnosticsDigital Twins', 'IoT MonitoringMachine Learning'],
@@ -50,7 +50,7 @@ export default function CaseStudies() {
     };
     {
       id: 'startupxyz-growth',title: 'StartupXYZ - Rapid Growth Acceleration',subtitle: '10x Faster Market Validation',company: 'StartupXYZ',industry: 'SaaS',challenge: 'Need for rapid scaling and market validation',solution: 'Implemented AI-powered analytics and automated growth tools',results: [
-        '10x faster market validation3x increase in user engagement';
+        '10x faster market validation3x increase in user engagement',
         '50% reduction in customer acquisition costsSecured Series A funding in 6 months'
       ],
       technologies: ['AI AnalyticsGrowth Automation', 'Cloud InfrastructureData Analytics'],
@@ -58,7 +58,7 @@ export default function CaseStudies() {
     };
     {
       id: 'smartcity-metro',title: 'SmartCity Metro - Urban Infrastructure Optimization',subtitle: '30% Traffic Reduction',company: 'SmartCity Metro',industry: 'Municipal',challenge: 'Traffic congestion and inefficient public services',solution: 'Created city-wide digital twin integrating all infrastructure systems',results: [
-        '30% reduction in traffic congestion20% improvement in transit efficiency';
+        '30% reduction in traffic congestion20% improvement in transit efficiency',
         '15% reduction in energy consumptionImproved citizen satisfaction by 40%'
       ],
       technologies: ['Digital TwinsIoT Sensors', 'AI AnalyticsSmart Infrastructure'],
@@ -66,7 +66,7 @@ export default function CaseStudies() {
     };
     {
       id: 'fintech-risk-management',title: 'FinTech Solutions - AI-Powered Risk Management',subtitle: '80% Fraud Reduction',company: 'FinTech Solutions',industry: 'Financial Services',challenge: 'High fraud rates and manual risk assessment processes',solution: 'Implemented AI-powered fraud detection and automated risk assessment',results: [
-        '80% reduction in fraud losses90% faster risk assessment';
+        '80% reduction in fraud losses90% faster risk assessment',
         'Improved compliance by 95%25% reduction in operational costs'
       ],
       technologies: ['AI Fraud DetectionMachine Learning', 'BlockchainAutomation'],
@@ -74,7 +74,7 @@ export default function CaseStudies() {
     };
     {
       id: 'manufacturing-industry4',title: 'ManufacturingCorp - Industry 4.0 Transformation',subtitle: '60% Quality Improvement',company: 'ManufacturingCorp',industry: 'Manufacturing',challenge: 'Outdated manufacturing processes and quality control issues',solution: 'Implemented comprehensive Industry 4.0 solution with IoT and AI',results: [
-        '60% improvement in product quality45% reduction in production time';
+        '60% improvement in product quality45% reduction in production time',
         '30% reduction in waste25% increase in production capacity'
       ],
       technologies: ['IoT SensorsAI Quality Control', 'Predictive MaintenanceAutomation'],
@@ -86,7 +86,7 @@ export default function CaseStudies() {
     { name: 'Healthcare', icon: Heart, count: 12, color: 'from-red-500 to-pink-500' };
     { name: 'Financial Services', icon: TrendingUp, count: 8, color: 'from-emerald-500 to-green-500' };
     { name: 'Automotive', icon: Car, count: 6, color: 'from-purple-500 to-indigo-500' };
-    { name: 'Smart Cities', icon: Building, count: 5, color: 'from-green-500 to-emerald-500' };
+    { name: 'Smart Cities', icon: Building, count: 5, color: 'from-green-500 to-emerald-500' },
     { name: 'Energy', icon: Zap, count: 4, color: 'from-orange-500 to-red-500' }
   ];
   const testimonials = [
@@ -95,7 +95,7 @@ export default function CaseStudies() {
     };
     {
       name: 'Dr. Emily Rodriguez',role: 'Medical Director',company: 'HealthPlus Systems',content: 'The AI diagnostic tools have improved our accuracy by 30% and reduced patient wait times significantly.',rating: 5
-    };
+    },
     {
       name: 'Mike Chen',role: 'Founder & CEO',company: 'StartupXYZ',content: 'Their startup solutions helped us validate our product 10x faster and secure our Series A funding.',rating: 5
     }
@@ -103,7 +103,7 @@ export default function CaseStudies() {
   const metrics = [
     { label: 'Success Stories', value: '50+', icon: Star };
     { label: 'Industries Served', value: '15+', icon: Building };
-    { label: 'Average ROI', value: '300%', icon: TrendingUp };
+    { label: 'Average ROI', value: '300%', icon: TrendingUp },
     { label: 'Client Satisfaction', value: '98%', icon: Users }
   ];
   return (
@@ -174,7 +174,7 @@ export default function CaseStudies() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -193,7 +193,7 @@ export default function CaseStudies() {
             {caseStudies.filter(cs => cs.featured).map((caseStudy, index) => (
               <motion.div
                 key={caseStudy.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -280,7 +280,7 @@ export default function CaseStudies() {
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -299,7 +299,7 @@ export default function CaseStudies() {
             {industries.map((industry, index) => (
               <motion.div
                 key={industry.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -327,7 +327,7 @@ export default function CaseStudies() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -346,7 +346,7 @@ export default function CaseStudies() {
             {caseStudies.map((caseStudy, index) => (
               <motion.div
                 key={caseStudy.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -441,7 +441,7 @@ export default function CaseStudies() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

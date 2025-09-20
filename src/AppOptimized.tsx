@@ -12,21 +12,21 @@ import PerformanceMonitor from "./components/PerformanceMonitor";
 import SEOHead from "./components/SEOHead";
 import LoadingSpinner from "./components/LoadingSpinner";
 // Lazy load components for better performance
-const Home = lazy(() => import('./pages/Home')),
-const About = lazy(() => import('./pages/About')),
-const Services = lazy(() => import('./pages/Services')),
-const Contact = lazy(() => import('./pages/Contact')),
-const Blog = lazy(() => import('./pages/Blog')),
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Blog = lazy(() => import('./pages/Blog'));
 
 // Create a separate query client for better performance
 const queryClient = new QueryClient({
-  defaultOptions: {
+  defaultOptions: {,
     queries: {
       staleTime: 5 * 60 * 1000, // 5 minutes
       cacheTime: 10 * 60 * 1000, // 10 minutes
       retry: 3,retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000)
     },
-    mutations: {
+    mutations: {,
       retry: 1
     }
   }

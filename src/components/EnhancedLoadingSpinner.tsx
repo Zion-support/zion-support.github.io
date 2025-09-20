@@ -8,21 +8,21 @@ interface LoadingSpinnerProps {
   showProgress?: boolean,
   progress?: number,
 }
-
+;
 const iconVariants = {
-  animate: {
+  animate: {,
     rotate: 360,scale: [1, 1.2, 1],
-    transition: {
-      rotate: { duration: 2, repeat: Infinity, ease: "linear" };
+    transition: {,
+      rotate: { duration: 2, repeat: Infinity, ease: "linear" },
       scale: { duration: 1, repeat: Infinity, ease: "easeInOut" }
     }
   }
 };
 const pulseVariants = {
-  animate: {
+  animate: {,
     scale: [1, 1.1, 1],
     opacity: [0.5, 1, 0.5],
-    transition: {
+    transition: {,
       duration: 2,repeat: Infinity,ease: "easeInOut"
     }
   }
@@ -43,22 +43,22 @@ export function EnhancedLoadingSpinner({
   const getIcon = () => {
     switch (variant) {
       case 'ai':
-        return <Brain className="w-full h-full text-cyan-400" />,
+        return <Brain className="w-full h-full text-cyan-400" />;
       case 'quantum':
         return <Atom className="w-full h-full text-purple-400" />,
       case 'futuristic':
-        return <Zap className="w-full h-full text-blue-400" />,
+        return <Zap className="w-full h-full text-blue-400" />;
       default: return <Loader2 className="w-full h-full text-gray-400" />
     }
   };
   const getBackground = () => {
     switch (variant) {
       case 'ai':
-        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30',
+        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
       case 'quantum':
         return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30',
       case 'futuristic':
-        return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30',
+        return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30';
       default: return 'bg-gray-100 border-gray-200'
     }
   };
@@ -67,7 +67,7 @@ export function EnhancedLoadingSpinner({
       {/* Main Spinner */}
       <div className="relative">
         <motion.div
-          className={`${sizeClasses[size]} ${getBackground()} border-2 rounded-full flex items-center justify-center`}
+          className={`${sizeClasses[size]} ${getBackground()} border-2 rounded-full flex items-center justify-center`};
           variants={pulseVariants}
           animate="animate"
         >

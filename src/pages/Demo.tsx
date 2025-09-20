@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Play, Pause, Square, RotateCcw, Settings, Download, Share2, Eye, EyeOff, Maximize2, Minimize2 } from "lucide-react";
 import { SEO } from "../components/SEO";
 export default function Demo() {
-  const [isPlaying, setIsPlaying] = useState(false),
-  const [currentTime, setCurrentTime] = useState(0),
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(120);
   const [showControls, setShowControls] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -17,13 +17,13 @@ export default function Demo() {
     };
     {
       id: 3,title: 'Digital Twin Platform',description: 'IoT and AI integration for smart operations',duration: '3:15',thumbnail: '/demos/digital-twin.jpg',category: 'IoT & AI'
-    };
+    },
     {
       id: 4,title: 'AI Content Generation',description: 'Automated content creation and optimization',duration: '2:00',thumbnail: '/demos/ai-content.jpg',category: 'Content AI'
     }
   ];
   const handlePlayPause = () => {
-    setIsPlaying(!isPlaying),
+    setIsPlaying(!isPlaying);
   },
 
   const handleTimeUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +31,7 @@ export default function Demo() {
   };
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60,
+    const secs = seconds % 60;
     return `${mins}:${secs.toString().padStart(2, '0')}`,
   },
 
@@ -244,12 +244,12 @@ export default function Demo() {
       </div>
 
       <style>{`
-        .slider::-webkit-slider-thumb {
+        .slider::-webkit-slider-thumb {,
           appearance: none,height: 20px,width: 20px;
           border-radius: 50%,background: #3b82f6,cursor: pointer
         }
         
-        .slider: :-moz-range-thumb {
+        .slider: :-moz-range-thumb {,
           height: 20px,width: 20px;
           border-radius: 50%,background: #3b82f6,cursor: pointer,border: none
         }

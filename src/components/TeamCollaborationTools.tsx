@@ -84,7 +84,7 @@ interface Comment {
 interface Message {
   id: string,sender: string,content: string,timestamp: string,type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[],
-  reactions: { type: string, count: number }[];
+  reactions: { type: string, count: number }[],
   isRead: boolean
 }
 
@@ -107,17 +107,17 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showFileSharing = true,
   maxItems = 20
 }) => {
-  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team'),
-  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]),
-  const [projects, setProjects] = useState<Project[]>([]),
-  const [messages, setMessages] = useState<Message[]>([]),
-  const [files, setFiles] = useState<FileItem[]>([]),
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null),
-  const [showProjectForm, setShowProjectForm] = useState(false),
-  const [showTaskForm, setShowTaskForm] = useState(false),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),
-  const [selectedStatus, setSelectedStatus] = useState<string>('all'),
+  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [files, setFiles] = useState<FileItem[]>([]);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showProjectForm, setShowProjectForm] = useState(false);
+  const [showTaskForm, setShowTaskForm] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
 
   // Sample data
   useEffect(() => {
@@ -157,15 +157,15 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
     const sampleMessages: Message[] = [
       {
-        id: '1',sender: 'Sarah Johnson',content: 'Great progress on the AI model training! The accuracy has improved significantly.',timestamp: '2 minutes ago',type: 'text',reactions: [{ type: 'thumbsUp', count: 3 }];
+        id: '1',sender: 'Sarah Johnson',content: 'Great progress on the AI model training! The accuracy has improved significantly.',timestamp: '2 minutes ago',type: 'text',reactions: [{ type: 'thumbsUp', count: 3 }],
         isRead: true
       };
       {
-        id: '2',sender: 'Michael Chen',content: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.',timestamp: '15 minutes ago',type: 'text',reactions: [{ type: 'check', count: 2 }];
+        id: '2',sender: 'Michael Chen',content: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.',timestamp: '15 minutes ago',type: 'text',reactions: [{ type: 'check', count: 2 }],
         isRead: false
       };
       {
-        id: '3',sender: 'David Kim',content: 'Security vulnerabilities identified and patched. Report ready for review.',timestamp: '1 hour ago',type: 'text',reactions: [{ type: 'star', count: 1 }];
+        id: '3',sender: 'David Kim',content: 'Security vulnerabilities identified and patched. Report ready for review.',timestamp: '1 hour ago',type: 'text',reactions: [{ type: 'star', count: 1 }],
         isRead: true
       }
     ];
@@ -183,10 +183,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         sharedWith: ['Lisa Thompson'],permissions: 'view',version: '1.0'
       }
     ];
-    setTeamMembers(sampleTeamMembers),
-    setProjects(sampleProjects),
-    setMessages(sampleMessages),
-    setFiles(sampleFiles),
+    setTeamMembers(sampleTeamMembers);
+    setProjects(sampleProjects);
+    setMessages(sampleMessages);
+    setFiles(sampleFiles);
   }, []),
 
   // Get status color and icon
@@ -195,7 +195,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
       case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
       case 'busy': return { color: 'text-red-400 bg-red-400/20', icon: <div className="w-2 h-2 bg-red-400 rounded-full"></div> };
-      case 'offline': return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
+      case 'offline': return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> },
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
     }
   },
@@ -207,7 +207,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'active': return 'text-green-400 bg-green-400/20',
       case 'review': return 'text-yellow-400 bg-yellow-400/20',
       case 'completed': return 'text-purple-400 bg-purple-400/20',
-      case 'on-hold': return 'text-red-400 bg-red-400/20',
+      case 'on-hold': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -217,7 +217,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20',
       case 'high': return 'text-orange-400 bg-orange-400/20',
-      case 'critical': return 'text-red-400 bg-red-400/20',
+      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -228,7 +228,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'image': return <Image className="w-5 h-5" />,
       case 'video': return <Video className="w-5 h-5" />,
       case 'audio': return <File className="w-5 h-5" />,
-      case 'archive': return <Folder className="w-5 h-5" />,
+      case 'archive': return <Folder className="w-5 h-5" />;
       default: return <File className="w-5 h-5" />
     }
   };
@@ -237,7 +237,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`,
     return `${(size / 1024).toFixed(1)} GB`,
-  },
+  };
 
   // Handle project selection
   const handleProjectSelect = (project: Project) => {
@@ -253,10 +253,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         } else {
           msg.reactions.push({ type: reactionType, count: 1 });
         }
-      }
+      };
       return msg,
     })),
-  },
+  };
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
@@ -272,7 +272,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           {[
             { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4" /> };
             { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4" /> };
-            { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4" /> };
+            { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4" /> },
             { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4" /> }
           ].map((tab) => (
             <button

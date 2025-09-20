@@ -33,22 +33,22 @@ import {
 } from "lucide-react";
 import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from "../data/ultimateInnovativeServices2025";
 export default function UltimateInnovativeServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all'),
-  const [searchTerm, setSearchTerm] = useState<string>(''),
-  const [sortBy, setSortBy] = useState<string>('innovation'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [sortBy, setSortBy] = useState<string>('innovation');
 
   const filteredServices = useMemo(() => {
-    let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025,
+    let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
+      filtered = filtered.filter(service => service.category === selectedCategory);
     }
-
+;
     if (selectedSubcategory !== 'all') {
-      filtered = filtered.filter(service => service.subcategory === selectedSubcategory),
+      filtered = filtered.filter(service => service.subcategory === selectedSubcategory);
     }
-
+;
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -67,27 +67,27 @@ export default function UltimateInnovativeServicesShowcase2025() {
         break,
       case 'roi':
         filtered = [...filtered].sort((a, b) => {
-          const aRoi = parseInt(a.roi.split('%')[0]),
-          const bRoi = parseInt(b.roi.split('%')[0]),
+          const aRoi = parseInt(a.roi.split('%')[0]);
+          const bRoi = parseInt(b.roi.split('%')[0]);
           return bRoi - aRoi,
         }),
-        break,
+        break;
       case 'delivery':
         filtered = [...filtered].sort((a, b) => {
-          const aWeeks = parseInt(a.estimatedDelivery.split('-')[0]),
-          const bWeeks = parseInt(b.estimatedDelivery.split('-')[0]),
+          const aWeeks = parseInt(a.estimatedDelivery.split('-')[0]);
+          const bWeeks = parseInt(b.estimatedDelivery.split('-')[0]);
           return aWeeks - bWeeks,
         }),
         break,
       default: // innovation
         filtered = [...filtered].sort((a, b) => {
-          const innovationOrder = ['RevolutionaryBreakthrough', 'Advanced'],
-          const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0]),
-          const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]),
-          return aIndex - bIndex,
+          const innovationOrder = ['RevolutionaryBreakthrough', 'Advanced'];
+          const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0]);
+          const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]);
+          return aIndex - bIndex;
         });
     }
-
+;
     return filtered;
   }, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
   const getCategoryIcon = (category: string) => {
@@ -101,7 +101,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
       case 'Robotics & Automation': return <Rocket className="w-6 h-6" />,
       case 'Biotechnology': return <Database className="w-6 h-6" />,
       case 'Space Technology': return <Zap className="w-6 h-6" />,
-      case 'Green Technology': return <BarChart3 className="w-6 h-6" />,
+      case 'Green Technology': return <BarChart3 className="w-6 h-6" />;
       default: return <Star className="w-6 h-6" />
     }
   };
@@ -113,7 +113,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
       case 'Breakthrough':
         return <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">💡 Breakthrough</span>,
       case 'Advanced':
-        return <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">⚡ Advanced</span>,
+        return <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">⚡ Advanced</span>;
       default: return <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>
     }
   };

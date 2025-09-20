@@ -11,7 +11,7 @@ const ITSolutions = () => {
         };
         {
             icon: Database,title: "Data Management",description: "Comprehensive data management and backup solutions"
-        };
+        },
         {
             icon: Shield,title: "IT Security",description: "Multi-layered security for your IT infrastructure"
         }

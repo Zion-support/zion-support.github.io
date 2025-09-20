@@ -134,7 +134,7 @@ export default function Resources() {
     };
     {
       title: 'AI Services Overview',description: 'Complete guide to our AI-powered technology solutions',href: '/services',type: 'Overview',featured: true,icon: Brain
-    };
+    },
     {
       title: 'Security & Compliance',description: 'Enterprise security standards and compliance frameworks',href: '/security',type: 'Framework',featured: true,icon: Shield
     }
@@ -147,7 +147,7 @@ export default function Resources() {
     {
       title: 'Cybersecurity Workshop',date: 'December 20, 2024',
       time: '2:00 PM EST',type: 'Workshop',href: '/events/cybersecurity-workshop'
-    };
+    },
     {
       title: 'Cloud Migration Webinar',date: 'January 10, 2025',
       time: '11:00 AM EST',type: 'Webinar',href: '/events/cloud-migration-webinar'
@@ -160,7 +160,7 @@ export default function Resources() {
     { name: 'White Papers', href: '/white-papers', type: 'Resource' };
     { name: 'Webinars', href: '/webinars', type: 'Resource' };
     { name: 'Blog', href: '/blog', type: 'Resource' };
-    { name: 'Contact Support Team', href: '/contact', type: 'Support' };
+    { name: 'Contact Support Team', href: '/contact', type: 'Support' },
     { name: 'Knowledge Base', href: '/knowledge-base', type: 'Resource' }
   ];
   return (
@@ -209,12 +209,12 @@ export default function Resources() {
               {[
                 { label: 'Resources', value: '500+', icon: BookOpen };
                 { label: 'Case Studies', value: '50+', icon: Target };
-                { label: 'White Papers', value: '25+', icon: FileText };
+                { label: 'White Papers', value: '25+', icon: FileText },
                 { label: 'Webinars', value: '100+', icon: Users }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -254,7 +254,7 @@ export default function Resources() {
             {featuredResources.map((resource, index) => (
               <motion.div
                 key={resource.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -301,7 +301,7 @@ export default function Resources() {
             {resources.map((category, index) => (
               <motion.div
                 key={category.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -362,7 +362,7 @@ export default function Resources() {
             {upcomingEvents.map((event, index) => (
               <motion.div
                 key={event.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -420,7 +420,7 @@ export default function Resources() {
             {quickLinks.map((link, index) => (
               <motion.div
                 key={link.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -449,7 +449,7 @@ export default function Resources() {
         <div className="container-responsive">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -485,7 +485,7 @@ export default function Resources() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

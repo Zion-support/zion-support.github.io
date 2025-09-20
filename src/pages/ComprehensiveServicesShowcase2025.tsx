@@ -35,17 +35,17 @@ import { SEO } from "@/components/SEO";
 import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServices2025";
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 export default function ComprehensiveServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
   const allServices = [
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025;
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ];
   const categories = ['all', ...new Set(allServices.map(service => service.category))];
   const priceRanges = [
-    { value: 'all', label: 'All Prices' };
+    { value: 'all', label: 'All Prices' },
     { value: 'low', label: 'Under $1,000/month' },
     { value: 'medium', label: '$1,000 - $5,000/month' },
     { value: 'high', label: '$5,000 - $15,000/month' },
@@ -60,24 +60,24 @@ export default function ComprehensiveServicesShowcase2025() {
     )
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
     .filter(service => {
-      if (selectedPriceRange === 'all') return true,
-      const priceRange = getPriceRange(service.price),
+      if (selectedPriceRange === 'all') return true;
+      const priceRange = getPriceRange(service.price);
       return priceRange === selectedPriceRange,
-    }),
+    });
 
   const getPriceRange = (price: number) => {
     if (price < 1000) return 'low';
     if (price < 5000) return 'medium',
     if (price < 15000) return 'high',
     return 'premium'
-  },
+  };
 
   const getPriceRangeColor = (range: string) => {
     switch (range) {
       case 'low': return 'bg-green-100 text-green-800';
       case 'medium': return 'bg-blue-100 text-blue-800',
       case 'high': return 'bg-yellow-100 text-yellow-800',
-      case 'premium': return 'bg-purple-100 text-purple-800',
+      case 'premium': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800'
     }
   };
@@ -85,7 +85,7 @@ export default function ComprehensiveServicesShowcase2025() {
     switch (level) {
       case 'high': return 'from-purple-500 to-pink-500';
       case 'medium': return 'from-blue-500 to-cyan-500',
-      case 'low': return 'from-green-500 to-emerald-500',
+      case 'low': return 'from-green-500 to-emerald-500';
       default: return 'from-gray-500 to-slate-500'
     }
   };
@@ -96,7 +96,7 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'Analytics': return BarChart3,
       case 'Communication': return MessageSquare,
       case 'Infrastructure': return Server,
-      case 'Development': return Code,
+      case 'Development': return Code;
       default: return Globe
     }
   };

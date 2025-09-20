@@ -154,7 +154,7 @@ const microSAASServices2028 = [
   {
     id: 'ai-content-creator-pro',name: 'AI Content Creator Pro',tagline: 'AI-powered content creation for all platforms',price: '$299',period: '/month',description: 'Advanced AI content creation platform that generates high-quality articles, social media posts, marketing copy, and creative content across all platforms.',
     features: [
-      'AI article generationSocial media content creation';
+      'AI article generationSocial media content creation',
       'Marketing copy optimizationSEO content optimization',
       'Multi-language supportContent scheduling',
       'Brand voice customizationPlagiarism detection',
@@ -171,7 +171,7 @@ const microSAASServices2028 = [
   {
     id: 'ai-image-generator-plus',name: 'AI Image Generator Plus',tagline: 'Professional AI image generation for businesses',price: '$199',period: '/month',description: 'Professional AI image generation platform that creates high-quality, customizable images for marketing, design, and business needs.',
     features: [
-      'High-resolution image generationCustom style training';
+      'High-resolution image generationCustom style training',
       'Brand-specific image creationBatch image generation',
       'Commercial usage rightsStyle transfer capabilities',
       'Image editing toolsAPI integration',
@@ -188,7 +188,7 @@ const microSAASServices2028 = [
   {
     id: 'ai-video-creator-studio',name: 'AI Video Creator Studio',tagline: 'AI-powered video creation and editing platform',price: '$399',period: '/month',description: 'Professional AI video creation platform that generates, edits, and optimizes videos for marketing, social media, and business needs.',
     features: [
-      'AI video generationAutomated video editing';
+      'AI video generationAutomated video editing',
       'Text-to-video conversionVideo optimization',
       'Multi-format exportBrand template library',
       'Voice-over generationMusic integration',
@@ -205,7 +205,7 @@ const microSAASServices2028 = [
   {
     id: 'ai-code-generator-pro',name: 'AI Code Generator Pro',tagline: 'AI-powered code generation and development assistance',price: '$499',period: '/month',description: 'Advanced AI code generation platform that helps developers write, debug, and optimize code across multiple programming languages.',
     features: [
-      'Multi-language code generationCode completion and suggestions';
+      'Multi-language code generationCode completion and suggestions',
       'Bug detection and fixingCode optimization',
       'Documentation generationTesting automation',
       'Code review assistanceTeam collaboration',
@@ -222,7 +222,7 @@ const microSAASServices2028 = [
   {
     id: 'ai-design-assistant',name: 'AI Design Assistant',tagline: 'AI-powered design creation and optimization',price: '$249',period: '/month',description: 'Intelligent AI design platform that creates logos, graphics, layouts, and visual assets with brand consistency and professional quality.',
     features: [
-      'Logo generation and designGraphic design creation';
+      'Logo generation and designGraphic design creation',
       'Layout optimizationBrand consistency tools',
       'Template libraryDesign collaboration',
       'Export optimizationBrand guidelines',
@@ -239,7 +239,7 @@ const microSAASServices2028 = [
   {
     id: 'ai-ecommerce-optimizer',name: 'AI E-commerce Optimizer',tagline: 'AI-powered e-commerce optimization and automation',price: '$349',period: '/month',description: 'Comprehensive AI e-commerce platform that optimizes product recommendations, pricing, inventory, and customer experience.',
     features: [
-      'AI product recommendationsDynamic pricing optimization';
+      'AI product recommendationsDynamic pricing optimization',
       'Inventory managementCustomer behavior analysis',
       'Personalization engineA/B testing automation',
       'Conversion optimizationAnalytics dashboard',
@@ -256,7 +256,7 @@ const microSAASServices2028 = [
   {
     id: 'ai-customer-service-pro',name: 'AI Customer Service Pro',tagline: 'AI-powered customer support and chatbot platform',price: '$199',period: '/month',description: 'Intelligent AI customer service platform that provides 24/7 support through chatbots, automated responses, and intelligent ticket routing.',
     features: [
-      'AI chatbot creationNatural language processing';
+      'AI chatbot creationNatural language processing',
       'Automated ticket routingKnowledge base management',
       'Multi-language supportIntegration capabilities',
       'Analytics dashboardTeam collaboration',
@@ -273,7 +273,7 @@ const microSAASServices2028 = [
   {
     id: 'ai-analytics-platform',name: 'AI Analytics Platform',tagline: 'AI-powered business intelligence and analytics',price: '$299',period: '/month',description: 'Advanced AI analytics platform that provides intelligent insights, predictive analytics, and automated reporting for business decision-making.',
     features: [
-      'AI-powered insightsPredictive analytics';
+      'AI-powered insightsPredictive analytics',
       'Automated reportingData visualization',
       'Real-time monitoringCustom dashboards',
       'Data integrationCollaboration tools',
@@ -288,9 +288,9 @@ const microSAASServices2028 = [
   }
 ];
 const MicroSAASServices2028: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [sortBy, setSortBy] = useState('popularity'),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('popularity');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' };
@@ -299,15 +299,15 @@ const MicroSAASServices2028: React.FC = () => {
     { id: 'ai-video', name: 'AI Video', icon: Video, color: 'from-zion-red to-zion-orange' };
     { id: 'ai-development', name: 'AI Development', icon: Code, color: 'from-zion-green to-zion-emerald' };
     { id: 'ai-ecommerce', name: 'AI E-commerce', icon: ShoppingCart, color: 'from-zion-orange to-zion-red' };
-    { id: 'ai-customer-service', name: 'AI Customer Service', icon: MessageSquare, color: 'from-zion-blue to-zion-indigo' };
+    { id: 'ai-customer-service', name: 'AI Customer Service', icon: MessageSquare, color: 'from-zion-blue to-zion-indigo' },
     { id: 'ai-analytics', name: 'AI Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' }
   ];
   const filteredServices = microSAASServices2028
     .filter(service => {
       const matchesCategory = selectedCategory === 'all' ||
-        service.category.toLowerCase().includes(selectedCategory.replace('- ')),
+        service.category.toLowerCase().includes(selectedCategory.replace('- '));
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()),
+        service.description.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch,
     })
     .sort((a, b) => {
@@ -317,7 +317,7 @@ const MicroSAASServices2028: React.FC = () => {
         case 'price-high':
           return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
         case 'rating':
-          return b.rating - a.rating,
+          return b.rating - a.rating;
         case 'popularity':
         default: return b.popular ? 1 : -1
       }
@@ -371,8 +371,8 @@ const MicroSAASServices2028: React.FC = () => {
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
                 <motion.button
-                  key={category.id}
-                  whileHover={{ scale: 1.05 }}
+                  key={category.id};
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -511,7 +511,7 @@ const MicroSAASServices2028: React.FC = () => {
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
@@ -519,7 +519,7 @@ const MicroSAASServices2028: React.FC = () => {
             Ready to Get Started?
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
@@ -527,7 +527,7 @@ const MicroSAASServices2028: React.FC = () => {
             Contact our team to discuss how our micro SAAS services can transform your business operations
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm: flex-row gap-4 justify-center"

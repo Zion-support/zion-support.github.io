@@ -11,31 +11,31 @@ const mockPost = {
     createdAt: "2025-04-01T12:00:00Z",updatedAt: "2025-04-01T12:00:00Z",upvotes: 48,downvotes: 2,replyCount: 12,isAnswered: true,isFeatured: true
 };
 export default function EditPostPage() {
-    const { postId } = useParams(),
-    const navigate = useNavigate(),
-    const { toast } = useToast(),
-    const { user } = useAuth(),
-    const [post, setPost] = useState(mockPost),
-    const [isLoading, setIsLoading] = useState(true),
+    const { postId } = useParams();
+    const navigate = useNavigate();
+    const { toast } = useToast();
+    const { user } = useAuth();
+    const [post, setPost] = useState(mockPost);
+    const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         // In a real app, we would fetch the post data here
         // For now, we'll just use the mock data
-        setIsLoading(false),
+        setIsLoading(false);
     }, [postId]),
     if (isLoading) {
         return (<div className="container py-8">
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
-        </div>),
-    }
+        </div>);
+    };
     if (!post) {
         return (<div className="container py-8">
           <h1>Post not found</h1>
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
-        </div>),
+        </div>);
     }
     // Check if the user is the author or an admin
     const isAuthor = user?.id === post.authorId;
@@ -48,7 +48,7 @@ export default function EditPostPage() {
             <Link to={`/community/post/${postId}`}>Back to Post</Link>
           </Button>
         </div>);
-    }
+    };
     const initialValues = {
         title: post.title,content: post.content,categoryId: post.categoryId,tags: post.tags.join(", ")
     },
@@ -60,7 +60,7 @@ export default function EditPostPage() {
                 title: "Post updated",description: "Your post has been updated successfully"
             });
             // Redirect back to the post
-            navigate(`/community/post/${postId}`),
+            navigate(`/community/post/${postId}`);
         }
         catch (error) {
             toast({
@@ -69,7 +69,7 @@ export default function EditPostPage() {
         }
     },
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
-        ,
+        ;
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">

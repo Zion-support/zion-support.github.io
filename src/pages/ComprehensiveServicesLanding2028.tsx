@@ -22,8 +22,8 @@ import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from "../data/comprehensiveITInf
 import { comprehensivePricingGuide2028 } from "../data/comprehensivePricingGuide2028";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028";
 const ComprehensiveServicesLanding2028: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [activeTab, setActiveTab] = useState('ai');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const serviceCategories = [
     {
@@ -31,30 +31,30 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
     };
     {
       id: 'infrastructure',name: 'IT Infrastructure',description: 'Next-generation infrastructure solutions for modern businesses',icon: Server,services: COMPREHENSIVE_IT_INFRASTRUCTURE_2028,color: 'from-green-600 to-emerald-600',bgColor: 'bg-green-500/10',borderColor: 'border-green-500/30'
-    };
+    },
     {
       id: 'saas',name: 'Micro SAAS',description: 'Innovative micro SAAS solutions for every business need',icon: Cloud,services: INNOVATIVE_MICRO_SAAS_SERVICES_2028,color: 'from-purple-600 to-pink-600',bgColor: 'bg-purple-500/10',borderColor: 'border-purple-500/30'
     }
   ];
-  const activeServices = serviceCategories.find(cat => cat.id === activeTab)?.services || [],
+  const activeServices = serviceCategories.find(cat => cat.id === activeTab)?.services || [];
   const filteredServices = activeServices.filter(service =>
     service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
     service.category.toLowerCase().includes(searchTerm.toLowerCase())
-  ),
+  );
 
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5
       }
     }
@@ -128,7 +128,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -185,7 +185,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
           >
             {filteredServices.map((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.id};
                 variants={itemVariants}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
               >
@@ -252,7 +252,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -270,7 +270,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
             {comprehensivePricingGuide2028.map((item, index) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
@@ -327,7 +327,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -352,14 +352,14 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
               };
               {
                 icon: TrendingUp,title: "Proven ROI",description: "See measurable results within 90 days with our data-driven approach",color: "from-pink-600 to-red-600"
-              };
+              },
               {
                 icon: Shield,title: "Enterprise Security",description: "Bank-grade security and compliance for your peace of mind",color: "from-red-600 to-orange-600"
               }
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -380,7 +380,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

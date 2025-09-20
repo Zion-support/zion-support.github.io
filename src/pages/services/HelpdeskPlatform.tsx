@@ -40,7 +40,7 @@ export default function HelpdeskPlatform() {
     };
     {
       icon: BarChart3,title: "Performance Analytics",description: "Comprehensive insights into support metrics and customer satisfaction."
-    };
+    },
     {
       icon: Shield,title: "Knowledge Management",description: "Centralized knowledge base with AI-powered search and suggestions."
     }
@@ -69,7 +69,7 @@ export default function HelpdeskPlatform() {
     };
     {
       channel: "Self-Service",description: "Knowledge base and FAQ automation",icon: Search
-    };
+    },
     {
       channel: "Mobile Support",description: "Mobile-optimized support experience",icon: Globe
     }
@@ -128,14 +128,14 @@ export default function HelpdeskPlatform() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300"
               >
@@ -150,7 +150,7 @@ export default function HelpdeskPlatform() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -168,7 +168,7 @@ export default function HelpdeskPlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-orange-400/30 transition-all duration-300 hover:transform hover:scale-105"
@@ -188,7 +188,7 @@ export default function HelpdeskPlatform() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -209,7 +209,7 @@ export default function HelpdeskPlatform() {
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -20 }};
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
@@ -254,7 +254,7 @@ export default function HelpdeskPlatform() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -272,7 +272,7 @@ export default function HelpdeskPlatform() {
             {supportChannels.map((channel, index) => (
               <motion.div
                 key={channel.channel}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-orange-400/30 transition-all duration-300"
@@ -294,7 +294,7 @@ export default function HelpdeskPlatform() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -312,7 +312,7 @@ export default function HelpdeskPlatform() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-orange-400/30 transition-all duration-300"
@@ -334,7 +334,7 @@ export default function HelpdeskPlatform() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 p-12 rounded-2xl border border-orange-400/20 text-center"
@@ -348,14 +348,14 @@ export default function HelpdeskPlatform() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover: bg-orange-400/10 transition-all duration-300"
               >

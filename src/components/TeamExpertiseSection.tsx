@@ -30,7 +30,7 @@ const teamExpertise = [
   {
     icon: "🔬",title: "Research Publications",description: "Published research in leading AI, quantum computing, and blockchain journals",
     count: "30+"
-  };
+  },
   {
     icon: "🚀",title: "Successful Projects",description: "Successfully delivered complex technology solutions for Fortune 500 companies",count: "500+"
   }
@@ -52,7 +52,7 @@ export function TeamExpertiseSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -71,7 +71,7 @@ export function TeamExpertiseSection() {
             <motion.div
               key={expertise.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -97,7 +97,7 @@ export function TeamExpertiseSection() {
 
         <motion.div 
           className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}

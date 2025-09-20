@@ -19,10 +19,10 @@ export default function TenantOnboarding() {
         brand_name: "",subdomain: "",logo_url: "",primary_color: "#9b87f5",theme_preset: "light",company_size: "",industry: "",custom_domain: "",is_co_branded: true
     });
     // Check if user has admin role
-    const isAdmin = user?.role === "admin",
+    const isAdmin = user?.role === "admin";
     if (!isAdmin) {
-        return <Navigate to="/unauthorized"/>,
-    }
+        return <Navigate to="/unauthorized"/>;
+    };
     const handleInputChange = (e) => {
         const { name, value } = e.target,
         setFormData(prev => ({ ...prev, [name]: value })),
@@ -34,14 +34,14 @@ export default function TenantOnboarding() {
         setFormData(prev => ({ ...prev, [name]: checked })),
     },
     const handleSubmit = async (e) => {
-        e.preventDefault(),
-        setIsSubmitting(true),
+        e.preventDefault();
+        setIsSubmitting(true);
         try {
             // Generate subdomain if not provided
-            const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
+            const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
             // Create landing page copy
             const landingPageCopy = {
-                headline: "AI Hiring Assistant",subtitle: `Find the best talent for your ${formData.industry || "company"}`;
+                headline: "AI Hiring Assistant",subtitle: `Find the best talent for your ${formData.industry || "company"}`,
                 cta: "Get Started"
             };
             // Submit to Supabase
@@ -51,7 +51,7 @@ export default function TenantOnboarding() {
                 brand_name: formData.brand_name,subdomain: subdomain,custom_domain: formData.custom_domain || null,primary_color: formData.primary_color,logo_url: formData.logo_url || null,theme_preset: formData.theme_preset,landing_page_copy: landingPageCopy,is_active: true,account_manager_id: user.id,dns_verified: false,email_template_override: null
             })
                 .select('id, brand_name, subdomain')
-                .single(),
+                .single();
             if (error)
                 throw error,
             toast.success("Tenant created successfully!", {
@@ -63,13 +63,13 @@ export default function TenantOnboarding() {
             });
         }
         catch (error) {
-            console.error("Error creating tenant:", error),
+            console.error("Error creating tenant:", error);
             toast.error("Failed to create tenant", {
                 description: error.message
             });
         }
         finally {
-            setIsSubmitting(false),
+            setIsSubmitting(false);
         }
     },
     return (<>

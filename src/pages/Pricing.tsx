@@ -42,18 +42,18 @@ export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState<string>('pro');
   const pricingPlans = [
     {
-      name: 'Starter',description: 'Perfect for small businesses and startups',price: { monthly: 299, annual: 2990 };
+      name: 'Starter',description: 'Perfect for small businesses and startups',price: { monthly: 299, annual: 2990 },
       features: [
-        'AI-powered business intelligence dashboardBasic cloud infrastructure setup';
+        'AI-powered business intelligence dashboardBasic cloud infrastructure setup',
         'Email supportMonthly reports',
         'Up to 5 usersBasic integrations'
       ],
       icon: Rocket,color: 'from-blue-500 to-cyan-500',popular: false,cta: 'Get Started',link: '/contact'
     };
     {
-      name: 'Professional',description: 'Ideal for growing businesses and teams',price: { monthly: 799, annual: 7990 };
+      name: 'Professional',description: 'Ideal for growing businesses and teams',price: { monthly: 799, annual: 7990 },
       features: [
-        'Everything in StarterAdvanced AI analytics and insights';
+        'Everything in StarterAdvanced AI analytics and insights',
         'Custom dashboard developmentPriority support',
         'Up to 25 usersAdvanced integrations',
         'Custom reportingTraining sessions'
@@ -61,9 +61,9 @@ export default function Pricing() {
       icon: Building,color: 'from-purple-500 to-pink-500',popular: true,cta: 'Get Started',link: '/contact'
     };
     {
-      name: 'Enterprise',description: 'For large organizations with complex needs',price: { monthly: 1999, annual: 19990 };
+      name: 'Enterprise',description: 'For large organizations with complex needs',price: { monthly: 1999, annual: 19990 },
       features: [
-        'Everything in ProfessionalCustom AI model development';
+        'Everything in ProfessionalCustom AI model development',
         'Dedicated account manager24/7 priority support',
         'Unlimited usersCustom integrations',
         'White-label solutionsOn-site training',
@@ -75,28 +75,28 @@ export default function Pricing() {
   const servicePackages = [
     {
       title: 'AI & Machine Learning',description: 'Custom AI solutions and ML model development',startingPrice: 5000,icon: Cpu,color: 'from-blue-500 to-cyan-500',features: [
-        'Custom AI model developmentData preprocessing and cleaning';
+        'Custom AI model developmentData preprocessing and cleaning',
         'Model training and optimizationAPI integration and deployment',
         'Ongoing model maintenance'
       ]
     },
     {
       title: 'Cloud Infrastructure',description: 'Scalable cloud solutions and migration services',startingPrice: 3000,icon: Server,color: 'from-green-500 to-emerald-500',features: [
-        'Cloud architecture designMigration planning and execution';
+        'Cloud architecture designMigration planning and execution',
         'Security and compliance setupPerformance optimization',
         '24/7 monitoring and support'
       ]
     },
     {
       title: 'Digital Twin Solutions',description: 'Advanced digital twin technology implementation',startingPrice: 10000,icon: Target,color: 'from-purple-500 to-pink-500',features: [
-        '3D modeling and visualizationReal-time data integration';
+        '3D modeling and visualizationReal-time data integration',
         'Predictive analyticsIoT device connectivity',
         'Custom dashboard development'
       ]
     },
     {
       title: 'Data Analytics',description: 'Comprehensive data analysis and insights',startingPrice: 2500,icon: Database,color: 'from-orange-500 to-red-500',features: [
-        'Data strategy and planningETL pipeline development';
+        'Data strategy and planningETL pipeline development',
         'Advanced analytics and reportingData visualization',
         'Business intelligence dashboards'
       ]
@@ -112,7 +112,7 @@ export default function Pricing() {
     };
     {
       title: 'Integration Requirements',description: 'Complex integrations with existing systems affect pricing',icon: Server,color: 'from-purple-500 to-pink-500'
-    };
+    },
     {
       title: 'Support and Maintenance',description: 'Ongoing support and maintenance packages vary by level',icon: Shield,color: 'from-orange-500 to-red-500'
     }
@@ -128,7 +128,7 @@ export default function Pricing() {
     };
     {
       title: 'Custom Solutions',description: 'Tailored packages for unique requirements',icon: Target
-    };
+    },
     {
       title: '24/7 Support',description: 'Round-the-clock assistance when you need it',icon: Users
     }
@@ -209,7 +209,7 @@ export default function Pricing() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -390,7 +390,7 @@ export default function Pricing() {
               };
               {
                 title: 'On-Site Training',description: 'Comprehensive training programs at your location',icon: Award,color: 'from-indigo-500 to-purple-500'
-              };
+              },
               {
                 title: 'Custom Integrations',description: 'Seamless integration with your existing systems',icon: Server,color: 'from-cyan-500 to-blue-500'
               }
@@ -415,7 +415,7 @@ export default function Pricing() {
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -433,7 +433,7 @@ export default function Pricing() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -454,7 +454,7 @@ export default function Pricing() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -475,7 +475,7 @@ export default function Pricing() {
               },
               {
                 question: 'Do you offer custom pricing for enterprise clients?',answer: 'Absolutely! We work with enterprise clients to create custom pricing plans that meet their specific needs and requirements.'
-              };
+              },
               {
                 question: 'What payment methods do you accept?',answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.'
               },
@@ -485,7 +485,7 @@ export default function Pricing() {
             ].map((faq, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -503,7 +503,7 @@ export default function Pricing() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

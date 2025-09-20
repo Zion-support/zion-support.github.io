@@ -16,9 +16,9 @@ export function generateSearchSuggestions() {
     "Digital Transformation",
     "Enterprise Solutions",
     "Startup Services",
-    "Consulting",
+    "Consulting";
     "Training";
-    "Support";
+    "Support",
     "Maintenance"
   ];
 }
@@ -53,7 +53,7 @@ export const marketplaceItems = [
 // Marketplace filters configuration
 export const marketplaceFilters = {
   productTypes: [
-    "AI Services";
+    "AI Services",
     "Cloud Computing", 
     "Cybersecurity",
     "Micro SAAS",
@@ -75,7 +75,7 @@ export const marketplaceFilters = {
     "Maintenance"
   ],
   locations: [
-    "Global";
+    "Global",
     "North America",
     "Europe",
     "Asia Pacific",
@@ -84,7 +84,7 @@ export const marketplaceFilters = {
     "Africa"
   ],
   availability: [
-    "Available";
+    "Available",
     "Coming Soon",
     "Limited Availability",
     "Custom Quote Required"

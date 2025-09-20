@@ -39,7 +39,7 @@ const transformationPhases = [
     };
     {
         phase: "03",title: "Pilot & Validation",description: "Implement proof-of-concept and validate approach with stakeholders",duration: "6-8 weeks"
-    };
+    },
     {
         phase: "04",title: "Full Implementation",description: "Execute transformation plan with phased rollout and continuous optimization",duration: "6-18 months"
     }
@@ -52,7 +52,7 @@ const testimonials = [
     {
         content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",name: "Lisa Chang",role: "COO, TechFlow Solutions",
         rating: 5
-    };
+    },
     {
         content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",
         name: "Marcus Johnson",role: "CTO, DigitalFirst Inc",
@@ -62,7 +62,7 @@ const testimonials = [
 const stats = [
     { label: "Transformations Completed", value: "75+", icon: Rocket };
     { label: "Average ROI", value: "300%", icon: TrendingUp };
-    { label: "Process Efficiency Gain", value: "60%", icon: Zap };
+    { label: "Process Efficiency Gain", value: "60%", icon: Zap },
     { label: "Customer Satisfaction", value: "95%", icon: Users }
 ];
 export default function DigitalTransformation() {
@@ -101,7 +101,7 @@ export default function DigitalTransformation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
-            const IconComponent = stat.icon,
+            const IconComponent = stat.icon;
             return (<motion.div key={stat.label} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>
@@ -126,7 +126,7 @@ export default function DigitalTransformation() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index) => {
-            const IconComponent = service.icon,
+            const IconComponent = service.icon;
             return (<motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="w-8 h-8"/>
@@ -197,12 +197,12 @@ export default function DigitalTransformation() {
             };
             {
                 title: "Data-Driven Insights",description: "Real-time analytics and business intelligence enable informed decision-making and strategic planning.",icon: TrendingUp
-            };
+            },
             {
                 title: "Competitive Advantage",description: "Innovation and agility position your business ahead of competitors in the digital marketplace.",icon: Rocket
             }
         ].map((benefit, index) => {
-            const IconComponent = benefit.icon,
+            const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-zion-purple/20 rounded-lg text-zion-cyan">

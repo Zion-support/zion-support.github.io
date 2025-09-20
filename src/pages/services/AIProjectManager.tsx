@@ -19,7 +19,7 @@ export default function AIProjectManager() {
     };
     {
       title: "Intelligent Communication",description: "AI-powered notifications and updates ensure stakeholders are always informed at the right time",icon: Zap,color: "from-indigo-500 to-blue-500"
-    };
+    },
     {
       title: "Cross-Platform Integration",description: "Seamlessly integrates with existing tools like Jira, Asana, Slack, and Microsoft Teams",
       icon: Globe,color: "from-teal-500 to-cyan-500"
@@ -28,7 +28,7 @@ export default function AIProjectManager() {
   const pricingPlans = [
     {
       name: "Starter",price: "$29",period: "/month",description: "Perfect for small teams and startups",features: [
-        "Up to 5 team members";
+        "Up to 5 team members",
         "Basic AI task prioritization",
         "Project templates",
         "Email support",
@@ -38,7 +38,7 @@ export default function AIProjectManager() {
     };
     {
       name: "Professional",price: "$79",period: "/month",description: "Ideal for growing businesses",features: [
-        "Up to 25 team members";
+        "Up to 25 team members",
         "Advanced AI analytics",
         "Custom workflows",
         "Priority support",
@@ -49,7 +49,7 @@ export default function AIProjectManager() {
     };
     {
       name: "Enterprise",price: "$199",period: "/month",description: "For large organizations",features: [
-        "Unlimited team members";
+        "Unlimited team members",
         "Custom AI models",
         "White-label solution",
         "Dedicated support",
@@ -65,7 +65,7 @@ export default function AIProjectManager() {
     };
     {
       title: "50% Better Resource Utilization",description: "Smart resource allocation maximizes team productivity",icon: TrendingUp,metric: "50%"
-    };
+    },
     {
       title: "90% Risk Reduction",description: "Predictive analytics prevent issues before they occur",icon: Shield,metric: "90%"
     }
@@ -113,7 +113,7 @@ export default function AIProjectManager() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -131,10 +131,10 @@ export default function AIProjectManager() {
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -153,7 +153,7 @@ export default function AIProjectManager() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -171,7 +171,7 @@ export default function AIProjectManager() {
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -193,7 +193,7 @@ export default function AIProjectManager() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -213,10 +213,10 @@ export default function AIProjectManager() {
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
                 }`}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 {plan.popular && (
@@ -262,7 +262,7 @@ export default function AIProjectManager() {
       <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}

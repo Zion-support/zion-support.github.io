@@ -10,49 +10,49 @@ export function HeroSection() {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,offset: ["start start", "end start"]
-    }),
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]),
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]),
+    });
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
     
     const containerVariants = {
-        hidden: { opacity: 0 };
-        visible: {
-            opacity: 1,transition: {
+        hidden: { opacity: 0 },
+        visible: {,
+            opacity: 1,transition: {,
                 staggerChildren: 0.2,delayChildren: 0.1
             }
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 };
-        visible: {
-            opacity: 1,y: 0,transition: {
+        hidden: { y: 30, opacity: 0 },
+        visible: {,
+            opacity: 1,y: 0,transition: {,
                 duration: 0.8,ease: "easeOut"
             }
         }
     };
     const floatingVariants = {
-        animate: {
+        animate: {,
             y: [-15, 15, -15],
             rotate: [0, 5, 0],
-            transition: {
+            transition: {,
                 duration: 4,repeat: Infinity,ease: "easeInOut"
             }
         }
     };
     const pulseVariants = {
-        animate: {
+        animate: {,
             scale: [1, 1.1, 1],
             opacity: [0.5, 0.8, 0.5],
-            transition: {
+            transition: {,
                 duration: 2,repeat: Infinity,ease: "easeInOut"
             }
         }
     };
     const particleVariants = {
-        animate: {
+        animate: {,
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.7, 0.3],
-            transition: {
+            transition: {,
                 duration: 3,repeat: Infinity,ease: "easeInOut"
             }
         }
@@ -186,7 +186,7 @@ export function HeroSection() {
                 {/* Enhanced CTA buttons with better animations and effects */}
                 <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
                     <motion.div 
-                        whileHover={{ scale: 1.05 }} 
+                        whileHover={{ scale: 1.05 }} ;
                         whileTap={{ scale: 0.95 }} 
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >
@@ -200,7 +200,7 @@ export function HeroSection() {
                     </motion.div>
                     
                     <motion.div 
-                        whileHover={{ scale: 1.05 }} 
+                        whileHover={{ scale: 1.05 }} ;
                         whileTap={{ scale: 0.95 }} 
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >

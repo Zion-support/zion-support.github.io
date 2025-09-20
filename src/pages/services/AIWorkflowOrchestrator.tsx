@@ -31,7 +31,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
     {
       icon: BarChart3,title: 'Performance Analytics',description: 'Real-time insights into workflow efficiency, bottlenecks, and optimization opportunities with predictive analytics.',
       price: '$149/month'
-    };
+    },
     {
       icon: Shield,title: 'Compliance & Governance',description: 'Built-in compliance frameworks, audit trails, and role-based access control for enterprise security.',
       price: '$399/month'
@@ -40,7 +40,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',price: '$99',period: '/month',description: 'Perfect for small teams getting started with workflow automation',features: [
-        'Up to 10 workflowsBasic AI process mapping';
+        'Up to 10 workflowsBasic AI process mapping',
         'Standard integrationsEmail support',
         'Basic analytics'
       ],
@@ -48,7 +48,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
     };
     {
       name: 'Professional',price: '$299',period: '/month',description: 'Ideal for growing businesses with complex workflow needs',features: [
-        'Up to 50 workflowsAdvanced AI orchestration';
+        'Up to 50 workflowsAdvanced AI orchestration',
         'Custom integrationsPriority support',
         'Advanced analyticsCompliance features'
       ],
@@ -56,7 +56,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
     };
     {
       name: 'Enterprise',price: '$799',period: '/month',description: 'For large organizations requiring enterprise-grade workflow management',features: [
-        'Unlimited workflowsCustom AI models';
+        'Unlimited workflowsCustom AI models',
         'White-label solution24/7 dedicated support',
         'Custom compliance frameworksAdvanced security features'
       ],
@@ -107,7 +107,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button 
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 <Play className="w-5 h-5" />
@@ -115,7 +115,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
               </motion.button>
               <motion.button 
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 <Settings className="w-5 h-5" />
@@ -128,7 +128,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
         {/* Features Grid */}
         <motion.section 
           className="py-20 px-6"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -148,10 +148,10 @@ const AIWorkflowOrchestrator: React.FC = () => {
                 <motion.div
                   key={feature.title}
                   className="group relative p-6 rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm hover:border-purple-500/40 transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true }};
                   whileHover={{ y: -5, scale: 1.02 }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -182,7 +182,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
         {/* Pricing Section */}
         <motion.section 
           className="py-20 px-6 bg-gradient-to-br from-purple-900/20 via-slate-900/50 to-blue-900/20"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -206,10 +206,10 @@ const AIWorkflowOrchestrator: React.FC = () => {
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/20 to-blue-500/20' 
                       : 'border-purple-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
                   }`}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true }};
                   whileHover={{ y: -5, scale: 1.02 }}
                 >
                   {plan.popular && (
@@ -243,8 +243,8 @@ const AIWorkflowOrchestrator: React.FC = () => {
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                         : 'border border-purple-500/30 text-purple-300 hover:bg-purple-500/10'
-                    }`}
-                    whileHover={{ scale: 1.02 }}
+                    }`};
+                    whileHover={{ scale: 1.02 }};
                     whileTap={{ scale: 0.98 }}
                   >
                     Get Started
@@ -258,7 +258,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
         {/* Benefits Section */}
         <motion.section 
           className="py-20 px-6"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -278,7 +278,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
                 <motion.div
                   key={benefit}
                   className="flex items-start gap-4 p-6 rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-blue-500/10"
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   viewport={{ once: true }}
@@ -296,7 +296,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
         {/* CTA Section */}
         <motion.section 
           className="py-20 px-6 text-center"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -311,7 +311,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button 
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 Start Free Trial
@@ -319,7 +319,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
               </motion.button>
               <motion.button 
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
               >
                 <Users className="w-5 h-5" />

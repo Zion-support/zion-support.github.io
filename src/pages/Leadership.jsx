@@ -7,7 +7,7 @@ const Leadership = () => {
             name: "Dr. Sarah Chen",role: "Chief Executive Officer",image: "/leadership/sarah-chen.jpg",bio: "Dr. Sarah Chen is a visionary leader with over 15 years of experience in technology innovation and business transformation. She has led multiple successful startups and has been instrumental in bringing AI and quantum computing solutions to market.",experience: "15+ years in technology leadership",education: "Ph.D. in Computer Science, Stanford University",
             expertise: ["Strategic Leadership", "AI Strategy", "Business Development", "Innovation Management"],
             achievements: [
-                "Led company to 300% growth in 3 years";
+                "Led company to 300% growth in 3 years",
                 "Named Top 50 Women in Tech by Forbes",
                 "Published 25+ research papers",
                 "Advisor to 3 successful tech startups"
@@ -19,7 +19,7 @@ const Leadership = () => {
             experience: "18+ years in technology architecture",education: "M.S. in Computer Science, MIT",
             expertise: ["AI/ML", "Cloud Architecture", "Technology Strategy", "System Design"],
             achievements: [
-                "Architected solutions for 50+ enterprise clients";
+                "Architected solutions for 50+ enterprise clients",
                 "Led cloud migration projects worth $100M+",
                 "Named Top 100 Technology Leaders",
                 "Speaker at major tech conferences"
@@ -31,7 +31,7 @@ const Leadership = () => {
             experience: "20+ years in research and development",education: "Ph.D. in Quantum Physics, Caltech",
             expertise: ["Quantum Computing", "AI Research", "Algorithm Development", "Research Strategy"],
             achievements: [
-                "Published 100+ research papers";
+                "Published 100+ research papers",
                 "Holds 15 patents in quantum computing",
                 "Led $50M research initiatives",
                 "Fellow of the American Physical Society"
@@ -42,7 +42,7 @@ const Leadership = () => {
             name: "David Kim",role: "Chief Security Officer",image: "/leadership/david-kim.jpg",bio: "David Kim is a cybersecurity expert with extensive experience in threat detection and security architecture. He has helped organizations build robust security frameworks and maintain compliance with industry standards.",experience: "16+ years in cybersecurity",education: "M.S. in Information Security, Carnegie Mellon",
             expertise: ["Cybersecurity", "Threat Intelligence", "Security Architecture", "Compliance"],
             achievements: [
-                "Secured 100+ enterprise organizations";
+                "Secured 100+ enterprise organizations",
                 "Zero security breaches in 10 years",
                 "Expert witness in cybersecurity cases",
                 "Author of 3 cybersecurity books"
@@ -53,7 +53,7 @@ const Leadership = () => {
             name: "Lisa Thompson",role: "VP of Engineering",image: "/leadership/lisa-thompson.jpg",bio: "Lisa Thompson is an engineering leader focused on building scalable solutions and developing high-performing teams. She has led engineering organizations of 100+ developers and delivered complex projects on time and budget.",experience: "14+ years in software engineering",education: "B.S. in Computer Science, UC Berkeley",
             expertise: ["Software Engineering", "Team Leadership", "System Architecture", "Agile Development"],
             achievements: [
-                "Led teams of 100+ engineers";
+                "Led teams of 100+ engineers",
                 "Delivered 50+ major projects",
                 "Reduced deployment time by 80%",
                 "Mentored 25+ engineering leaders"
@@ -64,7 +64,7 @@ const Leadership = () => {
             name: "James Wilson",role: "VP of Business Development",image: "/leadership/james-wilson.jpg",bio: "James Wilson is a business strategist with expertise in partnerships and market expansion. He has helped companies enter new markets and build strategic relationships that drive growth and innovation.",experience: "12+ years in business development",education: "MBA, Harvard Business School",
             expertise: ["Business Strategy", "Partnerships", "Market Analysis", "Growth Strategy"],
             achievements: [
-                "Generated $200M+ in new business";
+                "Generated $200M+ in new business",
                 "Established 50+ strategic partnerships",
                 "Expanded to 15 new markets",
                 "Led 3 successful market entries"
@@ -83,7 +83,7 @@ const Leadership = () => {
         };
         {
             title: "Collaborative Culture",description: "We believe in the power of teamwork and diverse perspectives to solve complex challenges.",icon: Users
-        };
+        },
         {
             title: "Client Success",description: "Our success is measured by the success of our clients and the impact we create together.",icon: Target
         }
@@ -91,7 +91,7 @@ const Leadership = () => {
     const vision = {
         title: "Our Vision",description: "To be the leading force in technological innovation, transforming businesses and society through cutting-edge AI, quantum computing, and sustainable technology solutions.",
         goals: [
-            "Advance AI consciousness and autonomous systems";
+            "Advance AI consciousness and autonomous systems",
             "Democratize quantum computing access",
             "Create sustainable technology solutions",
             "Build the most trusted technology partner network"

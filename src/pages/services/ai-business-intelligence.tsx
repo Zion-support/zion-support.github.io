@@ -39,7 +39,7 @@ export default function AIBusinessIntelligence() {
     };
     {
       icon: BarChart3,title: 'Real-time Analytics',description: 'Instant insights and dashboards updated in real-time for immediate decision-making'
-    };
+    },
     {
       icon: TrendingUp,title: 'Predictive Analytics',description: 'Forecast trends, identify opportunities, and predict potential risks before they occur'
     },
@@ -87,7 +87,7 @@ export default function AIBusinessIntelligence() {
     };
     {
       step: 3,title: 'Implementation',description: 'Deploy AI-powered BI solutions with minimal disruption to existing operations'
-    };
+    },
     {
       step: 4,title: 'Training & Optimization',description: 'Train your team and continuously optimize the system for maximum performance'
     }
@@ -127,14 +127,14 @@ export default function AIBusinessIntelligence() {
             
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Get Started
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
@@ -149,7 +149,7 @@ export default function AIBusinessIntelligence() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -165,7 +165,7 @@ export default function AIBusinessIntelligence() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 group"
@@ -186,7 +186,7 @@ export default function AIBusinessIntelligence() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -200,7 +200,7 @@ export default function AIBusinessIntelligence() {
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -20 }};
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex items-center space-x-3"
@@ -213,7 +213,7 @@ export default function AIBusinessIntelligence() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="relative"
@@ -234,7 +234,7 @@ export default function AIBusinessIntelligence() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -250,7 +250,7 @@ export default function AIBusinessIntelligence() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
@@ -279,7 +279,7 @@ export default function AIBusinessIntelligence() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -295,7 +295,7 @@ export default function AIBusinessIntelligence() {
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center p-4 bg-slate-700/50 rounded-lg border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300"
@@ -314,7 +314,7 @@ export default function AIBusinessIntelligence() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -330,7 +330,7 @@ export default function AIBusinessIntelligence() {
             {process.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center relative"
@@ -354,7 +354,7 @@ export default function AIBusinessIntelligence() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"

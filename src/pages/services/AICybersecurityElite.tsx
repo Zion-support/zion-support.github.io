@@ -37,7 +37,7 @@ const AICybersecurityElite: React.FC = () => {
     };
     {
       icon: Zap,title: "Automated Incident Response",description: "Instant threat containment and automated remediation workflows to minimize damage"
-    };
+    },
     {
       icon: Users,title: "Identity & Access Management",description: "Multi-factor authentication, biometric verification, and role-based access control"
     },
@@ -49,7 +49,7 @@ const AICybersecurityElite: React.FC = () => {
     {
       name: "Essential",price: "$3,500",
       period: "/month",description: "Perfect for small businesses and startups",features: [
-        "Basic AI threat detection";
+        "Basic AI threat detection",
         "Firewall & intrusion prevention",
         "Email security & spam filtering",
         "Vulnerability scanning",
@@ -60,7 +60,7 @@ const AICybersecurityElite: React.FC = () => {
     {
       name: "Professional",price: "$7,500",
       period: "/month",description: "Ideal for growing businesses and teams",features: [
-        "Advanced AI threat detection";
+        "Advanced AI threat detection",
         "Behavioral analytics",
         "Advanced endpoint protection",
         "Threat intelligence feeds",
@@ -73,7 +73,7 @@ const AICybersecurityElite: React.FC = () => {
     {
       name: "Enterprise",price: "$18,000",
       period: "/month",description: "For large organizations with complex needs",features: [
-        "Full AI cybersecurity suite";
+        "Full AI cybersecurity suite",
         "Custom threat modeling",
         "Advanced forensics",
         "Dedicated security team",
@@ -90,7 +90,7 @@ const AICybersecurityElite: React.FC = () => {
     };
     {
       title: "Behavioral Analytics",description: "Machine learning algorithms that detect anomalous behavior patterns and flag potential security risks"
-    };
+    },
     {
       title: "Cloud Security",description: "Comprehensive cloud security including container security, serverless protection, and multi-cloud management"
     },
@@ -156,7 +156,7 @@ const AICybersecurityElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -175,7 +175,7 @@ const AICybersecurityElite: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -196,7 +196,7 @@ const AICybersecurityElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -215,7 +215,7 @@ const AICybersecurityElite: React.FC = () => {
             {securityFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -233,7 +233,7 @@ const AICybersecurityElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -252,7 +252,7 @@ const AICybersecurityElite: React.FC = () => {
             {complianceStandards.map((standard, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -272,7 +272,7 @@ const AICybersecurityElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -291,7 +291,7 @@ const AICybersecurityElite: React.FC = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -343,7 +343,7 @@ const AICybersecurityElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

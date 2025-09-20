@@ -13,7 +13,7 @@ export default function Accessibility() {
     {
       icon: <Ear className="w-8 h-8" />,title: 'Auditory Accessibility',description: 'Captions, transcripts, and audio alternatives for multimedia content',
       features: [
-        'Closed captions for videosAudio descriptions for visual content';
+        'Closed captions for videosAudio descriptions for visual content',
         'Transcripts for audio contentVolume controls and audio indicators',
         'Visual alerts and notifications'
       ]
@@ -21,7 +21,7 @@ export default function Accessibility() {
     {
       icon: <Hand className="w-8 h-8" />,title: 'Motor Accessibility',description: 'Keyboard navigation, voice control, and assistive technology support',
       features: [
-        'Full keyboard navigationVoice control compatibility';
+        'Full keyboard navigationVoice control compatibility',
         'Switch device supportCustomizable click targets',
         'Gesture alternativesTiming adjustments'
       ]
@@ -29,7 +29,7 @@ export default function Accessibility() {
     {
       icon: <Brain className="w-8 h-8" />,title: 'Cognitive Accessibility',description: 'Clear navigation, consistent design, and simplified interfaces',
       features: [
-        'Clear and simple languageConsistent navigation patterns';
+        'Clear and simple languageConsistent navigation patterns',
         'Logical content structureError prevention and recovery',
         'Help and support resourcesMinimal distractions'
       ]
@@ -45,7 +45,7 @@ export default function Accessibility() {
     };
     {
       name: 'ADA Title III',description: 'Americans with Disabilities Act accessibility requirements',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
-    };
+    },
     {
       name: 'EN 301 549',description: 'European accessibility requirements for ICT products and services',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
     }
@@ -62,7 +62,7 @@ export default function Accessibility() {
     {
       name: 'Switch Devices',description: 'Single switch, multiple switch, and scanning software support',
       compatibility: 'Full'
-    };
+    },
     {
       name: 'Magnification',description: 'ZoomText, Windows Magnifier, and other magnification software',
       compatibility: 'Full'
@@ -77,7 +77,7 @@ export default function Accessibility() {
     };
     {
       title: 'Text Size Adjuster',description: 'Increase or decrease text size for better readability',link: '/text-size',icon: <Globe className="w-6 h-6" />
-    };
+    },
     {
       title: 'Keyboard Shortcuts',description: 'Complete list of keyboard navigation shortcuts',link: '/keyboard-shortcuts',icon: <Hand className="w-6 h-6" />
     }

@@ -57,7 +57,7 @@ export function EnhancedFooter() {
         { name: "Micro SaaS", href: "/micro-saas", icon: ShoppingCart };
         { name: "2025 Services", href: "/comprehensive-services-showcase-2025", icon: Star };
         { name: "2026 Services", href: "/services2026", icon: TrendingUp };
-        { name: "2027 Services", href: "/services2027", icon: Rocket };
+        { name: "2027 Services", href: "/services2027", icon: Rocket },
         { name: "2029 Services", href: "/innovative-services-showcase-2029", icon: Sparkles }
       ]
     };
@@ -67,7 +67,7 @@ export function EnhancedFooter() {
         { name: "Healthcare", href: "/solutions/healthcare", icon: Heart };
         { name: "Finance", href: "/solutions/finance", icon: DollarSign };
         { name: "Manufacturing", href: "/solutions/manufacturing", icon: Factory };
-        { name: "Retail", href: "/solutions/retail", icon: ShoppingBag };
+        { name: "Retail", href: "/solutions/retail", icon: ShoppingBag },
         { name: "Education", href: "/solutions/education", icon: GraduationCap }
       ]
     };
@@ -77,7 +77,7 @@ export function EnhancedFooter() {
         { name: "Our Team", href: "/team", icon: Users };
         { name: "Careers", href: "/careers", icon: Star };
         { name: "Partners", href: "/partners", icon: Handshake };
-        { name: "News", href: "/news", icon: Newspaper };
+        { name: "News", href: "/news", icon: Newspaper },
         { name: "Blog", href: "/blog", icon: BookOpen }
       ]
     };
@@ -87,7 +87,7 @@ export function EnhancedFooter() {
         { name: "API Reference", href: "/api", icon: Code };
         { name: "Developer Portal", href: "/developers", icon: Terminal };
         { name: "White Papers", href: "/white-papers", icon: FileText };
-        { name: "Webinars", href: "/webinars", icon: Video };
+        { name: "Webinars", href: "/webinars", icon: Video },
         { name: "Training", href: "/training", icon: GraduationCap }
       ]
     };
@@ -97,7 +97,7 @@ export function EnhancedFooter() {
         { name: "Contact Support", href: "/contact", icon: MessageCircle };
         { name: "Status Page", href: "/status", icon: Activity };
         { name: "Request Quote", href: "/request-quote", icon: DollarSign };
-        { name: "FAQ", href: "/faq", icon: HelpCircle };
+        { name: "FAQ", href: "/faq", icon: HelpCircle },
         { name: "Live Chat", href: "/chat", icon: MessageCircle }
       ]
     }
@@ -107,7 +107,7 @@ export function EnhancedFooter() {
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter, color: "hover:text-blue-400" };
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook, color: "hover:text-blue-600" };
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram, color: "hover:text-pink-400" };
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github, color: "hover:text-gray-400" };
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github, color: "hover:text-gray-400" },
     { name: "YouTube", href: "https://youtube.com/@ziontechgroup", icon: Youtube, color: "hover:text-red-400" }
   ];
   const contactInfo = {
@@ -128,7 +128,7 @@ export function EnhancedFooter() {
           {/* Company info */}
           <div className="lg:col-span-2">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -174,7 +174,7 @@ export function EnhancedFooter() {
           {footerSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
               viewport={{ once: true }}
@@ -192,7 +192,7 @@ export function EnhancedFooter() {
                 {section.links.map((link, linkIndex) => (
                   <motion.li
                     key={link.name}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -20 }};
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: (sectionIndex * 0.1) + (linkIndex * 0.05) }}
                     viewport={{ once: true }}
@@ -218,7 +218,7 @@ export function EnhancedFooter() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Copyright and legal */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -245,7 +245,7 @@ export function EnhancedFooter() {
 
             {/* Social links */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -258,7 +258,7 @@ export function EnhancedFooter() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  initial={{ opacity: 0, scale: 0 }}
+                  initial={{ opacity: 0, scale: 0 }};
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.3 + (index * 0.1) }}
                   viewport={{ once: true }}
@@ -272,7 +272,7 @@ export function EnhancedFooter() {
 
           {/* Newsletter signup */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}

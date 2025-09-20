@@ -5,9 +5,9 @@ import { SEO } from "@/components/SEO";
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from "../../data/revolutionary-2029-cutting-edge-services";
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from "../../data/revolutionary-2029-emerging-tech-services";
 export default function RevolutionaryServicesShowcase2029() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popularity'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
 
   const allServices = [...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES, ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES],
 
@@ -28,15 +28,15 @@ export default function RevolutionaryServicesShowcase2029() {
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory,
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
       case 'price-high':
         return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''));
       case 'rating':
@@ -69,7 +69,7 @@ export default function RevolutionaryServicesShowcase2029() {
       'AI & Blockchain': <Link className="w-5 h-5" />,
       'AI & Metaverse': <Globe className="w-5 h-5" />
     },
-    return iconMap[category] || <Cpu className="w-5 h-5" />,
+    return iconMap[category] || <Cpu className="w-5 h-5" />;
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -97,14 +97,14 @@ export default function RevolutionaryServicesShowcase2029() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
                 Explore Services
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/20 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
               >
@@ -119,7 +119,7 @@ export default function RevolutionaryServicesShowcase2029() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
@@ -128,7 +128,7 @@ export default function RevolutionaryServicesShowcase2029() {
             <div className="text-gray-400">Revolutionary Services</div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center"
@@ -137,7 +137,7 @@ export default function RevolutionaryServicesShowcase2029() {
             <div className="text-gray-400">Technology Categories</div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center"
@@ -146,7 +146,7 @@ export default function RevolutionaryServicesShowcase2029() {
             <div className="text-gray-400">Average Rating</div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-center"
@@ -214,7 +214,7 @@ export default function RevolutionaryServicesShowcase2029() {
           {sortedServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
@@ -340,14 +340,14 @@ export default function RevolutionaryServicesShowcase2029() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
             >
               Schedule a Demo
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-300"
             >

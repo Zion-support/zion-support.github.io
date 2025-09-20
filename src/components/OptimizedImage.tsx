@@ -21,7 +21,7 @@ interface OptimizedImageProps {
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src;
+  src,
   alt,
   width,
   height,
@@ -39,60 +39,60 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   shadow = false,
   hover = false
 }) => {
-  const [imageSrc, setImageSrc] = useState<string>(src),
-  const [isLoading, setIsLoading] = useState(true),
-  const [hasError, setHasError] = useState(false),
-  const [isIntersecting, setIsIntersecting] = useState(priority),
-  const [isLoaded, setIsLoaded] = useState(false),
+  const [imageSrc, setImageSrc] = useState<string>(src);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(priority);
+  const [isLoaded, setIsLoaded] = useState(false);
   
-  const imgRef = useRef<HTMLImageElement>(null),
-  const observerRef = useRef<IntersectionObserver | null>(null),
+  const imgRef = useRef<HTMLImageElement>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (priority || !lazy) {
-      setIsIntersecting(true),
+      setIsIntersecting(true);
       return,
     }
-
+;
     if (!imgRef.current) return,
 
     observerRef.current = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsIntersecting(true),
-          observerRef.current?.disconnect(),
+          setIsIntersecting(true);
+          observerRef.current?.disconnect();
         }
       },
       {
         rootMargin: '50px',threshold: 0.1
       }
     );
-    observerRef.current.observe(imgRef.current),
+    observerRef.current.observe(imgRef.current);
 
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect(),
+        observerRef.current.disconnect();
       }
     },
   }, [priority, lazy]),
 
   // Handle image load
   const handleImageLoad = () => {
-    setIsLoading(false),
-    setIsLoaded(true),
+    setIsLoading(false);
+    setIsLoaded(true);
     onLoad?.(),
   },
 
   // Handle image error
   const handleImageError = () => {
     if (imageSrc !== fallbackSrc) {
-      setImageSrc(fallbackSrc),
-      setHasError(false),
-      setIsLoading(true),
+      setImageSrc(fallbackSrc);
+      setHasError(false);
+      setIsLoading(true);
     } else {
-      setHasError(true),
-      setIsLoading(false),
+      setHasError(true);
+      setIsLoading(false);
       onError?.(new Error(`Failed to load image: ${src}`));
     }
   },
@@ -101,7 +101,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   useEffect(() => {
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect(),
+        observerRef.current.disconnect();
       }
     },
   }, []),
@@ -118,28 +118,28 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       if (url.searchParams.has('quality')) {
         return src,
       }
-      url.searchParams.set('quality', quality.toString()),
-      return url.toString(),
+      url.searchParams.set('quality', quality.toString());
+      return url.toString();
     } catch {
       return src,
     }
-  },
+  };
 
-  const optimizedSrc = getOptimizedSrc(imageSrc),
+  const optimizedSrc = getOptimizedSrc(imageSrc);
 
   // Base classes
   const baseClasses = [
-    'transition-all duration-300',
+    'transition-all duration-300';
     rounded ? 'rounded-lg' : '',
     shadow ? 'shadow-lg' : '',
-    hover ? 'hover: scale-105 hover:shadow-xl' : '';
+    hover ? 'hover: scale-105 hover:shadow-xl' : '',
     objectFit === 'cover' ? 'object-cover' : '',
     objectFit === 'contain' ? 'object-contain' : '',
     objectFit === 'fill' ? 'object-fill' : '',
     objectFit === 'none' ? 'object-none' : '',
     objectFit === 'scale-down' ? 'object-scale-down' : '',
     className
-  ].filter(Boolean).join(' '),
+  ].filter(Boolean).join(' ');
 
   // Loading skeleton
   if (!isIntersecting) {
@@ -152,7 +152,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
         </div>
       </div>
-    ),
+    );
   }
 
   // Error state
@@ -169,7 +169,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       </div>
     )
   }
-
+;
   return (
     <div className="relative" style={{ width, height }}>
       {/* Loading overlay */}
@@ -235,7 +235,7 @@ export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'object
       objectFit="cover"
     />
   ),
-},
+};
 
 export const CardImage: React.FC<OptimizedImageProps> = (props) => (
   <OptimizedImage

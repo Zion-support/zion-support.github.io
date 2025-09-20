@@ -30,7 +30,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
     },
     {
       icon: Workflow,title: "Intelligent Workflow Automation",description: "Automatically design and implement optimized workflows that adapt to changing business conditions and learn from user behavior patterns."
-    };
+    },
     {
       icon: BarChart3,title: "Predictive Performance Analytics",description: "Forecast process performance, resource requirements, and potential issues before they impact your operations using AI-driven predictive modeling."
     },
@@ -66,7 +66,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
     {
       title: "Healthcare & Life Sciences",description: "Optimize patient care workflows, clinical trial processes, and administrative operations for better patient outcomes.",
       icon: Users
-    };
+    },
     {
       title: "Retail & E-commerce",description: "Streamline order fulfillment, inventory management, customer service, and supply chain operations for seamless customer experiences.",
       icon: Globe
@@ -75,7 +75,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
   const pricing = [
     {
       name: "Starter",price: "$799",period: "/month",description: "Perfect for small businesses starting their process optimization journey",features: [
-        "Up to 10 process workflows";
+        "Up to 10 process workflows",
         "Basic AI analysis and recommendations",
         "Standard reporting and dashboards",
         "Email support",
@@ -86,7 +86,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
     {
       name: "Professional",price: "$1,999",
       period: "/month",description: "Ideal for growing companies with complex process optimization needs",features: [
-        "Up to 50 process workflows";
+        "Up to 50 process workflows",
         "Advanced AI optimization algorithms",
         "Real-time monitoring and alerts",
         "Custom dashboards and reports",
@@ -99,7 +99,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
     {
       name: "Enterprise",price: "$4,999",
       period: "/month",description: "Comprehensive solution for large enterprises with complex operations",features: [
-        "Unlimited process workflows";
+        "Unlimited process workflows",
         "Custom AI model training",
         "Advanced analytics and insights",
         "White-label solutions",
@@ -120,7 +120,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
     };
     {
       metric: "Error Reduction",improvement: "90%",description: "Minimal manual errors and rework"
-    };
+    },
     {
       metric: "Productivity Gain",improvement: "30%",description: "Increased employee output and satisfaction"
     }
@@ -169,7 +169,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -187,7 +187,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -208,7 +208,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -226,7 +226,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -244,7 +244,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -262,7 +262,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -285,7 +285,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -303,7 +303,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -352,7 +352,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -370,7 +370,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
             {roi.map((metric, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -389,7 +389,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

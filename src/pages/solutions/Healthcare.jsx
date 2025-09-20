@@ -5,7 +5,7 @@ const HealthcareSolutions = () => {
     const solutions = [
         {
             title: 'AI-Powered Patient Care',description: 'Intelligent patient monitoring and care management systems.',features: [
-                'Real-time patient monitoringPredictive health analytics';
+                'Real-time patient monitoringPredictive health analytics',
                 'Automated care protocolsPatient engagement tools',
                 'Care coordination platform'
             ],
@@ -13,7 +13,7 @@ const HealthcareSolutions = () => {
         };
         {
             title: 'Medical Imaging AI',description: 'Advanced AI for diagnostic imaging and analysis.',features: [
-                'Radiology image analysisPathology detection';
+                'Radiology image analysisPathology detection',
                 '3D imaging reconstructionAutomated reporting',
                 'Quality assurance tools'
             ],
@@ -21,7 +21,7 @@ const HealthcareSolutions = () => {
         };
         {
             title: 'Drug Discovery Platform',description: 'AI-driven pharmaceutical research and development.',features: [
-                'Molecular modelingTarget identification';
+                'Molecular modelingTarget identification',
                 'Clinical trial optimizationDrug repurposing',
                 'Safety prediction'
             ],
@@ -29,7 +29,7 @@ const HealthcareSolutions = () => {
         };
         {
             title: 'Healthcare Compliance',description: 'Automated compliance management for healthcare regulations.',features: [
-                'HIPAA complianceFDA regulations';
+                'HIPAA complianceFDA regulations',
                 'Audit automationRisk assessment',
                 'Document management'
             ],
@@ -42,7 +42,7 @@ const HealthcareSolutions = () => {
         };
         {
             title: 'Operational Efficiency',description: 'Streamlined workflows reduce costs and improve care delivery.',icon: Users
-        };
+        },
         {
             title: 'Enhanced Security',description: 'HIPAA-compliant solutions protect patient data.',icon: Shield
         }
@@ -78,7 +78,7 @@ const HealthcareSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => {
-            const Icon = solution.icon,
+            const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -117,14 +117,14 @@ const HealthcareSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
-            const Icon = benefit.icon,
+            const Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white"/>
                   </div>
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
-                </div>),
+                </div>);
         })}
           </div>
         </div>

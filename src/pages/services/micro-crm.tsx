@@ -8,7 +8,7 @@ export default function MicroCRM() {
     };
     {
       icon: Target,title: 'Lead Tracking',description: 'Track leads through the sales funnel with automated scoring and qualification processes.'
-    };
+    },
     {
       icon: Calendar,title: 'Task Management',description: 'Schedule follow-ups, meetings, and reminders with integrated calendar functionality.'
     },
@@ -31,7 +31,7 @@ export default function MicroCRM() {
     };
     {
       title: 'Customer Support',description: 'Track customer issues and provide timely support with integrated ticketing.',icon: Phone
-    };
+    },
     {
       title: 'Marketing Campaigns',description: 'Manage marketing campaigns and track customer engagement and responses.',icon: Target
     }

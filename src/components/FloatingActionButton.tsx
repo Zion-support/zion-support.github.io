@@ -28,7 +28,7 @@ interface FloatingActionButtonProps {
   showContactActions?: boolean,
   showUtilityActions?: boolean,
 }
-
+;
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   actions = [];
   position = 'bottom-right',
@@ -37,34 +37,34 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   showContactActions = true,
   showUtilityActions = true
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false),
-  const [showScrollButton, setShowScrollButton] = useState(false),
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'),
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
 
   // Detect theme
   useEffect(() => {
     if (theme === 'auto') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light'),
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
       const handleChange = (e: MediaQueryListEvent) => {
         setCurrentTheme(e.matches ? 'dark' : 'light')
       };
-      mediaQuery.addEventListener('change', handleChange),
-      return () => mediaQuery.removeEventListener('change', handleChange),
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
     } else {
-      setCurrentTheme(theme),
+      setCurrentTheme(theme);
     }
   }, [theme]),
 
   // Show scroll to top button when scrolled down
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300),
+      setShowScrollButton(window.scrollY > 300);
     },
 
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),
 
   // Default actions
@@ -83,15 +83,15 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       {
         id: 'phone',icon: Phone,label: 'Call Now',action: () => {
           window.location.href = 'tel:+1234567890'
-        };
+        },
         color: 'bg-green-500 hover:bg-green-600',priority: 'high' as const
       };
       {
         id: 'email',icon: Mail,label: 'Send Email',action: () => {
           window.location.href = 'mailto:info@ziontechgroup.com'
-        };
+        },
         color: 'bg-purple-500 hover:bg-purple-600',priority: 'medium' as const
-      };
+      },
       {
         id: 'location',icon: MapPin,label: 'Get Directions',action: () => {
           window.open('https: //maps.google.com/?q=Zion+Tech+Group_blank')},
@@ -108,10 +108,10 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           } else {
             // Fallback for browsers without share API
-            const url = window.location.href,
+            const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
               // Show success message
-              showNotification('Page URL copied to clipboard!'),
+              showNotification('Page URL copied to clipboard!');
             }),
           }
         },
@@ -125,9 +125,9 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           } else {
             // Fallback for browsers without share API
-            const url = window.location.href,
+            const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
-              showNotification('Page URL copied to clipboard!'),
+              showNotification('Page URL copied to clipboard!');
             }),
           }
         },
@@ -139,16 +139,16 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           const link = document.createElement('a');
           link.href = '/brochure.pdf', // Adjust path as needed
           link.download = 'Zion-Tech-Group-Brochure.pdf',
-          document.body.appendChild(link),
-          link.click(),
+          document.body.appendChild(link);
+          link.click();
           document.body.removeChild(link)
         },
         color: 'bg-teal-500 hover:bg-teal-600',priority: 'low' as const
-      };
+      },
       {
         id: 'print',icon: Printer,label: 'Print Page',action: () => {
           window.print()
-        };
+        },
         color: 'bg-gray-500 hover:bg-gray-600',priority: 'low' as const
       }
     ] : []);
@@ -160,11 +160,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   const sortedActions = defaultActions.sort((a, b) => {
     const priorityOrder = { high: 3, medium: 2, low: 1 };
     return priorityOrder[b.priority] - priorityOrder[a.priority],
-  }),
+  });
 
   // Toggle expansion
   const toggleExpansion = useCallback(() => {
-    setIsExpanded(prev => !prev),
+    setIsExpanded(prev => !prev);
   }, []),
 
   // Scroll to top
@@ -182,7 +182,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     `,
     notification.textContent = message,
     
-    document.body.appendChild(notification),
+    document.body.appendChild(notification);
     
     // Animate in
     setTimeout(() => {
@@ -191,9 +191,9 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     
     // Remove after 3 seconds
     setTimeout(() => {
-      notification.classList.add('translate-x-full'),
+      notification.classList.add('translate-x-full');
       setTimeout(() => {
-        document.body.removeChild(notification),
+        document.body.removeChild(notification);
       }, 300),
     }, 3000),
   }, []),
@@ -202,11 +202,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   const getPositionClasses = () => {
     switch (position) {
       case 'bottom-left':
-        return 'bottom-6 left-6',
+        return 'bottom-6 left-6';
       case 'top-right':
         return 'top-6 right-6',
       case 'top-left':
-        return 'top-6 left-6',
+        return 'top-6 left-6';
       default: return 'bottom-6 right-6'
     }
   };
@@ -214,7 +214,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   const getThemeClasses = () => {
     return currentTheme === 'dark' 
       ? 'bg-zion-slate-dark text-zion-slate-light border-zion-slate/20' 
-      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20',
+      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20';
   },
 
   return (
@@ -234,7 +234,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                     hover: scale-105 focus:outline-none focus:ring-2 focus:ring-white/50
                   `}
                   style={{
-                    animationDelay: `${index * 100}ms`;
+                    animationDelay: `${index * 100}ms`,
                     animation: 'slideInUp 0.3s ease-out forwards'
                   }}
                 >
@@ -293,16 +293,16 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         
         @keyframes bounce {
           0%, 20%, 53%, 80%, 100% {
-            transform: translate3d(0,0,0),
+            transform: translate3d(0,0,0);
           }
           40%, 43% {
-            transform: translate3d(0, -30px, 0),
+            transform: translate3d(0, -30px, 0);
           }
           70% {
-            transform: translate3d(0, -15px, 0),
+            transform: translate3d(0, -15px, 0);
           }
           90% {
-            transform: translate3d(0, -4px, 0),
+            transform: translate3d(0, -4px, 0);
           }
         }
         

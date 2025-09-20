@@ -24,7 +24,7 @@ const AIFinTechPlatform: React.FC = () => {
               AI FinTech Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Transform financial services with AI that detects fraud in real-time, provides intelligent banking insights, 
+              Transform financial services with AI that detects fraud in real-time, provides intelligent banking insights; 
               and delivers 99.9% accuracy with automated financial operations.
             </p>
           </div>

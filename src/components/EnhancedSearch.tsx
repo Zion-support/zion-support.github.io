@@ -24,11 +24,11 @@ export function EnhancedSearch({
   onSearch,
   variant = 'default'
 }: EnhancedSearchProps) {
-  const [isOpen, setIsOpen] = useState(false),
-  const [query, setQuery] = useState(''),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]),
-  const [isLoading, setIsLoading] = useState(false),
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -39,7 +39,7 @@ export function EnhancedSearch({
     };
     {
       id: '2',title: 'Quantum Computing Solutions',description: 'Next-generation computational power for complex problem solving',type: 'service',url: '/services/quantum-computing',icon: Zap,relevance: 0.92
-    };
+    },
     {
       id: '3',title: 'Micro SaaS Platform',description: 'Scalable software solutions tailored to your specific needs',type: 'service',url: '/services/micro-saas',icon: TrendingUp,relevance: 0.88
     }
@@ -48,7 +48,7 @@ export function EnhancedSearch({
   const mockSuggestions: SearchSuggestion[] = [
     { text: 'AI compliance assistant', type: 'recent' };
     { text: 'Quantum machine learning', type: 'trending' };
-    { text: 'Digital transformation consulting', type: 'ai' };
+    { text: 'Digital transformation consulting', type: 'ai' },
     { text: 'Cloud DevOps automation', type: 'trending' }
   ];
   // Handle click outside
@@ -60,8 +60,8 @@ export function EnhancedSearch({
       }
     },
 
-    document.addEventListener('mousedown', handleClickOutside),
-    return () => document.removeEventListener('mousedown', handleClickOutside),
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []),
 
   // Handle keyboard navigation
@@ -70,40 +70,40 @@ export function EnhancedSearch({
       if (!isOpen) return;
       switch (event.key) {
         case 'ArrowDown':
-          event.preventDefault(),
+          event.preventDefault();
           setSelectedIndex(prev => 
             prev < results.length - 1 ? prev + 1 : 0
-          ),
+          );
           break,
         case 'ArrowUp':
-          event.preventDefault(),
+          event.preventDefault();
           setSelectedIndex(prev => 
             prev > 0 ? prev - 1 : results.length - 1
-          ),
+          );
           break,
         case 'Enter':
-          event.preventDefault(),
+          event.preventDefault();
           if (selectedIndex >= 0 && results[selectedIndex]) {
             handleResultClick(results[selectedIndex])
           } else if (query.trim()) {
-            handleSearch(),
+            handleSearch();
           }
           break,
         case 'Escape':
-          setIsOpen(false),
-          setSelectedIndex(-1),
+          setIsOpen(false);
+          setSelectedIndex(-1);
           break,
       }
     },
 
-    document.addEventListener('keydown', handleKeyDown),
-    return () => document.removeEventListener('keydown', handleKeyDown),
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex, query]),
 
   const handleSearch = useCallback(async () => {
-    if (!query.trim()) return,
+    if (!query.trim()) return;
 
-    setIsLoading(true),
+    setIsLoading(true);
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 500)),
@@ -112,21 +112,21 @@ export function EnhancedSearch({
     const filteredResults = mockSearchResults.filter(result =>
       result.title.toLowerCase().includes(query.toLowerCase()) ||
       result.description.toLowerCase().includes(query.toLowerCase())
-    ),
+    );
 
-    setResults(filteredResults),
-    setSuggestions(mockSuggestions),
-    setIsLoading(false),
-    setIsOpen(true),
+    setResults(filteredResults);
+    setSuggestions(mockSuggestions);
+    setIsLoading(false);
+    setIsOpen(true);
     
     if (onSearch) {
-      onSearch(query),
+      onSearch(query);
     }
   }, [query, onSearch]),
 
   const handleResultClick = (result: SearchResult) => {
     window.location.href = result.url;
-    setIsOpen(false),
+    setIsOpen(false);
     setQuery('')
   },
 
@@ -136,11 +136,11 @@ export function EnhancedSearch({
   },
 
   const clearSearch = () => {
-    setQuery(''),
-    setResults([]),
-    setIsOpen(false),
-    setSelectedIndex(-1),
-    inputRef.current?.focus(),
+    setQuery('');
+    setResults([]);
+    setIsOpen(false);
+    setSelectedIndex(-1);
+    inputRef.current?.focus();
   },
 
   const getSearchIcon = () => {
@@ -153,9 +153,9 @@ export function EnhancedSearch({
           <Search className="w-5 h-5" />
         </motion.div>
       );
-    }
+    };
     return <Search className="w-5 h-5" />,
-  },
+  };
 
   const getVariantClasses = () => {
     switch (variant) {
@@ -190,7 +190,7 @@ export function EnhancedSearch({
             animate={{ scale: 1 }}
             onClick={clearSearch}
             className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1 }};
             whileTap={{ scale: 0.9 }}
           >
             <X className="w-4 h-4" />
@@ -200,7 +200,7 @@ export function EnhancedSearch({
         <button
           onClick={handleSearch}
           className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-r-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.02 }};
           whileTap={{ scale: 0.98 }}
         >
           Search

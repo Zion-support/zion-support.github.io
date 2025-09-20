@@ -26,11 +26,11 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
         default:
             return <Bell className={cn(className, "text-gray-500")}/>,
     }
-},
+};
 const getNotificationTypeBadge = (type) => {
     switch (type) {
         case 'message':
-            return <Badge className="bg-blue-500">Message</Badge>,
+            return <Badge className="bg-blue-500">Message</Badge>;
         case 'quote_request':
             return <Badge className="bg-purple-500">Quote Request</Badge>,
         case 'booking_confirmation':
@@ -40,18 +40,18 @@ const getNotificationTypeBadge = (type) => {
         case 'onboarding':
             return <Badge className="bg-zion-cyan">Onboarding</Badge>,
         case 'system':
-            return <Badge className="bg-yellow-500">System</Badge>,
+            return <Badge className="bg-yellow-500">System</Badge>;
         default: return <Badge variant="outline">Notification</Badge>
     }
 };
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
-    const navigate = useNavigate(),
+    const navigate = useNavigate();
     const handleAction = () => {
         if (!notification.read) {
-            onMarkAsRead(notification.id),
-        }
+            onMarkAsRead(notification.id);
+        };
         if (notification.action_url) {
-            navigate(notification.action_url),
+            navigate(notification.action_url);
         }
     },
     return (<div className={cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors", notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>

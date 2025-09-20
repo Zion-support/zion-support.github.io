@@ -131,14 +131,14 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaas
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from "../data/innovativeITInfrastructureServices2027";
 import { EMERGING_TECHNOLOGY_SERVICES_2027 } from "../data/emergingTechnologyServices2027";
 export default function ComprehensiveServicesLanding2027() {
-  const [activeCategory, setActiveCategory] = useState('all'),
-  const [expandedService, setExpandedService] = useState<string | null>(null),
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Combine all services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2027;
-    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027;
+    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027,
     ...EMERGING_TECHNOLOGY_SERVICES_2027
   ];
   // Get unique categories with counts
@@ -163,18 +163,18 @@ export default function ComprehensiveServicesLanding2027() {
     { id: 'Metaverse & AR/VR', name: 'Metaverse & AR/VR', count: allServices.filter(s => s.category === 'Metaverse & AR/VR').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' };
     { id: 'Neurotechnology', name: 'Neurotechnology', count: allServices.filter(s => s.category === 'Neurotechnology').length, icon: '🧠', color: 'from-indigo-500 to-purple-500' };
     { id: 'Quantum Technology', name: 'Quantum Technology', count: allServices.filter(s => s.category === 'Quantum Technology').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' };
-    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🚗', color: 'from-blue-500 to-indigo-500' };
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🚗', color: 'from-blue-500 to-indigo-500' },
     { id: 'Robotics & Automation', name: 'Robotics & Automation', count: allServices.filter(s => s.category === 'Robotics & Automation').length, icon: '🤖', color: 'from-gray-500 to-slate-500' }
   ];
   // Filter services based on category and search
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = searchQuery === '' || 
       service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+      service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch,
-  }),
+  });
 
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
@@ -204,14 +204,14 @@ export default function ComprehensiveServicesLanding2027() {
       'Robotics & Automation': <Bot className="w-6 h-6" />
     },
     return iconMap[category] || <Star className="w-6 h-6" />,
-  },
+  };
 
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}K`;
-    }
+    };
     return `$${price}`,
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -302,7 +302,7 @@ export default function ComprehensiveServicesLanding2027() {
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -322,7 +322,7 @@ export default function ComprehensiveServicesLanding2027() {
             {categories.map((category, index) => (
               <motion.button
                 key={category.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -346,7 +346,7 @@ export default function ComprehensiveServicesLanding2027() {
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -368,7 +368,7 @@ export default function ComprehensiveServicesLanding2027() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -540,7 +540,7 @@ export default function ComprehensiveServicesLanding2027() {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

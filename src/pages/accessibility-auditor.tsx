@@ -24,28 +24,28 @@ export default function AccessibilityPage() {
   const accessibilityFeatures = [
     {
       category: 'Visual Accessibility',icon: Eye,features: [
-        'High contrast mode supportAdjustable font sizes';
+        'High contrast mode supportAdjustable font sizes',
         'Color-blind friendly designClear typography and spacing',
         'Alternative text for imagesFocus indicators for navigation'
       ]
     },
     {
       category: 'Auditory Accessibility',icon: Ear,features: [
-        'Closed captions for videosAudio descriptions';
+        'Closed captions for videosAudio descriptions',
         'Volume controlsVisual alerts and notifications',
         'Transcripts for audio content'
       ]
     },
     {
       category: 'Motor Accessibility',icon: Hand,features: [
-        'Keyboard navigation supportVoice control compatibility';
+        'Keyboard navigation supportVoice control compatibility',
         'Large click targetsCustomizable timing',
         'Alternative input methods'
       ]
     },
     {
       category: 'Cognitive Accessibility',icon: Brain,features: [
-        'Clear and simple languageConsistent navigation structure';
+        'Clear and simple languageConsistent navigation structure',
         'Logical content organizationReduced distractions',
         'Step-by-step instructions'
       ]
@@ -61,7 +61,7 @@ export default function AccessibilityPage() {
     };
     {
       standard: 'ADA Title III',status: 'Compliant',icon: CheckCircle,description: 'Americans with Disabilities Act requirements for public accommodations',color: 'text-green-500'
-    };
+    },
     {
       standard: 'EN 301 549',status: 'Compliant',icon: CheckCircle,description: 'European accessibility requirements for ICT products and services',color: 'text-green-500'
     }
@@ -76,24 +76,24 @@ export default function AccessibilityPage() {
     };
     {
       name: 'Voice Navigation',description: 'Voice control support for hands-free navigation and interaction',icon: Globe
-    };
+    },
     {
       name: 'Customizable Interface',description: 'Personalizable themes, fonts, and layout options to meet individual needs',
       icon: Zap
     }
   ];
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: {
-      opacity: 1,y: 0,transition: {
+    hidden: { opacity: 0, y: 20 },
+    visible: {,
+      opacity: 1,y: 0,transition: {,
         duration: 0.5
       }
     }

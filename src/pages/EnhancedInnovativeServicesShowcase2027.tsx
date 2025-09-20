@@ -57,13 +57,13 @@ import {
 } from "lucide-react";
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
 const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
-  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all'),
-  const [sortBy, setSortBy] = useState('title'),
-  const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null),
-  const [currentSlide, setCurrentSlide] = useState(0),
+  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
+  const [sortBy, setSortBy] = useState('title');
+  const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))],
   const innovationLevels = ['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))],
@@ -71,9 +71,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel,
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
     
     return matchesSearch && matchesCategory && matchesInnovation,
   }),
@@ -87,7 +87,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0),
       case 'roi':
-        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', '')),
+        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       default: return a.title.localeCompare(b.title)
     }
   });
@@ -102,7 +102,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       case 'AI & Education Technology': return <Users className="w-5 h-5" />,
       case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />,
       case 'AI & Space Technology': return <Rocket className="w-5 h-5" />,
-      case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />,
+      case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />
     }
   };
@@ -110,7 +110,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
     switch (level) {
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600',
-      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600',
+      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600'
     }
   };
@@ -121,13 +121,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
 
   const nextSlide = () => {
     if (selectedService) {
-      setCurrentSlide((prev) => (prev + 1) % 4),
+      setCurrentSlide((prev) => (prev + 1) % 4);
     }
   },
 
   const prevSlide = () => {
     if (selectedService) {
-      setCurrentSlide((prev) => (prev - 1 + 4) % 4),
+      setCurrentSlide((prev) => (prev - 1 + 4) % 4);
     }
   },
 
@@ -147,12 +147,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
               Enhanced Innovative Services 2027
             </h1>
             <p className="text-xl text-zion-gray-light mb-8 max-w-3xl mx-auto">
-              Discover the future of technology with our comprehensive suite of AI, quantum computing, 
+              Discover the future of technology with our comprehensive suite of AI, quantum computing; 
               and cutting-edge innovative services designed to revolutionize your business.
             </p>
             <div className="flex justify-center space-x-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
                 onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
@@ -161,7 +161,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                 <span>Explore Services</span>
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -591,7 +591,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
 
                       <div className="flex justify-center space-x-4">
                         <motion.button
-                          whileHover={{ scale: 1.05 }}
+                          whileHover={{ scale: 1.05 }};
                           whileTap={{ scale: 0.95 }}
                           className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
                           onClick={() => window.open(`tel:${selectedService.contactInfo.phone}`)}
@@ -600,7 +600,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <span>Call Now</span>
                         </motion.button>
                         <motion.button
-                          whileHover={{ scale: 1.05 }}
+                          whileHover={{ scale: 1.05 }};
                           whileTap={{ scale: 0.95 }}
                           className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
                           onClick={() => window.open(`mailto:${selectedService.contactInfo.email}`)}
@@ -678,7 +678,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           </div>
 
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05 }};
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 mx-auto"
             onClick={() => window.open('https://ziontechgroup.com_blank')}

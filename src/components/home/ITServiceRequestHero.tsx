@@ -19,7 +19,7 @@ export const ITServiceRequestHero: React.FC = () => {
     };
     {
       icon: Mail,title: 'Email Us',description: 'Send us your requirements',action: 'kleber@ziontechgroup.com',href: 'mailto:kleber@ziontechgroup.com',color: 'from-purple-500 to-pink-500'
-    };
+    },
     {
       icon: MessageCircle,title: 'Live Chat',description: 'Get instant support',action: 'Start Chat',href: '#chat',color: 'from-green-500 to-emerald-500'
     }
@@ -30,7 +30,7 @@ export const ITServiceRequestHero: React.FC = () => {
     };
     {
       title: 'Schedule Consultation',description: 'Book a free 30-minute consultation',icon: Calendar,href: '/consultation'
-    };
+    },
     {
       title: 'View Services',description: 'Explore our comprehensive service offerings',icon: Star,href: '/services'
     }
@@ -38,7 +38,7 @@ export const ITServiceRequestHero: React.FC = () => {
   const stats = [
     { value: '500+', label: 'Projects Completed', icon: CheckCircle };
     { value: '99%', label: 'Client Satisfaction', icon: Star };
-    { value: '24/7', label: 'Support Available', icon: Clock };
+    { value: '24/7', label: 'Support Available', icon: Clock },
     { value: '50+', label: 'Expert Team Members', icon: Users }
   ];
   return (

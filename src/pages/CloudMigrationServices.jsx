@@ -38,7 +38,7 @@ export default function CloudMigrationServices() {
         {
             name: "Basic Migration",price: "$5,000",
             period: "one-time",description: "Essential cloud migration for small businesses",features: [
-                "Cloud assessment";
+                "Cloud assessment",
                 "Basic migration plan",
                 "Data migration",
                 "Basic optimization",
@@ -49,7 +49,7 @@ export default function CloudMigrationServices() {
         {
             name: "Professional Migration",price: "$15,000",
             period: "one-time",description: "Comprehensive migration for growing businesses",features: [
-                "Full cloud assessment";
+                "Full cloud assessment",
                 "Detailed migration plan",
                 "Data & app migration",
                 "Performance optimization",
@@ -61,7 +61,7 @@ export default function CloudMigrationServices() {
         {
             name: "Enterprise Migration",price: "$50,000",
             period: "one-time",description: "Full-scale migration for large organizations",features: [
-                "Custom migration strategy";
+                "Custom migration strategy",
                 "Multi-cloud migration",
                 "Advanced optimization",
                 "Dedicated team",
@@ -79,7 +79,7 @@ export default function CloudMigrationServices() {
         {
             name: "Dr. Maria Santos",role: "IT Director, HealthTech Innovations",
             content: "The migration was seamless with zero downtime. Zion's expertise in healthcare compliance made all the difference.",rating: 5
-        };
+        },
         {
             name: "James Wilson",role: "VP Engineering, FinTech Startup",
             content: "From on-premise to AWS in 6 weeks. Zion's team delivered beyond our expectations with excellent documentation.",rating: 5

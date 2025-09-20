@@ -44,14 +44,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   showStats = true,
   maxProjects = 10
 }) => {
-  const [projects, setProjects] = useState<Project[]>([]),
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]),
-  const [selectedStatus, setSelectedStatus] = useState<string>('all'),
-  const [selectedPriority, setSelectedPriority] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [viewMode, setViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline'),
-  const [showProjectForm, setShowProjectForm] = useState(false),
-  const [editingProject, setEditingProject] = useState<Project | null>(null),
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline');
+  const [showProjectForm, setShowProjectForm] = useState(false);
+  const [editingProject, setEditingProject] = useState<Project | null>(null);
 
   // Sample project data
   useEffect(() => {
@@ -68,7 +68,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           };
           {
             id: 'm3',title: 'Core Development',description: 'Develop core platform features and API endpoints',dueDate: '2024-04-15',status: 'in-progress',assignee: 'Emily Rodriguez',priority: 'high'
-          };
+          },
           {
             id: 'm4',title: 'Testing & QA',description: 'Comprehensive testing and quality assurance',dueDate: '2024-05-15',status: 'pending',assignee: 'Sarah Johnson',priority: 'medium'
           }
@@ -80,7 +80,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         milestones: [
           {
             id: 'm5',title: 'Infrastructure Assessment',description: 'Assess current infrastructure and plan migration strategy',dueDate: '2024-02-28',status: 'completed',assignee: 'David Kim',priority: 'critical'
-          };
+          },
           {
             id: 'm6',title: 'Cloud Setup',description: 'Set up cloud infrastructure and security configurations',dueDate: '2024-04-15',status: 'in-progress',assignee: 'Lisa Thompson',priority: 'critical'
           }
@@ -96,22 +96,22 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         ]
       }
     ];
-    setProjects(sampleProjects),
-    setFilteredProjects(sampleProjects),
+    setProjects(sampleProjects);
+    setFilteredProjects(sampleProjects);
   }, []),
 
   // Filter projects
   useEffect(() => {
-    let filtered = projects,
+    let filtered = projects;
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter(p => p.status === selectedStatus),
+      filtered = filtered.filter(p => p.status === selectedStatus);
     }
-
+;
     if (selectedPriority !== 'all') {
-      filtered = filtered.filter(p => p.priority === selectedPriority),
+      filtered = filtered.filter(p => p.priority === selectedPriority);
     }
-
+;
     if (searchQuery) {
       filtered = filtered.filter(p =>
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -142,7 +142,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       case 'completed':
         return { color: 'text-purple-400 bg-purple-400/20', icon: <CheckCircle className="w-4 h-4" /> };
       case 'cancelled':
-        return { color: 'text-red-400 bg-red-400/20', icon: <StopCircle className="w-4 h-4" /> };
+        return { color: 'text-red-400 bg-red-400/20', icon: <StopCircle className="w-4 h-4" /> },
       default:
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
     }
@@ -154,7 +154,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20',
       case 'high': return 'text-orange-400 bg-orange-400/20',
-      case 'critical': return 'text-red-400 bg-red-400/20',
+      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -164,7 +164,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
       case 'in-progress': return 'text-blue-400 bg-blue-400/20',
       case 'completed': return 'text-green-400 bg-green-400/20',
-      case 'overdue': return 'text-red-400 bg-red-400/20',
+      case 'overdue': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -178,11 +178,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   // Calculate days remaining
   const getDaysRemaining = (endDate: string) => {
     const end = new Date(endDate);
-    const today = new Date(),
-    const diffTime = end.getTime() - today.getTime(),
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)),
+    const today = new Date();
+    const diffTime = end.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return diffDays
-  },
+  };
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
@@ -198,7 +198,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
             {[
               { id: 'timeline', label: 'Timeline', icon: <Calendar className="w-4 h-4" /> };
-              { id: 'grid', label: 'Grid', icon: <Target className="w-4 h-4" /> };
+              { id: 'grid', label: 'Grid', icon: <Target className="w-4 h-4" /> },
               { id: 'list', label: 'List', icon: <FileText className="w-4 h-4" /> }
             ].map((mode) => (
               <button

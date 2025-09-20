@@ -46,7 +46,7 @@ export default function Help() {
         };
         {
           title: 'Setting Up Your Account',description: 'Complete guide to account creation and configuration',href: '/help/getting-started/account-setup',readTime: '5 min read'
-        };
+        },
         {
           title: 'First Project Setup',description: 'How to create and configure your first project',href: '/help/getting-started/first-project',readTime: '7 min read'
         }
@@ -59,7 +59,7 @@ export default function Help() {
         };
         {
           title: 'AI Integration Best Practices',description: 'Best practices for integrating AI into your workflows',href: '/help/ai-services/integration',readTime: '8 min read'
-        };
+        },
         {
           title: 'AI Performance Optimization',description: 'Tips for optimizing AI model performance',href: '/help/ai-services/optimization',readTime: '6 min read'
         }
@@ -73,7 +73,7 @@ export default function Help() {
         };
         {
           title: 'DevOps Pipeline Setup',description: 'Setting up CI/CD pipelines and automation',href: '/help/cloud/devops',readTime: '12 min read'
-        };
+        },
         {
           title: 'Cost Optimization Strategies',description: 'Reduce cloud costs while maintaining performance',href: '/help/cloud/cost-optimization',readTime: '8 min read'
         }
@@ -87,7 +87,7 @@ export default function Help() {
         {
           title: 'Compliance Frameworks',description: 'Understanding SOC2, ISO, and other standards',
           href: '/help/security/compliance',readTime: '12 min read'
-        };
+        },
         {
           title: 'Incident Response Guide',description: 'What to do when security incidents occur',href: '/help/security/incident-response',readTime: '8 min read'
         }
@@ -100,7 +100,7 @@ export default function Help() {
         };
         {
           title: 'Performance Issues',description: 'Diagnosing and fixing performance problems',href: '/help/troubleshooting/performance',readTime: '8 min read'
-        };
+        },
         {
           title: 'Integration Problems',description: 'Solving integration and connectivity issues',href: '/help/troubleshooting/integration',readTime: '7 min read'
         }
@@ -116,7 +116,7 @@ export default function Help() {
     };
     {
       title: 'Billing & Pricing FAQ',description: 'Answers to common billing questions',href: '/help/billing-faq',category: 'Billing',readTime: '5 min read'
-    };
+    },
     {
       title: 'Security Checklist',description: 'Essential security measures checklist',href: '/help/security-checklist',category: 'Security',readTime: '8 min read'
     }
@@ -130,20 +130,20 @@ export default function Help() {
     };
     {
       title: 'Email Support',description: 'Send us a detailed message',icon: Mail,action: 'Send Email',href: 'mailto:support@ziontechgroup.com',available: true
-    };
+    },
     {
       title: 'Video Tutorials',description: 'Step-by-step video guides',icon: Video,action: 'Watch Videos',href: '/help/videos',available: true
     }
   ];
   const filteredCategories = helpCategories.filter(category => {
-    if (selectedCategory !== 'all' && category.id !== selectedCategory) return false,
+    if (selectedCategory !== 'all' && category.id !== selectedCategory) return false;
     if (searchQuery) {
       return category.articles.some(article =>
         article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         article.description.toLowerCase().includes(searchQuery.toLowerCase())
-      ),
-    }
-    return true,
+      );
+    };
+    return true;
   });
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -177,7 +177,7 @@ export default function Help() {
       <section className="py-12">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto"
@@ -200,7 +200,7 @@ export default function Help() {
       <section className="py-8">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="flex flex-wrap justify-center gap-3"
@@ -236,7 +236,7 @@ export default function Help() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
@@ -249,7 +249,7 @@ export default function Help() {
             {popularArticles.map((article, index) => (
               <motion.div
                 key={article.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
@@ -288,7 +288,7 @@ export default function Help() {
           {filteredCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
               className="mb-16"
@@ -307,7 +307,7 @@ export default function Help() {
                 {category.articles.map((article, articleIndex) => (
                   <motion.div
                     key={article.title}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 20 }};
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: (categoryIndex * 0.1) + (articleIndex * 0.05) }}
                     className="group"
@@ -339,7 +339,7 @@ export default function Help() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -354,7 +354,7 @@ export default function Help() {
             {supportOptions.map((option, index) => (
               <motion.div
                 key={option.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -391,7 +391,7 @@ export default function Help() {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

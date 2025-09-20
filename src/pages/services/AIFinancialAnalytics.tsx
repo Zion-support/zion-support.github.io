@@ -60,7 +60,7 @@ const AIFinancialAnalytics = () => {
   const pricingPlans = [
     {
       name: "Starter",price: "$399",period: "/month",description: "Perfect for small businesses and startups",features: [
-        "Up to 10 financial accounts";
+        "Up to 10 financial accounts",
         "Basic AI forecasting",
         "5 user licenses",
         "Standard reports",
@@ -72,7 +72,7 @@ const AIFinancialAnalytics = () => {
     };
     {
       name: "Professional",price: "$999",period: "/month",description: "Ideal for growing businesses and financial teams",features: [
-        "Up to 50 financial accounts";
+        "Up to 50 financial accounts",
         "Advanced AI analytics",
         "25 user licenses",
         "Custom dashboards",
@@ -87,7 +87,7 @@ const AIFinancialAnalytics = () => {
     {
       name: "Enterprise",price: "$2,999",
       period: "/month",description: "For large organizations with complex financial needs",features: [
-        "Unlimited accounts";
+        "Unlimited accounts",
         "Custom AI models",
         "Unlimited users",
         "Advanced security",
@@ -112,7 +112,7 @@ const AIFinancialAnalytics = () => {
     {
       title: "Risk Management & Compliance",description: "Automated risk assessment, regulatory compliance monitoring, and audit trail management",
       icon: Shield
-    };
+    },
     {
       title: "Trading & Market Analysis",description: "Real-time market data analysis, trading signals, and algorithmic trading recommendations",
       icon: Activity
@@ -127,7 +127,7 @@ const AIFinancialAnalytics = () => {
     };
     {
       icon: DollarSign,title: "Cost Reduction",value: "30-50%",description: "Lower operational costs and improve efficiency"
-    };
+    },
     {
       icon: Target,title: "Risk Reduction",value: "40-60%",description: "Better risk management and compliance"
     }
@@ -138,7 +138,7 @@ const AIFinancialAnalytics = () => {
     };
     {
       name: "Sarah Williams",role: "Portfolio Manager",company: "Global Investments Ltd",content: "Real-time AI insights help us make better trading decisions. The risk assessment tools are incredibly accurate.",rating: 5
-    };
+    },
     {
       name: "Michael Rodriguez",role: "Financial Controller",company: "InnovateCorp",content: "Automated reporting saves us 20+ hours per week. The compliance features ensure we never miss regulatory deadlines.",rating: 5
     }
@@ -148,7 +148,7 @@ const AIFinancialAnalytics = () => {
     { name: "Salesforce", icon: Users, description: "CRM and sales data sync" };
     { name: "Bloomberg", icon: TrendingUp, description: "Market data feeds" };
     { name: "Excel", icon: FileText, description: "Spreadsheet automation" };
-    { name: "Tableau", icon: BarChart3, description: "Data visualization" };
+    { name: "Tableau", icon: BarChart3, description: "Data visualization" },
     { name: "Power BI", icon: Monitor, description: "Business intelligence" }
   ];
   return (
@@ -216,7 +216,7 @@ const AIFinancialAnalytics = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -235,7 +235,7 @@ const AIFinancialAnalytics = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -260,7 +260,7 @@ const AIFinancialAnalytics = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -279,7 +279,7 @@ const AIFinancialAnalytics = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -307,7 +307,7 @@ const AIFinancialAnalytics = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -326,7 +326,7 @@ const AIFinancialAnalytics = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -354,7 +354,7 @@ const AIFinancialAnalytics = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -373,7 +373,7 @@ const AIFinancialAnalytics = () => {
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -401,7 +401,7 @@ const AIFinancialAnalytics = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -420,7 +420,7 @@ const AIFinancialAnalytics = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -479,7 +479,7 @@ const AIFinancialAnalytics = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -495,7 +495,7 @@ const AIFinancialAnalytics = () => {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -524,7 +524,7 @@ const AIFinancialAnalytics = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

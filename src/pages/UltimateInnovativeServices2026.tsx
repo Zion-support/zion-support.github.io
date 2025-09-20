@@ -59,8 +59,8 @@ import {
 import SEO from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 export default function UltimateInnovativeServices2026() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
   const [expandedService, setExpandedService] = useState<string | null>(null);
@@ -75,11 +75,11 @@ export default function UltimateInnovativeServices2026() {
     { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' };
     { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' };
     { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' };
-    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' };
+    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },
     { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' }
   ];
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
+    { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },
     { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },
     { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' }
@@ -89,30 +89,30 @@ export default function UltimateInnovativeServices2026() {
     { id: 'featured', name: 'Featured' };
     { id: 'price-low', name: 'Price: Low to High' };
     { id: 'price-high', name: 'Price: High to Low' };
-    { id: 'innovation', name: 'Innovation Level' };
+    { id: 'innovation', name: 'Innovation Level' },
     { id: 'roi', name: 'ROI Potential' }
   ];
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Zap
-  },
+  };
 
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.color : 'from-zion-cyan to-zion-blue'
-  },
+  };
 
   const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory),
+    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory);
 
     const matchesPrice = selectedPriceRange === 'all' ||
                         (selectedPriceRange === 'under-10k' && service.price < 10000) ||
                         (selectedPriceRange === '10k-20k' && service.price >= 10000 && service.price <= 20000) ||
-                        (selectedPriceRange === 'over-20k' && service.price > 20000),
+                        (selectedPriceRange === 'over-20k' && service.price > 20000);
 
     return matchesSearch && matchesCategory && matchesPrice,
   }),
@@ -126,11 +126,11 @@ export default function UltimateInnovativeServices2026() {
       case 'innovation':
         const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 },
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
-               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0),
+               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'roi':
-        const aROI = parseInt(a.roi.split('-')[0]),
-        const bROI = parseInt(b.roi.split('-')[0]),
-        return bROI - aROI,
+        const aROI = parseInt(a.roi.split('-')[0]);
+        const bROI = parseInt(b.roi.split('-')[0]);
+        return bROI - aROI;
       default: return 0
     }
   });
@@ -166,7 +166,7 @@ export default function UltimateInnovativeServices2026() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
               >
@@ -174,7 +174,7 @@ export default function UltimateInnovativeServices2026() {
                 <span>12 Revolutionary Services</span>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
               >
@@ -182,7 +182,7 @@ export default function UltimateInnovativeServices2026() {
                 <span>Industry-Leading Innovation</span>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
               >
@@ -441,7 +441,7 @@ export default function UltimateInnovativeServices2026() {
               <button
                 onClick={() => {
                   setSearchQuery('');
-                  setSelectedCategory('all'),
+                  setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}
                 className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
@@ -457,7 +457,7 @@ export default function UltimateInnovativeServices2026() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

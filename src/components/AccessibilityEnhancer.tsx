@@ -26,7 +26,7 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
     } else {
       root.classList.remove('high-contrast');
     }
-
+;
     if (settings.largeText) {
       root.classList.add('large-text');
       root.style.fontSize = '1.2em';
@@ -34,7 +34,7 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
       root.classList.remove('large-text');
       root.style.fontSize = '';
     }
-
+;
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
       root.style.setProperty('--animation-duration', '0.01ms');
@@ -49,46 +49,56 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'A') {
         setIsVisible(!isVisible);
-        announce('Accessibility panel toggled')
+        announce('Accessibility panel toggled');
       }
-    },
+    };
 
-    window.addEventListener('keydown', handleKeyPress),
-    return () => window.removeEventListener('keydown', handleKeyPress),
-  }, [settings, isVisible]),
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [settings, isVisible]);
 
   const announce = (message: string) => {
-    setAnnouncements(prev => [...prev.slice(-2), message]),
+    setAnnouncements(prev => [...prev.slice(-2), message]);
     
     // Create live region for screen readers
-    const announcement = document.createElement('div'),
-    announcement.setAttribute('aria-livepolite'),
-    announcement.setAttribute('aria-atomictrue'),
-    announcement.className = 'sr-only',
-    announcement.textContent = message,
-    document.body.appendChild(announcement),
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    document.body.appendChild(announcement);
     
     setTimeout(() => {
-      document.body.removeChild(announcement),
-    }, 1000),
-  },
+      document.body.removeChild(announcement);
+    }, 1000);
+  };
 
   const toggleSetting = (setting: keyof AccessibilitySettings) => {
     const newValue = !settings[setting];
-    setSettings(prev => ({ ...prev, [setting]: newValue })),
+    setSettings(prev => ({ ...prev, [setting]: newValue }));
     
     const settingNames = {
-      highContrast: 'High contrast mode',largeText: 'Large text',reducedMotion: 'Reduced motion',focusVisible: 'Focus indicators',screenReader: 'Screen reader mode',keyboardNavigation: 'Keyboard navigation'
+      highContrast: 'High contrast mode',
+      largeText: 'Large text',
+      reducedMotion: 'Reduced motion',
+      focusVisible: 'Focus indicators',
+      screenReader: 'Screen reader mode',
+      keyboardNavigation: 'Keyboard navigation'
     };
-    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`),
-  },
+    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
+  };
 
   const resetSettings = () => {
     setSettings({
-      highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      focusVisible: false,
+      screenReader: false,
+      keyboardNavigation: false
     });
-    announce('Accessibility settings reset'),
-  },
+    announce('Accessibility settings reset');
+  };
 
   return (
     <>

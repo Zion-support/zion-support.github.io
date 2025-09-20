@@ -31,17 +31,17 @@ import {
 } from "lucide-react";
 import SEO from "@/components/SEO";
 export default function EnhancedServicesPage() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
   const filteredServices = ENHANCED_SERVICES.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 
     const matchesCategory = selectedCategory === 'all' ||
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
+                           service.category.toLowerCase().includes(selectedCategory.toLowerCase());
 
     const matchesPrice = selectedPriceRange === 'all' ||
                         (selectedPriceRange === 'basic' && service.price <= 2000) ||
@@ -78,7 +78,7 @@ export default function EnhancedServicesPage() {
       case 'blockchain':
         return <Link className="w-5 h-5" />,
       case 'quantum computing':
-        return <Zap className="w-5 h-5" />,
+        return <Zap className="w-5 h-5" />;
       default: return <Code className="w-5 h-5" />
     }
   };
@@ -87,7 +87,7 @@ export default function EnhancedServicesPage() {
     if (price <= 8000) return 'professional',
     if (price <= 25000) return 'enterprise',
     return 'premium'
-  },
+  };
 
   return (
     <div className="min-h-screen bg-background">

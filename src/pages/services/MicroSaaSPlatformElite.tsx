@@ -37,7 +37,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
     },
     {
       icon: Users,title: "Multi-Tenant Architecture",description: "Scalable platform supporting unlimited customers with role-based access control"
-    };
+    },
     {
       icon: Globe,title: "Global Deployment",description: "Deploy to multiple regions with CDN, load balancing, and localized compliance"
     },
@@ -74,7 +74,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
     {
       name: "Micro SaaS Enterprise",price: "$12,000",
       period: "/month",description: "For large organizations with complex needs",features: [
-        "Unlimited customers";
+        "Unlimited customers",
         "Custom SaaS development",
         "White-label platform",
         "24/7 dedicated support",
@@ -94,7 +94,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
     },
     {
       title: "Analytics & Reporting",description: "Comprehensive business intelligence with real-time dashboards and automated reporting"
-    };
+    },
     {
       title: "Integration Hub",description: "Connect with 500+ third-party services including CRMs, marketing tools, and business applications"
     }
@@ -159,7 +159,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -178,7 +178,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -199,7 +199,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -218,7 +218,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
             {platformFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -236,7 +236,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -255,7 +255,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
             {saasTemplates.map((template, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -275,7 +275,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -294,7 +294,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -346,7 +346,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

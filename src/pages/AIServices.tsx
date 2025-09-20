@@ -7,7 +7,7 @@ export default function AIServices() {
     {
       name: 'Starter AI',price: '$1,500/mo',
       ideal: 'Startups and SMBs',features: [
-        'AI chat assistant setup (Zendesk/Intercom integration)Basic analytics dashboard (Mixpanel/GA4)';
+        'AI chat assistant setup (Zendesk/Intercom integration)Basic analytics dashboard (Mixpanel/GA4)',
         'Monthly model updates and prompt tuningUp to 5,000 AI messages/mo'
       ],
       cta: '/contact'
@@ -15,7 +15,7 @@ export default function AIServices() {
     {
       name: 'Growth AI',price: '$4,000/mo',
       ideal: 'Growing teams',features: [
-        'Custom retrieval-augmented generation (RAG)Fine-tuned models for your domain';
+        'Custom retrieval-augmented generation (RAG)Fine-tuned models for your domain',
         'A/B testing for prompts and flowsUp to 50,000 AI messages/mo'
       ],
       cta: '/contact',highlighted: true
@@ -30,7 +30,7 @@ export default function AIServices() {
   ];
   const links = [
     { name: 'Zion Tech Group', url: 'https://ziontechgroup.com' };
-    { name: 'AI Safety Spec', url: 'https://ziontechgroup.com/solutions' };
+    { name: 'AI Safety Spec', url: 'https://ziontechgroup.com/solutions' },
     { name: 'Case Studies', url: 'https://ziontechgroup.com/case-studies' }
   ];
   return (
@@ -59,11 +59,11 @@ export default function AIServices() {
           {/* Capabilities */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: Brain, title: 'Chat & Agents', desc: 'Multilingual, tool-using assistants with guardrails.' },
+              { icon: Brain, title: 'Chat & Agents', desc: 'Multilingual, tool-using assistants with guardrails.' };
               { icon: Search, title: 'RAG & Search', desc: 'Accurate answers grounded in your content.' };
               { icon: BarChart3, title: 'Analytics & BI', desc: 'AI insights embedded into dashboards and apps.' };
               { icon: Activity, title: 'Automation', desc: 'AI workflows to triage, route, and summarize.' },
-              { icon: Wand2, title: 'Fine-tuning', desc: 'Domain-adapted models for tone and accuracy.' };
+              { icon: Wand2, title: 'Fine-tuning', desc: 'Domain-adapted models for tone and accuracy.' },
               { icon: Bot, title: 'Safety & QA', desc: 'Hallucination, PII, toxicity filters and audits.' }
             ].map((c) => (
               <div key={c.title} className="card-futuristic">

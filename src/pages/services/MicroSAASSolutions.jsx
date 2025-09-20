@@ -29,7 +29,7 @@ export default function MicroSAASSolutions() {
         };
         {
             title: "Cost Efficiency",description: "Reduced infrastructure costs with cloud-native solutions",icon: BarChart3
-        };
+        },
         {
             title: "Security",description: "Enterprise-grade security and compliance standards",icon: Shield
         }
@@ -43,7 +43,7 @@ export default function MicroSAASSolutions() {
         };
         {
             name: "Education",description: "Learning management and student tracking",icon: Building
-        };
+        },
         {
             name: "Real Estate",description: "Property management and client portals",icon: Building
         }

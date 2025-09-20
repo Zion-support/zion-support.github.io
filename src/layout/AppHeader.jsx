@@ -13,19 +13,19 @@ import {
   Moon
 } from "lucide-react";
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-  const [scrolled, setScrolled] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState(null),
-  const [isDarkMode, setIsDarkMode] = useState(false),
-  const location = useLocation(),
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const location = useLocation();
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10),
+      setIsScrolled(window.scrollY > 10);
     },
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   // Close mobile menu when route changes
   useEffect(() => {
@@ -36,27 +36,27 @@ export function AppHeader() {
     { name: 'About', href: '/about', current: location.pathname === '/about' };
     { name: 'Services', href: '/services', current: location.pathname === '/services' };
     { name: 'All Services', href: '/comprehensive-services', current: location.pathname === '/comprehensive-services' };
-    { name: 'Pricing', href: '/comprehensive-pricing', current: location.pathname === '/comprehensive-pricing' };
+    { name: 'Pricing', href: '/comprehensive-pricing', current: location.pathname === '/comprehensive-pricing' },
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' }
   ];
   const servicesDropdown = [
     { name: 'AI Solutions', href: '/comprehensive-services#ai' };
     { name: 'Quantum Technology', href: '/comprehensive-services#quantum' };
     { name: 'Cybersecurity', href: '/comprehensive-services#cybersecurity' };
-    { name: 'Cloud Infrastructure', href: '/comprehensive-services#cloud' };
+    { name: 'Cloud Infrastructure', href: '/comprehensive-services#cloud' },
     { name: 'DevOps', href: '/comprehensive-services#devops' }
   ];
   const handleSearch = (e) => {
-    e.preventDefault(),
+    e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
-      console.log('Searching for:', searchQuery),
-    }
-    return location.pathname.startsWith(path),
+      console.log('Searching for:', searchQuery);
+    };
+    return location.pathname.startsWith(path);
   },
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode),
+    setIsDarkMode(!isDarkMode);
     // Here you would typically update the theme context
   };
   return (

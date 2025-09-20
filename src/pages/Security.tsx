@@ -26,38 +26,38 @@ export default function Security() {
   const securityFeatures = [
     {
       icon: Shield,title: 'Advanced Threat Protection',description: 'Multi-layered security with AI-powered threat detection and prevention',features: [
-        'Real-time threat monitoringBehavioral analysis';
+        'Real-time threat monitoringBehavioral analysis',
         'Automated response systems24/7 security operations'
       ]
     },
     {
       icon: Lock,title: 'Data Encryption',description: 'End-to-end encryption for data at rest and in transit',features: [
-        'AES-256 encryptionTLS 1.3 protocols';
+        'AES-256 encryptionTLS 1.3 protocols',
         'Key management systemsHardware security modules'
       ]
     },
     {
       icon: Users,title: 'Identity & Access Management',description: 'Comprehensive user authentication and authorization controls',features: [
-        'Multi-factor authenticationSingle sign-on (SSO)';
+        'Multi-factor authenticationSingle sign-on (SSO)',
         'Role-based access controlPrivileged access management'
       ]
     },
     {
       icon: Server,title: 'Infrastructure Security',description: 'Secure cloud infrastructure with network segmentation',features: [
-        'VPC and subnet isolationWeb application firewalls';
+        'VPC and subnet isolationWeb application firewalls',
         'DDoS protectionIntrusion detection systems'
       ]
     },
     {
       icon: Database,title: 'Data Protection',description: 'Comprehensive data backup, recovery, and privacy controls',
       features: [
-        'Automated backupsPoint-in-time recovery';
+        'Automated backupsPoint-in-time recovery',
         'Data classificationPrivacy by design'
       ]
     },
     {
       icon: Network,title: 'Network Security',description: 'Advanced network security with monitoring and controls',features: [
-        'Network segmentationTraffic analysis';
+        'Network segmentationTraffic analysis',
         'VPN and secure tunnelsNetwork access control'
       ]
     }
@@ -67,35 +67,35 @@ export default function Security() {
     {
       name: 'SOC 2 Type II',status: 'Certified',description: 'Service Organization Control 2 Type II certification for security, availability, and confidentiality',
       details: [
-        'Annual third-party auditsContinuous monitoring';
+        'Annual third-party auditsContinuous monitoring',
         'Regular security assessmentsComprehensive reporting'
       ],
       icon: CheckCircle,color: 'text-green-400'
     };
     {
       name: 'ISO 27001',status: 'Certified',description: 'International standard for information security management systems',details: [
-        'Risk-based approachContinuous improvement';
+        'Risk-based approachContinuous improvement',
         'Management commitmentRegular audits and reviews'
       ],
       icon: CheckCircle,color: 'text-green-400'
     };
     {
       name: 'GDPR',status: 'Compliant',description: 'General Data Protection Regulation compliance for EU data protection',details: [
-        'Data subject rightsPrivacy by design';
+        'Data subject rightsPrivacy by design',
         'Data breach notificationRegular compliance audits'
       ],
       icon: CheckCircle,color: 'text-green-400'
     };
     {
       name: 'HIPAA',status: 'Compliant',description: 'Health Insurance Portability and Accountability Act compliance',details: [
-        'Protected health informationAdministrative safeguards';
+        'Protected health informationAdministrative safeguards',
         'Physical safeguardsTechnical safeguards'
       ],
       icon: CheckCircle,color: 'text-green-400'
     };
     {
       name: 'PCI DSS',status: 'Compliant',description: 'Payment Card Industry Data Security Standard compliance',details: [
-        'Cardholder data protectionVulnerability management';
+        'Cardholder data protectionVulnerability management',
         'Access controlRegular security testing'
       ],
       icon: CheckCircle,color: 'text-green-400'
@@ -110,7 +110,7 @@ export default function Security() {
     };
     {
       metric: '0',label: 'Data Breaches',description: 'Successful breaches in 5+ years'
-    };
+    },
     {
       metric: '24/7',label: 'Monitoring',description: 'Continuous security monitoring'
     }
@@ -124,7 +124,7 @@ export default function Security() {
     };
     {
       title: 'Incident Response',description: 'Comprehensive incident response and recovery procedures',icon: AlertTriangle
-    };
+    },
     {
       title: 'Security Updates',description: 'Regular security patches and system updates',icon: Zap
     }
@@ -170,7 +170,7 @@ export default function Security() {
             {securityMetrics.map((metric, index) => (
               <motion.div
                 key={metric.label}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -190,7 +190,7 @@ export default function Security() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -205,7 +205,7 @@ export default function Security() {
             {securityFeatures.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
@@ -239,7 +239,7 @@ export default function Security() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -254,7 +254,7 @@ export default function Security() {
             {complianceFrameworks.map((framework, index) => (
               <motion.div
                 key={framework.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden"
@@ -315,7 +315,7 @@ export default function Security() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -330,7 +330,7 @@ export default function Security() {
             {bestPractices.map((practice, index) => (
               <motion.div
                 key={practice.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex items-start"
@@ -354,7 +354,7 @@ export default function Security() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -367,7 +367,7 @@ export default function Security() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="group"
@@ -392,7 +392,7 @@ export default function Security() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="group"
@@ -417,7 +417,7 @@ export default function Security() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="group"
@@ -448,7 +448,7 @@ export default function Security() {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

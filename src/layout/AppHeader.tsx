@@ -3,17 +3,17 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "../components/ThemeToggle";
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false),
-  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false),
-  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false),
-  const [scrolled, setScrolled] = useState(false),
-  const [isSearching, setIsSearching] = useState(false),
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10),
+      setScrolled(window.scrollY > 10);
     },
 
     window.addEventListener('scroll', handleScroll);
@@ -22,12 +22,12 @@ export function AppHeader() {
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      setIsSearching(true),
+      setIsSearching(true);
       try {
         await new Promise(resolve => setTimeout(resolve, 1000)), // Simulate search
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`,
       } finally {
-        setIsSearching(false),
+        setIsSearching(false);
       }
     }
   },
@@ -38,7 +38,7 @@ export function AppHeader() {
     { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true };
     { name: 'Pricing', href: '/pricing-guide-2030', current: false };
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true };
-    { name: 'About', href: '/about', current: false };
+    { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false }
   ];
   const services = [
@@ -141,7 +141,7 @@ export function AppHeader() {
     // Data Analytics
     { 
       name: 'Data Analytics',href: '/services/data-analytics',icon: BarChart3,description: 'Advanced Analytics & BI',featured: true,color: 'from-green-500 to-emerald-500'
-    };
+    },
     // IT Infrastructure
     { 
       name: 'IT Infrastructure',href: '/services/it-infrastructure',icon: Server,description: 'Infrastructure & Management',featured: true,color: 'from-gray-500 to-slate-500'
@@ -152,7 +152,7 @@ export function AppHeader() {
       title: 'Enterprise Solutions',items: [
         { name: 'Digital Transformation', href: '/solutions/digital-transformation', description: 'Complete enterprise digital transformation' };
         { name: 'Cloud Migration', href: '/solutions/cloud-migration', description: 'Seamless cloud migration strategies' };
-        { name: 'Data Strategy', href: '/solutions/data-strategy', description: 'Comprehensive data strategy implementation' };
+        { name: 'Data Strategy', href: '/solutions/data-strategy', description: 'Comprehensive data strategy implementation' },
         { name: 'AI Implementation', href: '/solutions/ai-implementation', description: 'End-to-end AI implementation' }
       ]
     };
@@ -160,7 +160,7 @@ export function AppHeader() {
       title: 'Industry Solutions',items: [
         { name: 'Healthcare AI', href: '/solutions/healthcare-ai', description: 'AI solutions for healthcare industry' };
         { name: 'Financial Services', href: '/solutions/financial-services', description: 'FinTech and banking solutions' };
-        { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing solutions' };
+        { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing solutions' },
         { name: 'Retail & E-commerce', href: '/solutions/retail-ecommerce', description: 'Retail transformation solutions' }
       ]
     };
@@ -168,7 +168,7 @@ export function AppHeader() {
       title: 'Technology Solutions',items: [
         { name: 'Cybersecurity', href: '/solutions/cybersecurity', description: 'Comprehensive security solutions' };
         { name: 'Blockchain', href: '/solutions/blockchain', description: 'Blockchain and Web3 solutions' };
-        { name: 'IoT Solutions', href: '/solutions/iot', description: 'Internet of Things solutions' };
+        { name: 'IoT Solutions', href: '/solutions/iot', description: 'Internet of Things solutions' },
         { name: 'Quantum Computing', href: '/solutions/quantum-computing', description: 'Quantum computing applications' }
       ]
     }
@@ -178,7 +178,7 @@ export function AppHeader() {
       title: 'Learning Resources',items: [
         { name: 'Documentation', href: '/docs', description: 'Technical documentation and guides' };
         { name: 'API Reference', href: '/docs/api', description: 'Complete API documentation' };
-        { name: 'SDKs & Libraries', href: '/docs/sdks', description: 'Software development kits' };
+        { name: 'SDKs & Libraries', href: '/docs/sdks', description: 'Software development kits' },
         { name: 'Code Examples', href: '/docs/examples', description: 'Code samples and tutorials' }
       ]
     };
@@ -186,7 +186,7 @@ export function AppHeader() {
       title: 'Research & Insights',items: [
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories and implementations' };
         { name: 'White Papers', href: '/white-papers', description: 'In-depth technical research' };
-        { name: 'Blog', href: '/blog', description: 'Latest news and insights' };
+        { name: 'Blog', href: '/blog', description: 'Latest news and insights' },
         { name: 'Webinars', href: '/webinars', description: 'Educational webinars and events' }
       ]
     };
@@ -212,7 +212,7 @@ export function AppHeader() {
     { name: 'Pricing', href: '/pricing', icon: DollarSign };
     { name: 'Careers', href: '/careers', icon: Users };
     { name: 'Partners', href: '/partners', icon: HeartHandshake };
-    { name: 'Privacy', href: '/privacy', icon: Shield };
+    { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: BookOpen }
   ];
   const contactInfo = {
@@ -248,7 +248,7 @@ export function AppHeader() {
                   onMouseEnter={() => {
                     if (item.hasDropdown) {
                       if (item.name === 'Services') setServicesDropdownOpen(true);
-                      if (item.name === 'Solutions') setSolutionsDropdownOpen(true),
+                      if (item.name === 'Solutions') setSolutionsDropdownOpen(true);
                       if (item.name === 'Resources') setResourcesDropdownOpen(true)
                     }
                   }}

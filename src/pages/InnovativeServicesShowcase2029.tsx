@@ -48,23 +48,23 @@ import {
 } from "lucide-react";
 import { innovativeMicroSAASServices2029 } from "../../data/innovative-micro-saas-2029";
 export default function InnovativeServicesShowcase2029() {
-  const [selectedCategory, setSelectedCategory] = useState('All'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [isPlaying, setIsPlaying] = useState(false),
-  const [isMuted, setIsMuted] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
 
   const categories = ['AllAI & Analytics', 'CybersecurityAI & Operations', 'Blockchain & SecurityAI & Legal Tech', 'IoT & Edge ComputingAI & Healthcare', 'Quantum Computing & AIAI & Fintech', 'Sustainability & Consulting'],
 
   const filteredServices = innovativeMicroSAASServices2029.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),
+                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch,
-  }),
+  });
 
-  const togglePlayPause = () => setIsPlaying(!isPlaying),
+  const togglePlayPause = () => setIsPlaying(!isPlaying);
   const toggleMute = () => setIsMuted(!isMuted);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -81,15 +81,15 @@ export default function InnovativeServicesShowcase2029() {
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
               animate={{
-                x: [0, 100, 0];
-                y: [0, -100, 0];
+                x: [0, 100, 0],
+                y: [0, -100, 0],
                 opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
                 duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 5
               }}
               style={{
-                left: `${Math.random() * 100}%`;
+                left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`
               }}
             />

@@ -28,7 +28,7 @@ const CloudDevOps = () => {
     };
     {
       name: "Google Cloud",description: "Google Cloud Platform infrastructure and services",icon: "🔵"
-    };
+    },
     {
       name: "Multi-Cloud",description: "Hybrid and multi-cloud strategy implementation",icon: "🌐"
     }

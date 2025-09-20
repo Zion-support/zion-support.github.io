@@ -44,7 +44,7 @@ export default function InvestorRelations() {
     {
       metric: 'Global Customers',value: '1,200+',
       change: '+45%',period: 'YoY 2024',icon: Users,color: 'text-purple-400'
-    };
+    },
     {
       metric: 'Market Presence',value: '25+',change: '+5',period: 'Countries',icon: Globe,color: 'text-cyan-400'
     }
@@ -61,7 +61,7 @@ export default function InvestorRelations() {
     {
       quarter: 'Q2 2024',revenue: '$61.4M',growth: '+15%',margin: '31.5%',customers: '1,134',
       status: 'Reported'
-    };
+    },
     {
       quarter: 'Q1 2024',revenue: '$53.4M',growth: '+12%',margin: '30.2%',customers: '1,089',
       status: 'Reported'
@@ -76,7 +76,7 @@ export default function InvestorRelations() {
     };
     {
       title: 'Quantum Computing R&D',description: 'Research and development in quantum technologies',investment: '$32M',timeline: '2024-2027',status: 'Research',impact: 'Long-term'
-    };
+    },
     {
       title: 'Cybersecurity Platform',description: 'Next-generation security solutions development',investment: '$38M',timeline: '2024-2026',status: 'Development',impact: 'High'
     }
@@ -98,7 +98,7 @@ export default function InvestorRelations() {
     {
       title: 'ESG Report 2024',description: 'Environmental, Social, and Governance performance report',
       type: 'PDF',size: '6.7 MB',date: 'April 2024',featured: false
-    };
+    },
     {
       title: 'Financial Statements',description: 'Quarterly and annual financial statements and disclosures',type: 'PDF',size: 'Various',date: 'Quarterly',featured: false
     }
@@ -115,7 +115,7 @@ export default function InvestorRelations() {
     {
       title: 'Technology Investor Day',date: 'March 28, 2025',
       time: '9:00 AM ET',type: 'Investor Event',registration: 'Open'
-    };
+    },
     {
       title: 'Q1 2025 Earnings Call',date: 'May 8, 2025',
       time: '5:00 PM ET',type: 'Earnings Call',registration: 'Required'
@@ -172,7 +172,7 @@ export default function InvestorRelations() {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -225,7 +225,7 @@ export default function InvestorRelations() {
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -241,7 +241,7 @@ export default function InvestorRelations() {
             {strategicInitiatives.map((initiative, index) => (
               <motion.div
                 key={initiative.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -284,7 +284,7 @@ export default function InvestorRelations() {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -300,7 +300,7 @@ export default function InvestorRelations() {
             {investorResources.map((resource, index) => (
               <motion.div
                 key={resource.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -345,7 +345,7 @@ export default function InvestorRelations() {
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -361,7 +361,7 @@ export default function InvestorRelations() {
             {upcomingEvents.map((event, index) => (
               <motion.div
                 key={event.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -405,7 +405,7 @@ export default function InvestorRelations() {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

@@ -29,7 +29,7 @@ interface ApiClientOptions {
 export async function apiClient(endpoint: string, options: ApiClientOptions = { headers: {} }) {
   const { method = 'GET', body, headers = {} } = options;
   const config: RequestInit = {
-    method;
+    method,
     headers: {
       'Content-Type': 'application/json';
       ...headers
@@ -41,26 +41,26 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = { 
   }
 
   try {
-    const response = await fetch(endpoint, config),
+    const response = await fetch(endpoint, config);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
-    return await response.json(),
+    ;
+    return await response.json();
   } catch (error) {
-    console.error('API request failed:', error),
+    console.error('API request failed:', error);
     throw error,
   }
 }
 
 export const api = {
   get: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'GET', headers: headers || {} });
+    apiClient(endpoint, { method: 'GET', headers: headers || {} }),
   post: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers: headers || {} });
+    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers: headers || {} }),
   put: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} });
+    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} }),
   delete: (endpoint: string, headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'DELETE', headers: headers || {} })
 };

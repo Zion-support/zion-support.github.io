@@ -18,32 +18,32 @@ export default function Signup() {
   const [formData, setFormData] = useState({
     firstName: '',lastName: '',email: '',company: '',password: '',confirmPassword: ''
   });
-  const [showPassword, setShowPassword] = useState(false),
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
-  const [isLoading, setIsLoading] = useState(false),
-  const [agreedToTerms, setAgreedToTerms] = useState(false),
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData;
       [e.target.name]: e.target.value
-    }),
+    });
   },
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!agreedToTerms) {
-      alert('Please agree to the terms and conditions'),
+      alert('Please agree to the terms and conditions');
       return
-    }
+    };
     if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match'),
+      alert('Passwords do not match');
       return,
     }
-    setIsLoading(true),
+    setIsLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000)),
     // Here you would typically make an API call to register
-    console.log('Signup attempt:', formData),
-    setIsLoading(false),
+    console.log('Signup attempt:', formData);
+    setIsLoading(false);
   },
   const features = [
     {
@@ -51,7 +51,7 @@ export default function Signup() {
     };
     {
       icon: <Zap className="h-6 w-6 text-zion-purple" />,title: "Lightning Fast",description: "Optimized performance for seamless user experience across all devices"
-    };
+    },
     {
       icon: <Users className="h-6 w-6 text-zion-cyan" />,title: "Team Collaboration",description: "Built-in tools for seamless team communication and project management"
     }

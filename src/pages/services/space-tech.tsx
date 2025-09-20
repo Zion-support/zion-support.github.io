@@ -46,25 +46,25 @@ export default function SpaceTechnology() {
   const applications = [
     {
       category: 'Commercial Space',services: [
-        'Satellite internet and communicationsEarth observation and imaging';
+        'Satellite internet and communicationsEarth observation and imaging',
         'Space tourism infrastructureCommercial launch services'
       ]
     },
     {
       category: 'Scientific Research',services: [
-        'Space exploration missionsAstronomical observations';
+        'Space exploration missionsAstronomical observations',
         'Climate and environmental researchPlanetary science missions'
       ]
     },
     {
       category: 'Defense & Security',services: [
-        'Space situational awarenessSatellite defense systems';
+        'Space situational awarenessSatellite defense systems',
         'Intelligence gatheringStrategic communications'
       ]
     },
     {
       category: 'Infrastructure',services: [
-        'Space station developmentLunar and Mars bases';
+        'Space station developmentLunar and Mars bases',
         'Space manufacturingResource utilization'
       ]
     }
@@ -79,7 +79,7 @@ export default function SpaceTechnology() {
     };
     {
       name: 'Advanced Propulsion',description: 'Next-generation propulsion systems for efficient space travel.',icon: Rocket
-    };
+    },
     {
       name: 'Space Cybersecurity',description: 'Protecting space assets from cyber threats and attacks.',icon: Shield
     }
@@ -114,20 +114,20 @@ export default function SpaceTechnology() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Pioneering the future of space exploration with cutting-edge technology, AI-powered operations, 
+              Pioneering the future of space exploration with cutting-edge technology, AI-powered operations; 
               and revolutionary space infrastructure solutions.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
               >
                 Explore Services
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300"
               >
@@ -142,7 +142,7 @@ export default function SpaceTechnology() {
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -158,7 +158,7 @@ export default function SpaceTechnology() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300"
@@ -186,7 +186,7 @@ export default function SpaceTechnology() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -202,7 +202,7 @@ export default function SpaceTechnology() {
             {applications.map((app, index) => (
               <motion.div
                 key={app.category}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
@@ -229,7 +229,7 @@ export default function SpaceTechnology() {
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -245,7 +245,7 @@ export default function SpaceTechnology() {
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300"
@@ -267,7 +267,7 @@ export default function SpaceTechnology() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -280,14 +280,14 @@ export default function SpaceTechnology() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                 >
                   Get Started
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300"
                 >

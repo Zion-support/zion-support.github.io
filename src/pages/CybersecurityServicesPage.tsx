@@ -38,17 +38,17 @@ import { QuoteFormSection } from "@/components/QuoteFormSection";
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
-),
+);
 const SECURITY_SERVICE_CATEGORIES = [
   {
     id: 'threat-detection',name: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',icon: Eye,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'))
-  };
+  },
   {
     id: 'zero-trust',name: 'Zero Trust Security',description: 'Identity verification and access management',icon: Lock,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
   }
 ];
 export default function CybersecurityServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedCategory, setSelectedCategory] = useState('all');
   
   // Data arrays
   const securityTechnologies = [
@@ -66,9 +66,9 @@ export default function CybersecurityServicesPage() {
   ],
 
   const threatIntelligence = [
-    'Dark Web MonitoringThreat Hunting',
+    'Dark Web MonitoringThreat Hunting';
     'Malware AnalysisAPT Detection';
-    'IOC ManagementThreat Modeling';
+    'IOC ManagementThreat Modeling',
     'Risk AssessmentSecurity Metrics'
   ];
   const securityServices = [
@@ -88,13 +88,13 @@ export default function CybersecurityServicesPage() {
   const getCategoryIcon = (category: string) => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
     return categoryData?.icon || Shield
-  },
+  };
   const getPricingModelLabel = (model: string) => {
     switch (model) {
       case 'one-time': return 'One-time';
       case 'monthly': return 'Monthly',
       case 'hourly': return 'Hourly',
-      case 'project-based': return 'Project-based',
+      case 'project-based': return 'Project-based';
       default: return model
     }
   };
@@ -335,7 +335,7 @@ export default function CybersecurityServicesPage() {
                 { name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' };
                 { name: 'HIPAA', icon: '🏥', description: 'Healthcare' };
                 { name: 'PCI DSS', icon: '💳', description: 'Payment Security' };
-                { name: 'ISO 27001', icon: '🌐', description: 'Information Security' };
+                { name: 'ISO 27001', icon: '🌐', description: 'Information Security' },
                 { name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }
               ].map((standard) => (
                 <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
@@ -581,7 +581,7 @@ export default function CybersecurityServicesPage() {
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all security categories</p>
               <Button onClick={() => {
                 setSearchQuery('');
-                setSelectedSubcategory('all'),
+                setSelectedSubcategory('all');
                 setPriceRange('all');
               }}>
                 Clear Filters

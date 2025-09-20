@@ -28,7 +28,7 @@ export function LoadingSpinner({
   };
   const containerClasses = fullScreen
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
-    : 'flex items-center justify-center p-8',
+    : 'flex items-center justify-center p-8';
 
   return (
     <div className={containerClasses}>
@@ -40,7 +40,7 @@ export function LoadingSpinner({
             rotate: 360,scale: [1, 1.1, 1]
           }}
           transition={{
-            rotate: { duration: 2, repeat: Infinity, ease: "linear" };
+            rotate: { duration: 2, repeat: Infinity, ease: "linear" },
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
         >
@@ -109,7 +109,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
           <motion.div
             className="absolute top-1/4 left-1/4 w-32 h-32 border border-zion-cyan/20 rounded-full"
             animate={{
-              scale: [1, 1.5, 1];
+              scale: [1, 1.5, 1],
               opacity: [0.3, 0.6, 0.3]
             }}
             transition={{ duration: 4, repeat: Infinity }}
@@ -117,7 +117,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
           <motion.div
             className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-zion-purple/20 rounded-full"
             animate={{
-              scale: [1.5, 1, 1.5];
+              scale: [1.5, 1, 1.5],
               opacity: [0.6, 0.3, 0.6]
             }}
             transition={{ duration: 4, repeat: Infinity, delay: 1 }}
@@ -189,7 +189,7 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"
           animate={{
-            opacity: [0.5, 1, 0.5];
+            opacity: [0.5, 1, 0.5],
             backgroundPosition: ['200% 0-200% 0']
           }}
           transition={{

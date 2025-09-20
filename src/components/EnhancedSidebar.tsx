@@ -52,9 +52,9 @@ export const EnhancedSidebar: React.FC = () => {
     if (newExpanded.has(section)) {
       newExpanded.delete(section)
     } else {
-      newExpanded.add(section),
+      newExpanded.add(section);
     }
-    setExpandedSections(newExpanded),
+    setExpandedSections(newExpanded);
   },
 
   const isActive = (path: string) => location.pathname === path;
@@ -68,7 +68,7 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Blog", href: "/blog", icon: FileText };
         { name: "Partners", href: "/partners", icon: Handshake };
         { name: "About", href: "/about", icon: Users };
-        { name: "Contact", href: "/contact", icon: MessageCircle };
+        { name: "Contact", href: "/contact", icon: MessageCircle },
         { name: "Careers", href: "/careers", icon: Briefcase }
       ]
     };
@@ -82,7 +82,7 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain };
         { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users };
         { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar };
-        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp };
+        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
         { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
       ]
     };
@@ -95,14 +95,14 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "FAQ", href: "/faq", icon: HelpCircle };
         { name: "Request a Quote", href: "/request-quote", icon: MessageCircle };
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 };
-        { name: "Login", href: "/login", icon: User };
+        { name: "Login", href: "/login", icon: User },
         { name: "Support", href: "/support", icon: HelpCircle }
       ]
     }
   ];
   const quickActions = [
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" };
-    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" };
+    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
   return (
@@ -248,5 +248,5 @@ export const EnhancedSidebar: React.FC = () => {
         </motion.div>
       </div>
     </aside>
-  ),
+  );
 };

@@ -39,7 +39,7 @@ interface NavigationItem {
   children?: NavigationItem[],
   description?: string,
 }
-
+;
 const navigationItems: NavigationItem[] = [
   {
     label: 'Home',path: '/',icon: Home,description: 'Welcome to Zion Tech Group'
@@ -63,7 +63,7 @@ const navigationItems: NavigationItem[] = [
       };
       {
         label: 'Infrastructure',path: '/services/infrastructure',icon: Server,description: 'IT infrastructure solutions'
-      };
+      },
       {
         label: 'Consulting',path: '/services/consulting',icon: Users,description: 'Strategic IT consulting'
       }
@@ -82,16 +82,16 @@ const quickActions = [
   };
   {
     label: 'Support',path: '/help',icon: HelpCircle,color: 'bg-zion-purple'
-  };
+  },
   {
     label: 'Documentation',path: '/docs',icon: FileText,color: 'bg-zion-blue'
   }
 ];
 export const EnhancedMobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false),
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set()),
-  const [activePath, setActivePath] = useState('/'),
-  const location = useLocation(),
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [activePath, setActivePath] = useState('/');
+  const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     setActivePath(location.pathname);
@@ -103,12 +103,12 @@ export const EnhancedMobileNavigation: React.FC = () => {
       }
     };
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside),
+      document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden',
     }
-
+;
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside),
+      document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset',
     },
   }, [isOpen]),
@@ -119,11 +119,11 @@ export const EnhancedMobileNavigation: React.FC = () => {
       if (newSet.has(label)) {
         newSet.delete(label)
       } else {
-        newSet.add(label),
-      }
+        newSet.add(label);
+      };
       return newSet,
     }),
-  },
+  };
 
   const handleNavigation = (path: string) => {
     setIsOpen(false);
@@ -133,14 +133,14 @@ export const EnhancedMobileNavigation: React.FC = () => {
   const isActive = (path: string) => {
     if (path === '/') {
       return activePath === '/'
-    }
+    };
     return activePath.startsWith(path);
   },
 
   const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {
     const isExpanded = expandedItems.has(item.label);
-    const hasChildren = item.children && item.children.length > 0,
-    const isItemActive = isActive(item.path),
+    const hasChildren = item.children && item.children.length > 0;
+    const isItemActive = isActive(item.path);
 
     return (
       <div key={item.label} className="w-full">
@@ -215,7 +215,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
         )}
       </div>
     ),
-  },
+  };
 
   return (
     <>

@@ -5,7 +5,7 @@ const CloudDevOpsServices = () => {
     const cloudServices = [
         {
             title: "Cloud Migration & Strategy",description: "Seamless migration to cloud platforms with strategic planning and execution.",icon: Cloud,features: [
-                "Multi-cloud Strategy";
+                "Multi-cloud Strategy",
                 "Legacy System Migration",
                 "Cost Optimization",
                 "Performance Optimization",
@@ -14,7 +14,7 @@ const CloudDevOpsServices = () => {
         },
         {
             title: "DevOps Implementation",description: "Streamline development and operations with modern DevOps practices and tools.",icon: GitFork,features: [
-                "CI/CD Pipeline Setup";
+                "CI/CD Pipeline Setup",
                 "Infrastructure as Code",
                 "Automated Testing",
                 "Deployment Automation",
@@ -23,7 +23,7 @@ const CloudDevOpsServices = () => {
         },
         {
             title: "Container Orchestration",description: "Manage and scale containerized applications with Kubernetes and Docker.",icon: Server,features: [
-                "Kubernetes Deployment";
+                "Kubernetes Deployment",
                 "Docker Containerization",
                 "Service Mesh",
                 "Auto-scaling",
@@ -32,7 +32,7 @@ const CloudDevOpsServices = () => {
         },
         {
             title: "Database Management",description: "Optimize and manage databases in cloud environments for performance and reliability.",icon: Database,features: [
-                "Database Migration";
+                "Database Migration",
                 "Performance Tuning",
                 "Backup & Recovery",
                 "High Availability",
@@ -41,7 +41,7 @@ const CloudDevOpsServices = () => {
         },
         {
             title: "Security & Compliance",description: "Ensure cloud security and compliance with industry standards and best practices.",icon: Shield,features: [
-                "Identity & Access Management";
+                "Identity & Access Management",
                 "Network Security",
                 "Data Encryption",
                 "Compliance Auditing",
@@ -50,7 +50,7 @@ const CloudDevOpsServices = () => {
         },
         {
             title: "Monitoring & Observability",description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",icon: Monitor,features: [
-                "Real-time Monitoring";
+                "Real-time Monitoring",
                 "Log Management",
                 "Performance Metrics",
                 "Alert Management",

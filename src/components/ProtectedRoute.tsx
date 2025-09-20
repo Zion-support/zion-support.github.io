@@ -17,14 +17,14 @@ export function ProtectedRoute({ children, requireAuth = true, roles = [] }: Pro
       </div>
     );
   }
-
+;
   if (requireAuth && !isAuthenticated) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
-
+;
   if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {
-    return <Navigate to="/unauthorized" replace />,
+    return <Navigate to="/unauthorized" replace />;
   }
-
+;
   return <>{children}</>;
 }

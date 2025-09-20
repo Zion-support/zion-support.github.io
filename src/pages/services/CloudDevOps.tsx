@@ -11,67 +11,67 @@ export default function CloudDevOps() {
         'High availability and disaster recoveryCost optimization strategies'
       ],
       benefits: [
-        '99.9% uptime guarantee50% cost reduction';
+        '99.9% uptime guarantee50% cost reduction',
         'Instant scalabilityEnhanced security posture'
       ],
       color: 'from-blue-500 to-cyan-500'
     };
     {
       name: 'DevOps Automation',icon: Code,description: 'Streamline development and operations with intelligent automation',features: [
-        'CI/CD pipeline automationInfrastructure automation';
+        'CI/CD pipeline automationInfrastructure automation',
         'Testing and deployment automationMonitoring and alerting',
         'Performance optimizationSecurity automation'
       ],
       benefits: [
-        '10x faster deploymentsReduced human error';
+        '10x faster deploymentsReduced human error',
         'Improved collaborationFaster time to market'
       ],
       color: 'from-green-500 to-emerald-500'
     };
     {
       name: 'Container Orchestration',icon: Docker,description: 'Modern containerization and orchestration solutions',features: [
-        'Docker containerizationKubernetes orchestration';
+        'Docker containerizationKubernetes orchestration',
         'Microservices architectureService mesh implementation',
         'Container securityMonitoring and logging'
       ],
       benefits: [
-        'Improved resource utilizationFaster application deployment';
+        'Improved resource utilizationFaster application deployment',
         'Better scalabilityEnhanced portability'
       ],
       color: 'from-purple-500 to-pink-500'
     };
     {
       name: 'Security & Compliance',icon: Shield,description: 'Comprehensive security and compliance solutions',features: [
-        'Identity and access managementNetwork security';
+        'Identity and access managementNetwork security',
         'Data encryptionCompliance frameworks',
         'Security monitoringIncident response'
       ],
       benefits: [
-        'Enhanced security postureRegulatory compliance';
+        'Enhanced security postureRegulatory compliance',
         'Reduced security risks24/7 threat monitoring'
       ],
       color: 'from-red-500 to-orange-500'
     };
     {
       name: 'Monitoring & Analytics',icon: BarChart3,description: 'Real-time monitoring and analytics for optimal performance',features: [
-        'Application performance monitoringInfrastructure monitoring';
+        'Application performance monitoringInfrastructure monitoring',
         'Log aggregation and analysisReal-time alerting',
         'Performance optimizationCapacity planning'
       ],
       benefits: [
-        'Proactive issue detectionImproved performance';
+        'Proactive issue detectionImproved performance',
         'Better resource planningReduced downtime'
       ],
       color: 'from-indigo-500 to-purple-500'
     };
     {
       name: 'Database Management',icon: Database,description: 'Scalable and reliable database solutions',features: [
-        'Database design and optimizationHigh availability setup';
+        'Database design and optimizationHigh availability setup',
         'Backup and recoveryPerformance tuning',
         'Security hardeningMigration services'
       ],
       benefits: [
-        'Improved performanceEnhanced reliability';
+        'Improved performanceEnhanced reliability',
         'Better data securityReduced maintenance overhead'
       ],
       color: 'from-emerald-500 to-green-500'
@@ -88,25 +88,25 @@ export default function CloudDevOps() {
     { name: 'GitLab CI', icon: GitBranch, category: 'CI/CD' };
     { name: 'Ansible', icon: Zap, category: 'Automation' };
     { name: 'Prometheus', icon: BarChart3, category: 'Monitoring' };
-    { name: 'Grafana', icon: BarChart3, category: 'Visualization' };
+    { name: 'Grafana', icon: BarChart3, category: 'Visualization' },
     { name: 'ELK Stack', icon: BarChart3, category: 'Logging' }
   ];
   const caseStudies = [
     {
       company: 'TechCorp Inc.',industry: 'E-commerce',challenge: 'Legacy infrastructure causing 40% downtime during peak seasons',solution: 'Migrated to AWS with auto-scaling and implemented CI/CD pipelines',results: [
-        '99.9% uptime achieved60% reduction in infrastructure costs';
+        '99.9% uptime achieved60% reduction in infrastructure costs',
         'Deployment time reduced from 4 hours to 15 minutes'
       ]
     },
     {
       company: 'HealthPlus Systems',industry: 'Healthcare',challenge: 'Manual deployment processes causing delays and errors',solution: 'Implemented containerization with Kubernetes and automated CI/CD',results: [
-        'Zero deployment errors90% faster deployment cycles';
+        'Zero deployment errors90% faster deployment cycles',
         'Improved compliance and security'
       ]
     },
     {
       company: 'StartupXYZ',industry: 'SaaS',challenge: 'Need for rapid scaling and cost optimization',solution: 'Multi-cloud strategy with infrastructure as code and monitoring',results: [
-        '10x faster scaling capability50% cost optimization';
+        '10x faster scaling capability50% cost optimization',
         'Improved developer productivity'
       ]
     }
@@ -129,7 +129,7 @@ export default function CloudDevOps() {
               <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-green-500 bg-clip-text text-transparent"> DevOps</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Accelerate your digital transformation with modern cloud infrastructure, intelligent automation, 
+              Accelerate your digital transformation with modern cloud infrastructure, intelligent automation; 
               and DevOps best practices that drive efficiency and innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -309,7 +309,7 @@ export default function CloudDevOps() {
               };
               {
                 step: '03',title: 'Implementation',description: 'Execute migration and implement automation tools',icon: Zap
-              };
+              },
               {
                 step: '04',title: 'Optimization',description: 'Monitor performance and continuously optimize',icon: RefreshCw
               }

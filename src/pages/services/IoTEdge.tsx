@@ -11,7 +11,7 @@ export default function IoTEdge() {
     };
     {
       icon: Zap,title: 'Real-time Processing',description: 'Instant data analysis and decision making'
-    };
+    },
     {
       icon: Database,title: 'Data Management',description: 'Efficient storage and processing of IoT data streams'
     }
@@ -25,7 +25,7 @@ export default function IoTEdge() {
     };
     {
       title: '5G Integration',description: 'High-speed connectivity for IoT applications',icon: Wifi
-    };
+    },
     {
       title: 'Security & Compliance',description: 'End-to-end security for IoT ecosystems',icon: Shield
     }
@@ -48,7 +48,7 @@ export default function IoTEdge() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Connect, Process,
+              Connect, Process;
               <span className="text-gradient"> Transform</span>
             </h1>
 
@@ -74,7 +74,7 @@ export default function IoTEdge() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -92,7 +92,7 @@ export default function IoTEdge() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -113,7 +113,7 @@ export default function IoTEdge() {
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -131,7 +131,7 @@ export default function IoTEdge() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -156,7 +156,7 @@ export default function IoTEdge() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

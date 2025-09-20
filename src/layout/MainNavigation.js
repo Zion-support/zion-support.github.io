@@ -5,7 +5,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }) {
-    const { user } = useAuth(),
+    const { user } = useAuth();
     const isAuthenticated = !!user;
     const location = useLocation();
     const { t } = useTranslation();
@@ -27,7 +27,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }) 
         };
         {
             key: 'community',href: '/community',matches: (path) => path.startsWith('/community') || path.startsWith('/forum')
-        };
+        },
         {
             key: 'about',href: '/about',matches: (path) => path === '/about'
         }
@@ -44,7 +44,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }) 
         links.push({
             key: 'analytics',name: t('nav.analytics'),href: '/analytics',matches: (path) => path.startsWith('/analytics')
         });
-    }
+    };
     return (_jsx("nav", { className: cn("navbar ml-6 hidden md:flex", className), children: _jsxs("ul", { className: "flex items-center gap-1", children: [links.map((link) => (_jsx("li", { children: _jsx(Link, { to: link.href, className: cn("inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors", link.matches(location.pathname)
                             ? "bg-zion-purple/20 text-zion-cyan"
                             : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"), children: link.name }) }, link.name))), isAuthenticated && (_jsx("li", { children: _jsxs(Link, { to: "/messages", className: cn("inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative", location.pathname === "/messages" || location.pathname === "/inbox"

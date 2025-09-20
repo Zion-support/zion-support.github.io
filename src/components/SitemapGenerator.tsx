@@ -53,8 +53,8 @@ interface SitemapRoute {
 }
 
 export const SitemapGenerator: React.FC = () => {
-  const [sitemapData, setSitemapData] = useState<SitemapSection[]>([]),
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [sitemapData, setSitemapData] = useState<SitemapSection[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   useEffect(() => {
     generateSitemap();
@@ -69,7 +69,7 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/careers', name: 'Careers', description: 'Job opportunities and career information', icon: Briefcase, category: 'Main' };
           { path: '/partners', name: 'Partners', description: 'Strategic partnerships and collaborations', icon: Users, category: 'Main' };
           { path: '/blog', name: 'Blog', description: 'Latest news and insights', icon: Newspaper, category: 'Main' };
-          { path: '/news', name: 'News', description: 'Company news and announcements', icon: Newspaper, category: 'Main' };
+          { path: '/news', name: 'News', description: 'Company news and announcements', icon: Newspaper, category: 'Main' },
           { path: '/events', name: 'Events', description: 'Upcoming events and webinars', icon: Calendar, category: 'Main' }
         ]
       };
@@ -77,7 +77,7 @@ export const SitemapGenerator: React.FC = () => {
         title: 'Featured Services 2026-2027',icon: Star,description: 'Latest and most innovative service offerings',featured: true,routes: [
           { path: '/services2026', name: '2026 Services Overview', description: 'Revolutionary AI & Quantum Solutions', icon: Star, category: 'Featured', featured: true };
           { path: '/services2027', name: '2027 Services Overview', description: 'Cutting-edge Innovation & Emerging Tech', icon: Star, category: 'Featured', featured: true };
-          { path: '/ultimate-services-showcase-2026', name: 'Ultimate Services 2026', description: 'Comprehensive service portfolio', icon: Crown, category: 'Featured', featured: true };
+          { path: '/ultimate-services-showcase-2026', name: 'Ultimate Services 2026', description: 'Comprehensive service portfolio', icon: Crown, category: 'Featured', featured: true },
           { path: '/comprehensive-services-showcase-2025', name: 'Comprehensive Services 2025', description: 'Full service catalog overview', icon: Globe, category: 'Featured', featured: true }
         ]
       };
@@ -96,7 +96,7 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/services/ai-autonomous-research-assistant', name: 'AI Autonomous Research Assistant', description: 'Automated research and analysis', icon: Brain, category: 'AI & ML' };
           { path: '/services/ai-project-management', name: 'AI Project Management', description: 'Intelligent project coordination', icon: Target, category: 'AI & ML' };
           { path: '/services/ai-customer-support-automation', name: 'AI Customer Support Automation', description: 'Automated customer service', icon: MessageCircle, category: 'AI & ML' };
-          { path: '/services/ai-financial-analytics', name: 'AI Financial Analytics', description: 'Financial data analysis and insights', icon: DollarSign, category: 'AI & ML' };
+          { path: '/services/ai-financial-analytics', name: 'AI Financial Analytics', description: 'Financial data analysis and insights', icon: DollarSign, category: 'AI & ML' },
           { path: '/services/ai-marketing-automation', name: 'AI Marketing Automation', description: 'Intelligent marketing workflows', icon: TrendingUp, category: 'AI & ML' }
         ]
       };
@@ -106,7 +106,7 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/services/it-infrastructure', name: 'IT Infrastructure', description: 'Enterprise infrastructure solutions', icon: Server, category: 'Cloud & DevOps' };
           { path: '/services/finops-advisor', name: 'FinOps Advisor', description: 'Cloud cost optimization', icon: DollarSign, category: 'Cloud & DevOps' };
           { path: '/services/cloud-finops-optimizer', name: 'Cloud FinOps Optimizer', description: 'Financial operations automation', icon: BarChart3, category: 'Cloud & DevOps' };
-          { path: '/services/digital-transformation', name: 'Digital Transformation', description: 'Strategic technology consulting', icon: Zap, category: 'Cloud & DevOps' };
+          { path: '/services/digital-transformation', name: 'Digital Transformation', description: 'Strategic technology consulting', icon: Zap, category: 'Cloud & DevOps' },
           { path: '/services/digital-twin', name: 'Digital Twin', description: 'Virtual system replicas', icon: Eye, category: 'Cloud & DevOps' }
         ]
       };
@@ -115,7 +115,7 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/services/security-headers-csp', name: 'Security Headers & CSP', description: 'Web security hardening', icon: Lock, category: 'Cybersecurity' };
           { path: '/services/dsr-portal', name: 'DSR Privacy Portal', description: 'GDPR/CCPA compliance', icon: Shield, category: 'Cybersecurity' };
           { path: '/services/zero-trust-network-access', name: 'Zero Trust Network Access', description: 'Advanced network security', icon: Lock, category: 'Cybersecurity' };
-          { path: '/privacy', name: 'Privacy Policy', description: 'Data protection and privacy', icon: Shield, category: 'Cybersecurity' };
+          { path: '/privacy', name: 'Privacy Policy', description: 'Data protection and privacy', icon: Shield, category: 'Cybersecurity' },
           { path: '/security', name: 'Security', description: 'Security information and policies', icon: Shield, category: 'Cybersecurity' }
         ]
       };
@@ -126,7 +126,7 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/services/ai-content-creation', name: 'AI Content Creation', description: 'Automated content generation', icon: PenTool, category: 'Emerging Tech' };
           { path: '/services/ai-hr-platform', name: 'AI HR Platform', description: 'Human resources automation', icon: Users, category: 'Emerging Tech' };
           { path: '/services/sustainable-technology', name: 'Sustainable Technology', description: 'Green and eco-friendly solutions', icon: Globe, category: 'Emerging Tech' };
-          { path: '/services/ai-predictive-maintenance', name: 'AI Predictive Maintenance', description: 'Predictive analytics for maintenance', icon: TrendingUp, category: 'Emerging Tech' };
+          { path: '/services/ai-predictive-maintenance', name: 'AI Predictive Maintenance', description: 'Predictive analytics for maintenance', icon: TrendingUp, category: 'Emerging Tech' },
           { path: '/services/quantum-machine-learning', name: 'Quantum Machine Learning', description: 'Quantum-enhanced ML algorithms', icon: Brain, category: 'Emerging Tech' }
         ]
       };
@@ -134,7 +134,7 @@ export const SitemapGenerator: React.FC = () => {
         title: 'Data & Analytics',icon: BarChart3,description: 'Business intelligence and data analysis services',routes: [
           { path: '/services/data-analytics', name: 'Data Analytics', description: 'Business intelligence & insights', icon: BarChart3, category: 'Data & Analytics' };
           { path: '/services/website-analytics', name: 'Website Analytics', description: 'Web performance and user behavior', icon: BarChart3, category: 'Data & Analytics' };
-          { path: '/services/affiliate-tracking', name: 'Affiliate Tracking', description: 'Affiliate program management', icon: TrendingUp, category: 'Data & Analytics' };
+          { path: '/services/affiliate-tracking', name: 'Affiliate Tracking', description: 'Affiliate program management', icon: TrendingUp, category: 'Data & Analytics' },
           { path: '/analytics', name: 'Analytics Dashboard', description: 'Performance metrics and reporting', icon: BarChart3, category: 'Data & Analytics' }
         ]
       };
@@ -149,7 +149,7 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/services/llm-content-studio', name: 'LLM Content Studio', description: 'Large language model content creation', icon: PenTool, category: 'Micro SaaS' };
           { path: '/services/returns-management', name: 'Returns Management', description: 'Product returns processing', icon: ShoppingCart, category: 'Micro SaaS' };
           { path: '/services/email-sequencer', name: 'Email Sequencer', description: 'Automated email sequences', icon: MessageCircle, category: 'Micro SaaS' };
-          { path: '/services/podcast-transcription', name: 'Podcast Transcription', description: 'Audio content transcription', icon: MessageCircle, category: 'Micro SaaS' };
+          { path: '/services/podcast-transcription', name: 'Podcast Transcription', description: 'Audio content transcription', icon: MessageCircle, category: 'Micro SaaS' },
           { path: '/services/mobile-survey', name: 'Mobile Survey', description: 'Mobile survey solutions', icon: MessageCircle, category: 'Micro SaaS' }
         ]
       };
@@ -166,7 +166,7 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/webinars', name: 'Webinars', description: 'Educational webinars and sessions', icon: Video, category: 'Business' };
           { path: '/white-papers', name: 'White Papers', description: 'Technical documentation and research', icon: FileText, category: 'Business' };
           { path: '/documentation', name: 'Documentation', description: 'Technical documentation and guides', icon: FileText, category: 'Business' };
-          { path: '/developers', name: 'Developer Portal', description: 'Developer resources and APIs', icon: Code, category: 'Business' };
+          { path: '/developers', name: 'Developer Portal', description: 'Developer resources and APIs', icon: Code, category: 'Business' },
           { path: '/api', name: 'API', description: 'Application programming interfaces', icon: Code, category: 'Business' }
         ]
       };
@@ -175,24 +175,24 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/terms', name: 'Terms of Service', description: 'Service terms and conditions', icon: FileText, category: 'Legal' };
           { path: '/cookies', name: 'Cookie Policy', description: 'Cookie usage and privacy', icon: FileText, category: 'Legal' };
           { path: '/sitemap', name: 'Sitemap', description: 'Complete website structure', icon: FileText, category: 'Legal' };
-          { path: '/status', name: 'System Status', description: 'Service status and uptime', icon: Activity, category: 'Legal' };
+          { path: '/status', name: 'System Status', description: 'Service status and uptime', icon: Activity, category: 'Legal' },
           { path: '/system-status', name: 'System Status', description: 'Detailed system information', icon: Activity, category: 'Legal' }
         ]
       }
     ];
-    setSitemapData(sitemap),
+    setSitemapData(sitemap);
   },
 
   const filteredSitemap = sitemapData.map(section => ({
-    ...section,
+    ...section;
     routes: section.routes.filter(route => {
       const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.path.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory,
+      const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory;
       return matchesSearch && matchesCategory
     })
-  })).filter(section => section.routes.length > 0),
+  })).filter(section => section.routes.length > 0);
 
   const allCategories = ['all', ...Array.from(new Set(sitemapData.flatMap(section => 
     section.routes.map(route => route.category)
@@ -213,14 +213,14 @@ ${sitemapData.flatMap(section =>
 ).join('\n')}
 </urlset>`;
     const blob = new Blob([sitemapXml], { type: 'application/xml' });
-    const url = URL.createObjectURL(blob),
-    const a = document.createElement('a'),
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url,
     a.download = 'sitemap.xml',
-    document.body.appendChild(a),
-    a.click(),
-    document.body.removeChild(a),
-    URL.revokeObjectURL(url),
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   },
 
   const exportCSV = () => {
@@ -235,17 +235,17 @@ ${sitemapData.flatMap(section =>
           route.featured ? 'Yes' : 'No'
         ])
       )
-    ].map(row => row.map(field => `"${field}"`).join()).join('\n'),
+    ].map(row => row.map(field => `"${field}"`).join()).join('\n');
 
     const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob),
-    const a = document.createElement('a'),
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url,
     a.download = 'sitemap.csv',
-    document.body.appendChild(a),
-    a.click(),
-    document.body.removeChild(a),
-    URL.revokeObjectURL(url),
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   },
 
   return (
@@ -395,12 +395,12 @@ ${sitemapData.flatMap(section =>
       </div>
     </div>
   ),
-},
+};
 
 // Missing icon components
-const Home = () => <Globe className="w-4 h-4" />,
-const Calendar = () => <BookOpen className="w-4 h-4" />,
-const Video = () => <MessageCircle className="w-4 h-4" />,
-const Code = () => <Settings className="w-4 h-4" />,
+const Home = () => <Globe className="w-4 h-4" />;
+const Calendar = () => <BookOpen className="w-4 h-4" />;
+const Video = () => <MessageCircle className="w-4 h-4" />;
+const Code = () => <Settings className="w-4 h-4" />;
 
 export default SitemapGenerator;

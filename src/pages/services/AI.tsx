@@ -27,7 +27,7 @@ export default function AIServices() {
   const aiServices = [
     {
       name: "AI Strategy & Consulting",description: "Strategic guidance on implementing AI solutions across your organization",icon: Target,features: [
-        "AI readiness assessment";
+        "AI readiness assessment",
         "Technology roadmap planning",
         "ROI analysis and business case development",
         "Change management strategies"
@@ -37,7 +37,7 @@ export default function AIServices() {
     };
     {
       name: "Machine Learning Development",description: "Custom ML models and algorithms tailored to your specific business needs",icon: Brain,features: [
-        "Custom model development";
+        "Custom model development",
         "Data preprocessing and feature engineering",
         "Model training and optimization",
         "Performance monitoring and maintenance"
@@ -47,7 +47,7 @@ export default function AIServices() {
     };
     {
       name: "AI-Powered Applications",description: "Intelligent automation and insights through custom AI applications",icon: Zap,features: [
-        "Chatbot and virtual assistant development";
+        "Chatbot and virtual assistant development",
         "Predictive analytics applications",
         "Computer vision solutions",
         "Natural language processing systems"
@@ -57,7 +57,7 @@ export default function AIServices() {
     };
     {
       name: "AI Infrastructure & MLOps",description: "Scalable AI infrastructure and machine learning operations",icon: Cloud,features: [
-        "ML pipeline automation";
+        "ML pipeline automation",
         "Model versioning and deployment",
         "Scalable training infrastructure",
         "Monitoring and alerting systems"
@@ -71,7 +71,7 @@ export default function AIServices() {
     { name: "PyTorch", description: "Deep learning research platform", icon: Brain };
     { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu };
     { name: "Computer Vision", description: "Image and video analysis", icon: Eye };
-    { name: "NLP", description: "Natural language processing", icon: MessageSquare };
+    { name: "NLP", description: "Natural language processing", icon: MessageSquare },
     { name: "AutoML", description: "Automated machine learning", icon: Zap }
   ];
   const useCases = [

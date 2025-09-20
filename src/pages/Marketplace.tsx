@@ -212,8 +212,8 @@ import {
   Finch
 } from "lucide-react";
 export default function Marketplace() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
@@ -223,20 +223,20 @@ export default function Marketplace() {
     { id: 'cloud', name: 'Cloud Solutions', count: 8 };
     { id: 'security', name: 'Security & Compliance', count: 6 };
     { id: 'data', name: 'Data & Analytics', count: 7 };
-    { id: 'development', name: 'Development Tools', count: 9 };
+    { id: 'development', name: 'Development Tools', count: 9 },
     { id: 'hardware', name: 'Hardware & Equipment', count: 6 }
   ];
   const types = [
     { id: 'all', name: 'All Types', count: 48 };
     { id: 'software', name: 'Software', count: 25 };
-    { id: 'service', name: 'Services', count: 15 };
+    { id: 'service', name: 'Services', count: 15 },
     { id: 'hardware', name: 'Hardware', count: 8 }
   ];
   const marketplaceItems = [
     // AI & Machine Learning
     {
       id: 'ai-chatbot',name: 'AI Chatbot Platform',category: 'ai-ml',type: 'software',icon: Bot,description: 'Intelligent chatbot platform with natural language processing',features: [
-        'Natural language understandingMulti-language support';
+        'Natural language understandingMulti-language support',
         'Integration APIsAnalytics dashboard',
         'Custom training models24/7 availability'
       ],
@@ -245,7 +245,7 @@ export default function Marketplace() {
     };
     {
       id: 'ml-pipeline',name: 'ML Pipeline Automation',category: 'ai-ml',type: 'software',icon: BarChart3,description: 'Automated machine learning pipeline for data scientists',features: [
-        'AutoML capabilitiesModel versioning';
+        'AutoML capabilitiesModel versioning',
         'A/B testingPerformance monitoring',
         'Scalable infrastructureCloud deployment'
       ],
@@ -254,7 +254,7 @@ export default function Marketplace() {
     };
     {
       id: 'computer-vision',name: 'Computer Vision API',category: 'ai-ml',type: 'service',icon: Eye,description: 'Advanced computer vision services for image and video analysis',features: [
-        'Object detectionFace recognition';
+        'Object detectionFace recognition',
         'Image classificationVideo analysis',
         'Real-time processingCustom model training'
       ],
@@ -264,7 +264,7 @@ export default function Marketplace() {
     // Cloud Solutions
     {
       id: 'cloud-migration',name: 'Cloud Migration Service',category: 'cloud',type: 'service',icon: Cloud,description: 'Professional cloud migration and optimization services',features: [
-        'Infrastructure assessmentMigration planning';
+        'Infrastructure assessmentMigration planning',
         'Data migrationPerformance optimization',
         'Cost optimizationOngoing support'
       ],
@@ -274,7 +274,7 @@ export default function Marketplace() {
     };
     {
       id: 'kubernetes-manager',name: 'Kubernetes Management Platform',category: 'cloud',type: 'software',icon: Server,description: 'Enterprise-grade Kubernetes cluster management solution',features: [
-        'Multi-cluster managementAuto-scaling';
+        'Multi-cluster managementAuto-scaling',
         'Monitoring & alertingSecurity policies',
         'Backup & recoveryCost optimization'
       ],
@@ -284,7 +284,7 @@ export default function Marketplace() {
     // Security & Compliance
     {
       id: 'threat-detection',name: 'Advanced Threat Detection',category: 'security',type: 'software',icon: Shield,description: 'AI-powered threat detection and response system',features: [
-        'Real-time monitoringBehavioral analysis';
+        'Real-time monitoringBehavioral analysis',
         'Threat intelligenceAutomated response',
         'Compliance reporting24/7 SOC support'
       ],
@@ -293,7 +293,7 @@ export default function Marketplace() {
     };
     {
       id: 'compliance-audit',name: 'Compliance Audit Service',category: 'security',type: 'service',icon: CheckCircle,description: 'Comprehensive compliance auditing and certification services',features: [
-        'SOC 2 Type IIISO 27001';
+        'SOC 2 Type IIISO 27001',
         'GDPR complianceHIPAA assessment',
         'PCI DSS validationOngoing monitoring'
       ],
@@ -304,7 +304,7 @@ export default function Marketplace() {
     // Data & Analytics
     {
       id: 'data-warehouse',name: 'Data Warehouse Solution',category: 'data',type: 'software',icon: Database,description: 'Scalable data warehouse with advanced analytics',features: [
-        'Multi-cloud supportReal-time processing';
+        'Multi-cloud supportReal-time processing',
         'Advanced analyticsData governance',
         'Security & encryptionAuto-scaling'
       ],
@@ -313,7 +313,7 @@ export default function Marketplace() {
     };
     {
       id: 'bi-dashboard',name: 'Business Intelligence Dashboard',category: 'data',type: 'software',icon: BarChart3,description: 'Interactive BI dashboard for data visualization',features: [
-        'Drag & drop interfaceReal-time data';
+        'Drag & drop interfaceReal-time data',
         'Custom widgetsMobile responsive',
         'Export capabilitiesCollaboration tools'
       ],
@@ -323,7 +323,7 @@ export default function Marketplace() {
     // Development Tools
     {
       id: 'code-generator',name: 'AI Code Generator',category: 'development',type: 'software',icon: Code,description: 'AI-powered code generation and assistance tool',features: [
-        'Multi-language supportCode completion';
+        'Multi-language supportCode completion',
         'Bug detectionDocumentation generation',
         'Code reviewIntegration with IDEs'
       ],
@@ -332,7 +332,7 @@ export default function Marketplace() {
     };
     {
       id: 'api-gateway',name: 'API Gateway Platform',category: 'development',type: 'software',icon: Network,description: 'Enterprise API gateway with advanced management features',features: [
-        'Rate limitingAuthentication';
+        'Rate limitingAuthentication',
         'Monitoring & analyticsVersion management',
         'DocumentationDeveloper portal'
       ],
@@ -342,7 +342,7 @@ export default function Marketplace() {
     // Hardware & Equipment
     {
       id: 'edge-computing',name: 'Edge Computing Device',category: 'hardware',type: 'hardware',icon: Cpu,description: 'High-performance edge computing device for IoT applications',features: [
-        'Intel i7 processor16GB RAM';
+        'Intel i7 processor16GB RAM',
         '512GB SSDDual network ports',
         'Industrial grade5-year warranty'
       ],
@@ -352,7 +352,7 @@ export default function Marketplace() {
     };
     {
       id: 'network-switch',name: 'Enterprise Network Switch',category: 'hardware',type: 'hardware',icon: Network,description: 'High-speed network switch for enterprise environments',features: [
-        '48-port GigabitPoE+ support';
+        '48-port GigabitPoE+ support',
         'VLAN managementQoS features',
         'SNMP monitoringLifetime warranty'
       ],
@@ -360,23 +360,23 @@ export default function Marketplace() {
       image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/network-switch',documentation: 'https://docs.ziontechgroup.com/network-switch'
     }
   ];
-  const featuredItems = marketplaceItems.filter(item => item.status === 'featured'),
-  const popularItems = marketplaceItems.filter(item => item.status === 'popular'),
-  const trendingItems = marketplaceItems.filter(item => item.status === 'trending'),
+  const featuredItems = marketplaceItems.filter(item => item.status === 'featured');
+  const popularItems = marketplaceItems.filter(item => item.status === 'popular');
+  const trendingItems = marketplaceItems.filter(item => item.status === 'trending');
 
   const toggleItemExpansion = (itemId: string) => {
     setExpandedItem(expandedItem === itemId ? null : itemId)
   };
   const filteredItems = marketplaceItems.filter(item => {
-    if (selectedCategory !== 'all' && item.category !== selectedCategory) return false,
+    if (selectedCategory !== 'all' && item.category !== selectedCategory) return false;
     if (selectedType !== 'all' && item.type !== selectedType) return false,
     if (searchQuery) {
       return item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
              item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-             item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-    }
+             item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    };
     return true,
-  }),
+  });
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -385,7 +385,7 @@ export default function Marketplace() {
       case 'security': return 'bg-red-500/20 text-red-400',
       case 'data': return 'bg-green-500/20 text-green-400',
       case 'development': return 'bg-orange-500/20 text-orange-400',
-      case 'hardware': return 'bg-gray-500/20 text-gray-400',
+      case 'hardware': return 'bg-gray-500/20 text-gray-400';
       default: return 'bg-slate-500/20 text-slate-400'
     }
   };
@@ -393,7 +393,7 @@ export default function Marketplace() {
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
       case 'service': return 'bg-green-500/20 text-green-400',
-      case 'hardware': return 'bg-orange-500/20 text-orange-400',
+      case 'hardware': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-slate-500/20 text-slate-400'
     }
   };
@@ -401,30 +401,30 @@ export default function Marketplace() {
     switch (status) {
       case 'featured': return 'bg-yellow-500/20 text-yellow-400';
       case 'popular': return 'bg-blue-500/20 text-blue-400',
-      case 'trending': return 'bg-green-500/20 text-green-400',
+      case 'trending': return 'bg-green-500/20 text-green-400';
       default: return 'bg-slate-500/20 text-slate-400'
     }
   };
   const renderStars = (rating: number) => {
     const stars = [];
-    const fullStars = Math.floor(rating),
-    const hasHalfStar = rating % 1 !== 0,
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
     
     for (let i = 0, i < fullStars, i++) {
-      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />),
+      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />);
     }
-    
+    ;
     if (hasHalfStar) {
-      stars.push(<Star key="half" className="w-4 h-4 text-yellow-400 fill-current" />),
+      stars.push(<Star key="half" className="w-4 h-4 text-yellow-400 fill-current" />);
     }
-    
-    const emptyStars = 5 - Math.ceil(rating),
+    ;
+    const emptyStars = 5 - Math.ceil(rating);
     for (let i = 0, i < emptyStars, i++) {
-      stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />),
+      stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />);
     }
-    
+    ;
     return stars,
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -538,7 +538,7 @@ export default function Marketplace() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
@@ -551,7 +551,7 @@ export default function Marketplace() {
             {featuredItems.map((item, index) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
@@ -673,7 +673,7 @@ export default function Marketplace() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -689,7 +689,7 @@ export default function Marketplace() {
               {filteredItems.map((item, index) => (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                   className="group"
@@ -758,7 +758,7 @@ export default function Marketplace() {
               {filteredItems.map((item, index) => (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                   className="group"
@@ -842,7 +842,7 @@ export default function Marketplace() {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

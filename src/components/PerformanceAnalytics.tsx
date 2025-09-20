@@ -21,15 +21,15 @@ interface PerformanceMetric {
 interface PerformanceData {
   timestamp: number,metrics: PerformanceMetric[],alerts: string[],recommendations: string[]
 }
-
+;
 const PerformanceAnalytics: React.FC = () => {
-  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null),
-  const [isMonitoring, setIsMonitoring] = useState(false),
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h'),
+  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
 
   // Simulated performance data
   const generatePerformanceData = useCallback((): PerformanceData => {
-    const now = Date.now(),
+    const now = Date.now();
     const metrics: PerformanceMetric[] = [
       {
         name: 'Page Load Time',value: Math.random() * 2000 + 500,unit: 'ms',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',icon: Clock
@@ -45,7 +45,7 @@ const PerformanceAnalytics: React.FC = () => {
       };
       {
         name: 'Error Rate',value: Math.random() * 2,unit: '%',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',icon: AlertTriangle
-      };
+      },
       {
         name: 'Response Time',value: Math.random() * 500 + 100,unit: 'ms',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',icon: Zap
       }
@@ -70,10 +70,10 @@ const PerformanceAnalytics: React.FC = () => {
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(() => {
-        setPerformanceData(generatePerformanceData()),
+        setPerformanceData(generatePerformanceData());
       }, 5000),
 
-      return () => clearInterval(interval),
+      return () => clearInterval(interval);
     }
   }, [isMonitoring, generatePerformanceData]),
 
@@ -81,7 +81,7 @@ const PerformanceAnalytics: React.FC = () => {
     switch (status) {
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400',
-      case 'critical': return 'text-red-400',
+      case 'critical': return 'text-red-400';
       default: return 'text-gray-400'
     }
   };
@@ -89,14 +89,14 @@ const PerformanceAnalytics: React.FC = () => {
     switch (status) {
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20',
-      case 'critical': return 'bg-red-500/20',
+      case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20'
     }
   };
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return <TrendingUp className="w-4 h-4 text-green-400" />;
-      case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />,
+      case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />;
       default: return <Activity className="w-4 h-4 text-blue-400" />
     }
   };
@@ -104,7 +104,7 @@ const PerformanceAnalytics: React.FC = () => {
     if (unit === '%') return `${value.toFixed(1)}%`;
     if (unit === 'ms') return `${Math.round(value)}ms`,
     return `${value.toFixed(2)}${unit}`,
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -294,7 +294,7 @@ const PerformanceAnalytics: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

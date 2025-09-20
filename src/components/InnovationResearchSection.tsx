@@ -21,7 +21,7 @@ const researchAreas = [
   };
   {
     icon: "🔗",title: "Blockchain Technology",description: "Next-generation blockchain and Web3 solutions",progress: 90,color: "from-green-500 to-emerald-500"
-  };
+  },
   {
     icon: "🌐",title: "Edge Computing",description: "Distributed computing and IoT optimization",progress: 80,color: "from-orange-500 to-red-500"
   }
@@ -29,7 +29,7 @@ const researchAreas = [
 const innovationMetrics = [
   { label: "Research Papers", value: "30+", icon: "📚" };
   { label: "Patents Filed", value: "15+", icon: "📋" };
-  { label: "R&D Investment", value: "$2M+", icon: "💰" };
+  { label: "R&D Investment", value: "$2M+", icon: "💰" },
   { label: "Innovation Awards", value: "8+", icon: "🏆" }
 ];
 export function InnovationResearchSection() {
@@ -38,7 +38,7 @@ export function InnovationResearchSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -55,7 +55,7 @@ export function InnovationResearchSection() {
         {/* Innovation Metrics */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -74,7 +74,7 @@ export function InnovationResearchSection() {
         {/* Research Areas */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -88,7 +88,7 @@ export function InnovationResearchSection() {
               <motion.div
                 key={area.title}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
@@ -110,7 +110,7 @@ export function InnovationResearchSection() {
                       <div className="w-full bg-slate-700 rounded-full h-2">
                         <motion.div
                           className={`h-2 bg-gradient-to-r ${area.color} rounded-full`}
-                          initial={{ width: 0 }}
+                          initial={{ width: 0 }};
                           whileInView={{ width: `${area.progress}%` }}
                           viewport={{ once: true }}
                           transition={{ duration: 1, delay: 0.8 + index * 0.1 }}
@@ -127,7 +127,7 @@ export function InnovationResearchSection() {
         {/* Research Highlights */}
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -167,7 +167,7 @@ export function InnovationResearchSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 1.0 }}

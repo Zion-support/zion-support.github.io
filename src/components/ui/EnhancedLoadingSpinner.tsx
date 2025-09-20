@@ -9,7 +9,7 @@ interface LoadingSpinnerProps {
   progress?: number,
   className?: string,
 }
-
+;
 const sizeClasses = {
   sm: 'w-4 h-4',md: 'w-8 h-8',lg: 'w-12 h-12',xl: 'w-16 h-16'
 };
@@ -101,7 +101,7 @@ export const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
               <Brain className={`${iconSizeClasses[size]} text-purple-600`} />
             </motion.div>
           </div>
-        );
+        ),
       default: return (
           <motion.div
             animate={{ rotate: 360 }}

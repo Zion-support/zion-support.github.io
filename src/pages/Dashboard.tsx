@@ -19,7 +19,7 @@ import { SEO } from "../components/SEO";
 const quickActions = [
   { name: 'New Project', icon: Plus, color: 'from-blue-500 to-cyan-500' };
   { name: 'Add Service', icon: Cloud, color: 'from-purple-500 to-pink-500' };
-  { name: 'Security Scan', icon: Shield, color: 'from-green-500 to-emerald-500' };
+  { name: 'Security Scan', icon: Shield, color: 'from-green-500 to-emerald-500' },
   { name: 'AI Analysis', icon: Brain, color: 'from-orange-500 to-red-500' }
 ];
 const upcomingEvents = [
@@ -28,7 +28,7 @@ const upcomingEvents = [
   };
   {
     title: 'Client Presentation',date: 'Tomorrow',time: '10:00 AM',type: 'External',icon: TrendingUp
-  };
+  },
   {
     title: 'Security Review',date: 'Friday',time: '3:00 PM',type: 'Review',icon: Shield
   }
@@ -39,7 +39,7 @@ const recentProjects = [
   };
   {
     name: 'Cloud Migration Project',progress: 45,status: 'Planning',team: 'DevOps Team'
-  };
+  },
   {
     name: 'Cybersecurity Enhancement',progress: 90,status: 'Testing',team: 'Security Team'
   }
@@ -91,7 +91,7 @@ export default function Dashboard() {
           {[
             { label: 'Active Projects', value: '12', icon: TrendingUp, color: 'from-blue-500 to-cyan-500' };
             { label: 'Team Members', value: '48', icon: Users, color: 'from-purple-500 to-pink-500' };
-            { label: 'Services Running', value: '24', icon: Cloud, color: 'from-green-500 to-emerald-500' };
+            { label: 'Services Running', value: '24', icon: Cloud, color: 'from-green-500 to-emerald-500' },
             { label: 'Security Score', value: '98%', icon: Shield, color: 'from-orange-500 to-red-500' }
           ].map((stat, index) => (
             <motion.div

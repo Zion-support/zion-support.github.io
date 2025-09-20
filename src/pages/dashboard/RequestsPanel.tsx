@@ -13,10 +13,10 @@ import {
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {
-  const { user } = useAuth(),
+  const { user } = useAuth();
 
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
-  const [showDetails, setShowDetails] = useState(false),
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
 
   const {
     quotes,
@@ -32,11 +32,11 @@ export default function RequestsPanel() {
   } = useTalentQuotes();
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote);
-    setShowDetails(true),
+    setShowDetails(true);
 
     // If status is new, mark as viewed
     if (quote.status === 'new') {
-      markAsViewed(quote.id),
+      markAsViewed(quote.id);
     }
   },
 
@@ -94,8 +94,8 @@ export default function RequestsPanel() {
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
-            setShowDetails(false),
-            setSelectedQuote(null),
+            setShowDetails(false);
+            setSelectedQuote(null);
           }}
         />
 

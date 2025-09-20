@@ -26,12 +26,12 @@ import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovat
 import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
 import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
 interface Service {
-  id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {
+  id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {,
     mobile: string,email: string,address: string,website: string
-  };
+  },
   realImplementation: boolean,implementationDetails: string,launchDate: string,customers: number,rating: number,reviews: number,innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',aiCapabilities: string[],marketDisruption: string
 }
-
+;
 const contact = {
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
 };
@@ -41,43 +41,43 @@ const categories = [
   };
   {
     id: 'it-infrastructure',name: 'IT Infrastructure & Enterprise',description: 'Cutting-edge infrastructure solutions for modern businesses',icon: <Cloud className="w-8 h-8" />,color: 'from-blue-600 to-cyan-700',services: enterpriseITInfrastructureServices2025
-  };
+  },
   {
     id: 'micro-saas',name: 'Micro SAAS Solutions',description: 'Innovative software solutions for small businesses',icon: <Code className="w-8 h-8" />,color: 'from-green-600 to-emerald-700',services: innovativeMicroSaasSolutions2025
   }
 ];
 const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700Breakthrough': 'from-purple-600 to-violet-700Advanced': 'from-blue-600 to-cyan-700Emerging': 'from-green-600 to-emerald-700'
-},
+};
 
 const patentStatusColors = {
   'Patented': 'from-green-600 to-emerald-700Patent Pending': 'from-yellow-600 to-orange-700Trade Secret': 'from-blue-600 to-indigo-700Open Source': 'from-purple-600 to-violet-700'
-},
+};
 
 export function UltimateServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedService, setSelectedService] = useState<Service | null>(null),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const allServices = [
-    ...ultimateInnovativeServices2025,
-    ...enterpriseITInfrastructureServices2025;
+    ...ultimateInnovativeServices2025;
+    ...enterpriseITInfrastructureServices2025,
     ...innovativeMicroSaasSolutions2025
   ];
   const filteredServices = selectedCategory === 'all'
     ? allServices
     : categories.find(cat => cat.id === selectedCategory)?.services || [];
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1,delayChildren: 0.2
       }
     }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: {
-      opacity: 1,y: 0,transition: {
+    hidden: { opacity: 0, y: 20 },
+    visible: {,
+      opacity: 1,y: 0,transition: {,
         duration: 0.6,ease: "easeOut"
       }
     }
@@ -162,7 +162,7 @@ export function UltimateServicesShowcase() {
         >
           {filteredServices.map((service) => (
             <motion.div
-              key={service.id}
+              key={service.id};
               variants={itemVariants}
               className="group relative"
             >

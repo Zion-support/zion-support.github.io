@@ -16,7 +16,7 @@ export default function AIProjectManagementPlatform() {
 
   const useCases = [
     'Software development projectsConstruction and engineering projects';
-    'Marketing campaign managementEvent planning and execution';
+    'Marketing campaign managementEvent planning and execution',
     'Product development and launchResearch and development projects'
   ];
   const tiers = [

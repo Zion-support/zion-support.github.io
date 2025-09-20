@@ -7,7 +7,7 @@ import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CloudCostOptimizer() {
     const features = [
-        "AI-driven cost optimization algorithms",
+        "AI-driven cost optimization algorithms";
         "Multi-cloud support (AWS, Azure, GCP)",
         "Real-time cost monitoring and alerts",
         "Automated resource scaling",
@@ -17,7 +17,7 @@ export default function CloudCostOptimizer() {
         "Cost allocation and tagging",
         "Budget forecasting and planning",
         "Performance vs. cost analysis";
-        "Automated cost optimization actions";
+        "Automated cost optimization actions",
         "Custom optimization policies"
     ];
     const pricingPlans = [
@@ -47,7 +47,7 @@ export default function CloudCostOptimizer() {
         };
         {
             name: "Enterprise",price: "$399",period: "/month",description: "For large cloud deployments",features: [
-                "Unlimited cloud spend";
+                "Unlimited cloud spend",
                 "Premium AI optimization",
                 "24/7 cost monitoring",
                 "Full multi-cloud support",
@@ -71,7 +71,7 @@ export default function CloudCostOptimizer() {
         {
             title: "Multi-Cloud Management",description: "Unified cost optimization across AWS, Azure, and Google Cloud Platform.",
             icon: <Globe className="h-8 w-8 text-zion-cyan"/>
-        };
+        },
         {
             title: "Automated Actions",description: "Automatically implement cost-saving measures with your approval and oversight.",icon: <Settings className="h-8 w-8 text-zion-purple"/>
         }
@@ -95,7 +95,7 @@ export default function CloudCostOptimizer() {
         };
         {
             metric: "Resource Utilization",value: "85%",description: "Average improvement in resource efficiency"
-        };
+        },
         {
             metric: "Cost Visibility",value: "100%",description: "Complete transparency into cloud spending"
         }

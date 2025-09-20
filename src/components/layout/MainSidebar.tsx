@@ -52,8 +52,8 @@ interface SidebarItem {
 }
 
 export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false),
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']),
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
@@ -74,7 +74,7 @@ export function MainSidebar() {
         { name: 'Research', href: '/research-development', icon: TestTube };
         { name: 'Events', href: '/events', icon: Video };
         { name: 'News', href: '/news', icon: Newspaper };
-        { name: 'Contact', href: '/contact', icon: Mail };
+        { name: 'Contact', href: '/contact', icon: Mail },
         { name: 'Blog', href: '/blog', icon: FileText }
       ]
     };
@@ -88,7 +88,7 @@ export function MainSidebar() {
         };
         {
           name: 'Data Analytics',href: '/services/data-analytics',icon: BarChart3,description: 'Business Intelligence'
-        };
+        },
         {
           name: 'IT Infrastructure',href: '/services/it-infrastructure',icon: Server,description: 'Hardware & Network'
         }
@@ -104,7 +104,7 @@ export function MainSidebar() {
         };
         {
           name: 'AI Auto Email Responder',href: '/services/ai-auto-email-responder',icon: MessageCircle,description: 'Email Automation'
-        };
+        },
         {
           name: 'LLM Content Studio',href: '/services/llm-content-studio',icon: PenTool,description: 'Content Creation'
         }
@@ -120,7 +120,7 @@ export function MainSidebar() {
         };
         {
           name: 'IoT Edge Computing',href: '/services/iot-edge-computing',icon: Smartphone,description: 'Connected Ecosystems'
-        };
+        },
         {
           name: 'AI Content Creation',href: '/services/ai-content-creation',icon: Video,description: 'Creative AI'
         }
@@ -136,7 +136,7 @@ export function MainSidebar() {
         };
         {
           name: 'Equipment Services',href: '/equipment',icon: Server,description: 'Hardware Solutions'
-        };
+        },
         {
           name: 'Request Quote',href: '/request-quote',icon: MessageCircle,description: 'Get Pricing'
         }
@@ -152,7 +152,7 @@ export function MainSidebar() {
         };
         {
           name: 'Careers',href: '/careers',icon: Briefcase,description: 'Join Us'
-        };
+        },
         {
           name: 'Partners',href: '/partners',icon: Users,description: 'Partnerships'
         }
@@ -168,7 +168,7 @@ export function MainSidebar() {
         };
         {
           name: 'Help Center',href: '/help',icon: MessageCircle,description: 'Support Resources'
-        };
+        },
         {
           name: 'Documentation',href: '/docs',icon: BookOpen,description: 'Technical Docs'
         }
@@ -180,9 +180,9 @@ export function MainSidebar() {
   ];
   const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const isActive = location.pathname === item.href;
-    const hasChildren = item.children && item.children.length > 0,
-    const isExpanded = expandedSections.includes(item.name.toLowerCase()),
-    const isFeatured = item.featured,
+    const hasChildren = item.children && item.children.length > 0;
+    const isExpanded = expandedSections.includes(item.name.toLowerCase());
+    const isFeatured = item.featured;
 
     return (
       <div key={item.name} className="mb-1">

@@ -54,12 +54,12 @@ import {
 import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from "../data/enhancedMicroSaasServices2025";
 import { SEO } from "../components/SEO";
 const EnhancedServices: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [sortBy, setSortBy] = useState('rating'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('rating');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   
-  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025,
+  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025;
   
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-zion-cyan to-zion-blue' };
@@ -69,43 +69,43 @@ const EnhancedServices: React.FC = () => {
     { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-zion-red to-zion-pink' };
     { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗', color: 'from-zion-green to-zion-emerald' };
     { id: 'IoT & Smart Cities', name: 'IoT & Smart Cities', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length, icon: '🌐', color: 'from-zion-blue to-zion-cyan' };
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' },
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍', color: 'from-zion-purple to-zion-indigo' }
   ];
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.price - b.price,
+        return a.price - b.price;
       case 'innovation':
-        return b.innovationLevel.localeCompare(a.innovationLevel),
+        return b.innovationLevel.localeCompare(a.innovationLevel);
       case 'roi':
-        return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', '')),
+        return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''));
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       default: return 0
     }
   });
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5,ease: "easeOut"
       }
     }
@@ -119,7 +119,7 @@ const EnhancedServices: React.FC = () => {
       case 'Blockchain': return <DatabaseIcon className="w-6 h-6" />,
       case 'IoT & Smart Cities': return <NetworkIcon className="w-6 h-6" />,
       case 'Cybersecurity': return <ShieldCheckIcon className="w-6 h-6" />,
-      case 'Metaverse': return <GlobeIcon2 className="w-6 h-6" />,
+      case 'Metaverse': return <GlobeIcon2 className="w-6 h-6" />;
       default: return <RocketIcon className="w-6 h-6" />
     }
   };
@@ -132,7 +132,7 @@ const EnhancedServices: React.FC = () => {
         {level}
       </span>
     ),
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -267,7 +267,7 @@ const EnhancedServices: React.FC = () => {
         >
           {sortedServices.map((service) => (
             <motion.div
-              key={service.id}
+              key={service.id};
               variants={itemVariants}
               className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105 ${
                 viewMode === 'list' ? 'flex gap-6' : ''

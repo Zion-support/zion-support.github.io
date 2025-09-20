@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 // import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";
 // import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
 const ComprehensivePricing2026 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all'),
-    const [billingCycle, setBillingCycle] = useState('monthly'),
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [billingCycle, setBillingCycle] = useState('monthly');
     // Combine all services
     const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026],
     const categories = [
@@ -24,28 +24,28 @@ const ComprehensivePricing2026 = () => {
             case 'Cloud & DevOps':
                 return allServices.filter(service => ['Cloud InfrastructureDevOps', 'Performance Monitoring'].includes(service.category)),
             case 'Specialized Industry':
-                return allServices.filter(service => ['Supply Chain ManagementFinancial Technology', 'Healthcare TechnologyLegal Technology', 'Blockchain TechnologyInternet of Things', 'Quantum Computing'].includes(service.category)),
+                return allServices.filter(service => ['Supply Chain ManagementFinancial Technology', 'Healthcare TechnologyLegal Technology', 'Blockchain TechnologyInternet of Things', 'Quantum Computing'].includes(service.category));
             default: return allServices
         }
     };
-    const filteredServices = getCategoryServices(selectedCategory),
+    const filteredServices = getCategoryServices(selectedCategory);
     const getAnnualPrice = (monthlyPrice) => {
         const price = parseInt(monthlyPrice.replace(/[^0-9]/g, '')),
         const annualPrice = price * 12 * 0.8, // 20% discount for annual
         return `$${annualPrice.toLocaleString()}`,
     },
     const containerVariants = {
-        hidden: { opacity: 0 };
-        visible: {
-            opacity: 1,transition: {
+        hidden: { opacity: 0 },
+        visible: {,
+            opacity: 1,transition: {,
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 };
-        visible: {
-            y: 0,opacity: 1,transition: {
+        hidden: { y: 20, opacity: 0 },
+        visible: {,
+            y: 0,opacity: 1,transition: {,
                 duration: 0.5,ease: "easeOut"
             }
         }
@@ -304,5 +304,5 @@ const ComprehensivePricing2026 = () => {
         </div>
       </section>
     </div>),
-},
+};
 export default ComprehensivePricing2026;

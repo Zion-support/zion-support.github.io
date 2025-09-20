@@ -24,9 +24,9 @@ export function EnhancedContact() {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',email: '',phone: '',company: '',service: 'general',message: ''
   });
-  const [errors, setErrors] = useState<ContactFormErrors>({}),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
+  const [errors, setErrors] = useState<ContactFormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const services = [
     { value: 'general', label: 'General Inquiry' };
@@ -35,7 +35,7 @@ export function EnhancedContact() {
     { value: 'cybersecurity', label: 'Cybersecurity' };
     { value: 'digital-transformation', label: 'Digital Transformation' };
     { value: 'consulting', label: 'IT Consulting' };
-    { value: 'quantum-computing', label: 'Quantum Computing' };
+    { value: 'quantum-computing', label: 'Quantum Computing' },
     { value: 'green-it', label: 'Green IT Solutions' }
   ];
   const validateForm = (): boolean => {
@@ -43,20 +43,20 @@ export function EnhancedContact() {
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required',
     }
-
+;
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required',
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address',
     }
-
+;
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required',
     } else if (formData.message.length < 10) {
       newErrors.message = 'Message must be at least 10 characters long',
     }
 
-    setErrors(newErrors),
+    setErrors(newErrors);
     return Object.keys(newErrors).length === 0,
   },
 
@@ -67,7 +67,7 @@ export function EnhancedContact() {
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: '' })),
     }
-  },
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -75,20 +75,20 @@ export function EnhancedContact() {
       return
     }
 
-    setIsSubmitting(true),
+    setIsSubmitting(true);
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000)),
 
-      setIsSubmitted(true),
+      setIsSubmitted(true);
       setFormData({
         name: '',email: '',phone: '',company: '',service: 'general',message: ''
       });
     } catch (error) {
-      console.error('Error submitting form:', error),
+      console.error('Error submitting form:', error);
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   },
 
@@ -102,7 +102,7 @@ export function EnhancedContact() {
     {
       icon: MapPin,title: 'Address',value: '364 E Main St STE 1008, Middletown, DE 19709',
       description: 'Visit our office'
-    };
+    },
     {
       icon: Clock,title: 'Business Hours',value: 'Mon-Fri: 9AM-6PM EST',description: 'Available during these hours'
     }
@@ -155,7 +155,7 @@ export function EnhancedContact() {
       </motion.div>
     )
   }
-
+;
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -391,8 +391,8 @@ export function EnhancedContact() {
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                disabled={isSubmitting}
-                whileHover={{ scale: 1.02 }}
+                disabled={isSubmitting};
+                whileHover={{ scale: 1.02 }};
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 rounded-lg font-medium transition-all duration-300 hover:from-zion-cyan-dark hover:to-zion-purple-dark disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >

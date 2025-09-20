@@ -28,19 +28,19 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-error;
+error,
       errorInfo
     
-}),
+});
 
     // Call the onError callback if provided
     if (this.props.onError) {
-      this.props.onError(error),
+      this.props.onError(error);
     }
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo),
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
 
@@ -55,7 +55,7 @@ hasError: false,error: null,errorInfo: null
     if (this.state.hasError) {
       // Use custom fallback if provided
       if (this.props.fallback) {
-        return this.props.fallback,
+        return this.props.fallback;
       }
 
       // Default error UI
@@ -106,7 +106,7 @@ hasError: false,error: null,errorInfo: null
         </div>
       )
     }
-
+;
     return this.props.children;
   }
 }

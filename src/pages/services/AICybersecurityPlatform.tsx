@@ -24,7 +24,7 @@ const AICybersecurityPlatform: React.FC = () => {
               AI Cybersecurity Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Protect your organization with AI that detects threats in real-time, prevents attacks before they happen, 
+              Protect your organization with AI that detects threats in real-time, prevents attacks before they happen; 
               and provides 99.9% threat detection with zero false positives.
             </p>
           </div>

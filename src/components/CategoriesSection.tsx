@@ -12,7 +12,7 @@ const categories = [
   {
     title: "IT Services",description: "Infrastructure, security, and technical consulting",
     icon: "⚡",link: "/all-services",color: "from-amber-500 to-orange-600"
-  };
+  },
   {
     title: "Digital Transformation",description: "Business modernization and digital strategy",icon: "📈",link: "/all-services",color: "from-emerald-500 to-green-600"
   }
@@ -23,7 +23,7 @@ const specialServices = [
   };
   {
     title: "Comprehensive Services",link: "/comprehensive-services"
-  };
+  },
   {
     title: "Services Comparison",link: "/services-comparison"
   }
@@ -31,19 +31,19 @@ const specialServices = [
 interface CategoriesSectionProps {
   showTitle?: boolean,
 }
-
+;
 const containerVariants = {
-  hidden: { opacity: 0 };
-  visible: {
-    opacity: 1,transition: {
+  hidden: { opacity: 0 },
+  visible: {,
+    opacity: 1,transition: {,
       staggerChildren: 0.1,delayChildren: 0.2
     }
   }
 };
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 };
-  visible: {
-    y: 0,opacity: 1,transition: {
+  hidden: { y: 20, opacity: 0 },
+  visible: {,
+    y: 0,opacity: 1,transition: {,
       duration: 0.5,ease: "easeOut"
     }
   }
@@ -54,7 +54,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`;
+          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
           backgroundSize: '50px 50px'
         }}></div>
       </div>
@@ -63,7 +63,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         {showTitle && (
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -86,7 +86,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >
           {categories.map((category, index) => (
             <motion.div
-              key={category.title}
+              key={category.title};
               variants={itemVariants}
               className="group block"
             >
@@ -107,7 +107,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         
         <motion.div 
           className="mt-12"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -129,7 +129,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         
         <motion.div 
           className="mt-12 flex justify-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}

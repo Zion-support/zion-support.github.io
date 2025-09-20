@@ -12,7 +12,7 @@ const QuantumComputing: React.FC = () => {
     };
     {
       icon: Shield,title: 'Quantum Cryptography',description: 'Unbreakable encryption for next-generation security'
-    };
+    },
     {
       icon: Cpu,title: 'Quantum Simulation',description: 'Model complex molecular and physical systems'
     }
@@ -26,7 +26,7 @@ const QuantumComputing: React.FC = () => {
     };
     {
       title: 'Climate Research',description: 'Advanced climate modeling and prediction',icon: '🌍'
-    };
+    },
     {
       title: 'Logistics Optimization',description: 'Solve complex routing and supply chain problems',icon: '🚚'
     }
@@ -86,7 +86,7 @@ const QuantumComputing: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -103,7 +103,7 @@ const QuantumComputing: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hover:scale-105"
@@ -123,7 +123,7 @@ const QuantumComputing: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -140,7 +140,7 @@ const QuantumComputing: React.FC = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200"
@@ -162,7 +162,7 @@ const QuantumComputing: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -177,7 +177,7 @@ const QuantumComputing: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
@@ -194,7 +194,7 @@ const QuantumComputing: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-xl p-8"
@@ -216,7 +216,7 @@ const QuantumComputing: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >

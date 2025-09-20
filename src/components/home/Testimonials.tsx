@@ -4,9 +4,9 @@ import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 interface Testimonial {
   id: number,name: string,role: string,company: string,content: string,rating: number,avatar: string,industry: string
 }
-
+;
 const Testimonials: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0),
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials: Testimonial[] = [
     {
@@ -18,17 +18,17 @@ const Testimonials: React.FC = () => {
     };
     {
       id: 3,name: "Dr. Emily Watson",role: "Research Director",company: "Quantum Research Institute",content: "Working with Zion on our quantum computing initiatives has been groundbreaking. Their expertise in cutting-edge technologies is unmatched. They've helped us achieve breakthroughs we never thought possible.",rating: 5,avatar: "/images/testimonials/emily-watson.jpg",industry: "Research"
-    };
+    },
     {
       id: 4,name: "David Kim",role: "CEO",company: "FinTech Innovations",content: "Zion's cybersecurity solutions are enterprise-grade. They helped us achieve SOC 2 compliance in record time and their threat detection systems have prevented multiple potential breaches.",rating: 5,avatar: "/images/testimonials/david-kim.jpg",industry: "Financial Services"
     }
   ];
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length),
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   },
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length),
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   },
 
   const goToTestimonial = (index: number) => {
@@ -39,7 +39,7 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -143,7 +143,7 @@ const Testimonials: React.FC = () => {
         {/* Trust Indicators */}
         <motion.div
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}

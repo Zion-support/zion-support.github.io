@@ -30,16 +30,16 @@ const AIFinancialRiskManagement = () => {
     {
       name: 'Professional',price: '$3,500',
       period: '/month',description: 'Perfect for financial institutions',features: [
-        'Up to $100M portfolio valueBasic risk assessment';
+        'Up to $100M portfolio valueBasic risk assessment',
         'Standard compliance reportingEmail support',
         'Basic risk alerts'
-      ],
+      ];
       cta: 'Get Started',popular: false
     };
     {
       name: 'Enterprise',price: '$8,500',
       period: '/month',description: 'Ideal for large financial organizations',features: [
-        'Up to $1B portfolio valueAdvanced AI risk modeling';
+        'Up to $1B portfolio valueAdvanced AI risk modeling',
         'Full compliance automationPriority support',
         'Custom risk frameworksAPI access',
         'Real-time monitoring'
@@ -49,7 +49,7 @@ const AIFinancialRiskManagement = () => {
     {
       name: 'Institutional',price: '$18,000',
       period: '/month',description: 'For major financial institutions',features: [
-        'Unlimited portfolio valueCustom AI models';
+        'Unlimited portfolio valueCustom AI models',
         'White-label solutions24/7 dedicated support',
         'Advanced integrationsCustom workflows',
         'On-premise deployment'
@@ -90,7 +90,7 @@ const AIFinancialRiskManagement = () => {
     {
       title: 'Liquidity Risk',description: 'Risk of being unable to meet financial obligations when they come due.',icon: Activity,examples: ['Funding liquidity riskMarket liquidity risk', 'Asset liquidity riskContingent liquidity risk']
     }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -119,7 +119,7 @@ const AIFinancialRiskManagement = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center"
               >
@@ -127,7 +127,7 @@ const AIFinancialRiskManagement = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
               >
@@ -143,7 +143,7 @@ const AIFinancialRiskManagement = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
@@ -161,7 +161,7 @@ const AIFinancialRiskManagement = () => {
             {riskTypes.map((riskType, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300"
@@ -196,7 +196,7 @@ const AIFinancialRiskManagement = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -214,7 +214,7 @@ const AIFinancialRiskManagement = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300"
@@ -242,7 +242,7 @@ const AIFinancialRiskManagement = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -260,7 +260,7 @@ const AIFinancialRiskManagement = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
@@ -296,7 +296,7 @@ const AIFinancialRiskManagement = () => {
                 </ul>
 
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02 }};
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
@@ -316,7 +316,7 @@ const AIFinancialRiskManagement = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -334,7 +334,7 @@ const AIFinancialRiskManagement = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300"
@@ -366,7 +366,7 @@ const AIFinancialRiskManagement = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/20 to-orange-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -379,7 +379,7 @@ const AIFinancialRiskManagement = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center"
               >
@@ -387,7 +387,7 @@ const AIFinancialRiskManagement = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-200 flex items-center justify-center"
               >

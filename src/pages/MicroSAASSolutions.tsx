@@ -52,7 +52,7 @@ export default function MicroSAASSolutions() {
     };
     {
       title: "Cost Efficiency",description: "Reduced infrastructure costs with cloud-native solutions",icon: BarChart3
-    };
+    },
     {
       title: "Security",description: "Enterprise-grade security and compliance standards",icon: Shield
     }
@@ -72,7 +72,7 @@ export default function MicroSAASSolutions() {
     };
     {
       name: "Retail",description: "E-commerce and point-of-sale solutions",icon: Building
-    };
+    },
     {
       name: "Real Estate",description: "Property management and client portals",icon: Building
     }
@@ -86,7 +86,7 @@ export default function MicroSAASSolutions() {
     };
     {
       step: 3,title: "Development",description: "Building the core application with iterative development cycles",icon: Cpu,duration: "8-16 weeks"
-    };
+    },
     {
       step: 4,title: "Testing & Deployment",description: "Comprehensive testing and production deployment",icon: Rocket,duration: "2-4 weeks"
     }

@@ -51,22 +51,22 @@ interface SearchResult {
   relevance: number;
   featured?: boolean
 }
-
+;
 const SearchPage: React.FC = () => {
-  const [searchParams, setSearchParams] = useSearchParams(),
-  const [query, setQuery] = useState(searchParams.get('q') || ''),
-  const [isSearching, setIsSearching] = useState(false),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [selectedType, setSelectedType] = useState<string>('all'),
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'title'>('relevance'),
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [query, setQuery] = useState(searchParams.get('q') || '');
+  const [isSearching, setIsSearching] = useState(false);
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [selectedType, setSelectedType] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'title'>('relevance');
 
   const searchTypes = [
     { id: 'all', name: 'All Results', icon: Globe, count: 0 };
     { id: 'service', name: 'Services', icon: Zap, count: 0 };
     { id: 'page', name: 'Pages', icon: FileText, count: 0 };
     { id: 'news', name: 'News', icon: BookOpen, count: 0 };
-    { id: 'document', name: 'Documents', icon: FileText, count: 0 };
+    { id: 'document', name: 'Documents', icon: FileText, count: 0 },
     { id: 'case-study', name: 'Case Studies', icon: Target, count: 0 }
   ];
   const categories = [
@@ -80,7 +80,7 @@ const SearchPage: React.FC = () => {
     { id: 'technology', name: 'Technology', icon: Code, count: 0 };
     { id: 'data', name: 'Data & Analytics', icon: Database, count: 0 };
     { id: 'iot', name: 'IoT & Edge', icon: Network, count: 0 };
-    { id: 'blockchain', name: 'Blockchain', icon: Lock, count: 0 };
+    { id: 'blockchain', name: 'Blockchain', icon: Lock, count: 0 },
     { id: 'sustainability', name: 'Sustainability', icon: Leaf, count: 0 }
   ];
   // Mock search results - in a real app, this would come from an API
@@ -122,16 +122,16 @@ const SearchPage: React.FC = () => {
   ];
   useEffect(() => {
     if (query.trim()) {
-      performSearch(),
+      performSearch();
     } else {
-      setResults([]),
+      setResults([]);
     }
   }, [query, selectedType, selectedCategory, sortBy]),
 
   const performSearch = async () => {
-    if (!query.trim()) return,
+    if (!query.trim()) return;
 
-    setIsSearching(true),
+    setIsSearching(true);
     
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 500)),
@@ -140,9 +140,9 @@ const SearchPage: React.FC = () => {
     let filteredResults = mockSearchResults.filter(result => {
       const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||
                           result.excerpt.toLowerCase().includes(query.toLowerCase()) ||
-                          result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())),
-      const matchesType = selectedType === 'all' || result.type === selectedType,
-      const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory,
+                          result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
+      const matchesType = selectedType === 'all' || result.type === selectedType;
+      const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory;
       
       return matchesQuery && matchesType && matchesCategory,
     }),
@@ -150,17 +150,17 @@ const SearchPage: React.FC = () => {
     // Sort results
     filteredResults.sort((a, b) => {
       if (sortBy === 'relevance') {
-        return b.relevance - a.relevance,
+        return b.relevance - a.relevance;
       } else if (sortBy === 'date') {
-        return new Date(b.date || '1970-01-01').getTime() - new Date(a.date || '1970-01-01').getTime(),
+        return new Date(b.date || '1970-01-01').getTime() - new Date(a.date || '1970-01-01').getTime();
       } else if (sortBy === 'title') {
-        return a.title.localeCompare(b.title),
-      }
+        return a.title.localeCompare(b.title);
+      };
       return 0,
-    }),
+    });
 
-    setResults(filteredResults),
-    setIsSearching(false),
+    setResults(filteredResults);
+    setIsSearching(false);
   },
 
   const handleSearch = (e: React.FormEvent) => {
@@ -171,9 +171,9 @@ const SearchPage: React.FC = () => {
   },
 
   const clearFilters = () => {
-    setSelectedType('all'),
-    setSelectedCategory('all'),
-    setSortBy('relevance'),
+    setSelectedType('all');
+    setSelectedCategory('all');
+    setSortBy('relevance');
   },
 
   const getTypeIcon = (type: string) => {
@@ -182,7 +182,7 @@ const SearchPage: React.FC = () => {
       case 'page': return <FileText className="w-4 h-4" />,
       case 'news': return <BookOpen className="w-4 h-4" />,
       case 'document': return <FileText className="w-4 h-4" />,
-      case 'case-study': return <Target className="w-4 h-4" />,
+      case 'case-study': return <Target className="w-4 h-4" />;
       default: return <Globe className="w-4 h-4" />
     }
   };
@@ -198,7 +198,7 @@ const SearchPage: React.FC = () => {
       case 'data': return <Database className="w-4 h-4" />,
       case 'iot': return <Network className="w-4 h-4" />,
       case 'blockchain': return <Lock className="w-4 h-4" />,
-      case 'sustainability': return <Leaf className="w-4 h-4" />,
+      case 'sustainability': return <Leaf className="w-4 h-4" />;
       default: return <Globe className="w-4 h-4" />
     }
   };
@@ -524,7 +524,7 @@ const SearchPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -544,12 +544,12 @@ const SearchPage: React.FC = () => {
                 { title: 'Quantum Computing', icon: Atom, description: 'Next-generation computational power', query: 'quantum computing' };
                 { title: 'Cloud Solutions', icon: Cloud, description: 'DevOps, infrastructure, and cloud optimization', query: 'cloud solutions' };
                 { title: 'Cybersecurity', icon: Shield, description: 'Advanced security and threat protection', query: 'cybersecurity' };
-                { title: 'Micro SaaS', icon: Zap, description: 'Affordable software solutions for businesses', query: 'micro SaaS' };
+                { title: 'Micro SaaS', icon: Zap, description: 'Affordable software solutions for businesses', query: 'micro SaaS' },
                 { title: 'Digital Transformation', icon: Rocket, description: 'Strategic technology consulting', query: 'digital transformation' }
               ].map((item, index) => (
                 <motion.button
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}

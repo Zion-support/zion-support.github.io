@@ -46,7 +46,7 @@ const ManufacturingSolutions: React.FC = () => {
     };
     {
       title: 'Quality Improvement',description: 'Enhanced product quality and consistency',icon: Star
-    };
+    },
     {
       title: 'Predictive Capabilities',description: 'Anticipate and prevent issues before they occur',icon: Brain
     }

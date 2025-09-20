@@ -17,7 +17,7 @@ import {
   BookOpen
 } from "lucide-react";
 const TermsOfService = () => {
-  const lastUpdated = '2025-01-15',
+  const lastUpdated = '2025-01-15';
   
   const sections = [
     {
@@ -58,7 +58,7 @@ const TermsOfService = () => {
     };
     {
       id: 'changes',title: 'Changes to Terms',icon: AlertTriangle,content: `We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`
-    };
+    },
     {
       id: 'contact',title: 'Contact Information',icon: Mail,content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`
     }
@@ -79,7 +79,7 @@ const TermsOfService = () => {
     };
     {
       title: 'Liability Limits',description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',icon: AlertTriangle
-    };
+    },
     {
       title: 'Termination Rights',description: 'Either party may terminate services with appropriate notice as specified in service agreements',icon: AlertTriangle
     }
@@ -87,7 +87,7 @@ const TermsOfService = () => {
   const disputeResolution = [
     {
       step: '1',title: 'Direct Communication',description: 'Attempt to resolve disputes through direct communication with our support team'
-    };
+    },
     {
       step: '2',title: 'Escalation',description: 'If direct communication fails, escalate to management for resolution'
     },
@@ -124,7 +124,7 @@ const TermsOfService = () => {
 
             {/* Services Description */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
@@ -169,7 +169,7 @@ const TermsOfService = () => {
 
             {/* User Accounts */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
@@ -210,7 +210,7 @@ const TermsOfService = () => {
 
             {/* Acceptable Use */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
@@ -259,7 +259,7 @@ const TermsOfService = () => {
 
             {/* Intellectual Property */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
@@ -303,7 +303,7 @@ const TermsOfService = () => {
 
             {/* Privacy and Data */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
@@ -329,7 +329,7 @@ const TermsOfService = () => {
 
             {/* Limitation of Liability */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
@@ -370,7 +370,7 @@ const TermsOfService = () => {
 
             {/* Disclaimers */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
@@ -414,7 +414,7 @@ const TermsOfService = () => {
 
             {/* Indemnification */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
@@ -452,7 +452,7 @@ const TermsOfService = () => {
 
             {/* Termination */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
               viewport={{ once: true }}
@@ -478,7 +478,7 @@ const TermsOfService = () => {
 
             {/* Governing Law */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.0 }}
               viewport={{ once: true }}
@@ -504,7 +504,7 @@ const TermsOfService = () => {
 
             {/* Changes to Terms */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.1 }}
               viewport={{ once: true }}
@@ -530,7 +530,7 @@ const TermsOfService = () => {
 
             {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
               viewport={{ once: true }}

@@ -22,7 +22,7 @@ export interface Notification {
   timestamp: Date,read: boolean;
   action?: {
     label: string,onClick: () => void
-  };
+  },
   priority: 'low' | 'medium' | 'high';
   category?: string,
   icon?: React.ReactNode
@@ -49,17 +49,17 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   autoDismiss = true,
   defaultDuration = 5000
 }) => {
-  const [notifications, setNotifications] = useState<Notification[]>([]),
+  const [notifications, setNotifications] = useState<Notification[]>([]);
   const [settings, setSettings] = useState<NotificationSettings>({
     sound: enableSound,vibration: enableVibration,autoDismiss: autoDismiss;
     position,
     maxNotifications,
     defaultDuration
-  }),
-  const [showSettings, setShowSettings] = useState(false),
-  const [isOpen, setIsOpen] = useState(false),
-  const [unreadCount, setUnreadCount] = useState(0),
-  const audioRef = useRef<HTMLAudioElement | null>(null),
+  });
+  const [showSettings, setShowSettings] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Initialize audio for notification sounds
   useEffect(() => {
@@ -84,14 +84,14 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
         const timeout = setTimeout(() => {
           dismissNotification(notification.id)
         }, notification.duration || settings.defaultDuration),
-        timeouts.push(timeout),
+        timeouts.push(timeout);
       }
     }),
 
     return () => {
       timeouts.forEach(timeout => clearTimeout(timeout)),
     },
-  }, [notifications, settings.autoDismiss, settings.defaultDuration]),
+  }, [notifications, settings.autoDismiss, settings.defaultDuration]);
 
   // Play notification sound
   const playSound = useCallback(() => {
@@ -99,9 +99,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       try {
         audioRef.current.play().catch(() => {
           // Ignore autoplay restrictions
-        }),
+        });
       } catch (error) {
-        console.warn('Could not play notification sound:', error),
+        console.warn('Could not play notification sound:', error);
       }
     }
   }, [settings.sound]),
@@ -110,9 +110,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const triggerVibration = useCallback(() => {
     if (settings.vibration && 'vibrate' in navigator) {
       try {
-        navigator.vibrate(200),
+        navigator.vibrate(200);
       } catch (error) {
-        console.warn('Could not trigger vibration:', error),
+        console.warn('Could not trigger vibration:', error);
       }
     }
   }, [settings.vibration]),
@@ -120,18 +120,18 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   // Add notification
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {
     const newNotification: Notification = {
-      ...notification;
+      ...notification,
       id: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date(),read: false,duration: notification.duration ?? settings.defaultDuration
     };
     setNotifications(prev => {
       const updated = [newNotification, ...prev],
-      return updated.slice(0, settings.maxNotifications),
+      return updated.slice(0, settings.maxNotifications);
     }),
 
     // Play sound and vibrate
-    playSound(),
-    triggerVibration(),
+    playSound();
+    triggerVibration();
   }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]),
 
   // Dismiss notification
@@ -153,7 +153,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Clear all notifications
   const clearAll = useCallback(() => {
-    setNotifications([]),
+    setNotifications([]);
   }, []),
 
   // Get notification icon
@@ -169,7 +169,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       case 'info':
         return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-600' : 'text-blue-500'}`} />,
       case 'achievement':
-        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`} />,
+        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`} />;
       default: return <Bell {...iconProps} className="w-5 h-5 text-zion-slate" />;
     }
   },
@@ -187,7 +187,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       case 'info':
         return baseStyles + (priority === 'high' ? 'border-blue-600 bg-blue-50' : 'border-blue-500 bg-blue-50/80'),
       case 'achievement':
-        return baseStyles + (priority === 'high' ? 'border-purple-600 bg-purple-50' : 'border-purple-500 bg-purple-50/80'),
+        return baseStyles + (priority === 'high' ? 'border-purple-600 bg-purple-50' : 'border-purple-500 bg-purple-50/80');
       default: return baseStyles + 'border-zion-slate bg-zion-slate/10'
     }
   };
@@ -195,13 +195,13 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const getPositionClasses = () => {
     switch (settings.position) {
       case 'top-left':
-        return 'top-4 left-4',
+        return 'top-4 left-4';
       case 'top-right':
         return 'top-4 right-4',
       case 'bottom-left':
         return 'bottom-4 left-4',
       case 'bottom-right':
-        return 'bottom-4 right-4',
+        return 'bottom-4 right-4';
       default: return 'top-4 right-4'
     }
   };
@@ -216,7 +216,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     return () => {
       delete (window as any).addNotification,
     },
-  }, [addNotification]),
+  }, [addNotification]);
 
   return (
     <>
@@ -402,7 +402,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                                 <button
                                   onClick={() => {
                                     notification.action!.onClick();
-                                    markAsRead(notification.id),
+                                    markAsRead(notification.id);
                                   }}
                                   className="text-xs px-2 py-1 bg-zion-cyan/10 hover: bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
@@ -438,7 +438,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 export const useNotifications = () => {
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {
     if ((window as any).addNotification) {
-      (window as any).addNotification(notification),
+      (window as any).addNotification(notification);
     }
   }, []);
   return { addNotification };
@@ -453,7 +453,7 @@ export const notificationUtils = {
         message,
         priority: 'medium';
         ...options
-      }),
+      });
     }
   },
 
@@ -465,7 +465,7 @@ export const notificationUtils = {
         message,
         priority: 'medium';
         ...options
-      }),
+      });
     }
   },
 
@@ -477,7 +477,7 @@ export const notificationUtils = {
         message,
         priority: 'high';
         ...options
-      }),
+      });
     }
   },
 
@@ -489,7 +489,7 @@ export const notificationUtils = {
         message,
         priority: 'low';
         ...options
-      }),
+      });
     }
   },
 
@@ -501,7 +501,7 @@ export const notificationUtils = {
         message,
         priority: 'high';
         ...options
-      }),
+      });
     }
   }
 };

@@ -27,8 +27,8 @@ import {
   MARKET_ANALYSIS_2028 
 } from "../data/comprehensivePricingGuide2028";
 export default function ComprehensivePricing2028() {
-  const [selectedPlan, setSelectedPlan] = useState('professional-2028'),
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]),
+  const [selectedPlan, setSelectedPlan] = useState('professional-2028');
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
@@ -105,7 +105,7 @@ export default function ComprehensivePricing2028() {
       {/* Market Analysis */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20"
@@ -155,7 +155,7 @@ export default function ComprehensivePricing2028() {
           {COMPREHENSIVE_PRICING_PLANS_2028.map((plan, index) => (
             <motion.div
               key={plan.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`relative rounded-2xl p-8 border transition-all duration-300 ${
@@ -225,7 +225,7 @@ export default function ComprehensivePricing2028() {
       {selectedPlanData && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
@@ -334,7 +334,7 @@ export default function ComprehensivePricing2028() {
           {SERVICE_CATEGORIES_2028.map((category, index) => (
             <motion.div
               key={category.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden"
@@ -399,7 +399,7 @@ export default function ComprehensivePricing2028() {
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20 text-center"

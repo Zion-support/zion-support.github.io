@@ -25,13 +25,13 @@ import {
 } from "lucide-react";
 import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from "@/data/ultimateRealServices2025";
 export default function UltimateServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)],
 
   const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -42,7 +42,7 @@ export default function UltimateServicesShowcase2025() {
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
       <Rocket className="w-6 h-6" />,
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -399,7 +399,7 @@ export default function UltimateServicesShowcase2025() {
             <button
               onClick={() => {
                 setSearchTerm('');
-                setSelectedCategory('all'),
+                setSelectedCategory('all');
               }}
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >

@@ -6,18 +6,18 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 export default function SavedTalentsPage() {
-    const { user } = useAuth(),
-    const [savedTalents, setSavedTalents] = useState([]),
-    const [isLoading, setIsLoading] = useState(true),
-    const navigate = useNavigate(),
+    const { user } = useAuth();
+    const [savedTalents, setSavedTalents] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
     useEffect(() => {
         const fetchSavedTalents = async () => {
-            setIsLoading(true),
+            setIsLoading(true);
             try {
                 if (!user) {
-                    console.warn("User not authenticated."),
+                    console.warn("User not authenticated.");
                     return,
-                }
+                };
                 const { data, error } = await supabase
                     .from("saved_talents")
                     .select(`
@@ -37,10 +37,10 @@ export default function SavedTalentsPage() {
               is_verified
             )
           `)
-                    .eq("user_id", user.id),
+                    .eq("user_id", user.id);
                 if (error) {
                     throw error,
-                }
+                };
                 if (data) {
                     // Extract talent profiles and convert to TalentProfile type
                     const talentProfiles = data.map(item => item.talent_profile);
@@ -54,16 +54,16 @@ export default function SavedTalentsPage() {
                 });
             }
             finally {
-                setIsLoading(false),
+                setIsLoading(false);
             }
         },
-        fetchSavedTalents(),
+        fetchSavedTalents();
     }, [user]),
     const handleViewProfile = (talentId) => {
-        navigate(`/talent/${talentId}`),
+        navigate(`/talent/${talentId}`);
     },
     const handleRequestHire = (talent) => {
-        console.log("Request to hire:", talent),
+        console.log("Request to hire:", talent);
         toast({
             title: "Hire Request Sent",description: `A hire request has been sent to ${talent.full_name}.`
         });
@@ -71,16 +71,16 @@ export default function SavedTalentsPage() {
     const handleToggleSave = async (talentId, isCurrentlySaved) => {
         try {
             if (!user) {
-                console.warn("User not authenticated."),
+                console.warn("User not authenticated.");
                 return,
-            }
+            };
             if (isCurrentlySaved) {
                 // Remove from saved talents
                 const { error } = await supabase
                     .from('saved_talents')
                     .delete()
                     .eq('user_id', user.id)
-                    .eq('talent_id', talentId),
+                    .eq('talent_id', talentId);
                 if (error) {
                     throw error,
                 }
@@ -102,16 +102,16 @@ export default function SavedTalentsPage() {
                     .from('talent_profiles')
                     .select('*')
                     .eq('id', talentId)
-                    .single(),
+                    .single();
                 if (talentError) {
-                    console.error("Error fetching talent profile:", talentError),
+                    console.error("Error fetching talent profile:", talentError);
                     toast({
                         title: "Error",description: "Failed to update saved talents. Please try again later.",variant: "destructive"
                     });
                     return,
-                }
+                };
                 if (talentData) {
-                    setSavedTalents(prevTalents => [...prevTalents, talentData]),
+                    setSavedTalents(prevTalents => [...prevTalents, talentData]);
                     toast({
                         title: "Talent Saved",description: "Talent saved to your list."
                     });
@@ -119,7 +119,7 @@ export default function SavedTalentsPage() {
             }
         }
         catch (error) {
-            console.error("Error toggling saved talent:", error),
+            console.error("Error toggling saved talent:", error);
             toast({
                 title: "Error",description: "Failed to update saved talents. Please try again later.",variant: "destructive"
             });

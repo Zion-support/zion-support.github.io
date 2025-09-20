@@ -17,13 +17,13 @@ import { MyApplications } from "@/components/jobs/MyApplications";
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
-    const { user } = useAuth(),
-    const [activeTab, setActiveTab] = useState("job-matches"),
-    const onboardingStatus = useOnboardingStatus(),
+    const { user } = useAuth();
+    const [activeTab, setActiveTab] = useState("job-matches");
+    const onboardingStatus = useOnboardingStatus();
     const showAdvanced = onboardingStatus.profileCompleted &&
         onboardingStatus.skillsAdded &&
         onboardingStatus.availabilitySet &&
-        onboardingStatus.matchReceived,
+        onboardingStatus.matchReceived;
     return (<>
       <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
       

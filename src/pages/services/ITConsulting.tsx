@@ -175,7 +175,7 @@ const ITConsulting = () => {
     };
     {
       icon: Shield,title: 'Security Consulting',description: 'Develop comprehensive cybersecurity strategies and policies'
-    };
+    },
     {
       icon: Cloud,title: 'Cloud Strategy',description: 'Plan cloud migration and hybrid cloud solutions'
     }
@@ -195,7 +195,7 @@ const ITConsulting = () => {
     };
     {
       icon: Brain,title: 'Technology Advisory',description: 'Expert guidance on technology selection and implementation'
-    };
+    },
     {
       icon: Scale,title: 'Scalability Planning',description: 'Plan for future growth and technology scaling'
     }
@@ -206,7 +206,7 @@ const ITConsulting = () => {
     };
     {
       industry: 'Healthcare',description: 'HIPAA-compliant IT infrastructure and systems'
-    };
+    },
     {
       industry: 'Financial Services',description: 'Secure, compliant financial technology solutions'
     },
@@ -282,7 +282,7 @@ const ITConsulting = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
@@ -339,7 +339,7 @@ const ITConsulting = () => {
             {expertise.map((area, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
@@ -423,7 +423,7 @@ const ITConsulting = () => {
             {industries.map((industry, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
@@ -456,7 +456,7 @@ const ITConsulting = () => {
             {[
               { step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' };
               { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' };
-              { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' };
+              { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },
               { step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
             ].map((phase, index) => (
               <motion.div

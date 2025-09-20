@@ -40,7 +40,7 @@ const AIBusinessIntelligenceDashboard = () => {
     };
     {
       icon: Zap,title: "Automated Reporting",description: "Intelligent report generation that adapts to your business needs and automatically highlights key insights"
-    };
+    },
     {
       icon: Shield,title: "Enterprise Security",description: "Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
     },
@@ -52,7 +52,7 @@ const AIBusinessIntelligenceDashboard = () => {
   const pricingPlans = [
     {
       name: "Starter",price: "$299",period: "/month",description: "Perfect for small businesses and startups",features: [
-        "Up to 5 data sources";
+        "Up to 5 data sources",
         "Basic AI insights",
         "5 user licenses",
         "Standard reports",
@@ -63,7 +63,7 @@ const AIBusinessIntelligenceDashboard = () => {
     };
     {
       name: "Professional",price: "$799",period: "/month",description: "Ideal for growing businesses and teams",features: [
-        "Up to 20 data sources";
+        "Up to 20 data sources",
         "Advanced AI analytics",
         "25 user licenses",
         "Custom dashboards",
@@ -77,7 +77,7 @@ const AIBusinessIntelligenceDashboard = () => {
     {
       name: "Enterprise",price: "$2,499",
       period: "/month",description: "For large organizations with complex needs",features: [
-        "Unlimited data sources";
+        "Unlimited data sources",
         "Custom AI models",
         "Unlimited users",
         "Advanced security",
@@ -101,7 +101,7 @@ const AIBusinessIntelligenceDashboard = () => {
     {
       title: "Financial Performance Tracking",description: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts",
       icon: BarChart3
-    };
+    },
     {
       title: "Operational Efficiency",description: "Identify bottlenecks, optimize processes, and improve productivity across teams",
       icon: Activity
@@ -113,7 +113,7 @@ const AIBusinessIntelligenceDashboard = () => {
     };
     {
       name: "Michael Chen",role: "Data Scientist",company: "InnovateCorp",content: "The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy.",rating: 5
-    };
+    },
     {
       name: "Emily Rodriguez",role: "CEO",company: "StartupXYZ",content: "This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business.",rating: 5
     }
@@ -183,7 +183,7 @@ const AIBusinessIntelligenceDashboard = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -202,7 +202,7 @@ const AIBusinessIntelligenceDashboard = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -230,7 +230,7 @@ const AIBusinessIntelligenceDashboard = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -249,7 +249,7 @@ const AIBusinessIntelligenceDashboard = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -277,7 +277,7 @@ const AIBusinessIntelligenceDashboard = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -296,7 +296,7 @@ const AIBusinessIntelligenceDashboard = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -355,7 +355,7 @@ const AIBusinessIntelligenceDashboard = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -371,7 +371,7 @@ const AIBusinessIntelligenceDashboard = () => {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -400,7 +400,7 @@ const AIBusinessIntelligenceDashboard = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

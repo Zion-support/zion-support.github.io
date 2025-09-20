@@ -67,18 +67,18 @@ import {
   type ExpandedServicePricing
 } from "@/data/expandedServicesPricing2027";
 const ExpandedServicesPricingGuide2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [expandedService, setExpandedService] = useState<string | null>(null),
-  const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING),
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING);
 
   const categories = ['AllCybersecurity', 'Data AnalyticsCloud & DevOps', 'IoT & Edge ComputingFinancial Technology', 'Healthcare Technology'],
 
   useEffect(() => {
-    let pricing = ALL_EXPANDED_SERVICES_PRICING,
+    let pricing = ALL_EXPANDED_SERVICES_PRICING;
     if (selectedCategory !== 'All') {
-      pricing = pricing.filter(p => p.category === selectedCategory),
-    }
+      pricing = pricing.filter(p => p.category === selectedCategory);
+    };
     if (searchQuery) {
       pricing = pricing.filter(p =>
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -86,7 +86,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         p.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
       ),
     }
-    setFilteredPricing(pricing),
+    setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]),
 
   const getCategoryIcon = (category: string) => {
@@ -102,7 +102,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
       case 'Financial Technology':
         return FinTech,
       case 'Healthcare Technology':
-        return Healthcare,
+        return Healthcare;
       default: return Rocket
     }
   };
@@ -119,7 +119,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
       case 'Financial Technology':
         return 'from-yellow-500 to-orange-600',
       case 'Healthcare Technology':
-        return 'from-teal-500 to-blue-600',
+        return 'from-teal-500 to-blue-600';
       default: return 'from-gray-500 to-slate-600'
     }
   };
@@ -132,13 +132,13 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
       case 'niche':
         return 'bg-purple-100 text-purple-800',
       case 'emerging':
-        return 'bg-yellow-100 text-yellow-800',
+        return 'bg-yellow-100 text-yellow-800';
       default: return 'bg-gray-100 text-gray-800'
     }
   };
   const renderPricingCard = (pricing: ExpandedServicePricing) => {
     const CategoryIcon = getCategoryIcon(pricing.category);
-    const categoryColor = getCategoryColor(pricing.category),
+    const categoryColor = getCategoryColor(pricing.category);
 
     return (
       <motion.div

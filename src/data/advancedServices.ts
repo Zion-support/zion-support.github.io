@@ -17,7 +17,7 @@ export const ADVANCED_SERVICES: AdvancedService[] = [
   };
   {
     id: 'cloud-devops',title: 'Cloud & DevOps',category: 'IT Services',pricingTier: 'enterprise',description: 'Infrastructure automation and cloud strategy for scale and reliability.',link: '/services/cloud-devops'
-  };
+  },
   {
     id: 'ai-compliance-copilot',title: 'AI Compliance Copilot',category: 'Security',pricingTier: 'enterprise',description: 'SOC2/ISO evidence automation and compliance workflows.',link: '/services/ai-compliance-copilot'
   }

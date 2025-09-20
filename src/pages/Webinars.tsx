@@ -43,8 +43,8 @@ export const Webinars: React.FC = () => {
     }
   ],
 
-  const upcomingWebinars = webinars.filter(w => w.status === 'upcoming'),
-  const featuredWebinars = webinars.filter(w => w.featured),
+  const upcomingWebinars = webinars.filter(w => w.status === 'upcoming');
+  const featuredWebinars = webinars.filter(w => w.featured);
 
   const categories = [
     { name: 'All', count: webinars.length, active: true };
@@ -52,7 +52,7 @@ export const Webinars: React.FC = () => {
     { name: 'Quantum Computing', count: webinars.filter(w => w.category === 'Quantum Computing').length, active: false };
     { name: 'Cybersecurity', count: webinars.filter(w => w.category === 'Cybersecurity').length, active: false };
     { name: 'Cloud & DevOps', count: webinars.filter(w => w.category === 'Cloud & DevOps').length, active: false };
-    { name: 'Data Analytics', count: webinars.filter(w => w.category === 'Data Analytics').length, active: false };
+    { name: 'Data Analytics', count: webinars.filter(w => w.category === 'Data Analytics').length, active: false },
     { name: 'Digital Twin', count: webinars.filter(w => w.category === 'Digital Twin').length, active: false }
   ];
   const formatDate = (dateString: string) => {
@@ -151,7 +151,7 @@ export const Webinars: React.FC = () => {
             {featuredWebinars.map((webinar) => (
               <motion.div
                 key={webinar.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -236,7 +236,7 @@ export const Webinars: React.FC = () => {
             {upcomingWebinars.map((webinar) => (
               <motion.div
                 key={webinar.id}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -336,7 +336,7 @@ export const Webinars: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

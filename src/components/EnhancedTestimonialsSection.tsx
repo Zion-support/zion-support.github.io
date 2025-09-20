@@ -13,7 +13,7 @@ import {
 interface Testimonial {
   id: string,name: string,position: string,company: string,companyLogo: string,content: string,rating: number,industry: string,results: string[],avatar: string
 }
-
+;
 const testimonials: Testimonial[] = [
   {
     id: '1',name: 'Sarah Chen',position: 'CTO',company: 'TechFlow Solutions',companyLogo: '/images/company-logos/techflow.svg',content: 'Zion Tech Group transformed our data infrastructure completely. Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before. The ROI was incredible - we saw a 450% return within the first 6 months.',rating: 5,industry: 'Technology',results: ['300% efficiency increase450% ROI in 6 months', 'Real-time insights'],
@@ -37,22 +37,22 @@ const testimonials: Testimonial[] = [
   }
 ];
 export default function EnhancedTestimonialsSection() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0),
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
     if (!isAutoPlaying) return,
 
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length),
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 8000),
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, [isAutoPlaying, testimonials.length]),
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length),
-    setIsAutoPlaying(false),
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    setIsAutoPlaying(false);
   },
 
   const prevTestimonial = () => {
@@ -64,7 +64,7 @@ export default function EnhancedTestimonialsSection() {
     setIsAutoPlaying(false)
   },
 
-  const currentTestimonialData = testimonials[currentTestimonial],
+  const currentTestimonialData = testimonials[currentTestimonial];
 
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
@@ -78,7 +78,7 @@ export default function EnhancedTestimonialsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -181,7 +181,7 @@ export default function EnhancedTestimonialsSection() {
             <motion.button
               onClick={prevTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1 }};
               whileTap={{ scale: 0.9 }}
             >
               <ChevronLeft className="w-6 h-6 text-white" />
@@ -196,7 +196,7 @@ export default function EnhancedTestimonialsSection() {
                     index === currentTestimonial
                       ? 'bg-zion-cyan w-8'
                       : 'bg-white/30 hover:bg-white/50'
-                  }`}
+                  }`};
                   whileHover={{ scale: 1.2 }}
                 />
               ))}
@@ -205,7 +205,7 @@ export default function EnhancedTestimonialsSection() {
             <motion.button
               onClick={nextTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1 }};
               whileTap={{ scale: 0.9 }}
             >
               <ChevronRight className="w-6 h-6 text-white" />
@@ -215,7 +215,7 @@ export default function EnhancedTestimonialsSection() {
 
         {/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -229,12 +229,12 @@ export default function EnhancedTestimonialsSection() {
               {[
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' };
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' };
-                { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' };
+                { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
               ].map((indicator, index) => (
                 <motion.div
                   key={indicator.label}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -253,7 +253,7 @@ export default function EnhancedTestimonialsSection() {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}

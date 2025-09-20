@@ -18,7 +18,7 @@ export default function InterviewAssessmentAI() {
     };
     {
       icon: Shield,title: "Bias Elimination",description: "Remove unconscious bias and ensure fair evaluation processes"
-    };
+    },
     {
       icon: Clock,title: "24/7 Availability",description: "Conduct assessments anytime, anywhere with automated scheduling"
     }
@@ -45,7 +45,7 @@ export default function InterviewAssessmentAI() {
     {
       title: "Leadership Assessment",description: "Evaluation of leadership potential, decision-making, and team management",
       duration: "60-120 minutes",price: "From $200/candidate"
-    };
+    },
     {
       title: "Full Assessment Suite",description: "Complete evaluation covering all aspects of candidate suitability",duration: "2-3 hours",price: "From $350/candidate"
     }
@@ -97,7 +97,7 @@ export default function InterviewAssessmentAI() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
               >
@@ -105,7 +105,7 @@ export default function InterviewAssessmentAI() {
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300 flex items-center justify-center"
               >
@@ -121,7 +121,7 @@ export default function InterviewAssessmentAI() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -139,7 +139,7 @@ export default function InterviewAssessmentAI() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300 group"
@@ -159,7 +159,7 @@ export default function InterviewAssessmentAI() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -177,7 +177,7 @@ export default function InterviewAssessmentAI() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4"
@@ -194,7 +194,7 @@ export default function InterviewAssessmentAI() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -212,7 +212,7 @@ export default function InterviewAssessmentAI() {
             {assessmentTypes.map((assessment, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300"
@@ -237,7 +237,7 @@ export default function InterviewAssessmentAI() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -255,7 +255,7 @@ export default function InterviewAssessmentAI() {
             {industries.map((industry, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300"
@@ -274,7 +274,7 @@ export default function InterviewAssessmentAI() {
       <section className="py-20 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -287,7 +287,7 @@ export default function InterviewAssessmentAI() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
               >
@@ -295,7 +295,7 @@ export default function InterviewAssessmentAI() {
                 Start Your Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover: bg-purple-400/10 transition-all duration-300 flex items-center justify-center"
               >

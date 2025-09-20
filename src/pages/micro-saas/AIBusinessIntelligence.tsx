@@ -11,7 +11,7 @@ export default function AIBusinessIntelligence() {
     };
     {
       icon: Zap,title: 'Automated Intelligence',description: 'Smart automation of business processes'
-    };
+    },
     {
       icon: Eye,title: 'Predictive Analytics',description: 'Forecast trends and identify opportunities'
     }
@@ -25,7 +25,7 @@ export default function AIBusinessIntelligence() {
     };
     {
       title: 'Natural Language Query',description: 'Ask questions in plain English and get instant answers',icon: Database
-    };
+    },
     {
       title: 'Automated Reporting',description: 'Generate reports automatically with AI insights',icon: Target
     }
@@ -74,7 +74,7 @@ export default function AIBusinessIntelligence() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -92,7 +92,7 @@ export default function AIBusinessIntelligence() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -113,7 +113,7 @@ export default function AIBusinessIntelligence() {
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -131,7 +131,7 @@ export default function AIBusinessIntelligence() {
             {capabilities.map((capability, index) => (
               <motion.div
                 key={capability.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -156,7 +156,7 @@ export default function AIBusinessIntelligence() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -173,7 +173,7 @@ export default function AIBusinessIntelligence() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Starter Plan */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
@@ -200,7 +200,7 @@ export default function AIBusinessIntelligence() {
 
             {/* Pro Plan */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -236,7 +236,7 @@ export default function AIBusinessIntelligence() {
 
             {/* Enterprise Plan */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
@@ -272,7 +272,7 @@ export default function AIBusinessIntelligence() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

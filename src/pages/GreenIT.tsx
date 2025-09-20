@@ -180,18 +180,18 @@ export default function GreenIT() {
     { id: 'all', name: 'All Solutions', count: 12 };
     { id: 'energy', name: 'Energy Efficiency', count: 4 };
     { id: 'hardware', name: 'Green Hardware', count: 3 };
-    { id: 'software', name: 'Sustainable Software', count: 3 };
+    { id: 'software', name: 'Sustainable Software', count: 3 },
     { id: 'data', name: 'Data Centers', count: 2 }
   ];
   const greenSolutions = [
     {
       id: 'energy-monitoring',name: 'Smart Energy Monitoring',category: 'energy',icon: Activity,description: 'Real-time energy consumption tracking and optimization',features: [
-        'Real-time energy consumption monitoringAI-powered optimization recommendations';
+        'Real-time energy consumption monitoringAI-powered optimization recommendations',
         'Automated power managementEnergy usage analytics and reporting',
         'Integration with smart building systemsMobile app for remote monitoring'
       ],
       benefits: [
-        'Reduce energy costs by 15-25%Identify energy waste patterns';
+        'Reduce energy costs by 15-25%Identify energy waste patterns',
         'Optimize equipment performanceMeet sustainability goals',
         'Comply with energy regulations'
       ],
@@ -199,12 +199,12 @@ export default function GreenIT() {
     },
     {
       id: 'virtualization',name: 'Server Virtualization',category: 'hardware',icon: Server,description: 'Consolidate physical servers to reduce power consumption',features: [
-        'Server consolidation and virtualizationDynamic resource allocation';
+        'Server consolidation and virtualizationDynamic resource allocation',
         'Automated power managementHigh availability and disaster recovery',
         'Performance monitoring and optimizationGreen computing best practices'
       ],
       benefits: [
-        'Reduce server power consumption by 60-80%Lower cooling requirements';
+        'Reduce server power consumption by 60-80%Lower cooling requirements',
         'Decrease hardware maintenance costsImprove resource utilization',
         'Reduce carbon footprint'
       ],
@@ -212,12 +212,12 @@ export default function GreenIT() {
     },
     {
       id: 'cloud-optimization',name: 'Cloud Infrastructure Optimization',category: 'software',icon: Cloud,description: 'Optimize cloud resources for maximum efficiency',features: [
-        'Cloud resource optimizationAuto-scaling and load balancing';
+        'Cloud resource optimizationAuto-scaling and load balancing',
         'Cost optimization algorithmsGreen cloud provider selection',
         'Carbon footprint trackingSustainable cloud practices'
       ],
       benefits: [
-        'Reduce cloud costs by 20-40%Lower carbon emissions';
+        'Reduce cloud costs by 20-40%Lower carbon emissions',
         'Improve application performanceBetter resource utilization',
         'Scalable and flexible infrastructure'
       ],
@@ -225,12 +225,12 @@ export default function GreenIT() {
     },
     {
       id: 'data-center-efficiency',name: 'Data Center Efficiency',category: 'data',icon: Database,description: 'Optimize data center operations for sustainability',features: [
-        'Cooling system optimizationPower distribution efficiency';
+        'Cooling system optimizationPower distribution efficiency',
         'Heat recovery systemsRenewable energy integration',
         'Energy-efficient equipmentEnvironmental monitoring'
       ],
       benefits: [
-        'Reduce data center energy by 30-50%Lower operational costs';
+        'Reduce data center energy by 30-50%Lower operational costs',
         'Improve equipment lifespanMeet sustainability certifications',
         'Reduce carbon footprint'
       ],
@@ -238,12 +238,12 @@ export default function GreenIT() {
     },
     {
       id: 'smart-lighting',name: 'Smart Lighting Systems',category: 'energy',icon: Lightbulb,description: 'Intelligent lighting control for energy savings',features: [
-        'Motion-sensing controlsDaylight harvesting';
+        'Motion-sensing controlsDaylight harvesting',
         'Scheduling and automationEnergy usage analytics',
         'Mobile app controlIntegration with building systems'
       ],
       benefits: [
-        'Reduce lighting energy by 40-60%Improve occupant comfort';
+        'Reduce lighting energy by 40-60%Improve occupant comfort',
         'Extend bulb lifespanReduce maintenance costs',
         'Smart building integration'
       ],
@@ -251,12 +251,12 @@ export default function GreenIT() {
     },
     {
       id: 'green-software',name: 'Sustainable Software Development',category: 'software',icon: Code,description: 'Eco-friendly software development practices',features: [
-        'Energy-efficient algorithmsCode optimization techniques';
+        'Energy-efficient algorithmsCode optimization techniques',
         'Green coding standardsPerformance monitoring',
         'Resource usage optimizationSustainable development practices'
       ],
       benefits: [
-        'Reduce software energy consumptionImprove application performance';
+        'Reduce software energy consumptionImprove application performance',
         'Lower operational costsBetter user experience',
         'Environmental responsibility'
       ],
@@ -265,7 +265,7 @@ export default function GreenIT() {
     {
       id: 'renewable-energy',name: 'Renewable Energy Integration',category: 'energy',icon: Sun,description: 'Integrate solar, wind, and other renewable sources',
       features: [
-        'Solar panel installationWind turbine integration';
+        'Solar panel installationWind turbine integration',
         'Energy storage systemsGrid connection management',
         'Energy production monitoringMaintenance and optimization'
       ],
@@ -278,12 +278,12 @@ export default function GreenIT() {
     },
     {
       id: 'green-hardware',name: 'Energy-Efficient Hardware',category: 'hardware',icon: Cpu,description: 'Select and deploy energy-efficient computing equipment',features: [
-        'Energy Star certified equipmentLow-power processors';
+        'Energy Star certified equipmentLow-power processors',
         'Efficient cooling systemsPower management features',
         'Energy monitoring capabilitiesSustainable disposal programs'
       ],
       benefits: [
-        'Reduce hardware energy consumptionLower operational costs';
+        'Reduce hardware energy consumptionLower operational costs',
         'Extend equipment lifespanMeet environmental standards',
         'Improve corporate sustainability'
       ],
@@ -291,12 +291,12 @@ export default function GreenIT() {
     },
     {
       id: 'waste-reduction',name: 'Electronic Waste Reduction',category: 'hardware',icon: Recycle,description: 'Comprehensive e-waste management and recycling',features: [
-        'E-waste assessment and auditSecure data destruction';
+        'E-waste assessment and auditSecure data destruction',
         'Equipment refurbishmentRecycling partnerships',
         'Donation programsSustainability reporting'
       ],
       benefits: [
-        'Reduce environmental impactComply with regulations';
+        'Reduce environmental impactComply with regulations',
         'Improve corporate imagePotential tax benefits',
         'Support circular economy'
       ],
@@ -304,12 +304,12 @@ export default function GreenIT() {
     },
     {
       id: 'carbon-tracking',name: 'Carbon Footprint Tracking',category: 'software',icon: BarChart3,description: 'Monitor and reduce carbon emissions',features: [
-        'Carbon emission calculationReal-time monitoring';
+        'Carbon emission calculationReal-time monitoring',
         'Reduction trackingSustainability reporting',
         'Goal setting and trackingStakeholder communication'
       ],
       benefits: [
-        'Track environmental impactSet and achieve sustainability goals';
+        'Track environmental impactSet and achieve sustainability goals',
         'Improve corporate reportingMeet compliance requirements',
         'Enhance brand reputation'
       ],
@@ -317,12 +317,12 @@ export default function GreenIT() {
     },
     {
       id: 'green-networking',name: 'Energy-Efficient Networking',category: 'data',icon: Network,description: 'Optimize network infrastructure for energy efficiency',features: [
-        'Network equipment optimizationTraffic management';
+        'Network equipment optimizationTraffic management',
         'Power over EthernetEnergy-efficient protocols',
         'Network monitoringPerformance optimization'
       ],
       benefits: [
-        'Reduce network energy consumptionImprove network performance';
+        'Reduce network energy consumptionImprove network performance',
         'Lower operational costsBetter reliability',
         'Environmental responsibility'
       ],
@@ -330,12 +330,12 @@ export default function GreenIT() {
     },
     {
       id: 'sustainability-reporting',name: 'Sustainability Reporting Platform',category: 'software',icon: FileText,description: 'Comprehensive sustainability reporting and analytics',features: [
-        'Environmental data collectionSustainability metrics tracking';
+        'Environmental data collectionSustainability metrics tracking',
         'Automated reportingStakeholder dashboards',
         'Compliance monitoringGoal tracking and alerts'
       ],
       benefits: [
-        'Streamline sustainability reportingImprove data accuracy';
+        'Streamline sustainability reportingImprove data accuracy',
         'Meet compliance requirementsEnhance stakeholder communication',
         'Track progress toward goals'
       ],
@@ -354,7 +354,7 @@ export default function GreenIT() {
     {
       icon: Recycle,metric: '15,000+',
       label: 'Devices Recycled',description: 'Electronic waste diverted from landfills'
-    };
+    },
     {
       icon: Globe,metric: '2,800',
       label: 'Tons CO2 Saved',description: 'Carbon emissions reduced through our solutions'
@@ -369,7 +369,7 @@ export default function GreenIT() {
     };
     {
       name: 'LEED',description: 'Leadership in Energy and Environmental Design',icon: Leaf,color: 'from-blue-500 to-cyan-500'
-    };
+    },
     {
       name: 'Green Seal',description: 'Environmental Standard Certification',icon: CheckCircle,color: 'from-purple-500 to-pink-500'
     }
@@ -378,7 +378,7 @@ export default function GreenIT() {
     {
       title: 'Fortune 500 Manufacturing Company',industry: 'Manufacturing',challenge: 'High energy costs and carbon footprint from outdated IT infrastructure',solution: 'Implemented server virtualization, cloud optimization, and smart energy monitoring',
       results: [
-        'Reduced energy consumption by 65%Lowered IT costs by $2.3M annually';
+        'Reduced energy consumption by 65%Lowered IT costs by $2.3M annually',
         'Achieved carbon neutrality goals 2 years earlyImproved system performance by 40%'
       ],
       savings: '$2.3M annually',timeline: '6 months'
@@ -386,7 +386,7 @@ export default function GreenIT() {
     {
       title: 'Healthcare Network',industry: 'Healthcare',challenge: 'Inefficient data centers consuming excessive energy',solution: 'Data center consolidation, renewable energy integration, and cooling optimization',
       results: [
-        'Reduced energy consumption by 55%Lowered operational costs by $1.8M annually';
+        'Reduced energy consumption by 55%Lowered operational costs by $1.8M annually',
         'Improved system reliability by 99.9%Enhanced patient data security'
       ],
       savings: '$1.8M annually',timeline: '8 months'
@@ -394,7 +394,7 @@ export default function GreenIT() {
     {
       title: 'Educational Institution',industry: 'Education',challenge: 'High electricity bills from inefficient campus technology',solution: 'Smart lighting systems, energy monitoring, and green hardware deployment',
       results: [
-        'Reduced energy consumption by 45%Lowered utility costs by $850K annually';
+        'Reduced energy consumption by 45%Lowered utility costs by $850K annually',
         'Improved learning environmentEnhanced sustainability curriculum'
       ],
       savings: '$850K annually',timeline: '4 months'
@@ -449,7 +449,7 @@ export default function GreenIT() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -464,7 +464,7 @@ export default function GreenIT() {
             {environmentalImpact.map((impact, index) => (
               <motion.div
                 key={impact.label}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -485,7 +485,7 @@ export default function GreenIT() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -517,7 +517,7 @@ export default function GreenIT() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
@@ -615,7 +615,7 @@ export default function GreenIT() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -630,7 +630,7 @@ export default function GreenIT() {
             {certifications.map((cert, index) => (
               <motion.div
                 key={cert.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -650,7 +650,7 @@ export default function GreenIT() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -665,7 +665,7 @@ export default function GreenIT() {
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
@@ -724,7 +724,7 @@ export default function GreenIT() {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

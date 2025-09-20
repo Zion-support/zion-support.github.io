@@ -13,7 +13,7 @@ const features = [
     };
     {
         title: "Automated Operations",description: "Streamline business processes with intelligent automation that adapts to changing business conditions.",icon: Zap,color: "from-green-500 to-emerald-500"
-    };
+    },
     {
         title: "Predictive Insights",description: "Forecast market trends, customer needs, and business opportunities with advanced predictive analytics.",
         icon: TrendingUp,color: "from-orange-500 to-red-500"
@@ -36,7 +36,7 @@ const useCases = [
     };
     {
         title: "E-commerce Optimization",description: "Optimize e-commerce operations with AI-driven inventory management and customer behavior analysis.",icon: Target
-    };
+    },
     {
         title: "Financial Services",description: "Enhance financial decision-making with real-time market analysis and risk assessment.",icon: BarChart3
     }
@@ -45,7 +45,7 @@ const testimonials = [
     {
         content: "The AI Autonomous Business Manager transformed our operations completely. We've seen a 40% increase in efficiency and our decision-making process is now lightning-fast.",name: "Sarah Chen",role: "CEO, TechFlow Solutions",
         rating: 5
-    };
+    },
     {
         content: "Implementing this AI system was the best decision we made. It's like having a brilliant business strategist working 24/7.",name: "Michael Rodriguez",role: "COO, InnovateCorp",
         rating: 5
@@ -152,7 +152,7 @@ export default function AIAutonomousBusinessManager() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon,
+            const IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>

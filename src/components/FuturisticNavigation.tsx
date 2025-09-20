@@ -180,16 +180,16 @@ import {
   SkipForward2Dodecagon
 } from "lucide-react";
 export const FuturisticNavigation: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-  const [scrolled, setScrolled] = useState(false),
-  const location = useLocation(),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20),
+      setScrolled(window.scrollY > 20);
     },
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   useEffect(() => {
     setActiveDropdown(null);
@@ -213,7 +213,7 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' };
         { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' };
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' };
-        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' };
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       ]
     };
@@ -223,7 +223,7 @@ export const FuturisticNavigation: React.FC = () => {
         { name: "Business Tools", href: "/micro-saas/business-tools" };
         { name: "Productivity Apps", href: "/micro-saas/productivity" };
         { name: "Industry Solutions", href: "/micro-saas/industry" };
-        { name: "Custom Development", href: "/micro-saas/custom" };
+        { name: "Custom Development", href: "/micro-saas/custom" },
         { name: "Marketplace", href: "/marketplace" }
       ]
     };
@@ -233,7 +233,7 @@ export const FuturisticNavigation: React.FC = () => {
         { name: "Cloud Solutions", href: "/it-services/cloud" };
         { name: "Cybersecurity", href: "/it-services/cybersecurity" };
         { name: "DevOps & Automation", href: "/it-services/devops" };
-        { name: "Data Management", href: "/it-services/data" };
+        { name: "Data Management", href: "/it-services/data" },
         { name: "Network Security", href: "/it-services/network-security" }
       ]
     };
@@ -243,7 +243,7 @@ export const FuturisticNavigation: React.FC = () => {
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" };
         { name: "Edge Computing", href: "/emerging-tech/edge" };
         { name: "IoT Solutions", href: "/emerging-tech/iot" };
-        { name: "Green Technology", href: "/green-it" };
+        { name: "Green Technology", href: "/green-it" },
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
     };
@@ -251,7 +251,7 @@ export const FuturisticNavigation: React.FC = () => {
       name: '2028 Services',href: '/innovative-services-2028',icon: Crown,color: 'from-zion-cyan to-zion-purple',dropdown: [
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' };
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' };
-        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' };
+        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },
         { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' }
       ]
     }
@@ -401,21 +401,21 @@ export const FuturisticNavigation: React.FC = () => {
               {/* User actions */}
               <div className="flex items-center space-x-2">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                 >
                   <Bell className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                 >
                   <User className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                 >

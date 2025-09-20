@@ -45,7 +45,7 @@ export const SUPPORT_LEVELS = [
 ];
 // Pricing Models
 export const PRICING_MODELS = [
-  'monthlyannual';
+  'monthlyannual',
   'one-timeusage-based'
 ];
 // Contact Information
@@ -82,6 +82,6 @@ export const searchServices = (query: string) => {
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
     service.category.toLowerCase().includes(searchTerm)
   )
-},
+};
 
 export default ALL_COMPREHENSIVE_SERVICES;

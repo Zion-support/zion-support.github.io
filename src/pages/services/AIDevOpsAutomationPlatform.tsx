@@ -43,19 +43,19 @@ export default function AIDevOpsAutomationPlatform() {
   ],
 
   const benefits = [
-    "Reduce deployment time by 80% through intelligent automation",
+    "Reduce deployment time by 80% through intelligent automation";
     "Eliminate 95% of human errors in deployment processes",
     "Cut infrastructure costs by 40% with smart resource management",
     "Improve code quality by 60% with AI-powered analysis",
     "Achieve 99.9% uptime with predictive monitoring",
     "Reduce security incidents by 90% with automated scanning";
-    "Accelerate time-to-market by 3x";
+    "Accelerate time-to-market by 3x",
     "Enable 24/7 autonomous operations"
   ];
   const capabilities = [
     {
       category: "Code Management",items: [
-        "AI-powered code review and suggestions";
+        "AI-powered code review and suggestions",
         "Automated code quality analysis",
         "Intelligent refactoring recommendations",
         "Security vulnerability scanning",
@@ -64,7 +64,7 @@ export default function AIDevOpsAutomationPlatform() {
     },
     {
       category: "Build & Deploy",items: [
-        "Smart CI/CD pipeline orchestration";
+        "Smart CI/CD pipeline orchestration",
         "Automated testing and validation",
         "Intelligent deployment strategies",
         "Rollback automation",
@@ -73,7 +73,7 @@ export default function AIDevOpsAutomationPlatform() {
     },
     {
       category: "Infrastructure",items: [
-        "Auto-scaling based on demand";
+        "Auto-scaling based on demand",
         "Cost optimization algorithms",
         "Resource allocation intelligence",
         "Cloud provider optimization",
@@ -82,7 +82,7 @@ export default function AIDevOpsAutomationPlatform() {
     },
     {
       category: "Monitoring & Operations",items: [
-        "Predictive performance monitoring";
+        "Predictive performance monitoring",
         "Automated incident response",
         "Intelligent alerting systems",
         "Root cause analysis automation",
@@ -95,7 +95,7 @@ export default function AIDevOpsAutomationPlatform() {
     {
       name: "Starter",price: "$29,999",
       period: "one-time setup",features: [
-        "Basic AI DevOps automation";
+        "Basic AI DevOps automation",
         "Up to 10 applications",
         "Standard CI/CD pipelines",
         "Basic monitoring & alerting",
@@ -106,7 +106,7 @@ export default function AIDevOpsAutomationPlatform() {
     {
       name: "Professional",price: "$59,999",
       period: "one-time setup",features: [
-        "Advanced AI automation";
+        "Advanced AI automation",
         "Up to 50 applications",
         "Custom CI/CD workflows",
         "Advanced monitoring & analytics",
@@ -118,7 +118,7 @@ export default function AIDevOpsAutomationPlatform() {
     {
       name: "Enterprise",price: "$119,999",
       period: "one-time setup",features: [
-        "Full AI DevOps platform";
+        "Full AI DevOps platform",
         "Unlimited applications",
         "Custom automation workflows",
         "24/7 dedicated support",
@@ -188,7 +188,7 @@ export default function AIDevOpsAutomationPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -206,7 +206,7 @@ export default function AIDevOpsAutomationPlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -226,7 +226,7 @@ export default function AIDevOpsAutomationPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -244,7 +244,7 @@ export default function AIDevOpsAutomationPlatform() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -264,7 +264,7 @@ export default function AIDevOpsAutomationPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -282,7 +282,7 @@ export default function AIDevOpsAutomationPlatform() {
             {capabilities.map((category, index) => (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -315,7 +315,7 @@ export default function AIDevOpsAutomationPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -333,7 +333,7 @@ export default function AIDevOpsAutomationPlatform() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -380,7 +380,7 @@ export default function AIDevOpsAutomationPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -396,7 +396,7 @@ export default function AIDevOpsAutomationPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
@@ -416,7 +416,7 @@ export default function AIDevOpsAutomationPlatform() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
@@ -436,7 +436,7 @@ export default function AIDevOpsAutomationPlatform() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}

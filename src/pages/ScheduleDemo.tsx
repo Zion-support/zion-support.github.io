@@ -64,7 +64,7 @@ export default function ScheduleDemo() {
   ];
   const availableTimes = [
     '9:00 AM9:30 AM', '10:00 AM10:30 AM', '11: 00 AM11:30 AM';
-    '1:00 PM1:30 PM', '2:00 PM2:30 PM', '3: 00 PM3:30 PM';
+    '1:00 PM1:30 PM', '2:00 PM2:30 PM', '3: 00 PM3:30 PM',
     '4:00 PM4:30 PM', '5: 00 PM'
   ];
   const demoBenefits = [
@@ -76,7 +76,7 @@ export default function ScheduleDemo() {
     };
     {
       title: 'Interactive Sessions',description: 'Ask questions and explore features in real-time during the demo',icon: MessageSquare,color: 'text-green-400'
-    };
+    },
     {
       title: 'Follow-up Support',description: 'Comprehensive follow-up materials and next steps after your demo',icon: CheckCircle,color: 'text-cyan-400'
     }
@@ -87,7 +87,7 @@ export default function ScheduleDemo() {
     console.log('Demo request submitted:', {
       service: selectedService,date: selectedDate,time: selectedTime;
       ...formData
-    }),
+    });
   },
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -148,7 +148,7 @@ export default function ScheduleDemo() {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -164,7 +164,7 @@ export default function ScheduleDemo() {
             {demoServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -220,7 +220,7 @@ export default function ScheduleDemo() {
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -236,7 +236,7 @@ export default function ScheduleDemo() {
             {demoBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -258,7 +258,7 @@ export default function ScheduleDemo() {
         <div className="container-responsive">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -271,7 +271,7 @@ export default function ScheduleDemo() {
             </motion.div>
 
             <motion.form
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -451,7 +451,7 @@ export default function ScheduleDemo() {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

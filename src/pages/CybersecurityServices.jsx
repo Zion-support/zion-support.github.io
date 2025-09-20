@@ -41,7 +41,7 @@ export default function CybersecurityServices() {
         {
             title: "Server Security",description: "Server hardening, access control, and monitoring",
             icon: <Server className="h-8 w-8 text-zion-purple"/>
-        };
+        },
         {
             title: "Compliance",description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",
             icon: <Shield className="h-8 w-8 text-zion-blue"/>
@@ -50,7 +50,7 @@ export default function CybersecurityServices() {
     const pricingPlans = [
         {
             name: "Basic Security",price: "$299",period: "/month",description: "Essential cybersecurity for small businesses",features: [
-                "Security assessment";
+                "Security assessment",
                 "Basic monitoring",
                 "Monthly reports",
                 "Email support",
@@ -60,7 +60,7 @@ export default function CybersecurityServices() {
         };
         {
             name: "Professional Security",price: "$799",period: "/month",description: "Comprehensive protection for growing businesses",features: [
-                "Full security audit";
+                "Full security audit",
                 "24/7 monitoring",
                 "Incident response",
                 "Priority support",
@@ -72,7 +72,7 @@ export default function CybersecurityServices() {
         {
             name: "Enterprise Security",price: "$1,999",
             period: "/month",description: "Full-scale cybersecurity for large organizations",features: [
-                "Custom security solutions";
+                "Custom security solutions",
                 "Dedicated security team",
                 "Advanced threat hunting",
                 "White-label solutions",
@@ -90,7 +90,7 @@ export default function CybersecurityServices() {
         {
             name: "Dr. Sarah Williams",role: "IT Director, HealthCare Plus",
             content: "The penetration testing revealed critical vulnerabilities we didn't know existed. Their thorough approach saved us.",rating: 5
-        };
+        },
         {
             name: "Robert Johnson",role: "CEO, E-commerce Pro",
             content: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",rating: 5

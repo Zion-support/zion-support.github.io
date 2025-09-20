@@ -19,7 +19,7 @@ export default function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle };
     { number: '50+', label: 'Team Members', icon: Users };
-    { number: '25+', label: 'Countries Served', icon: Globe };
+    { number: '25+', label: 'Countries Served', icon: Globe },
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
   const values = [
@@ -31,7 +31,7 @@ export default function About() {
     };
     {
       icon: Heart,title: 'Client Success',description: 'We measure our success by the success of our clients and their digital transformation journey.'
-    };
+    },
     {
       icon: Rocket,title: 'Future-Ready',description: 'We build solutions that not only solve today\'s problems but prepare you for tomorrow\'s challenges.'
     }
@@ -43,7 +43,7 @@ export default function About() {
     {
       name: 'AI Research Team',role: 'AI & ML Specialists',bio: 'Experts in machine learning, neural networks, and autonomous systems development.',
       image: '/team/ai-team.jpg'
-    };
+    },
     {
       name: 'DevOps Engineers',role: 'Infrastructure & Cloud',bio: 'Specialists in cloud architecture, automation, and scalable infrastructure solutions.',
       image: '/team/devops-team.jpg'
@@ -82,7 +82,7 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -102,7 +102,7 @@ export default function About() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="relative"
@@ -140,7 +140,7 @@ export default function About() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -153,7 +153,7 @@ export default function About() {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -173,7 +173,7 @@ export default function About() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -186,7 +186,7 @@ export default function About() {
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
@@ -204,7 +204,7 @@ export default function About() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -217,7 +217,7 @@ export default function About() {
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
@@ -240,7 +240,7 @@ export default function About() {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

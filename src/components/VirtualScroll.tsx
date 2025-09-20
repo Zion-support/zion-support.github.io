@@ -8,7 +8,7 @@ interface VirtualScrollProps<T> {
 }
 
 export function VirtualScroll<T>({
-  items;
+  items,
   height,
   itemHeight,
   renderItem,
@@ -16,14 +16,14 @@ export function VirtualScroll<T>({
   className = '',
   onScroll
 }: VirtualScrollProps<T>) {
-  const [scrollTop, setScrollTop] = useState(0),
-  const containerRef = useRef<HTMLDivElement>(null),
+  const [scrollTop, setScrollTop] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Calculate visible range
   const visibleRange = useMemo(() => {
-    const start = Math.floor(scrollTop / itemHeight),
-    const visibleCount = Math.ceil(height / itemHeight),
-    const end = start + visibleCount + overscan,
+    const start = Math.floor(scrollTop / itemHeight);
+    const visibleCount = Math.ceil(height / itemHeight);
+    const end = start + visibleCount + overscan;
     
     return {
       start: Math.max(0, start - overscan),
@@ -32,13 +32,13 @@ export function VirtualScroll<T>({
   }, [scrollTop, itemHeight, height, overscan, items.length]),
 
   // Calculate total height and transform
-  const totalHeight = items.length * itemHeight,
-  const transform = `translateY(${visibleRange.start * itemHeight}px)`,
+  const totalHeight = items.length * itemHeight;
+  const transform = `translateY(${visibleRange.start * itemHeight}px)`;
 
   // Handle scroll
   const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {
     const newScrollTop = event.currentTarget.scrollTop;
-    setScrollTop(newScrollTop),
+    setScrollTop(newScrollTop);
     onScroll?.(newScrollTop)
   }, [onScroll]),
 
@@ -52,7 +52,7 @@ export function VirtualScroll<T>({
 
   // Scroll to top
   const scrollToTop = useCallback(() => {
-    scrollToItem(0),
+    scrollToItem(0);
   }, [scrollToItem]),
 
   // Auto-scroll to specific item on mount if needed
@@ -113,7 +113,7 @@ export function VirtualScroll<T>({
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%
       </div>
     </div>
-  ),
+  );
 }
 
 // Specialized virtual scroll for service cards
@@ -138,7 +138,7 @@ export function ServiceVirtualScroll({
   const renderServiceCard = useCallback((service: ServiceCard, index: number) => (
     <div className="p-4">
       <motion.div
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.02 }};
         whileTap={{ scale: 0.98 }}
         className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow"
         onClick={() => onServiceClick?.(service)}

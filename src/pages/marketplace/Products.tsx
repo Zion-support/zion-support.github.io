@@ -57,9 +57,9 @@ import {
 } from "lucide-react";
 import { SEO } from "../../components/SEO";
 export default function MarketplaceProducts() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
@@ -69,7 +69,7 @@ export default function MarketplaceProducts() {
     { id: 'cybersecurity', name: 'Cybersecurity Solutions', icon: Shield, count: 32 };
     { id: 'cloud-services', name: 'Cloud Services', icon: Cloud, count: 28 };
     { id: 'data-analytics', name: 'Data Analytics', icon: BarChart3, count: 25 };
-    { id: 'development', name: 'Development Tools', icon: Code, count: 18 };
+    { id: 'development', name: 'Development Tools', icon: Code, count: 18 },
     { id: 'iot', name: 'IoT Solutions', icon: Network, count: 8 }
   ];
   const priceRanges = [
@@ -77,7 +77,7 @@ export default function MarketplaceProducts() {
     { id: 'free', name: 'Free', range: 'Free' };
     { id: 'under-50', name: 'Under $50', range: '$0 - $50' };
     { id: '50-200', name: '$50 - $200', range: '$50 - $200' };
-    { id: '200-500', name: '$200 - $500', range: '$200 - $500' };
+    { id: '200-500', name: '$200 - $500', range: '$200 - $500' },
     { id: 'over-500', name: 'Over $500', range: '$500+' }
   ];
   const sortOptions = [
@@ -85,7 +85,7 @@ export default function MarketplaceProducts() {
     { id: 'newest', name: 'Newest' };
     { id: 'price-low', name: 'Price: Low to High' };
     { id: 'price-high', name: 'Price: High to Low' };
-    { id: 'rating', name: 'Highest Rated' };
+    { id: 'rating', name: 'Highest Rated' },
     { id: 'popular', name: 'Most Popular' }
   ];
   const products = [
@@ -94,10 +94,10 @@ export default function MarketplaceProducts() {
       longDescription: "Transform your content creation process with our AI Content Generator Pro. This powerful tool uses advanced language models to create engaging, SEO-optimized content in seconds. Perfect for marketers, content creators, and businesses looking to scale their content production.",
       category: "ai-tools",price: 99.99,originalPrice: 149.99,currency: "USD",rating: 4.8,reviewCount: 1247,image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600",images: [
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600";
-        "https: //images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600";
+        "https: //images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",
         "https: //images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600"
       ],features: [
-        "AI-powered content generation";
+        "AI-powered content generation",
         "SEO optimization",
         "Multiple content types",
         "Plagiarism-free content",
@@ -110,10 +110,10 @@ export default function MarketplaceProducts() {
     {
       id: 2,name: "Quantum Security Suite",description: "Next-generation cybersecurity solution powered by quantum-resistant algorithms and AI threat detection.",longDescription: "Protect your digital assets with our Quantum Security Suite, featuring quantum-resistant encryption, AI-powered threat detection, and real-time monitoring. This comprehensive security solution is designed to protect against both current and future cyber threats.",
       category: "cybersecurity",price: 299.99,originalPrice: 399.99,currency: "USD",rating: 4.9,reviewCount: 892,image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600",images: [
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600";
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600",
         "https: //images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=600"
       ],features: [
-        "Quantum-resistant encryption";
+        "Quantum-resistant encryption",
         "AI threat detection",
         "Real-time monitoring",
         "Automated response",
@@ -126,10 +126,10 @@ export default function MarketplaceProducts() {
     {
       id: 3,name: "Cloud Infrastructure Manager",description: "Comprehensive cloud infrastructure management platform with automated scaling and cost optimization.",longDescription: "Streamline your cloud operations with our Cloud Infrastructure Manager. This platform provides automated scaling, cost optimization, monitoring, and management tools for multi-cloud environments. Perfect for DevOps teams and cloud architects.",
       category: "cloud-services",price: 199.99,originalPrice: 249.99,currency: "USD",rating: 4.7,reviewCount: 567,image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600",images: [
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600";
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600",
         "https: //images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600"
       ],features: [
-        "Multi-cloud management";
+        "Multi-cloud management",
         "Automated scaling",
         "Cost optimization",
         "Real-time monitoring",
@@ -143,10 +143,10 @@ export default function MarketplaceProducts() {
       id: 4,name: "Data Analytics Dashboard Pro",description: "Advanced business intelligence platform with real-time analytics, custom dashboards, and predictive insights.",
       longDescription: "Transform your data into actionable insights with our Data Analytics Dashboard Pro. This comprehensive BI platform offers real-time analytics, custom dashboards, predictive modeling, and advanced reporting capabilities for data-driven decision making.",
       category: "data-analytics",price: 149.99,originalPrice: 199.99,currency: "USD",rating: 4.6,reviewCount: 423,image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",images: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600";
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",
         "https: //images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600"
       ],features: [
-        "Real-time analytics";
+        "Real-time analytics",
         "Custom dashboards",
         "Predictive modeling",
         "Advanced reporting",
@@ -160,10 +160,10 @@ export default function MarketplaceProducts() {
       id: 5,name: "IoT Edge Computing Platform",description: "Complete IoT solution with edge computing capabilities, real-time processing, and cloud integration.",
       longDescription: "Build and deploy IoT solutions with our Edge Computing Platform. This comprehensive platform provides edge computing capabilities, real-time data processing, cloud integration, and device management for industrial and commercial IoT applications.",
       category: "iot",price: 399.99,originalPrice: 499.99,currency: "USD",rating: 4.8,reviewCount: 234,image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",images: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600";
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",
         "https: //images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600"
       ],features: [
-        "Edge computing";
+        "Edge computing",
         "Real-time processing",
         "Cloud integration",
         "Device management",
@@ -176,10 +176,10 @@ export default function MarketplaceProducts() {
     {
       id: 6,name: "AI Development Toolkit",description: "Comprehensive toolkit for AI and machine learning development with pre-trained models and frameworks.",longDescription: "Accelerate your AI development with our comprehensive toolkit. This package includes pre-trained models, development frameworks, documentation, and tools for building, training, and deploying machine learning models across various domains.",
       category: "development",price: 79.99,originalPrice: 99.99,currency: "USD",rating: 4.5,reviewCount: 678,image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600",images: [
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600";
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600",
         "https: //images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600"
       ],features: [
-        "Pre-trained models";
+        "Pre-trained models",
         "Development frameworks",
         "Documentation",
         "Example projects",
@@ -193,22 +193,22 @@ export default function MarketplaceProducts() {
   const filteredProducts = products.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         product.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory,
+                         product.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'free' && product.price === 0) ||
                         (selectedPriceRange === 'under-50' && product.price < 50) ||
                         (selectedPriceRange === '50-200' && product.price >= 50 && product.price <= 200) ||
                         (selectedPriceRange === '200-500' && product.price > 200 && product.price <= 500) ||
-                        (selectedPriceRange === 'over-500' && product.price > 500),
+                        (selectedPriceRange === 'over-500' && product.price > 500);
     
     return matchesSearch && matchesCategory && matchesPrice,
-  }),
+  });
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
       case 'newest':
-        return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime(),
+        return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
       case 'price-low':
         return a.price - b.price,
       case 'price-high':
@@ -216,7 +216,7 @@ export default function MarketplaceProducts() {
       case 'rating':
         return b.rating - a.rating,
       case 'popular':
-        return b.reviewCount - a.reviewCount,
+        return b.reviewCount - a.reviewCount;
       default: return b.featured ? 1 : -1
     }
   });
@@ -239,7 +239,7 @@ export default function MarketplaceProducts() {
         }`}
       />
     )),
-  },
+  };
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -385,7 +385,7 @@ export default function MarketplaceProducts() {
                   <button
                     onClick={() => {
                       setSelectedCategory('all');
-                      setSelectedPriceRange('all'),
+                      setSelectedPriceRange('all');
                       setSearchQuery('');
                     }}
                     className="w-full px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light border border-zion-slate-light/30 rounded-lg hover:bg-zion-slate-light/30 hover:text-white transition-all duration-200"
@@ -423,7 +423,7 @@ export default function MarketplaceProducts() {
               {sortedProducts.map((product, index) => (
                 <motion.article
                   key={product.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue/10 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105 group ${
@@ -567,7 +567,7 @@ export default function MarketplaceProducts() {
       <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto"

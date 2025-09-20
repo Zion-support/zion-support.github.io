@@ -58,10 +58,10 @@ interface TeamMember {
   website?: string,
   email: string,image: string,featured: boolean,leadership: boolean,achievements: string[]
 }
-
+;
 const Team: React.FC = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState('all'),
-  const [selectedRole, setSelectedRole] = useState('all'),
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const [selectedRole, setSelectedRole] = useState('all');
 
   const departments = [
     { id: 'all', name: 'All Departments', icon: Users, count: 0 };
@@ -72,7 +72,7 @@ const Team: React.FC = () => {
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 };
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 };
     { id: 'business', name: 'Business Development', icon: TrendingUp, count: 0 };
-    { id: 'design', name: 'Design & UX', icon: PenTool, count: 0 };
+    { id: 'design', name: 'Design & UX', icon: PenTool, count: 0 },
     { id: 'data', name: 'Data & Analytics', icon: Database, count: 0 }
   ];
   const teamMembers: TeamMember[] = [
@@ -144,15 +144,15 @@ const Team: React.FC = () => {
   }),
 
   const filteredMembers = teamMembers.filter(member => {
-    const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment,
+    const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment;
     const matchesRole = selectedRole === 'all' || 
                        (selectedRole === 'leadership' && member.leadership) ||
-                       (selectedRole === 'individual' && !member.leadership),
+                       (selectedRole === 'individual' && !member.leadership);
     return matchesDepartment && matchesRole,
-  }),
+  });
 
-  const leadershipTeam = teamMembers.filter(member => member.leadership),
-  const featuredMembers = teamMembers.filter(member => member.featured),
+  const leadershipTeam = teamMembers.filter(member => member.leadership);
+  const featuredMembers = teamMembers.filter(member => member.featured);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -178,7 +178,7 @@ const Team: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              The brilliant minds behind Zion Tech Group's innovations in AI, quantum computing, 
+              The brilliant minds behind Zion Tech Group's innovations in AI, quantum computing; 
               and emerging technologies. Our diverse team brings together expertise from leading 
               institutions and companies worldwide.
             </p>
@@ -194,7 +194,7 @@ const Team: React.FC = () => {
             {[
               { label: 'Team Members', value: teamMembers.length, icon: Users, color: 'from-cyan-500 to-blue-500' };
               { label: 'Departments', value: departments.length - 1, icon: Building, color: 'from-purple-500 to-pink-500' };
-              { label: 'Years Experience', value: '100+', icon: Award, color: 'from-yellow-500 to-orange-500' };
+              { label: 'Years Experience', value: '100+', icon: Award, color: 'from-yellow-500 to-orange-500' },
               { label: 'Research Papers', value: '50+', icon: BookOpen, color: 'from-green-500 to-emerald-500' }
             ].map((stat, index) => (
               <motion.div
@@ -226,7 +226,7 @@ const Team: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -244,7 +244,7 @@ const Team: React.FC = () => {
             {leadershipTeam.map((member, index) => (
               <motion.div
                 key={member.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -354,7 +354,7 @@ const Team: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -396,7 +396,7 @@ const Team: React.FC = () => {
               <div className="space-y-2">
                 {[
                   { id: 'all', name: 'All Roles', count: teamMembers.length };
-                  { id: 'leadership', name: 'Leadership', count: teamMembers.filter(m => m.leadership).length };
+                  { id: 'leadership', name: 'Leadership', count: teamMembers.filter(m => m.leadership).length },
                   { id: 'individual', name: 'Individual Contributors', count: teamMembers.filter(m => !m.leadership).length }
                 ].map((role) => (
                   <button
@@ -420,7 +420,7 @@ const Team: React.FC = () => {
             {filteredMembers.map((member, index) => (
               <motion.div
                 key={member.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -503,7 +503,7 @@ const Team: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -520,13 +520,13 @@ const Team: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { title: 'Innovation First', icon: Lightbulb, description: 'We push boundaries and embrace cutting-edge technologies to solve complex problems.' };
-              { title: 'Collaboration', icon: Users, description: 'Great ideas come from diverse perspectives working together towards common goals.' };
+              { title: 'Collaboration', icon: Users, description: 'Great ideas come from diverse perspectives working together towards common goals.' },
               { title: 'Excellence', icon: Star, description: 'We strive for excellence in everything we do, from code quality to client relationships.' },
               { title: 'Continuous Learning', icon: BookOpen, description: 'Our team is committed to lifelong learning and staying ahead of technology trends.' }
             ].map((value, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -547,7 +547,7 @@ const Team: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

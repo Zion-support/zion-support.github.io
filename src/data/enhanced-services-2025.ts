@@ -1,7 +1,7 @@
 export interface EnhancedService {
-    id: string,name: string,tagline: string,description: string,category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech',pricing: {
+    id: string,name: string,tagline: string,description: string,category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech',pricing: {,
         monthly: string,yearly: string,enterprise: string,setup: string
-    };
+    },
     features: string[],benefits: string[],roi: string,trialDays: number,setupTime: string,icon: string,color: string,link: string;
     technology?: string[],
     integrations?: string[],
@@ -9,11 +9,11 @@ export interface EnhancedService {
     targetAudience?: string,
     marketPosition?: string,
     competitors?: string[],
-    contactInfo: {
+    contactInfo: {,
         mobile: string,email: string,address: string,website: string
     };
 }
-
+;
 const CONTACT = {
     mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
 };
@@ -21,14 +21,14 @@ export const enhancedServices2025: EnhancedService[] = [
     {
         id: 'ai-powered-code-review-assistant',name: 'AI-Powered Code Review Assistant',tagline: 'Automated code quality, security scanning, and best-practice guidance',
         description: 'Analyzes pull requests to flag security risks, style issues, and performance regressions. Posts actionable comments, gates CI on severity rules, and learns from team decisions.',
-        category: 'micro-saas',pricing: { monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$299 one-time' };
+        category: 'micro-saas',pricing: { monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$299 one-time' },
         features: [
-            'OWASP and supply‑chain risk checksPR auto-comments with code snippets';
+            'OWASP and supply‑chain risk checksPR auto-comments with code snippets',
             'Custom policy rules and severity gatesMulti-language static analysis + ML insights',
             'CI/CD integrations (GitHub, GitLab, Bitbucket)'
         ],
         benefits: [
-            'Cut review time 40–60%Catch critical issues pre-merge';
+            'Cut review time 40–60%Catch critical issues pre-merge',
             'Standardize engineering qualityReduce technical debt'
         ],
         roi: 'Reduce rework and incidents, recoup 5–10 dev hours/week/team',
@@ -41,9 +41,9 @@ export const enhancedServices2025: EnhancedService[] = [
     {
         id: 'intelligent-incident-response-platform',name: 'Intelligent Incident Response Platform',tagline: 'AI detection, response runbooks, and post-mortems',
         description: 'Unifies alert correlation, automated triage, and guided remediation with live runbooks and evidence capture for faster incident resolution.',
-        category: 'micro-saas',pricing: { monthly: '$299/month', yearly: '$2,999/year', enterprise: 'Custom', setup: '$499 one-time' };
+        category: 'micro-saas',pricing: { monthly: '$299/month', yearly: '$2,999/year', enterprise: 'Custom', setup: '$499 one-time' },
         features: [
-            'Alert deduplication and correlationAuto-triage and enrichment';
+            'Alert deduplication and correlationAuto-triage and enrichment',
             'Runbook automationRCA templates and knowledge capture',
             'SIEM/EDR integrations'
         ],
@@ -54,7 +54,7 @@ export const enhancedServices2025: EnhancedService[] = [
     {
         id: 'smart-invoice-management-system',name: 'Smart Invoice Management System',tagline: 'OCR, approvals, and payment reconciliation',
         description: 'End-to-end AP automation with invoice capture, duplicate detection, policy workflows, and payment status sync.',
-        category: 'micro-saas',pricing: { monthly: '$79/month', yearly: '$799/year', enterprise: 'Custom', setup: '$199 one-time' };
+        category: 'micro-saas',pricing: { monthly: '$79/month', yearly: '$799/year', enterprise: 'Custom', setup: '$199 one-time' },
         features: ['OCR and entity extractionApproval workflows', '3‑way matchVendor portal', 'Analytics'],
         benefits: ['Cycle time ↓ 90%Errors ↓ 95%', 'Better cash visibility'],
         roi: 'Lower processing cost per invoice by 60%',trialDays: 30,setupTime: '1 hour',icon: '📄',color: 'from-green-600 to-emerald-700',link: '/services/invoice-management',contactInfo: CONTACT
@@ -62,14 +62,14 @@ export const enhancedServices2025: EnhancedService[] = [
     {
         id: 'ai-customer-success-automation',name: 'AI Customer Success Automation',tagline: 'Onboarding journeys, churn prediction, and health scoring',
         description: 'Customer lifecycle automation with risk prediction, QBR prep, and proactive playbooks to scale CS impact.',
-        category: 'micro-saas',pricing: { monthly: '$149/month', yearly: '$1,499/year', enterprise: 'Custom', setup: '$299 one-time' };
+        category: 'micro-saas',pricing: { monthly: '$149/month', yearly: '$1,499/year', enterprise: 'Custom', setup: '$299 one-time' },
         features: ['Journeys & playbooksChurn prediction', 'Health scoresNPS/CSAT', 'CRM sync'],
         benefits: ['Retention ↑ 25–30%Time-to-value ↓', 'Scaled touch coverage'],
         roi: 'Reduced churn, revenue retention uplift',
         trialDays: 14,setupTime: '3 hours',icon: '🎯',color: 'from-purple-600 to-violet-700',link: '/services/customer-success-automation',contactInfo: CONTACT
     };
     {
-        id: 'intelligent-data-analytics-dashboard',name: 'Intelligent Data Analytics Dashboard',tagline: 'Real‑time KPIs and predictive analytics',description: 'Unified dashboards with live connectors and automated narrative insights for business users.',category: 'micro-saas',pricing: { monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$399 one-time' };
+        id: 'intelligent-data-analytics-dashboard',name: 'Intelligent Data Analytics Dashboard',tagline: 'Real‑time KPIs and predictive analytics',description: 'Unified dashboards with live connectors and automated narrative insights for business users.',category: 'micro-saas',pricing: { monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$399 one-time' },
         features: ['Live connectorsForecasting', 'Anomaly detectionCustom alerts', 'Embed SDK'],
         benefits: ['Decisions ↑ 40%Reporting time ↓ 80%', 'Self‑serve BI'],
         roi: 'Time saved on reporting and better outcomes',trialDays: 14,setupTime: '2 hours',icon: '📊',color: 'from-cyan-600 to-blue-700',link: '/services/analytics-dashboard',contactInfo: CONTACT
@@ -136,13 +136,13 @@ export const enhancedServices2025: EnhancedService[] = [
     // New additions
     {
         id: 'seo-content-optimizer',name: 'SEO Content Optimizer',tagline: 'Programmatic SEO at scale with AI',description: 'Generates, audits, and A/B tests landing pages with structured data and internal links.',
-        category: 'micro-saas',pricing: { monthly: '$129/month', yearly: '$1,290/year', enterprise: 'Custom', setup: '$199 one-time' };
+        category: 'micro-saas',pricing: { monthly: '$129/month', yearly: '$1,290/year', enterprise: 'Custom', setup: '$199 one-time' },
         features: ['Keyword clusteringContent briefs', 'On-page auditInternal linking', 'A/B testing'],
         benefits: ['Organic traffic ↑Publishing velocity ↑'],roi: 'Lower CAC via organic growth',trialDays: 14,setupTime: '1 day',icon: '🧭',color: 'from-emerald-600 to-teal-700',link: '/services/seo-content-optimizer',contactInfo: CONTACT
     };
     {
         id: 'ai-sales-email-copilot',name: 'AI Sales Email Copilot',tagline: 'Personalized outbound that actually converts',description: 'Enrich leads, draft multi-step sequences, and adapt tone by persona with live A/B improvements.',
-        category: 'micro-saas',pricing: { monthly: '$99/month', yearly: '$990/year', enterprise: 'Custom', setup: '$149 one-time' };
+        category: 'micro-saas',pricing: { monthly: '$99/month', yearly: '$990/year', enterprise: 'Custom', setup: '$149 one-time' },
         features: ['Lead enrichmentSequence drafts', 'Deliverability guardrailsCRM sync', 'Analytics'],
         benefits: ['Reply rate ↑Time saved for AEs'],roi: 'More meetings per rep with less effort',trialDays: 7,setupTime: '2 hours',icon: '✉️',color: 'from-sky-600 to-blue-700',link: '/services/ai-sales-email-copilot',contactInfo: CONTACT
     };

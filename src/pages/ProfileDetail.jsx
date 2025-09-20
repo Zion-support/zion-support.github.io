@@ -11,29 +11,29 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
     // useParams is typed as `any` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
-    const { profileId } = useParams(),
-    const [profileData, setProfileData] = useState(null),
-    const [isLoading, setIsLoading] = useState(true),
-    const [error, setError] = useState(null),
+    const { profileId } = useParams();
+    const [profileData, setProfileData] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
     useEffect(() => {
         const fetchProfile = async () => {
-            setIsLoading(true),
-            setError(null),
+            setIsLoading(true);
+            setError(null);
             try {
                 if (!profileId) {
-                    setError("Profile ID is missing."),
+                    setError("Profile ID is missing.");
                     return,
-                }
+                };
                 const { data, error } = await supabase
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
-                    .single(),
+                    .single();
                 if (error) {
-                    throw new Error(error.message),
-                }
+                    throw new Error(error.message);
+                };
                 if (!data) {
-                    setError("Profile not found."),
+                    setError("Profile not found.");
                     return;
                 }
                 setProfileData(data);
@@ -45,26 +45,26 @@ export default function ProfileDetail() {
                 });
             }
             finally {
-                setIsLoading(false),
+                setIsLoading(false);
             }
         },
-        fetchProfile(),
+        fetchProfile();
     }, [profileId]),
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
-      </div>),
-    }
+      </div>);
+    };
     if (error) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
       </div>);
-    }
+    };
     if (!profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
-      </div>),
-    }
+      </div>);
+    };
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
       

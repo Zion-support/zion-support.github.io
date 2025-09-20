@@ -15,7 +15,7 @@ const AICodeReviewAssistant = () => {
         {
             title: "Best Practice Recommendations",description: "Intelligent suggestions for code improvements, design patterns, and industry best practices",
             icon: <CheckCircle className="w-6 h-6"/>
-        };
+        },
         {
             title: "Git Integration & Automation",description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
             icon: <GitFork className="w-6 h-6"/>
@@ -30,7 +30,7 @@ const AICodeReviewAssistant = () => {
         };
         {
             metric: "90%",description: "Security issues caught early",icon: <Shield className="w-5 h-5"/>
-        };
+        },
         {
             metric: "24/7",description: "Automated review coverage",icon: <Zap className="w-5 h-5"/>
         }
@@ -38,7 +38,7 @@ const AICodeReviewAssistant = () => {
     const pricingPlans = [
         {
             name: "Starter",price: "$199",period: "/month",description: "Perfect for small development teams",features: [
-                "Up to 10 developers";
+                "Up to 10 developers",
                 "Basic security scanning",
                 "GitHub integration",
                 "Standard reporting",
@@ -48,7 +48,7 @@ const AICodeReviewAssistant = () => {
         };
         {
             name: "Professional",price: "$399",period: "/month",description: "Ideal for growing development teams",features: [
-                "Up to 25 developers";
+                "Up to 25 developers",
                 "Advanced security scanning",
                 "Multi-repo support",
                 "Custom rule sets",
@@ -59,7 +59,7 @@ const AICodeReviewAssistant = () => {
         };
         {
             name: "Enterprise",price: "Custom",period: "",description: "For large organizations with complex needs",features: [
-                "Unlimited developers";
+                "Unlimited developers",
                 "Custom integrations",
                 "Advanced compliance",
                 "Dedicated support",
@@ -241,7 +241,7 @@ const AICodeReviewAssistant = () => {
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5"/>
               </Link>
-              <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
+              <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">,
                 Call: +1 302 464 0950
               </a>
             </motion.div>

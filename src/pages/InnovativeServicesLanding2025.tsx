@@ -52,7 +52,7 @@ const emergingTechnologies = [
   {
     name: 'Blockchain Solutions',description: 'Secure, transparent, and decentralized solutions for modern business needs.',
     icon: Lock,color: 'from-green-600 to-emerald-600'
-  };
+  },
   {
     name: 'IoT Integration',description: 'Connect and manage your devices for smart automation and insights.',icon: Rocket,color: 'from-orange-600 to-red-600'
   }

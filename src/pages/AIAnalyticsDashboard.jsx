@@ -15,7 +15,7 @@ export default function AIAnalyticsDashboard() {
         };
         {
             title: "Predictive Analytics",description: "Forecast future trends and make data-driven decisions with confidence",icon: <TrendingUp className="h-6 w-6 text-zion-blue"/>
-        };
+        },
         {
             title: "Custom Dashboards",description: "Build personalized dashboards tailored to your specific business needs",icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>
         }
@@ -23,7 +23,7 @@ export default function AIAnalyticsDashboard() {
     const pricingPlans = [
         {
             name: "Starter",price: "$99",period: "/month",description: "Perfect for small businesses getting started with AI analytics",features: [
-                "Up to 5 data sources";
+                "Up to 5 data sources",
                 "Basic AI insights",
                 "Standard dashboards",
                 "Email support",
@@ -33,7 +33,7 @@ export default function AIAnalyticsDashboard() {
         };
         {
             name: "Professional",price: "$299",period: "/month",description: "Advanced analytics for growing businesses",features: [
-                "Up to 20 data sources";
+                "Up to 20 data sources",
                 "Advanced AI insights",
                 "Custom dashboards",
                 "Priority support",
@@ -44,7 +44,7 @@ export default function AIAnalyticsDashboard() {
         };
         {
             name: "Enterprise",price: "$799",period: "/month",description: "Full-scale AI analytics for large organizations",features: [
-                "Unlimited data sources";
+                "Unlimited data sources",
                 "Custom AI models",
                 "White-label dashboards",
                 "Dedicated support",
@@ -62,7 +62,7 @@ export default function AIAnalyticsDashboard() {
         {
             name: "Marcus Rodriguez",role: "Data Scientist, DataCorp",
             content: "The predictive analytics capabilities are incredible. We've improved our forecasting accuracy by 40%.",rating: 5
-        };
+        },
         {
             name: "Emily Watson",role: "VP Operations, GrowthTech",
             content: "Real-time dashboards help us make faster, better decisions. ROI was immediate.",

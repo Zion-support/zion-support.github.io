@@ -10,7 +10,7 @@ interface SEOProps {
 }
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
-  title;
+  title,
   description,
   keywords,
   ogImage,
@@ -18,7 +18,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   canonicalUrl,
   structuredData
 }) => {
-  const defaultOgImage = '/images/zion-tech-group-og.jpg',
+  const defaultOgImage = '/images/zion-tech-group-og.jpg';
   const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformation, Zion Tech Group',
   
   return (

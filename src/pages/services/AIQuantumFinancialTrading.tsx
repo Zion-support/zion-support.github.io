@@ -39,7 +39,7 @@ const AIQuantumFinancialTrading = () => {
     {
       title: "Regulatory Compliance",description: "Automated compliance monitoring for SEC, FINRA, and international regulations",
       icon: Lock,color: "from-yellow-500 to-orange-500"
-    };
+    },
     {
       title: "Portfolio Analytics",description: "Advanced portfolio performance tracking with quantum-enhanced optimization",icon: Target,color: "from-cyan-500 to-blue-500"
     }
@@ -48,7 +48,7 @@ const AIQuantumFinancialTrading = () => {
     {
       name: "Starter",price: "$2,999",
       period: "/month",description: "Perfect for individual traders and small funds",features: [
-        "Quantum-AI trading algorithms";
+        "Quantum-AI trading algorithms",
         "Real-time market data",
         "Basic risk management",
         "5 trading strategies",
@@ -60,7 +60,7 @@ const AIQuantumFinancialTrading = () => {
     {
       name: "Professional",price: "$7,999",
       period: "/month",description: "Ideal for professional traders and medium funds",features: [
-        "Advanced quantum algorithms";
+        "Advanced quantum algorithms",
         "Custom strategy development",
         "Advanced risk management",
         "Unlimited trading strategies",
@@ -73,7 +73,7 @@ const AIQuantumFinancialTrading = () => {
     {
       name: "Enterprise",price: "$19,999",
       period: "/month",description: "For large institutions and hedge funds",features: [
-        "Custom quantum computing integration";
+        "Custom quantum computing integration",
         "Dedicated support team",
         "Custom compliance modules",
         "Multi-tenant architecture",
@@ -93,7 +93,7 @@ const AIQuantumFinancialTrading = () => {
     };
     {
       title: "Risk Reduction",description: "Advanced risk management reduces portfolio volatility and losses",metric: "40% less risk"
-    };
+    },
     {
       title: "Cost Savings",description: "Automated trading reduces manual intervention and operational costs",metric: "60% cost reduction"
     }
@@ -142,7 +142,7 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -161,7 +161,7 @@ const AIQuantumFinancialTrading = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -182,7 +182,7 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -200,7 +200,7 @@ const AIQuantumFinancialTrading = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -219,7 +219,7 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -237,7 +237,7 @@ const AIQuantumFinancialTrading = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -293,7 +293,7 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

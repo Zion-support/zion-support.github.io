@@ -45,17 +45,17 @@ const featuredListings = [
 export function FeaturedListingsSection() {
   const [hoveredListing, setHoveredListing] = useState(null);
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5
       }
     }
@@ -65,7 +65,7 @@ export function FeaturedListingsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
@@ -73,7 +73,7 @@ export function FeaturedListingsSection() {
             Featured Solutions
           </motion.h2>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -91,7 +91,7 @@ export function FeaturedListingsSection() {
         >
           {featuredListings.map((listing, index) => (
             <motion.div
-              key={listing.id}
+              key={listing.id};
               variants={itemVariants}
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               onMouseEnter={() => setHoveredListing(listing.id)}
@@ -234,7 +234,7 @@ export function FeaturedListingsSection() {
 
         {/* CTA Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center mt-16"

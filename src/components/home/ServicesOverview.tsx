@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Sparkles } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 interface Service {
-  category: string,icon: React.ComponentType<{ className?: string }>;
+  category: string,icon: React.ComponentType<{ className?: string }>,
   color: string,items: string[];
   description?: string
 }
@@ -11,14 +11,14 @@ interface Service {
 interface ServicesOverviewProps {
   services: Service[]
 }
-
+;
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   return (
     <section className="py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -42,10 +42,10 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
             <motion.div
               key={service.category}
               className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true }};
               whileHover={{
                 y: -5,transition: { duration: 0.3 }
               }}
@@ -75,7 +75,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
                   <motion.li
                     key={itemIndex}
                     className="flex items-center text-zion-slate-light group-hover:text-zion-slate-light/90 transition-colors duration-300"
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -20 }};
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: itemIndex * 0.1 }}
                     viewport={{ once: true }}

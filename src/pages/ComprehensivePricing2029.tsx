@@ -48,10 +48,10 @@ import { innovativeMicroSAASServices2029 } from "../../data/innovative-micro-saa
 import { revolutionaryAIServices2029 } from "../../data/revolutionary-ai-services-2029";
 import { revolutionaryITServices2029 } from "../../data/revolutionary-it-services-2029";
 export default function ComprehensivePricing2029() {
-  const [selectedCategory, setSelectedCategory] = useState('All'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'popularity'>('popularity'),
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'popularity'>('popularity');
 
   const categories = ['AllAI & Analytics', 'CybersecurityAI & Operations', 'Blockchain & SecurityAI & Legal Tech', 'IoT & Edge ComputingAI & Healthcare', 'Quantum Computing & AIAI & Fintech', 'Sustainability & ConsultingEdge Computing', 'DevOps & AutomationStorage & Security', 'Network OptimizationDisaster Recovery', 'Quantum Security'],
 
@@ -63,12 +63,12 @@ export default function ComprehensivePricing2029() {
   ],
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),
+                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch,
-  }),
+  });
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -78,7 +78,7 @@ export default function ComprehensivePricing2029() {
       case 'rating':
         return b.rating - a.rating;
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       default: return 0
     }
   });
@@ -127,7 +127,7 @@ export default function ComprehensivePricing2029() {
                 duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 5
               }}
               style={{
-                left: `${Math.random() * 100}%`;
+                left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`
               }}
             />

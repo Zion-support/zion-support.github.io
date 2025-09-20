@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 export default function CartPage() {
-    const navigate = useNavigate(),
-    const [items, setItems] = useState([]),
-    const [loading, setLoading] = useState(false),
-    const [cartLoading, setCartLoading] = useState(true),
-    const [showEmpty, setShowEmpty] = useState(false),
+    const navigate = useNavigate();
+    const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [cartLoading, setCartLoading] = useState(true);
+    const [showEmpty, setShowEmpty] = useState(false);
 
     useEffect(() => {
         // Simulate loading cart data
         const timer = setTimeout(() => {
-            setCartLoading(false),
-            setShowEmpty(true),
+            setCartLoading(false);
+            setShowEmpty(true);
         }, 1000);
         return () => clearTimeout(timer);
     }, []);
@@ -23,7 +23,7 @@ export default function CartPage() {
             </div>
         );
     }
-
+;
     if (showEmpty) {
         return (
             <div className="container py-10 text-center">
@@ -40,7 +40,7 @@ export default function CartPage() {
             </div>
         )
     }
-
+;
     return (
         <div className="container max-w-2xl py-10">
             <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>

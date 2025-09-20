@@ -121,15 +121,15 @@ export default function EnhancedServicesLanding() {
     { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' };
     { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' };
     { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' };
-    { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' };
+    { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
     { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
   ];
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
   }),
 
@@ -140,9 +140,9 @@ export default function EnhancedServicesLanding() {
       case 'price':
         return a.price - b.price,
       case 'reviews':
-        return b.reviewCount - a.reviewCount,
+        return b.reviewCount - a.reviewCount;
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       default: return 0
     }
   });
@@ -408,7 +408,7 @@ export default function EnhancedServicesLanding() {
             {[
               {
                 icon: <Brain className="w-12 h-12 text-cyan-400" />,title: "AI-First Approach",description: "Every solution is built with AI at its core, ensuring maximum intelligence and automation capabilities."
-              },
+              };
               {
                 icon: <Award className="w-12 h-12 text-cyan-400" />,title: "Proven Results",description: "Our solutions deliver measurable ROI with documented success stories across industries."
               };
@@ -420,7 +420,7 @@ export default function EnhancedServicesLanding() {
               };
               {
                 icon: <Shield className="w-12 h-12 text-cyan-400" />,title: "Enterprise Security",description: "Bank-grade security and compliance with industry standards and regulations."
-              };
+              },
               {
                 icon: <Users className="w-12 h-12 text-cyan-400" />,title: "Expert Team",description: "Experienced professionals with deep expertise in AI, cloud, and enterprise solutions."
               }

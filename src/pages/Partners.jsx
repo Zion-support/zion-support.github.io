@@ -39,7 +39,7 @@ export default function Partners() {
     };
     {
       name: 'Stanford University',logo: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=200&fit=crop',category: 'Academic Partner',description: 'Research collaboration in AI and technology',year: '2023'
-    };
+    },
     {
       name: 'MIT',logo: 'https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=200&fit=crop',category: 'Research Partner',description: 'Innovation in emerging technologies',year: '2022'
     }
@@ -53,7 +53,7 @@ export default function Partners() {
     };
     {
       icon: Award,title: 'Brand Recognition',description: 'Leverage our established reputation in the tech industry'
-    };
+    },
     {
       icon: Globe,title: 'Global Reach',description: 'Expand your business presence across multiple countries and regions'
     }

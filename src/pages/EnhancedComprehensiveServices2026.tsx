@@ -61,9 +61,9 @@ import {
 import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
 import { zion2026ComprehensiveServices } from "../data/zion2026ComprehensiveServices";
 interface Service {
-  id: string,name: string,category: string,description: string,features: string[],benefits: string[],pricing: {
+  id: string,name: string,category: string,description: string,features: string[],benefits: string[],pricing: {,
     starter: number,professional: number,enterprise: number,currency: string,billingCycle: string
-  };
+  },
   rating: number,reviewCount: number,launchDate: string,status: string,marketPrice: string,estimatedDelivery: string;
   website?: string,
   contactInfo?: {
@@ -74,13 +74,13 @@ interface Service {
   growthRate?: string,
   roi?: string,
 }
-
+;
 const EnhancedComprehensiveServices2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest' | 'innovation'>('name'),
-  const [selectedService, setSelectedService] = useState<Service | null>(null),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest' | 'innovation'>('name');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
@@ -88,9 +88,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
     // Add services from ultimateInnovativeServices2026
     ultimateInnovativeServices2026.forEach(service => {
       services.push({
-        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {
+        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {,
           starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
-        };
+        },
         rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
       });
     }),
@@ -98,9 +98,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
     // Add services from zion2026ComprehensiveServices
     zion2026ComprehensiveServices.forEach(service => {
       services.push({
-        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {
+        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {,
           starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
-        };
+        },
         rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
       });
     }),
@@ -109,16 +109,16 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
   }, []),
 
   const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))],
-    return cats.sort(),
+    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+    return cats.sort();
   }, [allServices]),
 
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
       return matchesSearch && matchesCategory,
     }),
 
@@ -139,11 +139,11 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'innovation':
         // Sort by innovation level if available, otherwise by rating
         filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString())),
-        break,
+        break;
     }
-
+;
     return filtered,
-  }, [allServices, searchTerm, selectedCategory, sortBy]),
+  }, [allServices, searchTerm, selectedCategory, sortBy]);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -166,7 +166,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'Robotics':
         return <Factory className="w-6 h-6" />,
       case 'Space Technology':
-        return <Satellite className="w-6 h-6" />,
+        return <Satellite className="w-6 h-6" />;
       default: return <Lightbulb className="w-6 h-6" />
     }
   };
@@ -179,7 +179,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'coming soon':
         return 'bg-yellow-100 text-yellow-800',
       case 'preview':
-        return 'bg-purple-100 text-purple-800',
+        return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800'
     }
   };
@@ -188,9 +188,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>
     } else if (service.innovationLevel === 'Cutting-Edge') {
       return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>;
-    }
+    };
     return null,
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -213,7 +213,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
@@ -221,7 +221,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                 Watch Demo
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
@@ -314,7 +314,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }};
                   whileHover={{ y: -5 }}
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedService(service)}
@@ -631,7 +631,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >
@@ -639,7 +639,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               Call +1 302 464 0950
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >

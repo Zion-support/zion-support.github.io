@@ -10,7 +10,7 @@ export default function PostJob() {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
       </div>);
-    }
+    };
     return (<>
       <SEO title="Post a Job | Zion AI Marketplace" description="Post a job to find the perfect AI talent for your project."/>
       

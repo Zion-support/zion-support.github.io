@@ -63,7 +63,7 @@ export default function AISupplyChainOptimization() {
     };
     {
       icon: <Warehouse className="w-6 h-6" />,title: "Inventory Management",description: "Smart inventory tracking with automated reorder points and demand-driven replenishment."
-    };
+    },
     {
       icon: <Globe className="w-6 h-6" />,title: "Global Visibility",description: "End-to-end supply chain visibility across all suppliers, warehouses, and distribution centers."
     },
@@ -74,7 +74,7 @@ export default function AISupplyChainOptimization() {
   const pricingPlans = [
     {
       name: "Starter",price: "$499",period: "/month",description: "Perfect for small to medium businesses",features: [
-        "Up to 5 warehouses";
+        "Up to 5 warehouses",
         "Basic demand forecasting",
         "Route optimization",
         "Email support",
@@ -85,7 +85,7 @@ export default function AISupplyChainOptimization() {
     {
       name: "Professional",price: "$1,299",
       period: "/month",description: "Ideal for growing enterprises",features: [
-        "Up to 25 warehouses";
+        "Up to 25 warehouses",
         "Advanced AI forecasting",
         "Multi-modal optimization",
         "Priority support",
@@ -97,7 +97,7 @@ export default function AISupplyChainOptimization() {
     };
     {
       name: "Enterprise",price: "Custom",period: "",description: "For large organizations with complex supply chains",features: [
-        "Unlimited warehouses";
+        "Unlimited warehouses",
         "Custom AI model training",
         "Dedicated account manager",
         "24/7 phone support",
@@ -118,7 +118,7 @@ export default function AISupplyChainOptimization() {
     };
     {
       icon: <Shield className="w-8 h-8" />,title: "Risk Mitigation",description: "Identify and prevent 90% of supply chain disruptions before they occur"
-    };
+    },
     {
       icon: <TrendingUp className="w-8 h-8" />,title: "Increased Efficiency",description: "Boost operational efficiency by 35% with automated processes and real-time insights"
     }
@@ -135,7 +135,7 @@ export default function AISupplyChainOptimization() {
     {
       title: "Logistics",description: "Optimize multi-modal transportation, warehousing, and cross-border operations",
       icon: <Truck className="w-6 h-6" />
-    };
+    },
     {
       title: "Retail",description: "Improve store replenishment, seasonal planning, and omnichannel inventory",
       icon: <Warehouse className="w-6 h-6" />
@@ -165,7 +165,7 @@ export default function AISupplyChainOptimization() {
     };
     {
       icon: <DollarSign className="w-6 h-6" />,title: "Cost per Order",current: "$18.50",improvement: "-32%",description: "Total cost to fulfill a single order"
-    };
+    },
     {
       icon: <BarChart3 className="w-6 h-6" />,title: "Inventory Turnover",current: "8.2x",improvement: "+28%",description: "How quickly inventory is sold and replaced"
     }

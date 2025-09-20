@@ -21,7 +21,7 @@ const AIContentMarketingSuite: React.FC = () => {
   const pricingPlans = [
     {
       name: "Starter",price: "$199",period: "/month",description: "Perfect for small businesses",features: [
-        "Up to 10 articles/month";
+        "Up to 10 articles/month",
         "Basic SEO optimization",
         "Social media templates",
         "Email support",
@@ -31,7 +31,7 @@ const AIContentMarketingSuite: React.FC = () => {
     };
     {
       name: "Professional",price: "$499",period: "/month",description: "Ideal for growing companies",features: [
-        "Up to 50 articles/month";
+        "Up to 50 articles/month",
         "Advanced SEO tools",
         "Custom content templates",
         "Priority support",
@@ -44,7 +44,7 @@ const AIContentMarketingSuite: React.FC = () => {
     {
       name: "Enterprise",price: "$1,299",
       period: "/month",description: "For large organizations",features: [
-        "Unlimited content";
+        "Unlimited content",
         "Custom AI models",
         "Dedicated account manager",
         "24/7 support",
@@ -131,7 +131,7 @@ const AIContentMarketingSuite: React.FC = () => {
       <div className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -149,7 +149,7 @@ const AIContentMarketingSuite: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -177,7 +177,7 @@ const AIContentMarketingSuite: React.FC = () => {
       <div className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -195,7 +195,7 @@ const AIContentMarketingSuite: React.FC = () => {
             {contentTypes.map((content, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
@@ -225,7 +225,7 @@ const AIContentMarketingSuite: React.FC = () => {
       <div className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -242,7 +242,7 @@ const AIContentMarketingSuite: React.FC = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
@@ -297,7 +297,7 @@ const AIContentMarketingSuite: React.FC = () => {
       <div className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-sm rounded-3xl p-12 border border-zion-cyan/20 text-center"

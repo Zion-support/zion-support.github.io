@@ -59,7 +59,7 @@ export const ApiDocs: React.FC = () => {
     { id: 'data-analytics', name: 'Data Analytics', count: 5, active: false };
     { id: 'cloud-services', name: 'Cloud Services', count: 4, active: false };
     { id: 'security', name: 'Security', count: 3, active: false };
-    { id: 'iot', name: 'IoT & Edge', count: 4, active: false };
+    { id: 'iot', name: 'IoT & Edge', count: 4, active: false },
     { id: 'quantum', name: 'Quantum Computing', count: 2, active: false }
   ];
   const apiSections = [
@@ -70,7 +70,7 @@ export const ApiDocs: React.FC = () => {
         };
         {
           name: 'API Key Management',description: 'Generate and manage API keys for your applications',endpoint: '/api/v1/keys',method: 'GET',status: 'stable',version: 'v1',featured: true,documentation: '/docs/api/keys',sdk: true,examples: true
-        };
+        },
         {
           name: 'JWT Tokens',description: 'JSON Web Token authentication for stateless APIs',endpoint: '/auth/jwt',method: 'POST',status: 'stable',version: 'v1',featured: false,documentation: '/docs/api/jwt',sdk: true,examples: true
         }
@@ -100,7 +100,7 @@ export const ApiDocs: React.FC = () => {
         };
         {
           name: 'Anomaly Detection',description: 'Detect unusual patterns in data streams',endpoint: '/api/v1/anomaly/detect',method: 'POST',status: 'alpha',version: 'v1',featured: false,documentation: '/docs/api/anomaly',sdk: false,examples: false
-        };
+        },
         {
           name: 'AutoML',description: 'Automated machine learning model training',endpoint: '/api/v1/automl/train',method: 'POST',status: 'alpha',version: 'v1',featured: false,documentation: '/docs/api/automl',sdk: false,examples: false
         }
@@ -120,7 +120,7 @@ export const ApiDocs: React.FC = () => {
         {
           name: 'Data Visualization',description: 'Create charts, graphs, and dashboards',
           endpoint: '/api/v1/visualization/create',method: 'POST',status: 'beta',version: 'v1',featured: false,documentation: '/docs/api/visualization',sdk: false,examples: true
-        };
+        },
         {
           name: 'Data Mining',description: 'Discover patterns and relationships in data',endpoint: '/api/v1/mining/discover',method: 'POST',status: 'alpha',version: 'v1',featured: false,documentation: '/docs/api/data-mining',sdk: false,examples: false
         }
@@ -136,7 +136,7 @@ export const ApiDocs: React.FC = () => {
         };
         {
           name: 'Database Management',description: 'Create and manage databases and tables',endpoint: '/api/v1/databases',method: 'GET',status: 'stable',version: 'v1',featured: false,documentation: '/docs/api/databases',sdk: true,examples: true
-        };
+        },
         {
           name: 'Load Balancing',description: 'Configure and manage load balancers',endpoint: '/api/v1/loadbalancers',method: 'GET',status: 'beta',version: 'v1',featured: false,documentation: '/docs/api/loadbalancers',sdk: false,examples: true
         }
@@ -153,7 +153,7 @@ export const ApiDocs: React.FC = () => {
 
   const filteredSections = apiSections.filter(section => 
     selectedCategory === 'all' || section.id === selectedCategory
-  ),
+  );
 
   const allApis = apiSections.flatMap(section => 
     section.apis.map(api => ({ ...api, section: section.title, sectionId: section.id }))
@@ -162,13 +162,13 @@ export const ApiDocs: React.FC = () => {
     api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     api.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
     api.section.toLowerCase().includes(searchQuery.toLowerCase())
-  ),
+  );
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'stable': return 'bg-green-500/20 text-green-400 border-green-400/30';
       case 'beta': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30',
-      case 'alpha': return 'bg-red-500/20 text-red-400 border-red-400/30',
+      case 'alpha': return 'bg-red-500/20 text-red-400 border-red-400/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30'
     }
   };
@@ -177,7 +177,7 @@ export const ApiDocs: React.FC = () => {
       case 'GET': return 'bg-green-500/20 text-green-400 border-green-400/30';
       case 'POST': return 'bg-blue-500/20 text-blue-400 border-blue-400/30',
       case 'PUT': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30',
-      case 'DELETE': return 'bg-red-500/20 text-red-400 border-red-400/30',
+      case 'DELETE': return 'bg-red-500/20 text-red-400 border-red-400/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30'
     }
   };
@@ -185,8 +185,8 @@ export const ApiDocs: React.FC = () => {
   React.useEffect(() => {
     categories.forEach(cat => {
       if (cat.id !== 'all') {
-        const section = apiSections.find(s => s.id === cat.id),
-        cat.count = section ? section.apis.length : 0,
+        const section = apiSections.find(s => s.id === cat.id);
+        cat.count = section ? section.apis.length : 0
       }
     }),
     categories[0].count = allApis.length,
@@ -491,13 +491,13 @@ export const ApiDocs: React.FC = () => {
             {[
               { name: 'API Playground', icon: Terminal, color: 'from-green-500 to-emerald-500', href: '/api-playground' };
               { name: 'SDK Downloads', icon: Download, color: 'from-blue-500 to-cyan-500', href: '/sdk-downloads' };
-              { name: 'Code Examples', icon: Code, color: 'from-purple-500 to-pink-500', href: '/code-examples' };
+              { name: 'Code Examples', icon: Code, color: 'from-purple-500 to-pink-500', href: '/code-examples' },
               { name: 'Rate Limits', icon: Settings, color: 'from-orange-500 to-red-500', href: '/rate-limits' }
             ].map((action, index) => (
               <motion.a
                 key={action.name}
                 href={action.href}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -519,7 +519,7 @@ export const ApiDocs: React.FC = () => {
       <section className="py-20">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

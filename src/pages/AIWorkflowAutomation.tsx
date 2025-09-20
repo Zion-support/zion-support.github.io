@@ -269,7 +269,7 @@ import {
 const workflowSolutions = [
   {
     id: 1,title: "AI Process Automation",description: "Intelligent automation of business processes using AI and machine learning.",icon: Cog,features: [
-      "Process automation";
+      "Process automation",
       "AI decision making",
       "Workflow optimization",
       "Performance monitoring"
@@ -279,7 +279,7 @@ const workflowSolutions = [
   },
   {
     id: 2,title: "Intelligent Document Processing",description: "AI-powered document processing and workflow automation.",icon: FileText,features: [
-      "Document processing";
+      "Document processing",
       "Data extraction",
       "Workflow automation",
       "Compliance management"
@@ -289,7 +289,7 @@ const workflowSolutions = [
   },
   {
     id: 3,title: "Smart Workflow Orchestration",description: "Intelligent orchestration and management of complex workflows.",icon: Network,features: [
-      "Workflow orchestration";
+      "Workflow orchestration",
       "Process management",
       "Resource optimization",
       "Performance analytics"
@@ -299,7 +299,7 @@ const workflowSolutions = [
   },
   {
     id: 4,title: "AI Decision Automation",description: "Automated decision making using AI algorithms and business rules.",icon: Brain,features: [
-      "Decision automation";
+      "Decision automation",
       "Business rules",
       "AI algorithms",
       "Risk assessment"
@@ -309,7 +309,7 @@ const workflowSolutions = [
   },
   {
     id: 5,title: "Predictive Workflow Analytics",description: "AI-powered analytics for workflow optimization and prediction.",icon: BarChart3,features: [
-      "Predictive analytics";
+      "Predictive analytics",
       "Workflow optimization",
       "Performance insights",
       "Trend analysis"
@@ -319,7 +319,7 @@ const workflowSolutions = [
   },
   {
     id: 6,title: "Intelligent Task Management",description: "AI-powered task management and workflow optimization.",icon: Target,features: [
-      "Task management";
+      "Task management",
       "Priority optimization",
       "Resource allocation",
       "Performance tracking"
@@ -338,7 +338,7 @@ const workflowTechnologies = [
   };
   {
     name: "Workflow Management",description: "Intelligent workflow management and orchestration",icon: Network,useCase: "Workflow Control",reliability: "High"
-  };
+  },
   {
     name: "Predictive Analytics",description: "AI-powered analytics for workflow optimization",icon: BarChart3,useCase: "Performance Optimization",reliability: "High"
   }
@@ -351,7 +351,7 @@ const successStories = [
   {
     id: 2,company: "Financial Services Group",industry: "Finance",challenge: "Required AI document processing and workflow automation for compliance",solution: "Implemented AI-powered document processing and workflow automation",results: "70% faster document processing, 80% accuracy improvement, 90% compliance, better efficiency",
     logo: "FSG"
-  };
+  },
   {
     id: 3,company: "Healthcare Technology Ltd",industry: "Healthcare",challenge: "Needed AI workflow automation for patient care processes",solution: "Built AI-powered workflow automation system for healthcare",results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",
     logo: "HTL"
@@ -366,7 +366,7 @@ const processSteps = [
   };
   {
     step: 3,title: "System Implementation",description: "Build and deploy AI workflow automation systems",icon: Wrench,duration: "16-40 weeks"
-  };
+  },
   {
     step: 4,title: "Testing & Optimization",description: "Test systems and optimize performance",icon: Gauge,duration: "4-8 weeks"
   }
@@ -388,7 +388,7 @@ const workflowBenefits = [
 ],
 
 export default function AIWorkflowAutomation() {
-  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
   const categories = ['AllProcess Automation', 'Document ProcessingWorkflow Orchestration', 'Decision AutomationAnalytics', 'Task Management'];
   const filteredSolutions = selectedCategory === 'All'
@@ -452,7 +452,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -467,7 +467,7 @@ export default function AIWorkflowAutomation() {
             {workflowBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
@@ -498,7 +498,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -513,7 +513,7 @@ export default function AIWorkflowAutomation() {
             {workflowTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
@@ -545,7 +545,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -560,7 +560,7 @@ export default function AIWorkflowAutomation() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
@@ -589,7 +589,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -621,7 +621,7 @@ export default function AIWorkflowAutomation() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
@@ -678,7 +678,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -693,7 +693,7 @@ export default function AIWorkflowAutomation() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -739,7 +739,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"

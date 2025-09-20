@@ -17,7 +17,7 @@ export default function AIContentGenerator() {
         };
         {
             title: "Brand Voice Consistency",description: "Maintain your brand's unique voice across all content pieces",icon: <Type className="h-6 w-6 text-zion-blue"/>
-        };
+        },
         {
             title: "SEO Optimization",description: "AI-powered SEO suggestions to improve content visibility and ranking",icon: <Target className="h-6 w-6 text-zion-cyan"/>
         }
@@ -38,7 +38,7 @@ export default function AIContentGenerator() {
         };
         {
             title: "Email Campaigns",description: "Newsletters and email marketing content",icon: <Mail className="h-8 w-8 text-zion-purple"/>
-        };
+        },
         {
             title: "Video Scripts",description: "Scripts for video content and presentations",icon: <Video className="h-8 w-8 text-zion-blue"/>
         }
@@ -46,7 +46,7 @@ export default function AIContentGenerator() {
     const pricingPlans = [
         {
             name: "Starter",price: "$49",period: "/month",description: "Perfect for individuals and small businesses",features: [
-                "Up to 50 content pieces/month";
+                "Up to 50 content pieces/month",
                 "Basic AI writing tools",
                 "Standard templates",
                 "Email support",
@@ -56,7 +56,7 @@ export default function AIContentGenerator() {
         };
         {
             name: "Professional",price: "$99",period: "/month",description: "Ideal for growing businesses and content teams",features: [
-                "Up to 200 content pieces/month";
+                "Up to 200 content pieces/month",
                 "Advanced AI writing tools",
                 "Premium templates",
                 "Priority support",
@@ -69,7 +69,7 @@ export default function AIContentGenerator() {
         };
         {
             name: "Enterprise",price: "$199",period: "/month",description: "For large organizations with advanced needs",features: [
-                "Unlimited content pieces";
+                "Unlimited content pieces",
                 "Custom AI models",
                 "White-label solutions",
                 "Dedicated account manager",

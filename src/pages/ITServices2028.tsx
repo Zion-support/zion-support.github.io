@@ -20,7 +20,7 @@ const itServices2028 = [
     id: 'quantum-cloud-infrastructure',name: 'Quantum Cloud Infrastructure',tagline: 'Next-generation quantum-ready cloud infrastructure',price: '$45,999',
     period: '/month',description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
     features: [
-      'Quantum-ready computing nodesAdvanced AI optimization';
+      'Quantum-ready computing nodesAdvanced AI optimization',
       'Zero-latency networkingQuantum encryption',
       'Auto-scaling infrastructureReal-time monitoring',
       'Disaster recoveryGlobal CDN',
@@ -32,7 +32,7 @@ const itServices2028 = [
     id: 'ai-powered-cybersecurity',name: 'AI-Powered Cybersecurity Suite',tagline: 'Intelligent threat detection and response',price: '$32,999',
     period: '/month',description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
     features: [
-      'AI threat detectionBehavioral analysis';
+      'AI threat detectionBehavioral analysis',
       'Zero-trust architectureAutomated incident response',
       'Threat intelligenceCompliance automation',
       'Security analyticsPenetration testing',
@@ -44,7 +44,7 @@ const itServices2028 = [
     id: 'quantum-database-platform',name: 'Quantum Database Platform',tagline: 'Quantum-powered database management system',price: '$28,999',
     period: '/month',description: 'Revolutionary quantum database platform that provides unprecedented speed, security, and scalability for enterprise data management.',
     features: [
-      'Quantum query optimizationReal-time data processing';
+      'Quantum query optimizationReal-time data processing',
       'Advanced encryptionAuto-scaling storage',
       'Multi-model supportData analytics',
       'Backup automationDisaster recovery',
@@ -56,7 +56,7 @@ const itServices2028 = [
     id: 'ai-network-optimization',name: 'AI Network Optimization',tagline: 'Intelligent network performance and security',price: '$22,999',
     period: '/month',description: 'AI-powered network optimization platform that automatically manages, secures, and optimizes enterprise network infrastructure.',
     features: [
-      'AI network monitoringAutomatic optimization';
+      'AI network monitoringAutomatic optimization',
       'Traffic analysisSecurity automation',
       'Performance tuningBandwidth management',
       'Quality of serviceNetwork analytics',
@@ -68,7 +68,7 @@ const itServices2028 = [
     id: 'quantum-devops-automation',name: 'Quantum DevOps Automation',tagline: 'Next-generation development and operations automation',price: '$35,999',
     period: '/month',description: 'Advanced quantum-powered DevOps platform that automates software development, testing, deployment, and operations processes.',
     features: [
-      'AI-powered CI/CDAutomated testing';
+      'AI-powered CI/CDAutomated testing',
       'Deployment automationPerformance monitoring',
       'Error trackingTeam collaboration',
       'Version controlInfrastructure as code',
@@ -80,7 +80,7 @@ const itServices2028 = [
     id: 'ai-data-analytics-platform',name: 'AI Data Analytics Platform',tagline: 'Intelligent business intelligence and analytics',price: '$25,999',
     period: '/month',description: 'Comprehensive AI-powered data analytics platform that provides real-time insights, predictive analytics, and automated reporting.',
     features: [
-      'Real-time data processingAI-powered insights';
+      'Real-time data processingAI-powered insights',
       'Predictive analyticsData visualization',
       'Automated reportingCustom dashboards',
       'Data integrationCollaboration tools',
@@ -90,8 +90,8 @@ const itServices2028 = [
   }
 ];
 const ITServices2028: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' };
@@ -99,16 +99,16 @@ const ITServices2028: React.FC = () => {
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-red to-zion-pink' };
     { id: 'database', name: 'Database & Storage', icon: Database, color: 'from-zion-green to-zion-emerald' };
     { id: 'networking', name: 'Networking', icon: Network, color: 'from-zion-purple to-zion-indigo' };
-    { id: 'devops', name: 'DevOps & Automation', icon: Rocket, color: 'from-zion-orange to-zion-red' };
+    { id: 'devops', name: 'DevOps & Automation', icon: Rocket, color: 'from-zion-orange to-zion-red' },
     { id: 'analytics', name: 'Data & Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' }
   ];
   const filteredServices = itServices2028.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
-      service.category.toLowerCase().includes(selectedCategory.replace('- ')),
+      service.category.toLowerCase().includes(selectedCategory.replace('- '));
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()),
+      service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch,
-  }),
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -159,8 +159,8 @@ const ITServices2028: React.FC = () => {
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
                 <motion.button
-                  key={category.id}
-                  whileHover={{ scale: 1.05 }}
+                  key={category.id};
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -287,7 +287,7 @@ const ITServices2028: React.FC = () => {
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
@@ -295,7 +295,7 @@ const ITServices2028: React.FC = () => {
             Ready to Transform Your IT Infrastructure?
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
@@ -303,7 +303,7 @@ const ITServices2028: React.FC = () => {
             Contact our team of IT experts to discuss how our innovative services can revolutionize your technology infrastructure
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm: flex-row gap-4 justify-center"

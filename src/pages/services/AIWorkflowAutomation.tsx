@@ -46,7 +46,7 @@ export default function AIWorkflowAutomation() {
     };
     {
       icon: Workflow,title: 'Visual Workflow Designer',description: 'Drag-and-drop interface to create complex workflows without coding knowledge.'
-    };
+    },
     {
       icon: Zap,title: 'Real-time Automation',description: 'Instant execution of workflows triggered by events, schedules, or conditions.'
     },
@@ -92,7 +92,7 @@ export default function AIWorkflowAutomation() {
   const pricing = [
     {
       name: 'Starter',price: '$99',period: '/month',description: 'Perfect for small teams getting started with automation',features: [
-        'Up to 10 workflows5 user accounts';
+        'Up to 10 workflows5 user accounts',
         'Basic integrationsEmail support',
         'Standard templates'
       ],
@@ -100,7 +100,7 @@ export default function AIWorkflowAutomation() {
     };
     {
       name: 'Professional',price: '$299',period: '/month',description: 'Ideal for growing businesses with complex automation needs',features: [
-        'Up to 100 workflows25 user accounts';
+        'Up to 100 workflows25 user accounts',
         'Advanced integrationsPriority support',
         'Custom templatesAdvanced analytics',
         'API access'
@@ -109,7 +109,7 @@ export default function AIWorkflowAutomation() {
     };
     {
       name: 'Enterprise',price: 'Custom',period: '',description: 'For large organizations requiring enterprise-grade automation',features: [
-        'Unlimited workflowsUnlimited users';
+        'Unlimited workflowsUnlimited users',
         'All integrations24/7 support',
         'Custom developmentAdvanced security',
         'SLA guarantees'
@@ -126,7 +126,7 @@ export default function AIWorkflowAutomation() {
     };
     {
       icon: Shield,title: 'Reduce Errors by 95%',description: 'AI-powered validation ensures accuracy and consistency across all workflows.'
-    };
+    },
     {
       icon: Users,title: 'Improve Team Productivity',description: 'Empower teams with self-service automation tools and real-time insights.'
     }
@@ -161,7 +161,7 @@ export default function AIWorkflowAutomation() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
@@ -169,7 +169,7 @@ export default function AIWorkflowAutomation() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
@@ -184,7 +184,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -201,7 +201,7 @@ export default function AIWorkflowAutomation() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
@@ -221,7 +221,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -238,7 +238,7 @@ export default function AIWorkflowAutomation() {
             {capabilities.map((capability, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300"
@@ -270,7 +270,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -287,7 +287,7 @@ export default function AIWorkflowAutomation() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
@@ -314,7 +314,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -331,7 +331,7 @@ export default function AIWorkflowAutomation() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border rounded-xl p-8 ${
@@ -367,7 +367,7 @@ export default function AIWorkflowAutomation() {
                 </ul>
 
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02 }};
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -387,7 +387,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -404,7 +404,7 @@ export default function AIWorkflowAutomation() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -424,7 +424,7 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -436,14 +436,14 @@ export default function AIWorkflowAutomation() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300"
               >

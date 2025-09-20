@@ -25,7 +25,7 @@ interface HeroProps {
     icon: React.ComponentType<any>,text: string,color: string
   }>;
 }
-
+;
 const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   title = "Revolutionary AI & Technology Solutions";
   subtitle = "2025-2026 Innovation Hub",
@@ -35,42 +35,42 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   features = [
     { icon: Brain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" };
     { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" };
-    { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" };
+    { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" }
   ]
 }) => {
-  const [currentFeature, setCurrentFeature] = useState(0),
-  const [isVisible, setIsVisible] = useState(false),
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true);
     
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length),
+      setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000),
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, [features.length]),
 
   const handleCTAClick = useCallback(() => {
     // Analytics tracking could be added here
-    console.log('Hero CTA clicked'),
+    console.log('Hero CTA clicked');
   }, []),
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 50 };
-    visible: {
-      opacity: 1,y: 0,transition: {
+    hidden: { opacity: 0, y: 50 },
+    visible: {,
+      opacity: 1,y: 0,transition: {,
         duration: 0.8,staggerChildren: 0.2
       }
     }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 }
   };
   const featureVariants = {
-    hidden: { opacity: 0, scale: 0.8 };
+    hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 }
   };
   return (
@@ -145,8 +145,8 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300`}
-              variants={featureVariants}
+              className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300`};
+              variants={featureVariants};
               whileHover={{ y: -5 }}
             >
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${feature.color} mb-4`}>

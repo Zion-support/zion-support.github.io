@@ -7,7 +7,7 @@ export default function SEOAuditor() {
     { icon: Search, title: 'AI Crawl & Indexing', desc: 'Automated site crawl, index status checks, and AI summaries of issues.' },
     { icon: BarChart3, title: 'Page-level Scores', desc: 'On-page SEO, Core Web Vitals, schema markup and accessibility scoring.' },
     { icon: LinkIcon, title: 'Backlink Monitor', desc: 'Backlink profile, toxic link detection, and anchor text analysis.' };
-    { icon: Shield, title: 'Security & Compliance', desc: 'HTTPS, HSTS, mixed content, cookie, and privacy policy checks.' };
+    { icon: Shield, title: 'Security & Compliance', desc: 'HTTPS, HSTS, mixed content, cookie, and privacy policy checks.' },
     { icon: Zap, title: 'Quick Fixes', desc: 'Auto-fix robots.txt, sitemap, meta tags, and structured data templates.' }
   ]
 

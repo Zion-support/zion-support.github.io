@@ -3,7 +3,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "ai-diagnostic-platform",title: "AI Diagnostic Imaging Platform",description: "Advanced AI-powered medical imaging platform for accurate diagnosis of diseases and conditions",category: "Healthcare",price: "$18,500/month",
     features: [
-      "Multi-modality imaging support";
+      "Multi-modality imaging support",
       "AI-powered diagnosis",
       "Radiology workflow automation",
       "Clinical decision support",
@@ -11,7 +11,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Integration with PACS systems"
     ],
     benefits: [
-      "95% diagnostic accuracy";
+      "95% diagnostic accuracy",
       "50% faster diagnosis",
       "Reduced radiologist workload",
       "Improved patient outcomes"
@@ -21,7 +21,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "precision-medicine-platform",title: "Precision Medicine Platform",description: "Personalized treatment platform using AI and genomics for targeted therapies",category: "Healthcare",price: "$22,000/month",
     features: [
-      "Genomic analysis";
+      "Genomic analysis",
       "AI treatment recommendations",
       "Clinical trial matching",
       "Patient outcome tracking",
@@ -29,7 +29,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Personalized dosing"
     ],
     benefits: [
-      "Personalized treatments";
+      "Personalized treatments",
       "Improved efficacy",
       "Reduced side effects",
       "Better patient outcomes"
@@ -41,7 +41,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "ai-risk-management",title: "AI Risk Management Platform",description: "Comprehensive risk management platform using AI for real-time financial risk assessment",category: "Financial Services",price: "$15,500/month",
     features: [
-      "Real-time risk monitoring";
+      "Real-time risk monitoring",
       "AI risk scoring",
       "Regulatory compliance",
       "Stress testing",
@@ -49,7 +49,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Fraud detection"
     ],
     benefits: [
-      "Real-time risk assessment";
+      "Real-time risk assessment",
       "Regulatory compliance",
       "Reduced financial losses",
       "Improved decision making"
@@ -59,7 +59,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "quantum-trading-platform",title: "Quantum Trading Platform",description: "Revolutionary trading platform using quantum computing for ultra-fast market analysis",category: "Financial Services",price: "$35,000/month",
     features: [
-      "Quantum market analysis";
+      "Quantum market analysis",
       "Ultra-fast execution",
       "AI trading strategies",
       "Risk management",
@@ -67,7 +67,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Real-time analytics"
     ],
     benefits: [
-      "Quantum advantage in trading";
+      "Quantum advantage in trading",
       "Ultra-fast execution",
       "Superior market analysis",
       "Competitive edge"
@@ -79,7 +79,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "smart-manufacturing-platform",title: "Smart Manufacturing Platform",description: "Comprehensive Industry 4.0 platform for intelligent manufacturing operations",category: "Manufacturing",price: "$12,500/month",
     features: [
-      "IoT device management";
+      "IoT device management",
       "Predictive maintenance",
       "Quality control AI",
       "Supply chain optimization",
@@ -87,7 +87,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Production analytics"
     ],
     benefits: [
-      "30% efficiency improvement";
+      "30% efficiency improvement",
       "Reduced downtime",
       "Quality enhancement",
       "Cost optimization"
@@ -97,7 +97,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "3d-printing-ai-platform",title: "AI-Powered 3D Printing Platform",description: "Intelligent 3D printing platform with AI optimization and quality control",category: "Manufacturing",price: "$8,500/month",
     features: [
-      "AI design optimization";
+      "AI design optimization",
       "Quality prediction",
       "Material optimization",
       "Print failure prevention",
@@ -105,7 +105,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Design validation"
     ],
     benefits: [
-      "Reduced print failures";
+      "Reduced print failures",
       "Material optimization",
       "Cost savings",
       "Quality improvement"
@@ -117,7 +117,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "smart-grid-platform",title: "Smart Grid Management Platform",description: "AI-powered platform for intelligent energy grid management and optimization",category: "Energy",price: "$16,500/month",
     features: [
-      "Grid load balancing";
+      "Grid load balancing",
       "Renewable integration",
       "Predictive maintenance",
       "Energy optimization",
@@ -125,7 +125,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Grid security"
     ],
     benefits: [
-      "Grid efficiency improvement";
+      "Grid efficiency improvement",
       "Renewable integration",
       "Reduced energy waste",
       "Enhanced reliability"
@@ -135,7 +135,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "carbon-capture-ai",title: "AI Carbon Capture Platform",description: "Intelligent platform for optimizing carbon capture and sequestration processes",category: "Sustainability",price: "$19,500/month",
     features: [
-      "Capture optimization";
+      "Capture optimization",
       "Sequestration monitoring",
       "Carbon credit tracking",
       "Process automation",
@@ -143,7 +143,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Compliance reporting"
     ],
     benefits: [
-      "Increased capture efficiency";
+      "Increased capture efficiency",
       "Cost optimization",
       "Regulatory compliance",
       "Environmental impact"
@@ -155,7 +155,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "autonomous-logistics",title: "Autonomous Logistics Platform",description: "AI-powered platform for autonomous logistics and supply chain management",category: "Transportation",price: "$14,500/month",
     features: [
-      "Autonomous vehicle management";
+      "Autonomous vehicle management",
       "Route optimization",
       "Inventory management",
       "Predictive analytics",
@@ -163,7 +163,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Cost optimization"
     ],
     benefits: [
-      "24/7 autonomous operation";
+      "24/7 autonomous operation",
       "Route optimization",
       "Cost reduction",
       "Improved efficiency"
@@ -173,7 +173,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "smart-city-mobility",title: "Smart City Mobility Platform",description: "Comprehensive platform for intelligent urban transportation and mobility management",category: "Smart Cities",price: "$21,500/month",
     features: [
-      "Traffic optimization";
+      "Traffic optimization",
       "Public transport management",
       "Parking optimization",
       "Mobility analytics",
@@ -181,7 +181,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Citizen engagement"
     ],
     benefits: [
-      "Reduced traffic congestion";
+      "Reduced traffic congestion",
       "Improved air quality",
       "Enhanced mobility",
       "Citizen satisfaction"
@@ -193,7 +193,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "ai-education-platform",title: "AI-Powered Education Platform",description: "Intelligent learning platform with personalized education and adaptive learning",category: "Education",price: "$6,500/month",
     features: [
-      "Personalized learning paths";
+      "Personalized learning paths",
       "Adaptive content",
       "Progress tracking",
       "Skill assessment",
@@ -201,7 +201,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Analytics dashboard"
     ],
     benefits: [
-      "Personalized learning";
+      "Personalized learning",
       "Improved outcomes",
       "Engagement enhancement",
       "Scalable education"
@@ -213,7 +213,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   {
     id: "ai-retail-platform",title: "AI Retail Intelligence Platform",description: "Comprehensive platform for intelligent retail operations and customer experience",category: "Retail",price: "$9,500/month",
     features: [
-      "Customer behavior analysis";
+      "Customer behavior analysis",
       "Inventory optimization",
       "Price optimization",
       "Personalized marketing",
@@ -221,7 +221,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Customer service AI"
     ],
     benefits: [
-      "Increased sales";
+      "Increased sales",
       "Customer satisfaction",
       "Cost optimization",
       "Competitive advantage"
@@ -231,7 +231,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
 ],
 
 export const INDUSTRY_CATEGORIES = [
-    "Healthcare",
+    "Healthcare";
     "Financial Services",
     "Manufacturing",
     "Energy",
@@ -239,17 +239,17 @@ export const INDUSTRY_CATEGORIES = [
     "Education",
     "Real Estate",
     "Agriculture";
-    "Legal Services";
+    "Legal Services",
     "Media & Entertainment"
 ];
 export const INDUSTRY_PRICING = {
-    basic: {
+    basic: {,
         price: 299,currency: "$",period: "month",features: ["Core platform access", "Basic analytics", "Standard support"]
     },
-    professional: {
+    professional: {,
         price: 799,currency: "$",period: "month",features: ["Advanced features", "Custom integrations", "Priority support", "Advanced analytics"]
     },
-    enterprise: {
+    enterprise: {,
         price: 1999,currency: "$",period: "month",features: ["Full platform access", "White-label options", "24/7 support", "Custom development"]
     }
 },

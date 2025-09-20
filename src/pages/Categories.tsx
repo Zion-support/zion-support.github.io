@@ -17,7 +17,7 @@ export default function Categories() {
     };
     {
       id: 'data',name: 'Data & Analytics',icon: <BarChart3 className="w-8 h-8" />,color: 'from-zion-green to-zion-emerald',count: 36
-    };
+    },
     {
       id: 'development',name: 'Development',icon: <Code className="w-8 h-8" />,color: 'from-zion-indigo to-zion-purple',count: 41
     }
@@ -35,7 +35,7 @@ export default function Categories() {
       {
         name: 'Machine Learning Platforms',description: 'ML model training, deployment, and management',
         icon: <Cpu className="w-6 h-6" />,services: 15,talent: 12,equipment: 7
-      };
+      },
       {
         name: 'AI Consulting',description: 'Strategic AI implementation and optimization',icon: <Target className="w-6 h-6" />,services: 8,talent: 5,equipment: 1
       }
@@ -46,7 +46,7 @@ export default function Categories() {
       };
       {
         name: 'DevOps & CI/CD',description: 'Automated deployment and infrastructure management',icon: <Zap className="w-6 h-6" />,services: 14,talent: 9,equipment: 3
-      };
+      },
       {
         name: 'Serverless Computing',description: 'Event-driven and serverless architecture',icon: <Cloud className="w-6 h-6" />,services: 7,talent: 4,equipment: 1
       }
@@ -57,7 +57,7 @@ export default function Categories() {
       };
       {
         name: 'Compliance & Governance',description: 'Security compliance and policy management',icon: <Lock className="w-6 h-6" />,services: 9,talent: 6,equipment: 2
-      };
+      },
       {
         name: 'Penetration Testing',description: 'Security assessment and vulnerability testing',icon: <Target className="w-6 h-6" />,services: 6,talent: 4,equipment: 3
       }
@@ -68,7 +68,7 @@ export default function Categories() {
       };
       {
         name: 'Big Data Processing',description: 'Large-scale data processing and analytics',icon: <Database className="w-6 h-6" />,services: 12,talent: 8,equipment: 6
-      };
+      },
       {
         name: 'Data Engineering',description: 'Data pipeline development and ETL processes',icon: <Network className="w-6 h-6" />,services: 6,talent: 5,equipment: 2
       }
@@ -79,7 +79,7 @@ export default function Categories() {
       };
       {
         name: 'Mobile Development',description: 'iOS and Android mobile applications',icon: <Smartphone className="w-6 h-6" />,services: 16,talent: 12,equipment: 2
-      };
+      },
       {
         name: 'API Development',description: 'RESTful APIs and microservices',icon: <Network className="w-6 h-6" />,services: 13,talent: 8,equipment: 1
       }
@@ -92,7 +92,7 @@ export default function Categories() {
     };
     {
       type: 'talent',title: 'Senior AI Engineer',category: 'AI & Machine Learning',rating: 4.8,price: '$150/hour',featured: true
-    };
+    },
     {
       type: 'equipment',title: 'High-Performance GPU Cluster',category: 'AI & Machine Learning',rating: 4.7,price: '$15,000/month',
       featured: true
@@ -102,16 +102,16 @@ export default function Categories() {
     if (categoryId === 'all') {
       return Object.values(subCategories).flat().reduce((total, sub) =>
         total + sub.services + sub.talent + sub.equipment, 0
-      ),
-    }
+      );
+    };
     return subCategories[categoryId]?.reduce((total, sub) =>
       total + sub.services + sub.talent + sub.equipment, 0
     ) || 0,
-  },
+  };
 
   // Update counts
   mainCategories.forEach(cat => {
-    cat.count = getCategoryCount(cat.id),
+    cat.count = getCategoryCount(cat.id);
   });
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

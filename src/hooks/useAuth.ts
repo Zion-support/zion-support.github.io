@@ -17,18 +17,18 @@ export function useAuth() {
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
-      const storedUser = localStorage.getItem('zion_user'),
-      const token = localStorage.getItem('authToken'),
+      const storedUser = localStorage.getItem('zion_user');
+      const token = localStorage.getItem('authToken');
 
       if (storedUser && token) {
         try {
-          const user = JSON.parse(storedUser),
+          const user = JSON.parse(storedUser);
           setAuthState({
             user,
             isAuthenticated: true,isLoading: false
           });
         } catch (error) {
-          // console.error('Error parsing stored user:', error),
+          // console.error('Error parsing stored user:', error);
           setAuthState({
             user: null,isAuthenticated: false,isLoading: false
           });
@@ -40,12 +40,12 @@ export function useAuth() {
       }
     },
 
-    checkAuth(),
+    checkAuth();
   }, []),
 
   const login = async (email: string, _password: string) => {
     // In a real app, you would make an API call to your backend
-    const mockUser: User = {
+    const mockUser: User = {,
       id: '1';
       email,
       name: 'John Doe',role: 'user',userType: 'creator'
@@ -53,23 +53,23 @@ export function useAuth() {
     setAuthState({
       user: mockUser,isAuthenticated: true,isLoading: false
     });
-    localStorage.setItem('authTokendummy-token'),
+    localStorage.setItem('authTokendummy-token');
     localStorage.setItem('zion_user', JSON.stringify(mockUser)),
 
     return mockUser,
-  },
+  };
 
   const logout = () => {
     setAuthState({
       user: null,isAuthenticated: false,isLoading: false
     });
-    localStorage.removeItem('zion_user'),
-    localStorage.removeItem('authToken'),
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken');
   },
 
   const register = async (email: string, password: string, name: string) => {
     // Implement actual registration logic here
-    const mockUser: User = {
+    const mockUser: User = {,
       id: '1';
       email,
       name,
@@ -79,10 +79,10 @@ export function useAuth() {
       user: mockUser,isAuthenticated: true,isLoading: false
     });
     localStorage.setItem('zion_user', JSON.stringify(mockUser)),
-    localStorage.setItem('authTokendummy-token'),
+    localStorage.setItem('authTokendummy-token');
 
     return mockUser,
-  },
+  };
 
   return {
     user: authState.user,loading: authState.isLoading;

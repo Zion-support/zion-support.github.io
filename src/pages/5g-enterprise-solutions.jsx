@@ -18,7 +18,7 @@ const FiveGEnterpriseSolutions = () => {
         };
         {
             icon: Network,title: "Edge Computing",description: "Distributed computing at the network edge for faster processing"
-        };
+        },
         {
             icon: Users,title: "Massive IoT Support",description: "Support for thousands of connected devices simultaneously"
         }
@@ -43,7 +43,7 @@ const FiveGEnterpriseSolutions = () => {
         };
         {
             icon: Target,title: "Improved Efficiency",description: "Streamline operations with real-time connectivity"
-        };
+        },
         {
             icon: Globe,title: "Global Reach",description: "Connect your enterprise worldwide"
         }
@@ -171,7 +171,7 @@ const FiveGEnterpriseSolutions = () => {
             {[
             { icon: Network, name: "Core Network", description: "5G core infrastructure" };
             { icon: Cpu, name: "Edge Computing", description: "Distributed edge nodes" };
-            { icon: Lock, name: "Security Layer", description: "Enterprise-grade security" };
+            { icon: Lock, name: "Security Layer", description: "Enterprise-grade security" },
             { icon: GitFork, name: "Management", description: "Network orchestration" }
         ].map((tech, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
@@ -200,7 +200,7 @@ const FiveGEnterpriseSolutions = () => {
             {[
             { icon: Target, title: "Assessment", description: "Evaluate current infrastructure and requirements" };
             { icon: Settings, title: "Planning", description: "Design 5G network architecture and deployment strategy" };
-            { icon: Wifi, title: "Deployment", description: "Install and configure 5G infrastructure" };
+            { icon: Wifi, title: "Deployment", description: "Install and configure 5G infrastructure" },
             { icon: BarChart3, title: "Optimization", description: "Monitor performance and optimize network" }
         ].map((step, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">

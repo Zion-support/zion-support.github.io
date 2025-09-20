@@ -337,7 +337,7 @@ const AIFinancialCompliancePlatform = () => {
     };
     {
       icon: Activity,title: 'Real-time Audit Trails',description: 'Comprehensive tracking of all compliance activities and decisions'
-    };
+    },
     {
       icon: AlertTriangle,title: 'Proactive Risk Alerts',description: 'Instant notifications of compliance risks and regulatory changes'
     }
@@ -366,7 +366,7 @@ const AIFinancialCompliancePlatform = () => {
     {
       plan: 'Starter',price: '$2,200/month',
       features: [
-        'Up to 100 usersBasic AI risk assessment';
+        'Up to 100 usersBasic AI risk assessment',
         'Core compliance monitoringDocument analysis',
         'Basic reportingEmail support'
       ]
@@ -374,7 +374,7 @@ const AIFinancialCompliancePlatform = () => {
     {
       plan: 'Professional',price: '$4,500/month',
       features: [
-        'Up to 500 usersAdvanced AI analytics';
+        'Up to 500 usersAdvanced AI analytics',
         'Multi-regulation supportCustom compliance workflows',
         'Advanced reportingPriority support',
         'API access'
@@ -383,7 +383,7 @@ const AIFinancialCompliancePlatform = () => {
     {
       plan: 'Enterprise',price: '$9,000/month',
       features: [
-        'Unlimited usersFull AI capabilities';
+        'Unlimited usersFull AI capabilities',
         'Custom integrationsWhite-label options',
         'Dedicated compliance manager24/7 phone support',
         'Custom training'
@@ -409,7 +409,7 @@ const AIFinancialCompliancePlatform = () => {
     };
     {
       metric: '80%',label: 'Task Automation'
-    };
+    },
     {
       metric: '70%',label: 'Time Savings'
     }
@@ -450,7 +450,7 @@ const AIFinancialCompliancePlatform = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200"
               >
@@ -458,7 +458,7 @@ const AIFinancialCompliancePlatform = () => {
                 Watch Demo
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
@@ -477,7 +477,7 @@ const AIFinancialCompliancePlatform = () => {
             {keyMetrics.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
@@ -494,7 +494,7 @@ const AIFinancialCompliancePlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -511,7 +511,7 @@ const AIFinancialCompliancePlatform = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"
@@ -531,7 +531,7 @@ const AIFinancialCompliancePlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -548,7 +548,7 @@ const AIFinancialCompliancePlatform = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
@@ -565,7 +565,7 @@ const AIFinancialCompliancePlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -582,7 +582,7 @@ const AIFinancialCompliancePlatform = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20"
@@ -599,7 +599,7 @@ const AIFinancialCompliancePlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -616,7 +616,7 @@ const AIFinancialCompliancePlatform = () => {
             {regulations.map((regulation, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-purple-400/40 transition-all duration-300"
@@ -632,7 +632,7 @@ const AIFinancialCompliancePlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -649,7 +649,7 @@ const AIFinancialCompliancePlatform = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
@@ -688,7 +688,7 @@ const AIFinancialCompliancePlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -705,7 +705,7 @@ const AIFinancialCompliancePlatform = () => {
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300"
@@ -721,7 +721,7 @@ const AIFinancialCompliancePlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -733,7 +733,7 @@ const AIFinancialCompliancePlatform = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200"
               >
@@ -741,7 +741,7 @@ const AIFinancialCompliancePlatform = () => {
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >
@@ -757,7 +757,7 @@ const AIFinancialCompliancePlatform = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

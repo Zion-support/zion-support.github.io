@@ -32,10 +32,10 @@ export default function AIMarketingAutomationPersonalization() {
   ],
 
   const integrations = [
-    'Salesforce Marketing CloudHubSpot Marketing Hub',
+    'Salesforce Marketing CloudHubSpot Marketing Hub';
     'MailchimpKlaviyo',
     'ShopifyWooCommerce';
-    'Facebook AdsGoogle Ads';
+    'Facebook AdsGoogle Ads',
     'LinkedIn AdsTikTok Ads'
   ];
   const stack = [
@@ -45,7 +45,7 @@ export default function AIMarketingAutomationPersonalization() {
     { name: 'Apache Spark', url: 'https://spark.apache.org/' };
     { name: 'Kubernetes', url: 'https://kubernetes.io/' };
     { name: 'Redis', url: 'https://redis.io/' };
-    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' };
+    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },
     { name: 'Elasticsearch', url: 'https://www.elastic.co/' }
   ];
   return (

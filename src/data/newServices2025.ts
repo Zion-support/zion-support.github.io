@@ -8,12 +8,12 @@ export const NEW_SERVICES_2025: NewService[] = [
   {
     id: 'rag-docs-chatbot',title: 'RAG Chatbot for Your Docs',description: 'Deploy a secure Retrieval-Augmented Generation chatbot over your knowledge base (PDFs, sites, Confluence).',
     category: 'AI & Automation',subcategory: 'Chatbots',price: 299,currency: '$',pricingModel: 'monthly',features: [
-      'Semantic search over docsSource-cited answers';
+      'Semantic search over docsSource-cited answers',
       'Admins upload and manage contentEmbeddings cache + nightly refresh',
       'Role & permission controls'
     ],
     benefits: [
-      'Deflect L1 support by 30–60%Instant employee answers';
+      'Deflect L1 support by 30–60%Instant employee answers',
       'Reduce onboarding time'
     ],
     tags: ['RAGChatbot', 'DocsEmbeddings'],
@@ -21,7 +21,7 @@ export const NEW_SERVICES_2025: NewService[] = [
   };
   {
     id: 'ai-lead-scoring',title: 'AI Lead Scoring for CRM',description: 'Machine learning scoring on contacts and opportunities for Salesforce/HubSpot/Pipedrive.',category: 'Sales AI',subcategory: 'Revenue',price: 249,currency: '$',pricingModel: 'monthly',features: [
-      'Propensity-to-buy modelsICP matching and enrichment';
+      'Propensity-to-buy modelsICP matching and enrichment',
       'Auto-prioritized queuesPlaybook recommendations'
     ],
     benefits: ['Higher win ratesShorter cycles', 'Rep productivity +20%'],
@@ -31,7 +31,7 @@ export const NEW_SERVICES_2025: NewService[] = [
   {
     id: 'etl-pipeline-starter',title: 'ETL Pipeline Starter Kit',description: 'Production-ready ELT/ETL template with orchestrator, dbt models, and observability.',
     category: 'Data & Analytics',subcategory: 'Pipelines',price: 5000,currency: '$',pricingModel: 'fixed',features: [
-      'dbt core modelsAirflow/Prefect orchestration';
+      'dbt core modelsAirflow/Prefect orchestration',
       'Great Expectations data testsWarehouse adapters (BigQuery/Snowflake/Redshift/Postgres)'
     ],
     benefits: ['Weeks to days time-to-valueBest-practice stack', 'Lower maintenance'],

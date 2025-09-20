@@ -49,21 +49,21 @@ import {
 } from "lucide-react";
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from "@/data/innovativeServices2025";
 export default function InnovativeServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'aiScore' | 'name'>('name'),
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
-  const [selectedService, setSelectedService] = useState<any>(null),
-  const [showModal, setShowModal] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'aiScore' | 'name'>('name');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [showModal, setShowModal] = useState(false);
 
   const categories = ['all', ...Object.keys(INNOVATIVE_SERVICE_CATEGORIES_2025)],
 
   const filteredServices = INNOVATIVE_SERVICES_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch,
   }),
 
@@ -82,7 +82,7 @@ export default function InnovativeServicesShowcase2025() {
       case 'aiScore':
         aValue = a.aiScore,
         bValue = b.aiScore,
-        break,
+        break;
       case 'name':
         aValue = a.title;
         bValue = b.title;
@@ -90,25 +90,25 @@ export default function InnovativeServicesShowcase2025() {
       default: aValue = a.title;
         bValue = b.title
     }
-
+;
     if (sortOrder === 'asc') {
-      return aValue > bValue ? 1 : -1,
+      return aValue > bValue ? 1 : -1
     } else {
-      return aValue < bValue ? 1 : -1,
+      return aValue < bValue ? 1 : -1
     }
-  }),
+  });
 
   const getCategoryIcon = (category: string) => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
       <Rocket className="w-6 h-6" />,
-  },
+  };
 
   const getCategoryColor = (category: string) => {
     if (category === 'all') return 'from-cyan-500 to-blue-500';
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'
-  },
+  };
 
   const openServiceModal = (service: any) => {
     setSelectedService(service);
@@ -116,8 +116,8 @@ export default function InnovativeServicesShowcase2025() {
   },
 
   const closeModal = () => {
-    setShowModal(false),
-    setSelectedService(null),
+    setShowModal(false);
+    setSelectedService(null);
   },
 
   return (
@@ -149,7 +149,7 @@ export default function InnovativeServicesShowcase2025() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="futuristic-btn inline-flex items-center px-8 py-4"
                 onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
@@ -158,8 +158,8 @@ export default function InnovativeServicesShowcase2025() {
                 Explore Services
               </motion.button>
               <motion.a
-                href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`}
-                whileHover={{ scale: 1.05 }}
+                href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`};
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
@@ -221,8 +221,8 @@ export default function InnovativeServicesShowcase2025() {
             <div className="flex gap-2">
               {categories.map((category) => (
                 <motion.button
-                  key={category}
-                  whileHover={{ scale: 1.05 }}
+                  key={category};
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
@@ -263,9 +263,9 @@ export default function InnovativeServicesShowcase2025() {
               <select
                 value={`${sortBy}-${sortOrder}`}
                 onChange={(e) => {
-                  const [newSortBy, newSortOrder] = e.target.value.split('-'),
-                  setSortBy(newSortBy as any),
-                  setSortOrder(newSortOrder as any),
+                  const [newSortBy, newSortOrder] = e.target.value.split('-');
+                  setSortBy(newSortBy as any);
+                  setSortOrder(newSortOrder as any);
                 }}
                 className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               >
@@ -345,7 +345,7 @@ export default function InnovativeServicesShowcase2025() {
                         {service.currency}{service.price.toLocaleString()}
                       </div>
                       <motion.button
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.05 }};
                         whileTap={{ scale: 0.95 }}
                         onClick={() => openServiceModal(service)}
                         className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
@@ -383,7 +383,7 @@ export default function InnovativeServicesShowcase2025() {
                         {service.currency}{service.price.toLocaleString()}
                       </div>
                       <motion.button
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.05 }};
                         whileTap={{ scale: 0.95 }}
                         onClick={() => openServiceModal(service)}
                         className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
@@ -513,7 +513,7 @@ export default function InnovativeServicesShowcase2025() {
                       
                       <div className="space-y-3">
                         <motion.button
-                          whileHover={{ scale: 1.02 }}
+                          whileHover={{ scale: 1.02 }};
                           whileTap={{ scale: 0.98 }}
                           className="w-full futuristic-btn py-3"
                           onClick={() => window.open(`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}?subject=Inquiry about ${selectedService.title}`, '_blank')}
@@ -522,7 +522,7 @@ export default function InnovativeServicesShowcase2025() {
                         </motion.button>
                         
                         <motion.button
-                          whileHover={{ scale: 1.02 }}
+                          whileHover={{ scale: 1.02 }};
                           whileTap={{ scale: 0.98 }}
                           className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
                           onClick={() => window.open(`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`, '_blank')}
@@ -573,7 +573,7 @@ export default function InnovativeServicesShowcase2025() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025).map(([key, value]) => (
             <motion.div
-              key={key}
+              key={key};
               whileHover={{ scale: 1.05 }}
               className="futuristic-card p-6 text-center"
             >
@@ -597,8 +597,8 @@ export default function InnovativeServicesShowcase2025() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
-              href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`}
-              whileHover={{ scale: 1.05 }}
+              href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`};
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="futuristic-btn inline-flex items-center px-8 py-4"
             >
@@ -607,8 +607,8 @@ export default function InnovativeServicesShowcase2025() {
             </motion.a>
             
             <motion.a
-              href={`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}`}
-              whileHover={{ scale: 1.05 }}
+              href={`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}`};
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >

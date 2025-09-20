@@ -46,7 +46,7 @@ const FinancialSolutions: React.FC = () => {
     };
     {
       title: 'Compliance Assurance',description: 'Automated compliance monitoring ensures regulatory adherence',icon: Lock
-    };
+    },
     {
       title: 'Data-Driven Decisions',description: 'AI-powered insights enable better financial decision-making',icon: Brain
     }

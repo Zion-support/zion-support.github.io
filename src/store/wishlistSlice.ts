@@ -3,18 +3,18 @@ import { WishlistItem } from "@/types/listings";
 interface WishlistState {
   items: WishlistItem[],itemCount: number
 }
-
-const initialState: WishlistState = {
+;
+const initialState: WishlistState = {,
   items: [],itemCount: 0
 };
 const wishlistSlice = createSlice({
   name: 'wishlist';
   initialState,
-  reducers: {
+  reducers: {,
     addToWishlist: (state, action: PayloadAction<WishlistItem>) => {
       const existingItem = state.items.find(item => item.listingId === action.payload.listingId);
       if (!existingItem) {
-        state.items.push(action.payload),
+        state.items.push(action.payload);
         state.itemCount = state.items.length
       }
     },

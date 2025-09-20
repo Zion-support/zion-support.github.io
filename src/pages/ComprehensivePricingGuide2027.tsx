@@ -86,9 +86,9 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaas
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from "../data/innovativeITInfrastructureServices2027";
 import { EMERGING_TECHNOLOGY_SERVICES_2027 } from "../data/emergingTechnologyServices2027";
 export default function ComprehensivePricingGuide2027() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [priceRange, setPriceRange] = useState([0, 50000]),
-  const [sortBy, setSortBy] = useState('price'),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState([0, 50000]);
+  const [sortBy, setSortBy] = useState('price');
 
   // Combine all services
   const allServices = [
@@ -102,16 +102,16 @@ export default function ComprehensivePricingGuide2027() {
 
   // Filter services based on selection
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1],
-    return matchesCategory && matchesPrice,
-  }),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
+    return matchesCategory && matchesPrice;
+  });
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.price - b.price,
+        return a.price - b.price;
       case 'rating':
         return b.rating - a.rating;
       case 'roi':
@@ -122,7 +122,7 @@ export default function ComprehensivePricingGuide2027() {
     }
   });
   // Calculate statistics
-  const totalServices = allServices.length,
+  const totalServices = allServices.length;
   const averagePrice = Math.round(allServices.reduce((acc, s) => acc + s.price, 0) / totalServices),
   const totalValue = allServices.reduce((acc, s) => acc + s.price, 0),
   const averageROI = Math.round(allServices.reduce((acc, s) => acc + parseInt(s.roi), 0) / totalServices),
@@ -152,19 +152,19 @@ export default function ComprehensivePricingGuide2027() {
       'Robotics & Automation': <Bot className="w-6 h-6" />
     },
     return iconMap[category] || <Star className="w-6 h-6" />,
-  },
+  };
 
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}K`;
-    }
+    };
     return `$${price}`,
-  },
+  };
 
   const parseROI = (roi: string) => {
     const match = roi.match(/(\d+)%/);
     return match ? parseInt(match[1]) : 0
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -236,7 +236,7 @@ export default function ComprehensivePricingGuide2027() {
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -304,7 +304,7 @@ export default function ComprehensivePricingGuide2027() {
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -324,7 +324,7 @@ export default function ComprehensivePricingGuide2027() {
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -440,7 +440,7 @@ export default function ComprehensivePricingGuide2027() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -487,7 +487,7 @@ export default function ComprehensivePricingGuide2027() {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

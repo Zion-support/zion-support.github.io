@@ -27,15 +27,15 @@ import {
   Cloud
 } from "lucide-react";
 const Support: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: HelpCircle };
     { id: 'technical', name: 'Technical Issues', icon: Monitor };
     { id: 'billing', name: 'Billing & Account', icon: FileText };
     { id: 'product', name: 'Product Support', icon: Rocket };
-    { id: 'integration', name: 'Integration Help', icon: Zap };
+    { id: 'integration', name: 'Integration Help', icon: Zap },
     { id: 'general', name: 'General Questions', icon: Users }
   ];
   const supportChannels = [
@@ -48,7 +48,7 @@ const Support: React.FC = () => {
     {
       icon: Phone,title: 'Phone Support',description: 'Speak directly with our experts',availability: 'Mon-Fri, 9AM-6PM EST',
       responseTime: 'Immediate',priority: 'high',href: '/support/phone'
-    };
+    },
     {
       icon: Mail,title: 'Email Support',description: 'Send us detailed questions',availability: '24/7',responseTime: '< 24 hours',priority: 'medium',href: '/support/email'
     }
@@ -63,7 +63,7 @@ const Support: React.FC = () => {
     {
       icon: Users,title: 'Community Forum',description: 'Connect with other users',members: '10,000+ members',
       href: '/community'
-    };
+    },
     {
       icon: FileText,title: 'FAQ',description: 'Frequently asked questions',questions: '200+ FAQs',href: '/faq'
     }
@@ -90,7 +90,7 @@ const Support: React.FC = () => {
     (issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
      issue.solution.toLowerCase().includes(searchQuery.toLowerCase()) ||
      issue.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-  ),
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

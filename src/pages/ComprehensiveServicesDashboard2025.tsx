@@ -35,16 +35,16 @@ import {
     ServiceIndex 
 } from "../data/comprehensive-services-index-2025";
 const ComprehensiveServicesDashboard2025: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState(''),
-    const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-    const [selectedSource, setSelectedSource] = useState<string>('all'),
-    const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
+    const [selectedSource, setSelectedSource] = useState<string>('all');
+    const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-    const stats = getServiceStats(),
-    const categories = stats.categoryBreakdown,
+    const stats = getServiceStats();
+    const categories = stats.categoryBreakdown;
 
     const filteredServices = useMemo(() => {
-        let filtered = comprehensiveServicesIndex2025,
+        let filtered = comprehensiveServicesIndex2025;
 
         if (searchTerm) {
             filtered = filtered.filter(service =>
@@ -53,24 +53,24 @@ const ComprehensiveServicesDashboard2025: React.FC = () => {
                 service.category.toLowerCase().includes(searchTerm.toLowerCase())
             ),
         }
-
+;
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory),
+            filtered = filtered.filter(service => service.category === selectedCategory);
         }
-
+;
         if (selectedSource !== 'all') {
-            filtered = filtered.filter(service => service.source === selectedSource),
+            filtered = filtered.filter(service => service.source === selectedSource);
         }
-
+;
         return filtered,
-    }, [searchTerm, selectedCategory, selectedSource]),
+    }, [searchTerm, selectedCategory, selectedSource]);
 
     const getCategoryColor = (category: string) => {
         const colors: { [key: string]: string } = {
             'fintech': 'from-green-500 to-emerald-600healthtech': 'from-red-500 to-pink-600edutech': 'from-purple-500 to-violet-600martech': 'from-pink-500 to-rose-600micro-saas': 'from-blue-500 to-indigo-600ai-services': 'from-cyan-500 to-blue-600it-services': 'from-slate-500 to-gray-600emerging-tech': 'from-orange-500 to-yellow-600Fintech': 'from-green-500 to-emerald-600Healthtech': 'from-red-500 to-pink-600Edutech': 'from-purple-500 to-violet-600Martech': 'from-pink-500 to-rose-600Micro SaaS': 'from-blue-500 to-indigo-600AI Services': 'from-cyan-500 to-blue-600IT Services': 'from-slate-500 to-gray-600'
         };
         return colors[category] || 'from-gray-500 to-gray-600',
-    },
+    };
 
     const getCategoryIcon = (category: string) => {
         const icons: { [key: string]: React.ReactNode } = {
@@ -91,7 +91,7 @@ const ComprehensiveServicesDashboard2025: React.FC = () => {
             'IT Services': <Shield className="w-5 h-5" />
         },
         return icons[category] || <Globe className="w-5 h-5" />,
-    },
+    };
 
     const getSourceBadge = (source: string) => {
         const badges = {
@@ -495,6 +495,6 @@ const ComprehensiveServicesDashboard2025: React.FC = () => {
             </footer>
         </div>
     )
-},
+};
 
 export default ComprehensiveServicesDashboard2025;

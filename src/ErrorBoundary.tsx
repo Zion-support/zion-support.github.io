@@ -69,7 +69,7 @@ error,
         </div>
       )
     }
-
+;
     return this.props.children
   }
 }

@@ -17,17 +17,17 @@ export default function ProjectRoom() {
         }
     ]);
     const startVideoCall = () => {
-        setIsInCall(true),
+        setIsInCall(true);
         toast.success("Video call started", {
             description: "Others can join with the project room link"
         });
         // Switch to video tab if not already there
         if (activeTab !== 'video') {
-            setActiveTab('video'),
+            setActiveTab('video');
         }
     },
     const endVideoCall = () => {
-        setIsInCall(false),
+        setIsInCall(false);
         toast.info("Video call ended", {
             description: "Call duration and participants will be logged"
         });
@@ -36,13 +36,13 @@ export default function ProjectRoom() {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
             { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false };
-            { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true };
+            { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
             { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
         ];
-        const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],
+        const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!callParticipants.find(p => p.id === randomUser.id)) {
-            setCallParticipants(prev => [...prev, randomUser]),
-            toast(`${randomUser.name} joined the call`),
+            setCallParticipants(prev => [...prev, randomUser]);
+            toast(`${randomUser.name} joined the call`);
         }
     },
     return (<>

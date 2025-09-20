@@ -48,17 +48,17 @@ const MicroSAASPage = () => {
     'ScalabilityCost Efficiency', 'Rapid DeploymentEasy Updates', 'AccessibilityIntegration'
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: {
-      opacity: 1,y: 0,transition: {
+    hidden: { opacity: 0, y: 20 },
+    visible: {,
+      opacity: 1,y: 0,transition: {,
         duration: 0.5
       }
     }
@@ -110,7 +110,7 @@ const MicroSAASPage = () => {
         >
           {saasServices.map((service, index) => (
             <motion.div
-              key={service.id}
+              key={service.id};
               variants={itemVariants}
               className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10"
             >

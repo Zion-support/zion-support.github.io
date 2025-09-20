@@ -6,20 +6,20 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from "lucide-react";
 import SEO from "@/components/SEO";
 export default function PricingGuidePage() {
-    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES
-        : EXPANDED_SERVICES.filter(service => service.category === selectedCategory),
+        : EXPANDED_SERVICES.filter(service => service.category === selectedCategory);
     const getCategoryStats = (category) => {
-        const services = EXPANDED_SERVICES.filter(s => s.category === category),
+        const services = EXPANDED_SERVICES.filter(s => s.category === category);
         const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length,
         const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length,
         return { count: services.length, avgPrice, avgRating },
-    },
+    };
     const formatPrice = (price) => {
         if (price >= 1000) {
             return `$${(price / 1000).toFixed(1)}K`;
-        }
+        };
         return `$${price}`;
     };
     const getServiceTier = (price) => {

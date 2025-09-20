@@ -25,21 +25,21 @@ import {
 } from "lucide-react";
 import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026";
 const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('innovation'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('innovation');
 
   const categories = useMemo(() => {
-    const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category)),
+    const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
     return ['all', ...Array.from(cats)],
-  }, []),
+  }, []);
 
   const filteredServices = useMemo(() => {
-    let filtered = ADVANCED_INNOVATIVE_SERVICES_2026,
+    let filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
+      filtered = filtered.filter(service => service.category === selectedCategory);
     }
 
     // Filter by search term
@@ -55,13 +55,13 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'innovation':
-          return b.innovationLevel.localeCompare(a.innovationLevel),
+          return b.innovationLevel.localeCompare(a.innovationLevel);
         case 'roi':
           return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', '')),
         case 'price':
-          return a.price - b.price,
+          return a.price - b.price;
         case 'delivery':
-          return a.estimatedDelivery.localeCompare(b.estimatedDelivery),
+          return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
         default: return 0
       }
     });
@@ -69,17 +69,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
   }, [searchTerm, selectedCategory, sortBy]),
 
   const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5
       }
     }
@@ -200,7 +200,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
             <motion.div
               key={service.id}
               className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
-              variants={itemVariants}
+              variants={itemVariants};
               whileHover={{ y: -5, scale: 1.02 }}
             >
               {/* Service Header */}

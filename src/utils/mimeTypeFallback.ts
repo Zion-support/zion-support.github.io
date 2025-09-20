@@ -6,9 +6,9 @@ class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {
     '.js': 'application/javascript.mjs': 'application/javascript.css': 'text/css.html': 'text/html.htm': 'text/html.xml': 'application/xml.json': 'application/json.svg': 'image/svg+xml.ico': 'image/x-icon.png': 'image/png.jpg': 'image/jpeg.jpeg': 'image/jpeg.gif': 'image/gif.webp': 'image/webp.bmp': 'image/bmp.tiff': 'image/tiff.woff': 'font/woff.woff2': 'font/woff2.ttf': 'font/ttf.otf': 'font/otf.eot': 'application/vnd.ms-fontobject.pdf': 'application/pdf.zip': 'application/zip.tar': 'application/x-tar.gz': 'application/gzip.mp4': 'video/mp4.webm': 'video/webm.ogg': 'video/ogg.mp3': 'audio/mpeg.wav': 'audio/wav.flac': 'audio/flac'
   };
-  private fallbackUrls: Map<string, string> = new Map(),
+  private fallbackUrls: Map<string, string> = new Map();
   private cdnFallbacks = [
-    'https: //cdn.jsdelivr.nethttps://unpkg.com';
+    'https: //cdn.jsdelivr.nethttps://unpkg.com',
     'https: //cdnjs.cloudflare.com'
   ];
   constructor() {
@@ -32,7 +32,7 @@ class MimeTypeFallback {
 
   private getFileExtension(filename: string): string {
     const lastDot = filename.lastIndexOf('.');
-    if (lastDot === -1) return '',
+    if (lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase()
   }
 
@@ -41,28 +41,28 @@ class MimeTypeFallback {
       const response = await fetch(url, { method: 'HEAD' });
       if (!response.ok) {
         console.warn(`Resource not found: ${url}`);
-        return false,
+        return false;
       }
-
-      const contentType = response.headers.get('content-type'),
+;
+      const contentType = response.headers.get('content-type');
       if (!contentType) {
         console.warn(`No content-type header for: ${url}`);
-        return false,
+        return false;
       }
-
-      const expectedType = this.getMimeType(url),
+;
+      const expectedType = this.getMimeType(url);
       if (contentType.includes(expectedType) || contentType.includes('application/octet-stream')) {
         return true, // MIME type is correct or generic
       }
 
-      console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`),
+      console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`);
       
       // Try to fix with fallback URL
-      return await this.tryFallbackUrl(url),
+      return await this.tryFallbackUrl(url);
       
     } catch (error) {
-      console.error(`Error checking MIME type for ${url}:`, error),
-      return await this.tryFallbackUrl(url),
+      console.error(`Error checking MIME type for ${url}:`, error);
+      return await this.tryFallbackUrl(url);
     }
   }
 
@@ -73,21 +73,21 @@ class MimeTypeFallback {
       try {
         const response = await fetch(fallbackUrl, { method: 'HEAD' });
         if (response.ok) {
-          const contentType = response.headers.get('content-type'),
-          const expectedType = this.getMimeType(originalUrl),
+          const contentType = response.headers.get('content-type');
+          const expectedType = this.getMimeType(originalUrl);
           
           if (contentType && contentType.includes(expectedType)) {
 
-            this.replaceResource(originalUrl, fallbackUrl),
-            return true,
+            this.replaceResource(originalUrl, fallbackUrl);
+            return true;
           }
         }
       } catch (error) {
-        console.error(`Fallback URL failed: ${fallbackUrl}`, error),
+        console.error(`Fallback URL failed: ${fallbackUrl}`, error);
       }
     }
-
-    return false,
+;
+    return false;
   }
 
   private replaceResource(originalUrl: string, fallbackUrl: string) {
@@ -99,7 +99,7 @@ class MimeTypeFallback {
     }),
 
     // Replace stylesheet links
-    const links = document.querySelectorAll(`link[href="${originalUrl}"]`),
+    const links = document.querySelectorAll(`link[href="${originalUrl}"]`);
     links.forEach(link => {
       (link as HTMLLinkElement).href = fallbackUrl,
 
@@ -113,16 +113,16 @@ class MimeTypeFallback {
       '/js/ui-vendor-B31yGDq-.js/js/utils-vendor-CrFdsnXa.js'
     ],
 
-    console.log('🔍 Preloading critical resources...'),
+    console.log('🔍 Preloading critical resources...');
     
     for (const resource of criticalResources) {
       try {
-        const isValid = await this.checkAndFixMimeType(resource),
+        const isValid = await this.checkAndFixMimeType(resource);
         if (!isValid) {
           console.warn(`Critical resource has MIME type issues: ${resource}`);
         }
       } catch (error) {
-        console.error(`Error preloading resource: ${resource}`, error),
+        console.error(`Error preloading resource: ${resource}`, error);
       }
     }
   }
@@ -135,21 +135,21 @@ class MimeTypeFallback {
       script.type = 'text/javascript',
       return script
     } else {
-      const link = document.createElement('link'),
+      const link = document.createElement('link');
       link.rel = 'stylesheet',
       link.href = url,
       link.type = 'text/css',
-      return link,
+      return link;
     }
   }
 
   injectResource(url: string, type: 'script' | 'stylesheet'): Promise<void> {
     return new Promise((resolve, reject) => {
-      const element = this.createResourceElement(url, type),
+      const element = this.createResourceElement(url, type);
       
       element.onload = () => {
 
-        resolve(),
+        resolve();
       },
       
       element.onerror = () => {
@@ -158,15 +158,15 @@ class MimeTypeFallback {
       },
 
       if (type === 'script') {
-        document.head.appendChild(element),
+        document.head.appendChild(element);
       } else {
-        document.head.appendChild(element),
+        document.head.appendChild(element);
       }
     }),
   }
 }
 
 // Create singleton instance
-const mimeTypeFallback = new MimeTypeFallback(),
+const mimeTypeFallback = new MimeTypeFallback();
 
 export default mimeTypeFallback;

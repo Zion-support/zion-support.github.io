@@ -1,5 +1,5 @@
 export interface NewInnovativeService {
-  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
+  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {,
     phone: string,email: string,website: string
   };
   technicalSpecs?: {
@@ -14,7 +14,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
   {
     id: "ai-legal-document-automation",title: "AI Legal Document Automation",description: "Revolutionary AI-powered legal document automation platform that streamlines contract generation, compliance checking, and legal workflow management.",
     category: "AI & Legal Tech",subcategory: "Document Automation",price: 799,currency: "$",pricingModel: "monthly",features: [
-      "AI-powered contract analysis and generation";
+      "AI-powered contract analysis and generation",
       "Legal document template automation",
       "Compliance checking and risk assessment",
       "Multi-jurisdiction legal framework support",
@@ -24,7 +24,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
       "Integration with legal practice management systems"
     ],
     benefits: [
-      "Reduce legal document creation time by 85%";
+      "Reduce legal document creation time by 85%",
       "Minimize legal risks and compliance errors",
       "Standardize legal processes across organizations",
       "Enable faster contract negotiations and closings",
@@ -32,7 +32,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
       "Improve accuracy and consistency in legal documents"
     ],
     useCases: [
-      "Corporate law firms and legal departments";
+      "Corporate law firms and legal departments",
       "Real estate transactions and documentation",
       "Healthcare compliance and medical contracts",
       "Startup and SME legal documentation",
@@ -40,7 +40,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
       "Regulatory compliance and reporting"
     ],
     targetAudience: [
-      "Law firms and legal departments";
+      "Law firms and legal departments",
       "Corporate legal teams",
       "Real estate professionals",
       "Healthcare organizations",
@@ -49,10 +49,10 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
     ],
     tags: ["AI", "Legal Tech", "Document Automation", "Compliance", "Contract Management", "Legal Workflow"],
     estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$799 - $1,999/month",
-    roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
+    roi: "300-500%",innovationLevel: "Advanced",contactInfo: {,
       phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-    };
-    technicalSpecs: {
+    },
+    technicalSpecs: {,
       technology: ["Python", "Natural Language Processing", "Machine Learning", "React", "Node.js", "PostgreSQL"],
       integrations: ["Clio", "LexisNexis", "Westlaw", "DocuSign", "ContractPodAi", "Practice Management Systems"],
       apiEndpoints: 200,uptime: "99.9%",security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption", "Audit trails"]
@@ -64,7 +64,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
   {
     id: "ai-healthcare-analytics",title: "AI Healthcare Analytics Platform",description: "Comprehensive AI-powered healthcare analytics platform that transforms patient care, operational efficiency, and clinical decision-making through data-driven insights.",
     category: "AI & Healthcare",subcategory: "Healthcare Analytics",price: 1299,currency: "$",pricingModel: "monthly",features: [
-      "Real-time patient data analytics and insights";
+      "Real-time patient data analytics and insights",
       "Predictive disease modeling and risk assessment",
       "Automated medical image analysis and diagnosis",
       "Population health trend analysis and forecasting",
@@ -74,7 +74,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
       "Personalized medicine and treatment optimization"
     ],
     benefits: [
-      "Improve diagnostic accuracy by 35-45%";
+      "Improve diagnostic accuracy by 35-45%",
       "Reduce healthcare costs by 20-30%",
       "Enhance patient outcomes and satisfaction",
       "Streamline clinical workflows and efficiency",
@@ -82,7 +82,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
       "Support evidence-based medical decisions"
     ],
     useCases: [
-      "Hospitals and health systems";
+      "Hospitals and health systems",
       "Primary care practices",
       "Specialty clinics",
       "Pharmaceutical companies",
@@ -90,7 +90,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
       "Research institutions"
     ],
     targetAudience: [
-      "Healthcare administrators";
+      "Healthcare administrators",
       "Clinical teams",
       "Data scientists",
       "Quality improvement teams",
@@ -99,10 +99,10 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
     ],
     tags: ["AI", "Healthcare", "Analytics", "Predictive Medicine", "Clinical Decision Support", "Population Health"],
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$1,299 - $2,999/month",
-    roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
+    roi: "250-400%",innovationLevel: "Advanced",contactInfo: {,
       phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-    };
-    technicalSpecs: {
+    },
+    technicalSpecs: {,
       technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Apache Spark"],
       integrations: ["Epic", "Cerner", "Allscripts", "Meditech", "Athenahealth", "HL7 FHIR"],
       apiEndpoints: 300,uptime: "99.99%",security: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA 21 CFR Part 11", "End-to-end encryption"]
@@ -114,7 +114,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
   {
     id: "ai-financial-trading",title: "AI Financial Trading Platform",description: "Advanced AI-powered financial trading platform that revolutionizes trading through intelligent market analysis, automated execution, and sophisticated risk management.",
     category: "AI & FinTech",subcategory: "Trading Platform",price: 599,currency: "$",pricingModel: "monthly",features: [
-      "AI-powered market analysis and prediction";
+      "AI-powered market analysis and prediction",
       "Automated trading strategy execution",
       "Real-time risk management and monitoring",
       "Multi-asset portfolio optimization",
@@ -124,7 +124,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
       "Regulatory compliance and audit trails"
     ],
     benefits: [
-      "Increase trading profitability by 25-40%";
+      "Increase trading profitability by 25-40%",
       "Reduce trading risks through AI risk management",
       "24/7 automated market monitoring and execution",
       "Eliminate emotional trading decisions",
@@ -132,7 +132,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
       "Access institutional-grade trading tools"
     ],
     useCases: [
-      "Individual retail traders";
+      "Individual retail traders",
       "Hedge funds and asset managers",
       "Investment firms and advisors",
       "Quantitative trading teams",
@@ -140,7 +140,7 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
       "Trading education and training"
     ],
     targetAudience: [
-      "Retail traders";
+      "Retail traders",
       "Professional traders",
       "Portfolio managers",
       "Quantitative analysts",
@@ -149,10 +149,10 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
     ],
     tags: ["AI", "FinTech", "Trading", "Algorithmic Trading", "Risk Management", "Portfolio Optimization"],
     estimatedDelivery: "6-10 weeks",supportLevel: "enterprise",marketPrice: "$599 - $1,999/month",
-    roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
+    roi: "200-350%",innovationLevel: "Advanced",contactInfo: {,
       phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-    };
-    technicalSpecs: {
+    },
+    technicalSpecs: {,
       technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "Apache Kafka"],
       integrations: ["MetaTrader", "TradingView", "Interactive Brokers", "Bloomberg Terminal", "Reuters Eikon"],
       apiEndpoints: 500,uptime: "99.99%",security: ["SOC 2", "ISO 27001", "PCI DSS", "End-to-end encryption", "Multi-factor authentication"]

@@ -13,7 +13,7 @@ export default function CheckoutPerformanceOptimizer() {
           {[
             { title: 'RUM & Session Replay', desc: 'Find slow steps and rage clicks across funnels.' };
             { title: 'Experimentation', desc: 'One‑click A/B templates for forms, shipping, and offers.' },
-            { title: 'Payment resilience', desc: 'Smart retries, 3DS prompts, and dunning flows.' };
+            { title: 'Payment resilience', desc: 'Smart retries, 3DS prompts, and dunning flows.' },
             { title: 'Analytics & alerts', desc: 'Error budgets, drop‑off heatmaps and Slack alerts.' }
           ].map((f) => (
             <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">

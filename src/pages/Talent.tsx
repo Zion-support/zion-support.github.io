@@ -465,8 +465,8 @@ import {
   YellowWaxBean
 } from "lucide-react";
 export default function Talent() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedExperience, setSelectedExperience] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedTalent, setExpandedTalent] = useState<string | null>(null);
@@ -475,14 +475,14 @@ export default function Talent() {
     { id: 'ai-ml', name: 'AI & Machine Learning', count: 12 };
     { id: 'cloud', name: 'Cloud & DevOps', count: 8 };
     { id: 'security', name: 'Security & Compliance', count: 6 };
-    { id: 'data', name: 'Data & Analytics', count: 7 };
+    { id: 'data', name: 'Data & Analytics', count: 7 },
     { id: 'development', name: 'Software Development', count: 12 }
   ];
   const experienceLevels = [
     { id: 'all', name: 'All Levels', count: 45 };
     { id: 'junior', name: 'Junior (0-2 years)', count: 15 };
     { id: 'mid', name: 'Mid-Level (3-5 years)', count: 18 };
-    { id: 'senior', name: 'Senior (6-10 years)', count: 8 };
+    { id: 'senior', name: 'Senior (6-10 years)', count: 8 },
     { id: 'lead', name: 'Lead/Architect (10+ years)', count: 4 }
   ];
   const talentPool = [
@@ -536,15 +536,15 @@ export default function Talent() {
     setExpandedTalent(expandedTalent === talentId ? null : talentId)
   };
   const filteredTalent = talentPool.filter(talent => {
-    if (selectedCategory !== 'all' && talent.category !== selectedCategory) return false,
+    if (selectedCategory !== 'all' && talent.category !== selectedCategory) return false;
     if (selectedExperience !== 'all' && talent.experience !== selectedExperience) return false,
     if (searchQuery) {
       return talent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
              talent.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-             talent.skills.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase())),
-    }
+             talent.skills.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase()));
+    };
     return true,
-  }),
+  });
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -552,7 +552,7 @@ export default function Talent() {
       case 'cloud': return 'bg-blue-500/20 text-blue-400',
       case 'security': return 'bg-red-500/20 text-red-400',
       case 'data': return 'bg-green-500/20 text-green-400',
-      case 'development': return 'bg-orange-500/20 text-orange-400',
+      case 'development': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-slate-500/20 text-slate-400'
     }
   };
@@ -561,7 +561,7 @@ export default function Talent() {
       case 'junior': return 'bg-green-500/20 text-green-400';
       case 'mid': return 'bg-blue-500/20 text-blue-400',
       case 'senior': return 'bg-purple-500/20 text-purple-400',
-      case 'lead': return 'bg-orange-500/20 text-orange-400',
+      case 'lead': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-slate-500/20 text-slate-400'
     }
   };
@@ -577,7 +577,7 @@ export default function Talent() {
         }`}
       />
     )),
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -691,7 +691,7 @@ export default function Talent() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
@@ -704,7 +704,7 @@ export default function Talent() {
             {talentPool.filter(t => t.featured).map((talent, index) => (
               <motion.div
                 key={talent.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
@@ -824,7 +824,7 @@ export default function Talent() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -840,7 +840,7 @@ export default function Talent() {
               {filteredTalent.map((talent, index) => (
                 <motion.div
                   key={talent.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                   className="group"
@@ -907,7 +907,7 @@ export default function Talent() {
               {filteredTalent.map((talent, index) => (
                 <motion.div
                   key={talent.id}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                   className="group"
@@ -1002,7 +1002,7 @@ export default function Talent() {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

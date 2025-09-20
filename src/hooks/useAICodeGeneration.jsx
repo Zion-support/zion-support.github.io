@@ -4,34 +4,34 @@ export const useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,enableUserBehaviorTracking: true
     });
-    const [isGenerating, setIsGenerating] = useState(false),
-    const [isAnalyzing, setIsAnalyzing] = useState(false),
-    const [generatedCode, setGeneratedCode] = useState(''),
-    const [codeAnalysis, setCodeAnalysis] = useState(null),
-    const [suggestions, setSuggestions] = useState([]),
-    const [history, setHistory] = useState([]),
-    const generationTimeoutRef = useRef(null),
+    const [isGenerating, setIsGenerating] = useState(false);
+    const [isAnalyzing, setIsAnalyzing] = useState(false);
+    const [generatedCode, setGeneratedCode] = useState('');
+    const [codeAnalysis, setCodeAnalysis] = useState(null);
+    const [suggestions, setSuggestions] = useState([]);
+    const [history, setHistory] = useState([]);
+    const generationTimeoutRef = useRef(null);
     // Generate code using AI
     const generateCode = useCallback(async (prompt, options) => {
-        setIsGenerating(true),
+        setIsGenerating(true);
         try {
             // Simulate AI processing - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 3000)),
-            let generatedCode = '',
+            let generatedCode = '';
             // Generate code based on options
             if (options.language === 'typescript' && options.framework === 'react') {
-                generatedCode = generateReactTypeScriptCode(prompt, options),
+                generatedCode = generateReactTypeScriptCode(prompt, options);
             }
             else if (options.language === 'javascript' && options.framework === 'express') {
-                generatedCode = generateExpressCode(prompt, options),
+                generatedCode = generateExpressCode(prompt, options);
             }
             else if (options.language === 'python') {
-                generatedCode = generatePythonCode(prompt, options),
+                generatedCode = generatePythonCode(prompt, options);
             }
             else {
-                generatedCode = generateGenericCode(prompt, options),
+                generatedCode = generateGenericCode(prompt, options);
             }
-            setGeneratedCode(generatedCode),
+            setGeneratedCode(generatedCode);
             // Add to history
             const historyItem = {
                 id: `gen_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -40,24 +40,24 @@ export const useAICodeGeneration = () => {
             };
             setHistory(prev => [historyItem, ...prev.slice(0, 49)]), // Keep last 50 items
             // Analyze the generated code
-            await analyzeCode(generatedCode, options.language),
+            await analyzeCode(generatedCode, options.language);
             trackEvent('ai_code_generationcode_generated', options.language, generatedCode.length, {
                 framework: options.framework,style: options.style,target: options.target,quality: options.quality
             });
         }
         catch (error) {
-            console.error('Failed to generate code:', error),
+            console.error('Failed to generate code:', error);
             trackEvent('ai_code_generationgeneration_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
         }
         finally {
-            setIsGenerating(false),
+            setIsGenerating(false);
         }
     }, [trackEvent]),
     // Analyze existing code
     const analyzeCode = useCallback(async (code, language) => {
-        setIsAnalyzing(true),
+        setIsAnalyzing(true);
         try {
             // Simulate AI analysis - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000)),
@@ -65,27 +65,27 @@ export const useAICodeGeneration = () => {
                 complexity: calculateComplexity(code),maintainability: calculateMaintainability(code),security: calculateSecurityScore(code),performance: calculatePerformanceScore(code),accessibility: calculateAccessibilityScore(code),suggestions: generateCodeSuggestions(code, language),
                 metrics: getCodeMetrics(code),issues: analyzeCodeIssues(code, language)
             },
-            setCodeAnalysis(analysis),
-            setSuggestions(analysis.suggestions),
+            setCodeAnalysis(analysis);
+            setSuggestions(analysis.suggestions);
             trackEvent('ai_code_analysiscode_analyzed', language, code.length, {
                 complexity: analysis.complexity,maintainability: analysis.maintainability,security: analysis.security,performance: analysis.performance
             });
         }
         catch (error) {
-            console.error('Failed to analyze code:', error),
+            console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysisanalysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
         }
         finally {
-            setIsAnalyzing(false),
+            setIsAnalyzing(false);
         }
     }, [trackEvent]),
     // Apply a code suggestion
     const applySuggestion = useCallback((suggestion) => {
         setGeneratedCode(prev => {
             // Simple replacement - in production, this would be more sophisticated
-            return prev.replace(/\/\/ TODO: Apply suggestion/g, suggestion.code),
+            return prev.replace(/\/\/ TODO: Apply suggestion/g, suggestion.code);
         }),
         // Remove the applied suggestion
         setSuggestions(prev => prev.filter(s => s.id !== suggestion.id)),
@@ -98,26 +98,26 @@ export const useAICodeGeneration = () => {
         try {
             // Simulate AI optimization - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2500)),
-            let optimizedCode = code,
+            let optimizedCode = code;
             switch (focus) {
                 case 'performance':
-                    optimizedCode = optimizeForPerformance(code),
+                    optimizedCode = optimizeForPerformance(code);
                     break,
                 case 'security':
-                    optimizedCode = optimizeForSecurity(code),
+                    optimizedCode = optimizeForSecurity(code);
                     break,
                 case 'maintainability':
-                    optimizedCode = optimizeForMaintainability(code),
+                    optimizedCode = optimizeForMaintainability(code);
                     break,
                 case 'accessibility':
-                    optimizedCode = optimizeForAccessibility(code),
+                    optimizedCode = optimizeForAccessibility(code);
                     break,
             }
-            trackEvent('ai_code_generationcode_optimized', focus, optimizedCode.length),
-            return optimizedCode,
+            trackEvent('ai_code_generationcode_optimized', focus, optimizedCode.length);
+            return optimizedCode;
         }
         catch (error) {
-            console.error('Failed to optimize code:', error),
+            console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generationoptimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -128,22 +128,22 @@ export const useAICodeGeneration = () => {
     const generateTests = useCallback(async (code, language) => {
         try {
             // Simulate AI test generation - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 2000)),
-            let testCode = '',
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            let testCode = '';
             if (language === 'typescript' || language === 'javascript') {
-                testCode = generateJestTests(code),
+                testCode = generateJestTests(code);
             }
             else if (language === 'python') {
-                testCode = generatePytestTests(code),
+                testCode = generatePytestTests(code);
             }
             else {
-                testCode = generateGenericTests(code, language),
+                testCode = generateGenericTests(code, language);
             }
-            trackEvent('ai_code_generationtests_generated', language, testCode.length),
-            return testCode,
+            trackEvent('ai_code_generationtests_generated', language, testCode.length);
+            return testCode;
         }
         catch (error) {
-            console.error('Failed to generate tests:', error),
+            console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generationtest_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -154,37 +154,37 @@ export const useAICodeGeneration = () => {
     const generateDocs = useCallback(async (code, language) => {
         try {
             // Simulate AI documentation generation - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 1500)),
-            let docs = '',
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            let docs = '';
             if (language === 'typescript' || language === 'javascript') {
-                docs = generateJSDoc(code),
+                docs = generateJSDoc(code);
             }
             else if (language === 'python') {
-                docs = generatePythonDoc(code),
+                docs = generatePythonDoc(code);
             }
             else {
-                docs = generateGenericDocs(code, language),
+                docs = generateGenericDocs(code, language);
             }
-            trackEvent('ai_code_generationdocs_generated', language, docs.length),
-            return docs,
+            trackEvent('ai_code_generationdocs_generated', language, docs.length);
+            return docs;
         }
         catch (error) {
-            console.error('Failed to generate documentation:', error),
+            console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generationdoc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate documentation',
         }
-    }, [trackEvent]),
+    }, [trackEvent]);
     // Clear generation history
     const clearHistory = useCallback(() => {
-        setHistory([]),
-        trackEvent('ai_code_generationhistory_cleared', 'manual'),
+        setHistory([]);
+        trackEvent('ai_code_generationhistory_cleared', 'manual');
     }, [trackEvent]),
     // Export generated code
     const exportCode = useCallback((format) => {
-        let exportContent = '',
-        let filename = '',
+        let exportContent = '';
+        let filename = '';
         if (format === 'json') {
             exportContent = JSON.stringify({
                 code: generatedCode,analysis: codeAnalysis;
@@ -200,23 +200,23 @@ export const useAICodeGeneration = () => {
         else {
             exportContent = generatedCode,
             filename = 'generated-code.txt',
-        }
+        };
         const blob = new Blob([exportContent], { type: 'text/plain' });
-        const url = window.URL.createObjectURL(blob),
-        const a = document.createElement('a'),
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
         a.href = url,
         a.download = filename,
-        a.click(),
-        window.URL.revokeObjectURL(url),
-        trackEvent('ai_code_generationcode_exported', format, exportContent.length),
+        a.click();
+        window.URL.revokeObjectURL(url);
+        trackEvent('ai_code_generationcode_exported', format, exportContent.length);
     }, [generatedCode, codeAnalysis, suggestions, trackEvent]),
     // Get basic code metrics
     const getCodeMetrics = useCallback((code) => {
-        const lines = code.split('\n').length,
-        const functions = (code.match(/function\s+\w+|const\s+\w+\s*=\s*\(|=>/g) || []).length,
-        const classes = (code.match(/class\s+\w+/g) || []).length,
-        const imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length,
-        const dependencies = (code.match(/from\s+['"][^'"]+['"]|require\s*\(['"][^'"]+['"]/g) || []).length,
+        const lines = code.split('\n').length;
+        const functions = (code.match(/function\s+\w+|const\s+\w+\s*=\s*\(|=>/g) || []).length;
+        const classes = (code.match(/class\s+\w+/g) || []).length;
+        const imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length;
+        const dependencies = (code.match(/from\s+['"][^'"]+['"]|require\s*\(['"][^'"]+['"]/g) || []).length;
         return {
             linesOfCode: lines;
             functions,
@@ -260,8 +260,8 @@ export default GeneratedComponent,`;
         return `import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-const app = express(),
-const PORT = process.env.PORT || 3000,
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors()),
@@ -276,7 +276,7 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-  console.log(\`Server running on port \${PORT}\`),
+  console.log(\`Server running on port \${PORT}\`);
 }),`,
     },
     const generatePythonCode = (prompt, _options) => {
@@ -318,18 +318,18 @@ if __name__ == "__main__": asyncio.run(main())`
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
 
-console.log("Prompt:", "${prompt}"),
+console.log("Prompt:", "${prompt}");
 console.log("Language:", "${options.language}"),`,
     },
     // Helper functions for code analysis
     const calculateComplexity = (code) => {
-        const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1,
+        const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5))),
-    },
+    };
     const calculateMaintainability = (code) => {
-        const lines = code.split('\n').length,
-        const functions = (code.match(/function|=>/g) || []).length,
-        const avgFunctionLength = lines / Math.max(1, functions),
+        const lines = code.split('\n').length;
+        const functions = (code.match(/function|=>/g) || []).length;
+        const avgFunctionLength = lines / Math.max(1, functions);
         if (avgFunctionLength < 10)
             return 9,
         if (avgFunctionLength < 20)
@@ -337,25 +337,25 @@ console.log("Language:", "${options.language}"),`,
         if (avgFunctionLength < 30)
             return 5,
         return 3,
-    },
+    };
     const calculateSecurityScore = (code) => {
-        const securityIssues = (code.match(/eval|innerHTML|document\.write|localStorage|sessionStorage/g) || []).length,
-        return Math.max(1, 10 - securityIssues),
+        const securityIssues = (code.match(/eval|innerHTML|document\.write|localStorage|sessionStorage/g) || []).length;
+        return Math.max(1, 10 - securityIssues);
     },
     const calculatePerformanceScore = (code) => {
-        const performanceIssues = (code.match(/setInterval|setTimeout|addEventListener|querySelectorAll/g) || []).length,
+        const performanceIssues = (code.match(/setInterval|setTimeout|addEventListener|querySelectorAll/g) || []).length;
         return Math.max(1, 10 - Math.floor(performanceIssues / 2)),
-    },
+    };
     const calculateAccessibilityScore = (code) => {
-        const accessibilityFeatures = (code.match(/aria-|role=|alt=|title=/g) || []).length,
+        const accessibilityFeatures = (code.match(/aria-|role=|alt=|title=/g) || []).length;
         return Math.min(10, Math.max(1, Math.floor(accessibilityFeatures / 2))),
-    },
+    };
     const generateCodeSuggestions = (code, _language) => {
-        const suggestions = [],
+        const suggestions = [];
         // Performance suggestions
         if (code.includes('setInterval') || code.includes('setTimeout')) {
             suggestions.push({
-                id: `suggestion_${Date.now()}_1`;
+                id: `suggestion_${Date.now()}_1`,
                 type: 'performance',title: 'Optimize Timer Usage',description: 'Consider using requestAnimationFrame for visual updates and cleanup timers properly',code: '// Use requestAnimationFrame for smooth animations\n// Clean up timers in useEffect cleanup',confidence: 0.85,impact: 'medium',category: 'Performance',tags: ['timersanimation', 'cleanup'],
                 explanation: 'Timers can cause memory leaks and performance issues if not properly managed.',alternatives: ['requestAnimationFrameuseEffect cleanup', 'AbortController']
             }),
@@ -363,7 +363,7 @@ console.log("Language:", "${options.language}"),`,
         // Security suggestions
         if (code.includes('innerHTML') || code.includes('document.write')) {
             suggestions.push({
-                id: `suggestion_${Date.now()}_2`;
+                id: `suggestion_${Date.now()}_2`,
                 type: 'security',title: 'Prevent XSS Attacks',description: 'Avoid using innerHTML with user input to prevent XSS vulnerabilities',code: '// Use textContent instead of innerHTML\n// Sanitize user input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity', 'user-input'],
                 explanation: 'innerHTML can execute malicious scripts if user input is not properly sanitized.',alternatives: ['textContentcreateElement', 'DOMPurify']
             }),
@@ -371,51 +371,51 @@ console.log("Language:", "${options.language}"),`,
         // Best practice suggestions
         if (code.includes('console.log')) {
             suggestions.push({
-                id: `suggestion_${Date.now()}_3`;
+                id: `suggestion_${Date.now()}_3`,
                 type: 'best_practice',title: 'Remove Console Logs',description: 'Remove console.log statements for production code',code: '// Remove console.log statements\n// Use proper logging library for production',confidence: 0.90,impact: 'low',category: 'Best Practices',tags: ['loggingproduction', 'cleanup'],
                 explanation: 'Console logs should not be in production code as they can impact performance and expose sensitive information.',alternatives: ['winstonpino', 'debug package']
             }),
-        }
+        };
         return suggestions,
-    },
+    };
     const analyzeCodeIssues = (code, _language) => {
-        const issues = [],
+        const issues = [];
         if (code.includes('TODO')) {
             issues.push({
                 severity: 'info',message: 'Code contains TODO comments that need implementation',line: code.split('\n').findIndex(line => line.includes('TODO')) + 1
             });
-        }
+        };
         if (code.includes('any')) {
             issues.push({
                 severity: 'warning',message: 'Usage of "any" type reduces type safety',line: code.split('\n').findIndex(line => line.includes('any')) + 1
             });
-        }
+        };
         return issues,
-    },
+    };
     // Helper functions for code optimization
     const optimizeForPerformance = (code) => {
         return code
             .replace(/console\.log/g, '// console.log removed for performance')
             .replace(/setInterval/g, '// Consider requestAnimationFrame instead of setInterval')
-            .replace(/querySelectorAll/g, '// Consider caching querySelectorAll results'),
+            .replace(/querySelectorAll/g, '// Consider caching querySelectorAll results');
     },
     const optimizeForSecurity = (code) => {
         return code
             .replace(/innerHTML/g, 'textContent')
             .replace(/eval/g, '// eval() removed for security - use alternatives')
-            .replace(/localStorage/g, '// Consider security implications of localStorage'),
+            .replace(/localStorage/g, '// Consider security implications of localStorage');
     },
     const optimizeForMaintainability = (code) => {
         return code
             .replace(/\/\/ TODO/g, '// IMPLEMENTED:')
             .replace(/any/g, 'unknown')
             .replace(/function\s+(\w+)/g, 'const $1 = ('),
-    },
+    };
     const optimizeForAccessibility = (code) => {
         return code
             .replace(/<div>/g, '<div role="main">')
             .replace(/<button>/g, '<button aria-label="Action button">')
-            .replace(/<img/g, '<img alt="Description"'),
+            .replace(/<img/g, '<img alt="Description"');
     },
     // Helper functions for test generation
     const generateJestTests = (_code) => {
@@ -423,12 +423,12 @@ console.log("Language:", "${options.language}"),`,
 import GeneratedComponent from "./GeneratedComponent";
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
-    render(<GeneratedComponent />),
-    expect(screen.getByText('Generated Component')).toBeInTheDocument(),
+    render(<GeneratedComponent />);
+    expect(screen.getByText('Generated Component')).toBeInTheDocument();
   }),
 
   it('handles user interactions', () => {
-    render(<GeneratedComponent />),
+    render(<GeneratedComponent />);
     // TODO: Add specific test cases based on component functionality
   });
 }),`,
@@ -502,7 +502,7 @@ def generated_function():
     useEffect(() => {
         return () => {
             if (generationTimeoutRef.current) {
-                clearTimeout(generationTimeoutRef.current),
+                clearTimeout(generationTimeoutRef.current);
             }
         },
     }, []),
@@ -525,5 +525,5 @@ def generated_function():
         clearHistory,
         exportCode,
         getCodeMetrics
-    },
+    };
 };

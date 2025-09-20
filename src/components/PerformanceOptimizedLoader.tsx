@@ -111,7 +111,7 @@ export function GridSkeleton({
   rows = 2,
   className = ""
 }: {
-  columns?: number,
+  columns?: number;
   rows?: number;
   className?: string;
 }) {

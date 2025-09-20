@@ -39,7 +39,7 @@ const AIMarketingAutomation = () => {
     };
     {
       icon: BarChart3,title: "Predictive Analytics",description: "AI predicts customer behavior and campaign performance",price: "$99/month"
-    };
+    },
     {
       icon: Users,title: "Multi-Channel Orchestration",description: "Seamlessly coordinate campaigns across email, social, and web",
       price: "$119/month"
@@ -48,7 +48,7 @@ const AIMarketingAutomation = () => {
   const pricingPlans = [
     {
       name: "Starter",price: "$59",period: "/month",description: "Perfect for small businesses starting with AI marketing",features: [
-        "Basic audience targeting";
+        "Basic audience targeting",
         "Email automation",
         "Social media posting",
         "Email support"
@@ -57,7 +57,7 @@ const AIMarketingAutomation = () => {
     };
     {
       name: "Professional",price: "$149",period: "/month",description: "Ideal for growing businesses with multiple marketing channels",features: [
-        "All Starter features";
+        "All Starter features",
         "Advanced AI targeting",
         "Multi-channel campaigns",
         "Priority support",
@@ -67,7 +67,7 @@ const AIMarketingAutomation = () => {
     };
     {
       name: "Enterprise",price: "$399",period: "/month",description: "For large organizations with complex marketing needs",features: [
-        "All Professional features";
+        "All Professional features",
         "Custom AI models",
         "Advanced analytics",
         "Dedicated support",
@@ -85,7 +85,7 @@ const AIMarketingAutomation = () => {
     };
     {
       icon: Target,title: "5x Better Targeting",description: "AI identifies and reaches your ideal customers with precision"
-    };
+    },
     {
       icon: Heart,title: "Personalized Experience",description: "Every customer receives relevant, personalized content"
     }
@@ -126,7 +126,7 @@ const AIMarketingAutomation = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
@@ -134,7 +134,7 @@ const AIMarketingAutomation = () => {
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300"
                 >
@@ -149,7 +149,7 @@ const AIMarketingAutomation = () => {
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -166,7 +166,7 @@ const AIMarketingAutomation = () => {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
@@ -186,7 +186,7 @@ const AIMarketingAutomation = () => {
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-7xl">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -203,7 +203,7 @@ const AIMarketingAutomation = () => {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-pink-400/50 transition-all duration-300 group"
@@ -224,7 +224,7 @@ const AIMarketingAutomation = () => {
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -241,7 +241,7 @@ const AIMarketingAutomation = () => {
               {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
@@ -277,7 +277,7 @@ const AIMarketingAutomation = () => {
                   </ul>
 
                   <motion.button
-                    whileHover={{ scale: 1.02 }}
+                    whileHover={{ scale: 1.02 }};
                     whileTap={{ scale: 0.98 }}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
@@ -297,7 +297,7 @@ const AIMarketingAutomation = () => {
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -309,7 +309,7 @@ const AIMarketingAutomation = () => {
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
@@ -317,7 +317,7 @@ const AIMarketingAutomation = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-pink-400 text-pink-400 font-semibold rounded-lg hover: bg-pink-400 hover:text-white transition-all duration-300"
                 >

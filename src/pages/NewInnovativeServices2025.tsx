@@ -135,7 +135,7 @@ export default function NewInnovativeServices2025() {
   const serviceCategories = [
     {
       name: "AI & Machine Learning",icon: Brain,description: "Cutting-edge AI solutions for business transformation",services: [
-        "AI Workflow Orchestrator";
+        "AI Workflow Orchestrator",
         "AI Data Governance Platform",
         "AI Customer Experience Analytics",
         "AI Project Management",
@@ -145,7 +145,7 @@ export default function NewInnovativeServices2025() {
     };
     {
       name: "Data & Analytics",icon: BarChart3,description: "Advanced data solutions for informed decision-making",services: [
-        "Data Governance Platform";
+        "Data Governance Platform",
         "Customer Experience Analytics",
         "Business Intelligence",
         "Predictive Analytics",
@@ -155,7 +155,7 @@ export default function NewInnovativeServices2025() {
     };
     {
       name: "Security & Compliance",icon: Shield,description: "Enterprise-grade security and compliance solutions",services: [
-        "Data Governance Platform";
+        "Data Governance Platform",
         "Zero Trust Network Access",
         "Security Headers & CSP",
         "DSR Privacy Portal",
@@ -165,7 +165,7 @@ export default function NewInnovativeServices2025() {
     };
     {
       name: "Business Process Automation",icon: WorkflowIcon,description: "Streamline operations with intelligent automation",services: [
-        "AI Workflow Orchestrator";
+        "AI Workflow Orchestrator",
         "AI Project Management",
         "Customer Support Automation",
         "Email Automation",
@@ -180,7 +180,7 @@ export default function NewInnovativeServices2025() {
     };
     {
       icon: DollarSign,title: "Cost Reduction",description: "Reduce operational costs through intelligent automation and process optimization"
-    };
+    },
     {
       icon: Users,title: "Enhanced Customer Experience",description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty"
     },
@@ -221,7 +221,7 @@ export default function NewInnovativeServices2025() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >
@@ -229,7 +229,7 @@ export default function NewInnovativeServices2025() {
                   Explore Services
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >
@@ -245,7 +245,7 @@ export default function NewInnovativeServices2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -263,7 +263,7 @@ export default function NewInnovativeServices2025() {
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -302,7 +302,7 @@ export default function NewInnovativeServices2025() {
                   
                   <Link to={service.link}>
                     <motion.button
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={{ scale: 1.02 }};
                       whileTap={{ scale: 0.98 }}
                       className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                         service.popular
@@ -323,7 +323,7 @@ export default function NewInnovativeServices2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -341,7 +341,7 @@ export default function NewInnovativeServices2025() {
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -375,7 +375,7 @@ export default function NewInnovativeServices2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -393,7 +393,7 @@ export default function NewInnovativeServices2025() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -414,7 +414,7 @@ export default function NewInnovativeServices2025() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -429,7 +429,7 @@ export default function NewInnovativeServices2025() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >
@@ -437,7 +437,7 @@ export default function NewInnovativeServices2025() {
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >

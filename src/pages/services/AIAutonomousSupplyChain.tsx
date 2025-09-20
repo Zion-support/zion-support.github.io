@@ -50,7 +50,7 @@ const AIAutonomousSupplyChain = () => {
     {
       title: "Supplier Risk Assessment",description: "AI analyzes supplier performance, financial health, and geopolitical risks in real-time",
       icon: Shield,color: "from-yellow-500 to-orange-500"
-    };
+    },
     {
       title: "End-to-End Visibility",description: "Complete transparency across the entire supply chain from raw materials to final delivery",icon: Eye,color: "from-cyan-500 to-blue-500"
     }
@@ -59,7 +59,7 @@ const AIAutonomousSupplyChain = () => {
     {
       name: "Starter",price: "$1,999",
       period: "/month",description: "Perfect for small to medium businesses",features: [
-        "AI demand forecasting";
+        "AI demand forecasting",
         "Basic inventory management",
         "Route optimization",
         "Up to 5 warehouses",
@@ -71,7 +71,7 @@ const AIAutonomousSupplyChain = () => {
     {
       name: "Professional",price: "$4,999",
       period: "/month",description: "Ideal for growing enterprises",features: [
-        "Advanced AI algorithms";
+        "Advanced AI algorithms",
         "Multi-warehouse management",
         "Predictive maintenance",
         "Supplier risk assessment",
@@ -84,7 +84,7 @@ const AIAutonomousSupplyChain = () => {
     {
       name: "Enterprise",price: "$12,999",
       period: "/month",description: "For large corporations and global operations",features: [
-        "Custom AI model development";
+        "Custom AI model development",
         "Global supply chain visibility",
         "Advanced analytics dashboard",
         "Dedicated support team",
@@ -104,7 +104,7 @@ const AIAutonomousSupplyChain = () => {
     };
     {
       title: "Better Customer Service",description: "Faster delivery times and improved order accuracy",metric: "50% faster delivery"
-    };
+    },
     {
       title: "Risk Mitigation",description: "Identify and prevent supply chain disruptions proactively",metric: "80% risk reduction"
     }
@@ -120,7 +120,7 @@ const AIAutonomousSupplyChain = () => {
     };
     {
       title: "Healthcare",description: "Ensure critical medical supplies are always available and properly distributed",icon: Heart,color: "from-red-500 to-pink-500"
-    };
+    },
     {
       title: "Food & Beverage",description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",
       icon: Leaf,color: "from-green-500 to-emerald-500"
@@ -144,7 +144,7 @@ const AIAutonomousSupplyChain = () => {
               </h1>
             </div>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your supply chain with AI-powered automation. Optimize operations, reduce costs, 
+              Transform your supply chain with AI-powered automation. Optimize operations, reduce costs; 
               and gain unprecedented visibility across your entire network.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -170,7 +170,7 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -189,7 +189,7 @@ const AIAutonomousSupplyChain = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -210,7 +210,7 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -228,7 +228,7 @@ const AIAutonomousSupplyChain = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -249,7 +249,7 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -267,7 +267,7 @@ const AIAutonomousSupplyChain = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -286,7 +286,7 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -304,7 +304,7 @@ const AIAutonomousSupplyChain = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -360,7 +360,7 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-green-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

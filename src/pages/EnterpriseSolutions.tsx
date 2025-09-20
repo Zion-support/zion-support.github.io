@@ -15,6 +15,6 @@ const EnterpriseSolutions: React.FC = () => {
       </div>
     </div>
   ),
-},
+};
 
 export default EnterpriseSolutions;

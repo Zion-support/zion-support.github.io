@@ -23,7 +23,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </p>
         </div>
 
-        {/* Innovation Categories */},
+        {/* Innovation Categories */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="group bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🧠</div>

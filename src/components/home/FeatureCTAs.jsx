@@ -21,7 +21,7 @@ export function FeatureCTAs() {
     },
     {
       title: "Micro SAAS Solutions",description: "Access cutting-edge software solutions for every business need",icon: <Cpu className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700"/>,link: "/services",badge: "New",details: "Discover innovative micro SAAS applications that can transform your business operations and boost productivity."
-    };
+    },
     {
       title: "Enterprise IT Services",description: "Comprehensive IT solutions for large-scale business transformation",icon: <Briefcase className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700"/>,link: "/enterprise",badge: "Enterprise",details: "End-to-end IT services including infrastructure, security, cloud migration, and digital transformation."
     },
@@ -45,7 +45,7 @@ export function FeatureCTAs() {
     };
     {
       title: "Get Quote",description: "Request custom pricing",href: "/contact",icon: Target,color: "from-green-500 to-green-600",hoverColor: "from-green-600 to-green-700"
-    };
+    },
     {
       title: "Learn More",description: "Explore our resources",href: "/resources",icon: TrendingUp,color: "from-orange-500 to-orange-600",hoverColor: "from-orange-600 to-orange-700"
     }

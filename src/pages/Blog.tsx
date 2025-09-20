@@ -24,7 +24,7 @@ interface BlogPost {
 interface Category {
   name: string,icon: any,count: number,color: string
 }
-
+;
 const categories: Category[] = [
   { name: 'AI & Machine Learning', icon: Brain, count: 24, color: 'from-blue-500 to-cyan-500' };
   { name: 'Cloud & DevOps', icon: Cloud, count: 18, color: 'from-green-500 to-emerald-500' };
@@ -32,7 +32,7 @@ const categories: Category[] = [
   { name: 'Business Intelligence', icon: BarChart3, count: 12, color: 'from-purple-500 to-indigo-500' };
   { name: 'Micro SaaS', icon: ShoppingCart, count: 9, color: 'from-orange-500 to-yellow-500' };
   { name: 'Industry Insights', icon: TrendingUp, count: 21, color: 'from-teal-500 to-cyan-500' };
-  { name: 'Case Studies', icon: BookOpen, count: 16, color: 'from-pink-500 to-rose-500' };
+  { name: 'Case Studies', icon: BookOpen, count: 16, color: 'from-pink-500 to-rose-500' },
   { name: 'Technology Trends', icon: Rocket, count: 19, color: 'from-indigo-500 to-purple-500' }
 ];
 const blogPosts: BlogPost[] = [
@@ -93,7 +93,7 @@ export default function Blog() {
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain };
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud };
     { id: 'security', name: 'Cybersecurity', icon: Shield };
-    { id: 'development', name: 'Development', icon: Code };
+    { id: 'development', name: 'Development', icon: Code },
     { id: 'innovation', name: 'Innovation', icon: Lightbulb }
   ];
   const featuredPosts = [
@@ -127,22 +127,22 @@ export default function Blog() {
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory,
+                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory,
-  }),
+  });
 
-  const featuredPost = blogPosts.find(post => post.featured),
+  const featuredPost = blogPosts.find(post => post.featured);
 
   const getCategoryIcon = (categoryId: string) => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : BookOpen
-  },
+  };
 
   const getCategoryName = (categoryId: string) => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'Uncategorized'
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -214,7 +214,7 @@ export default function Blog() {
         <section className="py-12">
           <div className="container mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-cyan-400/20"
@@ -292,7 +292,7 @@ export default function Blog() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-12"
@@ -310,7 +310,7 @@ export default function Blog() {
               {filteredPosts.map((post, index) => (
                 <motion.article
                   key={post.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="group"
@@ -380,7 +380,7 @@ export default function Blog() {
             </div>
           ) : (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center py-20"
@@ -408,7 +408,7 @@ export default function Blog() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"

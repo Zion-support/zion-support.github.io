@@ -40,7 +40,7 @@ export default function AILegalDocumentAutomation() {
 
   const benefits = [
     'Reduce legal document creation time by 85%Minimize legal risks and compliance errors';
-    'Standardize legal processes across organizationsEnable faster contract negotiations and closings';
+    'Standardize legal processes across organizationsEnable faster contract negotiations and closings',
     'Reduce legal costs by 40-60%Improve accuracy and consistency in legal documents'
   ];
   const useCases = [
@@ -61,7 +61,7 @@ export default function AILegalDocumentAutomation() {
   const pricing = [
     {
       plan: 'Starter',price: '$299',period: '/month',features: [
-        'Up to 50 documents/monthBasic contract templates';
+        'Up to 50 documents/monthBasic contract templates',
         'Standard compliance checksEmail support',
         'Basic legal research tools'
       ],
@@ -69,7 +69,7 @@ export default function AILegalDocumentAutomation() {
     };
     {
       plan: 'Professional',price: '$799',period: '/month',features: [
-        'Up to 200 documents/monthAdvanced contract templates';
+        'Up to 200 documents/monthAdvanced contract templates',
         'Multi-jurisdiction supportPriority support',
         'Advanced legal researchContract negotiation assistance'
       ],
@@ -78,7 +78,7 @@ export default function AILegalDocumentAutomation() {
     {
       plan: 'Enterprise',price: '$1,999',
       period: '/month',features: [
-        'Unlimited documentsCustom template creation';
+        'Unlimited documentsCustom template creation',
         'White-label solutions24/7 dedicated support',
         'API accessCustom integrations'
       ],
@@ -89,7 +89,7 @@ export default function AILegalDocumentAutomation() {
     { name: 'Clio', url: 'https://www.clio.com/', category: 'Practice Management' };
     { name: 'LexisNexis', url: 'https://www.lexisnexis.com/', category: 'Legal Research' };
     { name: 'Westlaw', url: 'https://www.westlaw.com/', category: 'Legal Database' };
-    { name: 'DocuSign', url: 'https://www.docusign.com/', category: 'E-Signature' };
+    { name: 'DocuSign', url: 'https://www.docusign.com/', category: 'E-Signature' },
     { name: 'ContractPodAi', url: 'https://www.contractpodai.com/', category: 'Contract AI' }
   ];
   const complianceFrameworks = [

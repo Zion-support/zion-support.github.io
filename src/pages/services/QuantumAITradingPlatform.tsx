@@ -40,11 +40,11 @@ import {
   PieChart
 } from "lucide-react";
 export default function QuantumAITradingPlatform() {
-  const [activeTab, setActiveTab] = useState('overview'),
-  const [isVisible, setIsVisible] = useState(false),
+  const [activeTab, setActiveTab] = useState('overview');
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true);
   }, []),
 
   const features = [
@@ -76,8 +76,8 @@ export default function QuantumAITradingPlatform() {
     "High-frequency trading"
   ];
   const technicalSpecs = {
-    technology: ["IBM Qiskit", "Google Cirq", "Python", "TensorFlow", "React", "Node.js"];
-    integrations: ["Bloomberg", "Reuters", "NYSE", "NASDAQ", "LSE"];
+    technology: ["IBM Qiskit", "Google Cirq", "Python", "TensorFlow", "React", "Node.js"],
+    integrations: ["Bloomberg", "Reuters", "NYSE", "NASDAQ", "LSE"],
     apiEndpoints: 500,uptime: "99.999%",security: ["SOC 2", "PCI DSS", "FINRA compliance", "Quantum encryption"]
   },
 
@@ -85,7 +85,7 @@ export default function QuantumAITradingPlatform() {
     monthly: "$9,999",
     yearly: "$99,999",
     enterprise: "Custom",features: [
-      "Full quantum trading capabilities";
+      "Full quantum trading capabilities",
       "Unlimited trading volume",
       "Priority support",
       "Custom integrations",
@@ -116,7 +116,7 @@ export default function QuantumAITradingPlatform() {
                 duration: 3 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
               }}
               style={{
-                left: `${Math.random() * 100}%`;
+                left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`
               }}
             />

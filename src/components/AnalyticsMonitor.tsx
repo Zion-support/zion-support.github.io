@@ -22,17 +22,17 @@ export const AnalyticsMonitor: React.FC = () => {
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({
     pageViews: 0,sessionDuration: 0,bounceRate: 0,conversionRate: 0,topPages: [],userJourney: []
   });
-  const [isTracking, setIsTracking] = useState(false),
-  const [sessionId] = useState(() => generateSessionId()),
+  const [isTracking, setIsTracking] = useState(false);
+  const [sessionId] = useState(() => generateSessionId());
 
   // Generate unique session ID
   function generateSessionId(): string {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }
 
   // Track custom event
   const trackEvent = useCallback((category: string, action: string, label?: string, value?: number) => {
-    const event: AnalyticsEvent = {
+    const event: AnalyticsEvent = {,
       id: generateEventId(),type: 'custom';
       category,
       action,
@@ -42,18 +42,18 @@ export const AnalyticsMonitor: React.FC = () => {
       sessionId,
       pageUrl: window.location.href,userAgent: navigator.userAgent,referrer: document.referrer
     };
-    setEvents(prev => [...prev, event]),
+    setEvents(prev => [...prev, event]);
     
     // Send to analytics service (replace with your actual analytics endpoint)
-    sendToAnalytics(event),
+    sendToAnalytics(event);
     
     // Store in localStorage for persistence
-    storeEventLocally(event),
+    storeEventLocally(event);
   }, [sessionId, sendToAnalytics, storeEventLocally]),
 
   // Generate unique event ID
   function generateEventId(): string {
-    return 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+    return 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }
 
   // Send event to analytics service
@@ -64,10 +64,10 @@ export const AnalyticsMonitor: React.FC = () => {
       storeEventLocally(event);
       // Log event for debugging (remove in production)
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics event stored locally:', event),
+        console.log('Analytics event stored locally:', event);
       }
     } catch (error) {
-      console.warn('Error storing analytics event locally:', error),
+      console.warn('Error storing analytics event locally:', error);
     }
   }, [storeEventLocally]),
 
@@ -75,30 +75,30 @@ export const AnalyticsMonitor: React.FC = () => {
   const storeEventLocally = useCallback((event: AnalyticsEvent) => {
     try {
       const storedEvents = localStorage.getItem('analytics-events');
-      const events = storedEvents ? JSON.parse(storedEvents) : [],
-      events.push(event),
+      const events = storedEvents ? JSON.parse(storedEvents) : [];
+      events.push(event);
       
       // Keep only last 1000 events
       if (events.length > 1000) {
-        events.splice(0, events.length - 1000),
+        events.splice(0, events.length - 1000);
       }
       
       localStorage.setItem('analytics-events', JSON.stringify(events)),
     } catch (error) {
-      console.warn('Error storing event locally:', error),
+      console.warn('Error storing event locally:', error);
     }
   }, []),
 
   // Track page view
   const trackPageView = useCallback((url: string) => {
-    const event: AnalyticsEvent = {
+    const event: AnalyticsEvent = {,
       id: generateEventId(),type: 'pageview',category: 'navigation',action: 'page_view',label: url,timestamp: Date.now();
       sessionId,
       pageUrl: url,userAgent: navigator.userAgent,referrer: document.referrer
     };
-    setEvents(prev => [...prev, event]),
-    sendToAnalytics(event),
-    storeEventLocally(event),
+    setEvents(prev => [...prev, event]);
+    sendToAnalytics(event);
+    storeEventLocally(event);
     
     // Update user behavior
     setUserBehavior(prev => ({
@@ -110,12 +110,12 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Track user interaction
   const trackInteraction = useCallback((element: string, action: string, details?: any) => {
-    trackEvent('interaction', action, element, details?.value),
+    trackEvent('interaction', action, element, details?.value);
   }, [trackEvent]),
 
   // Track conversion
   const trackConversion = useCallback((goal: string, value?: number) => {
-    trackEvent('conversiongoal_completed', goal, value),
+    trackEvent('conversiongoal_completed', goal, value);
     
     // Update conversion rate
     setUserBehavior(prev => ({
@@ -130,7 +130,7 @@ export const AnalyticsMonitor: React.FC = () => {
       try {
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries(),
+          const entries = list.getEntries();
           entries.forEach((entry) => {
             if (entry.name === 'first-contentful-paint') {
               setPerformance(prev => ({
@@ -143,8 +143,8 @@ export const AnalyticsMonitor: React.FC = () => {
         fcpObserver.observe({ entryTypes: ['paint'] });
         // Largest Contentful Paint
         const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries(),
-          const lastEntry = entries[entries.length - 1],
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
             setPerformance(prev => ({
               ...prev,
@@ -155,7 +155,7 @@ export const AnalyticsMonitor: React.FC = () => {
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries(),
+          const entries = list.getEntries();
           entries.forEach((entry) => {
             setPerformance(prev => ({
               ...prev,
@@ -166,7 +166,7 @@ export const AnalyticsMonitor: React.FC = () => {
         fidObserver.observe({ entryTypes: ['first-input'] });
         // Cumulative Layout Shift
         const clsObserver = new PerformanceObserver((list) => {
-          let clsValue = 0,
+          let clsValue = 0;
           list.getEntries().forEach((entry: any) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value
@@ -179,19 +179,19 @@ export const AnalyticsMonitor: React.FC = () => {
         }),
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         return () => {
-          fcpObserver.disconnect(),
-          lcpObserver.disconnect(),
-          fidObserver.disconnect(),
-          clsObserver.disconnect(),
+          fcpObserver.disconnect();
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
         },
       } catch (error) {
-        console.warn('Performance monitoring not supported:', error),
+        console.warn('Performance monitoring not supported:', error);
       }
     }
 
     // Fallback performance metrics
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         setPerformance({
           fcp: 0,lcp: 0,fid: 0,cls: 0,ttfb: Math.round(navigation.responseStart - navigation.requestStart),domLoad: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),windowLoad: Math.round(navigation.loadEventEnd - navigation.loadEventStart)
@@ -200,19 +200,19 @@ export const AnalyticsMonitor: React.FC = () => {
     },
 
     if (document.readyState === 'complete') {
-      measurePerformance(),
+      measurePerformance();
     } else {
-      window.addEventListener('load', measurePerformance),
-      return () => window.removeEventListener('load', measurePerformance),
+      window.addEventListener('load', measurePerformance);
+      return () => window.removeEventListener('load', measurePerformance);
     }
   }, []),
 
   // Session tracking
   useEffect(() => {
-    const startTime = Date.now(),
+    const startTime = Date.now();
     
     const handleBeforeUnload = () => {
-      const sessionDuration = Date.now() - startTime,
+      const sessionDuration = Date.now() - startTime;
       setUserBehavior(prev => ({
         ...prev,
         sessionDuration: Math.round(sessionDuration / 1000)
@@ -223,21 +223,21 @@ export const AnalyticsMonitor: React.FC = () => {
 
     const handleVisibilityChange = () => {
       if (document.hidden) {
-        trackEvent('sessionpage_hidden', 'user_left_page'),
+        trackEvent('sessionpage_hidden', 'user_left_page');
       } else {
-        trackEvent('sessionpage_visible', 'user_returned'),
+        trackEvent('sessionpage_visible', 'user_returned');
       }
     },
 
-    window.addEventListener('beforeunload', handleBeforeUnload),
-    document.addEventListener('visibilitychange', handleVisibilityChange),
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     // Track session start
-    trackEvent('sessionsession_start', 'new_session'),
+    trackEvent('sessionsession_start', 'new_session');
 
     return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload),
-      document.removeEventListener('visibilitychange', handleVisibilityChange),
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     },
   }, [trackEvent]),
 
@@ -247,46 +247,46 @@ export const AnalyticsMonitor: React.FC = () => {
 
     const trackClick = (event: Event) => {
       const target = event.target as HTMLElement;
-      const tagName = target.tagName.toLowerCase(),
-      const text = target.textContent?.trim() || '',
-      const href = (target as HTMLAnchorElement).href,
+      const tagName = target.tagName.toLowerCase();
+      const text = target.textContent?.trim() || '';
+      const href = (target as HTMLAnchorElement).href;
       
       if (tagName === 'a' && href) {
-        trackInteraction('linkclick', { text, href }),
+        trackInteraction('linkclick', { text, href });
       } else if (tagName === 'button') {
-        trackInteraction('buttonclick', { text }),
+        trackInteraction('buttonclick', { text });
       } else if (tagName === 'input' || tagName === 'textarea') {
         trackInteraction('form_fieldfocus', { type: (target as HTMLInputElement).type });
       }
     },
 
     const trackScroll = () => {
-      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100),
+      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
       if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-        trackEvent('engagementscroll_depth', `${scrollDepth}%`, scrollDepth),
+        trackEvent('engagementscroll_depth', `${scrollDepth}%`, scrollDepth);
       }
     },
 
     const trackFormSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement;
-      trackEvent('formsubmit', form.action || 'unknown_form'),
+      trackEvent('formsubmit', form.action || 'unknown_form');
     },
 
-    document.addEventListener('click', trackClick),
-    window.addEventListener('scroll', trackScroll),
-    document.addEventListener('submit', trackFormSubmit),
+    document.addEventListener('click', trackClick);
+    window.addEventListener('scroll', trackScroll);
+    document.addEventListener('submit', trackFormSubmit);
 
     return () => {
-      document.removeEventListener('click', trackClick),
-      window.removeEventListener('scroll', trackScroll),
-      document.removeEventListener('submit', trackFormSubmit),
+      document.removeEventListener('click', trackClick);
+      window.removeEventListener('scroll', trackScroll);
+      document.removeEventListener('submit', trackFormSubmit);
     },
   }, [isTracking, trackEvent, trackInteraction]),
 
   // Start tracking when component mounts
   useEffect(() => {
-    setIsTracking(true),
-    trackPageView(window.location.href),
+    setIsTracking(true);
+    trackPageView(window.location.href);
   }, [trackPageView]),
 
   // Export analytics data
@@ -299,22 +299,22 @@ export const AnalyticsMonitor: React.FC = () => {
       timestamp: new Date().toISOString()
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob),
-    const a = document.createElement('a'),
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url,
     a.download = `analytics-${sessionId}-${Date.now()}.json`,
-    a.click(),
-    URL.revokeObjectURL(url),
+    a.click();
+    URL.revokeObjectURL(url);
   }, [events, performance, userBehavior, sessionId]),
 
   // Clear analytics data
   const clearAnalytics = useCallback(() => {
-    setEvents([]),
-    setPerformance(null),
+    setEvents([]);
+    setPerformance(null);
     setUserBehavior({
       pageViews: 0,sessionDuration: 0,bounceRate: 0,conversionRate: 0,topPages: [],userJourney: []
     });
-    localStorage.removeItem('analytics-events'),
+    localStorage.removeItem('analytics-events');
   }, []),
 
   return (

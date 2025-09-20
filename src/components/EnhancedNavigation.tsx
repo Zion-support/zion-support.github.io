@@ -39,7 +39,7 @@ interface EnhancedNavigationProps {
   className?: string,
   onThemeChange?: (theme: 'light' | 'dark' | 'system') => void
 }
-
+;
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' };
   { 
@@ -64,7 +64,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'AI Marketing Automation', href: '/services/ai-marketing-automation' };
       { label: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation' };
       { label: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' };
-      { label: 'AI Financial Trading', href: '/services/ai-financial-trading' };
+      { label: 'AI Financial Trading', href: '/services/ai-financial-trading' },
       { label: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite' }
     ]
   };
@@ -78,7 +78,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'Enterprise Solutions', href: '/solutions/enterprise' };
       { label: 'Healthcare Solutions', href: '/solutions/healthcare' };
       { label: 'Digital Twin', href: '/services/digital-twin' };
-      { label: 'Data Analytics', href: '/services/data-analytics' };
+      { label: 'Data Analytics', href: '/services/data-analytics' },
       { label: 'Digital Transformation', href: '/services/digital-transformation' }
     ]
   };
@@ -87,7 +87,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' };
       { label: 'Security Headers & CSP', href: '/services/security-headers-csp' };
       { label: 'DSR Privacy Portal', href: '/services/dsr-portal' };
-      { label: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' };
+      { label: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' },
       { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' }
     ]
   };
@@ -98,7 +98,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform' };
       { label: 'Space Technology', href: '/space-tech' };
       { label: 'Quantum Machine Learning', href: '/services/quantum-machine-learning' };
-      { label: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' };
+      { label: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' },
       { label: 'Sustainable Technology', href: '/services/sustainable-technology' }
     ]
   };
@@ -112,7 +112,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'Mobile Survey', href: '/services/mobile-survey' };
       { label: 'Podcast Transcription', href: '/services/podcast-transcription' };
       { label: 'Email Sequencer', href: '/services/email-sequencer' };
-      { label: 'Returns Management', href: '/services/returns-management' };
+      { label: 'Returns Management', href: '/services/returns-management' },
       { label: 'LLM Content Studio', href: '/services/llm-content-studio' }
     ]
   };
@@ -122,7 +122,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'Healthcare Solutions', href: '/solutions/healthcare' };
       { label: 'Manufacturing Solutions', href: '/manufacturing-solutions' };
       { label: 'Financial Solutions', href: '/financial-solutions' };
-      { label: '5G Enterprise Solutions', href: '/5g-enterprise-solutions' };
+      { label: '5G Enterprise Solutions', href: '/5g-enterprise-solutions' },
       { label: 'Industry Solutions', href: '/industry-solutions' }
     ]
   };
@@ -134,7 +134,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'Careers', href: '/careers' };
       { label: 'Partners', href: '/partners' };
       { label: 'News', href: '/news' };
-      { label: 'Case Studies', href: '/case-studies' };
+      { label: 'Case Studies', href: '/case-studies' },
       { label: 'Blog', href: '/blog' }
     ]
   };
@@ -148,7 +148,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'Developer Portal', href: '/developer' };
       { label: 'Training', href: '/training' };
       { label: 'Webinars', href: '/webinars' };
-      { label: 'White Papers', href: '/white-papers' };
+      { label: 'White Papers', href: '/white-papers' },
       { label: 'Sitemap', href: '/sitemap' }
     ]
   };
@@ -158,48 +158,48 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = '';
   onThemeChange 
 }) => {
-  const [isOpen, setIsOpen] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system'),
-  const [isScrolled, setIsScrolled] = useState(false),
-  const location = useLocation(),
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10),
+      setIsScrolled(window.scrollY > 10);
     },
 
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),
 
   useEffect(() => {
-    setIsOpen(false),
-    setActiveDropdown(null),
+    setIsOpen(false);
+    setActiveDropdown(null);
   }, [location]),
 
   const handleThemeChange = useCallback((newTheme: 'light' | 'dark' | 'system') => {
     setTheme(newTheme);
     onThemeChange?.(newTheme),
     
-    const root = document.documentElement,
-    root.classList.remove('lightdark'),
+    const root = document.documentElement;
+    root.classList.remove('lightdark');
     
     if (newTheme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.classList.add(systemTheme)
     } else {
-      root.classList.add(newTheme),
+      root.classList.add(newTheme);
     }
     
-    localStorage.setItem('zion-theme', newTheme),
+    localStorage.setItem('zion-theme', newTheme);
   }, [onThemeChange]),
 
   const toggleDropdown = (label: string) => {
     setActiveDropdown(activeDropdown === label ? null : label)
   };
   const closeDropdown = () => {
-    setActiveDropdown(null),
+    setActiveDropdown(null);
   },
 
   const contactInfo = {

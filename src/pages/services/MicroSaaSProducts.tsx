@@ -18,7 +18,7 @@ const products: Product[] = [
       { name: 'Enterprise', price: 'Custom', features: ['SSO/SAMLSOC2 report', 'SLAs'] }
     ],
     links: [
-      { label: 'Docs', href: 'https://developers.google.com/gmail/api' };
+      { label: 'Docs', href: 'https://developers.google.com/gmail/api' },
       { label: 'Compare market pricing', href: 'https://www.g2.com/categories/email-management' }
     ]
   };

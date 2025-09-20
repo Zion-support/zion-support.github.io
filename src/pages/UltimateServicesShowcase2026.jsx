@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 // import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
 // import { enterpriseITInfrastructureServices2026 } from "../data/2025-enterprise-it-infrastructure-services";
 const UltimateServicesShowcase2026 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all'),
-    const [searchTerm, setSearchTerm] = useState(''),
-    const [sortBy, setSortBy] = useState('name'),
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
+    const [sortBy, setSortBy] = useState('name');
     // Combine all services
     const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026],
     const categories = [
@@ -30,11 +30,11 @@ const UltimateServicesShowcase2026 = () => {
         .sort((a, b) => {
         switch (sortBy) {
             case 'price':
-                return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
+                return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
             case 'category':
-                return a.category.localeCompare(b.category),
+                return a.category.localeCompare(b.category);
             case 'rating':
-                return b.rating - a.rating,
+                return b.rating - a.rating;
             case 'name':
             default: return a.name.localeCompare(b.name)
         }
@@ -42,21 +42,21 @@ const UltimateServicesShowcase2026 = () => {
     const getCategoryIcon = (category) => {
         const icons = {
             'Business Intelligence': '📊Marketing Automation': '🎯Customer Service': '🤖Supply Chain Management': '📦Financial Technology': '💰Healthcare Technology': '🏥Legal Technology': '⚖️Workflow Automation': '⚡Blockchain Technology': '🔗Internet of Things': '🌐Quantum Computing': '🔮Cybersecurity': '🛡️Cloud Infrastructure': '☁️DevOps': '⚡Data Center Management': '🏢Network Security': '🌐Storage Management': '💾Virtualization': '🖥️IT Asset Management': '📱Performance Monitoring': '📊'
-        },
+        };
         return icons[category] || '🚀',
     },
     const containerVariants = {
-        hidden: { opacity: 0 };
-        visible: {
-            opacity: 1,transition: {
+        hidden: { opacity: 0 },
+        visible: {,
+            opacity: 1,transition: {,
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 };
-        visible: {
-            y: 0,opacity: 1,transition: {
+        hidden: { y: 20, opacity: 0 },
+        visible: {,
+            y: 0,opacity: 1,transition: {,
                 duration: 0.5,ease: "easeOut"
             }
         }

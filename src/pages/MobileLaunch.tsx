@@ -50,7 +50,7 @@ const MobileLaunch: React.FC = () => {
     };
     {
       title: "Secure & Private",description: "Enterprise-grade security with end-to-end encryption and privacy controls",icon: Shield,color: "from-green-400 to-emerald-500"
-    };
+    },
     {
       title: "Smart Notifications",description: "Intelligent alerts that adapt to your preferences and schedule",icon: Bell,color: "from-orange-400 to-red-500"
     }
@@ -76,7 +76,7 @@ const MobileLaunch: React.FC = () => {
     };
     {
       platform: "Google Play Store",icon: "🤖",description: "Download for Android devices",link: "#",featured: true
-    };
+    },
     {
       platform: "Web App",icon: "🌐",description: "Access via browser",link: "/",featured: false
     }
@@ -85,7 +85,7 @@ const MobileLaunch: React.FC = () => {
     { requirement: "iOS 14.0+", icon: "🍎" };
     { requirement: "Android 8.0+", icon: "🤖" };
     { requirement: "2GB RAM", icon: "💾" };
-    { requirement: "100MB Storage", icon: "💿" };
+    { requirement: "100MB Storage", icon: "💿" },
     { requirement: "Internet Connection", icon: "🌐" }
   ];
   return (
@@ -210,7 +210,7 @@ const MobileLaunch: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -228,7 +228,7 @@ const MobileLaunch: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
@@ -249,7 +249,7 @@ const MobileLaunch: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -266,7 +266,7 @@ const MobileLaunch: React.FC = () => {
             {appScreens.map((screen, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
@@ -296,7 +296,7 @@ const MobileLaunch: React.FC = () => {
       <section id="download" className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -313,7 +313,7 @@ const MobileLaunch: React.FC = () => {
             {downloadOptions.map((option, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-slate-800/50 border rounded-xl p-8 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
@@ -348,7 +348,7 @@ const MobileLaunch: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -365,7 +365,7 @@ const MobileLaunch: React.FC = () => {
             {systemRequirements.map((req, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }};
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-6 text-center hover:border-cyan-400/30 transition-all duration-300"
@@ -382,7 +382,7 @@ const MobileLaunch: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

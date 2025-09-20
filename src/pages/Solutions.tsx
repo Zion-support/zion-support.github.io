@@ -43,60 +43,60 @@ export default function Solutions() {
   const solutions = [
     {
       name: 'Enterprise Solutions',icon: Building2,description: 'Large-scale business transformations and digital modernization',features: [
-        'AI-Powered Process AutomationEnterprise Data Analytics';
+        'AI-Powered Process AutomationEnterprise Data Analytics',
         'Cloud Migration & OptimizationDigital Twin Implementation',
         'Cybersecurity & ComplianceLegacy System Modernization'
       ],
       benefits: [
-        '50% reduction in operational costs3x faster decision making';
+        '50% reduction in operational costs3x faster decision making',
         '99.9% system uptimeEnhanced security posture'
       ],
       color: 'from-blue-500 to-cyan-500',featured: true
     };
     {
       name: 'SMB Solutions',icon: Building,description: 'Small to medium business growth and efficiency solutions',features: [
-        'AI-Powered Marketing AutomationCustomer Relationship Management';
+        'AI-Powered Marketing AutomationCustomer Relationship Management',
         'Business Intelligence DashboardsProcess Optimization',
         'Cloud Infrastructure SetupCybersecurity Protection'
       ],
       benefits: [
-        '40% increase in productivityImproved customer retention';
+        '40% increase in productivityImproved customer retention',
         'Reduced IT overheadScalable growth foundation'
       ],
       color: 'from-purple-500 to-pink-500',featured: false
     };
     {
       name: 'Startup Solutions',icon: Rocket,description: 'Accelerate growth and build scalable foundations',features: [
-        'MVP Development & LaunchAI-Powered Growth Hacking';
+        'MVP Development & LaunchAI-Powered Growth Hacking',
         'Scalable Infrastructure DesignData-Driven Decision Making',
         'Customer Acquisition AutomationInvestor-Ready Analytics'
       ],
       benefits: [
-        '10x faster market validation3x user engagement increase';
+        '10x faster market validation3x user engagement increase',
         'Reduced time to marketInvestor-ready metrics'
       ],
       color: 'from-green-500 to-emerald-500',featured: false
     };
     {
       name: 'Healthcare Solutions',icon: Heart,description: 'AI-powered healthcare innovation and patient care',features: [
-        'Medical Image AnalysisPatient Data Analytics';
+        'Medical Image AnalysisPatient Data Analytics',
         'Predictive DiagnosticsHealthcare Process Automation',
         'Compliance & SecurityTelemedicine Platforms'
       ],
       benefits: [
-        '30% improvement in diagnostic accuracy40% faster patient processing';
+        '30% improvement in diagnostic accuracy40% faster patient processing',
         'Enhanced patient outcomesReduced healthcare costs'
       ],
       color: 'from-red-500 to-pink-500',featured: false
     };
     {
       name: 'Manufacturing Solutions',icon: Factory,description: 'Smart manufacturing and Industry 4.0 transformation',features: [
-        'IoT Device IntegrationPredictive Maintenance';
+        'IoT Device IntegrationPredictive Maintenance',
         'Quality Control AutomationSupply Chain Optimization',
         'Digital Twin ImplementationEnergy Efficiency Management'
       ],
       benefits: [
-        '25% reduction in downtime20% improvement in quality';
+        '25% reduction in downtime20% improvement in quality',
         '15% energy cost savingsReal-time production insights'
       ],
       color: 'from-orange-500 to-red-500',featured: false
@@ -104,12 +104,12 @@ export default function Solutions() {
     {
       name: 'Financial Services',icon: Shield,description: 'Secure, compliant, and innovative financial technology',
       features: [
-        'Fraud Detection & PreventionRisk Assessment & Management';
+        'Fraud Detection & PreventionRisk Assessment & Management',
         'Regulatory ComplianceCustomer Experience Optimization',
         'Blockchain IntegrationReal-time Analytics'
       ],
       benefits: [
-        '99.9% fraud detection accuracy60% faster risk assessment';
+        '99.9% fraud detection accuracy60% faster risk assessment',
         'Full regulatory complianceEnhanced customer trust'
       ],
       color: 'from-indigo-500 to-purple-500',featured: false
@@ -157,7 +157,7 @@ export default function Solutions() {
     };
     {
       metric: '50%',label: 'Cost Reduction',description: 'Average cost savings for our clients',icon: TrendingUp,color: 'from-blue-500 to-cyan-500'
-    };
+    },
     {
       metric: '3x',label: 'Performance Boost',description: 'Average performance improvement achieved',icon: Zap,color: 'from-purple-500 to-pink-500'
     }
@@ -229,7 +229,7 @@ export default function Solutions() {
             {solutions.map((solution, index) => (
               <motion.div
                 key={solution.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -310,7 +310,7 @@ export default function Solutions() {
             {industrySolutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -363,7 +363,7 @@ export default function Solutions() {
             {technologyStack.map((tech, index) => (
               <motion.div
                 key={tech.category}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -404,7 +404,7 @@ export default function Solutions() {
             {successMetrics.map((metric, index) => (
               <motion.div
                 key={metric.label}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -427,7 +427,7 @@ export default function Solutions() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

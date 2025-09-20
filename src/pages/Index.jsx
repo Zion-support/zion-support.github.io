@@ -36,7 +36,7 @@ export default function Index() {
         };
         {
             title: t("home.tool_analytics"),description: t("home.tool_analytics_desc"),icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>,link: "/analytics"
-        };
+        },
         {
             title: "Mobile App",description: "Take Zion with you on the go with our mobile app for iOS and Android",icon: <Smartphone className="h-6 w-6 text-zion-purple"/>,link: "/mobile-launch"
         }

@@ -55,21 +55,21 @@ import {
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "../data/ultimateInnovativeServices2026";
 import { comprehensiveServices } from "../data/comprehensiveServices";
 interface Service {
-  id: string,name: string,category: string,description: string,features: string[],benefits: string[],pricing: {
+  id: string,name: string,category: string,description: string,features: string[],benefits: string[],pricing: {,
     starter: number,professional: number,enterprise: number,currency: string,billingCycle: string
-  };
+  },
   rating: number,reviewCount: number,launchDate: string,status: string,marketPrice: string,estimatedDelivery: string;
   website?: string,
   contactInfo?: {
     phone: string,email: string,address: string
   };
 }
-
+;
 const ComprehensiveServicesShowcase2027: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name'),
-  const [selectedService, setSelectedService] = useState<Service | null>(null),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
@@ -77,9 +77,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     // Add services from ultimateInnovativeServices2026
     ultimateInnovativeServices2026.forEach(service => {
       services.push({
-        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {
+        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {,
           starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
-        };
+        },
         rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
       });
     }),
@@ -87,9 +87,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service => {
       services.push({
-        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {
+        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {,
           starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
-        };
+        },
         rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
       });
     }),
@@ -98,16 +98,16 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   }, []),
 
   const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))],
-    return cats.sort(),
+    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+    return cats.sort();
   }, [allServices]),
 
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
       return matchesSearch && matchesCategory,
     }),
 
@@ -124,11 +124,11 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         break,
       case 'newest':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
-        break,
+        break;
     }
-
+;
     return filtered,
-  }, [allServices, searchTerm, selectedCategory, sortBy]),
+  }, [allServices, searchTerm, selectedCategory, sortBy]);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -151,7 +151,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'Robotics':
         return <Factory className="w-6 h-6" />,
       case 'Space Technology':
-        return <Satellite className="w-6 h-6" />,
+        return <Satellite className="w-6 h-6" />;
       default: return <Lightbulb className="w-6 h-6" />
     }
   };
@@ -164,7 +164,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'coming soon':
         return 'bg-yellow-100 text-yellow-800',
       case 'preview':
-        return 'bg-purple-100 text-purple-800',
+        return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800'
     }
   };
@@ -189,7 +189,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
@@ -197,7 +197,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 Watch Demo
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
@@ -266,7 +266,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }};
                 whileHover={{ y: -5 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedService(service)}
@@ -519,7 +519,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >
@@ -527,7 +527,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               Call +1 302 464 0950
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }}
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >

@@ -27,7 +27,7 @@ import {
 const cloudDevOpsSolutions = [
   {
     id: 1,title: "Cloud Infrastructure Setup",description: "Complete cloud infrastructure design and implementation for scalable applications.",icon: Cloud,features: [
-      "Multi-cloud strategy";
+      "Multi-cloud strategy",
       "Auto-scaling setup",
       "Load balancing",
       "High availability"
@@ -37,7 +37,7 @@ const cloudDevOpsSolutions = [
   },
   {
     id: 2,title: "CI/CD Pipeline Development",description: "Automated continuous integration and deployment pipelines for rapid software delivery.",icon: GitFork,features: [
-      "Automated testing";
+      "Automated testing",
       "Build automation",
       "Deployment automation",
       "Rollback capabilities"
@@ -47,7 +47,7 @@ const cloudDevOpsSolutions = [
   },
   {
     id: 3,title: "Container Orchestration",description: "Kubernetes and Docker implementation for scalable containerized applications.",icon: Server,features: [
-      "Container orchestration";
+      "Container orchestration",
       "Service mesh setup",
       "Auto-scaling",
       "Monitoring & logging"
@@ -57,7 +57,7 @@ const cloudDevOpsSolutions = [
   },
   {
     id: 4,title: "Infrastructure as Code",description: "Automated infrastructure provisioning and management using code.",icon: Code,features: [
-      "Terraform implementation";
+      "Terraform implementation",
       "Ansible automation",
       "Version control",
       "Environment management"
@@ -67,7 +67,7 @@ const cloudDevOpsSolutions = [
   },
   {
     id: 5,title: "Monitoring & Observability",description: "Comprehensive monitoring and logging solutions for cloud applications.",icon: Activity,features: [
-      "Real-time monitoring";
+      "Real-time monitoring",
       "Alert systems",
       "Log aggregation",
       "Performance metrics"
@@ -77,7 +77,7 @@ const cloudDevOpsSolutions = [
   },
   {
     id: 6,title: "Security & Compliance",description: "Cloud security implementation and compliance management for enterprise applications.",icon: Shield,features: [
-      "Identity management";
+      "Identity management",
       "Access controls",
       "Security scanning",
       "Compliance reporting"
@@ -110,7 +110,7 @@ const successStories = [
   {
     id: 2,company: "E-commerce Platform",industry: "Retail",challenge: "Required containerized microservices architecture",solution: "Implemented Kubernetes with automated CI/CD",results: "5x faster development cycles, improved scalability, better performance",
     logo: "EP"
-  };
+  },
   {
     id: 3,company: "Financial Services",industry: "Finance",challenge: "Needed secure, compliant cloud infrastructure",
     solution: "Built secure cloud platform with automated compliance",results: "Full compliance, enhanced security, 40% faster time-to-market",
@@ -126,14 +126,14 @@ const processSteps = [
   };
   {
     step: 3,title: "Implementation",description: "Build and deploy cloud infrastructure with automation",icon: Wrench,duration: "6-20 weeks"
-  };
+  },
   {
     step: 4,title: "Optimization",description: "Monitor, optimize, and continuously improve the system",
     icon: Zap,duration: "Ongoing"
   }
 ];
 export default function CloudDevOps() {
-  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
   const categories = ['AllCloud Infrastructure', 'DevOpsContainerization', 'IaCMonitoring', 'Security'];
   const filteredSolutions = selectedCategory === 'All' 
@@ -197,7 +197,7 @@ export default function CloudDevOps() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -212,7 +212,7 @@ export default function CloudDevOps() {
             {cloudPlatforms.map((platform, index) => (
               <motion.div
                 key={platform.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
@@ -242,7 +242,7 @@ export default function CloudDevOps() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -257,7 +257,7 @@ export default function CloudDevOps() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
@@ -286,7 +286,7 @@ export default function CloudDevOps() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -318,7 +318,7 @@ export default function CloudDevOps() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
@@ -375,7 +375,7 @@ export default function CloudDevOps() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -390,7 +390,7 @@ export default function CloudDevOps() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -436,7 +436,7 @@ export default function CloudDevOps() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"

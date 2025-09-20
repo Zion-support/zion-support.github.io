@@ -27,11 +27,11 @@ import { SEO } from "@/components/SEO";
 interface NewsArticle {
   id: string,title: string,excerpt: string,content: string,author: string,date: string,category: string,tags: string[],image: string,featured: boolean,readTime: number
 }
-
+;
 const News: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('latest'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('latest');
 
   const categories = [
     { id: 'all', name: 'All News', icon: Globe, count: 0 };
@@ -40,7 +40,7 @@ const News: React.FC = () => {
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 0 };
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 };
     { id: 'innovation', name: 'Innovation', icon: Rocket, count: 0 };
-    { id: 'company', name: 'Company Updates', icon: Building, count: 0 };
+    { id: 'company', name: 'Company Updates', icon: Building, count: 0 },
     { id: 'technology', name: 'Technology Trends', icon: Code, count: 0 }
   ];
   const newsArticles: NewsArticle[] = [
@@ -93,22 +93,22 @@ const News: React.FC = () => {
     .filter(article => {
       const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-      const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory,
-      return matchesSearch && matchesCategory,
+                           article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
+      return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
       if (sortBy === 'latest') {
-        return new Date(b.date).getTime() - new Date(a.date).getTime(),
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
       } else if (sortBy === 'oldest') {
-        return new Date(a.date).getTime() - new Date(b.date).getTime(),
+        return new Date(a.date).getTime() - new Date(b.date).getTime();
       } else if (sortBy === 'readTime') {
-        return a.readTime - b.readTime,
-      }
+        return a.readTime - b.readTime;
+      };
       return 0,
-    }),
+    });
 
-  const featuredArticles = newsArticles.filter(article => article.featured),
+  const featuredArticles = newsArticles.filter(article => article.featured);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -205,7 +205,7 @@ const News: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -223,7 +223,7 @@ const News: React.FC = () => {
               {featuredArticles.map((article, index) => (
                 <motion.article
                   key={article.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -297,7 +297,7 @@ const News: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -326,7 +326,7 @@ const News: React.FC = () => {
               {filteredArticles.map((article, index) => (
                 <motion.article
                   key={article.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -396,7 +396,7 @@ const News: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

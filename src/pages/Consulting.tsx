@@ -39,7 +39,7 @@ const Consulting = () => {
     };
     {
       title: "Energy & Utilities",description: "Smart grid and sustainability consulting",icon: Globe
-    };
+    },
     {
       title: "Government",description: "Public sector digital transformation consulting",icon: Briefcase
     }
@@ -62,7 +62,7 @@ const Consulting = () => {
     };
     {
       phase: "Strategy",description: "Developing customized solutions and implementation plans",duration: "3-6 weeks"
-    };
+    },
     {
       phase: "Implementation",description: "Executing the strategy with ongoing support and guidance",duration: "Ongoing"
     }

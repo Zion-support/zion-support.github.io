@@ -41,7 +41,7 @@ export default function AISupplyChainOptimization() {
     },
     {
       icon: <Shield className="w-6 h-6" />,title: "Risk Management & Compliance",description: "AI-driven risk assessment and automated compliance monitoring for regulatory requirements"
-    };
+    },
     {
       icon: <BarChart3 className="w-6 h-6" />,title: "Advanced Analytics Dashboard",description: "Comprehensive insights into supply chain performance, cost analysis, and optimization opportunities"
     }
@@ -50,7 +50,7 @@ export default function AISupplyChainOptimization() {
   const pricing = [
     {
       name: "Starter",price: "$499",period: "/month",features: [
-        "Up to 5 locations";
+        "Up to 5 locations",
         "Basic demand forecasting",
         "Route optimization",
         "Email support",
@@ -61,7 +61,7 @@ export default function AISupplyChainOptimization() {
     {
       name: "Professional",price: "$1,299",
       period: "/month",features: [
-        "Up to 25 locations";
+        "Up to 25 locations",
         "Advanced AI forecasting",
         "Multi-modal optimization",
         "Priority support",
@@ -74,7 +74,7 @@ export default function AISupplyChainOptimization() {
     {
       name: "Enterprise",price: "$2,999",
       period: "/month",features: [
-        "Unlimited locations";
+        "Unlimited locations",
         "Custom AI models",
         "Real-time optimization",
         "Dedicated support",
@@ -106,7 +106,7 @@ export default function AISupplyChainOptimization() {
     {
       industry: "Healthcare & Pharmaceuticals",description: "Ensure critical supplies availability, optimize distribution networks, and maintain compliance",
       savings: "50% risk reduction"
-    };
+    },
     {
       industry: "Food & Beverage",description: "Optimize cold chain logistics, reduce waste, and improve freshness delivery",
       savings: "30% waste reduction"
@@ -169,7 +169,7 @@ export default function AISupplyChainOptimization() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300"
@@ -198,7 +198,7 @@ export default function AISupplyChainOptimization() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 group"
@@ -230,7 +230,7 @@ export default function AISupplyChainOptimization() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-green-500 transition-all duration-300"
@@ -263,7 +263,7 @@ export default function AISupplyChainOptimization() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
@@ -318,7 +318,7 @@ export default function AISupplyChainOptimization() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -358,7 +358,7 @@ export default function AISupplyChainOptimization() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
@@ -391,7 +391,7 @@ export default function AISupplyChainOptimization() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-green-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-green-500/30"

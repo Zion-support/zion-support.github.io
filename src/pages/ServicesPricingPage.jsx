@@ -9,10 +9,10 @@ import SEO from "@/components/SEO";
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
     const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
-        const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category),
+        const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
         if (categoryServices.length > 0) {
             acc[category] = categoryServices;
-        }
+        };
         return acc;
     }, {});
     return (<div className="min-h-screen bg-zion-blue-dark">
@@ -188,7 +188,7 @@ export default function ServicesPricingPage() {
             };
             {
                 icon: <Users className="w-8 h-8"/>,title: "Flexible Plans",description: "Customizable solutions that grow with your business needs"
-            };
+            },
             {
                 icon: <Building className="w-8 h-8"/>,title: "Proven ROI",description: "Measurable business outcomes and return on investment"
             }

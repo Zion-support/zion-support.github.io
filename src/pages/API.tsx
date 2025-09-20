@@ -36,7 +36,7 @@ const API: React.FC = () => {
     };
     {
       method: 'GET',path: '/api/v1/analytics',description: 'Get analytics data',auth: 'Required'
-    };
+    },
     {
       method: 'PUT',path: '/api/v1/user/profile',description: 'Update user profile',auth: 'Required'
     }
@@ -50,7 +50,7 @@ const API: React.FC = () => {
     };
     {
       icon: Globe,title: 'Global CDN',description: 'Worldwide edge locations for fast access'
-    };
+    },
     {
       icon: Database,title: 'Real-time Data',description: 'Live data synchronization across all endpoints'
     }
@@ -79,7 +79,7 @@ const createInstance = async () => {
     return response.data,
 },`,
       category: 'Cloud & DevOps'
-    };
+    },
     {
       title: 'Security Threat Detection',language: 'Python',description: 'Implement real-time threat detection using our security API.',code: `import requests
 
@@ -92,7 +92,7 @@ def check_threat(ip_address):
         "check_type": "comprehensive"
     })
 
-    return response.json()`,
+    return response.json()`;
       category: 'Security'
     }
   ];
@@ -102,7 +102,7 @@ def check_threat(ip_address):
     };
     {
       name: 'Python SDK',icon: Key,link: 'https://github.com/ziontechgroup/python-sdk'
-    };
+    },
     {
       name: 'Go SDK',icon: Database,link: 'https://github.com/ziontechgroup/go-sdk'
     }
@@ -158,7 +158,7 @@ def check_threat(ip_address):
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -175,7 +175,7 @@ def check_threat(ip_address):
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
@@ -195,7 +195,7 @@ def check_threat(ip_address):
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -212,7 +212,7 @@ def check_threat(ip_address):
             {codeExamples.map((example, index) => (
               <motion.div
                 key={example.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
@@ -242,7 +242,7 @@ def check_threat(ip_address):
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -259,7 +259,7 @@ def check_threat(ip_address):
             {sdks.map((sdk, index) => (
               <motion.div
                 key={sdk.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
@@ -286,7 +286,7 @@ def check_threat(ip_address):
       <section className="py-20 px-4 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >

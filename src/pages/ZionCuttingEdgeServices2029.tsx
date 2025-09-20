@@ -24,9 +24,9 @@ import { SEO } from "@/components/SEO";
 import { zionCuttingEdgeServices2029 } from "../../data/zion-2029-cutting-edge-services";
 import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech-services";
 export default function ZionCuttingEdgeServices2029() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [priceRange, setPriceRange] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
 
   const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029],
   
@@ -35,26 +35,26 @@ export default function ZionCuttingEdgeServices2029() {
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     
-    let matchesPrice = true,
+    let matchesPrice = true;
     if (priceRange !== 'all') {
-      const [min, max] = priceRange.split('-').map(Number),
+      const [min, max] = priceRange.split('-').map(Number);
       if (max) {
         matchesPrice = service.pricing.starter >= min && service.pricing.starter <= max,
       } else {
         matchesPrice = service.pricing.starter >= min,
       }
     }
-    
+    ;
     return matchesSearch && matchesCategory && matchesPrice,
   }),
 
   const getPriceRangeLabel = (range: string) => {
     switch (range) {
-      case '0-1000': return '$0 - $1,000/month',
+      case '0-1000': return '$0 - $1,000/month';
       case '1000-3000': return '$1,000 - $3,000/month';
       case '3000-5000': return '$3,000 - $5,000/month';
       case '5000+': return '$5,000+/month';
@@ -332,8 +332,8 @@ export default function ZionCuttingEdgeServices2029() {
               <button
                 onClick={() => {
                   setSearchTerm('');
-                  setSelectedCategory('all'),
-                  setPriceRange('all'),
+                  setSelectedCategory('all');
+                  setPriceRange('all');
                 }}
                 className="mt-4 text-blue-400 hover:text-blue-300 underline"
               >
@@ -359,7 +359,7 @@ export default function ZionCuttingEdgeServices2029() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="text-center"
@@ -374,7 +374,7 @@ export default function ZionCuttingEdgeServices2029() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-center"
@@ -389,7 +389,7 @@ export default function ZionCuttingEdgeServices2029() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-center"
@@ -404,7 +404,7 @@ export default function ZionCuttingEdgeServices2029() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-center"
@@ -425,7 +425,7 @@ export default function ZionCuttingEdgeServices2029() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

@@ -11,7 +11,7 @@ const Tutorials = () => {
     };
     {
       title: "Advanced",description: "Complex topics for experienced users",color: "from-red-500 to-pink-500",count: "8"
-    };
+    },
     {
       title: "Expert",description: "Cutting-edge research and techniques",color: "from-purple-500 to-indigo-500",count: "5"
     }
@@ -31,7 +31,7 @@ const Tutorials = () => {
     };
     {
       title: "Cybersecurity Best Practices",description: "Master essential cybersecurity concepts and implement robust security measures to protect your applications and data.",category: "Intermediate",duration: "60 min",instructor: "James Wilson",rating: 4.7,students: "1.5k",thumbnail: "/images/tutorials/cybersecurity.jpg"
-    };
+    },
     {
       title: "AI Model Optimization",description: "Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.",
       category: "Expert",duration: "75 min",instructor: "Dr. Emily Watson",rating: 4.6,students: "623",thumbnail: "/images/tutorials/model-optimization.jpg"
@@ -46,7 +46,7 @@ const Tutorials = () => {
     };
     {
       title: "API Integration Patterns",category: "Intermediate",duration: "50 min",instructor: "Dr. Sarah Chen",rating: 4.6,students: "567"
-    };
+    },
     {
       title: "Machine Learning Model Deployment",category: "Advanced",duration: "65 min",instructor: "Michael Rodriguez",rating: 4.7,students: "345"
     }
@@ -57,7 +57,7 @@ const Tutorials = () => {
     };
     {
       title: "Cybersecurity Specialist",description: "Master security and compliance",courses: 6,duration: "8 weeks",level: "Intermediate to Expert"
-    };
+    },
     {
       title: "Quantum Computing Engineer",description: "Learn quantum algorithms and applications",courses: 5,duration: "10 weeks",level: "Advanced to Expert"
     }

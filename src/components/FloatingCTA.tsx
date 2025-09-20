@@ -113,7 +113,7 @@ export function FloatingCTA() {
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
             className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1 }};
             whileTap={{ scale: 0.9 }}
           >
             {isExpanded ? '✕' : '💬'}

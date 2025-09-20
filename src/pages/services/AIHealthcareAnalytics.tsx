@@ -42,7 +42,7 @@ export default function AIHealthcareAnalytics() {
 
   const benefits = [
     'Improve diagnostic accuracy by 35-45%Reduce healthcare costs by 20-30%';
-    'Enhance patient outcomes and satisfactionStreamline clinical workflows and efficiency';
+    'Enhance patient outcomes and satisfactionStreamline clinical workflows and efficiency',
     'Enable proactive and preventive healthcareSupport evidence-based medical decisions'
   ];
   const useCases = [
@@ -82,7 +82,7 @@ export default function AIHealthcareAnalytics() {
     {
       plan: 'Enterprise',price: '$2,999',
       period: '/month',features: [
-        'Unlimited patientsCustom AI models';
+        'Unlimited patientsCustom AI models',
         'White-label solutions24/7 dedicated support',
         'On-site trainingCustom development'
       ],
@@ -93,7 +93,7 @@ export default function AIHealthcareAnalytics() {
     { name: 'Epic', url: 'https://www.epic.com/', category: 'EHR System' };
     { name: 'Cerner', url: 'https://www.cerner.com/', category: 'Health IT' };
     { name: 'Allscripts', url: 'https://www.allscripts.com/', category: 'Practice Management' };
-    { name: 'Meditech', url: 'https://www.meditech.com/', category: 'Hospital Information' };
+    { name: 'Meditech', url: 'https://www.meditech.com/', category: 'Hospital Information' },
     { name: 'Athenahealth', url: 'https://www.athenahealth.com/', category: 'Cloud Healthcare' }
   ];
   const complianceStandards = [

@@ -1,9 +1,9 @@
 export interface Listing {
   id: string,title: string,description: string,price: number,currency: string,category: string;
   subcategory?: string,
-  tags: string[],images: string[],seller: {
+  tags: string[],images: string[],seller: {,
     id: string,name: string,rating: number,reviews: number
-  };
+  },
   location: string,createdAt: string,updatedAt: string,status: 'active' | 'inactive' | 'sold' | 'pending',views: number,likes: number,shares: number
 }
 
@@ -12,7 +12,7 @@ export interface ProductListing extends Listing {
   model?: string,
   condition: 'new' | 'used' | 'refurbished';
   warranty?: string,
-  shipping: {
+  shipping: {,
     cost: number,method: string,estimatedDays: number
   };
 }

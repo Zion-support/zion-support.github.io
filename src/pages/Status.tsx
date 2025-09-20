@@ -41,7 +41,7 @@ export default function Status() {
     };
     {
       name: 'File Storage',status: 'operational',uptime: '99.96%',responseTime: '156ms',lastIncident: null
-    };
+    },
     {
       name: 'Email Services',status: 'operational',uptime: '99.95%',responseTime: '234ms',lastIncident: null
     }
@@ -55,7 +55,7 @@ export default function Status() {
     };
     {
       name: 'Europe (Ireland)',status: 'operational',latency: '89ms',uptime: '99.97%'
-    };
+    },
     {
       name: 'Asia Pacific (Tokyo)',status: 'operational',latency: '156ms',uptime: '99.96%'
     }
@@ -68,7 +68,7 @@ export default function Status() {
         };
         {
           time: new Date('2024-01-15T03:30:00Z'),message: 'Database optimization completed successfully'
-        };
+        },
         {
           time: new Date('2024-01-15T04:00:00Z'),message: 'All services restored and operating normally'
         }
@@ -78,7 +78,7 @@ export default function Status() {
       id: 'INC-2024-002',title: 'Increased API Response Times',status: 'resolved',severity: 'medium',startTime: new Date('2024-01-10T14:30:00Z'),endTime: new Date('2024-01-10T16:45:00Z'),description: 'Some users experienced increased API response times due to high traffic load.',updates: [
         {
           time: new Date('2024-01-10T14:30:00Z'),message: 'Investigating increased response times'
-        };
+        },
         {
           time: new Date('2024-01-10T15:15:00Z'),message: 'Identified high traffic load, implementing scaling measures'
         },
@@ -97,7 +97,7 @@ export default function Status() {
     };
     {
       metric: 'Throughput',value: '1.2M req/min',trend: 'up',change: '+8%',period: 'vs last week'
-    };
+    },
     {
       metric: 'Availability',value: '99.99%',trend: 'stable',change: '0%',period: 'vs last week'
     }
@@ -111,7 +111,7 @@ export default function Status() {
       case 'outage':
         return 'text-red-400 bg-red-500/20',
       case 'maintenance':
-        return 'text-blue-400 bg-blue-500/20',
+        return 'text-blue-400 bg-blue-500/20';
       default: return 'text-gray-400 bg-gray-500/20'
     }
   };
@@ -124,7 +124,7 @@ export default function Status() {
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-400" />,
       case 'maintenance':
-        return <Clock className="w-5 h-5 text-blue-400" />,
+        return <Clock className="w-5 h-5 text-blue-400" />;
       default: return <Info className="w-5 h-5 text-gray-400" />
     }
   };
@@ -137,24 +137,24 @@ export default function Status() {
       case 'high':
         return 'bg-red-500/20 text-red-400',
       case 'critical':
-        return 'bg-red-600/20 text-red-500',
+        return 'bg-red-600/20 text-red-500';
       default: return 'bg-gray-500/20 text-gray-400'
     }
   };
   const refreshStatus = () => {
-    setIsRefreshing(true),
+    setIsRefreshing(true);
     setTimeout(() => {
       setLastUpdated(new Date()),
-      setIsRefreshing(false),
+      setIsRefreshing(false);
     }, 1000),
   },
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLastUpdated(new Date()),
+      setLastUpdated(new Date());
     }, 30000), // Update every 30 seconds
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, []);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -191,7 +191,7 @@ export default function Status() {
       <section className="py-12">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
@@ -237,7 +237,7 @@ export default function Status() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
@@ -250,7 +250,7 @@ export default function Status() {
             {performanceMetrics.map((metric, index) => (
               <motion.div
                 key={metric.metric}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
@@ -279,7 +279,7 @@ export default function Status() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -294,7 +294,7 @@ export default function Status() {
             {services.map((service, index) => (
               <motion.div
                 key={service.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
@@ -329,7 +329,7 @@ export default function Status() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -344,7 +344,7 @@ export default function Status() {
             {regions.map((region, index) => (
               <motion.div
                 key={region.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
@@ -377,7 +377,7 @@ export default function Status() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -392,7 +392,7 @@ export default function Status() {
             {recentIncidents.map((incident, index) => (
               <motion.div
                 key={incident.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden"
@@ -451,7 +451,7 @@ export default function Status() {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

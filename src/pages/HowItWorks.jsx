@@ -18,7 +18,7 @@ export default function HowItWorks() {
         {
             icon: MessageSquare,title: "Connect & Discuss",description: "Message potential candidates, discuss project requirements, timelines, and budgets to ensure alignment.",
             color: "text-zion-cyan"
-        };
+        },
         {
             icon: Handshake,title: "Hire & Collaborate",description: "Select your preferred talent, set up milestones, and begin your project with full transparency and support.",
             color: "text-zion-purple"
@@ -36,7 +36,7 @@ export default function HowItWorks() {
         {
             icon: MessageSquare,title: "Connect with Clients",description: "Respond to project inquiries, discuss requirements, and negotiate terms to ensure successful project outcomes.",
             color: "text-zion-cyan"
-        };
+        },
         {
             icon: CheckCircle,title: "Deliver & Grow",description: "Complete projects successfully, build your reputation, and expand your client base through our platform.",
             color: "text-zion-purple"
@@ -53,7 +53,7 @@ export default function HowItWorks() {
         {
             icon: Globe,title: "Global Reach",description: "Connect with talent and clients worldwide, breaking down geographical barriers for better opportunities.",
             color: "text-zion-cyan"
-        };
+        },
         {
             icon: FileText,title: "Project Management",description: "Built-in tools for tracking progress, managing milestones, and ensuring smooth project delivery.",
             color: "text-zion-purple"
@@ -71,7 +71,7 @@ export default function HowItWorks() {
         },
         {
             title: "For Talent",icon: Briefcase,benefits: [
-                "Global client opportunities";
+                "Global client opportunities",
                 "Flexible work arrangements",
                 "Secure payment processing",
                 "Portfolio building tools",

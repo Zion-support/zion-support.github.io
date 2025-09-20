@@ -15,7 +15,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "ai-analytics-services",name: "AI & Analytics Services",description: "Advanced AI-powered analytics and business intelligence solutions",icon: "🧠",services: [],pricingTiers: [
       {
         id: "ai-analytics-starter",name: "AI Analytics Starter",price: 999,currency: "$",period: "month",description: "Perfect for small businesses starting their AI journey",features: [
-          "Basic AI-powered analytics dashboard";
+          "Basic AI-powered analytics dashboard",
           "Up to 10,000 data points per month",
           "Standard reporting templates",
           "Email support",
@@ -26,7 +26,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "ai-analytics-professional",name: "AI Analytics Professional",price: 2499,currency: "$",period: "month",description: "Advanced AI analytics for growing businesses",features: [
-          "Advanced AI-powered analytics dashboard";
+          "Advanced AI-powered analytics dashboard",
           "Up to 100,000 data points per month",
           "Custom reporting templates",
           "Priority email & chat support",
@@ -39,7 +39,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "ai-analytics-enterprise",name: "AI Analytics Enterprise",price: 4999,currency: "$",period: "month",description: "Enterprise-grade AI analytics with unlimited capabilities",features: [
-          "Enterprise AI analytics platform";
+          "Enterprise AI analytics platform",
           "Unlimited data points",
           "Custom AI model development",
           "Dedicated account manager",
@@ -57,7 +57,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "quantum-computing-services",name: "Quantum Computing Services",description: "Next-generation quantum computing solutions for complex problems",icon: "⚛️",services: [],pricingTiers: [
       {
         id: "quantum-starter",name: "Quantum Starter",price: 4999,currency: "$",period: "month",description: "Entry-level quantum computing access",features: [
-          "Access to quantum simulators";
+          "Access to quantum simulators",
           "Basic quantum algorithms",
           "Up to 100 quantum operations per month",
           "Documentation & tutorials",
@@ -68,7 +68,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "quantum-professional",name: "Quantum Professional",price: 14999,currency: "$",period: "month",description: "Professional quantum computing with real hardware access",features: [
-          "Access to real quantum hardware";
+          "Access to real quantum hardware",
           "Advanced quantum algorithms",
           "Up to 1,000 quantum operations per month",
           "Priority support",
@@ -80,7 +80,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "quantum-enterprise",name: "Quantum Enterprise",price: 49999,currency: "$",period: "month",description: "Enterprise quantum computing with dedicated resources",features: [
-          "Dedicated quantum hardware access";
+          "Dedicated quantum hardware access",
           "Unlimited quantum operations",
           "Custom quantum algorithm development",
           "Dedicated quantum engineer",
@@ -97,7 +97,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "edge-ai-services",name: "Edge AI Services",description: "AI processing at the edge for real-time decision making",icon: "🌐",services: [],pricingTiers: [
       {
         id: "edge-ai-starter",name: "Edge AI Starter",price: 799,currency: "$",period: "month",description: "Basic edge AI capabilities for IoT devices",features: [
-          "Basic edge AI inference";
+          "Basic edge AI inference",
           "Up to 1,000 inferences per day",
           "Standard AI models",
           "Basic device management",
@@ -108,7 +108,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "edge-ai-professional",name: "Edge AI Professional",price: 1999,currency: "$",period: "month",description: "Professional edge AI with advanced capabilities",features: [
-          "Advanced edge AI inference & training";
+          "Advanced edge AI inference & training",
           "Up to 10,000 inferences per day",
           "Custom AI model optimization",
           "Advanced device management",
@@ -121,7 +121,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "edge-ai-enterprise",name: "Edge AI Enterprise",price: 4999,currency: "$",period: "month",description: "Enterprise edge AI with unlimited capabilities",features: [
-          "Unlimited edge AI operations";
+          "Unlimited edge AI operations",
           "Custom AI model development",
           "Advanced security protocols",
           "Dedicated support team",
@@ -138,7 +138,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "neuromorphic-computing",name: "Neuromorphic Computing",description: "Brain-inspired computing for energy-efficient AI processing",icon: "🧬",services: [],pricingTiers: [
       {
         id: "neuromorphic-starter",name: "Neuromorphic Starter",price: 2999,currency: "$",period: "month",description: "Basic neuromorphic computing access",features: [
-          "Access to neuromorphic simulators";
+          "Access to neuromorphic simulators",
           "Basic neural network models",
           "Up to 100,000 neural operations per month",
           "Documentation & tutorials",
@@ -149,7 +149,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "neuromorphic-professional",name: "Neuromorphic Professional",price: 8999,currency: "$",period: "month",description: "Professional neuromorphic computing with hardware access",features: [
-          "Access to neuromorphic hardware";
+          "Access to neuromorphic hardware",
           "Advanced neural network models",
           "Up to 1,000,000 neural operations per month",
           "Custom model development",
@@ -161,7 +161,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       };
       {
         id: "neuromorphic-enterprise",name: "Neuromorphic Enterprise",price: 29999,currency: "$",period: "month",description: "Enterprise neuromorphic computing with dedicated resources",features: [
-          "Dedicated neuromorphic hardware";
+          "Dedicated neuromorphic hardware",
           "Unlimited neural operations",
           "Custom neuromorphic architecture",
           "Dedicated engineer",
@@ -178,7 +178,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "biocomputing-dna-storage",name: "Biocomputing & DNA Storage",description: "Revolutionary DNA-based computing and ultra-dense storage",icon: "🧪",services: [],pricingTiers: [
       {
         id: "biocomputing-starter",name: "Biocomputing Starter",price: 3999,currency: "$",period: "month",description: "Basic biocomputing and DNA storage access",features: [
-          "Basic DNA storage (1TB equivalent)";
+          "Basic DNA storage (1TB equivalent)",
           "Simple biocomputing operations",
           "Standard error correction",
           "Documentation & tutorials",
@@ -189,7 +189,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "biocomputing-professional",name: "Biocomputing Professional",price: 11999,currency: "$",period: "month",description: "Professional biocomputing with advanced capabilities",features: [
-          "Advanced DNA storage (10TB equivalent)";
+          "Advanced DNA storage (10TB equivalent)",
           "Advanced biocomputing operations",
           "Enhanced error correction",
           "Custom DNA synthesis",
@@ -201,7 +201,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       };
       {
         id: "biocomputing-enterprise",name: "Biocomputing Enterprise",price: 39999,currency: "$",period: "month",description: "Enterprise biocomputing with unlimited capabilities",features: [
-          "Unlimited DNA storage";
+          "Unlimited DNA storage",
           "Custom biocomputing architecture",
           "Advanced error correction",
           "Dedicated biologist",
@@ -218,7 +218,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "photonics-computing",name: "Photonics Computing",description: "Light-based computing for ultra-fast AI processing",icon: "💡",services: [],pricingTiers: [
       {
         id: "photonics-starter",name: "Photonics Starter",price: 2499,currency: "$",period: "month",description: "Basic photonics computing access",features: [
-          "Access to photonics simulators";
+          "Access to photonics simulators",
           "Basic optical neural networks",
           "Up to 1,000 optical operations per month",
           "Documentation & tutorials",
@@ -229,7 +229,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "photonics-professional",name: "Photonics Professional",price: 7999,currency: "$",period: "month",description: "Professional photonics computing with hardware access",features: [
-          "Access to photonics hardware";
+          "Access to photonics hardware",
           "Advanced optical neural networks",
           "Up to 10,000 optical operations per month",
           "Custom model optimization",
@@ -241,7 +241,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       };
       {
         id: "photonics-enterprise",name: "Photonics Enterprise",price: 24999,currency: "$",period: "month",description: "Enterprise photonics computing with dedicated resources",features: [
-          "Dedicated photonics hardware";
+          "Dedicated photonics hardware",
           "Unlimited optical operations",
           "Custom photonic architecture",
           "Dedicated engineer",
@@ -258,7 +258,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "swarm-robotics",name: "Swarm Robotics",description: "Coordinated multi-robot systems for complex tasks",icon: "🤖",services: [],pricingTiers: [
       {
         id: "swarm-robotics-starter",name: "Swarm Robotics Starter",price: 1599,currency: "$",period: "month",description: "Basic swarm robotics platform",features: [
-          "Up to 10 robots";
+          "Up to 10 robots",
           "Basic coordination algorithms",
           "Standard task templates",
           "Basic monitoring",
@@ -269,7 +269,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "swarm-robotics-professional",name: "Swarm Robotics Professional",price: 4999,currency: "$",period: "month",description: "Professional swarm robotics with advanced capabilities",features: [
-          "Up to 100 robots";
+          "Up to 100 robots",
           "Advanced coordination algorithms",
           "Custom task development",
           "Advanced monitoring & analytics",
@@ -281,7 +281,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       };
       {
         id: "swarm-robotics-enterprise",name: "Swarm Robotics Enterprise",price: 15999,currency: "$",period: "month",description: "Enterprise swarm robotics with unlimited capabilities",features: [
-          "Unlimited robots";
+          "Unlimited robots",
           "Custom swarm architecture",
           "Advanced AI coordination",
           "Dedicated engineer",
@@ -298,7 +298,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "quantum-internet",name: "Quantum Internet",description: "Next-generation quantum communication infrastructure",icon: "🌍",services: [],pricingTiers: [
       {
         id: "quantum-internet-starter",name: "Quantum Internet Starter",price: 3499,currency: "$",period: "month",description: "Basic quantum internet access",features: [
-          "Basic quantum key distribution";
+          "Basic quantum key distribution",
           "Up to 1GB quantum data per month",
           "Standard security protocols",
           "Documentation & tutorials",
@@ -309,7 +309,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "quantum-internet-professional",name: "Quantum Internet Professional",price: 9999,currency: "$",period: "month",description: "Professional quantum internet with advanced capabilities",features: [
-          "Advanced quantum key distribution";
+          "Advanced quantum key distribution",
           "Up to 100GB quantum data per month",
           "Enhanced security protocols",
           "Custom quantum routing",
@@ -321,7 +321,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       };
       {
         id: "quantum-internet-enterprise",name: "Quantum Internet Enterprise",price: 34999,currency: "$",period: "month",description: "Enterprise quantum internet with unlimited capabilities",features: [
-          "Unlimited quantum data transfer";
+          "Unlimited quantum data transfer",
           "Custom quantum architecture",
           "Advanced security protocols",
           "Dedicated engineer",
@@ -338,7 +338,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "brain-computer-interface",name: "Brain-Computer Interface",description: "Direct neural communication with computers",icon: "🧠",services: [],pricingTiers: [
       {
         id: "bci-starter",name: "BCI Starter",price: 1999,currency: "$",period: "month",description: "Basic brain-computer interface platform",features: [
-          "Basic EEG signal processing";
+          "Basic EEG signal processing",
           "Simple thought-to-text",
           "Up to 100 neural commands per day",
           "Standard accuracy (70-80%)",
@@ -349,7 +349,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "bci-professional",name: "BCI Professional",price: 5999,currency: "$",period: "month",description: "Professional BCI with advanced capabilities",features: [
-          "Advanced neural signal processing";
+          "Advanced neural signal processing",
           "High-accuracy thought-to-text",
           "Up to 1,000 neural commands per day",
           "High accuracy (85-95%)",
@@ -361,7 +361,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       };
       {
         id: "bci-enterprise",name: "BCI Enterprise",price: 19999,currency: "$",period: "month",description: "Enterprise BCI with unlimited capabilities",features: [
-          "Unlimited neural commands";
+          "Unlimited neural commands",
           "Custom BCI architecture",
           "Ultra-high accuracy (95%+)",
           "Dedicated neuroscientist",
@@ -378,7 +378,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
     id: "space-computing",name: "Space Computing",description: "AI and computing infrastructure in space",icon: "🚀",services: [],pricingTiers: [
       {
         id: "space-computing-starter",name: "Space Computing Starter",price: 5999,currency: "$",period: "month",description: "Basic space computing access",features: [
-          "Access to satellite computing resources";
+          "Access to satellite computing resources",
           "Basic space-to-ground processing",
           "Up to 1TB data processing per month",
           "Standard latency (500-1000ms)",
@@ -389,7 +389,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       },
       {
         id: "space-computing-professional",name: "Space Computing Professional",price: 17999,currency: "$",period: "month",description: "Professional space computing with advanced capabilities",features: [
-          "Advanced satellite computing";
+          "Advanced satellite computing",
           "Low-latency space-to-ground processing",
           "Up to 100TB data processing per month",
           "Low latency (100-500ms)",
@@ -401,7 +401,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
       };
       {
         id: "space-computing-enterprise",name: "Space Computing Enterprise",price: 59999,currency: "$",period: "month",description: "Enterprise space computing with unlimited capabilities",features: [
-          "Unlimited space computing resources";
+          "Unlimited space computing resources",
           "Custom space architecture",
           "Ultra-low latency (<100ms)",
           "Dedicated space engineer",

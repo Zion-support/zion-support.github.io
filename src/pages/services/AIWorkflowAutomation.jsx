@@ -21,7 +21,7 @@ const AIWorkflowAutomation = () => {
     const solutions = [
         {
             category: "Document Processing",icon: Database,solutions: [
-                "Automated document classification";
+                "Automated document classification",
                 "Intelligent data extraction",
                 "Form processing automation",
                 "Document routing and approval",
@@ -30,7 +30,7 @@ const AIWorkflowAutomation = () => {
         },
         {
             category: "Customer Service",icon: Users,solutions: [
-                "Ticket routing and prioritization";
+                "Ticket routing and prioritization",
                 "Automated responses",
                 "Customer inquiry handling",
                 "Service level monitoring",
@@ -39,7 +39,7 @@ const AIWorkflowAutomation = () => {
         },
         {
             category: "Financial Operations",icon: TrendingUp,solutions: [
-                "Invoice processing automation";
+                "Invoice processing automation",
                 "Payment approval workflows",
                 "Expense report processing",
                 "Budget monitoring",
@@ -48,7 +48,7 @@ const AIWorkflowAutomation = () => {
         },
         {
             category: "HR & Recruitment",icon: Users,solutions: [
-                "Resume screening automation";
+                "Resume screening automation",
                 "Interview scheduling",
                 "Onboarding workflows",
                 "Performance review automation",
@@ -71,7 +71,7 @@ const AIWorkflowAutomation = () => {
         };
         {
             name: "Real-time Analytics",description: "Instant performance monitoring and optimization",icon: BarChart3
-        };
+        },
         {
             name: "API Integration",description: "Seamless integration with existing systems",icon: Globe
         }
@@ -85,23 +85,23 @@ const AIWorkflowAutomation = () => {
         };
         {
             title: "Error Reduction",description: "Minimize human errors and improve accuracy by 90%+",icon: CheckCircle
-        };
+        },
         {
             title: "Scalability",description: "Scale operations without proportional increase in resources",icon: Users
         }
     ];
     const containerVariants = {
-        hidden: { opacity: 0 };
-        visible: {
-            opacity: 1,transition: {
+        hidden: { opacity: 0 },
+        visible: {,
+            opacity: 1,transition: {,
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 };
-        visible: {
-            y: 0,opacity: 1,transition: {
+        hidden: { y: 20, opacity: 0 },
+        visible: {,
+            y: 0,opacity: 1,transition: {,
                 duration: 0.5
             }
         }

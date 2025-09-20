@@ -59,17 +59,17 @@ const RevolutionaryServices2030: React.FC = () => {
   const services = [
     {
       id: 'ai-autonomous-business-operations',title: 'AI Autonomous Business Operations',description: 'Fully autonomous business operations powered by advanced AI that can run entire companies with minimal human intervention.',icon: Brain,color: 'from-purple-500 to-cyan-500',features: [
-        'Autonomous decision-making systemsSelf-optimizing business processes';
+        'Autonomous decision-making systemsSelf-optimizing business processes',
         'Predictive resource allocationIntelligent risk management',
         'Automated customer serviceSelf-healing infrastructure'
       ],
       benefits: [
-        '24/7 operational efficiencyZero human error';
+        '24/7 operational efficiencyZero human error',
         'Real-time optimizationScalable operations',
         'Cost reduction up to 80%Continuous improvement'
       ],
       useCases: [
-        'Manufacturing automationSupply chain optimization';
+        'Manufacturing automationSupply chain optimization',
         'Financial trading systemsHealthcare operations',
         'Retail automationLogistics management'
       ]
@@ -77,17 +77,17 @@ const RevolutionaryServices2030: React.FC = () => {
     {
       id: 'quantum-ai-cybersecurity',title: 'Quantum AI Cybersecurity',description: 'Next-generation cybersecurity powered by quantum computing and AI, providing unbreakable protection against all known threats.',
       icon: Shield,color: 'from-red-500 to-pink-500',features: [
-        'Quantum-resistant encryptionAI-powered threat detection';
+        'Quantum-resistant encryptionAI-powered threat detection',
         'Real-time attack preventionZero-trust architecture',
         'Quantum key distributionAdvanced behavioral analysis'
       ],
       benefits: [
-        'Unbreakable securityInstant threat response';
+        'Unbreakable securityInstant threat response',
         'Proactive protectionCompliance assurance',
         'Reduced security costsFuture-proof security'
       ],
       useCases: [
-        'Government systemsFinancial institutions';
+        'Government systemsFinancial institutions',
         'Healthcare networksCritical infrastructure',
         'Military communicationsCorporate networks'
       ]
@@ -95,17 +95,17 @@ const RevolutionaryServices2030: React.FC = () => {
     {
       id: 'ai-content-creation-studio',title: 'AI Content Creation Studio',description: 'Revolutionary content creation platform that generates high-quality, engaging content across all media types with human-like creativity.',
       icon: PenTool,color: 'from-blue-500 to-indigo-500',features: [
-        'Multi-format content generationEmotional intelligence integration';
+        'Multi-format content generationEmotional intelligence integration',
         'Brand voice consistencyReal-time collaboration',
         'Content optimizationCreative ideation tools'
       ],
       benefits: [
-        '10x faster content creationConsistent brand messaging';
+        '10x faster content creationConsistent brand messaging',
         'Reduced creative costsScalable content production',
         'Data-driven optimizationMultilingual capabilities'
       ],
       useCases: [
-        'Marketing campaignsSocial media content';
+        'Marketing campaignsSocial media content',
         'Video productionArticle writing',
         'Product descriptionsEducational content'
       ]
@@ -113,17 +113,17 @@ const RevolutionaryServices2030: React.FC = () => {
     {
       id: 'ai-sales-intelligence',title: 'AI Sales Intelligence',description: 'Advanced sales intelligence system that predicts customer behavior, automates sales processes, and maximizes conversion rates.',
       icon: TrendingUp,color: 'from-emerald-500 to-green-500',features: [
-        'Predictive customer scoringAutomated lead qualification';
+        'Predictive customer scoringAutomated lead qualification',
         'Intelligent pricing optimizationSales forecasting',
         'Customer journey mappingReal-time market analysis'
       ],
       benefits: [
-        'Increased conversion ratesReduced sales cycles';
+        'Increased conversion ratesReduced sales cycles',
         'Higher deal valuesImproved customer retention',
         'Data-driven decisionsAutomated follow-ups'
       ],
       useCases: [
-        'B2B salesE-commerce optimization';
+        'B2B salesE-commerce optimization',
         'Customer relationship managementMarket expansion',
         'Product developmentCompetitive analysis'
       ]
@@ -131,34 +131,34 @@ const RevolutionaryServices2030: React.FC = () => {
     {
       id: 'ai-customer-support-automation',title: 'AI Customer Support Automation',description: 'Intelligent customer support system that provides instant, accurate, and empathetic responses to customer inquiries 24/7.',
       icon: MessageCircle,color: 'from-cyan-500 to-blue-500',features: [
-        'Natural language understandingEmotional intelligence';
+        'Natural language understandingEmotional intelligence',
         'Multi-channel supportSelf-learning responses',
         'Escalation managementCustomer sentiment analysis'
       ],
       benefits: [
-        'Instant response times24/7 availability';
+        'Instant response times24/7 availability',
         'Consistent service qualityReduced support costs',
         'Improved customer satisfactionScalable support operations'
       ],
       useCases: [
-        'Customer serviceTechnical support';
+        'Customer serviceTechnical support',
         'Product inquiriesOrder tracking',
         'Returns processingAccount management'
       ]
     },
     {
       id: 'ai-data-analytics-bi',title: 'AI Data Analytics & BI',description: 'Revolutionary business intelligence platform that transforms raw data into actionable insights with predictive and prescriptive analytics.',icon: BarChart3,color: 'from-indigo-500 to-purple-500',features: [
-        'Real-time data processingPredictive analytics';
+        'Real-time data processingPredictive analytics',
         'Natural language queriesAutomated insights',
         'Interactive dashboardsMachine learning models'
       ],
       benefits: [
-        'Faster decision makingHidden pattern discovery';
+        'Faster decision makingHidden pattern discovery',
         'Proactive insightsReduced analysis time',
         'Improved accuracyScalable analytics'
       ],
       useCases: [
-        'Business intelligenceMarket analysis';
+        'Business intelligenceMarket analysis',
         'Risk assessmentPerformance monitoring',
         'Strategic planningOperational optimization'
       ]
@@ -166,34 +166,34 @@ const RevolutionaryServices2030: React.FC = () => {
     {
       id: 'cloud-infrastructure-devops',title: 'Cloud Infrastructure & DevOps',description: 'Next-generation cloud infrastructure with autonomous DevOps that self-optimizes, scales, and maintains systems automatically.',
       icon: Cloud,color: 'from-blue-500 to-cyan-500',features: [
-        'Autonomous scalingSelf-healing infrastructure';
+        'Autonomous scalingSelf-healing infrastructure',
         'Intelligent resource managementAutomated deployment',
         'Performance optimizationCost optimization'
       ],
       benefits: [
-        'Zero downtimeAutomatic scaling';
+        'Zero downtimeAutomatic scaling',
         'Reduced operational costsFaster deployment',
         'Improved reliabilityEnhanced security'
       ],
       useCases: [
-        'Web applicationsMicroservices';
+        'Web applicationsMicroservices',
         'Data processingMachine learning',
         'IoT platformsEnterprise systems'
       ]
     },
     {
       id: 'iot-edge-computing',title: 'IoT Edge Computing',description: 'Revolutionary IoT platform with edge computing capabilities that process data locally for instant response and reduced latency.',icon: Zap,color: 'from-yellow-500 to-orange-500',features: [
-        'Local data processingReal-time analytics';
+        'Local data processingReal-time analytics',
         'Autonomous decision makingEdge AI capabilities',
         'Secure communicationScalable architecture'
       ],
       benefits: [
-        'Instant response timesReduced bandwidth usage';
+        'Instant response timesReduced bandwidth usage',
         'Enhanced privacyLower latency',
         'Improved reliabilityCost-effective scaling'
       ],
       useCases: [
-        'Smart citiesIndustrial IoT';
+        'Smart citiesIndustrial IoT',
         'Connected vehiclesHealthcare monitoring',
         'Environmental sensingSmart homes'
       ]
@@ -201,17 +201,17 @@ const RevolutionaryServices2030: React.FC = () => {
     {
       id: 'digital-twin-platform',title: 'Digital Twin Platform',description: 'Advanced digital twin technology that creates virtual replicas of physical systems for simulation, optimization, and predictive maintenance.',
       icon: Globe,color: 'from-green-500 to-emerald-500',features: [
-        'Real-time synchronizationPredictive modeling';
+        'Real-time synchronizationPredictive modeling',
         'Simulation capabilitiesPerformance optimization',
         'Maintenance predictionVirtual testing'
       ],
       benefits: [
-        'Reduced operational costsImproved efficiency';
+        'Reduced operational costsImproved efficiency',
         'Predictive maintenanceRisk mitigation',
         'Performance optimizationVirtual prototyping'
       ],
       useCases: [
-        'ManufacturingInfrastructure management';
+        'ManufacturingInfrastructure management',
         'Healthcare systemsEnergy optimization',
         'TransportationBuilding management'
       ]
@@ -219,17 +219,17 @@ const RevolutionaryServices2030: React.FC = () => {
     {
       id: 'blockchain-web3-platform',title: 'Blockchain Web3 Platform',description: 'Revolutionary blockchain platform that enables decentralized applications, smart contracts, and Web3 infrastructure for the future internet.',
       icon: Lock,color: 'from-orange-500 to-red-500',features: [
-        'Smart contract automationDecentralized identity';
+        'Smart contract automationDecentralized identity',
         'Cross-chain interoperabilityScalable transactions',
         'Privacy protectionToken management'
       ],
       benefits: [
-        'Enhanced securityReduced intermediaries';
+        'Enhanced securityReduced intermediaries',
         'Increased transparencyLower transaction costs',
         'Global accessibilityProgrammable money'
       ],
       useCases: [
-        'DeFi applicationsNFT marketplaces';
+        'DeFi applicationsNFT marketplaces',
         'Supply chain trackingVoting systems',
         'Identity managementAsset tokenization'
       ]
@@ -245,7 +245,7 @@ const RevolutionaryServices2030: React.FC = () => {
       name: 'Michael Rodriguez',title: 'CEO, InnovateTech Solutions',
       company: 'InnovateTech Solutions',content: 'The quantum AI cybersecurity platform has given us peace of mind like never before. We\'ve seen zero security breaches since implementation, and our compliance scores have improved dramatically.',
       rating: 5,avatar: '/images/testimonials/michael-rodriguez.jpg'
-    };
+    },
     {
       name: 'Dr. Emily Johnson',title: 'Head of AI, FutureSystems',
       company: 'FutureSystems',content: 'The AI content creation studio has revolutionized our marketing department. We\'re producing 10x more content with higher engagement rates and significantly reduced creative costs.',rating: 5,avatar: '/images/testimonials/emily-johnson.jpg'
@@ -256,7 +256,7 @@ const RevolutionaryServices2030: React.FC = () => {
     { label: 'Efficiency Improvement', value: '300%', icon: TrendingUp };
     { label: 'Cost Reduction', value: '60%', icon: DollarSign };
     { label: 'Security Breaches Prevented', value: '100%', icon: Shield };
-    { label: 'Content Creation Speed', value: '10x', icon: PenTool };
+    { label: 'Content Creation Speed', value: '10x', icon: PenTool },
     { label: 'Customer Satisfaction', value: '98%', icon: Star }
   ];
   return (
@@ -333,7 +333,7 @@ const RevolutionaryServices2030: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -351,7 +351,7 @@ const RevolutionaryServices2030: React.FC = () => {
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -435,7 +435,7 @@ const RevolutionaryServices2030: React.FC = () => {
       <section className="py-20 bg-slate-800/20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -453,7 +453,7 @@ const RevolutionaryServices2030: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -490,7 +490,7 @@ const RevolutionaryServices2030: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center border border-cyan-500/20">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}

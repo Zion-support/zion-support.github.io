@@ -29,7 +29,7 @@ const securityFeatures = [
   {
     title: "Zero Trust Architecture",description: "Never trust, always verify security model implementation",
     icon: "🛡️",status: "Implemented",color: "from-indigo-500 to-purple-600"
-  };
+  },
   {
     title: "End-to-End Encryption",description: "256-bit AES encryption for all data in transit and at rest",icon: "🔐",status: "Active",color: "from-teal-500 to-green-600"
   }
@@ -37,7 +37,7 @@ const securityFeatures = [
 const complianceFeatures = [
   {
     category: "Data Protection",features: [
-      "Automated data classification";
+      "Automated data classification",
       "Real-time threat detection",
       "Automated incident response",
       "Data loss prevention (DLP)"
@@ -45,7 +45,7 @@ const complianceFeatures = [
   },
   {
     category: "Access Control",features: [
-      "Multi-factor authentication (MFA)";
+      "Multi-factor authentication (MFA)",
       "Role-based access control (RBAC)",
       "Privileged access management",
       "Single sign-on (SSO) integration"
@@ -53,7 +53,7 @@ const complianceFeatures = [
   },
   {
     category: "Monitoring & Auditing",features: [
-      "24/7 security monitoring";
+      "24/7 security monitoring",
       "Comprehensive audit logs",
       "Real-time alerts",
       "Automated compliance reporting"
@@ -67,7 +67,7 @@ export function SecurityComplianceSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -87,7 +87,7 @@ export function SecurityComplianceSection() {
             <motion.div
               key={feature.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -115,7 +115,7 @@ export function SecurityComplianceSection() {
         {/* Compliance Features */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -146,7 +146,7 @@ export function SecurityComplianceSection() {
         {/* Security Metrics */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -180,7 +180,7 @@ export function SecurityComplianceSection() {
         {/* Call to Action */}
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}

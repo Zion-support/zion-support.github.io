@@ -29,24 +29,24 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo),
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({
 error,
       errorInfo
     
-}),
+});
 
     // Log error to external service
-    this.logError(error, errorInfo),
+    this.logError(error, errorInfo);
   }
 
   logError = (error: Error, errorInfo: ErrorInfo) => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Boundary Error');
-      console.error('Error:', error),
-      console.error('Error Info:', errorInfo),
-      console.groupEnd(),
+      console.error('Error:', error);
+      console.error('Error Info:', errorInfo);
+      console.groupEnd();
     }
 
     // In production, you could send to error reporting service
@@ -60,15 +60,15 @@ error,
   },
 
   handleReload = () => {
-    window.location.reload(),
+    window.location.reload();
   },
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback,
+        return this.props.fallback;
       }
-
+;
       return (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -132,7 +132,7 @@ error,
               {/* Action Buttons */}
               <div className="space-y-3">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   onClick={this.handleRetry}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
@@ -141,7 +141,7 @@ error,
                 </motion.button>
                 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   onClick={this.handleReload}
                   className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
@@ -164,7 +164,7 @@ error,
         </motion.div>
       )
     }
-
+;
     return this.props.children;
   }
 }

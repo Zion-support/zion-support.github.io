@@ -35,7 +35,7 @@ const Legal: React.FC = () => {
     };
     {
       title: 'Service Level Agreement',description: 'Our commitment to service quality and availability',href: '/sla',icon: CheckCircle,category: 'Service Terms'
-    };
+    },
     {
       title: 'Acceptable Use Policy',description: 'Guidelines for acceptable use of our services',href: '/acceptable-use',icon: UserCheck,category: 'Service Terms'
     }
@@ -46,7 +46,7 @@ const Legal: React.FC = () => {
     };
     {
       name: 'Data Protection',description: 'Privacy and data handling policies',icon: Shield,color: 'from-green-500 to-emerald-500'
-    };
+    },
     {
       name: 'Compliance',description: 'Regulatory and industry compliance documents',icon: Scale,color: 'from-purple-500 to-pink-500'
     }
@@ -97,7 +97,7 @@ const Legal: React.FC = () => {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -115,7 +115,7 @@ const Legal: React.FC = () => {
             {legalCategories.map((category, index) => (
               <motion.div
                 key={category.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -136,7 +136,7 @@ const Legal: React.FC = () => {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -154,7 +154,7 @@ const Legal: React.FC = () => {
             {legalDocuments.map((document, index) => (
               <motion.div
                 key={document.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -194,7 +194,7 @@ const Legal: React.FC = () => {
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -235,7 +235,7 @@ const Legal: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -272,7 +272,7 @@ const Legal: React.FC = () => {
       <section className="py-16">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

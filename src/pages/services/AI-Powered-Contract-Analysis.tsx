@@ -82,7 +82,7 @@ export default function AIPoweredContractAnalysis() {
   const pricingPlans = [
     {
       name: "Starter",price: "$299",period: "/month",description: "Perfect for small legal teams and startups",features: [
-        "Up to 100 contracts/month";
+        "Up to 100 contracts/month",
         "Basic risk assessment",
         "Standard compliance checks",
         "Email support",
@@ -113,7 +113,7 @@ export default function AIPoweredContractAnalysis() {
     {
       name: "Enterprise",price: "$1,999",
       period: "/month",description: "For large organizations with complex contract portfolios",features: [
-        "Unlimited contracts";
+        "Unlimited contracts",
         "Custom AI models",
         "Advanced compliance",
         "24/7 dedicated support",
@@ -139,7 +139,7 @@ export default function AIPoweredContractAnalysis() {
     };
     {
       icon: <DollarSign className="w-8 h-8" />,title: "Cut Costs by 60%",description: "Lower legal expenses and improve contract negotiation outcomes"
-    };
+    },
     {
       icon: <TrendingUp className="w-8 h-8" />,title: "Improve Compliance",description: "Stay ahead of regulatory changes with automated compliance monitoring"
     }
@@ -159,7 +159,7 @@ export default function AIPoweredContractAnalysis() {
     };
     {
       title: "Real Estate Firms",description: "Streamline lease agreements and property management contracts",icon: <Building className="w-6 h-6" />
-    };
+    },
     {
       title: "Manufacturing Companies",description: "Manage supplier contracts and ensure quality compliance",icon: <Settings className="w-6 h-6" />
     }
@@ -176,7 +176,7 @@ export default function AIPoweredContractAnalysis() {
     };
     {
       feature: "Compliance Frameworks",zion: "150+",competitor1: "75",competitor2: "50",competitor3: "25"
-    };
+    },
     {
       feature: "API Response Time",zion: "< 100ms",competitor1: "500ms",competitor2: "1s",competitor3: "2s"
     }

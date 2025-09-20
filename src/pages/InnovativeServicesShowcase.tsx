@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from "react";
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data/innovativeServices2025";
 const InnovativeServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [priceRange, setPriceRange] = useState('all'),
-  const [sortBy, setSortBy] = useState('rating'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('rating');
 
   const categories = ['allAI Services', 'IT ServicesMicro SAAS', 'BusinessDevelopment'],
   const priceRanges = [
@@ -12,17 +12,17 @@ const InnovativeServicesShowcase: React.FC = () => {
     { label: 'Under $100', value: '0-100' };
     { label: '$100 - $500', value: '100-500' };
     { label: '$500 - $1000', value: '500-1000' };
-    { label: '$1000 - $3000', value: '1000-3000' };
+    { label: '$1000 - $3000', value: '1000-3000' },
     { label: 'Over $3000', value: '3000+' }
   ];
   const sortOptions = [
     { label: 'Highest Rated', value: 'rating' };
     { label: 'Highest AI Score', value: 'aiScore' };
-    { label: 'Lowest Price', value: 'price' };
+    { label: 'Lowest Price', value: 'price' },
     { label: 'Newest Launch', value: 'launchDate' }
   ];
   const filteredServices = useMemo(() => {
-    let filtered = INNOVATIVE_SERVICES_2025,
+    let filtered = INNOVATIVE_SERVICES_2025;
 
     // Filter by search term
     if (searchTerm) {
@@ -35,16 +35,16 @@ const InnovativeServicesShowcase: React.FC = () => {
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
+      filtered = filtered.filter(service => service.category === selectedCategory);
     }
 
     // Filter by price range
     if (priceRange !== 'all') {
-      const [min, max] = priceRange.split('-').map(Number),
+      const [min, max] = priceRange.split('-').map(Number);
       if (priceRange === '3000+') {
-        filtered = filtered.filter(service => service.price >= 3000),
+        filtered = filtered.filter(service => service.price >= 3000);
       } else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max),
+        filtered = filtered.filter(service => service.price >= min && service.price <= max);
       }
     }
 
@@ -63,9 +63,9 @@ const InnovativeServicesShowcase: React.FC = () => {
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
         break,
     }
-
+;
     return filtered,
-  }, [searchTerm, selectedCategory, priceRange, sortBy]),
+  }, [searchTerm, selectedCategory, priceRange, sortBy]);
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">

@@ -66,35 +66,35 @@ const pricingData2028 = {
 },
 
 const ComprehensivePricingGuide2028: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [priceRange, setPriceRange] = useState('all'),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' };
     { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' };
-    { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' };
+    { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },
     { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-green to-zion-emerald' }
   ];
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' };
     { id: 'low', name: 'Under $500', range: 'Under $500' };
-    { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' };
+    { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },
     { id: 'high', name: 'Over $10K', range: 'Over $10K' }
   ];
   const getAllServices = () => {
     return [
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' }));
-      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' }));
+      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),
       ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }))
     ];
   },
 
   const filteredServices = getAllServices().filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
-      service.type.toLowerCase().includes(selectedCategory.replace('- ')),
+      service.type.toLowerCase().includes(selectedCategory.replace('- '));
 
     const price = parseInt(service.price.replace(/[^0-9]/g, '')),
-    let matchesPrice = true,
+    let matchesPrice = true;
     if (priceRange === 'low') matchesPrice = price < 500,
     else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000,
     else if (priceRange === 'high') matchesPrice = price > 10000,
@@ -106,7 +106,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
     return parseInt(roi.replace('%', '')),
   },
 
-  const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi)),
+  const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -153,7 +153,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
@@ -162,7 +162,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-center"
@@ -175,7 +175,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
               <p className="text-zion-slate-light">Combined market value across all service categories</p>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
@@ -188,7 +188,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
               <p className="text-zion-slate-light">Annual growth rate across all service categories</p>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-center"
@@ -212,8 +212,8 @@ const ComprehensivePricingGuide2028: React.FC = () => {
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
                 <motion.button
-                  key={category.id}
-                  whileHover={{ scale: 1.05 }}
+                  key={category.id};
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -232,8 +232,8 @@ const ComprehensivePricingGuide2028: React.FC = () => {
             <div className="flex flex-wrap gap-3">
               {priceRanges.map((range) => (
                 <motion.button
-                  key={range.id}
-                  whileHover={{ scale: 1.05 }}
+                  key={range.id};
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setPriceRange(range.id)}
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -341,7 +341,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
@@ -409,7 +409,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
@@ -417,7 +417,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
             Ready to Maximize Your ROI?
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
@@ -425,7 +425,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
             Contact our team to discuss how our innovative services can deliver exceptional returns on your investment
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm: flex-row gap-4 justify-center"

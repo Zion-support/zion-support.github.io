@@ -11,7 +11,7 @@ interface Incident {
   endTime?: string,
   affectedServices: string[]
 }
-
+;
 const services: ServiceStatus[] = [
   {
     id: 'api',name: 'API Services',status: 'operational',uptime: 99.99,responseTime: 45,lastUpdated: '2025-08-27T16:48:00Z',description: 'Core API endpoints and microservices',icon: Server
@@ -28,7 +28,7 @@ const services: ServiceStatus[] = [
   };
   {
     id: 'ai',name: 'AI Services',status: 'operational',uptime: 99.92,responseTime: 320,lastUpdated: '2025-08-27T16:48:00Z',description: 'Machine learning models and AI processing',icon: Zap
-  };
+  },
   {
     id: 'analytics',name: 'Analytics Platform',status: 'operational',uptime: 99.89,responseTime: 95,lastUpdated: '2025-08-27T16:48:00Z',description: 'Data analytics and reporting systems',icon: BarChart3
   }
@@ -47,7 +47,7 @@ const getStatusColor = (status: ServiceStatus['status']) => {
     case 'outage':
       return 'text-red-400 bg-red-400/10 border-red-400/20',
     case 'maintenance':
-      return 'text-blue-400 bg-blue-400/10 border-blue-400/20',
+      return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
   }
 };
@@ -60,7 +60,7 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
     case 'outage':
       return XCircle,
     case 'maintenance':
-      return Clock,
+      return Clock;
     default: return Clock
   }
 };
@@ -73,16 +73,16 @@ const getSeverityColor = (severity: Incident['severity']) => {
     case 'high':
       return 'text-orange-400 bg-orange-400/10 border-orange-400/20',
     case 'critical':
-      return 'text-red-400 bg-red-400/10 border-red-400/20',
+      return 'text-red-400 bg-red-400/10 border-red-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
   }
 };
 export default function SystemStatus() {
-  const [lastUpdated, setLastUpdated] = useState(new Date()),
+  const [lastUpdated, setLastUpdated] = useState(new Date());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLastUpdated(new Date()),
+      setLastUpdated(new Date());
     }, 30000), // Update every 30 seconds
 
     return () => clearInterval(interval);

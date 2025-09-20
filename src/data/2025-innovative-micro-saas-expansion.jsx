@@ -4,7 +4,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     id: "metaverse-platform",title: "Metaverse Business Platform",description: "Comprehensive platform for businesses to establish presence in the metaverse with virtual offices, events, and commerce",
     category: "Metaverse",price: "$8,500/month",
     features: [
-      "Virtual office creation";
+      "Virtual office creation",
       "3D event hosting",
       "Virtual commerce",
       "Avatar management",
@@ -12,7 +12,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Analytics dashboard"
     ],
     benefits: [
-      "Early metaverse adoption";
+      "Early metaverse adoption",
       "Virtual customer engagement",
       "Cost-effective events",
       "Global reach"
@@ -23,7 +23,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     id: "web3-infrastructure",title: "Web3 Infrastructure Platform",description: "Complete Web3 infrastructure for decentralized applications, NFTs, and blockchain integration",
     category: "Web3",price: "$12,500/month",
     features: [
-      "Smart contract deployment";
+      "Smart contract deployment",
       "NFT marketplace",
       "DeFi integration",
       "Wallet management",
@@ -31,7 +31,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Security auditing"
     ],
     benefits: [
-      "Decentralized infrastructure";
+      "Decentralized infrastructure",
       "NFT monetization",
       "DeFi capabilities",
       "Future-proof technology"
@@ -43,7 +43,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "ai-customer-success",title: "AI Customer Success Platform",description: "Intelligent platform that predicts customer churn and automates retention strategies",category: "Customer Success",price: "$6,500/month",
     features: [
-      "Churn prediction";
+      "Churn prediction",
       "Automated retention",
       "Customer health scoring",
       "Personalized engagement",
@@ -51,7 +51,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Integration APIs"
     ],
     benefits: [
-      "Reduce churn by 30%";
+      "Reduce churn by 30%",
       "Automated retention",
       "Improved customer satisfaction",
       "Data-driven insights"
@@ -62,7 +62,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     id: "ai-sales-optimization",title: "AI Sales Optimization Platform",description: "Comprehensive platform for optimizing sales processes, lead scoring, and revenue forecasting",
     category: "Sales",price: "$7,500/month",
     features: [
-      "Lead scoring AI";
+      "Lead scoring AI",
       "Revenue forecasting",
       "Sales process optimization",
       "Pipeline analytics",
@@ -70,7 +70,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "CRM integration"
     ],
     benefits: [
-      "Increase conversion rates";
+      "Increase conversion rates",
       "Accurate forecasting",
       "Process optimization",
       "Revenue growth"
@@ -82,7 +82,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "real-time-analytics",title: "Real-Time Business Analytics Platform",description: "Live analytics platform for instant business insights and decision-making",category: "Analytics",price: "$5,500/month",
     features: [
-      "Real-time dashboards";
+      "Real-time dashboards",
       "Live data streaming",
       "Instant alerts",
       "Predictive analytics",
@@ -90,7 +90,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Mobile access"
     ],
     benefits: [
-      "Instant insights";
+      "Instant insights",
       "Real-time decisions",
       "Proactive alerts",
       "Competitive advantage"
@@ -101,7 +101,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     id: "data-governance-platform",title: "AI Data Governance Platform",description: "Intelligent platform for automated data governance, compliance, and quality management",
     category: "Data Governance",price: "$9,500/month",
     features: [
-      "Automated compliance";
+      "Automated compliance",
       "Data quality monitoring",
       "Privacy protection",
       "Audit trails",
@@ -109,7 +109,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Regulatory reporting"
     ],
     benefits: [
-      "Automated compliance";
+      "Automated compliance",
       "Data quality improvement",
       "Risk reduction",
       "Regulatory adherence"
@@ -121,7 +121,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "zero-trust-security",title: "Zero Trust Security Platform",description: "Comprehensive zero trust security platform for modern enterprise environments",category: "Security",price: "$11,500/month",
     features: [
-      "Identity verification";
+      "Identity verification",
       "Device trust scoring",
       "Network segmentation",
       "Continuous monitoring",
@@ -129,7 +129,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Compliance reporting"
     ],
     benefits: [
-      "Enhanced security";
+      "Enhanced security",
       "Reduced attack surface",
       "Compliance adherence",
       "Modern security model"
@@ -139,7 +139,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "ai-compliance-automation",title: "AI Compliance Automation Platform",description: "Intelligent platform that automates regulatory compliance across multiple industries",category: "Compliance",price: "$8,500/month",
     features: [
-      "Regulatory monitoring";
+      "Regulatory monitoring",
       "Automated reporting",
       "Compliance scoring",
       "Risk assessment",
@@ -147,7 +147,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Multi-regulation support"
     ],
     benefits: [
-      "Automated compliance";
+      "Automated compliance",
       "Reduced manual work",
       "Risk mitigation",
       "Cost savings"
@@ -159,7 +159,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "ai-collaboration-platform",title: "AI Collaboration Platform",description: "Intelligent platform that enhances team collaboration with AI-powered insights and automation",category: "Collaboration",price: "$4,500/month",
     features: [
-      "Smart meeting scheduling";
+      "Smart meeting scheduling",
       "Task automation",
       "Team analytics",
       "Knowledge management",
@@ -167,7 +167,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Integration tools"
     ],
     benefits: [
-      "Improved productivity";
+      "Improved productivity",
       "Better collaboration",
       "Automated workflows",
       "Team insights"
@@ -177,7 +177,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "virtual-reality-meetings",title: "VR Meeting Platform",description: "Immersive virtual reality platform for remote meetings and collaboration",category: "VR Collaboration",price: "$6,500/month",
     features: [
-      "VR meeting rooms";
+      "VR meeting rooms",
       "3D presentations",
       "Virtual whiteboards",
       "Avatar customization",
@@ -185,7 +185,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Cross-platform support"
     ],
     benefits: [
-      "Immersive meetings";
+      "Immersive meetings",
       "Better engagement",
       "3D collaboration",
       "Remote team building"
@@ -197,7 +197,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "ai-marketing-automation",title: "AI Marketing Automation Platform",description: "Intelligent marketing platform that automates campaigns and personalizes customer experiences",category: "Marketing",price: "$7,500/month",
     features: [
-      "Campaign automation";
+      "Campaign automation",
       "Personalization engine",
       "Customer segmentation",
       "A/B testing",
@@ -205,7 +205,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Multi-channel support"
     ],
     benefits: [
-      "Automated campaigns";
+      "Automated campaigns",
       "Personalized experiences",
       "Improved ROI",
       "Scalable marketing"
@@ -215,7 +215,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "voice-search-optimization",title: "Voice Search Optimization Platform",description: "Platform for optimizing content and SEO for voice search and virtual assistants",category: "Voice SEO",price: "$4,500/month",
     features: [
-      "Voice keyword research";
+      "Voice keyword research",
       "Content optimization",
       "Schema markup",
       "Voice analytics",
@@ -223,7 +223,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Multi-language support"
     ],
     benefits: [
-      "Voice search visibility";
+      "Voice search visibility",
       "Improved rankings",
       "Mobile optimization",
       "Future-ready SEO"
@@ -235,7 +235,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "ai-accounting-platform",title: "AI Accounting Platform",description: "Intelligent accounting platform with automated bookkeeping and financial insights",category: "FinTech",price: "$5,500/month",
     features: [
-      "Automated bookkeeping";
+      "Automated bookkeeping",
       "Expense categorization",
       "Financial insights",
       "Tax preparation",
@@ -243,7 +243,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Integration tools"
     ],
     benefits: [
-      "Automated accounting";
+      "Automated accounting",
       "Real-time insights",
       "Cost savings",
       "Compliance assurance"
@@ -253,7 +253,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   {
     id: "crypto-payment-platform",title: "Crypto Payment Platform",description: "Complete platform for accepting and processing cryptocurrency payments",category: "Crypto",price: "$8,500/month",
     features: [
-      "Multi-crypto support";
+      "Multi-crypto support",
       "Instant settlements",
       "Fiat conversion",
       "Security protocols",
@@ -261,7 +261,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Analytics dashboard"
     ],
     benefits: [
-      "Crypto acceptance";
+      "Crypto acceptance",
       "Global payments",
       "Lower fees",
       "Instant settlements"
@@ -271,7 +271,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
 ],
 
 export const INNOVATIVE_CATEGORIES = [
-    "Business Intelligence",
+    "Business Intelligence";
     "Customer Experience",
     "Project Management",
     "Marketing",
@@ -279,17 +279,17 @@ export const INNOVATIVE_CATEGORIES = [
     "Sales",
     "Financial Services",
     "Data Privacy";
-    "Supply Chain";
+    "Supply Chain",
     "Business Automation"
 ];
 export const INNOVATIVE_PRICING = {
-    basic: {
+    basic: {,
         price: 199,currency: "$",period: "month",features: ["Core platform access", "Basic AI features", "Standard support"]
     },
-    professional: {
+    professional: {,
         price: 449,currency: "$",period: "month",features: ["Advanced AI features", "Custom integrations", "Priority support", "Advanced analytics"]
     },
-    enterprise: {
+    enterprise: {,
         price: 999,currency: "$",period: "month",features: ["Full platform access", "White-label options", "24/7 support", "Custom development"]
     }
 },

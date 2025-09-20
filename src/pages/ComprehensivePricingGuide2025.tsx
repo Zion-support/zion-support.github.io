@@ -30,8 +30,8 @@ import {
 import { SEO } from "../components/SEO";
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from "../data/comprehensivePricingGuide2025";
 export default function ComprehensivePricingGuide2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 20000]);
@@ -42,33 +42,33 @@ export default function ComprehensivePricingGuide2025() {
     { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Customer Support').length };
     { id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Marketing').length };
     { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Content').length };
-    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & HR').length };
+    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & HR').length },
     { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'FinTech').length }
   ];
   const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesPrice = service.pricingTiers.some(tier => 
       tier.price >= priceRange[0] && tier.price <= priceRange[1]
-    ),
+    );
     return matchesCategory && matchesSearch && matchesPrice,
-  }),
+  });
 
   const handleServiceClick = (service: any) => {
     setSelectedService(service)
   };
   const closeModal = () => {
-    setSelectedService(null),
+    setSelectedService(null);
   },
 
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}k`;
-    }
+    };
     return `$${price}`,
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -390,7 +390,7 @@ export default function ComprehensivePricingGuide2025() {
       <section className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

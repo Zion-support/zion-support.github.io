@@ -32,14 +32,14 @@ import {
 } from "lucide-react";
 import { INNOVATIVE_SERVICES } from "../data/servicesData";
 export default function InnovativeServicesShowcase2026() {
-  const [selectedCategory, setSelectedCategory] = useState('All'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [sortBy, setSortBy] = useState('innovation'),
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
 
   const categories = ['AllAI & Automation', 'Quantum ComputingBlockchain', 'CybersecurityIoT', 'AI & ContentDevOps', 'FinanceSustainability'],
 
   const sortedServices = useMemo(() => {
-    let filtered = INNOVATIVE_SERVICES,
+    let filtered = INNOVATIVE_SERVICES;
 
     // Filter by search query
     if (searchQuery) {
@@ -52,7 +52,7 @@ export default function InnovativeServicesShowcase2026() {
 
     // Filter by category
     if (selectedCategory !== 'All') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
+      filtered = filtered.filter(service => service.category === selectedCategory);
     }
 
     // Sort services
@@ -68,7 +68,7 @@ export default function InnovativeServicesShowcase2026() {
       }
     });
     return filtered,
-  }, [searchQuery, selectedCategory, sortBy]),
+  }, [searchQuery, selectedCategory, sortBy]);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -89,7 +89,7 @@ export default function InnovativeServicesShowcase2026() {
       case 'Finance':
         return <TrendingUp className="w-5 h-5" />,
       case 'Sustainability':
-        return <Leaf className="w-5 h-5" />,
+        return <Leaf className="w-5 h-5" />;
       default: return <Star className="w-5 h-5" />
     }
   };
@@ -102,7 +102,7 @@ export default function InnovativeServicesShowcase2026() {
         {level}
       </span>
     ),
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -378,7 +378,7 @@ export default function InnovativeServicesShowcase2026() {
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -468,6 +468,6 @@ export default function InnovativeServicesShowcase2026() {
       </section>
     </div>
   ),
-},
+};
 
 export default InnovativeServicesShowcase2026;

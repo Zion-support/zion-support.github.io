@@ -31,9 +31,9 @@ import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028";
 import { EMERGING_TECH_INNOVATIVE_SERVICES_2028 } from "../data/emergingTechInnovativeServices2028";
 export default function InnovativeServicesShowcase2028() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('All'),
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('All'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('All');
 
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2028,
@@ -46,8 +46,8 @@ export default function InnovativeServicesShowcase2028() {
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.innovationLevel === selectedInnovationLevel;
     return matchesSearch && matchesCategory && matchesInnovationLevel;
   });
@@ -84,7 +84,7 @@ export default function InnovativeServicesShowcase2028() {
       case 'Climate Technology & AI':
         return <Cloud className="w-6 h-6" />,
       case 'Quantum Internet & AI':
-        return <Network className="w-6 h-6" />,
+        return <Network className="w-6 h-6" />;
       default: return <Rocket className="w-6 h-6" />
     }
   };
@@ -95,7 +95,7 @@ export default function InnovativeServicesShowcase2028() {
       case 'Advanced':
         return 'bg-gradient-to-r from-blue-600 to-cyan-600',
       case 'Innovative':
-        return 'bg-gradient-to-r from-green-600 to-emerald-600',
+        return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gradient-to-r from-gray-600 to-slate-600'
     }
   };

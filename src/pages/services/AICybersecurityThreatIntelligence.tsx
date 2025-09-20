@@ -63,7 +63,7 @@ const AICybersecurityThreatIntelligence = () => {
     };
     {
       icon: AlertTriangle,title: 'Proactive Threat Hunting',description: 'AI-driven threat hunting that identifies potential threats before they become active attacks'
-    };
+    },
     {
       icon: Globe2,title: 'Global Threat Feed',description: 'Real-time threat intelligence from global sources, dark web monitoring, and threat databases'
     },
@@ -83,7 +83,7 @@ const AICybersecurityThreatIntelligence = () => {
     },
     {
       icon: Workflow,title: 'Security Operations Center',description: 'AI-powered SOC services with 24/7 monitoring and automated incident response'
-    };
+    },
     {
       icon: Database,title: 'Threat Database & Analytics',description: 'Extensive database of known threats, attack patterns, and security intelligence'
     },
@@ -109,7 +109,7 @@ const AICybersecurityThreatIntelligence = () => {
   const pricing = [
     {
       name: 'Starter',price: '$399',period: '/month',description: 'Perfect for small businesses',features: [
-        'Up to 100 endpointsBasic threat detection';
+        'Up to 100 endpointsBasic threat detection',
         'Email alertsBasic reporting',
         'Email supportMobile app access'
       ],
@@ -127,7 +127,7 @@ const AICybersecurityThreatIntelligence = () => {
     {
       name: 'Enterprise',price: '$2,499',
       period: '/month',description: 'For large organizations',features: [
-        'Unlimited endpointsCustom AI models';
+        'Unlimited endpointsCustom AI models',
         'On-premise deploymentDedicated support',
         'Custom integrationsAdvanced security',
         'Compliance reportingSLA guarantees'
@@ -179,7 +179,7 @@ const AICybersecurityThreatIntelligence = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -197,7 +197,7 @@ const AICybersecurityThreatIntelligence = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-500/30 transition-all duration-200"
@@ -217,7 +217,7 @@ const AICybersecurityThreatIntelligence = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -235,7 +235,7 @@ const AICybersecurityThreatIntelligence = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-500/30 transition-all duration-200"
@@ -259,7 +259,7 @@ const AICybersecurityThreatIntelligence = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -277,7 +277,7 @@ const AICybersecurityThreatIntelligence = () => {
               {benefits.slice(0, 3).map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
@@ -291,7 +291,7 @@ const AICybersecurityThreatIntelligence = () => {
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
                   key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 20 }};
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
@@ -309,7 +309,7 @@ const AICybersecurityThreatIntelligence = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -327,7 +327,7 @@ const AICybersecurityThreatIntelligence = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
@@ -379,7 +379,7 @@ const AICybersecurityThreatIntelligence = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -397,7 +397,7 @@ const AICybersecurityThreatIntelligence = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-red-500/30 transition-all duration-200"
@@ -417,7 +417,7 @@ const AICybersecurityThreatIntelligence = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -432,7 +432,7 @@ const AICybersecurityThreatIntelligence = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
@@ -443,7 +443,7 @@ const AICybersecurityThreatIntelligence = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
@@ -454,7 +454,7 @@ const AICybersecurityThreatIntelligence = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
@@ -465,7 +465,7 @@ const AICybersecurityThreatIntelligence = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
@@ -482,7 +482,7 @@ const AICybersecurityThreatIntelligence = () => {
       <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

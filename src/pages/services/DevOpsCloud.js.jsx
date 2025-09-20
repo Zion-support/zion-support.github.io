@@ -8,12 +8,12 @@ export default function DevOpsCloudServices() {
             icon: Cloud,title: 'Cloud Migration & Strategy',description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.',price: 'From $8,500/project',
             marketPrice: '$7,000 - $25,000/project',
             features: [
-                'Cloud readiness assessmentMulti-cloud strategy planning';
+                'Cloud readiness assessmentMulti-cloud strategy planning',
                 'Migration roadmap developmentCost optimization analysis',
                 'Security and compliance reviewPerformance benchmarking'
             ],
             benefits: [
-                'Reduced infrastructure costs by 30-50%Improved scalability and flexibility';
+                'Reduced infrastructure costs by 30-50%Improved scalability and flexibility',
                 'Enhanced disaster recoveryBetter resource utilization'
             ]
         },
@@ -22,12 +22,12 @@ export default function DevOpsCloudServices() {
             price: 'From $6,500/project',
             marketPrice: '$5,500 - $18,000/project',
             features: [
-                'Automated build and test pipelinesDeployment automation';
+                'Automated build and test pipelinesDeployment automation',
                 'Environment managementRollback and recovery',
                 'Pipeline monitoring and alertsSecurity scanning integration'
             ],
             benefits: [
-                'Faster time to marketReduced deployment errors';
+                'Faster time to marketReduced deployment errors',
                 'Improved code qualityEnhanced team productivity'
             ]
         },
@@ -35,12 +35,12 @@ export default function DevOpsCloudServices() {
             icon: Shield,title: 'Infrastructure as Code (IaC)',description: 'Automated infrastructure provisioning and management using modern IaC tools and practices.',price: 'From $5,500/project',
             marketPrice: '$4,500 - $15,000/project',
             features: [
-                'Terraform and CloudFormationAnsible and Puppet automation';
+                'Terraform and CloudFormationAnsible and Puppet automation',
                 'Infrastructure versioningEnvironment consistency',
                 'Automated scaling policiesCost monitoring and alerts'
             ],
             benefits: [
-                'Consistent infrastructure deploymentReduced manual configuration errors';
+                'Consistent infrastructure deploymentReduced manual configuration errors',
                 'Faster environment provisioningBetter cost control and visibility'
             ]
         },
@@ -48,12 +48,12 @@ export default function DevOpsCloudServices() {
             icon: Database,title: 'Container Orchestration & Kubernetes',description: 'Enterprise-grade container management and orchestration with Kubernetes and Docker.',price: 'From $7,500/project',
             marketPrice: '$6,500 - $20,000/project',
             features: [
-                'Kubernetes cluster designContainer security and scanning';
+                'Kubernetes cluster designContainer security and scanning',
                 'Auto-scaling and load balancingService mesh implementation',
                 'Monitoring and loggingBackup and disaster recovery'
             ],
             benefits: [
-                'Improved application scalabilityBetter resource utilization';
+                'Improved application scalabilityBetter resource utilization',
                 'Enhanced deployment flexibilityReduced operational overhead'
             ]
         },
@@ -61,12 +61,12 @@ export default function DevOpsCloudServices() {
             icon: Users,title: 'DevOps Consulting & Training',description: 'Strategic DevOps consulting and comprehensive team training for organizational transformation.',price: 'From $4,500/month',
             marketPrice: '$3,500 - $12,000/month',
             features: [
-                'DevOps maturity assessmentProcess optimization';
+                'DevOps maturity assessmentProcess optimization',
                 'Team structure recommendationsTool selection and implementation',
                 'Best practices trainingChange management support'
             ],
             benefits: [
-                'Improved development velocityBetter team collaboration';
+                'Improved development velocityBetter team collaboration',
                 'Reduced operational costsEnhanced software quality'
             ]
         },
@@ -75,12 +75,12 @@ export default function DevOpsCloudServices() {
             price: 'From $4,800/month',
             marketPrice: '$4,000 - $12,000/month',
             features: [
-                'Application performance monitoringInfrastructure monitoring';
+                'Application performance monitoringInfrastructure monitoring',
                 'Centralized logging and analysisReal-time alerting',
                 'Custom dashboardsCapacity planning insights'
             ],
             benefits: [
-                'Proactive issue detectionImproved system reliability';
+                'Proactive issue detectionImproved system reliability',
                 'Better user experienceData-driven optimization'
             ]
         }
@@ -133,7 +133,7 @@ export default function DevOpsCloudServices() {
         };
         {
             title: 'DevOps Transformation',description: 'Complete organizational DevOps transformation with process optimization and tool implementation.',roi: '30-50% efficiency improvement',implementation: '24-36 weeks'
-        };
+        },
         {
             title: 'Cloud-Native Development',description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',roi: '35-55% faster delivery',implementation: '12-20 weeks'
         }

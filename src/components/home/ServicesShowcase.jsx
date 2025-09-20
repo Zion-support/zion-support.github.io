@@ -18,7 +18,7 @@ export function ServicesShowcase() {
         };
         {
             title: "AI Customer Experience Analytics",description: "Intelligent analytics and insights for data-driven decisions",category: "Analytics",price: "$99/month",icon: "📊",link: "/services/ai-customer-experience-analytics"
-        };
+        },
         {
             title: "Cloud DevOps Platform",description: "Streamlined cloud infrastructure and deployment automation",category: "Cloud & DevOps",price: "$299/month",icon: "☁️",link: "/services/cloud-devops"
         }

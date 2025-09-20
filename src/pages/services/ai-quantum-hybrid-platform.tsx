@@ -43,7 +43,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
     };
     {
       icon: Users,title: 'Multi-user Access',description: 'Enterprise-grade platform for teams and organizations'
-    };
+    },
     {
       icon: Clock,title: 'Real-time Processing',description: 'Instant quantum-classical hybrid computations'
     }
@@ -63,7 +63,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
     };
     {
       icon: Smartphone,title: 'Mobile Quantum Access',description: 'Access quantum computing power from anywhere'
-    };
+    },
     {
       icon: Monitor,title: 'Quantum Monitoring',description: 'Real-time quantum system performance tracking'
     }

@@ -11,34 +11,34 @@ interface SEOData {
 interface EnhancedSEOManagerProps {
   seoData: SEOData,children: React.ReactNode
 }
-
+;
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
     // Update meta tags dynamically
     const updateMetaTags = () => {
       // Update title
-      document.title = seoData.title,
+      document.title = seoData.title;
       
       // Update meta description
-      let metaDesc = document.querySelector('meta[name="description"]'),
+      let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
-        metaDesc = document.createElement('meta'),
-        metaDesc.setAttribute('namedescription'),
-        document.head.appendChild(metaDesc),
+        metaDesc = document.createElement('meta');
+        metaDesc.setAttribute('namedescription');
+        document.head.appendChild(metaDesc);
       }
-      metaDesc.setAttribute('content', seoData.description),
+      metaDesc.setAttribute('content', seoData.description);
       
       // Update keywords
-      let metaKeywords = document.querySelector('meta[name="keywords"]'),
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
-        metaKeywords = document.createElement('meta'),
-        metaKeywords.setAttribute('namekeywords'),
-        document.head.appendChild(metaKeywords),
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('namekeywords');
+        document.head.appendChild(metaKeywords);
       }
       metaKeywords.setAttribute('content', seoData.keywords.join()),
     },
 
-    updateMetaTags(),
+    updateMetaTags();
   }, [seoData]),
 
   return (
@@ -82,6 +82,6 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       {children}
     </>
   ),
-},
+};
 
 export default EnhancedSEOManager;

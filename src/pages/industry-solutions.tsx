@@ -47,7 +47,7 @@ const IndustrySolutions: React.FC = () => {
     };
     {
       title: 'Proven Results',description: 'Track record of successful implementations across industries',icon: Star
-    };
+    },
     {
       title: 'Future-Ready',description: 'Scalable solutions that grow with your business',icon: TrendingUp
     }

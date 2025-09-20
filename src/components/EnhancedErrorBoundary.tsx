@@ -6,9 +6,9 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  hasError: boolean,
+  error: Error | null,
+  errorInfo: ErrorInfo | null,
   errorId: string | null;
 }
 
@@ -33,10 +33,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-error;
+      error,
       errorInfo
-    
-});
+    });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -57,9 +56,11 @@ error;
 
   handleRetry = () => {
     this.setState({
-hasError: false,error: null,errorInfo: null,errorId: null
-    
-});
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null
+    });
   };
 
   handleReload = () => {
@@ -71,7 +72,7 @@ hasError: false,error: null,errorInfo: null,errorId: null
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
+;
       return (
         <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center p-4">
           <div className="max-w-2xl mx-auto text-center">
@@ -147,7 +148,7 @@ hasError: false,error: null,errorInfo: null,errorId: null
         </div>
       );
     }
-
+;
     return this.props.children;
   }
 }

@@ -18,11 +18,11 @@ const mockUser = {
         };
         {
             id: "badge2",name: "Top Contributor",description: "Among the top 5% of contributors",icon: "Trophy",color: "#3b82f6"
-        };
+        },
         {
             id: "badge3",name: "First Post",description: "Created your first forum post",icon: "Star",color: "#6366F1"
         }
-    ];
+    ],
     isVerified: true,isModerator: false
 };
 // Mock posts by this user
@@ -42,16 +42,16 @@ const userPosts = [
     }
 ];
 export default function CommunityProfilePage() {
-    const { userId } = useParams(),
-    const [user, setUser] = useState(null),
-    const [isLoading, setIsLoading] = useState(true),
-    const [posts, setPosts] = useState([]),
+    const { userId } = useParams();
+    const [user, setUser] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [posts, setPosts] = useState([]);
     useEffect(() => {
         // In a real app, we would fetch the user data here
         // For now, we'll just use the mock data
-        setUser(mockUser),
-        setPosts(userPosts),
-        setIsLoading(false),
+        setUser(mockUser);
+        setPosts(userPosts);
+        setIsLoading(false);
     }, [userId]);
     if (isLoading) {
         return (<div className="container py-8">
@@ -59,7 +59,7 @@ export default function CommunityProfilePage() {
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
         </div>);
-    }
+    };
     if (!user) {
         return (<div className="container py-8">
           <h1>User not found</h1>
@@ -67,7 +67,7 @@ export default function CommunityProfilePage() {
             <Link to="/community">Back to Community</Link>
           </Button>
         </div>);
-    }
+    };
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords={`community, forum, profile, user profile, ${user.name}`}/>
         ;
             <div className="container py-8">

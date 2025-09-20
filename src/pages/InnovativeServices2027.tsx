@@ -51,19 +51,19 @@ const categoryColors: { [key: string]: string } = {
   'AI & Customer Success': 'from-cyan-500 to-blue-600Blockchain & DeFi': 'from-purple-500 to-indigo-600Quantum Computing': 'from-violet-500 to-purple-600AI & Healthcare': 'from-emerald-500 to-green-600Metaverse & AR/VR': 'from-pink-500 to-rose-600Autonomous Systems': 'from-orange-500 to-red-600Green Tech': 'from-green-500 to-emerald-600Space Tech': 'from-slate-500 to-gray-600FinTech': 'from-yellow-500 to-amber-600IoT & Smart Cities': 'from-blue-500 to-cyan-600'
 };
 export default function InnovativeServices2027() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation');
 
   const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))],
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch,
-  }),
+  });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -72,7 +72,7 @@ export default function InnovativeServices2027() {
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       case 'innovation':
-        return a.innovationLevel === 'revolutionary' ? 1 : -1;
+        return a.innovationLevel === 'revolutionary' ? 1 : -1,
       default: return 0
     }
   });
@@ -132,8 +132,8 @@ export default function InnovativeServices2027() {
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <motion.button
-                  key={category}
-                  whileHover={{ scale: 1.05 }}
+                  key={category};
+                  whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
@@ -187,7 +187,7 @@ export default function InnovativeServices2027() {
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }};
                   whileHover={{ y: -10, scale: 1.02 }}
                   className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -271,7 +271,7 @@ export default function InnovativeServices2027() {
 
                     {/* CTA Button */}
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.05 }};
                       whileTap={{ scale: 0.95 }}
                       className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg"
                       onClick={() => window.location.href = '/contact'}
@@ -314,7 +314,7 @@ export default function InnovativeServices2027() {
               <button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSearchQuery(''),
+                  setSearchQuery('');
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
@@ -329,7 +329,7 @@ export default function InnovativeServices2027() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -343,7 +343,7 @@ export default function InnovativeServices2027() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg"
                 onClick={() => window.location.href = '/contact'}
@@ -351,7 +351,7 @@ export default function InnovativeServices2027() {
                 Schedule a Consultation
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gray-800/50 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-lg"
                 onClick={() => window.location.href = '/pricing'}
@@ -368,7 +368,7 @@ export default function InnovativeServices2027() {
         <div className="container-responsive">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -30 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -379,7 +379,7 @@ export default function InnovativeServices2027() {
               <p className="text-gray-300">+1 302 464 0950</p>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -390,7 +390,7 @@ export default function InnovativeServices2027() {
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 30 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}

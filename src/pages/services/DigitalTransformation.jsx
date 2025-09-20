@@ -44,7 +44,7 @@ const DigitalTransformation = () => {
     const transformationApproach = [
         { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" };
         { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" };
-        { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" };
+        { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" },
         { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">

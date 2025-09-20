@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from "lucide-react";
 export default function Research() {
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeStatus, setActiveStatus] = useState('all');
   const [activeType, setActiveType] = useState('all');
@@ -12,21 +12,21 @@ export default function Research() {
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 };
     { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 };
     { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 };
-    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 };
+    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 }
   ];
   const statuses = [
     { id: 'all', name: 'All Statuses', count: 0 };
     { id: 'active', name: 'Active', count: 0 };
     { id: 'completed', name: 'Completed', count: 0 };
-    { id: 'planning', name: 'Planning', count: 0 };
+    { id: 'planning', name: 'Planning', count: 0 },
     { id: 'published', name: 'Published', count: 0 }
   ];
   const types = [
     { id: 'all', name: 'All Types', count: 0 };
     { id: 'research', name: 'Research Papers', count: 0 };
     { id: 'patents', name: 'Patents', count: 0 };
-    { id: 'prototypes', name: 'Prototypes', count: 0 };
+    { id: 'prototypes', name: 'Prototypes', count: 0 },
     { id: 'collaborations', name: 'Collaborations', count: 0 }
   ];
   const researchProjects = [
@@ -37,7 +37,7 @@ export default function Research() {
         {
           title: 'Quantum Algorithms for Portfolio Optimization',journal: 'Nature Quantum Information',year: 2024,doi: '10.1038/s41534-024-00800-5',citations: 23
         }
-      ];
+      ],
       tags: ['Quantum ComputingMachine Learning', 'FinanceOptimization', 'Risk Assessment'],
       featured: true,progress: 65,impact: 'high'
     };
@@ -48,11 +48,11 @@ export default function Research() {
       publications: [
         {
           title: 'Privacy-Preserving Federated Learning in Healthcare',journal: 'Nature Machine Intelligence',year: 2024,doi: '10.1038/s42256-024-00789-8',citations: 45
-        };
+        },
         {
           title: 'Secure Multi-Party Computation for Medical Data',journal: 'IEEE Transactions on Medical Imaging',year: 2024,doi: '10.1109/TMI.2024.001234',citations: 18
         }
-      ];
+      ],
       tags: ['Federated LearningHealthcare', 'PrivacyAI Ethics', 'Medical Imaging'],
       featured: true,progress: 100,impact: 'very-high'
     };
@@ -64,7 +64,7 @@ export default function Research() {
         {
           title: 'Zero-Trust Security for Industrial IoT',journal: 'IEEE Security & Privacy',year: 2024,doi: '10.1109/MSEC.2024.001234',citations: 12
         }
-      ];
+      ],
       tags: ['Zero-TrustIndustrial IoT', 'CybersecurityCritical Infrastructure', 'Security Architecture'],
       featured: false,progress: 40,impact: 'high'
     };
@@ -83,7 +83,7 @@ export default function Research() {
         {
           title: 'Blockchain-Enabled Supply Chain Transparency',journal: 'Journal of Supply Chain Management',year: 2024,doi: '10.1111/jscm.12345',citations: 28
         }
-      ];
+      ],
       tags: ['BlockchainSupply Chain', 'TransparencySmart Contracts', 'Traceability'],
       featured: false,progress: 100,impact: 'medium'
     };
@@ -95,7 +95,7 @@ export default function Research() {
         {
           title: 'Neuromorphic Computing for Edge AI Applications',journal: 'Nature Electronics',year: 2024,doi: '10.1038/s41928-024-01123-4',citations: 19
         }
-      ];
+      ],
       tags: ['Neuromorphic ComputingEdge AI', 'Energy EfficiencySpiking Neural Networks', 'Hardware Design'],
       featured: true,progress: 55,impact: 'high'
     }
@@ -116,14 +116,14 @@ export default function Research() {
   const filteredProjects = researchProjects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+                         project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    const matchesCategory = activeCategory === 'all' || project.category === activeCategory,
-    const matchesStatus = activeStatus === 'all' || project.status === activeStatus,
-    const matchesType = activeType === 'all' || project.type === activeType,
+    const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
+    const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
+    const matchesType = activeType === 'all' || project.type === activeType;
 
     return matchesSearch && matchesCategory && matchesStatus && matchesType,
-  }),
+  });
 
   const getCategoryIcon = (categoryId: string) => {
     return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />
@@ -133,7 +133,7 @@ export default function Research() {
       case 'active': return 'text-green-400';
       case 'completed': return 'text-blue-400',
       case 'planning': return 'text-yellow-400',
-      case 'published': return 'text-purple-400',
+      case 'published': return 'text-purple-400';
       default: return 'text-zion-slate-light'
     }
   };
@@ -142,7 +142,7 @@ export default function Research() {
       case 'very-high': return 'text-red-400';
       case 'high': return 'text-orange-400',
       case 'medium': return 'text-yellow-400',
-      case 'low': return 'text-green-400',
+      case 'low': return 'text-green-400';
       default: return 'text-zion-slate-light'
     }
   };
@@ -156,9 +156,9 @@ export default function Research() {
     if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {
-      return `$${(amount / 1000).toFixed(0)}K`,
-    }
-    return `$${amount.toLocaleString()}`,
+      return `$${(amount / 1000).toFixed(0)}K`;
+    };
+    return `$${amount.toLocaleString()}`;
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

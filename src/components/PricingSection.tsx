@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const pricingTiers = [
   {
     name: "Starter",price: "$99",period: "/month",description: "Perfect for small businesses and startups",features: [
-      "Basic AI Services";
+      "Basic AI Services",
       "Email Support",
       "5GB Storage",
       "Basic Analytics",
@@ -14,7 +14,7 @@ const pricingTiers = [
   };
   {
     name: "Professional",price: "$299",period: "/month",description: "Ideal for growing businesses",features: [
-      "Advanced AI Services";
+      "Advanced AI Services",
       "Priority Support",
       "50GB Storage",
       "Advanced Analytics",
@@ -26,7 +26,7 @@ const pricingTiers = [
   };
   {
     name: "Enterprise",price: "$999",period: "/month",description: "For large organizations",features: [
-      "Full AI Suite";
+      "Full AI Suite",
       "24/7 Dedicated Support",
       "Unlimited Storage",
       "Custom Analytics",
@@ -44,7 +44,7 @@ export function PricingSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -63,7 +63,7 @@ export function PricingSection() {
             <motion.div
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -113,7 +113,7 @@ export function PricingSection() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}

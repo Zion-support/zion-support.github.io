@@ -30,7 +30,7 @@ export default function AffiliateTracking() {
   const plans = [
     {
       name: 'Starter',price: 49,unit: 'month',bestFor: 'Founders validating their first affiliate program',bullets: [
-        'Up to 200 partnersBasic tracking links and coupons';
+        'Up to 200 partnersBasic tracking links and coupons',
         'Manual approvals and payoutsEmail support'
       ]
     },
@@ -44,7 +44,7 @@ export default function AffiliateTracking() {
     {
       name: 'Enterprise',price: 599,unit: 'month',bestFor: 'Global programs, agencies and marketplaces',
       bullets: [
-        'Unlimited partners and campaignsSAML SSO and audit trails';
+        'Unlimited partners and campaignsSAML SSO and audit trails',
         'Custom data retention + warehouse syncDedicated CSM and 99.9% SLA'
       ]
     }
@@ -96,7 +96,7 @@ export default function AffiliateTracking() {
             {features.map((f) => (
               <motion.div
                 key={f.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
@@ -145,7 +145,7 @@ export default function AffiliateTracking() {
             {plans.map((plan, i) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}

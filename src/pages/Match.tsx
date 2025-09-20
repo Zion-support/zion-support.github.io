@@ -41,15 +41,15 @@ import {
 } from "lucide-react";
 import SEO from "../components/SEO";
 const Match: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 };
     { id: 'ai', name: 'AI Services', icon: Brain, count: 45 };
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 };
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 };
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 };
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },
     { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 }
   ];
   const matchedServices = [
@@ -85,11 +85,11 @@ const Match: React.FC = () => {
     }
   ];
   const filteredServices = matchedServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch,
-  }),
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -191,7 +191,7 @@ const Match: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -209,7 +209,7 @@ const Match: React.FC = () => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
@@ -314,7 +314,7 @@ const Match: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -336,14 +336,14 @@ const Match: React.FC = () => {
               };
               {
                 step: "02",title: "Match with Services",description: "We match you with services that best fit your needs and budget.",icon: Target
-              };
+              },
               {
                 step: "03",title: "Get Recommendations",description: "Receive personalized recommendations with match scores and detailed analysis.",icon: Sparkles
               }
             ].map((step, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
@@ -364,7 +364,7 @@ const Match: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

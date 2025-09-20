@@ -15,8 +15,8 @@ const AISEOAuditor: React.FC = () => {
 
         <div className="mt-10 grid gap-6 sm: grid-cols-2 lg:grid-cols-3">
           {[
-            'Automated site crawl and issues triageCore Web Vitals & Lighthouse monitoring';
-            'Schema.org and OpenGraph validationInternal linking and orphan page detection',
+            'Automated site crawl and issues triageCore Web Vitals & Lighthouse monitoring',
+            'Schema.org and OpenGraph validationInternal linking and orphan page detection';
             'AI-generated meta tags and headingsCI-ready fix PRs with human-in-the-loop'
           ].map((b) => (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">

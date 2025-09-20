@@ -19,32 +19,32 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/store";
 export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false),
-  const { user } = useAuth(),
-  const isLoggedIn = !!user,
-  const isMobile = useIsMobile(),
-  const { t } = useTranslation(),
-  const router = useLocation(),
-  const [query, setQuery] = React.useState(''),
-  const suggestions = generateSearchSuggestions(),
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const { user } = useAuth();
+  const isLoggedIn = !!user;
+  const isMobile = useIsMobile();
+  const { t } = useTranslation();
+  const router = useLocation();
+  const [query, setQuery] = React.useState('');
+  const suggestions = generateSearchSuggestions();
 
-  let unreadCount = 0,
+  let unreadCount = 0;
   try {
-    const messaging = useMessaging(),
+    const messaging = useMessaging();
     unreadCount = messaging.unreadCount;
   } catch {
     // context not available
   }
-
+;
   const cartCount = useSelector((s: RootState) =>
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0);
   );
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      console.log('PrimaryNav search submit:', query),
+      console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`),
-      setQuery(''),
+      setQuery('');
     }
   },
 
@@ -72,22 +72,22 @@ export function PrimaryNav() {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  console.log('PrimaryNav search suggestion selected:', sugg),
+                  console.log('PrimaryNav search suggestion selected:', sugg);
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`),
+                    router.push(`/marketplace/listing/${sugg.id}`);
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
-                    router.push(sugg.slug),
+                    router.push(sugg.slug);
                   } else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
-                    router.push(`/blog/${sugg.slug}`),
+                    router.push(`/blog/${sugg.slug}`);
                   } else {
                     // Default: search results page with slug
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
                   }
-                  setQuery(''),
+                  setQuery('');
 
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {

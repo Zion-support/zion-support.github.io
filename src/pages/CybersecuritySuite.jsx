@@ -7,7 +7,7 @@ import { Check, Shield, AlertTriangle, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CybersecuritySuite() {
     const features = [
-        "24/7 threat monitoring and detection",
+        "24/7 threat monitoring and detection";
         "Real-time security incident response",
         "Advanced threat intelligence feeds",
         "Automated vulnerability scanning",
@@ -17,13 +17,13 @@ export default function CybersecuritySuite() {
         "Endpoint detection and response (EDR)",
         "Network traffic analysis",
         "Cloud security monitoring";
-        "Incident response automation";
+        "Incident response automation",
         "Security metrics and dashboards"
     ];
     const pricingPlans = [
         {
             name: "Essential",price: "$199",period: "/month",description: "Perfect for small businesses and startups",features: [
-                "Basic threat monitoring";
+                "Basic threat monitoring",
                 "Vulnerability scanning (monthly)",
                 "Security awareness training",
                 "Basic incident response",
@@ -34,7 +34,7 @@ export default function CybersecuritySuite() {
         };
         {
             name: "Professional",price: "$499",period: "/month",description: "Ideal for growing businesses",features: [
-                "Advanced threat monitoring";
+                "Advanced threat monitoring",
                 "Real-time vulnerability scanning",
                 "Penetration testing (quarterly)",
                 "Automated incident response",
@@ -48,7 +48,7 @@ export default function CybersecuritySuite() {
         {
             name: "Enterprise",price: "$1,299",
             period: "/month",description: "For large organizations with advanced security needs",features: [
-                "Full-spectrum threat monitoring";
+                "Full-spectrum threat monitoring",
                 "Continuous vulnerability assessment",
                 "Advanced penetration testing",
                 "Custom incident response playbooks",
@@ -72,7 +72,7 @@ export default function CybersecuritySuite() {
         {
             title: "Security Compliance",description: "Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.",
             icon: <Shield className="h-8 w-8 text-zion-cyan"/>
-        };
+        },
         {
             title: "Incident Response",description: "Rapid incident response with automated playbooks and expert security team support.",icon: <Shield className="h-8 w-8 text-zion-purple"/>
         }

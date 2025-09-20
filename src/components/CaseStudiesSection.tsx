@@ -13,7 +13,7 @@ import {
 const caseStudies = [
   {
     id: 1,title: "AI-Powered Supply Chain Optimization",company: "Global Manufacturing Corp",industry: "Manufacturing",challenge: "Inefficient supply chain causing 30% cost overruns and delays",solution: "Implemented AI-driven demand forecasting and route optimization",results: [
-      "Reduced costs by 25%";
+      "Reduced costs by 25%",
       "Improved delivery times by 40%",
       "Increased efficiency by 35%"
     ],
@@ -21,7 +21,7 @@ const caseStudies = [
   };
   {
     id: 2,title: "Quantum Computing Financial Modeling",company: "FinTech Innovations Ltd",industry: "Financial Services",challenge: "Complex financial models taking days to compute",solution: "Deployed quantum computing algorithms for portfolio optimization",results: [
-      "1000x faster computation";
+      "1000x faster computation",
       "Improved accuracy by 60%",
       "Reduced risk by 45%"
     ],
@@ -29,7 +29,7 @@ const caseStudies = [
   };
   {
     id: 3,title: "Blockchain Supply Chain Transparency",company: "Organic Foods Inc",industry: "Food & Beverage",challenge: "Lack of transparency in food supply chain",solution: "Implemented blockchain-based tracking system",results: [
-      "100% supply chain visibility";
+      "100% supply chain visibility",
       "Reduced fraud by 99%",
       "Improved customer trust by 80%"
     ],
@@ -42,7 +42,7 @@ export function CaseStudiesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -61,7 +61,7 @@ export function CaseStudiesSection() {
             <motion.div
               key={study.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -113,7 +113,7 @@ export function CaseStudiesSection() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}

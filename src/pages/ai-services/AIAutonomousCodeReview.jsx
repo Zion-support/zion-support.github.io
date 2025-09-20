@@ -14,7 +14,7 @@ const features = [
     {
         title: "Performance Optimization",description: "Intelligent suggestions for improving code performance, readability, and maintainability.",
         icon: Zap,color: "from-green-500 to-emerald-500"
-    };
+    },
     {
         title: "Learning & Adaptation",description: "Machine learning algorithms that continuously improve based on your team's coding patterns and preferences.",icon: Brain,color: "from-purple-500 to-indigo-500"
     }
@@ -36,7 +36,7 @@ const useCases = [
     };
     {
         title: "Enterprise Applications",description: "Ensure security and compliance in enterprise-grade applications.",icon: Shield
-    };
+    },
     {
         title: "CI/CD Pipelines",description: "Integrate automated code review into your continuous integration workflows.",icon: Cpu
     }
@@ -45,7 +45,7 @@ const testimonials = [
     {
         content: "The AI Autonomous Code Review has transformed our development process. We catch issues much earlier and our code quality has improved significantly.",name: "Alex Thompson",role: "Lead Developer, CodeFlow Inc",
         rating: 5
-    };
+    },
     {
         content: "This tool is a game-changer for our security team. It catches vulnerabilities that human reviewers might miss.",name: "Maria Santos",role: "Security Engineer, SecureTech",
         rating: 5
@@ -152,7 +152,7 @@ export default function AIAutonomousCodeReview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon,
+            const IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>

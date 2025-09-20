@@ -12,7 +12,7 @@ const ServicesAdvertising: React.FC = () => {
     mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
   } as const;
   const benefits: string[] = [
-    'High-ROI projects with measurable KPIsTransparent pricing with market references';
+    'High-ROI projects with measurable KPIsTransparent pricing with market references',
     'Fast onboarding with templates and playbooksEnterprise-grade security and compliance',
     '24/7 support with SLAsProven architectures and reference implementations',
     'No long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',

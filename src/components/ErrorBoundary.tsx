@@ -16,11 +16,11 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error },
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo),
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   render() {
@@ -40,7 +40,7 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       )
     }
-
+;
     return this.props.children;
   }
 }

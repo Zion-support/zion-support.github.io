@@ -41,7 +41,7 @@ export default function AIFinancialTrading() {
     };
     {
       icon: <Shield className="w-6 h-6" />,title: "Advanced Risk Management",description: "Multi-layered risk controls including stop-loss automation and position limit management"
-    };
+    },
     {
       icon: <BarChart3 className="w-6 h-6" />,title: "Performance Analytics",description: "Comprehensive trading performance metrics, backtesting, and strategy optimization tools"
     }
@@ -50,7 +50,7 @@ export default function AIFinancialTrading() {
   const pricing = [
     {
       name: "Starter",price: "$299",period: "/month",features: [
-        "Basic AI trading signals";
+        "Basic AI trading signals",
         "Portfolio tracking",
         "Email alerts",
         "Standard analytics",
@@ -60,7 +60,7 @@ export default function AIFinancialTrading() {
     };
     {
       name: "Professional",price: "$799",period: "/month",features: [
-        "Advanced AI algorithms";
+        "Advanced AI algorithms",
         "Real-time signals",
         "Portfolio optimization",
         "Priority support",
@@ -73,7 +73,7 @@ export default function AIFinancialTrading() {
     {
       name: "Institutional",price: "$1,999",
       period: "/month",features: [
-        "Custom AI models";
+        "Custom AI models",
         "White-label platform",
         "Dedicated support",
         "SLA guarantees",
@@ -102,7 +102,7 @@ export default function AIFinancialTrading() {
     };
     {
       strategy: "Sentiment Analysis",description: "Social media and news sentiment analysis for market direction prediction",performance: "42% annual return"
-    };
+    },
     {
       strategy: "Multi-Factor Models",description: "Combined technical, fundamental, and macroeconomic factor analysis",
       performance: "38% annual return"
@@ -165,7 +165,7 @@ export default function AIFinancialTrading() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300"
@@ -194,7 +194,7 @@ export default function AIFinancialTrading() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300 group"
@@ -226,7 +226,7 @@ export default function AIFinancialTrading() {
             {tradingStrategies.map((strategy, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-yellow-500 transition-all duration-300"
@@ -259,7 +259,7 @@ export default function AIFinancialTrading() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
@@ -314,7 +314,7 @@ export default function AIFinancialTrading() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -354,7 +354,7 @@ export default function AIFinancialTrading() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20 }};
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
@@ -387,7 +387,7 @@ export default function AIFinancialTrading() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-12 border border-yellow-500/30"

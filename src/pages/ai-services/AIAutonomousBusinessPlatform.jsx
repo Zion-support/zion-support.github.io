@@ -13,7 +13,7 @@ const features = [
     };
     {
         title: "Real-time Processing",description: "Instant data processing and analysis for immediate business insights and decision-making.",icon: Zap,color: "from-green-500 to-emerald-500"
-    };
+    },
     {
         title: "Enterprise Security",description: "Bank-level security with encryption, compliance, and advanced threat protection.",
         icon: Shield,color: "from-orange-500 to-red-500"
@@ -36,7 +36,7 @@ const useCases = [
     };
     {
         title: "Data Analytics",description: "Comprehensive business analytics with real-time dashboards and reporting.",icon: BarChart3
-    };
+    },
     {
         title: "Process Automation",description: "Automate complex business processes with intelligent workflow management.",icon: Cpu
     }
@@ -45,7 +45,7 @@ const testimonials = [
     {
         content: "The AI Autonomous Business Platform has transformed how we operate. We can now manage our global operations from anywhere with real-time insights.",name: "Jennifer Martinez",role: "CTO, GlobalTech Solutions",
         rating: 5
-    };
+    },
     {
         content: "This platform is a game-changer. The AI capabilities and cloud architecture give us the flexibility we need to grow rapidly.",name: "David Kim",role: "VP Engineering, ScaleUp Inc",
         rating: 5
@@ -152,7 +152,7 @@ export default function AIAutonomousBusinessPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon,
+            const IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>
