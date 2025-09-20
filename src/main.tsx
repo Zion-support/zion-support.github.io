@@ -4,7 +4,13 @@ import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
 import ErrorBoundary from './components/ErrorBoundary'
 import { ThemeProvider } from './context/ThemeContext'
+import { AccessibilityProvider } from './utils/accessibilityEnhancer'
+import { preloadCriticalResources, addResourceHints } from './utils/performanceOptimizer'
 import './index.css'
+
+// Initialize performance optimizations
+preloadCriticalResources();
+addResourceHints();
 
 // Register service worker for PWA functionality
 if (typeof window !== 'undefined' && 'serviceWorker' in (window as any).navigator) {
@@ -24,11 +30,13 @@ if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <ErrorBoundary>
-        <ThemeProvider>
-          <HelmetProvider>
-            <App />
-          </HelmetProvider>
-        </ThemeProvider>
+        <AccessibilityProvider>
+          <ThemeProvider>
+            <HelmetProvider>
+              <App />
+            </HelmetProvider>
+          </ThemeProvider>
+        </AccessibilityProvider>
       </ErrorBoundary>
     </React.StrictMode>
   );
