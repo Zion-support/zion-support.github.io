@@ -1,19 +1,10 @@
-
+export interface LinkInfo {
+  url: string;
+  status: "working" | "broken" | "missing" | "external";
+  page: string;
+  anchor?: string;
+  error?: string;
 }
-anchor?: string;}
-error?: string}
-
-export interface PageInfo {path: string, title: string, links: LinkInfo[];
-}
-}
-anchor?: string;
-error?: string}
-
-export interface PageInfo {
-path: string; title: string; links: LinkInfo[];,return url}
-
-if (url.startsWith("/")) {
-return `${this.baseUrl}${url}`;}
 
 export interface PageInfo {
   path: string;
@@ -72,30 +63,32 @@ export class LinkChecker {
       });
     }
 
-for (const link of links) {
-if (this.isInternalLink(link.url)) {
-const exists = await this.checkPageExists(link.url);
-if (!exists) {
-link.status = "missing";
-this.missingPages.push(link.url)}
-} else {link.status = "external"}
-} else {
-link.status = "external"}}
     return links;
   }
 
-getSummary() {return {
-totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;,
-missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};}
+  async checkPageExists(url: string): Promise<boolean> {
+    try {
+      const response = await fetch(url, { method: "HEAD" });
+      return response.ok;
+    } catch {
+      return false;
+    }
+  }
+
   async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {
     const links = this.extractLinks(pageContent, pagePath);
     const checkedLinks: LinkInfo[] = [];
 
-getMissingPages(): string[] {return this.missingPages}
-return {
-path: pagePath; title: this.extractPageTitle(pageContent),
-links: checkedLinks; exists: true};
-}
+    for (const link of links) {
+      if (this.isInternalLink(link.url)) {
+        const exists = await this.checkPageExists(link.url);
+        if (!exists) {
+          link.status = "missing";
+          this.missingPages.push(link.url);
+        }
+      } else {
+        link.status = "external";
+      }
       checkedLinks.push(link);
     }
 
@@ -127,14 +120,5 @@ links: checkedLinks; exists: true};
 
   getMissingPages(): string[] {
     return this.missingPages;
-  }
-}
-
-export default LinkChecker;
-
-    return {
-      ...page,
-      links: checkedLinks
-    };
   }
 }
