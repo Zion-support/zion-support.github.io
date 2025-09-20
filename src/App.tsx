@@ -7,6 +7,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import SEOHead from './components/SEOHead';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load components for better performance
 const LazyHome = React.lazy(() => import('./components/Home'));
@@ -16,26 +17,28 @@ const LazyContact = React.lazy(() => import('./components/Contact'));
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider>
-      <SEOHead />
-      <AccessibilityEnhancer>
-        <PerformanceMonitor />
-        <React.Suspense fallback={
-          <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-            <LoadingSpinner size="lg" text="Loading application..." />
-          </div>
-        }>
-          <Routes>
-            <Route path="/" element={<LazyHome />} />
-            <Route path="/services" element={<LazyServices />} />
-            <Route path="/about" element={<LazyAbout />} />
-            <Route path="/contact" element={<LazyContact />} />
-          </Routes>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <SEOHead />
+        <AccessibilityEnhancer>
+          <PerformanceMonitor />
+          <React.Suspense fallback={
+            <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+              <LoadingSpinner size="lg" text="Loading application..." />
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<LazyHome />} />
+              <Route path="/services" element={<LazyServices />} />
+              <Route path="/about" element={<LazyAbout />} />
+              <Route path="/contact" element={<LazyContact />} />
+            </Routes>
           </React.Suspense>
-        <PerformanceOptimizer />
-        <EnhancedAccessibility />
-      </AccessibilityEnhancer>
-    </ThemeProvider>
+          <PerformanceOptimizer />
+          <EnhancedAccessibility />
+        </AccessibilityEnhancer>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 };
 
