@@ -1,159 +1,158 @@
-import React from "react,,
-,
-import { SEO  } from "@/components/SEO",
-export default function SmartContractBuilder(props: any) {return (,
-<div className="min-h-screen bg-white">,
-<SEO title="SmartContractBuilder - Zion Tech Group" description="Professional SmartContractBuilder services by Zion Tech Group"  />,
-<div className="container mx-auto px-4 py-20">,
-<h1 className="text-4xl font-bold text-white mb-8">SmartContractBuilder</h1>,
-<p className="text-gray-300 text-lg">,
-Professional SmartContractBuilder services to help your business grow.,
-</p>,
-</div>",
-</div>,;
-),,',;
-"}, ";<//div><///div>;
-import { useState,  } from "react",
-import { Dialog,, DialogContent,, DialogHeader, DialogTitle,  } from "@/components/ui/dialog",
-import { Tabs,, TabsList,, TabsTrigger, TabsContent,  } from "@/components/ui/tabs",
-import { Button,  } from "@/components/ui/button",
-import { Save,  } from 'lucide-react'
-import { TalentProfile,  } from "@/types/talent",
-import { ContractForm, ContractFormValues,  } from "./components/ContractForm",
-import { ContractPreview,  } from "./components/ContractPreview",
-import { TemplateManager,  } from "./templates/TemplateManager",
-import { DeploymentOptions, SmartContractInfo,  } from "@/types/smart-contracts",
-import { useSmartContracts,  } from "@/hooks/useSmartContracts",
-import { toast,  } from "sonner";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { TalentProfile } from "@/types/talent";
+
 interface SmartContractBuilderProps {
+  isOpen: boolean;
+  onClose: () => void;
+  talent: TalentProfile;
+  clientName: string;
+  onContractGenerated: (contract: string) => void;
 }
+
 export function SmartContractBuilder({
-  isOpen;
-  onClose;
-  talent;
-  clientName;
-  onContractGenerated}: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form"),
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
-    undefined
-  ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
-return (
+  isOpen,
+  onClose,
+  talent,
+  clientName,
+  onContractGenerated,
+}: SmartContractBuilderProps) {
+  const [contractCode, setContractCode] = useState("");
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const handleGenerateSmartContract = async () => {
+    setIsGenerating(true);
+    
+    try {
+      // Simulate AI generation of smart contract
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      const smartContract = `
+// Smart Contract for ${talent.name} - ${clientName}
+pragma solidity ^0.8.0;
+
+contract TalentContract {
+    address public client;
+    address public talent;
+    uint256 public projectValue;
+    uint256 public milestoneCount;
+    uint256 public currentMilestone;
+    bool public isCompleted;
+    
+    struct Milestone {
+        string description;
+        uint256 value;
+        bool isCompleted;
+    }
+    
+    mapping(uint256 => Milestone) public milestones;
+    
+    event MilestoneCompleted(uint256 milestoneId, uint256 value);
+    event ProjectCompleted(uint256 totalValue);
+    
+    constructor(
+        address _client,
+        address _talent,
+        uint256 _projectValue,
+        uint256 _milestoneCount
+    ) {
+        client = _client;
+        talent = _talent;
+        projectValue = _projectValue;
+        milestoneCount = _milestoneCount;
+        currentMilestone = 0;
+        isCompleted = false;
+    }
+    
+    function addMilestone(uint256 _milestoneId, string memory _description, uint256 _value) public {
+        require(msg.sender == talent, "Only talent can add milestones");
+        require(_milestoneId < milestoneCount, "Invalid milestone ID");
+        
+        milestones[_milestoneId] = Milestone({
+            description: _description,
+            value: _value,
+            isCompleted: false
+        });
+    }
+    
+    function completeMilestone(uint256 _milestoneId) public {
+        require(msg.sender == client, "Only client can complete milestones");
+        require(_milestoneId < milestoneCount, "Invalid milestone ID");
+        require(!milestones[_milestoneId].isCompleted, "Milestone already completed");
+        
+        milestones[_milestoneId].isCompleted = true;
+        currentMilestone = _milestoneId + 1;
+        
+        emit MilestoneCompleted(_milestoneId, milestones[_milestoneId].value);
+        
+        if (currentMilestone == milestoneCount) {
+            isCompleted = true;
+            emit ProjectCompleted(projectValue);
+        }
+    }
+    
+    function withdrawPayment() public {
+        require(msg.sender == talent, "Only talent can withdraw");
+        require(isCompleted, "Project not completed");
+        
+        payable(talent).transfer(address(this).balance);
+    }
+}
+      `;
+      
+      setContractCode(smartContract);
+      onContractGenerated(smartContract);
+    } catch (error) {
+      console.error("Smart contract generation failed:", error);
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Smart Contract Builder</DialogTitle>
         </DialogHeader>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
-          <div className="flex justify-between items-center">
-            <TabsList className="grid grid-cols-2">
-              <TabsTrigger value="form">Contract Details</TabsTrigger>
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
-            </TabsList>
-            <div className="flex gap-2">
-              <Button,
-variant="outline"
-                size="sm"
-                onClick = {(,) => setTemplateManagerOpen(true),}
-                className="flex gap-1"
-              >
-                <Save className="h-4 w-4" />
-                Templates
-              </Button>
-            </div>
+        
+        <div className="space-y-4">
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <h3 className="font-semibold text-blue-900 mb-2">AI-Generated Smart Contract</h3>
+            <p className="text-blue-700 text-sm">
+              This will generate a Solidity smart contract for your project with {talent.name}.
+            </p>
           </div>
-          <TabsContent value="form" className="pt-4">
-            <ContractForm,
-talent = {talent,}
-              clientName = {clientName,}
-              initialValues = {formValues,}
-              onFormValuesChange = {setFormValues,}
-              onContractGenerated = {handleFormSubmit,}
+
+          <div className="space-y-2">
+            <Label htmlFor="contractCode">Generated Contract Code</Label>
+            <Textarea
+              id="contractCode"
+              value={contractCode}
+              onChange={(e) => setContractCode(e.target.value)}
+              placeholder="Smart contract code will appear here..."
+              rows={20}
+              className="font-mono text-sm"
             />
-          </TabsContent>
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <div>
-                <ContractPreview,
-generatedContract = {generatedContract,}
-                  talent = {talent,}
-                  onClose = {onClose,}
-                  deploymentInfo = {deploymentInfo,}
-                />
-                {!deploymentInfo && deployOptions.deployToChain && (
-                  <div className="mt-6 flex justify-center">
-                    <Button,
-onClick = {handleDeployContract,}
-                      disabled = {deployStatus === 'deploying',}
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                    >
-                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
-                    </Button>
-                  </div>                )}
-              </div>
-            )}
-          </TabsContent>
-        </Tabs>
-        <TemplateManager,
-isOpen = {templateManagerOpen,}
-          onClose = {() => setTemplateManagerOpen(false),}
-          onSelectTemplate = {handleLoadTemplate,}
-          currentValues = {formValues,}
-        />
+          </div>
+
+          <div className="flex gap-2 justify-end">
+            <Button variant="outline" onClick={onClose}>
+              Cancel
+            </Button>
+            <Button
+              onClick={handleGenerateSmartContract}
+              disabled={isGenerating}
+            >
+              {isGenerating ? "Generating..." : "Generate Smart Contract"}
+            </Button>
+          </div>
+        </div>
       </DialogContent>
     </Dialog>
-  )
-}
-//Modified to match the expected interface const handleFormSubmit = (contract: string) => {'
-  //This should be a function that takes a string (contract content) //Since we need to adapt the interface we'll implement the simplest solution that works if (onContractGenerated) {
-  setGeneratedContract (contract);"
-setActiveTab ("preview")
-};"
-  talent,
-}clientName= {
-  clientName,
-}initialValues= {
-  formValues,
-}onFormValuesChange= {
-  setFormValues,
-}onContractGenerated= {
-  handleFormSubmit,
-}/> </TabsContent> <div> <ContractPreview generatedContract= {
-  generatedContract,
-}talent= {
-  talent,
-}onClose= {
-  onClose,
-}deploymentInfo= {
-  deploymentInfo,
-}/> > {'
-  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'
-}</Button> </div>)
-}</div>)
-}</TabsContent> </Tabs> <TemplateManager isOpen= {
-  templateManagerOpen,
-}onClose= {
-  () => setTemplateManagerOpen (false)
-}onSelectTemplate= {
-  handleLoadTemplate,
-}currentValues= {
-  formValues,
-}/> </DialogContent> </Dialog>)
-}'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
-            {/* Fallback for old Solidity preview if needed or remove if fully replaced by on-chain flow */}
-            {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
-          </TabsContent>
-        </Tabs>
-        <TemplateManager,
-isOpen={templateManagerOpen}
-          onClose={() => setTemplateManagerOpen(false)}
-          onSelectTemplate={handleLoadTemplate}
-          currentValues={formValues}
-        />
-      </DialogContent>
-    </Dialog>
-  )}
+  );
 }

@@ -1,27 +1,27 @@
-import React from "react";
+// Production logging utility
+export function logErrorToProduction(message: string, data?: any) {
+  // In a real application, this would send logs to a service like Sentry, LogRocket, etc.
+  console.error('Production Error:', message, data);
+  
+  // Example integration with Sentry
+  if (typeof window !== 'undefined' && (window as any).Sentry) {
+    (window as any).Sentry.captureException(new Error(message), {
+      extra: data,
+    });
+  }
+  
+  // Example integration with LogRocket
+  if (typeof window !== 'undefined' && (window as any).LogRocket) {
+    (window as any).LogRocket.captureException(new Error(message), {
+      extra: data,
+    });
+  }
+}
 
-export function logErrorToProduction(message: string, error?: any): void {
-// In production, we might want to send errors to a logging service;
-// For now, just console.error in development;
-if (process.env.NODE_ENV === "development") {
-console.error("Production Logger:", message, error);
-} else {
-// TODO: Implement production error logging service;
-// Could integrate with services like Sentry, LogRocket; etc.;
-console.error("Error:", message, error);
-}
+export function logInfoToProduction(message: string, data?: any) {
+  console.info('Production Info:', message, data);
 }
 
-export function logInfoToProduction(message: string, data?: any): void {
-if (process.env.NODE_ENV === "development") {
-console.info("Production Logger:", message, data);
-}
-}
-
-export function logWarningToProduction(message: string, data?: any): void {
-if (process.env.NODE_ENV === "development") {
-console.warn("Production Logger:", message, data);
-} else {
-console.warn("Warning:", message, data);
-}
+export function logWarningToProduction(message: string, data?: any) {
+  console.warn('Production Warning:', message, data);
 }

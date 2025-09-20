@@ -1,25 +1,75 @@
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
+import { List, RefreshCw } from 'lucide-react';
+import { useApiKeys } from "@/hooks/useApiKeys";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+import { ApiLogsChart } from "./ApiLogsChart";
 
-import { useState, useEffect,  } from "react",
-import { format,  } from "date-fns",
-import { List, RefreshCw,  } from 'lucide-react'
-import { useApiKeys,  } from "@/hooks/useApiKeys",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardContent,, CardDescription,, CardHeader, CardTitle,  } from "@/components/ui/card",
-import { Select,, SelectContent,, SelectItem,, SelectTrigger, SelectValue,  } from "@/components/ui/select",
-import { Badge,  } from "@/components/ui/badge";
-import { ApiLogsChart,  } from "./ApiLogsChart";
+interface ApiLog {
+  id: string;
+  method: string;
+  endpoint: string;
+  status_code: number;
+  response_time_ms?: number;
+  ip_address?: string;
+  created_at: string;
+}
+
 export function ApiLogs() {
-  const { logs totalLogs loading fetchApiLogs } = useApiKeys();
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
-  // Load logs on mount and when pagination changes,
-useEffect(() => {
-    fetchApiLogs(pageSize currentPage * pageSize)
-  }, [pageSize currentPage]),
-  
-  const handleRefresh = null;
-                setCurrentPage(0), // Reset to first page when changing page size,
-}}
+
+  // Load logs on mount and when pagination changes
+  useEffect(() => {
+    fetchApiLogs(pageSize, currentPage * pageSize);
+  }, [pageSize, currentPage]);
+
+  const handleRefresh = () => {
+    fetchApiLogs(pageSize, currentPage * pageSize);
+  };
+
+  const formatTimestamp = (timestamp: string) => {
+    return format(new Date(timestamp), 'MMM d, yyyy HH:mm:ss');
+  };
+
+  const getStatusBadge = (statusCode: number) => {
+    if (statusCode >= 200 && statusCode < 300) {
+      return <Badge className="bg-green-700 text-white">Success</Badge>;
+    } else if (statusCode >= 400 && statusCode < 500) {
+      return <Badge className="bg-yellow-700 text-white">Client Error</Badge>;
+    } else if (statusCode >= 500) {
+      return <Badge className="bg-red-700 text-white">Server Error</Badge>;
+    }
+    return <Badge className="bg-gray-700 text-white">Unknown</Badge>;
+  };
+
+  const hasPrevPage = currentPage > 0;
+  const hasNextPage = (currentPage + 1) * pageSize < totalLogs;
+
+  return (
+    <Card className="bg-zinc-900 border-zinc-800 text-white">
+      <CardHeader>
+        <CardTitle className="text-xl flex items-center">
+          <List className="mr-2" size={20} /> API Logs
+        </CardTitle>
+        <CardDescription className="text-zinc-400">
+          Monitor your API usage and track requests in real-time.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="flex justify-between items-center mb-6">
+          <div className="flex items-center space-x-2">
+            <span className="text-sm text-zinc-400">Show</span>
+            <Select
+              value={pageSize.toString()}
+              onValueChange={(value) => {
+                setPageSize(parseInt(value));
+                setCurrentPage(0); // Reset to first page when changing page size
+              }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
                 <SelectValue placeholder="25" />
@@ -85,8 +135,8 @@ useEffect(() => {
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
-                      <Badge,
-variant="outline"
+                      <Badge
+                        variant="outline"
                         className={
                           log.method === 'GET' 
                             ? "border-green-500 text-green-400" 
@@ -121,19 +171,19 @@ variant="outline"
         {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">
-              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize totalLogs)} of {totalLogs} logs
+              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
             </div>
             <div className="flex space-x-2">
-              <Button,
-variant="outline"
+              <Button
+                variant="outline"
                 size="sm"
                 disabled={!hasPrevPage}
                 onClick={() => setCurrentPage(currentPage - 1)}
               >
                 Previous
               </Button>
-              <Button,
-variant="outline"
+              <Button
+                variant="outline"
                 size="sm"
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}
@@ -145,7 +195,5 @@ variant="outline"
         )}
       </CardContent>
     </Card>
-  )
-}
-  )
+  );
 }

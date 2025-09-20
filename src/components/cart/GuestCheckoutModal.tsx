@@ -1,5 +1,13 @@
-import { User,, Mail,, MapPin, CreditCard,  } from 'lucide-react'
-import { isProdDomain,  } from '@/utils/getStripe';interface GuestCheckoutModalProps {
+import React, { useState } from 'react';
+import { User, Mail, MapPin, CreditCard } from 'lucide-react';
+import { isProdDomain } from '@/utils/getStripe';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+
+interface GuestCheckoutModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   total: number;
@@ -118,5 +126,5 @@ export default function GuestCheckoutModal({ open, onOpenChange, total }: GuestC
         </form>
       </DialogContent>
     </Dialog>
-  )
-}}
+  );
+}
