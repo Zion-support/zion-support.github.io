@@ -1,15 +1,17 @@
 interface PerformanceMetric {
-  name: string,startTime: number;
-  endTime?: number,
-  duration?: number
-};
+  name: string;
+  startTime: number;
+  endTime?: number;
+  duration?: number;
+}
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
   private observers: PerformanceObserver[] = [];
+
   constructor() {
-    this.initializeObservers()
-  };
+    this.initializeObservers();
+  }
 
   private initializeObservers() {
     // Monitor Core Web Vitals
@@ -20,7 +22,7 @@ class PerformanceMonitor {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           this.logMetric('LCP', lastEntry.startTime);
-        }),
+        });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
       } catch (e) {
@@ -33,8 +35,8 @@ class PerformanceMonitor {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             this.logMetric('FID', entry.processingStart - entry.startTime);
-          }),
-        }),
+          });
+        });
         fidObserver.observe({ entryTypes: ['first-input'] });
         this.observers.push(fidObserver);
       } catch (e) {
@@ -48,114 +50,60 @@ class PerformanceMonitor {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             if (!entry.hadRecentInput) {
-              clsValue += entry.value
+              clsValue += entry.value;
             }
           });
           this.logMetric('CLS', clsValue);
-        }),
+        });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (e) {
         console.warn('CLS observer not supported');
       }
     }
-  };
+  }
 
-  startTiming(name: string): void {
+  startMeasure(name: string) {
     this.metrics.set(name, {
       name,
       startTime: performance.now()
     });
-  };
+  }
 
-  endTiming(name: string): number | null {
+  endMeasure(name: string) {
     const metric = this.metrics.get(name);
-    if (!metric) {
-      console.warn(`No timing found for metric: ${name}`);
-      return null;
+    if (metric) {
+      metric.endTime = performance.now();
+      metric.duration = metric.endTime - metric.startTime;
+      this.logMetric(name, metric.duration);
     }
-;
-    const endTime = performance.now();
-    const duration = endTime - metric.startTime;
+  }
+
+  logMetric(name: string, value: number) {
+    console.log(`Performance Metric - ${name}: ${value.toFixed(2)}ms`);
     
-    metric.endTime = endTime,
-    metric.duration = duration,
-
-    this.logMetric(name, duration);
-    return duration;
-  };
-
-  measureFunction<T>(name: string, fn: () => T): T {
-    this.startTiming(name);
-    try {
-      const result = fn();
-      this.endTiming(name);
-      return result
-    } catch (error) {
-      this.endTiming(name);
-      throw error,
-    }
-  };
-
-  async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    this.startTiming(name);
-    try {
-      const result = await fn();
-      this.endTiming(name);
-      return result
-    } catch (error) {
-      this.endTiming(name);
-      throw error,
-    }
-  };
-
-  private logMetric(name: string, value: number): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric [${name}]: ${value.toFixed(2)}ms`);
-    }
-
-    // Send to analytics service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToAnalytics(name, value);
-    }
-  };
-
-  private sendToAnalytics(name: string, value: number): void {
-    // Implement analytics integration here
-    // Example: Google Analytics, Mixpanel, etc.
+    // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('eventperformance_metric', {
-        metric_name: name,metric_value: Math.round(value),custom_map: {,
-          metric_category: 'performance'
-        }
+      (window as any).gtag('event', 'performance_metric', {
+        metric_name: name,
+        metric_value: Math.round(value),
+        custom_map: {}
       });
     }
-  };
+  }
 
-  getMetrics(): Record<string, PerformanceMetric> {
-    const result: Record<string, PerformanceMetric> = {},
-    this.metrics.forEach((metric, name) => {
-      result[name] = { ...metric },
-    }),
-    return result;
-  };
+  getMetrics(): PerformanceMetric[] {
+    return Array.from(this.metrics.values());
+  }
 
-  clearMetrics(): void {
+  clearMetrics() {
     this.metrics.clear();
-  };
+  }
 
-  disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect()),
-    this.observers = [],
-  };
-
-// Create singleton instance
-export const performanceMonitor = new PerformanceMonitor();
-// React hook for performance monitoring
-export const usePerformanceMonitor = () => {
-  return {
-    startTiming: performanceMonitor.startTiming.bind(performanceMonitor),endTiming: performanceMonitor.endTiming.bind(performanceMonitor),measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),measureAsync: performanceMonitor.measureAsync.bind(performanceMonitor)
-  };
-},
+  disconnect() {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+}
 
 export default performanceMonitor;

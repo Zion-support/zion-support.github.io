@@ -6,14 +6,14 @@
 import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number,
-  renderTime: number;,
-  memoryUsage: number,
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
   bundleSize: number;
-};
+}
 
 class PerformanceOptimizer {
-  private metrics: PerformanceMetrics = {,
+  private metrics: PerformanceMetrics = {
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
@@ -24,7 +24,7 @@ class PerformanceOptimizer {
 
   constructor() {
     this.initializeObservers();
-  };
+  }
 
   private initializeObservers(): void {
     // Observe navigation timing
@@ -52,10 +52,10 @@ class PerformanceOptimizer {
       paintObserver.observe({ entryTypes: ['paint'] });
       this.observers.push(paintObserver);
     }
-  };
+  }
 
-  // Debounce function for performance optimization
-  debounce<T extends (...args: any[]) => any>(,
+  // Debounce utility function
+  debounce<T extends (...args: any[]) => any>(
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -64,10 +64,10 @@ class PerformanceOptimizer {
       clearTimeout(timeout);
       timeout = setTimeout(() => func(...args), wait);
     };
-  };
+  }
 
-  // Throttle function for performance optimization
-  throttle<T extends (...args: any[]) => any>(,
+  // Throttle utility function
+  throttle<T extends (...args: any[]) => any>(
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
@@ -79,108 +79,97 @@ class PerformanceOptimizer {
         setTimeout(() => (inThrottle = false), limit);
       }
     };
-  };
+  }
 
-  // Lazy load images
-  lazyLoadImages(): void {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
+  // Lazy loading utility
+  lazyLoad(selector: string, callback: () => void): void {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            callback();
+            observer.unobserve(entry.target);
+          }
+        });
       });
-    });
 
-    images.forEach((img) => imageObserver.observe(img));
-  };
-
-  // Preload critical resources
-  preloadResource(href: string, as: string): void {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = href;
-    link.as = as;
-    document.head.appendChild(link);
-  };
-
-  // Bundle size optimization
-  optimizeBundleSize(): void {
-    // Dynamic imports for code splitting
-    const dynamicImport = (moduleName: string) => {
-      return import(/* webpackChunkName: "[request]" */ `../components/${moduleName}`);
-    };
-
-    // Tree shaking optimization
-    if (process.env.NODE_ENV === 'production') {
-      // Remove unused code
-      console.log('Production mode: Tree shaking enabled');
+      const elements = document.querySelectorAll(selector);
+      elements.forEach((element) => observer.observe(element));
     }
-  };
+  }
 
-  // Memory optimization
-  optimizeMemory(): void {
-    // Clean up event listeners
-    const cleanup = () => {
-      this.observers.forEach(observer => observer.disconnect());
-    };
-
-    // Memory leak prevention
+  // Memory usage monitoring
+  getMemoryUsage(): number {
     if ('memory' in performance) {
-      setInterval(() => {
-        this.metrics.memoryUsage = (performance as any).memory.usedJSHeapSize;
-      }, 5000);
+      const memory = (performance as any).memory;
+      return memory.usedJSHeapSize / memory.jsHeapSizeLimit;
     }
-;
-    return cleanup;
-  };
+    return 0;
+  }
 
-  // Get current metrics
-  getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
-  };
+  // Bundle size estimation
+  getBundleSize(): number {
+    const scripts = document.querySelectorAll('script[src]');
+    let totalSize = 0;
+    scripts.forEach((script) => {
+      const src = (script as HTMLScriptElement).src;
+      if (src.includes('.js')) {
+        // Rough estimation based on script count
+        totalSize += 50; // KB per script estimate
+      }
+    });
+    return totalSize;
+  }
 
-  // Performance score calculation
-  calculatePerformanceScore(): number {
-    const loadScore = Math.max(0, 100 - (this.metrics.loadTime / 100));
-    const renderScore = Math.max(0, 100 - (this.metrics.renderTime / 10));
-    const memoryScore = Math.max(0, 100 - (this.metrics.memoryUsage / 10000000));
+  // Performance report
+  getPerformanceReport() {
+    const memoryUsage = this.getMemoryUsage();
+    const bundleSize = this.getBundleSize();
     
-    return Math.round((loadScore + renderScore + memoryScore) / 3);
-  };
+    return {
+      ...this.metrics,
+      memoryUsage,
+      bundleSize,
+      timestamp: Date.now()
+    };
+  }
 
-// Singleton instance
-export const performanceOptimizer = new PerformanceOptimizer();
-
-// Utility functions
-export const debounce = performanceOptimizer.debounce.bind(performanceOptimizer);
-export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer);
+  disconnect(): void {
+    this.observers.forEach((observer) => observer.disconnect());
+    this.observers = [];
+  }
+}
 
 // React hook for performance monitoring
 export const usePerformanceMonitor = () => {
-  const [score, setScore] = useState(0);
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState({
     loadTime: 0,
     renderTime: 0,
-    memoryUsage: 0;
+    memoryUsage: 0,
     bundleSize: 0
   });
 
   useEffect(() => {
+    const optimizer = new PerformanceOptimizer();
+    
     const updateMetrics = () => {
-      setMetrics(performanceOptimizer.getMetrics());
-      setScore(performanceOptimizer.calculatePerformanceScore());
+      const report = optimizer.getPerformanceReport();
+      setMetrics(report);
     };
 
+    // Update metrics periodically
+    const interval = setInterval(updateMetrics, 5000);
+    
+    // Initial update
     updateMetrics();
-    const interval = setInterval(updateMetrics, 1000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      optimizer.disconnect();
+    };
   }, []);
 
-  return { score, metrics };
+  return metrics;
+};
 
-export default performanceOptimizer;
+export default PerformanceOptimizer;
