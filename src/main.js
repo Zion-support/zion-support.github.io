@@ -1,1 +1,1 @@
-import ReactDOM from 'react-dom/client';
+// Main entry point for the application
