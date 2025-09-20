@@ -1,53 +1,106 @@
-import React from 'react';
-import { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks/useScrollToTop";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Header } from "./components/Header";
+import { ToasterProvider } from "./components/Toaster";
+import { Sonner } from "./components/Sonner";
 import { Sidebar } from "./components/Sidebar";
-import { Footer } from "./components/Footer";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { ScrollToTop } from "./components/ScrollToTop";
 
 // Lazy load pages
-const Home = React.lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
-const Services = React.lazy(() => import('./pages/Services').then(module => ({ default: module.Services })));
-const About = React.lazy(() => import('./pages/About'));
+const Home = React.lazy(() => import('./pages/Home'));
+const AboutPage = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Services = React.lazy(() => import('./pages/Services'));
+const AISolutionsPage = React.lazy(() => import('./pages/AISolutions'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServices'));
+const EnterprisePage = React.lazy(() => import('./pages/Enterprise'));
+const DeveloperPortalPage = React.lazy(() => import('./pages/DeveloperPortal'));
+const HelpCenterPage = React.lazy(() => import('./pages/HelpCenter'));
+const CookiesPage = React.lazy(() => import('./pages/Cookies'));
+const AccessibilityPage = React.lazy(() => import('./pages/Accessibility'));
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div>
-  </div>
-);
+// Our comprehensive services pages
+const ServiceDetailPage = React.lazy(() => import('./pages/ServiceDetailPage'));
+const PricingPage = React.lazy(() => import('./pages/PricingPage'));
+
+// Additional service pages
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage'));
+const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase'));
+const EnterpriseSolutions = React.lazy(() => import('./pages/EnterpriseSolutions'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/about', element: <AboutPage /> },
+  { path: '/contact', element: <Contact /> },
+  { path: '/services', element: <Services /> },
+  { path: '/sitemap', element: <Sitemap /> },
+  { path: '/ai-solutions', element: <AISolutionsPage /> },
+  { path: '/it-services', element: <ITServicesPage /> },
+  { path: '/enterprise', element: <EnterprisePage /> },
+  { path: '/enterprise-solutions', element: <EnterpriseSolutions /> },
+  { path: '/developers', element: <DeveloperPortalPage /> },
+  { path: '/help-center', element: <HelpCenterPage /> },
+  { path: '/cookies', element: <CookiesPage /> },
+  { path: '/accessibility', element: <AccessibilityPage /> },
+  // Our comprehensive services routes
+  { path: '/services/:id', element: <ServiceDetailPage /> },
+  { path: '/pricing', element: <PricingPage /> },
+  // Additional service routes
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
+  { path: '/services-pricing', element: <ServicesPricingPage /> },
+  { path: '/innovative-services', element: <InnovativeServicesShowcase /> },
+  // Catch-all route
+  { path: '*', element: <NotFound /> },
+];
+
+// Enhanced loading component with better UX
+function EnhancedSuspenseFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-gold mx-auto mb-4"></div>
+        <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group...</h2>
+        <p className="text-zion-slate-light">Please wait while we prepare your experience</p>
+      </div>
+    </div>
+  );
+}
+
+// Simple Error Boundary Component
+function ErrorBoundary({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
+}
 
 function App() {
   return (
-    <ThemeProvider>
+    <ErrorBoundary>
       <WhitelabelProvider>
-        <div className="App">
-          <Header />
-          <Sidebar />
-          <main className="ml-64">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-          <ScrollToTop />
-          <Toaster />
-          <SonnerToaster />
-        </div>
+        <ThemeProvider>
+          <Router>
+            <Sidebar />
+            <div className="ml-64">
+              <Suspense fallback={<EnhancedSuspenseFallback />}>
+                <Routes>
+                  {baseRoutes.map(({ path, element }) => (
+                    <Route key={path} path={path} element={element} />
+                  ))}
+                </Routes>
+              </Suspense>
+            </div>
+            <ToasterProvider>
+              <Sonner />
+            </ToasterProvider>
+          </Router>
+        </ThemeProvider>
       </WhitelabelProvider>
-    </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 
