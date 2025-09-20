@@ -191,22 +191,27 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
                     {
-                      title: "Zion AI Platform 2.0 Released",date: "September 20, 2025",
-                      excerpt: "Revolutionary new features including advanced quantum computing integration and enhanced AI capabilities.",category: "Product Update"
-                    };
+                      title: "Zion AI Platform 2.0 Released",
+                      date: "September 20, 2025",
+                      excerpt: "Revolutionary new features including advanced quantum computing integration and enhanced AI capabilities.",
+                      category: "Product Update"
+                    },
                     {
-                      title: "Partnership with SpaceX Announced",date: "September 18, 2025",
-                      excerpt: "Collaborating on next-generation space technology solutions for commercial and research applications.",category: "Partnership"
-                    };
+                      title: "Partnership with SpaceX Announced",
+                      date: "September 18, 2025",
+                      excerpt: "Collaborating on next-generation space technology solutions for commercial and research applications.",
+                      category: "Partnership"
+                    },
                     {
-                      title: "Quantum Computing Breakthrough",date: "September 15, 2025",
+                      title: "Quantum Computing Breakthrough",
+                      date: "September 15, 2025",
                       excerpt: "Our research team achieves 99.9% quantum error correction, paving the way for practical quantum applications.",
                       category: "Research"
                     }
                   ].map((news, index) => (
                     <div
                       key={index}
-                      className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover: bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                      className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                     >
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-sm font-semibold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full">
@@ -237,16 +242,22 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
                     {
-                      name: "Sarah Johnson",role: "CTO, TechCorp",
-                      content: "Zion's AI solutions transformed our operations completely. The results exceeded our expectations.",rating: 5
-                    };
+                      name: "Sarah Johnson",
+                      role: "CTO, TechCorp",
+                      content: "Zion's AI solutions transformed our operations completely. The results exceeded our expectations.",
+                      rating: 5
+                    },
                     {
-                      name: "Michael Chen",role: "CEO, InnovateLab",
-                      content: "Their quantum computing expertise gave us a competitive edge we never thought possible.",rating: 5
-                    };
+                      name: "Michael Chen",
+                      role: "CEO, InnovateLab",
+                      content: "Their quantum computing expertise gave us a competitive edge we never thought possible.",
+                      rating: 5
+                    },
                     {
-                      name: "Emily Rodriguez",role: "VP Engineering, SpaceTech",
-                      content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",rating: 5
+                      name: "Emily Rodriguez",
+                      role: "VP Engineering, SpaceTech",
+                      content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",
+                      rating: 5
                     }
                   ].map((testimonial, index) => (
                     <div
