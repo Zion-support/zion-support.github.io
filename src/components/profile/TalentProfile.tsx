@@ -15,4 +15,3 @@ import { Availability } from "@/types/profile";
 interface TalentProfileProps {profile: TalentProfileType;
 onRequestHire: () => void;
 }
-  onMessageTalent?: () => void}

@@ -37,4 +37,3 @@ toast({
 title: "Login Failed";
 description: data.error || "Email not confirmed. Please check your inbox to verify your email.";
 variant: "destructive";
-});

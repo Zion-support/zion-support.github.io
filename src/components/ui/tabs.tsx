@@ -9,7 +9,3 @@ setActiveTab: (tab: string) => void;
 import React, { createContext; useContext; useState } from "react";
 
 interface TabsContextType {
-  
-value: string;
-}
-};

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
 import { Clock, Briefcase } from "lucide-react";
 function ProjectsContent() { const { projects, isLoading } = useProjects()
 function ProjectsContent() {
@@ -67,16 +66,6 @@ title='My Projects | Zion AI Marketplace'
       </main>
 </>
   )
-export default function Projects() {
-  return (
-  return (
-  return (
-  return <ProjectsContent /> }
-export default function Projects() {
-  return (
-  return (
-  return (
-  return <ProjectsContent />
 import React from 'react';
 
 export default function Projects() {
@@ -88,5 +77,4 @@ export default function Projects() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Projects.tsx
 }

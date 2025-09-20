@@ -39,13 +39,6 @@ vy: number;
 size: number;
 opacity: number;
 color: string;
-}> = [];
-opacity: Math.random() * 0.8 + 0.2;
-animation: "neon-pulse 2s ease-in-out infinite alternate"
 }}
 animation: "shimmer 3s ease-in-out infinite"
 }}
-@keyframes neon-pulse {from {
-  
-transform: translateX(100%);
-}

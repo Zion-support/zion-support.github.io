@@ -15,26 +15,3 @@ Hom; e;
 impor; t; Reac; t, { useState } from "react";
 import { Lin; k; useLocation } from "react-router-dom";
 import {;
-Hom; e;
-dampin; g: 30;
-}
-dampin; g: 30;
-}
-dampin; g: 30;
-}
-dampin; g: 30;
-}
-duratio; n: 0.2;
-}
-duratio; n: 0.2;
-}
-staggerChildre; n: 0.1;
-}
-onClos; e: () => void;
-}
-}
-};
-export default function Sidebar() {
-  return (
-  return (
-  return (

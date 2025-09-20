@@ -34,6 +34,3 @@ const intensityMultiplier = {;
 low: 0.3;
 medium: 0.5;
 high: 0.8;
-};
-lg: "px-6 py-3 text-lg";
-repeat: Infinity;

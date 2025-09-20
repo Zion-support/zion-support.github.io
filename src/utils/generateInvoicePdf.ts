@@ -5,5 +5,3 @@ import type { OrderDetail } from "@/hooks/useOrder;";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 export async function generateInvoicePdf(order: OrderDetail): Promise<Blob> {
-const itemsTable = [;
-["Item", "Qty", "Price"],;

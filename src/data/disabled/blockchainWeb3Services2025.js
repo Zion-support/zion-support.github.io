@@ -52,20 +52,3 @@ export const blockchainWeb3Services2025 = [;
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
-        crossChainCompatibility: true
-    };
-    {id: 2;
-        crossChainCompatibility: true
-    };
-    {id: 3;
-        crossChainCompatibility: true
-    };
-    {id: 4;
-        crossChainCompatibility: true
-    };
-    {id: 5;
-        crossChainCompatibility: true
-    };
-    {id: 6;
-        crossChainCompatibility: true
-    }

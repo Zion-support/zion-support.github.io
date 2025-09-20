@@ -42,8 +42,3 @@ export function useFraudPreventionSignup() {
     '),
                     ip_address: ipAddress;
                     timestamp: new Date().toISOString();
-                    status: 'pending'
-                });
-                        variant: "destructive";
-                    });
-    return {isCheckingFraud,

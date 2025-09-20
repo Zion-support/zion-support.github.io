@@ -23,22 +23,3 @@ email: string;
 website: string;
 }
 }
-};
-email: "kleber@ziontechgroup.com";
-demoUrl: "https://ziontechgroup.com/demo/ai-content-suite";
-documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"
-};
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";

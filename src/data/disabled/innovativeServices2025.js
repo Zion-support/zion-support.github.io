@@ -28,17 +28,3 @@ export const INNOVATIVE_SERVICES_2025 = [;
             website: 'https://ziontechgroup.com'};
         technology: ['GPT-4', 'Machine Learning', 'RPA', 'Business Intelligence'],
         estimatedDelivery: '2-4 weeks';
-        supportLevel: 'premium'
-    };
-    {id: 'quantum-neural-network-platform';
-        supportLevel: 'enterprise'
-    };
-    {id: 'blockchain-defi-solutions';
-        supportLevel: 'premium'
-    };
-    {id: 'iot-data-analytics-platform';
-        supportLevel: 'standard'
-    };
-    {id: 'ai-cybersecurity-automation';
-        supportLevel: 'premium'
-    }

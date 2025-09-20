@@ -11,7 +11,3 @@ sendMessage: (content: string) => void;
 markAsRead: (id: string) => void;
 }
 }
-};
-timestamp: new Date();
-isRead: false;
-};

@@ -24,21 +24,3 @@ email: string;
 website: string;
 }
 }
-};
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-content-generation"
-};
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"
-};
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/iot-smart-home"
-};
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-customer-service"
-};
-email: "kleber@ziontechgroup.com";

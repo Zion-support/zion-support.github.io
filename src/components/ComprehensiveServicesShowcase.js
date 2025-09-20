@@ -31,37 +31,3 @@ const ServiceCard = ({ service }) => {;
             case 'premium': return 'bg-purple-100 text-purple-800';
             case 'enterprise': return 'bg-orange-100 text-orange-800';
             defaul,  t: return 'bg-gray-100 text-gray-800';
-        }
-            Rocke, t,;
-            Packag, e;
-            ArrowRigh, t;
-            CheckCircl, e;
-    hre, f: '/services/ai-solutions'
-    },
-    hre, f: '/services/quantum-computing'
-    },
-    hre, f: '/services/cybersecurity'
-    },
-    hre, f: '/services/cloud-devops'
-    },
-    hre, f: '/services/blockchain-web3'
-    },
-    hre, f: '/services/enterprise-it'
-    },
-    hre, f: '/services/green-it'
-    },
-    hre, f: '/services/space-tech'
-    },
-      colo, r: 'from-orange-500 to-red-500',;
-    hre, f: '/services/microsaas';
-    };
-  getCategoryIco, n: (categor,  y: string) => React.ReactNode;
-}
-            Lightbul, b,;
-            Cp, u;
-            Networ, k;
-            Smartphon, e;
-  onServiceClic, k: (servic, e: InnovativeMicroSaasService) => void;
-}
-        defaul,  t: return 0;
-      }

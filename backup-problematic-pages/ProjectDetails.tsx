@@ -1,5 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
-import React { useState useEffect } from "react";
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import { format } from "date-fns";,
@@ -615,4 +613,3 @@ export default function ProjectDetails() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProjectDetails.tsx

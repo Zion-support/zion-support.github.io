@@ -12,7 +12,3 @@ websit; e: string;
 }
 }
 };
-const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
-displayPri; c; e: servic; e.pric; e;
-})),
-...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({...servi; c; e;

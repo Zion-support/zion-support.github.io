@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/EquipmentRecommendations.tsx
 import { Loader2 } from "lucide-react";
 import Link from 'next/link';
 import { ErrorState } from "@/components/jobs/applications";
@@ -67,7 +66,6 @@ export default function EquipmentRecommendations() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Equipment Recommendations</h1>
         <p className="text-lg text-gray-600">Get personalized equipment recommendations...</p>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/EquipmentRecommendations.tsx
       </div>
     </div>
   );

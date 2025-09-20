@@ -64,20 +64,3 @@ export const ADVANCED_IT_SERVICES = [;
         roi: "200% within 18 months";
         competitors: ["Accenture", "Deloitte", "IBM", "AWS Professional Services", "Microsoft Consulting"],
         onsiteSupport: true;
-        globalCoverage: true
-    };
-    {id: "cybersecurity-managed-services";
-        globalCoverage: true
-    };
-    {id: "devops-automation-platform";
-        globalCoverage: true
-    };
-    {id: "data-center-optimization";
-        globalCoverage: true
-    };
-    {id: "network-security-architecture";
-        globalCoverage: true
-    };
-    {id: "disaster-recovery-solutions";
-        globalCoverage: true
-    }

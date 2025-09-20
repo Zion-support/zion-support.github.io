@@ -14,7 +14,6 @@ errorInfo?: ErrorInfo;}
 class; ErrorBoundary; extends Component<PropsState> {
 constructor() {
 super(props);
-this.state = { hasErro;r: false };
 className="btn-primary";
 type="button";
 >;
@@ -25,4 +24,3 @@ Refresh Page;
 <summary>Error Details (Development)</summary>;
 <pre style={{ ;
 background: "#f5f5f5",padding: "1rem"borderRadius: "4px"overflo;w: "auto"fontSiz;e: "12px";
-}}>;

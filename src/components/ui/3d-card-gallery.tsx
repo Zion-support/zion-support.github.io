@@ -49,10 +49,3 @@ const [searchQuery; setSearchQuery] = useState("");
 const [sortBy; setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
 const [sortOrder; setSortOrder] = useState<"asc" | "desc">("desc");
 const [isPlaying; setIsPlaying] = useState(autoPlay);
-const [currentCarouselIndex; setCurrentCarouselIndex] = useState(0);
-default: return 0;
-}
-default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
-}
-default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
-}

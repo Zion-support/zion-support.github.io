@@ -29,4 +29,3 @@ setExperienceRange: (range: [number; number]) => void;,
 clearFilters: () => void;
 }
 }
-};

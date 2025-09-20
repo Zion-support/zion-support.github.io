@@ -46,20 +46,3 @@ technologie; s: string[];
 statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
 }
 }
-};
-categor; y: string;
-}
-}
-{i; d: "ai-consciousness";
-{i; d: "space-mining";
-{i; d: "fusion-energy";
-{i; d: "synthetic-biology";
-{i; d: "brain-computer-interfaces";
-{i; d: "space-colonization";
-{i; d: "ai-governance";
-defaul;  t: return "bg-gray-100 text-gray-800";
-}
-defaul;  t: return "bg-gray-100 text-gray-800";
-}
-defaul;  t: return <Cpu className="w-5 h-5" />;
-}

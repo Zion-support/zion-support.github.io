@@ -32,10 +32,3 @@ const [isAnalyzing; setIsAnalyzing] = useState(false);
 const [generatedCode; setGeneratedCode] = useState("");
 const [codeAnalysis; setCodeAnalysis] = useState<CodeAnalysis | null>(null);
 const [suggestions; setSuggestions] = useState<CodeSuggestion[]>([]);
-const [history; setHistory] = useState<Array<{
-language: string;
-quality: string;
-}>>([]);
-language: options.language;
-quality: options.quality;
-// TODO: Implement action handler;

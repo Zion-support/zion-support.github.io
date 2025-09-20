@@ -30,16 +30,3 @@ export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ classNa
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
-framewor; k: "tensorflow" as const;
-});
-const [predictionFo; r; m; setPredictionFo; r; m] = useState({modelI;  d: "";
-inpu; t: ""});
-framewor; k: newModelForm.framework;
-});
-defaul;  t: return "text-gray-600 bg-gray-100";
-}
-defaul;  t: return "text-gray-600 bg-gray-100";
-}
-defaul;  t: return <Brain className="w-4 h-4" />;
-}

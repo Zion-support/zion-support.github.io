@@ -26,10 +26,3 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
-defaul;  t: return "text-gray-600 bg-gray-100";
-}
-defaul;  t: return "text-gray-600 bg-gray-100";
-}
-defaul;  t: return "text-gray-600 bg-gray-100 border-gray-200";
-}

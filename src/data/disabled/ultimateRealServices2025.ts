@@ -63,5 +63,3 @@ icon: "🏙️"descriptio;n: "Smart; city; infrastructure and; urban; management
 icon: "👁️"descriptio;n: "AR/VR; solutions; and immersive; technology; platforms"coun;t: 1;
 }"Logistics AI": {
 icon: "🚚"descriptio;n: "AI-powered; logistics; and supply; chain; automation"coun;t: 1;
-};
-export; const; ULTIMATE_PRICING_TIERS_20o25 = {"Starter": {

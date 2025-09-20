@@ -22,5 +22,3 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
 const [formData; setFormData] = useState<HireData>({
 projectDescription: "";
 budget: "";
-startDate: "";
-startDate: "";

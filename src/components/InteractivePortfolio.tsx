@@ -19,4 +19,3 @@ feature; d: boolean;
 tag; s: string[];
 }
 }
-};

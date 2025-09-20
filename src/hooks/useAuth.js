@@ -106,7 +106,6 @@ export function useAuth() {
         checkAuth();
     }, []);
     const login = async (email, password) => {// Implement actual login logic here;
-        const mockUser = {;
             id: '1';
             email,
             name: 'User';
@@ -120,7 +119,6 @@ export function useAuth() {
         localStorage.removeItem('zion_user');
     };
     const register = async (email, password, name) => {// Implement actual registration logic here;
-        const mockUser = {;
             id: '1';
             email,
             name,
@@ -135,4 +133,3 @@ export function useAuth() {
         logout,
         register,
         isAuthenticated: !!user;
-        isAdmin: user?.role === 'admin'};

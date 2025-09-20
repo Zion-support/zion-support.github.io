@@ -14,4 +14,3 @@ interface UseLazyLoadReturn {
 isVisible: boolean;
 ref: React.RefObject<HTMLElement>;
 load: () => void;
-}

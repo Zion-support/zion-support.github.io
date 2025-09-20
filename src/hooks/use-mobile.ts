@@ -1,4 +1,3 @@
 interface Service {
   
 id: string;
-};

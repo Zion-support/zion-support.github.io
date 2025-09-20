@@ -7,5 +7,3 @@ export const TALENT_SEEDS = [;
         skills: ['React', 'Node.js', 'TypeScript'],
         hourly_rate: 120;
         availability_type: 'full_time'};
-    {id: 'seed-2';
-    {id: 'seed-3';

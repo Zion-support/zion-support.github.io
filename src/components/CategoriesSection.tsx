@@ -37,23 +37,3 @@ description: "Cutting - edge AI solutions chatbots and machine learning"
     icon: "🤖",
 link: "/ai - services"
     color: "from - purple - 500 to - indigo - 600"}
-  {title: "Micro SAAS",
-  {title: "IT Services",
-  {title: "Digital Transformation",
-          {displayCategories.map((category) => (
-            <Link
-            {getSpecialServices(t).map((service) => (
-              <Link
-interface CategoriesSectionProps {showTitle?: boolean,
-className?: string
-}
-style?: React.CSSProperties}
-categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({showTitle = true,;
-className;
-style,;
-categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {const {
-  
-  t}= useTranslation ()
-const defaultCategories = getDefaultCategories (t);
-//Use fetchedCategories if provided otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
-}</div> > {service.title}</Link>) ) "

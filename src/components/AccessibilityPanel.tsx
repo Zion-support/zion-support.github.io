@@ -19,6 +19,3 @@ colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 onToggl; e: () => void;
 }
 }
-};
-colorBlindnes; s: "none"
-};

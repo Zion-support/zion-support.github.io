@@ -38,16 +38,3 @@ name: "rate";
 type: "number";
 description: "Hourly rate for services";
 required: true;
-}],
-rating: 4.8;
-tags: ["freelance", "agreement", "services"]
-},
-description: "Name of the company";
-required: true;
-},
-required: true;
-defaultValue: 2;
-}],
-rating: 4.6;
-tags: ["nda", "confidentiality", "legal"]
-}

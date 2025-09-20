@@ -45,4 +45,3 @@ import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview";
 import { format, isPast, parseISO } from "date-fns";
 import Link from 'next/link';
-import { Calendar, Clock, Video } from "lucide-react";

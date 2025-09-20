@@ -22,4 +22,3 @@ phone: string;
 email: string;
 website: string;
 }
-}

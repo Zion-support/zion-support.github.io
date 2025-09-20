@@ -16,4 +16,3 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
-avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";

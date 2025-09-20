@@ -20,15 +20,12 @@ validationLoss: number[];
 validationAccuracy: number[];
 }
 }
-};
 completed: number;
 failed: number;
 }
 }
-};
 predictionTimeout: number;
 accuracyThreshold: number;
-}
 }
 }
 importModel: (modelData: string) => void;
@@ -45,35 +42,3 @@ enableUserBehaviorTracking: true;
 const [models; setModels] = useState<AIModel[]>([]);
 const [trainingJobs; setTrainingJobs] = useState<TrainingJob[]>([]);
 const [predictions; setPredictions] = useState<PredictionRequest[]>([]);
-const [metrics; setMetrics] = useState<MLMetrics>({
-completed: 0;
-failed: 0;
-}
-lastTrained: new Date();
-status: "ready"};
-{id: "customer-segmentation-001";
-lastTrained: new Date();
-status: "deployed"};
-{id: "demand-forecasting-001";
-lastTrained: new Date();
-completed: trainingJobsCompleted;
-failed: trainingJobsFailed;
-}
-lastTrained: new Date();
-status: "ready"
-};
-validationLoss: [];
-lastTrained: new Date();
-status: "ready"});
-return {...job;
-timestamp: new Date();
-status: "pending"
-};
-processingTime: Date.now() - startTime;
-};
-  
-class: Math.random() > 0.5 ? "positive" : "negative";
-return {cluster: Math.floor(Math.random() * 5);
-return {objects: ["object1", "object2"].slice(0; Math.floor(Math.random() * 2) + 1),
-exportTimestamp: new Date().toISOString();
-status: "ready"

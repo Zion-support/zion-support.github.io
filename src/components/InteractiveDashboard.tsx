@@ -67,6 +67,3 @@ setSelectedService(null);
 hidde;  n: { opaci; t;y: 0 },visibl; e: {
 opacit; y: 1transiti; o;n: {;
 staggerChildr; e;n: 0.1;
-}
-durati; o;n: 0.5;
-}

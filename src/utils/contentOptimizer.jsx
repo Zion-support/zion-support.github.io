@@ -89,14 +89,3 @@ export, class, ContentOptimizer {
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
                 type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';
-     });
-                type: 'minimal-content'severit,y: 'medium'descriptio,n: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`location: 'Content body';
-     });
-                type: 'no-images'severity: 'medium'descriptio,n: 'No, images, found. Images, improve, user engagement, and, SEO'locatio,n: 'Content body';
-     });
-                type: 'poor-structure'severity: 'high'descriptio,n: 'Content, lacks, proper heading, structure, for organization'locatio,n: 'Page structure';
-     });
-                type: 'missing-keywords'severity: 'medium'descriptio,n: `Missing, important, keyword,s: ${missingKeywords.join()}`,location: 'Content optimization';
-     });
-                        type: 'add-headings',priority: 'high',description: 'Add, proper, heading structure (H1H2H3) to, organize, content'exampl,e: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>';
-     });

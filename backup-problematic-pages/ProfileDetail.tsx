@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
 import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
@@ -131,4 +130,3 @@ export default function ProfileDetail() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProfileDetail.tsx

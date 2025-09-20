@@ -1,5 +1,4 @@
 
-import React { useState useEffect } from 'react';
 import { Button } from "@/components/ui/button";,
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";,
 import { Label } from "@/components/ui/label";,
@@ -11,4 +10,3 @@ import { ResumePreviewCard } from "./ResumePreviewCard";
 import { UploadSection } from "./UploadSection";
 import { SelectResumeSection } from "./SelectResumeSection";
 import { ResumeOption, ResumeSelectorProps } from "./types";
-import { logErrorToProduction } from "@/utils/productionLogger";

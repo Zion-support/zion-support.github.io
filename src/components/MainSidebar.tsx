@@ -16,5 +16,3 @@ Building;
 Mail;
 Calendar;
 Globe;
-Zap } from "lucide-react";
-interface MainSidebarProps {className?: string};

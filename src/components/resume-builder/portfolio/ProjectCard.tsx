@@ -14,6 +14,3 @@ project: PortfolioProject;
 onEdit: (project: PortfolioProject) => void;
 onDelete: (projectId: string) => void;
 }
-import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
-import Image from 'next/image';
-import { PortfolioProject } from "@/types/resume";

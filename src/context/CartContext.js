@@ -24,5 +24,3 @@ const initialState = { items: [] };
     case 'CLEAR_CART':
             return { items: [] };
     default: return state;
-     }
-    const value = {items: state.items;

@@ -173,7 +173,3 @@ aria-label='View billing'
               </TableRow>
             ))}
           </TableBody>
-        </Table>;
-      </div>;
-    </div>;
-  );

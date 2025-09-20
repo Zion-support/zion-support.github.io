@@ -9,6 +9,3 @@ import { RadioGroup;
 , , RadioGroupItem } from "@/components/ui/radio-group";
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
-interface ReviewFormValues {rating?: number;
-}
-  would_work_again?: boolean;}

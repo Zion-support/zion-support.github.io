@@ -9,7 +9,3 @@ import { PersonalInfoFields } from "./PersonalInfoFields";,
 import { ProjectDetailsField } from "./ProjectDetailsField";,
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
-export interface HireRequestFormProps {talent: TalentProfile;
-}
-    email?: string;}
-  const { form isSubmitting onSubmit } = useHireRequestForm({talent,

@@ -3,4 +3,3 @@ export interface SpecializedIndustrySolution {id: string; title: string; descrip
 useCases: string[], targetAudience: string[];
 tags: string[], estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
-contactInfo: {}

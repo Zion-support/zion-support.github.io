@@ -10,4 +10,3 @@ isOpe; n: boolean;
 onToggl; e: () => void;
 }
 }
-};

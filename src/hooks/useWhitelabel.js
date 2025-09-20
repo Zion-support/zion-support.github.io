@@ -4,7 +4,6 @@ export const useWhitelabel = () => {;
         config: null;
         tenant: null;
         isLoading: true;
-    });
                         theme: 'dark';
                     },
                     tenant: {
@@ -13,6 +12,3 @@ export const useWhitelabel = () => {;
                         domain: 'ziontechgroup.com';
                     },
                     isLoading: false;
-                });
-                    isLoading: false;
-                });

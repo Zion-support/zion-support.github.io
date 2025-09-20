@@ -46,35 +46,3 @@ assignedTo?: string;
 priorit; y: "immediate" | "high" | "normal" | "low";
 }
 }
-};
-control; s: string[];
-}
-}
-};
-categor; y: string;
-}
-}
-};
-frequenc; y: number;
-}
-}
-};
-{i; d: "2";
-{i; d: "3";
-{i; d: "2";
-{i; d: "3";
-{i; d: "4";
-frequenc; y: 15;
-};
-frequenc; y: 8;
-}
-defaul;  t: return "bg-gray-500 text-white";
-}
-defaul; t: return "bg-gray-100 text-gray-700 dar; k:bg-gray-900/30 dar; k: text-gray-300";
-}
-defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: text-green-300";
-}
-defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;
-}
-defaul;  t: return <Server className="w-5 h-5 text-gray-500" />;
-}

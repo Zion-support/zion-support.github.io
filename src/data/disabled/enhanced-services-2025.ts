@@ -12,4 +12,3 @@ monthly: string;
 yearly: string;
 enterprise: string;
 setup: string;
-}

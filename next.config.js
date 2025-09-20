@@ -10,6 +10,42 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
+  // Additional performance optimizations
+  swcMinify: true,
+  reactStrictMode: true,
+  
+  // Headers for better caching
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+        ],
+      },
+      {
+        source: '/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
+  
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
@@ -37,15 +73,34 @@ const nextConfig = {
       // Optimize bundle size
       config.optimization.splitChunks = {
         chunks: 'all',
+        minSize: 20000,
+        maxSize: 244000,
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
+            priority: 10,
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            priority: 5,
+            reuseExistingChunk: true,
           },
         },
       };
+      
+      // Add compression
+      config.optimization.minimize = true;
     }
+    
+    // Add source map optimization
+    if (dev) {
+      config.devtool = 'eval-cheap-module-source-map';
+    }
+    
     return config;
   },
   
@@ -54,10 +109,18 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
+    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
   
   // Security headers are handled by Netlify configuration
   // since we're using static export
 };
 
-module.exports = nextConfig;

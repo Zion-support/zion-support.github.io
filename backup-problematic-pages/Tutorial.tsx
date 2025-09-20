@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Tutorial.tsx
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import { TUTORIALS } from "@/data/tutorials";
@@ -74,5 +73,4 @@ export default function Tutorial() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Tutorial.tsx
 }

@@ -52,38 +52,3 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [;
         marketSize: "$12.5B global credit scoring market";
         competitiveAdvantage: "Alternative data integration and real-time processing";
         roi: "300% ROI within 6 months";
-        implementationTime: "3-4 weeks"
-    };
-    {id: "ai-medical-imaging";
-        implementationTime: "6-8 weeks"
-    };
-    {id: "ai-supply-chain-optimization";
-        implementationTime: "4-6 weeks"
-    };
-    {id: "ai-energy-optimization";
-        implementationTime: "5-7 weeks"
-    };
-    {id: "ai-legal-document-analysis";
-        implementationTime: "4-5 weeks"
-    };
-    {id: "ai-real-estate-analytics";
-        implementationTime: "3-4 weeks"
-    };
-    {id: "ai-personalized-learning";
-        implementationTime: "4-6 weeks"
-    };
-    {id: "ai-predictive-maintenance";
-        implementationTime: "6-8 weeks"
-    };
-    {id: "ai-retail-optimization";
-        implementationTime: "4-5 weeks"
-    };
-    {id: "ai-logistics-optimization";
-        implementationTime: "5-6 weeks"
-    };
-    {id: "ai-hr-talent-management";
-        implementationTime: "4-6 weeks"
-    };
-    {id: "ai-marketing-automation";
-        implementationTime: "3-5 weeks"
-    }

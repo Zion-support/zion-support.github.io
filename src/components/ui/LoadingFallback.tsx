@@ -4,9 +4,3 @@ import { Loader2 } from "lucide-react, ";
 
 interface LoadingFallbackProps {message?: string;
 }
-size?: "sm" | "md" | "lg";}
-lg: "w-12 h-12";
-};
-const textSizes = {;
-sm: "text-sm", md: "text-base",;
-duration: 1.4; repeat: Infinity;

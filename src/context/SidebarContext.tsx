@@ -5,4 +5,3 @@ interface SidebarContextType {
 isSidebarOpen: boolean;
 setIsSidebarOpen: (open: boolean) => void;
 toggleSidebar: () => void;
-};

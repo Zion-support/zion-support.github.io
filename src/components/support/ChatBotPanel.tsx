@@ -9,4 +9,3 @@ import { toast } from "@/components/ui/use-toast";,
 import { cn } from "@/lib/utils";,
 import { ChatMessage } from "./ChatMessage";,
 import { QuickReplyButton } from "./QuickReplyButton";
-import { Send, Loader2 } from "lucide-react";

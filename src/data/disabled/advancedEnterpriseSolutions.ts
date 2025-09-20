@@ -24,27 +24,3 @@ email: string;
 website: string;
 }
 }
-};
-innovationLevel: string;
-marketTrend: string;
-}
-email: "kleber@ziontechgroup.com";
-innovationLevel: "Breakthrough";
-marketTrend: "Rapidly Growing"
-};
-email: "kleber@ziontechgroup.com";
-innovationLevel: "Revolutionary";
-marketTrend: "Emerging"
-};
-email: "kleber@ziontechgroup.com";
-innovationLevel: "Advanced";
-marketTrend: "Growing"
-};
-email: "kleber@ziontechgroup.com";
-innovationLevel: "Advanced";
-marketTrend: "High Growth"
-};
-email: "kleber@ziontechgroup.com";
-innovationLevel: "Advanced";
-marketTrend: "Emerging"
-}

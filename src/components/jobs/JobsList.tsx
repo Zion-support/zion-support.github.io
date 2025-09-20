@@ -12,10 +12,3 @@ import Link from "next/link";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface JobsListProps {return (<div className="grid gap-6 md:grid-cols-2">
 }
-      {jobs.map((job) => (<Card}
-          onClick = {() => onSelectJob?.(job.id job.title)}
-return (<div className="grid gap-6 md:grid-cols-2" > {jobs.map ( (job) => (<Card key= {
-  job.id}className={
-}job.description
-}</p> + {job.skills.length - 3}more </Badge>) "
-}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {job.budget.min}- $ {

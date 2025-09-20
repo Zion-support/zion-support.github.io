@@ -11,4 +11,3 @@ fps: number;
 network: number;
 }
 }
-};

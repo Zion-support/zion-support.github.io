@@ -17,8 +17,3 @@ sortOrder: "asc" | "desc";
 results: T[];
 isLoading: boolean;
 totalResults: number;
-sortBy: null;
-sortOrder: "asc"
-}));
-hasNextPage: endIndex < searchState.totalResults;
-hasPrevPage: page > 1;

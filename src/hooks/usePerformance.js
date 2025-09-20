@@ -131,4 +131,3 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
                 case 'needs-improvement': return 65;
                 case 'poor': return 0;
                 default: return 0;
-     }

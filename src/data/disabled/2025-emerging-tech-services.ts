@@ -21,4 +21,3 @@ website: string;
 contact: {
 phone: string;
 email: string;
-address: string;

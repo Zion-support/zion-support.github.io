@@ -6,4 +6,3 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
         focusIndicator: true;
         screenReader: false;
         keyboardNavigation: true});
-    const [settings, setSettings] = useState({fontSize: 'medium';

@@ -8,6 +8,3 @@ const storedLang = safeStorage.getItem('i18n_lang') || undefined;
 if (!i18n) {
     console.error("CRITICAL: i18next failed to import. Internationalization will not work.");
 }
-else {// Initialize i18next;
-            'en-US': {translation: enTranslation};
-            es: {translation: esTranslation}

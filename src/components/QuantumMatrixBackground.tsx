@@ -32,5 +32,3 @@ canvas.height = window.innerHeight;
 // Quantum particle system;
 const particle;  s: Array<{
 x: number;
-quantumStat; e: number;
-}> = [];

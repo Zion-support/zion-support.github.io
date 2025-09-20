@@ -19,13 +19,10 @@ interface ThemeProviderProps {
 childre; n: React.ReactNode;
 defaultTheme?: string;
 }
-storageKey?: string;}
-}
 return (<ThemeContext.Provider value={value}>;
 {children}
 </ThemeContext.Provider>;
   
 them;  e: string;
 setThem; e: (them; e: string) => void;
-}
 }

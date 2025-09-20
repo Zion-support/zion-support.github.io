@@ -12,16 +12,8 @@ onError?: (erro;  r: Erro; r;
 errorInf; o: any) => void;
 }
 }
-};
 errorInf; o: any) => void;
 }
 }
 };
 resetErro; r: () => void;
-};
-interface Props {;
-  children: ReactNode;
-}
-error?: Error}
-    return this.props.children
-}

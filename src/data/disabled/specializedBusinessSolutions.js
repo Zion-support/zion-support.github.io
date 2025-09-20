@@ -47,13 +47,3 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [;
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/ai-sales-optimization"
-    };
-        websiteUrl: "https://ziontechgroup.com/digital-transformation"
-    };
-        websiteUrl: "https://ziontechgroup.com/data-analytics"
-    };
-        websiteUrl: "https://ziontechgroup.com/process-automation"
-    };
-        websiteUrl: "https://ziontechgroup.com/customer-experience"
-    }

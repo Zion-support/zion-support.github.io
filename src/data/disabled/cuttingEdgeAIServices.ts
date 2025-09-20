@@ -24,21 +24,3 @@ email: string;
 website: string;
 }
 }
-};
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/autonomous-ai-research"
-};
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution"
-};
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-business-manager"
-};
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-creative-director"
-};
-email: "kleber@ziontechgroup.com";

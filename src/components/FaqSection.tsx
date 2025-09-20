@@ -15,4 +15,3 @@ Find answers to common questions about our services and solutions;
 </p>;
 </p>;
 }<//div><///div>;
-import { FileText } from "lucide-react";

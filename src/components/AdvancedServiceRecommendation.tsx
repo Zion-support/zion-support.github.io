@@ -33,4 +33,3 @@ technologyMaturit; y: string;
 primaryGoal; s: string[];
 challenge; s: string[];
 }
-}

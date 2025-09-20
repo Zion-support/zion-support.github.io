@@ -11,7 +11,3 @@ className?: string;
 text?: string;}
 showText?: boolean};
 export function LoadingSpinner({size = "md";
-color = "primary";
-duration: 1; repeat: Infinity;
-export function ButtonLoader({size = "sm",
-className}: {size?: "sm" | "md" | "lg",

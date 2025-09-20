@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
 import { useState, useEffect } from "react";,
 import { SEO } from "@/components/SEO";,
 import { TalentCard } from "@/components/talent/TalentCard";,
@@ -110,4 +109,3 @@ export default function SavedTalentsPage() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SavedTalentsPage.tsx

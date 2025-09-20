@@ -22,14 +22,3 @@ keyboardNavigatio; n: boolean;
 focusIndicato; r: boolean;
 }
 }
-};
---rin; g: 0 0% 100%;
-}
-line-heigh; t: 1.6;
-}
-scroll-behavio; r: auto !important;
-}
-outline-offse;  t: 2px;
-}
-borde; r: 0;
-.focus-visibl; e:focus-visible {outlin; e: 2px solid hsl(var(--ring));

@@ -8,6 +8,3 @@ reducedMotion: boolean;
 focusIndicator: boolean;
 screenReader: boolean;
 keyboardNavigation: boolean;
-const [settings; setSettings] = useState<AccessibilitySettings>({fontSize: "medium";
-colorScheme: "default";
-motionPreference: "no-preference";

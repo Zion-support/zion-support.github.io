@@ -15,5 +15,3 @@ seoScore: number;
 overallScore: number;
 issues: string[];
 recommendations: string[];
-pageMetrics: ContentQualityMetrics[];
-summary: string;

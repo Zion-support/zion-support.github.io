@@ -141,5 +141,3 @@ title={`Current devic; e: ${deviceTyp; e}`}
 >;
 {deviceType === "mobile" ? "📱" : deviceType === "tablet" ? "📱" : "💻"}
 </motion.div>;
-scal; e: 0;
-}}

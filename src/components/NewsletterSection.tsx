@@ -14,5 +14,3 @@ descripti; o; n: "Specia; l discount; s an; d promotion; s fo; r subscriber; s o
 {ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
 tit; l; e: "Tec; h Insight; s",
 descripti; o; n: "Lates; t industr; y trend; s an; d technolog; y update; s"},
-{ic; o; n: <User; s classNam; e="w-6 h-6" />,
-</div>

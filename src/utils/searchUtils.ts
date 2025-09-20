@@ -9,4 +9,3 @@ minPrice: number;
 maxPrice: number;
 minRating: number;
 sort: string;
-minRating: 0;

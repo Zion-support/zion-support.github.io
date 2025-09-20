@@ -1,12 +1,6 @@
 import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface DialogContextType {
-  
-isOpen: boolean;
-setIsOpen: (open: boolean) => void;
-onOpenChange?: (open: boolean) => void;
-}) {
-const [internalOpen; setInternalOpen] = useState(false);
 onOpenChange?: (open: boolean) => void;
 }
 
@@ -37,18 +31,3 @@ children: React.ReactNode;
 const DialogContext = React.createContext<{;
 open: boolean;
 setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-} | undefined>(undefined);
-const DialogHeader = ({className
-  ...props}: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
-  <div
-const DialogFooter = ({className
-  ...props}: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
-  <div
-DialogClose;
-  DialogTrigger,;
-DialogContent;
-  DialogHeader,;
-DialogFooter;
-  DialogTitle,;
-DialogDescription};
-;

@@ -24,19 +24,3 @@ email: string;
 website: string;
 }
 }
-};
-aiModel: string;
-trainingData: string;
-}
-trainingData: "Proprietary + Public Datasets"
-},
-trainingData: "Proprietary Pharmaceutical Data"
-},
-trainingData: "Market Data + Historical Trading Data"
-},
-trainingData: "Satellite + Historical Climate Data"
-},
-trainingData: "Legal Documents + Case Law"
-},
-trainingData: "Creative Design Datasets"
-}

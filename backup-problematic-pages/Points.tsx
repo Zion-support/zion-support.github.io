@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Points.tsx
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { LoginModal } from "@/components/auth/LoginModal";
@@ -147,14 +146,12 @@ earning points immediately.
 import React from 'react';
 
 export default function Points() {
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Points.tsx
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Points</h1>
         <p className="text-lg text-gray-600">Your points and rewards...</p>
       </div>
-<<<<<<< HEAD:temp_broken_pages_all/Points.tsx
       <div className='grid md:grid-cols-2 gap-8 mb-12'>
         <Card>
           <CardHeader>
@@ -332,7 +329,6 @@ variant='outline'
           </div>
         </CardContent>
       </Card>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Points.tsx
     </div>
   );
 }

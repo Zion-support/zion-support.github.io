@@ -39,4 +39,3 @@ byPricing: {
 freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length;
 professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;
 enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;
-};

@@ -5,8 +5,6 @@ interface Props {
   children: ReactNode;
 }
 
-interface State {
-  
 export default class GlobalErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
@@ -35,4 +33,3 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
               <h1 className="ml-3 text-xl font-semibold text-gray-900">Something went wrong</h1>
             </div>
             <p className="text-gray-600 mb-4">
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"

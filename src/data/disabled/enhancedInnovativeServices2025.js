@@ -39,34 +39,6 @@ export const enhancedInnovativeMicroSaasServices2025 = [;
         setupTime: "2 hours";
         integrations: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure"],
         freeTier: false;
-        trialPeriod: "30 days"
-    };
-    {id: 2;
-        trialPeriod: "14 days"
-    };
-    {id: 3;
-        trialPeriod: "21 days"
-    };
-    {id: 4;
-        trialPeriod: "30 days"
-    };
-    {id: 5;
-        trialPeriod: "14 days"
-    };
-    {id: 6;
-        trialPeriod: "30 days"
-    };
-    {id: 7;
-        trialPeriod: "21 days"
-    };
-    {id: 8;
-        trialPeriod: "1000 transactions"
-    };
-    {id: 9;
-        trialPeriod: "14 days"
-    };
-    {id: 10;
-        trialPeriod: "7 days"
     }
         support: "24/7 dedicated support"
     };

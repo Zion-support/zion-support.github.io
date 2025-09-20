@@ -9,7 +9,3 @@ interface SeparatorProps {
 
 export function Separator({ className = "", orientation = "horizontal" }: SeparatorProps) {
   return (
-    <div
-    />
-  );
-}

@@ -29,4 +29,3 @@ technology: string[];
 integrations: string[];
 compliance: string[];
 roi: string;
-competitors: string[];

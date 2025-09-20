@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/TalentDashboard.tsx
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
@@ -171,14 +170,6 @@ Tracker
       </main>
 </>
   )
-export default function TalentDashboard() {
-  return (
-  return (
-  return (
-    <ProtectedRoute>
-      <TalentDashboardContent />
-    </ProtectedRoute>
-  )
 import React from 'react';
 
 export default function TalentDashboard() {
@@ -190,5 +181,4 @@ export default function TalentDashboard() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/TalentDashboard.tsx
 }

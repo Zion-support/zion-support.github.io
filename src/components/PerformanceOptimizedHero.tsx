@@ -10,4 +10,3 @@ ico; n: string;
 colo; r: string;
 }
 }
-};

@@ -46,11 +46,3 @@ marketDeman; d: "Low" | "Medium" | "High" | "Exploding";
 technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";
 }
 }
-defaul;  t: return "bg-gray-100 text-gray-800";
-}
-defaul;  t: return "bg-gray-100 text-gray-800";
-}
-defaul;  t: return "bg-gray-100 text-gray-800";
-}
-defaul;  t: return "bg-gray-100 text-gray-800";
-}

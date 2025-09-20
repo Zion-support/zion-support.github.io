@@ -17,5 +17,3 @@ const scroll: any = (direction: "left" | "right") => {
 if (scrollContainerRef.current) {;
 const scrollAmount = 300;
 scrollContainerRef.current.scrollBy({
-left: direction === "left" ? -scrollAmount : scrollAmount;
-import { ChevronLeft, ChevronRight } from "lucide-react";

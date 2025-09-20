@@ -5,6 +5,3 @@ interface EmptyStateProps {text?: string;
   onRetry?: () => void;
   showRetry?: boolean;
 }
-  icon?: React.ReactNode}
-icon
-}: EmptyStateProps) {

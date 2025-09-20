@@ -11,4 +11,3 @@ return (,
 <//div><///div>)
 import React from 'react';
 import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from "lucide-react";

@@ -21,4 +21,3 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;
-website: string;

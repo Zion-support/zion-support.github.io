@@ -6,4 +6,3 @@ sende; r: "user" | "assistant";
 }
 }
 timestam; p: Date};
-interface ChatMessageProps {messag; e: Message};

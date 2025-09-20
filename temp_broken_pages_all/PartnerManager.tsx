@@ -14,7 +14,6 @@ import { Check, Flag, Search, Settings, X, Users } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { logErrorToProduction } from "@/utils/productionLogger";
 import { EmptyState } from "@/components/ui/empty-state";
-interface PartnerProfile {commission_rate?: number}
 export default function PartnerManager() {
   return (
   return (

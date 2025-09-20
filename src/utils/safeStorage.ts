@@ -27,18 +27,3 @@ localStorage.setItem(testKey, "test");
 localStorage.removeItem(testKey);
 localStorageAvailable = true;
 return true;
-} catch {localStorageAvailable = false;
-} catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
-  
-  
-  
-try {localStorage.clear()} catch (e) {safeConsoleError("safeStorage.clear: Error clearing localStorage. Falling back to in-memory.", e);
-get isAvailable(): boolean {return isLocalStorageAvailable()}
-  
-return sessionStorage.getItem(key)} catch (e) {return sessionMemoryStore[key] || null}
-  
-sessionStorage.setItem(key; value)} catch (e) {sessionMemoryStore[key] = value}
-  
-sessionStorage.removeItem(key)} catch (e) {delete sessionMemoryStore[key]}
-try {sessionStorage.clear()} catch {for (const key in sessionMemoryStore) {
-return true} catch {return false}

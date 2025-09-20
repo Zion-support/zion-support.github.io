@@ -41,10 +41,3 @@ import { MobileBottomNav } from "@/components/header/MobileBottomNav";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { CartDrawer } from "@/components/cart/CartDrawer";
-import { LoginModal } from "@/components/auth/LoginModal";
-//Track analytics event
-}searchSuggestions= {suggestions}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
-}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {unreadCount}onClose= {
-}{isMobile && <MobileBottomNav unreadCount= {
-  unreadCount}/>
-}<LoginModal isOpen= {loginOpen}onOpenChange= {setLoginOpen}/> </>)

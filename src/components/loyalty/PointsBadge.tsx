@@ -11,8 +11,3 @@ TooltipTrigger } from "@/components/ui/tooltip, ";
 import { DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
-DropdownMenuTrigger } from "@/components/ui/dropdown-menu, ";
-useEffect(() => {setPoints(balance)}, [balance]);
-const handleLogout = async () => {if (signOut) {;
-await signOut()} else if (logout) {await logout()};
-import { Gift, RefreshCw } from "lucide-react";

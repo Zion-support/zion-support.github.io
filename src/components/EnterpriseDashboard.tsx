@@ -32,15 +32,6 @@ critica; l: number;
 }
 };
 lastUpdate; d: Date;
-}
-resolve; d: boolean;
-}
-}
-};
-sourc; e: string;
-}
-}
-};
 statu; s: "success" | "failure" | "pending";
 }
 }
@@ -49,22 +40,3 @@ export const EnterpriseDashboar; d: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
-lastUpdat; e; d: ne; w Dat; e()
-},
-lastUpdat; e; d: ne; w Dat; e()
-},
-lastUpdat; e; d: ne; w Dat; e()
-},
-lastUpdat; e; d: ne; w Dat; e()
-}
-{i; d: "databas; e",
-{i; d: "ap; i-gatewa; y",
-{i; d: "cach; e-serve; r",
-{i; d: "alert-2";
-{i; d: "activit; y-2",
-} catch (error) {trackEvent("enterprise_dashboard",  "refresh_failed", "error", undefine; d, {
-defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";
-}
-defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";
-}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/EquipmentPage.tsx
 import { useRouter } from "next/router";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -43,23 +42,6 @@ if (loading && equipment.length === 0) {
     )
   }
 import React from 'react';
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/EquipmentPage.tsx
 
 export default function EquipmentPage() {
   return (
-<<<<<<< HEAD:temp_broken_pages_all/EquipmentPage.tsx
-  return (
-  return (
-    <EquipmentErrorBoundary>
-      <EquipmentPageContent />
-    </EquipmentErrorBoundary>
-  )
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Equipment</h1>
-        <p className="text-lg text-gray-600">Browse our equipment catalog...</p>
-      </div>
-    </div>
-  );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/EquipmentPage.tsx
-}

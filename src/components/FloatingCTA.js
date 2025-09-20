@@ -41,14 +41,3 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 dampin, g: 20}
         },
         hove, r: {scal, e: 1.1,
-    transitio, n: {;
-                duratio, n: 0.2};
-        };
-        visibl, e: {scal, e: 1,
-    stiffnes, s: 30, 0,;
-                dampin, g: 25};
-        };
-            defaul,  t: return 'bottom-6 right-6';
-        }
-            defaul,  t: return 'bottom-6 right-6';
-        }

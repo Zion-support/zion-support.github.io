@@ -49,9 +49,3 @@ priority: [] as TimelineEvent["priority"][];
 progress: 0;
 });
 const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
-const [zoomLevel; setZoomLevel] = useState(1);
-default: return "border-zinc-500/50 bg-zinc-500/10";
-}
-text: "Check out our project timeline";
-url: window.location.href;
-});

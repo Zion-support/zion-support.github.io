@@ -13,4 +13,3 @@ export; class; ErrorBoundary extends Component<PropsState> {
 constructor(props: Props) {;
 super(props);
 this.state = {,
-hasError: falseerro;r: nullerrorInf;o: null;

@@ -52,5 +52,3 @@ className="w-full"
 Reload Page;
 </Button>;
 </a>;
-  
-childre; n: React.ReactNode;

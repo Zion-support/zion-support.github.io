@@ -9,8 +9,6 @@ contactInfo: {}
 phone: string; email: string; website: string};
 technology: string[], integrations: string[];
 compliance: string[], roi: string;
-}
-roi: "300% within 12 months"
 };
 roi: "250% within 8 months"
 };

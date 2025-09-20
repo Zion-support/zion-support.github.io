@@ -49,26 +49,3 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [;
         technology: ['Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Multi-cloud APIs'],
         compliance: ['SOC2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'GDPR'],
         integrations: ['AWS', 'Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud', 'VMware'],
-        sla: '99.99% uptime guarantee'
-    };
-    {id: 'next-generation-data-center-solutions';
-        sla: '99.995% uptime guarantee'
-    };
-    {id: 'enterprise-network-security-fabric';
-        sla: '99.9% uptime guarantee'
-    };
-    {id: 'enterprise-performance-optimization-suite';
-        sla: '99.9% uptime guarantee'
-    };
-    {id: 'enterprise-disaster-recovery-platform';
-        sla: '99.99% recovery time guarantee'
-    };
-    {id: 'enterprise-integration-hub';
-        sla: '99.9% uptime guarantee'
-    };
-    {id: 'enterprise-compliance-automation-suite';
-        sla: '99.9% uptime guarantee'
-    };
-    {id: 'enterprise-scalability-solutions';
-        sla: '99.9% uptime guarantee'
-    }

@@ -8,5 +8,3 @@ export const store = configureStore({;
         cart: cartReducer;
         wishlist: wishlistReducer;
         auth: authReducer;
-    }
-});

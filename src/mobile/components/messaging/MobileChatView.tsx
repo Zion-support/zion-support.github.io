@@ -13,4 +13,3 @@ id: string;
 }
     avatar?: string;}
     status?: string},
-  messages: Message[];

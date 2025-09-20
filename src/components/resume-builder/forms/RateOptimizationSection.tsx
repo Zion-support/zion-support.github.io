@@ -9,4 +9,3 @@ import { FormField;
 , FormMessage } from "@/components/ui/form";,
 import { Input } from "@/components/ui/input";,
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-import { Card, CardContent } from "@/components/ui/card";

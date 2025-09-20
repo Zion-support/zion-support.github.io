@@ -19,13 +19,3 @@ hre; f: string;
 }
 }
 };
-const InteractiveServiceShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
-{i; d: "quantum-ai";
-{i; d: "neuromorphic";
-{i; d: "edge-ai";
-{i; d: "federated-learning";
-{i; d: "ai-ethics";
-{i; d: "quantum-security";
-{i; d: "cloud-automation";
-staggerChildre; n: 0.1;
-}

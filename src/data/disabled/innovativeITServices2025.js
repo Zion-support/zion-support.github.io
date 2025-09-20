@@ -36,26 +36,3 @@ export const innovativeITServices2025 = [;
         sla: "99.9% uptime";
         certifications: ["CISSP", "CISM", "CCSP", "SANS"],
         deliveryTime: "4-6 weeks";
-        support: "24/7 premium support"
-    };
-    {id: 2;
-        support: "24/7 enterprise support"
-    };
-    {id: 3;
-        support: "Business hours + emergency support"
-    };
-    {id: 4;
-        support: "Business hours + emergency support"
-    };
-    {id: 5;
-        support: "24/7 premium support"
-    };
-    {id: 6;
-        support: "Business hours + emergency support"
-    };
-    {id: 7;
-        support: "24/7 premium support"
-    };
-    {id: 8;
-        support: "Business hours + emergency support"
-    }

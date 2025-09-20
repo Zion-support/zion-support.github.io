@@ -11,9 +11,3 @@ categor; y: string;
 timestam; p: Date;
 }
 metadata?: Record<strin; g; any>;}
-responsiv; e: true;
-});
-defaul;  t: return renderBarChart();
-}
-backgroundColo; r: colors[inde; x % color; s.leng; t; h]
-}}

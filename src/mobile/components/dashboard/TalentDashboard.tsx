@@ -1,1 +1,0 @@
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";

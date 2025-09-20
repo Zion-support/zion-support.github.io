@@ -1,4 +1,3 @@
-export const completeSitemap = [;
     {path: '/';
         title: 'Home';
         label: 'Home';
@@ -96,7 +95,6 @@ export const completeSitemap = [;
         description: 'Create a new account';
         priority: 0.4;
         changefreq: 'monthly';
-        requiredAuth: false};
     {path: '/admin';
         title: 'Admin Panel';
         label: 'Admin Panel';
@@ -104,7 +102,6 @@ export const completeSitemap = [;
         priority: 0.3;
         changefreq: 'monthly';
         requiredAuth: true;
-        requiredRoles: ['admin']}
 ];
     export const dynamicPaths = {;
     services: [;

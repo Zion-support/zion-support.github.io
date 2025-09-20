@@ -6,4 +6,3 @@ import { HelpCategoryList } from "./HelpCategoryList";
 import { HelpArticleList } from "./HelpArticleList";
 import { HelpArticleView } from "./HelpArticleView";
 import { HELP_CATEGORIES } from "./help-content";
-import { Search } from "lucide-react";

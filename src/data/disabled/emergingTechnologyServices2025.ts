@@ -25,39 +25,3 @@ website: string;
 address: string;
 }
 }
-};
-researchPartnerships: boolean;
-pilotPrograms: boolean;
-}
-website: "https://ziontechgroup.com";
-researchPartnerships: true;
-pilotPrograms: true;
-};
-website: "https://ziontechgroup.com";
-researchPartnerships: true;
-pilotPrograms: true;
-};
-website: "https://ziontechgroup.com";
-researchPartnerships: true;
-pilotPrograms: true;
-};
-website: "https://ziontechgroup.com";
-researchPartnerships: true;
-pilotPrograms: true;
-};
-website: "https://ziontechgroup.com";
-researchPartnerships: true;
-pilotPrograms: true;
-};
-website: "https://ziontechgroup.com";
-researchPartnerships: true;
-pilotPrograms: true;
-};
-website: "https://ziontechgroup.com";
-researchPartnerships: true;
-pilotPrograms: true;
-};
-website: "https://ziontechgroup.com";
-researchPartnerships: true;
-pilotPrograms: true;
-}

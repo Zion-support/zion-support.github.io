@@ -63,6 +63,3 @@ export function useMarketplaceSearch() {
                     const productResults = responseData.results.filter((item) => item.type === 'product');
                     setListings(productResults); // Use the 'results' array;
                 }
-                else {setListings([]); // Default to empty if structure is wrong;
-            default: break;
-     }

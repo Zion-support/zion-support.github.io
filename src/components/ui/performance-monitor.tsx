@@ -28,30 +28,3 @@ networkLatency: number;
 cpuUsage: number;
 diskUsage: number;
 timestamp: number;
-const [alerts; setAlerts] = useState<Array<{ id: string;
-cpuUsage: 70;
-diskUsage: 85;
-});
-severity: "warning" as const;
-timestamp: Date.now()
-};
-severity: "warning" as const;
-timestamp: Date.now()
-};
-severity: "error" as const;
-timestamp: Date.now()
-};
-method: "HEAD";
-severity: "warning" as const;
-timestamp: Date.now()
-};
-severity: "warning" as const;
-timestamp: Date.now()
-};
-severity: "warning" as const;
-timestamp: Date.now()
-};
-default: return Activity;
-}
-default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
-}

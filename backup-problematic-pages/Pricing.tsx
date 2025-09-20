@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Pricing.tsx
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 const Pricing: React.FC = () => {
@@ -208,7 +207,6 @@ export default function Pricing() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
         <p className="text-lg text-gray-600">Coming soon...</p>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Pricing.tsx
       </div>
     </div>
   );

@@ -48,6 +48,8 @@
     "git:report": "node automation/enhanced-git-sync-orchestrator.cjs report",
     "build:analyze": "npm run build && npx @next/bundle-analyzer",
     "build:check": "npm run type-check && npm run lint && npm run build",
+    "build:monitor": "node scripts/performance-monitor.js",
+    "build:optimized": "npm run build:monitor",
     "dev:clean": "rm -rf .next out && npm run dev",
     "clean": "rm -rf .next out node_modules/.cache",
     "test:coverage": "npm run test -- --coverage",

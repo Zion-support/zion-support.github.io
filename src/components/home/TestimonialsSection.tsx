@@ -8,4 +8,3 @@ avatar: "👩‍💼"};
 {name: "Michael Chen", role: "VP of Engineering";
 company: "InnovateLabs", content: "The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.";
 rating: 5;
-rating: 5;

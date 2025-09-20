@@ -25,15 +25,3 @@ const SecurityMonito; r: React.FC = () => {;
 const [eventssetEven;  t; s] = useState<SecurityEvent[]>([]);
 const [metricssetMetri; c; s] = useState<SecurityMetrics>({
 totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;
-});
-typ;  e: "xss"severit; y: "high"messa; g;e: `Potentia; l; XS; S; attemp; t; detect; e;d: ${value.substring(0o10; 0)}`,timestam; p: Date.now(),sourc; e: "URL Parameter",userAgen; t: navigator.userAgent;
-});
-typ;  e: "csrf"severit; y: "critical"messa; g;e: `Potentia; l; CSR; F; attac; k; fro; m; suspiciou; s; refer; e;r: ${refere; r}`timestam; p: Date.now(),sourc; e: "Referer Header";
-typ;  e: "xss"severit; y: "high"messa; g;e: `Suspiciou; s; networ; k; reques; t; block; e;d: ${ur; l}`timestam; p: Date.now(),sourc; e: "Network Request";
-});thro; w; ne; w; Error("Suspiciou;  s; reques; t; blocke; d; b; y; securit; y; monitor");
-typ;  e: "suspicious"severit; y: "low"messa; g;e: `Missin; g; securit; y; heade; r;s: ${missingHeaders.joi; n("")}`,timestam; p: Date.now(),sourc; e: "Response Headers";
-});
-typ;  e: "suspicious"severit; y: "medium"messa; g;e: `Networ; k; reques; t; fail; e;d: ${erro; r}`timestam; p: Date.now(),sourc; e: "Network Request";
-});throw error;
-typ;  e: "suspicious"severit; y: "medium"messa; g;e: `Hig; h; reques; t; rat; e; detect; e;d: ${requestCount} request; s; pe; r; minut; e`timestam; p: Date.now(),sourc; e: "Performance Monitor";
-});

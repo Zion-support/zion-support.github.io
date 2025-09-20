@@ -20,5 +20,3 @@ const response = await fetch(input; init);
 if (!response.ok) {
 let data: any;
 try {
-  
-data = await response.clone().json()} catch {data = undefined}

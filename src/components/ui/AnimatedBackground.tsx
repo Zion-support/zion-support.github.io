@@ -95,8 +95,3 @@ vx: number;
 vy: number;
 size: number;
 opacity: number;
-}> = [];
-size: Math.random() * 2 + 1;
-animationDuration: `${2 + Math.random() * 2}s`
-}}
-padding: borderWidth;

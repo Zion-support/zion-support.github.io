@@ -162,15 +162,6 @@ export const blockchainWeb3Services2025 = [;
         setupTime: "20 minutes";
         integrations: ["Ethereum", "Polygon", "BSC", "Arbitrum", "Optimism"],
         freeTier: true;
-        trialPeriod: "7 days"
-    };
-    {id: 2;
-        trialPeriod: "14 days"
-    }
-        support: "24/7"
-    };
-    {id: 2;
-        support: "24/7"
     }
         support: "Business hours"
     }

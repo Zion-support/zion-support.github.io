@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD:temp_broken_pages_all/Referrals.tsx
 import { useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useReferrals } from "@/hooks/useReferrals";
@@ -123,5 +122,4 @@ export default function Referrals() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Referrals.tsx
 }

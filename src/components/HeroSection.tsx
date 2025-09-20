@@ -8,7 +8,3 @@ export const HeroSection: any = () => {return (
 <div className="text-center">;
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
 </button>;
-</div>
-</div>
-</div>
-</div>

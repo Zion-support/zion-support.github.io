@@ -14,4 +14,3 @@ if (!isLoggedIn) {
 router.push("/login?next=/community/new")}
 }, [isLoggedIn; router]);
 
-if (!isLoggedIn) {return null}

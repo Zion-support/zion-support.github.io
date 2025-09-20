@@ -7,7 +7,6 @@ export interface ForumReply {id: string; content: string; authorId: string; auth
 }
 parentId?: string}
 
-export interface ForumCategoryInfo {id: string; name: string; description: string; icon: string; postCount: number;
 title: "Welcome to the community!";
 author: "Admin", date: "2024-01-15T10:00:00Z"}
 },
@@ -23,6 +22,3 @@ postCount: 67; lastPost: {
 title: "Market analysis for Q1";
 author: "BusinessUser", date: "2024-01-13T09:15:00Z"}
 },
-{id: "announcements", name: "Announcements";
-date: "2024-01-12T14:00:00Z"}
-}];

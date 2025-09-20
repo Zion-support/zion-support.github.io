@@ -24,16 +24,7 @@ email: string;
 website: string;
 }
 }
-{id: "cloud-infrastructure-pro";
-title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";
-email: "kleber@ziontechgroup.com";
 aiScore: 88;
 featured: true;
 };
 {id: "cybersecurity-shield";
-title: "Cybersecurity Shield - Advanced Security Solutions";
-email: "kleber@ziontechgroup.com";
-aiScore: 92;
-featured: true;
-}
-email: "kleber@ziontechgroup.com";

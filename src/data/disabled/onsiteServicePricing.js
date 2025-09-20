@@ -62,4 +62,3 @@ export, const, additionalServices = [;
      };
   {
     name: 'Remote Support',price: 65descriptio,n: 'Remote troubleshooting (per hour)'categor,y: 'remote';
-     },{name: 'Maintenance Contracts'price: 'Monthly'descriptio,n: 'Ongoing, maintenance, agreements'categor,y: 'maintenance'};

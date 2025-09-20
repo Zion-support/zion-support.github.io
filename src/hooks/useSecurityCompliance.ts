@@ -19,15 +19,10 @@ requirements: string[];
 violations: ComplianceViolation[];
 }
 }
-}
 averageResponseTime: number;
 falsePositiveRate: number;
 }
 }
-complianceViolations: number;
-}
-}
-};
 exportAuditLog: () => string;
 configureSecurity: (config: Partial<SecurityConfig>) => void;
 }
@@ -41,27 +36,7 @@ enableUserBehaviorTracking: true;
 });
 const [securityEvents; setSecurityEvents] = useState<SecurityEvent[]>([]);
 const [complianceRules; setComplianceRules] = useState<ComplianceRule[]>([]);
-const [securityMetrics; setSecurityMetrics] = useState<SecurityMetrics>({
 averageResponseTime: 0;
 falsePositiveRate: 0;
 });
 const [isMonitoring; setIsMonitoring] = useState(false);
-const [isComplianceChecking; setIsComplianceChecking] = useState(false);
-{id: "sox-financial-controls";
-{id: "hipaa-privacy-security";
-status: "new"
-});
-timestamp: new Date()
-};
-criticalEvents: prev.criticalEvents + (event.severity === "critical" ? 1 : 0);
-violations: []
-};
-timestamp: violation.timestamp;
-status: "open"
-}))
-complianceScore: newScore;
-}));
-status: rule.status;
-violations: rule.violations.length;
-}));
-recommendations: [] as string[]

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/MarketplacePage.tsx
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from "lucide-react";
 import { NextSeo } from "@/components/NextSeo";
 import { useInfiniteScrollPagination } from "@/hooks/useInfiniteScroll";
@@ -65,11 +64,6 @@ onClick = {scrollToTop}
   )
 }
 // Main export,
-export default function MarketplacePage() {
-  return (
-  return (
-  return (
-  return <MarketplacePageContent />
 import React from 'react';
 
 export default function MarketplacePage() {
@@ -81,5 +75,4 @@ export default function MarketplacePage() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/MarketplacePage.tsx
 }

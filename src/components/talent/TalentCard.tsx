@@ -14,7 +14,6 @@ onMessage: (talent: TalentProfile) => void;
 isAuthenticated: boolean;
 }
 }
-};
 import { useRouter } from "next/router";
 import { Badge } from "@/components/ui/badge";,
 import { Button } from "@/components/ui/button";,
@@ -24,4 +23,3 @@ import { FavoriteButton } from "@/components/FavoriteButton";,
 import { TalentProfile } from "@/types/talent";
 import { RatingStars } from "@/components/RatingStars";
 import { useAuth } from "@/context/auth/AuthProvider";
-import { useCart } from "@/context/CartContext";

@@ -18,10 +18,3 @@ spen; t: number;
 task; s: Task[];
 }
 }
-};
-actualHour; s: number;
-}
-}
-};
-defaul;  t: return <Clock className="w-4 h-4" />;
-}

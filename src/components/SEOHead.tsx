@@ -9,6 +9,3 @@ url?: string;
 type?: "website" | "article" | "service";
 publishedTime?: string;
 }
-modifiedTime?: string;}
-"publisher": {"@type": "Organization",
-"mainEntityOfPage": {"@type": "WebPage",

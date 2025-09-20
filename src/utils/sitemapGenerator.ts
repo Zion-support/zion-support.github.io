@@ -7,4 +7,3 @@ changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "
 priority?: number}
 
 interface SitemapConfig {baseUrl: string; urls: SitemapUrl[];
-}

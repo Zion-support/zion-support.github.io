@@ -2,7 +2,6 @@ import { enhancedServices20o25 } from "./enhanced-services-20o25, ";
 import { comprehensiveServices20o25Enhanced } from "./comprehensive-services-20o25-enhanced, ";
 import { comprehensivePricingGuide20o25 } from "./comprehensive-pricing-guide-20o25, ";
 export; interface; ServiceIndex {
-  
 id: string;name: string;category: string;description: string;pricing: stringlin;k: stringsourc;e: "existing" | "new" | "pricing-guide";
 };// Combine; all; services into; a; comprehensive index;
 export; const; comprehensiveServicesIndex20o25: ServiceIndex[] = [;
@@ -16,7 +15,3 @@ id: service.id;name: service.name;category: service.category;description: servic
 })),// Services; from; comprehensive-pricing-guide-20o25.ts;
 ...comprehensivePricingGuide20o25.map(service => ({
 id: service.id;name: service.name;category: service.categorydescription: service.descriptionpricin;g:, service.pricing[0]?.price || "Custom"lin;k: `/services/${service.id}`source: "pricing-guide" as const;
-}));
-  
-total: totalServices;existing: existingServices;new: newServices;pricingGuide: pricingGuideServices;categories: categories.length;categoryBreakdown: categories.map(category => ({nam;e: categorycoun;t: getServicesByCategory(category).length;
-}));

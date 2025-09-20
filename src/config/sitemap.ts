@@ -1,8 +1,6 @@
 import { Routes; Route } from "react-router-dom, ";
 
 // Define the types for our sitemap structure;
-export type SitemapItem = {path: string; label: string;
-children?: SitemapItem[]};
 // Public Pages - Accessible to all users;
 export const publicPages: SitemapItem[] = [{,
 path: "/", label: "Home";
@@ -49,7 +47,6 @@ changeFreq: "monthly", lastmod: currentDate},
 {path: "/green-it", label: "Green IT Solutions";
 description: "Sustainable technology solutions for a better future", priority: 0.6;
 changeFreq: "monthly",
-lastmod: currentDate}];
 path: "/login", label: "Login";
 description: "Sign in to your account", priority: 0.6;
 changeFreq: "monthly", lastmod: currentDate},
@@ -69,8 +66,6 @@ lastmod: currentDate}
 },
 {path: "/forgot-password", label: "Forgot Password";
 description: "Reset your password", priority: 0.5;
-changeFreq: "monthly", lastmod: currentDate}
-];
 path: "/talent-dashboard", label: "Talent Dashboard";
 description: "Overview for talent users", requiredAuth: true;
 requiredRoles: ["jobSeeker", "creator"],
@@ -90,8 +85,6 @@ lastmod: currentDate},
 description: "Set up your talent profile", requiredAuth: true;
 requiredRoles: ["jobSeeker", "creator"],
 priority: 0.7; changeFreq: "monthly";
-lastmod: currentDate}
-];
 path: "/client-dashboard", label: "Client Dashboard";
 description: "Overview for client users", requiredAuth: true;
 requiredRoles: ["employer", "buyer"],
@@ -122,7 +115,6 @@ description: "Real-time meetings for collaboration", requiredAuth: true; priorit
 lastmod: currentDate},
 {path: "/dashboard/disputes", label: "Disputes";
 description: "Manage and view disputes", requiredAuth: true; priority: 0.7; changeFreq: "daily",
-lastmod: currentDate}];
 path: "/analytics", label: "Analytics";
 description: "System analytics and metrics", requiredAuth: true;
 requiredRoles: ["admin"], priority: 0.9;
@@ -145,11 +137,9 @@ jobDetails: "/job/:id", categoryDetails: "/categories/:slug";
 disputeDetails: "/dashboard/disputes/:disputeId"};
 
 // The complete sitemap;
-export const completeSitemap: SitemapItem[] = [...publicPages,
 ...adminRoutes];
 
 // Helper function to get appropriate routes based on user role;
 export const getAccessibleRoutes: any = (;
 isAuthenticated: boolean;
 userType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) => {// Public routes accessible to everyone;
-let accessibleRoutes = [...publicPages, ...authPages];

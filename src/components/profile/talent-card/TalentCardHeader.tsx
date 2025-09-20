@@ -7,4 +7,3 @@ professionalTitle: string;
   profilePicture?: string;
   availabilityType: string;
 }
-yearsExperience: number}

@@ -15,4 +15,3 @@ topPages: Array<{ page: string; views: number }>;
 trafficSources: Array<{ source: string; percentage: number }>;
 topPages: [],;
 trafficSources: [];
-});

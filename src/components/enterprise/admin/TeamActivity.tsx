@@ -57,10 +57,3 @@ type="search"
         <Button variant="outline" size="sm">
           Next
         </Button>
-      </div>;
-    </div>;
-  );
-};
-const getCategoryBadge = (category: string) => {;
-};"
-  activities.map ( (activity) => (<TableRow key= {activity.id}> </TableCell> </TableRow>) ) "

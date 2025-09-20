@@ -7,4 +7,3 @@ email: string;
 website: string;
 address: string;
 }
-}

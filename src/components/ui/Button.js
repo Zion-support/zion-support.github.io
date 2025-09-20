@@ -21,7 +21,6 @@ const Button = React.forwardRef((_a, ref) => {;
             'border border-input bg-background hover:bg-accent hover:text-accent-foreground': variant === 'outline',
             'bg-secondary text-secondary-foreground hover:bg-secondary/80': variant === 'secondary',
             'hover:bg-accent hover:text-accent-foreground': variant === 'ghost',
-            'text-primary underline-offset-4 hover:underline': variant === 'link'}, {'h-10 px-4 py-2': size === 'default',
         size: {sm: "h-8 px-3 text-sm",
             md: "h-10 px-4 text-sm",
             lg: "h-12 px-6 text-base",
@@ -29,7 +28,3 @@ const Button = React.forwardRef((_a, ref) => {;
         fullWidth: {true: "w-full",
             false: ""}
     },
-    defaultVariants: {variant: "default",;
-        size: "md",;
-        fullWidth: false};
-});

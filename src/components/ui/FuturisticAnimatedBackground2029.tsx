@@ -53,9 +53,6 @@ size: number;
 opacity: number;
 color: string;
 type: "particle" | "energy" | "data";
-}> = [];
-type: "particle" | "wave" | "grid";
-}> = [];
 rotation: time * 0.15;
 type: "hexagon"},
 {x: Math.cos(time * 0.5) * 300 + canvas.width / 2;
@@ -66,11 +63,3 @@ type: "octagon"},
 {x: Math.sin(time * 0.7) * 350 + canvas.width / 2;
 y: Math.cos(time * 0.2) * 250 + canvas.height / 2;
 size: 40;
-rotation: time * 0.25;
-repeat: Infinity;
-repeat: Infinity;
-repeat: Infinity;
-repeat: Infinity;
-opacity: intensity;
-opacity: intensity;
-opacity: intensity;

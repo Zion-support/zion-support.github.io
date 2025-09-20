@@ -6,5 +6,3 @@ import { SortFilter } from "./filters/SortFilter";,
 import { SkillsFilter } from "./filters/SkillsFilter";,
 import { AvailabilityFilter } from "./filters/AvailabilityFilter";,
 import { RegionFilter } from "./filters/RegionFilter";,
-import { ExperienceFilter } from "./filters/ExperienceFilter";,
-        <Button

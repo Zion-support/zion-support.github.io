@@ -66,4 +66,3 @@ className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu

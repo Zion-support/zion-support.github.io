@@ -1,11 +1,5 @@
-import React from "react";
+/**
+ * SEO Optimization Utilities
+ * Provides tools for optimizing search engine optimization
+ */
 
-export interface SEOData {
-  
-title: string;
-description: string;
-  
-page: string;
-issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
-severity: "high" | "medium" | "low";
-suggestedFix: string;

@@ -11,4 +11,3 @@ price: {,
 monthly: number;,
 yearly: number;
 oneTime?: number;,
-currency: string;

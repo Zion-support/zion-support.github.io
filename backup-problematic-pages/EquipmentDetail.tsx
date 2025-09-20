@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/EquipmentDetail.tsx
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from "lucide-react";
 import { toast } from "@/hooks/use-toast";,
 import { useAuth } from "@/hooks/useAuth";,
@@ -278,9 +277,6 @@ url: equipment.images[0]
 }</div> </span> </div> </div> </div>) )
 }</div> </div>) "
 }> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {equipment.warranty}</p> </div> </div>) "
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {equipment.returnPolicy}</p> </div> </div>);
-}</div> </motion.div> </div> </div> </div> </>);
-}'"};
 import React from 'react';
 
 export default function EquipmentDetail() {
@@ -293,4 +289,3 @@ export default function EquipmentDetail() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/EquipmentDetail.tsx

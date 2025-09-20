@@ -15,6 +15,3 @@ className = "",
 customGradient}: GradientHeadingProps) {const getGradientClasses: any = () => {
 const gradients = {;
 primary: "bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent", secondary: "bg-gradient-to-r from-zion-blue via-zion-cyan to-zion-purple bg-clip-text text-transparent";
-const sizes = {;
-xs: "text-xs", sm: "text-sm";
-md: "text-base", lg: "text-lg";

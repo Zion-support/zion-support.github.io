@@ -6,4 +6,3 @@ estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: strin
 }
 contactInfo: {}
 phone: string; email: string; website: string};
-technicalSpecs?: {technology: string[], integrations: string[];

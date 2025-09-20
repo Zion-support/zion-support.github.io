@@ -8,5 +8,3 @@ error: string;
 timestamp: number;
 }
 }
-recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
-};

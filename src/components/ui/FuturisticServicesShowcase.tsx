@@ -16,4 +16,3 @@ color: "from-purple-500 to-pink-500";
 price: "$199/month";
 features: ["AI Code Review", "Testing Automation", "DevOps Intelligence", "Security Automation"],
 popular: true;
-};

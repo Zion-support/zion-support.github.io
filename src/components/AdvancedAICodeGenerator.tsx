@@ -18,5 +18,3 @@ ratin; g: number;
 usageCoun; t: number;
 createdA; t: string;
 }
-timestam; p: new Date().toISOString()
-};

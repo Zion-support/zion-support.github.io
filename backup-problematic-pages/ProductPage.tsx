@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
 import { useRouter } from "next/router";, // Changed from useParams,
 import { useEffect, useState } from "react";
 import Image from 'next/image';
@@ -63,5 +62,4 @@ export default function ProductPage() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProductPage.tsx
 }

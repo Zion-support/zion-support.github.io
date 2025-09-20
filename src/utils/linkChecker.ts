@@ -8,12 +8,6 @@ error?: string}
 
 export interface PageInfo {path: string; title: string; links: LinkInfo[];
 }
-}
-normalizeUrl(url: string; basePage: string): string {if (url.startsWith("http")) {
-} catch {return url}
-page: pagePath;
-} catch {return false}
-} else {link.status = "external"}
 return {path: pagePath; title: this.extractPageTitle(pageContent),
 links: checkedLinks; exists: true};
 }
@@ -29,4 +23,3 @@ missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUr
 
 getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
 
-getMissingPages(): string[] {return this.missingPages}

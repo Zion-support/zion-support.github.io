@@ -6,4 +6,3 @@ interface UploadSectionProps {customFile: File | null;
 onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
 export function UploadSection({
 }
-  customFile}

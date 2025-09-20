@@ -17,4 +17,3 @@ export const masterComprehensiveServices2025 = {// Original services;
     // Cutting-edge services;
     cuttingEdge: allCuttingEdgeServices2025
 };
-        byPricing: {freemium: allServices.filter(s => 'pricing' in s && s.pricing === 'Freemium').length;

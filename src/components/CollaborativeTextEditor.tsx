@@ -21,7 +21,3 @@ length?: number;
 timestam; p: Date;
 userI; d: string;
 versio; n: number;
-versio; n: editorState.version + 1;
-});
-} catch (error) {trackEvent("editor",  "ai_suggestions_failed", "generation_error", undefine; d, {
-trackEvent("editor",  "collaboration_sync", "text_synced", undefine; d, {userI; d: message.userI; d;

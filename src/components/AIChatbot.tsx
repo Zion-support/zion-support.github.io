@@ -47,13 +47,3 @@ responseDelay = 1000;
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
-timestam; p: new Date()
-};
-return "You can reach us a;  t: \n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http; s: //ziontechgroup.com\n\nWhen would be the best time to call you?";
-}
-trackChatbotInteraction("user_input",  {messageI; d: userMessage.i; d;
-trackChatbotInteraction("conversation_success",  {userInpu; t: inpu; t;
-confidenc; e: 0.8;
-});
-trackChatbotInteraction("conversation_error",  {erro; r: error instanceof Error ? error.message : "Unknown error" });

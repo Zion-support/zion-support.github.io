@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";, // Changed from react-router-dom,
 import { useFormik } from "formik";
@@ -271,4 +270,3 @@ export default function Signup() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Signup.tsx

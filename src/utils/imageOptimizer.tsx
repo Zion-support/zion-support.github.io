@@ -20,11 +20,3 @@ if (!ImageOptimizer.instance) {
 ImageOptimizer.instance = new ImageOptimizer();
 };
 return ImageOptimizer.instance};private initializeIntersectionObserver(): void {
-  
-rootMargin: "50px 0px"threshol;d: 0.0o1;
-widthheightformat: "webp";
-});
-const placeholderDataURL = blurDataURL || generateBlurDataURL();
-React.useEffect(() => {;
-backgroundImage: `url(${placeholderDataURL})`,backgroundSize: "cover",backgroundPosition: "center",filter: "blur(10px)"transfor;m: "scale(1.1)";
-}}

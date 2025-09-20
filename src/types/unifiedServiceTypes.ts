@@ -10,5 +10,3 @@ price?: number | {
 monthly?: number;
 yearly?: number;
 }
-oneTime?: number;}
-export const hasProperty = <T; K extends string>(obj: T; prop: K): obj is T & Record<K; any> => {return obj && typeof obj === "object" && prop in obj};

@@ -28,5 +28,3 @@ maxLength?: number;
 custom?: (valu;  e: string) => string | null;
 }
 }
-defaul;  t: return <User className="w-4 h-4" />;
-}

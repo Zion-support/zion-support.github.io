@@ -107,4 +107,3 @@ variant='ghost'
                       </Button>
                     ) : (
                       <Button
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {member.role}</TableCell> <TableCell> <Badge > {member.status}</Badge> </TableCell> <TableCell> {

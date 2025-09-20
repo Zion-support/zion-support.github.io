@@ -28,10 +28,3 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
-const [transactionFo; r; m; setTransactionFo; r; m] = useState({t;  o: "";
-valu; e: "";
-dat; a: ""});
-const handleConnectWallet = useCallback(async () => {;
-defaul;  t: return "text-gray-600 bg-gray-100";
-}

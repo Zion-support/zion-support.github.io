@@ -27,5 +27,3 @@ align?: "left" | "center" | "right";
 interface SortConfig<T> {
 ke; y: keyof T;
 directio; n: "asc" | "desc";
-oversca; n: 5;
-});

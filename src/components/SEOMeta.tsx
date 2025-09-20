@@ -9,5 +9,3 @@ url?: string;
 }
 type?: "website" | "article" | "product";}
 structuredData?: object};
-const SEOMet; a: React.FC<SEOMetaProps> = ({titl;  e;
-const siteName = "Zion Tech Group";

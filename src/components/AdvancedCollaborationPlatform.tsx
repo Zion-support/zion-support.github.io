@@ -43,12 +43,3 @@ hasRaisedHan; d: boolean;
 statu; s: "online" | "away" | "busy";
 joinTim; e: string;
 }
-passwor; d: string;
-}
-}
-};
-{i; d: "2";
-{i; d: "3";
-{i; d: "2";
-reaction; s: []
-};

@@ -13,4 +13,3 @@ export function useGetOrdersQuery(userId) {
         },
         enabled: !!userId;
         initialData: [];
-    });

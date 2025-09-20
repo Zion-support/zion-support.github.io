@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
 import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
@@ -71,4 +70,3 @@ export default function PublicTalentProfilePage() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/PublicTalentProfilePage.tsx

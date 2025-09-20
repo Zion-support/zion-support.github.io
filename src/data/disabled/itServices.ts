@@ -14,4 +14,3 @@ monthly: number;
 currency: string;
 features: string[];
 }
-}

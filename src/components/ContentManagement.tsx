@@ -13,10 +13,3 @@ author: string;
 }
 }
 };
-export const ContentManagement: React.FC = () => {const [content, setContent] = useState<ContentItem[]>([
-{id: '2',
-{id: '3',
-default: return 'text-gray-400 bg-gray-900';
-}
-default: return '📄';
-}

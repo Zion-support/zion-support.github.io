@@ -21,5 +21,3 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
 import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from "lucide-react";
-import { format } from "date-fns";
-  }, [])

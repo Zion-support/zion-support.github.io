@@ -5,4 +5,3 @@ benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
-contactInfo: {}

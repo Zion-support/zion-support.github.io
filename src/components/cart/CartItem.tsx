@@ -5,4 +5,3 @@ import { Button } from "@/components/ui/button, ";
 interface CartItemProps {item: CartItemType;
 onRemove?: (id: string) => void;
 }
-}

@@ -12,18 +12,3 @@ export, const, securityConfig = {
     ma,x: 10o0// limit, each, IP to, 10o0, requests per windowMs;
   };
 },export, default, securityConfig,
-// Security Configuration,
-  // Security Headers,
-headers: {
-    'X-Frame-Options': 'DENY'
-    'X-Content-Type-Options': 'nosniff'
-    'Referrer-Policy': 'strict-origin-when-cross-origin'
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-  }
-  // Rate Limiting,
-rateLimit: {,
-windowMs: 15 * 60 * 1000, // 15 minutes,
-max: 100 // limit each IP to 100 requests per windowMs}
-};
-export default securityConfig;
-;

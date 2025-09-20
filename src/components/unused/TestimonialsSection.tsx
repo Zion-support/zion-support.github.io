@@ -12,5 +12,3 @@ avatar: "MC"};
 {name: "Emily Rodriguez", role: "Director of IT";
 company: "Global Manufacturing Inc.", content: "Their cybersecurity solutions gave us peace of mind. We"re now SOC 2 compliant and have a robust security posture.";
 rating: 5;
-rating: 5;
-hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,

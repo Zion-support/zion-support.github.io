@@ -15,7 +15,6 @@ import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-interface MobileMenuProps {className?: string};
 import { useRouter } from "next/router";
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -25,4 +24,3 @@ import { ModeToggle } from "@/components/ModeToggle";
 import { useTranslation } from "react-i18next";
 export interface MobileMenuProps {unreadCount?: number;
   onClose: () => void;
-}

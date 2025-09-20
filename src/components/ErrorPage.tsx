@@ -4,4 +4,3 @@ import { Link } from "react-router-dom, ";
 
 interface ErrorPageProps {statusCode?: number;
 }
-title?: string;}

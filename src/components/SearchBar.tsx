@@ -7,8 +7,3 @@ import { fireEvent } from "@/lib/analytics";
 import { SearchSuggestion } from "@/types/search";
 import { slugify } from "@/lib/slugify";
 import { useDebounce } from "@/hooks/useDebounce";
-import { useOnClickOutside } from "@/hooks/useOnClickOutside";
-  placeholder?: string
-}
-      <AutocompleteSuggestions
-}</div> <AutocompleteSuggestions suggestions= {suggestions}searchTerm= {value}onSelectSuggestion= {handleSelect}visible= {focused}highlightedIndex= {highlightedIndex}listId= {listId}/> </div>)

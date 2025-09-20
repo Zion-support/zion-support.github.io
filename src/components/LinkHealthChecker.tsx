@@ -16,5 +16,3 @@ link; s: Array<{ ur; l: string;
 }
 }
 labe; l: string }>;
-defaul;  t: return "text-gray-500";
-}

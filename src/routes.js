@@ -21,5 +21,3 @@ export const AdminRoutes = {admin: '/admin';
     users: '/admin/users';
     analytics: '/admin/analytics'};
     // Mobile app routes;
-export const MobileAppRoutes = {mobileLaunch: '/mobile-launch';
-export const ErrorRoutes = {notFound: '/404';

@@ -11,22 +11,3 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             setIsLoading(true);
             // Clean up any stale auth state before login;
             cleanupAuthState();
-            const { data, error } = await supabase.auth.signInWithPassword({email,
-                    variant: "destructive";
-                });
-                variant: "destructive";
-            });
-                }
-            });
-                    variant: "destructive";
-                });
-                description: "Check your email for verification instructions.";
-            });
-                variant: "destructive";
-            });
-                    variant: "destructive";
-                });
-                description: "Check your email for password reset instructions.";
-            });
-                variant: "destructive";
-            });

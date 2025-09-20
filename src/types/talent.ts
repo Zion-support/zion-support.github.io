@@ -16,7 +16,6 @@ export interface Certification {id: string; name: string; issuer: string; issueD
 expiryDate?: Date;}
 credentialId?: string}
 
-export interface Language {name: string; proficiency: "basic" | "conversational" | "fluent" | "native"}
 }
 portfolio?: string;}
 twitter?: string}
@@ -25,9 +24,7 @@ export interface TalentFilter {skills?: string[];
 }
 experienceRange?: {}
 min: number; max: number};
-hourlyRateRange?: {min: number; max: number};
 export interface TalentSearchResult {talents: Talent[], total: number; page: number; limit: number; hasMore: boolean}
 
 export interface TalentFormData {name: string; email: string; bio: string; skills: string[], experience: number; hourlyRate: number; currency: string;
 }
-location: {}

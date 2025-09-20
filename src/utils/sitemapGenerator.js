@@ -68,9 +68,6 @@ Allow: /careers/
 
 # Crawl delay (optional)
 Crawl-delay: 1`;
-     }
-                lastmod: url.lastmod || new Date().toISOString()
-            }))
     line-height: 1.6;
      }
         .container { max-width: 1200px;
@@ -87,7 +84,6 @@ Crawl-delay: 1`;
      }
         .sitemap-links { display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
-     }
     color: #333;
      }
         .sitemap-link: hover { background-color: #f5f5f5;
@@ -98,4 +94,3 @@ Crawl-delay: 1`;
         .priority-medium { border-left: 4px solid #ff9800;
      }
         .priority-low { border-left: 4px solid #4caf50;
-     }

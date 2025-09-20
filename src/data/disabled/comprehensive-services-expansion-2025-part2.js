@@ -122,15 +122,6 @@ export const advancedBlockchainServices2025 = [;
         setupTime: "1-2 weeks";
         integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
         freeTier: false;
-        trialPeriod: "7 days"
-    };
-    {id: 2;
-        trialPeriod: "14 days"
-    }
-        support: "24/7"
-    };
-    {id: 2;
-        support: "Business hours"
     }
         support: "Business hours"
     }

@@ -6,4 +6,3 @@ import { AIMatchingResults } from "@/components/AIMatchingResults";,
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking";,
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from "lucide-react";
-import { logInfo, logErrorToProduction } from "@/utils/productionLogger";

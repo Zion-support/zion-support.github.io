@@ -20,4 +20,3 @@ company?: string;
 author?: {,
 name: string; id: string;
 }
-avatarUrl?: string;}

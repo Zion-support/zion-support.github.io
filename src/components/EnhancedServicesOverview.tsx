@@ -37,4 +37,3 @@ categor; y: string;
 service; s: typeof ENHANCED_SERVICES;
 }
 }
-};

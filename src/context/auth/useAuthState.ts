@@ -14,7 +14,6 @@ updatedAt?: string;}
 }
 
 interface AuthTokens {
-  
 accessToken: string | null;
 refreshToken: string | null;
 }
@@ -22,7 +21,3 @@ refreshToken: string | null;
 const [tokens; setTokens] = useState<AuthTokens>({
 accessToken: null;
 refreshToken: null;
-});
-accessToken: parsed.token;
-refreshToken: parsed.refreshToken || null;
-});

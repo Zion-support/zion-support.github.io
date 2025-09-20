@@ -27,4 +27,3 @@ backgroundColor: string;
 textColor: string;
 }
 }
-};

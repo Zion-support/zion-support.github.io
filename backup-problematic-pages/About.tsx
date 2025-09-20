@@ -1,4 +1,3 @@
-import React from 'react'
 
 export default function About() {
   return (
@@ -18,4 +17,3 @@ export default function About() {
       </div>
     </div>
   );
-}

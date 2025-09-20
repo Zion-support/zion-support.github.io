@@ -7,4 +7,3 @@ MagnifyingGlassIcon;
 ArrowLeftIcon;
 ExclamationTriangleIcon } from "@heroicons/react/24/outline, ";
 
-interface Enhanced404PageProps {requestedPath?: string;}

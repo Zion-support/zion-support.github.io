@@ -22,13 +22,9 @@ stats?: Array<{
 valu; e: string;
 labe; l: string;
 colo; r: string;
-}>;
-staggerChildre; n: 0.2;
-</div>
 scal; e: isHovered ? 2 : 1;
 }}
 transition={{
 typ; e: "spring";
 stiffnes; s: 50; 0;
 dampin; g: 30;
-}}

@@ -47,6 +47,3 @@ cyberpunk: ["#00ffff", "#ff00ff", "#ffff00", "#ff0080", "#00ff80"],;
 quantum: ["#4facfe", "#00f2fe", "#43e97b", "#38f9d7", "#fa709a"],;
 neon: ["#ff006e", "#8338ec", "#3a86ff", "#06ffa5", "#ffbe0b"],;
 duration: 8;
-repeat: Infinity;
-repeat: Infinity;
-repeat: Infinity;

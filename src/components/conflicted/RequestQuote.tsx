@@ -39,5 +39,3 @@ budget: "";
 timeline: "";
 description: "";
 urgency: "medium"});
-const [submissionStatus; setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-description: "";

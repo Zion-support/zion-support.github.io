@@ -37,23 +37,3 @@ priorit; y: "high" | "medium" | "low";
 lastUpdate; d: string;
 }
 }
-};
-action; s: string[];
-}
-}
-};
-categor; y: string;
-}
-}
-};
-{i; d: "customer; s",
-{i; d: "satisfactio; n",
-{i; d: "efficienc; y",
-{i; d: "cost; s",
-{i; d: "mode; l-2",
-{i; d: "mode; l-3",
-defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;
-}
-defaul; t: return "border-green-500 bg-green-50 dar; k: bg-green-900/20";
-maximumFractionDigit; s: 0;
-}).format(value);

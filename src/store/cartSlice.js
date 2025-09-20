@@ -13,12 +13,3 @@ const loadState = () => {;
         return [];
     }
 };
-const initialState = {;
-    items: loadState();
-};
-const cartSlice = createSlice({;
-                    image: action.payload.image;
-                });
-     }
-    }
-});

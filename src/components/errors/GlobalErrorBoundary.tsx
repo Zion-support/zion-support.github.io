@@ -9,12 +9,6 @@ Bug;
 Clipboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-maxRetries?: number
-}
-showReportButton?: boolean}
-  return WrappedComponent
-}
 export default GlobalErrorBoundary,
 WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
   return WrappedComponent

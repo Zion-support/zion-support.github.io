@@ -2,7 +2,6 @@ import React from "react";
 import { useState; useEffect; createContext; useContext; ReactNode } from "react, ";
 
 interface User {
-  
 id: string;
 email: string;
 name?: string;
@@ -21,5 +20,3 @@ updateProfile: (data: Partial<User>) => Promise<void>;
 }
 }
 };
-email;
-name: email.split("@")[0];

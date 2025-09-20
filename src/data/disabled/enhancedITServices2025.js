@@ -51,32 +51,3 @@ export const enhancedITServices2025 = [;
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true
-    };
-    {id: 2;
-        reportingCapabilities: true
-    };
-    {id: 3;
-        reportingCapabilities: true
-    };
-    {id: 4;
-        reportingCapabilities: true
-    };
-    {id: 5;
-        reportingCapabilities: true
-    };
-    {id: 6;
-        reportingCapabilities: true
-    };
-    {id: 7;
-        reportingCapabilities: true
-    };
-    {id: 8;
-        reportingCapabilities: true
-    };
-    {id: 9;
-        reportingCapabilities: true
-    };
-    {id: 10;
-        reportingCapabilities: true
-    }

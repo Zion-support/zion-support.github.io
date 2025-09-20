@@ -52,32 +52,3 @@ export const enhancedAIServices2025 = [;
         scalability: "Millions of requests/day";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true
-    };
-    {id: 2;
-        industrySpecific: true
-    };
-    {id: 3;
-        industrySpecific: true
-    };
-    {id: 4;
-        industrySpecific: true
-    };
-    {id: 5;
-        industrySpecific: true
-    };
-    {id: 6;
-        industrySpecific: true
-    };
-    {id: 7;
-        industrySpecific: true
-    };
-    {id: 8;
-        industrySpecific: true
-    };
-    {id: 9;
-        industrySpecific: true
-    };
-    {id: 10;
-        industrySpecific: true
-    }

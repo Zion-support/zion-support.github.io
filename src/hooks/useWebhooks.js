@@ -51,16 +51,3 @@ export function useWebhooks() {
                 variant: "destructive";
                 title: "Error fetching webhooks";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });
-                description: "Your webhook has been created successfully.";
-            });
-                description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });
-                description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });
-                description: "The webhook has been deleted successfully.";
-            });
-                description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });
-                description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });

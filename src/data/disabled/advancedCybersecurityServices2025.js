@@ -53,20 +53,3 @@ export const advancedCybersecurityServices2025 = [;
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: true;
-        threatIntelligence: true
-    };
-    {id: 2;
-        threatIntelligence: true
-    };
-    {id: 3;
-        threatIntelligence: false
-    };
-    {id: 4;
-        threatIntelligence: false
-    };
-    {id: 5;
-        threatIntelligence: true
-    };
-    {id: 6;
-        threatIntelligence: true
-    }

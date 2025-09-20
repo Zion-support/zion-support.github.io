@@ -6,7 +6,6 @@ name: string;
 }
 }
 
-import React from "react";
 import { useEffect, useState } from "react";,
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";,
 import { Input } from "@/components/ui/input";,
@@ -16,4 +15,3 @@ import { ListingScoreCard } from "@/components/ListingScoreCard";,
 import { captureException } from "@/utils/sentry";,
 import Skeleton from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";,
-import { useIsMounted } from "@/hooks/useIsMounted";,

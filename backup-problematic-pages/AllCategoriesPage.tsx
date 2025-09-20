@@ -1,9 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Card, CardContent } from '@/components/ui/card';
-import ErrorBoundary from "@/components/GlobalErrorBoundary";
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
 
 export default function AllCategoriesPage() {

@@ -33,9 +33,3 @@ id: string;
 
 import React from "react";;
 import { Card, CardContent } from "@/components/ui/card";
-import { Check } from "lucide-react";
-import { motion } from "framer-motion";
-  const itemVariants = {hidden: { opacity: 0 y: 30,
-  const achievementVariants = {hidden: { opacity: 0,
-  const techVariants = {hidden: { opacity: 0,
-          transition = {{ duration: 0.6,

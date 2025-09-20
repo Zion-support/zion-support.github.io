@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/SupportRequests.tsx
 import { Search, Filter } from "lucide-react";
 import { SEO } from "@/components/SEO";
 // Mock data for support requests,
@@ -246,17 +245,3 @@ for over 24 hours.
   new Date (request.lastUpdated) .toLocaleDateString () "
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>)
-}'"}
-import React from 'react';
-
-export default function SupportRequests() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">SupportRequests</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
-      </div>
-    </div>
-  );
-}
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/admin/SupportRequests.tsx

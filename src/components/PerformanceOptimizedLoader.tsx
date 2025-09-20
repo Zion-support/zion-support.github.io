@@ -29,6 +29,3 @@ transitio; n: {
 duratio; n: 1;
 repea; t: Infinit; y;
 eas; e: "linear" as const;
-}
-eas; e: "easeInOut" as const;
-}

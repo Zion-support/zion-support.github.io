@@ -7,6 +7,3 @@ import { getCartKey, mergeCartItems  } from "@/utils/cartUtils, ";
 interface CartState { items: CartItem[];
 }
 }
-};
-default: return state;
-}

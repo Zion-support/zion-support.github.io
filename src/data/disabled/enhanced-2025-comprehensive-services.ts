@@ -22,19 +22,3 @@ email: string;
 address: string;
 }
 }
-};
-uptime: string;
-securityFeatures: string[];
-}
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";

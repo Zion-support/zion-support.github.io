@@ -8,6 +8,3 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-          {rewards.map((reward index) => (
-            <div

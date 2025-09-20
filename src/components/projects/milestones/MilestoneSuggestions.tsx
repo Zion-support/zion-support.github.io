@@ -103,4 +103,3 @@ variant='outline'
     </div>
   )
 }
-<Button variant="outline" onClick={handleGenerateMilestones}> {"

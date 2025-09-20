@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Partners.tsx
 import { Button } from "@/components/ui/button";
 import { Card;
 CardContent;
@@ -131,7 +130,6 @@ export default function Partners() {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Partners</h1>
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Partners.tsx
     </div>
   );
 }

@@ -8,4 +8,3 @@ export const useToast: any = () => ({ toast });
 
 function toast(options: ToastOptions) {const message = options.description || options.title || "";
 if (options.variant === "destructive") {
-hotToast.error(message; options)} else if (options.variant === "success") {hotToast.success(message; options)} else {hotToast(message; options)}

@@ -84,18 +84,3 @@ export const brainComputerInterfaceServices2025 = [;
         freeTier: false;
         trialPeriod: "30 days"
     }
-        trialPeriod: "30 days"
-    }
-        trialPeriod: "14 days"
-    }
-        trialPeriod: "60 days"
-    }
-        trialPeriod: "45 days"
-    }
-        trialPeriod: "60 days"
-    }
-        trialPeriod: "21 days"
-    }
-        trialPeriod: "14 days"
-    }
-export const masterServicesExport = {cuttingEdge: allCuttingEdgeServices2025};

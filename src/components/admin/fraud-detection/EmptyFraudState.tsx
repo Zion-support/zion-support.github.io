@@ -16,4 +16,3 @@ return (
 )
 }
 '"
-import React from "react";

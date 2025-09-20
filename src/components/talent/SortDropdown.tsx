@@ -8,7 +8,3 @@ import { DropdownMenu;
 , , DropdownMenuItem;
 , , DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
-interface SortDropdownProps {setSortOption: (option: string) => void}
-                : ''            }`}        {SORT_OPTIONS.map((option) => (<DropdownMenuItem
-key = {option.value}
-            onClick = {() => setSortOption(option.value)}

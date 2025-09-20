@@ -5,4 +5,3 @@ export interface CartItem {id: string; name: string; price: number; quantity: nu
 }
 image?: string}
 
-export interface CartContextType {items: CartItem[], dispatch: React.Dispatch<CartAction>}

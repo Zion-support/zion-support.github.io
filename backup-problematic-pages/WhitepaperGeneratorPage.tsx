@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/WhitepaperGeneratorPage.tsx
 import React { useState useEffect useCallback } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
@@ -71,7 +70,6 @@ setSections ([])
   
   setIsLoading (false)
 interface DistributionChartItem {
-  
 import React from 'react';
 
 export default function WhitepaperGeneratorPage() {
@@ -83,5 +81,4 @@ export default function WhitepaperGeneratorPage() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/WhitepaperGeneratorPage.tsx
 }

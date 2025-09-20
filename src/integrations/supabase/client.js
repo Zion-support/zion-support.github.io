@@ -5,5 +5,3 @@ const createMockSupabaseClient = () => ({;
         persistSession: true;
         autoRefreshToken: true;
         storage: supabaseStorageAdapter;
-    }
-});

@@ -9,7 +9,3 @@ isEmailVerified?: boolean;
 }
 createdAt?: string;}
 updatedAt?: string};
-export interface AuthTokens {;}
-onboardingStep: number; setOnboardingStep: (step: number) => void;
-}
-}

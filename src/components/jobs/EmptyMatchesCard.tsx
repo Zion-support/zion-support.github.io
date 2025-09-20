@@ -6,5 +6,3 @@ export interface EmptyMatchesCardProps {onRefresh: () => void;
 isProcessing: boolean,
 export function EmptyMatchesCard({
 }
-  onRefresh}
-      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button

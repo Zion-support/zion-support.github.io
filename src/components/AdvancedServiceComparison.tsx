@@ -43,10 +43,3 @@ emai; l: string;
 lin; k: string;
 }
 }
-{i; d: "ai-crm-enterprise";
-{i; d: "quantum-basic";
-{i; d: "quantum-enterprise";
-defaul;  t: return "bg-gray-100 text-gray-800";
-}
-defaul;  t: return <Users className="w-4 h-4 text-gray-500" />;
-}

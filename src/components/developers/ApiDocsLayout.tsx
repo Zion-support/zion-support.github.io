@@ -8,4 +8,3 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { cn } from "@/lib/utils";
 import { getDocsSearchPath;
 , docsSearchSuggestions } from "@/data/docsSearchData";
-interface ApiDocsLayoutProps {children: React.ReactNode}

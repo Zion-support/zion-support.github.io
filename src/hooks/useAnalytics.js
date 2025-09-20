@@ -233,6 +233,3 @@ export const useAnalytics = (config = {}) => {;
             await fetch('/api/analytics/events', {
                 method: 'POST';
                 headers: { 'Content-Type': 'application/json' };
-                body: JSON.stringify(eventsToSend)
-            });
-        viewport: {width: window.innerWidth;

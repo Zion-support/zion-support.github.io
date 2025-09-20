@@ -41,10 +41,3 @@ export const AICodeGenerato; r: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
-includeMetric; s: false;
-});
-qualit; y: form.quality;
-});
-impac; t: suggestion.impact;
-});

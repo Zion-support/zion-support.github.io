@@ -9,4 +9,3 @@ import './index.css',const queryClient = new QueryClient({;
     defaultOptions: {queries: {;
     staleTim,e: 5 * 60 * 10o00// 5 minutes;
     retr,y: 1;
-     }

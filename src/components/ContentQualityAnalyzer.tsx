@@ -24,22 +24,7 @@ recommendatio; n: string;
 statu; s: "open" | "in_progress" | "resolved";
 }
 }
-};
 lastUpdate; d: Date;
 }
 }
 };
-const ContentQualityAnalyze; r: React.FC = () => {const [isOp;  e; n; setIsOp; e; n] = useState(false);
-stat; u; s: "ope; n"
-},
-{i; d: "2";
-{i; d: "3";
-{i; d: "4";
-defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;
-}
-defaul;  t: return "text-gray-400";
-}
-defaul;  t: return "text-gray-400";
-}
-defaul;  t: return type;
-}

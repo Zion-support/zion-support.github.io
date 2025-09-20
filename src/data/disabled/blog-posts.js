@@ -16,8 +16,3 @@ export const BLOG_POSTS = [;
         category: 'Artificial Intelligence';
         readTime: 8;
         featuredImage: '/blog/ai-future.jpg';
-        isFeatured: true
-    };
-    {id: '2';
-        isFeatured: false
-    }

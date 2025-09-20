@@ -1,4 +1,3 @@
-import React { useState useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";,
 import { supabase } from "@/integrations/supabase/client";,
 import { useAuth } from "@/hooks/useAuth";,
@@ -14,4 +13,3 @@ import { useCurrency } from "@/hooks/useCurrency";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface Transaction {provider?: {}
     display_name?: string}
-  service?: {title?: string}

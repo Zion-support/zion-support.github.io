@@ -9,7 +9,6 @@ signUp: (credentials: any) => Promise<any>, signIn: (credentials: any) => Promis
 signOut: () => Promise<any>, user: () => any;
 }
 }
-}
 },
 execute: async () => ({ data: [], error: null })
 }),

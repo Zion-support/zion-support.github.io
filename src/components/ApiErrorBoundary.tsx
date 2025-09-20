@@ -7,4 +7,3 @@ import { RefreshCw, WifiOff } from "lucide-react";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ApiErrorBoundaryProps {children: ReactNode;
 }
-  queryClient?: QueryClient;}

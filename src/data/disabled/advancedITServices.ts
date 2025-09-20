@@ -24,41 +24,23 @@ email: string;
 website: string;
 }
 }
-};
-onsiteSupport: boolean;
-globalCoverage: boolean;
-}
-email: "kleber@ziontechgroup.com";
 onsiteSupport: true;
 globalCoverage: true;
 };
 {id: "cybersecurity-managed-services";
-title: "Managed Cybersecurity Services";
-email: "kleber@ziontechgroup.com";
 onsiteSupport: true;
 globalCoverage: true;
 };
 {id: "devops-automation-platform";
-title: "DevOps Automation & CI/CD Platform";
-email: "kleber@ziontechgroup.com";
 onsiteSupport: true;
 globalCoverage: true;
 };
 {id: "data-center-optimization";
-title: "Data Center Optimization & Modernization";
-email: "kleber@ziontechgroup.com";
 onsiteSupport: true;
 globalCoverage: true;
 };
 {id: "network-security-architecture";
-title: "Network Security Architecture & Design";
-email: "kleber@ziontechgroup.com";
 onsiteSupport: true;
 globalCoverage: true;
 };
 {id: "disaster-recovery-solutions";
-title: "Disaster Recovery & Business Continuity";
-email: "kleber@ziontechgroup.com";
-onsiteSupport: true;
-globalCoverage: true;
-}

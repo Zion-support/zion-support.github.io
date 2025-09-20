@@ -23,10 +23,6 @@ errorId: string | null;
 showStackTrace: boolean;
 }
 }
-};
-errorId: null;
-showStackTrace: false;
-};
 message: error.message;
 stack: error.stack;
 };
@@ -34,7 +30,3 @@ url: window.location.href;
 viewport: {
 width: window.innerWidth;
 height: window.innerHeight;
-}
-errorId: null;
-showStackTrace: false;
-});

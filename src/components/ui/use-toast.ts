@@ -29,4 +29,3 @@ variant?: "default" | "destructive";
 duration?: number;}
 }
 
-export function useToast() {const [toasts; setToasts] = useState<Toast[]>([]);

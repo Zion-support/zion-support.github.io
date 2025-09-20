@@ -9,4 +9,3 @@ import { DropdownMenu;
 , DropdownMenuSeparator;
 , DropdownMenuLabel } from "@/components/ui/dropdown-menu";
 import { User, as, UserIcon, Package } from "lucide-react";
-import { LogOut } from "lucide-react";, // Assuming lucide-react is used,

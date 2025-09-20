@@ -11,7 +11,3 @@ export function LanguageProvider({ children }) {;
       get_started: 'Get Started';
       learn_more: 'Learn More';
       contact_us: 'Contact Us';
-    },
-      contact_us: 'Contáctanos';
-    }
-  };

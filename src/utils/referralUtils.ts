@@ -52,5 +52,3 @@ const refCode = localStorage.getItem("referral_code");
 if (!refCode) return;
 
 // Call API to record the referral;
-const response = await apiClient("/api/track-referral", {;
-method: "POST",;

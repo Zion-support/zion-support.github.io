@@ -21,5 +21,3 @@ id: string;
 type: "user" | "assistant";
 content: string;
 timestamp: Date;
-onAssistantResponse?: (response: string) => void;
-timestamp: new Date();

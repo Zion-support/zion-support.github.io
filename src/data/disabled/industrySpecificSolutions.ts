@@ -3,4 +3,3 @@ export interface IndustrySpecificSolution {id: string; title: string; descriptio
 features: string[], benefits: string[];
 useCases: string[], targetAudience: string[];
 tags: string[], estimatedDelivery: string;
-supportLevel: "basic" | "standard" | "premium" | "enterprise", marketPrice: string;

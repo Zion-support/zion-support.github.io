@@ -11,9 +11,6 @@ export default function AITalentMatchingPage() {
 
   return (
     <ServiceLandingTemplate
-      title="AI Talent Matching"
-      description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients."
       benefits={benefits}
     />
   );
-}

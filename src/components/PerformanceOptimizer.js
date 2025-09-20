@@ -198,4 +198,3 @@ export const PerformanceOptimizer = ({ children }) => {;
                         }
                     }
                 });
-            },  {rootMargi, n: '50px',

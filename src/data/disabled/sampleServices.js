@@ -5,7 +5,3 @@ export const SAMPLE_SERVICES = [;
         description: "Advanced analytics and business intelligence powered by artificial intelligence";
         price: "$2,500/month",
         rating: 4.8};
-    {id: 2;
-    {id: 3;
-    {id: 4;
-    {id: 5;

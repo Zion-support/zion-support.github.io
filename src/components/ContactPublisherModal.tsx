@@ -13,4 +13,3 @@ productI;  d: string;
 sellerI; d: string;
 }
 }
-};

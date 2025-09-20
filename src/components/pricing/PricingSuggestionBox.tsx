@@ -1,1 +1,0 @@
-import { Loader2, Info, ThumbsUp } from "lucide-react";

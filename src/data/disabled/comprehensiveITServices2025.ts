@@ -5,5 +5,3 @@ targetAudience: string[], tags: string[];
 }
 contactInfo: {}
 phone: string; email: string; website: string; address: string};
-technology: string[], technology: string[];
-marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;

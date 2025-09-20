@@ -17,9 +17,3 @@ actions?: Array<{
 labe; l: string;
 actio; n: () => void;
 varian;  t: "primary" | "secondary" | "danger";
-}>;
-defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />;
-}
-defaul;  t: return "border-l-zion-slate";
-}
-className={`border-l-4 ${getPriorityColor(notification.priority)} ${!notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate"} hove; r:bg-zion-slate-light/5 transition-color; s`}

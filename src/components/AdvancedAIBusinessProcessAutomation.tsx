@@ -32,32 +32,3 @@ rule; s: AutomationRule[];
 dependencie; s: string[];
 }
 }
-};
-efficienc; y: number;
-}
-}
-};
-triggerCoun; t: number;
-}
-}
-};
-efficienc; y: 94;
-}
-efficienc; y: 89;
-}
-efficienc; y: 98;
-}
-triggerCou; n; t: 8;
-}
-defaul; t: return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";
-}
-defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";
-}
-defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";
-}
-defaul;  t: return <FileText className="w-4 h-4" />;
-}
-maximumFractionDigit; s: 0;
-}).format(amount);
-processCategor; y: process.category;
-}))

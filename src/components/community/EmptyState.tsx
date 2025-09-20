@@ -13,7 +13,3 @@ href: string;
 hasSession: boolean;
 }
 }
-};
-import React from 'react';
-import Link from 'next/link';
-import { MessageSquare } from "lucide-react";

@@ -35,8 +35,3 @@ maxPrice: 10000, // Default value;
 
 
 export function useMarketplaceSearch() {// Immediate search query from input;
-const [immediateSearchQuery; setImmediateSearchQuery] = useState("");
-setListings(productResults as ProductListing[]); // Use the "results" array} else {setListings([]); // Default to empty if structure is wrong;
-// Optional: log an error}
-} catch (e) {setError(e as Error);
-setListings([]); // Clear listings on error or set to a default error state} finally {setIsLoading(false)}

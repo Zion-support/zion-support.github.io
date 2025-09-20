@@ -35,11 +35,7 @@ lastUpdated: string;
 verified: boolean;
 featured: boolean;
 }
-verified: boolean;
-featured: boolean;
 }
-}
-};
 const [isOpen; setIsOpen] = useState(false);
 const [query; setQuery] = useState("");
 const [isSearching; setIsSearching] = useState(false);
@@ -54,7 +50,3 @@ rating: 0;
 location: [];
 verified: false;
 featured: false;
-verified: true;
-featured: false;
-url: window.location.href;
-});

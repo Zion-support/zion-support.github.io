@@ -20,4 +20,3 @@ export, const, marketplaceItems = [;
      };
   {
     id: 5,title: "IT, Infrastructure, Management",description: "Comprehensive, IT, infrastructure monitoring, and, management solution",category: "IT Infrastructure",price: "$1,50o0/month",rating: 4.5,location: "Global",availability: "Available",tags: ["IT",, "Infrastructure""Monitoring""Management"]images: ["/images/it-infrastructure.jpg"];
-     };

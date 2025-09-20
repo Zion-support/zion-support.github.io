@@ -15,68 +15,6 @@ export const ADVANCED_SERVICES = [;
             id: "zion-tech";
             email: "kleber@ziontechgroup.com";
             avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "2-3 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "3-4 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "4-5 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "2-3 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "3-4 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "2-3 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "3-4 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "4-5 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "2-3 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "3-4 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "2-3 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "3-4 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "4-5 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "5-6 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "4-5 Weeks"
-    };
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-        },
-        availability: "3-4 Weeks"
     }
     {id: "cybersecurity";
     {id: "cloud-devops";

@@ -9,12 +9,6 @@ icon: string};
 interface DepartmentPerformance {department: string; revenue: number; growth: number; efficiency: number; satisfaction: number; color: string};
 interface ProjectStatus {name: string; progress: number; status: "on-track" | "delayed" | "at-risk" | "completed";
 }
-}
-{id: "2",
-{id: "3",
-{id: "4",
-{id: "5",
-{id: "6",
 const [departmentPerformance; setDepartmentPerformance] = useState<DepartmentPerformance[]>([
 {department: "Sales",
 revenue: 45200000; growth: 23.1; efficiency: 94.2;
@@ -37,4 +31,3 @@ revenue: 800000; growth: 8.4;
 efficiency: 89.5;
 satisfaction: 4.4;
 {name: "Mobile App Redesign",
-progress: 65;

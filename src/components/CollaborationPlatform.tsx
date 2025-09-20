@@ -13,8 +13,3 @@ isSpeakin; g: boolean;
 avata; r: string;
 }
 }
-};
-isMute; d: false;
-});
-timestam; p: new Date()
-};

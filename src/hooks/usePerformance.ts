@@ -20,6 +20,3 @@ rating: "good" | "needs-improvement" | "poor";
   
 hadRecentInput: boolean;
 value: number;
-startTime: entry.startTime;
-name: entry.name;
-});

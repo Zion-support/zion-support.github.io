@@ -6,5 +6,3 @@ avatar: string,
 twitter?: string
 }
 linkedin?: string}
-linkedin?: string}
-interface Speaker {linkedin?: string}

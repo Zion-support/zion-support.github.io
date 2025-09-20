@@ -16,6 +16,5 @@ interface CertificationsFormProps {resumeId: string;
 certifications: Certification[];
   onComplete: () => void;
 }
-}
 onBack: () => void} else {
   

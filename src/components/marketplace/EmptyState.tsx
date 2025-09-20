@@ -14,7 +14,6 @@ label: string;
 onClick: () => void;
 }
 }
-};
 title: "No Products Available";
 description: "We\"re loading our marketplace products. If this persists; there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!"},
 categories: {
@@ -49,9 +48,3 @@ loading: {
 icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />;
 title: "Loading...";
 description: "We\"re fetching the latest data for you. This should only take a moment.";
-}
-};
-    label: string;
-}
-}
-label: isAuthenticated ? "Add Product" : "Login to Add Product";

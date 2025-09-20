@@ -1,18 +1,6 @@
 interface Service {
   
 id: string;
-<div className="min-h-screen bg-gray-900 text-white p-8">;
-<h1 className="text-4xl font-bold mb-4">Zion Tech Group</h1>;
-<p className="text-xl">Advanced AI; Quantum Computing & Technology Solutions</p>;
-<div className="min-h-screen bg-gray-900 text-white p-8">;
-<h1 className="text-4xl font-bold mb-4">Our Services</h1>;
-<p className="text-xl">Comprehensive technology solutions for your business</p>;
-<div className="min-h-screen bg-gray-900 text-white p-8">;
-<h1 className="text-4xl font-bold mb-4">About Us</h1>;
-<p className="text-xl">Leading the future of technology</p>;
-<div className="min-h-screen bg-gray-900 text-white p-8">;
-<h1 className="text-4xl font-bold mb-4">Contact Us</h1>;
-<p className="text-xl">Get in touch with our team</p>;
 export default App;<//ErrorBoundary><///ErrorBoundary>
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -50,4 +38,3 @@ export default function App() {
     </ErrorBoundary>;
   );
 };
-;

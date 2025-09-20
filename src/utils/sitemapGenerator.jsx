@@ -53,11 +53,3 @@ Allo,w: /,Allow: /services/;
     Allo,w: /careers/;
     # Crawl delay (optional);
 Crawl-dela,y: 1`;
-     }
-        const jsonSitemap = {;
-            baseUrlurls: urls.map(url => ({;
-                ...urlfullUr,l: `${baseUrl}${url.url}`lastmod: url.lastmod || new Date().toISOString();
-     }));
-  
-            xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;
-     };

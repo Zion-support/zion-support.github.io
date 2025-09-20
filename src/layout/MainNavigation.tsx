@@ -30,10 +30,6 @@ import {
 DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
-DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-name: t("nav.blog")
-}
-{key: "services",
 {key: "ai-services",
 href: "/ai-services",
 matches: (path: string) => path.startsWith("/ai-services")},
@@ -47,14 +43,12 @@ matches: (path: string) => path.startsWith("/micro-saas")},
 href: "/about",
 matches: (path: string) => path.startsWith("/about")},
 {key: "services",
-{key: "services",
 href: "/services",
 name: "Services",
 matches: (path: string) => path.startsWith("/services")},
 {key: "services",
 href: "/comprehensive-services",
 matches: (path: string) => path.startsWith("/comprehensive-services") || path.startsWith("/services")},
-{key: "marketplace",
 {key: "micro-saas",
 href: "/micro-saas-services",
 matches: (path: string) => path.startsWith("/micro-saas-services"),
@@ -62,11 +56,3 @@ matches: (path: string) => path === "/"},
 {key: "marketplace",
 href: "/marketplace",
 matches: (path: string) => path.startsWith("/marketplace")},
-{key: "services",
-{matches: (path: string) => path.startsWith("/equipment"),
-matches: (path: string) => path.startsWith("/equipment")
-},
-{key: "community",
-{key: "blog",
-{key: "help",
-name: t("nav.blog")

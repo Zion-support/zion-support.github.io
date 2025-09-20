@@ -26,16 +26,3 @@ export const useContractTemplates = () => {;
                                 type: 'string';
                                 description: 'Name of the client';
                                 required: true;
-                            },
-                                required: true;
-                            },
-                                required: true;
-                            }],
-                        tags: ['freelance', 'agreement', 'services']
-                    },
-                                required: true;
-                            },
-                                defaultValue: 2;
-                            }],
-                        tags: ['nda', 'confidentiality', 'legal']
-                    }

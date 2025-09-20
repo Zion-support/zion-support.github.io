@@ -9,6 +9,3 @@ return (
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
-          <FormField
-          <FormField
-          <FormField

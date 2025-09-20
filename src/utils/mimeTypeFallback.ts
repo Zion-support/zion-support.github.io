@@ -22,5 +22,3 @@ class MimeTypeFallback {private supportedTypes: Set<string> = new Set([
 * Check if a MIME type is supported;
 */;
 isSupported(type: string): boolean {
-  
-return script} else {const link = document.createElement("link");

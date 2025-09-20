@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useRouterReady, useRouteChange } from "@/hooks/useRouterReady";
@@ -261,9 +260,6 @@ value={sortBy}
                 Contact Us
               </Link>
             </div>
-</>;
-  );
-};
 import React from 'react';
 
 export default function SearchPage() {
@@ -275,5 +271,3 @@ export default function SearchPage() {
       </div>
     </div>
   );
-}
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SearchPage.tsx

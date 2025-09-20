@@ -39,26 +39,3 @@ export const specializedInnovativeServices2025 = [;
         scalability: ["Multi-system Support", "Cloud-based Rendering", "Real-time Processing"],
         estimatedDelivery: "8-12 weeks";
         supportLevel: "premium";
-        innovationScore: 9.1
-    };
-    {id: 2;
-        innovationScore: 9.3
-    };
-    {id: 3;
-        innovationScore: 9.5
-    };
-    {id: 4;
-        innovationScore: 9.2
-    };
-    {id: 5;
-        innovationScore: 9.0
-    };
-    {id: 6;
-        innovationScore: 9.4
-    };
-    {id: 7;
-        innovationScore: 8.8
-    };
-    {id: 8;
-        innovationScore: 9.6
-    }
