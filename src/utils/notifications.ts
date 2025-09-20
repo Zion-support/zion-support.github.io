@@ -27,3 +27,6 @@ export const notify = {
   
   info: (message: string, options?: Omit<NotificationOptions, 'type'>) =>
     notificationManager.add(message, { ...options, type: 'info' }),
+};
+
+export default notificationManager;
