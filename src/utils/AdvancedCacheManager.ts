@@ -1,3 +1,9 @@
+interface CacheConfig {
+  maxSize: number;
+  ttl: number;
+  strategy: "lru" | "lfu" | "fifo" | "ttl";
+  persist: boolean;
+}
 
 persis;t: boolean;
 }

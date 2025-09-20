@@ -1,3 +1,9 @@
+export interface LinkValidationResult {
+  url: string;
+  isValid: boolean;
+  httpStatus?: number;
+  error?: string;
+}
 
 export interface LinkValidationResult {
   url: string;
@@ -72,3 +78,11 @@ return !urlObj.hostname.includes("ziontechgroup.com")} catch {
 
 export const linkValidator = new LinkValidator();
 
+    return {
+      originalUrl: result.url,
+      newUrl: "",
+      type: "update",
+      reason: result.error || "Unknown error"
+    };
+  }
+}

@@ -132,3 +132,9 @@ links: checkedLinks; exists: true};
 
 export default LinkChecker;
 
+    return {
+      ...page,
+      links: checkedLinks
+    };
+  }
+}

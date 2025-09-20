@@ -125,3 +125,11 @@ report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
 
 export default LinkHealthChecker;
 
+  static async checkMultipleLinks(urls: string[]): Promise<LinkHealthStatus[]> {
+    const results = await Promise.all(
+      urls.map(url => this.checkLinkHealth(url))
+    );
+    
+    return results;
+  }
+}

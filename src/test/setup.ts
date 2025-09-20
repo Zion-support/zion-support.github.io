@@ -18,12 +18,17 @@ removeEventListener: jest.fn(),dispatchEvent: jest.fn()
 })
 // Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver {
-constructor() {}
-disconnect() {}
-observe() {}
-unobserve() {}
-}
-// Mock ResizeObserver;
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+  takeRecords() { return []; }
+  root = null;
+  rootMargin = "";
+  thresholds = [];
+} as any;
+
+// Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
 constructor() {}
 disconnect() {}

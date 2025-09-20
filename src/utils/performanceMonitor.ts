@@ -117,7 +117,11 @@ this.endTiming(name);throw error}
   }
 }
 
-export const performanceMonitor = new PerformanceMonitor();
+    // Measure FID (simplified)
+    const fidEntries = performance.getEntriesByType("first-input");
+    if (fidEntries.length > 0) {
+      metrics.firstInputDelay = (fidEntries[0] as any).processingStart - fidEntries[0].startTime;
+    }
 
 export const usePerformanceMonitor = () => {
   return {
@@ -130,5 +134,48 @@ export const usePerformanceMonitor = () => {
   };
 };
 
-export default performanceMonitor;
+    // Measure memory usage if available
+    if ((performance as any).memory) {
+      metrics.memoryUsage = (performance as any).memory.usedJSHeapSize;
+    }
 
+    this.metrics = metrics;
+    return metrics;
+  }
+
+  public getMetrics(): PerformanceMetrics | null {
+    return this.metrics;
+  }
+
+  public checkThresholds(): { [K in keyof PerformanceThresholds]: boolean } {
+    if (!this.metrics) {
+      throw new Error("No performance metrics available. Call measurePerformance() first.");
+    }
+
+    const results = {} as { [K in keyof PerformanceThresholds]: boolean };
+    
+    for (const [key, threshold] of Object.entries(this.thresholds)) {
+      const metricKey = key as keyof PerformanceThresholds;
+      const metricValue = this.metrics[metricKey as keyof PerformanceMetrics] as number;
+      results[metricKey] = metricValue <= threshold;
+    }
+
+    return results;
+  }
+
+  public getPerformanceScore(): number {
+    if (!this.metrics) {
+      return 0;
+    }
+
+    const thresholdResults = this.checkThresholds();
+    const passedThresholds = Object.values(thresholdResults).filter(Boolean).length;
+    const totalThresholds = Object.keys(this.thresholds).length;
+    
+    return Math.round((passedThresholds / totalThresholds) * 100);
+  }
+
+  public setThresholds(thresholds: Partial<PerformanceThresholds>): void {
+    this.thresholds = { ...this.thresholds, ...thresholds };
+  }
+}
