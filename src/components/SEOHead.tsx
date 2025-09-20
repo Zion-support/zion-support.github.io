@@ -139,22 +139,22 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         "name": "Zion Tech Group",
         "logo": {
           "@type": "ImageObject",
-          "url": "https: //ziontechgroup.com/logo.png"
+          "url": "https://ziontechgroup.com/logo.png"
         }
-      };
+      },
       ...(data.publishedTime && { "datePublished": data.publishedTime }),
       ...(data.modifiedTime && { "dateModified": data.modifiedTime }),
       ...(data.section && { "articleSection": data.section }),
       ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join() })
-    },
+    };
 
-    const script = document.createElement('script'),
-    script.type = 'application/ld+json',
-    script.textContent = JSON.stringify(structuredData),
-    document.head.appendChild(script),
-  },
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+  };
 
-  return null, // This component doesn't render anything
-},
+  return null; // This component doesn't render anything
+};
 
 export default SEOHead;
