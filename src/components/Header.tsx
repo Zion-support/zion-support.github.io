@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../styles/futuristic.css';
+import '../../styles/futuristic.css';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
