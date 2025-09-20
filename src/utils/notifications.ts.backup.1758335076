@@ -5,6 +5,17 @@ interface NotificationOptions {
   closable?: boolean;
 }
 
+<<<<<<< HEAD
+// Notification manager class
+class NotificationManager {
+  add(message: string, options?: NotificationOptions) {
+    // Implementation would go here
+    console.log('Notification:', message, options);
+  }
+}
+
+const notificationManager = new NotificationManager();
+=======
 interface NotificationManager {
   add: (message: string, options?: NotificationOptions) => void;
 }
@@ -15,6 +26,7 @@ const notificationManager: NotificationManager = {
     console.log('Notification:', message, options);
   }
 };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2732
 
 // Convenience functions
 export const notify = {
