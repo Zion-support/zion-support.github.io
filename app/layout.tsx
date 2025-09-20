@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
@@ -158,7 +159,26 @@ function Footer() {
       </div>
     </footer>
   )
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-3eed
+// import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group',
+  description: 'Leading technology solutions provider',
+<<<<<<< HEAD
+};
+=======
+>>>>>>> eaaeaf6a16b7b5ed71cff049fdf1d07a51b6564b
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-3eed
 
 export default function RootLayout({
   children,
@@ -174,4 +194,12 @@ export default function RootLayout({
       </body>
     </html>
   )
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-3eed
+>>>>>>> eaaeaf6a16b7b5ed71cff049fdf1d07a51b6564b

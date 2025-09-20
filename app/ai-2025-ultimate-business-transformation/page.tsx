@@ -18,6 +18,7 @@ export default function AI2025UltimateBusinessTransformationPage() {
         url="/ai-2025-ultimate-business-transformation"
       />
       <div>
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
           <div>
@@ -238,6 +239,10 @@ export default function AI2025UltimateBusinessTransformationPage() {
             </div>
           </div>
         </section>
+=======
+        <h1>AI 2025 Ultimate Business Transformation</h1>
+        <p>Coming soon...</p>
+>>>>>>> eaaeaf6a16b7b5ed71cff049fdf1d07a51b6564b
       </div>
     </div>
   )

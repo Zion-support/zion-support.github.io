@@ -1,9 +1,8 @@
-=======
-import React, { createContext, useContext, useState, ReactNode } from 'react;';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface DialogContextType {
   isOpen: boolean;
-    setIsOpen: (open: boolean) => void;
+  setIsOpen: (open: boolean) => void;
 }
 
 const DialogContext = createContext<DialogContextType | undefined>(undefined);
@@ -14,7 +13,7 @@ export function Dialog({
   onOpenChange 
 }: { 
   children: ReactNode;
-    open?: boolean;
+  open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }) {
   const [internalOpen, setInternalOpen] = useState(false);
@@ -24,7 +23,7 @@ export function Dialog({
   const setIsOpen = (newOpen: boolean) => {
     if (!isControlled) {
       setInternalOpen(newOpen);
-     }
+    }
     if (onOpenChange) {
       onOpenChange(newOpen);
     }
@@ -33,8 +32,8 @@ export function Dialog({
   return (
     <DialogContext.Provider value={{ isOpen, setIsOpen }}>
       <div className="relative">
-import React from 'react;';
-import { cn } from '@/lib/utils, ';
+import React from 'react';
+import { cn } from '@/lib/utils';
 
 export interface DialogProps extends React.HTMLAttributes<HTMLDivElement> {
   open?: boolean;
@@ -67,11 +66,11 @@ export interface DialogFooterProps extends React.HTMLAttributes<HTMLDivElement> 
 
 const DialogContext = React.createContext<{
   open: boolean;
-    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 } | undefined>(undefined);
 
 export const Dialog: React.FC<DialogProps> = ({
-  open = false;
+  open = false,
   onOpenChange,
   children,
   className,
@@ -92,22 +91,18 @@ export const Dialog: React.FC<DialogProps> = ({
     <DialogContext.Provider value={{ open: isOpen, setOpen: (value: boolean | ((prev: boolean) => boolean)) => {
       if (typeof value === 'function') {
         setIsOpen(value);
-     } else {
+      } else {
         setIsOpen(value);
       }
     }}}>
       <div className={cn('relative', className)} {...props}>
-=======
-=======
         {children}
       </div>
     </DialogContext.Provider>
   );
-=======
 }
 
-export function DialogTrigger({ children, asChild = false }: { children: ReactNode;
-    asChild?: boolean }) {
+export function DialogTrigger({ children, asChild = false }: { children: ReactNode; asChild?: boolean }) {
   const context = useContext(DialogContext);
   if (!context) throw new Error('DialogTrigger must be used within Dialog');
 
@@ -126,8 +121,7 @@ export function DialogTrigger({ children, asChild = false }: { children: ReactNo
   );
 }
 
-export function DialogContent({ children, className = '' }: { children: ReactNode;
-    className?: string }) {
+export function DialogContent({ children, className = '' }: { children: ReactNode; className?: string }) {
   const context = useContext(DialogContext);
   if (!context) throw new Error('DialogContent must be used within Dialog');
 
@@ -140,7 +134,7 @@ export function DialogContent({ children, className = '' }: { children: ReactNod
 };
 
 export const DialogTrigger: React.FC<DialogTriggerProps> = ({
-  children;
+  children,
   className,
   ...props
 }) => {
@@ -163,7 +157,7 @@ export const DialogTrigger: React.FC<DialogTriggerProps> = ({
 };
 
 export const DialogContent: React.FC<DialogContentProps> = ({
-  children;
+  children,
   className,
   ...props
 }) => {
@@ -189,38 +183,31 @@ export const DialogContent: React.FC<DialogContentProps> = ({
         )}
         {...props}
       >
-=======
-=======
         {children}
       </div>
     </div>
   );
-=======
 }
 
-export function DialogHeader({ children, className = '' }: { children: ReactNode;
-    className?: string }) {
+export function DialogHeader({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <div className={`mb-4 ${className}`}>{children}</div>;
 }
 
-export function DialogTitle({ children, className = '' }: { children: ReactNode;
-    className?: string }) {
+export function DialogTitle({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>;
 }
 
-export function DialogDescription({ children, className = '' }: { children: ReactNode;
-    className?: string }) {
+export function DialogDescription({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>;
 }
 
-export function DialogFooter({ children, className = '' }: { children: ReactNode;
-    className?: string }) {
+export function DialogFooter({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;
 }
 };
 
 export const DialogHeader: React.FC<DialogHeaderProps> = ({
-  children;
+  children,
   className,
   ...props
 }) => {
@@ -232,7 +219,7 @@ export const DialogHeader: React.FC<DialogHeaderProps> = ({
 };
 
 export const DialogTitle: React.FC<DialogTitleProps> = ({
-  children;
+  children,
   className,
   ...props
 }) => {
@@ -244,7 +231,7 @@ export const DialogTitle: React.FC<DialogTitleProps> = ({
 };
 
 export const DialogDescription: React.FC<DialogDescriptionProps> = ({
-  children;
+  children,
   className,
   ...props
 }) => {
@@ -256,7 +243,7 @@ export const DialogDescription: React.FC<DialogDescriptionProps> = ({
 };
 
 export const DialogFooter: React.FC<DialogFooterProps> = ({
-  children;
+  children,
   className,
   ...props
 }) => {
@@ -266,5 +253,3 @@ export const DialogFooter: React.FC<DialogFooterProps> = ({
     </div>
   );
 };
-=======
-=======

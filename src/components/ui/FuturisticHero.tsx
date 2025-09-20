@@ -1,9 +1,9 @@
-import React from 'react;';
+import React from 'react';
 
 interface FuturisticHeroProps {
   title: string;
-    subtitle: string;
-    children?: React.ReactNode;
+  subtitle: string;
+  children?: React.ReactNode;
   className?: string;
 }
 
@@ -44,32 +44,31 @@ export default function FuturisticHero({ title, subtitle, children, className = 
       
       {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-=======
-import React, { useState, useEffect } from 'react;';
-import { motion, useScroll, useTransform } from 'framer-motion, ';
-import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react, ';
+import React, { useState, useEffect } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react';
 
 export default function FuturisticHero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const { scrollY } = useScroll();
+  const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 300], [0, 100]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
-     };
+    };
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   const floatingIcons = [
-    { icon: <Star className="w-6 h-6" />, delay: 0, color: 'text-yellow-400' };
-    { icon: <Zap className="w-6 h-6" />, delay: 0.5, color: 'text-cyan-400' };
-    { icon: <Brain className="w-6 h-6" />, delay: 1, color: 'text-purple-400' };
-    { icon: <Shield className="w-6 h-6" />, delay: 1.5, color: 'text-green-400' };
-    { icon: <Globe className="w-6 h-6" />, delay: 2, color: 'text-blue-400' };
+    { icon: <Star className="w-6 h-6" />, delay: 0, color: 'text-yellow-400' },
+    { icon: <Zap className="w-6 h-6" />, delay: 0.5, color: 'text-cyan-400' },
+    { icon: <Brain className="w-6 h-6" />, delay: 1, color: 'text-purple-400' },
+    { icon: <Shield className="w-6 h-6" />, delay: 1.5, color: 'text-green-400' },
+    { icon: <Globe className="w-6 h-6" />, delay: 2, color: 'text-blue-400' },
   ];
 
   return (
@@ -94,8 +93,8 @@ export default function FuturisticHero() {
           transition={{ delay: item.delay, duration: 1 }}
           className={`absolute ${item.color} opacity-20`}
           style={{
-            left: `${20 + index * 15}%`;
-            top: `${30 + (index % 2) * 20}%`;
+            left: `${20 + index * 15}%`,
+            top: `${30 + (index % 2) * 20}%`,
           }}
         >
           {item.icon}
@@ -106,8 +105,8 @@ export default function FuturisticHero() {
       <div
         className="fixed w-4 h-4 bg-cyan-400 rounded-full pointer-events-none z-10 mix-blend-difference"
         style={{
-          left: mousePosition.x - 8;
-          top: mousePosition.y - 8;
+          left: mousePosition.x - 8,
+          top: mousePosition.y - 8,
         }}
       />
 
@@ -143,7 +142,7 @@ export default function FuturisticHero() {
             transition={{ duration: 1, delay: 0.3 }}
             className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
-            Discover our comprehensive suite of cutting-edge micro SaaS services;
+            Discover our comprehensive suite of cutting-edge micro SaaS services, 
             AI solutions, and emerging technologies. From quantum computing to 
             space technology, we're building the future today.
           </motion.p>
@@ -157,10 +156,10 @@ export default function FuturisticHero() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto"
         >
           {[
-            { value: '200+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8" />, color: 'text-cyan-400' };
-            { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" />, color: 'text-green-400' };
-            { value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8" />, color: 'text-yellow-400' };
-            { value: '24/7', label: 'AI Support', icon: <Brain className="w-8 h-8" />, color: 'text-purple-400' };
+            { value: '200+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8" />, color: 'text-cyan-400' },
+            { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" />, color: 'text-green-400' },
+            { value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8" />, color: 'text-yellow-400' },
+            { value: '24/7', label: 'AI Support', icon: <Brain className="w-8 h-8" />, color: 'text-purple-400' },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -233,23 +232,22 @@ export default function FuturisticHero() {
             key={i}
             className="absolute w-1 h-1 bg-cyan-400 rounded-full"
             initial={{
-              x: Math.random() * window.innerWidth;
-              y: Math.random() * window.innerHeight;
-              opacity: Math.random();
+              x: Math.random() * window.innerWidth,
+              y: Math.random() * window.innerHeight,
+              opacity: Math.random(),
             }}
             animate={{
               y: [0, -100],
               opacity: [0, 1, 0],
             }}
             transition={{
-              duration: Math.random() * 3 + 2;
-              repeat: Infinity;
-              delay: Math.random() * 2;
+              duration: Math.random() * 3 + 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
             }}
           />
         ))}
       </div>
-=======
     </section>
   );
 }

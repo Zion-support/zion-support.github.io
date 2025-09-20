@@ -17,6 +17,7 @@ export default function AI2025Page() {
         keywords="AI 2025, artificial intelligence, neural networks, automation, machine learning"
         url="/ai-2025"
       />
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
         <div>
@@ -98,6 +99,12 @@ export default function AI2025Page() {
           </Link>
         </div>
       </section>
+=======
+      <div>
+        <h1>AI 2025 - Revolutionary AI Technologies</h1>
+        <p>Coming soon...</p>
+      </div>
+>>>>>>> eaaeaf6a16b7b5ed71cff049fdf1d07a51b6564b
     </div>
   )
 }
