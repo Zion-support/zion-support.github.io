@@ -1,6 +1,6 @@
 [build]
   # Use npm for dependency installation and build
-  command = "npm ci && npm run build:netlify"
+  command = "npm ci && npm run build"
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
@@ -8,12 +8,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  NODE_OPTIONS = "--max-old-space-size=8192 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
   NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
   NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
-  NPM_CONFIG_PREFER_OFFLINE = "true"
 
 # Fix MIME type issues
 [[headers]]
