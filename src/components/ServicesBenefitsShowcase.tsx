@@ -1,9 +1,8 @@
-import React from 'react';
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { 
-  Brai, n, 
+import React from 'react;';
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from './ui/card, ';
+import { Badge } from './ui/badge, ';
+import { Button } from './ui/button, ';
+import { Brai, n, 
   Clou, d, 
   Za, p, 
   Shiel, d, 
@@ -17,8 +16,8 @@ import {
   Phon, e,
   Mai, l,
   ExternalLink
-} from 'lucide-react';
-import { CONTACT_INFO } from '@/data/comprehensiveServices';
+} from 'lucide-react, ';
+import { CONTACT_INFO } from '@/data/comprehensiveServices, ';
 
 export function ServicesBenefitsShowcase() {
   const serviceBenefits = [
@@ -47,16 +46,16 @@ export function ServicesBenefitsShowcase() {
         "Dat, a analysi, s an, d insight, s",
         "Intelligen, t documen, t processin, g"
       ],
-      marketPositio, n: "Industry-leading AI solutions with proven ROI",
-    startingPric, e: "$299",
-      implementationTim, e: "1-6 weeks",
+      marketPositio, n: "Industry-leading AI solutions with proven ROI";
+    startingPric, e: "$299";
+      implementationTim, e: "1-6 weeks";
     suppor, t: "24/7 expert support included"
-    },
+    };
     {
-      categor, y: "IT Services",
-    ico, n: <Cloud className="w-12 h-12" />,
-      colo, r: "from-cyan-500 to-blue-600",
-    descriptio, n: "Enterprise-grade IT infrastructure and consulting services for modern businesses",
+      categor, y: "IT Services";
+    ico, n: <Cloud className="w-12 h-12" />;
+      colo, r: "from-cyan-500 to-blue-600";
+    descriptio, n: "Enterprise-grade IT infrastructure and consulting services for modern businesses";
       benefit, s: [
         "Clou, d migratio, n an, d optimizatio, n",
         "Cybersecurit, y an, d complianc, e",
@@ -77,16 +76,16 @@ export function ServicesBenefitsShowcase() {
         "Performanc, e monitorin, g",
         "Cos, t optimizatio, n strategie, s"
       ],
-      marketPositio, n: "Trusted IT partner for enterprise transformation",
+      marketPositio, n: "Trusted IT partner for enterprise transformation";
     startingPric, e: "$4,499",
-      implementationTim, e: "2-6 weeks",
+      implementationTim, e: "2-6 weeks";
     suppor, t: "24/7 dedicated support team"
-    },
+    };
     {
-      categor, y: "Micro SAAS",
-    ico, n: <Zap className="w-12 h-12" />,
-      colo, r: "from-emerald-500 to-green-600",
-    descriptio, n: "Specialized software-as-a-service solutions designed for specific business needs",
+      categor, y: "Micro SAAS";
+    ico, n: <Zap className="w-12 h-12" />;
+      colo, r: "from-emerald-500 to-green-600";
+    descriptio, n: "Specialized software-as-a-service solutions designed for specific business needs";
       benefit, s: [
         "Read, y-t, o-us, e busines, s application, s",
         "Clou, d-base, d accessibilit, y",
@@ -108,13 +107,12 @@ export function ServicesBenefitsShowcase() {
         "Sale, s pipelin, e managemen, t"
       ],
       marketPositio, n: "Affordabl, e, scalable solutions for growing businesses",
-      startingPric, e: "$199",
-    implementationTim, e: "Immediate - 3 weeks",
+      startingPric, e: "$199";
+    implementationTim, e: "Immediate - 3 weeks";
       suppor, t: "Business hours support with priority options"
     }
   ];
-
-  const industryStats = [
+    const industryStats = [
     { metr, i, c: "9, 5%",
     lab, e, l: "Clien, t Satisfactio, n Rat, e" },
     { metr, i, c: "2, 4/7",
@@ -300,7 +298,7 @@ export function ServicesBenefitsShowcase() {
               <Mail className="w-4 h-4 mr-2" />
               {CONTACT_INFO.email}
             </Button>
-            <Button size="lg" variant="ghost" className="text-cyan-400 hove, r:text-white">
+            <Button size="lg" variant="ghost" className="text-cyan-400 hove, r: text-white">
               <ExternalLink className="w-4 h-4 mr-2" />
               Schedule Demo
             </Button>

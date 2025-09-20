@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageSquare, 
+import React, { useState, useRef, useEffect, useCallback } from 'react;';
+import { motion, AnimatePresence } from 'framer-motion, ';
+import { MessageSquare, 
   Send, 
   Bot, 
   User, 
@@ -14,16 +13,16 @@ import {
   Brain,
   Paperclip,
   Smile
-} from 'lucide-react';
-import { Button } from './button';
+} from 'lucide-react, ';
+import { Button } from './button, ';
 
 interface ChatMessage {
   id: string;
-  type: 'user' | 'assistant';
-  content: string;
-  timestamp: Date;
-  status: 'sending' | 'sent' | 'error';
-  metadata?: {
+    type: 'user' | 'assistant';
+    content: string;
+    timestamp: Date;
+    status: 'sending' | 'sent' | 'error';
+    metadata?: {
     confidence?: number;
     suggestions?: string[];
     relatedTopics?: string[];
@@ -34,7 +33,7 @@ interface AIChatAssistantProps {
   enabled?: boolean;
   className?: string;
   onMessageSend?: (message: string) => void;
-  onAssistantResponse?: (response: string) => void;
+    onAssistantResponse?: (response: string) => void;
 }
 
 export function AIChatAssistant({ 
@@ -49,13 +48,13 @@ export function AIChatAssistant({
   const [showSettings, setShowSettings] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
-      id: '1',
-      type: 'assistant',
+      id: '1';
+      type: 'assistant';
       content: 'Hello! I\'m Zion AI Assistant. I can help you with technology solutions, business insights, and answer any questions about our services. How can I assist you today?',
-      timestamp: new Date(),
-      status: 'sent',
+      timestamp: new Date();
+      status: 'sent';
       metadata: {
-        confidence: 0.95,
+        confidence: 0.95;
         suggestions: ['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
       }
     }
@@ -68,7 +67,7 @@ export function AIChatAssistant({
   // Auto-scroll to bottom
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+     };
 
   useEffect(() => {
     scrollToBottom();
@@ -94,7 +93,6 @@ export function AIChatAssistant({
   // Generate AI response
   const generateAIResponse = (_userMessage: string) => {
     setIsTyping(true);
-
     // Simulate API call delay
     const timer = setTimeout(() => {
       // Mock AI responses based on user input
@@ -120,18 +118,17 @@ export function AIChatAssistant({
       const randomResponse = responses[Math.floor(Math.random() * responses.length)];
       
       const aiMessage: ChatMessage = {
-        id: Date.now().toString(),
-        type: 'assistant',
-        content: randomResponse.content,
-        timestamp: new Date(),
-        status: 'sent',
+        id: Date.now().toString();
+        type: 'assistant';
+        content: randomResponse.content;
+        timestamp: new Date();
+        status: 'sent';
         metadata: {
-          confidence: 0.85 + Math.random() * 0.1,
+          confidence: 0.85 + Math.random() * 0.1;
           suggestions: randomResponse.suggestions
         }
       };
-
-      setMessages(prev => [...prev, aiMessage]);
+    setMessages(prev => [...prev, aiMessage]);
       setIsTyping(false);
       onAssistantResponse?.(aiMessage.content);
     }, 1500 + Math.random() * 1000);
@@ -144,13 +141,12 @@ export function AIChatAssistant({
     if (!inputValue.trim() || isTyping) return;
 
     const userMessage: ChatMessage = {
-      id: Date.now().toString(),
-      type: 'user',
-      content: inputValue.trim(),
-      timestamp: new Date(),
+      id: Date.now().toString();
+      type: 'user';
+      content: inputValue.trim();
+      timestamp: new Date();
       status: 'sending'
     };
-
     setMessages(prev => [...prev, userMessage]);
     onMessageSend?.(userMessage.content);
     
@@ -162,7 +158,7 @@ export function AIChatAssistant({
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      sendMessage();
+    sendMessage();
     }
   };
 
@@ -462,7 +458,7 @@ export function AIChatAssistant({
                       <button
                         key={action}
                         onClick={() => handleSuggestionClick(action)}
-                        className="px-3 py-1 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-blue-light/30 rounded-full text-xs text-zinc-300 hover:text-white transition-all duration-200"
+                        className="px-3 py-1 bg-zion-blue/20 hover: bg-zion-blue/30 border border-zion-blue-light/30 rounded-full text-xs text-zinc-300 hover:text-white transition-all duration-200"
                       >
                         {action}
                       </button>

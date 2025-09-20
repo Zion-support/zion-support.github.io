@@ -1,11 +1,20 @@
+<<<<<<< HEAD:app/blog/ai-2026-executive-ai-security-playbook/page.tsx
+import Link from 'next/link'
+import React from 'react'
+=======
 import Link from 'next/link';
 import React from 'react';
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/blog/ai-2026-executive-ai-security-playbook/page.tsx
 
 export const metadata = {
   title: 'Executive AI Security Playbook (2026)';
   description:
     'Board‑ready controls: policy‑as‑code, eval gates, runtime guardrails, and audit evidence to ship safely at scale.'
+<<<<<<< HEAD:app/blog/ai-2026-executive-ai-security-playbook/page.tsx
+}
+=======
 };
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/blog/ai-2026-executive-ai-security-playbook/page.tsx
 
 export default function ExecutiveAISecurityPlaybookPage() {
   return (
@@ -76,14 +85,23 @@ gates:
   )
 }
 
+<<<<<<< HEAD:app/blog/ai-2026-executive-ai-security-playbook/page.tsx
+import Link from 'next/link'
+import React from 'react'
+=======
 import Link from 'next/link';
 import React from 'react';
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/blog/ai-2026-executive-ai-security-playbook/page.tsx
 
 export const metadata = {
 	title: 'AI 2026: Executive AI Security Playbook';
 	description:
 		'Practical, board-ready playbook for securing AI systems: policy-as-code, eval-gated releases, and evidence-driven assurance.'
+<<<<<<< HEAD:app/blog/ai-2026-executive-ai-security-playbook/page.tsx
+}
+=======
 };
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/blog/ai-2026-executive-ai-security-playbook/page.tsx
 
 export default function Page() {
 	return (

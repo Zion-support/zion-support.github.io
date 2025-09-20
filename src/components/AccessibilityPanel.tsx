@@ -1,22 +1,22 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
+import { motio, n, AnimatePresence } from 'framer-motion, ';
 
 interface AccessibilitySettings {
   // Visual
   highContras, t: boolean;
-  fontSiz, e: number;
-  colorBlindnes, s: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  reducedMotio, n: boolean;
-  screenReade, r: boolean;
-  keyboardNavigatio, n: boolean;
-  focusIndicato, r: boolean;
-  colorBlindnes, s: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+    fontSiz, e: number;
+    colorBlindnes, s: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+    reducedMotio, n: boolean;
+    screenReade, r: boolean;
+    keyboardNavigatio, n: boolean;
+    focusIndicato, r: boolean;
+    colorBlindnes, s: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 
 interface AccessibilityPanelProps {
   isOpe, n: boolean;
-  onToggl, e: () => void;
+    onToggl, e: () => void;
 }
 
 export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
@@ -26,14 +26,14 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
   const [settin, g, s, setSettin, g, s] = useState<AccessibilitySettings>({
     highContras,  t: fals, e,
     fontSiz, e: 10, 0,
-    colorBlindnes, s: 'none',
+    colorBlindnes, s: 'none';
     reducedMotio, n: fals, e,
     screenReade, r: fals, e,
     keyboardNavigatio, n: fals, e,
     focusIndicato, r: tru, e,
     colorBlindnes, s: 'none'
   });
-  const [accessibilitySco, r, e, setAccessibilitySco, r, e] = useState(85);
+    const [accessibilitySco, r, e, setAccessibilitySco, r, e] = useState(85);
 
   const [activeT,  a, b, setActiveT, a, b] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general');
 
@@ -60,7 +60,6 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
 
   const applySettings = (newSetting,  s: AccessibilitySettings) => {
     const root = document.documentElement;
-    
     // High contrast
     if (newSettings.highContrast) {
       root.style.setProperty('--high-contrast',  '1');
@@ -102,7 +101,7 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
   };
 
   const updateSetting = <K extends keyof AccessibilitySettings>(
-    ke,  y: K,
+    ke,  y: K;
     valu, e: AccessibilitySettings[K]
   ) => {
     setSettings(prev => ({ ...pre,  v, [k, e, y]: value }));
@@ -115,7 +114,8 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
       reducedMotio, n: fals, e,
     screenReade, r: fals, e,
       keyboardNavigatio, n: fals, e,
-    focusIndicato, r: tru, e,
+    focusIndicato, r: tru, e
+  };
       colorBlindnes, s: 'none'
     };
     setSettings(defaultSettings);
@@ -123,16 +123,15 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
 
   const tabs = [
     { i, d: 'genera, l',
-    lab, e, l: 'Genera, l', ic, o, n: '⚙️' },
+    lab, e, l: 'Genera, l', ic, o, n: '⚙️' };
     { i, d: 'visua, l',
-    lab, e, l: 'Visua, l', ic, o, n: '👁️' },
+    lab, e, l: 'Visua, l', ic, o, n: '👁️' };
     { i, d: 'audi, o',
-    lab, e, l: 'Audi, o', ic, o, n: '🔊' },
+    lab, e, l: 'Audi, o', ic, o, n: '🔊' };
     { i, d: 'navigatio, n',
     lab, e, l: 'Navigatio, n', ic, o, n: '⌨️' }
   ] as const;
-
-  const getScoreColor = (scor,  e: number) => {
+    const getScoreColor = (scor,  e: number) => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
@@ -169,11 +168,11 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacit, y: 0,
+            initial={{ opacit, y: 0;
     x: -400 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     x: 0 }}
-            exit={{ opacit, y: 0,
+            exit={{ opacit, y: 0;
     x: -400 }}
             className="fixed left-4 bottom-20 z-40 w-80 bg-white dar, k:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dar, k:border-slate-700 overflow-hidden"
           >
@@ -215,11 +214,11 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
               <AnimatePresence mode="wait">
                 {activeTab === 'general' && (<motion.div
                     key="general"
-                    initial={{ opacit,  y: 0,
+                    initial={{ opacit,  y: 0;
     y: 20 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     y: 0 }}
-                    exit={{ opacit, y: 0,
+                    exit={{ opacit, y: 0;
     y: -20 }}
                     className="space-y-4"
                   >
@@ -276,11 +275,11 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
 
                 {activeTab === 'visual' && (<motion.div
                     key="visual"
-                    initial={{ opacit,  y: 0,
+                    initial={{ opacit,  y: 0;
     y: 20 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     y: 0 }}
-                    exit={{ opacit, y: 0,
+                    exit={{ opacit, y: 0;
     y: -20 }}
                     className="space-y-4"
                   >
@@ -321,11 +320,11 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
 
                 {activeTab === 'audio' && (<motion.div
                     key="audio"
-                    initial={{ opacit,  y: 0,
+                    initial={{ opacit,  y: 0;
     y: 20 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     y: 0 }}
-                    exit={{ opacit, y: 0,
+                    exit={{ opacit, y: 0;
     y: -20 }}
                     className="space-y-4"
                   >
@@ -362,11 +361,11 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
 
                 {activeTab === 'navigation' && (<motion.div
                     key="navigation"
-                    initial={{ opacit,  y: 0,
+                    initial={{ opacit,  y: 0;
     y: 20 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     y: 0 }}
-                    exit={{ opacit, y: 0,
+                    exit={{ opacit, y: 0;
     y: -20 }}
                     className="space-y-4"
                   >
@@ -414,7 +413,7 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
                 </button>
                 <button
                   onClick={onToggle}
-                  className="flex-1 px-4 py-2 text-sm bg-blue-600 hove, r:bg-blue-700 text-white rounded-md transition-colors"
+                  className="flex-1 px-4 py-2 text-sm bg-blue-600 hove, r: bg-blue-700 text-white rounded-md transition-colors"
                 >
                   Close
                 </button>

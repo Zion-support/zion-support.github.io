@@ -1,8 +1,8 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react, ';
 
 interface SearchOptions<T> {
   searchFields: (keyof T)[];
-  filterFields?: (keyof T)[];
+    filterFields?: (keyof T)[];
   sortFields?: (keyof T)[];
   debounceMs?: number;
   fuzzySearch?: boolean;
@@ -11,36 +11,35 @@ interface SearchOptions<T> {
 
 interface SearchState<T> {
   query: string;
-  filters: Record<string, any>;
+    filters: Record<string, any>;
   sortBy: keyof T | null;
-  sortOrder: 'asc' | 'desc';
-  results: T[];
-  isLoading: boolean;
-  totalResults: number;
+    sortOrder: 'asc' | 'desc';
+    results: T[];
+    isLoading: boolean;
+    totalResults: number;
 }
 
 export const useSearch = <T extends Record<string, any>>(
-  data: T[],
+  data: T[];
   options: SearchOptions<T>
 ) => {
   const {
-    searchFields,
+    searchFields;
     debounceMs = 300,
     fuzzySearch = true,
     caseSensitive = false
   } = options;
 
   const [searchState, setSearchState] = useState<SearchState<T>>({
-    query: '',
-    filters: {},
-    sortBy: null,
-    sortOrder: 'asc',
-    results: data,
-    isLoading: false,
+    query: '';
+    filters: {};
+    sortBy: null;
+    sortOrder: 'asc';
+    results: data;
+    isLoading: false;
     totalResults: data.length
   });
-
-  const [debouncedQuery, setDebouncedQuery] = useState('');
+    const [debouncedQuery, setDebouncedQuery] = useState('');
 
   // Debounce search query
   useEffect(() => {
@@ -54,7 +53,6 @@ export const useSearch = <T extends Record<string, any>>(
   // Fuzzy search algorithm
   const fuzzyMatch = useCallback((text: string, query: string): boolean => {
     if (!query) return true;
-    
     const searchText = caseSensitive ? text : text.toLowerCase();
     const searchQuery = caseSensitive ? query : query.toLowerCase();
     
@@ -75,7 +73,6 @@ export const useSearch = <T extends Record<string, any>>(
   // Search and filter data
   const processedData = useMemo(() => {
     setSearchState(prev => ({ ...prev, isLoading: true }));
-
     let results = data;
 
     // Apply search
@@ -134,10 +131,9 @@ export const useSearch = <T extends Record<string, any>>(
     setSearchState(prev => ({ 
       ...prev, 
       results, 
-      totalResults: results.length,
+      totalResults: results.length;
       isLoading: false 
     }));
-
     return results;
   }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
 
@@ -149,7 +145,7 @@ export const useSearch = <T extends Record<string, any>>(
   // Update filters
   const setFilter = useCallback((key: string, value: any) => {
     setSearchState(prev => ({
-      ...prev,
+      ...prev;
       filters: { ...prev.filters, [key]: value }
     }));
   }, []);
@@ -157,32 +153,31 @@ export const useSearch = <T extends Record<string, any>>(
   // Clear all filters
   const clearFilters = useCallback(() => {
     setSearchState(prev => ({ ...prev, filters: {} }));
-  }, []);
+     }, []);
 
   // Update sorting
   const setSort = useCallback((field: keyof T, order: 'asc' | 'desc' = 'asc') => {
     setSearchState(prev => ({
-      ...prev,
-      sortBy: field,
+      ...prev;
+      sortBy: field;
       sortOrder: order
     }));
-  }, []);
+     }, []);
 
   // Clear search
   const clearSearch = useCallback(() => {
     setSearchState(prev => ({
       ...prev,
-      query: '',
-      filters: {},
-      sortBy: null,
+      query: '';
+      filters: {};
+      sortBy: null;
       sortOrder: 'asc'
     }));
-  }, []);
+     }, []);
 
   // Get search suggestions
   const getSuggestions = useCallback((query: string, maxSuggestions: number = 5): string[] => {
     if (!query || query.length < 2) return [];
-
     const suggestions = new Set<string>();
     
     searchFields.forEach(field => {
@@ -193,7 +188,7 @@ export const useSearch = <T extends Record<string, any>>(
           words.forEach((word: string) => {
             if (word.toLowerCase().startsWith(query.toLowerCase()) && word.length > query.length) {
               suggestions.add(word);
-            }
+     }
           });
         }
       });
@@ -208,12 +203,12 @@ export const useSearch = <T extends Record<string, any>>(
     const endIndex = startIndex + pageSize;
     return {
       results: searchState.results.slice(startIndex, endIndex),
-      totalPages: Math.ceil(searchState.totalResults / pageSize),
-      currentPage: page,
-      hasNextPage: endIndex < searchState.totalResults,
+      totalPages: Math.ceil(searchState.totalResults / pageSize);
+      currentPage: page;
+      hasNextPage: endIndex < searchState.totalResults;
       hasPrevPage: page > 1
     };
-  }, [searchState.results, searchState.totalResults]);
+     }, [searchState.results, searchState.totalResults]);
 
   return {
     ...searchState,

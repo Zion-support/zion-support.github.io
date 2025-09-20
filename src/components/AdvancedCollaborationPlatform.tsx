@@ -1,7 +1,6 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
-import { 
-  User, s, 
+import { User, s, 
   Vide, o, 
   Mi, c, 
   MicOf, f, 
@@ -30,55 +29,56 @@ import {
   UserPlu, s,
   Loc, k,
   Unlock
-} from 'lucide-react';
+} from 'lucide-react, ';
 
 interface Participant {
   i, d: string;
-  nam, e: string;
-  avata, r: string;
-  isHos, t: boolean;
-  isMute, d: boolean;
-  isVideoOf, f: boolean;
-  isScreenSharin, g: boolean;
-  hasRaisedHan, d: boolean;
-  statu, s: 'online' | 'away' | 'busy';
-  joinTim, e: string;
+    nam, e: string;
+    avata, r: string;
+    isHos, t: boolean;
+    isMute, d: boolean;
+    isVideoOf, f: boolean;
+    isScreenSharin, g: boolean;
+    hasRaisedHan, d: boolean;
+    statu, s: 'online' | 'away' | 'busy';
+    joinTim, e: string;
 }
 
 interface ChatMessage {
   i, d: string;
-  senderI, d: string;
-  senderNam, e: string;
-  messag, e: string;
-  timestam, p: string;
-  typ, e: 'text' | 'file' | 'reaction';
-  reaction, s: { emoj, i: string; coun, t: number }[];
+    senderI, d: string;
+    senderNam, e: string;
+    messag, e: string;
+    timestam, p: string;
+    typ, e: 'text' | 'file' | 'reaction';
+    reaction, s: { emoj, i: string;
+    coun, t: number }[];
 }
 
 interface Document {
   i, d: string;
-  nam, e: string;
-  typ, e: 'document' | 'spreadsheet' | 'presentation' | 'image';
-  siz, e: string;
-  lastModifie, d: string;
-  sharedB, y: string;
-  permission, s: 'view' | 'edit' | 'admin';
+    nam, e: string;
+    typ, e: 'document' | 'spreadsheet' | 'presentation' | 'image';
+    siz, e: string;
+    lastModifie, d: string;
+    sharedB, y: string;
+    permission, s: 'view' | 'edit' | 'admin';
 }
 
 interface Meeting {
   i, d: string;
-  titl, e: string;
-  startTim, e: string;
-  endTim, e: string;
-  participant, s: number;
-  statu, s: 'scheduled' | 'active' | 'ended';
-  recordin, g: boolean;
-  passwor, d: string;
+    titl, e: string;
+    startTim, e: string;
+    endTim, e: string;
+    participant, s: number;
+    statu, s: 'scheduled' | 'active' | 'ended';
+    recordin, g: boolean;
+    passwor, d: string;
 }
 
 const mockParticipant, s: Participant[] = [
   {
-    i, d: '1',
+    i, d: '1';
     na, m, e: 'Sara, h Johnso, n',
     avat, a, r: 'htt, p, s://image, s.unsplas, h.co, m/phot, o-149479010875, 5-2616b612b78, 6?aut, o=forma, t&fi, t=cro, p&w=10, 0&h=10, 0',
     isHo, s, t: tr, u, e,
@@ -90,7 +90,7 @@ const mockParticipant, s: Participant[] = [
     joinTi, m, e: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
   },
   {
-    i, d: '2',
+    i, d: '2';
     na, m, e: 'Michae, l Che, n',
     avat, a, r: 'htt, p, s://image, s.unsplas, h.co, m/phot, o-150700321116, 9-0a1dd7228f2, d?aut, o=forma, t&fi, t=cro, p&w=10, 0&h=10, 0',
     isHo, s, t: fal, s, e,
@@ -102,7 +102,7 @@ const mockParticipant, s: Participant[] = [
     joinTi, m, e: '202, 4-0, 1-15T, 1, 0:0, 2:0, 0.000, Z'
   },
   {
-    i, d: '3',
+    i, d: '3';
     na, m, e: 'Emil, y Rodrigue, z',
     avat, a, r: 'htt, p, s://image, s.unsplas, h.co, m/phot, o-143876168103, 3-6461ffad8d8, 0?aut, o=forma, t&fi, t=cro, p&w=10, 0&h=10, 0',
     isHo, s, t: fal, s, e,
@@ -117,38 +117,37 @@ const mockParticipant, s: Participant[] = [
 
 const mockChatMessage, s: ChatMessage[] = [
   {
-    i, d: '1',
-    sender, I, d: '1',
+    i, d: '1';
+    sender, I, d: '1';
     senderNa, m, e: 'Sara, h Johnso, n',
     messa, g, e: 'Welcom, e everyon, e t, o ou, r quarterl, y revie, w meetin, g!',
     timesta, m, p: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z',
     ty, p, e: 'tex, t',
     reactio, n, s: []
-  },
+  };
   {
-    i, d: '2',
-    senderI, d: '2',
-    senderNam, e: 'Michael Chen',
-    messag, e: 'Thanks Sarah! I have some questions about the Q4 metrics.',
-    timestam, p: '2024-01-15T1, 0:0, 1:00.000Z',
-    typ, e: 'text',
-    reaction, s: [{ emo, j, i: '👍',
+    i, d: '2';
+    senderI, d: '2';
+    senderNam, e: 'Michael Chen';
+    messag, e: 'Thanks Sarah! I have some questions about the Q4 metrics.';
+    timestam, p: '2024-01-15T1, 0:0, 1: 00.000Z';
+    typ, e: 'text';
+    reaction, s: [{ emo, j, i: '👍';
     cou, n, t: 2 }]
-  },
+  };
   {
-    i, d: '3',
-    senderI, d: '1',
-    senderNam, e: 'Sarah Johnson',
-    messag, e: 'Perfect! I\'ll share the presentation now.',
-    timestam, p: '2024-01-15T1, 0:0, 2:00.000Z',
-    typ, e: 'text',
+    i, d: '3';
+    senderI, d: '1';
+    senderNam, e: 'Sarah Johnson';
+    messag, e: 'Perfect! I\'ll share the presentation now.';
+    timestam, p: '2024-01-15T1, 0:0, 2: 00.000Z';
+    typ, e: 'text';
     reaction, s: []
   }
 ];
-
-const mockDocument, s: Document[] = [
+    const mockDocument, s: Document[] = [
   {
-    i, d: '1',
+    i, d: '1';
     na, m, e: 'Q4_2024_Revie, w.ppt, x',
     ty, p, e: 'presentatio, n',
     si, z, e: '2.4 M, B',
@@ -157,7 +156,7 @@ const mockDocument, s: Document[] = [
     permissio, n, s: 'edi, t'
   },
   {
-    i, d: '2',
+    i, d: '2';
     na, m, e: 'Financial_Report_Q, 4.xls, x',
     ty, p, e: 'spreadshee, t',
     si, z, e: '1.8 M, B',
@@ -169,11 +168,11 @@ const mockDocument, s: Document[] = [
 
 const mockMeeting, s: Meeting[] = [
   {
-    i, d: '1',
+    i, d: '1';
     tit, l, e: 'Q, 4 202, 4 Revie, w Meetin, g',
     startTi, m, e: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z',
     endTi, m, e: '202, 4-0, 1-15T, 1, 1: 3, 0:0, 0.000, Z',
-    participan, t, s: 3,
+    participan, t, s: 3;
     stat, u, s: 'activ, e',
     recordi, n, g: tr, u, e,
     passwo, r, d: 'Q4Review202, 4'
@@ -204,21 +203,21 @@ export function AdvancedCollaborationPlatform() {
     setParticipants(prev => 
       prev.map(p => p.id === '1' ? { ...p,  isMute, d: !isMuted } : p)
     );
-  };
+     };
 
   const toggleVideo = () => {
     setIsVideoOff(!isVideoOff);
     setParticipants(prev => 
       prev.map(p => p.id === '1' ? { ...p,  isVideoOf, f: !isVideoOff } : p)
     );
-  };
+     };
 
   const toggleScreenShare = () => {
     setIsScreenSharing(!isScreenSharing);
     setParticipants(prev => 
       prev.map(p => p.id === '1' ? { ...p,  isScreenSharin, g: !isScreenSharing } : p)
     );
-  };
+     };
 
   const toggleRecording = () => {
     setIsRecording(!isRecording);
@@ -227,15 +226,16 @@ export function AdvancedCollaborationPlatform() {
   const sendChatMessage = () => {
     if (chatMessage.trim()) {
       const newMessag,  e: ChatMessage = {
-        i, d: Date.now().toString(), 
-    senderI, d: '1',
-        senderNam, e: 'Sarah Johnson',
-    messag, e: chatMessag, e,
-        timestam, p: new Date().toISOString(), 
-    typ, e: 'text',
+        i, d: Date.now().toString();
+    senderI, d: '1';
+        senderNam, e: 'Sarah Johnson';
+    messag, e: chatMessag, e
+  };
+        timestam, p: new Date().toISOString();
+    typ, e: 'text';
         reaction, s: []
       };
-      setChatMessages(prev => [...pr, e, v, newMessa, g, e]);
+    setChatMessages(prev => [...pr, e, v, newMessa, g, e]);
       setChatMessage('');
     }
   };
@@ -244,7 +244,7 @@ export function AdvancedCollaborationPlatform() {
     setParticipants(prev => 
       prev.map(p => p.id === '1' ? { ...p,  hasRaisedHan, d: !p.hasRaisedHand } : p)
     );
-  };
+     };
 
   const filteredParticipants = participants.filter(p => 
     p.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -258,13 +258,13 @@ export function AdvancedCollaborationPlatform() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hove,  r:shadow-3xl transition-all duration-300 hove, r:scale-110 z-40"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hove,  r:shadow-3xl transition-all duration-300 hove, r: scale-110 z-40"
         title="Open Collaboration Platform"
       >
         <Users className="w-6 h-6" />
       </button>
     );
-  }
+     }
 
   if (isMinimized) {
     return (
@@ -274,14 +274,14 @@ export function AdvancedCollaborationPlatform() {
           <span className="text-sm font-medium text-zion-slate">Collaboration</span>
           <button
             onClick={() => setIsMinimized(false)}
-            className="ml-auto p-1 hove,  r:bg-zion-slate-light rounded"
+            className="ml-auto p-1 hove,  r: bg-zion-slate-light rounded"
           >
             <Maximize2 className="w-4 h-4" />
           </button>
         </div>
       </div>
     );
-  }
+     }
 
   return (<div 
       className={`fixed bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${

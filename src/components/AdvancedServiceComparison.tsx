@@ -1,8 +1,7 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Chec, k, 
+import { motion } from 'framer-motion, ';
+import { Chec, k, 
   X, 
   Sta, r, 
   TrendingU, p, 
@@ -20,35 +19,35 @@ import {
   Rocke, t,
   Mai, l,
   Phone
-} from 'lucide-react';
-import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
+} from 'lucide-react, ';
+import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card, ';
+import { Button } from './ui/button, ';
+import { Badge } from './ui/badge, ';
+import { Input } from './ui/input, ';
 
 interface ServiceTier {
   i, d: string;
-  nam, e: string;
-  categor, y: string;
-  pric, e: string;
-  duratio, n: string;
-  feature, s: string[];
-  benefit, s: string[];
-  technolog, y: string[];
-  targetAudienc, e: string[];
-  ratin, g: number;
-  complexit, y: 'Basic' | 'Intermediate' | 'Advanced' | 'Enterprise';
-  popularit, y: 'Low' | 'Medium' | 'High' | 'Trending';
-  contactInf, o: string;
-  emai, l: string;
-  lin, k: string;
+    nam, e: string;
+    categor, y: string;
+    pric, e: string;
+    duratio, n: string;
+    feature, s: string[];
+    benefit, s: string[];
+    technolog, y: string[];
+    targetAudienc, e: string[];
+    ratin, g: number;
+    complexit, y: 'Basic' | 'Intermediate' | 'Advanced' | 'Enterprise';
+    popularit, y: 'Low' | 'Medium' | 'High' | 'Trending';
+    contactInf, o: string;
+    emai, l: string;
+    lin, k: string;
 }
 
 interface ComparisonFilter {
   categor, y: string;
-  complexit, y: string;
-  priceRang, e: string;
-  technolog, y: string;
+    complexit, y: string;
+    priceRang, e: string;
+    technolog, y: string;
 }
 
 const COMPLEXITY_LEVELS = ['Basi, c', 'Intermediat, e', 'Advance, d', 'Enterpris, e'];
@@ -58,12 +57,12 @@ const PRICE_RANGES = ['Unde, r $10, K', '$10, K-$50, K', '$50, K-$100, K', '$100
 export const AdvancedServiceCompariso, n: React.FC = () => {
   const [selectedServic,  e, s, setSelectedServic, e, s] = useState<string[]>([]);
   const [filte, r, s, setFilte, r, s] = useState<ComparisonFilter>({
-    categor,  y: 'all',
-    complexit, y: 'all',
-    priceRang, e: 'all',
+    categor,  y: 'all';
+    complexit, y: 'all';
+    priceRang, e: 'all';
     technolog, y: 'all'
   });
-  const [searchTe, r, m, setSearchTe, r, m] = useState('');
+    const [searchTe, r, m, setSearchTe, r, m] = useState('');
   const [viewMo,  d, e, setViewMo, d, e] = useState<'grid' | 'table' | 'detailed'>('grid');
 
   // Mock data - in real app this would come from props or API
@@ -78,67 +77,66 @@ export const AdvancedServiceCompariso, n: React.FC = () => {
       benefit, s: ['Improve, d custome, r retentio, n', 'Automate, d workflow, s', 'Basi, c analytic, s'],
       technolog, y: ['A, I/M, L', 'CR, M', 'Automatio, n'],
       targetAudienc, e: ['Smal, l Busines, s', 'Startup, s'],
-      ratin, g: 4.2,
-    complexit, y: 'Basic',
-      popularit, y: 'Medium',
-    contactInf, o: '+1 302 464 0950',
-      emai, l: 'kleber@ziontechgroup.com',
-    lin, k: 'http, s://ziontechgroup.com/services/ai-crm-basic'
-    },
+      ratin, g: 4.2;
+    complexit, y: 'Basic';
+      popularit, y: 'Medium';
+    contactInf, o: '+1 302 464 0950';
+      emai, l: 'kleber@ziontechgroup.com';
+    lin, k: 'http, s: //ziontechgroup.com/services/ai-crm-basic'
+    };
     {
-      i, d: 'ai-crm-enterprise',
-    nam, e: 'AI CRM Enterprise',
-      categor, y: 'ai',
+      i, d: 'ai-crm-enterprise';
+    nam, e: 'AI CRM Enterprise';
+      categor, y: 'ai';
     pric, e: '$2, 5,000/month',
-      duratio, n: '12-18 months',
+      duratio, n: '12-18 months';
     feature, s: ['Advance, d A, I insight, s', 'Predictiv, e analytic, s', 'Mult, i-channe, l integratio, n', 'Custo, m A, I model, s'],
       benefit, s: ['Predictiv, e custome, r behavio, r', 'Advance, d automatio, n', 'Enterpris, e scalabilit, y'],
       technolog, y: ['A, I/M, L', 'Bi, g Dat, a', 'Predictiv, e Analytic, s', 'Enterpris, e Integratio, n'],
       targetAudienc, e: ['Enterpris, e', 'Larg, e Corporation, s'],
-      ratin, g: 4.8,
-    complexit, y: 'Enterprise',
-      popularit, y: 'High',
-    contactInf, o: '+1 302 464 0950',
-      emai, l: 'kleber@ziontechgroup.com',
-    lin, k: 'http, s://ziontechgroup.com/services/ai-crm-enterprise'
-    },
+      ratin, g: 4.8;
+    complexit, y: 'Enterprise';
+      popularit, y: 'High';
+    contactInf, o: '+1 302 464 0950';
+      emai, l: 'kleber@ziontechgroup.com';
+    lin, k: 'http, s: //ziontechgroup.com/services/ai-crm-enterprise'
+    };
     {
-      i, d: 'quantum-basic',
-    nam, e: 'Quantum Computing Basic',
-      categor, y: 'quantum',
+      i, d: 'quantum-basic';
+    nam, e: 'Quantum Computing Basic';
+      categor, y: 'quantum';
     pric, e: '$5, 0,000/month',
-      duratio, n: '6-12 months',
+      duratio, n: '6-12 months';
     feature, s: ['Basi, c quantu, m algorithm, s', 'Clou, d acces, s', 'Documentatio, n'],
       benefit, s: ['Quantu, m computin, g acces, s', 'Algorith, m developmen, t', 'Researc, h capabilitie, s'],
       technolog, y: ['Quantu, m Computin, g', 'Clou, d Platfor, m', 'Basi, c Algorithm, s'],
       targetAudienc, e: ['Researc, h Institution, s', 'Universitie, s'],
-      ratin, g: 4.5,
-    complexit, y: 'Intermediate',
-      popularit, y: 'Medium',
-    contactInf, o: '+1 302 464 0950',
-      emai, l: 'kleber@ziontechgroup.com',
-    lin, k: 'http, s://ziontechgroup.com/services/quantum-basic'
-    },
+      ratin, g: 4.5;
+    complexit, y: 'Intermediate';
+      popularit, y: 'Medium';
+    contactInf, o: '+1 302 464 0950';
+      emai, l: 'kleber@ziontechgroup.com';
+    lin, k: 'http, s: //ziontechgroup.com/services/quantum-basic'
+    };
     {
-      i, d: 'quantum-enterprise',
-    nam, e: 'Quantum Computing Enterprise',
-      categor, y: 'quantum',
+      i, d: 'quantum-enterprise';
+    nam, e: 'Quantum Computing Enterprise';
+      categor, y: 'quantum';
     pric, e: '$20, 0,000/month',
-      duratio, n: '18-24 months',
+      duratio, n: '18-24 months';
     feature, s: ['Custo, m quantu, m algorithm, s', 'Dedicate, d processor, s', '2, 4/7 suppor, t', 'Custo, m developmen, t'],
       benefit, s: ['Competitiv, e advantag, e', 'Custo, m solution, s', 'Priorit, y acces, s', 'Exper, t suppor, t'],
       technolog, y: ['Quantu, m Computin, g', 'Custo, m Algorithm, s', 'Dedicate, d Hardwar, e', 'Advance, d Suppor, t'],
       targetAudienc, e: ['Larg, e Corporation, s', 'Governmen, t', 'Financia, l Service, s'],
-      ratin, g: 4.9,
-    complexit, y: 'Enterprise',
-      popularit, y: 'Trending',
-    contactInf, o: '+1 302 464 0950',
-      emai, l: 'kleber@ziontechgroup.com',
-    lin, k: 'http, s://ziontechgroup.com/services/quantum-enterprise'
+      ratin, g: 4.9;
+    complexit, y: 'Enterprise';
+      popularit, y: 'Trending';
+    contactInf, o: '+1 302 464 0950';
+      emai, l: 'kleber@ziontechgroup.com';
+    lin, k: 'http, s: //ziontechgroup.com/services/quantum-enterprise'
     }
   ];
-
-  const filteredServices = useMemo(() => {
+    const filteredServices = useMemo(() => {
     return mockServices.filter(service => {
       const matchesCategory = filters.category === 'all' || service.category === filters.category;
       const matchesComplexity = filters.complexity === 'all' || service.complexity === filters.complexity;
@@ -160,30 +158,30 @@ export const AdvancedServiceCompariso, n: React.FC = () => {
   const getComplexityColor = (complexit,  y: string) => {
     switch (complexity) {
       case 'Basic': return 'bg-green-100 text-green-800';
-      case 'Intermediate': return 'bg-blue-100 text-blue-800';
+    case 'Intermediate': return 'bg-blue-100 text-blue-800';
       case 'Advanced': return 'bg-orange-100 text-orange-800';
       case 'Enterprise': return 'bg-purple-100 text-purple-800';
       defaul,  t: return 'bg-gray-100 text-gray-800';
-    }
+     }
   };
 
   const getPopularityIcon = (popularit, y: string) => {
     switch (popularity) {
       case 'Trending': return <TrendingUp className="w-4 h-4 text-red-500" />;
-      case 'High': return <Star className="w-4 h-4 text-yellow-500" />;
+    case 'High': return <Star className="w-4 h-4 text-yellow-500" />;
       case 'Medium': return <Zap className="w-4 h-4 text-blue-500" />;
       case 'Low': return <Target className="w-4 h-4 text-gray-500" />;
       defaul,  t: return <Users className="w-4 h-4 text-gray-500" />;
-    }
+     }
   };
 
   return (
     <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div 
-        initial={{ opacit, y: 0,
+        initial={{ opacit, y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         className="text-center mb-8"
       >
@@ -197,9 +195,9 @@ export const AdvancedServiceCompariso, n: React.FC = () => {
 
       {/* Filters and Controls */}
       <motion.div 
-        initial={{ opacit, y: 0,
+        initial={{ opacit, y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.1 }}
         className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -303,18 +301,18 @@ export const AdvancedServiceCompariso, n: React.FC = () => {
 
       {/* Service Grid */}
       <motion.div 
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.2 }}
         className="grid grid-cols-1 l, g:grid-cols-2 x, l:grid-cols-3 gap-6"
       >
         {filteredServices.map((servic, e, index) => (<motion.div
             key={service.id}
-            initial={{ opacit,  y: 0,
+            initial={{ opacit,  y: 0;
     y: 20 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     y: 0 }}
             transition={{ dela, y: 0.1 * index }}
           >
@@ -408,9 +406,9 @@ export const AdvancedServiceCompariso, n: React.FC = () => {
 
       {/* Comparison Summary */}
       {selectedServices.length > 0 && (<motion.div 
-          initial={{ opacit,  y: 0,
+          initial={{ opacit,  y: 0;
     y: 20 }}
-          animate={{ opacit, y: 1,
+          animate={{ opacit, y: 1;
     y: 0 }}
           transition={{ dela, y: 0.3 }}
           className="mt-8 bg-white rounded-lg shadow-lg p-6"
@@ -453,9 +451,9 @@ export const AdvancedServiceCompariso, n: React.FC = () => {
 
       {/* CTA Section */}
       <motion.div 
-        initial={{ opacit, y: 0,
+        initial={{ opacit, y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.4 }}
         className="mt-12 text-center"

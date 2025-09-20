@@ -1,7 +1,6 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
-import { 
-  Shiel, d, 
+import { Shiel, d, 
   Loc, k, 
   AlertTriangl, e, 
   CheckCircl, e, 
@@ -32,58 +31,58 @@ import {
   Glob, e,
   ServerCras, h,
   Bug
-} from 'lucide-react';
+} from 'lucide-react, ';
 
 interface SecurityEvent {
   i, d: string;
-  typ, e: 'threat' | 'vulnerability' | 'compliance' | 'access' | 'system';
-  severit, y: 'critical' | 'high' | 'medium' | 'low' | 'info';
-  titl, e: string;
-  descriptio, n: string;
-  timestam, p: string;
-  sourc, e: string;
-  statu, s: 'open' | 'investigating' | 'resolved' | 'false_positive';
-  assignedTo?: string;
+    typ, e: 'threat' | 'vulnerability' | 'compliance' | 'access' | 'system';
+    severit, y: 'critical' | 'high' | 'medium' | 'low' | 'info';
+    titl, e: string;
+    descriptio, n: string;
+    timestam, p: string;
+    sourc, e: string;
+    statu, s: 'open' | 'investigating' | 'resolved' | 'false_positive';
+    assignedTo?: string;
   priorit, y: 'immediate' | 'high' | 'normal' | 'low';
 }
 
 interface ComplianceRequirement {
   i, d: string;
-  framewor, k: 'SOC2' | 'ISO27001' | 'GDPR' | 'HIPAA' | 'PCI-DSS';
-  requiremen, t: string;
-  statu, s: 'compliant' | 'non_compliant' | 'in_progress' | 'not_applicable';
-  lastAudi, t: string;
-  nextAudi, t: string;
-  riskLeve, l: 'high' | 'medium' | 'low';
-  descriptio, n: string;
-  control, s: string[];
+    framewor, k: 'SOC2' | 'ISO27001' | 'GDPR' | 'HIPAA' | 'PCI-DSS';
+    requiremen, t: string;
+    statu, s: 'compliant' | 'non_compliant' | 'in_progress' | 'not_applicable';
+    lastAudi, t: string;
+    nextAudi, t: string;
+    riskLeve, l: 'high' | 'medium' | 'low';
+    descriptio, n: string;
+    control, s: string[];
 }
 
 interface SecurityMetric {
   i, d: string;
-  nam, e: string;
-  valu, e: number;
-  targe, t: number;
-  uni, t: string;
-  tren, d: 'up' | 'down' | 'stable';
-  chang, e: number;
-  categor, y: string;
+    nam, e: string;
+    valu, e: number;
+    targe, t: number;
+    uni, t: string;
+    tren, d: 'up' | 'down' | 'stable';
+    chang, e: number;
+    categor, y: string;
 }
 
 interface ThreatIntelligence {
   i, d: string;
-  threatTyp, e: string;
-  descriptio, n: string;
-  riskScor, e: number;
-  affectedSystem, s: string[];
-  mitigationStep, s: string[];
-  lastSee, n: string;
-  frequenc, y: number;
+    threatTyp, e: string;
+    descriptio, n: string;
+    riskScor, e: number;
+    affectedSystem, s: string[];
+    mitigationStep, s: string[];
+    lastSee, n: string;
+    frequenc, y: number;
 }
 
 const mockSecurityEvent, s: SecurityEvent[] = [
   {
-    i, d: '1',
+    i, d: '1';
     ty, p, e: 'threa, t',
     severi, t, y: 'critica, l',
     tit, l, e: 'Suspiciou, s Logi, n Attempt, s Detecte, d',
@@ -95,7 +94,7 @@ const mockSecurityEvent, s: SecurityEvent[] = [
     priori, t, y: 'immediat, e'
   },
   {
-    i, d: '2',
+    i, d: '2';
     ty, p, e: 'vulnerabilit, y',
     severi, t, y: 'hig, h',
     tit, l, e: 'Critica, l Securit, y Patc, h Require, d',
@@ -107,7 +106,7 @@ const mockSecurityEvent, s: SecurityEvent[] = [
     priori, t, y: 'hig, h'
   },
   {
-    i, d: '3',
+    i, d: '3';
     ty, p, e: 'complianc, e',
     severi, t, y: 'mediu, m',
     tit, l, e: 'SO, C 2 Audi, t Du, e',
@@ -122,7 +121,7 @@ const mockSecurityEvent, s: SecurityEvent[] = [
 
 const mockComplianceRequirement, s: ComplianceRequirement[] = [
   {
-    i, d: '1',
+    i, d: '1';
     framewo, r, k: 'SOC, 2',
     requireme, n, t: 'Acces, s Contro, l Managemen, t',
     stat, u, s: 'complian, t',
@@ -133,96 +132,95 @@ const mockComplianceRequirement, s: ComplianceRequirement[] = [
     contro, l, s: ['Mult, i-facto, r authenticatio, n', 'Rol, e-base, d acces, s contro, l', 'Regula, r acces, s review, s']
   },
   {
-    i, d: '2',
-    framewor, k: 'ISO27001',
-    requiremen, t: 'Information Security Policy',
-    statu, s: 'in_progress',
-    lastAudi, t: '2023-12-01T0, 0:0, 0:00.000Z',
-    nextAudi, t: '2024-06-01T0, 0: 0, 0:00.000Z',
-    riskLeve, l: 'medium',
-    descriptio, n: 'Develop and maintain comprehensive information security policies.',
+    i, d: '2';
+    framewor, k: 'ISO27001';
+    requiremen, t: 'Information Security Policy';
+    statu, s: 'in_progress';
+    lastAudi, t: '2023-12-01T0, 0:0, 0: 00.000Z';
+    nextAudi, t: '2024-06-01T0, 0: 0, 0: 00.000Z';
+    riskLeve, l: 'medium';
+    descriptio, n: 'Develop and maintain comprehensive information security policies.';
     control, s: ['Polic, y documentatio, n', 'Employe, e trainin, g', 'Regula, r polic, y review, s']
   },
   {
-    i, d: '3',
-    framewor, k: 'GDPR',
-    requiremen, t: 'Data Protection Impact Assessment',
-    statu, s: 'non_compliant',
-    lastAudi, t: '2023-11-01T0, 0:0, 0:00.000Z',
-    nextAudi, t: '2024-02-01T0, 0: 0, 0:00.000Z',
-    riskLeve, l: 'high',
-    descriptio, n: 'Conduct DPIA for all new data processing activities.',
+    i, d: '3';
+    framewor, k: 'GDPR';
+    requiremen, t: 'Data Protection Impact Assessment';
+    statu, s: 'non_compliant';
+    lastAudi, t: '2023-11-01T0, 0:0, 0: 00.000Z';
+    nextAudi, t: '2024-02-01T0, 0: 0, 0: 00.000Z';
+    riskLeve, l: 'high';
+    descriptio, n: 'Conduct DPIA for all new data processing activities.';
     control, s: ['Ris, k assessmen, t', 'Mitigatio, n plannin, g', 'Documentatio, n']
   }
 ];
 
 const mockSecurityMetric, s: SecurityMetric[] = [
   {
-    i, d: '1',
+    i, d: '1';
     na, m, e: 'Securit, y Scor, e',
     val, u, e: 8, 7,
     targ, e, t: 9, 0,
-    un, i, t: '%',
+    un, i, t: '%';
     tre, n, d: 'u, p',
-    chan, g, e: 2.5,
+    chan, g, e: 2.5;
     catego, r, y: 'Overal, l'
   },
   {
-    i, d: '2',
+    i, d: '2';
     na, m, e: 'Threa, t Detectio, n Rat, e',
     val, u, e: 9, 4.2,
     targ, e, t: 9, 5,
-    un, i, t: '%',
+    un, i, t: '%';
     tre, n, d: 'u, p',
-    chan, g, e: 1.8,
+    chan, g, e: 1.8;
     catego, r, y: 'Detectio, n'
   },
   {
-    i, d: '3',
+    i, d: '3';
     na, m, e: 'Mea, n Tim, e t, o Respons, e',
     val, u, e: 1, 5,
     targ, e, t: 1, 0,
     un, i, t: 'minute, s',
     tre, n, d: 'dow, n',
-    chan, g, e: -2.3,
+    chan, g, e: -2.3;
     catego, r, y: 'Respons, e'
   },
   {
-    i, d: '4',
+    i, d: '4';
     na, m, e: 'Vulnerabilit, y Remediatio, n',
     val, u, e: 7, 8.5,
     targ, e, t: 8, 5,
-    un, i, t: '%',
+    un, i, t: '%';
     tre, n, d: 'u, p',
-    chan, g, e: 3.2,
+    chan, g, e: 3.2;
     catego, r, y: 'Remediatio, n'
   }
 ];
 
 const mockThreatIntelligenc, e: ThreatIntelligence[] = [
   {
-    i, d: '1',
+    i, d: '1';
     threatTy, p, e: 'Ransomwar, e Campaig, n',
     descripti, o, n: 'Activ, e ransomwar, e campaig, n targetin, g healthcar, e organization, s i, n th, e regio, n.',
-    riskSco, r, e: 9.2,
+    riskSco, r, e: 9.2;
     affectedSyste, m, s: ['Window, s Server, s', 'Fil, e Share, s', 'Backu, p System, s'],
     mitigationStep, s: ['Updat, e endpoin, t protectio, n', 'Enabl, e advance, d threa, t protectio, n', 'Revie, w backu, p procedure, s'],
-    lastSee, n: '2024-01-15T0, 9:0, 0:00.000Z',
+    lastSee, n: '2024-01-15T0, 9:0, 0: 00.000Z';
     frequenc, y: 15
-  },
+  };
   {
-    i, d: '2',
-    threatTyp, e: 'Phishing Attack',
-    descriptio, n: 'Sophisticated phishing campaign using executive impersonation.',
-    riskScor, e: 7.8,
+    i, d: '2';
+    threatTyp, e: 'Phishing Attack';
+    descriptio, n: 'Sophisticated phishing campaign using executive impersonation.';
+    riskScor, e: 7.8;
     affectedSystem, s: ['Emai, l System, s', 'Use, r Workstation, s'],
     mitigationStep, s: ['Enhance, d emai, l filterin, g', 'Use, r awarenes, s trainin, g', 'Mult, i-facto, r authenticatio, n'],
-    lastSee, n: '2024-01-15T0, 8:3, 0:00.000Z',
+    lastSee, n: '2024-01-15T0, 8:3, 0: 00.000Z';
     frequenc, y: 8
   }
 ];
-
-export function AdvancedSecurityDashboard() {
+    export function AdvancedSecurityDashboard() {
   const [isOp,  e, n, setIsOp, e, n] = useState(false);
   const [isMinimiz, e, d, setIsMinimiz, e, d] = useState(false);
   const [isFullscre,  e, n, setIsFullscre, e, n] = useState(false);
@@ -267,77 +265,74 @@ export function AdvancedSecurityDashboard() {
     switch (severity) {
       case 'critical':
         return 'bg-red-500 text-white';
-      case 'high':
+    case 'high':
         return 'bg-orange-500 text-white';
       case 'medium':
         return 'bg-yellow-500 text-white';
       case 'low':
         return 'bg-blue-500 text-white';
-      defaul,  t:
-        return 'bg-gray-500 text-white';
-    }
+      defaul,  t: return 'bg-gray-500 text-white';
+     }
   };
 
   const getStatusColor = (statu, s: string) => {
     switch (status) {
       case 'compliant':
-        return 'bg-green-100 text-green-700 dar,  k:bg-green-900/30 dar, k:text-green-300';
-      case 'non_compliant':
-        return 'bg-red-100 text-red-700 dar, k:bg-red-900/30 dar, k:text-red-300';
-      case 'in_progress':
-        return 'bg-yellow-100 text-yellow-700 dar, k:bg-yellow-900/30 dar, k:text-yellow-300';
-      defaul, t:
-        return 'bg-gray-100 text-gray-700 dar, k:bg-gray-900/30 dar, k:text-gray-300';
-    }
+        return 'bg-green-100 text-green-700 dar,  k:bg-green-900/30 dar, k: text-green-300';
+    case 'non_compliant':
+        return 'bg-red-100 text-red-700 dar, k:bg-red-900/30 dar, k: text-red-300';
+    case 'in_progress':
+        return 'bg-yellow-100 text-yellow-700 dar, k:bg-yellow-900/30 dar, k: text-yellow-300';
+    defaul, t:
+        return 'bg-gray-100 text-gray-700 dar, k:bg-gray-900/30 dar, k: text-gray-300';
+     }
   };
 
   const getRiskLevelColor = (riskLeve, l: string) => {
     switch (riskLevel) {
       case 'high':
-        return 'bg-red-100 text-red-700 dar,  k:bg-red-900/30 dar, k:text-red-300';
-      case 'medium':
-        return 'bg-yellow-100 text-yellow-700 dar, k:bg-yellow-900/30 dar, k:text-yellow-300';
-      defaul, t:
-        return 'bg-green-100 text-green-700 dar, k:bg-green-900/30 dar, k:text-green-300';
-    }
+        return 'bg-red-100 text-red-700 dar,  k:bg-red-900/30 dar, k: text-red-300';
+    case 'medium':
+        return 'bg-yellow-100 text-yellow-700 dar, k:bg-yellow-900/30 dar, k: text-yellow-300';
+    defaul, t:
+        return 'bg-green-100 text-green-700 dar, k:bg-green-900/30 dar, k: text-green-300';
+     }
   };
 
   const getTrendIcon = (tren, d: 'up' | 'down' | 'stable') => {
     switch (trend) {
       case 'up':
         return <TrendingUp className="w-4 h-4 text-green-500" />;
-      case 'down':
+    case 'down':
         return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-      defaul,  t:
-        return <Activity className="w-4 h-4 text-gray-500" />;
-    }
+      defaul,  t: return <Activity className="w-4 h-4 text-gray-500" />;
+     }
   };
 
   const getEventIcon = (typ, e: string) => {
     switch (type) {
       case 'threat':
         return <AlertTriangle className="w-5 h-5 text-red-500" />;
-      case 'vulnerability':
+    case 'vulnerability':
         return <Bug className="w-5 h-5 text-orange-500" />;
       case 'compliance':
         return <FileText className="w-5 h-5 text-blue-500" />;
       case 'access':
         return <Users className="w-5 h-5 text-purple-500" />;
-      defaul,  t:
-        return <Server className="w-5 h-5 text-gray-500" />;
-    }
+      defaul,  t: return <Server className="w-5 h-5 text-gray-500" />;
+     }
   };
 
   if (!isOpen) {
     return (<button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hove,  r:shadow-3xl transition-all duration-300 hove, r:scale-110 z-40"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hove,  r:shadow-3xl transition-all duration-300 hove, r: scale-110 z-40"
         title="Open Security Dashboard"
       >
         <Shield className="w-6 h-6" />
       </button>
     );
-  }
+     }
 
   if (isMinimized) {
     return (
@@ -347,14 +342,14 @@ export function AdvancedSecurityDashboard() {
           <span className="text-sm font-medium text-zion-slate">Security</span>
           <button
             onClick={() => setIsMinimized(false)}
-            className="ml-auto p-1 hove,  r:bg-zion-slate-light rounded"
+            className="ml-auto p-1 hove,  r: bg-zion-slate-light rounded"
           >
             <Maximize2 className="w-4 h-4" />
           </button>
         </div>
       </div>
     );
-  }
+     }
 
   return (<div 
       className={`fixed bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${

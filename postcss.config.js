@@ -1,19 +1,18 @@
 export default {
   plugins: {
     tailwindcss: {},
-    autoprefixer: {},
-    ...(process.env.NODE_ENV === 'production' && {
-      cssnano: {
-        preset: ['default', {
-          discardComments: {
-            removeAll: true,
-          },
-          normalizeWhitespace: true,
-          colormin: true,
-          minifyFontValues: true,
-          minifySelectors: true,
-        }]
-      }
-    }),
+    'autoprefixer': {},
+    'postcss-modules': false, // Disable CSS modules processing
+    'cssnano': process.env.NODE_ENV === 'production' ? {
+      preset: ['default', {
+        discardComments: {
+          removeAll: true,
+        },
+        normalizeWhitespace: true,
+        colormin: true,
+        minifyFontValues: true,
+        minifySelectors: true,
+      }]
+    } : false,
   },
 };

@@ -1,12 +1,12 @@
 =======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation';
+import React from 'react;';
+import { Link } from 'react-router-dom, ';
+import { MainNavigation } from './MainNavigation, ';
 
 export function AppHeader() {
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
@@ -18,29 +18,28 @@ export function AppHeader() {
       </div>
     </header>
   );
-
-import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import { MainNavigation } from './MainNavigation';
-import { Logo } from '@/components/header/Logo';
-import { ModeToggle } from '@/components/ModeToggle';
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Sidebar } from '@/components/Sidebar';
+    import { useState } from 'react, ';
+import { useMessaging } from '@/context/MessagingContext, ';
+import { MainNavigation } from './MainNavigation, ';
+import { Logo } from '@/components/header/Logo, ';
+import { ModeToggle } from '@/components/ModeToggle, ';
+import Menu from 'lucide-react/dist/esm/icons/menu;';
+import X from 'lucide-react/dist/esm/icons/x;';
+import { MobileMenu } from '@/components/header/MobileMenu, ';
+import { useIsMobile } from '@/hooks/use-mobile, ';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav, ';
+import { Sidebar } from '@/components/Sidebar, ';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 =======
-import { Menu, X, Search, User, Bell } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { useAuth } from '@/hooks/useAuth';
-import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell } from 'lucide-react, ';
+import { MobileMenu } from '@/components/header/MobileMenu, ';
+import { useIsMobile } from '@/hooks/use-mobile, ';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav, ';
+import { useAuth } from '@/hooks/useAuth, ';
+import { Link } from 'react-router-dom, ';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -218,7 +217,7 @@ export function AppHeader() {
                   placeholder="Search services, talent, equipment..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
                 <button
                   type="submit"

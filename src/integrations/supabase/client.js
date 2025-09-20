@@ -1,10 +1,10 @@
-import { supabaseStorageAdapter } from './safeStorageAdapter';
+import { supabaseStorageAdapter } from './safeStorageAdapter, ';
 // Mock implementation
 const createMockSupabaseClient = () => ({
     auth: {
-        persistSession: true,
-        autoRefreshToken: true,
-        storage: supabaseStorageAdapter,
+        persistSession: true;
+        autoRefreshToken: true;
+        storage: supabaseStorageAdapter;
     },
 });
 export const supabase = createMockSupabaseClient();

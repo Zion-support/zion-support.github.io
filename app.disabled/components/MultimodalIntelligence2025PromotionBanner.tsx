@@ -1,3 +1,12 @@
+<<<<<<< HEAD:app/components/MultimodalIntelligence2025PromotionBanner.tsx
+import React from 'react'
+const MultimodalIntelligence2025PromotionBanner: React.FC = () => {;
+  return (
+    <div>
+      <h3 className="text-xl font-bold mb-4">MultimodalIntelligence2025PromotionBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>)}
+=======
 import React from 'react';
 const MultimodalIntelligence2025PromotionBanner: React.FC = () => {;
   return (
@@ -5,4 +14,5 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {;
       <h3 className="text-xl font-bold mb-4">MultimodalIntelligence2025PromotionBanner</h3>;
       <p className="text-gray-300">Revolutionary technology component</p>;
     </div>)};
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/components/MultimodalIntelligence2025PromotionBanner.tsx
 export default MultimodalIntelligence2025PromotionBanner;

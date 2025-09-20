@@ -1,4 +1,4 @@
-import { console.errorToProduction } from '@/utils/productionLogger';
+// import { console.errorToProduction } from '@/utils/productionLogger, ';
 // In-memory storage for fallback with optimizations
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
@@ -51,7 +51,7 @@ export const safeStorage = {
     getItem: (key) => {
         if (typeof window === 'undefined')
             return null;
-        // Don't log verbose messages for Supabase auth tokens to prevent spam
+    // Don't log verbose messages for Supabase auth tokens to prevent spam
         const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
             return localStorage.getItem(key);
@@ -80,7 +80,7 @@ export const safeStorage = {
     removeItem: (key) => {
         if (typeof window === 'undefined')
             return;
-        const isVerboseKey = key.includes('sb-') || key.includes('supabase');
+    const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
             localStorage.removeItem(key);
         }
@@ -95,7 +95,7 @@ export const safeStorage = {
         if (typeof window === 'undefined') {
             for (const key in inMemoryStore) {
                 delete inMemoryStore[key];
-            }
+     }
             return;
         }
         try {
@@ -118,7 +118,7 @@ export const safeSessionStorage = {
     getItem: (key) => {
         if (typeof window === 'undefined')
             return null;
-        try {
+    try {
             return sessionStorage.getItem(key);
         }
         catch (e) {
@@ -138,7 +138,7 @@ export const safeSessionStorage = {
     removeItem: (key) => {
         if (typeof window === 'undefined')
             return;
-        try {
+    try {
             sessionStorage.removeItem(key);
         }
         catch (e) {
@@ -149,7 +149,7 @@ export const safeSessionStorage = {
         if (typeof window === 'undefined') {
             for (const key in sessionMemoryStore) {
                 delete sessionMemoryStore[key];
-            }
+     }
             return;
         }
         try {

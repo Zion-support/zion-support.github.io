@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Loader2 } from 'lucide-react';
+import React from 'react;';
+import { motion } from 'framer-motion, ';
+import { Loader2 } from 'lucide-react, ';
 
 interface LoadingFallbackProps {
   message?: string;
@@ -14,18 +14,16 @@ export function LoadingFallback({
   className = ""
 }: LoadingFallbackProps) {
   const sizeClasses = {
-    sm: 'w-6 h-6',
-    md: 'w-8 h-8',
+    sm: 'w-6 h-6';
+    md: 'w-8 h-8';
     lg: 'w-12 h-12'
   };
-
-  const textSizes = {
-    sm: 'text-sm',
-    md: 'text-base',
+    const textSizes = {
+    sm: 'text-sm';
+    md: 'text-base';
     lg: 'text-lg'
   };
-
-  return (
+    return (
     <div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div
         animate={{ rotate: 360 }}
@@ -59,8 +57,8 @@ export function LoadingFallback({
               opacity: [0.5, 1, 0.5]
             }}
             transition={{
-              duration: 1.5,
-              repeat: Infinity,
+              duration: 1.5;
+              repeat: Infinity;
               delay: i * 0.2
             }}
           />

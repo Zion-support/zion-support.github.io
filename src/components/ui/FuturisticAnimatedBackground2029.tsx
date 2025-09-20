@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react;';
+import { motion } from 'framer-motion, ';
 
 interface FuturisticAnimatedBackground2029Props {
   children?: React.ReactNode;
@@ -9,7 +9,7 @@ interface FuturisticAnimatedBackground2029Props {
 }
 
 export const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ 
-  children, 
+  children;
   className = '',
   intensity = 1,
   theme = 'default'
@@ -22,7 +22,7 @@ interface FuturisticAnimatedBackground2029Props {
 }
 
 const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({
-  intensity = 0.8,
+  intensity = 0.8;
   theme = 'cyberpunk'
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -39,21 +39,20 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
     let animationFrameId: number;
     let particles: Array<{
     if (!canvas) return;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const particles: Array<{
 =======
       x: number;
-      y: number;
+    y: number;
       vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-      type: 'particle' | 'energy' | 'data';
-    }> = [];
+    vy: number;
+    size: number;
+    opacity: number;
+    color: string;
+    type: 'particle' | 'energy' | 'data';
+     }> = [];
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -67,8 +66,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       for (let i = 0; i < particleCount; i++) {
         const type = Math.random() > 0.7 ? 'energy' : Math.random() > 0.5 ? 'data' : 'particle';
         let color: string;
-        
-        switch (type) {
+    switch (type) {
           case 'energy':
             color = `hsl(${Math.random() * 60 + 180}, 80%, 70%)`;
             break;
@@ -80,19 +78,19 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         }
         
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.8 * intensity,
-          vy: (Math.random() - 0.5) * 0.8 * intensity,
-          size: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.6 + 0.2,
+          x: Math.random() * canvas.width;
+          y: Math.random() * canvas.height;
+          vx: (Math.random() - 0.5) * 0.8 * intensity;
+          vy: (Math.random() - 0.5) * 0.8 * intensity;
+          size: Math.random() * 3 + 1;
+          opacity: Math.random() * 0.6 + 0.2;
           color,
           type
         });
       }
     };
       type: 'particle' | 'wave' | 'grid';
-    }> = [];
+     }> = [];
 
     const colors = {
       cyberpunk: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],
@@ -105,24 +103,25 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
     // Create particles
     for (let i = 0; i < 150; i++) {
       particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 3,
-        vy: (Math.random() - 0.5) * 3,
-        size: Math.random() * 4 + 1,
-        opacity: Math.random() * 0.6 + 0.2,
-        color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
+        x: Math.random() * canvas.width;
+        y: Math.random() * canvas.height;
+        vx: (Math.random() - 0.5) * 3;
+        vy: (Math.random() - 0.5) * 3;
+        size: Math.random() * 4 + 1;
+        opacity: Math.random() * 0.6 + 0.2;
+        color: selectedColors[Math.floor(Math.random() * selectedColors.length)];
         type: Math.random() > 0.7 ? 'wave' : Math.random() > 0.5 ? 'grid' : 'particle'
       });
-    }
+     }
 =======
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Create advanced gradient background
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0,
+        canvas.width / 2, canvas.height / 2, 0
+  };
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       );
       
@@ -225,7 +224,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
             ctx.lineTo(otherParticle.x, otherParticle.y);
             
             let lineColor: string;
-            if (particle.type === 'energy' || otherParticle.type === 'energy') {
+    if (particle.type === 'energy' || otherParticle.type === 'energy') {
               lineColor = `rgba(100, 200, 255, ${0.15 * (1 - distance / 120) * intensity})`;
             } else if (particle.type === 'data' || otherParticle.type === 'data') {
               lineColor = `rgba(200, 100, 255, ${0.12 * (1 - distance / 120) * intensity})`;
@@ -277,29 +276,28 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       const time = Date.now() * 0.001;
       const shapes = [
         { 
-          x: Math.sin(time * 0.3) * 250 + canvas.width / 2, 
-          y: Math.cos(time * 0.4) * 200 + canvas.height / 2, 
-          size: 35, 
-          rotation: time * 0.15,
+          x: Math.sin(time * 0.3) * 250 + canvas.width / 2;
+          y: Math.cos(time * 0.4) * 200 + canvas.height / 2;
+          size: 35;
+          rotation: time * 0.15;
           type: 'hexagon'
-        },
+        };
         { 
-          x: Math.cos(time * 0.5) * 300 + canvas.width / 2, 
-          y: Math.sin(time * 0.6) * 150 + canvas.height / 2, 
-          size: 30, 
-          rotation: -time * 0.2,
+          x: Math.cos(time * 0.5) * 300 + canvas.width / 2;
+          y: Math.sin(time * 0.6) * 150 + canvas.height / 2;
+          size: 30;
+          rotation: -time * 0.2;
           type: 'octagon'
-        },
+        };
         { 
-          x: Math.sin(time * 0.7) * 350 + canvas.width / 2, 
-          y: Math.cos(time * 0.2) * 250 + canvas.height / 2, 
-          size: 40, 
-          rotation: time * 0.25,
+          x: Math.sin(time * 0.7) * 350 + canvas.width / 2;
+          y: Math.cos(time * 0.2) * 250 + canvas.height / 2;
+          size: 40;
+          rotation: time * 0.25;
           type: 'diamond'
         }
       ];
-
-      shapes.forEach(shape => {
+    shapes.forEach(shape => {
         ctx.save();
         ctx.translate(shape.x, shape.y);
         ctx.rotate(shape.rotation);
@@ -475,8 +473,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
           scale: [1, 1.2, 1],
         }}
         transition={{
-          duration: 4,
-          repeat: Infinity,
+          duration: 4;
+          repeat: Infinity;
           ease: "easeInOut"
         }}
       />
@@ -489,8 +487,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
           x: [0, 10, 0],
         }}
         transition={{
-          duration: 3.5,
-          repeat: Infinity,
+          duration: 3.5;
+          repeat: Infinity;
           ease: "easeInOut"
         }}
       />
@@ -503,8 +501,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
           scale: [1, 1.1, 1],
         }}
         transition={{
-          duration: 5,
-          repeat: Infinity,
+          duration: 5;
+          repeat: Infinity;
           ease: "easeInOut"
         }}
       />
@@ -517,8 +515,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
           opacity: [0.6, 1, 0.6],
         }}
         transition={{
-          duration: 6,
-          repeat: Infinity,
+          duration: 6;
+          repeat: Infinity;
           ease: "easeInOut"
         }}
       />
@@ -527,7 +525,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
       style={{
-        opacity: intensity,
+        opacity: intensity;
         filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'
       }}
     />

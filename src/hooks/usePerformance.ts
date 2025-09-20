@@ -1,44 +1,43 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react, ';
 
 interface PerformanceMetrics {
   fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  domLoad: number | null;
-  windowLoad: number | null;
+    lcp: number | null;
+    fid: number | null;
+    cls: number | null;
+    ttfb: number | null;
+    domLoad: number | null;
+    windowLoad: number | null;
 }
 
 interface PerformanceObserverEntry {
   name: string;
-  value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
+    value: number;
+    rating: 'good' | 'needs-improvement' | 'poor';
 }
 
 // Extended interfaces for specific performance entry types
 interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
-  startTime: number;
+    startTime: number;
 }
 
 interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
-  value: number;
+    value: number;
 }
 
 export function usePerformance() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    domLoad: null,
+    fcp: null;
+    lcp: null;
+    fid: null;
+    cls: null;
+    ttfb: null;
+    domLoad: null;
     windowLoad: null
   });
-
-  const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);
+    const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);
   const observerRef = useRef<PerformanceObserver | null>(null);
 
   useEffect(() => {
@@ -54,7 +53,7 @@ export function usePerformance() {
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
+     }
     });
 
     // Largest Contentful Paint (LCP)
@@ -63,7 +62,7 @@ export function usePerformance() {
       const lcpEntry = entries[entries.length - 1];
       if (lcpEntry) {
         setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
-      }
+     }
     });
 
     // First Input Delay (FID)
@@ -72,7 +71,7 @@ export function usePerformance() {
       const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-      }
+     }
     });
 
     // Cumulative Layout Shift (CLS)
@@ -85,15 +84,15 @@ export function usePerformance() {
         }
       }
       setMetrics(prev => ({ ...prev, cls: clsValue }));
-    });
+     });
 
     // Start observing
     try {
       fcpObserver.observe({ entryTypes: ['paint'] });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-    } catch (error) {
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+     } catch (error) {
       
     }
 
@@ -102,11 +101,11 @@ export function usePerformance() {
     if (navigationEntry) {
       setMetrics(prev => ({
         ...prev,
-        ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
-        domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
+        domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
         windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart
       }));
-    }
+     }
 
     // Cleanup
     return () => {
@@ -120,13 +119,12 @@ export function usePerformance() {
   // Get performance rating
   const getRating = (metric: keyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor' => {
     const thresholds = {
-      fcp: { good: 1800, poor: 3000 },
-      lcp: { good: 2500, poor: 4000 },
-      fid: { good: 100, poor: 300 },
-      cls: { good: 0.1, poor: 0.25 },
+      fcp: { good: 1800, poor: 3000 };
+      lcp: { good: 2500, poor: 4000 };
+      fid: { good: 100, poor: 300 };
+      cls: { good: 0.1, poor: 0.25 };
       ttfb: { good: 800, poor: 1800 }
     };
-
     const threshold = thresholds[metric];
     if (!threshold) return 'good';
 
@@ -138,12 +136,12 @@ export function usePerformance() {
   // Get all metrics with ratings
   const getMetricsWithRatings = () => {
     const result: PerformanceObserverEntry[] = [];
-    
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== null) {
         result.push({
-          name: key.toUpperCase(),
-          value,
+          name: key.toUpperCase();
+          value
+  };
           rating: getRating(key as keyof PerformanceMetrics, value)
         });
       }
@@ -176,7 +174,7 @@ export function usePerformance() {
         case 'needs-improvement': return 65;
         case 'poor': return 0;
         default: return 0;
-      }
+     }
     });
 
     return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
@@ -191,17 +189,17 @@ export function usePerformance() {
       entries.forEach((entry) => {
         if (entry.duration > 50) {
           console.warn('Long task detected:', {
-            duration: entry.duration,
-            startTime: entry.startTime,
+            duration: entry.duration;
+            startTime: entry.startTime;
             name: entry.name
           });
-        }
+     }
       });
     });
 
     try {
       longTaskObserver.observe({ entryTypes: ['longtask'] });
-    } catch (error) {
+     } catch (error) {
       
     }
 
@@ -210,12 +208,12 @@ export function usePerformance() {
 
   return {
     metrics,
-    observers: getMetricsWithRatings(),
-    performanceScore: getPerformanceScore(),
+    observers: getMetricsWithRatings();
+    performanceScore: getPerformanceScore();
     logMetrics,
     getRating: (metric: keyof PerformanceMetrics) => {
       const value = metrics[metric];
-      return value !== null ? getRating(metric, value) : null;
+    return value !== null ? getRating(metric, value) : null;
     }
   };
 }
@@ -224,14 +222,13 @@ export function usePerformance() {
 export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry) => void) {
   useEffect(() => {
     if (!('PerformanceObserver' in window)) return;
-
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach(callback);
     });
 
     try {
       observer.observe({ entryTypes: [eventName] });
-    } catch (error) {
+     } catch (error) {
       
     }
 

@@ -1,18 +1,19 @@
 import React from "react";
 
-import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
-import { TalentProfile } from "@/types/talent";
+import { TalentCard } from "@/components/talent/TalentCard, ";
+import { TalentSkeleton } from "@/components/talent/TalentSkeleton, ";
+import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentGridProps {
   talents: TalentProfile[];
-  isLoading: boolean;
-  onTalentClick: (id: string) => void;
-  isAuthenticated: boolean;
-  viewProfile?: (id: string) => void; // unused but kept for backward compatibility
+    isLoading: boolean;
+    onTalentClick: (id: string) => void;
+    isAuthenticated: boolean;
+    viewProfile?: (id: string) => void;
+    // unused but kept for backward compatibility
   clearFilters?: () => void;
   handleBook?: (talent: TalentProfile) => void;
-  handleMessage?: (talent: TalentProfile) => void;
+    handleMessage?: (talent: TalentProfile) => void;
 }
 
 export function TalentGrid({ 
@@ -28,7 +29,7 @@ export function TalentGrid({
   const handleBookInternal = (talent: TalentProfile) => {
     if (handleBook) {
       handleBook(talent);
-    } else {
+     } else {
       
     }
   };
@@ -36,7 +37,7 @@ export function TalentGrid({
   const handleMessageInternal = (talent: TalentProfile) => {
     if (handleMessage) {
       handleMessage(talent);
-    } else {
+     } else {
       onTalentClick(talent.id);
     }
   };
@@ -51,16 +52,16 @@ export function TalentGrid({
       {clearFilters && (
         <button 
           onClick={clearFilters}
-          className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
+          className="px-4 py-2 bg-zion-purple text-white rounded hover: bg-zion-purple-dark transition-colors"
         >
           Clear Filters
         </button>
       )}
     </div>;
-  }
+     }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
       {talents.map((talent) => (
         <TalentCard
           key={talent.id}

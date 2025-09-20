@@ -1,22 +1,23 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    es2020: true,
-    node: true
-  },
-  extends: [
-    "eslint:recommended"
-  ],
+  extends: ["eslint:recommended"],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2022,
     sourceType: "module",
     ecmaFeatures: {
       jsx: true
     }
   },
   rules: {
-    "no-unused-vars": "warn",
+    "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     "no-undef": "off"
-  }
+  },
+  env: {
+    browser: true,
+    es2022: true,
+    node: true
+  },
+  ignorePatterns: [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 };

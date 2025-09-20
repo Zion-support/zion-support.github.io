@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react;';
 const ThemeContext = React.createContext(undefined);
 export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = React.useState('system');
@@ -7,7 +7,7 @@ export const ThemeProvider = ({ children }) => {
         root.classList.remove('light', 'dark');
         if (theme === 'system') {
             const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            root.classList.add(systemTheme);
+    root.classList.add(systemTheme);
         }
         else {
             root.classList.add(theme);

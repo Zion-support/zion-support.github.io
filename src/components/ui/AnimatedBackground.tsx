@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;';
 
 interface AnimatedBackgroundProps {
   variant?: 'hero' | 'section' | 'card';
@@ -25,7 +25,7 @@ export function AnimatedBackground({ variant = 'hero', className = '' }: Animate
 =======
         
         {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,113,242,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,113,242,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,113,242,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,113,242,0.1)_1px,transparent_1px)] bg-[size: 50px_50px] animate-pulse"></div>
         
         {/* Neon lines */}
         <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-pulse"></div>
@@ -39,7 +39,7 @@ export function AnimatedBackground({ variant = 'hero', className = '' }: Animate
 =======
       </div>
     );
-  }
+     }
 
   if (variant === 'section') {
     return (
@@ -60,7 +60,7 @@ export function AnimatedBackground({ variant = 'hero', className = '' }: Animate
 =======
       </div>
     );
-  }
+     }
 
   if (variant === 'card') {
     return (
@@ -83,7 +83,7 @@ export function AnimatedBackground({ variant = 'hero', className = '' }: Animate
 =======
       </div>
     );
-  }
+     }
 
   return null;
 }
@@ -96,7 +96,7 @@ export function NeonBorder({ className = '', children }: { className?: string; c
       <div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">
 =======
 =======
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react;';
 
 interface AnimatedBackgroundProps {
   className?: string;
@@ -116,12 +116,12 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
     let animationFrameId: number;
     let particles: Array<{
       x: number;
-      y: number;
+    y: number;
       vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-    }> = [];
+    vy: number;
+    size: number;
+    opacity: number;
+     }> = [];
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -134,12 +134,12 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.1,
+          x: Math.random() * canvas.width;
+          y: Math.random() * canvas.height;
+          vx: (Math.random() - 0.5) * 0.5;
+          vy: (Math.random() - 0.5) * 0.5;
+          size: Math.random() * 2 + 1;
+          opacity: Math.random() * 0.5 + 0.1;
         });
       }
     };
@@ -297,7 +297,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
 // Neon glow effect component
 export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }: {
   children: React.ReactNode;
-  className?: string;
+    className?: string;
   glowColor?: string;
 }) {
   return (
@@ -325,10 +325,10 @@ export function FloatingParticles({ count = 20, className = '' }: {
           key={i}
           className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 2}s`,
-            animationDuration: `${2 + Math.random() * 2}s`,
+            left: `${Math.random() * 100}%`;
+            top: `${Math.random() * 100}%`;
+            animationDelay: `${Math.random() * 2}s`;
+            animationDuration: `${2 + Math.random() * 2}s`;
           }}
         />
       ))}
@@ -339,7 +339,7 @@ export function FloatingParticles({ count = 20, className = '' }: {
 // Gradient border component
 export function GradientBorder({ children, className = '', borderWidth = '2px' }: {
   children: React.ReactNode;
-  className?: string;
+    className?: string;
   borderWidth?: string;
 }) {
   return (
@@ -347,8 +347,8 @@ export function GradientBorder({ children, className = '', borderWidth = '2px' }
       className={`relative ${className}`}
       style={{
         background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
-        padding: borderWidth,
-        borderRadius: 'inherit',
+        padding: borderWidth;
+        borderRadius: 'inherit';
       }}
     >
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">

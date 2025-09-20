@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import { useState } from 'react, ';
+import Link from 'next/link;';
+import { useRouter } from 'next/router, ';
+import { Logo } from '@/components/header/Logo, ';
+import { PointsBadge } from '@/components/loyalty/PointsBadge, ';
+import { UserMenu } from '@/components/header/UserMenu, ';
+import { LanguageSelector } from '@/components/header/LanguageSelector, ';
+import { ModeToggle } from '@/components/ModeToggle, ';
+import { useAuth } from '@/hooks/useAuth, ';
+import { useIsMobile } from '@/hooks/use-mobile, ';
+import { useMessaging } from '@/context/MessagingContext, ';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput, ';
+import { generateSearchSuggestions } from '@/data/marketplaceData, ';
+import { slugify } from '@/lib/slugify, ';
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation, ';
+import { MobileMenu } from '@/components/header/MobileMenu, ';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav, ';
+import { Menu, X, ShoppingCart } from 'lucide-react, ';
+import { useTranslation } from 'react-i18next, ';
+import { useSelector } from 'react-redux, ';
 export function PrimaryNav() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { user } = useAuth();
@@ -76,16 +76,16 @@ export function PrimaryNav() {
             else {
                 // Default: search results page with slug
                 router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
-            }
+     }
             setQuery('');
             // Track analytics event
             if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('event', 'search_suggestion_click', {
-                    search_term: sugg.text,
-                    suggestion_type: sugg.type,
+                    search_term: sugg.text;
+                    suggestion_type: sugg.type;
                     suggestion_id: sugg.id || sugg.slug
                 });
-            }
+     }
         }} searchSuggestions={suggestions}/>
             </form>
             
@@ -138,7 +138,7 @@ export function PrimaryNav() {
           </div>
           
           {/* Mobile menu button */}
-          <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
+          <button className="md: hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
             {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
           </button>
         </div>

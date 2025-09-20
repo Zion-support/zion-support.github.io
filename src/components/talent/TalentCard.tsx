@@ -1,17 +1,17 @@
 
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { MapPin, Clock, CheckCircle2 } from "lucide-react";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useNavigate } from "react-router-dom";
-import { TalentProfile } from "@/types/talent";
+import React from 'react;';
+import { Button } from "@/components/ui/button, ";
+import { Card } from "@/components/ui/card, ";
+import { MapPin, Clock, CheckCircle2 } from "lucide-react, ";
+import { FavoriteButton } from "@/components/FavoriteButton, ";
+import { useNavigate } from "react-router-dom, ";
+import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentCardProps {
   talent: TalentProfile;
-  onBook: (talent: TalentProfile) => void;
-  onMessage: (talent: TalentProfile) => void;
-  isAuthenticated: boolean;
+    onBook: (talent: TalentProfile) => void;
+    onMessage: (talent: TalentProfile) => void;
+    isAuthenticated: boolean;
 }
 
 const TalentCardComponent = ({
@@ -140,7 +140,7 @@ const TalentCardComponent = ({
                 size="sm"
                 variant="secondary"
                 onClick={handleBook}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+                className="bg-zion-purple hover: bg-zion-purple-light text-white"
               >
                 Book
               </Button>

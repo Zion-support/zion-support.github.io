@@ -1,8 +1,7 @@
 import React from "react";
-import { useStat, e, useEffec, t, useCallback } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { 
-  Sen, d, 
+import { useStat, e, useEffec, t, useCallback } from 'react, ';
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { Sen, d, 
   CheckCircl, e, 
   AlertCircl, e, 
   Ey, e, 
@@ -13,22 +12,23 @@ import {
   Use, r,
   MessageSquar, e,
   Building
-} from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
+} from 'lucide-react, ';
+import { useAnalytics } from '../hooks/useAnalytics, ';
 
 interface FormField {
   nam, e: string;
-  labe, l: string;
-  typ, e: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox';
-  placeholder?: string;
+    labe, l: string;
+    typ, e: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox';
+    placeholder?: string;
   required?: boolean;
   validation?: {
     pattern?: RegExp;
     minLength?: number;
     maxLength?: number;
     custom?: (valu,  e: string) => string | null;
-  };
-  options?: { valu, e: string; labe, l: string }[];
+     };
+  options?: { valu, e: string;
+    labe, l: string }[];
 }
 
 interface FormData {
@@ -40,13 +40,13 @@ interface FormValidation {
     isVali, d: boolean;
     messag, e: string;
     isTouche, d: boolean;
-  };
+     };
 }
 
 interface AdvancedFormProps {
   field, s: FormField[];
-  onSubmi, t: (dat,  a: FormData) => Promise<void>;
-  title?: string;
+    onSubmi, t: (dat,  a: FormData) => Promise<void>;
+    title?: string;
   subtitle?: string;
   submitText?: string;
   className?: string;
@@ -68,8 +68,7 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
     enableTrackin,  g: enableAnalytic, s,
     enableUserBehaviorTrackin, g: true
   });
-
-  const [formDa, t, a, setFormDa, t, a] = useState<FormData>({});
+    const [formDa, t, a, setFormDa, t, a] = useState<FormData>({});
   const [validati,  o, n, setValidati, o, n] = useState<FormValidation>({});
   const [isSubmitti, n, g, setIsSubmitti, n, g] = useState(false);
   const [isSubmitt,  e, d, setIsSubmitt, e, d] = useState(false);
@@ -80,15 +79,14 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
   useEffect(() => {
     const initialDat,  a: FormData = {};
     const initialValidatio, n: FormValidation = {};
-
     fields.forEach(field => {
       initialData[fiel, d.na, m, e] = field.type === 'checkbox' ? false : '';
       initialValidation[fiel, d.na, m, e] = {
         isVali, d: !field.require, d,
-    messag, e: '',
+    messag, e: '';
         isTouche, d: false
       };
-    });
+     });
 
     setFormData(initialData);
     setValidation(initialValidation);
@@ -180,16 +178,15 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
       ...pre,  v,
       [na, m, e]: {
         isVali, d: !erro, r,
-    messag, e: error || '',
+    messag, e: error || '';
         isTouche, d: true
       }
     }));
-
     // Track form interaction
     if (enableAnalytics) {
       trackEvent('form',  'field_changed', nam, e, undefine, d, { fieldNam, e: nam, e,
     valu, e: String(value) });
-    }
+     }
   }, [validateFie, l, d, enableAnalyti, c, s, trackEve, n, t]);
 
   // Handle field blur
@@ -202,11 +199,11 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
       [na, m, e]: {
         ...prev[na, m, e],
         isVali, d: !erro, r,
-    messag, e: error || '',
+    messag, e: error || '';
         isTouche, d: true
       }
     }));
-  }, [formDa, t, a, validateFie, l, d]);
+     }, [formDa, t, a, validateFie, l, d]);
 
   // Check if form is valid
   const isFormValid = useCallback(() => {
@@ -216,14 +213,13 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
   // Handle form submission
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!isFormValid()) {
       // Track validation error
       if (enableAnalytics) {
         trackEvent('form',  'validation_error', 'form_submission_failed', undefine, d, { 
           error, s: Object.values(validation).filter(v => !v.isValid).length 
         });
-      }
+     }
       return;
     }
 
@@ -241,7 +237,7 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
       if (enableAnalytics) {
         trackEvent('form',  'submission_success', 'form_completed');
         trackConversion('form_submission',  1, { formTyp, e: title });
-      }
+     }
 
       setIsSubmitted(true);
       
@@ -259,7 +255,7 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
         trackEvent('form',  'submission_error', 'form_failed', undefine, d, { 
           erro, r: error instanceof Error ? error.message : 'Unknown error' 
         });
-      }
+     }
       
       
     } finally {
@@ -276,11 +272,11 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
   const getFieldIcon = useCallback((fiel,  d: FormField) => {
     switch (field.type) {
       case 'email': return <Mail className="w-4 h-4" />;
-      case 'tel': return <Phone className="w-4 h-4" />;
+    case 'tel': return <Phone className="w-4 h-4" />;
       case 'textarea': return <MessageSquare className="w-4 h-4" />;
       case 'select': return <Building className="w-4 h-4" />;
       defaul,  t: return <User className="w-4 h-4" />;
-    }
+     }
   }, []);
 
   // Render field
@@ -292,9 +288,9 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
     return (
       <motion.div
         key={field.name}
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         className="space-y-2"
       >
@@ -398,25 +394,25 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
         {/* Validation Message */}
         {fieldValidation?.isTouched && fieldValidation.message && (
           <motion.p
-            initial={{ opacit,  y: 0,
+            initial={{ opacit,  y: 0;
     heigh, t: 0 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     heigh, t: 'auto' }}
-            className="text-sm text-red-600 dar, k:text-red-400"
+            className="text-sm text-red-600 dar, k: text-red-400"
           >
             {fieldValidation.message}
           </motion.p>
         )}
       </motion.div>
     );
-  }, [formDa, t, a, validati, o, n, showPasswo, r, d, getFieldIc, o, n, handleFieldChan, g, e, handleFieldBl, u, r, togglePasswordVisibili, t, y]);
+     }, [formDa, t, a, validati, o, n, showPasswo, r, d, getFieldIc, o, n, handleFieldChan, g, e, handleFieldBl, u, r, togglePasswordVisibili, t, y]);
 
   if (isSubmitted) {
     return (
       <motion.div
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     scal, e: 0.9 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     scal, e: 1 }}
         className="text-center p-8 bg-green-50 dar, k:bg-green-900/20 rounded-xl border border-green-200 dar, k:border-green-700"
       >
@@ -424,17 +420,17 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
         <h3 className="text-2xl font-bold text-green-800 dar, k:text-green-200 mb-2">
           Thank You!
         </h3>
-        <p className="text-green-600 dar, k:text-green-300">
+        <p className="text-green-600 dar, k: text-green-300">
           Your message has been sent successfully. We'll get back to you soon!
         </p>
       </motion.div>
     );
-  }
+     }
 
   return (<motion.div
-      initial={{ opacit,  y: 0,
+      initial={{ opacit,  y: 0;
     y: 20 }}
-      animate={{ opacit, y: 1,
+      animate={{ opacit, y: 1;
     y: 0 }}
       className={`bg-white dar, k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar, k:border-gray-700 overflow-hidden ${classNam, e}`}
     >
@@ -495,15 +491,15 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
         <AnimatePresence>
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (
             <motion.div
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     heigh, t: 0 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     heigh, t: 'auto' }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     heigh, t: 0 }}
               className="p-3 bg-red-50 dar, k:bg-red-900/20 border border-red-200 dar, k:border-red-700 rounded-lg"
             >
-              <p className="text-sm text-red-600 dar, k:text-red-400">
+              <p className="text-sm text-red-600 dar, k: text-red-400">
                 Please fix the errors above before submitting the form.
               </p>
             </motion.div>

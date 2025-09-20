@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react;';
 
 interface FuturisticBackgroundProps {
   variant?: 'particles' | 'grid' | 'waves' | 'matrix';
@@ -32,13 +32,13 @@ export function FuturisticBackground({
     if (variant === 'particles') {
       const particles: Array<{
         x: number;
-        y: number;
+    y: number;
         vx: number;
-        vy: number;
-        size: number;
-        opacity: number;
-        color: string;
-      }> = [];
+    vy: number;
+    size: number;
+    opacity: number;
+    color: string;
+     }> = [];
 
       const colors = [
         '#00ffff', // Cyan
@@ -55,15 +55,15 @@ export function FuturisticBackground({
       const particleCount = intensity === 'high' ? 200 : intensity === 'medium' ? 100 : 50;
       for (let i = 0; i < particleCount; i++) {
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2,
-          vy: (Math.random() - 0.5) * 2,
-          size: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.8 + 0.2,
+          x: Math.random() * canvas.width;
+          y: Math.random() * canvas.height;
+          vx: (Math.random() - 0.5) * 2;
+          vy: (Math.random() - 0.5) * 2;
+          size: Math.random() * 3 + 1;
+          opacity: Math.random() * 0.8 + 0.2;
           color: colors[Math.floor(Math.random() * colors.length)]
         });
-      }
+     }
 
       // Animation loop
       const animate = () => {
@@ -208,7 +208,7 @@ export function FuturisticBackground({
     if (variant === 'matrix') {
       const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const drops: number[] = [];
-      const fontSize = intensity === 'high' ? 12 : intensity === 'medium' ? 16 : 20;
+    const fontSize = intensity === 'high' ? 12 : intensity === 'medium' ? 16 : 20;
       const columns = Math.floor(canvas.width / fontSize);
       
       for (let i = 0; i < columns; i++) {
@@ -263,7 +263,7 @@ export function NeonText({
   className = '' 
 }: {
   children: React.ReactNode;
-  color?: string;
+    color?: string;
   glowIntensity?: 'low' | 'medium' | 'high';
   className?: string;
 }) {
@@ -273,9 +273,9 @@ export function NeonText({
     <span
       className={className}
       style={{
-        color: color,
+        color: color;
         textShadow: `
-          ${glowSize} ${color},
+          ${glowSize} ${color};
           0 0 30px ${color},
           0 0 40px ${color}
         `,
@@ -295,7 +295,7 @@ export function FuturisticCard({
   intensity = 'medium'
 }: {
   children: React.ReactNode;
-  className?: string;
+    className?: string;
   glowColor?: string;
   intensity?: 'low' | 'medium' | 'high';
 }) {
@@ -305,7 +305,7 @@ export function FuturisticCard({
     <div
       className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm ${className}`}
       style={{
-        boxShadow: `0 0 ${glowSize} ${glowColor}`,
+        boxShadow: `0 0 ${glowSize} ${glowColor}`;
         borderColor: `${glowColor}40`
       }}
     >
@@ -339,10 +339,10 @@ style.textContent = `
   @keyframes shimmer {
     0% {
       transform: translateX(-100%);
-    }
+     }
     100% {
       transform: translateX(100%);
-    }
+     }
   }
 `;
 document.head.appendChild(style);

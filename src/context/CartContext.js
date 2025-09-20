@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
-import { useAuth } from '@/hooks/useAuth';
-import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
+import React, { createContext, useContext, useReducer, useEffect } from 'react;';
+import { safeStorage } from '@/utils/safeStorage, ';
+import { useAuth } from '@/hooks/useAuth, ';
+import { getCartKey, mergeCartItems } from '@/utils/cartUtils, ';
 const initialState = { items: [] };
-function cartReducer(state, action) {
+    function cartReducer(state, action) {
     switch (action.type) {
         case 'ADD_ITEM': {
             const existing = state.items.find(i => i.id === action.payload.id);
@@ -12,7 +12,7 @@ function cartReducer(state, action) {
                 items = state.items.map(i => i.id === action.payload.id
                     ? { ...i, quantity: i.quantity + action.payload.quantity }
                     : i);
-            }
+     }
             else {
                 items = [...state.items, action.payload];
             }
@@ -20,11 +20,10 @@ function cartReducer(state, action) {
         }
         case 'REMOVE_ITEM':
             return { items: state.items.filter(i => i.id !== action.payload) };
-        case 'CLEAR_CART':
+    case 'CLEAR_CART':
             return { items: [] };
-        default:
-            return state;
-    }
+    default: return state;
+     }
 }
 const CartContext = createContext(undefined);
 export function useCart() {
@@ -63,12 +62,12 @@ export function CartProvider({ children }) {
             }
         }
         dispatch({ type: 'SET_ITEMS', payload: items });
-    }, [cartKey]);
+     }, [cartKey]);
     useEffect(() => {
         safeStorage.setItem(cartKey, JSON.stringify(state.items));
     }, [state.items, cartKey]);
     const value = {
-        items: state.items,
+        items: state.items;
         dispatch,
     };
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

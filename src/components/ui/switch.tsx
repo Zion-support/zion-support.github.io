@@ -1,44 +1,10 @@
-import React from "react";
-import, React, from "react";
-import { cn } from "../../utils/, cn";interface SwitchProps {
-  checked?: boolean;
-  onCheckedChange?: (checked: boolean) => voiddisabled?: boolean;
-  className?: string;
-  id?: string;
-  'aria-label'?: string;
-}export, function, Switch() {
-;
-  const handleToggle = () => {
-    if (if (!disabled && onCheckedChange) {
-  ) {
-      onCheckedChange(!checked);
-    }};
-  return <butto;n;
-      type="button";
-      role="switch";
-      aria-checked={{checked};
+import React from 'react',
+const switch: React.FC = () => {
+    ;
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">switch</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>
   };
-      aria-label={{ariaLabel};
-  };
-      disabled={{disabled};
-  };
-      onClick={{onClick={handleToggle},;
-  };
-  };
-      className={cn(;
-  'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disable,;
-    d:cursor-not-allowed disable,;
-  d:opacity-50'checked ? 'bg-primary' : 'bg-input';
-        disabled && 'opacity-50 cursor-not-allowed';
-        className)}
-      id={{id}}{{...props};
-  };
-    >;
-      <span;
-        className={cn(;
-  'pointer-events-none, block, h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform';
-          checked ? 'translate-x-5' : 'translate-x-0';
-)}
-      />;
-    </button>;
-  );
+    </div>)},
+export default switch,

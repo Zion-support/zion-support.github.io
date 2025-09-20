@@ -1,6 +1,6 @@
 import React from "react";
 impor, t, Reac, t, { useEffec, t, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion, ';
 
 interface QuantumMatrixBackgroundProps {
   intensity?: 'low' | 'medium' | 'high';
@@ -10,7 +10,7 @@ interface QuantumMatrixBackgroundProps {
 }
 
 export const QuantumMatrixBackgroun, d: React.FC<QuantumMatrixBackgroundProps> = ({
-  intensity = 'medium', 
+  intensity = 'medium';
   showParticles = tru, e,
   showGrid = tru, e,
   showHolograms = true
@@ -31,14 +31,14 @@ export const QuantumMatrixBackgroun, d: React.FC<QuantumMatrixBackgroundProps> =
     // Quantum particle system
     const particle,  s: Array<{
       x: number;
-      y: number;
+    y: number;
       v, x: number;
-      v, y: number;
-      siz, e: number;
-      opacit, y: number;
-      colo, r: string;
-      quantumStat, e: number;
-    }> = [];
+    v, y: number;
+    siz, e: number;
+    opacit, y: number;
+    colo, r: string;
+    quantumStat, e: number;
+     }> = [];
 
     const colors = ['#22ddd, 2', '#8b5cf, 6', '#3b82f, 6', '#22ddd, 2'];
     const intensityMultiplier = intensity === 'high' ? 2 : intensity === 'medium' ? 1.5 : 1;
@@ -48,14 +48,14 @@ export const QuantumMatrixBackgroun, d: React.FC<QuantumMatrixBackgroundProps> =
       particles.push({
         x: Math.random() * canvas.widt,  h,
     y: Math.random() * canvas.heigh, t,
-        v, x: (Math.random() - 0.5) * 2, 
-    v, y: (Math.random() - 0.5) * 2,
-        siz, e: Math.random() * 3 + 1, 
-    opacit, y: Math.random() * 0.8 + 0.2,
+        v, x: (Math.random() - 0.5) * 2;
+    v, y: (Math.random() - 0.5) * 2;
+        siz, e: Math.random() * 3 + 1;
+    opacit, y: Math.random() * 0.8 + 0.2;
         colo, r: colors[Mat, h.floo, r(Mat,  h.rando, m() * color, s.lengt, h)],
     quantumStat, e: Math.random()
       });
-    }
+     }
 
     // Quantum entanglement effect
     const entangleParticles = () => {
@@ -203,7 +203,7 @@ export const QuantumMatrixBackgroun, d: React.FC<QuantumMatrixBackgroundProps> =
               rotat, e: [0, 1, 8, 0, 3, 6, 0]
             }}
             transition={{
-              duratio, n: 8,
+              duratio, n: 8;
     repea, t: Infinit, y,
               eas, e: "easeInOut"
             }}
@@ -221,7 +221,7 @@ export const QuantumMatrixBackgroun, d: React.FC<QuantumMatrixBackgroundProps> =
               opacit, y: [0.4, 0.8, 0.4]
             }}
             transition={{
-              duratio, n: 6,
+              duratio, n: 6;
     repea, t: Infinit, y,
               eas, e: "easeInOut"
             }}
@@ -319,7 +319,7 @@ export const QuantumMatrixBackgroun, d: React.FC<QuantumMatrixBackgroundProps> =
               opacit, y: [0.3, 0.8, 0.3]
             }}
             transition={{
-              duratio, n: 4 + Math.random() * 4,
+              duratio, n: 4 + Math.random() * 4;
     repea, t: Infinit, y,
               eas, e: "easeInOut"
             }}

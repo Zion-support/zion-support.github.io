@@ -1,24 +1,25 @@
 import React from "react";
 impor, t, Reac, t, { useState } from 'react';
-import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3, ';
+import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions, ';
 
 interface ServiceContact {
   mobil, e: string;
-  emai, l: string;
-  addres, s: string;
-  websit, e: string;
+    emai, l: string;
+    addres, s: string;
+    websit, e: string;
 }
 
 const EnhancedComprehensiveServicesShowcas, e: React.FC = () => {
-  const [activeCatego,  r, y, setActiveCatego, r, y] = useState('all');
+    const [activeCatego,  r, y, setActiveCatego, r, y] = useState('all');
   const [searchTe, r, m, setSearchTe, r, m] = useState('');
   const [selectedServi,  c, e, setSelectedServi, c, e] = useState<any>(null);
 
   const allServices = [
     ...advancedInnovativeServicesExpansionV, 3.ma, p(servic,  e => ({ 
       ...servi, c, e, 
-      ty, p, e: 'Advance, d A, I & Innovatio, n',
+      ty, p, e: 'Advance, d A, I & Innovatio, n'
+  };
     displayPri, c, e: servic, e.pric, e
     })),
     ...specializedEnterpriseSolutions202, 5.ma, p(servic,  e => ({ 
@@ -47,7 +48,7 @@ const EnhancedComprehensiveServicesShowcas, e: React.FC = () => {
 
   const handleServiceClick = (servic, e: any) => {
     setSelectedService(service);
-  };
+     };
 
   const closeModal = () => {
     setSelectedService(null);

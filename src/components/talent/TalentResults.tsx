@@ -1,20 +1,20 @@
 import React from "react";
 
 
-import { TalentProfile } from "@/types/talent";
-import { ActiveFilters } from "@/components/talent/ActiveFilters";
-import { ResultsHeader } from "@/components/talent/ResultsHeader";
-import { TalentGrid } from "@/components/talent/TalentGrid";
+import { TalentProfile } from "@/types/talent, ";
+import { ActiveFilters } from "@/components/talent/ActiveFilters, ";
+import { ResultsHeader } from "@/components/talent/ResultsHeader, ";
+import { TalentGrid } from "@/components/talent/TalentGrid, ";
 
 interface TalentResultsProps {
   talents: TalentProfile[];
-  totalCount: number;
-  isLoading: boolean;
-  viewProfile: (id: string) => void;
-  handleBook: (talent: TalentProfile) => void;
-  handleMessage: (talent: TalentProfile) => void;
-  isAuthenticated: boolean;
-  activeFiltersProps: {
+    totalCount: number;
+    isLoading: boolean;
+    viewProfile: (id: string) => void;
+    handleBook: (talent: TalentProfile) => void;
+    handleMessage: (talent: TalentProfile) => void;
+    isAuthenticated: boolean;
+    activeFiltersProps: {
     selectedSkills: string[];
     toggleSkill: (skill: string) => void;
     selectedAvailability: string[];
@@ -26,7 +26,7 @@ interface TalentResultsProps {
     experienceRange: [number, number];
     setExperienceRange: (range: [number, number]) => void;
     clearFilters: () => void;
-  }
+     }
 }
 
 export function TalentResults({

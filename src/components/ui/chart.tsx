@@ -3,17 +3,19 @@ import * as React from "react"
 import * as RechartsPrimitive from "recharts"
 import type { LegendProps as RechartsLegendProps } from "recharts/types/component/Legend"
 
-import { cn } from "@/lib/utils"
+import { cn  } from "@/lib/utils"
 
 // Format: { THEME_NAME: CSS_SELECTOR }
-const THEMES = { light: "", dark: ".dark" } as const
+const THEMES = { light: ";
+    ", dark: ".dark" } as const
 
 export type ChartConfig = {
   [k in string]: {
     label?: React.ReactNode
     icon?: React.ComponentType
   } & (
-    | { color?: string; theme?: never }
+    | { color?: string;
+    theme?: never }
     | { color?: never; theme: Record<keyof typeof THEMES, string> }
   )
 }
@@ -35,7 +37,7 @@ function useChart() {
 }
 
 const ChartContainer = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
   React.ComponentProps<"div"> & {
     config: ChartConfig
     children: React.ComponentProps<
@@ -67,7 +69,8 @@ const ChartContainer = React.forwardRef<
 })
 ChartContainer.displayName = "Chart"
 
-const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
+const ChartStyle = ({ id, config }: { id: string;
+    config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
     ([_, config]) => config.theme || config.color
   )
@@ -302,7 +305,7 @@ const ChartLegendContent = React.forwardRef<
                 <div
                   className="h-2 w-2 shrink-0 rounded-[2px]"
                   style={{
-                    backgroundColor: item.color,
+                    backgroundColor: item.color;
                   }}
                 />
               )}
@@ -318,8 +321,8 @@ ChartLegendContent.displayName = "ChartLegend"
 
 // Helper to extract item config from a payload.
 function getPayloadConfigFromPayload(
-  config: ChartConfig,
-  payload: unknown,
+  config: ChartConfig;
+  payload: unknown;
   key: string
 ) {
   if (typeof payload !== "object" || payload === null) {
@@ -356,7 +359,7 @@ function getPayloadConfigFromPayload(
 }
 
 export {
-  ChartContainer,
+  ChartContainer;
   ChartTooltip,
   ChartTooltipContent,
   ChartLegend,

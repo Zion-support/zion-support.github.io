@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  EyeIcon, 
+import React, { useState, useEffect } from 'react;';
+import { motion, AnimatePresence } from 'framer-motion, ';
+import { EyeIcon, 
   EyeSlashIcon, 
   SpeakerWaveIcon, 
   SpeakerXMarkIcon,
@@ -12,31 +11,30 @@ import {
   ArrowDownIcon,
   MagnifyingGlassIcon,
   CursorArrowRaysIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline, ';
 
 interface AccessibilitySettings {
   highContrast: boolean;
-  fontSize: number;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusIndicator: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+    fontSize: number;
+    reducedMotion: boolean;
+    screenReader: boolean;
+    keyboardNavigation: boolean;
+    focusIndicator: boolean;
+    colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 
 const EnhancedAccessibility: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    fontSize: 16,
-    reducedMotion: false,
-    screenReader: false,
-    keyboardNavigation: false,
-    focusIndicator: true,
+    highContrast: false;
+    fontSize: 16;
+    reducedMotion: false;
+    screenReader: false;
+    keyboardNavigation: false;
+    focusIndicator: true;
     colorBlindness: 'none'
   });
-
-  useEffect(() => {
+    useEffect(() => {
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -53,12 +51,11 @@ const EnhancedAccessibility: React.FC = () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
       setSettings(prev => ({ ...prev, reducedMotion: true }));
-    }
+     }
   }, []);
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
     // High contrast mode
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
@@ -115,12 +112,12 @@ const EnhancedAccessibility: React.FC = () => {
 
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
-      fontSize: 16,
-      reducedMotion: false,
-      screenReader: false,
-      keyboardNavigation: false,
-      focusIndicator: true,
+      highContrast: false;
+      fontSize: 16;
+      reducedMotion: false;
+      screenReader: false;
+      keyboardNavigation: false;
+      focusIndicator: true;
       colorBlindness: 'none'
     };
     setSettings(defaultSettings);
@@ -130,7 +127,7 @@ const EnhancedAccessibility: React.FC = () => {
   const speakText = (text: string) => {
     if ('speechSynthesis' in window) {
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.rate = 0.9;
+    utterance.rate = 0.9;
       utterance.pitch = 1;
       speechSynthesis.speak(utterance);
     }
@@ -138,7 +135,7 @@ const EnhancedAccessibility: React.FC = () => {
 
   const announcePageChange = (pageName: string) => {
     speakText(`Navigated to ${pageName}`);
-  };
+     };
 
   return (
     <>
@@ -338,7 +335,7 @@ const EnhancedAccessibility: React.FC = () => {
                   </span>
                   <button
                     onClick={() => updateSetting('keyboardNavigation', !settings.keyboardNavigation)}
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus: outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${
                       settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'
                     }`}
                     role="switch"

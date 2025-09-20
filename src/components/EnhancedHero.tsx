@@ -1,38 +1,39 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { ChevronLef, t, ChevronRigh, t, Pla, y, Paus, e, Volume, 2, VolumeX } from 'lucide-react';
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { ChevronLef, t, ChevronRigh, t, Pla, y, Paus, e, Volume, 2, VolumeX } from 'lucide-react, ';
 
 interface HeroSlide {
   i, d: number;
-  titl, e: string;
-  subtitl, e: string;
-  descriptio, n: string;
-  ctaTex, t: string;
-  ctaLin, k: string;
-  backgroun, d: string;
-  ico, n: React.ReactNode;
+    titl, e: string;
+    subtitl, e: string;
+    descriptio, n: string;
+    ctaTex, t: string;
+    ctaLin, k: string;
+    backgroun, d: string;
+    ico, n: React.ReactNode;
 }
 
 const EnhancedHer, o: React.FC = () => {
-  const [currentSli,  d, e, setCurrentSli, d, e] = useState(0);
+    const [currentSli,  d, e, setCurrentSli, d, e] = useState(0);
   const [isPlayi, n, g, setIsPlayi, n, g] = useState(true);
   const [isMut,  e, d, setIsMut, e, d] = useState(false);
   const [isAutoPlayi, n, g, setIsAutoPlayi, n, g] = useState(true);
 
   const heroSlide,  s: HeroSlide[] = [
     {
-      i, d: 1,
+      i, d: 1;
     tit, l, e: "Transfor, m You, r Busines, s",
       subtit, l, e: "Wit, h Zio, n Tec, h Grou, p",
     descripti, o, n: "Discove, r ou, r cuttin, g-edg, e micr, o SAA, S solution, s designe, d t, o scal, e you, r busines, s operation, s an, d driv, e growt, h.",
       ctaTe, x, t: "Explor, e Service, s",
     ctaLi, n, k: "/micr, o-saa, s-service, s",
-      backgrou, n, d: "linea, r-gradien, t(135d, e, g, #667ee, a 0%, #764ba, 2 10, 0%)",
+      backgrou, n, d: "linea, r-gradien, t(135d, e, g, #667ee, a 0%, #764ba, 2 10, 0%)"
+  };
       ic, o, n: "🚀"
-    },
+    };
     {
-      i, d: 2,
+      i, d: 2;
     tit, l, e: "A, I-Powere, d Solution, s",
       subtit, l, e: "Fo, r Moder, n Enterprise, s",
     descripti, o, n: "Leverag, e artificia, l intelligenc, e t, o automa, t, e, workflo, w, s, enhan, c, e, productivi, t, y, an, d gai, n competitiv, e advantage, s.",
@@ -40,9 +41,9 @@ const EnhancedHer, o: React.FC = () => {
     ctaLi, n, k: "/a, i-solution, s",
       backgrou, n, d: "linea, r-gradien, t(135d,  e, g, #f093f, b 0%, #f5576, c 10, 0%)",
       ic, o, n: "🤖"
-    },
+    };
     {
-      i, d: 3,
+      i, d: 3;
     tit, l, e: "Clou, d-Nativ, e Architectur, e",
       subtit, l, e: "Buil, t fo, r Scal, e",
     descripti, o, n: "Enterpris, e-grad, e clou, d solution, s tha, t gro, w wit, h yo, u, r, busine, s, s, ensurin, g reliabilit, y an, d performanc, e.",
@@ -52,8 +53,7 @@ const EnhancedHer, o: React.FC = () => {
       ic, o, n: "☁️"
     }
   ];
-
-  useEffect(() => {
+    useEffect(() => {
     if (!isAutoPlaying) return;
     
     const interval = setInterval(() => {
@@ -75,7 +75,7 @@ const EnhancedHer, o: React.FC = () => {
 
   const goToSlide = (inde,  x: number) => {
     setCurrentSlide(index);
-  };
+     };
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
@@ -105,22 +105,22 @@ const EnhancedHer, o: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
-              initial={{ opacit, y: 0,
+              initial={{ opacit, y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               transition={{ duratio, n: 0.5 }}
               className="space-y-6"
             >
               {/* Icon */}
               <motion.div
-                initial={{ scal, e: 0,
+                initial={{ scal, e: 0;
     rotat, e: -180 }}
-                animate={{ scal, e: 1,
+                animate={{ scal, e: 1;
     rotat, e: 0 }}
-                transition={{ duratio, n: 0.6,
+                transition={{ duratio, n: 0.6;
     dela, y: 0.2 }}
                 className="text-8xl mb-6"
               >
@@ -129,11 +129,11 @@ const EnhancedHer, o: React.FC = () => {
 
               {/* Title */}
               <motion.h1
-                initial={{ opacit, y: 0,
+                initial={{ opacit, y: 0;
     y: 30 }}
-                animate={{ opacit, y: 1,
+                animate={{ opacit, y: 1;
     y: 0 }}
-                transition={{ duratio, n: 0.6,
+                transition={{ duratio, n: 0.6;
     dela, y: 0.3 }}
                 className="text-4xl s, m:text-5xl l, g:text-7xl font-bold text-white leading-tight"
               >
@@ -142,11 +142,11 @@ const EnhancedHer, o: React.FC = () => {
 
               {/* Subtitle */}
               <motion.h2
-                initial={{ opacit, y: 0,
+                initial={{ opacit, y: 0;
     y: 30 }}
-                animate={{ opacit, y: 1,
+                animate={{ opacit, y: 1;
     y: 0 }}
-                transition={{ duratio, n: 0.6,
+                transition={{ duratio, n: 0.6;
     dela, y: 0.4 }}
                 className="text-2xl s, m:text-3xl l, g:text-4xl font-semibold text-blue-300 leading-tight"
               >
@@ -155,11 +155,11 @@ const EnhancedHer, o: React.FC = () => {
 
               {/* Description */}
               <motion.p
-                initial={{ opacit, y: 0,
+                initial={{ opacit, y: 0;
     y: 30 }}
-                animate={{ opacit, y: 1,
+                animate={{ opacit, y: 1;
     y: 0 }}
-                transition={{ duratio, n: 0.6,
+                transition={{ duratio, n: 0.6;
     dela, y: 0.5 }}
                 className="text-lg s, m:text-xl l, g:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
               >
@@ -168,11 +168,11 @@ const EnhancedHer, o: React.FC = () => {
 
               {/* CTA Button */}
               <motion.div
-                initial={{ opacit, y: 0,
+                initial={{ opacit, y: 0;
     y: 30 }}
-                animate={{ opacit, y: 1,
+                animate={{ opacit, y: 1;
     y: 0 }}
-                transition={{ duratio, n: 0.6,
+                transition={{ duratio, n: 0.6;
     dela, y: 0.6 }}
                 className="pt-6"
               >
@@ -183,7 +183,7 @@ const EnhancedHer, o: React.FC = () => {
                   {heroSlides[currentSli, d, e].ctaText}
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
-                    transition={{ duratio, n: 1.5,
+                    transition={{ duratio, n: 1.5;
     repea, t: Infinity }}
                     className="ml-2"
                   >
@@ -259,7 +259,7 @@ const EnhancedHer, o: React.FC = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hove, r:bg-white/20 transition-colors duration-300"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hove, r: bg-white/20 transition-colors duration-300"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6 text-white" />

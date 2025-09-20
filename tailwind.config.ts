@@ -1,13 +1,12 @@
 import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
-import plugin from 'tailwindcss/plugin'
 import animatePlugin from 'tailwindcss-animate'
+import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    './public/**/*.html',
   ],
   theme: {
     extend: {
@@ -134,6 +133,6 @@ const config: Config = {
       addUtilities(newUtilities);
     }),
   ],
-}
+};
 
-export default config
+export default config;
