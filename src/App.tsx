@@ -237,20 +237,21 @@ const LoadingFallback = () => (
   </div>
 );
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <Router>
+      <AppHeader />
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/contact" element={<Contact />} />
+          {baseRoutes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
         </Routes>
       </Suspense>
-    </div>
+      <ChatAssistant />
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;
