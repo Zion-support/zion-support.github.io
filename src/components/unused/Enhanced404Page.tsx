@@ -7,7 +7,7 @@ MagnifyingGlassIcon;
 ArrowLeftIcon, ExclamationTriangleIcon  } from "@heroicons/react/24/outline, ";
 
 interface Enhanced404PageProps {
-requestedPath?: string;
+requestedPath?: string;origin/main
 suggestedRoutes?: string[]};
 export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({ ;
 requestedPath;
@@ -16,8 +16,8 @@ suggestedRoutes = [];
 const defaultSuggestions = [
 "/services",
 "/ai-solutions",
-"/about",
-"/contact",
+"/about",;
+"/contact",;
 "/case-studies";
 ];
 

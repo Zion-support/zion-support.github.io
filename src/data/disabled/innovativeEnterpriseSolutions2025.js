@@ -1,7 +1,6 @@
 export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
     // Autonomous Digital Transformation Platform;
-    {
-        id: "autonomous-digital-transformation-platform-2025";
+    {id: "autonomous-digital-transformation-platform-2025";
         title: "Autonomous Digital Transformation Platform 2025";
         description: "Comprehensive digital transformation platform that autonomously assesses, plans, and executes digital transformation initiatives across enterprises using AI, automation, and advanced analytics.",
         category: "Digital Transformation";
@@ -62,8 +61,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         industryApplications: ["Manufacturing", "Healthcare", "Financial Services", "Retail", "Government", "Energy"]
     },
     // Quantum-Enhanced Data Analytics Platform;
-    {
-        id: "quantum-enhanced-data-analytics-2025";
+    {id: "quantum-enhanced-data-analytics-2025";
         title: "Quantum-Enhanced Data Analytics Platform 2025";
         description: "Revolutionary data analytics platform that leverages quantum computing algorithms to process massive datasets, perform complex analytics, and deliver insights at unprecedented speeds.",
         category: "Quantum Computing";
@@ -124,8 +122,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         industryApplications: ["Financial Services", "Healthcare", "Research", "Manufacturing", "Energy", "Transportation"]
     },
     // AI-Powered Autonomous IT Infrastructure Management;
-    {
-        id: "ai-autonomous-it-infrastructure-management-2025";
+    {id: "ai-autonomous-it-infrastructure-management-2025";
         title: "AI Autonomous IT Infrastructure Management Platform 2025";
         description: "Intelligent IT infrastructure management platform that autonomously monitors, optimizes, and maintains enterprise IT systems using advanced AI, machine learning, and automation.",
         category: "IT Infrastructure";
@@ -186,8 +183,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         industryApplications: ["Technology", "Financial Services", "Healthcare", "Manufacturing", "Government", "Retail"]
     },
     // Blockchain-Based Digital Identity Management;
-    {
-        id: "blockchain-digital-identity-management-2025";
+    {id: "blockchain-digital-identity-management-2025";
         title: "Blockchain-Based Digital Identity Management Platform 2025";
         description: "Secure and decentralized digital identity management platform that uses blockchain technology to provide self-sovereign identity, secure authentication, and privacy-preserving identity verification.",
         category: "Blockchain & Web3";
@@ -248,8 +244,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         industryApplications: ["Financial Services", "Healthcare", "Government", "E-commerce", "Education", "Technology"]
     },
     // AI-Powered Autonomous Research and Development Platform;
-    {
-        id: "ai-autonomous-research-development-platform-2025";
+    {id: "ai-autonomous-research-development-platform-2025";
         title: "AI Autonomous Research and Development Platform 2025";
         description: "Intelligent R&D platform that autonomously conducts research, analyzes data, generates hypotheses, and accelerates scientific discovery using advanced AI, machine learning, and automation.",
         category: "AI & Research";
@@ -310,8 +305,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         industryApplications: ["Academic Research", "Pharmaceutical", "Technology", "Government", "Industrial", "Healthcare"]
     },
     // Quantum-Enhanced Machine Learning Platform;
-    {
-        id: "quantum-enhanced-machine-learning-2025";
+    {id: "quantum-enhanced-machine-learning-2025";
         title: "Quantum-Enhanced Machine Learning Platform 2025";
         description: "Revolutionary machine learning platform that leverages quantum computing to train models faster, handle larger datasets, and solve complex problems that are impossible for classical computers.",
         category: "Quantum Computing";
@@ -372,8 +366,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         industryApplications: ["Technology", "Financial Services", "Healthcare", "Research", "Manufacturing", "Transportation"]
     },
     // Autonomous Edge Computing Platform;
-    {
-        id: "autonomous-edge-computing-platform-2025";
+    {id: "autonomous-edge-computing-platform-2025";
         title: "Autonomous Edge Computing Platform 2025";
         description: "Intelligent edge computing platform that autonomously manages distributed computing resources, optimizes performance, and enables real-time processing at the network edge.",
         category: "Edge Computing";
@@ -434,8 +427,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         industryApplications: ["IoT", "Telecommunications", "Industrial", "Content Delivery", "Mobile", "Automotive"]
     },
     // AI-Powered Autonomous Compliance Management;
-    {
-        id: "ai-autonomous-compliance-management-2025";
+    {id: "ai-autonomous-compliance-management-2025";
         title: "AI Autonomous Compliance Management Platform 2025";
         description: "Intelligent compliance management platform that autonomously monitors, analyzes, and ensures compliance with regulatory requirements across industries using AI and automation.",
         category: "AI & Compliance";

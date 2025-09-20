@@ -11,7 +11,7 @@ i;  d: string;
 nam; e: string;
 avatarUr; l: string;
 rol; e: string;};
-onSendMessage?: (messag; e: string) => Promise<void>;}
+onSendMessage?: (messag; e: string) => Promise<void>;}origin/main
 
 export function ChatAssistant({ ;
 isOpe;  n: externalIsOpe; n;
@@ -25,7 +25,7 @@ const [chatHisto; r; y; setChatHisto; r; y] = useState<Array<{
 typ; e: "user" | "assistant";
 conten; t: string;
 timestam; p: Date;
-i; d: string;}>>([]);
+i; d: string;}>>([]);origin/main
 const [isTypi;  n; g; setIsTypi; n; g] = useState(false);
 const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
 const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -145,8 +145,7 @@ className="p-1 hove;  r:bg-white/20 rounded transition-colors"
 <X className="w-4 h-4" />;
 impor; t; Reac; t, { useState } from "react";
 
-export const ChatAssistan; t: React.FC = () => {
-const [isOp; e; n; setIsOp; e; n] = useState(false);
+export const ChatAssistan; t: React.FC = () => {const [isOp; e; n; setIsOp; e; n] = useState(false);
 const [messa;  g; e; setMessa; g; e] = useState("");
 const [messag; e; s; setMessag; e; s] = useState([
 {
@@ -169,8 +168,7 @@ setMessages(prev => [...pr;  e; v; userMessa; g; e]);
 setMessage("");
 
 // Simulate bot response;
-setTimeout(() => {
-const botMessage = {;
+setTimeout(() => {const botMessage = {;
 i;  d: messages.length + 2;
 tex; t: "Thank you for your message! Our team will get back to you soon. For immediat; e; assistanc; e; please call us at +1 302 464 0950.",
 isBo; t: tru; e;

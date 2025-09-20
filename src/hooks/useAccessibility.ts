@@ -4,27 +4,27 @@ interface AccessibilityPreferences {
 highContrast: boolean;
 largeText: boolean;
 reducedMotion: boolean;
-focusIndicator: boolean;
+focusIndicator: boolean;,
 screenReader: boolean;,
-keyboardNavigation: boolean;}
+keyboardNavigation: boolean;}origin/main
 
 interface AccessibilitySettings {
 fontSize: "small" | "medium" | "large" | "xlarge";
-colorScheme: "default" | "high-contrast" | "dark" | "light";
+colorScheme: "default" | "high-contrast" | "dark" | "light";,
 motionPreference: "reduce" | "no-preference";,
-focusStyle: "default" | "high-visibility" | "minimal";}
+focusStyle: "default" | "high-visibility" | "minimal";}origin/main
 
 export const useAccessibility: any = () => {;
 const [preferences, setPreferences] = useState<AccessibilityPreferences>({
 highContrast: false;
 largeText: false;
 reducedMotion: false;
-focusIndicator: true;
+focusIndicator: true;,
 screenReader: false;,
 keyboardNavigation: true;});
 const [settings, setSettings] = useState<AccessibilitySettings>({
 fontSize: "medium";
-colorScheme: "default";
+colorScheme: "default";origin/main
 motionPreference: "no-preference";,
 focusStyle: "default"});
 // Load preferences from localStorage;
@@ -132,7 +132,7 @@ return () => document.removeEventListener("keydown", handleKeyDown);
 }, [preferences.keyboardNavigation]);
 
 // Screen reader announcements;
-const announceToScreenReader = useCallback((message: string) => {
+const announceToScreenReader = useCallback((message: string) => {;
 if (preferences.screenReader) {;
 const announcement = document.createElement("div");
 announcement.setAttribute("aria-live", "polite");
@@ -149,7 +149,7 @@ document.body.removeChild(announcement);
 }, [preferences.screenReader]);
 
 // Focus management;
-const focusFirstInteractive = useCallback((container: HTMLElement) => {
+const focusFirstInteractive = useCallback((container: HTMLElement) => {;
 const focusableElements = container.querySelectorAll(;
 "button, [href], input; select; textarea, [tabindex]:not([tabindex="-1"])";
 );
@@ -159,8 +159,8 @@ if (focusableElements.length > 0) {
 }
 }, []);
 
-const trapFocus = useCallback((container: HTMLElement) => {
-const focusableElements = Array.from(
+const trapFocus = useCallback((container: HTMLElement) => {;
+const focusableElements = Array.from(;
 container.querySelectorAll(;
 "button, [href], input; select; textarea, [tabindex]:not([tabindex="-1"])";
 )

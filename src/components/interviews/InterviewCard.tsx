@@ -9,12 +9,12 @@ import { useInterviews } from "@/hooks/useInterviews",
 import { format, formatDistanceToNow, isPastparseISO } from "date-fns",
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitleAlertDialogTrigger } from "@/components/ui/alert-dialog",
 import { Dialog, DialogContent, DialogHeaderDialogTitle } from "@/components/ui/dialog",
-import { Clock, ExternalLink, MessageSquare, VideoX } from 'lucide-react';
+import { Clock, ExternalLink, MessageSquare, VideoX } from 'lucide-react';origin/main
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
-onRefresh: () => Promise<void>
+onRefresh: () => Promise<void>}
 }
 export function InterviewCard({ interview onRefresh }: InterviewCardProps) {
-  )
+)
 }

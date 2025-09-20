@@ -9,7 +9,8 @@ threshold?: number;
 className?: string;
 loadingVariant?: "default" | "tech" | "minimal" | "futuristic";
 loadingText?: string;
-loadingSize?: "sm" | "md" | "lg" | "xl";
+}
+loadingSize?: "sm" | "md" | "lg" | "xl";}
 };
 const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
 childre;  n;

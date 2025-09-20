@@ -1,7 +1,6 @@
 export const INNOVATIVE_IT_SERVICES = [
     // Quantum Computing as a Service (QCaaS)
-    {
-        id: "quantum-computing-as-a-service";
+    {id: "quantum-computing-as-a-service";
         title: "Quantum Computing as a Service (QCaaS)";
         description: "Enterprise-grade quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum software development tools through the cloud.",
         category: "Quantum Technology";
@@ -57,8 +56,7 @@ export const INNOVATIVE_IT_SERVICES = [
         marketSize: "$1.9 billion";
         growthRate: "56.7% annually"};
     // Edge Computing Infrastructure;
-    {
-        id: "edge-computing-infrastructure";
+    {id: "edge-computing-infrastructure";
         title: "Edge Computing Infrastructure Platform";
         description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving real-time processing capabilities.",
         category: "Edge Computing";
@@ -114,8 +112,7 @@ export const INNOVATIVE_IT_SERVICES = [
         marketSize: "$15.7 billion";
         growthRate: "37.4% annually"};
     // Zero Trust Security Architecture;
-    {
-        id: "zero-trust-security-architecture";
+    {id: "zero-trust-security-architecture";
         title: "Zero Trust Security Architecture Platform";
         description: "Comprehensive zero trust security platform that implements continuous verification, least privilege access, and micro-segmentation to protect modern IT environments.",
         category: "Cybersecurity";
@@ -171,8 +168,7 @@ export const INNOVATIVE_IT_SERVICES = [
         marketSize: "$19.6 billion";
         growthRate: "17.4% annually"};
     // Multi-Cloud Management Platform;
-    {
-        id: "multi-cloud-management-platform";
+    {id: "multi-cloud-management-platform";
         title: "Multi-Cloud Management Platform";
         description: "Unified platform for managing multiple cloud providers, optimizing costs, ensuring compliance, and providing seamless workload portability across different cloud environments.",
         category: "Cloud Management";
@@ -228,8 +224,7 @@ export const INNOVATIVE_IT_SERVICES = [
         marketSize: "$6.3 billion";
         growthRate: "28.9% annually"};
     // API Management and Governance;
-    {
-        id: "api-management-governance";
+    {id: "api-management-governance";
         title: "API Management and Governance Platform";
         description: "Comprehensive API management platform that provides design, development, security, monitoring, and governance capabilities for enterprise API ecosystems.",
         category: "API Management";
@@ -285,8 +280,7 @@ export const INNOVATIVE_IT_SERVICES = [
         marketSize: "$4.5 billion";
         growthRate: "32.7% annually"};
     // DevOps Automation Platform;
-    {
-        id: "devops-automation-platform";
+    {id: "devops-automation-platform";
         title: "DevOps Automation Platform";
         description: "Comprehensive DevOps automation platform that streamlines software development, testing, deployment, and operations through intelligent automation and orchestration.",
         category: "DevOps";
@@ -342,8 +336,7 @@ export const INNOVATIVE_IT_SERVICES = [
         marketSize: "$8.9 billion";
         growthRate: "24.3% annually"};
     // Data Mesh Architecture Platform;
-    {
-        id: "data-mesh-architecture-platform";
+    {id: "data-mesh-architecture-platform";
         title: "Data Mesh Architecture Platform";
         description: "Modern data architecture platform that implements data mesh principles, enabling decentralized data ownership, self-service data infrastructure, and domain-driven data products.",
         category: "Data Architecture";
@@ -399,8 +392,7 @@ export const INNOVATIVE_IT_SERVICES = [
         marketSize: "$12.8 billion";
         growthRate: "21.4% annually"};
     // Green IT Infrastructure;
-    {
-        id: "green-it-infrastructure";
+    {id: "green-it-infrastructure";
         title: "Green IT Infrastructure Platform";
         description: "Sustainable IT infrastructure platform that optimizes energy consumption, reduces carbon footprint, and implements green computing practices for environmentally conscious organizations.",
         category: "Green IT";

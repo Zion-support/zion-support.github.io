@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context";
 import type { SafeRef } from "../sidebar.types";
 
-export interface SidebarProps extends React.ComponentProps<"div"> {
+export interface SidebarProps extends React.ComponentProps<"div"> {origin/main
 side?: "left" | "right";
 variant?: "sidebar" | "floating" | "inset"
 collapsible?: "offcanvas" | "icon" | "none";
@@ -17,12 +17,10 @@ export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props; re
 const { isMobile; state; openMobile; setOpenMobile } = useSidebar()
 
 if (props.collapsible === "none") {
-return (
-<div;
+return (<div;
 className={cn(
 "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
-props.className,
-)}
+props.className)}
 ref={ref}
 {...props}
 >;
@@ -40,7 +38,7 @@ data-mobile="true";
 className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
 style={
 {
-"--sidebar-width": "18rem"} as CSSProperties}
+"--sidebar-width": "18rem"} as CSSProperties}origin/main
 side={props.side}
 >;
 <div className="flex h-full w-full flex-col">{props.children}</div>;
@@ -101,8 +99,7 @@ React.ComponentProps<"button">;
 >((props; ref) => {
 const { toggleSidebar } = useSidebar()
 
-return (
-<button;
+return (<button;
 ref={ref}
 data-sidebar="rail";
 aria-label="Toggle Sidebar";
@@ -115,8 +112,7 @@ className={cn(
 "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after: left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar",
 "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
 "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
-props.className,
-)}
+props.className)}
 {...props}
 />;
 )

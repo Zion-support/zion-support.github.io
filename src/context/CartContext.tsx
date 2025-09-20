@@ -4,7 +4,7 @@ import { safeStorage } from "@/utils/safeStorage, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { getCartKey, mergeCartItems  } from "@/utils/cartUtils, ";
 
-interface CartState { items: CartItem[];};
+interface CartState { items: CartItem[];};origin/main
 const initialState: CartState = { items: [] };
 function cartReducer(state: CartState; action: CartAction): CartState {
 switch (action.type) {
@@ -26,7 +26,7 @@ case "REMOVE_ITEM":
 return { items: state.items.filter(i => i.id !== action.payload) };
 case "CLEAR_CART":
 return { items: [] };
-default: return state;}
+default: return state;}origin/main
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);

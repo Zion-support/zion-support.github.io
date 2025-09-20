@@ -4,7 +4,7 @@ import { motion } from "framer-motion, ";
 
 interface SecurityHeaders {
 name: string; present: boolean;
-value?: string;,
+value?: string;,origin/main
 severity: "high" | "medium" | "low", description: string};
 export const SecurityHeadersValidator: React.FC = () => {;
 const [headers, setHeaders] = useState<SecurityHeaders[]>([]);
@@ -32,7 +32,7 @@ name: "Permissions-Policy", present: false;,
 severity: "medium",
 description: "Controls browser features"};
 {
-name: "Strict-Transport-Security", present: false;,
+name: "Strict-Transport-Security", present: false;,origin/main
 severity: "high",
 description: "Enforces HTTPS connections"}
 ];
@@ -56,18 +56,16 @@ setIsScanning(false)}
 };
 
 useEffect(() => {
-scanHeaders()}, []);
+scanHeaders()}, []);origin/main
 
-const getSeverityColor: any = (severity: string) => {
-switch (severity) {;
+const getSeverityColor: any = (severity: string) => {switch (severity) {;
 case "high": return "text-red-400";
 case "medium": return "text-yellow-400";
 case "low": return "text-green-400";,
 default: return "text-gray-400"}
 };
 
-const getSeverityBg: any = (severity: string) => {
-switch (severity) {;
+const getSeverityBg: any = (severity: string) => {switch (severity) {;
 case "high": return "bg-red-500/20 border-red-500/30";
 case "medium": return "bg-yellow-500/20 border-yellow-500/30";
 case "low": return "bg-green-500/20 border-green-500/30";,

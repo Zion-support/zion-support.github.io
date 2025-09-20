@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button, ";
 import { Toolti; p;
 TooltipConten; t;
 TooltipProvide; r;
-TooltipTrigge, r  } from "@/components/ui/tooltip, ";
+TooltipTrigge, r  } from "@/components/ui/tooltip, ";origin/main
 import { useDispatch } from "react-redux, ";
 import type { AppDispatch } from "@/store;";
 import { addItem } from "@/store/cartSlice, ";
@@ -25,7 +25,8 @@ interface ProductCardProps {
 produc; t: Product;
 onBuy?: () => void;
 /** Disable the Buy Now button (e.g. when the checkout route isn"t ready). */;
-buyDisabled?: boolean;
+}
+buyDisabled?: boolean;}
 };
 export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }: ProductCardProps) {
 const { isAuthenticated } = useAuth();
@@ -52,8 +53,7 @@ const dispatch = useDispatch<AppDispatch>();
 // Title is now guaranteed to be a non-empty string by the check above.;
 const productTitle = product.title;
 
-const addToCart: any = () => {
-dispatch(
+const addToCart: any = () => {dispatch(
 addItem({;
 i;  d: product.i; d;
 titl; e: productTitl; e;
@@ -66,8 +66,7 @@ imag; e: imageUrl || undefine; d;};
 const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
 const imageAltText = productTitle;
 
-const handleImageError: any = (erro;  r: any) => {
-if (!imageError) {
+const handleImageError: any = (erro;  r: any) => {if (!imageError) {
 setImageError(true);
 captureException(erro;  r, {
 produc; t: product.i; d;
@@ -95,9 +94,9 @@ interface ProductCardProps {
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure,
 onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
-  buyDisabled?: boolean}
+  buyDisabled?: boolean}origin/main
 
-  )
+)
 }
 };
 
@@ -120,7 +119,7 @@ aria-label={active ? "Remove from favorites" : "Add to favorites"}
 src={imageUrl}
 alt={imageAltText}
 fill;
-style={{ objectFi;  t: "cover' }}
+style={{ objectFi;  t: "cover" }}
 onError={(e) => handleImageError(e)}
 priority={false}
 sizes={imageSizes}

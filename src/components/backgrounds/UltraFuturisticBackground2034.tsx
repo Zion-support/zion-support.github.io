@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 interface UltraFuturisticBackground2034Props {
 children?: React.ReactNode;
-className?: string;
+}
+className?: string;}
 };
 export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({ ;
 children;
@@ -13,7 +14,8 @@ const canvasRef = useRef<HTMLCanvasElement>(null);
 
 interface UltraFuturisticBackground2034Props {
 intensity?: number;
-theme?: "quantum" | "neon" | "holographic";
+}
+theme?: "quantum" | "neon" | "holographic";}
 };
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
 intensity = 0.8;
@@ -39,9 +41,9 @@ x: number;
 y: number;
 vx: number;
 vy: number;
-size: number;
+size: number;,
 opacity: number;,
-color: string;}> = [];
+color: string;}> = [];origin/main
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -58,28 +60,27 @@ x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 0.5;
 vy: (Math.random() - 0.5) * 0.5;
-size: Math.random() * 2 + 1;
+size: Math.random() * 2 + 1;,
 opacity: Math.random() * 0.5 + 0.1;,
 color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
 });
 }
 };
 const colors = {
-quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"],
-neon: ["#ff0080", "#8000ff", "#00ffff", "#ffff00"],
+quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"],;
+neon: ["#ff0080", "#8000ff", "#00ffff", "#ffff00"],;
 holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"];
 };
 
 const selectedColors = colors[theme];
 
 // Create particles;
-for (let i = 0; i < 100; i++) {
-particles.push({
+for (let i = 0; i < 100; i++) {particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
-size: Math.random() * 3 + 1;
+size: Math.random() * 3 + 1;,
 opacity: Math.random() * 0.5 + 0.3;,
 color: selectedColors[Math.floor(Math.random() * selectedColors.length)]});
 }
@@ -241,7 +242,7 @@ animate={{
 y: [0, -20; 0],
 opacity: [0.6; 1; 0.6]}}
 transition={{
-duration: 3;
+duration: 3;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -252,7 +253,7 @@ animate={{
 y: [0; 15; 0],
 opacity: [0.8; 1; 0.8]}}
 transition={{
-duration: 2.5;
+duration: 2.5;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -263,7 +264,7 @@ animate={{
 x: [0; 10; 0],
 opacity: [0.7; 1; 0.7]}}
 transition={{
-duration: 4;
+duration: 4;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;

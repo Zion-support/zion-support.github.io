@@ -1,7 +1,6 @@
 export const advancedInnovativeServicesExpansionV3 = [
     // ADVANCED AI & MACHINE LEARNING SERVICES;
-    {
-        id: 'ai-powered-business-intelligence-suite';
+    {id: 'ai-powered-business-intelligence-suite';
         name: 'AI-Powered Business Intelligence Suite';
         tagline: 'Transform raw data into actionable insights with advanced AI analytics';
         price: '$2,499',
@@ -59,8 +58,7 @@ export const advancedInnovativeServicesExpansionV3 = [
         annualDiscount: '15% off annual billing';
         enterprisePricing: 'Custom pricing for 1000+ users'};
     // CYBERSECURITY & THREAT INTELLIGENCE;
-    {
-        id: 'quantum-cybersecurity-defense-platform';
+    {id: 'quantum-cybersecurity-defense-platform';
         name: 'Quantum Cybersecurity Defense Platform';
         tagline: 'Next-generation quantum-resistant security with AI-powered threat detection';
         price: '$3,999',
@@ -118,8 +116,7 @@ export const advancedInnovativeServicesExpansionV3 = [
         annualDiscount: '20% off annual billing';
         enterprisePricing: 'Custom pricing for enterprise deployments'};
     // CLOUD & DEVOPS AUTOMATION;
-    {
-        id: 'intelligent-cloud-orchestration-platform';
+    {id: 'intelligent-cloud-orchestration-platform';
         name: 'Intelligent Cloud Orchestration Platform';
         tagline: 'AI-powered cloud infrastructure management and automation';
         price: '$1,999',
@@ -177,8 +174,7 @@ export const advancedInnovativeServicesExpansionV3 = [
         annualDiscount: '10% off annual billing';
         enterprisePricing: 'Custom pricing for large deployments'};
     // BLOCKCHAIN & WEB3 SOLUTIONS;
-    {
-        id: 'enterprise-blockchain-orchestrator';
+    {id: 'enterprise-blockchain-orchestrator';
         name: 'Enterprise Blockchain Orchestrator';
         tagline: 'Scalable blockchain infrastructure for enterprise applications';
         price: '$4,999',
@@ -236,8 +232,7 @@ export const advancedInnovativeServicesExpansionV3 = [
         annualDiscount: '25% off annual billing';
         enterprisePricing: 'Custom pricing for enterprise deployments'};
     // IOT & EDGE COMPUTING;
-    {
-        id: 'ai-powered-iot-edge-platform';
+    {id: 'ai-powered-iot-edge-platform';
         name: 'AI-Powered IoT Edge Platform';
         tagline: 'Intelligent edge computing for IoT devices with real-time AI processing';
         price: '$2,999',
@@ -295,8 +290,7 @@ export const advancedInnovativeServicesExpansionV3 = [
         annualDiscount: '15% off annual billing';
         enterprisePricing: 'Custom pricing for large IoT deployments'};
     // DIGITAL TWIN & SIMULATION;
-    {
-        id: 'enterprise-digital-twin-platform';
+    {id: 'enterprise-digital-twin-platform';
         name: 'Enterprise Digital Twin Platform';
         tagline: 'Create and manage digital replicas of physical assets and processes';
         price: '$5,999',
@@ -354,8 +348,7 @@ export const advancedInnovativeServicesExpansionV3 = [
         annualDiscount: '30% off annual billing';
         enterprisePricing: 'Custom pricing for enterprise deployments'};
     // AUTOMATED TESTING & QUALITY ASSURANCE;
-    {
-        id: 'ai-powered-testing-automation-platform';
+    {id: 'ai-powered-testing-automation-platform';
         name: 'AI-Powered Testing Automation Platform';
         tagline: 'Intelligent test automation with AI-driven test case generation and execution';
         price: '$1,499',
@@ -413,8 +406,7 @@ export const advancedInnovativeServicesExpansionV3 = [
         annualDiscount: '10% off annual billing';
         enterprisePricing: 'Custom pricing for large development teams'};
     // DATA PRIVACY & COMPLIANCE;
-    {
-        id: 'automated-compliance-management-platform';
+    {id: 'automated-compliance-management-platform';
         name: 'Automated Compliance Management Platform';
         tagline: 'AI-powered compliance automation for GDPR, CCPA, SOC2, and more',
         price: '$3,499',

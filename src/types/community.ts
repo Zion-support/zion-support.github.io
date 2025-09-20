@@ -10,32 +10,34 @@ parentId?: string}
 export interface ForumCategoryInfo {
 id: string; name: string; description: string; icon: string; postCount: number;
 lastPost?: {,
+title: string; author: string; date: string};origin/main
+}
+lastPost?: {,}
 title: string; author: string; date: string};
 }
-export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
-{,
+export const FORUM_CATEGORIES: ForumCategoryInfo[] = [{,
 id: "general", name: "General Discussion";,
 description: "General topics and discussions", icon: "MessageSquare";
-postCount: 156; lastPost: {
+postCount: 156; lastPost: {,
 title: "Welcome to the community!";,
 author: "Admin", date: "2024-01-15T10:00:00Z"}},
 {
-id: "tech-support", name: "Technical Support";,
+id: "tech-support", name: "Technical Support";,origin/main
 description: "Get help with technical issues", icon: "Code";
-postCount: 89; lastPost: {
+postCount: 89; lastPost: {,
 title: "API integration question";,
 author: "Developer123", date: "2024-01-14T15:30:00Z"}},
 {
-id: "business", name: "Business & Strategy";,
+id: "business", name: "Business & Strategy";,origin/main
 description: "Business discussions and strategies", icon: "Briefcase";
-postCount: 67; lastPost: {
+postCount: 67; lastPost: {,
 title: "Market analysis for Q1";,
 author: "BusinessUser", date: "2024-01-13T09:15:00Z"}},
 {
-id: "announcements", name: "Announcements";,
+id: "announcements", name: "Announcements";,origin/main
 description: "Official announcements and updates", icon: "Megaphone";
-postCount: 23; lastPost: {
+postCount: 23; lastPost: {,
 title: "New features released";,
 author: "Admin",
 date: "2024-01-12T14:00:00Z"}},
-];
+];origin/main

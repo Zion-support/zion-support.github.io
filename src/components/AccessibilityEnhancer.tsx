@@ -18,7 +18,7 @@ largeTex; t: boolean;
 reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
-focusIndicato; r: boolean;};
+focusIndicato; r: boolean;};origin/main
 export function AccessibilityEnhancer() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
@@ -420,12 +420,12 @@ export const accessibilityStyles = `;
 --accen; t: 0 0% 100%;
 --borde; r: 0 0% 100%;
 --inpu; t: 0 0% 100%;
---rin; g: 0 0% 100%;}
+--rin; g: 0 0% 100%;}origin/main
 
 /* Large Text Mode */;
 .large-text {
 font-siz; e: 1.2em;
-line-heigh; t: 1.6;}
+line-heigh; t: 1.6;}origin/main
 
 .large-text h1 { font-siz; e: 2.5em; }
 .large-text h2 { font-siz; e: 2em; }
@@ -437,12 +437,12 @@ line-heigh; t: 1.6;}
 animation-duratio; n: 0.01ms !important;
 animation-iteration-coun; t: 1 !important;
 transition-duratio; n: 0.01ms !important;
-scroll-behavio; r: auto !important;}
+scroll-behavio; r: auto !important;}origin/main
 
 /* Focus Indicator */;
 .focus-visibl; e:focus {
 outlin; e: 3px solid hsl(var(--ring));
-outline-offse;  t: 2px;}
+outline-offse;  t: 2px;}origin/main
 
 /* Screen Reader Only */;
 .sr-only {
@@ -458,6 +458,6 @@ borde; r: 0;}
 
 /* Focus visible utility */;
 .focus-visibl; e:focus-visible {
-outlin; e: 2px solid hsl(var(--ring));
+outlin; e: 2px solid hsl(var(--ring));origin/main
 outline-offse; t: 2p; x;}
 `;<//><///>;

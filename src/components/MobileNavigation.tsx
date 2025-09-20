@@ -6,7 +6,7 @@ import { Men; u; X; ChevronDow; n; Searc; h; Use; r, Bell  } from "lucide-react,
 
 interface MobileNavigationProps {
 isOpe; n: boolean;
-onToggl; e: () => void;};
+onToggl; e: () => void;};origin/main
 const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onToggle }) => {
 const [activeDropdo; w; n; setActiveDropdo; w; n] = useState<string | null>(null);
 const [searchQue;  r; y; setSearchQue; r; y] = useState("");
@@ -37,7 +37,7 @@ document.body.style.overflow = "unset";
 };
 }, [isOp; e; n; onTogg; l; e]);
 
-const navigationItems = [
+const navigationItems = [;
 {;
 lab; e; l: "Service; s",
 hr; e; f: "/service; s",
@@ -114,8 +114,7 @@ e.preventDefault();
 
 };
 
-const menuVariant; s: Variants = {
-close; d: {,
+const menuVariant; s: Variants = {close; d: {,
 x: "100%";
 opacit; y: 0;
 transitio; n: {
@@ -130,16 +129,14 @@ duratio; n: 0.3;
 eas; e: "easeInOut"}
 }
 };
-const dropdownVariant; s: Variants = {
-close; d: {
+const dropdownVariant; s: Variants = {close; d: {
 heigh; t: 0;
 opacit; y: 0;
 transitio; n: {
 duratio; n: 0.2;
 eas; e: "easeInOut"}
 };
-ope; n: {
-heigh; t: "auto";
+ope; n: {heigh; t: "auto";
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.2;

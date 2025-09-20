@@ -1,7 +1,6 @@
 export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
     // Quantum Computing as a Service;
-    {
-        id: "quantum-computing-as-a-service-2025";
+    {id: "quantum-computing-as-a-service-2025";
         title: "Quantum Computing as a Service (QCaaS)";
         description: "Enterprise-grade quantum computing platform providing access to quantum processors, quantum algorithms, and hybrid classical-quantum computing solutions for complex optimization problems.",
         category: "Quantum Technology";
@@ -71,8 +70,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         researchPartnerships: true;
         pilotPrograms: true};
     // AI-Powered Autonomous Systems Platform;
-    {
-        id: "ai-autonomous-systems-platform-2025";
+    {id: "ai-autonomous-systems-platform-2025";
         title: "AI-Powered Autonomous Systems Platform";
         description: "Next-generation autonomous systems platform that enables businesses to deploy AI-powered autonomous agents for complex decision-making, process automation, and operational optimization.",
         category: "Artificial Intelligence";
@@ -142,8 +140,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         researchPartnerships: true;
         pilotPrograms: true};
     // Blockchain-Based Supply Chain Platform;
-    {
-        id: "blockchain-supply-chain-platform-2025";
+    {id: "blockchain-supply-chain-platform-2025";
         title: "Blockchain-Based Supply Chain Platform";
         description: "Revolutionary supply chain platform leveraging blockchain technology for transparent, secure, and efficient supply chain management with real-time tracking and smart contracts.",
         category: "Blockchain & Web3";
@@ -213,8 +210,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         researchPartnerships: true;
         pilotPrograms: true};
     // Edge Computing & IoT Platform;
-    {
-        id: "edge-computing-iot-platform-2025";
+    {id: "edge-computing-iot-platform-2025";
         title: "Edge Computing & IoT Platform";
         description: "Advanced edge computing platform that processes data at the source, enabling real-time analytics, autonomous decision-making, and reduced latency for IoT applications.",
         category: "Edge Computing & IoT";
@@ -284,8 +280,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         researchPartnerships: true;
         pilotPrograms: true};
     // AI-Powered Cybersecurity Platform;
-    {
-        id: "ai-cybersecurity-platform-2025";
+    {id: "ai-cybersecurity-platform-2025";
         title: "AI-Powered Cybersecurity Platform";
         description: "Next-generation cybersecurity platform that uses artificial intelligence and machine learning to detect, prevent, and respond to cyber threats in real-time with autonomous defense capabilities.",
         category: "Cybersecurity";
@@ -355,8 +350,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         researchPartnerships: true;
         pilotPrograms: true};
     // Quantum-Safe Cryptography Platform;
-    {
-        id: "quantum-safe-cryptography-platform-2025";
+    {id: "quantum-safe-cryptography-platform-2025";
         title: "Quantum-Safe Cryptography Platform";
         description: "Future-proof cryptography platform that implements post-quantum cryptographic algorithms to protect against quantum computing threats while maintaining current security standards.";
         category: "Quantum Technology";
@@ -426,8 +420,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         researchPartnerships: true;
         pilotPrograms: true};
     // AI-Powered Drug Discovery Platform;
-    {
-        id: "ai-drug-discovery-platform-2025";
+    {id: "ai-drug-discovery-platform-2025";
         title: "AI-Powered Drug Discovery Platform";
         description: "Revolutionary drug discovery platform that uses artificial intelligence and machine learning to accelerate the identification, design, and optimization of new pharmaceutical compounds.",
         category: "Healthcare Technology";
@@ -497,8 +490,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         researchPartnerships: true;
         pilotPrograms: true};
     // Autonomous Vehicle Technology Platform;
-    {
-        id: "autonomous-vehicle-technology-platform-2025";
+    {id: "autonomous-vehicle-technology-platform-2025";
         title: "Autonomous Vehicle Technology Platform";
         description: "Advanced autonomous vehicle technology platform that provides the software, sensors, and AI algorithms needed to develop and deploy autonomous vehicles for various applications.",
         category: "Autonomous Vehicles";

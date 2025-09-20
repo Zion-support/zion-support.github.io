@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
@@ -27,12 +29,12 @@ setSelectedService(null);
 };const containerVariants = {;
 hidde;  n: { opaci; t;y: 0 },visibl; e: {
 opacit; y: 1transiti; o;n: {;
-staggerChildr; e;n: 0.1;}
+staggerChildr; e;n: 0.1;}origin/main
 }
 };const itemVariants = {;
 hidde; n: { ,y: 20opaci; t;y: 0 },visibl; e: {,
 y: 0opacit; y: 1transiti; o;n: {;
-durati; o;n: 0.5;}
+durati; o;n: 0.5;}origin/main
 }
 };return(<div className="min-h-screen bg-gray-90o0 text-white">;
 {/* Hero Section */}

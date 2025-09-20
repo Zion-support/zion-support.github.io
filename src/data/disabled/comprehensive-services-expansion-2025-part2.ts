@@ -2,17 +2,15 @@ import React from "react";
 
 // Interface definitions;
 export interface ServiceContact {
-phone: string; email: string; website: string; address: string}
+phone: string; email: string; website: string; address: string}origin/main
 
-export interface MicroSaasService {
-id: number; name: string; category: string; pricing: string; description: string; price: number; pricingModel: string; userLimit: string; features: string[];,
+export interface MicroSaasService {id: number; name: string; category: string; pricing: string; description: string; price: number; pricingModel: string; userLimit: string; features: string[];,
 benefits: string[], targetAudience: string[];,
 tags: string[], contactInfo: ServiceContact; marketPrice: string; competitors: string[];
-roi: string; setupTime: string; integrations: string[];,
+roi: string; setupTime: string; integrations: string[];,origin/main
 freeTier: boolean; trialPeriod: string}
 
-export interface ITService {
-id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[];,
+export interface ITService {id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[];,
 benefits: string[], targetAudience: string[];,
 tags: string[], contactInfo: ServiceContact; marketPrice: string; responseTime: string; sla: string; certifications: string[];,
 deliveryTime: string; support: string}
@@ -21,13 +19,12 @@ export interface AIService {
 id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];,
 targetAudience: string[], tags: string[];
 contactInfo: ServiceContact; marketPrice: string; aiModels: string[];
-accuracy: string; trainingData: string; compliance: string[];,
+accuracy: string; trainingData: string; compliance: string[];,origin/main
 aiScore: number; useCases: string[]}
 
 // Additional Advanced AI Services;
 export const additionalAdvancedAIServices2025: AIService[] = [
-{
-id: 1; name: "Quantum Neural Networks Pro";,
+{id: 1; name: "Quantum Neural Networks Pro";,
 category: "Quantum AI", description: "Revolutionary quantum neural network platform that leverages quantum computing principles for unprecedented AI performance";,
 pricing: "Enterprise", price: 4500;,
 pricingModel: "monthly", features: [
@@ -59,8 +56,7 @@ accuracy: "Quantum advantage", trainingData: "Quantum datasets";,
 compliance: ["Research standards", "Security protocols", "Data protection"],
 aiScore: 98; useCases: ["Drug discovery", "Financial modeling", "Climate prediction", "Cryptography"];
 },
-{
-id: 2; name: "Autonomous AI Agents";,
+{id: 2; name: "Autonomous AI Agents";,
 category: "Autonomous Systems", description: "Next-generation autonomous AI agents that can independently execute complex tasks and make decisions in dynamic environments";,
 pricing: "Enterprise", price: 3200;,
 pricingModel: "monthly", features: [
@@ -96,8 +92,7 @@ aiScore: 95; useCases: ["Supply chain automation", "Customer service", "Quality 
 
 // Advanced Blockchain Services;
 export const advancedBlockchainServices2025: MicroSaasService[] = [
-{
-id: 1; name: "Cross-Chain Bridge Platform";,
+{id: 1; name: "Cross-Chain Bridge Platform";,
 category: "Blockchain Infrastructure", pricing: "Professional";,
 description: "Advanced cross-chain bridge platform enabling seamless asset transfers and interoperability between different blockchain networks", price: 399;,
 pricingModel: "monthly", userLimit: "Unlimited transactions";,
@@ -130,7 +125,7 @@ roi: "600% within 12 months", setupTime: "1-2 weeks";,
 integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
 freeTier: false; trialPeriod: "7 days"};
 {
-id: 2; name: "Decentralized Identity Platform";,
+id: 2; name: "Decentralized Identity Platform";,origin/main
 category: "Identity Management", pricing: "Professional";,
 description: "Self-sovereign identity platform built on blockchain technology for secure; privacy-preserving digital identity management",
 price: 249; pricingModel: "monthly";,
@@ -165,8 +160,7 @@ freeTier: true; trialPeriod: "14 days"}
 ];
 // Advanced Cybersecurity Services;
 export const advancedCybersecurityServices2025: ITService[] = [
-{
-id: 1; name: "AI-Powered SOC Platform";,
+{id: 1; name: "AI-Powered SOC Platform";,
 category: "Security Operations", description: "Intelligent Security Operations Center platform with AI-driven threat detection; automated response; and advanced analytics",
 hourlyRate: 175; projectRate: 20000; features: [
 "AI threat detection",
@@ -196,7 +190,7 @@ responseTime: "30 minutes", sla: "99.99% uptime";,
 certifications: ["CISSP", "CISM", "GCIH", "GCFA"],
 deliveryTime: "8-10 weeks", support: "24/7"};
 {
-id: 2; name: "Quantum-Safe Cryptography";,
+id: 2; name: "Quantum-Safe Cryptography";,origin/main
 category: "Cryptography", description: "Post-quantum cryptography solutions to protect against future quantum computing threats to current encryption standards";,
 hourlyRate: 200; projectRate: 30000; features: [
 "Post-quantum algorithms",
@@ -228,8 +222,7 @@ deliveryTime: "12-16 weeks", support: "Business hours"}
 ];
 // Advanced Cloud & DevOps Services;
 export const advancedCloudDevOpsServices2025: ITService[] = [
-{
-id: 1; name: "AI-Powered DevOps Automation";,
+{id: 1; name: "AI-Powered DevOps Automation";,
 category: "DevOps", description: "Intelligent DevOps automation platform that uses AI to optimize CI/CD pipelines; infrastructure management; and deployment strategies",
 hourlyRate: 150; projectRate: 18000; features: [
 "AI pipeline optimization",
@@ -261,8 +254,7 @@ deliveryTime: "6-8 weeks", support: "Business hours"}
 ];
 // Advanced Healthcare Services;
 export const advancedHealthcareServices2025: AIService[] = [
-{
-id: 1; name: "Genomic AI Platform";,
+{id: 1; name: "Genomic AI Platform";,
 category: "Genomics", description: "Advanced AI platform for genomic analysis; personalized medicine; and drug discovery with cutting-edge machine learning algorithms",
 pricing: "Enterprise", price: 4200;,
 pricingModel: "monthly", features: [
@@ -298,8 +290,7 @@ aiScore: 97; useCases: ["Cancer research", "Rare diseases", "Drug development", 
 
 // Advanced IoT Services;
 export const advancedIoTServices2025: MicroSaasService[] = [
-{
-id: 1; name: "Industrial IoT Analytics";,
+{id: 1; name: "Industrial IoT Analytics";,
 category: "Industrial IoT", pricing: "Enterprise";,
 description: "Comprehensive industrial IoT analytics platform for manufacturing optimization; predictive maintenance; and operational intelligence",
 price: 1500; pricingModel: "monthly";,
@@ -334,8 +325,7 @@ freeTier: false; trialPeriod: "30 days"}
 ];
 // Advanced Quantum Services;
 export const advancedQuantumServices2025: AIService[] = [
-{
-id: 1; name: "Quantum Machine Learning Suite";,
+{id: 1; name: "Quantum Machine Learning Suite";,
 category: "Quantum ML", description: "Comprehensive quantum machine learning platform that combines quantum computing with advanced ML algorithms for breakthrough applications";,
 pricing: "Enterprise", price: 6000;,
 pricingModel: "monthly", features: [
@@ -371,8 +361,7 @@ aiScore: 96; useCases: ["Drug discovery", "Financial modeling", "Climate predict
 
 // Advanced Space Services;
 export const advancedSpaceServices2025: MicroSaasService[] = [
-{
-id: 1; name: "Space Traffic Management";,
+{id: 1; name: "Space Traffic Management";,
 category: "Space Operations", pricing: "Enterprise";,
 description: "Advanced space traffic management platform for satellite collision avoidance; orbital optimization; and space debris monitoring",
 price: 2500; pricingModel: "monthly";,
@@ -407,8 +396,7 @@ freeTier: false; trialPeriod: "30 days"}
 ];
 // Advanced Sustainability Services;
 export const advancedSustainabilityServices2025: MicroSaasService[] = [
-{
-id: 1; name: "Circular Economy Platform";,
+{id: 1; name: "Circular Economy Platform";,
 category: "Circular Economy", pricing: "Professional";,
 description: "Comprehensive circular economy platform for waste reduction; resource optimization; and sustainable business practices",
 price: 299; pricingModel: "monthly";,
@@ -443,8 +431,7 @@ freeTier: true; trialPeriod: "21 days"}
 ];
 // Advanced Fintech Services;
 export const advancedFintechServices2025: MicroSaasService[] = [
-{
-id: 1; name: "RegTech Compliance Platform";,
+{id: 1; name: "RegTech Compliance Platform";,
 category: "RegTech", pricing: "Enterprise";,
 description: "Advanced regulatory technology platform for automated compliance monitoring; risk assessment; and regulatory reporting",
 price: 1200; pricingModel: "monthly";,
@@ -481,8 +468,8 @@ freeTier: false; trialPeriod: "21 days"}
 export const allAdditionalServices2025 = {;
 advancedAI: additionalAdvancedAIServices2025; blockchain: advancedBlockchainServices2025; cybersecurity: advancedCybersecurityServices2025; cloudDevOps: advancedCloudDevOpsServices2025; healthcare: advancedHealthcareServices2025; iot: advancedIoTServices2025; quantum: advancedQuantumServices2025; space: advancedSpaceServices2025; sustainability: advancedSustainabilityServices2025; fintech: advancedFintechServices2025};
 // Combined services export;
-export const allComprehensiveServices2025 = {
-...allAdditionalServices2025,;
+export const allComprehensiveServices2025 = {;
+...allAdditionalServices2025;
 };
 
 // Helper functions for additional services;
@@ -490,13 +477,12 @@ export const getAdditionalServicesByCategory: any = (category: string) => {;
 const allServices = Object.values(allAdditionalServices2025).flat();
 return allServices.filter(service => service.category === category)};
 
-export const getAdditionalServicesByPriceRange: any = (minPrice: number; maxPrice: number) => {
-const allServices = Object.values(allAdditionalServices2025).flat();
+export const getAdditionalServicesByPriceRange: any = (minPrice: number; maxPrice: number) => {const allServices = Object.values(allAdditionalServices2025).flat();
 return allServices.filter(service => {
 if ("price" in service) {
 return service.price >= minPrice && service.price <= maxPrice}
 if ("hourlyRate" in service) {
-return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice}
+return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice}origin/main
 return false;
 });
 };

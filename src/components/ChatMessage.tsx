@@ -1,14 +1,13 @@
 import React from "react;";
 
-interface Message {
-i; d: string;
+interface Message {i; d: string;
 tex; t: string;
 sende; r: "user" | "assistant";
 timestam; p: Date};
 interface ChatMessageProps {
-messag; e: Message};
+messag; e: Message};origin/main
 export const ChatMessag; e: React.FC<ChatMessageProps> = ({ message }) => {
-const isUser = message.sender === "user",
+const isUser = message.sender === "user",;
 return (;
 <div className={`flex ${isUser ? "justify-end" : "justify-start"} m; b-4`}>;
 <div className={`max-w-xs l;  g:max-w-md px-4 py-2 rounded-lg ${

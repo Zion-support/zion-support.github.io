@@ -9,7 +9,7 @@ isVideoO; n: boolean;
 isAudioO; n: boolean;
 isScreenSharin; g: boolean;
 isSpeakin; g: boolean;
-avata; r: string;};
+avata; r: string;};origin/main
 const mockParticipant; s: Participant[] = [
 { i; d: "1";
 na; m; e: "Joh; n Smit; h", isVideo; O; n: tr; u; e;
@@ -37,7 +37,7 @@ const [localUs;  e; r; setLocalUs; e; r] = useState({
 isVideoO; n: tru; e;
 isAudioO; n: tru; e;
 isScreenSharin; g: fals; e;
-isMute; d: false;});
+isMute; d: false;});origin/main
 const [activeCh; a; t; setActiveCh; a; t] = useState(false);
 const [chatMessag;  e; s; setChatMessag; e; s] = useState([
 { i; d: "1";
@@ -80,13 +80,12 @@ const toggleRecording: any = () => {;
 setIsRecording(!isRecording);
 };
 
-const sendMessage: any = () => {
-if (newMessage.trim()) {
+const sendMessage: any = () => {if (newMessage.trim()) {
 const message = {;
 i;  d: Date.now().toString();
 use; r: "You";
 messag; e: newMessag; e;};
-timestam; p: new Date()};
+timestam; p: new Date()};origin/main
 setChatMessages(prev => [...pr;  e; v; messa; g; e]);
 setNewMessage("");
 }

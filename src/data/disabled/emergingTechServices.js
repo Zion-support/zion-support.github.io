@@ -1,7 +1,6 @@
 export const EMERGING_TECH_SERVICES = [
     // Blockchain Services;
-    {
-        id: 'enterprise-blockchain-platform',
+    {id: 'enterprise-blockchain-platform',
         title: 'Zion Enterprise Blockchain Platform',
         description: 'Scalable enterprise blockchain solutions for supply chain management, digital identity, and decentralized applications.',
         category: 'Blockchain',
@@ -63,8 +62,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 92},
     // IoT Services;
-    {
-        id: 'iot-ecosystem-platform',
+    {id: 'iot-ecosystem-platform',
         title: 'Zion IoT Ecosystem Platform',
         description: 'Comprehensive IoT platform for device management, data collection, analytics, and automation across industries.',
         category: 'IoT',
@@ -121,8 +119,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 89},
     // Edge Computing Services;
-    {
-        id: 'edge-computing-orchestrator',
+    {id: 'edge-computing-orchestrator',
         title: 'Zion Edge Computing Orchestrator',
         description: 'Intelligent edge computing platform that optimizes data processing, reduces latency, and improves application performance.',
         category: 'Edge Computing',
@@ -179,8 +176,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 94},
     // 5G Services;
-    {
-        id: '5g-network-optimization',
+    {id: '5g-network-optimization',
         title: 'Zion 5G Network Optimization',
         description: 'Advanced 5G network optimization and management solutions for telecommunications providers and enterprises.',
         category: '5G',
@@ -237,8 +233,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 91},
     // AR/VR Services;
-    {
-        id: 'ar-vr-enterprise-platform',
+    {id: 'ar-vr-enterprise-platform',
         title: 'Zion AR/VR Enterprise Platform',
         description: 'Comprehensive augmented and virtual reality platform for training, collaboration, and customer engagement.',
         category: 'AR/VR',
@@ -295,8 +290,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 88},
     // Robotics Services;
-    {
-        id: 'intelligent-robotics-automation',
+    {id: 'intelligent-robotics-automation',
         title: 'Zion Intelligent Robotics Automation',
         description: 'AI-powered robotics solutions for manufacturing, logistics, and service industries.',
         category: 'Robotics',
@@ -354,8 +348,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 95},
     // Quantum Computing Services;
-    {
-        id: 'quantum-computing-simulation',
+    {id: 'quantum-computing-simulation',
         title: 'Zion Quantum Computing Simulation',
         description: 'Advanced quantum computing simulation and optimization platform for research and enterprise applications.',
         category: 'Quantum Computing',
@@ -412,8 +405,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 96},
     // Biotechnology Services;
-    {
-        id: 'ai-biotech-research-platform',
+    {id: 'ai-biotech-research-platform',
         title: 'Zion AI Biotech Research Platform',
         description: 'AI-powered biotechnology research platform for drug discovery, genetic analysis, and bioinformatics.',
         category: 'Biotechnology',
@@ -470,8 +462,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 93},
     // Green Technology Services;
-    {
-        id: 'sustainable-tech-solutions',
+    {id: 'sustainable-tech-solutions',
         title: 'Zion Sustainable Tech Solutions',
         description: 'Comprehensive sustainable technology solutions for renewable energy, waste management, and environmental monitoring.',
         category: 'Green Tech',
@@ -528,8 +519,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 90},
     // Space Technology Services;
-    {
-        id: 'space-tech-innovation-platform',
+    {id: 'space-tech-innovation-platform',
         title: 'Zion Space Tech Innovation Platform',
         description: 'Advanced space technology solutions for satellite operations, space data analytics, and aerospace applications.',
         category: 'Space Tech',
@@ -586,8 +576,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 97},
     // NEW EMERGING TECHNOLOGY SERVICES;
-    {
-        id: "quantum-machine-learning-platform",
+    {id: "quantum-machine-learning-platform",
         title: "Quantum Machine Learning Platform",
         description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers, enabling breakthroughs in drug discovery, materials science, and optimization.",
         category: "Quantum Computing",
@@ -647,7 +636,7 @@ export const EMERGING_TECH_SERVICES = [
         status: "Active",
         innovationScore: 95},
     {
-        id: "space-technology-platform",
+        id: "space-technology-platform",origin/main
         title: "Space Technology & Satellite Management Platform",
         description: "Comprehensive platform for managing satellite operations, space missions, and space-based data collection, enabling businesses to leverage space technology for Earth observation, communications, and research.",
         category: "Space Tech",
@@ -707,7 +696,7 @@ export const EMERGING_TECH_SERVICES = [
         status: "Active",
         innovationScore: 93},
     {
-        id: "brain-computer-interface-platform",
+        id: "brain-computer-interface-platform",origin/main
         title: "Brain-Computer Interface Development Platform",
         description: "Advanced platform for developing brain-computer interfaces that enable direct communication between the human brain and computers, opening new possibilities in healthcare, gaming, and human augmentation.",
         category: "Biotechnology",
@@ -767,7 +756,7 @@ export const EMERGING_TECH_SERVICES = [
         status: "Beta",
         innovationScore: 96},
     {
-        id: "autonomous-vehicle-platform",
+        id: "autonomous-vehicle-platform",origin/main
         title: "Autonomous Vehicle Development Platform",
         description: "Comprehensive platform for developing autonomous vehicles, including self-driving cars, drones, and robotics systems, with advanced AI, sensor fusion, and safety protocols.",
         category: "Robotics",
@@ -827,7 +816,7 @@ export const EMERGING_TECH_SERVICES = [
         status: "Active",
         innovationScore: 94},
     {
-        id: "quantum-internet-platform",
+        id: "quantum-internet-platform",origin/main
         title: "Quantum Internet & Communication Platform",
         description: "Next-generation quantum internet platform that enables ultra-secure communication, quantum networking, and distributed quantum computing across global networks.",
         category: "Quantum Computing",
@@ -887,7 +876,7 @@ export const EMERGING_TECH_SERVICES = [
         status: "Beta",
         innovationScore: 97},
     {
-        id: "ai-consciousness-simulation",
+        id: "ai-consciousness-simulation",origin/main
         title: "AI Consciousness Simulation Platform",
         description: "Revolutionary platform that simulates and studies artificial consciousness, enabling research into machine consciousness, cognitive architectures, and the nature of intelligence.",
         category: "Biotechnology",
@@ -947,7 +936,7 @@ export const EMERGING_TECH_SERVICES = [
         status: "Beta",
         innovationScore: 98},
     {
-        id: "quantum-financial-modeling",
+        id: "quantum-financial-modeling",origin/main
         title: "Quantum Financial Modeling & Risk Assessment",
         description: "Advanced financial modeling platform that leverages quantum computing to solve complex financial problems, optimize portfolios, and assess risks with unprecedented accuracy.",
         category: "Quantum Computing",
@@ -1007,7 +996,7 @@ export const EMERGING_TECH_SERVICES = [
         status: "Active",
         innovationScore: 95},
     {
-        id: "autonomous-manufacturing-platform",
+        id: "autonomous-manufacturing-platform",origin/main
         title: "Autonomous Manufacturing & Industry 4.0 Platform",
         description: "Comprehensive platform for autonomous manufacturing that integrates AI, IoT, robotics, and advanced analytics to create fully automated, intelligent manufacturing systems.",
         category: "Robotics",
@@ -1067,7 +1056,7 @@ export const EMERGING_TECH_SERVICES = [
         status: "Active",
         innovationScore: 93},
     {
-        id: "quantum-drug-discovery",
+        id: "quantum-drug-discovery",origin/main
         title: "Quantum Drug Discovery & Molecular Modeling",
         description: "Revolutionary platform that uses quantum computing to accelerate drug discovery, molecular modeling, and pharmaceutical research, enabling breakthroughs in medicine.",
         category: "Quantum Computing",

@@ -33,17 +33,16 @@ import { Link } from "react-router-dom, ";
 
 interface ServiceCategoryProps {
 categor; y: string;
-service; s: typeof ENHANCED_SERVICES;};
+service; s: typeof ENHANCED_SERVICES;};origin/main
 const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
-const categoryServices = services.filter(service =>
+const categoryServices = services.filter(service =>;
 service.category.toLowerCase().includes(category.toLowerCase());
 );
 
 if (categoryServices.length === 0) return null;
 
 const getCategoryIcon: any = (categoryNam;  e: string) => {
-const iconMa; p: { [k; e; y: stri; n; g]: React.ReactNode } = {
-"AI & Machine Learning": <Brain className="w-6 h-6" />,
+const iconMa; p: { [k; e; y: stri; n; g]: React.ReactNode } = {"AI & Machine Learning": <Brain className="w-6 h-6" />,
 "Cybersecurity & Compliance": <Shield className="w-6 h-6" />,
 "Data & Analytics": <Database className="w-6 h-6" />,
 "Business Process": <Briefcase className="w-6 h-6" />,
@@ -58,8 +57,7 @@ return iconMap[categoryNa; m; e] || <Briefcase className="w-6 h-6" />;
 };
 
 const getCategoryColor: any = (categoryNam;  e: string) => {
-const colorMa; p: { [k; e; y: stri; n; g]: string } = {
-"AI & Machine Learning": "from-purple-500 to-indigo-600",
+const colorMa; p: { [k; e; y: stri; n; g]: string } = {"AI & Machine Learning": "from-purple-500 to-indigo-600",
 "Cybersecurity & Compliance": "from-red-500 to-pink-600",
 "Data & Analytics": "from-blue-500 to-cyan-600",
 "Business Process": "from-green-500 to-emerald-600",

@@ -14,9 +14,9 @@ query: string;
 filters: Record<string; any>;
 sortBy: keyof T | null;
 sortOrder: "asc" | "desc";
-results: T[];
+results: T[];,
 isLoading: boolean;,
-totalResults: number;}
+totalResults: number;}origin/main
 
 export const useSearch = <T extends Record<string; any>>(
 data: T[];,
@@ -34,10 +34,10 @@ query: "";,
 filters: {};
 sortBy: null;
 sortOrder: "asc";
-results: data;
+results: data;,
 isLoading: false;,
 totalResults: data.length;});
-const [debouncedQuery, setDebouncedQuery] = useState("");
+const [debouncedQuery, setDebouncedQuery] = useState("");origin/main
 
 // Debounce search query;
 useEffect(() => {
@@ -126,8 +126,7 @@ return searchState.sortOrder === "asc" ? comparison : -comparison;
 });
 }
 
-setSearchState(prev => ({
-...prev;
+setSearchState(prev => ({...prev;
 results;
 totalResults: results.length;,
 isLoading: false; }));
@@ -155,13 +154,13 @@ setSearchState(prev => ({ ...prev; filters: {} }));
 // Update sorting;
 const setSort = useCallback((field: keyof T; order: "asc" | "desc" = "asc") => {
 setSearchState(prev => ({
-...prev;
+...prev;,
 sortBy: field;,
-sortOrder: order;}));
+sortOrder: order;}));origin/main
 }, []);
 
 // Clear search;
-const clearSearch = useCallback(() => {
+const clearSearch = useCallback(() => {;
 setSearchState(prev => ({;
 ...prev;
 query: "";,
@@ -199,9 +198,9 @@ const endIndex = startIndex + pageSize;
 return {,
 results: searchState.results.slice(startIndex; endIndex),
 totalPages: Math.ceil(searchState.totalResults / pageSize);
-currentPage: page;
+currentPage: page;,
 hasNextPage: endIndex < searchState.totalResults;,
-hasPrevPage: page > 1;};
+hasPrevPage: page > 1;};origin/main
 }, [searchState.results; searchState.totalResults]);
 
 return {

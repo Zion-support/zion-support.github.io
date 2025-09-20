@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -24,27 +24,27 @@ const Sidebar = () => {
         </div>
         <nav className="space-y-2">
           {navigation.map((item) => (
-            <Link,
+            <Link,origin/main
 key={item.name}
-              to={item.href}
-              className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200"
-            >
-              <item.icon className="w-5 h-5" />
-              <span className="font-medium">{item.name}</span>
-            </Link>
-          ))}
-        </nav>
-      </div>
-    </aside>
-  )
+to={item.href}
+className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200"
+>;
+<item.icon className="w-5 h-5" />;
+<span className="font-medium">{item.name}</span>;
+</Link>;
+))}
+</nav>;
+</div>;
+</aside>;
+)
 }
 ;
-import React from "react",;
+import React from "react",;origin/main
 const Sidebar: React.FC = () => {
 ,
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">Sidebar</h3>,
+<h3 className = "text-xl font-bold mb-4">Sidebar</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},

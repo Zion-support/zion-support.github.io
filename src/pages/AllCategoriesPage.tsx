@@ -2,7 +2,7 @@ import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
 import ErrorBoundary from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-// Reusing the categories array from CategoriesSection.tsx
+// Reusing the categories array from CategoriesSection.tsxorigin/main
 // Ideally this would come from a shared data source or API;
 
 const categories = [
@@ -60,4 +60,4 @@ export default function AllCategoriesPage() {
       </div>
     </div>
   );
-}
+}origin/main

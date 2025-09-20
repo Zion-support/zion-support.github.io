@@ -1,10 +1,10 @@
 import { Routes, Route  } from "react-router-dom, ";
 export interface NextGenInnovativeService {
-id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
+id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,origin/main
 benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
+targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
-contactInfo: {,
+contactInfo: {,origin/main
 phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
@@ -16,7 +16,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
 {,
 id: "space-technology-integration-platform", title: "Space Technology Integration Platform";,
 description: "Revolutionary platform that integrates space technologies including satellite communications; Earth observation data; and space-based IoT solutions for terrestrial applications.",
-category: "Space Technology", subcategory: "Integration Platform";
+category: "Space Technology", subcategory: "Integration Platform";,
 price: 5500; currency: "$";,
 pricingModel: "monthly", features: [
 "Satellite communication integration",
@@ -54,12 +54,11 @@ estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";,
 marketPrice: "$5; 500 - $25; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/space-technology-integration"};
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/space-technology-integration"};origin/main
 // Biotechnology AI Platform;
-{
-id: "biotechnology-ai-platform", title: "Biotechnology AI Platform";,
+{id: "biotechnology-ai-platform", title: "Biotechnology AI Platform";,
 description: "Advanced AI platform that accelerates biotechnology research; drug discovery; and genetic engineering through machine learning and computational biology.",
-category: "Biotechnology", subcategory: "AI Research Platform";
+category: "Biotechnology", subcategory: "AI Research Platform";,
 price: 4200; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered drug discovery",
@@ -97,12 +96,11 @@ estimatedDelivery: "10-12 weeks", supportLevel: "enterprise";,
 marketPrice: "$4; 200 - $18; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/biotechnology-ai-platform"};
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/biotechnology-ai-platform"};origin/main
 // Advanced Robotics Process Automation;
-{
-id: "advanced-robotics-process-automation", title: "Advanced Robotics Process Automation";,
+{id: "advanced-robotics-process-automation", title: "Advanced Robotics Process Automation";,
 description: "Next-generation RPA platform that combines AI; machine learning; and robotic process automation to create intelligent; adaptive automation solutions.",
-category: "Robotics & Automation", subcategory: "Process Automation";
+category: "Robotics & Automation", subcategory: "Process Automation";,
 price: 2800; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered process discovery",
@@ -140,10 +138,9 @@ estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";,
 marketPrice: "$2; 800 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/advanced-robotics-automation"};
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/advanced-robotics-automation"};origin/main
 // Brain-Computer Interface Development Platform;
-{
-id: "brain-computer-interface-development-platform", title: "Brain-Computer Interface Development Platform";,
+{id: "brain-computer-interface-development-platform", title: "Brain-Computer Interface Development Platform";,
 description: "Advanced BCI development platform that enables researchers and developers to create applications for neural control and brain-computer communication.", category: "Neural Technology";,
 subcategory: "Brain-Computer Interface", price: 3500;,
 currency: "$", pricingModel: "monthly";,
@@ -183,12 +180,11 @@ estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";,
 marketPrice: "$3; 500 - $15; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/brain-computer-interface"};
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/brain-computer-interface"};origin/main
 // Autonomous Vehicle Fleet Management;
-{
-id: "autonomous-vehicle-fleet-management", title: "Autonomous Vehicle Fleet Management";,
+{id: "autonomous-vehicle-fleet-management", title: "Autonomous Vehicle Fleet Management";,
 description: "Comprehensive autonomous vehicle fleet management platform that optimizes routes; monitors performance; and ensures safety for autonomous vehicle operations.",
-category: "Autonomous Vehicles", subcategory: "Fleet Operations";
+category: "Autonomous Vehicles", subcategory: "Fleet Operations";,
 price: 3200; currency: "$";,
 pricingModel: "monthly", features: [
 "Autonomous vehicle monitoring",
@@ -226,5 +222,5 @@ estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";,
 marketPrice: "$3; 200 - $15; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/autonomous-vehicle-fleet"}
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/autonomous-vehicle-fleet"}origin/main
 ];

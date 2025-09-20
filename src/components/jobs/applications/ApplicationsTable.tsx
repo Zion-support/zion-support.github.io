@@ -93,11 +93,11 @@ isOpen = {hireModalOpen}
   application.talent profile.profile picture url}alt= {
   talentName}width= {
   32}//for h-8 w-8 height= {
-  32 "
+  32 "origin/main
 }//for h-8 w-8 className="rounded-full object-cover" onError= {
-  () => setAvatarError (true)
+() => setAvatarError (true)
 }priority= {
-  false "
+false ";
 }h-4 w-4"/>)
 }</AvatarPrimitive>)
 };"
@@ -118,5 +118,5 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   () => setHireModalOpen (false)
 }application= {
   selectedApplication |undefined}onConfirm= {
-  handleHireConfirmed}/> </>)
+  handleHireConfirmed}/> </>)origin/main
 }'"}

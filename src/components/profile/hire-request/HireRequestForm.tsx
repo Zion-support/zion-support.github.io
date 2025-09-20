@@ -55,28 +55,28 @@ type='submit'
           >
             {isSubmitting ? (
               <>
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void}
+                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void}origin/main
 export function HireRequestForm({ talent onClose initialJobTitle userDetails onSubmitSuccess }: HireRequestFormProps) {
 return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <PersonalInfoFields form={form} />
-        </div>
-        <ProjectDetailsField form={form} />
-        <TimelineField form={form} />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <BudgetFields form={form} talent={talent} />
-        </div>
-        <DialogFooter className="pt-4">
-          <Button,
+<Form {...form}>;
+<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+<PersonalInfoFields form={form} />;
+</div>;
+<ProjectDetailsField form={form} />;
+<TimelineField form={form} />;
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+<BudgetFields form={form} talent={talent} />;
+</div>;
+<DialogFooter className="pt-4">;
+<Button;
 type="button"
-            variant="outline"
-            onClick={onClose}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled={isSubmitting}
-        <DialogFooter className="pt-4">
-          <Button,
+variant="outline"
+onClick={onClose}
+className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+disabled={isSubmitting}
+<DialogFooter className="pt-4">;
+<Button;
 type="button"
             variant="outline"
             onClick = {onClose}
@@ -106,4 +106,4 @@ type="submit"
       </form>
     </Form>
   )
-}
+}origin/main

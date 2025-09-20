@@ -1,9 +1,9 @@
 import { Star } from 'lucide-react';
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
-  averageRating: number;,
+  averageRating: number;,origin/main
 totalReviews: number;
-  ratingDistribution?: Record<number number>
+ratingDistribution?: Record<number number>;
 export function ReviewStats({
   averageRating,
 totalReviews
@@ -68,7 +68,7 @@ value = {getPercentage(ratingDistribution[rating] |0)}
         </div>
       )}
     </div>
-  )
+  )origin/main
 }</div>)
 }</div>)
 }"}

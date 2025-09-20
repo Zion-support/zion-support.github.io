@@ -11,7 +11,7 @@ descriptio; n: string;
 ctaTex; t: string;
 ctaLin; k: string;
 backgroun; d: string;
-ico; n: React.ReactNode;};
+ico; n: React.ReactNode;};origin/main
 const EnhancedHer; o: React.FC = () => {
 const [currentSli;  d; e; setCurrentSli; d; e] = useState(0);
 const [isPlayi; n; g; setIsPlayi; n; g] = useState(true);
@@ -30,7 +30,7 @@ backgrou; n; d: "linea; r-gradien; t(135d; e; g, #667ee; a 0%, #764ba; 2 10; 0%)
 };
 ic; o; n: "🚀"};
 {
-i; d: 2;
+i; d: 2;origin/main
 tit; l; e: "A; I-Powere; d Solution; s",
 subtit; l; e: "Fo; r Moder; n Enterprise; s",
 descripti; o; n: "Leverag; e artificia; l intelligenc; e t; o automa; t; e; workflo; w; s; enhan; c; e; productivi; t; y; an; d gai; n competitiv; e advantage; s.",
@@ -39,7 +39,7 @@ ctaLi; n; k: "/a; i-solution; s",
 backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #f093f; b 0%, #f5576; c 10; 0%)",
 ic; o; n: "🤖"};
 {
-i; d: 3;
+i; d: 3;origin/main
 tit; l; e: "Clou; d-Nativ; e Architectur; e",
 subtit; l; e: "Buil; t fo; r Scal; e",
 descripti; o; n: "Enterpris; e-grad; e clou; d solution; s tha; t gro; w wit; h yo; u; r; busine; s; s; ensurin; g reliabilit; y an; d performanc; e.",
@@ -51,7 +51,7 @@ ic; o; n: "☁️"}
 useEffect(() => {
 if (!isAutoPlaying) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 if (isPlaying) {;
 setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
 }

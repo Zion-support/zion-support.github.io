@@ -18,22 +18,21 @@ estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
 contactInfo: {
-phone: string;
+phone: string;,
 email: string;,
 website: string;};
 websiteUrl: string;
 technologyStack: string[];,
-roiMetrics: string[];}
+roiMetrics: string[];}origin/main
 
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
-{
-id: "5g-enterprise-network-solutions";
+{id: "5g-enterprise-network-solutions";,
 title: "5G Enterprise Network Infrastructure & Management Platform";,
 description: "Comprehensive 5G enterprise networking solution that provides ultra-fast; low-latency connectivity with advanced network slicing; security; and management capabilities.",
 category: "Network Infrastructure";
 subcategory: "5G Solutions";
 price: 6500;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "5G network slicing";
@@ -65,25 +64,24 @@ targetAudience: [
 "Government agencies";
 ],
 tags: ["5G", "Network Infrastructure", "IoT", "Low Latency", "Network Slicing"],
-estimatedDelivery: "8-12 weeks";
+estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$6;500 - $25;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/5g-enterprise-network-solutions";,
 technologyStack: ["5G Core", "Network Slicing", "SDN", "NFV", "OpenStack", "Kubernetes"],
 roiMetrics: ["90% reduction in network latency", "40% infrastructure cost savings", "99.9% network reliability"];
 },
-{
-id: "edge-ai-computing-platform";
+{id: "edge-ai-computing-platform";,
 title: "Edge AI Computing & Inference Platform";,
 description: "Distributed edge computing platform that brings AI processing closer to data sources; enabling real-time AI applications with minimal latency and bandwidth requirements.",
 category: "Edge Computing";
 subcategory: "AI Inference";
 price: 4200;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Distributed AI inference";
@@ -115,11 +113,11 @@ targetAudience: [
 "Healthcare providers";
 ],
 tags: ["Edge Computing", "AI", "Machine Learning", "IoT", "Real-time Processing"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$4;200 - $15;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/edge-ai-computing-platform";,

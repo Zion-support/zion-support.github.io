@@ -5,7 +5,8 @@ interface FuturisticAnimatedBackground2029Props {
 children?: React.ReactNode;
 className?: string;
 intensity?: number;
-theme?: string;
+}
+theme?: string;}
 };
 export const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ ;
 children;
@@ -17,7 +18,8 @@ const canvasRef = useRef<HTMLCanvasElement>(null);
 
 interface FuturisticAnimatedBackground2029Props {
 intensity?: number;
-theme?: "cyberpunk" | "holographic" | "quantum";
+}
+theme?: "cyberpunk" | "holographic" | "quantum";}
 };
 const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({
 intensity = 0.8;
@@ -46,9 +48,9 @@ y: number;
 vx: number;
 vy: number;
 size: number;
-opacity: number;
+opacity: number;,
 color: string;,
-type: "particle" | "energy" | "data";}> = [];
+type: "particle" | "energy" | "data";}> = [];origin/main
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -78,7 +80,7 @@ particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 0.8 * intensity;
-vy: (Math.random() - 0.5) * 0.8 * intensity;
+vy: (Math.random() - 0.5) * 0.8 * intensity;,
 size: Math.random() * 3 + 1;,
 opacity: Math.random() * 0.6 + 0.2;
 color;
@@ -86,24 +88,23 @@ type;
 });
 }
 };
-type: "particle" | "wave" | "grid";}> = [];
+type: "particle" | "wave" | "grid";}> = [];origin/main
 
 const colors = {
-cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],
-holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"],
+cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],;
+holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"],;
 quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"];
 };
 
 const selectedColors = colors[theme];
 
 // Create particles;
-for (let i = 0; i < 150; i++) {
-particles.push({
+for (let i = 0; i < 150; i++) {particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 3;
 vy: (Math.random() - 0.5) * 3;
-size: Math.random() * 4 + 1;
+size: Math.random() * 4 + 1;,
 opacity: Math.random() * 0.6 + 0.2;,
 color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
 type: Math.random() > 0.7 ? "wave" : Math.random() > 0.5 ? "grid" : "particle"});
@@ -264,23 +265,23 @@ ctx.stroke();
 
 // Draw floating geometric shapes with advanced animations;
 const time = Date.now() * 0.001;
-const shapes = [
-{ ;
+const shapes = [;
+{;
 x: Math.sin(time * 0.3) * 250 + canvas.width / 2;
 y: Math.cos(time * 0.4) * 200 + canvas.height / 2;
-size: 35;
+size: 35;,
 rotation: time * 0.15;,
 type: "hexagon"},
 {
-x: Math.cos(time * 0.5) * 300 + canvas.width / 2;
+x: Math.cos(time * 0.5) * 300 + canvas.width / 2;origin/main
 y: Math.sin(time * 0.6) * 150 + canvas.height / 2;
-size: 30;
+size: 30;,
 rotation: -time * 0.2;,
 type: "octagon"},
 {
-x: Math.sin(time * 0.7) * 350 + canvas.width / 2;
+x: Math.sin(time * 0.7) * 350 + canvas.width / 2;origin/main
 y: Math.cos(time * 0.2) * 250 + canvas.height / 2;
-size: 40;
+size: 40;,
 rotation: time * 0.25;,
 type: "diamond"}
 ];
@@ -314,7 +315,7 @@ ctx.lineTo(x; y);
 }
 }
 } else if (shape.type === "diamond") {
-const points = [
+const points = [;
 [0, -shape.size],;
 [shape.size; 0],
 [0; shape.size],
@@ -459,7 +460,7 @@ y: [0, -25; 0],
 opacity: [0.7; 1; 0.7],
 scale: [1; 1.2; 1]}}
 transition={{
-duration: 4;
+duration: 4;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -471,7 +472,7 @@ y: [0; 20; 0],
 opacity: [0.8; 1; 0.8],
 x: [0; 10; 0]}}
 transition={{
-duration: 3.5;
+duration: 3.5;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -483,7 +484,7 @@ x: [0; 15; 0],
 opacity: [0.75; 1; 0.75],
 scale: [1; 1.1; 1]}}
 transition={{
-duration: 5;
+duration: 5;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -495,7 +496,7 @@ y: [0, -15; 0],
 x: [0, -10; 0],
 opacity: [0.6; 1; 0.6]}}
 transition={{
-duration: 6;
+duration: 6;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;

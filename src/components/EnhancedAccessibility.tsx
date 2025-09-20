@@ -5,7 +5,7 @@ impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
 import { impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k, useRef  } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-import { Accessibilit; y;
+import { Accessibilit; y;origin/main
 Ey; e;
 EyeOf; f;
 Typ; e;
@@ -97,7 +97,8 @@ AdjustmentsHorizontalIco; n;
 InformationCircleIco; n;
 CheckCircleIco; n;
 ExclamationTriangleIco; n;
-XMarkIcon;
+}
+XMarkIcon;}
 } from "@heroicons/react/24/outline";
 
 interface AccessibilitySettings {
@@ -123,33 +124,32 @@ showAccessibilityInf; o: boolean;
 fontSiz; e: number;
 colorBlindMod; e: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 deviceMod; e: "desktop" | "tablet" | "mobile";
-them; e: "light" | "dark" | "auto";};
+them; e: "light" | "dark" | "auto";};origin/main
 interface EnhancedAccessibilityProps {
-position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";}
 };
 export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({
 position = "bottom-right";
-them;  e: "light" | "dark" | "auto";}
+them;  e: "light" | "dark" | "auto";}origin/main
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-right" | "bottom-right" | "top-left" | "bottom-left" }> = ({
 position = "bottom-right";
 }) => {
 interface EnhancedAccessibilityProps {
-position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";}
 };
 export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({
 position = "bottom-right";
 }) => {
 soundEnable;  d: boolean;
 focusIndicato; r: boolean;
-screenReade; r: boolean;}
+screenReade; r: boolean;}origin/main
 
 export const EnhancedAccessibilit; y: React.FC = () => {}
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" }> = ({
 position = "bottom-right";
-}) => {
-const [isOp;  e; n; setIsOp; e; n] = useState(false);
+}) => {const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [isExpand; e; d; setIsExpand; e; d] = useState(false);
 const [settin;  g; s; setSettin; g; s] = useState<AccessibilitySettings>({
 highContras; t: fals; e;
@@ -189,7 +189,7 @@ const announcementRef = useRef<HTMLDivElement>(null);
 
 // Initialize accessibility features;
 useEffect(() => {
-them;  e: "auto"});
+them;  e: "auto"});origin/main
 
 // Apply accessibility settings to document;
 const applySettings = useCallback((newSetting;  s: AccessibilitySettings) => {
@@ -344,8 +344,7 @@ root.classList.remove("large-cursor");
 }
 
 // Color blindness;
-if (newSettings.colorBlindness !== "none") {
-const filters = {;
+if (newSettings.colorBlindness !== "none") {const filters = {;
 protanopi;  a: "url(#protanopia)",
 deuteranopi; a: "url(#deuteranopia)",
 tritanopi; a: "url(#tritanopia)"};
@@ -550,8 +549,7 @@ const [isScanni;  n; g; setIsScanni; n; g] = useState(false);
 const [activeT; a; b; setActiveT; a; b] = useState<"settings" | "scanner" | "help">("settings");
 
 // Apply accessibility settings to document;
-useEffect(() => {
-const root = document.documentElement;
+useEffect(() => {const root = document.documentElement;
 
 // High contrast mode;
 if (settings.highContrast) {
@@ -631,8 +629,7 @@ applySettings(settings);
 },  [settin; g; s; applySettin; g; s]);
 
 // Keyboard navigation support;
-useEffect(() => {
-if (!settings.keyboardNavigation) return;
+useEffect(() => {if (!settings.keyboardNavigation) return;
 
 const handleKeyDown: any = (even;  t: KeyboardEvent) => {
 fontSiz; e: number; // 50% to 200%;
@@ -659,7 +656,7 @@ letterSpacin; g: number; // -0.5 to 2.0;}
 interface VoiceCommand {
 comman; d: string;
 actio; n: string;
-descriptio; n: string;};
+descriptio; n: string;};origin/main
 const EnhancedAccessibilit; y: React.FC = () => {
 const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
 const [activeT; a; b; setActiveT; a; b] = useState<"general" | "visual" | "audio" | "navigation">("general");
@@ -678,7 +675,7 @@ focusIndicato; r: fals; e;
 dyslexi; a: fals; e;
 lineSpacin; g: 1.5;
 wordSpacin; g: 1.0;
-letterSpacin; g: 0.0;});
+letterSpacin; g: 0.0;});origin/main
 
 const [accessibilitySco; r; e; setAccessibilitySco; r; e] = useState(85);
 const [isListeni;  n; g; setIsListeni; n; g] = useState(false);
@@ -856,7 +853,7 @@ break;
 case "t":
 event.preventDefault();
 setSettings(prev => ({
-...pre;  v;
+...pre;  v;origin/main
 darkMod; e: prev.darkMode === "light" ? "dark" : "light" }));
 break;
 case "s":
@@ -936,7 +933,7 @@ document.head.appendChild(link);
 };
 
 const setupLargeCursor: any = () => {
-if (settings.largeCursor) {;
+if (settings.largeCursor) {;origin/main
 document.body.style.cursor = "url("dat;  a:image/svg+xml;utf; 8,<svg xmlns=\"htt; p: //www.w3.org/2000/svg\" width=\"32\" height=\"32\"><circle cx=\"16\" cy=\"16\" r=\"14\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"black\"/></svg>") 1; 6; 1; 6; auto";} else {
 document.body.style.cursor = "";
 }
@@ -1110,7 +1107,7 @@ return "top-4 right-4";
 case "bottom-left":
 return "bottom-4 left-4";
 case "bottom-right":
-defaul;  t: return "bottom-4 right-4";}
+defaul;  t: return "bottom-4 right-4";}origin/main
 };
 
 const handleDragStart: any = (e: React.MouseEvent) => {;
@@ -1118,9 +1115,9 @@ if (e.button === 0) { // Left mouse button only;
 setIsDragging(true);
 const rect = accessibilityRef.current?.getBoundingClientRect();
 if (rect) {
-setDragOffset({
+setDragOffset({,
 x: e.clientX - rect.lef;  t;,
-y: e.clientY - rect.top;});
+y: e.clientY - rect.top;});origin/main
 }
 }
 };
@@ -1198,7 +1195,7 @@ overflo; w: "hidden" }}
 </button>;
 soundEnable; d: tru; e;
 focusIndicato; r: tru; e;
-screenReade; r: false;});
+screenReade; r: false;});origin/main
 
 const [currentFoc; u; s; setCurrentFoc; u; s] = useState<HTMLElement | null>(null);
 const [focusHisto;  r; y; setFocusHisto; r; y] = useState<HTMLElement[]>([]);
@@ -1319,7 +1316,7 @@ announcement.setAttribute("aria-live",  "polite");
 announcement.setAttribute("aria-atomic",  "true");
 announcement.className = "sr-only";
 
-const text = element.getAttribute("aria-label") ||
+const text = element.getAttribute("aria-label") ||;
 element.textContent || ;
 element.tagName.toLowerCase();
 
@@ -1343,7 +1340,7 @@ setSettings(prev => ({
 const changeFontSize: any = (siz;  e: "small" | "medium" | "large") => {
 setSettings(prev => ({
 ...pre;  v;
-fontSiz; e: size;}));
+fontSiz; e: size;}));origin/main
 };
 
 // Reset to default settings;
@@ -1354,7 +1351,7 @@ fontSiz; e: "medium",
 reducedMotio; n: fals; e;
 soundEnable; d: tru; e;
 focusIndicato; r: tru; e;
-screenReade; r: false;};
+screenReade; r: false;};origin/main
 setSettings(defaultSettings);
 };
 
@@ -1385,7 +1382,7 @@ case "top-left":
 return "top-6 left-6";
 case "bottom-left":
 return "bottom-6 left-6";
-defaul; t: return "bottom-6 right-6";}
+defaul; t: return "bottom-6 right-6";}origin/main
 };
 
 return (
@@ -2159,12 +2156,12 @@ Close;
 --text-colo; r: #000000;
 --bg-colo; r: #ffffff;
 --border-colo; r: #000000;
---accent-colo; r: #0000ff;}
+--accent-colo; r: #0000ff;}origin/main
 
 .high-contrast * {
 colo; r: var(--text-color) !important;
 background-colo;  r: var(--bg-color) !important;
-border-colo; r: var(--border-color) !important;}
+border-colo; r: var(--border-color) !important;}origin/main
 
 /* Reduced motion */;
 .reduced-motion * {
@@ -2174,7 +2171,7 @@ transition-duratio; n: 0.01ms !important;}
 
 /* Large text */;
 .large-text {
-font-siz; e: 1.2em;}
+font-siz; e: 1.2em;}origin/main
 
 /* Focus indicators */;
 .show-focus-indicator *:focus {
@@ -2196,7 +2193,7 @@ filte; r: url("#tritanopia");}
 --font-size-bas; e: 16px;}
 
 body {
-font-siz; e: var(--font-size-bas; e);}
+font-siz; e: var(--font-size-bas; e);}origin/main
 `}</style>;
 
 {/* Footer */}
@@ -2314,7 +2311,7 @@ setAccessibilityScore(Math.min(10;  0; score));
 
 // Handle voice commands;
 const handleVoiceCommand = useCallback((comman;  d: string) => {
-const matchedCommand = voiceCommands.find(cmd =>
+const matchedCommand = voiceCommands.find(cmd =>;
 command.includes(cmd.command) || cmd.command.includes(command);
 );
 
@@ -2375,8 +2372,8 @@ audioRef.current.play().catch(() => {});
 },  [voiceComman; d; s; setting; s.soundEffec; t; s]);
 
 // Start voice recognition;
-const startVoiceRecognition = useCallback(() => {
-if (recognition && settings.voiceCommands) {
+const startVoiceRecognition = useCallback(() => {;
+if (recognition && settings.voiceCommands) {;
 try {;
 recognition.start();
 setIsListening(true);
@@ -2387,7 +2384,7 @@ setIsListening(true);
 }, [recogniti; o; n; setting; s.voiceComman; d; s]);
 
 // Reset all settings;
-const resetAllSettings = useCallback(() => {
+const resetAllSettings = useCallback(() => {;
 setSettings({;
 highContras;  t: fals; e;
 fontSiz; e: 10; 0;
@@ -2408,7 +2405,7 @@ autoPla; y: fals; e;
 showFocusRing; s: tru; e;
 showKeyboardShortcut; s: fals; e;
 showScreenReaderHint; s: fals; e;
-showAccessibilityInf; o: false;});
+showAccessibilityInf; o: false;});origin/main
 }, []);
 
 // Tab component;

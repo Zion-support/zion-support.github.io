@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
@@ -110,5 +112,5 @@ href={feature.link}
         </div>
       </div>
     </section>
-  );  )
+  );  )origin/main
 }

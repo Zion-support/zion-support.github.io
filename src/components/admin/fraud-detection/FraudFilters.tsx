@@ -6,5 +6,6 @@ import { Select, SelectContent, SelectItem, SelectTriggerSelectValue } from "@/c
 import { SearchFilter } from 'lucide-react';
 
 interface FraudFiltersProps {
-resetFilters: () => void}
+resetFilters: () => void}origin/main
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
+})

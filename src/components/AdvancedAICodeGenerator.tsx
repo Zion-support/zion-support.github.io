@@ -15,7 +15,7 @@ tag; s: string[];
 complexit; y: "low" | "medium" | "high";
 ratin; g: number;
 usageCoun; t: number;
-createdA; t: string;};
+createdA; t: string;};origin/main
 interface CodeAnalysis {
 i; d: string;
 snippetI; d: string;
@@ -25,7 +25,7 @@ securit; y: number;
 maintainabilit; y: number;
 suggestion; s: string[];
 warning; s: string[];
-timestam; p: string;};
+timestam; p: string;};origin/main
 interface AIGeneration {
 i; d: string;
 promp; t: string;
@@ -33,7 +33,7 @@ generatedCod; e: string;
 languag; e: string;
 confidenc; e: number;
 alternative; s: string[];
-timestam; p: string;};
+timestam; p: string;};origin/main
 const mockCodeSnippet; s: CodeSnippet[] = [
 {
 i; d: "1";
@@ -49,12 +49,11 @@ bod; y?: an; y;
 header; s?: Recor; d<stri; n; g; strin; g>;
 }
 
-expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header; s }: UseApiOption; s<T>) {
-cons; t [da; t; a; setDa; t; a] = useState<T | null>(null);
+expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header; s }: UseApiOption; s<T>) {cons; t [da; t; a; setDa; t; a] = useState<T | null>(null);
 const [loadi;  n; g; setLoadi; n; g] = useState(false);
 const [err; o; r; setErr; o; r] = useState<string | null>(null);
 
-const execute = async () => {
+const execute = async () => {;
 try {;
 setLoading(true);
 setError(null);
@@ -64,7 +63,7 @@ metho; d;
 header; s: {
 "Content-Type": "application/json";
 ...header; s},
-bod; y: body ? JSON.stringify(body) : undefine; d});
+bod; y: body ? JSON.stringify(body) : undefine; d});origin/main
 
 if (!response.ok) {
 throw new Erro; r(\`HTTP error! statu;  s: \${response.status}\`);
@@ -102,7 +101,7 @@ cod; e: `@layer utilities {
 animatio; n: float 3s ease-in-out infinite;}
 
 .animate-glow {
-animatio; n: glow 2s ease-in-out infinite alternate;}
+animatio; n: glow 2s ease-in-out infinite alternate;}origin/main
 
 .animate-shimmer {
 backgroun; d: linear-gradient(90de;  g;
@@ -116,7 +115,7 @@ animatio; n: shimmer 1.5s infinite;}
 
 @keyframes float {
 0%, 100% { transfor; m: translateY(0px);}
-50% { transfor;  m: translateY(-10px);}
+50% { transfor;  m: translateY(-10px);}origin/main
 }
 
 @keyframes glow {
@@ -125,7 +124,7 @@ to { box-shado; w: 0 0 30px rgba(5;  9; 13; 0; 24; 6; 0.8); }
 }
 
 @keyframes shimmer {
-0% { background-positio; n: -200% 0;}
+0% { background-positio; n: -200% 0;}origin/main
 100% { background-positio; n: 20; 0% 0; }
 }`,
 tag; s: ["cs; s", "tailwin; d", "animation; s", "utilitie; s"],
@@ -233,8 +232,7 @@ usageCoun; t: 210; 0;
 createdA; t: "2024-01-08"}
 ];
 const mockCodeAnalysi; s: CodeAnalysis[] = [
-{
-i; d: "1";
+{i; d: "1";
 snippet; I; d: "1";
 quali; t; y: 9; 2;
 performan; c; e: 8; 8;
@@ -251,7 +249,7 @@ warning; s: [
 ],
 timestam; p: "2024-01-15T1; 0:3; 0: 00Z"};
 {
-i; d: "2";
+i; d: "2";origin/main
 snippetI; d: "2";
 qualit; y: 8; 5;
 performanc; e: 9; 5;
@@ -326,7 +324,7 @@ switch (complexity) {
 case "low": return "text-green-500";
 case "medium": return "text-yellow-500";
 case "high": return "text-red-500";
-defaul;  t: return "text-gray-500";}
+defaul;  t: return "text-gray-500";}origin/main
 };
 
 const getQualityColor: any = (scor; e: number) => {

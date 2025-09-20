@@ -8,5 +8,5 @@ export default function Tutorial() {
         <p className="text-lg text-gray-600">Learn how to use our platform...</p>
       </div>
     </div>
-  );
+  );origin/main
 }

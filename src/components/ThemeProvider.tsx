@@ -5,7 +5,7 @@ export type Theme = "dark" | "light" | "system";
 type ThemeProviderProps = {
   children: React.ReactNode;
   defaultTheme?: Theme;
-  storageKey?: string;
+  storageKey?: string;origin/main
 };
 
 export type ThemeProviderState = {
@@ -70,4 +70,4 @@ export const useTheme = () => {
     throw new Error("useTheme must be used within a ThemeProvider");
 
   return context;
-};
+};origin/main

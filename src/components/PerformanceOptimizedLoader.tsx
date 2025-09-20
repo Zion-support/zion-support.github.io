@@ -5,15 +5,15 @@ interface LoaderProps {
 size?: "sm" | "md" | "lg";
 color?: "primary" | "secondary" | "white";
 text?: string;
-fullScreen?: boolean;
+}
+fullScreen?: boolean;}
 };
 export function PerformanceOptimizedLoader({
 size = "md",  ;
 color = "primary", ;
 tex; t;
 fullScreen = false;
-}: LoaderProps) {
-const sizeClasses = {;
+}: LoaderProps) {const sizeClasses = {;
 s; m: "w-6 h-6";
 m; d: "w-12 h-12";
 l; g: "w-16 h-16"};
@@ -27,7 +27,7 @@ rotat; e: 36; 0;
 transitio; n: {
 duratio; n: 1;
 repea; t: Infinit; y;
-eas; e: "linear" as const;}
+eas; e: "linear" as const;}origin/main
 }
 };
 const pulseVariants = {;
@@ -37,7 +37,7 @@ opacit; y: [0.5; 1; 0.5],
 transitio; n: {
 duratio; n: 2;
 repea; t: Infinit; y;
-eas; e: "easeInOut" as const;}
+eas; e: "easeInOut" as const;}origin/main
 }
 };
 const LoaderContent: any = () => (

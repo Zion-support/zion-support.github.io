@@ -1,7 +1,6 @@
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     // Blockchain & Web3 Solutions;
-    {
-        id: "blockchain-web3-enterprise-platform";
+    {id: "blockchain-web3-enterprise-platform";
         title: "Blockchain & Web3 Enterprise Platform - Decentralized Business Solutions";
         description: "Comprehensive blockchain and Web3 platform that enables enterprises to build decentralized applications, implement smart contracts, and leverage blockchain technology for business transformation and innovation.",
         category: "Blockchain & Web3";
@@ -63,8 +62,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         customizationLevel: "Custom blockchain solutions and smart contracts";
         innovationLevel: "Cutting-edge Web3 and blockchain technology"};
     // Quantum Computing Solutions;
-    {
-        id: "quantum-computing-solutions-platform";
+    {id: "quantum-computing-solutions-platform";
         title: "Quantum Computing Solutions Platform - Next-Generation Computing Power";
         description: "Advanced quantum computing platform that provides quantum algorithms, quantum machine learning, and quantum optimization solutions for complex computational problems that are impossible to solve with classical computers.",
         category: "Quantum Computing";
@@ -126,8 +124,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         customizationLevel: "Custom quantum algorithms and applications";
         innovationLevel: "Revolutionary quantum computing technology"};
     // Edge Computing & IoT Solutions;
-    {
-        id: "edge-computing-iot-platform";
+    {id: "edge-computing-iot-platform";
         title: "Edge Computing & IoT Platform - Intelligent Edge Intelligence";
         description: "Comprehensive edge computing and IoT platform that processes data at the edge, reduces latency, improves performance, and enables real-time decision making for connected devices and smart systems.",
         category: "Edge Computing & IoT";
@@ -189,8 +186,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         customizationLevel: "Custom edge computing solutions and IoT integrations";
         innovationLevel: "Advanced edge computing and IoT technology"};
     // 5G & Advanced Connectivity Solutions;
-    {
-        id: "5g-advanced-connectivity-platform";
+    {id: "5g-advanced-connectivity-platform";
         title: "5G & Advanced Connectivity Platform - Next-Generation Network Solutions";
         description: "Advanced 5G and connectivity platform that provides ultra-fast wireless communication, low-latency networking, and advanced connectivity solutions for businesses, IoT devices, and emerging technologies.",
         category: "5G & Connectivity";
@@ -252,8 +248,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         customizationLevel: "Custom 5G solutions and network configurations";
         innovationLevel: "Cutting-edge 5G and connectivity technology"};
     // Augmented Reality & Virtual Reality Solutions;
-    {
-        id: "ar-vr-enterprise-platform";
+    {id: "ar-vr-enterprise-platform";
         title: "AR/VR Enterprise Platform - Immersive Business Solutions";
         description: "Comprehensive augmented reality and virtual reality platform that provides immersive experiences, training simulations, virtual collaboration, and AR/VR solutions for enterprise applications and business transformation.",
         category: "AR/VR & Immersive Technology";
@@ -315,8 +310,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         customizationLevel: "Custom AR/VR experiences and training programs";
         innovationLevel: "Advanced immersive technology solutions"};
     // Robotics & Automation Solutions;
-    {
-        id: "robotics-automation-platform";
+    {id: "robotics-automation-platform";
         title: "Robotics & Automation Platform - Intelligent Automation Solutions";
         description: "Advanced robotics and automation platform that provides intelligent automation, robotic process automation (RPA), and autonomous systems for manufacturing, logistics, healthcare, and other industries.",
         category: "Robotics & Automation";
@@ -378,8 +372,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         customizationLevel: "Custom robotics solutions and automation workflows";
         innovationLevel: "Advanced robotics and automation technology"};
     // Digital Twin & Simulation Solutions;
-    {
-        id: "digital-twin-simulation-platform";
+    {id: "digital-twin-simulation-platform";
         title: "Digital Twin & Simulation Platform - Virtual Replica Solutions";
         description: "Comprehensive digital twin and simulation platform that creates virtual replicas of physical systems, enables predictive modeling, and provides real-time monitoring and optimization for complex systems and processes.",
         category: "Digital Twin & Simulation";
@@ -441,8 +434,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         customizationLevel: "Custom digital twin solutions and simulation models";
         innovationLevel: "Advanced digital twin and simulation technology"};
     // Green Technology & Sustainability Solutions;
-    {
-        id: "green-technology-sustainability-platform";
+    {id: "green-technology-sustainability-platform";
         title: "Green Technology & Sustainability Platform - Eco-Friendly Solutions";
         description: "Comprehensive green technology and sustainability platform that provides renewable energy solutions, carbon footprint tracking, environmental monitoring, and sustainable business practices for organizations committed to environmental responsibility.",
         category: "Green Technology & Sustainability";

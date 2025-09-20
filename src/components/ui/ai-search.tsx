@@ -30,9 +30,9 @@ location?: string;
 price?: string;
 type: "service" | "talent" | "company" | "article";
 metadata: {
-lastUpdated: string;
+lastUpdated: string;,
 verified: boolean;,
-featured: boolean;};
+featured: boolean;};origin/main
 }
 
 interface AISearchProps {
@@ -40,15 +40,16 @@ enabled?: boolean;
 placeholder?: string;
 onSearch?: (query: string; filters: SearchFilters) => void;
 onResultClick?: (result: SearchResult) => void;
-className?: string;
+}
+className?: string;}
 };
 interface SearchFilters {
 category: string[];
 priceRange: [number; number];
 rating: number;
-location: string[];
+location: string[];,
 verified: boolean;,
-featured: boolean;};
+featured: boolean;};origin/main
 export function AISearch({;
 enabled = true;
 placeholder = "Search for AI services; talent; or companies...",
@@ -67,12 +68,12 @@ const [filters, setFilters] = useState<SearchFilters>({
 category: [];,
 priceRange: [0; 10000],
 rating: 0;
-location: [];
+location: [];,
 verified: false;,
 featured: false;});
 const [results, setResults] = useState<SearchResult[]>([]);
 const [suggestions, setSuggestions] = useState<string[]>([]);
-const [_selectedResult, setSelectedResult] = useState<SearchResult | null>(null);
+const [_selectedResult, setSelectedResult] = useState<SearchResult | null>(null);origin/main
 
 const searchRef = useRef<HTMLDivElement>(null);
 const inputRef = useRef<HTMLInputElement>(null);
@@ -88,8 +89,8 @@ const baseSuggestions = [
 "Cloud solutions",
 "Cybersecurity",
 "Data analytics",
-"Quantum computing",
-"Remote developers",
+"Quantum computing",;
+"Remote developers",;
 "IT consulting";
 ];
 
@@ -121,23 +122,23 @@ const mockResults: SearchResult[] = [
 {
 id: "1";
 title: "AI-Powered Business Intelligence Platform";
-description: "Advanced analytics and insights powered by machine learning algorithms";
+description: "Advanced analytics and insights powered by machine learning algorithms";,
 category: "AI & Analytics";,
 tags: ["Business Intelligence", "Machine Learning", "Analytics", "Dashboard"],
 relevance: 0.95;
-rating: 4.8;
+rating: 4.8;,
 reviews: 1247;,
 price: "$2;500/month",
 type: "service";
 metadata: {
-lastUpdated: "2024-01-15";
+lastUpdated: "2024-01-15";,
 verified: true;,
-featured: true;}
+featured: true;}origin/main
 };
 {
 id: "2";
 title: "Senior AI Engineer - Remote";
-description: "Experienced AI engineer specializing in deep learning and NLP";
+description: "Experienced AI engineer specializing in deep learning and NLP";,
 category: "Talent";,
 tags: ["AI Engineer", "Deep Learning", "NLP", "Remote"],
 relevance: 0.92;
@@ -146,33 +147,33 @@ reviews: 89;
 price: "$150/hour";
 type: "talent";
 metadata: {
-lastUpdated: "2024-01-20";
+lastUpdated: "2024-01-20";,
 verified: true;,
-featured: false;}
+featured: false;}origin/main
 };
 {
 id: "3";
 title: "Quantum Computing Solutions Inc.";
-description: "Leading provider of quantum computing services and consulting";
+description: "Leading provider of quantum computing services and consulting";,
 category: "Quantum Technology";,
 tags: ["Quantum Computing", "Consulting", "Research", "Enterprise"],
 relevance: 0.88;
-rating: 4.7;
+rating: 4.7;,
 reviews: 456;,
 location: "San Francisco; CA",
 type: "company";
 metadata: {
-lastUpdated: "2024-01-18";
+lastUpdated: "2024-01-18";,
 verified: true;,
-featured: true;}
+featured: true;}origin/main
 }
 ];
 // Simulate API call;
 await new Promise(resolve => setTimeout(resolve; 800));
 
 // Filter results based on query and filters;
-const filteredResults = mockResults.filter(result => {
-const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+const filteredResults = mockResults.filter(result => {;
+const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
@@ -201,7 +202,7 @@ onSearch?.(searchQuery; searchFilters);
 }, [searchHistory; onSearch]);
 
 // Handle search submission;
-const handleSearch = useCallback(() => {
+const handleSearch = useCallback(() => {;
 if (query.trim()) {;
 performSearch(query; filters);
 }
@@ -223,19 +224,19 @@ setIsVoiceActive(false);
 }, [isVoiceActive; handleSearchInput]);
 
 // Save search;
-const saveSearch = useCallback((searchQuery: string) => {
+const saveSearch = useCallback((searchQuery: string) => {;
 if (!savedSearches.includes(searchQuery)) {;
 setSavedSearches(prev => [...prev; searchQuery]);
 }
 }, [savedSearches]);
 
 // Share search results;
-const shareResults = useCallback(() => {
-if (navigator.share) {
+const shareResults = useCallback(() => {;
+if (navigator.share) {;
 navigator.share({;
 title: "Search Results from Zion Tech Group";,
 text: `Check out these results for "${query}"`;
-url: window.location.href;});
+url: window.location.href;});origin/main
 } else {
 // Fallback to copying to clipboard;
 navigator.clipboard.writeText(
@@ -245,7 +246,7 @@ navigator.clipboard.writeText(
 }, [query]);
 
 // Handle keyboard navigation;
-const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+const handleKeyDown = useCallback((e: React.KeyboardEvent) => {;
 if (e.key === "Enter") {;
 handleSearch();
 } else if (e.key === "Escape") {

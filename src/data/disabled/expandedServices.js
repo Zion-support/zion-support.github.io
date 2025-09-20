@@ -14,7 +14,7 @@ export const EXPANDED_SERVICES = [
             name: "Zion Tech Group";
             id: "zion-tech-group";
             email: "kleber@ziontechgroup.com";
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";},
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";},origin/main
         images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.9;
@@ -35,7 +35,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-20T14:30:00.000Z";
         rating: 4.8;
@@ -55,7 +55,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-25T11:15:00.000Z";
         rating: 4.7;
@@ -76,7 +76,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-30T09:45:00.000Z";
         rating: 4.9;
@@ -97,7 +97,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-05T16:20:00.000Z";
         rating: 4.8;
@@ -117,7 +117,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-10T13:10:00.000Z";
         rating: 4.7;
@@ -138,7 +138,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-15T10:30:00.000Z";
         rating: 4.9;
@@ -159,7 +159,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-20T15:45:00.000Z";
         rating: 4.8;
@@ -179,7 +179,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-25T12:00:00.000Z";
         rating: 4.7;
@@ -200,7 +200,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-01T09:15:00.000Z";
         rating: 4.8;
@@ -221,7 +221,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-05T14:30:00.000Z";
         rating: 4.7;
@@ -241,7 +241,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-10T11:45:00.000Z";
         rating: 4.8;
@@ -262,7 +262,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-15T16:20:00.000Z";
         rating: 4.8;
@@ -282,7 +282,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-20T13:10:00.000Z";
         rating: 4.7;
@@ -302,7 +302,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-25T10:30:00.000Z";
         rating: 4.9;
@@ -324,7 +324,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-30T15:45:00.000Z";
         rating: 4.8;
@@ -344,7 +344,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1621416894560-8a5c5baaacaa?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-04-05T12:00:00.000Z";
         rating: 4.9;
@@ -366,7 +366,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-04-10T09:30:00.000Z";
         rating: 4.7;
@@ -386,7 +386,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-04-15T14:15:00.000Z";
         rating: 4.8;
@@ -407,7 +407,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-04-20T11:00:00.000Z";
         rating: 4.8;
@@ -427,7 +427,7 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";},
+            email: "kleber@ziontechgroup.com";},origin/main
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-04-25T16:45:00.000Z";
         rating: 4.9;

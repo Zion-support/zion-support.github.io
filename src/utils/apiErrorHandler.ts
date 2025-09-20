@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import { toast } from "@/hooks/use-toast, ";

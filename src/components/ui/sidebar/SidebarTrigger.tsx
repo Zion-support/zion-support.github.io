@@ -1,11 +1,11 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { MenuX } from 'lucide-react';
+import { MenuX } from 'lucide-react';origin/main
 import { useSidebar } from "./sidebar-context";
 import { cn } from "@/lib/utils";
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
-  className?: string
-    </Button>
-  )
+className?: string;
+</Button>;
+)
 }
 }

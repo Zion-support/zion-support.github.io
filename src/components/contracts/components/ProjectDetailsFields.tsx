@@ -1,28 +1,30 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
+}
+}
 
-import React from "react",;
+import React from "react",;origin/main
 const ProjectDetailsFields: React.FC = () => {
 ,
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">ProjectDetailsFields</h3>,
+<h3 className = "text-xl font-bold mb-4">ProjectDetailsFields</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
 export default ProjectDetailsFields,;<//div><///div>
 
 import { format } from "date-fns";
-import { CalendarIcon } from 'lucide-react';
+import { CalendarIcon } from 'lucide-react';origin/main
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
+form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>}
 }
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
-  return (
-    <>
-      <FormField,
+return (
+<>;
+<FormField;
 control={form.control}
         name='projectName'
         render={({
@@ -56,29 +58,29 @@ control={form.control}
               <Textarea,
 placeholder='Describe the project scope deliverables and expectations...'
                 className='min-h-[120px]'                {...field}        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> },) => (
-      <FormField,
+      <FormField,origin/main
 control={form.control}
-        name="scopeSummary"
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (
-          <FormItem>
-            <FormLabel>Scope Summary</FormLabel>
-            <FormControl>
-              <Textarea,
-placeholder='Describe the project scope deliverables and expectations...'
-                className='min-h-[120px]'                placeholder="Describe the project scope deliverables and expectations..."
-                className="min-h-[120px]"
-                {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              Be specific about what is included and any limitations
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-        <FormField,
+name="scopeSummary";
+render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (
+<FormItem>;
+<FormLabel>Scope Summary</FormLabel>;
+<FormControl>;
+<Textarea;
+placeholder="Describe the project scope deliverables and expectations...";
+className="min-h-[120px]"                placeholder="Describe the project scope deliverables and expectations..."
+className="min-h-[120px]"
+{...field}
+/>;
+</FormControl>;
+<FormDescription>;
+Be specific about what is included and any limitations;
+</FormDescription>;
+<FormMessage />;
+</FormItem>;
+)}
+/>;
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+<FormField;
 control={form.control}
           name='startDate'
           render={({
@@ -206,5 +208,6 @@ mode="single"
         />
       </div>
     </>
-  )
+  )origin/main
 }
+}}))))))

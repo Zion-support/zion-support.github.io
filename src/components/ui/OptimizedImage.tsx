@@ -2,8 +2,7 @@ import React, { useState; useRef; useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
 import { motion, AnimatePresence  } from "framer-motion, ";
 
-interface OptimizedImageProps {
-src: string; alt: string;
+interface OptimizedImageProps {src: string; alt: string;
 width?: number;
 height?: number;
 className?: string;
@@ -16,7 +15,7 @@ onLoad?: () => void;
 onError?: () => void;
 aspectRatio?: "square" | "video" | "auto" | number;
 objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
-blur?: boolean;
+blur?: boolean;origin/main
 quality?: number};
 export function OptimizedImage({;
 src;
@@ -37,7 +36,7 @@ blur = false;
 quality = 75}: OptimizedImageProps) {
 const [isLoaded, setIsLoaded] = useState(false);
 const [hasError, setHasError] = useState(false);
-const [isInView, setIsInView] = useState(priority);
+const [isInView, setIsInView] = useState(priority);origin/main
 const imgRef = useRef<HTMLImageElement>(null);
 const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -57,7 +56,7 @@ rootMargin: "50px", threshold: 0.1}
 observerRef.current.observe(imgRef.current);
 
 return () => {
-if (observerRef.current) {
+if (observerRef.current) {origin/main
 observerRef.current.disconnect()}
 };
 }, [priority]);
@@ -75,16 +74,14 @@ if (typeof aspectRatio === "number") {;
 return `aspect-[${aspectRatio}]`;
 }
 
-switch (aspectRatio) {
-case "square":
+switch (aspectRatio) {case "square":
 return "aspect-square";
 case "video":
 return "aspect-video";
 default: return ""}
 };
 
-const getObjectFitClass: any = () => {
-switch (objectFit) {
+const getObjectFitClass: any = () => {switch (objectFit) {
 case "cover":;
 return "object-cover";
 case "contain":
@@ -94,7 +91,7 @@ return "object-fill";
 case "none":
 return "object-none";
 case "scale-down":
-return "object-scale-down";
+return "object-scale-down";origin/main
 default: return "object-cover"}
 };
 
@@ -193,7 +190,7 @@ size = "md",
 className,
 ...props}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
 size?: "sm" | "md" | "lg" | "xl"}) {
-const sizeClasses = {;
+const sizeClasses = {;origin/main
 sm: "w-8 h-8", md: "w-10 h-10";,
 lg: "w-12 h-12",
 xl: "w-16 h-16"};
@@ -214,7 +211,7 @@ export function HeroImage({;
 src;
 alt;
 className,
-...props}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
+...props}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {origin/main
 return (
 <OptimizedImage;
 src={src}

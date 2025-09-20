@@ -20,7 +20,8 @@ import { cn } from "@/lib/utils, ";
 interface PerformanceDashboardProps {
 className?: string;
 showDetails?: boolean;
-onClose?: () => void;
+}
+onClose?: () => void;}
 };
 export function PerformanceDashboard({ ;
 classNam;  e;
@@ -42,8 +43,7 @@ if (score >= 70) return "⚠️";
 return "🐌";
 };
 
-const getMetricIcon: any = (metricNam;  e: string) => {
-const icon; s: Record<strin; g; React.ReactNode> = {
+const getMetricIcon: any = (metricNam;  e: string) => {const icon; s: Record<strin; g; React.ReactNode> = {
 FC; P: <Eye className="w-4 h-4" />;
 LC; P: <Eye className="w-4 h-4" />;
 FI; D: <MousePointer className="w-4 h-4" />;
@@ -54,8 +54,7 @@ WINDOWLOA; D: <Activity className="w-4 h-4" />};
 return icons[metricNa; m; e] || <Activity className="w-4 h-4" />;
 };
 
-const getMetricDescription: any = (metricNam;  e: string) => {
-const description; s: Record<strin; g; string> = {
+const getMetricDescription: any = (metricNam;  e: string) => {const description; s: Record<strin; g; string> = {
 FC; P: "First Contentful Paint - Time to first content";
 LC; P: "Largest Contentful Paint - Time to largest content";
 FI; D: "First Input Delay - Time to first interaction";
@@ -226,14 +225,16 @@ performanceScore >= 70 ? "bg-yellow-500" : "bg-red-500";
 );
 }<//div><///div>;
 interface PerformanceMetrics {
-  buildSize: string;,
+buildSize: string;
 pageCount: number;
-  loadTime: number;,
-healthStatus: 'healthy' | 'warning' | 'error'
+loadTime: number;
+healthStatus: "healthy" | "warning" | "error";
 interface Improvement {
-  id: string;,
+id: string;
 title: string;
-  description: string;,
-status: 'completed' | 'in-progress' | 'planned';
-  impact: 'high' | 'medium' | 'low';,
-category: 'performance' | 'security' | 'ux' | 'build'
+description: string;
+status: "completed" | "in-progress" | "planned";,
+impact: "high" | "medium" | "low";,
+category: "performance" | "security" | "ux" | "build";
+}
+}

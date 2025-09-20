@@ -2,31 +2,31 @@
 import '@testing-library/jest-dom'
 // Mock window.matchMedia,
 Object.defineProperty(window, 'matchMedia', {;
-  writable: true;
+  writable: true;origin/main
 value: jest.fn().mockImplementation(query => ({,
 matches: false;
-media: query;
-onchange: null;
-addListener: jest.fn(), // deprecated,
-removeListener: jest.fn(), // deprecated,
+media: query;,
+onchange: null;,
+addListener: jest.fn(), // deprecated;
+removeListener: jest.fn(), // deprecated;
 addEventListener: jest.fn(),
-removeEventListener: jest.fn()
-    dispatchEvent: jest.fn()
-  }))
+removeEventListener: jest.fn(),
+dispatchEvent: jest.fn()
+}))
 })
-// Mock IntersectionObserver,
+// Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+constructor() {}
+disconnect() {}
+observe() {}
+unobserve() {}
 }
-// Mock ResizeObserver,
+// Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+constructor() {}
+disconnect() {}
+observe() {}
+unobserve() {}
 }
 // Mock console methods to reduce noise in tests,
 const originalError = console.error,
@@ -50,5 +50,5 @@ beforeAll(() => {
   }
 })
 afterAll(() => {
-  console.error = originalError,
+  console.error = originalError,origin/main
 console.warn = originalWarn})

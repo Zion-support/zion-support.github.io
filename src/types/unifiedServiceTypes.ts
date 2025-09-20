@@ -1,16 +1,15 @@
 import React from "react";
 
 // Unified service types that combine all service variants;
-export interface BaseService {
-id: string;
+export interface BaseService {id: string;
 title?: string;
-name?: string;
+name?: string;,
 description: string; category: string;
 subcategory?: string;
 price?: number | {
 monthly?: number;
 yearly?: number;
-oneTime?: number;,
+oneTime?: number;,origin/main
 currency: string; pricingModel: string};
 currency?: string;
 pricingModel?: string;
@@ -23,7 +22,7 @@ estimatedDelivery?: string;
 supportLevel?: string;
 marketPrice?: string;
 roi?: string;
-innovationLevel?: string;
+innovationLevel?: string;,
 contactInfo: {,
 phone: string; email: string; website: string;
 address?: string};
@@ -36,7 +35,7 @@ export type UnifiedService = BaseService;
 export const hasProperty = <T; K extends string>(
 obj: T; prop: K,
 ): obj is T & Record<K; any> => {
-return obj && typeof obj === "object" && prop in obj};
+return obj && typeof obj === "object" && prop in obj};origin/main
 
 export const hasTags: any = (service: UnifiedService): service is UnifiedService & { tags: string[] } => {
 return hasProperty(service, "tags") && Array.isArray(service.tags),;
@@ -47,21 +46,21 @@ return hasProperty(service, "benefits") && Array.isArray(service.benefits),;
 };
 
 export const hasEstimatedDelivery: any = (service: UnifiedService): service is UnifiedService & { estimatedDelivery: string } => {
-return hasProperty(service, "estimatedDelivery") && typeof service.estimatedDelivery === "string",;
+return hasProperty(service, "estimatedDelivery") && typeof service.estimatedDelivery = == "string";
 };
 
 export const hasSupportLevel: any = (service: UnifiedService): service is UnifiedService & { supportLevel: string } => {
-return hasProperty(service, "supportLevel") && typeof service.supportLevel === "string",;
+return hasProperty(service, "supportLevel") && typeof service.supportLevel = == "string";
 };
 
 export const hasMarketPrice: any = (service: UnifiedService): service is UnifiedService & { marketPrice: string } => {
-return hasProperty(service, "marketPrice") && typeof service.marketPrice === "string",;
+return hasProperty(service, "marketPrice") && typeof service.marketPrice = == "string";
 };
 
 export const hasRoi: any = (service: UnifiedService): service is UnifiedService & { roi: string } => {
-return hasProperty(service, "roi") && typeof service.roi === "string",;
+return hasProperty(service, "roi") && typeof service.roi = == "string";
 };
 
 export const hasInnovationLevel: any = (service: UnifiedService): service is UnifiedService & { innovationLevel: string } => {
-return hasProperty(service, "innovationLevel") && typeof service.innovationLevel === "string",;
+return hasProperty(service, "innovationLevel") && typeof service.innovationLevel = == "string";
 };

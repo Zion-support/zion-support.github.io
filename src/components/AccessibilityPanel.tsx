@@ -14,12 +14,11 @@ focusIndicato; r: boolean;
 colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";};
 interface AccessibilityPanelProps {
 isOpe; n: boolean;
-onToggl; e: () => void;};
+onToggl; e: () => void;};origin/main
 export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
 isOpe; n;
 onToggle;
-}) => {
-const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
+}) => {const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
 highContras;  t: fals; e;
 fontSiz; e: 10; 0;
 colorBlindnes; s: "none";
@@ -110,7 +109,7 @@ reducedMotio; n: fals; e;
 screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
 focusIndicato; r: tru; e;};
-colorBlindnes; s: "none"};
+colorBlindnes; s: "none"};origin/main
 setSettings(defaultSettings);
 };
 

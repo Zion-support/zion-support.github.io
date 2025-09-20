@@ -3,7 +3,7 @@ export, function, generateSearchSuggestions() {
     "AI Services","Cloud Computing","Cybersecurity","Micro SAAS","IT Infrastructure","Quantum Computing","Blockchain Solutions","IoT Services","Data Analytics","Machine Learning","DevOps Services","Mobile Development","Web Development","Digital Transformation","Enterprise Solutions""Startup Services""Consulting";
     "Training";
     "Support""Maintenance";
-,  ];
+];
 };// Mock, marketplace, items data;
 export, const, marketplaceItems = [;
   {
@@ -15,14 +15,14 @@ export, const, marketplaceItems = [;
   {
     id: 4,title: "Micro, SaaS, CRM Platform",description: "Lightweight, customer, relationship management, for, small businesses",category: "Micro SAAS",price: "$99/month",rating: 4.6,location: "Global",availability: "Available",tags: ["CRM", "SaaS""Business""Customer, Management"]images: ["/images/micro-crm.jpg"];};
   {
-    id: 5,title: "IT, Infrastructure, Management",description: "Comprehensive, IT, infrastructure monitoring, and, management solution",category: "IT Infrastructure",price: "$1,50o0/month",rating: 4.5,location: "Global",availability: "Available",tags: ["IT", "Infrastructure""Monitoring""Management"]images: ["/images/it-infrastructure.jpg"];};
+    id: 5,title: "IT, Infrastructure, Management",description: "Comprehensive, IT, infrastructure monitoring, and, management solution",category: "IT Infrastructure",price: "$1,50o0/month",rating: 4.5,location: "Global",availability: "Available",tags: ["IT", "Infrastructure""Monitoring""Management"]images: ["/images/it-infrastructure.jpg"];};origin/main
 ];
 // Marketplace, filters, configuration;
 export, const, marketplaceFilters = {
   productTypes: [;
     "AI Services","Cloud Computing","Cybersecurity","Micro SAAS","IT Infrastructure","Quantum Computing","Blockchain Solutions","IoT Services","Data Analytics","Machine Learning","DevOps Services","Mobile Development","Web Development","Digital Transformation","Enterprise Solutions","Startup Services","Consulting","Training","Support""Maintenance";
-,  ],locations: [;
+],locations: [;
     "Global","North America","Europe","Asia Pacific","Latin America","Middle East""Africa";
-,  ],availability: [;
+],availability: [;
     "Available","Coming Soon","Limited Availability""Custom, Quote, Required";
-,  ];
+];

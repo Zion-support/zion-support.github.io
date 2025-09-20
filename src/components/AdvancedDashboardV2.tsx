@@ -6,17 +6,17 @@ id: string;
 title: string;
 value: string;
 change: string;
-trend: "up" | "down" | "stable";
+trend: "up" | "down" | "stable";,
 icon: string;,
-color: string;};
+color: string;};origin/main
 interface ChartData {
 labels: string[];
 datasets: Array<{
 label: string;
 data: number[];
-borderColor: string;
+borderColor: string;,
 backgroundColor: string;,
-tension: number;}>;
+tension: number;}>;origin/main
 }
 
 export const AdvancedDashboardV2: React.FC = () => {;
@@ -30,7 +30,7 @@ trend: "up",
 icon: "💰",
 color: "green"},
 {
-id: "2",
+id: "2",origin/main
 title: "Active Users",
 value: "45;672",
 change: "+8.3%",
@@ -38,7 +38,7 @@ trend: "up",
 icon: "👥",
 color: "blue"},
 {
-id: "3",
+id: "3",origin/main
 title: "Conversion Rate",
 value: "3.24%",
 change: "-2.1%",
@@ -46,7 +46,7 @@ trend: "down",
 icon: "📈",
 color: "red"},
 {
-id: "4",
+id: "4",origin/main
 title: "Customer Satisfaction",
 value: "4.8/5",
 change: "+0.2",
@@ -54,7 +54,7 @@ trend: "up",
 icon: "⭐",
 color: "yellow"},
 {
-id: "5",
+id: "5",origin/main
 title: "System Uptime",
 value: "99.9%",
 change: "stable",
@@ -62,7 +62,7 @@ trend: "stable",
 icon: "⚡",
 color: "purple"},
 {
-id: "6",
+id: "6",origin/main
 title: "API Response Time",
 value: "145ms",
 change: "-12ms",
@@ -79,13 +79,13 @@ label: "Revenue",
 data: [120000; 190000; 300000; 500000; 200000; 300000],
 borderColor: "rgb(34; 197; 94)",
 backgroundColor: "rgba(34; 197; 94; 0.1)",
-tension: 0.4;},
+tension: 0.4;},origin/main
 {
 label: "Users",
 data: [10000; 15000; 25000; 35000; 40000; 45000],
 borderColor: "rgb(59; 130; 246)",
 backgroundColor: "rgba(59; 130; 246; 0.1)",
-tension: 0.4;}
+tension: 0.4;}origin/main
 ];
 });
 
@@ -96,14 +96,14 @@ const getTrendIcon: any = (trend: string) => {
 switch (trend) {;
 case "up": return "↗️";
 case "down": return "↘️";,
-default: return "➡️";}
+default: return "➡️";}origin/main
 };
 
 const getTrendColor: any = (trend: string) => {
 switch (trend) {;
 case "up": return "text-green-400";
 case "down": return "text-red-400";,
-default: return "text-gray-400";}
+default: return "text-gray-400";}origin/main
 };
 
 const getMetricColor: any = (color: string) => {
@@ -114,7 +114,7 @@ case "red": return "from-red-500 to-rose-600";
 case "yellow": return "from-yellow-500 to-amber-600";
 case "purple": return "from-purple-500 to-violet-600";
 case "indigo": return "from-indigo-500 to-blue-600";,
-default: return "from-gray-500 to-slate-600";}
+default: return "from-gray-500 to-slate-600";}origin/main
 };
 
 return (

@@ -1,7 +1,6 @@
 export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
     // Edge Computing Orchestration Platform;
-    {
-        id: "edge-computing-orchestration-platform";
+    {id: "edge-computing-orchestration-platform";
         title: "Edge Computing Orchestration Platform";
         description: "Advanced edge computing platform that distributes computing resources closer to data sources, enabling real-time processing, reduced latency, and improved performance for IoT and mobile applications.",
         category: "IT Infrastructure";
@@ -57,8 +56,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         scalability: "Auto-scaling edge clusters";
         uptime: "99.9% edge availability"};
     // Quantum-Ready Cloud Infrastructure;
-    {
-        id: "quantum-ready-cloud-infrastructure";
+    {id: "quantum-ready-cloud-infrastructure";
         title: "Quantum-Ready Cloud Infrastructure";
         description: "Future-proof cloud infrastructure designed to seamlessly integrate with quantum computing resources, enabling hybrid classical-quantum applications and quantum algorithm development.",
         category: "IT Infrastructure";
@@ -114,8 +112,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         scalability: "Quantum resource scaling";
         uptime: "99.5% quantum availability"};
     // Autonomous DevOps Infrastructure;
-    {
-        id: "autonomous-devops-infrastructure";
+    {id: "autonomous-devops-infrastructure";
         title: "Autonomous DevOps Infrastructure";
         description: "Self-healing, self-optimizing infrastructure platform that automatically manages deployments, scaling, monitoring, and incident response using AI and machine learning.",
         category: "IT Infrastructure";
@@ -171,8 +168,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         scalability: "Infinite auto-scaling";
         uptime: "99.99% availability"};
     // Zero-Trust Security Infrastructure;
-    {
-        id: "zero-trust-security-infrastructure";
+    {id: "zero-trust-security-infrastructure";
         title: "Zero-Trust Security Infrastructure";
         description: "Comprehensive zero-trust security platform that implements continuous verification, least-privilege access, and micro-segmentation across all infrastructure components.",
         category: "IT Infrastructure";
@@ -228,8 +224,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         scalability: "Enterprise-wide deployment";
         uptime: "99.9% security availability"};
     // Green Computing Infrastructure;
-    {
-        id: "green-computing-infrastructure";
+    {id: "green-computing-infrastructure";
         title: "Green Computing Infrastructure";
         description: "Environmentally sustainable infrastructure platform that optimizes energy consumption, uses renewable energy sources, and implements carbon-neutral computing practices.",
         category: "IT Infrastructure";
@@ -285,8 +280,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         scalability: "Sustainable scaling";
         uptime: "99.5% green availability"};
     // Hybrid Multi-Cloud Orchestration;
-    {
-        id: "hybrid-multi-cloud-orchestration";
+    {id: "hybrid-multi-cloud-orchestration";
         title: "Hybrid Multi-Cloud Orchestration";
         description: "Intelligent platform that orchestrates workloads across multiple cloud providers and on-premises infrastructure, optimizing costs, performance, and compliance.",
         category: "IT Infrastructure";

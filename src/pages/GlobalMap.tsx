@@ -8,5 +8,5 @@ export default function GlobalMap() {
         <p className="text-lg text-gray-600">View our global presence...</p>
       </div>
     </div>
-  );
+  );origin/main
 }

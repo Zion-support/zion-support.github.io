@@ -45,14 +45,14 @@ onClick={() =>
                   <RefreshCw className='h-4 w-4 mr-2' />
                   Try Again
                 </Button>
-                <Button,
+                <Button,origin/main
 onClick={() => window.location.reload()}
-                  variant='default'
-                >                  Refresh Page
-                <Button onClick={() => window.location.reload()} variant="default">
-              </p>
-              <div className="flex gap-2 justify-center">
-                <Button,
+variant="default'
+>                  Refresh Page;
+<Button onClick={() => window.location.reload()} variant="default">;
+</p>;
+<div className="flex gap-2 justify-center">;
+<Button;
 onClick={() => this.setState({ hasError: false error: undefined })}
                   variant="outline"
                 >
@@ -70,5 +70,5 @@ onClick={() => this.setState({ hasError: false error: undefined })}
     }
     return this.props.children}      )
     }
-    return this.props.children}
+    return this.props.children}origin/main
 }

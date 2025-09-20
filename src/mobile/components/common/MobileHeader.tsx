@@ -1,15 +1,14 @@
 import React from "react";
 import { useRouter } from 'next/router';
-import { ChevronLeft, BellSettings } from 'lucide-react';
+import { ChevronLeft, BellSettings } from 'lucide-react';origin/main
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
-className
-    )}>
-      <div className="flex items-center justify-between h-14 px-4">
-        <div className="flex items-center">
-          {showBack && (
-            <Button,
+className}
+)}>;
+<div className="flex items-center justify-between h-14 px-4">;
+<div className="flex items-center">;
+{showBack && (<Button;
 variant="ghost"
               size="icon"
               className="mr-2"
@@ -82,5 +81,5 @@ variant="ghost"
         </div>
       </div>
     </header>
-  );  )
+  );  )origin/main
 }

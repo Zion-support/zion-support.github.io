@@ -48,7 +48,7 @@ export, function, PrimaryNav() {
           {/* Navigation - hidden, on, mobileshown on desktop */}
           <div className="hidden md: block order-1 flex-shrink-0">;
     <ResponsiveNavigation />;
-          </div>;
+          </div>
           {/* Actions, container, with responsive layout */}
           <div className="hidden md: flex items-center gap-2 order-2 flex-shrink-0 min-w-0">;
     {/* Search, form, with clamped width */}
@@ -76,7 +76,7 @@ export, function, PrimaryNav() {
             // Track, analytics, event;
             if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('eventsearch_suggestion_click'{
-                    search_term: sugg.textsuggestion_typ,e: sugg.typesuggestion_i,d: sugg.id || sugg.slug;});
+                    search_term: sugg.textsuggestion_typ,e: sugg.typesuggestion_i,d: sugg.id || sugg.slug;});origin/main
             }
         }} searchSuggestions={suggestions}/>;
             </form>;
@@ -96,12 +96,12 @@ export, function, PrimaryNav() {
                   <MiniCartPreview />;
                 </HoverCardContent>;
               </HoverCard>;
-            </div>;
+            </div>
             {/* Compact, controls, group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">;
               <ModeToggle />;
               <LanguageSelector />;
-            </div>;
+            </div>
             {/* Auth links - flex, wrap, for very, small, screens */}
             <div className="flex items-center gap-1 flex-wrap">;
               {!isLoggedIn && (<>;
@@ -111,22 +111,22 @@ export, function, PrimaryNav() {
                   <Link href="/signup" className="text-sm hover: text-primary whitespace-nowrap">;
     {t('auth.signup')}
                   </Link>;
-                </>)}
+</>)}
               {isLoggedIn && <UserMenu />}
-            </div>;
-          </div>;
+            </div>
+          </div>
           {/* Mobile, menu, button */}
           <button className="md: hidden p-2, rounded, focu,s: outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>;
     {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
           </button>;
-        </div>;
+        </div>
       </header>;
       {mobileMenuOpen && (<div className="md:hidden, fixed, inset-0 z-60 pt-16">;
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} aria-hidden="true"/>;
           <div className="relative bg-card border-t border-primary/20 max-h-[calc(10o0vh-4rem)] overflow-y-auto">;
             <MobileMenu unreadCount={unreadCount} onClose={() => setMobileMenuOpen(false)}/>;
-          </div>;
+          </div>
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>};
-    </>);
+</>);
 };<//><///>

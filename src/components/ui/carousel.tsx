@@ -18,14 +18,14 @@ type CarouselContextProps = {
 api: ReturnType<typeof useEmblaCarousel>[1]
   scrollPrev: () => void,
 scrollNext: () => void,
-canScrollPrev: boolean,;
+canScrollPrev: boolean,;origin/main
 canScrollNext: boolean;
 }
-  return context as CarouselContextProps;
+return context as CarouselContextProps;
 }
-const Carousel = React.forwardRef<
-  HTMLDivElement,
-React.HTMLAttributes<HTMLDivElement> & CarouselProps
+const Carousel = React.forwardRef<;
+HTMLDivElement;
+React.HTMLAttributes<HTMLDivElement> & CarouselProps;
 >(
   (
     {
@@ -137,11 +137,11 @@ ref={ref}
 CarouselContent.displayName = "CarouselContent"
 const CarouselItem = React.forwardRef<
   HTMLDivElement,
-React.HTMLAttributes<HTMLDivElement>
+React.HTMLAttributes<HTMLDivElement>origin/main
 >(({ className, ...props }, ref) => {
-  const { orientation } = useCarousel()
-  return (
-    <div,
+const { orientation } = useCarousel()
+return (
+<div;
 ref={ref}
       role="group"
       aria-roledescription="slide"
@@ -206,13 +206,13 @@ ref={ref}
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
     </Button>
-  )
+  )origin/main
 })
 CarouselNext.displayName = "CarouselNext"
 export {
-  type CarouselApi,
-Carousel
-  CarouselContent,
-CarouselItem
-  CarouselPrevious,
+type CarouselApi;
+Carousel;
+CarouselContent;
+CarouselItem;
+CarouselPrevious;
 CarouselNext}

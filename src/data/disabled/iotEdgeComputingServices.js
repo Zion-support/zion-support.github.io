@@ -1,7 +1,6 @@
 export const IOT_EDGE_COMPUTING_SERVICES = [
     // Industrial IoT Platform;
-    {
-        id: "industrial-iot-platform";
+    {id: "industrial-iot-platform";
         title: "Industrial IoT (IIoT) Platform";
         description: "Comprehensive IIoT platform for manufacturing, energy, and industrial operations that provides real-time monitoring, predictive maintenance, and operational optimization.",
         category: "IoT & Edge Computing";
@@ -48,10 +47,9 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/industrial-iot"};
+        websiteUrl: "https://ziontechgroup.com/industrial-iot"};origin/main
     // Smart City IoT Solution;
-    {
-        id: "smart-city-iot-solution";
+    {id: "smart-city-iot-solution";
         title: "Smart City IoT Infrastructure Platform";
         description: "Comprehensive smart city solution integrating traffic management, environmental monitoring, public safety, and utility management through IoT sensors and edge computing.",
         category: "IoT & Edge Computing";
@@ -98,10 +96,9 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/smart-city-iot"};
+        websiteUrl: "https://ziontechgroup.com/smart-city-iot"};origin/main
     // Healthcare IoT Monitoring;
-    {
-        id: "healthcare-iot-monitoring";
+    {id: "healthcare-iot-monitoring";
         title: "Healthcare IoT Patient Monitoring System";
         description: "Advanced patient monitoring system using IoT devices and edge computing to provide real-time health monitoring, early warning systems, and remote patient care capabilities.",
         category: "IoT & Edge Computing";
@@ -148,10 +145,9 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/healthcare-iot"};
+        websiteUrl: "https://ziontechgroup.com/healthcare-iot"};origin/main
     // Retail IoT Analytics Platform;
-    {
-        id: "retail-iot-analytics";
+    {id: "retail-iot-analytics";
         title: "Retail IoT Analytics and Optimization Platform";
         description: "Intelligent retail analytics platform using IoT sensors to track customer behavior, optimize store layouts, manage inventory, and enhance customer experience.",
         category: "IoT & Edge Computing";
@@ -198,10 +194,9 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/retail-iot"};
+        websiteUrl: "https://ziontechgroup.com/retail-iot"};origin/main
     // Edge AI Computing Platform;
-    {
-        id: "edge-ai-computing";
+    {id: "edge-ai-computing";
         title: "Edge AI Computing Platform";
         description: "Advanced edge computing platform that brings AI processing capabilities to IoT devices, enabling real-time AI inference, local data processing, and reduced cloud dependency.",
         category: "IoT & Edge Computing";
@@ -248,5 +243,5 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/edge-ai"}
+        websiteUrl: "https://ziontechgroup.com/edge-ai"}origin/main
 ];

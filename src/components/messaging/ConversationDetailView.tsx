@@ -1,14 +1,16 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
+}
+}
 
-import React from "react",;
+import React from "react",;origin/main
 const ConversationDetailView: React.FC = () => {
 ,
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">ConversationDetailView</h3>,
+<h3 className = "text-xl font-bold mb-4">ConversationDetailView</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
@@ -120,14 +122,14 @@ value = {messageText}
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref = {inputRef}
           />
-          <Button,
+          <Button,origin/main
 type="submit"
-            className="bg-zion-purple hover: bg-zion-purple-dark text-white"
-          >
-            Send
-          </Button>
-        </form>
-      </div>
-    </div>
-  )
+className="bg-zion-purple hover: bg-zion-purple-dark text-white"
+>;
+Send;
+</Button>;
+</form>;
+</div>;
+</div>;
+)
 }

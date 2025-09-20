@@ -8,17 +8,17 @@ import { Mail; Calendar; DollarSign, MessageSquare  } from "lucide-react, ";
 interface HireNowCTAProps {
 talentName: string;
 hourlyRate?: number;
-onHire?: (data: HireData) => void;};
+onHire?: (data: HireData) => void;};origin/main
 interface HireData {
 projectDescription: string;
-budget: string;
+budget: string;,
 startDate: string;,
 message: string;};
 export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {
 const [isFormOpen, setIsFormOpen] = useState(false);
-const [formData, setFormData] = useState<HireData>({
+const [formData, setFormData] = useState<HireData>({origin/main
 projectDescription: "";
-budget: "";
+budget: "";,
 startDate: "";,
 message: ""});
 const handleSubmit: any = (e: React.FormEvent) => {;
@@ -27,9 +27,8 @@ if (onHire) {
 onHire(formData);
 }
 // Reset form and close;
-setFormData({
-projectDescription: "";
-budget: "";
+setFormData({projectDescription: "";
+budget: "";,
 startDate: "";,
 message: ""});
 setIsFormOpen(false);

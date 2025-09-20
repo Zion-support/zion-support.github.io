@@ -36,10 +36,10 @@ phone: "";
 company: "";
 projectType: "";
 budget: "";
-timeline: "";
+timeline: "";,
 description: "";,
 urgency: "medium"});
-const [submissionStatus, setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+const [submissionStatus, setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");origin/main
 
 const projectTypes = [;
 { value: "web-development", label: "Web Development", icon: Globe; description: "Custom websites and web applications" };
@@ -102,7 +102,7 @@ phone: "";
 company: "";
 projectType: "";
 budget: "";
-timeline: "";
+timeline: "";,
 description: "";,
 urgency: "medium"});
 setSubmissionStatus("idle");

@@ -60,16 +60,30 @@ key = {index}
             {resume.skills.length > 5 && (
               <Badge,
 variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge,
+                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge,origin/main
 variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
-              >
-                +{resume.skills.length - 5} more
-              </Badge>
-            )}
-          </div>
-        )}
-      </CardContent>
-    </Card>
-  )
-}
+className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"              >          <div className="flex flex-wrap gap-1 mt-2">
+{resume.skills.slice(0 5).map((skill index) => (
+<Badge;
+key = {index}
+variant="outline"
+className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
+{skill.name}
+</Badge>;
+))}
+{resume.skills.length > 5 && (
+<Badge;
+variant="outline"
+className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"              >              <Badge;
+variant="outline"
+className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
+>;
++{resume.skills.length - 5} more;
+</Badge>;
+)}
+</div>;
+)}
+</CardContent>;
+</Card>;
+)
+}))

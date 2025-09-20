@@ -50,28 +50,28 @@ key = {project.id}
                   Add your best work to showcase your skills and experience to,
 potential employers.
                 </p>
-                <Button,
+                <Button,origin/main
 onClick={() => setShowAddProject(true)}
-                  className='mt-2'                >            <CardContent>
-              <div className="flex flex-col items-center gap-4">
-                <div className="bg-muted/50 p-6 rounded-full">
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />
-                </div>
-                <h3 className="text-xl font-medium">No portfolio projects yet</h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
-                  Add your best work to showcase your skills and experience to potential employers.
-                </p>
-                <Button,
+className="mt-2"                >            <CardContent>
+<div className="flex flex-col items-center gap-4">;
+<div className="bg-muted/50 p-6 rounded-full">;
+<FilePlus className="h-12 w-12 text-muted-foreground" />;
+</div>;
+<h3 className="text-xl font-medium">No portfolio projects yet</h3>;
+<p className="text-muted-foreground max-w-md mx-auto">;
+Add your best work to showcase your skills and experience to potential employers.;
+</p>;
+<Button;
 onClick={() => setShowAddProject(true)}
-                  className="mt-2"
-                >
-                  Add Your First Project
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        )
-      )}
-    </div>
-  )
-}
+className="mt-2"
+>;
+Add Your First Project;
+</Button>;
+</div>;
+</CardContent>;
+</Card>;
+)
+)}
+</div>;
+)
+})))

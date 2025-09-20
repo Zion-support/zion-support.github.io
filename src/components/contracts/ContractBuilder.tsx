@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button",
 import { Save } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { ContractFormContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",;
+import { ContractPreview } from "./components/ContractPreview",;origin/main
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
@@ -105,5 +105,5 @@ isOpen = {templateManagerOpen}
   () => setTemplateManagerOpen (false)
 }onSelectTemplate= {
   handleLoadTemplate}currentValues= {
-  formValues}/> </DialogContent> </Dialog>)
+  formValues}/> </DialogContent> </Dialog>)origin/main
 }"}

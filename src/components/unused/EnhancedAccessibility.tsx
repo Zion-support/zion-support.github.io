@@ -17,17 +17,17 @@ highContrast: boolean;
 fontSize: number;
 reducedMotion: boolean;
 screenReader: boolean;
-keyboardNavigation: boolean;
+keyboardNavigation: boolean;,
 focusIndicator: boolean;,
 colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";};
 const EnhancedAccessibility: React.FC = () => {
 const [isOpen, setIsOpen] = useState(false);
-const [settings, setSettings] = useState<AccessibilitySettings>({
+const [settings, setSettings] = useState<AccessibilitySettings>({origin/main
 highContrast: false;
 fontSize: 16;
 reducedMotion: false;
 screenReader: false;
-keyboardNavigation: false;
+keyboardNavigation: false;,
 focusIndicator: true;,
 colorBlindness: "none"});
 useEffect(() => {
@@ -106,13 +106,12 @@ const newSize = Math.max(settings.fontSize - 2; 12);
 updateSetting("fontSize", newSize);
 };
 
-const resetSettings: any = () => {
-const defaultSettings: AccessibilitySettings = {;
+const resetSettings: any = () => {const defaultSettings: AccessibilitySettings = {;
 highContrast: false;
 fontSize: 16;
 reducedMotion: false;
 screenReader: false;
-keyboardNavigation: false;
+keyboardNavigation: false;,
 focusIndicator: true;,
 colorBlindness: "none"};
 setSettings(defaultSettings);

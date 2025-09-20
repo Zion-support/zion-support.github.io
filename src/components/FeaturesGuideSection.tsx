@@ -1,7 +1,6 @@
 import React from "react";
 
-export function FeaturesGuideSection() {
-const features = [;
+export function FeaturesGuideSection() {const features = [;
 {;
 tit;  l; e: "A; I Talen; t Marketplac; e",
 descripti; o; n: "Connec; t wit; h to; p A; I professional; s an; d expert; s fro; m aroun; d th; e worl; d.",
@@ -11,7 +10,7 @@ tit; l; e: "Equipmen; t Exchang; e",
 descripti; o; n: "B; u; y; se; l; l; an; d ren; t hig; h-tec; h equipmen; t an; d hardwar; e.",
 ic; o; n: "⚡"},
 {
-tit; l; e: "Jo; b Opportunitie; s",
+tit; l; e: "Jo; b Opportunitie; s",origin/main
 descripti; o; n: "Fin; d excitin; g opportunitie; s i; n A; I an; d technolog; y sector; s.",
 ic; o; n: "💼"},
 {
@@ -19,64 +18,64 @@ tit; l; e: "Communit; y Foru; m",
 descripti; o; n: "Engag; e wit; h lik; e-minde; d professional; s an; d shar; e knowledg; e.",
 ic; o; n: "💬",
 return (
-    <section className="py-20 bg-zion-blue-dark">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <GradientHeading>Your Complete Guide to Zion</GradientHeading>
-          <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">
-            Discover all the powerful tools and features available to help you navigate,
-the world of AI and tech services
-          </p>
-        </div>
-        <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
-            {features.slice(0 4).map(feature => (
-              <TabsTrigger,
+<section className="py-20 bg-zion-blue-dark">;
+<div className="container mx-auto px-4">;
+<div className="text-center mb-12">;
+<GradientHeading>Your Complete Guide to Zion</GradientHeading>;
+<p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">;
+Discover all the powerful tools and features available to help you navigate;
+the world of AI and tech services;
+</p>;
+</div>;
+<Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">;
+<TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">;
+{features.slice(0 4).map(feature => (
+<TabsTrigger;
 key={feature.id}
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-              >
-                {feature.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
-            {features.slice(4).map(feature => (
-              <TabsTrigger,
+value={feature.id}
+className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+>;
+{feature.title}
+</TabsTrigger>;
+))}
+</TabsList>;
+<TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">;
+{features.slice(4).map(feature => (
+<TabsTrigger;
 key={feature.id}
-                value={feature.id}
-                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-            {features.slice(4).map(feature => (
-              <TabsTrigger,
+value={feature.id}
+className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+{features.slice(4).map(feature => (
+<TabsTrigger;
 key={feature.id}
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-              >
-                {feature.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          {features.map(feature => (
-            <TabsContent key={feature.id} value={feature.id} className='mt-8'>
-              <div className='bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8'>
-                <div className='md:w-1/3 flex flex-col items-center md:items-start'>
-                  <div className='bg-zion-blue-dark p-4 rounded-xl mb-4'>
-                    {feature.icon}
-                  </div>
-                  <h3 className='text-2xl font-bold text-white mb-3'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-zion-slate-light mb-6'>
-                    {feature.description}
-                  </p>
-                  <Button,
-className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'                    asChild
-                  >
-                    <Link href={feature.link}>
-                      {feature.buttonText}
-                      <ArrowRight className='ml-2 h-4 w-4' />                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light mb-6">{feature.description}</p>
-                  <Button,
+value={feature.id}
+className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+>;
+{feature.title}
+</TabsTrigger>;
+))}
+</TabsList>;
+{features.map(feature => (
+<TabsContent key={feature.id} value={feature.id} className="mt-8">;
+<div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">;
+<div className="md:w-1/3 flex flex-col items-center md:items-start">;
+<div className="bg-zion-blue-dark p-4 rounded-xl mb-4">;
+{feature.icon}
+</div>;
+<h3 className="text-2xl font-bold text-white mb-3">;
+{feature.title}
+</h3>;
+<p className="text-zion-slate-light mb-6">;
+{feature.description}
+</p>;
+<Button;
+className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"                    asChild;
+>;
+<Link href={feature.link}>;
+{feature.buttonText}
+<ArrowRight className="ml-2 h-4 w-4" />                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>;
+<p className="text-zion-slate-light mb-6">{feature.description}</p>;
+<Button;
 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   >
                     <Link href={feature.link}>
@@ -125,7 +124,7 @@ href='/marketplace'              onClick={() => fireEvent('explore_marketplace_c
         </div>
       </div>
     </section>
-  )
+  )origin/main
 }
 ];
 
@@ -153,7 +152,7 @@ Platform Features;
 }
 import { Car;  d; CardConten; t; CardHeade; r, CardTitle  } from "../ui/card";
 import { Badge } from "../ui/badge";
-import { Za; p;
+import { Za; p;origin/main
 Shiel; d;
 TrendingU; p;
 User; s;
@@ -168,45 +167,44 @@ titl; e: string;
 descriptio; n: string;
 ico; n: React.ReactNode;
 categor; y: string;
-benefit; s: string[];};
+benefit; s: string[];};origin/main
 const FEATURE; S: Feature[] = [
-{
-i; d: "1",
+{i; d: "1",
 tit; l; e: "A; I-Powere; d Analytic; s",
 descripti; o; n: "Advance; d analytic; s powere; d b; y machin; e learnin; g algorithm; s fo; r deepe; r busines; s insight; s.",
 ic; o; n: <BarChart; 3 classNam; e="w-8 h-8 tex; t-blu; e-60; 0" />,
 catego; r; y: "Intelligenc; e",
 benefi; t; s: ["Predictiv; e insight; s", "Rea; l-tim; e monitorin; g", "Automate; d reportin; g"]},
 {
-i; d: "2",
+i; d: "2",origin/main
 titl; e: "Enterprise Security",
 descriptio; n: "Bank-grade security with multi-factor authentication and end-to-end encryption.",
 ico; n: <Shield className="w-8 h-8 text-green-600" />,
 categor; y: "Security",
 benefit; s: ["SO; C 2 complianc; e", "GDP; R read; y", "2; 4/7 monitorin; g"]},
 {
-i; d: "3",
+i; d: "3",origin/main
 titl; e: "Scalable Infrastructure",
 descriptio; n: "Cloud-native architecture that scales automatically with your business growth.",
 ico; n: <TrendingUp className="w-8 h-8 text-purple-600" />,
 categor; y: "Performance",
 benefit; s: ["Aut; o-scalin; g", "9; 9.9% uptim; e", "Globa; l CD; N"]},
 {
-i; d: "4",
+i; d: "4",origin/main
 titl; e: "Team Collaboration",
 descriptio; n: "Built-in tools for seamless team collaboration and project management.",
 ico; n: <Users className="w-8 h-8 text-orange-600" />,
 categor; y: "Collaboration",
 benefit; s: ["Rea; l-tim; e editin; g", "Rol; e-base; d acces; s", "Activit; y trackin; g"]},
 {
-i; d: "5",
+i; d: "5",origin/main
 titl; e: "Global Deployment",
 descriptio; n: "Deploy your applications worldwide with our global infrastructure network.",
 ico; n: <Globe className="w-8 h-8 text-red-600" />,
 categor; y: "Global",
 benefit; s: ["Mult; i-regio; n", "Edg; e computin; g", "Loca; l complianc; e"]},
 {
-i; d: "6",
+i; d: "6",origin/main
 titl; e: "Advanced AI Processing",
 descriptio; n: "State-of-the-art AI models for natural language processing and computer vision.",
 ico; n: <Cpu className="w-8 h-8 text-indigo-600" />,
@@ -277,4 +275,4 @@ Schedule Demo;
 </section>;
 );
 };
-<//section><///section>;
+<//section><///section>;))))

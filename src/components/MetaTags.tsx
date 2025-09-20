@@ -10,7 +10,8 @@ url?: string;
 type?: "website" | "article" | "product" | "service";
 author?: string;
 publishedTime?: string;
-modifiedTime?: string;
+}
+modifiedTime?: string;}
 };
 export const MetaTag; s: React.FC<MetaTagsProps> = ({
 titl;  e;

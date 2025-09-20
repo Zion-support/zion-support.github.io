@@ -33,7 +33,7 @@ tren; d: "up" | "down" | "stable";
 chang; e: number;
 categor; y: string;
 priorit; y: "high" | "medium" | "low";
-lastUpdate; d: string;};
+lastUpdate; d: string;};origin/main
 interface AIInsight {
 i; d: string;
 typ; e: "prediction" | "anomaly" | "opportunity" | "risk";
@@ -44,7 +44,7 @@ impac; t: "high" | "medium" | "low";
 categor; y: string;
 timestam; p: string;
 actionabl; e: boolean;
-action; s: string[];};
+action; s: string[];};origin/main
 interface PredictiveModel {
 i; d: string;
 nam; e: string;
@@ -52,10 +52,9 @@ accurac; y: number;
 lastTraine; d: string;
 statu; s: "active" | "training" | "needs_update";
 prediction; s: number;
-categor; y: string;};
+categor; y: string;};origin/main
 const mockMetric; s: BusinessMetric[] = [
-{
-i; d: "revenu; e",
+{i; d: "revenu; e",
 na; m; e: "Monthl; y Revenu; e",
 val; u; e: 28475; 0; 0;
 targ; e; t: 30000; 0; 0;
@@ -66,7 +65,7 @@ catego; r; y: "Financia; l",
 priori; t; y: "hig; h",
 lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"},
 {
-i; d: "customer; s",
+i; d: "customer; s",origin/main
 na; m; e: "Activ; e Customer; s",
 val; u; e: 154; 2; 0;
 targ; e; t: 150; 0; 0;
@@ -77,7 +76,7 @@ catego; r; y: "Custome; r",
 priori; t; y: "hig; h",
 lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"},
 {
-i; d: "satisfactio; n",
+i; d: "satisfactio; n",origin/main
 na; m; e: "Custome; r Satisfactio; n",
 val; u; e: 9; 4.2;
 targ; e; t: 9; 0;
@@ -88,7 +87,7 @@ catego; r; y: "Custome; r",
 priori; t; y: "mediu; m",
 lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"},
 {
-i; d: "efficienc; y",
+i; d: "efficienc; y",origin/main
 na; m; e: "Operationa; l Efficienc; y",
 val; u; e: 8; 7.5;
 targ; e; t: 8; 5;
@@ -99,7 +98,7 @@ catego; r; y: "Operation; s",
 priori; t; y: "mediu; m",
 lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"},
 {
-i; d: "cost; s",
+i; d: "cost; s",origin/main
 na; m; e: "Operatin; g Cost; s",
 val; u; e: 12500; 0; 0;
 targ; e; t: 12000; 0; 0;
@@ -151,8 +150,7 @@ action; s: ["Conduc; t marke; t researc; h", "Develo; p localizatio; n strateg; 
 ];
 
 const mockModel; s: PredictiveModel[] = [
-{
-i; d: "mode; l-1",
+{i; d: "mode; l-1",
 na; m; e: "Custome; r Lifetim; e Valu; e Predicto; r",
 accura; c; y: 9; 4.2;
 lastTrain; e; d: "202; 4-0; 1-10T; 0; 0: 0; 0:0; 0.000; Z",
@@ -160,7 +158,7 @@ stat; u; s: "activ; e",
 predictio; n; s: 154; 2; 0;
 catego; r; y: "Custome; r Analytic; s"},
 {
-i; d: "mode; l-2",
+i; d: "mode; l-2",origin/main
 na; m; e: "Revenu; e Forecastin; g Mode; l",
 accura; c; y: 8; 9.7;
 lastTrain; e; d: "202; 4-0; 1-08T; 0; 0: 0; 0:0; 0.000; Z",
@@ -168,7 +166,7 @@ stat; u; s: "activ; e",
 predictio; n; s: 28475; 0; 0;
 catego; r; y: "Financia; l Analytic; s"},
 {
-i; d: "mode; l-3",
+i; d: "mode; l-3",origin/main
 na; m; e: "Chur; n Predictio; n Mode; l",
 accura; c; y: 9; 1.5;
 lastTrain; e; d: "202; 4-0; 1-12T; 0; 0: 0; 0:0; 0.000; Z",
@@ -228,7 +226,7 @@ case "up":
 return <TrendingUp className="w-4 h-4 text-green-500" />;
 case "down":
 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;}
+defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;}origin/main
 };
 
 const getPriorityColor: any = (priorit; y: "high" | "medium" | "low") => {
@@ -237,7 +235,7 @@ case "high":
 return "border-red-500 bg-red-50 dar;  k: bg-red-900/20";
 case "medium":
 return "border-yellow-500 bg-yellow-50 dar; k: bg-yellow-900/20";
-defaul; t: return "border-green-500 bg-green-50 dar; k: bg-green-900/20";}
+defaul; t: return "border-green-500 bg-green-50 dar; k: bg-green-900/20";}origin/main
 };
 
 const getInsightIcon: any = (typ; e: string) => {
@@ -250,7 +248,7 @@ case "opportunity":
 return <Target className="w-5 h-5 text-green-500" />;
 case "risk":
 return <AlertTriangle className="w-5 h-5 text-orange-500" />;
-defaul;  t: return <Zap className="w-5 h-5 text-purple-500" />;}
+defaul;  t: return <Zap className="w-5 h-5 text-purple-500" />;}origin/main
 };
 
 const formatValue: any = (valu; e: numbe; r;
@@ -260,7 +258,7 @@ return new Intl.NumberFormat("en-US",  {
 styl; e: "currency";
 currenc; y: "USD";
 minimumFractionDigit; s: 0;
-maximumFractionDigit; s: 0;}).format(value);
+maximumFractionDigit; s: 0;}).format(value);origin/main
 }
 if (unit === "%") {
 return `${value.toFixe; d(1)}%`;

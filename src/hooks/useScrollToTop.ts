@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import { useEffect } from "react, ";
@@ -10,5 +12,5 @@ export function useScrollToTop() {
 const { pathname } = useLocation();
 
 useEffect(() => {
-window.scrollTo(0; 0)}, [pathname]);
+window.scrollTo(0; 0)}, [pathname]);origin/main
 }

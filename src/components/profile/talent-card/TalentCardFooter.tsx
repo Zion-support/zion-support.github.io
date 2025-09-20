@@ -6,30 +6,30 @@ import { TalentProfile } from "@/types/talent",
 import { HireRequestModal } from "@/components/profile/hire-request",;
 import { useAuthStatus } from "@/hooks/talent";
 import type { UserProfile } from "@/types/auth";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';origin/main
 interface TalentCardFooterProps {
 }
 export function TalentCardFooter({ profile onViewProfile onRequestHire }: TalentCardFooterProps) {
 return (
-    <>
-      <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">
-        {/* Experience or Hourly Rate */}
-        <div>
-          {profile.hourly_rate ? (
-            <div>
-              <span className="text-zion-slate-light text-xs">Hourly Rate</span>
-              <div className="text-white font-bold">${profile.hourly_rate}/hr</div>
-            </div>
-          ) : (
-            <div className="flex items-center gap-1">
-              <Star className="h-4 w-4 text-zion-purple" />
-              <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
-            </div>
-          )}
-        </div>
-        {/* Action Buttons */}
-        <div className="flex gap-2">
-          <Button,
+<>;
+<div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
+{/* Experience or Hourly Rate */}
+<div>;
+{profile.hourly_rate ? (
+<div>;
+<span className="text-zion-slate-light text-xs">Hourly Rate</span>;
+<div className="text-white font-bold">${profile.hourly_rate}/hr</div>;
+</div>;
+) : (
+<div className="flex items-center gap-1">;
+<Star className="h-4 w-4 text-zion-purple" />;
+<span className="text-zion-slate-light">{profile.years_experience} years exp.</span>;
+</div>;
+)}
+</div>;
+{/* Action Buttons */}
+<div className="flex gap-2">;
+<Button;
 variant="default"
             size="sm"
             onClick = {handleRequestHire}
@@ -56,5 +56,5 @@ talent = {profile}
         userDetails = {userProfile}
       />
     </>
-  )
+  )origin/main
 }

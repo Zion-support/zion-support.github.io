@@ -8,5 +8,5 @@ export default function ContentGenerator() {
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
     </div>
-  );
+  );origin/main
 }

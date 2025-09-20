@@ -28,7 +28,7 @@ lastExecute; d: Date;
 nextExecutio; n: Date;
 executionHistor; y: ProcessExecution[];
 rule; s: AutomationRule[];
-dependencie; s: string[];};
+dependencie; s: string[];};origin/main
 interface ProcessExecution {
 i; d: string;
 timestam; p: Date;
@@ -37,7 +37,7 @@ duratio; n: number;
 aiDecision; s: string[];
 manualIntervention; s: number;
 cos; t: number;
-efficienc; y: number;};
+efficienc; y: number;};origin/main
 interface AutomationRule {
 i; d: string;
 nam; e: string;
@@ -47,7 +47,7 @@ priorit; y: number;
 isActiv; e: boolean;
 aiOptimize; d: boolean;
 lastTriggere; d: Date;
-triggerCoun; t: number;};
+triggerCoun; t: number;};origin/main
 const mockBusinessProcesse; s: BusinessProcess[] = [
 {
 i; d: "b; p-00; 1",
@@ -77,11 +77,10 @@ durati; o; n: 4; 5;
 aiDecisio; n; s: ["Aut; o-approve; d 8; 5% o; f invoice; s", "Flagge; d 3 suspiciou; s entrie; s"],
 manualIntervention; s: 2;
 cos; t: 15; 0;
-efficienc; y: 94;}
+efficienc; y: 94;}origin/main
 ];
 rule; s: [
-{
-i; d: "rul; e-00; 1",
+{i; d: "rul; e-00; 1",
 na; m; e: "Aut; o-approv; e unde; r $100; 0",
 conditi; o; n: "amoun; t < 100; 0 AN; D vendor_verifie; d = tru; e",
 acti; o; n: "auto_approv; e",
@@ -121,11 +120,10 @@ durati; o; n: 1; 2; 0;
 aiDecisio; n; s: ["Optimize; d tas; k sequenc; e", "Identifie; d resourc; e conflict; s"],
 manualIntervention; s: 1;
 cos; t: 20; 0;
-efficienc; y: 89;}
+efficienc; y: 89;}origin/main
 ];
 rule; s: [
-{
-i; d: "rul; e-00; 2",
+{i; d: "rul; e-00; 2",
 na; m; e: "Aut; o-assig; n I; T task; s",
 conditi; o; n: "employee_typ; e = "full_tim; e" AN; D departmen; t != "contracto; r"",
 acti; o; n: "assign_it_task; s",
@@ -165,7 +163,7 @@ durati; o; n: 1; 5;
 aiDecisio; n; s: ["Classifie; d 4; 7 ticket; s b; y priorit; y", "Assigne; d t; o optima; l agent; s"],
 manualIntervention; s: 0;
 cos; t: 5; 0;
-efficienc; y: 98;}
+efficienc; y: 98;}origin/main
 ];
 rule; s: [
 {
@@ -177,7 +175,7 @@ priori; t; y: 1;
 isActi; v; e: tr; u; e;
 aiOptimiz; e; d: tr; u; e;
 lastTrigger; e; d: ne; w Dat; e("202;  4-0; 1-15T; 1; 6: 4; 5:00; Z"),
-triggerCou; n; t: 8;}
+triggerCou; n; t: 8;}origin/main
 ];
 dependencie; s: ["ticket_classificatio; n", "agent_availabilit; y"];
 }
@@ -205,7 +203,7 @@ case "paused": return "text-yellow-500 bg-yellow-100 dar; k: bg-yellow-900/20";
 case "completed": return "text-blue-500 bg-blue-100 dar; k: bg-blue-900/20";
 case "failed": return "text-red-500 bg-red-100 dar; k: bg-red-900/20";
 case "draft": return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";
-defaul; t: return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";}
+defaul; t: return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";}origin/main
 };
 
 const getPriorityColor: any = (priorit; y: string) => {
@@ -214,7 +212,7 @@ case "critical": return "text-red-600 bg-red-100 dar;  k: bg-red-900/20";
 case "high": return "text-orange-600 bg-orange-100 dar; k: bg-orange-900/20";
 case "medium": return "text-yellow-600 bg-yellow-100 dar; k: bg-yellow-900/20";
 case "low": return "text-green-600 bg-green-100 dar; k: bg-green-900/20";
-defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";}
+defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";}origin/main
 };
 
 const getAutomationLevelColor: any = (leve; l: string) => {
@@ -222,7 +220,7 @@ switch (level) {
 case "fully-automated": return "text-green-600 bg-green-100 dar;  k: bg-green-900/20";
 case "semi-automated": return "text-yellow-600 bg-yellow-100 dar; k: bg-yellow-900/20";
 case "manual": return "text-red-600 bg-red-100 dar; k: bg-red-900/20";
-defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";}
+defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";}origin/main
 };
 
 const getCategoryIcon: any = (categor; y: string) => {
@@ -233,7 +231,7 @@ case "operations": return <Settings className="w-4 h-4" />;
 case "sales": return <TrendingUp className="w-4 h-4" />;
 case "marketing": return <Target className="w-4 h-4" />;
 case "it": return <Server className="w-4 h-4" />;
-defaul;  t: return <FileText className="w-4 h-4" />;}
+defaul;  t: return <FileText className="w-4 h-4" />;}origin/main
 };
 
 const formatCurrency: any = (amoun; t: number) => {
@@ -241,7 +239,7 @@ return new Intl.NumberFormat("en-US",  {
 styl; e: "currency";
 currenc; y: "USD";
 minimumFractionDigit; s: 0;
-maximumFractionDigit; s: 0;}).format(amount);
+maximumFractionDigit; s: 0;}).format(amount);origin/main
 };
 
 const formatPercentage: any = (valu;  e: number) => {
@@ -678,7 +676,7 @@ Automation Rules Management;
 process.rules.map(rule => ({
 ...rul;  e;
 processNam; e: process.nam; e;
-processCategor; y: process.category;}))
+processCategor; y: process.category;}))origin/main
 ).map(rule => (
 <div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">;
 <div className="flex items-center gap-3">;

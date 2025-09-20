@@ -1,7 +1,6 @@
 export const INNOVATIVE_NEW_SERVICES = [
     // Quantum Computing & Advanced AI Services;
-    {
-        id: "quantum-ai-orchestrator";
+    {id: "quantum-ai-orchestrator";
         title: "Quantum AI Orchestrator Platform";
         description: "Revolutionary platform that orchestrates quantum computing resources with AI to solve complex optimization problems, drug discovery, and financial modeling.",
         category: "Quantum Computing & AI";
@@ -54,8 +53,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Autonomous Systems;
-    {
-        id: "ai-autonomous-fleet-management";
+    {id: "ai-autonomous-fleet-management";
         title: "AI Autonomous Fleet Management System";
         description: "Next-generation autonomous fleet management platform that uses AI to coordinate self-driving vehicles, optimize routes, and ensure safety compliance.",
         category: "AI & Autonomous Systems";
@@ -108,8 +106,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // Blockchain & Web3 Services;
-    {
-        id: "blockchain-enterprise-orchestrator";
+    {id: "blockchain-enterprise-orchestrator";
         title: "Blockchain Enterprise Orchestrator";
         description: "Enterprise-grade blockchain orchestration platform that manages multiple blockchain networks, smart contracts, and DeFi protocols for business applications.",
         category: "Blockchain & Web3";
@@ -162,8 +159,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Cybersecurity & Threat Intelligence;
-    {
-        id: "ai-threat-intelligence-platform";
+    {id: "ai-threat-intelligence-platform";
         title: "AI Threat Intelligence Platform";
         description: "Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analysis, and automated response for enterprise security.",
         category: "AI & Cybersecurity";
@@ -216,8 +212,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Healthcare & Medical Research;
-    {
-        id: "ai-medical-research-platform";
+    {id: "ai-medical-research-platform";
         title: "AI Medical Research Platform";
         description: "Revolutionary AI platform that accelerates medical research, drug discovery, and clinical trials through advanced machine learning and data analysis.",
         category: "AI & Healthcare";
@@ -270,8 +265,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Financial Services & Trading;
-    {
-        id: "ai-financial-trading-platform";
+    {id: "ai-financial-trading-platform";
         title: "AI Financial Trading Platform";
         description: "Advanced AI-powered financial trading platform that provides algorithmic trading, risk management, and market analysis for institutional investors.",
         category: "AI & Financial Services";
@@ -324,8 +318,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Manufacturing & Industry 4.0;
-    {
-        id: "ai-industry-4-0-platform";
+    {id: "ai-industry-4-0-platform";
         title: "AI Industry 4.0 Platform";
         description: "Comprehensive AI platform for Industry 4.0 that optimizes manufacturing processes, predictive maintenance, and quality control through intelligent automation.",
         category: "AI & Manufacturing";
@@ -378,8 +371,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Energy & Sustainability;
-    {
-        id: "ai-energy-sustainability-platform";
+    {id: "ai-energy-sustainability-platform";
         title: "AI Energy & Sustainability Platform";
         description: "Intelligent platform that optimizes energy consumption, manages renewable energy systems, and provides sustainability analytics for organizations.",
         category: "AI & Energy";
@@ -432,8 +424,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Transportation & Smart Cities;
-    {
-        id: "ai-smart-city-platform";
+    {id: "ai-smart-city-platform";
         title: "AI Smart City Platform";
         description: "Comprehensive AI platform for smart cities that manages transportation, utilities, public safety, and urban planning through intelligent automation.",
         category: "AI & Smart Cities";
@@ -486,8 +477,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Education & Learning Analytics;
-    {
-        id: "ai-education-analytics-platform";
+    {id: "ai-education-analytics-platform";
         title: "AI Education Analytics Platform";
         description: "Advanced AI platform that provides comprehensive learning analytics, student performance tracking, and personalized education recommendations.",
         category: "AI & Education";
@@ -540,8 +530,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Retail & E-commerce Innovation;
-    {
-        id: "ai-retail-innovation-platform";
+    {id: "ai-retail-innovation-platform";
         title: "AI Retail Innovation Platform";
         description: "Cutting-edge AI platform that revolutionizes retail through personalized shopping experiences, inventory optimization, and predictive analytics.",
         category: "AI & Retail";
@@ -594,8 +583,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Legal & Compliance Automation;
-    {
-        id: "ai-legal-compliance-platform";
+    {id: "ai-legal-compliance-platform";
         title: "AI Legal & Compliance Platform";
         description: "Advanced AI platform that automates legal document generation, compliance monitoring, and regulatory reporting for enterprises.",
         category: "AI & Legal";
@@ -648,8 +636,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Agriculture & Precision Farming;
-    {
-        id: "ai-precision-farming-platform";
+    {id: "ai-precision-farming-platform";
         title: "AI Precision Farming Platform";
         description: "Revolutionary AI platform that optimizes agricultural operations through precision farming, crop monitoring, and sustainable agriculture practices.",
         category: "AI & Agriculture";
@@ -702,8 +689,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Construction & Infrastructure;
-    {
-        id: "ai-construction-optimization";
+    {id: "ai-construction-optimization";
         title: "AI Construction Optimization Platform";
         description: "Advanced AI platform that optimizes construction projects through intelligent planning, resource management, and performance analytics.",
         category: "AI & Construction";
@@ -756,8 +742,7 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Hospitality & Guest Experience;
-    {
-        id: "ai-hospitality-optimization";
+    {id: "ai-hospitality-optimization";
         title: "AI Hospitality Optimization Platform";
         description: "Intelligent platform that optimizes hospitality operations through guest experience enhancement, operational efficiency, and revenue optimization.",
         category: "AI & Hospitality";

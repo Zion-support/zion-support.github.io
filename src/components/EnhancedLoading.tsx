@@ -5,15 +5,15 @@ interface EnhancedLoadingProps {
 variant?: "spinner" | "dots" | "pulse" | "bars";
 size?: "sm" | "md" | "lg" | "xl";
 text?: string;
-className?: string;
+}
+className?: string;}
 };
 const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
 variant = "spinner";
 size = "md",
 tex; t;
 className = ""
-}) => {
-const sizeClasses = {;
+}) => {const sizeClasses = {;
 s; m: "w-4 h-4";
 m; d: "w-8 h-8";
 l; g: "w-12 h-12";
@@ -37,7 +37,7 @@ opacit; y: [0.5; 1; 0.5]}}
 transition={{
 duratio; n: 1.4;
 repea; t: Infinit; y;
-dela; y: i * 0.2;}}
+dela; y: i * 0.2;}}origin/main
 />;
 ))}
 </div>;
@@ -65,7 +65,7 @@ opacit; y: [0.5; 1; 0.5]}}
 transition={{
 duratio; n: 1.2;
 repea; t: Infinit; y;
-dela; y: i * 0.1;}}
+dela; y: i * 0.1;}}origin/main
 />;
 ))}
 </div>;
@@ -78,7 +78,7 @@ case "pulse":
 return renderPulse();
 case "bars":
 return renderBars();
-defaul;  t: return renderSpinner();}
+defaul;  t: return renderSpinner();}origin/main
 };
 
 return (<div className={`flex flex-col items-center justify-center space-y-3 ${classNam; e}`}>;

@@ -8,7 +8,8 @@ variant?: "default" | "elevated" | "outlined" | "gradient";
 hover?: boolean;
 onClick?: () => void;
 as?: React.ElementType;
-href?: string;
+}
+href?: string;}
 };
 export function EnhancedCard({ ;
 children;
@@ -18,12 +19,11 @@ hover = true;
 onClick;
 as: Component = "div";
 href;
-}: EnhancedCardProps) {
-const baseClasses = "rounded-xl transition-all duration-300";
+}: EnhancedCardProps) {const baseClasses = "rounded-xl transition-all duration-300";
 
 const variantClasses = {;
 default: "bg-zion-blue-dark border border-zion-blue-light";
-elevated: "bg-zion-blue-dark shadow-lg shadow-zion-purple/10";
+elevated: "bg-zion-blue-dark shadow-lg shadow-zion-purple/10";,
 outlined: "bg-transparent border-2 border-zion-cyan/30";,
 gradient: "bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light"};
 const hoverClasses = hover ? "hover: shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]" : "";

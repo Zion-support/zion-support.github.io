@@ -6,14 +6,14 @@ import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentGridProps {;
 talents: TalentProfile[];
-isLoading: boolean;
+isLoading: boolean;,
 onTalentClick: (id: string) => void;,
 isAuthenticated: boolean;
 viewProfile?: (id: string) => void;
 // unused but kept for backward compatibility;
 clearFilters?: () => void;
 handleBook?: (talent: TalentProfile) => void;
-handleMessage?: (talent: TalentProfile) => void;};
+handleMessage?: (talent: TalentProfile) => void;};origin/main
 export function TalentGrid({ ;
 talents;
 isLoading;

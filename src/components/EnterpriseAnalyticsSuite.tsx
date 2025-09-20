@@ -8,7 +8,7 @@ icon: string};
 interface DepartmentPerformance {
 department: string; revenue: number; growth: number; efficiency: number; satisfaction: number; color: string};
 interface ProjectStatus {
-name: string; progress: number; status: "on-track" | "delayed" | "at-risk" | "completed";,
+name: string; progress: number; status: "on-track" | "delayed" | "at-risk" | "completed";,origin/main
 team: string; deadline: string};
 export const EnterpriseAnalyticsSuite: React.FC = () => {;
 const [metrics, setMetrics] = useState<EnterpriseMetric[]>([
@@ -22,7 +22,7 @@ department: "sales",
 priority: "high",
 icon: "💰"},
 {
-id: "2",
+id: "2",origin/main
 title: "Lead Generation",
 value: "12;847",
 change: "+18.7%",
@@ -31,7 +31,7 @@ department: "marketing",
 priority: "high",
 icon: "🎯"},
 {
-id: "3",
+id: "3",origin/main
 title: "Operational Efficiency",
 value: "96.8%",
 change: "+1.2%",
@@ -40,7 +40,7 @@ department: "operations",
 priority: "medium",
 icon: "⚙️"},
 {
-id: "4",
+id: "4",origin/main
 title: "Profit Margin",
 value: "34.2%",
 change: "+2.8%",
@@ -49,7 +49,7 @@ department: "finance",
 priority: "high",
 icon: "📊"},
 {
-id: "5",
+id: "5",origin/main
 title: "Employee Retention",
 value: "94.5%",
 change: "+0.8%",
@@ -58,7 +58,7 @@ department: "hr",
 priority: "medium",
 icon: "👥"},
 {
-id: "6",
+id: "6",origin/main
 title: "Customer Acquisition Cost",
 value: "$245",
 change: "-12.3%",
@@ -90,40 +90,40 @@ revenue: 1200000; growth: 12.9; efficiency: 98.1;
 satisfaction: 4.6;,
 color: "yellow"},
 {
-department: "HR",
+department: "HR",origin/main
 revenue: 800000; growth: 8.4;
-efficiency: 89.5;
+efficiency: 89.5;,
 satisfaction: 4.4;,
 color: "indigo"}
 ]);
 
 const [projectStatus, setProjectStatus] = useState<ProjectStatus[]>([
 {
-name: "Digital Transformation Initiative",
+name: "Digital Transformation Initiative",origin/main
 progress: 78;,
 status: "on-track",
 team: "Engineering",
 deadline: "2024-03-15"},
 {
-name: "Customer Experience Platform",
+name: "Customer Experience Platform",origin/main
 progress: 92;,
 status: "on-track",
 team: "Product",
 deadline: "2024-02-28"},
 {
-name: "AI Integration Project",
+name: "AI Integration Project",origin/main
 progress: 45;,
 status: "at-risk",
 team: "Data Science",
 deadline: "2024-04-30"},
 {
-name: "Security Infrastructure Upgrade",
+name: "Security Infrastructure Upgrade",origin/main
 progress: 100;,
 status: "completed",
 team: "Security",
 deadline: "2024-01-15"},
 {
-name: "Mobile App Redesign",
+name: "Mobile App Redesign",origin/main
 progress: 65;,
 status: "delayed",
 team: "Design",
@@ -133,22 +133,19 @@ deadline: "2024-03-01"}
 const [selectedDepartment, setSelectedDepartment] = useState("all");
 const [selectedPriority, setSelectedPriority] = useState("all");
 
-const getTrendIcon: any = (trend: string) => {
-switch (trend) {;
+const getTrendIcon: any = (trend: string) => {switch (trend) {;
 case "up": return "↗️";
 case "down": return "↘️";,
 default: return "➡️"}
 };
 
-const getTrendColor: any = (trend: string) => {
-switch (trend) {;
+const getTrendColor: any = (trend: string) => {switch (trend) {;
 case "up": return "text-green-400";
 case "down": return "text-red-400";,
 default: return "text-gray-400"}
 };
 
-const getDepartmentColor: any = (department: string) => {
-switch (department) {;
+const getDepartmentColor: any = (department: string) => {switch (department) {;
 case "sales": return "from-blue-500 to-cyan-600";
 case "marketing": return "from-green-500 to-emerald-600";
 case "operations": return "from-purple-500 to-violet-600";
@@ -157,16 +154,14 @@ case "hr": return "from-indigo-500 to-blue-600";,
 default: return "from-gray-500 to-slate-600"}
 };
 
-const getPriorityColor: any = (priority: string) => {
-switch (priority) {;
+const getPriorityColor: any = (priority: string) => {switch (priority) {;
 case "high": return "text-red-400 bg-red-900";
 case "medium": return "text-yellow-400 bg-yellow-900";
 case "low": return "text-green-400 bg-green-900";,
 default: return "text-gray-400 bg-gray-900"}
 };
 
-const getStatusColor: any = (status: string) => {
-switch (status) {;
+const getStatusColor: any = (status: string) => {switch (status) {;
 case "on-track": return "text-green-400 bg-green-900";
 case "completed": return "text-blue-400 bg-blue-900";
 case "at-risk": return "text-yellow-400 bg-yellow-900";

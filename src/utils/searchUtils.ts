@@ -2,7 +2,7 @@ import { SearchSuggestion } from "@/types/search, ";
 
 export interface SearchResult {
 id: string;
-title: string;
+title: string;,
 description: string;,
 type: "product" | "talent" | "blog" | "service" | "doc";
 category?: string;
@@ -12,24 +12,27 @@ price?: number;
 currency?: string;
 rating?: number;
 tags?: string[];
-date?: string;
+}
+date?: string;}
 }
 
 export interface SearchFilters {
 types: string[];
 category: string;
 minPrice: number;
-maxPrice: number;
+maxPrice: number;,
 minRating: number;,
-sort: string;}
+sort: string;}origin/main
 
 export interface SearchMetrics {
-totalResults: number;
-searchTime: number;
-topCategories: Array<{ category: string;,
+totalResults: number;,
+searchTime: number;,
+topCategories: Array<{ category: string;
+}
+}
 count: number }>;
 averagePrice: number;,
-averageRating: number;}
+averageRating: number;}origin/main
 
 /**;
 * Highlight search terms in text with HTML mark tags;
@@ -170,7 +173,7 @@ return filteredResults;
 /**;
 * Generate search suggestions based on query;
 */;
-export const generateDynamicSuggestions: any = (;
+export const generateDynamicSuggestions: any = (;,
 query: string;,
 recentSearches: string[] = [],
 availableCategories: string[] = [],
@@ -181,7 +184,7 @@ const lowerQuery = query.toLowerCase();
 
 // Add exact query as first suggestion;
 if (query.trim()) {
-suggestions.push({
+suggestions.push({,
 text: query;,
 type: "recent",
 id: `query-${query}`;
@@ -269,7 +272,7 @@ averageRating;
 /**;
 * Debounce function for search input;
 */;
-export const debounce = <T extends (...args: any[]) => any>(;
+export const debounce = <T extends (...args: any[]) => any>(;,
 func: T;,
 wait: number;
 ): ((...args: Parameters<T>) => void) => {
@@ -329,11 +332,10 @@ return count;
 /**;
 * Reset filters to default values;
 */;
-export const getDefaultFilters: any = (): SearchFilters => ({
-types: [],
+export const getDefaultFilters: any = (): SearchFilters => ({types: [],
 category: "",;
 minPrice: 0;
-maxPrice: 10000;
+maxPrice: 10000;,
 minRating: 0;,
 sort: "relevance"});
 export default {

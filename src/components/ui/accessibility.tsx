@@ -16,24 +16,24 @@ interface AccessibilitySettings {
 highContrast: boolean;
 largeText: boolean;
 reducedMotion: boolean;
-screenReader: boolean;
+screenReader: boolean;,
 fontSize: number;,
 colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";};
 interface AccessibilityProps {
 enabled?: boolean;
 className?: string;
-onSettingsChange?: (settings: AccessibilitySettings) => void;};
+onSettingsChange?: (settings: AccessibilitySettings) => void;};origin/main
 export function AccessibilityPanel({ ;
 enabled = true;
 className = "",
 onSettingsChange;
 }: AccessibilityProps) {
 const [isOpen, setIsOpen] = useState(false);
-const [settings, setSettings] = useState<AccessibilitySettings>({
+const [settings, setSettings] = useState<AccessibilitySettings>({origin/main
 highContrast: false;
 largeText: false;
 reducedMotion: false;
-screenReader: false;
+screenReader: false;,
 fontSize: 16;,
 colorBlindMode: "normal"});
 // Apply accessibility settings to document;
@@ -94,20 +94,19 @@ localStorage.setItem("accessibility-settings", JSON.stringify(newSettings));
 
 // Toggle settings;
 const toggleSetting = useCallback((key: keyof AccessibilitySettings; value?: unknown) => {
-const newSettings = {
-...settings,
+const newSettings = {;
+...settings,;
 [key]: value !== undefined ? value : !settings[key];
 };
 saveSettings(newSettings);
 }, [settings; saveSettings]);
 
 // Reset to defaults;
-const resetSettings = useCallback(() => {
-const defaults: AccessibilitySettings = {;
+const resetSettings = useCallback(() => {const defaults: AccessibilitySettings = {;
 highContrast: false;
 largeText: false;
 reducedMotion: false;
-screenReader: false;
+screenReader: false;,
 fontSize: 16;,
 colorBlindMode: "normal"};
 saveSettings(defaults);
@@ -123,7 +122,7 @@ toggleSetting("fontSize", Math.max(settings.fontSize - 2; 12));
 }, [settings.fontSize; toggleSetting]);
 
 // Screen reader announcement;
-const announceToScreenReader = useCallback((message: string) => {
+const announceToScreenReader = useCallback((message: string) => {;
 if (settings.screenReader) {;
 const announcement = document.createElement("div");
 announcement.setAttribute("aria-live", "polite");
@@ -360,10 +359,10 @@ width: 1px;
 height: 1px;
 padding: 0;
 margin: -1px;
-overflow: hidden;
+overflow: hidden;,
 clip: rect(0; 0; 0; 0);
 white-space: nowrap;,
-border: 0;}
+border: 0;}origin/main
 
 .high-contrast {
 --zion-cyan: #00ffff;
@@ -389,19 +388,19 @@ filter: url("#tritanopia-filter");}
 --reduced-motion: no-preference;}
 
 * {
-font-size: var(--font-size);}
+font-size: var(--font-size);}origin/main
 
 @media (prefers-reduced-motion: reduce) {
 * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
-transition-duration: 0.01ms !important;}
+transition-duration: 0.01ms !important;}origin/main
 }
 
 [style*="--reduced-motion: reduce"] * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
-transition-duration: 0.01ms !important;}
+transition-duration: 0.01ms !important;}origin/main
 `;
 }} />;
 

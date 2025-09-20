@@ -28,31 +28,31 @@ icon}: EmptyStateProps) {
       {description && (
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>      )}
       {showRetry && onRetry && (
-        <Button,
+        <Button,origin/main
 onClick={onRetry}
-          variant='outline'
-          className='flex items-center gap-2'
-        >
-          <RefreshCw className='h-4 w-4' />          Try Again      )}
-      {showRetry && onRetry && (
-        <Button,
+variant="outline"
+className="flex items-center gap-2"
+>;
+<RefreshCw className="h-4 w-4" />          Try Again      )}
+{showRetry && onRetry && (
+<Button;
 onClick={onRetry}
-          variant='outline'
-          className='flex items-center gap-2'
-        >
-          <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">
-          {description}
-        </p>
-      )}
-      {showRetry && onRetry && (
-        <Button,
+variant="outline"
+className="flex items-center gap-2"
+>;
+<RefreshCw className="h-4 w-4" />        <p className="text-gray-400 mb-6 max-w-md">;
+{description}
+</p>;
+)}
+{showRetry && onRetry && (
+<Button;
 onClick={onRetry}
-          variant="outline"
-          className="flex items-center gap-2"
-        >
-          <RefreshCw className="h-4 w-4" />
-        </Button>
-      )}
-    </div>
-  )
+variant="outline"
+className="flex items-center gap-2"
+>;
+<RefreshCw className="h-4 w-4" />;
+</Button>;
+)}
+</div>;
+)
 }

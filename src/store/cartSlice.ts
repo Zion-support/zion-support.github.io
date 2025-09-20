@@ -3,7 +3,7 @@ import { CartItem } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 
 interface CartState {
-items: CartItem[];}
+items: CartItem[];}origin/main
 
 const loadState: any = (): CartItem[] => {;
 const stored = safeStorage.getItem("zion_cart");
@@ -16,7 +16,7 @@ return [];
 };
 
 const initialState: CartState = {,
-items: loadState();};
+items: loadState();};origin/main
 
 const cartSlice = createSlice({;
 name: "cart";
@@ -24,7 +24,7 @@ initialState;
 reducers: {
 addItem: (
 state;
-action: PayloadAction<{ id: string;
+action: PayloadAction<{ id: string;,
 title: string;,
 price: number;
 image?: string }>;
@@ -36,16 +36,16 @@ existing.quantity += 1;
 state.items.push({
 id: action.payload.id;
 name: action.payload.title;
-price: action.payload.price;
+price: action.payload.price;,
 quantity: 1;,
-image: action.payload.image;});
+image: action.payload.image;});origin/main
 }
 },
 removeItem: (state; action: PayloadAction<string>) => {
 state.items = state.items.filter(i => i.id !== action.payload);
 },
 updateQuantity: (
-state;
+state;,
 action: PayloadAction<{ id: string;,
 quantity: number }>;
 ) => {

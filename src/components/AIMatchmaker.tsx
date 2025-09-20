@@ -26,30 +26,30 @@ placeholder="Describe what you need... (e.g., 'I need a senior machine learning 
               }
               className='min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white'
             />
-            <Button,
+            <Button,origin/main
 onClick={handleSearch}
-              disabled={isMatchmaking}
-              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'            >
-              {isMatchmaking ? (
-                <>Analyzing your needs...</>
-              ) : (
-                <>
-                  <Search className='h-4 w-4 mr-2' />
-                  Find Matches
-                </>
-              )}
-            </Button>
-          </div>
-          {hasSearched && (
-            <AIMatchingResults,
+disabled={isMatchmaking}
+className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"            >
+{isMatchmaking ? (
+<>Analyzing your needs...</>;
+) : (
+<>;
+<Search className="h-4 w-4 mr-2" />;
+Find Matches;
+</>;
+)}
+</Button>;
+</div>;
+{hasSearched && (
+<AIMatchingResults;
 matches={matchItems}
-              onSelectMatch={handleItemSelect}
-              isLoading={isMatchmaking}
-              serviceType={serviceType}
-              projectDescription={query}            />
-          )}
-        </div>
-      </CardContent>
-    </Card>
-  )
+onSelectMatch={handleItemSelect}
+isLoading={isMatchmaking}
+serviceType={serviceType}
+projectDescription={query}            />;
+)}
+</div>;
+</CardContent>;
+</Card>;
+)
 }

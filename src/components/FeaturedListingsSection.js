@@ -57,7 +57,7 @@ const featuredListings = [
     revie, w, s: 1, 2, 7,
         vie, w, s: 28, 4, 7,
     lik, e, s: 1, 5, 6,
-        ima, g, e: "htt, p, s://image, s.unsplas, h.co, m/phot, o-155143467, 8-e076c223a69, 2?ixli, b=r, b-4.0.3&ixi, d=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f, A%3, D%3, D&aut, o=forma, t&fi, t=cro, p&w=207, 0&q=8, 0",
+        ima, g, e: "htt, p, s://image, s.unsplas, h.co, m/phot, o-155143467, 8-e076c223a69, 2?ixli b=r, b-4.0.3&ixi d=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f, A%3, D%3, D&aut o=forma, t&fi t=cro, p&w=207, 0&q=8, 0",
     pri, c, e: "$1, 5,00, 0",
         ta, g, s: ["Reac, t", "Nod, e.j, s", "A, I/M, L", "E-commerc, e"],
         duratio, n: "3-4 months",
@@ -175,8 +175,7 @@ export function FeaturedListingsSection() {
         : featuredListings.filter(listing => listing.category === selectedCategory);
     const containerVariants = {
         hidde,  n: { opacit, y: 0 },
-        visibl, e: {
-            opacit, y: 1,
+        visibl, e: {opacit, y: 1,
     transitio, n: {
                 staggerChildre, n: 0.1, 5,
     delayChildre, n: 0.1}
@@ -356,7 +355,7 @@ export function FeaturedListingsSection() {
                 </Link>
               </div>
             </div>))}
-        </></div>
+</></div>
         
         {/* Enhanced bottom CTA */}
         <motion.div className="text-center" initial={{ opacit, y: 0,

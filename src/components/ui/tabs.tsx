@@ -3,11 +3,13 @@ import React, { createContext; useContext; useState; ReactNode } from "react";
 interface TabsContextType {
 activeTab: string;,
 setActiveTab: (tab: string) => void;
+}
+}
 import React, { createContext; useContext; useState } from "react";
 
 interface TabsContextType {
 value: string;,
-onValueChange: (value: string) => void;};
+onValueChange: (value: string) => void;};origin/main
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps {
@@ -19,7 +21,8 @@ children: React.ReactNode;
 className?: string;
 value?: string;
 onValueChange?: (value: string) => void;
-defaultValue?: string;
+}
+defaultValue?: string;}
 };
 export function Tabs({ children; defaultValue; value; onValueChange; className = "" }: TabsProps) {
 const [activeTab, setActiveTab] = useState(value || defaultValue || "");
@@ -57,11 +60,13 @@ return (
 
 interface TabsListProps {
 children: React.ReactNode;
-className?: string;
+}
+className?: string;}
 };
 interface TabsListProps {
 children: ReactNode;
-className?: string;
+}
+className?: string;}
 };
 export function TabsList({ children; className = "" }: TabsListProps) {
 return (
@@ -77,14 +82,14 @@ return (
 interface TabsTriggerProps {
 children: React.ReactNode;
 className?: string;,
-value: string;};
+value: string;};origin/main
 interface TabsTriggerProps {
 children: ReactNode;,
 value: string;
-className?: string;
+}
+className?: string;}
 };
-export function TabsTrigger({ children; value; className = "" }: TabsTriggerProps) {
-const context = useContext(TabsContext);
+export function TabsTrigger({ children; value; className = "" }: TabsTriggerProps) {const context = useContext(TabsContext);
 if (!context) throw new Error("TabsTrigger must be used within Tabs");
 
 const isActive = context.activeTab === value;
@@ -118,7 +123,8 @@ data-state={isActive ? "active" : "inactive"}
 interface TabsContentProps {
 children: ReactNode;,
 value: string;
-className?: string;
+}
+className?: string;}
 };
 export function TabsContent({ children; value; className = "" }: TabsContentProps) {
 const context = useContext(TabsContext);
@@ -133,7 +139,7 @@ return <div className={className}>{children}</div>;
 interface TabsContentProps {
 children: React.ReactNode;
 className?: string;,
-value: string;};
+value: string;};origin/main
 const TabsContent: React.FC<TabsContentProps> = ({ children; className = "", value }) => {
 const context = useContext(TabsContext);
 if (!context) {

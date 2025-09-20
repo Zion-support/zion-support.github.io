@@ -37,9 +37,9 @@ metadata: {
 lastUpdated: string;
 version: string;
 downloads: number;
-verified: boolean;
+verified: boolean;,
 featured: boolean;,
-complexity: "beginner" | "intermediate" | "advanced" | "expert";};
+complexity: "beginner" | "intermediate" | "advanced" | "expert";};origin/main
 actions?: {
 label: string;,
 icon: React.ComponentType<{ className?: string }>;
@@ -57,7 +57,8 @@ autoPlay?: boolean;
 showFilters?: boolean;
 onCardClick?: (item: CardItem) => void;
 onAction?: (itemId: string; action: string) => void;
-className?: string;
+}
+className?: string;}
 };
 export function Card3DGallery({;
 enabled = true;
@@ -74,21 +75,21 @@ const [viewMode, setViewMode] = useState<"grid" | "list" | "carousel">("grid");
 const [filters, setFilters] = useState({
 category: [] as string[];
 status: [] as CardItem["status"][];
-complexity: [] as CardItem["metadata"]["complexity"][];
+complexity: [] as CardItem["metadata"]["complexity"][];,
 verified: false;,
 featured: false;});
 const [searchQuery, setSearchQuery] = useState("");
 const [sortBy, setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
 const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
 const [isPlaying, setIsPlaying] = useState(autoPlay);
-const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
+const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);origin/main
 
 const galleryRef = useRef<HTMLDivElement>(null);
 
 // Filter and sort items;
 const filteredAndSortedItems = items;
 .filter(item => {
-const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
@@ -119,7 +120,7 @@ case "title":
 aValue = a.title.toLowerCase();
 bValue = b.title.toLowerCase();
 break;,
-default: return 0;}
+default: return 0;}origin/main
 
 if (sortOrder === "asc") {
 return aValue > bValue ? 1 : -1;
@@ -161,7 +162,7 @@ case "coming-soon":
 return "border-blue-500/50 bg-blue-500/10 text-blue-400";
 case "deprecated":
 return "border-red-500/50 bg-red-500/10 text-red-400";,
-default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}origin/main
 };
 
 // Get complexity color;
@@ -175,7 +176,7 @@ case "advanced":
 return "border-orange-500/50 bg-orange-500/10 text-orange-400";
 case "expert":
 return "border-red-500/50 bg-red-500/10 text-red-400";,
-default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}origin/main
 };
 
 // Get category icon;
@@ -586,9 +587,11 @@ interface Card3DProps {
 item: CardItem;
 index: number;
 onClick: () => void;
-onAction: (itemId: string; action: string) => void;
-getStatusColor: (status: CardItem["status"]) => string;
-getComplexityColor: (complexity: CardItem["metadata"]["complexity"]) => string;,
+onAction: (itemId: string; action: string) => void;,
+getStatusColor: (status: CardItem["status"]) => string;,
+getComplexityColor: (complexity: CardItem["metadata"]["complexity"]) => string;
+}
+}
 getCategoryIcon: (category: string) => React.ComponentType<{ className?: string }>;
 isCarousel?: boolean;
 }

@@ -2,17 +2,17 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { SparklesLoader2 } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';origin/main
 interface AIEnhancementButtonProps {
-  currentContent: string;,
-enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
-  context?: string;
-  onEnhanced: (enhancedContent: string) => void;
-  buttonText?: string;
-  className?: string,
+currentContent: string;,
+enhancementType: "summary" | "work-description" | "skill-categorization" | "general";
+context?: string;,
+onEnhanced: (enhancedContent: string) => void;
+buttonText?: string;
+className?: string;
 export function AIEnhancementButton({
 return (
-    <Button,
+<Button;
 type="button"
       variant="ghost"
       size="sm"
@@ -37,5 +37,5 @@ type="button"
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
-  )
+  )origin/main
 }

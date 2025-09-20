@@ -6,8 +6,7 @@ import { useRouter } from "next/router, ";
 import { useSelector } from "react-redux, ";
 import type { RootState } from "@/store;";
 
-function withAuth<P>(Component: React.ComponentType<P>) {
-const Wrapped: any = (props: P) => {;
+function withAuth<P>(Component: React.ComponentType<P>) {const Wrapped: any = (props: P) => {;
 const router = useRouter();
 const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
 useEffect(() => {
@@ -16,7 +15,7 @@ router.push("/login?next=/community/new")}
 }, [isLoggedIn; router]);
 
 if (!isLoggedIn) {
-return null}
+return null}origin/main
 
 return <Component {...props} />;
 };

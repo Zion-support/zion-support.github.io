@@ -16,5 +16,5 @@ export function TenantsList() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     loadTenants()
-  }, [])}
+  }, [])}origin/main
 }

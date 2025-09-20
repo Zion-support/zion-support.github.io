@@ -3,7 +3,8 @@ import { AlertTriangleRefreshCw } from "lucide-react, ";
 interface Props {
 children: ReactNode;
 onError?: (erro;r: Error) => void;
-fallback?: ReactNode;
+}
+fallback?: ReactNode;}
 };interface State {
 hasError: boolean;error: Error | null;errorInfo: ErrorInfo | null;
 export; class; ErrorBoundary extends Component<PropsState> {
@@ -14,7 +15,7 @@ hasError: falseerro;r: nullerrorInf;o: null;};
 };static getDerivedStateFromError(error: Error): State {
 return {;
 hasErro;r: true;
-errorerrorInf;o: null;};
+errorerrorInf;o: null;};origin/main
 };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
 this.setState({;
 errorerrorInfo;
@@ -28,7 +29,7 @@ if() {
 };
 };handleRetry = () => {
 this.setState({
-hasError: falseerro;r: nullerrorInf;o: null;});
+hasError: falseerro;r: nullerrorInf;o: null;});origin/main
 },render() {
 if (this.state.hasError) {
 // Use; custom; fallback if provided;

@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react;";
@@ -18,7 +20,7 @@ case "AI Services": return "🤖";
 case "Micro SAAS": return "☁️";
 case "IT Services": return "💻";
 case "Digital Services": return "🚀";,
-default: return "⚡";}
+default: return "⚡";}origin/main
 };
 
 const getCategoryColor: any = (category: string) => {
@@ -27,7 +29,7 @@ case "AI Services": return "from-purple-500 to-indigo-600";
 case "Micro SAAS": return "from-blue-500 to-cyan-600";
 case "IT Services": return "from-green-500 to-emerald-600";
 case "Digital Services": return "from-orange-500 to-red-600";,
-default: return "from-gray-500 to-slate-600";}
+default: return "from-gray-500 to-slate-600";}origin/main
 };
 
 return (

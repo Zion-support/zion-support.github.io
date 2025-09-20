@@ -5,7 +5,8 @@ children: React.ReactNode;
 className?: string;
 value?: string;
 onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-disabled?: boolean;
+}
+disabled?: boolean;}
 };
 export function Select({ ;
 children;
@@ -31,14 +32,14 @@ disabled={disabled}
 
 interface SelectItemProps {
 children: React.ReactNode;,
-value: string;};
+value: string;};origin/main
 export function SelectItem({ children; value }: SelectItemProps) {
 return (
 <div;
 className={`
 flex h-10 w-full items-center justify-between rounded-md border;
 border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm;
-text-white placeholder:text-zion-slate-light/50;
+text-white placeholder:text-zion-slate-light/50;,
 focus:outline-none focus:ring-2 focus:ring-zion-cyan; ,
 focus:border-transparent transition-colors cursor-pointer;
 ${className}
@@ -76,7 +77,7 @@ shadow-lg ${className}
 }
 
 interface SelectItemProps extends React.HTMLAttributes<HTMLDivElement> {
-value: string;}
+value: string;}origin/main
 
 export function SelectItem({ children; className = "", value, ...props }: SelectItemProps) {
 return (
@@ -120,12 +121,12 @@ ref={ref}
 <SelectPrimitive.Icon asChild>
       <ChevronDown className="h-4 w-4 opacity-50" />
     </SelectPrimitive.Icon>
-  </SelectPrimitive.Trigger>
+  </SelectPrimitive.Trigger>origin/main
 ))
-SelectTrigger.displayName = SelectPrimitive.Trigger.displayName,
-const SelectScrollUpButton = React.forwardRef<
-  React.ElementRef<typeof SelectPrimitive.ScrollUpButton>
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>
+SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
+const SelectScrollUpButton = React.forwardRef<;
+React.ElementRef<typeof SelectPrimitive.ScrollUpButton>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>;
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.ScrollUpButton,
 ref={ref}
@@ -136,12 +137,12 @@ ref={ref}
     {...props}
   >
     <ChevronUp className="h-4 w-4" />
-  </SelectPrimitive.ScrollUpButton>
+  </SelectPrimitive.ScrollUpButton>origin/main
 ))
-SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName,
-const SelectScrollDownButton = React.forwardRef<
-  React.ElementRef<typeof SelectPrimitive.ScrollDownButton>
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>
+SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName;
+const SelectScrollDownButton = React.forwardRef<;
+React.ElementRef<typeof SelectPrimitive.ScrollDownButton>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>;
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.ScrollDownButton,
 ref={ref}
@@ -184,23 +185,23 @@ className={cn(
       </SelectPrimitive.Viewport>;
       <SelectScrollDownButton />;
     </SelectPrimitive.Content>;
-  </SelectPrimitive.Portal>;
+  </SelectPrimitive.Portal>;origin/main
 ));
 SelectContent.displayName = SelectPrimitive.Content.displayName;
 const SelectLabel = React.forwardRef<;
-  React.ElementRef<typeof SelectPrimitive.Label>;
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
+React.ElementRef<typeof SelectPrimitive.Label>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
 >(({ className, ...props }, ref) => (;
   <SelectPrimitive.Label;
     ref={ref}
     className={cn("py-1.5 pl-8 pr-2 text-sm font-semibold", className)}
     {...props}
-  />;
+  />;origin/main
 ));
 SelectLabel.displayName = SelectPrimitive.Label.displayName;
 const SelectItem = React.forwardRef<;
-  React.ElementRef<typeof SelectPrimitive.Item>;
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
+React.ElementRef<typeof SelectPrimitive.Item>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >(({ className children, ...props }, ref) => (;
   <SelectPrimitive.Item;
     ref={ref}
@@ -227,16 +228,16 @@ const SelectSeparator = React.forwardRef<
 ref={ref}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
     {...props}
-  />;
+  />;origin/main
 ));
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
 export {Select;
-  SelectGroup;
-  SelectValue;
-  SelectTrigger;
-  SelectContent;
-  SelectLabel;
-  SelectItem;
-  SelectSeparator;
-  SelectScrollUpButton;
-  SelectScrollDownButton}
+SelectGroup;
+SelectValue;
+SelectTrigger;
+SelectContent;
+SelectLabel;
+SelectItem;
+SelectSeparator;
+SelectScrollUpButton;
+SelectScrollDownButton}

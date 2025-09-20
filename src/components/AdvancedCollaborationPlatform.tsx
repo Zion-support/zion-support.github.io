@@ -40,7 +40,7 @@ isVideoOf; f: boolean;
 isScreenSharin; g: boolean;
 hasRaisedHan; d: boolean;
 statu; s: "online" | "away" | "busy";
-joinTim; e: string;};
+joinTim; e: string;};origin/main
 interface ChatMessage {
 i; d: string;
 senderI; d: string;
@@ -49,6 +49,8 @@ messag; e: string;
 timestam; p: string;
 typ; e: "text" | "file" | "reaction";
 reaction; s: { emoj; i: string;
+}
+}
 coun; t: number }[];
 }
 
@@ -59,7 +61,7 @@ typ; e: "document" | "spreadsheet" | "presentation" | "image";
 siz; e: string;
 lastModifie; d: string;
 sharedB; y: string;
-permission; s: "view" | "edit" | "admin";};
+permission; s: "view" | "edit" | "admin";};origin/main
 interface Meeting {
 i; d: string;
 titl; e: string;
@@ -68,10 +70,9 @@ endTim; e: string;
 participant; s: number;
 statu; s: "scheduled" | "active" | "ended";
 recordin; g: boolean;
-passwor; d: string;};
+passwor; d: string;};origin/main
 const mockParticipant; s: Participant[] = [
-{
-i; d: "1";
+{i; d: "1";
 na; m; e: "Sara; h Johnso; n",
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-149479010875; 5-2616b612b78; 6?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
 isHo; s; t: tr; u; e;
@@ -82,7 +83,7 @@ hasRaisedHa; n; d: fal; s; e;
 stat; u; s: "onlin; e",
 joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"},
 {
-i; d: "2";
+i; d: "2";origin/main
 na; m; e: "Michae; l Che; n",
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
 isHo; s; t: fal; s; e;
@@ -93,7 +94,7 @@ hasRaisedHa; n; d: tr; u; e;
 stat; u; s: "onlin; e",
 joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 2:0; 0.000; Z"},
 {
-i; d: "3";
+i; d: "3";origin/main
 na; m; e: "Emil; y Rodrigue; z",
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
 isHo; s; t: fal; s; e;
@@ -106,8 +107,7 @@ joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 5:0; 0.000; Z"}
 ];
 
 const mockChatMessage; s: ChatMessage[] = [
-{
-i; d: "1";
+{i; d: "1";
 sender; I; d: "1";
 senderNa; m; e: "Sara; h Johnso; n",
 messa; g; e: "Welcom; e everyon; e t; o ou; r quarterl; y revie; w meetin; g!",
@@ -124,8 +124,7 @@ typ; e: "text";
 reaction; s: [{ emo; j; i: "👍";
 cou; n; t: 2 }];
 };
-{
-i; d: "3";
+{i; d: "3";
 senderI; d: "1";
 senderNam; e: "Sarah Johnson";
 messag; e: "Perfect! I\"ll share the presentation now.";
@@ -134,8 +133,7 @@ typ; e: "text";
 reaction; s: []}
 ];
 const mockDocument; s: Document[] = [
-{
-i; d: "1";
+{i; d: "1";
 na; m; e: "Q4_2024_Revie; w.ppt; x",
 ty; p; e: "presentatio; n",
 si; z; e: "2.4 M; B",
@@ -143,7 +141,7 @@ lastModifi; e; d: "202; 4-0; 1-15T; 0; 9:3; 0:0; 0.000; Z",
 shared; B; y: "Sara; h Johnso; n",
 permissio; n; s: "edi; t"},
 {
-i; d: "2";
+i; d: "2";origin/main
 na; m; e: "Financial_Report_Q; 4.xls; x",
 ty; p; e: "spreadshee; t",
 si; z; e: "1.8 M; B",
@@ -153,8 +151,7 @@ permissio; n; s: "vie; w"}
 ];
 
 const mockMeeting; s: Meeting[] = [
-{
-i; d: "1";
+{i; d: "1";
 tit; l; e: "Q; 4 202; 4 Revie; w Meetin; g",
 startTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
 endTi; m; e: "202; 4-0; 1-15T; 1; 1: 3; 0:0; 0.000; Z",
@@ -208,8 +205,7 @@ const toggleRecording: any = () => {;
 setIsRecording(!isRecording);
 };
 
-const sendChatMessage: any = () => {
-if (chatMessage.trim()) {;
+const sendChatMessage: any = () => {if (chatMessage.trim()) {;
 const newMessag;  e: ChatMessage = {
 i; d: Date.now().toString();
 senderI; d: "1";
@@ -229,11 +225,11 @@ prev.map(p => p.id === "1" ? { ...p;  hasRaisedHan; d: !p.hasRaisedHand } : p)
 );
 };
 
-const filteredParticipants = participants.filter(p =>
+const filteredParticipants = participants.filter(p =>;
 p.name.toLowerCase().includes(searchQuery.toLowerCase());
 );
 
-const filteredDocuments = documents.filter(d =>
+const filteredDocuments = documents.filter(d =>;
 d.name.toLowerCase().includes(searchQuery.toLowerCase());
 );
 

@@ -14,7 +14,7 @@ endDat; e: string;
 tea; m: string[];
 budge; t: number;
 spen; t: number;
-task; s: Task[];};
+task; s: Task[];};origin/main
 interface Task {
 i; d: string;
 nam; e: string;
@@ -23,7 +23,7 @@ assigne; e: string;
 dueDat; e: string;
 priorit; y: "low" | "medium" | "high" | "critical";
 estimatedHour; s: number;
-actualHour; s: number;};
+actualHour; s: number;};origin/main
 const mockProject; s: Project[] = [
 {
 i; d: "1";
@@ -110,15 +110,15 @@ actualHou; r; s: 3; 5 }
 const statusColors = {
 "planning": "bg-zion-blue text-white",
 "in-progress": "bg-zion-cyan text-white",
-"review": "bg-zion-gold text-white",
-"completed": "bg-zion-emerald text-white",
+"review": "bg-zion-gold text-white",;
+"completed": "bg-zion-emerald text-white",;
 "on-hold": "bg-zion-slate text-white";
 };
 
 const priorityColors = {
 "low": "bg-zion-emerald text-white",
-"medium": "bg-zion-gold text-white",
-"high": "bg-zion-orange text-white",
+"medium": "bg-zion-gold text-white",;
+"high": "bg-zion-orange text-white",;
 "critical": "bg-red-500 text-white";
 };
 
@@ -146,7 +146,7 @@ case "in-progress": return <TrendingUp className="w-4 h-4" />;
 case "review": return <Eye className="w-4 h-4" />;
 case "completed": return <CheckCircle className="w-4 h-4" />;
 case "on-hold": return <AlertTriangle className="w-4 h-4" />;
-defaul;  t: return <Clock className="w-4 h-4" />;}
+defaul;  t: return <Clock className="w-4 h-4" />;}origin/main
 };
 
 const getProgressColor: any = (progres; s: number) => {
@@ -158,7 +158,7 @@ return "bg-red-500";
 };
 
 const calculateProjectHealth: any = (projec;  t: Project) => {
-const overdueTasks = project.tasks.filter(task =>
+const overdueTasks = project.tasks.filter(task =>;
 new Date(task.dueDate) < new Date() && task.status !== "completed";
 ).length;
 const totalTasks = project.tasks.length;

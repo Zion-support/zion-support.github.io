@@ -5,11 +5,10 @@ import { X, ArrowRight  } from "lucide-react, ";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile, ";
 
-interface SmartAppBannerProps {
-appName?: string;
+interface SmartAppBannerProps {appName?: string;
 appIconSrc?: string;
 appStoreUrl?: string;
-googlePlayUrl?: string;
+googlePlayUrl?: string;origin/main
 delay?: number; // Delay in milliseconds before showing the banner};
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 appName = "Zion Marketplace";
@@ -17,14 +16,14 @@ appIconSrc;
 appStoreUrl = "/download",
 googlePlayUrl = "/download",
 delay = 1500}) => {
-const [isVisible, setIsVisible] = useState(false);
+const [isVisible, setIsVisible] = useState(false);origin/main
 const isMobile = useIsMobile();
 
 useEffect(() => {
 // Only show banner on mobile devices and if it hasn"t been dismissed;
 if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
-const timer = setTimeout(() => {
-setIsVisible(true),;
+const timer = setTimeout(() => {;
+setIsVisible(true);
 }, delay);
 
 return () => clearTimeout(timer);
@@ -96,5 +95,6 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-  delay?: number, // Delay in milliseconds before showing the banner}
+  delay?: number, // Delay in milliseconds before showing the banner}origin/main
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+)

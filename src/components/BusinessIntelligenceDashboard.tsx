@@ -9,7 +9,7 @@ metric: string; current: number; target: number; progress: number; status: "on-t
 interface RevenueData {
 month: string; revenue: number; growth: number; profit: number};
 interface CustomerInsight {
-segment: string; count: number; revenue: number; growth: number; satisfaction: number};
+segment: string; count: number; revenue: number; growth: number; satisfaction: number};origin/main
 export const BusinessIntelligenceDashboard: React.FC = () => {;
 const [metrics, setMetrics] = useState<BusinessMetric[]>([
 {,
@@ -22,7 +22,7 @@ category: "revenue",
 icon: "💰",
 color: "green"},
 {
-id: "2",
+id: "2",origin/main
 title: "Customer Growth",
 value: "24;567",
 change: "+12.3%",
@@ -31,7 +31,7 @@ category: "growth",
 icon: "👥",
 color: "blue"},
 {
-id: "3",
+id: "3",origin/main
 title: "Operational Efficiency",
 value: "94.2%",
 change: "+2.1%",
@@ -40,7 +40,7 @@ category: "efficiency",
 icon: "⚡",
 color: "purple"},
 {
-id: "4",
+id: "4",origin/main
 title: "Customer Satisfaction",
 value: "4.8/5",
 change: "+0.3",
@@ -49,7 +49,7 @@ category: "customer",
 icon: "⭐",
 color: "yellow"},
 {
-id: "5",
+id: "5",origin/main
 title: "Market Share",
 value: "15.7%",
 change: "+3.2%",
@@ -58,7 +58,7 @@ category: "growth",
 icon: "📈",
 color: "indigo"},
 {
-id: "6",
+id: "6",origin/main
 title: "Cost Reduction",
 value: "$2.1M",
 change: "-8.5%",
@@ -82,9 +82,9 @@ metric: "Product Launch",
 current: 3; target: 5; progress: 60;,
 status: "at-risk"},
 {
-metric: "Employee Satisfaction",
+metric: "Employee Satisfaction",origin/main
 current: 4.2;
-target: 4.5;
+target: 4.5;,
 progress: 93;,
 status: "on-track"}
 ]);
@@ -109,7 +109,7 @@ count: 1245; revenue: 2800000; growth: 22.1;,
 satisfaction: 4.6},
 {
 segment: "SMB",
-count: 8900; revenue: 1100000;
+count: 8900; revenue: 1100000;origin/main
 growth: 8.7;,
 satisfaction: 4.3}
 ]);
@@ -117,22 +117,19 @@ satisfaction: 4.3}
 const [selectedTimeframe, setSelectedTimeframe] = useState("6m");
 const [selectedCategory, setSelectedCategory] = useState("all");
 
-const getTrendIcon: any = (trend: string) => {
-switch (trend) {;
+const getTrendIcon: any = (trend: string) => {switch (trend) {;
 case "up": return "↗️";
 case "down": return "↘️";,
 default: return "➡️"}
 };
 
-const getTrendColor: any = (trend: string) => {
-switch (trend) {;
+const getTrendColor: any = (trend: string) => {switch (trend) {;
 case "up": return "text-green-400";
 case "down": return "text-red-400";,
 default: return "text-gray-400"}
 };
 
-const getCategoryColor: any = (category: string) => {
-switch (category) {;
+const getCategoryColor: any = (category: string) => {switch (category) {;
 case "revenue": return "from-green-500 to-emerald-600";
 case "growth": return "from-blue-500 to-cyan-600";
 case "efficiency": return "from-purple-500 to-violet-600";
@@ -140,8 +137,7 @@ case "customer": return "from-yellow-500 to-amber-600";,
 default: return "from-gray-500 to-slate-600"}
 };
 
-const getStatusColor: any = (status: string) => {
-switch (status) {;
+const getStatusColor: any = (status: string) => {switch (status) {;
 case "on-track": return "text-green-400 bg-green-900";
 case "at-risk": return "text-yellow-400 bg-yellow-900";
 case "behind": return "text-red-400 bg-red-900";,

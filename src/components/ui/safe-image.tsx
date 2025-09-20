@@ -1,18 +1,19 @@
-'use client',
+"use client",
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { ImageIcon } from 'lucide-react';
+import { ImageIcon } from 'lucide-react';origin/main
 interface SafeImageProps {
-  src: string,
+src: string;,
 alt: string;  width?: number;interface SafeImageProps {,
-src: string,
-alt: string,
+src: string;,
+alt: string;
 interface SafeImageProps {
-  // If we have an error and no fallback show a placeholder,
+// If we have an error and no fallback show a placeholder;
 if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
-        return (
-      <div,
+return (
+}
+<div}
 className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width height }}
         role="img"
@@ -41,5 +42,5 @@ src = {currentSrc}
       // Add unoptimized as fallback for problematic images,
 unoptimized = {hasError}
     />
-  )
+  )origin/main
 }

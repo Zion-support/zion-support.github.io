@@ -1,11 +1,10 @@
 import React from "react";
 
-export interface Talent {
-id: string; name: string; email: string;
+export interface Talent {id: string; name: string; email: string;
 avatar?: string;
 bio?: string;,
 skills: string[], experience: number; hourlyRate: number; currency: string;
-location: {,
+location: {,origin/main
 city: string; country: string; timezone: string};
 availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[];,
 education: Education[], certifications: Certification[];,
@@ -28,10 +27,9 @@ expiryDate?: Date;
 credentialId?: string}
 
 export interface Language {
-name: string; proficiency: "basic" | "conversational" | "fluent" | "native"}
+name: string; proficiency: "basic" | "conversational" | "fluent" | "native"}origin/main
 
-export interface SocialLinks {
-linkedin?: string;
+export interface SocialLinks {linkedin?: string;
 github?: string;
 portfolio?: string;
 twitter?: string}
@@ -41,7 +39,7 @@ skills?: string[];
 experienceRange?: {
 min: number; max: number};
 hourlyRateRange?: {
-min: number; max: number};
+min: number; max: number};origin/main
 location?: string;
 availability?: string;
 rating?: number;
@@ -60,4 +58,4 @@ location: {,
 city: string; country: string; timezone: string};
 availability: string; portfolio: PortfolioItem[], education: Education[];,
 certifications: Certification[], languages: Language[];,
-socialLinks: SocialLinks;}
+socialLinks: SocialLinks;}origin/main

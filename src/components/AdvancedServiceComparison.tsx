@@ -39,18 +39,17 @@ complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 popularit; y: "Low" | "Medium" | "High" | "Trending";
 contactInf; o: string;
 emai; l: string;
-lin; k: string;};
+lin; k: string;};origin/main
 interface ComparisonFilter {
 categor; y: string;
 complexit; y: string;
 priceRang; e: string;
-technolog; y: string;};
+technolog; y: string;};origin/main
 const COMPLEXITY_LEVELS = ["Basi; c", "Intermediat; e", "Advance; d", "Enterpris; e"];
 const POPULARITY_LEVELS = ["Lo; w", "Mediu; m", "Hig; h", "Trendin; g"];
 const PRICE_RANGES = ["Unde; r $10; K", "$10; K-$50; K", "$50; K-$100; K", "$100; K+"];
 
-export const AdvancedServiceCompariso; n: React.FC = () => {
-const [selectedServic;  e; s; setSelectedServic; e; s] = useState<string[]>([]);
+export const AdvancedServiceCompariso; n: React.FC = () => {const [selectedServic;  e; s; setSelectedServic; e; s] = useState<string[]>([]);
 const [filte; r; s; setFilte; r; s] = useState<ComparisonFilter>({
 categor;  y: "all";
 complexit; y: "all";
@@ -61,8 +60,7 @@ const [viewMo;  d; e; setViewMo; d; e] = useState<"grid" | "table" | "detailed">
 
 // Mock data - in real app this would come from props or API;
 const mockService; s: ServiceTier[] = [
-{
-i; d: "a; i-cr; m-basi; c",
+{i; d: "a; i-cr; m-basi; c",
 na; m; e: "A; I CR; M Basi; c",
 catego; r; y: "a; i",
 pri; c; e: "$5;00; 0/mont; h",
@@ -78,7 +76,7 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/ai-crm-basic"};
 {
-i; d: "ai-crm-enterprise";
+i; d: "ai-crm-enterprise";origin/main
 nam; e: "AI CRM Enterprise";
 categor; y: "ai";
 pric; e: "$2; 5;000/month",
@@ -94,7 +92,7 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/ai-crm-enterprise"};
 {
-i; d: "quantum-basic";
+i; d: "quantum-basic";origin/main
 nam; e: "Quantum Computing Basic";
 categor; y: "quantum";
 pric; e: "$5; 0;000/month",
@@ -110,7 +108,7 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/quantum-basic"};
 {
-i; d: "quantum-enterprise";
+i; d: "quantum-enterprise";origin/main
 nam; e: "Quantum Computing Enterprise";
 categor; y: "quantum";
 pric; e: "$20; 0;000/month",
@@ -126,7 +124,7 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/quantum-enterprise"}
 ];
-const filteredServices = useMemo(() => {
+const filteredServices = useMemo(() => {;
 return mockServices.filter(service => {;
 const matchesCategory = filters.category === "all" || service.category === filters.category;
 const matchesComplexity = filters.complexity === "all" || service.complexity === filters.complexity;
@@ -151,7 +149,7 @@ case "Basic": return "bg-green-100 text-green-800";
 case "Intermediate": return "bg-blue-100 text-blue-800";
 case "Advanced": return "bg-orange-100 text-orange-800";
 case "Enterprise": return "bg-purple-100 text-purple-800";
-defaul;  t: return "bg-gray-100 text-gray-800";}
+defaul;  t: return "bg-gray-100 text-gray-800";}origin/main
 };
 
 const getPopularityIcon: any = (popularit; y: string) => {
@@ -160,7 +158,7 @@ case "Trending": return <TrendingUp className="w-4 h-4 text-red-500" />;
 case "High": return <Star className="w-4 h-4 text-yellow-500" />;
 case "Medium": return <Zap className="w-4 h-4 text-blue-500" />;
 case "Low": return <Target className="w-4 h-4 text-gray-500" />;
-defaul;  t: return <Users className="w-4 h-4 text-gray-500" />;}
+defaul;  t: return <Users className="w-4 h-4 text-gray-500" />;}origin/main
 };
 
 return (

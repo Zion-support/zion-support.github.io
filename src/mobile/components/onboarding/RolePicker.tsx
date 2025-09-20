@@ -2,17 +2,16 @@
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button";
 import { CardCardContent } from "@/components/ui/card";
-import { Briefcase, UsersCheck } from 'lucide-react';
+import { Briefcase, UsersCheck } from 'lucide-react';origin/main
 
 type UserRole = any;
-  return (
-    <div className='space-y-4 px-4'>
-      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
-      <p className='text-muted-foreground'>
-        Choose how you want to use our platform
-      </p>
-      <div className='space-y-3 mt-6'>
-        <Card,
+return (<div className="space-y-4 px-4">;
+<h2 className="text-xl font-medium">What brings you to Zion?</h2>;
+<p className="text-muted-foreground">;
+Choose how you want to use our platform;
+</p>;
+<div className="space-y-3 mt-6">;
+<Card;
 className={`cursor-pointer transition-all ${
             selectedRole === 'talent'
               ? 'border-primary bg-primary/5'
@@ -64,5 +63,5 @@ className={`cursor-pointer transition-all ${
         </Card>
       </div>
     </div>
-  )
+  )origin/main
 }

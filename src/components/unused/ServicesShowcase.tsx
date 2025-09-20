@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react;";
@@ -10,10 +12,9 @@ import { CpuChipIcon;
 CloudIcon;
 ShieldCheckIcon;
 LightBulbIcon;
-RocketLaunchIcon, ChartBarIcon  } from "@heroicons/react/24/outline, ";
+RocketLaunchIcon, ChartBarIcon  } from "@heroicons/react/24/outline, ";origin/main
 
-export function ServicesShowcase() {
-const services = [;
+export function ServicesShowcase() {const services = [;
 {;
 icon: CpuChipIcon; title: "AI & Machine Learning";,
 description: "Advanced AI solutions for automation; decision-making; and predictive analytics",
@@ -36,21 +37,21 @@ icon: RocketLaunchIcon; title: "Micro SaaS Solutions";,
 description: "Custom SaaS platforms for specific business needs", color: "from-zion-blue to-zion-cyan",
 href: "/micro-saas"};
 {
-icon: ChartBarIcon; title: "Business Intelligence";,
+icon: ChartBarIcon; title: "Business Intelligence";,origin/main
 description: "Data analytics and insights for informed decision-making",
 color: "from-zion-purple to-zion-blue",
 href: "/business-intelligence"}
 ];
-const containerVariants = {
-hidden: { opacity: 0 }, visible: {;
-opacity: 1;
+const containerVariants = {;
+hidden: { opacity: 0 }, visible: {;,
+opacity: 1;,
 transition: {,
 staggerChildren: 0.1}
 }
 };
 const itemVariants = {;
 hidden: { y: 20; opacity: 0 }, visible: {
-y: 0; opacity: 1; transition: {,
+y: 0; opacity: 1; transition: {,origin/main
 duration: 0.5}
 }
 };

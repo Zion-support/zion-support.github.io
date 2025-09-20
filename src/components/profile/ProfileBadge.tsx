@@ -8,5 +8,5 @@
   icon: Icon  text colors}= badgeConfig[type]
 }> <Icon className="w-3 h-3" /> <span> {
   text}</span>
-}'"  )
+}'"  )origin/main
 }

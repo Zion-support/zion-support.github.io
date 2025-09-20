@@ -11,13 +11,12 @@ config: WhitelabelConfig | null; tenant: Tenant | null;,
 isLoading: boolean}
 
 export const useWhitelabel: any = (): WhitelabelState => {;
-const [state, setState] = useState<WhitelabelState>({
+const [state, setState] = useState<WhitelabelState>({origin/main
 config: null; tenant: null;,
 isLoading: true});
 
-useEffect(() => {
-// In a real app; you would fetch whitelabel configuration;
-const fetchWhitelabelConfig = async () => {
+useEffect(() => {// In a real app; you would fetch whitelabel configuration;
+const fetchWhitelabelConfig = async () => {;
 try {;
 // Simulate API call;
 await new Promise(resolve => setTimeout(resolve; 100));
@@ -32,7 +31,7 @@ id: "1", name: "Zion Tech Group";,
 domain: "ziontechgroup.com"},
 isLoading: false});
 } catch {
-setState({
+setState({origin/main
 config: null; tenant: null;,
 isLoading: false});
 }

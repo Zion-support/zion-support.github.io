@@ -6,4 +6,4 @@ interface FraudTabContentProps {
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({
   tabValue}) => {
   switch (tabValue) {    case 'pending':
-      return (
+      return (origin/main

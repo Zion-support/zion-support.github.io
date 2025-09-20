@@ -1,7 +1,6 @@
 // Additional Advanced AI Services;
 export const additionalAdvancedAIServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Quantum Neural Networks Pro";
         category: "Quantum AI";
         description: "Revolutionary quantum neural network platform that leverages quantum computing principles for unprecedented AI performance";
@@ -41,8 +40,7 @@ export const additionalAdvancedAIServices2025 = [
         aiScore: 98;
         useCases: ["Drug discovery", "Financial modeling", "Climate prediction", "Cryptography"]
     },
-    {
-        id: 2;
+    {id: 2;
         name: "Autonomous AI Agents";
         category: "Autonomous Systems";
         description: "Next-generation autonomous AI agents that can independently execute complex tasks and make decisions in dynamic environments";
@@ -85,8 +83,7 @@ export const additionalAdvancedAIServices2025 = [
 ];
 // Advanced Blockchain Services;
 export const advancedBlockchainServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Cross-Chain Bridge Platform";
         category: "Blockchain Infrastructure";
         pricing: "Professional";
@@ -127,7 +124,7 @@ export const advancedBlockchainServices2025 = [
         freeTier: false;
         trialPeriod: "7 days"};
     {
-        id: 2;
+        id: 2;origin/main
         name: "Decentralized Identity Platform";
         category: "Identity Management";
         pricing: "Professional";
@@ -170,8 +167,7 @@ export const advancedBlockchainServices2025 = [
 ];
     // Advanced Cybersecurity Services;
 export const advancedCybersecurityServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "AI-Powered SOC Platform";
         category: "Security Operations";
         description: "Intelligent Security Operations Center platform with AI-driven threat detection, automated response, and advanced analytics",
@@ -209,7 +205,7 @@ export const advancedCybersecurityServices2025 = [
         deliveryTime: "8-10 weeks";
         support: "24/7"};
     {
-        id: 2;
+        id: 2;origin/main
         name: "Quantum-Safe Cryptography";
         category: "Cryptography";
         description: "Post-quantum cryptography solutions to protect against future quantum computing threats to current encryption standards";
@@ -249,8 +245,7 @@ export const advancedCybersecurityServices2025 = [
 ];
     // Advanced Cloud & DevOps Services;
 export const advancedCloudDevOpsServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "AI-Powered DevOps Automation";
         category: "DevOps";
         description: "Intelligent DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment strategies",
@@ -290,8 +285,7 @@ export const advancedCloudDevOpsServices2025 = [
 ];
     // Advanced Healthcare Services;
 export const advancedHealthcareServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Genomic AI Platform";
         category: "Genomics";
         description: "Advanced AI platform for genomic analysis, personalized medicine, and drug discovery with cutting-edge machine learning algorithms",
@@ -334,8 +328,7 @@ export const advancedHealthcareServices2025 = [
 ];
 // Advanced IoT Services;
 export const advancedIoTServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Industrial IoT Analytics";
         category: "Industrial IoT";
         pricing: "Enterprise";
@@ -378,8 +371,7 @@ export const advancedIoTServices2025 = [
 ];
     // Advanced Quantum Services;
 export const advancedQuantumServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Quantum Machine Learning Suite";
         category: "Quantum ML";
         description: "Comprehensive quantum machine learning platform that combines quantum computing with advanced ML algorithms for breakthrough applications";
@@ -422,8 +414,7 @@ export const advancedQuantumServices2025 = [
 ];
 // Advanced Space Services;
 export const advancedSpaceServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Space Traffic Management";
         category: "Space Operations";
         pricing: "Enterprise";
@@ -466,8 +457,7 @@ export const advancedSpaceServices2025 = [
 ];
     // Advanced Sustainability Services;
 export const advancedSustainabilityServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Circular Economy Platform";
         category: "Circular Economy";
         pricing: "Professional";
@@ -510,8 +500,7 @@ export const advancedSustainabilityServices2025 = [
 ];
     // Advanced Fintech Services;
 export const advancedFintechServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "RegTech Compliance Platform";
         category: "RegTech";
         pricing: "Enterprise";
@@ -553,8 +542,7 @@ export const advancedFintechServices2025 = [
         trialPeriod: "21 days"}
 ];
     // Export all additional services;
-export const allAdditionalServices2025 = {
-    advancedAI: additionalAdvancedAIServices2025;
+export const allAdditionalServices2025 = {advancedAI: additionalAdvancedAIServices2025;
     blockchain: advancedBlockchainServices2025;
     cybersecurity: advancedCybersecurityServices2025;
     cloudDevOps: advancedCloudDevOpsServices2025;

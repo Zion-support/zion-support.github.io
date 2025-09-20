@@ -7,12 +7,11 @@ phone: string; email: string; website: string; address: string};
 marketPrice: string; competitors: string[], roi: string; setupTime: string; integrations: string[];
 freeTier: boolean; trialPeriod: string; technology: string[];,
 compliance: string[], useCases: string[];,
-industryStandards: string[];}
+industryStandards: string[];}origin/main
 
 export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 // Healthcare & Biotech Solutions;
-{
-id: 1; name: "MedTech AI Platform";,
+{id: 1; name: "MedTech AI Platform";,
 category: "Healthcare", industry: "Biotechnology";,
 description: "Comprehensive AI-powered medical technology platform for diagnostics; drug discovery; and personalized medicine with FDA compliance",
 pricing: "Enterprise", price: 899;,
@@ -50,8 +49,7 @@ compliance: ["FDA", "HIPAA", "SOC 2", "ISO 27001", "GDPR"],
 useCases: ["Medical imaging", "Drug discovery", "Clinical trials", "Patient monitoring"],
 industryStandards: ["DICOM", "HL7", "FHIR", "CDISC"];
 },
-{
-id: 2; name: "FinTech Compliance Suite";,
+{id: 2; name: "FinTech Compliance Suite";,
 category: "Financial Services", industry: "Banking & Finance";,
 description: "Comprehensive financial technology compliance platform with AI-powered risk assessment; regulatory reporting; and fraud detection",
 pricing: "Tiered", price: 599;,
@@ -91,8 +89,7 @@ industryStandards: ["ISO 20022", "SWIFT", "ACH", "SEPA"];
 },
 
 // Manufacturing & Industry 4.0;
-{
-id: 3; name: "Smart Factory Hub";,
+{id: 3; name: "Smart Factory Hub";,
 category: "Manufacturing", industry: "Industry 4.0";,
 description: "Intelligent manufacturing platform with IoT sensors; predictive maintenance; and AI-powered quality control for Industry 4.0 transformation",
 pricing: "Usage-based", price: 0.10;,
@@ -132,8 +129,7 @@ industryStandards: ["OPC UA", "MQTT", "Modbus", "Ethernet/IP"];
 },
 
 // Retail & E-commerce Solutions;
-{
-id: 4; name: "OmniChannel Retail AI";,
+{id: 4; name: "OmniChannel Retail AI";,
 category: "Retail", industry: "E-commerce";,
 description: "AI-powered omnichannel retail platform with personalized recommendations; inventory optimization; and seamless customer experience across all channels",
 pricing: "Revenue-based", price: 2.5;,
@@ -173,8 +169,7 @@ industryStandards: ["REST APIs", "GraphQL", "OAuth 2.0", "Webhooks"];
 },
 
 // Education & EdTech;
-{
-id: 5; name: "Adaptive Learning Platform";,
+{id: 5; name: "Adaptive Learning Platform";,
 category: "Education", industry: "EdTech";,
 description: "AI-powered adaptive learning platform with personalized curriculum; real-time assessment; and intelligent tutoring for K-12 and higher education",
 pricing: "Per student", price: 15;,
@@ -214,8 +209,7 @@ industryStandards: ["LTI", "SCORM", "xAPI", "Common Core"];
 },
 
 // Transportation & Logistics;
-{
-id: 6; name: "Logistics Optimization AI";,
+{id: 6; name: "Logistics Optimization AI";,
 category: "Transportation", industry: "Logistics";,
 description: "Intelligent logistics platform with route optimization; demand forecasting; and real-time tracking for supply chain and transportation management",
 pricing: "Tiered", price: 399;,
@@ -255,8 +249,7 @@ industryStandards: ["EDI", "API standards", "GPS protocols", "IoT standards"];
 },
 
 // Energy & Sustainability;
-{
-id: 7; name: "Green Energy Management";,
+{id: 7; name: "Green Energy Management";,
 category: "Energy", industry: "Renewable Energy";,
 description: "AI-powered energy management platform for renewable energy optimization; grid management; and sustainability monitoring",
 pricing: "Usage-based", price: 0.02;,
@@ -296,8 +289,7 @@ industryStandards: ["IEC 61850", "DNP3", "Modbus", "OPC UA"];
 },
 
 // Real Estate & PropTech;
-{
-id: 8; name: "PropTech Intelligence Suite";,
+{id: 8; name: "PropTech Intelligence Suite";,
 category: "Real Estate", industry: "PropTech";,
 description: "Comprehensive property technology platform with AI-powered market analysis; property valuation; and investment insights",
 pricing: "Tiered", price: 299;,
@@ -337,8 +329,7 @@ industryStandards: ["RESO", "RETS", "Open Real Estate", "Financial data standard
 },
 
 // Legal & Compliance;
-{
-id: 9; name: "LegalTech AI Platform";,
+{id: 9; name: "LegalTech AI Platform";,
 category: "Legal Services", industry: "Legal Technology";,
 description: "AI-powered legal technology platform with contract analysis; legal research automation; and compliance monitoring for law firms and legal departments",
 pricing: "Per attorney", price: 199;,
@@ -378,8 +369,7 @@ industryStandards: ["Legal XML", "Case law standards", "Document formats", "API 
 },
 
 // Agriculture & AgTech;
-{
-id: 10; name: "Precision Agriculture AI";,
+{id: 10; name: "Precision Agriculture AI";,
 category: "Agriculture", industry: "AgTech";,
 description: "Intelligent precision agriculture platform with drone monitoring; crop analysis; and AI-powered farming recommendations",
 pricing: "Per acre", price: 2.50;,
@@ -421,27 +411,27 @@ industryStandards: ["ISO 11783", "Precision agriculture protocols", "IoT standar
 
 // Utility functions for specialized industry services;
 export const getServicesByIndustry: any = (industry: string): SpecializedIndustryService[] => {
-return specializedIndustrySolutions2025.filter(service => service.industry === industry),;
+return specializedIndustrySolutions2025.filter(service => service.industry === industry);
 };
 
 export const getServicesByCategory: any = (category: string): SpecializedIndustryService[] => {
-return specializedIndustrySolutions2025.filter(service => service.category === category),;
+return specializedIndustrySolutions2025.filter(service => service.category === category);
 };
 
 export const getServicesByCompliance: any = (compliance: string): SpecializedIndustryService[] => {
 return specializedIndustrySolutions2025.filter(service =>;
-service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase()))
-),;
+service.compliance.some(comp = > comp.toLowerCase().includes(compliance.toLowerCase()))
+);
 };
 
 export const getServicesByTechnology: any = (technology: string): SpecializedIndustryService[] => {
 return specializedIndustrySolutions2025.filter(service =>;
-service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-),;
+service.technology.some(tech = > tech.toLowerCase().includes(technology.toLowerCase()))
+);
 };
 
 export const getPopularIndustryServices: any = (limit: number = 6): SpecializedIndustryService[] => {;
 return specializedIndustrySolutions2025.slice(0; limit)};
 
 export const getServicesByPriceRange: any = (minPrice: number; maxPrice: number): SpecializedIndustryService[] => {
-return specializedIndustrySolutions2025.filter(service => service.price >= minPrice && service.price <= maxPrice)};
+return specializedIndustrySolutions2025.filter(service => service.price >= minPrice && service.price <= maxPrice)};origin/main

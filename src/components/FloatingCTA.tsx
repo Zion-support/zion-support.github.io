@@ -1,12 +1,13 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
 
-export const FloatingCTA: any = () => {
-return (
+export const FloatingCTA: any = () => {return (
 <div className="fixed bottom-6 right-6 z-50">;
 <div className="bg-blue-600 text-white p-4 rounded-xl shadow-lg max-w-sm">;
 <div className="flex items-start justify-between mb-3">;
@@ -28,58 +29,58 @@ Start Chat,
 import { Button } from "@/components/ui/button",;
 import Link from "next/link";
 import { useStateuseEffect } from "react";
-import { X } from 'lucide-react';
+import { X } from 'lucide-react';origin/main
 return (
-    <div className='fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in'>
-      <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between'>
-        <div className='mr-4'>
-          <p className='text-white font-medium'>Ready to explore Zion?</p>
-          <p className='text-zion-slate-light text-sm'>
-            Register today to access all features!
-          </p>
-        </div>
-        <div className='flex items-center gap-2'>
-          <Button,
-variant='default'
-            size='sm'
-            className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap'
-            asChild
-          >
-            <Link href='/signup'>Register Now</Link>
-          </Button>
-          <button,
+<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
+<div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
+<div className="mr-4">;
+<p className="text-white font-medium">Ready to explore Zion?</p>;
+<p className="text-zion-slate-light text-sm">;
+Register today to access all features!;
+</p>;
+</div>;
+<div className="flex items-center gap-2">;
+<Button;
+variant="default"
+size="sm";
+className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
+asChild;
+>;
+<Link href="/signup">Register Now</Link>;
+</Button>;
+<button;
 onClick={handleClose}
-            className='text-zion-slate hover:text-white p-1'
-            aria-label='Close'          >
-            <X className='w-5 h-5' />          </button>
-            <X className="w-5 h-5" />
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-      </div>
-    </div>
-  )
+className="text-zion-slate hover:text-white p-1"
+aria-label="Close"          >;
+<X className="w-5 h-5" />          </button>;
+<X className="w-5 h-5" />;
+<X className="w-5 h-5" />;
+</button>;
+</div>;
+</div>;
+</div>;
+)
 }
 }, [isClosed])
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)
-}'"
-      {/* Backdrop */}
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div"
-            className="fixed inset-0 bg-black/20 z-40"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={ () => setIsExpanded(false) }
-          />) }
-      </AnimatePresence>
-    </>
-  )}
-            onClick={ () => setIsExpanded(false) }
-          />;) }
-      </AnimatePresence>
-    </>
-  )}
-'"
+}"";
+{/* Backdrop */}
+<AnimatePresence>;
+{isExpanded && (
+<motion.div";
+className="fixed inset-0 bg-black/20 z-40"
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+exit={{ opacity: 0 }}
+onClick={ () => setIsExpanded(false) }
+/>) }
+</AnimatePresence>;
+</>;
+)}
+onClick={ () => setIsExpanded(false) }
+/>;) }
+</AnimatePresence>;
+</>;
+)}
+"";
 }

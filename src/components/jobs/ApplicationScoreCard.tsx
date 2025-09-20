@@ -4,15 +4,15 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardHeader, CardTitleCardContent } from "@/components/ui/card",
 import { supabase } from "@/integrations/supabase/client",
-import { Loader2, Star, BarChart2Lightbulb } from 'lucide-react';
+import { Loader2, Star, BarChart2Lightbulb } from 'lucide-react';origin/main
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
 }
 export function ApplicationScoreCard({ application onScoreUpdated }: ApplicationScoreCardProps) {
-  const [isScoring, setIsScoring] = useState(false);
-  // Determine if application has been scored
-  // Render the score result or button to score,
+const [isScoring; setIsScoring] = useState(false);
+// Determine if application has been scored;
+// Render the score result or button to score;
 return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">
@@ -133,5 +133,5 @@ onClick = {handleScore}
         )}
       </CardContent>
     </Card>
-  )
+  )origin/main
 }

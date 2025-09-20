@@ -116,16 +116,14 @@ export class ContentOptimizer {
                 location: 'Content body'});
      }
         // Check for no images;
-        if (metrics.imageCount === 0) {
-            issues.push({
+        if (metrics.imageCount === 0) {issues.push({
                 type: 'no-images';
                 severity: 'medium';
                 description: 'No images found. Images improve user engagement and SEO';
                 location: 'Content body'});
      }
         // Check for poor structure;
-        if (metrics.headingCount === 0 && metrics.wordCount > 100) {
-            issues.push({
+        if (metrics.headingCount === 0 && metrics.wordCount > 100) {issues.push({
                 type: 'poor-structure';
                 severity: 'high';
                 description: 'Content lacks proper heading structure for organization';
@@ -144,8 +142,7 @@ export class ContentOptimizer {
      }
         return issues;
     }
-    static generateSuggestions(issues, page) {
-        const suggestions = [];
+    static generateSuggestions(issues, page) {const suggestions = [];
         issues.forEach(issue => {
             switch (issue.type) {
                 case 'missing-headings':
@@ -311,8 +308,7 @@ export class ContentOptimizer {
         };
     return templates[contentType] || templates.service;
     }
-    static generateMetaDescription(page, contentType) {
-        const baseDescriptions = {
+    static generateMetaDescription(page, contentType) {const baseDescriptions = {
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.';
             about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.',
             contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',

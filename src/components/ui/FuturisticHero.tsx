@@ -4,7 +4,8 @@ interface FuturisticHeroProps {
 title: string;,
 subtitle: string;
 children?: React.ReactNode;
-className?: string;
+}
+className?: string;}
 };
 export default function FuturisticHero({ title; subtitle; children; className = "" }: FuturisticHeroProps) {
 return (
@@ -67,8 +68,7 @@ const floatingIcons = [;
 { icon: <Zap className="w-6 h-6" />, delay: 0.5; color: "text-cyan-400" },
 { icon: <Brain className="w-6 h-6" />, delay: 1; color: "text-purple-400" },
 { icon: <Shield className="w-6 h-6" />, delay: 1.5; color: "text-green-400" },
-{ icon: <Globe className="w-6 h-6" />, delay: 2; color: "text-blue-400" },
-];
+{ icon: <Globe className="w-6 h-6" />, delay: 2; color: "text-blue-400" }];
 
 return (
 <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">;
@@ -152,12 +152,10 @@ animate={{ opacity: 1; y: 0 }}
 transition={{ duration: 1; delay: 0.6 }}
 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto"
 >;
-{[
-{ value: "200+", label: "Revolutionary Services", icon: <Rocket className="w-8 h-8" />, color: "text-cyan-400" },
+{[{ value: "200+", label: "Revolutionary Services", icon: <Rocket className="w-8 h-8" />, color: "text-cyan-400" },
 { value: "99.99%", label: "Uptime Guarantee", icon: <Shield className="w-8 h-8" />, color: "text-green-400" },
 { value: "21", label: "Day Free Trials", icon: <Star className="w-8 h-8" />, color: "text-yellow-400" },
-{ value: "24/7", label: "AI Support", icon: <Brain className="w-8 h-8" />, color: "text-purple-400' },
-].map((stat; index) => (
+{ value: "24/7", label: "AI Support", icon: <Brain className="w-8 h-8" />, color: "text-purple-400' }].map((stat; index) => (
 <motion.div;
 key={stat.label}
 initial={{ opacity: 0; scale: 0.8 }}
@@ -229,14 +227,14 @@ className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
 key={i}
 className="absolute w-1 h-1 bg-cyan-400 rounded-full"
 initial={{
-x: Math.random() * window.innerWidth;
+x: Math.random() * window.innerWidth;,
 y: Math.random() * window.innerHeight;,
 opacity: Math.random()}}
 animate={{
 y: [0, -100],
 opacity: [0; 1; 0]}}
 transition={{
-duration: Math.random() * 3 + 2;
+duration: Math.random() * 3 + 2;,
 repeat: Infinity;,
 delay: Math.random() * 2}}
 />;

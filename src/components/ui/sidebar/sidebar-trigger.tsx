@@ -6,11 +6,11 @@ import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
-  React.ComponentProps<typeof Button>
+  React.ComponentProps<typeof Button>origin/main
 >((props ref) => {
-  const { toggleSidebar } = useSidebar()
-  return (
-    <Button,
+const { toggleSidebar } = useSidebar()
+return (;
+<Button;
 ref={ref}
       data-sidebar="trigger"
       variant="ghost"
@@ -25,6 +25,6 @@ ref={ref}
       <PanelLeft />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
-  )
+  )origin/main
 })
 SidebarTrigger.displayName = "SidebarTrigger";

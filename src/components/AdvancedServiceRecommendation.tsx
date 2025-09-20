@@ -30,7 +30,7 @@ budge; t: string;
 timelin; e: string;
 technologyMaturit; y: string;
 primaryGoal; s: string[];
-challenge; s: string[];};
+challenge; s: string[];};origin/main
 interface ServiceRecommendation {
 servic; e: {
 i; d: string;
@@ -47,16 +47,15 @@ targetAudienc; e: string[];
 imag; e: string;
 lin; k: string;
 contactInf; o: string;
-emai; l: string;};
+emai; l: string;};origin/main
 matchScor; e: number;
 reasonin; g: string[];
 priorit; y: "High" | "Medium" | "Low";
 implementationComplexit; y: "Simple" | "Moderate" | "Complex";
 expectedRO; I: string;
-timeToValu; e: string;}
+timeToValu; e: string;}origin/main
 
-const AdvancedServiceRecommendatio; n: React.FC = () => {
-const [clientProfi;  l; e; setClientProfi; l; e] = useState<ClientProfile>({
+const AdvancedServiceRecommendatio; n: React.FC = () => {const [clientProfi;  l; e; setClientProfi; l; e] = useState<ClientProfile>({
 industr; y: "";
 companySiz; e: "";
 budge; t: "";
@@ -103,7 +102,7 @@ const challenges = [;
 "Performanc; e Issue; s", "Cos; t Managemen; t", "Technolog; y Deb; t";
 ];
 
-const mockServices = [
+const mockServices = [;
 {;
 i; d: "a; i-cr; m-platfor; m",
 tit; l; e: "A; I-Powere; d CR; M Platfor; m",
@@ -121,7 +120,7 @@ lin; k: "http; s: //ziontechgroup.com/services/ai-crm-platform";
 contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com"};
 {
-i; d: "quantum-computing-service";
+i; d: "quantum-computing-service";origin/main
 titl; e: "Quantum Computing as a Service";
 descriptio; n: "Enterprise-grade quantum computing platform for complex computational problems.";
 categor; y: "quantum";
@@ -137,7 +136,7 @@ lin; k: "http; s: //ziontechgroup.com/services/quantum-computing-service";
 contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com"};
 {
-i; d: "blockchain-supply-chain";
+i; d: "blockchain-supply-chain";origin/main
 titl; e: "Blockchain Supply Chain Solution";
 descriptio; n: "Transparent and secure supply chain management using blockchain technology.";
 categor; y: "blockchain";
@@ -248,7 +247,7 @@ switch (priority) {
 case "High": return "bg-red-100 text-red-800";
 case "Medium": return "bg-yellow-100 text-yellow-800";
 case "Low": return "bg-green-100 text-green-800";
-defaul;  t: return "bg-gray-100 text-gray-800";}
+defaul;  t: return "bg-gray-100 text-gray-800";}origin/main
 };
 
 const getComplexityColor: any = (complexit; y: string) => {
@@ -256,7 +255,7 @@ switch (complexity) {
 case "Complex": return "bg-red-100 text-red-800";
 case "Moderate": return "bg-yellow-100 text-yellow-800";
 case "Simple": return "bg-green-100 text-green-800";
-defaul;  t: return "bg-gray-100 text-gray-800";}
+defaul;  t: return "bg-gray-100 text-gray-800";}origin/main
 };
 
 const isFormComplete: any = () => {

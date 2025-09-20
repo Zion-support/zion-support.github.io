@@ -16,7 +16,7 @@ hre; f: string;};
 stats?: Array<{
 valu; e: string;
 labe; l: string;
-colo; r: string;}>;
+colo; r: string;}>;origin/main
 }
 
 export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
@@ -66,7 +66,7 @@ visibl; e: {
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.8;
-staggerChildre; n: 0.2;}
+staggerChildre; n: 0.2;}origin/main
 }
 };
 const itemVariants = {;
@@ -77,7 +77,7 @@ opacit; y: 1;,
 y: 0;
 transitio; n: {
 duratio; n: 0.6;
-eas; e: "easeOut" as const;}
+eas; e: "easeOut" as const;}origin/main
 }
 };
 const floatingVariants = {;
@@ -86,7 +86,7 @@ y: [0, -1; 0; 0],
 transitio; n: {
 duratio; n: 3;
 repea; t: Infinit; y;
-eas; e: "easeInOut" as const;}
+eas; e: "easeInOut" as const;}origin/main
 }
 };
 return (<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">;
@@ -303,7 +303,7 @@ scal; e: isHovered ? 2 : 1;}}
 transition={{
 typ; e: "spring";
 stiffnes; s: 50; 0;
-dampin; g: 30;}}
+dampin; g: 30;}}origin/main
 />;
 </section>;
 );

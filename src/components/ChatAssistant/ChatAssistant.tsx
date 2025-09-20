@@ -1,4 +1,4 @@
-import React from "react, import { SEO  } from "@/components/SEO",;
+import React from "react, import { SEO  } from "@/components/SEO",;origin/main
 export default function ChatAssistant(props: any) {return (,
 <div className="min-h-screen bg-white">,
 <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />,
@@ -7,47 +7,47 @@ export default function ChatAssistant(props: any) {return (,
 <p className="text-gray-300 text-lg">,
 Professional ChatAssistant services to help your business grow.,
 </p>,
-</div>",
+</div>",;
 </div>,;
 ), ',;
 "}, ";<//div><///div>;
-  const isGuest = !auth?.isAuthenticated,
-const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return,
+const isGuest = !auth?.isAuthenticated;
+const handleSendMessage = async (messageContent: string) => {if (!messageContent.trim()) return;
 import React {
 read?: boolean}
 export interface ChatAssistantProps {
-  /** Optional canned questions shown when the chat is empty */
-  starterQuestions?: string[]
+/** Optional canned questions shown when the chat is empty */;
+}
+starterQuestions?: string[]}
 }
 export function ChatAssistant({
 return (
-    <div,
+<div;
 className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="chat-assistant-title"
-    >
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
-        {/* Header */}
-        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
-          <div className="flex items-center space-x-3">
-            <Avatar className="h-10 w-10 border border-zion-purple/20">
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />
-              <AvatarFallback className="bg-zion-purple/20 text-white">
-                {recipient.name.charAt(0).toUpperCase()}
-              </AvatarFallback>
-            </Avatar>
-            <div>
-              <h2 id="chat-assistant-title" className="font-medium text-white">
-                {recipient.name}
-              </h2>
-              {recipient.role && (
-                <div className="text-xs text-zion-slate">{recipient.role}</div>
-              )}
-            </div>
-          </div>
-          <Button,
+role="dialog";
+aria-modal="true";
+aria-labelledby="chat-assistant-title";
+>;
+<div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
+{/* Header */}
+<div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;
+<div className="flex items-center space-x-3">;
+<Avatar className="h-10 w-10 border border-zion-purple/20">;
+<AvatarImage src={recipient.avatarUrl} alt={recipient.name} />;
+<AvatarFallback className="bg-zion-purple/20 text-white">;
+{recipient.name.charAt(0).toUpperCase()}
+</AvatarFallback>;
+</Avatar>;
+<div>;
+<h2 id="chat-assistant-title" className="font-medium text-white">;
+{recipient.name}
+</h2>;
+{recipient.role && (
+<div className="text-xs text-zion-slate">{recipient.role}</div>;
+)}
+</div>;
+</div>;
+<Button;
 variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
@@ -137,4 +137,4 @@ onClick = {handleModalSendConfirm}
   )
 }
 }
-;
+;origin/main

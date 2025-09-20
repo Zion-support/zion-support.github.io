@@ -22,7 +22,7 @@ rating: 4.9; reviewCount: 156; featured: true; location: "Global",
 availability: "2-3 Weeks",
 aiScore: 96;},
 {
-id: "ai-customer-insights",
+id: "ai-customer-insights",origin/main
 title: "AI-Powered Customer Insights Platform",
 description: "Advanced customer behavior analysis using machine learning to predict churn; identify upsell opportunities; and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.",
 category: "Customer Analytics",
@@ -40,7 +40,7 @@ location: "Global",
 availability: "1-2 Weeks",
 aiScore: 93;},
 {
-id: "ai-content-optimization",
+id: "ai-content-optimization",origin/main
 title: "AI Content Optimization Engine",
 description: "Intelligent content optimization tool that analyzes and improves SEO; readability; and engagement metrics. Uses NLP to suggest improvements; keyword optimization; and content structure recommendations.",
 category: "Content Marketing",
@@ -56,11 +56,10 @@ createdAt: "2024-01-25T09:15:00.000Z",
 rating: 4.7; reviewCount: 234;,
 location: "Global",
 availability: "Immediate",
-aiScore: 91;},
+aiScore: 91;},origin/main
 
 // Cloud & Infrastructure Services;
-{
-id: "multi-cloud-orchestration",
+{id: "multi-cloud-orchestration",
 title: "Multi-Cloud Orchestration Platform",
 description: "Unified management platform for AWS; Azure; and Google Cloud with automated cost optimization; security compliance monitoring; and disaster recovery orchestration. Reduces cloud costs by 25-40%.",
 category: "Cloud Management",
@@ -77,7 +76,7 @@ rating: 4.9; reviewCount: 78; featured: true; location: "Global",
 availability: "3-4 Weeks",
 aiScore: 94;},
 {
-id: "edge-computing-solution",
+id: "edge-computing-solution",origin/main
 title: "Edge Computing Infrastructure Solution",
 description: "Distributed edge computing platform for IoT devices; reducing latency and bandwidth costs. Includes edge node management; data processing; and real-time analytics capabilities.",
 category: "Edge Computing",
@@ -93,11 +92,10 @@ createdAt: "2024-02-05T13:20:00.000Z",
 rating: 4.8; reviewCount: 45;,
 location: "Global",
 availability: "4-6 Weeks",
-aiScore: 92;},
+aiScore: 92;},origin/main
 
 // Cybersecurity Services;
-{
-id: "ai-threat-detection",
+{id: "ai-threat-detection",
 title: "AI-Powered Threat Detection System",
 description: "Next-generation cybersecurity platform using machine learning to detect and respond to threats in real-time. Includes behavioral analysis; anomaly detection; and automated incident response.",
 category: "Cybersecurity",
@@ -114,7 +112,7 @@ rating: 4.9; reviewCount: 112; featured: true; location: "Global",
 availability: "3-4 Weeks",
 aiScore: 95;},
 {
-id: "zero-trust-security",
+id: "zero-trust-security",origin/main
 title: "Zero Trust Security Implementation",
 description: "Complete zero trust security framework implementation including identity verification; device trust scoring; and continuous monitoring. Reduces security breaches by 90% and simplifies compliance.",
 category: "Security Framework",
@@ -130,11 +128,10 @@ createdAt: "2024-02-15T10:15:00.000Z",
 rating: 4.8; reviewCount: 67;,
 location: "Global",
 availability: "6-8 Weeks",
-aiScore: 93;},
+aiScore: 93;},origin/main
 
 // Data & Analytics Services;
-{
-id: "real-time-data-pipeline",
+{id: "real-time-data-pipeline",
 title: "Real-Time Data Pipeline Platform",
 description: "Streaming data processing platform for real-time analytics; event processing; and data integration. Supports Apache Kafka; Apache Flink; and provides real-time dashboards and alerts.",
 category: "Data Engineering",
@@ -152,7 +149,7 @@ location: "Global",
 availability: "2-3 Weeks",
 aiScore: 90;},
 {
-id: "predictive-maintenance-ai",
+id: "predictive-maintenance-ai",origin/main
 title: "AI-Powered Predictive Maintenance",
 description: "Machine learning solution for predicting equipment failures and optimizing maintenance schedules. Reduces downtime by 60% and maintenance costs by 40% through intelligent scheduling.",
 category: "Predictive Analytics",
@@ -168,11 +165,10 @@ createdAt: "2024-02-25T14:45:00.000Z",
 rating: 4.8; reviewCount: 56;,
 location: "Global",
 availability: "4-5 Weeks",
-aiScore: 92;},
+aiScore: 92;},origin/main
 
 // Business Intelligence & Reporting;
-{
-id: "ai-business-intelligence",
+{id: "ai-business-intelligence",
 title: "AI-Enhanced Business Intelligence Suite",
 description: "Advanced BI platform with natural language querying; automated insights generation; and predictive analytics. Includes customizable dashboards; automated reporting; and mobile access.",
 category: "Business Intelligence",
@@ -187,11 +183,10 @@ images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&
 createdAt: "2024-03-01T09:30:00.000Z",
 rating: 4.9; reviewCount: 178; featured: true; location: "Global",
 availability: "1-2 Weeks",
-aiScore: 94;},
+aiScore: 94;},origin/main
 
 // Development & DevOps Services;
-{
-id: "ai-code-review",
+{id: "ai-code-review",
 title: "AI-Powered Code Review Assistant",
 description: "Intelligent code review tool that analyzes code quality; security vulnerabilities; and performance issues. Integrates with GitHub; GitLab; and provides detailed recommendations and automated fixes.",
 category: "Developer Tools",
@@ -209,7 +204,7 @@ location: "Global",
 availability: "Immediate",
 aiScore: 93;},
 {
-id: "devops-automation",
+id: "devops-automation",origin/main
 title: "DevOps Automation Platform",
 description: "Complete CI/CD automation platform with infrastructure as code; automated testing; deployment orchestration; and monitoring. Reduces deployment time by 80% and improves reliability.",
 category: "DevOps",
@@ -225,11 +220,10 @@ createdAt: "2024-03-10T13:45:00.000Z",
 rating: 4.8; reviewCount: 98;,
 location: "Global",
 availability: "2-3 Weeks",
-aiScore: 91;},
+aiScore: 91;},origin/main
 
 // Digital Transformation Services;
-{
-id: "digital-transformation-consulting",
+{id: "digital-transformation-consulting",
 title: "Digital Transformation Strategy & Implementation",
 description: "End-to-end digital transformation consulting including strategy development; technology assessment; change management; and implementation support. Helps businesses modernize operations and improve customer experience.",
 category: "Digital Transformation",
@@ -244,11 +238,10 @@ images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=form
 createdAt: "2024-03-15T10:00:00.000Z",
 rating: 4.9; reviewCount: 45; featured: true; location: "Global",
 availability: "8-12 Weeks",
-aiScore: 95;},
+aiScore: 95;},origin/main
 
 // Industry-Specific Solutions;
-{
-id: "healthcare-ai-platform",
+{id: "healthcare-ai-platform",
 title: "Healthcare AI Analytics Platform",
 description: "HIPAA-compliant AI platform for healthcare analytics; patient outcome prediction; and operational optimization. Includes clinical decision support; resource allocation; and compliance monitoring.",
 category: "Healthcare Technology",
@@ -266,7 +259,7 @@ location: "Global",
 availability: "6-8 Weeks",
 aiScore: 94;},
 {
-id: "fintech-compliance-ai",
+id: "fintech-compliance-ai",origin/main
 title: "FinTech Compliance & Fraud Detection AI",
 description: "AI-powered financial compliance monitoring and fraud detection system. Includes AML screening; KYC verification; transaction monitoring; and regulatory reporting automation.",
 category: "Financial Technology",
@@ -282,11 +275,10 @@ createdAt: "2024-03-25T16:15:00.000Z",
 rating: 4.8; reviewCount: 67;,
 location: "Global",
 availability: "4-6 Weeks",
-aiScore: 93;},
+aiScore: 93;},origin/main
 
 // Emerging Technology Services;
-{
-id: "blockchain-enterprise",
+{id: "blockchain-enterprise",
 title: "Enterprise Blockchain Solutions",
 description: "Custom blockchain development for supply chain transparency; smart contracts; and decentralized applications. Includes private blockchain networks; smart contract development; and integration services.",
 category: "Blockchain",
@@ -303,7 +295,7 @@ rating: 4.9; reviewCount: 23; featured: true; location: "Global",
 availability: "8-12 Weeks",
 aiScore: 95;},
 {
-id: "quantum-computing-readiness",
+id: "quantum-computing-readiness",origin/main
 title: "Quantum Computing Readiness Assessment",
 description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification; technology evaluation; and implementation roadmap for quantum advantage.",
 category: "Quantum Computing",
@@ -321,7 +313,7 @@ location: "Global",
 availability: "4-6 Weeks",
 aiScore: 94;},
 {
-id: "ai-website-personalization",
+id: "ai-website-personalization",origin/main
 title: "AI Website Personalization",
 description: "Dynamic on-site personalization that adapts content; offers; and CTAs per visitor segment using first-party data and ML scoring.",
 category: "Growth & CRO",
@@ -341,7 +333,7 @@ location: "Global",
 availability: "1-2 Weeks",
 aiScore: 90;},
 {
-id: "managed-help-desk",
+id: "managed-help-desk",origin/main
 title: "Managed Help Desk (24/7)",
 description: "End-user IT support with SLA-backed response times; onboarding; remote assistance; and monthly reporting.",
 category: "Managed IT",
@@ -361,7 +353,7 @@ location: "USA & Remote",
 availability: "Immediate",
 aiScore: 85;},
 {
-id: "managed-endpoint-security",
+id: "managed-endpoint-security",origin/main
 title: "Managed Endpoint Security (NGAV/EDR)",
 description: "Next-gen antivirus and endpoint detection and response with central monitoring; threat hunting; and automated quarantine.",
 category: "Cybersecurity",
@@ -381,7 +373,7 @@ location: "Global",
 availability: "Immediate",
 aiScore: 88;},
 {
-id: "review-responder-ai",
+id: "review-responder-ai",origin/main
 title: "ReviewResponder.ai",
 description: "Auto-generate professional responses to customer reviews across Google; Yelp; and Facebook with tone controls and approvals.",
 category: "Micro SaaS",
@@ -401,7 +393,7 @@ location: "Global",
 availability: "Immediate",
 aiScore: 87;},
 {
-id: "invoice-sync",
+id: "invoice-sync",origin/main
 title: "InvoiceSync (AI for AP)",
 description: "AI-assisted invoice capture; reconciliation; duplicate detection; and auto-reminders integrated with QuickBooks and Xero.",
 category: "Micro SaaS",
@@ -421,7 +413,7 @@ location: "Global",
 availability: "Immediate",
 aiScore: 86;},
 {
-id: "uptime-pulse",
+id: "uptime-pulse",origin/main
 title: "UptimePulse (Monitoring)",
 description: "Global uptime; SSL; DNS; and performance monitoring with Core Web Vitals and public status pages.",
 category: "Micro SaaS",
@@ -441,7 +433,7 @@ location: "Global",
 availability: "Immediate",
 aiScore: 84;},
 {
-id: "data-quality-observability",
+id: "data-quality-observability",origin/main
 title: "Data Quality & Observability",
 description: "End-to-end data quality monitoring with anomaly detection; lineage; SLAs; and incident workflows for modern data stacks.",
 category: "Data Platform",
@@ -449,7 +441,7 @@ price: 2799;,
 currency: "$",
 tags: ["Data Quality", "Lineage", "SLAs", "Observability"]},
 {
-id: "mlops-platform",
+id: "mlops-platform",origin/main
 title: "Managed MLOps Platform",
 description: "End-to-end model lifecycle management with CI/CD for ML; feature store; model registry; automated evaluations; and safe rollout.",
 category: "AI Platform",
@@ -468,7 +460,7 @@ rating: 4.8; reviewCount: 64; featured: false; location: "Global",
 availability: "4-6 Weeks",
 aiScore: 94;},
 {
-id: "finops-cost-optimization",
+id: "finops-cost-optimization",origin/main
 title: "Cloud FinOps Cost Optimization",
 description: "Data-driven cloud spend optimization across AWS; Azure; and GCP with continuous rightsizing; commitment planning; and anomaly detection.",
 category: "Cloud Management",
@@ -488,7 +480,7 @@ location: "Global",
 availability: "2-3 Weeks",
 aiScore: 88;},
 {
-id: "soc2-compliance-automation",
+id: "soc2-compliance-automation",origin/main
 title: "SOC 2 Compliance Automation",
 description: "Automated evidence collection; control monitoring; policy management; and audit readiness with mapped tasks and dashboards.",
 category: "Security & Compliance",
@@ -507,7 +499,7 @@ rating: 4.9; reviewCount: 41; featured: true; location: "Global",
 availability: "3-5 Weeks",
 aiScore: 90;},
 {
-id: "ai-sales-sdr",
+id: "ai-sales-sdr",origin/main
 title: "AI Sales SDR Automation",
 description: "Outbound research; personalized messaging; meeting scheduling; and CRM updates driven by AI agents with human-in-the-loop.",
 category: "Sales Automation",
@@ -527,7 +519,7 @@ location: "Global",
 availability: "Immediate",
 aiScore: 89;},
 {
-id: "data-governance-catalog",
+id: "data-governance-catalog",origin/main
 title: "Data Governance & Catalog",
 description: "Centralized data catalog with lineage; PII detection; access workflows; and policy enforcement for compliance and productivity.",
 category: "Data Governance",
@@ -547,7 +539,7 @@ location: "Global",
 availability: "3-4 Weeks",
 aiScore: 91;},
 {
-id: "llm-evaluation-lab",
+id: "llm-evaluation-lab",origin/main
 title: "LLM Evaluation & Safety Lab",
 description: "Red teaming; prompt-injection hardening; grounding; and automated evals for accuracy; bias; toxicity; and safety.",
 category: "AI Safety",
@@ -564,7 +556,7 @@ images: [
 createdAt: "2024-04-02T10:05:00.000Z",
 rating: 4.9; reviewCount: 27; featured: true; location: "Global",
 availability: "2-3 Weeks",
-aiScore: 96;}
+aiScore: 96;}origin/main
 ];
 
 // Service categories for filtering;
@@ -577,8 +569,8 @@ export const ENHANCED_SERVICE_CATEGORIES = [
 { label: "Development & DevOps", value: "development-devops" },
 { label: "Digital Transformation", value: "digital-transformation" },
 { label: "Healthcare Technology", value: "healthcare-tech" },
-{ label: "Financial Technology", value: "fintech" },
-{ label: "Blockchain", value: "blockchain" },
+{ label: "Financial Technology", value: "fintech" },;
+{ label: "Blockchain", value: "blockchain" },;
 { label: "Quantum Computing", value: "quantum-computing" };
 ];
 
@@ -595,7 +587,7 @@ export const PRICING_TIERS = SERVICE_PRICING_TIERS;
 // Contact information;
 export const CONTACT_INFO = {
 mobile: "+1 302 464 0950",
-email: "kleber@ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
+email: "kleber@ziontechgroup.com",;
+address: "364 E Main St STE 1008 Middletown DE 19709",;
 website: "https://ziontechgroup.com",;
 };

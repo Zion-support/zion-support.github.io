@@ -1,7 +1,7 @@
 import { useState; useEffect, useCallback  } from "react, ";
 
 interface UseFetchOptions {
-immediate?: boolean;
+immediate?: boolean;}
 }
 
 export const useOptimizedFetch = <T>(;

@@ -1,14 +1,16 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
+}
+}
 
-import React from "react",;
+import React from "react",;origin/main
 const LoginForm: React.FC = () => {
 ,
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">LoginForm</h3>,
+<h3 className = "text-xl font-bold mb-4">LoginForm</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
@@ -20,16 +22,16 @@ import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod";
 import { LogIn, User, EyeEyeOff } from 'lucide-react';
 import { fireEvent } from '@/lib/analytics';
-import { useAuth } from "@/context/auth/AuthProvider",;
+import { useAuth } from "@/context/auth/AuthProvider",;origin/main
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
 if (firstError) {
-            form.setFocus(firstError)
-          }        })}
-        className='space-y-6'
-      >
-        <FormField,
+form.setFocus(firstError)
+}        })}
+className="space-y-6"
+>;
+<FormField;
 control={form.control}
           name='email'
           render={({
@@ -102,79 +104,79 @@ control={form.control}
           }) => (
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
               <FormControl>
-                <Checkbox,
+                <Checkbox,origin/main
 checked={field.value}
-                  onCheckedChange={field.onChange}
-                  className='border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white'
-                  aria-label='Remember me'                />
-              </FormControl>
-              <div className='space-y-1 leading-none'>
-                <FormLabel className='text-zion-slate-light'>
-                  Remember me
-                </FormLabel>
-              </div>
-            </FormItem>
-          )}
-        />
-        <div className='flex items-center justify-between'>
-          <div className='text-sm'>
-            {/* "Remember me" checkbox is now above this div can be used for "Forgot Password" if it's still needed */}
-            {/* If "Remember me" was previously here it's moved. */}
-          </div>
-          <div className='text-sm'>
-            <Link,
-href='/forgot-password'
-              className='font-medium text-zion-cyan hover:text-zion-cyan-light'
-            >
-              Forgot password?
-            </Link>
-          </div>
-        </div>
-        <Button,
-type='submit'
-          className='w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible'
-          disabled={isLoading |isSubmitting}        >
-          {isLoading |isSubmitting ? 'Logging in...' : 'Login'}
-        </Button>
-        {verificationMessage && (
-          <p className='text-sm text-center text-zion-slate-light mt-2'>
-            {verificationMessage}
-          </p>
-        )}
-        <div className='flex justify-between mt-4'>
-          <Button,
-type='button'
-            variant='secondary'
-            className='w-1/2 mr-2'
-            onClick={handleResendEmail}
-            disabled={isResending}          >
-            {isResending ? 'Sending...' : 'Resend / Verify e-mail'}
-          </Button>
-          <Button,
-type='button'
-            variant='outline'
-            className='w-1/2 ml-2'
-            onClick={handleCheckStatus}          >
-            Check status
-          </Button>
-        </div>
-        <p className='text-sm text-center mt-4'>
-          <Link,
-href='/signup'
-            className='font-medium text-zion-cyan hover:text-zion-cyan-light'
-          >
-            Create account
-          </Link>
-        </p>
-      </form>
-    </Form>
-  )
+onCheckedChange={field.onChange}
+className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
+aria-label="Remember me"                />;
+</FormControl>;
+<div className="space-y-1 leading-none">;
+<FormLabel className="text-zion-slate-light">;
+Remember me;
+</FormLabel>;
+</div>;
+</FormItem>;
+)}
+/>;
+<div className="flex items-center justify-between">;
+<div className="text-sm">;
+{/* "Remember me" checkbox is now above this div can be used for "Forgot Password" if it"s still needed */}
+{/* If "Remember me" was previously here it"s moved. */}
+</div>;
+<div className="text-sm">;
+<Link;
+href="/forgot-password";
+className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+>;
+Forgot password?;
+</Link>;
+</div>;
+</div>;
+<Button;
+type="submit"
+className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
+disabled={isLoading |isSubmitting}        >;
+{isLoading |isSubmitting ? "Logging in..." : "Login"}
+</Button>;
+{verificationMessage && (
+<p className="text-sm text-center text-zion-slate-light mt-2">;
+{verificationMessage}
+</p>;
+)}
+<div className="flex justify-between mt-4">;
+<Button;
+type="button"
+variant="secondary"
+className="w-1/2 mr-2"
+onClick={handleResendEmail}
+disabled={isResending}          >;
+{isResending ? "Sending..." : "Resend / Verify e-mail"}
+</Button>;
+<Button;
+type="button"
+variant="outline"
+className="w-1/2 ml-2"
+onClick={handleCheckStatus}          >;
+Check status;
+</Button>;
+</div>;
+<p className="text-sm text-center mt-4">;
+<Link;
+href="/signup";
+className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+>;
+Create account;
+</Link>;
+</p>;
+</form>;
+</Form>;
+)
 }else {
-  fireEvent ('login', {'
-  method: 'email'
+fireEvent ("login", {";
+method: "email";
 })
 }finally {
-  setIsSubmitting (false)
+setIsSubmitting (false)
 }
 const handleResendEmail = async () => {'
   const email = form.getValues ('email')
@@ -199,15 +201,15 @@ if (response.ok) {'
 }else {'
   setVerificationMessage (data.message |'Failed to resend verification email.')
 }catch (err) {'
-  setVerificationMessage ('Failed to resend verification email.')
+  setVerificationMessage ('Failed to resend verification email.')origin/main
 }finally {
-  setIsResending (false)
+setIsResending (false)
 }
-const handleCheckStatus = () => {'
-  const email = form.getValues ('email')
-if (!email) {'
-  form.setError ('root', {'
-  message: 'Please enter your email address.'
+const handleCheckStatus: any = () => {"
+const email = form.getValues ("email");
+if (!email) {";
+form.setError ("root", {";
+message: "Please enter your email address.";
 })
 return}router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
@@ -224,6 +226,6 @@ return}router.push (`/verify-status?email=$ {
 }/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {
   verificationMessage}</p>) "
 }<div className=" flex justify-between mt-4" > <Button > {'
-  isResending ? 'Sending...': 'Resend / Verify e-mail'
+  isResending ? 'Sending...': 'Resend / Verify e-mail'origin/main
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
-}'"}
+}""}

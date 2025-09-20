@@ -17,9 +17,9 @@ wordCount: number;
 readabilityScore: number;
 seoScore: number;
 engagementScore: number;
-issues: ContentIssue[];
+issues: ContentIssue[];,
 suggestions: ContentSuggestion[];,
-overallScore: number;};
+overallScore: number;};origin/main
 interface ContentIssue {
 id: string;
 type: "error" | "warning" | "info";
@@ -27,22 +27,23 @@ title: string;
 description: string;
 severity: "low" | "medium" | "high";
 element?: HTMLElement;
-fixable: boolean;
+fixable: boolean;,
 suggestion: string;,
-impact: "seo" | "readability" | "engagement" | "accessibility";};
+impact: "seo" | "readability" | "engagement" | "accessibility";};origin/main
 interface ContentSuggestion {
 id: string;
 type: "improvement" | "optimization" | "enhancement";
 title: string;
 description: string;
-priority: "low" | "medium" | "high";
+priority: "low" | "medium" | "high";,
 implementation: string;,
-expectedImpact: number;};
+expectedImpact: number;};origin/main
 interface ContentQualityEnhancerProps {
 className?: string;
 showAnalysis?: boolean;
 autoAnalyze?: boolean;
-targetElements?: string[];
+}
+targetElements?: string[];}
 };
 export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({;
 className = "";
@@ -83,7 +84,7 @@ title: "Empty Content";
 description: "Element contains no meaningful content";
 severity: "high";
 element: element as HTMLElement;
-fixable: true;
+fixable: true;,
 suggestion: "Add relevant content or remove empty element";,
 impact: "seo"});
 seoScore -= 10;
@@ -94,12 +95,12 @@ engagementScore -= 10;
 if (words.length > 0 && words.length < 10) {
 issues.push({
 id: `short-content-${index}`;
-type: "warning";
+type: "warning";,
 title: "Very Short Content";,
 description: `Element contains only ${words.length} words`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
+fixable: true;,
 suggestion: "Expand content to provide more value to users";,
 impact: "engagement"});
 engagementScore -= 5;
@@ -110,12 +111,12 @@ seoScore -= 3;
 if (words.length > 100) {
 issues.push({
 id: `long-paragraph-${index}`;
-type: "warning";
+type: "warning";,
 title: "Very Long Paragraph";,
 description: `Paragraph contains ${words.length} words`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
+fixable: true;,
 suggestion: "Break into smaller paragraphs for better readability";,
 impact: "readability"});
 readabilityScore -= 5;
@@ -134,12 +135,12 @@ const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName
 if (level - lastLevel > 1) {
 issues.push({
 id: `heading-skip-${index}`;
-type: "warning";
+type: "warning";,
 title: "Heading Level Skipped";,
 description: `Heading level jumps from h${lastLevel} to h${level}`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
+fixable: true;,
 suggestion: "Ensure heading levels follow logical sequence";,
 impact: "accessibility"});
 seoScore -= 3;
@@ -158,14 +159,14 @@ Object.entries(wordFrequency).forEach(([word; count]) => {
 if (count > 5 && word.length > 3) {
 const density: any = (count / commonWords.length) * 100;
 if (density > 3) {
-issues.push({
+issues.push({,
 id: `keyword-stuffing-${index}-${word}`;
-type: "warning";
+type: "warning";,
 title: "Potential Keyword Stuffing";,
 description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
+fixable: true;,
 suggestion: "Reduce keyword density for more natural content";,
 impact: "seo"});
 seoScore -= 5;
@@ -179,24 +180,24 @@ const content = element.getAttribute("content") || "";
 if (content.length < 50) {
 issues.push({
 id: `short-meta-${index}`;
-type: "warning";
+type: "warning";,
 title: "Short Meta Description";,
 description: `Meta description is only ${content.length} characters`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
+fixable: true;,
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo"});
 seoScore -= 5;
 } else if (content.length > 160) {
 issues.push({
 id: `long-meta-${index}`;
-type: "warning";
+type: "warning";,
 title: "Long Meta Description";,
 description: `Meta description is ${content.length} characters`;
 severity: "low";
 element: element as HTMLElement;
-fixable: true;
+fixable: true;,
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo"});
 seoScore -= 2;
@@ -209,12 +210,12 @@ const href = element.getAttribute("href");
 if (href && (href.startsWith("#") || href.startsWith("javascript: "))) {
 issues.push({,
 id: `broken-link-${index}`;
-type: "warning";
+type: "warning";,
 title: "Potential Broken Link";,
 description: `Link "${href}" may not work properly`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
+fixable: true;,
 suggestion: "Ensure link points to valid URL or page section";,
 impact: "engagement"});
 engagementScore -= 3;
@@ -232,7 +233,7 @@ title: "Missing Alt Text";
 description: "Image has no alternative text for accessibility";
 severity: "high";
 element: element as HTMLElement;
-fixable: true;
+fixable: true;,
 suggestion: "Add descriptive alt text for better accessibility and SEO";,
 impact: "accessibility"});
 seoScore -= 8;
@@ -247,10 +248,10 @@ suggestions.push({
 id: "increase-content";
 type: "improvement";
 title: "Increase Content Length";
-description: "Consider adding more content to improve SEO and user engagement";
+description: "Consider adding more content to improve SEO and user engagement";,
 priority: "high";,
 implementation: "Add relevant sections; expand existing content; include more examples",
-expectedImpact: 15;});
+expectedImpact: 15;});origin/main
 }
 
 if (readabilityScore < 80) {
@@ -258,10 +259,10 @@ suggestions.push({
 id: "improve-readability";
 type: "optimization";
 title: "Improve Readability";
-description: "Content could be more readable for better user experience";
+description: "Content could be more readable for better user experience";,
 priority: "medium";,
 implementation: "Use shorter sentences; break up long paragraphs; simplify complex language",
-expectedImpact: 12;});
+expectedImpact: 12;});origin/main
 }
 
 if (seoScore < 80) {
@@ -269,10 +270,10 @@ suggestions.push({
 id: "seo-optimization";
 type: "enhancement";
 title: "SEO Optimization";
-description: "Several SEO improvements could boost search visibility";
+description: "Several SEO improvements could boost search visibility";,
 priority: "high";,
 implementation: "Fix meta descriptions; add alt text; improve heading structure",
-expectedImpact: 20;});
+expectedImpact: 20;});origin/main
 }
 
 if (engagementScore < 80) {
@@ -280,17 +281,16 @@ suggestions.push({
 id: "engagement-improvement";
 type: "improvement";
 title: "Improve User Engagement";
-description: "Content could be more engaging for visitors";
+description: "Content could be more engaging for visitors";,
 priority: "medium";,
 implementation: "Add interactive elements; improve content structure; include calls-to-action",
-expectedImpact: 10;});
+expectedImpact: 10;});origin/main
 }
 
 // Calculate overall score;
 const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
 
-const analysisResult: ContentAnalysis = {
-wordCount;,
+const analysisResult: ContentAnalysis = {wordCount;,
 readabilityScore: Math.max(0; Math.min(100; readabilityScore)),
 seoScore: Math.max(0; Math.min(100; seoScore)),
 engagementScore: Math.max(0; Math.min(100; engagementScore)),
@@ -388,7 +388,7 @@ return "text-red-600";
 const getScoreBgColor: any = (score: number) => {;
 if (score >= 80) return "bg-green-100 dark:bg-green-900/20";
 if (score >= 60) return "bg-yellow-100 dark: bg-yellow-900/20";
-return "bg-red-100 dark: bg-red-900/20";};
+return "bg-red-100 dark: bg-red-900/20";};origin/main
 
 // Get severity color;
 const getSeverityColor: any = (severity: string) => {
@@ -396,7 +396,7 @@ switch (severity) {;
 case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
 case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
 case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
-default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}origin/main
 };
 
 // Get priority color;
@@ -405,7 +405,7 @@ switch (priority) {;
 case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
 case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
 case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
-default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}origin/main
 };
 
 return (
@@ -729,7 +729,7 @@ Export Report;
 outline: 3px solid #8b5cf6 !important;
 outline-offset: 2px !important;
 background-color: rgba(139; 92; 246; 0.1) !important;,
-transition: all 0.3s ease !important;}
+transition: all 0.3s ease !important;}origin/main
 `}</style>;
 </>;
 );

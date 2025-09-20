@@ -1,21 +1,21 @@
 import { Routes, Route  } from "react-router-dom, ";
 export interface InnovativeAIService {
-id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
+id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,origin/main
 benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
+targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 contactInfo: {,
 phone: string; email: string; website: string};
 technology: string[], integrations: string[];,
 compliance: string[], roi: string; competitors: string[], aiCapabilities: string[];,
-trainingData: string; accuracy: string;}
+trainingData: string; accuracy: string;}origin/main
 
 export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
 // AI-Powered Content Generation & Marketing;
 {,
 id: "ai-content-marketing-suite", title: "AI Content Marketing Suite";,
 description: "Comprehensive AI-powered content creation platform that generates high-quality marketing materials; social media posts; and SEO-optimized content.",
-category: "AI & Marketing", subcategory: "Content Generation";
+category: "AI & Marketing", subcategory: "Content Generation";,
 price: 399; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered content generation",
@@ -60,10 +60,9 @@ roi: "400% within 3 months", competitors: ["Jasper", "Copy.ai", "Writesonic", "C
 aiCapabilities: ["Natural Language Generation", "Sentiment Analysis", "SEO Optimization", "Content Personalization"],
 trainingData: "10M+ high-quality content samples", accuracy: "95% human-like quality"};
 // AI-Powered Video Analytics;
-{
-id: "ai-video-analytics-platform", title: "AI Video Analytics Platform";,
+{id: "ai-video-analytics-platform", title: "AI Video Analytics Platform";,
 description: "Advanced video analysis platform that uses computer vision to extract insights; detect objects; and analyze customer behavior in retail and security applications.",
-category: "AI & Computer Vision", subcategory: "Video Analytics";
+category: "AI & Computer Vision", subcategory: "Video Analytics";,
 price: 599; currency: "$";,
 pricingModel: "monthly", features: [
 "Real-time object detection",
@@ -108,10 +107,9 @@ roi: "300% within 6 months", competitors: ["Vintra", "BriefCam", "Avigilon", "Mi
 aiCapabilities: ["Object Detection", "Behavior Analysis", "Pattern Recognition", "Real-time Processing"],
 trainingData: "5M+ video frames", accuracy: "98% detection accuracy"};
 // AI-Powered Financial Trading Assistant;
-{
-id: "ai-financial-trading-assistant", title: "AI Financial Trading Assistant";,
+{id: "ai-financial-trading-assistant", title: "AI Financial Trading Assistant";,
 description: "Intelligent trading platform that uses machine learning to analyze market trends; predict price movements; and provide automated trading recommendations.",
-category: "AI & Finance", subcategory: "Trading & Investment";
+category: "AI & Finance", subcategory: "Trading & Investment";,
 price: 799; currency: "$";,
 pricingModel: "monthly", features: [
 "Real-time market analysis",
@@ -156,8 +154,7 @@ roi: "500% within 12 months", competitors: ["Alpaca", "QuantConnect", "Zerodha",
 aiCapabilities: ["Price Prediction", "Risk Assessment", "Portfolio Optimization", "Market Sentiment Analysis"],
 trainingData: "20+ years of market data", accuracy: "78% prediction accuracy"};
 // AI-Powered Healthcare Diagnostics;
-{
-id: "ai-healthcare-diagnostics", title: "AI Healthcare Diagnostics Platform";,
+{id: "ai-healthcare-diagnostics", title: "AI Healthcare Diagnostics Platform";,
 description: "Advanced medical imaging analysis platform that uses deep learning to assist healthcare professionals in diagnosing diseases and conditions.", category: "AI & Healthcare";,
 subcategory: "Medical Imaging", price: 1299;,
 currency: "$", pricingModel: "monthly";,
@@ -204,10 +201,9 @@ roi: "200% within 18 months", competitors: ["Aidoc", "Zebra Medical", "Butterfly
 aiCapabilities: ["Image Recognition", "Disease Detection", "Pattern Analysis", "Clinical Decision Support"],
 trainingData: "1M+ medical images", accuracy: "94% diagnostic accuracy"};
 // AI-Powered Supply Chain Optimization;
-{
-id: "ai-supply-chain-optimization", title: "AI Supply Chain Optimization Platform";,
+{id: "ai-supply-chain-optimization", title: "AI Supply Chain Optimization Platform";,
 description: "Intelligent supply chain management system that uses AI to predict demand; optimize inventory; and streamline logistics operations.",
-category: "AI & Operations", subcategory: "Supply Chain";
+category: "AI & Operations", subcategory: "Supply Chain";,
 price: 699; currency: "$";,
 pricingModel: "monthly", features: [
 "Demand forecasting",

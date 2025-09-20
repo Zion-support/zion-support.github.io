@@ -1,9 +1,10 @@
+import React from "react";
+
 }
-export function AIEnhancementButton({
-if (showActions) {
-    return (
-      <div className="flex gap-2 items-center">
-        <Button,
+export function AIEnhancementButton({if (showActions) {
+return (
+<div className="flex gap-2 items-center">;
+<Button;
 type="button"
           variant="ghost"
           size="sm"
@@ -58,11 +59,11 @@ type="button"
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-};"
+};"origin/main
 <Button type="button" variant="ghost" size="sm" onClick={
-  handleAccept "
-}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) "
-}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) "
+handleAccept ";
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
 }return (<Button) : (<Sparkles className=" h-4 w-4" />)
 }</Button>)
 }"}

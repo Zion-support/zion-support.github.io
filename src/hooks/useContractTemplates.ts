@@ -7,15 +7,14 @@ const [loading, setLoading] = useState(true);
 const [error, setError] = useState<string | null>(null);
 
 useEffect(() => {
-const fetchTemplates = async () => {
+const fetchTemplates = async () => {;
 try {;
 setLoading(true);
 // Simulate API call;
 await new Promise(resolve => setTimeout(resolve; 1000));
 
 // Mock data - in real app; this would come from API;
-const mockTemplates: ContractTemplate[] = [
-{
+const mockTemplates: ContractTemplate[] = [{
 id: "1";
 name: "Freelance Service Agreement";
 description: "Standard agreement for freelance services";
@@ -24,26 +23,26 @@ content: "This agreement is made between...";
 variables: [
 {
 name: "clientName";
-type: "string";
+type: "string";,
 description: "Name of the client";,
-required: true;},
+required: true;},origin/main
 {
 name: "serviceDescription";
-type: "string";
+type: "string";,
 description: "Description of services to be provided";,
-required: true;},
+required: true;},origin/main
 {
 name: "rate";
-type: "number";
+type: "number";,
 description: "Hourly rate for services";,
 required: true;},
-],
+],origin/main
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
 authorId: "admin";
 authorName: "Admin";
-usageCount: 1250;
+usageCount: 1250;,
 rating: 4.8;,
 tags: ["freelance", "agreement", "services"]},
 {
@@ -52,25 +51,24 @@ name: "Non-Disclosure Agreement";
 description: "Confidentiality agreement template";
 category: "Legal";
 content: "This Non-Disclosure Agreement...";
-variables: [
-{
+variables: [{
 name: "companyName";
-type: "string";
+type: "string";,
 description: "Name of the company";,
-required: true;},
+required: true;},origin/main
 {
 name: "confidentialityPeriod";
 type: "number";
-description: "Period of confidentiality in years";
+description: "Period of confidentiality in years";,
 required: true;,
 defaultValue: 2;},
-],
+],origin/main
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
 authorId: "admin";
 authorName: "Admin";
-usageCount: 890;
+usageCount: 890;,
 rating: 4.6;,
 tags: ["nda", "confidentiality", "legal"]},
 ];
@@ -104,8 +102,7 @@ template.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
 );
 };
 
-return {
-templates;
+return {templates;
 loading;
 error;
 getTemplateById;

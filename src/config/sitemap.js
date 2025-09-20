@@ -128,7 +128,7 @@ export const completeSitemap = [
         priority: 0.4,
         changefreq: 'monthly',
         requiredAuth: false,
-    },
+    },origin/main
     {
         path: '/talent-dashboard',
         title: 'Talent Dashboard',
@@ -158,7 +158,7 @@ export const completeSitemap = [
         changefreq: 'monthly',
         requiredAuth: true,
         requiredRoles: ['admin'],
-    }
+    }origin/main
 ];
 
 export const dynamicPaths = {

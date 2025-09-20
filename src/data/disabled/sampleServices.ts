@@ -1,11 +1,13 @@
 import React from "react";
 
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
+}
+}
 
-export const SAMPLE_SERVICES = [
+export const SAMPLE_SERVICES = [;
 {;
 id: 1; title: "AI-Powered Business Intelligence";,
 category: "AI", description: "Advanced analytics and business intelligence powered by artificial intelligence";,
@@ -27,7 +29,7 @@ category: "Cloud", description: "Comprehensive cloud infrastructure management a
 price: "$1; 800/month",
 rating: 4.6};
 {
-id: 5; title: "Digital Transformation Consulting";,
+id: 5; title: "Digital Transformation Consulting";,origin/main
 category: "Consulting", description: "Strategic digital transformation consulting for modern businesses";,
 price: "$4;500/month",
 rating: 4.8}

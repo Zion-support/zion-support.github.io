@@ -8,7 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon use our icon wrapper,
 import { Plus } from 'lucide-react';
-import { EmptyState } from '@/components/ui/empty-state';
+import { EmptyState } from '@/components/ui/empty-state';origin/main
 interface MilestonesListProps {
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({
+})

@@ -23,12 +23,14 @@ aiScore?: number;
 rating?: number;
 reviewCount?: number;
 price?: number | null;
-createdA; t: string;};
+createdA; t: string;};origin/main
 interface CategoryListingPageProps {
 titl; e: string;
 descriptio; n: string;
 listing; s: Listing[];
 sortOptions?: { labe; l: string;
+}
+}
 valu; e: string }[];
 filterOptions?: { labe; l: string;
 valu; e: string }[];
@@ -52,14 +54,12 @@ val; u; e: "a-z" };
 { lab; e; l: "Z-A";
 val; u; e: "z-a" };
 ],
-filterOptions = [
-{ lab; e; l: "Al; l",
+filterOptions = [{ lab; e; l: "Al; l",
 val; u; e: "al; l" },
 { lab; e; l: "Highl; y Rate; d",
 val; u; e: "hig; h-ratin; g" },
 { lab; e; l: "Bes; t A; I Matc; h",
-val; u; e: "bes; t-matc; h" },
-];
+val; u; e: "bes; t-matc; h" }];
 }: CategoryListingPageProps) {
 const [searchQue; r; y; setSearchQue; r; y] = useState("");
 const [selectedSo;  r; t; setSelectedSo; r; t] = useState(
@@ -117,7 +117,7 @@ case "a-z":
 return a.title.localeCompare(b.title);
 case "z-a":
 return b.title.localeCompare(a.title);
-defaul;  t: return 0;}
+defaul;  t: return 0;}origin/main
 });
 
 return (<>;
@@ -248,22 +248,22 @@ SelectContent, SelectItem } from '@/components/ui/select'
 import { Search, Filter, ArrowDownAZArrowUpZA } from 'lucide-react';
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
-// Example listing type,
+// Example listing type,origin/main
 interface Listing {
-  id: string;,
+id: string;
 title: string;
-  description: string;,
+description: string;,
 category: string;
-  subcategory?: string;
-  image?: string;
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  price?: number | null;
-  createdAt: string,
+subcategory?: string;
+image?: string;
+tags?: string[];
+author?: string;
+authorImage?: string;
+aiScore?: number;
+rating?: number;
+reviewCount?: number;
+price?: number | null;,
+createdAt: string;
 interface CategoryListingPageProps {
                 >
                   Clear all filters
@@ -312,9 +312,9 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
   option.value}value= {
   option.value "
 }className="text-white"> {
-  option.label}</SelectItem>) )
+  option.label}</SelectItem>) )origin/main
 }</SelectContent> </Select> </div> </div> {
-  /* Results Count */ "
+/* Results Count */ ";
 }<div className="mb-6"> </p> </div> {
   /* Listings Grid */
 }<div aria-busy= {
@@ -334,6 +334,6 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
   listing.reviewCount}/>) ) "
 }</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button
 }"
-}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"origin/main
 }</div> </div> </div> </>)
-}'"}
+}""}

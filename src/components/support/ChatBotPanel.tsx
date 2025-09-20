@@ -12,7 +12,7 @@ import { QuickReplyButton } from "./QuickReplyButton";
 import { SendLoader2 } from 'lucide-react';
 import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
-  )
+  )origin/main
 }
-  )
+)
 }

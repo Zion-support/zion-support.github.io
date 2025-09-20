@@ -1,7 +1,6 @@
 // IoT & Edge Computing Services for 2025;
 export const iotEdgeComputingServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Smart City IoT Platform";
         category: "Smart Cities";
         description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated response systems",
@@ -55,7 +54,7 @@ export const iotEdgeComputingServices2025 = [
         aiIntegration: true;
         predictiveAnalytics: true};
     {
-        id: 2;
+        id: 2;origin/main
         name: "Industrial IoT Edge AI";
         category: "Industrial IoT";
         description: "Advanced edge AI platform for industrial IoT with real-time processing, predictive maintenance, and autonomous decision-making",
@@ -109,7 +108,7 @@ export const iotEdgeComputingServices2025 = [
         aiIntegration: true;
         predictiveAnalytics: true};
     {
-        id: 3;
+        id: 3;origin/main
         name: "Healthcare IoT Monitor";
         category: "Healthcare IoT";
         description: "Comprehensive healthcare IoT monitoring platform with patient tracking, medical device management, and health analytics",
@@ -163,7 +162,7 @@ export const iotEdgeComputingServices2025 = [
         aiIntegration: true;
         predictiveAnalytics: true};
     {
-        id: 4;
+        id: 4;origin/main
         name: "Retail IoT Analytics";
         category: "Retail IoT";
         description: "Advanced retail IoT platform with customer behavior analysis, inventory management, and personalized shopping experiences",
@@ -217,7 +216,7 @@ export const iotEdgeComputingServices2025 = [
         aiIntegration: true;
         predictiveAnalytics: true};
     {
-        id: 5;
+        id: 5;origin/main
         name: "Agricultural IoT Suite";
         category: "Agricultural IoT";
         description: "Comprehensive agricultural IoT platform with precision farming, crop monitoring, and automated irrigation systems",
@@ -271,7 +270,7 @@ export const iotEdgeComputingServices2025 = [
         aiIntegration: true;
         predictiveAnalytics: true};
     {
-        id: 6;
+        id: 6;origin/main
         name: "Energy IoT Grid";
         category: "Energy IoT";
         description: "Advanced energy IoT platform with smart grid management, renewable energy integration, and demand response optimization",

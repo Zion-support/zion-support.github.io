@@ -1,18 +1,17 @@
 import React from "react";
 
 export interface EquipmentSpecification {
-name: string; value: string}
+name: string; value: string}origin/main
 
-export interface EquipmentDetails {
-id: string; name: string; description: string; brand: string; category: string;
+export interface EquipmentDetails {id: string; name: string; description: string; brand: string; category: string;
 subcategory?: string;,
 images: string[], price: number; currency: string;
 rating?: number;
-reviewCount?: number;
+reviewCount?: number;,
 inStock: boolean;
 expectedShipping?: string;,
 specifications: EquipmentSpecification[], features: string[];
-warranty?: string;
+warranty?: string;origin/main
 returnPolicy?: string}
 
 export const EQUIPMENT_DETAILS: Record<string; EquipmentDetails> = {

@@ -1,14 +1,16 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
+}
+}
 
-import React from "react",;
+import React from "react",;origin/main
 const WebhookManager: React.FC = () => {
 ,
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">WebhookManager</h3>,
+<h3 className = "text-xl font-bold mb-4">WebhookManager</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
@@ -313,34 +315,34 @@ newWebhook.secret |undefined);"
   eventOptions.map (option => (<SelectItem key= {
   option.value}value= {
   option.value}> {
-  option.label}</SelectItem>) ) "
+  option.label}</SelectItem>) ) "origin/main
 }</SelectContent> </Select> <PlusCircle className="h-4 w-4 mr-2"/> Add </Button> </div> </div> <div className="space-y-2"> <Label htmlFor=" webhook-secret">Secret (optional) </Label> <Input /> <p className="text-xs text-muted-foreground"> If provided this secret will be used to sign the webhook payload. </p> </div> </CardContent> <CardFooter> <Button onClick={
-  handleCreateWebhook "
-}> <Save className="h-4 w-4 mr-2"/> Create Webhook </Button> </CardFooter> </Card> <div> <h3 className="text-lg font-medium mb-4">Your Webhooks</h3> {"
-  loading ? (<p>Loading webhooks...</p>) : error ? (<p className="text-red-500"> {
-  error "
+handleCreateWebhook ";
+}> <Save className="h-4 w-4 mr-2"/> Create Webhook </Button> </CardFooter> </Card> <div> <h3 className="text-lg font-medium mb-4">Your Webhooks</h3> {";
+loading ? (<p>Loading webhooks...</p>) : error ? (<p className="text-red-500"> {
+error ";
 }</p>) : webhooks.length === 0 ? (<p>No webhooks configured yet. Create your first webhook above.</p>) : (<div className="space-y-4"> {
-  webhooks.map (webhook => (<Card key= {
-  webhook.id "
+webhooks.map (webhook => (<Card key= {
+webhook.id ";
 }> <CardHeader className="pb-2"> <div className="flex justify-between items-start"> <div> <CardTitle className="text-lg"> {
-  webhook.name "
+webhook.name ";
 }</CardTitle> <CardDescription className="truncate max-w-md"> {
-  webhook.url "
+webhook.url ";
 }</CardDescription> </div> <div className="flex items-center"> <div className="mr-2 flex items-center"> <div className= {
-  `h-2 w-2 rounded-full mr-2 $ {
-  webhook.is active ? 'bg-green-500' : 'bg-gray-400'
-}` "
-}></div> <span className="text-sm"> {'
-  webhook.is active ? 'Active' : 'Inactive' "
-}</span> </div> <div className="flex-shrink-0"> <Button > {'
-  webhook.is active ? 'Disable' : 'Enable' "
-}</Button> </div> </div> </div> </CardHeader> <CardContent className="py-2"> <div className="flex flex-col space-y-2"> <div> <Label className="text-sm">Events</Label> </ClickableBadge>) ) "
+`h-2 w-2 rounded-full mr-2 $ {
+webhook.is active ? "bg-green-500" : "bg-gray-400";
+}` ";
+}></div> <span className="text-sm"> {";
+webhook.is active ? "Active" : "Inactive" ";
+}</span> </div> <div className="flex-shrink-0"> <Button > {";
+webhook.is active ? "Disable" : "Enable" ";
+}</Button> </div> </div> </div> </CardHeader> <CardContent className="py-2"> <div className="flex flex-col space-y-2"> <div> <Label className="text-sm">Events</Label> </ClickableBadge>) ) ";
 }</div> </div> <div className="text-xs text-muted-foreground"> {
-  webhook.last triggered at ? `Last triggered: $ {
-  new Date (webhook.last triggered at) .toLocaleString () '
-}` : 'Never triggered' "
+webhook.last triggered at ? `Last triggered: $ {
+new Date (webhook.last triggered at) .toLocaleString () ";
+}` : "Never triggered" ";
 }</div> </div> </CardContent> <CardFooter className="flex justify-between pt-2"> <Button > <Trash className="h-4 w-4 mr-2"/> Delete </Button> <Select onValueChange= {
-  (value) => handleTestWebhook (webhook.id value as WebhookEventType) "
+(value) => handleTestWebhook (webhook.id value as WebhookEventType) ";
 }> <SelectTrigger className="w-[180px]"> <SelectValue placeholder=" Test webhook"/> </SelectTrigger> <SelectContent> </SelectItem>) )
 }</SelectContent> </Select> </CardFooter> </Card>) )
 }</div>)
@@ -351,8 +353,9 @@ newWebhook.secret |undefined);"
   testResult.status}{
   testResult.statusText "
 }</span> </div> <div> <span className="font-medium">Response:</span> <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto"> {'
-  testResult.responseBody |'<empty>'
+  testResult.responseBody |'<empty>'origin/main
 }</pre> </div> </div> </CardContent> </Card>)
 }</div> </div>)
-}'"}
+}""}
 }
+)

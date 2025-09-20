@@ -18,27 +18,26 @@ estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
 contactInfo: {
-phone: string;
+phone: string;,
 email: string;,
-website: string;};
+website: string;};origin/main
 technology: string[];
 integrations: string[];
 compliance: string[];
 roi: string;
-competitors: string[];
+competitors: string[];,
 marketSize: string;,
-growthRate: string;}
+growthRate: string;}origin/main
 
 export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
 // Quantum Computing as a Service (QCaaS)
-{
-id: "quantum-computing-as-a-service";
+{id: "quantum-computing-as-a-service";,
 title: "Quantum Computing as a Service (QCaaS)";,
 description: "Enterprise-grade quantum computing platform that provides access to quantum processors; quantum algorithms; and quantum software development tools through the cloud.",
 category: "Quantum Technology";
 subcategory: "Cloud Computing";
 price: 5000;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Quantum processor access";
@@ -73,11 +72,11 @@ targetAudience: [
 "Government agencies";
 ],
 tags: ["Quantum Computing", "Cloud Services", "Research", "Innovation", "Advanced Computing"],
-estimatedDelivery: "8-12 weeks";
+estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$5;000 - $25;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IBM Q", "Google Quantum", "Microsoft Q#", "Qiskit", "Cirq", "PennyLane"],
@@ -88,14 +87,13 @@ competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Am
 marketSize: "$1.9 billion";,
 growthRate: "56.7% annually"};
 // Edge Computing Infrastructure;
-{
-id: "edge-computing-infrastructure";
+{id: "edge-computing-infrastructure";,
 title: "Edge Computing Infrastructure Platform";,
 description: "Distributed edge computing platform that brings computation and data storage closer to data sources; reducing latency and improving real-time processing capabilities.",
 category: "Edge Computing";
 subcategory: "Infrastructure";
 price: 1200;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Distributed edge nodes";
@@ -130,11 +128,11 @@ targetAudience: [
 "Smart city developers";
 ],
 tags: ["Edge Computing", "IoT", "5G", "Real-time Processing", "Distributed Systems"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;200 - $4;500/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Node.js", "Python", "Redis", "PostgreSQL"],
@@ -145,14 +143,13 @@ competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogH
 marketSize: "$15.7 billion";,
 growthRate: "37.4% annually"};
 // Zero Trust Security Architecture;
-{
-id: "zero-trust-security-architecture";
+{id: "zero-trust-security-architecture";,
 title: "Zero Trust Security Architecture Platform";,
 description: "Comprehensive zero trust security platform that implements continuous verification; least privilege access; and micro-segmentation to protect modern IT environments.",
 category: "Cybersecurity";
 subcategory: "Zero Trust";
 price: 2500;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Identity verification";
@@ -187,11 +184,11 @@ targetAudience: [
 "Security engineers";
 ],
 tags: ["Zero Trust", "Cybersecurity", "Identity Management", "Network Security", "Compliance"],
-estimatedDelivery: "8-12 weeks";
+estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["OAuth 2.0", "SAML", "OIDC", "Zero Trust Network Access", "Identity providers", "SIEM"],
@@ -202,14 +199,13 @@ competitors: ["Okta", "Ping Identity", "ForgeRock", "CyberArk", "Palo Alto Netwo
 marketSize: "$19.6 billion";,
 growthRate: "17.4% annually"};
 // Multi-Cloud Management Platform;
-{
-id: "multi-cloud-management-platform";
+{id: "multi-cloud-management-platform";,
 title: "Multi-Cloud Management Platform";,
 description: "Unified platform for managing multiple cloud providers; optimizing costs; ensuring compliance; and providing seamless workload portability across different cloud environments.",
 category: "Cloud Management";
 subcategory: "Multi-Cloud";
 price: 800;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Multi-cloud dashboard";
@@ -244,11 +240,11 @@ targetAudience: [
 "Operations teams";
 ],
 tags: ["Multi-Cloud", "Cloud Management", "Cost Optimization", "DevOps", "Compliance"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$800 - $3;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Terraform", "Kubernetes", "Docker", "Python", "React", "PostgreSQL"],
@@ -259,14 +255,13 @@ competitors: ["Flexera", "CloudHealth", "CloudCheckr", "RightScale", "Scalr"],
 marketSize: "$6.3 billion";,
 growthRate: "28.9% annually"};
 // API Management and Governance;
-{
-id: "api-management-governance";
+{id: "api-management-governance";,
 title: "API Management and Governance Platform";,
 description: "Comprehensive API management platform that provides design; development; security; monitoring; and governance capabilities for enterprise API ecosystems.",
 category: "API Management";
 subcategory: "Governance";
 price: 600;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "API design and documentation";
@@ -301,11 +296,11 @@ targetAudience: [
 "Integration specialists";
 ],
 tags: ["API Management", "Microservices", "Developer Experience", "Integration", "Governance"],
-estimatedDelivery: "3-4 weeks";
+estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$600 - $2;500/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kong", "Apigee", "AWS API Gateway", "Azure API Management", "Node.js", "React"],
@@ -316,14 +311,13 @@ competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management", "Mule
 marketSize: "$4.5 billion";,
 growthRate: "32.7% annually"};
 // DevOps Automation Platform;
-{
-id: "devops-automation-platform";
+{id: "devops-automation-platform";,
 title: "DevOps Automation Platform";,
 description: "Comprehensive DevOps automation platform that streamlines software development; testing; deployment; and operations through intelligent automation and orchestration.",
 category: "DevOps";
 subcategory: "Automation";
 price: 450;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "CI/CD pipeline automation";
@@ -358,11 +352,11 @@ targetAudience: [
 "Security engineers";
 ],
 tags: ["DevOps", "Automation", "CI/CD", "Infrastructure as Code", "Monitoring"],
-estimatedDelivery: "3-4 weeks";
+estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$450 - $1;800/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Kubernetes"],
@@ -373,14 +367,13 @@ competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "TeamCity"
 marketSize: "$8.9 billion";,
 growthRate: "24.3% annually"};
 // Data Mesh Architecture Platform;
-{
-id: "data-mesh-architecture-platform";
+{id: "data-mesh-architecture-platform";,
 title: "Data Mesh Architecture Platform";,
 description: "Modern data architecture platform that implements data mesh principles; enabling decentralized data ownership; self-service data infrastructure; and domain-driven data products.",
 category: "Data Architecture";
 subcategory: "Data Mesh";
 price: 1500;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Domain-driven data products";
@@ -415,11 +408,11 @@ targetAudience: [
 "Data governance teams";
 ],
 tags: ["Data Mesh", "Data Architecture", "Data Governance", "Microservices", "Data Products"],
-estimatedDelivery: "8-12 weeks";
+estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;500 - $6;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Apache Kafka", "Apache Airflow", "DataHub", "Amundsen", "Great Expectations", "dbt"],
@@ -430,14 +423,13 @@ competitors: ["DataHub", "Amundsen", "Collibra", "Alation", "Informatica"],
 marketSize: "$12.8 billion";,
 growthRate: "21.4% annually"};
 // Green IT Infrastructure;
-{
-id: "green-it-infrastructure";
+{id: "green-it-infrastructure";,
 title: "Green IT Infrastructure Platform";,
 description: "Sustainable IT infrastructure platform that optimizes energy consumption; reduces carbon footprint; and implements green computing practices for environmentally conscious organizations.",
 category: "Green IT";
 subcategory: "Sustainability";
 price: 800;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Energy consumption monitoring";
@@ -472,11 +464,11 @@ targetAudience: [
 "Compliance officers";
 ],
 tags: ["Green IT", "Sustainability", "Energy Efficiency", "ESG", "Environmental Compliance"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$800 - $3;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT sensors", "Energy monitoring", "Sustainability analytics", "Green computing tools", "Reporting platforms"],

@@ -33,27 +33,24 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     const containerVariants = {
         hidde, n: { scal, e: 0,
     opacit, y: 0 },
-        visibl, e: {
-            scal, e: 1,
+        visibl, e: {scal, e: 1,
     opacit, y: 1,
             transitio, n: {
                 typ, e: "spring",
     stiffnes, s: 26, 0,
                 dampin, g: 20}
         },
-        hove, r: {
-            scal, e: 1.1,
+        hove, r: {scal, e: 1.1,
     transitio, n: {
                 duratio, n: 0.2}
         }
     };
-    const expandVariants = {
-        hidde, n: {
+    const expandVariants = {hidde, n: {
             scal, e: 0.8,
     opacit, y: 0,
             y: 20},
         visibl, e: {
-            scal, e: 1,
+            scal, e: 1,origin/main
     opacit, y: 1,
             y: 0,
     transitio, n: {
@@ -105,7 +102,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 right-6';
             case 'top-left':
                 return 'top-6 left-6';
-            defaul,  t: return 'bottom-6 right-6';}
+            defaul,  t: return 'bottom-6 right-6';}origin/main
     };
     const getExpandedPositionClasses = () => {
         switch (position) {
@@ -115,7 +112,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 right-6';
             case 'top-left':
                 return 'top-6 left-6';
-            defaul,  t: return 'bottom-6 right-6';}
+            defaul,  t: return 'bottom-6 right-6';}origin/main
     };
     if (variant === 'minimal') {
         return (<AnimatePresence>

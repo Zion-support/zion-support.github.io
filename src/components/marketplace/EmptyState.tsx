@@ -9,45 +9,44 @@ export interface EmptyStateProps {;
 type: "products" | "categories" | "talent" | "equipment" | "search" | "error" | "network" | "loading";
 title?: string;
 description?: string;
-action?: {
+action?: {,
 label: string;,
-onClick: () => void;};
+onClick: () => void;};origin/main
 icon?: React.ReactNode;
 }
 
-const defaultContent = {
-products: {;
-icon: <ShoppingCart className="w-16 h-16 text-gray-500" />;
+const defaultContent = {products: {;
+icon: <ShoppingCart className="w-16 h-16 text-gray-500" />;,
 title: "No Products Available";,
 description: "We\"re loading our marketplace products. If this persists; there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!"},
 categories: {
-icon: <Lightbulb className="w-16 h-16 text-gray-500" />;
+icon: <Lightbulb className="w-16 h-16 text-gray-500" />;,
 title: "No Categories Found";,
-description: "Categories are being organized. Please try refreshing the page or come back later.";},
+description: "Categories are being organized. Please try refreshing the page or come back later.";},origin/main
 talent: {
-icon: <Users className="w-16 h-16 text-gray-500" />;
+icon: <Users className="w-16 h-16 text-gray-500" />;,
 title: "No Talent Profiles";,
-description: "No talent profiles match your criteria. Try adjusting your filters or search terms.";},
+description: "No talent profiles match your criteria. Try adjusting your filters or search terms.";},origin/main
 equipment: {
-icon: <Wrench className="w-16 h-16 text-gray-500" />;
+icon: <Wrench className="w-16 h-16 text-gray-500" />;,
 title: "No Equipment Available";,
-description: "Equipment listings are being updated. Please check back soon for the latest hardware offerings.";},
+description: "Equipment listings are being updated. Please check back soon for the latest hardware offerings.";},origin/main
 search: {
-icon: <ShoppingCart className="w-16 h-16 text-gray-500" />;
+icon: <ShoppingCart className="w-16 h-16 text-gray-500" />;,
 title: "No Results Found";,
-description: "Try adjusting your search terms or browse our categories to discover what we have available.";},
+description: "Try adjusting your search terms or browse our categories to discover what we have available.";},origin/main
 error: {
-icon: <Server className="w-16 h-16 text-red-400" />;
+icon: <Server className="w-16 h-16 text-red-400" />;,
 title: "Unable to Load Data";,
 description: "We\"re experiencing technical difficulties. Our team has been notified and is working on a fix.";},
 network: {
-icon: <Wifi className="w-16 h-16 text-orange-400" />;
+icon: <Wifi className="w-16 h-16 text-orange-400" />;origin/main
 title: "Connection Issue";,
 description: "Please check your internet connection and try again. If the problem persists; our servers might be temporarily unavailable."},
 loading: {
-icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />;
+icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />;,
 title: "Loading...";,
-description: "We\"re fetching the latest data for you. This should only take a moment.";}};
+description: "We\"re fetching the latest data for you. This should only take a moment.";}};origin/main
 
 export function EmptyState({;
 type;
@@ -115,25 +114,25 @@ export interface EmptyStateProps {
     label: string;,
 onClick: () => void}
   icon?: React.ReactNode
-  )
+  )origin/main
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
+/>;
+)
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
+/>;
+)
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
+/>;
+)
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
+/>;
+)
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
+/>;
+)
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
+/>;
+)
 }
 
 // Specific empty state variants for quick use;
@@ -145,8 +144,7 @@ isAuthenticated = false;
 onRetry?: () => void;
 onAddProduct?: () => void;
 isAuthenticated?: boolean;
-}) {
-const action = onAddProduct;
+}) {const action = onAddProduct;
 ? {
 label: isAuthenticated ? "Add Product" : "Login to Add Product";,
 onClick: onAddProduct; }
@@ -215,13 +213,13 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {;
 return (;
 <EmptyState;
 type="error"
-action={onRetry ? { label: "Retry', onClick: onRetry } : undefined}
+action={onRetry ? { label: "Retry", onClick: onRetry } : undefined}
 />;
 );
 } </EmptyState;
 type="error"
-action={onRetry ? { label: "Retry', onClick: onRetry } : undefined}
+action={onRetry ? { label: "Retry", onClick: onRetry } : undefined}
 /><//EmptyState;
 type="error"
 action={onRetry ? { label: "Retry', onClick: onRetry } : undefined}
-/>;
+/>;}}}

@@ -1,9 +1,9 @@
 import { Save, ChevronDown, PlusLoader2 } from 'lucide-react';
 import { Resume } from '@/types/resume';
-import { useResume } from '@/hooks/useResume';
+import { useResume } from '@/hooks/useResume';origin/main
 interface ResumeVersionSelectorProps {
-  currentResume: Resume;,
-onResumeChange: (resumeId: string) => void,
+currentResume: Resume;,
+onResumeChange: (resumeId: string) => void;
 return (
     <div className='flex items-center gap-2'>
       <span className='text-sm text-muted-foreground'>Resume:</span>
@@ -96,7 +96,7 @@ onClick = {handleCreateNewVersion}
   )
 }
 > {
-  resume.basic info.title}</DropdownMenuItem>) )
+  resume.basic info.title}</DropdownMenuItem>) )origin/main
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)
-}"
+}";
 }

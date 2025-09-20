@@ -3,7 +3,8 @@ import React, { useEffect; useRef } from "react;";
 interface FuturisticBackgroundProps {
 variant?: "particles" | "grid" | "waves" | "matrix";
 intensity?: "low" | "medium" | "high";
-className?: string;
+}
+className?: string;}
 };
 export function FuturisticBackground({
 variant = "particles",
@@ -34,9 +35,9 @@ x: number;
 y: number;
 vx: number;
 vy: number;
-size: number;
+size: number;,
 opacity: number;,
-color: string;}> = [];
+color: string;}> = [];origin/main
 
 const colors = [;
 "#00ffff", // Cyan;
@@ -51,13 +52,12 @@ const colors = [;
 
 // Create particles;
 const particleCount = intensity === "high" ? 200 : intensity === "medium" ? 100 : 50;
-for (let i = 0; i < particleCount; i++) {
-particles.push({
+for (let i = 0; i < particleCount; i++) {particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
-size: Math.random() * 3 + 1;
+size: Math.random() * 3 + 1;,
 opacity: Math.random() * 0.8 + 0.2;,
 color: colors[Math.floor(Math.random() * colors.length)]});
 }
@@ -181,7 +181,7 @@ ctx.lineWidth = 2;
 ctx.globalAlpha = 0.6;
 
 for (let x = 0; x < canvas.width; x++) {
-const y = canvas.height / 2 +
+const y = canvas.height / 2 +;
 Math.sin(x * 0.01 + time + i) * 100 +;
 Math.sin(x * 0.005 + time * 0.5 + i) * 50;
 
@@ -326,14 +326,14 @@ style.textContent = `;
 from {
 text-shadow: 0 0 10px currentColor; 0 0 20px currentColor; 0 0 30px currentColor;}
 to {
-text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}
+text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}origin/main
 }
 
 @keyframes shimmer {
 0% {
 transform: translateX(-100%);}
 100% {
-transform: translateX(100%);}
+transform: translateX(100%);}origin/main
 }
 `;
 document.head.appendChild(style);<//div><///div>;

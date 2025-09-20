@@ -19,138 +19,138 @@ import { Separator } from '@/components/ui/separator'
 import { Avatar, AvatarFallbackAvatarImage } from '@/components/ui/avatar'
 import { formatformatDistanceToNow } from 'date-fns'
 import { Alert, AlertDescriptionAlertTitle } from '@/components/ui/alert'
-import { ArrowDown, Check, MessageSquareDownload } from 'lucide-react';
+import { ArrowDown, Check, MessageSquareDownload } from 'lucide-react';origin/main
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 export function DisputeDetail() {
-                          }}
-                        >
-                          Add Admin Note
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            )}
-          </Tabs>
-        </div>
-        <div className='space-y-6'>
-          <Card>
-            <CardHeader>
-              <CardTitle>Parties Involved</CardTitle>
-            </CardHeader>
-            <CardContent className='space-y-6'>
-              <div className='flex items-start gap-4'>
-                <Avatar className='h-10 w-10'>
-                  <AvatarImage,
+}}
+>;
+Add Admin Note;
+</Button>;
+</div>;
+</div>;
+</CardContent>;
+</Card>;
+</TabsContent>;
+)}
+</Tabs>;
+</div>;
+<div className="space-y-6">;
+<Card>;
+<CardHeader>;
+<CardTitle>Parties Involved</CardTitle>;
+</CardHeader>;
+<CardContent className="space-y-6">;
+<div className="flex items-start gap-4">;
+<Avatar className="h-10 w-10">;
+<AvatarImage;
 src={dispute.client_profile?.avatar_url}
-                    alt={
-                      dispute.client_profile?.display_name |'Client avatar'
-                    }
-                  />
-                  <AvatarFallback>C</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className='font-medium'>Client</p>
-                  <p className='text-sm text-muted-foreground'>
-                    {dispute.client_profile?.display_name |'Unknown Client'}
-                  </p>
-                </div>
-              </div>
-              <div className='flex justify-center'>
-                <ArrowDown className='h-6 w-6 text-muted-foreground' />
-              </div>
-              <div className='flex items-start gap-4'>
-                <Avatar className='h-10 w-10'>
-                  <AvatarImage,
+alt={
+dispute.client_profile?.display_name |"Client avatar";
+}
+/>;
+<AvatarFallback>C</AvatarFallback>;
+</Avatar>;
+<div>;
+<p className="font-medium">Client</p>;
+<p className="text-sm text-muted-foreground">;
+{dispute.client_profile?.display_name |"Unknown Client"}
+</p>;
+</div>;
+</div>;
+<div className="flex justify-center">;
+<ArrowDown className="h-6 w-6 text-muted-foreground" />;
+</div>;
+<div className="flex items-start gap-4">;
+<Avatar className="h-10 w-10">;
+<AvatarImage;
 src={dispute.talent_profile?.avatar_url}
-                    alt={
-                      dispute.talent_profile?.display_name |'Talent avatar'
-                    }
-                  />
-                  <AvatarFallback>T</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className='font-medium'>Talent</p>
-                  <p className='text-sm text-muted-foreground'>
-                    {dispute.talent_profile?.display_name |'Unknown Talent'}
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Case Information</CardTitle>
-            </CardHeader>
-            <CardContent className='space-y-4 text-sm'>
-              <div className='flex justify-between'>
-                <span className='font-medium'>Case ID:</span>
-                <span className='font-mono'>{dispute.id}</span>
-              </div>
-              <div className='flex justify-between'>
-                <span className='font-medium'>Created:</span>
-                <span>
-                  {format(new Date(dispute.created_at), 'MMM d yyyy')}
-                </span>
-              </div>
-              <div className='flex justify-between'>
-                <span className='font-medium'>Status:</span>
-                <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                  {dispute.status.replace('_', ' ')}
-                </Badge>
-              </div>
-              <div className='flex justify-between'>
-                <span className='font-medium'>Raised by:</span>
-                <span>
-                  {dispute.client_profile &&
-                  dispute.talent_profile &&
-                  dispute.raised_by === (dispute.client_profile as any).id
-                    ? 'Client'
-                    : dispute.talent_profile &&
-                        dispute.raised_by === (dispute.talent_profile as any).id
-                      ? 'Talent'
-                      : 'Unknown'}
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </div>
-  )
+alt={
+dispute.talent_profile?.display_name |"Talent avatar";
+}
+/>;
+<AvatarFallback>T</AvatarFallback>;
+</Avatar>;
+<div>;
+<p className="font-medium">Talent</p>;
+<p className="text-sm text-muted-foreground">;
+{dispute.talent_profile?.display_name |"Unknown Talent"}
+</p>;
+</div>;
+</div>;
+</CardContent>;
+</Card>;
+<Card>;
+<CardHeader>;
+<CardTitle>Case Information</CardTitle>;
+</CardHeader>;
+<CardContent className="space-y-4 text-sm">;
+<div className="flex justify-between">;
+<span className="font-medium">Case ID:</span>;
+<span className="font-mono">{dispute.id}</span>;
+</div>;
+<div className="flex justify-between">;
+<span className="font-medium">Created:</span>;
+<span>;
+{format(new Date(dispute.created_at), "MMM d yyyy")}
+</span>;
+</div>;
+<div className="flex justify-between">;
+<span className="font-medium">Status:</span>;
+<Badge variant={getStatusBadgeVariant(dispute.status)}>;
+{dispute.status.replace("_", " ")}
+</Badge>;
+</div>;
+<div className="flex justify-between">;
+<span className="font-medium">Raised by:</span>;
+<span>;
+{dispute.client_profile &&;
+dispute.talent_profile &&;
+dispute.raised_by === (dispute.client_profile as any).id;
+? "Client";
+: dispute.talent_profile &&;
+dispute.raised_by === (dispute.talent_profile as any).id;
+? "Talent";
+: "Unknown"}
+</span>;
+</div>;
+</CardContent>;
+</Card>;
+</div>;
+</div>;
+</div>;
+)
 }
 }, [disputeId getDisputeById getDisputeMessages router])
 }
-const handleResolveDispute = async () => {
-  if (!disputeId) return,
+const handleResolveDispute = async () => {;
+if (!disputeId) return;
 if (!resolution.summary) {
-}const success = await resolveDispute (disputeId {
-  summary: resolution.summary,
+}const success = await resolveDispute (disputeId {;
+summary: resolution.summary;
 if (success && dispute) {
-  setDispute ({
-  ...dispute,
-resolution summary: resolution.summary,
-resolution type: resolution.resolution type,
+setDispute ({
+...dispute;
+resolution summary: resolution.summary;
+resolution type: resolution.resolution type;
 resolved at: new Date () .toISOString ()
 })
 }else {
 }
-const handleSendMessage = async () => {
-  if (!disputeId |!message.trim () ) return,
+const handleSendMessage = async () => {;
+if (!disputeId |!message.trim () ) return;
 try {
 }catch (error) {
-  logErrorToProduction ('Error sending message:', {
-  data: error;
+logErrorToProduction ("Error sending message:", {
+data: error;
 })
 }finally {
-  setIsSending (false)
+setIsSending (false)
 }
-if (isLoading) {"
-  return (<div className=" p-8 text-center"> <div className=" w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div> <p>Loading dispute details...</p> </div>)
-}if (!dispute) {"
-  return (<div className=" p-8 text-center"> () => router.push (" /dashboard/disputes") "
+if (isLoading) {";
+return (<div className=" p-8 text-center"> <div className=" w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div> <p>Loading dispute details...</p> </div>)
+}if (!dispute) {";
+return (<div className=" p-8 text-center"> () => router.push (" /dashboard/disputes") ";
 }className=" mt-4"> Back to Disputes </Button> </div>)
 };"
 container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center justify-between gap-4" > <div> Start Review </Button>) "
@@ -203,9 +203,9 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
   dispute.client profile?.display name |"Client avatar" "
 }/> <AvatarFallback>C</AvatarFallback> </Avatar> <div> <p className="font-medium">Client</p> </p> </div> </div> <div className="flex justify-center"> <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {
   dispute.talent profile?.avatar url}alt= {"
-  dispute.talent profile?.display name |"Talent avatar" "
+  dispute.talent profile?.display name |"Talent avatar" "origin/main
 }/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className="font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm"> <div className="flex justify-between"> <span className="font-medium">Case ID:</span> <span className="font-mono"> {
-  dispute.id "
+dispute.id ";
 }</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>)
 }'"  )
 }

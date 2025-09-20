@@ -1,9 +1,9 @@
 import React, { createContext; useContext; useState; ReactNode } from "react;";
 
 interface SidebarContextType {
-isSidebarOpen: boolean;
+isSidebarOpen: boolean;,
 setIsSidebarOpen: (open: boolean) => void;,
-toggleSidebar: () => void;};
+toggleSidebar: () => void;};origin/main
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export function SidebarProvider({ children }: { children: ReactNode }) {;

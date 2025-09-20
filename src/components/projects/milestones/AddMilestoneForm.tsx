@@ -90,22 +90,22 @@ control = {form.control}
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
-                    <Input,
+                    <Input,origin/main
 type="number"
-                      min="0"
-                      step="0.01"
-                      placeholder="0.00"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="flex justify-end space-x-2 pt-4">
-            {onCancel && (
-              <Button,
+min="0";
+step="0.01";
+placeholder="0.00";
+{...field}
+/>;
+</FormControl>;
+<FormMessage />;
+</FormItem>;
+)}
+/>;
+</div>;
+<div className="flex justify-end space-x-2 pt-4">;
+{onCancel && (
+<Button;
 type="button"
                 variant="outline"
                 onClick = {onCancel}
@@ -135,15 +135,15 @@ type="button"
   projectEndDate}projectType= {
   projectType}onAddMilestones= {
   handleAddMilestones}onAddMilestone= {
-  handleAddMilestone}/>)
+  handleAddMilestone}/>)origin/main
 }</FormControl> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) "
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) ";
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) "
 }/> </div> <Button type="button" variant="outline" onClick={
   onCancel}disabled= {
-  isSubmitting}> Cancel </Button>) "
+  isSubmitting}> Cancel </Button>) "origin/main
 }<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone")
 }</Button> </div> </form> </Form> </div>)
 }'"}

@@ -20,12 +20,12 @@ import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface BlockchainDashboardProps {
-className?: string;
+className?: string;}
 };
 export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;});
+enableUserBehaviorTrackin; g: true;});origin/main
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "wallet" | "contracts" | "nfts" | "defi" | "transactions">("overview");
 const [showMintN;  F; T; setShowMintN; F; T] = useState(false);
 const [showSendTransacti; o; n; setShowSendTransacti; o; n] = useState(false);
@@ -48,15 +48,14 @@ sendTransactio; n;
 createDeFiPosition;
 } = useBlockchainWeb3();
 
-const [nftFo; r; m; setNftFo; r; m] = useState({
-nam;  e: "";
+const [nftFo; r; m; setNftFo; r; m] = useState({nam;  e: "";
 descriptio; n: "";
 imag; e: ""});
 const [transactionFo; r; m; setTransactionFo; r; m] = useState({
 t;  o: "";
 valu; e: "";
 dat; a: ""});
-const handleConnectWallet = useCallback(async () => {
+const handleConnectWallet = useCallback(async () => {origin/main
 try {;
 await connectWallet();
 trackEvent("blockchain",  "dashboard", "wallet_connected");
@@ -66,8 +65,8 @@ trackEvent("blockchain",  "dashboard", "wallet_connected");
 }, [connectWall; e; t; trackEve; n; t]);
 
 const handleMintNFT = useCallback(async () => {
-if (nftForm.name.trim() && wallet) {
-try {
+if (nftForm.name.trim() && wallet) {;
+try {;
 const metadata = {;
 nam;  e: nftForm.nam; e;
 descriptio; n: nftForm.descriptio; n;
@@ -86,8 +85,8 @@ trackEvent("blockchain",  "dashboard", "nft_minted");
 }, [nftFo; r; m; wall; e; t; contrac; t; s; mintN; F; T; trackEve; n; t]);
 
 const handleSendTransaction = useCallback(async () => {
-if (transactionForm.to.trim() && transactionForm.value && wallet) {
-try {
+if (transactionForm.to.trim() && transactionForm.value && wallet) {;
+try {;
 await sendTransaction(;
 transactionForm.t;  o;
 transactionForm.valu; e;
@@ -108,7 +107,7 @@ switch (status) {
 case "confirmed": return "text-green-600 bg-green-100";
 case "pending": return "text-yellow-600 bg-yellow-100";
 case "failed": return "text-red-600 bg-red-100";
-defaul;  t: return "text-gray-600 bg-gray-100";}
+defaul;  t: return "text-gray-600 bg-gray-100";}origin/main
 };
 
 return (

@@ -8,6 +8,8 @@ category: stringico;n: React.ComponentType<{ className?: string }>,color: string
 description?: string;
 };interface ServicesOverviewProps {
 services: Service[ ];
+}
+}
 const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
 return (;
 <section className="py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">;
@@ -57,8 +59,7 @@ y: -5transitio; n: { duratio;n: 0.3 }
 {service.description && (;
 <p className="relative text-zion-slate-light mb-6 leading-relaxed group-hover: text-zion-slate-light/90 transition-colors duration-30o0">,
 {service.description}
-</p>,
-)}
+</p>)}
 ;
 <ul className="relative space-y-3 mb-6">;
 {service.items.map((itemitemIndex) => (;
@@ -72,8 +73,7 @@ viewport={{ once: true }}
 >;
 <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover: scale-110 transition-transform duration-30o0" aria-hidden="true" />;
 <span className="text-sm">{item}</span>;
-</motion.li>,
-))}
+</motion.li>))}
 </ul>;
 <Link;
 to={`/services/${service.category.toLowerCase().replace(/\s+/g"-")}`}

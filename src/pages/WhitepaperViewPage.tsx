@@ -9,4 +9,4 @@ export default function WhitepaperViewPage() {
       </div>
     </div>
   );
-}
+}origin/main

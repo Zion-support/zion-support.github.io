@@ -5,4 +5,4 @@ import { Card, CardContent, CardHeaderCardTitle } from '@/components/ui/card';
 import { CreditCard } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescriptionCardFooter } from '@/components/ui/card';
 import React from 'react';
-interface PaymentSummaryProps {
+interface PaymentSummaryProps {origin/main

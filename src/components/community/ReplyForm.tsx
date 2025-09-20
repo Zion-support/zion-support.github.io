@@ -5,7 +5,7 @@ interface ReplyFormProps {
 onSubmit: (content: string) => void;
 placeholder?: string};
 export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
-const [content, setContent] = useState("");
+const [content, setContent] = useState("");origin/main
 
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
@@ -40,4 +40,4 @@ interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
   parentId?: string,
 interface ReplyFormValues {
-  content: string
+  content: stringorigin/main

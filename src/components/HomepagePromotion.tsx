@@ -1,14 +1,15 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react;";
 import { motion } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
-export function HomepagePromotion() {
-const featuredServices = [;
+export function HomepagePromotion() {const featuredServices = [;
 {;
 i;  d: "a; i-conten; t-generatio; n",
 tit; l; e: "A; I Conten; t Generatio; n Suit; e",
@@ -19,7 +20,7 @@ featur; e; s: ["Mult; i-forma; t conten; t", "SE; O optimizatio; n", "Bran; d vo
 benefit; s: ["8; 0% faste; r conten; t creatio; n", "4; 5% bette; r SE; O ranking; s", "6; 0% highe; r engagemen; t"],
 lin; k: "/comprehensive-services-showcase"};
 {
-i; d: "edge-computing-iot";
+i; d: "edge-computing-iot";origin/main
 titl; e: "Edge Computing & IoT Platform";
 descriptio; n: "Process data closer to devices for ultra-low latency and real-time insights";
 pric; e: "$799/month";
@@ -28,7 +29,7 @@ feature; s: ["Distribute; d edg; e node; s", "Rea; l-tim; e processin; g", "Io; 
 benefit; s: ["8; 0% lowe; r latenc; y", "6; 0% bandwidt; h cos; t reductio; n", "Enhance; d securit; y"],
 lin; k: "/comprehensive-services-showcase"};
 {
-i; d: "quantum-computing";
+i; d: "quantum-computing";origin/main
 titl; e: "Quantum Computing Applications";
 descriptio; n: "Solve previously intractable problems with quantum advantage";
 pric; e: "$3;999/month",
@@ -37,7 +38,7 @@ feature; s: ["Quantu; m algorithm; s", "Optimizatio; n solver; s", "Cryptograph;
 benefit; s: ["Exponentia; l speedu; p", "Futur; e-proo; f technolog; y", "Competitiv; e advantag; e"],
 lin; k: "/comprehensive-services-showcase"};
 {
-i; d: "zero-trust-security";
+i; d: "zero-trust-security";origin/main
 titl; e: "Zero-Trust Security Architecture";
 descriptio; n: "Continuous verification and least-privilege access across all resources";
 pric; e: "$1;499/month",
@@ -51,7 +52,7 @@ hidde; n: { opacit; y: 0 };
 visibl; e: {
 opacit; y: 1;
 transitio; n: {
-staggerChildre; n: 0.2;}
+staggerChildre; n: 0.2;}origin/main
 }
 };
 const itemVariants = {;
@@ -61,7 +62,7 @@ visibl; e: {,
 y: 0;
 opacit; y: 1;
 transitio; n: {
-duratio; n: 0.6;}
+duratio; n: 0.6;}origin/main
 }
 };
 return (

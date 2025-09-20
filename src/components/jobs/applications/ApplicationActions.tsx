@@ -62,23 +62,29 @@ onClick={() => onStatusChange(application.id, 'rejected')}
           >
             Hire
           </DropdownMenuItem>
-          <DropdownMenuItem,
+          <DropdownMenuItem,origin/main
 onClick={() => onStatusChange(application.id, "rejected")}
-            className="text-red-600"
-          >
-            Reject
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
-      <Button,
+className="text-red-600"          >            onClick={() => onStatusChange(application.id, "hired")}
+>;
+Hire;
+</DropdownMenuItem>;
+<DropdownMenuItem;
+onClick={() => onStatusChange(application.id, "rejected")}
+className="text-red-600"
+>;
+Reject;
+</DropdownMenuItem>;
+</DropdownMenuContent>;
+</DropdownMenu>;
+<Button variant="default" size="sm" asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>;
+<Button;
 variant="default"
-        size="sm"
-        asChild
-      >
-          Contact
-        </Link>
-      </Button>
-    </div>
-  )
+size="sm";
+asChild;
+>;
+Contact;
+</Link>;
+</Button>;
+</div>;
+)
 }

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 interface ContentItem {
 id: string;
 title: string;
-type: 'blog' | 'page' | 'product' | 'service';
-status: 'published' | 'draft' | 'scheduled';
-publishDate: string;
+type: "blog" | "page" | "product" | "service";
+status: "published" | "draft" | "scheduled";
+publishDate: string;,
 views: number;,
 author: string;};
 export const ContentManagement: React.FC = () => {
@@ -42,16 +42,16 @@ type: 'service',
 status: 'scheduled',
 publishDate: '2024-01-17',
 views: 0,
-author: 'Sarah Wilson',;
+author: 'Sarah Wilson',;origin/main
 };
 ]);
 
-const [selectedType, setSelectedType] = useState<string>('all');
-const [selectedStatus, setSelectedStatus] = useState<string>('all');
+const [selectedType; setSelectedType] = useState<string>("all");
+const [selectedStatus; setSelectedStatus] = useState<string>("all");
 
 const filteredContent = content.filter(item => {;
-const typeMatch = selectedType === 'all' || item.type === selectedType;
-const statusMatch = selectedStatus === 'all' || item.status === selectedStatus;
+const typeMatch = selectedType === "all" || item.type === selectedType;
+const statusMatch = selectedStatus === "all" || item.status === selectedStatus;
 return typeMatch && statusMatch;
 });
 
@@ -60,7 +60,7 @@ switch (status) {;
 case 'published': return 'text-green-400 bg-green-900';
 case 'draft': return 'text-yellow-400 bg-yellow-900';
 case 'scheduled': return 'text-blue-400 bg-blue-900';,
-default: return 'text-gray-400 bg-gray-900';}
+default: return 'text-gray-400 bg-gray-900';}origin/main
 };
 
 const getTypeIcon: any = (type: string) => {
@@ -69,14 +69,14 @@ case 'blog': return '📝';
 case 'page': return '📄';
 case 'product': return '🛍️';
 case 'service': return '⚙️';,
-default: return '📄';}
+default: return '📄';}origin/main
 };
 
 return (
 <div className="p-6 bg-gray-900 min-h-screen">;
 <motion.div;
-initial={{ opacity: 0, y: 20 }}
-animate={{ opacity: 1, y: 0 }}
+initial={{ opacity: 0; y: 20 }}
+animate={{ opacity: 1; y: 0 }}
 className="max-w-7xl mx-auto"
 >;
 <div className="flex justify-between items-center mb-8">;
@@ -125,11 +125,11 @@ className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 </div>;
 
 <div className="divide-y divide-gray-700">;
-{filteredContent.map((item, index) => (
+{filteredContent.map((item; index) => (
 <motion.div;
 key={item.id}
-initial={{ opacity: 0, y: 10 }}
-animate={{ opacity: 1, y: 0 }}
+initial={{ opacity: 0; y: 10 }}
+animate={{ opacity: 1; y: 0 }}
 transition={{ delay: index * 0.05 }}
 className="p-6 hover:bg-gray-750 transition-colors"
 >;
@@ -177,15 +177,15 @@ View;
 {/* Quick Stats */}
 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">;
 {[
-{ label: 'Total Content', value: content.length, icon: '📄' },
-{ label: 'Published', value: content.filter(c => c.status === 'published').length, icon: '✅' },
-{ label: 'Drafts', value: content.filter(c => c.status === 'draft').length, icon: '📝' },
-{ label: 'Total Views', value: content.reduce((sum, c) => sum + c.views, 0).toLocaleString(), icon: '👁️' }
-].map((stat, index) => (
+{ label: "Total Content", value: content.length; icon: "📄" },
+{ label: "Published", value: content.filter(c => c.status === "published").length; icon: "✅" },
+{ label: "Drafts", value: content.filter(c => c.status === "draft").length; icon: "📝" },
+{ label: "Total Views", value: content.reduce((sum; c) => sum + c.views; 0).toLocaleString(), icon: "👁️" }
+].map((stat; index) => (
 <motion.div;
 key={stat.label}
-initial={{ opacity: 0, y: 20 }}
-animate={{ opacity: 1, y: 0 }}
+initial={{ opacity: 0; y: 20 }}
+animate={{ opacity: 1; y: 0 }}
 transition={{ delay: index * 0.1 }}
 className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center"
 >;

@@ -1,7 +1,6 @@
 // Blockchain & Web3 Services for 2025;
 export const blockchainWeb3Services2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "DeFi Pro Suite";
         category: "Decentralized Finance";
         description: "Comprehensive DeFi platform offering yield farming, liquidity provision, and automated trading strategies with advanced risk management",
@@ -55,7 +54,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true};
     {
-        id: 2;
+        id: 2;origin/main
         name: "NFT Studio Pro";
         category: "NFT & Digital Assets";
         description: "Complete NFT creation, management, and marketplace platform with AI-powered generation and blockchain verification",
@@ -109,7 +108,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true};
     {
-        id: 3;
+        id: 3;origin/main
         name: "Smart Contract Factory";
         category: "Smart Contract Development";
         description: "Advanced smart contract development platform with automated testing, deployment, and monitoring across multiple blockchains",
@@ -163,7 +162,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true};
     {
-        id: 4;
+        id: 4;origin/main
         name: "DAO Governance Platform";
         category: "Decentralized Governance";
         description: "Complete DAO governance platform with voting mechanisms, proposal management, and treasury management tools",
@@ -217,7 +216,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true};
     {
-        id: 5;
+        id: 5;origin/main
         name: "Cross-Chain Bridge Pro";
         category: "Cross-Chain Infrastructure";
         description: "Advanced cross-chain bridge platform enabling seamless asset transfers and data exchange between different blockchain networks";
@@ -271,7 +270,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true};
     {
-        id: 6;
+        id: 6;origin/main
         name: "Web3 Identity Manager";
         category: "Decentralized Identity";
         description: "Self-sovereign identity platform with zero-knowledge proofs, verifiable credentials, and privacy-preserving authentication",

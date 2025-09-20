@@ -8,7 +8,9 @@ import { FileText, ChevronDown, Loader2Download } from 'lucide-react';
 import { Resume } from '@/types/resume';
 import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport';
 import { toast } from '@/hooks/use-toast';
-import { FontFamily } from '@/utils/pdf/fontConfig';
+import { FontFamily } from '@/utils/pdf/fontConfig';origin/main
 interface PdfExportButtonProps {
-  resume: Resume;
+resume: Resume;
+}
+}
 }

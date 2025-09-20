@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { useForm, typeControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod';
-import { Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';origin/main
 return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
-        <FormField,
+<Form {...form}>;
+<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
+<FormField;
 control={form.control}
           name='title'
           render={({
@@ -59,17 +59,17 @@ aria-label='Default template'
         </div>
       </form>
     </Form>
-  )
+  )origin/main
 setSaving (true)
 try {
-  if (editTemplate) {
-  await updateTemplate.mutateAsync ({
-  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {
-  ...field "
-}placeholder="Enter template name" />
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
-  editTemplate ? "Update" : "Save"
+if (editTemplate) {
+await updateTemplate.mutateAsync ({
+<FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {
+...field ";
+}placeholder="Enter template name" />;
+}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
+editTemplate ? "Update" : "Save";
 }Template`)
 }</Button> </div> </form> </Form>)
 }"}

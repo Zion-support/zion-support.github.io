@@ -8,4 +8,4 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 interface ApiErrorBoundaryProps {
   children: ReactNode;
   queryClient?: QueryClient;
-  fallback?: ReactNode}
+  fallback?: ReactNode}origin/main

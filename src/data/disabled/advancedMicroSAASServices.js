@@ -1,7 +1,6 @@
 export const ADVANCED_MICRO_SAAS_SERVICES = [
     // AI-Powered Customer Experience Platform;
-    {
-        id: "ai-customer-experience-platform";
+    {id: "ai-customer-experience-platform";
         title: "AI Customer Experience & Sentiment Analysis Platform";
         description: "Intelligent platform that analyzes customer interactions across all channels, predicts customer behavior, and provides personalized experiences using advanced AI and machine learning.",
         category: "AI & Customer Experience";
@@ -81,8 +80,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         sla: "99.9% uptime guarantee";
         uptime: "99.95%"};
     // Blockchain Supply Chain Transparency Platform;
-    {
-        id: "blockchain-supply-chain-transparency";
+    {id: "blockchain-supply-chain-transparency";
         title: "Blockchain Supply Chain Transparency & Traceability Platform";
         description: "Revolutionary blockchain-based platform that provides end-to-end supply chain visibility, ensuring product authenticity, ethical sourcing, and regulatory compliance.",
         category: "Blockchain & Supply Chain";
@@ -162,8 +160,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         sla: "99.99% blockchain uptime";
         uptime: "99.99%"};
     // AI-Powered Predictive Maintenance Platform;
-    {
-        id: "ai-predictive-maintenance-platform";
+    {id: "ai-predictive-maintenance-platform";
         title: "AI Predictive Maintenance & IoT Asset Management Platform";
         description: "Intelligent platform that uses IoT sensors, AI algorithms, and machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime.",
         category: "AI & IoT";
@@ -243,8 +240,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         sla: "99.5% uptime guarantee";
         uptime: "99.7%"};
     // Quantum-Safe Communication Platform;
-    {
-        id: "quantum-safe-communication-platform";
+    {id: "quantum-safe-communication-platform";
         title: "Quantum-Safe Communication & Encryption Platform";
         description: "Next-generation communication platform that implements post-quantum cryptography to protect against future quantum computing threats while maintaining current security standards.";
         category: "Quantum Technology";
@@ -324,8 +320,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         sla: "99.99% security guarantee";
         uptime: "99.95%"};
     // AI-Powered Market Research & Intelligence Platform;
-    {
-        id: "ai-market-research-intelligence";
+    {id: "ai-market-research-intelligence";
         title: "AI Market Research & Competitive Intelligence Platform";
         description: "Intelligent platform that uses AI to analyze market trends, monitor competitors, identify opportunities, and provide actionable business intelligence for strategic decision-making.",
         category: "AI & Business Intelligence";
@@ -405,8 +400,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         sla: "99.5% uptime guarantee";
         uptime: "99.7%"};
     // Autonomous AI Content Creation & Management Platform;
-    {
-        id: "autonomous-ai-content-creation";
+    {id: "autonomous-ai-content-creation";
         title: "Autonomous AI Content Creation & Management Platform";
         description: "Revolutionary platform that autonomously creates, optimizes, and manages content across all digital channels using advanced AI, with minimal human intervention.",
         category: "AI & Content Creation";
@@ -486,8 +480,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         sla: "99.9% content creation uptime";
         uptime: "99.95%"};
     // Smart Contract Development & Management Platform;
-    {
-        id: "smart-contract-development-platform";
+    {id: "smart-contract-development-platform";
         title: "Smart Contract Development & Management Platform";
         description: "Comprehensive platform for developing, deploying, and managing smart contracts across multiple blockchain networks with advanced security, testing, and monitoring capabilities.",
         category: "Blockchain & Smart Contracts";
@@ -567,8 +560,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         sla: "99.9% platform uptime";
         uptime: "99.95%"};
     // AI-Powered Human Resources & Talent Management Platform;
-    {
-        id: "ai-hr-talent-management";
+    {id: "ai-hr-talent-management";
         title: "AI-Powered HR & Talent Management Platform";
         description: "Intelligent HR platform that uses AI to streamline recruitment, employee management, performance evaluation, and organizational development with predictive analytics.",
         category: "AI & Human Resources";
@@ -648,8 +640,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         sla: "99.5% uptime guarantee";
         uptime: "99.7%"};
     // Quantum Machine Learning & Optimization Platform;
-    {
-        id: "quantum-ml-optimization";
+    {id: "quantum-ml-optimization";
         title: "Quantum Machine Learning & Optimization Platform";
         description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate AI model training, and provide quantum advantage.",
         category: "Quantum Computing & AI";

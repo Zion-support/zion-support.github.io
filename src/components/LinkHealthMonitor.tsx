@@ -18,7 +18,8 @@ statusCode?: number;
 responseTime?: number;
 lastChecke; d: Date;
 parentPage?: string;
-linkText?: string;
+}
+linkText?: string;}
 };
 interface LinkHealthReport {
 totalLink; s: number;
@@ -28,7 +29,7 @@ externalLink; s: number;
 averageResponseTim; e: number;
 lastUpdate; d: Date;};
 const LinkHealthMonito; r: React.FC = () => {
-const [isOp;  e; n; setIsOp; e; n] = useState(false);
+const [isOp;  e; n; setIsOp; e; n] = useState(false);origin/main
 const [isMonitori; n; g; setIsMonitori; n; g] = useState(false);
 const [linkStatus;  e; s; setLinkStatus; e; s] = useState<LinkStatus[]>([]);
 const [repo; r; t; setRepo; r; t] = useState<LinkHealthReport | null>(null);
@@ -45,7 +46,7 @@ lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Homepag; e"};
 linkTe; x; t: "LinkedI; n"},
 {
-u; r; l: "htt; p; s://twitte; r.co; m/ziontechgrou; p",
+u; r; l: "htt; p; s://twitte; r.co; m/ziontechgrou; p",origin/main
 stat; u; s: "externa; l",
 statusCo; d; e: 2; 0; 0;
 responseTi; m; e: 8; 0; 0;
@@ -53,7 +54,7 @@ lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Homepag; e",
 linkTe; x; t: "Twitte; r"},
 {
-u; r; l: "t; e; l:+1 30; 2 46; 4 095; 0",
+u; r; l: "t; e; l:+1 30; 2 46; 4 095; 0",origin/main
 stat; u; s: "health; y",
 statusCo; d; e: 2; 0; 0;
 responseTi; m; e: 5; 0;
@@ -61,7 +62,7 @@ lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Contac; t",
 linkTe; x; t: "Phon; e Numbe; r"},
 {
-u; r; l: "mail; t; o:klebe; r@ziontechgrou; p.co; m",
+u; r; l: "mail; t; o:klebe; r@ziontechgrou; p.co; m",origin/main
 stat; u; s: "health; y",
 statusCo; d; e: 2; 0; 0;
 responseTi; m; e: 5; 0;
@@ -75,8 +76,7 @@ setLinkStatuses(sampleLinks);
 generateReport(sampleLinks);
 },  []);
 
-const generateReport: any = (link;  s: LinkStatus[]) => {
-const totalLinks = links.length;
+const generateReport: any = (link;  s: LinkStatus[]) => {const totalLinks = links.length;
 const healthyLinks = links.filter(l => l.status === "healthy").length;
 const brokenLinks = links.filter(l => l.status === "broken").length;
 const externalLinks = links.filter(l => l.status === "external").length;
@@ -106,7 +106,7 @@ case "broken":
 return <AlertTriangle className="w-4 h-4 text-red-400" />;
 case "external":
 return <ExternalLink className="w-4 h-4 text-blue-400" />;
-defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;}
+defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;}origin/main
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -117,7 +117,7 @@ case "broken":
 return "text-red-400";
 case "external":
 return "text-blue-400";
-defaul;  t: return "text-yellow-400";}
+defaul;  t: return "text-yellow-400";}origin/main
 };
 
 const filteredLinks = linkStatuses.filter(link => {;

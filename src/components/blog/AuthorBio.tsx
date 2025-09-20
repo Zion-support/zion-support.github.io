@@ -1,7 +1,9 @@
-import React from 'react';
-import type { BlogAuthor } from '@/types/blog';
+import React from "react";
+import type { BlogAuthor } from "@/types/blog";
 interface AuthorBioProps {
-  author: BlogAuthor;
+author: BlogAuthor;
+}
+}
 }
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null;
@@ -22,5 +24,5 @@ export function AuthorBio({ author }: AuthorBioProps) {
   author.title && <p className="text-sm text-muted-foreground mb-2" > {
   author.title}</p>
 }<p> {
-  author.bio}</p>
+  author.bio}</p>origin/main
 }'"}

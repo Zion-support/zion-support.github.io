@@ -25,20 +25,20 @@ maxRetries?: number,
 showReportButton?: boolean,
 context?: string;  enableRetry?: boolean,
 maxRetries?: number,
-showReportButton?: boolean,
+showReportButton?: boolean,origin/main
 context?: string}
 export class GlobalErrorBoundary extends Component<
-  ErrorBoundaryProps,
-ErrorBoundaryState
+ErrorBoundaryProps;
+ErrorBoundaryState;
 > {
-  private retryTimeouts: NodeJS.Timeout[] = []
-  constructor(props: ErrorBoundaryProps) {
-    super(props)
+private retryTimeouts: NodeJS.Timeout[] = [];
+constructor(props: ErrorBoundaryProps) {
+super(props)
 export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {
-  private retryTimeouts: NodeJS.Timeout[] = []
-  constructor(props: ErrorBoundaryProps) {
-    super(props)
-errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>
+private retryTimeouts: NodeJS.Timeout[] = [];
+constructor(props: ErrorBoundaryProps) {
+super(props)
+errorBoundaryProps?: Omit<ErrorBoundaryProps "children">;
 ,) => {
   const WrappedComponent = (props: P;) => (
     <GlobalErrorBoundary {...errorBoundaryProps}>
@@ -50,4 +50,4 @@ errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>
 export default GlobalErrorBoundary,
 WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
   return WrappedComponent}
-export default GlobalErrorBoundary
+export default GlobalErrorBoundaryorigin/main

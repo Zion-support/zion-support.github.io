@@ -8,7 +8,7 @@ const { data; error } = await supabase;
 .eq("category_id", categoryId)
 .order("created_at", { ascending: false });
 if (error) {
-throw new Error(error.message)}
+throw new Error(error.message)}origin/main
 
 return (data as ForumPost[]) || [];
 }

@@ -1,17 +1,18 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react;";
 import { motion } from "framer-motion, ";
 import { StarIcon } from "@heroicons/react/24/solid, ";
 
-export function TestimonialsSection() {
-const testimonials = [;
+export function TestimonialsSection() {const testimonials = [;
 {;
 name: "Sarah Johnson", role: "CTO";,
-company: "TechFlow Solutions", content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs significantly.";
+company: "TechFlow Solutions", content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs significantly.";,
 rating: 5;,
 avatar: "SJ"};
 {
@@ -25,21 +26,21 @@ company: "Global Manufacturing Inc.", content: "Their cybersecurity solutions ga
 rating: 5;,
 avatar: "ER"};
 {
-name: "David Thompson", role: "CEO";,
+name: "David Thompson", role: "CEO";,origin/main
 company: "StartupXYZ", content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
 rating: 5;,
 avatar: "DT"}
 ];
-const containerVariants = {
-hidden: { opacity: 0 }, visible: {;
-opacity: 1;
+const containerVariants = {;
+hidden: { opacity: 0 }, visible: {;,
+opacity: 1;,
 transition: {,
 staggerChildren: 0.2}
 }
 };
 const itemVariants = {;
 hidden: { y: 20; opacity: 0 }, visible: {
-y: 0; opacity: 1; transition: {,
+y: 0; opacity: 1; transition: {,origin/main
 duration: 0.5}
 }
 };

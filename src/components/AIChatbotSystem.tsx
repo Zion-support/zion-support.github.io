@@ -1,8 +1,10 @@
 import React from "react";
 
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 export const AIChatbotSystem: React.FC = () => {

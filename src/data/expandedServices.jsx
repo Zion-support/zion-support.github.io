@@ -50,7 +50,7 @@ export, const, EXPANDED_SERVICES = [;
     {
         id: "business-process-automation",title: "Business, Process, Automation & RPA",description: "End-to-end, business, process automation, using, RPA tools, and, custom software. Includes, workflow, analysis, implementation, and, ongoing, optimization.",category: "Business Automation",subcategory: "RPA",price: 17999,currency: "$",tags: ["RPA", "Process Automation", "Workflow""Optimization"],author: {,name: "Zion, Tech, Group"id: "zion-tech-group"emai,l: "kleber@ziontechgroup.com";},images: ["http, s://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"],createdAt: "20o24-0o4-20T1,1:0,0:0o0.0o00Z",rating: 4.8,reviewCount: 67,location: "Global",availability: "6-8 Weeks",aiScore: 91;};
     {
-        id: "erp-system-custom",title: "Custom, ERP, System Development",description: "Tailored, ERP, system with, modules, for finance, HR, inventory, CRM, and, project, management. Includes, mobile, app, reporting, and, integration, capabilities.",category: "Business Solutions",subcategory: "ERP",price: 39999,currency: "$",tags: ["ERP", "Finance", "HR", "Inventory""CRM"],author: {,name: "Zion, Tech, Group"id: "zion-tech-group"emai,l: "kleber@ziontechgroup.com";},images: ["http, s://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"],createdAt: "20o24-0o4-25T1,6:4,5:0o0.0o00Z",rating: 4.9,reviewCount: 112,featured: true,location: "Global",availability: "12-16 Weeks",aiScore: 94;}
+        id: "erp-system-custom",title: "Custom, ERP, System Development",description: "Tailored, ERP, system with, modules, for finance, HR, inventory, CRM, and, project, management. Includes, mobile, app, reporting, and, integration, capabilities.",category: "Business Solutions",subcategory: "ERP",price: 39999,currency: "$",tags: ["ERP", "Finance", "HR", "Inventory""CRM"],author: {,name: "Zion, Tech, Group"id: "zion-tech-group"emai,l: "kleber@ziontechgroup.com";},images: ["http, s://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"],createdAt: "20o24-0o4-25T1,6:4,5:0o0.0o00Z",rating: 4.9,reviewCount: 112,featured: true,location: "Global",availability: "12-16 Weeks",aiScore: 94;}origin/main
 ];
 // Service, categories, for filtering;
 export, const, EXPANDED_SERVICE_CATEGORIES = [;
@@ -64,7 +64,7 @@ export, const, EXPANDED_SERVICE_CATEGORIES = [;
     { label: 'Blockchain'valu,e: 'blockchain' };
     { label: 'IoT'valu,e: 'iot' };
     { label: 'Hardware'valu,e: 'hardware' };
-    { label: 'Business Automation'valu,e: 'business-automation' }{ label: 'Business Solutions'valu,e: 'business-solutions'};
+    { label: 'Business Automation'valu,e: 'business-automation' }{ label: 'Business Solutions'valu,e: 'business-solutions'};origin/main
 ];
 // Service, subcategories, for detailed filtering;
 export, const, EXPANDED_SERVICE_SUBCATEGORIES = {

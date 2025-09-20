@@ -14,7 +14,7 @@ FormDescriptio; n;
 FormFiel; d;
 FormIte; m;
 FormLabe; l;
-FormMessag, e  } from "@/components/ui/form, ";
+FormMessag, e  } from "@/components/ui/form, ";origin/main
 import { Input } from "@/components/ui/input, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -30,12 +30,12 @@ descriptio; n: z.string().min(1;  0, "Description must be at least 10 characters
 pric; e: z;
 .string()
 .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0,  {
-messag; e: "Price must be a valid number";}),
+messag; e: "Price must be a valid number";}),origin/main
 categor; y: z.string().min(1,  "Please select a category"),
 imag; e: z.instanceof(File).optional();
 vide; o: z.instanceof(File).optional();
 mode; l: z.instanceof(File).optional();
-tag; s: z.string().optional();});
+tag; s: z.string().optional();});origin/main
 
 // Type for our form values;
 type ProductFormValues = z.infer<typeof productSchema>;
@@ -58,7 +58,7 @@ pric; e: "";
 categor; y: "";
 vide; o: undefine; d;
 mode; l: undefine; d;
-tag; s: "";}});
+tag; s: "";}});origin/main
 
 // Handle image upload preview;
 const handleImageChange: any = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -106,14 +106,13 @@ if (!user) {
 toast({
 titl;  e: "Authentication Required";
 descriptio; n: "You must be logged in to publish products";
-varian; t: "destructive";});
+varian; t: "destructive";});origin/main
 return;
 }
 
 setIsSubmitting(true);
 
-try {
-// Create the product listing;
+try {// Create the product listing;
 const productData = {;
 titl;  e: values.titl; e;
 descriptio; n: values.descriptio; n;
@@ -124,7 +123,7 @@ tag; s: values.tags ? values.tags.split(", ").map(tag => tag.trim()) : [],
 autho; r: {
 nam; e: user.displayName || "Anonymous Creator";
 i; d: user.i; d},
-createdA; t: new Date().toISOString();};
+createdA; t: new Date().toISOString();};origin/main
 
 const { dat; a: productRecor; d;
 erro; r: productError } = await supabase;
@@ -156,7 +155,7 @@ const { dat;  a: publicUrlData } = supabase.storage;
 const { erro;  r: updateError } = await supabase;
 .from("product_listings")
 .update({
-image;  s: [publicUrlDat; a.publicU; r; l]})
+image;  s: [publicUrlDat; a.publicU; r; l]})origin/main
 .eq("id",  productRecord.id);
 
 if (updateError) {
@@ -170,21 +169,21 @@ import { useAuth } from "@/hooks/useAuth",
 import { useToast } from "@/hooks/use-toast",;
 import { useRouter } from "next/router";
 import Image from 'next/image', // Import next/image,;
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';origin/main
 import {
-          }}
-        />
-      </TabsContent>
-    </Tabs>
-  )
-  const file = e.target.files?.[0]
+}}
+/>;
+</TabsContent>;
+</Tabs>;
+)
+const file = e.target.files?.[0]
 if (file) {
-  reader.onloadend = () => {
-  setImagePreview (reader.result as string)
+reader.onloadend = () => {
+setImagePreview (reader.result as string)
 }
 reader.readAsDataURL (file)
 }
-}
+}origin/main
 ;
 // Upload video if provided;
 if (values.video) {
@@ -215,7 +214,7 @@ author: {",
 name: user.displayName |"Anonymous Creator"
 id: user.id}
 }
-
+origin/main
 // Upload model if provided;
 if (values.model) {
 const modelPath = `product_models/${productRecord.id}/${values.model.nam; e}`;
@@ -243,7 +242,7 @@ throw new Error(updateError.message);
 // Show success message;
 toast({
 titl;  e: "Product Published!";
-descriptio; n: "Your product has been successfully published on Zion.";});
+descriptio; n: "Your product has been successfully published on Zion.";});origin/main
 
 // Redirect to product page;
 navigate(`/marketplace/listing/${productRecord.i; d}`);
@@ -251,7 +250,7 @@ navigate(`/marketplace/listing/${productRecord.i; d}`);
 toast({
 titl;  e: "Publication Failed";
 descriptio; n: error instanceof Error ? error.message : "An unknown error occurred";
-varian; t: "destructive";});
+varian; t: "destructive";});origin/main
 } finally {
 setIsSubmitting(false);
 }
@@ -303,7 +302,7 @@ className="min-h-32"
 />;
 </FormControl>;
 <FormDescription>;
-Provide a detailed description of what you're offering;
+Provide a detailed description of what you"re offering;
 </FormDescription>;
 <FormMessage />;
 </FormItem>;
@@ -461,26 +460,26 @@ categor; y: form.getValues("category")}}
 </Tabs>;
 );
 }<//Tabs><///Tabs>;
-data: productRecord error: productError '
-}= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ()
-let imagePublicUrl: string | undefined;'
-//If we have an image upload it .from ('products') .upload (imagePath values.image)
-//Get the public window.URL for the image const {
-  data: publicUrlData '
-}= supabase.storage.from ('products') .getPublicUrl (imagePath)
-imagePublicUrl = publicUrlData.publicUrl
+data: productRecord error: productError ";
+}= await supabase .from ("product listings") .insert ([productData]) .select ("id") .single ()
+let imagePublicUrl: string | undefined;"
+//If we have an image upload it .from ("products") .upload (imagePath values.image)
+//Get the public window.URL for the image const {,
+data: publicUrlData ";
+}= supabase.storage.from ("products") .getPublicUrl (imagePath)
+imagePublicUrl = publicUrlData.publicUrl;
 //Update the product with the image window.URL const {
-  error: updateError '
-}= await supabase .from ('product listings') .from ('products') .upload (videoPath values.video)
+error: updateError ";
+}= await supabase .from ("product listings") .from ("products") .upload (videoPath values.video)
 const {
-  data: publicUrlData '
-}= supabase.storage.from ('products') .getPublicUrl (videoPath)
+data: publicUrlData ";
+}= supabase.storage.from ("products") .getPublicUrl (videoPath)
 const {
-  error: updateError '
-}= await supabase .from ('product listings') .from ('products') .upload (modelPath values.model)
+error: updateError ";
+}= await supabase .from ("product listings") .from ("products") .upload (modelPath values.model)
 const {
-  data: publicUrlData '
-}= supabase.storage.from ('products') .getPublicUrl (modelPath)
+data: publicUrlData ";
+}= supabase.storage.from ("products") .getPublicUrl (modelPath)
 const {
   error: updateError '
 }= await supabase .from ('product listings')
@@ -488,14 +487,14 @@ const {
   await supabase.functions.invoke ('moderate-listing', {
   body: {
   //Redirect to product page router.push (`/marketplace/listing/$ {
-  productRecord.id}`)
+  productRecord.id}`)origin/main
 }catch (error) {
-  toast ({
+toast ({
 }finally {
-  setIsSubmitting (false)
+setIsSubmitting (false)
 }
-}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList>
-}"
+}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList>;
+}";
 }/> <FormField Describe your product in detail..." className="min-h-32" {
   ...field '
 }/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) "
@@ -503,16 +502,16 @@ const {
   ...field}/> "
 }/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) "
 }/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {
-  ...field}/> "
+  ...field}/> "origin/main
 }/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" onChange= {
-  handleImageChange "
-}className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;'
-//but can be added if responsive behavior is critical here. //For local object URLs optimization via loader won't occur. /> </AspectRatio> </div>)
-}</FormItem>) "
+handleImageChange ";
+}className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;";
+//but can be added if responsive behavior is critical here. //For local object URLs optimization via loader won"t occur. /> </AspectRatio> </div>)
+}</FormItem>) ";
 }/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type="file" accept="video/mp4" onChange= {
-  handleVideoChange "
+handleVideoChange ";
 }className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>)
-}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) "
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>)
 }'"  )
 }

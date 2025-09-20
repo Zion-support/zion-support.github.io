@@ -17,14 +17,15 @@ largeText: boolean;
 fontSize: number;
 colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 reducedMotion: boolean;
-screenReader: boolean;
+screenReader: boolean;,
 focusIndicator: boolean;,
-keyboardNavigation: boolean;};
+keyboardNavigation: boolean;};origin/main
 interface AccessibilityPanelProps {
 enabled?: boolean;
 defaultSettings?: Partial<AccessibilitySettings>;
 onSettingsChange?: (settings: AccessibilitySettings) => void;
-className?: string;
+}
+className?: string;}
 };
 const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
 enabled = true;
@@ -39,7 +40,7 @@ largeText: false;
 fontSize: 16;
 colorBlindMode: "none";
 reducedMotion: false;
-screenReader: false;
+screenReader: false;,
 focusIndicator: true;,
 keyboardNavigation: true;
 ...defaultSettings;
@@ -47,9 +48,9 @@ keyboardNavigation: true;
 
 const [notifications, setNotifications] = useState<Array<{
 id: string;
-message: string;
+message: string;,
 type: "success" | "info" | "warning";,
-timestamp: number;}>>([]);
+timestamp: number;}>>([]);origin/main
 
 // Apply accessibility settings to the document;
 useEffect(() => {
@@ -158,21 +159,21 @@ return newSettings;
 });
 }, []);
 
-const resetToDefaults = useCallback(() => {
+const resetToDefaults = useCallback(() => {;
 const defaultSettings: AccessibilitySettings = {;
 highContrast: false;
 largeText: false;
 fontSize: 16;
 colorBlindMode: "none";
 reducedMotion: false;
-screenReader: false;
+screenReader: false;,
 focusIndicator: true;,
-keyboardNavigation: true;};
+keyboardNavigation: true;};origin/main
 setSettings(defaultSettings);
 
 const notification = {;
 id: Date.now().toString();
-message: "Accessibility settings reset to defaults";
+message: "Accessibility settings reset to defaults";,
 type: "info" as const;,
 timestamp: Date.now()};
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
@@ -466,13 +467,13 @@ __html: `;
 --bg-secondary: #1a1a1a;
 --text-primary: #ffffff;
 --text-secondary: #e0e0e0;
---border-color: #ffffff;}
+--border-color: #ffffff;}origin/main
 
 .large-text {
 --font-size-base: 18px;
 --font-size-lg: 22px;
 --font-size-xl: 26px;
---font-size-2xl: 32px;}
+--font-size-2xl: 32px;}origin/main
 
 .reduced-motion * {
 animation-duration: 0.01ms !important;
@@ -485,7 +486,7 @@ outline-offset: 2px !important;}
 
 .keyboard-navigation *:focus-visible {
 outline: 3px solid #00d4ff !important;
-outline-offset: 2px !important;}
+outline-offset: 2px !important;}origin/main
 
 .sr-only {
 position: absolute;
@@ -493,10 +494,10 @@ width: 1px;
 height: 1px;
 padding: 0;
 margin: -1px;
-overflow: hidden;
+overflow: hidden;,
 clip: rect(0; 0; 0; 0);
 white-space: nowrap;,
-border: 0;}
+border: 0;}origin/main
 
 /* Color blind mode filters */;
 [style*="--color-blind-mode: protanopia"] {,

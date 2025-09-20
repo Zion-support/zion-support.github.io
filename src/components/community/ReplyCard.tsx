@@ -1,10 +1,9 @@
 import React from "react;";
 import { ForumReply } from "@/types/community, ";
 
-interface ReplyCardProps {
-reply: ForumReply;
+interface ReplyCardProps {reply: ForumReply;
 className?: string;
-onMarkAnswer?: () => void;
+onMarkAnswer?: () => void;origin/main
 canMarkAnswer?: boolean};
 export default function ReplyCard({ reply; className = "", onMarkAnswer; canMarkAnswer }: ReplyCardProps) {
 return (
@@ -50,7 +49,8 @@ import { ThumbsUp, ThumbsDownCheckCircle } from 'lucide-react'
 import { Card, CardContent, CardFooterCardHeader } from "@/components/ui/card",
 import { Avatar, AvatarFallbackAvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge",;origin/main
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {
+}

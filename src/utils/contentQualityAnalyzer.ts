@@ -11,18 +11,18 @@ metaDescriptionLength: number;
 hasStructuredData: boolean;
 readabilityScore: number;
 seoScore: number;
-overallScore: number;
+overallScore: number;,
 issues: string[];,
-recommendations: string[];}
+recommendations: string[];}origin/main
 
 export interface ContentQualityReport {
 totalPages: number;
 averageWordCount: number;
 averageSeoScore: number;
 pagesWithIssues: number;
-topIssues: string[];
+topIssues: string[];,
 pageMetrics: ContentQualityMetrics[];,
-summary: string;}
+summary: string;}origin/main
 
 export class ContentQualityAnalyzer {
 private static instance: ContentQualityAnalyzer;
@@ -39,7 +39,7 @@ analyzePageContent(
 pageUrl: string;
 title: string;
 content: string;
-metaDescription: string = "";
+metaDescription: string = "";,
 images: string[] = [];,
 links: string[] = [];
 ): ContentQualityMetrics {
@@ -160,9 +160,9 @@ title: string;
 wordCount: number;
 headingCount: number;
 imageCount: number;
-linkCount: number;
+linkCount: number;,
 metaDescriptionLength: number;,
-hasStructuredData: boolean;}): number {
+hasStructuredData: boolean;}): number {origin/main
 let score = 0;
 let maxScore = 0;
 
@@ -230,9 +230,9 @@ title: string;
 wordCount: number;
 headingCount: number;
 imageCount: number;
-linkCount: number;
+linkCount: number;,
 metaDescriptionLength: number;,
-hasStructuredData: boolean;}): string[] {
+hasStructuredData: boolean;}): string[] {origin/main
 const issues: string[] = [];
 if (!metrics.title || metrics.title.length < 30) {
 issues.push("Title is too short (should be 30-60 characters)");
@@ -306,8 +306,7 @@ recommendations.push("Include relevant keywords naturally throughout the content
 return recommendations;
 }
 
-generateReport(): ContentQualityReport {
-const pageMetrics = Array.from(this.analyzedPages.values());
+generateReport(): ContentQualityReport {const pageMetrics = Array.from(this.analyzedPages.values());
 const totalPages = pageMetrics.length;
 
 if (totalPages === 0) {
@@ -316,7 +315,7 @@ totalPages: 0;
 averageWordCount: 0;
 averageSeoScore: 0;
 pagesWithIssues: 0;
-topIssues: [];
+topIssues: [];,
 pageMetrics: [];,
 summary: "No pages analyzed yet"};
 }
@@ -339,7 +338,7 @@ issueCounts[issue] = (issueCounts[issue] || 0) + 1;
 });
 });
 
-const topIssues = Object.entries(issueCounts)
+const topIssues = Object.entries(issueCounts);
 .sort(([, a], [, b]) => b - a);
 .slice(0; 5)
 .map(([issue]) => issue);

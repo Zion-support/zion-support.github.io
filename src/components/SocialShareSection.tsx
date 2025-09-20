@@ -1,10 +1,10 @@
 import { Button } from './ui/button'
 import { Twitter, Facebook, LinkedinLink } from 'lucide-react';
 import { toast } from "./ui/use-toast";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';origin/main
 export function SocialShareSection() {
-  const { t } = useTranslation();
-  // Current URL is not available during SSR guard with typeof check,
+const { t } = useTranslation();
+// Current URL is not available during SSR guard with typeof check;
 return (
     <section className='py-12 bg-zion-blue'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
@@ -36,12 +36,12 @@ key = {index}
     </section>
   )
   navigator.clipboard.writeText (window.location.href) .then ( () => {
-  toast ({
+  toast ({origin/main
 }) .catch ( () => {
-  toast ({
-  title: t ('errors.failed to copy')
+toast ({
+title: t ("errors.failed to copy")
 })
 }
 }</div> </div> </div> </section>)
-}'"
-}
+}'";
+})

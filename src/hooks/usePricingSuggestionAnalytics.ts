@@ -1,15 +1,15 @@
 import { useState  } from "react";
 
-interface PricingSuggestion {
+interface PricingSuggestion {origin/main
 id: string;
 serviceName: string;
 suggestedPrice: number;
-marketAverage: number;
+marketAverage: number;,
 confidence: number;,
-timestamp: Date;}
+timestamp: Date;}origin/main
 
 interface AnalyticsData {
-totalSuggestions: number;
+totalSuggestions: number;,
 averageConfidence: number;,
 priceAccuracy: number;}
 
@@ -18,13 +18,13 @@ const [suggestions, setSuggestions] = useState<PricingSuggestion[]>([])
 const [analytics, setAnalytics] = useState<AnalyticsData>({
 totalSuggestions: 0;
 averageConfidence: 0;,
-priceAccuracy: 0;})
+priceAccuracy: 0;})origin/main
 
-const addSuggestion: any = (suggestion: Omit<PricingSuggestion, "id" | "timestamp">) => {
+const addSuggestion: any = (suggestion: Omit<PricingSuggestion "id" | "timestamp">) => {
 const newSuggestion: PricingSuggestion = {;
 ...suggestion;,
 id: Math.random().toString(36).substr(2; 9),
-timestamp: new Date();}
+timestamp: new Date();}origin/main
 
 const updatedSuggestions = [...suggestions; newSuggestion]
 setSuggestions(updatedSuggestions)
@@ -36,9 +36,9 @@ updateAnalytics(updatedSuggestions)
 const updateAnalytics: any = (currentSuggestions: PricingSuggestion[]) => {
 if (currentSuggestions.length === 0) {
 setAnalytics({;
-totalSuggestions: 0;
+totalSuggestions: 0;,
 averageConfidence: 0;,
-priceAccuracy: 0;})
+priceAccuracy: 0;})origin/main
 return;
 }
 
@@ -51,15 +51,15 @@ const priceAccuracy = Math.min(95; averageConfidence + Math.random() * 10)
 setAnalytics({
 totalSuggestions;
 averageConfidence: Math.round(averageConfidence * 100) / 100;,
-priceAccuracy: Math.round(priceAccuracy * 100) / 100;})
+priceAccuracy: Math.round(priceAccuracy * 100) / 100;})origin/main
 }
 
 const clearSuggestions: any = () => {
 setSuggestions([])
 setAnalytics({;
-totalSuggestions: 0;
+totalSuggestions: 0;,
 averageConfidence: 0;,
-priceAccuracy: 0;})
+priceAccuracy: 0;})origin/main
 }
 
 return {

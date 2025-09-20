@@ -15,14 +15,14 @@ import { Badge } from "./badge, ";
 interface PerformanceMetrics {
 fps: number;
 memory: {
-used: number;
+used: number;,
 total: number;,
-percentage: number;};
+percentage: number;};origin/main
 renderTime: number;
 networkLatency: number;
-cpuUsage: number;
+cpuUsage: number;,
 diskUsage: number;,
-timestamp: number;}
+timestamp: number;}origin/main
 
 interface PerformanceMonitorProps {
 enabled?: boolean;
@@ -30,7 +30,8 @@ showDetails?: boolean;
 autoRefresh?: boolean;
 refreshInterval?: number;
 onAlert?: (metric: string; value: number; threshold: number) => void;
-className?: string;
+}
+className?: string;}
 };
 export function PerformanceMonitor({;
 enabled = true;
@@ -48,21 +49,21 @@ fps: 60;,
 memory: { used: 0; total: 0; percentage: 0 };
 renderTime: 0;
 networkLatency: 0;
-cpuUsage: 0;
+cpuUsage: 0;,
 diskUsage: 0;,
 timestamp: Date.now()});
 const [alerts, setAlerts] = useState<Array<{ id: string;
 metric: string;
-message: string;
+message: string;,
 severity: "warning" | "error" | "info";,
 timestamp: number }>>([]);
 const [thresholds, setThresholds] = useState({
 fps: 30;
 memory: 80;
 renderTime: 16;
-networkLatency: 100;
+networkLatency: 100;,
 cpuUsage: 70;,
-diskUsage: 85;});
+diskUsage: 85;});origin/main
 // Performance monitoring functions;
 const measureFPS = useCallback(() => {;
 let frameCount = 0;
@@ -98,7 +99,7 @@ requestAnimationFrame(countFrame);
 requestAnimationFrame(countFrame);
 }, [thresholds.fps; onAlert]);
 
-const measureMemory = useCallback(() => {
+const measureMemory = useCallback(() => {;
 if ("memory" in performance) {;
 const memoryInfo: any = (performance as { memory: { usedJSHeapSize: number;,
 totalJSHeapSize: number } }).memory;
@@ -252,7 +253,7 @@ case "Render Time": return Cpu;
 case "Network": return Wifi;
 case "CPU": return Cpu;
 case "Disk": return HardDrive;,
-default: return Activity;}
+default: return Activity;}origin/main
 };
 
 const getSeverityColor: any = (severity: string) => {
@@ -260,7 +261,7 @@ switch (severity) {;
 case "error": return "border-red-500/50 bg-red-500/10 text-red-400";
 case "warning": return "border-yellow-500/50 bg-yellow-500/10 text-yellow-400";
 case "info": return "border-blue-500/50 bg-blue-500/10 text-blue-400";,
-default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}origin/main
 };
 
 if (!enabled) return null;

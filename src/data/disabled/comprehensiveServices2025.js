@@ -1,7 +1,6 @@
 // Enhanced Micro SAAS Services for 2025;
 export const enhancedMicroSaasServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "TaskFlow Pro";
         category: "Productivity";
         pricing: "Freemium";
@@ -42,7 +41,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "14 days"};
     {
-        id: 2;
+        id: 2;origin/main
         name: "InvoiceGenius AI";
         category: "Finance";
         pricing: "Freemium";
@@ -83,7 +82,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "30 days"};
     {
-        id: 3;
+        id: 3;origin/main
         name: "SocialSync Pro";
         category: "Marketing";
         pricing: "Freemium";
@@ -124,7 +123,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "7 days"};
     {
-        id: 4;
+        id: 4;origin/main
         name: "CustomerFlow CRM";
         category: "CRM";
         pricing: "Freemium";
@@ -165,7 +164,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "14 days"};
     {
-        id: 5;
+        id: 5;origin/main
         name: "DataViz Studio";
         category: "Analytics";
         pricing: "Freemium";
@@ -206,7 +205,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "21 days"};
     {
-        id: 6;
+        id: 6;origin/main
         name: "ScheduleMaster AI";
         category: "Scheduling";
         pricing: "Freemium";
@@ -247,8 +246,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "14 days"};
     // NEW INNOVATIVE MICRO SAAS SERVICES;
-    {
-        id: 7;
+    {id: 7;
         name: "Quantum AI Fusion Platform";
         category: "Quantum Computing";
         pricing: "Enterprise";
@@ -289,7 +287,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "30 days"};
     {
-        id: 8;
+        id: 8;origin/main
         name: "Neuromorphic Computing Platform";
         category: "AI Architecture";
         pricing: "Enterprise";
@@ -330,7 +328,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "60 days"};
     {
-        id: 9;
+        id: 9;origin/main
         name: "Edge AI Orchestration Platform";
         category: "Edge Computing";
         pricing: "Professional";
@@ -371,7 +369,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "45 days"};
     {
-        id: 10;
+        id: 10;origin/main
         name: "Federated Learning Platform";
         category: "Privacy AI";
         pricing: "Professional";
@@ -412,7 +410,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "60 days"};
     {
-        id: 11;
+        id: 11;origin/main
         name: "AI Ethics & Governance Platform";
         category: "AI Governance";
         pricing: "Professional";
@@ -453,7 +451,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "45 days"};
     {
-        id: 12;
+        id: 12;origin/main
         name: "AI Marketplace Platform";
         category: "AI Ecosystem";
         pricing: "Professional";
@@ -494,7 +492,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "30 days"};
     {
-        id: 13;
+        id: 13;origin/main
         name: "SmartInvoice AI";
         category: "Finance";
         pricing: "Professional";
@@ -535,7 +533,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "14 days"};
     {
-        id: 14;
+        id: 14;origin/main
         name: "ContentGenius Pro";
         category: "Marketing";
         pricing: "Professional";
@@ -576,7 +574,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "7 days"};
     {
-        id: 15;
+        id: 15;origin/main
         name: "LeadFlow CRM";
         category: "CRM";
         pricing: "Professional";
@@ -617,7 +615,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "30 days"};
     {
-        id: 16;
+        id: 16;origin/main
         name: "DataViz Studio";
         category: "Analytics";
         pricing: "Professional";
@@ -658,7 +656,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "14 days"};
     {
-        id: 17;
+        id: 17;origin/main
         name: "SmartScheduler AI";
         category: "Scheduling";
         pricing: "Freemium";
@@ -699,7 +697,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "30 days"};
     {
-        id: 18;
+        id: 18;origin/main
         name: "QuantumCode Studio";
         category: "Quantum Computing";
         pricing: "Enterprise";
@@ -740,7 +738,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "7 days"};
     {
-        id: 19;
+        id: 19;origin/main
         name: "EdgeCompute Pro";
         category: "Edge Computing";
         pricing: "Enterprise";
@@ -781,7 +779,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "14 days"};
     {
-        id: 20;
+        id: 20;origin/main
         name: "PrivacyGuard AI";
         category: "Privacy AI";
         pricing: "Professional";
@@ -822,7 +820,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "21 days"};
     {
-        id: 21;
+        id: 21;origin/main
         name: "AI Governance Suite";
         category: "AI Governance";
         pricing: "Enterprise";
@@ -863,7 +861,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "30 days"};
     {
-        id: 22;
+        id: 22;origin/main
         name: "EcoSystem AI";
         category: "AI Ecosystem";
         pricing: "Professional";
@@ -904,7 +902,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "21 days"};
     {
-        id: 23;
+        id: 23;origin/main
         name: "Blockchain Analytics Pro";
         category: "Finance";
         pricing: "Enterprise";
@@ -945,7 +943,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "14 days"};
     {
-        id: 24;
+        id: 24;origin/main
         name: "SmartContract AI";
         category: "AI Architecture";
         pricing: "Professional";
@@ -986,7 +984,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "21 days"};
     {
-        id: 25;
+        id: 25;origin/main
         name: "Quantum Security Vault";
         category: "Quantum Computing";
         pricing: "Enterprise";
@@ -1029,8 +1027,7 @@ export const enhancedMicroSaasServices2025 = [
 ];
     // Enhanced IT Services for 2025;
 export const enhancedITServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Enterprise Network Infrastructure";
         category: "Infrastructure";
         description: "Complete network design, implementation, and management for large organizations with AI-powered optimization",
@@ -1070,7 +1067,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "8-12 weeks";
         support: "24/7 enterprise support"};
     {
-        id: 2;
+        id: 2;origin/main
         name: "Cloud Migration & Optimization";
         category: "Cloud Services";
         description: "End-to-end cloud migration services with AI-powered cost optimization and performance tuning";
@@ -1110,7 +1107,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "12-16 weeks";
         support: "24/7 cloud support"};
     {
-        id: 3;
+        id: 3;origin/main
         name: "AI-Powered Cybersecurity";
         category: "Security";
         description: "Next-generation cybersecurity with AI threat detection, automated response, and predictive security",
@@ -1150,7 +1147,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "6-10 weeks";
         support: "24/7 security support"};
     {
-        id: 4;
+        id: 4;origin/main
         name: "Data Center Modernization";
         category: "Infrastructure";
         description: "Complete data center modernization with AI-powered management and energy optimization";
@@ -1190,7 +1187,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "16-24 weeks";
         support: "24/7 data center support"};
     {
-        id: 5;
+        id: 5;origin/main
         name: "DevOps & AI Automation";
         category: "DevOps";
         description: "Complete DevOps transformation with AI-powered automation, CI/CD pipelines, and intelligent monitoring",
@@ -1230,7 +1227,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "10-14 weeks";
         support: "24/7 DevOps support"};
     {
-        id: 6;
+        id: 6;origin/main
         name: "AI Business Intelligence Platform";
         category: "Analytics";
         description: "Comprehensive BI platform with AI-powered analytics, predictive modeling, and real-time insights",
@@ -1270,7 +1267,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "14-20 weeks";
         support: "24/7 analytics support"};
     {
-        id: 7;
+        id: 7;origin/main
         name: "DevOps Automation Platform";
         category: "DevOps";
         description: "Comprehensive DevOps automation with CI/CD pipelines, infrastructure as code, and AI-powered optimization",
@@ -1308,7 +1305,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "8-12 weeks";
         support: "24/7 DevOps support"};
     {
-        id: 8;
+        id: 8;origin/main
         name: "Data Center Modernization";
         category: "Infrastructure";
         description: "Complete data center transformation with AI-powered optimization, energy efficiency, and hybrid cloud integration",
@@ -1346,7 +1343,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "16-24 weeks";
         support: "24/7 infrastructure support"};
     {
-        id: 9;
+        id: 9;origin/main
         name: "IoT Infrastructure & Management";
         category: "IoT";
         description: "End-to-end IoT infrastructure design, implementation, and management with AI-powered analytics and security",
@@ -1384,7 +1381,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "12-18 weeks";
         support: "24/7 IoT support"};
     {
-        id: 10;
+        id: 10;origin/main
         name: "Digital Transformation Consulting";
         category: "Consulting";
         description: "Strategic digital transformation consulting with technology roadmap, change management, and implementation support",
@@ -1422,7 +1419,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "20-32 weeks";
         support: "Business hours consulting support"};
     {
-        id: 11;
+        id: 11;origin/main
         name: "Legacy System Modernization";
         category: "Modernization";
         description: "Legacy system modernization with cloud migration, API development, and microservices architecture",
@@ -1460,7 +1457,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "16-24 weeks";
         support: "24/7 modernization support"};
     {
-        id: 12;
+        id: 12;origin/main
         name: "Enterprise Software Development";
         category: "Software Development";
         description: "Custom enterprise software development with modern technologies, AI integration, and scalable architecture",
@@ -1500,8 +1497,7 @@ export const enhancedITServices2025 = [
 ];
     // Enhanced AI Services for 2025;
 export const enhancedAIServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "AI-Powered Business Intelligence";
         category: "Business Intelligence";
         description: "Advanced analytics and business intelligence powered by machine learning algorithms with real-time insights";
@@ -1541,8 +1537,7 @@ export const enhancedAIServices2025 = [
         aiScore: 95;
         useCases: ["Financial analysis", "Sales forecasting", "Customer behavior analysis", "Performance tracking"]
     },
-    {
-        id: 2;
+    {id: 2;
         name: "Natural Language Processing Solutions";
         category: "Language AI";
         description: "Advanced NLP solutions for text analysis, sentiment analysis, and language understanding with multilingual support",
@@ -1582,8 +1577,7 @@ export const enhancedAIServices2025 = [
         aiScore: 92;
         useCases: ["Customer support", "Content moderation", "Market research", "Document analysis"]
     },
-    {
-        id: 3;
+    {id: 3;
         name: "Computer Vision & Image Recognition";
         category: "Visual AI";
         description: "Advanced computer vision solutions for image and video analysis, object detection, and pattern recognition",
@@ -1623,8 +1617,7 @@ export const enhancedAIServices2025 = [
         aiScore: 94;
         useCases: ["Manufacturing QC", "Security systems", "Retail analytics", "Medical imaging"]
     },
-    {
-        id: 4;
+    {id: 4;
         name: "Predictive Analytics & Forecasting";
         category: "Predictive AI";
         description: "AI-powered predictive analytics for forecasting trends, risks, and opportunities with high accuracy",
@@ -1664,8 +1657,7 @@ export const enhancedAIServices2025 = [
         aiScore: 91;
         useCases: ["Supply chain optimization", "Financial risk management", "Sales forecasting", "Maintenance prediction"]
     },
-    {
-        id: 5;
+    {id: 5;
         name: "AI-Powered Process Automation";
         category: "Process Automation";
         description: "Intelligent automation solutions that learn and adapt to optimize business processes with RPA integration";
@@ -1705,8 +1697,7 @@ export const enhancedAIServices2025 = [
         aiScore: 89;
         useCases: ["Customer service", "Data entry", "Document processing", "Quality control"]
     },
-    {
-        id: 6;
+    {id: 6;
         name: "AI Chatbot & Virtual Assistants";
         category: "Conversational AI";
         description: "Intelligent chatbots and virtual assistants for customer service and business automation with natural conversations";
@@ -1746,8 +1737,7 @@ export const enhancedAIServices2025 = [
         aiScore: 88;
         useCases: ["Customer support", "Sales assistance", "Appointment booking", "Information retrieval"]
     },
-    {
-        id: 7;
+    {id: 7;
         name: "AI-Powered Predictive Maintenance";
         category: "Predictive Analytics";
         description: "Advanced predictive maintenance solutions using AI and IoT sensors to prevent equipment failures and optimize operations";
@@ -1787,8 +1777,7 @@ export const enhancedAIServices2025 = [
         aiScore: 94;
         useCases: ["Manufacturing equipment", "HVAC systems", "Medical devices", "Transportation vehicles"]
     },
-    {
-        id: 8;
+    {id: 8;
         name: "AI-Powered Supply Chain Optimization";
         category: "Supply Chain";
         description: "Intelligent supply chain optimization with demand forecasting, inventory management, and logistics optimization",
@@ -1828,8 +1817,7 @@ export const enhancedAIServices2025 = [
         aiScore: 92;
         useCases: ["Demand forecasting", "Inventory optimization", "Route planning", "Supplier selection"]
     },
-    {
-        id: 9;
+    {id: 9;
         name: "AI-Powered Customer Experience";
         category: "Customer Experience";
         description: "Comprehensive customer experience platform with AI-powered personalization, sentiment analysis, and journey optimization",
@@ -1869,8 +1857,7 @@ export const enhancedAIServices2025 = [
         aiScore: 91;
         useCases: ["Product recommendations", "Content personalization", "Customer support", "Marketing campaigns"]
     },
-    {
-        id: 10;
+    {id: 10;
         name: "AI-Powered Financial Risk Management";
         category: "Financial AI";
         description: "Advanced financial risk management platform with AI-powered risk assessment, fraud detection, and compliance monitoring",
@@ -1910,8 +1897,7 @@ export const enhancedAIServices2025 = [
         aiScore: 96;
         useCases: ["Credit risk assessment", "Fraud detection", "Portfolio optimization", "Regulatory compliance"]
     },
-    {
-        id: 11;
+    {id: 11;
         name: "AI-Powered Healthcare Analytics";
         category: "Healthcare AI";
         description: "Comprehensive healthcare analytics platform with AI-powered diagnosis support, patient monitoring, and predictive health",
@@ -1951,8 +1937,7 @@ export const enhancedAIServices2025 = [
         aiScore: 93;
         useCases: ["Medical imaging", "Diagnosis support", "Patient monitoring", "Drug discovery"]
     },
-    {
-        id: 12;
+    {id: 12;
         name: "AI-Powered Marketing Automation";
         category: "Marketing AI";
         description: "Intelligent marketing automation platform with AI-powered campaign optimization, audience targeting, and performance analytics",
@@ -1993,7 +1978,6 @@ export const enhancedAIServices2025 = [
         useCases: ["Campaign optimization", "Audience targeting", "Content personalization", "ROI optimization"]
     }
 ];
-export const allServices = {
-    microSaas: enhancedMicroSaasServices2025;
+export const allServices = {microSaas: enhancedMicroSaasServices2025;
     itServices: enhancedITServices2025;
     aiServices: enhancedAIServices2025};

@@ -1,18 +1,19 @@
 import React from "react";
 
 export interface LinkHealthResult {
-url: string;
+url: string;,
 status: "healthy" | "unhealthy" | "error";
 statusCode?: number;
 responseTime?: number;
 error?: string;,
-lastChecked: Date;}
+lastChecked: Date;}origin/main
 
 export interface LinkHealthConfig {
 timeout?: number;
 retries?: number;
 userAgent?: string;
-followRedirects?: boolean;
+}
+followRedirects?: boolean;}
 }
 
 export class LinkHealthChecker {
@@ -20,10 +21,10 @@ private config: Required<LinkHealthConfig>;
 
 constructor(config: LinkHealthConfig = {}) {
 this.config = {
-timeout: config.timeout || 10000;
+timeout: config.timeout || 10000;,
 retries: config.retries || 3;,
 userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0",
-followRedirects: config.followRedirects !== false;};
+followRedirects: config.followRedirects !== false;};origin/main
 }
 
 async checkLink(url: string): Promise<LinkHealthResult> {
@@ -31,8 +32,8 @@ const startTime = Date.now();
 
 try {
 const response = await fetch(url, {
-method: "HEAD",
-signal: AbortSignal.timeout(this.config.timeout),
+method: "HEAD",;
+signal: AbortSignal.timeout(this.config.timeout),;
 headers: {;
 "User-Agent": this.config.userAgent;
 },
@@ -40,8 +41,7 @@ redirect: this.config.followRedirects ? "follow" : "manual"});
 
 const responseTime = Date.now() - startTime;
 
-if (response.ok || response.status < 400) {
-return {
+if (response.ok || response.status < 400) {return {
 url;
 status: "healthy",
 statusCode: response.status;
@@ -56,8 +56,7 @@ responseTime;,
 error: `HTTP ${response.status}: ${response.statusText}`,
 lastChecked: new Date()};
 }
-} catch (error) {
-return {
+} catch (error) {return {
 url;
 status: "error",
 error: error instanceof Error ? error.message : "Unknown error",
@@ -72,8 +71,7 @@ for (const url of urls) {
 try {
 const result = await this.checkLink(url);
 results.push(result);
-} catch (error) {
-results.push({
+} catch (error) {results.push({
 url;
 status: "error",
 error: error instanceof Error ? error.message : "Unknown error",
@@ -113,9 +111,9 @@ lastChecked: new Date()};
 getHealthSummary(results: LinkHealthResult[]): {
 total: number;
 healthy: number;
-unhealthy: number;
+unhealthy: number;,
 errors: number;,
-averageResponseTime: number;} {
+averageResponseTime: number;} {origin/main
 const total = results.length;
 const healthy = results.filter(r => r.status === "healthy").length;
 const unhealthy = results.filter(r => r.status === "unhealthy").length;

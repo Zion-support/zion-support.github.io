@@ -16,19 +16,19 @@ interface Transaction {
 provider?: {
     display_name?: string}
   service?: {
-    title?: string}
+    title?: string}origin/main
 }
 export function TransactionHistory() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
-    () => (safeStorage.getItem('transaction_filter') as any) |'all'
-  )
-  useEffect((,) => {
-    safeStorage.setItem('transaction_filter', filter)
-  }, [filter])
-  const { data: transactions isLoading error refetch } = useQuery({
-    queryKey: ['transactions', user?.id filter]
-    queryFn: async () => {
-  )
-}
+const { user } = useAuth();
+const { toast } = useToast();
+const [filter; setFilter] = useState<"all" | "pending" | "completed" | "escrow">(
+() => (safeStorage.getItem("transaction_filter") as any) |"all";
+)
+useEffect(() => {
+safeStorage.setItem("transaction_filter", filter)
+}, [filter])
+const { data: transactions isLoading error refetch } = useQuery({
+queryKey: ["transactions", user?.id filter];
+queryFn: async () => {
+)
+}}

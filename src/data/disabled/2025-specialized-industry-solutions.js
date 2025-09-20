@@ -1,7 +1,6 @@
 export const specializedIndustrySolutions2025 = [
     // Healthcare & Biotech Solutions;
-    {
-        id: 1;
+    {id: 1;
         name: "MedTech AI Platform";
         category: "Healthcare";
         industry: "Biotechnology";
@@ -47,8 +46,7 @@ export const specializedIndustrySolutions2025 = [
         useCases: ["Medical imaging", "Drug discovery", "Clinical trials", "Patient monitoring"],
         industryStandards: ["DICOM", "HL7", "FHIR", "CDISC"]
     },
-    {
-        id: 2;
+    {id: 2;
         name: "FinTech Compliance Suite";
         category: "Financial Services";
         industry: "Banking & Finance";
@@ -95,8 +93,7 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["ISO 20022", "SWIFT", "ACH", "SEPA"]
     },
     // Manufacturing & Industry 4.0;
-    {
-        id: 3;
+    {id: 3;
         name: "Smart Factory Hub";
         category: "Manufacturing";
         industry: "Industry 4.0";
@@ -143,8 +140,7 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["OPC UA", "MQTT", "Modbus", "Ethernet/IP"]
     },
     // Retail & E-commerce Solutions;
-    {
-        id: 4;
+    {id: 4;
         name: "OmniChannel Retail AI";
         category: "Retail";
         industry: "E-commerce";
@@ -191,8 +187,7 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["REST APIs", "GraphQL", "OAuth 2.0", "Webhooks"]
     },
     // Education & EdTech;
-    {
-        id: 5;
+    {id: 5;
         name: "Adaptive Learning Platform";
         category: "Education";
         industry: "EdTech";
@@ -239,8 +234,7 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["LTI", "SCORM", "xAPI", "Common Core"]
     },
     // Transportation & Logistics;
-    {
-        id: 6;
+    {id: 6;
         name: "Logistics Optimization AI";
         category: "Transportation";
         industry: "Logistics";
@@ -287,8 +281,7 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["EDI", "API standards", "GPS protocols", "IoT standards"]
     },
     // Energy & Sustainability;
-    {
-        id: 7;
+    {id: 7;
         name: "Green Energy Management";
         category: "Energy";
         industry: "Renewable Energy";
@@ -335,8 +328,7 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["IEC 61850", "DNP3", "Modbus", "OPC UA"]
     },
     // Real Estate & PropTech;
-    {
-        id: 8;
+    {id: 8;
         name: "PropTech Intelligence Suite";
         category: "Real Estate";
         industry: "PropTech";
@@ -383,8 +375,7 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["RESO", "RETS", "Open Real Estate", "Financial data standards"]
     },
     // Legal & Compliance;
-    {
-        id: 9;
+    {id: 9;
         name: "LegalTech AI Platform";
         category: "Legal Services";
         industry: "Legal Technology";
@@ -431,8 +422,7 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["Legal XML", "Case law standards", "Document formats", "API standards"]
     },
     // Agriculture & AgTech;
-    {
-        id: 10;
+    {id: 10;
         name: "Precision Agriculture AI";
         category: "Agriculture";
         industry: "AgTech";

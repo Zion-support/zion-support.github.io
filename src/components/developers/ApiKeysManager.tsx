@@ -146,83 +146,83 @@ variant="ghost"
             </div>
           ) : (
             keys.map(key => (
-              <div,
+              <div,origin/main
 key={key.id}
-                className='p-4 border border-zinc-800 rounded-lg'
-              >
-                <div className='flex items-center justify-between'>
-                  <div className='flex items-center'>                    <div>
-                      <h3 className='font-medium'>{key.name}</h3>
-                      <div className='flex items-center space-x-2 mt-1'>
-                        <span className='text-sm text-zinc-400 font-mono'>
-                          {key.key_prefix}••••••••••••
-                        </span>
-                        {key.is_active ? (
-                          <Badge className='bg-green-700 text-white'>
-                            Active
-                          </Badge>
-                        ) : (
-                          <Badge,
-variant='secondary'
-                            className='bg-red-900 text-white border-red-800'
-                          >
-                            Revoked
-                          </Badge>                        )}
-                      </div>
-                    </div>
-                  </div>
-                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
-              This key will only be displayed once. Please save it securely.
-            </p>
-            <CodeBlock code={newApiKey} className="mb-3" />
-            <div className="text-sm text-zinc-400">
-              <span className="font-medium">Example usage:</span>
-            </div>
-            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
-          </div>
-        )}
-        {/* API Keys List */}
-        <div className="space-y-4">
-          {loading ? (
-            <div className="text-center py-8 text-zinc-500">Loading API keys...</div>
-          ) : keys.length === 0 ? (
-            <div className="text-center py-8 text-zinc-500">
-              <Key className="mx-auto mb-2 opacity-30" size={24} />
-              <p>No API keys found.</p>
-              <p className="text-sm mt-1">Create one to access the Zion APIs.</p>
-            </div>
-          ) : (
-            keys.map((key) => (
-              <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <div>
-                      <h3 className="font-medium">{key.name}</h3>
-                      <div className="flex items-center space-x-2 mt-1">
-                        <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>
-                        {key.is_active ? (
-                          <Badge className="bg-green-700 text-white">Active</Badge>
-                        ) : (
-                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button,
-variant='ghost'
-                        size='icon'
-                        aria-label='More options'
-                      >
-                        <MoreVertical size={16} />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent,
-align='end'
-                      className='bg-zinc-900 border-zinc-800 text-white'
-                    >
-                      <DropdownMenuItem,
+className="p-4 border border-zinc-800 rounded-lg"
+>;
+<div className="flex items-center justify-between">;
+<div className="flex items-center">                    <div>;
+<h3 className="font-medium">{key.name}</h3>;
+<div className="flex items-center space-x-2 mt-1">;
+<span className="text-sm text-zinc-400 font-mono">;
+{key.key_prefix}••••••••••••;
+</span>;
+{key.is_active ? (
+<Badge className="bg-green-700 text-white">;
+Active;
+</Badge>;
+) : (
+<Badge;
+variant="secondary"
+className="bg-red-900 text-white border-red-800"
+>;
+Revoked;
+</Badge>                        )}
+</div>;
+</div>;
+</div>;
+<Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>;
+This key will only be displayed once. Please save it securely.;
+</p>;
+<CodeBlock code={newApiKey} className="mb-3" />;
+<div className="text-sm text-zinc-400">;
+<span className="font-medium">Example usage:</span>;
+</div>;
+<CodeBlock code={getExampleCode(newApiKey)} language="bash" />;
+</div>;
+)}
+{/* API Keys List */}
+<div className="space-y-4">;
+{loading ? (
+<div className="text-center py-8 text-zinc-500">Loading API keys...</div>;
+) : keys.length === 0 ? (
+<div className="text-center py-8 text-zinc-500">;
+<Key className="mx-auto mb-2 opacity-30" size={24} />;
+<p>No API keys found.</p>;
+<p className="text-sm mt-1">Create one to access the Zion APIs.</p>;
+</div>;
+) : (
+keys.map((key) => (
+<div key={key.id} className="p-4 border border-zinc-800 rounded-lg">;
+<div className="flex items-center justify-between">;
+<div className="flex items-center">;
+<div>;
+<h3 className="font-medium">{key.name}</h3>;
+<div className="flex items-center space-x-2 mt-1">;
+<span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>;
+{key.is_active ? (
+<Badge className="bg-green-700 text-white">Active</Badge>;
+) : (
+<Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>;
+)}
+</div>;
+</div>;
+</div>;
+<DropdownMenu>;
+<DropdownMenuTrigger asChild>;
+<Button;
+variant="ghost"
+size="icon";
+aria-label="More options";
+>;
+<MoreVertical size={16} />;
+</Button>;
+</DropdownMenuTrigger>;
+<DropdownMenuContent;
+align="end";
+className="bg-zinc-900 border-zinc-800 text-white"
+>;
+<DropdownMenuItem;
 onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer'
                         disabled={!key.is_active}
@@ -232,21 +232,21 @@ onClick={() => setShowRegenerateConfirm(key.id)}
                       >
                         <RefreshCw size={14} className='mr-2' /> Regenerate
                       </DropdownMenuItem>
-                      <DropdownMenuItem,
+                      <DropdownMenuItem,origin/main
 onClick={() => setShowDeleteConfirm(key.id)}
-                        className='cursor-pointer text-red-500'
-                        disabled={!key.is_active}                      >
-                        <X size={14} className='mr-2' /> Revoke                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>                        <X size={14} className="mr-2" /> Revoke
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-                <div className='mt-3 flex flex-wrap gap-2'>
-                  {key.scopes.map(scope => (
-                    <Badge,
+className="cursor-pointer text-red-500"
+disabled={!key.is_active}                      >;
+<X size={14} className="mr-2" /> Revoke                      </DropdownMenuItem>;
+</DropdownMenuContent>;
+</DropdownMenu>;
+</div>                        <X size={14} className="mr-2" /> Revoke;
+</DropdownMenuItem>;
+</DropdownMenuContent>;
+</DropdownMenu>;
+</div>;
+<div className="mt-3 flex flex-wrap gap-2">;
+{key.scopes.map(scope => (
+<Badge;
 key={scope}
                       variant='secondary'
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
@@ -348,17 +348,17 @@ onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConf
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction,origin/main
 onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
-              className="bg-blue-600 hover:bg-blue-700"
-            >
-              Regenerate
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-      {/* Delete Key Confirmation Dialog */}
-      <AlertDialog,
+className="bg-blue-600 hover:bg-blue-700"
+>;
+Regenerate;
+</AlertDialogAction>;
+</AlertDialogFooter>;
+</AlertDialogContent>;
+</AlertDialog>;
+{/* Delete Key Confirmation Dialog */}
+<AlertDialog;
 open={showDeleteConfirm !== null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
@@ -394,15 +394,15 @@ onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction,origin/main
 onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
-              className="bg-red-600 hover: bg-red-700"
-            >
-              Revoke
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-    </Card>
-  )
-}
+className="bg-red-600 hover: bg-red-700"
+>;
+Revoke;
+</AlertDialogAction>;
+</AlertDialogFooter>;
+</AlertDialogContent>;
+</AlertDialog>;
+</Card>;
+)
+}}}})))))))

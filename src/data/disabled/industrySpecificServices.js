@@ -1,7 +1,6 @@
 export const INDUSTRY_SPECIFIC_SERVICES = [
     // Healthcare Industry Services;
-    {
-        id: "healthcare-ai-diagnostic-suite";
+    {id: "healthcare-ai-diagnostic-suite";
         title: "Healthcare AI Diagnostic Suite";
         description: "Comprehensive AI-powered diagnostic platform designed specifically for healthcare providers, offering medical image analysis, patient data analytics, and clinical decision support.",
         category: "Healthcare Technology";
@@ -57,8 +56,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         caseStudies: ["Major Hospital Network", "Radiology Practice", "Primary Care Group"]
     },
     // Financial Services Industry;
-    {
-        id: "financial-ai-risk-management";
+    {id: "financial-ai-risk-management";
         title: "Financial AI Risk Management Platform";
         description: "Advanced AI-powered risk management platform designed for financial institutions, offering real-time risk assessment, fraud detection, and regulatory compliance monitoring.",
         category: "Financial Technology";
@@ -114,8 +112,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         caseStudies: ["Major Bank", "Investment Firm", "Insurance Company"]
     },
     // Manufacturing Industry Services;
-    {
-        id: "manufacturing-ai-optimization";
+    {id: "manufacturing-ai-optimization";
         title: "Manufacturing AI Optimization Platform";
         description: "Intelligent manufacturing optimization platform that uses AI to improve production efficiency, quality control, and predictive maintenance for manufacturing operations.",
         category: "Manufacturing Technology";
@@ -171,8 +168,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         caseStudies: ["Automotive Manufacturer", "Electronics Producer", "Chemical Plant"]
     },
     // Retail Industry Services;
-    {
-        id: "retail-ai-customer-intelligence";
+    {id: "retail-ai-customer-intelligence";
         title: "Retail AI Customer Intelligence Platform";
         description: "Comprehensive AI-powered customer intelligence platform designed for retail businesses, offering personalized marketing, inventory optimization, and customer behavior analytics.",
         category: "Retail Technology";
@@ -228,8 +224,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         caseStudies: ["E-commerce Platform", "Fashion Retailer", "Electronics Store"]
     },
     // Education Industry Services;
-    {
-        id: "education-ai-learning-platform";
+    {id: "education-ai-learning-platform";
         title: "Education AI Learning Platform";
         description: "Intelligent AI-powered learning platform designed for educational institutions, offering personalized learning experiences, adaptive assessments, and student performance analytics.",
         category: "Education Technology";
@@ -285,8 +280,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         caseStudies: ["University System", "K-12 District", "Corporate Training"]
     },
     // Transportation & Logistics Services;
-    {
-        id: "transportation-ai-logistics-optimization";
+    {id: "transportation-ai-logistics-optimization";
         title: "Transportation AI Logistics Optimization Platform";
         description: "Advanced AI-powered logistics optimization platform designed for transportation and logistics companies, offering route optimization, fleet management, and supply chain analytics.",
         category: "Transportation Technology";
@@ -342,8 +336,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         caseStudies: ["Major Trucking Company", "E-commerce Logistics", "Warehouse Operator"]
     },
     // Energy Industry Services;
-    {
-        id: "energy-ai-grid-optimization";
+    {id: "energy-ai-grid-optimization";
         title: "Energy AI Grid Optimization Platform";
         description: "Intelligent AI-powered energy grid optimization platform designed for utility companies, offering smart grid management, renewable energy integration, and demand response optimization.",
         category: "Energy Technology";
@@ -399,8 +392,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         caseStudies: ["Major Utility", "Grid Operator", "Renewable Energy Provider"]
     },
     // Real Estate Industry Services;
-    {
-        id: "real-estate-ai-market-intelligence";
+    {id: "real-estate-ai-market-intelligence";
         title: "Real Estate AI Market Intelligence Platform";
         description: "Advanced AI-powered market intelligence platform designed for real estate professionals, offering market analysis, property valuation, and investment opportunity identification.",
         category: "Real Estate Technology";
@@ -456,8 +448,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         caseStudies: ["Real Estate Investment Firm", "Property Developer", "Real Estate Agency"]
     },
     // Agriculture Industry Services;
-    {
-        id: "agriculture-ai-precision-farming";
+    {id: "agriculture-ai-precision-farming";
         title: "Agriculture AI Precision Farming Platform";
         description: "Intelligent AI-powered precision farming platform designed for agricultural operations, offering crop monitoring, yield optimization, and sustainable farming practices.",
         category: "Agriculture Technology";

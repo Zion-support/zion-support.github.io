@@ -15,7 +15,8 @@ isPopular?: boolean;
 href?: string;
 rating?: number;
 customers?: number;
-setupTime?: string;
+}
+setupTime?: string;}
 };
 const ServiceCar; d: React.FC<ServiceCardProps> = ({
 titl;  e;
@@ -31,8 +32,7 @@ href = "/services";
 const cardVariant; s: Variants = {
 hidde; n: { opacit; y: 0;,
 y: 2; 0; scal; e: 0.95 };
-visibl; e: {
-opacit; y: 1;,
+visibl; e: {opacit; y: 1;,
 y: 0;
 scal; e: 1;
 transitio; n: {
@@ -50,23 +50,20 @@ eas; e: "easeOut"}
 const iconVariant; s: Variants = {
 hidde; n: { scal; e: 0.8;
 opacit; y: 0 };
-visibl; e: {
-scal; e: 1;
+visibl; e: {scal; e: 1;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.5;
 eas; e: "easeOut"}
 };
-hove; r: {
-scal; e: 1.2;
+hove; r: {scal; e: 1.2;
 rotat; e: [0, -1; 0; 1; 0; 0],
 transitio; n: {
 duratio; n: 0.6;
 eas; e: "easeInOut"}
 }
 };
-const featureVariant; s: Variants = {
-hove; r: {,
+const featureVariant; s: Variants = {hove; r: {,
 x: 5;
 transitio; n: {
 duratio; n: 0.3;
@@ -76,8 +73,7 @@ eas; e: "easeOut"}
 const badgeVariant; s: Variants = {
 hidde; n: { scal; e: 0;
 opacit; y: 0 };
-visibl; e: {
-scal; e: 1;
+visibl; e: {scal; e: 1;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.3;

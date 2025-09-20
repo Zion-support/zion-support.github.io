@@ -13,9 +13,9 @@ role="navigation"
 Pagination.displayName = "Pagination"
 const PaginationContent = React.forwardRef<
   HTMLUListElement,
-React.ComponentProps<"ul">
+React.ComponentProps<"ul">origin/main
 >(({ className, ...props }, ref) => (
-  <ul,
+<ul;
 ref={ref}
     className={cn("flex flex-row items-center gap-1", className)}
     {...props}
@@ -26,7 +26,7 @@ const PaginationItem = React.forwardRef<
   HTMLLIElement,
 React.ComponentProps<"li">
 >(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn("", className)} {...props} />
+  <li ref={ref} className={cn("", className)} {...props} />origin/main
 ))
 PaginationItem.displayName = "PaginationItem"
 type PaginationLinkProps = {
@@ -113,13 +113,13 @@ className={cn("flex h-9 w-9 items-center justify-center", className)}
     <span className="sr-only">More pages</span>
   </span>
 )
-PaginationEllipsis.displayName = "PaginationEllipsis"
+PaginationEllipsis.displayName = "PaginationEllipsis"origin/main
 export {
-  Pagination,
-PaginationContent
-  PaginationEllipsis,
-PaginationItem
-  PaginationLink,
-PaginationButton
-  PaginationNext,
+Pagination;
+PaginationContent;
+PaginationEllipsis;
+PaginationItem;
+PaginationLink;
+PaginationButton;
+PaginationNext;
 PaginationPrevious}

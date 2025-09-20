@@ -18,18 +18,18 @@ estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
 contactInfo: {
-phone: string;
+phone: string;,
 email: string;,
-website: string;};
+website: string;};origin/main
 technology: string[];
 integrations: string[];
 compliance: string[];
 roi: string;
 competitors: string[];
 innovationLevel: string;
-marketTrend: string;
+marketTrend: string;,
 aiModel: string;,
-trainingData: string;}
+trainingData: string;}origin/main
 
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
 // Multimodal AI Platform;
@@ -93,8 +93,7 @@ trainingData: "Proprietary + Public Datasets"},
 
 // AI-Powered Predictive Healthcare Analytics;
 // AI-Powered Drug Discovery Platform;
-{
-id: "ai-drug-discovery-platform",
+{id: "ai-drug-discovery-platform",
 title: "AI-Powered Drug Discovery Platform",
 description: "Revolutionary AI platform that accelerates drug discovery using machine learning; molecular modeling; and predictive analytics.",
 category: "AI Healthcare",
@@ -153,8 +152,7 @@ trainingData: "Proprietary Pharmaceutical Data"},
 
 // Autonomous Financial Trading AI;
 // AI-Powered Financial Trading Platform;
-{
-id: "ai-financial-trading-platform",
+{id: "ai-financial-trading-platform",
 title: "AI-Powered Financial Trading Platform",
 description: "Advanced AI trading platform that uses machine learning; predictive analytics; and real-time market data for automated trading strategies.",
 category: "AI Finance",
@@ -213,8 +211,7 @@ trainingData: "Market Data + Historical Trading Data"},
 
 // AI-Powered Supply Chain Optimization;
 // AI-Powered Climate Prediction Engine;
-{
-id: "ai-climate-prediction-engine",
+{id: "ai-climate-prediction-engine",
 title: "AI-Powered Climate Prediction Engine",
 description: "Advanced AI platform that predicts climate patterns; extreme weather events; and environmental changes using machine learning and satellite data.",
 category: "AI Environment",
@@ -272,8 +269,7 @@ aiModel: "Custom Climate Prediction Models",
 trainingData: "Satellite + Historical Climate Data"},
 
 // AI-Powered Legal Research Assistant;
-{
-id: "ai-legal-research-assistant",
+{id: "ai-legal-research-assistant",
 title: "AI-Powered Legal Research Assistant",
 description: "Intelligent legal research platform that uses AI to analyze case law; legal documents; and regulations for comprehensive legal insights.",
 category: "AI Legal",
@@ -332,8 +328,7 @@ trainingData: "Legal Documents + Case Law"},
 
 // AI-Powered Educational Personalization;
 // AI-Powered Creative Design Platform;
-{
-id: "ai-creative-design-platform",
+{id: "ai-creative-design-platform",
 title: "AI-Powered Creative Design Platform",
 description: "Revolutionary AI platform that generates creative designs; graphics; and visual content using advanced generative AI models.",
 category: "AI Creative",

@@ -5,7 +5,7 @@ import type { LegendProps as RechartsLegendProps } from "recharts/types/componen
 
 import { cn  } from "@/lib/utils";
 
-// Format: { THEME_NAME: CSS_SELECTOR }
+// Format: { THEME_NAME: CSS_SELECTOR }origin/main
 const THEMES = { light: ";
 ", dark: ".dark" } as const;
 
@@ -21,7 +21,7 @@ theme?: never }
 }
 
 type ChartContextProps = {;
-config: ChartConfig;}
+config: ChartConfig;}origin/main
 
 const ChartContext = React.createContext<ChartContextProps | null>(null)
 
@@ -29,8 +29,8 @@ function useChart() {
 const context = React.useContext(ChartContext)
 
 if (!context) {
-throw new Error("useChart must be used within a <ChartContainer />")
-}
+throw new Error("useChart must be used within a <ChartContainer />");
+};
 ;
 return context;
 }
@@ -46,8 +46,8 @@ typeof RechartsPrimitive.ResponsiveContainer;
 >(({ id; className; children; config, ...props }, ref) => {
 const uniqueId = React.useId()
 const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`
-
-return (
+;
+return (;
 <ChartContext.Provider value={{ config }}>;
 <div;
 data-chart={chartId}
@@ -115,8 +115,7 @@ labelKey?: string;
 }
 >(
 (
-{
-active;
+{active;
 payload;
 className;
 indicator = "dot",
@@ -133,7 +132,7 @@ ref;
 ) => {
 const { config } = useChart()
 
-const tooltipLabel = React.useMemo(() => {
+const tooltipLabel = React.useMemo(() => {;
 if (hideLabel || !payload?.length) {;
 return null;
 }
@@ -159,22 +158,20 @@ return null;
 }
 
 return <div className={cn("font-medium", labelClassName)}>{value}</div>;
-}, [
-label;
+}, [label;
 labelFormatter;
 payload;
 hideLabel;
 labelClassName;
 config;
-labelKey,
-])
+labelKey])
 
 if (!active || !payload?.length) {
 return null;
 }
 
-const nestLabel = payload.length === 1 && indicator !== "dot"
-
+const nestLabel = payload.length === 1 && indicator !== "dot";
+;
 return (;
 <div;
 ref={ref}
@@ -216,8 +213,7 @@ className={cn(
 indicator === "dashed",
 "my-0.5": nestLabel && indicator === "dashed"}
 )}
-style={
-{
+style={{
 "--color-bg": indicatorColor,
 "--color-border": indicatorColor} as React.CSSProperties;
 }
@@ -259,7 +255,7 @@ const ChartLegend = RechartsPrimitive.Legend;
 const ChartLegendContent = React.forwardRef<;
 HTMLDivElement;
 React.ComponentProps<"div"> &;
-Pick<RechartsLegendProps, "payload" | "verticalAlign"> & {
+Pick<RechartsLegendProps "payload" | "verticalAlign"> & {
 hideIcon?: boolean;
 nameKey?: string;
 }
@@ -300,7 +296,7 @@ className={cn(
 <div;
 className="h-2 w-2 shrink-0 rounded-[2px]"
 style={{
-backgroundColor: item.color;}}
+backgroundColor: item.color;}}origin/main
 />;
 )}
 {itemConfig?.label}
@@ -315,7 +311,7 @@ ChartLegendContent.displayName = "ChartLegend";
 
 // Helper to extract item config from a payload.;
 function getPayloadConfigFromPayload(
-config: ChartConfig;
+config: ChartConfig;,
 payload: unknown;,
 key: string;
 ) {

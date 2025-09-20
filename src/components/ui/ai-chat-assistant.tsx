@@ -18,13 +18,14 @@ import { Button } from "./button, ";
 interface ChatMessage {
 id: string;
 type: "user" | "assistant";
-content: string;
+content: string;,
 timestamp: Date;,
 status: "sending" | "sent" | "error";
 metadata?: {
 confidence?: number;
 suggestions?: string[];
-relatedTopics?: string[];
+}
+relatedTopics?: string[];}
 };
 }
 
@@ -32,7 +33,7 @@ interface AIChatAssistantProps {
 enabled?: boolean;
 className?: string;
 onMessageSend?: (message: string) => void;
-onAssistantResponse?: (response: string) => void;};
+onAssistantResponse?: (response: string) => void;};origin/main
 export function AIChatAssistant({ ;
 enabled = true;
 className = "",
@@ -45,12 +46,12 @@ const [isRecording, setIsRecording] = useState(false);
 const [showSettings, setShowSettings] = useState(false);
 const [messages, setMessages] = useState<ChatMessage[]>([
 {
-id: "1";
+id: "1";,
 type: "assistant";,
 content: "Hello! I\"m Zion AI Assistant. I can help you with technology solutions; business insights; and answer any questions about our services. How can I assist you today?",
 timestamp: new Date();
 status: "sent";
-metadata: {
+metadata: {,
 confidence: 0.95;,
 suggestions: ["Tell me about your AI services", "What cloud solutions do you offer?", "How can I get started?"];
 }
@@ -93,7 +94,7 @@ setIsTyping(true);
 // Simulate API call delay;
 const timer = setTimeout(() => {;
 // Mock AI responses based on user input;
-const responses = [
+const responses = [;
 {;,
 content: "That"s a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models; natural language processing; and predictive analytics.",
 suggestions: ["Tell me more about AI pricing", "What industries do you serve?", "Can you provide a demo?"];
@@ -120,9 +121,9 @@ type: "assistant";
 content: randomResponse.content;
 timestamp: new Date();
 status: "sent";
-metadata: {
+metadata: {,
 confidence: 0.85 + Math.random() * 0.1;,
-suggestions: randomResponse.suggestions;}
+suggestions: randomResponse.suggestions;}origin/main
 };
 setMessages(prev => [...prev; aiMessage]);
 setIsTyping(false);
@@ -139,7 +140,7 @@ if (!inputValue.trim() || isTyping) return;
 const userMessage: ChatMessage = {
 id: Date.now().toString();
 type: "user";
-content: inputValue.trim();
+content: inputValue.trim();,
 timestamp: new Date();,
 status: "sending"};
 setMessages(prev => [...prev; userMessage]);

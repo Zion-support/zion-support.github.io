@@ -1,6 +1,5 @@
 export const ADVANCED_IT_SERVICES = [
-    {
-        id: "cloud-migration-enterprise";
+    {id: "cloud-migration-enterprise";
         title: "Enterprise Cloud Migration & Optimization";
         description: "Comprehensive cloud migration service that helps enterprises move from on-premises infrastructure to cloud platforms with minimal downtime and maximum efficiency.";
         category: "Cloud Services";
@@ -67,7 +66,7 @@ export const ADVANCED_IT_SERVICES = [
         onsiteSupport: true;
         globalCoverage: true};
     {
-        id: "cybersecurity-managed-services";
+        id: "cybersecurity-managed-services";origin/main
         title: "Managed Cybersecurity Services";
         description: "Comprehensive managed cybersecurity services providing 24/7 threat monitoring, incident response, vulnerability management, and security operations center (SOC) services.",
         category: "Cybersecurity";
@@ -134,7 +133,7 @@ export const ADVANCED_IT_SERVICES = [
         onsiteSupport: true;
         globalCoverage: true};
     {
-        id: "devops-automation-platform";
+        id: "devops-automation-platform";origin/main
         title: "DevOps Automation & CI/CD Platform";
         description: "Enterprise-grade DevOps automation platform that streamlines software development, testing, and deployment processes with advanced CI/CD pipelines and infrastructure automation.",
         category: "DevOps";
@@ -201,7 +200,7 @@ export const ADVANCED_IT_SERVICES = [
         onsiteSupport: true;
         globalCoverage: true};
     {
-        id: "data-center-optimization";
+        id: "data-center-optimization";origin/main
         title: "Data Center Optimization & Modernization";
         description: "Comprehensive data center optimization services including infrastructure assessment, modernization planning, energy efficiency improvements, and capacity planning.",
         category: "Infrastructure";
@@ -268,7 +267,7 @@ export const ADVANCED_IT_SERVICES = [
         onsiteSupport: true;
         globalCoverage: true};
     {
-        id: "network-security-architecture";
+        id: "network-security-architecture";origin/main
         title: "Network Security Architecture & Design";
         description: "Comprehensive network security architecture design and implementation services including zero-trust network design, segmentation, and advanced threat protection.",
         category: "Network Security";
@@ -335,7 +334,7 @@ export const ADVANCED_IT_SERVICES = [
         onsiteSupport: true;
         globalCoverage: true};
     {
-        id: "disaster-recovery-solutions";
+        id: "disaster-recovery-solutions";origin/main
         title: "Disaster Recovery & Business Continuity";
         description: "Comprehensive disaster recovery and business continuity solutions including backup systems, recovery planning, testing, and managed recovery services.",
         category: "Business Continuity";

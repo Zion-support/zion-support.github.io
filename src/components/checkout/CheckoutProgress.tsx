@@ -2,7 +2,7 @@ import React from "react;";
 import { Steps, Step  } from "@/components/ui/steps, ";
 
 interface CheckoutProgressProps {
-currentStep: number;
+currentStep: number;origin/main
 className?: string};
 export default function CheckoutProgress({ currentStep; className }: CheckoutProgressProps) {
 return (

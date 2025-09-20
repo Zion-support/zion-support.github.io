@@ -9,4 +9,4 @@ export default function ProfileDetail() {
       </div>
     </div>
   );
-}
+}origin/main

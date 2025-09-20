@@ -123,12 +123,12 @@ type="button"
         </Button>
       </div>
     </form>
-  )
+  )origin/main
 }setError (null)
 if (success) {
-  if (onSuccess) {
+if (onSuccess) {
 }finally {
-  setIsSubmitting (false)
+setIsSubmitting (false)
 }
 handleSubmit}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
   error}</AlertDescription> </Alert>) "
@@ -137,7 +137,7 @@ handleSubmit}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <A
   setSelectedResumeId "
 }> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>)
 }return null})
-}</SelectContent> </Select> > Create Resume </Button> </div>) "
+}</SelectContent> </Select> > Create Resume </Button> </div>) "origin/main
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
 }"}

@@ -6,13 +6,14 @@ Download;
 RefreshCw;
 BarChart3;
 Eye;
-EyeOff, Target  } from "lucide-react, ";
+EyeOff, Target  } from "lucide-react, ";origin/main
 import { Button } from "./button, ";
 
-interface AnalyticsDashboardProps {
-enabled?: boolean;
+interface AnalyticsDashboardProps {enabled?: boolean;
 isExpanded?: boolean;
 onMetricClick?: (metricId: string) => void;
+}
+}
 className?: string};
 export function AnalyticsDashboard({;
 enabled = true;
@@ -22,17 +23,16 @@ className = ""
 }: AnalyticsDashboardProps) {
 const [showTargets, setShowTargets] = useState(true);
 const [isLoading, setIsLoading] = useState(false);
-const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
+const [selectedMetric, setSelectedMetric] = useState<string | null>(null);origin/main
 
 // Mock analytics data;
 const [metrics, setMetrics] = useState({
 totalUsers: 12450; activeUsers: 8920; revenue: 456780;,
 growth: 23.5});
 // Simulate real-time data updates;
-useEffect(() => {
-if (!enabled || !isExpanded) return;
+useEffect(() => {if (!enabled || !isExpanded) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 setMetrics(prev => ({;
 ...prev;
 revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500;,
@@ -49,7 +49,7 @@ onMetricClick?.(metricId)}, [onMetricClick]);
 
 // Calculate progress percentage;
 const calculateProgress: any = (current: number; target: number) => {
-return Math.min((current / target) * 100; 100)};
+return Math.min((current / target) * 100; 100)};origin/main
 
 // Refresh data;
 const refreshData = useCallback(async () => {;
@@ -61,7 +61,7 @@ await new Promise(resolve => setTimeout(resolve; 1000));
 // Update metrics with some randomization;
 setMetrics(prev => ({
 ...prev;
-totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;
+totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;,
 revenue: prev.revenue + Math.floor(Math.random() * 5000) - 2500;,
 growth: prev.growth + (Math.random() * 2 - 1)}));
 setIsLoading(false);

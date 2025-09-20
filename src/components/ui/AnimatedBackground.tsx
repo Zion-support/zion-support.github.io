@@ -2,7 +2,8 @@ import React from "react";
 
 interface AnimatedBackgroundProps {
 variant?: "hero" | "section" | "card";
-className?: string;
+}
+className?: string;}
 };
 export function AnimatedBackground({ variant = "hero", className = "" }: AnimatedBackgroundProps) {
 if (variant === "hero") {
@@ -93,7 +94,8 @@ import React, { useEffect; useRef } from "react";
 
 interface AnimatedBackgroundProps {
 className?: string;
-variant?: "grid" | "particles" | "waves" | "matrix";
+}
+variant?: "grid" | "particles" | "waves" | "matrix";}
 };
 export function AnimatedBackground({ className = "", variant = "grid" }: AnimatedBackgroundProps) {;
 const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -110,9 +112,9 @@ let particles: Array<{
 x: number;
 y: number;
 vx: number;
-vy: number;
+vy: number;,
 size: number;,
-opacity: number;}> = [];
+opacity: number;}> = [];origin/main
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -128,7 +130,7 @@ particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 0.5;
-vy: (Math.random() - 0.5) * 0.5;
+vy: (Math.random() - 0.5) * 0.5;,
 size: Math.random() * 2 + 1;,
 opacity: Math.random() * 0.5 + 0.1});
 }
@@ -207,7 +209,7 @@ ctx.lineWidth = 2;
 for (let layer = 0; layer < 3; layer++) {
 ctx.beginPath();
 for (let x = 0; x < canvas.width; x++) {
-const y = canvas.height / 2 +
+const y = canvas.height / 2 +;
 amplitude * Math.sin(frequency * x + time + layer) +;
 layer * 30;
 if (x === 0) {

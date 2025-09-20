@@ -11,7 +11,7 @@ interface MarketplaceErrorFallbackProps extends FallbackProps {
 }
 
 function MarketplaceErrorFallback({ erro;  r; resetErrorBoundary }: MarketplaceErrorFallbackProps) {
-const handleRetry = async () => {
+const handleRetry = async () => {;
 try {;
 // Re-call SWR mutate("*") to refresh all cached data;
 await mutate(() => tru;  e; undefine; d, { revalidat; e: true });
@@ -67,7 +67,7 @@ contact support;
 }
 
 interface MarketplaceErrorBoundaryProps {
-childre; n: React.ReactNode;};
+childre; n: React.ReactNode;};origin/main
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {;
 const handleError: any = (erro;  r: Erro; r;
 errorInf; o: React.ErrorInfo) => {
@@ -99,13 +99,12 @@ import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcwAlertCircle } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';origin/main
 interface MarketplaceErrorFallbackProps extends FallbackProps {
-  // Additional props if needed,
-FallbackComponent={MarketplaceErrorFallback}
-      onError={handleError}
-    >
-      {children}
-    </ErrorBoundary>
-  )
+// Additional props if needed FallbackComponent={MarketplaceErrorFallback}
+onError={handleError}
+>;
+{children}
+</ErrorBoundary>;
+)
 }

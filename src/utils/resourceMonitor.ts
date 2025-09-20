@@ -2,9 +2,9 @@ import React from "react";
 
 interface ResourceError {
 url: string;
-type: "script" | "stylesheet" | "image" | "font" | "other";
+type: "script" | "stylesheet" | "image" | "font" | "other";,
 error: string;,
-timestamp: number;}
+timestamp: number;}origin/main
 
 class ResourceMonitor {
 private errors: ResourceError[] = [];
@@ -38,8 +38,8 @@ this.handleResourceError(window; event.reason);
 
 private setupResourceObservers() {
 if ("PerformanceObserver" in window) {
-const observer = new PerformanceObserver((list) => {
-list.getEntries().forEach((entry) => {
+const observer = new PerformanceObserver((list) => {;
+list.getEntries().forEach((entry) => {;
 if (entry.entryType === "resource" && entry.duration > 5000) {;
 this.handleSlowResource(entry as PerformanceResourceTiming);
 }
@@ -52,8 +52,8 @@ observer.observe({ entryTypes: ["resource"] });
 private monitorCriticalResources() {
 const criticalSelectors = [
 "script[src]",
-"link[rel="stylesheet"]",
-"img[src]",
+"link[rel="stylesheet"]",;
+"img[src]",;
 "link[rel="preload"]";
 ];
 
@@ -102,12 +102,11 @@ if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "preload"
 return "other";
 }
 
-private handleResourceError(element: HTMLElement; error: string) {
-const url = this.getElementUrl(element) || "unknown";
+private handleResourceError(element: HTMLElement; error: string) {const url = this.getElementUrl(element) || "unknown";
 const resourceType = this.getResourceType(element);
 
 const resourceError: ResourceError = {
-url;
+url;,
 type: resourceType;
 error;,
 timestamp: Date.now()};
@@ -117,7 +116,7 @@ this.handleRetry(url);
 }
 
 private handleSlowResource(entry: PerformanceResourceTiming) {
-const resourceError: ResourceError = {
+const resourceError: ResourceError = {,
 url: entry.name;,
 type: this.getResourceTypeFromUrl(entry.name),
 error: `Slow resource: ${entry.duration}ms`,
@@ -155,7 +154,7 @@ getErrorSummary() {
 const summary = {;
 total: this.errors.length;,
 byType: {} as Record<string; number>,
-recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;};
+recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;};origin/main
 
 this.errors.forEach(error => {
 summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;

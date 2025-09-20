@@ -8,7 +8,8 @@ nam; e: string;
 valu; e: number;
 categor; y: string;
 timestam; p: Date;
-metadata?: Record<strin; g; any>;
+}
+metadata?: Record<strin; g; any>;}
 };
 interface ChartConfig {
 typ; e: "bar" | "line" | "pie" | "area" | "scatter";
@@ -20,7 +21,7 @@ color; s: string[];
 showLegen; d: boolean;
 showGri; d: boolean;
 animat; e: boolean;
-responsiv; e: boolean;};
+responsiv; e: boolean;};origin/main
 }
 
 const mockChartDat; a: ChartData[] = [
@@ -98,7 +99,7 @@ const [chartConf;  i; g; setChartConf; i; g] = useState({
 showLegen; d: tru; e;
 showGri; d: tru; e;
 animat; e: tru; e;
-responsiv; e: true;});
+responsiv; e: true;});origin/main
 const [da; t; a; setDa; t; a] = useState<ChartData[]>(mockChartData);
 const [isRefreshi;  n; g; setIsRefreshi; n; g] = useState(false);
 const [autoRefre; s; h; setAutoRefre; s; h] = useState(false);
@@ -145,7 +146,7 @@ case "area":
 return renderAreaChart();
 case "scatter":
 return renderScatterChart();
-defaul;  t: return renderBarChart();}
+defaul;  t: return renderBarChart();}origin/main
 };
 
 const renderBarChart: any = () => {;

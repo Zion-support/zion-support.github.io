@@ -9,4 +9,4 @@ export default function EquipmentDetail() {
       </div>
     </div>
   );
-}
+}origin/main

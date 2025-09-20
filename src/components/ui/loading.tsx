@@ -1,8 +1,7 @@
 import React from "react;";
 import { cn } from "@/lib/utils, ";
 
-interface LoadingProps {
-size?: "sm" | "md" | "lg" | "xl";
+interface LoadingProps {size?: "sm" | "md" | "lg" | "xl";
 variant?: "spinner" | "dots" | "pulse" | "skeleton";
 className?: string;
 text?: string};
@@ -11,7 +10,7 @@ size = "md", ;
 variant = "spinner", ;
 className;
 text}: LoadingProps) {
-const sizeClasses = {;
+const sizeClasses = {;origin/main
 sm: "w-4 h-4", md: "w-6 h-6";,
 lg: "w-8 h-8",
 xl: "w-12 h-12"};
@@ -37,14 +36,13 @@ const renderSkeleton: any = () => (
 <div className={cn("bg-current rounded animate-pulse", sizeClasses[size])} />;
 );
 
-const renderContent: any = () => {
-switch (variant) {
+const renderContent: any = () => {switch (variant) {
 case "dots":;
 return renderDots();
 case "pulse":
 return renderPulse();
 case "skeleton":
-return renderSkeleton();
+return renderSkeleton();origin/main
 default: return renderSpinner()}
 };
 
@@ -69,8 +67,7 @@ className={cn("animate-pulse rounded-md bg-zion-slate-light/20", className)}
 }
 
 // Page loading component;
-export function PageLoading() {
-return (
+export function PageLoading() {return (
 <div className="min-h-screen flex items-center justify-center bg-background">;
 <div className="text-center space-y-4">;
 <Loading size="xl" variant="spinner" className="text-zion-cyan" />;
@@ -81,8 +78,7 @@ return (
 )};
 ;
 // Content skeleton loading;
-export function ContentSkeleton() {
-return (
+export function ContentSkeleton() {return (
 <div className="space-y-4 animate-pulse">;
 <div className="h-8 bg-zion-slate-light/20 rounded w-3/4"></div>;
 <div className="space-y-2">;

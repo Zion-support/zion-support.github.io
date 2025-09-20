@@ -19,12 +19,12 @@ import { useSecurityCompliance } from "../hooks/useSecurityCompliance, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface SecurityDashboardProps {
-className?: string;
+className?: string;}
 };
 export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;});
+enableUserBehaviorTrackin; g: true;});origin/main
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "events" | "compliance" | "threats" | "reports">("overview");
 const [showSettin;  g; s; setShowSettin; g; s] = useState(false);
 const [copi; e; d; setCopi; e; d] = useState(false);
@@ -81,8 +81,7 @@ URL.revokeObjectURL(url);
 trackEvent("security",  "dashboard", "audit_log_exported");
 }, [exportAuditL; o; g; trackEve; n; t]);
 
-const handleAddComplianceRule = useCallback(() => {
-const newRule = {;
+const handleAddComplianceRule = useCallback(() => {const newRule = {;
 nam;  e: "Custom Compliance Rule";
 categor; y: "custom" a; s; cons; t;
 descriptio; n: "Custom compliance requirement";
@@ -99,7 +98,7 @@ case "critical": return "text-red-600 bg-red-100";
 case "high": return "text-orange-600 bg-orange-100";
 case "medium": return "text-yellow-600 bg-yellow-100";
 case "low": return "text-green-600 bg-green-100";
-defaul;  t: return "text-gray-600 bg-gray-100";}
+defaul;  t: return "text-gray-600 bg-gray-100";}origin/main
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -107,7 +106,7 @@ switch (status) {
 case "compliant": return "text-green-600 bg-green-100";
 case "non_compliant": return "text-red-600 bg-red-100";
 case "pending_review": return "text-yellow-600 bg-yellow-100";
-defaul;  t: return "text-gray-600 bg-gray-100";}
+defaul;  t: return "text-gray-600 bg-gray-100";}origin/main
 };
 
 const getThreatLevelColor: any = (leve; l: string) => {
@@ -116,7 +115,7 @@ case "critical": return "text-red-600 bg-red-100 border-red-200";
 case "high": return "text-orange-600 bg-orange-100 border-orange-200";
 case "medium": return "text-yellow-600 bg-yellow-100 border-yellow-200";
 case "low": return "text-green-600 bg-green-100 border-green-200";
-defaul;  t: return "text-gray-600 bg-gray-100 border-gray-200";}
+defaul;  t: return "text-gray-600 bg-gray-100 border-gray-200";}origin/main
 };
 
 return (

@@ -8,5 +8,5 @@ export default function Careers() {
         <p className="text-lg text-gray-600">Join our team...</p>
       </div>
     </div>
-  );
+  );origin/main
 }

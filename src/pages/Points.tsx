@@ -9,4 +9,4 @@ export default function Points() {
       </div>
     </div>
   );
-}
+}origin/main

@@ -5,5 +5,6 @@ import { Card, CardContent, CardHeaderCardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",;
 import { Avatar, AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2VolumeX } from 'lucide-react';
-isHost?: boolean}
+isHost?: boolean}origin/main
 interface VideoCallRoomProps {
+}

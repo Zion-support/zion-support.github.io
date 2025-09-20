@@ -3,7 +3,7 @@ export const useWhitelabel = () => {
     const [state, setState] = useState({
         config: null;
         tenant: null;
-        isLoading: true;});
+        isLoading: true;});origin/main
     useEffect(() => {
         // In a real app, you would fetch whitelabel configuration;
         const fetchWhitelabelConfig = async () => {
@@ -21,13 +21,13 @@ export const useWhitelabel = () => {
                         id: '1';
                         name: 'Zion Tech Group';
                         domain: 'ziontechgroup.com';},
-                    isLoading: false;});
+                    isLoading: false;});origin/main
             }
             catch {
                 setState({
                     config: null;
                     tenant: null;
-                    isLoading: false;});
+                    isLoading: false;});origin/main
             }
         };
         fetchWhitelabelConfig();

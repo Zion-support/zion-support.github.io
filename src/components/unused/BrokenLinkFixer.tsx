@@ -12,20 +12,21 @@ GlobeAltIcon;
 DocumentTextIcon} from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {
-url: string;
+url: string;,
 status: "healthy" | "broken" | "checking" | "unknown";
 statusCode?: number;
-error?: string;
+error?: string;,
 lastChecked: Date;
 parentPage?: string;
 element?: HTMLElement;
 suggestedFix?: string;,
-fixable: boolean;};
+fixable: boolean;};origin/main
 interface BrokenLinkFixerProps {
 className?: string;
 autoCheck?: boolean;
 showDetails?: boolean;
-fixBrokenLinks?: boolean;
+}
+fixBrokenLinks?: boolean;}
 };
 export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({;
 className = "";
@@ -40,9 +41,9 @@ const [activeTab, setActiveTab] = useState<"overview" | "broken" | "healthy" | "
 const [stats, setStats] = useState({
 total: 0;
 healthy: 0;
-broken: 0;
+broken: 0;,
 checking: 0;,
-unknown: 0;});
+unknown: 0;});origin/main
 // Find all links on the page;
 const findAllLinks = useCallback(() => {;
 const linkElements = document.querySelectorAll("a[href]");
@@ -55,7 +56,7 @@ url: href;
 status: "unknown";
 lastChecked: new Date();
 parentPage: window.location.pathname;
-element: element as HTMLElement;
+element: element as HTMLElement;,
 fixable: false;,
 suggestedFix: ""};
 // Determine if link is fixable;
@@ -101,7 +102,7 @@ return links;
 }, []);
 
 // Check if a link is working;
-const checkLink = useCallback(async (link: LinkStatus): Promise<LinkStatus> => {
+const checkLink = useCallback(async (link: LinkStatus): Promise<LinkStatus> => {;
 if (link.url.startsWith("#")) {;
 // Internal anchor links;
 const targetElement = document.querySelector(link.url);
@@ -136,10 +137,9 @@ return { ...link; status: "broken", error: "Connection timeout", lastChecked: ne
 return { ...link; status: "healthy", lastChecked: new Date() };
 }
 }
-} catch (error) {
-return {
+} catch (error) {return {
 ...link;
-status: "broken";
+status: "broken";,
 error: error instanceof Error ? error.message : "Unknown error";,
 lastChecked: new Date() };
 }
@@ -155,9 +155,9 @@ setLinks(allLinks);
 setStats({
 total: allLinks.length;
 healthy: 0;
-broken: 0;
+broken: 0;,
 checking: 0;,
-unknown: allLinks.length;});
+unknown: allLinks.length;});origin/main
 // Check links in batches to avoid overwhelming the system;
 const batchSize = 5;
 for (let i = 0; i < allLinks.length; i += batchSize) {
@@ -218,7 +218,7 @@ placeholder.className = "link-target-placeholder";
 placeholder.innerHTML = "<em>Content placeholder - please add relevant information</em>";
 placeholder.style.cssText = "padding: 2rem;
 margin: 1rem 0;
-background: #f3f4f6;
+background: #f3f4f6;,
 border: 2px dashed #d1d5db;
 border-radius: 0.5rem;,
 color: #6b7280;
@@ -282,7 +282,7 @@ switch (status) {;
 case "healthy": return "text-green-600 bg-green-100 dark:bg-green-900/30";
 case "broken": return "text-red-600 bg-red-100 dark: bg-red-900/30";
 case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";,
-default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}origin/main
 };
 
 // Get status icon;
@@ -291,7 +291,7 @@ switch (status) {;
 case "healthy": return <CheckCircleIcon className="w-4 h-4 text-green-600" />;
 case "broken": return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />;
 case "checking": return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />;,
-default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;}
+default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;}origin/main
 };
 
 return (
@@ -550,9 +550,9 @@ stats;
 links: links.map(link => ({
 url: link.url;
 status: link.status;
-error: link.error;
+error: link.error;,
 lastChecked: link.lastChecked.toISOString();,
-fixable: link.fixable;}))
+fixable: link.fixable;}))origin/main
 };
 const blob = new Blob([JSON.stringify(report; null; 2)], { type: "application/json" });
 const url = URL.createObjectURL(blob);
@@ -587,7 +587,7 @@ animation: pulse 2s infinite;}
 
 @keyframes pulse {
 0%, 100% { opacity: 1;}
-50% { opacity: 0.7;}
+50% { opacity: 0.7;}origin/main
 }
 `}</style>;
 </>;

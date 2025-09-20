@@ -8,5 +8,5 @@ export default function Dashboard() {
         <p className="text-lg text-gray-600">Welcome to your dashboard...</p>
       </div>
     </div>
-  );
+  );origin/main
 }

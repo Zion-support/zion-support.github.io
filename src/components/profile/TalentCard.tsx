@@ -1,11 +1,11 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card';
-import { Star, MapPin, Clock, ArrowRightCheckCircle2 } from 'lucide-react';
+import { Star, MapPin, Clock, ArrowRightCheckCircle2 } from 'lucide-react';origin/main
 isAuthenticated: boolean;
 }
 export function TalentCard({
-              {talent.profile_picture_url && !avatarError ? (
-                <Image,
+{talent.profile_picture_url && !avatarError ? (
+<Image;
 src={talent.profile_picture_url}
                   alt={talent.full_name |'Talent Avatar'}
                   fill={true}                  style={{ objectFit: 'cover' }}
@@ -163,4 +163,4 @@ size='sm'
       </div>
     </Card>
   )
-}
+}origin/main

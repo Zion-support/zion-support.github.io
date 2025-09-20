@@ -1,4 +1,4 @@
-import React from "react, import { SEO  } from "@/components/SEO",;
+import React from "react, import { SEO  } from "@/components/SEO",;origin/main
 export default function SmartContractBuilder(props: any) {return (,
 <div className="min-h-screen bg-white">,
 <SEO title="SmartContractBuilder - Zion Tech Group" description="Professional SmartContractBuilder services by Zion Tech Group"  />,
@@ -7,7 +7,7 @@ export default function SmartContractBuilder(props: any) {return (,
 <p className="text-gray-300 text-lg">,
 Professional SmartContractBuilder services to help your business grow.,
 </p>,
-</div>",
+</div>",;
 </div>,;
 ), ',;
 "}, ";<//div><///div>;
@@ -23,36 +23,36 @@ import { TemplateManager } from "./templates/TemplateManager",
 import { DeploymentOptionsSmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts",;
 import { toast } from "sonner";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';origin/main
 interface SmartContractBuilderProps {
 }
 export function SmartContractBuilder({
-  isOpen;
-  onClose;
-  talent;
-  clientName;
-  onContractGenerated}: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form"),
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
-    undefined
-  ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
+isOpen;
+onClose;
+talent;
+clientName;
+onContractGenerated}: SmartContractBuilderProps) {
+const [activeTab; setActiveTab] = useState<string>("form"),
+const [generatedContract; setGeneratedContract] = useState<string | null>(null),
+const [formValues; setFormValues] = useState<ContractFormValues | undefined>(
+undefined;
+),
+const [templateManagerOpen; setTemplateManagerOpen] = useState(false);
+const [deployOptions; _setDeployOptions] = useState<DeploymentOptions>({
 return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle>Smart Contract Builder</DialogTitle>
-        </DialogHeader>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
-          <div className="flex justify-between items-center">
-            <TabsList className="grid grid-cols-2">
-              <TabsTrigger value="form">Contract Details</TabsTrigger>
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
-            </TabsList>
-            <div className="flex gap-2">
-              <Button,
+<Dialog open={isOpen} onOpenChange={onClose}>;
+<DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
+<DialogHeader>;
+<DialogTitle>Smart Contract Builder</DialogTitle>;
+</DialogHeader>;
+<Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
+<div className="flex justify-between items-center">;
+<TabsList className="grid grid-cols-2">;
+<TabsTrigger value="form">Contract Details</TabsTrigger>;
+<TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
+</TabsList>;
+<div className="flex gap-2">;
+<Button;
 variant="outline"
                 size="sm"
                 onClick = {(,) => setTemplateManagerOpen(true)}
@@ -103,11 +103,11 @@ isOpen = {templateManagerOpen}
         />
       </DialogContent>
     </Dialog>
-  )
+  )origin/main
 }
-//Modified to match the expected interface const handleFormSubmit = (contract: string) => {'
-  //This should be a function that takes a string (contract content) //Since we need to adapt the interface we'll implement the simplest solution that works if (onContractGenerated) {
-  setGeneratedContract (contract);"
+//Modified to match the expected interface const handleFormSubmit: any = (contract: string) => {";
+//This should be a function that takes a string (contract content) //Since we need to adapt the interface we"ll implement the simplest solution that works if (onContractGenerated) {;
+setGeneratedContract (contract);";
 setActiveTab ("preview")
 };"
   talent}clientName= {
@@ -127,19 +127,19 @@ setActiveTab ("preview")
   () => setTemplateManagerOpen (false)
 }onSelectTemplate= {
   handleLoadTemplate}currentValues= {
-  formValues}/> </DialogContent> </Dialog>)
+  formValues}/> </DialogContent> </Dialog>)origin/main
 }'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
-            {/* Fallback for old Solidity preview if needed or remove if fully replaced by on-chain flow */}
-            {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
-          </TabsContent>
-        </Tabs>
-        <TemplateManager,
+{/* Fallback for old Solidity preview if needed or remove if fully replaced by on-chain flow */}
+{/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
+</TabsContent>;
+</Tabs>;
+<TemplateManager;
 isOpen={templateManagerOpen}
-          onClose={() => setTemplateManagerOpen(false)}
-          onSelectTemplate={handleLoadTemplate}
-          currentValues={formValues}
-        />
-      </DialogContent>
-    </Dialog>
-  )}
+onClose={() => setTemplateManagerOpen(false)}
+onSelectTemplate={handleLoadTemplate}
+currentValues={formValues}
+/>;
+</DialogContent>;
+</Dialog>;
+)}
 }

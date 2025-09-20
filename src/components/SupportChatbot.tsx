@@ -3,9 +3,9 @@ import { MessageSquareX } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
 import { logErrorToProduction } from '@/utils/productionLogger';
-interface Msg { id: string role: 'user' | 'assistant', message: string }
+interface Msg { id: string role: 'user' | 'assistant', message: string }origin/main
 
-// Fallback responses when API is unavailable,
+// Fallback responses when API is unavailable;
 if (!open) {
         onClick={() => setOpen(true)}
         size='icon'
@@ -55,16 +55,16 @@ role='assistant'
 }buffer = lines[lines.length - 1] |''
 }catch (err) {'
   logErrorToProduction ('Chatbot error:', {
-  data: err;
+  data: err;origin/main
 })
-//Provide a helpful fallback response instead of generic error const errorMsg: Msg = {',
-id: Date.now () .toString () + '-e';'
-role: 'assistant',
+//Provide a helpful fallback response instead of generic error const errorMsg: Msg = {",
+id: Date.now () .toString () + "-e";",
+role: "assistant",
 message: fallbackResponse;
 }
 setMessages (prev => [...prev errorMsg])
 }finally {
-  setLoading (false)
+setLoading (false)
 setTyping (false)
 }
   () => setOpen (true) "
@@ -78,6 +78,6 @@ setTyping (false)
 })
 }<div ref= {
   endRef}/> </div> </div> </div>)
-}'"
+}'"origin/main
 }
 }

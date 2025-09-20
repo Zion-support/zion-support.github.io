@@ -36,7 +36,7 @@ includeMetric; s: boolean;};
 export const AICodeGenerato; r: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;});
+enableUserBehaviorTrackin; g: true;});origin/main
 const [activeT; a; b; setActiveT; a; b] = useState<"generate" | "analyze" | "optimize" | "tests" | "docs">("generate");
 const [showAdvanc;  e; d; setShowAdvanc; e; d] = useState(false);
 const [customCo; d; e; setCustomCo; d; e] = useState("");
@@ -70,7 +70,7 @@ includeTest; s: fals; e;
 includeDoc; s: fals; e;
 includeErrorHandlin; g: fals; e;
 includeLoggin; g: fals; e;
-includeMetric; s: false;});
+includeMetric; s: false;});origin/main
 // Handle form submission;
 const handleSubmit = useCallback(async (e: React.FormEvent) => {;
 e.preventDefault();
@@ -82,7 +82,7 @@ trackEvent("ai_code_generator",  "form_submitted", form.languag; e; undefine; d,
 framewor; k: form.framewor; k;
 styl; e: form.styl; e;
 targe; t: form.targe; t;
-qualit; y: form.quality;});
+qualit; y: form.quality;});origin/main
 }, [fo; r; m; generateCo; d; e; trackEve; n; t]);
 
 // Handle custom code analysis;
@@ -95,8 +95,7 @@ trackEvent("ai_code_generator",  "custom_code_analyzed", form.languag; e; custom
 }, [customCo; d; e; for; m.langua; g; e; analyzeCo; d; e; trackEve; n; t]);
 
 // Handle code optimization;
-const handleOptimizeCode = useCallback(async (focu;  s: keyof typeof codeAnalysis) => {
-if (!generatedCode && !customCode) return;
+const handleOptimizeCode = useCallback(async (focu;  s: keyof typeof codeAnalysis) => {if (!generatedCode && !customCode) return;
 const codeToOptimize = generatedCode || customCode;
 const optimizedCode = await optimizeCode(codeToOptimiz;  e; focus);
 
@@ -151,7 +150,7 @@ const handleApplySuggestion = useCallback((suggestio;  n: any) => {
 applySuggestion(suggestion);
 trackEvent("ai_code_generator",  "suggestion_applied", suggestion.typ; e; undefine; d, {
 suggestionI; d: suggestion.i; d;
-impac; t: suggestion.impact;});
+impac; t: suggestion.impact;});origin/main
 }, [applySuggesti; o; n; trackEve; n; t]);
 
 // Clear history;

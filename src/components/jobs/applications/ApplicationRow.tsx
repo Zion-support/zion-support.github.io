@@ -1,41 +1,39 @@
 import { formatDistanceToNow } from 'date-fns';
-import { Calendar, User, FileTextBarChart } from 'lucide-react';
+import { Calendar, User, FileTextBarChart } from 'lucide-react';origin/main
 }
 export function ApplicationRow({
 return (
-    <TableRow key={application.id}>
-      <TableCell>
-        <div className='flex items-center gap-3'>
-          <AvatarPrimitive className='h-9 w-9'>
-            {' '}
-            {/* Using renamed AvatarPrimitive */}
-            {application.talent_profile?.profile_picture_url && !avatarError ? (
-              <Image,
+<TableRow key={application.id}>;
+<TableCell>;
+<div className="flex items-center gap-3">;
+<AvatarPrimitive className="h-9 w-9">;
+{" "}
+{/* Using renamed AvatarPrimitive */}
+{application.talent_profile?.profile_picture_url && !avatarError ? (
+<Image;
 src={application.talent_profile.profile_picture_url}
-                alt={talentName}
-                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-                height={36} // Corresponds to h-9 w-9,
-className='rounded-full object-cover' // Ensure rounded and object-cover,
-onError={() => setAvatarError(true)}
-                priority={false}              />
-            ) : (
-              <User className='h-5 w-5 text-gray-400' />
-            )}
-          </AvatarPrimitive>
-          <div>
-            <div className='font-medium'>{talentName}</div>
-            <div className='text-xs text-muted-foreground'>
-              {application.talent_profile?.professional_title |'Talent'}
-            </div>
-          </div>
-        </div>
-      </TableCell>
-      <TableCell>
-        <div className='flex items-center gap-1'>
-          <Calendar className='h-4 w-4 text-muted-foreground' />
-          <span>
-            {formatDistanceToNow(new Date(application.created_at), {
-              addSuffix: true;
+alt={talentName}
+width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
+height={36} // Corresponds to h-9 w-9 className="rounded-full object-cover" // Ensure rounded and object-cover onError={() => setAvatarError(true)}
+priority={false}              />;
+) : (
+<User className="h-5 w-5 text-gray-400" />;
+)}
+</AvatarPrimitive>;
+<div>;
+<div className="font-medium">{talentName}</div>;
+<div className="text-xs text-muted-foreground">;
+{application.talent_profile?.professional_title |"Talent"}
+</div>;
+</div>;
+</div>;
+</TableCell>;
+<TableCell>;
+<div className="flex items-center gap-1">;
+<Calendar className="h-4 w-4 text-muted-foreground" />;
+<span>;
+{formatDistanceToNow(new Date(application.created_at), {
+addSuffix: true;
 })}
           </span>
         </div>
@@ -78,4 +76,4 @@ application = {application}
       </TableCell>
     </TableRow>
   )
-}
+}origin/main

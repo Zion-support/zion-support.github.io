@@ -10,27 +10,27 @@ interface Props {
 children: ReactNode;
 fallback?: ReactNode;
 onError?: (error: Error; errorInfo: ErrorInfo) => void;
-showDetails?: boolean;
+}
+showDetails?: boolean;}
 };
 interface State {
 hasError: boolean;
 error: Error | null;
-errorInfo: ErrorInfo | null;
+errorInfo: ErrorInfo | null;,
 errorId: string | null;,
-showStackTrace: boolean;};
+showStackTrace: boolean;};origin/main
 class EnhancedErrorBoundary extends Component<Props; State> {
 constructor(props: Props) {
 super(props);
 this.state = {
 hasError: false;
 error: null;
-errorInfo: null;
+errorInfo: null;,
 errorId: null;,
-showStackTrace: false;};
+showStackTrace: false;};origin/main
 }
 
-static getDerivedStateFromError(error: Error): Partial<State> {
-return {
+static getDerivedStateFromError(error: Error): Partial<State> {return {,
 hasError: true;
 error;,
 errorId: this.generateErrorId()};
@@ -62,16 +62,16 @@ const errorReport = {;
 id: this.state.errorId;
 timestamp: new Date().toISOString();
 error: {
-name: error.name;
+name: error.name;,
 message: error.message;,
 stack: error.stack;};
 errorInfo: {,
-componentStack: errorInfo.componentStack;};
+componentStack: errorInfo.componentStack;};origin/main
 userAgent: navigator.userAgent;
 url: window.location.href;
-viewport: {
+viewport: {,
 width: window.innerWidth;,
-height: window.innerHeight;}
+height: window.innerHeight;}origin/main
 };
 // Log to console for development;
 if (process.env.NODE_ENV === "development") {
@@ -89,9 +89,9 @@ private handleRetry = () => {
 this.setState({
 hasError: false;
 error: null;
-errorInfo: null;
+errorInfo: null;,
 errorId: null;,
-showStackTrace: false;});
+showStackTrace: false;});origin/main
 };
 
 private handleGoHome = () => {

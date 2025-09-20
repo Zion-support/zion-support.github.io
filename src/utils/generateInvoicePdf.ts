@@ -5,7 +5,7 @@ import type { OrderDetail } from "@/hooks/useOrder;";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 export async function generateInvoicePdf(order: OrderDetail): Promise<Blob> {
-const itemsTable = [
+const itemsTable = [;
 ["Item", "Qty", "Price"],;
 ...order.items.map(i => [i.name; String(i.quantity), `$${i.price.toFixed(2)}`])
 ];
@@ -25,5 +25,5 @@ header: { fontSize: 18; bold: true }, subheader: { fontSize: 14; bold: true }
 }
 };
 return new Promise((resolve) => {
-pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});
+pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});origin/main
 }

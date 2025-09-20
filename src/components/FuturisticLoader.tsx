@@ -3,14 +3,14 @@ import React from "react;";
 interface FuturisticLoaderProps {
 size?: "small" | "medium" | "large";
 text?: string;
-variant?: "matrix" | "neural" | "quantum" | "cyber";
+}
+variant?: "matrix" | "neural" | "quantum" | "cyber";}
 };
 export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
 size = "medium";
 text = "Loading...",
 variant = "matrix"
-}) => {
-const sizeClasses = {;
+}) => {const sizeClasses = {;
 smal; l: "w-8 h-8";
 mediu; m: "w-16 h-16";
 larg; e: "w-24 h-24"};

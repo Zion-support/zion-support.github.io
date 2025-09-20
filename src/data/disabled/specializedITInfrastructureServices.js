@@ -1,7 +1,6 @@
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
     // Edge Computing Infrastructure Platform;
-    {
-        id: "edge-computing-infrastructure-platform";
+    {id: "edge-computing-infrastructure-platform";
         title: "Edge Computing Infrastructure Platform";
         description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance for IoT and real-time applications.",
         category: "IT Infrastructure";
@@ -58,8 +57,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         marketTrend: "Growing market with 250% annual growth";
         innovationLevel: "Advanced edge computing with AI capabilities"};
     // Zero-Trust Security Architecture;
-    {
-        id: "zero-trust-security-architecture";
+    {id: "zero-trust-security-architecture";
         title: "Zero-Trust Security Architecture Platform";
         description: "Comprehensive zero-trust security platform that implements continuous verification and least-privilege access controls across all network resources and applications.";
         category: "Cybersecurity";
@@ -116,8 +114,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         marketTrend: "Growing market with 300% annual growth";
         innovationLevel: "Advanced zero-trust with AI-powered threat detection"};
     // Hybrid Cloud Management Platform;
-    {
-        id: "hybrid-cloud-management-platform";
+    {id: "hybrid-cloud-management-platform";
         title: "Hybrid Cloud Management Platform";
         description: "Unified platform for managing and orchestrating workloads across multiple cloud providers and on-premises infrastructure with seamless integration and optimization.";
         category: "Cloud Computing";
@@ -174,8 +171,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         marketTrend: "Growing market with 200% annual growth";
         innovationLevel: "Advanced hybrid cloud with AI-powered optimization"};
     // Software-Defined Networking (SDN) Platform;
-    {
-        id: "software-defined-networking-platform";
+    {id: "software-defined-networking-platform";
         title: "Software-Defined Networking (SDN) Platform";
         description: "Intelligent networking platform that centralizes network control and management through software, enabling dynamic configuration and automation of network resources.",
         category: "Networking";
@@ -232,8 +228,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         marketTrend: "Growing market with 180% annual growth";
         innovationLevel: "Advanced SDN with AI-powered traffic optimization"};
     // Container Orchestration Platform;
-    {
-        id: "container-orchestration-platform";
+    {id: "container-orchestration-platform";
         title: "Container Orchestration Platform";
         description: "Enterprise-grade container orchestration platform that automates deployment, scaling, and management of containerized applications across distributed environments.",
         category: "DevOps & Containers";

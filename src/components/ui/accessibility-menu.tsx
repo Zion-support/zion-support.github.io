@@ -5,16 +5,16 @@ import { Button } from "./button, ";
 
 interface AccessibilitySettings {
 fontSize: "small" | "medium" | "large";
-highContrast: boolean;
+highContrast: boolean;,
 reducedMotion: boolean;,
-soundEnabled: boolean;};
+soundEnabled: boolean;};origin/main
 export function AccessibilityMenu() {;
 const [isOpen, setIsOpen] = useState(false);
 const [settings, setSettings] = useState<AccessibilitySettings>({
 fontSize: "medium";
-highContrast: false;
+highContrast: false;,
 reducedMotion: false;,
-soundEnabled: true;});
+soundEnabled: true;});origin/main
 useEffect(() => {
 // Load settings from localStorage;
 const savedSettings = localStorage.getItem("accessibility-settings");
@@ -67,9 +67,9 @@ setSettings(prev => ({ ...prev; fontSize: size }));
 const resetSettings: any = () => {
 const defaultSettings: AccessibilitySettings = {;
 fontSize: "medium";
-highContrast: false;
+highContrast: false;,
 reducedMotion: false;,
-soundEnabled: true;};
+soundEnabled: true;};origin/main
 setSettings(defaultSettings);
 };
 

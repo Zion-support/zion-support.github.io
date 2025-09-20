@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
@@ -78,5 +80,5 @@ role: 'Virtual Assistant'
         />
       )}
     </>
-  )
+  )origin/main
 }

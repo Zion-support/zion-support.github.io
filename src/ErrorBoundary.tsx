@@ -8,7 +8,7 @@ fallback?: ReactNode;
 interface State {
 hasError: boolean;
 error?: Error;
-errorInfo?: ErrorInfo;
+errorInfo?: ErrorInfo;origin/main
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -61,7 +61,7 @@ padding: "1rem",
 borderRadius: "4px",
 overflow: "auto",
 fontSize: "12px",
-}}>
+}}>origin/main
 {this.state.error.toString()}
 {this.state.errorInfo?.componentStack}
 </pre>

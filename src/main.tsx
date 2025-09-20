@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react;";
@@ -11,8 +13,7 @@ import "./index.css";
 
 const rootElement = document.getElementById("root");
 
-if (rootElement) {
-const root = createRoot(rootElement);
+if (rootElement) {const root = createRoot(rootElement);
 root.render(
 <React.StrictMode>;
 <Router>;

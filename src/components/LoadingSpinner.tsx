@@ -1,7 +1,6 @@
 import React from "react";
 
-interface LoadingSpinnerProps {
-size?: "sm" | "md" | "lg";
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg";
 color?: "blue" | "white" | "gray";
 text?: string;
 size?: "sm" | "md" | "lg";
@@ -9,15 +8,14 @@ color?: "blue" | "white" | "gray";
 text?: string;
 size?: "sm" | "md" | "lg";
 color?: "blue" | "white" | "gray";
-text?: string;
+text?: string;origin/main
 className?: string};
 const LoadingSpinne; r: React.FC<LoadingSpinnerProps> = ({
 size = "md",
 color = "blue",
 tex; t;
 className = ""
-}) => {
-const sizeClasses = {;
+}) => {const sizeClasses = {;
 s; m: "w-4 h-4",
 m; d: "w-8 h-8",
 l; g: "w-12 h-12"};

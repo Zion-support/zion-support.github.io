@@ -1,24 +1,24 @@
 import { Routes, Route  } from "react-router-dom, ";
 export interface ComprehensiveMicroSaasService {
-id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
+id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,origin/main
 benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
+targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
-contactInfo: {,
+contactInfo: {,origin/main
 phone: string; email: string; website: string};
 technology: string[], integrations: string[];,
 compliance: string[], roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
 websiteUrl?: string;,
-marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string;}
+marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string;}origin/main
 
 export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasService[] = [
 // AI-Powered Business Intelligence & Analytics;
 {,
 id: "ai-business-intelligence-suite", title: "AI Business Intelligence Suite - Intelligent Data Insights";,
 description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights; predictive analytics; and automated reporting for data-driven decision making.",
-category: "AI & Business Intelligence", subcategory: "Data Analytics";
+category: "AI & Business Intelligence", subcategory: "Data Analytics";,
 price: 599; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered data analysis and insights",
@@ -66,10 +66,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-business-intelligence", caseStudies:
 marketTrend: "Growing demand for AI-powered business intelligence with 35% annual growth", industryFocus: ["Technology", "Finance", "Healthcare", "Retail", "Manufacturing"],
 scalability: "Enterprise-grade with unlimited users and data", customizationLevel: "Highly customizable with white-label options"};
 // AI-Powered Customer Experience Platform;
-{
-id: "ai-customer-experience-platform", title: "AI Customer Experience Platform - Personalized Customer Journeys";,
+{id: "ai-customer-experience-platform", title: "AI Customer Experience Platform - Personalized Customer Journeys";,
 description: "Comprehensive AI-powered customer experience platform that personalizes customer interactions; predicts customer needs; and optimizes customer journeys across all touchpoints.",
-category: "AI & Customer Experience", subcategory: "Customer Journey Optimization";
+category: "AI & Customer Experience", subcategory: "Customer Journey Optimization";,
 price: 449; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered customer journey mapping",
@@ -117,10 +116,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-customer-experience", caseStudies: [
 marketTrend: "Rapid adoption of AI-powered CX platforms with 40% market growth", industryFocus: ["E-commerce", "SaaS", "Retail", "Financial Services", "Healthcare"],
 scalability: "Handles millions of customer interactions", customizationLevel: "Fully customizable customer journey workflows"};
 // AI-Powered Supply Chain & Logistics Optimization;
-{
-id: "ai-supply-chain-optimizer-pro", title: "AI Supply Chain Optimizer Pro - Intelligent Logistics Management";,
+{id: "ai-supply-chain-optimizer-pro", title: "AI Supply Chain Optimizer Pro - Intelligent Logistics Management";,
 description: "Advanced AI-powered supply chain optimization platform that predicts demand; optimizes inventory; reduces costs; and improves delivery efficiency through machine learning algorithms.",
-category: "AI & Supply Chain", subcategory: "Logistics Optimization";
+category: "AI & Supply Chain", subcategory: "Logistics Optimization";,
 price: 799; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered demand forecasting",
@@ -168,10 +166,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-supply-chain", caseStudies: ["Manufa
 marketTrend: "Growing demand for AI-powered supply chain solutions with 45% annual growth", industryFocus: ["Manufacturing", "Retail", "Logistics", "E-commerce", "Healthcare"],
 scalability: "Enterprise-grade with multi-company support", customizationLevel: "Industry-specific optimization algorithms"};
 // AI-Powered Financial Technology Platform;
-{
-id: "ai-fintech-platform-elite", title: "AI FinTech Platform Elite - Intelligent Financial Solutions";,
+{id: "ai-fintech-platform-elite", title: "AI FinTech Platform Elite - Intelligent Financial Solutions";,
 description: "Comprehensive AI-powered financial technology platform that provides intelligent banking; investment management; risk assessment; and financial planning solutions for businesses and individuals.",
-category: "AI & Financial Technology", subcategory: "Financial Services";
+category: "AI & Financial Technology", subcategory: "Financial Services";,
 price: 699; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered financial analysis",
@@ -219,10 +216,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-fintech", caseStudies: ["Investment 
 marketTrend: "Explosive growth in AI-powered FinTech with 50% annual market expansion", industryFocus: ["Financial Services", "Banking", "Investment", "Insurance", "Real Estate"],
 scalability: "Banking-grade infrastructure with unlimited scalability", customizationLevel: "White-label solutions for financial institutions"};
 // AI-Powered Healthcare & Medical Solutions;
-{
-id: "ai-healthcare-solutions-suite", title: "AI Healthcare Solutions Suite - Intelligent Medical Technology";,
+{id: "ai-healthcare-solutions-suite", title: "AI Healthcare Solutions Suite - Intelligent Medical Technology";,
 description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance; patient monitoring; medical image analysis; and healthcare workflow optimization for medical professionals and institutions.",
-category: "AI & Healthcare", subcategory: "Medical Technology";
+category: "AI & Healthcare", subcategory: "Medical Technology";,
 price: 899; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered diagnostic assistance",
@@ -270,10 +266,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-healthcare", caseStudies: ["Hospital
 marketTrend: "Rapid adoption of AI in healthcare with 60% annual growth", industryFocus: ["Healthcare", "Medical Technology", "Pharmaceuticals", "Research", "Insurance"],
 scalability: "Enterprise healthcare infrastructure with multi-institution support", customizationLevel: "Specialized medical AI models for different specialties"};
 // AI-Powered Education & Learning Platform;
-{
-id: "ai-education-learning-platform", title: "AI Education & Learning Platform - Intelligent Learning Solutions";,
+{id: "ai-education-learning-platform", title: "AI Education & Learning Platform - Intelligent Learning Solutions";,
 description: "Advanced AI-powered education platform that personalizes learning experiences; provides intelligent tutoring; automates assessment; and optimizes educational content delivery for students and educators.",
-category: "AI & Education", subcategory: "Learning Technology";
+category: "AI & Education", subcategory: "Learning Technology";,
 price: 399; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered personalized learning",
@@ -321,10 +316,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-education", caseStudies: ["Universit
 marketTrend: "Growing demand for AI-powered education with 55% annual growth", industryFocus: ["Education", "Corporate Training", "Online Learning", "EdTech", "Professional Development"],
 scalability: "Multi-institution platform with unlimited student support", customizationLevel: "Customizable learning paths and curriculum design"};
 // AI-Powered Cybersecurity & Threat Intelligence;
-{
-id: "ai-cybersecurity-threat-intelligence", title: "AI Cybersecurity & Threat Intelligence - Advanced Security Solutions";,
+{id: "ai-cybersecurity-threat-intelligence", title: "AI Cybersecurity & Threat Intelligence - Advanced Security Solutions";,
 description: "Comprehensive AI-powered cybersecurity platform that provides real-time threat detection; automated incident response; vulnerability assessment; and security intelligence for organizations of all sizes.",
-category: "AI & Cybersecurity", subcategory: "Threat Intelligence";
+category: "AI & Cybersecurity", subcategory: "Threat Intelligence";,
 price: 649; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered threat detection",
@@ -372,10 +366,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-cybersecurity", caseStudies: ["Finan
 marketTrend: "High demand for AI-powered cybersecurity with 65% annual growth", industryFocus: ["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
 scalability: "Enterprise-grade security infrastructure with unlimited scalability", customizationLevel: "Industry-specific security frameworks and compliance"};
 // AI-Powered Marketing & Advertising Platform;
-{
-id: "ai-marketing-advertising-platform", title: "AI Marketing & Advertising Platform - Intelligent Marketing Solutions";,
+{id: "ai-marketing-advertising-platform", title: "AI Marketing & Advertising Platform - Intelligent Marketing Solutions";,
 description: "Advanced AI-powered marketing platform that optimizes campaigns; personalizes content; predicts customer behavior; and automates marketing workflows for maximum ROI and customer engagement.",
-category: "AI & Marketing", subcategory: "Marketing Automation";
+category: "AI & Marketing", subcategory: "Marketing Automation";,
 price: 549; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered campaign optimization",
@@ -423,10 +416,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-marketing", caseStudies: ["E-commerc
 marketTrend: "Growing adoption of AI in marketing with 50% annual growth", industryFocus: ["E-commerce", "SaaS", "Retail", "B2B", "Agencies"],
 scalability: "Multi-client platform with unlimited campaign support", customizationLevel: "Custom marketing workflows and automation rules"};
 // AI-Powered Human Resources & Talent Management;
-{
-id: "ai-hr-talent-management-suite", title: "AI HR & Talent Management Suite - Intelligent People Management";,
+{id: "ai-hr-talent-management-suite", title: "AI HR & Talent Management Suite - Intelligent People Management";,
 description: "Comprehensive AI-powered HR platform that streamlines recruitment; optimizes employee performance; predicts turnover; and automates HR processes for better talent management and organizational success.",
-category: "AI & Human Resources", subcategory: "Talent Management";
+category: "AI & Human Resources", subcategory: "Talent Management";,
 price: 499; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered candidate screening",
@@ -474,10 +466,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-hr-talent", caseStudies: ["Tech comp
 marketTrend: "Growing demand for AI-powered HR solutions with 45% annual growth", industryFocus: ["Technology", "Healthcare", "Finance", "Manufacturing", "Professional Services"],
 scalability: "Multi-company platform with enterprise HR capabilities", customizationLevel: "Customizable HR workflows and compliance frameworks"};
 // AI-Powered Legal Technology & Compliance;
-{
-id: "ai-legal-technology-compliance", title: "AI Legal Technology & Compliance - Intelligent Legal Solutions";,
+{id: "ai-legal-technology-compliance", title: "AI Legal Technology & Compliance - Intelligent Legal Solutions";,
 description: "Advanced AI-powered legal technology platform that automates contract analysis; provides legal research assistance; monitors compliance; and optimizes legal workflows for law firms and legal departments.",
-category: "AI & Legal Technology", subcategory: "Legal Automation";
+category: "AI & Legal Technology", subcategory: "Legal Automation";,
 price: 749; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered contract analysis",
@@ -525,10 +516,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-legal-technology", caseStudies: ["La
 marketTrend: "Rapid adoption of AI in legal technology with 55% annual growth", industryFocus: ["Legal Services", "Financial Services", "Healthcare", "Technology", "Manufacturing"],
 scalability: "Enterprise legal platform with multi-firm support", customizationLevel: "Industry-specific legal workflows and compliance frameworks"};
 // AI-Powered Real Estate & Property Management;
-{
-id: "ai-real-estate-property-management", title: "AI Real Estate & Property Management - Intelligent Property Solutions";,
+{id: "ai-real-estate-property-management", title: "AI Real Estate & Property Management - Intelligent Property Solutions";,
 description: "Comprehensive AI-powered real estate platform that optimizes property management; predicts market trends; automates tenant screening; and provides intelligent property insights for real estate professionals and investors.",
-category: "AI & Real Estate", subcategory: "Property Management";
+category: "AI & Real Estate", subcategory: "Property Management";,
 price: 399; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered market analysis",
@@ -576,10 +566,9 @@ demoUrl: "https://ziontechgroup.com/demo/ai-real-estate", caseStudies: ["Propert
 marketTrend: "Growing adoption of AI in real estate with 40% annual growth", industryFocus: ["Real Estate", "Property Management", "Investment", "Development", "Brokerage"],
 scalability: "Multi-property platform with unlimited portfolio support", customizationLevel: "Customizable property workflows and reporting"};
 // AI-Powered Manufacturing & Industrial IoT;
-{
-id: "ai-manufacturing-industrial-iot", title: "AI Manufacturing & Industrial IoT - Intelligent Manufacturing Solutions";,
+{id: "ai-manufacturing-industrial-iot", title: "AI Manufacturing & Industrial IoT - Intelligent Manufacturing Solutions";,
 description: "Advanced AI-powered manufacturing platform that optimizes production processes; predicts equipment failures; monitors quality control; and enables smart manufacturing through IoT integration and machine learning.",
-category: "AI & Manufacturing", subcategory: "Industrial IoT";
+category: "AI & Manufacturing", subcategory: "Industrial IoT";,
 price: 899; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered production optimization",

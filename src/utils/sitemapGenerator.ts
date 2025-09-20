@@ -1,17 +1,15 @@
 import React from "react";
 
-interface SitemapUrl {
-url: string;
+interface SitemapUrl {url: string;
 lastmod?: string;
 changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
 priority?: number}
 
 interface SitemapConfig {
-baseUrl: string; urls: SitemapUrl[];
+baseUrl: string; urls: SitemapUrl[];origin/main
 outputPath?: string}
 
-export class SitemapGenerator {
-private config: SitemapConfig;
+export class SitemapGenerator {private config: SitemapConfig;
 constructor(config: SitemapConfig) {
 this.config = config}
 
@@ -43,7 +41,7 @@ ${xmlUrls}
 */;
 generateRobotsTxt(): string {
 const { baseUrl } = this.config;
-return `User-agent: *;
+return `User-agent: *;,
 Allow: /;
 ,
 Sitemap: ${baseUrl}/sitemap.xml; Sitemap: ${baseUrl}/sitemap-index.xml`;
@@ -52,8 +50,7 @@ Sitemap: ${baseUrl}/sitemap.xml; Sitemap: ${baseUrl}/sitemap-index.xml`;
 /**;
 * Save sitemap to file;
 */;
-async saveSitemap(): Promise<void> {
-const xml = this.generateXML();
+async saveSitemap(): Promise<void> {const xml = this.generateXML();
 const outputPath = this.config.outputPath || "./public/sitemap.xml";
 
 // In a real implementation; you would write to file system;
@@ -100,5 +97,5 @@ return generator.generateXML()}
 
 // Utility function to generate robots.txt;
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
-const generator = new SitemapGenerator(config);
+const generator = new SitemapGenerator(config);origin/main
 return generator.generateRobotsTxt()}

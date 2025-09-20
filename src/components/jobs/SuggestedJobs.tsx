@@ -78,12 +78,12 @@ const handleApply = (matchId: string jobId: string) => {
   updateJobMatchStatus (matchId,  'applied')
 //In a real app this might redirect to application form or open a modal}
 const handleDecline = (matchId: string) => {'
-  updateJobMatchStatus (matchId, 'declined')
+  updateJobMatchStatus (matchId, 'declined')origin/main
 }
 if (isLoading) {
-  return (<div className="flex items-center justify-center p-6" > <Loader2 className="w-6 h-6 animate-spin text-primary" /> </div>)
+return (<div className="flex items-center justify-center p-6" > <Loader2 className="w-6 h-6 animate-spin text-primary" /> </div>)
 }if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-  return <NoJobsCard /> "
+return <NoJobsCard /> ";
 }return (<div className="space-y-6" > {
   /* New Matches Section */
 }{"
@@ -106,7 +106,7 @@ if (isLoading) {
   match}onApply= {
   handleApply}onDecline= {
   handleDecline}showApplied= {
-  true}/>) )
+  true}/>) )origin/main
 }</div> </div>)
-}</div>)
-}'"}
+}</div>);
+}""}

@@ -5,9 +5,9 @@ import { motion } from "framer-motion, ";
 interface PerformanceMetrics {
 timestamp: number;
 memory: number;
-cpu: number;
+cpu: number;,
 fps: number;,
-network: number;};
+network: number;};origin/main
 export const RealTimePerformanceMonitor: React.FC = () => {;
 const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
 const [isVisible, setIsVisible] = useState(false);

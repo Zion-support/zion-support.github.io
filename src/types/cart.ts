@@ -5,7 +5,7 @@ id: string; name: string; price: number; quantity: number;
 image?: string}
 
 export interface CartContextType {
-items: CartItem[], dispatch: React.Dispatch<CartAction>}
+items: CartItem[], dispatch: React.Dispatch<CartAction>}origin/main
 
 export type CartAction =
 | { type: "ADD_ITEM",

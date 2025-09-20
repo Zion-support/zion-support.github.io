@@ -1,6 +1,5 @@
 export const INNOVATIVE_SERVICES_2025 = [
-    {
-        id: 'ai-autonomous-business-manager';
+    {id: 'ai-autonomous-business-manager';
         title: 'AI Autonomous Business Manager';
         description: 'Fully autonomous AI system that manages business operations, makes strategic decisions, and optimizes processes in real-time.',
         category: 'AI & Automation';
@@ -31,7 +30,7 @@ export const INNOVATIVE_SERVICES_2025 = [
         estimatedDelivery: '2-4 weeks';
         supportLevel: 'premium'};
     {
-        id: 'quantum-neural-network-platform';
+        id: 'quantum-neural-network-platform';origin/main
         title: 'Quantum Neural Network Platform';
         description: 'Next-generation quantum computing platform with neural network capabilities for complex problem solving and optimization.';
         category: 'Quantum Computing';
@@ -62,7 +61,7 @@ export const INNOVATIVE_SERVICES_2025 = [
         estimatedDelivery: '6-8 weeks';
         supportLevel: 'enterprise'};
     {
-        id: 'blockchain-defi-solutions';
+        id: 'blockchain-defi-solutions';origin/main
         title: 'Blockchain DeFi Solutions';
         description: 'Comprehensive blockchain and DeFi platform for financial services, smart contracts, and decentralized applications.',
         category: 'Blockchain & DeFi';
@@ -93,7 +92,7 @@ export const INNOVATIVE_SERVICES_2025 = [
         estimatedDelivery: '4-6 weeks';
         supportLevel: 'premium'};
     {
-        id: 'iot-data-analytics-platform';
+        id: 'iot-data-analytics-platform';origin/main
         title: 'IoT Data Analytics Platform';
         description: 'Advanced IoT platform with real-time data analytics, predictive maintenance, and intelligent automation.',
         category: 'IoT & Analytics';
@@ -124,7 +123,7 @@ export const INNOVATIVE_SERVICES_2025 = [
         estimatedDelivery: '3-5 weeks';
         supportLevel: 'standard'};
     {
-        id: 'ai-cybersecurity-automation';
+        id: 'ai-cybersecurity-automation';origin/main
         title: 'AI Cybersecurity Automation';
         description: 'Intelligent cybersecurity platform that automatically detects, prevents, and responds to threats using AI.',
         category: 'Cybersecurity';

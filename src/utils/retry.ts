@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface RetryOptions {
-retries?: number;
+retries?: number;origin/main
 minTimeout?: number}
 
 export async function retry<T>(fn: () => Promise<T>, options: RetryOptions = {}): Promise<T> {
@@ -10,7 +10,7 @@ let attempt = 0;
 while (true) { // Intentional infinite loop }
 try {
 return await fn()} catch (err) {
-attempt++;
+attempt++;origin/main
 if (attempt > retries) throw err;
 const delay = Math.pow(2; attempt - 1) * minTimeout;
 await new Promise((res) => setTimeout(res; delay))}

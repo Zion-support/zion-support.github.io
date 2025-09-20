@@ -42,7 +42,7 @@ revenu; e: number;
 growt; h: number;
 complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 marketDeman; d: "Low" | "Medium" | "High" | "Exploding";
-technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";};
+technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";};origin/main
 interface PortfolioMetrics {
 totalService; s: number;
 totalRevenu; e: number;
@@ -51,7 +51,7 @@ averagePerformanc; e: number;
 portfolioGrowt; h: number;
 marketCoverag; e: number;};
 const AdvancedServicePortfolioDashboar; d: React.FC = () => {
-const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
+const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");origin/main
 const [selectedStat; u; s; setSelectedStat; u; s] = useState<string>("all");
 const [selectedComplexi;  t; y; setSelectedComplexi; t; y] = useState<string>("all");
 const [searchTe; r; m; setSearchTe; r; m] = useState("");
@@ -74,7 +74,7 @@ complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Explodin; g"};
 technologyMaturi; t; y: "Leadin; g"},
 {
-i; d: "spac; e-minin; g",
+i; d: "spac; e-minin; g",origin/main
 tit; l; e: "Spac; e Minin; g & Resourc; e Extractio; n",
 catego; r; y: "spac; e-tec; h",
 pri; c; e: "$1;0; 0; 0;00; 0/mont; h",
@@ -88,7 +88,7 @@ complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Hig; h",
 technologyMaturi; t; y: "Emergin; g"},
 {
-i; d: "quantu; m-teleportatio; n",
+i; d: "quantu; m-teleportatio; n",origin/main
 tit; l; e: "Quantu; m Teleportatio; n Networ; k",
 catego; r; y: "quantu; m",
 pri; c; e: "$8; 0; 0;00; 0/mont; h",
@@ -102,7 +102,7 @@ complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Explodin; g",
 technologyMaturi; t; y: "Emergin; g"},
 {
-i; d: "fusio; n-energ; y",
+i; d: "fusio; n-energ; y",origin/main
 tit; l; e: "Fusio; n Energ; y Generatio; n Platfor; m",
 catego; r; y: "gree; n-tec; h",
 pri; c; e: "$2;0; 0; 0;00; 0/mont; h",
@@ -116,7 +116,7 @@ complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Hig; h",
 technologyMaturi; t; y: "Growin; g"},
 {
-i; d: "nanotechnolog; y",
+i; d: "nanotechnolog; y",origin/main
 tit; l; e: "Advance; d Nanotechnolog; y Platfor; m",
 catego; r; y: "biotec; h-a; i",
 pri; c; e: "$4; 5; 0;00; 0/mont; h",
@@ -130,7 +130,7 @@ complexi; t; y: "Advance; d",
 marketDema; n; d: "Hig; h",
 technologyMaturi; t; y: "Growin; g"},
 {
-i; d: "brai; n-compute; r-interfac; e",
+i; d: "brai; n-compute; r-interfac; e",origin/main
 tit; l; e: "Advance; d Brai; n-Compute; r Interfac; e",
 catego; r; y: "biotec; h-a; i",
 pri; c; e: "$6; 0; 0;00; 0/mont; h",
@@ -145,7 +145,7 @@ marketDema; n; d: "Explodin; g",
 technologyMaturi; t; y: "Leadin; g"}
 ];
 
-const filteredPortfolio = useMemo(() => {
+const filteredPortfolio = useMemo(() => {;
 return portfolioData.filter(service => {;
 const matchesCategory = selectedCategory === "all" || service.category === selectedCategory;
 const matchesStatus = selectedStatus === "all" || service.status === selectedStatus;
@@ -173,7 +173,7 @@ totalRevenu; e;
 activeClient; s: totalClient; s;
 averagePerformanc; e: Math.round(avgPerformance);
 portfolioGrowt; h: Math.round(portfolioGrowth);
-marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;};
+marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;};origin/main
 },  [portfolioDa; t; a]);
 
 const getStatusColor: any = (statu;  s: string) => {
@@ -182,7 +182,7 @@ case "Active": return "bg-green-100 text-green-800";
 case "Development": return "bg-blue-100 text-blue-800";
 case "Planning": return "bg-yellow-100 text-yellow-800";
 case "Discontinued": return "bg-red-100 text-red-800";
-defaul;  t: return "bg-gray-100 text-gray-800";}
+defaul;  t: return "bg-gray-100 text-gray-800";}origin/main
 };
 
 const getComplexityColor: any = (complexit; y: string) => {
@@ -191,7 +191,7 @@ case "Basic": return "bg-green-100 text-green-800";
 case "Intermediate": return "bg-blue-100 text-blue-800";
 case "Advanced": return "bg-orange-100 text-orange-800";
 case "Enterprise": return "bg-purple-100 text-purple-800";
-defaul;  t: return "bg-gray-100 text-gray-800";}
+defaul;  t: return "bg-gray-100 text-gray-800";}origin/main
 };
 
 const getMarketDemandColor: any = (deman; d: string) => {
@@ -200,7 +200,7 @@ case "Low": return "bg-gray-100 text-gray-800";
 case "Medium": return "bg-blue-100 text-blue-800";
 case "High": return "bg-orange-100 text-orange-800";
 case "Exploding": return "bg-red-100 text-red-800";
-defaul;  t: return "bg-gray-100 text-gray-800";}
+defaul;  t: return "bg-gray-100 text-gray-800";}origin/main
 };
 
 const getTechnologyMaturityColor: any = (maturit; y: string) => {
@@ -209,7 +209,7 @@ case "Emerging": return "bg-blue-100 text-blue-800";
 case "Growing": return "bg-green-100 text-green-800";
 case "Mature": return "bg-orange-100 text-orange-800";
 case "Leading": return "bg-purple-100 text-purple-800";
-defaul;  t: return "bg-gray-100 text-gray-800";}
+defaul;  t: return "bg-gray-100 text-gray-800";}origin/main
 };
 
 const categories = [;

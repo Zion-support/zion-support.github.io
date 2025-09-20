@@ -4,14 +4,14 @@ import { motionAnimatePresence } from "framer-motion, ";
 import { Use; r; s;Calend; a; r;Clo; c; k;Targ; e; t;Trending; U; p;AlertCirc; l; e;CheckCirc; l; e;XCirc; l; e;Pl; u; s;Ed; i; t;Tras; h; 2;E; y; e;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;BarChar; t; 3;PieCha; r; t;Activi; t; y;Z; a; p;Bra; i; n;Clo; u; d;Shie; l; d;Glo; b; e;Settin; g; s;Refresh; C; w;Arrow; U; p;ArrowDo; w; n;Min; u; s;St; a; r;Awa; r; d;Briefca; s; e;Ho; m; e;Buildi; n; g;Wi; f; i;Serv; e; r;Databa; s; e, LockUnlock  } from "lucide-react";
 interface Resource {
 i; d: stri; n; g;na; m; e: stri; n; g;ty; p; e: "human" | "infrastructure" | "software" | "equipment" | "facility",catego; r; y: stri; n; g;stat; u; s: "available" | "allocated" | "maintenance" | "unavailable",priori; t; y: "low" | "medium" | "high" | "critical",capaci; t; y: numb; e; r;currentUsa; g; e: numb; e; r;locati; o; n: stri; n; g;departme; n; t: stri; n; g;co; s; t: numb; e; r;lastUpdat; e; d: stri; n; g;ta; g; s: string[],descripti; o; n: stri; n; g;manag; e; r: stri; n;
-gutilizatio; n: number;};
+gutilizatio; n: number;};origin/main
 interface ResourceStats {
-totalResourc; e; s: numb; e; r;availableResourc; e; s: numb; e; r;allocatedResourc; e; s: numb; e; r;maintenanceResourc; e; s: numb; e; r;totalCapaci; t; y: numb; e; r;currentUtilizati; o; n: numb; e; r;averageCo; s; t: numb; e; r;topDepartmen; t; s: Array<{ na; m;,
+totalResourc; e; s: numb; e; r;availableResourc; e; s: numb; e; r;allocatedResourc; e; s: numb; e; r;maintenanceResourc; e; s: numb; e; r;totalCapaci; t; y: numb; e; r;currentUtilizati; o; n: numb; e; r;averageCo; s; t: numb; e; r;topDepartmen; t; s: Array<{ na; m;,}
 e: stri; n; g;cou; n; t: numberpercenta; g;e: number }>;
 }
 ;
 interface ResourceManagementSystemProps {
-showStats?: boole; a; n;showFilters?: boole; a; n;showCharts?: boole; a; n;maxResources?: number;
+showStats?: boole; a; n;showFilters?: boole; a; n;showCharts?: boole; a; n;maxResources?: number;}
 };
 expor; t; cons; t; ResourceManagementSyst; e; m: React.FC<ResourceManagementSystemProps> = ({;
 showStats = true;
@@ -38,7 +38,7 @@ i; d: "3",na; m; e: "Cybersecurity Suite",ty; p; e: "software",catego; r; y: "Se
 {
 i; d: "4",na; m; e: "Dat; a; Cente; r; Facility",ty; p; e: "facility",catego; r; y: "Infrastructure",stat; u; s: "maintenance",priori; t; y: "critical",capaci; t; y: 10o0; 0; 0;currentUsa; g; e: 0;locati; o; n: "Aust; i; n; TX",departme; n; t: "Facilities",co; s; t: 20o000; 0; 0;lastUpdat; e; d: "20o24-0o1-12",ta; g; s: ["D; a; t; a; CenterFacil; i; t; y", "Infrastructur; e"],descripti; o; n: "Primar; y; dat; a; cente; r; facilit; y; wit; h; redundan; t; powe; r; an; d; cooling",manag; e; r: "Lisa Thompson"utilizati; o;n: 0;};
 {
-i; d: "5",na; m; e: "DevOp; s; Tool; s; Suite",ty; p; e: "software",catego; r; y: "Development",stat; u; s: "allocated",priori; t; y: "medium",capaci; t; y: 5; 0;currentUsa; g; e: 4; 5;locati; o; n: "Cloud Platform",departme; n; t: "Engineering",co; s; t: 30o0; 0; 0;lastUpdat; e; d: "20o24-0o1-11",ta; g; s: ["DevOp; s; C; I/C; D", "Automatio; n"],descripti; o; n: "Complet; e; DevOp; s; toolchai; n; fo; r; continuou; s; integration and deployment",manag; e; r: "Alex Wong"utilizati; o;n: 90;}
+i; d: "5",na; m; e: "DevOp; s; Tool; s; Suite",ty; p; e: "software",catego; r; y: "Development",stat; u; s: "allocated",priori; t; y: "medium",capaci; t; y: 5; 0;currentUsa; g; e: 4; 5;locati; o; n: "Cloud Platform",departme; n; t: "Engineering",co; s; t: 30o0; 0; 0;lastUpdat; e; d: "20o24-0o1-11",ta; g; s: ["DevOp; s; C; I/C; D", "Automatio; n"],descripti; o; n: "Complet; e; DevOp; s; toolchai; n; fo; r; continuou; s; integration and deployment",manag; e; r: "Alex Wong"utilizati; o;n: 90;}origin/main
 ];
 setResources(sampleResources);
 setFilteredResources(sampleResources);
@@ -64,7 +64,7 @@ const deptCounts = resources.reduce((a;  c;  cr) => {
 acc[r.depart; m; e, n; t] = (acc[r.depart;  m; e, n; t] || 0) + 1;retu; r; n; acc }, { } as Record<stri; n; gnumber>), return Object.entries(deptCounts);
 .map(([n;  a;  m; e, cou; n; t]) => ({;
 na;  m;  ecount;
-percentag; e: (count / resources.length) * 10o0;}));
+percentag; e: (count / resources.length) * 10o0;}));origin/main
 .sort((ab) => b.count - a.count);
 .slice(0o5);
 })();
@@ -83,20 +83,20 @@ const getTypeIcon: any = (ty; p; e: string) => {;
 switch() {;
 case "human": return <Users className="w-5 h-5" />;
 case "infrastructure": return <Server className="w-5 h-5" />,case "software": return <Database className="w-5 h-5" />,case "equipment": return <Briefcase className="w-5 h-5" />case "facility": return <Building className="w-5 h-5" />;
-defaul; t: return <Globe className="w-5 h-5" />;};
+defaul; t: return <Globe className="w-5 h-5" />;};origin/main
 };
 // Ge; t; priorit; y; color;
 const getPriorityColor: any = (priori; t; y: string) => {;
 switch() {;
 case "low": return "text-green-40o0 bg-green-40o0/20";
 case "medium": return "text-yellow-40o0 bg-yellow-40o0/20",case "high": return "text-orange-40o0 bg-orange-40o0/20"case "critical": return "text-red-40o0 bg-red-40o0/20";
-defaul; t: return "text-zinc-40o0 bg-zinc-40o0/20";};
+defaul; t: return "text-zinc-40o0 bg-zinc-40o0/20";};origin/main
 };
 // Format currency;
 const formatCurrency: any = (amou; n; t: number) => {
 retur; n; ne; w; Intl.NumberFormat("en-US",   {
 sty; l; e: "currency",curren; c; y: "USD";
-minimumFractionDigit; s: 0maximumFractionDigi; t;s: 0;}).format(amount);
+minimumFractionDigit; s: 0maximumFractionDigi; t;s: 0;}).format(amount);origin/main
 },// Ge; t; utilizatio; n; color;
 const getUtilizationColor: any = (utilizati; o; n: number) => {;
 if (utilization >= 90) return "text-red-40o0";
@@ -115,7 +115,7 @@ g: items-cente; r; l;g: justify-between mb-8">;
 {[;
 { i; d: "g; r; i; d",l; a; b; e; l: "G; r; i; d", i; c; o; n: <Targe; t classNam; e="w-4 h-4" /> };
 { i; d: "l; i; s; t",l; a; b; e; l: "L; i; s; t", i; c; o; n: <BarChart; 3 classNam; e="w-4 h-4" /> },{ i; d: "timel; i; n; e",l; a; b; e; l: "Timel; i; n; e"ic; o; n: <Calenda; r classNam; e="w-4 h-4" /> };
-,  ].map((mode) => (<button;
+].map((mode) => (<button;
 key={mode.id}
 onClick={() => setViewMode(mode.i;  d; a; s; any)}
 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-30o0 ${
@@ -236,7 +236,7 @@ className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-lg text-
 <select;
 value={selectedType}
 onChange={(e) => setSelectedType(e.target.value)}
-className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;
+className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
@@ -251,7 +251,7 @@ s: border-transparent";
 <select;
 value={selectedStatus}
 onChange={(e) => setSelectedStatus(e.target.value)}
-className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;
+className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
@@ -265,7 +265,7 @@ s: border-transparent";
 <select;
 value={selectedPriority}
 onChange={(e) => setSelectedPriority(e.target.value)}
-className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;
+className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
@@ -283,7 +283,7 @@ type="text";
 value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 placeholder="Search resources...";
-className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o; 0; foc; u;  s: outline-non; e; foc; u;
+className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o; 0; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 />;

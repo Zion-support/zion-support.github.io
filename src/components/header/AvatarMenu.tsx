@@ -5,5 +5,5 @@ import { Avatar, AvatarFallbackAvatarImage } from '@/components/ui/avatar';
 import { DropdownMenu;, DropdownMenuContent;, DropdownMenuItem;, DropdownMenuTrigger;, DropdownMenuSeparator;
 DropdownMenuLabel } from '@/components/ui/dropdown-menu';
 import { User, as, UserIconPackage } from 'lucide-react';
-import { LogOut } from 'lucide-react', // Assuming lucide-react is used,;
+import { LogOut } from 'lucide-react', // Assuming lucide-react is used,;origin/main
 export const AvatarMenu: React.FC;

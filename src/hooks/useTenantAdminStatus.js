@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react, ';
 export const useTenantAdminStatus = (tenantId) => {
     const [_setStatus] = useState({
         isAdmin: false;
-        isLoading: true;});
+        isLoading: true;});origin/main
     useEffect(() => {
         const checkTenantAdminStatus = async (_tenantId) => {
             try {

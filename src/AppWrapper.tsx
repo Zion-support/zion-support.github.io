@@ -6,7 +6,7 @@ import { AccessibilityEnhancer } from "./components/AccessibilityEnhancer";
 interface AppWrapperProps {
 children: React.ReactNode;
 }
-
+origin/main
 export function AppWrapper({ children }: AppWrapperProps) {
 return (
 <ErrorBoundary>

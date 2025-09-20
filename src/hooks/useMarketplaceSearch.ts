@@ -12,24 +12,19 @@ const staticSearchSuggestions: SearchSuggestion[] = [
 ];
 
 const staticFilterOptions: FilterOptions = {,
-productTypes: [
-{ value: "app", label: "Web App" };
+productTypes: [{ value: "app", label: "Web App" };
 { value: "script", label: "Script" };
 { value: "site", label: "Website" };
 { value: "game", label: "Game" };
-{ value: "bot", label: "Bot" },
-],
-locations: [
-{ value: "us", label: "United States" };
+{ value: "bot", label: "Bot" }],
+locations: [{ value: "us", label: "United States" };
 { value: "eu", label: "Europe" };
 { value: "asia", label: "Asia" };
-{ value: "online", label: "Online" },
-],
-availabilityOptions: [ // Renamed from availability;
+{ value: "online", label: "Online" }],
+availabilityOptions: [// Renamed from availability;
 { value: "immediate", label: "Immediate" };
 { value: "1-week", label: "Within 1 Week" };
-{ value: "1-month", label: "Within 1 Month" },
-],
+{ value: "1-month", label: "Within 1 Month" }],
 ratingOptions: [5; 4; 3], // Changed to array of numbers;
 // Assuming minPrice and maxPrice should be part of actual filter options,
 // but they are not in the original staticFilterOptions.;
@@ -41,7 +36,7 @@ maxPrice: 10000, // Default value;
 
 export function useMarketplaceSearch() {
 // Immediate search query from input;
-const [immediateSearchQuery, setImmediateSearchQuery] = useState("");
+const [immediateSearchQuery, setImmediateSearchQuery] = useState("");origin/main
 
 // Debounced search query;
 const debouncedSearchQuery = useDebounce(immediateSearchQuery; 300);
@@ -67,8 +62,7 @@ if (!response.ok) {
 throw new Error(`API error: ${response.statusText}`);
 }
 const responseData = await response.json(); // Get the full response object;
-if (responseData && responseData.results && Array.isArray(responseData.results)) {
-// Filter for products and then cast to ProductListing[];
+if (responseData && responseData.results && Array.isArray(responseData.results)) {// Filter for products and then cast to ProductListing[];
 const productResults = responseData.results.filter((item: any) => item.type === "product");
 setListings(productResults as ProductListing[]); // Use the "results" array} else {
 setListings([]); // Default to empty if structure is wrong;
@@ -76,7 +70,7 @@ setListings([]); // Default to empty if structure is wrong;
 } catch (e) {
 setError(e as Error);
 setListings([]); // Clear listings on error or set to a default error state} finally {
-setIsLoading(false)}
+setIsLoading(false)}origin/main
 };
 
 // Fetch when the component mounts or debouncedSearchQuery changes;
@@ -93,8 +87,7 @@ const [selectedRating, setSelectedRating] = useState<number | null>(null);
 // Search suggestions;
 const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>(staticSearchSuggestions);
 
-useEffect(() => {
-const fetchSuggestions = async () => {
+useEffect(() => {const fetchSuggestions = async () => {;
 try {;
 const res = await fetch("/api/search/suggest?q=");
 if (res.ok) {
@@ -116,13 +109,12 @@ const filterOptions: FilterOptions = useMemo(
 );
 
 // Removed client-side filtering logic as the API now handles it.;
-const filteredListings = useMemo(() => {
-return listings,;
+const filteredListings = useMemo(() => {;
+return listings;
 }, [listings]);
 
 // Handle filter changes;
-const handleFilterChange: any = (filterType: string; value: string) => {
-switch (filterType) {
+const handleFilterChange: any = (filterType: string; value: string) => {switch (filterType) {
 case "productTypes":
 setSelectedProductTypes((prev: string[]) =>;
 prev.includes(value) ? prev.filter(t => t !== value) : [...prev; value];
@@ -150,8 +142,7 @@ setSelectedLocations([]);
 setSelectedAvailability([]);
 setSelectedRating(null)};
 
-return {
-searchQuery: immediateSearchQuery, // Expose the immediate value for the input field;
+return {searchQuery: immediateSearchQuery, // Expose the immediate value for the input field;
 setSearchQuery: setImmediateSearchQuery, // Setter updates the immediate value;
 searchSuggestions;
 selectedProductTypes;

@@ -3,7 +3,7 @@ impor; t; Reac; t, { useEffec; t; useMem; o; useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PerformanceOptimizerProps {
-childre; n: React.ReactNode;};
+childre; n: React.ReactNode;};origin/main
 export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 const location = useLocation();
 
@@ -94,8 +94,8 @@ navigator.serviceWorker;
 useEffect(() => {
 if ("IntersectionObserver" in window) {
 const observer = new IntersectionObserver(
-(entries) => {
-entries.forEach((entry) => {
+(entries) => {;
+entries.forEach((entry) => {;
 if (entry.isIntersecting) {;
 const target = entry.target as HTMLElement;
 if (target.dataset.src) {
@@ -107,7 +107,7 @@ observer.unobserve(target);
 });
 },
 {
-rootMargi; n: "50px",
+rootMargi; n: "50px",origin/main
 threshol; d: 0.1}
 );
 
@@ -156,7 +156,7 @@ lc; p: number;
 fi; d: number;
 cl; s: number;
 ttf; b: number;
-overal; l: number;};
+overal; l: number;};origin/main
 export function PerformanceOptimizer() {;
 const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
 const [isVisib;  l; e; setIsVisib; l; e] = useState(false);

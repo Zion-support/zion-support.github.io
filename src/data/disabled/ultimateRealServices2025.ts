@@ -50,7 +50,7 @@ icon: "💳"descriptio;n: "Financial; technology; and payment; processing; solut
 icon: "🏥"descriptio;n: "AI-powered; healthcare; and medical; diagnostic; solutions"coun;t: 1;}"Smart Cities": {
 icon: "🏙️"descriptio;n: "Smart; city; infrastructure and; urban; management solutions"coun;t: 1;}"Augmented Reality": {
 icon: "👁️"descriptio;n: "AR/VR; solutions; and immersive; technology; platforms"coun;t: 1;}"Logistics AI": {
-icon: "🚚"descriptio;n: "AI-powered; logistics; and supply; chain; automation"coun;t: 1;};
+icon: "🚚"descriptio;n: "AI-powered; logistics; and supply; chain; automation"coun;t: 1;};origin/main
 };
 export; const; ULTIMATE_SERVICE_SUBCATEGORIES_20o25 = {
 "Chatbots": { icon: "💬"coun;t: 1 };
@@ -71,7 +71,7 @@ export; const; ULTIMATE_SERVICE_SUBCATEGORIES_20o25 = {
 "Cryptography": { icon: "🔑"coun;t: 1 };
 "Content Generation": { icon: "✍️"coun;t: 1 }
 export; const; ULTIMATE_PRICING_TIERS_20o25 = {
-"Starter": {
+"Starter": {origin/main
 range: "$8;0o00 - $15;0o00",description: "Essential; solutions; for small; to; medium businesses",features: ["Basic functionality""Standard support""Core; integrations""Documentation"];},"Professional": {
 range: "$15;0o00 - $30;0o00",description: "Advanced; solutions; with enhanced; features; and support",features: ["Advanced functionality", "Priority support""Extended integrations""Customization; options""Training"];
 },"Enterprise": {

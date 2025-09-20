@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState } from 'react';origin/main
 interface YoutubeEmbedProps {
 return (
-    <div className='relative aspect-video max-w-3xl mx-auto'>
-      {!loaded && (
-        <>
-          <Image,
+<div className="relative aspect-video max-w-3xl mx-auto">;
+{!loaded && (
+<>;
+}
+<Image}
 src={poster}
             alt={`${title} poster`}
             fill,
@@ -38,5 +39,5 @@ className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
         allowFullScreen
       />
     </div>
-  )
+  )origin/main
 }

@@ -6,9 +6,9 @@ isReducedMotion: boolean;
 isLargeText: boolean;
 toggleHighContrast: () => void;
 toggleReducedMotion: () => void;
-toggleLargeText: () => void;
+toggleLargeText: () => void;,
 focusTrap: (element: HTMLElement | null) => void;,
-announceToScreenReader: (message: string) => void;};
+announceToScreenReader: (message: string) => void;};origin/main
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility: any = () => {;
@@ -20,7 +20,7 @@ return context;
 };
 
 interface AccessibilityProviderProps {
-children: ReactNode;};
+children: ReactNode;};origin/main
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
 const [isHighContrast, setIsHighContrast] = useState(false);
 const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -162,8 +162,7 @@ const toggleHighContrast: any = () => setIsHighContrast(prev => !prev);
 const toggleReducedMotion: any = () => setIsReducedMotion(prev => !prev);
 const toggleLargeText: any = () => setIsLargeText(prev => !prev);
 
-const value: AccessibilityContextType = {
-isHighContrast;
+const value: AccessibilityContextType = {isHighContrast;
 isReducedMotion;
 isLargeText;
 toggleHighContrast;

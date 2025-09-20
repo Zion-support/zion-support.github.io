@@ -1,15 +1,16 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react;";
 
-export function TestimonialsSection() {
-const testimonials = [;
+export function TestimonialsSection() {const testimonials = [;
 {;
 name: "Sarah Johnson", role: "CTO";,
-company: "TechCorp Inc.", content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.";
+company: "TechCorp Inc.", content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.";,
 rating: 5;,
 avatar: "👩‍💼"};
 {
@@ -18,7 +19,7 @@ company: "InnovateLabs", content: "The cybersecurity implementation was seamless
 rating: 5;,
 avatar: "👨‍💻"};
 {
-name: "Emily Rodriguez", role: "Operations Director";,
+name: "Emily Rodriguez", role: "Operations Director";,origin/main
 company: "Global Solutions", content: "Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.",
 rating: 5;,
 avatar: "👩‍🔬"}

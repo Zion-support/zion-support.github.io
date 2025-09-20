@@ -5,7 +5,8 @@ import { LinkValidato; r; LinkValidationResul; t, LinkFix  } from "../utils/link
 interface LinkMonitorProps {
 onLinkIssue?: (issu;  e: LinkValidationResult) => void;
 autoFix?: boolean;
-showStatus?: boolean;
+}
+showStatus?: boolean;}
 };
 export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
 onLinkIssu;  e;
@@ -74,8 +75,7 @@ links.forEach(link => {
 });
 
 // Add to fixed links list;
-const fi; x: LinkFix = {
-originalUr; l;
+const fi; x: LinkFix = {originalUr; l;
 newUr; l;
 typ; e: "redirect";
 reaso; n: "Automatically fixed broken internal link"};
@@ -84,7 +84,7 @@ setFixedLinks(prev => [...pr;  e; v; f; i; x]);
 };
 
 // Fix all broken links;
-const fixAllBrokenLinks = async () => {
+const fixAllBrokenLinks = async () => {;
 for (const brokenLink of brokenLinks) {;
 await fixBrokenLink(brokenLink.ur;  l; brokenLink);
 }
@@ -106,12 +106,11 @@ URL.revokeObjectURL(url);
 };
 
 // Export broken links report;
-const exportReport: any = () => {
-const report = {;
+const exportReport: any = () => {const report = {;
 scanTim;  e: lastScanTime?.toISOString();
 totalBrokenLink; s: brokenLinks.lengt; h;
 brokenLink; s: brokenLink; s;};
-fixedLink; s: fixedLinks;};
+fixedLink; s: fixedLinks;};origin/main
 const blob = new Blob([JSO;  N.stringif; y(repo; r; t; nu; l; l; 2)], { typ; e: "application/json" });
 const url = URL.createObjectURL(blob);
 

@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
@@ -14,7 +16,7 @@ const LazyExpensiveComponent = lazy(() => import("./ExpensiveComponent"));
 const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {
 dat; a: any[];
 onItemClic; k: (ite; m: any) => void; }) => {
-const processedData = useMemo(() => {
+const processedData = useMemo(() => {origin/main
 return data.map(item => ({;
 ...ite;  m;
 processe; d: item.value * 2;
@@ -53,8 +55,7 @@ const VirtualList: any = ({ item;  s; itemHeight = 6; 0; containerHeight = 400 }
 item; s: any[];
 itemHeight?: number;
 containerHeight?: number;
-}) => {
-const [scrollT; o; p; setScrollT; o; p] = React.useState(0);
+}) => {const [scrollT; o; p; setScrollT; o; p] = React.useState(0);
 
 const visibleItems = useMemo(() => {;
 const startIndex = Math.floor(scrollTop / itemHeight);
@@ -105,8 +106,7 @@ className="p-3 border-b border-zion-slate/10 hove;  r: bg-zion-slate/5 transitio
 // Main performance optimizations component;
 export function PerformanceOptimizations() {;
 const [showExpensi;  v; e; setShowExpensi; v; e] = React.useState(false);
-const [da; t; a; setDa; t; a] = React.useState([
-{ i;  d: 1;
+const [da; t; a; setDa; t; a] = React.useState([{ i;  d: 1;
 tit; l; e: "Servic; e 1", descripti; o; n: "Descriptio; n 1",
 val; u; e: 10; 0 },
 { i; d: 2;
@@ -120,8 +120,7 @@ tit; l; e: "Servic; e 4", descripti; o; n: "Descriptio; n 4",
 val; u; e: 40; 0 },
 { i; d: 5;
 tit; l; e: "Servic; e 5", descripti; o; n: "Descriptio; n 5",
-val; u; e: 50; 0 },
-]);
+val; u; e: 50; 0 }]);
 
 const handleItemClick = useCallback((ite;  m: any) => {}, []);
 

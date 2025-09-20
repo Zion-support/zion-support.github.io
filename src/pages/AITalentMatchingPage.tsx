@@ -31,7 +31,7 @@ const stats = [
   { label: "Successful Matches", value: "95%" },
   { label: "Client Satisfaction", value: "98%" },
   { label: "Time Saved", value: "70%" }
-];
+];origin/main
 
 export default function AITalentMatchingPage() {
   return (

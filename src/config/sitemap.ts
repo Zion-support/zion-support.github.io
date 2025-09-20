@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 // Define the types for our sitemap structure
 export type SitemapItem = {
 path: string;
-label: string;
+label: string;origin/main
 description?: string;
 priority?: number;
 changeFreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
@@ -11,7 +11,7 @@ lastmod?: string;
 requiredAuth?: boolean;
 requiredRoles?: Array<"creator" | "jobSeeker" | "employer" | "buyer" | "admin">;
 children?: SitemapItem[];
-};
+};origin/main
 
 // Current date for lastmod
 const currentDate = "2025-05-15";
@@ -92,7 +92,7 @@ description: "Sustainable technology solutions for a better future", priority: 0
 changeFreq: "monthly",
 lastmod: currentDate,
 },
-],
+],origin/main
 
 // Authentication Pages,
 export const authPages: SitemapItem[] = [
@@ -124,7 +124,7 @@ path: "/forgot-password", label: "Forgot Password",
 description: "Reset your password", priority: 0.5,
 changeFreq: "monthly", lastmod: currentDate,
 },
-],
+],origin/main
 
 // Talent/Creator Routes - Requires authentication and appropriate role,
 export const talentRoutes: SitemapItem[] = [
@@ -156,7 +156,7 @@ requiredRoles: ["jobSeeker", "creator"],
 priority: 0.7, changeFreq: "monthly",
 lastmod: currentDate,
 },
-],
+],origin/main
 
 // Client/Employer Routes - Requires authentication and appropriate role,
 export const clientRoutes: SitemapItem[] = [
@@ -205,7 +205,7 @@ path: "/dashboard/disputes", label: "Disputes",
 description: "Manage and view disputes", requiredAuth: true, priority: 0.7, changeFreq: "daily",
 lastmod: currentDate,
 },
-],
+],origin/main
 
 // Admin Routes,
 export const adminRoutes: SitemapItem[] = [
@@ -239,7 +239,7 @@ disputeDetails: "/dashboard/disputes/:disputeId",
 
 // The complete sitemap,
 export const completeSitemap: SitemapItem[] = [
-...publicPages,
+...publicPages,origin/main
 ...authPages,
 ...talentRoutes,
 ...clientRoutes,
@@ -253,7 +253,7 @@ isAuthenticated: boolean,
 userType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null,
 ) => {
 // Public routes accessible to everyone,
-let accessibleRoutes = [...publicPages, ...authPages],
+let accessibleRoutes = [...publicPages, ...authPages],origin/main
 
 // Add authenticated-only routes,
 if (isAuthenticated) {
@@ -261,16 +261,11 @@ accessibleRoutes = [...accessibleRoutes, ...sharedRoutes],
 
 // Add role-specific routes,
 if (userType === "creator" || userType === "jobSeeker") {
-accessibleRoutes = [...accessibleRoutes, ...talentRoutes],
-}
+accessibleRoutes = [...accessibleRoutes, ...talentRoutes]}
 
-if (userType === "employer" || userType === "buyer") {
-accessibleRoutes = [...accessibleRoutes, ...clientRoutes],
-}
+if (userType === "employer" || userType === "buyer") {accessibleRoutes = [...accessibleRoutes, ...clientRoutes]}
 
-if (userType === "admin') {
-accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes],
-}
+if (userType === "admin') {accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]}
 }
 
 return accessibleRoutes,

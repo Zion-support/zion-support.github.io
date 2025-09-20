@@ -1,13 +1,13 @@
 import { Routes, Route  } from "react-router-dom";
 export interface NextGenInnovativeService2025 {
-id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
+id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,origin/main
 benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
+targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 contactInfo: {,
 phone: string; email: string; website: string};
 technology: string[], integrations: string[];,
-compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;}
+compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;}origin/main
 
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] = [
 // Quantum AI Orchestration Platform;
@@ -65,11 +65,10 @@ compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
 roi: "500% within 12 months",
 competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
 launchDate: "Q1 2025",
-betaAccess: true;},
+betaAccess: true;},origin/main
 
 // Autonomous AI Business Operations Suite;
-{
-id: "autonomous-ai-business-operations-suite",
+{id: "autonomous-ai-business-operations-suite",
 title: "Autonomous AI Business Operations Suite",
 description: "Complete AI-powered business automation platform that runs entire business operations autonomously; from decision-making to execution; with human oversight capabilities.",
 category: "AI & Business Automation",
@@ -121,11 +120,10 @@ compliance: ["SOC 2", "GDPR", "ISO 27001"],
 roi: "400% within 8 months",
 competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
 launchDate: "Q2 2025",
-betaAccess: true;},
+betaAccess: true;},origin/main
 
 // Neural Interface Development Platform;
-{
-id: "neural-interface-development-platform",
+{id: "neural-interface-development-platform",
 title: "Neural Interface Development Platform",
 description: "Cutting-edge platform for developing brain-computer interfaces and neural network applications; enabling direct communication between human brain and digital systems.",
 category: "Neural Technology",
@@ -177,11 +175,10 @@ compliance: ["FDA", "HIPAA", "ISO 13485", "CE Mark"],
 roi: "300% within 18 months",
 competitors: ["Neuralink", "Kernel", "CTRL-labs"],
 launchDate: "Q3 2025",
-betaAccess: false;},
+betaAccess: false;},origin/main
 
 // Holographic Collaboration Workspace;
-{
-id: "holographic-collaboration-workspace",
+{id: "holographic-collaboration-workspace",
 title: "Holographic Collaboration Workspace",
 description: "Next-generation 3D holographic workspace that enables teams to collaborate in immersive virtual environments; revolutionizing remote work and creative collaboration.",
 category: "Immersive Technology",
@@ -233,11 +230,10 @@ compliance: ["GDPR", "SOC 2", "ISO 27001"],
 roi: "250% within 6 months",
 competitors: ["Microsoft Mesh", "Meta Horizon", "Spatial"],
 launchDate: "Q2 2025",
-betaAccess: true;},
+betaAccess: true;},origin/main
 
 // AI-Powered Cybersecurity Mesh;
-{
-id: "ai-powered-cybersecurity-mesh",
+{id: "ai-powered-cybersecurity-mesh",
 title: "AI-Powered Cybersecurity Mesh",
 description: "Advanced cybersecurity platform that creates a distributed security mesh using AI to protect digital assets across all environments; from edge to cloud.",
 category: "Cybersecurity",
@@ -289,11 +285,10 @@ compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 roi: "350% within 12 months",
 competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
 launchDate: "Q1 2025",
-betaAccess: true;},
+betaAccess: true;},origin/main
 
 // Sustainable Tech Innovation Hub;
-{
-id: "sustainable-tech-innovation-hub",
+{id: "sustainable-tech-innovation-hub",
 title: "Sustainable Tech Innovation Hub",
 description: "Comprehensive platform for developing and deploying sustainable technology solutions; including green computing; renewable energy optimization; and environmental impact tracking.",
 category: "Sustainable Technology",
@@ -346,20 +341,18 @@ roi: "200% within 12 months",
 competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
 launchDate: "Q2 2025",
 betaAccess: true;
-export interface ServiceContact {,
+export interface ServiceContact {,origin/main
 phone: string; email: string; website: string; address: string}
 
-export interface NextGenService {
-id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];,
+export interface NextGenService {id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];,
 benefits: string[], targetAudience: string[];,
 tags: string[], contactInfo: ServiceContact; marketPrice: string; technologyStack: string[];,
-compliance: string[], scalability: string[];,
+compliance: string[], scalability: string[];,origin/main
 estimatedDelivery: string; supportLevel: string; innovationScore: number}
 
 // Next-Generation Innovative Services for 2025;
 export const nextGenInnovativeServices2025: NextGenService[] = [
-{
-id: 1;,
+{id: 1;,
 name: "Quantum AI Hybrid Computing Platform",
 category: "Quantum Computing",
 subcategory: "AI Integration",
@@ -400,7 +393,7 @@ estimatedDelivery: "8-12 weeks",
 supportLevel: "enterprise",
 innovationScore: 9.5;},
 {
-id: 2; name: "Metaverse Business Platform & Virtual Commerce",
+id: 2; name: "Metaverse Business Platform & Virtual Commerce",origin/main
 category: "Metaverse & VR",
 subcategory: "Business Solutions",
 description: "Comprehensive metaverse platform enabling businesses to create; manage; and monetize virtual experiences and digital assets",
@@ -440,7 +433,7 @@ estimatedDelivery: "6-8 weeks",
 supportLevel: "premium",
 innovationScore: 8.8;},
 {
-id: 3; name: "Autonomous Vehicle AI Platform & Fleet Management",
+id: 3; name: "Autonomous Vehicle AI Platform & Fleet Management",origin/main
 category: "Autonomous Systems",
 subcategory: "Transportation",
 description: "Advanced AI-powered platform for autonomous vehicle operations; fleet management; and intelligent transportation systems",
@@ -480,7 +473,7 @@ estimatedDelivery: "10-14 weeks",
 supportLevel: "enterprise",
 innovationScore: 9.2;},
 {
-id: 4; name: "AI-Powered Healthcare Diagnostic Platform",
+id: 4; name: "AI-Powered Healthcare Diagnostic Platform",origin/main
 category: "Healthcare Technology",
 subcategory: "Medical AI",
 description: "Advanced AI platform for medical diagnostics; patient monitoring; and healthcare analytics with high accuracy",
@@ -520,7 +513,7 @@ estimatedDelivery: "8-12 weeks",
 supportLevel: "enterprise",
 innovationScore: 9.0;},
 {
-id: 5; name: "AI-Powered Financial Trading & Risk Management",
+id: 5; name: "AI-Powered Financial Trading & Risk Management",origin/main
 category: "Financial Technology",
 subcategory: "Trading AI",
 description: "Intelligent trading platform using advanced AI algorithms for market analysis; automated trading; and risk assessment",
@@ -560,7 +553,7 @@ estimatedDelivery: "10-14 weeks",
 supportLevel: "enterprise",
 innovationScore: 9.3;},
 {
-id: 6; name: "Intelligent Document Processing & Automation",
+id: 6; name: "Intelligent Document Processing & Automation",origin/main
 category: "Document AI",
 subcategory: "Process Automation",
 description: "Advanced AI platform that automatically processes; analyzes; and extracts information from any type of document",
@@ -600,7 +593,7 @@ estimatedDelivery: "4-6 weeks",
 supportLevel: "premium",
 innovationScore: 8.5;},
 {
-id: 7; name: "AI-Powered Supply Chain Optimization Platform",
+id: 7; name: "AI-Powered Supply Chain Optimization Platform",origin/main
 category: "Supply Chain AI",
 subcategory: "Logistics Optimization",
 description: "Intelligent supply chain platform that uses AI to predict demand; optimize inventory; and improve efficiency",
@@ -640,7 +633,7 @@ estimatedDelivery: "6-8 weeks",
 supportLevel: "premium",
 innovationScore: 9.1;},
 {
-id: 8; name: "AI-Powered Cybersecurity Threat Detection & Response",
+id: 8; name: "AI-Powered Cybersecurity Threat Detection & Response",origin/main
 category: "Cybersecurity AI",
 subcategory: "Threat Intelligence",
 description: "Advanced cybersecurity platform that uses AI to detect; analyze; and respond to security threats in real-time",
@@ -680,7 +673,7 @@ estimatedDelivery: "6-8 weeks",
 supportLevel: "enterprise",
 innovationScore: 9.4;},
 {
-id: 9; name: "Brain-Computer Interface Development Platform",
+id: 9; name: "Brain-Computer Interface Development Platform",origin/main
 category: "Neurotechnology",
 subcategory: "BCI Solutions",
 description: "Revolutionary brain-computer interface platform for medical applications; research; and human-computer interaction",
@@ -720,7 +713,7 @@ estimatedDelivery: "12-16 weeks",
 supportLevel: "enterprise",
 innovationScore: 9.6;},
 {
-id: 10; name: "Space Technology & Satellite AI Platform",
+id: 10; name: "Space Technology & Satellite AI Platform",origin/main
 category: "Space Technology",
 subcategory: "Satellite AI",
 description: "Advanced AI platform for satellite operations; space data analysis; and orbital management systems",
@@ -760,7 +753,7 @@ estimatedDelivery: "14-18 weeks",
 supportLevel: "enterprise",
 innovationScore: 9.1;},
 {
-id: 11; name: "Quantum Internet & Secure Communications",
+id: 11; name: "Quantum Internet & Secure Communications",origin/main
 category: "Quantum Technology",
 subcategory: "Quantum Communications",
 description: "Next-generation quantum internet infrastructure for ultra-secure; unhackable communications and data transfer",
@@ -800,7 +793,7 @@ estimatedDelivery: "16-20 weeks",
 supportLevel: "enterprise",
 innovationScore: 9.5;},
 {
-id: 12; name: "Synthetic Biology & Bioengineering Platform",
+id: 12; name: "Synthetic Biology & Bioengineering Platform",origin/main
 category: "Biotechnology",
 subcategory: "Synthetic Biology",
 description: "Revolutionary platform for synthetic biology; genetic engineering; and bio-manufacturing applications",
@@ -838,7 +831,7 @@ compliance: ["FDA", "EPA", "Biosafety Regulations", "International Standards"],
 scalability: ["Multi-lab Support", "Research Collaboration", "Global Bio-network"],
 estimatedDelivery: "18-24 weeks",
 supportLevel: "enterprise",
-innovationScore: 9.2;}
+innovationScore: 9.2;}origin/main
 ];
 
 export default nextGenInnovativeServices2025;}

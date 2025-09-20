@@ -4,7 +4,7 @@ export type ViewMode = "light" | "dark" | "system";
 
 interface ViewModeContextValue {
 viewMode: ViewMode;,
-setViewMode: (mode: ViewMode) => void;};
+setViewMode: (mode: ViewMode) => void;};origin/main
 const ViewModeContext = createContext<ViewModeContextValue | undefined>(undefined);
 
 export function ViewModeProvider({ children }: { children: ReactNode }) {;

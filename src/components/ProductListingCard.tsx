@@ -8,9 +8,11 @@ import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",;
-import { DollarSign } from 'lucide-react';
+import { DollarSign } from 'lucide-react';origin/main
 interface ProductListingCardProps {
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-  detailBasePath?: string
+listing: ProductListing;
+view?: "grid" | "list";
+onRequestQuote?: (id: string) => void;
+detailBasePath?: string;
+}
+}

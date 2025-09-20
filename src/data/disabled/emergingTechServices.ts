@@ -1,12 +1,11 @@
 import React from "react";
 
-export interface EmergingTechService {
-id: string; title: string; description: string;,
-category: "Blockchain" | "IoT" | "Edge Computing" | "5G" | "AR/VR" | "Robotics" | "Quantum Computing" | "Biotechnology" | "Green Tech" | "Space Tech", subcategory: string;
+export interface EmergingTechService {id: string; title: string; description: string;,
+category: "Blockchain" | "IoT" | "Edge Computing" | "5G" | "AR/VR" | "Robotics" | "Quantum Computing" | "Biotechnology" | "Green Tech" | "Space Tech", subcategory: string;,
 price: {
 monthly?: number;
 yearly?: number;
-oneTime?: number;,
+oneTime?: number;,origin/main
 currency: string; pricingModel: string};
 currency?: string;
 pricingModel?: string;
@@ -14,11 +13,11 @@ features: string[], benefits: string[];,
 useCases: string[], targetAudience: string[];
 tags?: string[];
 estimatedDelivery?: string;
-supportLevel?: string;
+supportLevel?: string;,
 marketPrice: string; competitiveAdvantage: string; contactInfo: {,
 phone: string; email: string; website: string; address: string};
 rating: number; reviewCount: number; launchDate: string;,
-status: "Active" | "Beta" | "Coming Soon", innovationScore: number;}
+status: "Active" | "Beta" | "Coming Soon", innovationScore: number;}origin/main
 
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
 // Blockchain Services;
@@ -29,7 +28,7 @@ description: "Scalable enterprise blockchain solutions for supply chain manageme
 category: "Blockchain",
 subcategory: "Enterprise Solutions",
 price: {
-monthly: 299;
+monthly: 299;,
 yearly: 2990;,
 currency: "$",
 pricingModel: "subscription"},
@@ -81,16 +80,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.8; reviewCount: 156;,
 launchDate: "2024-01-01",
 status: "Active",
-innovationScore: 92;},
+innovationScore: 92;},origin/main
 
 // IoT Services;
-{
-id: "iot-ecosystem-platform",
+{id: "iot-ecosystem-platform",
 title: "Zion IoT Ecosystem Platform",
 description: "Comprehensive IoT platform for device management; data collection; analytics; and automation across industries.",
 category: "IoT",
 subcategory: "Platform Solutions",
-price: {
+price: {,
 monthly: 199; yearly: 1990;,
 currency: "$",
 pricingModel: "subscription"},
@@ -137,16 +135,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.7; reviewCount: 234;,
 launchDate: "2023-12-01",
 status: "Active",
-innovationScore: 89;},
+innovationScore: 89;},origin/main
 
 // Edge Computing Services;
-{
-id: "edge-computing-orchestrator",
+{id: "edge-computing-orchestrator",
 title: "Zion Edge Computing Orchestrator",
 description: "Intelligent edge computing platform that optimizes data processing; reduces latency; and improves application performance.",
 category: "Edge Computing",
 subcategory: "Orchestration Platform",
-price: {
+price: {,
 monthly: 249; yearly: 2490;,
 currency: "$",
 pricingModel: "subscription"},
@@ -193,16 +190,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.9; reviewCount: 178;,
 launchDate: "2024-02-01",
 status: "Active",
-innovationScore: 94;},
+innovationScore: 94;},origin/main
 
 // 5G Services;
-{
-id: "5g-network-optimization",
+{id: "5g-network-optimization",
 title: "Zion 5G Network Optimization",
 description: "Advanced 5G network optimization and management solutions for telecommunications providers and enterprises.",
 category: "5G",
 subcategory: "Network Management",
-price: {
+price: {,
 monthly: 399; yearly: 3990;,
 currency: "$",
 pricingModel: "subscription"},
@@ -249,16 +245,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.8; reviewCount: 145;,
 launchDate: "2024-01-15",
 status: "Active",
-innovationScore: 91;},
+innovationScore: 91;},origin/main
 
 // AR/VR Services;
-{
-id: "ar-vr-enterprise-platform",
+{id: "ar-vr-enterprise-platform",
 title: "Zion AR/VR Enterprise Platform",
 description: "Comprehensive augmented and virtual reality platform for training; collaboration; and customer engagement.",
 category: "AR/VR",
 subcategory: "Enterprise Platform",
-price: {
+price: {,
 monthly: 179; yearly: 1790;,
 currency: "$",
 pricingModel: "subscription"},
@@ -305,16 +300,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.6; reviewCount: 189;,
 launchDate: "2023-11-01",
 status: "Active",
-innovationScore: 88;},
+innovationScore: 88;},origin/main
 
 // Robotics Services;
-{
-id: "intelligent-robotics-automation",
+{id: "intelligent-robotics-automation",
 title: "Zion Intelligent Robotics Automation",
 description: "AI-powered robotics solutions for manufacturing; logistics; and service industries.",
 category: "Robotics",
 subcategory: "Automation Solutions",
-price: {
+price: {,
 monthly: 0; yearly: 0; oneTime: 25000;,
 currency: "$",
 pricingModel: "one-time"},
@@ -361,16 +355,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.9; reviewCount: 67;,
 launchDate: "2024-01-01",
 status: "Active",
-innovationScore: 95;},
+innovationScore: 95;},origin/main
 
 // Quantum Computing Services;
-{
-id: "quantum-computing-simulation",
+{id: "quantum-computing-simulation",
 title: "Zion Quantum Computing Simulation",
 description: "Advanced quantum computing simulation and optimization platform for research and enterprise applications.",
 category: "Quantum Computing",
 subcategory: "Simulation Platform",
-price: {
+price: {,
 monthly: 599; yearly: 5990;,
 currency: "$",
 pricingModel: "subscription"},
@@ -417,16 +410,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.9; reviewCount: 89;,
 launchDate: "2024-01-01",
 status: "Active",
-innovationScore: 96;},
+innovationScore: 96;},origin/main
 
 // Biotechnology Services;
-{
-id: "ai-biotech-research-platform",
+{id: "ai-biotech-research-platform",
 title: "Zion AI Biotech Research Platform",
 description: "AI-powered biotechnology research platform for drug discovery; genetic analysis; and bioinformatics.",
 category: "Biotechnology",
 subcategory: "Research Platform",
-price: {
+price: {,
 monthly: 449; yearly: 4490;,
 currency: "$",
 pricingModel: "subscription"},
@@ -473,16 +465,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.8; reviewCount: 123;,
 launchDate: "2023-12-01",
 status: "Active",
-innovationScore: 93;},
+innovationScore: 93;},origin/main
 
 // Green Technology Services;
-{
-id: "sustainable-tech-solutions",
+{id: "sustainable-tech-solutions",
 title: "Zion Sustainable Tech Solutions",
 description: "Comprehensive sustainable technology solutions for renewable energy; waste management; and environmental monitoring.",
 category: "Green Tech",
 subcategory: "Sustainability Solutions",
-price: {
+price: {,
 monthly: 199; yearly: 1990;,
 currency: "$",
 pricingModel: "subscription"},
@@ -529,16 +520,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.7; reviewCount: 167;,
 launchDate: "2024-01-01",
 status: "Active",
-innovationScore: 90;},
+innovationScore: 90;},origin/main
 
 // Space Technology Services;
-{
-id: "space-tech-innovation-platform",
+{id: "space-tech-innovation-platform",
 title: "Zion Space Tech Innovation Platform",
 description: "Advanced space technology solutions for satellite operations; space data analytics; and aerospace applications.",
 category: "Space Tech",
 subcategory: "Innovation Platform",
-price: {
+price: {,
 monthly: 799; yearly: 7990;,
 currency: "$",
 pricingModel: "subscription"},
@@ -585,16 +575,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.9; reviewCount: 78;,
 launchDate: "2024-02-01",
 status: "Active",
-innovationScore: 97;},
+innovationScore: 97;},origin/main
 
 // NEW EMERGING TECHNOLOGY SERVICES;
-{
-id: "quantum-machine-learning-platform",
+{id: "quantum-machine-learning-platform",
 title: "Quantum Machine Learning Platform",
 description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers; enabling breakthroughs in drug discovery; materials science; and optimization.",
 category: "Quantum Computing",
 subcategory: "Machine Learning",
-price: {
+price: {,
 monthly: 3000; yearly: 30000;,
 currency: "$",
 pricingModel: "subscription"},
@@ -644,15 +633,14 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.9; reviewCount: 89;,
 launchDate: "2024-03-01",
 status: "Active",
-innovationScore: 95;},
+innovationScore: 95;},origin/main
 
-{
-id: "space-technology-platform",
+{id: "space-technology-platform",
 title: "Space Technology & Satellite Management Platform",
 description: "Comprehensive platform for managing satellite operations; space missions; and space-based data collection; enabling businesses to leverage space technology for Earth observation; communications; and research.",
 category: "Space Tech",
 subcategory: "Satellite Management",
-price: {
+price: {,
 monthly: 2000; yearly: 20000;,
 currency: "$",
 pricingModel: "subscription"},
@@ -702,15 +690,14 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.8; reviewCount: 67;,
 launchDate: "2024-02-15",
 status: "Active",
-innovationScore: 93;},
+innovationScore: 93;},origin/main
 
-{
-id: "brain-computer-interface-platform",
+{id: "brain-computer-interface-platform",
 title: "Brain-Computer Interface Development Platform",
 description: "Advanced platform for developing brain-computer interfaces that enable direct communication between the human brain and computers; opening new possibilities in healthcare; gaming; and human augmentation.",
 category: "Biotechnology",
 subcategory: "Brain-Computer Interface",
-price: {
+price: {,
 monthly: 2500; yearly: 25000;,
 currency: "$",
 pricingModel: "subscription"},
@@ -760,15 +747,14 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.7; reviewCount: 45;,
 launchDate: "2024-01-20",
 status: "Beta",
-innovationScore: 96;},
+innovationScore: 96;},origin/main
 
-{
-id: "autonomous-vehicle-platform",
+{id: "autonomous-vehicle-platform",
 title: "Autonomous Vehicle Development Platform",
 description: "Comprehensive platform for developing autonomous vehicles; including self-driving cars; drones; and robotics systems; with advanced AI; sensor fusion; and safety protocols.",
 category: "Robotics",
 subcategory: "Vehicle Development",
-price: {
+price: {,
 monthly: 1800; yearly: 18000;,
 currency: "$",
 pricingModel: "subscription"},
@@ -818,15 +804,14 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.6; reviewCount: 78;,
 launchDate: "2024-02-01",
 status: "Active",
-innovationScore: 94;},
+innovationScore: 94;},origin/main
 
-{
-id: "quantum-internet-platform",
+{id: "quantum-internet-platform",
 title: "Quantum Internet & Communication Platform",
 description: "Next-generation quantum internet platform that enables ultra-secure communication; quantum networking; and distributed quantum computing across global networks.",
 category: "Quantum Computing",
 subcategory: "Quantum Internet",
-price: {
+price: {,
 monthly: 2200; yearly: 22000;,
 currency: "$",
 pricingModel: "subscription"},
@@ -876,15 +861,14 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.9; reviewCount: 34;,
 launchDate: "2024-01-10",
 status: "Beta",
-innovationScore: 97;},
+innovationScore: 97;},origin/main
 
-{
-id: "ai-consciousness-simulation",
+{id: "ai-consciousness-simulation",
 title: "AI Consciousness Simulation Platform",
 description: "Revolutionary platform that simulates and studies artificial consciousness; enabling research into machine consciousness; cognitive architectures; and the nature of intelligence.",
 category: "Biotechnology",
 subcategory: "Consciousness Simulation",
-price: {
+price: {,
 monthly: 1600; yearly: 16000;,
 currency: "$",
 pricingModel: "subscription"},
@@ -934,15 +918,14 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.8; reviewCount: 23;,
 launchDate: "2024-01-05",
 status: "Beta",
-innovationScore: 98;},
+innovationScore: 98;},origin/main
 
-{
-id: "quantum-financial-modeling",
+{id: "quantum-financial-modeling",
 title: "Quantum Financial Modeling & Risk Assessment",
 description: "Advanced financial modeling platform that leverages quantum computing to solve complex financial problems; optimize portfolios; and assess risks with unprecedented accuracy.",
 category: "Quantum Computing",
 subcategory: "Financial Modeling",
-price: {
+price: {,
 monthly: 2800; yearly: 28000;,
 currency: "$",
 pricingModel: "subscription"},
@@ -992,15 +975,14 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.9; reviewCount: 56;,
 launchDate: "2024-02-20",
 status: "Active",
-innovationScore: 95;},
+innovationScore: 95;},origin/main
 
-{
-id: "autonomous-manufacturing-platform",
+{id: "autonomous-manufacturing-platform",
 title: "Autonomous Manufacturing & Industry 4.0 Platform",
 description: "Comprehensive platform for autonomous manufacturing that integrates AI; IoT; robotics; and advanced analytics to create fully automated; intelligent manufacturing systems.",
 category: "Robotics",
 subcategory: "Manufacturing",
-price: {
+price: {,
 monthly: 1500; yearly: 15000;,
 currency: "$",
 pricingModel: "subscription"},
@@ -1050,15 +1032,14 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.7; reviewCount: 89;,
 launchDate: "2024-01-15",
 status: "Active",
-innovationScore: 93;},
+innovationScore: 93;},origin/main
 
-{
-id: "quantum-drug-discovery",
+{id: "quantum-drug-discovery",
 title: "Quantum Drug Discovery & Molecular Modeling",
 description: "Revolutionary platform that uses quantum computing to accelerate drug discovery; molecular modeling; and pharmaceutical research; enabling breakthroughs in medicine.",
 category: "Quantum Computing",
 subcategory: "Drug Discovery",
-price: {
+price: {,
 monthly: 3200; yearly: 32000;,
 currency: "$",
 pricingModel: "subscription"},
@@ -1108,15 +1089,15 @@ address: "364 E Main St STE 1008; Middletown DE 19709"},
 rating: 4.9; reviewCount: 67;,
 launchDate: "2024-02-25",
 status: "Active",
-innovationScore: 96;}
+innovationScore: 96;}origin/main
 ];
 
 export const getEmergingTechServiceByCategory: any = (category: string) => {
-return EMERGING_TECH_SERVICES.filter(service => service.category === category),;
+return EMERGING_TECH_SERVICES.filter(service => service.category === category);
 };
 
 export const getEmergingTechServiceBySubcategory: any = (subcategory: string) => {
-return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory),;
+return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory);
 };
 
 export const getFeaturedEmergingTechServices: any = () => {;

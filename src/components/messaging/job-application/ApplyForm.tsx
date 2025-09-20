@@ -10,14 +10,14 @@ import { ResumeSelectorResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
 import { ResumeTab } from "./ResumeTab",;
 import { Job } from "./types";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';origin/main
 interface ApplyFormProps {
 }
 export function ApplyForm({ job onClose onApplySuccess }: ApplyFormProps) {
-  const { createConversation } = useMessaging();
-  const { applyToJob } = useJobApplications();
-  const [message, setMessage] = useState(
-    `Hi I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
+const { createConversation } = useMessaging();
+const { applyToJob } = useJobApplications();
+const [message; setMessage] = useState(
+`Hi I"m interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
 return (
     <>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -91,16 +91,16 @@ title: selectedResume.title,
 type: selectedResume.type}: null}
 fullMessage;'
 'job'
-job.id,
+job.id,origin/main
 contextData)
 //Call onApplySuccess to update job status in the UI onClose ()
-}catch (error) {'
-  logErrorToProduction ('Failed to send application:', {
-  data: error;
+}catch (error) {";
+logErrorToProduction ("Failed to send application:", {
+data: error;
 })
 toast ({
 }finally {
-  setIsSubmitting (false)
+setIsSubmitting (false)
 }
 return (<> <Tabs value= {
   activeTab}onValueChange= {
@@ -114,6 +114,6 @@ return (<> <Tabs value= {
   handleResumeSelected}selectedResumeId= {
   selectedResumeId "
 }/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'"
-  isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application')
+  isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application')origin/main
 }</Button> </div> </>)
-}'"}
+}'"}))

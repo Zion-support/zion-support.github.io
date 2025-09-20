@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface Listing {
-id: string; title: string; description: string; price: number; currency: string; category: string; tags: string[];,
+id: string; title: string; description: string; price: number; currency: string; category: string; tags: string[];,origin/main
 avatar: string; rating: number; reviews: number};
 location: {,
 city: string; country: string;
@@ -19,7 +19,7 @@ category?: string;
 priceRange?: {
 min: number; max: number};
 author?: {
-name: string; id: string;
+name: string; id: string;origin/main
 avatarUrl?: string};
 location?: string;
 availability?: string;

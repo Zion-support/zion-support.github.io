@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from 'react, ';
-export const useAccessibility = () => {
-    const [preferences, setPreferences] = useState({
+export const useAccessibility = () => {const [preferences, setPreferences] = useState({
         highContrast: false;
         largeText: false;
         reducedMotion: false;
@@ -8,7 +7,7 @@ export const useAccessibility = () => {
         screenReader: false;
         keyboardNavigation: true});
     const [settings, setSettings] = useState({
-        fontSize: 'medium';
+        fontSize: 'medium';origin/main
         colorScheme: 'default';
         motionPreference: 'no-preference';
         focusStyle: 'default'});

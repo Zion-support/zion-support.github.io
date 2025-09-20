@@ -1,9 +1,9 @@
 import { Routes, Route  } from "react-router-dom, ";
 export interface ServiceContact {
 phone: string;
-email: string;
+email: string;,
 website: string;,
-address: string;}
+address: string;}origin/main
 
 export interface MicroSaasService {
 id: number;
@@ -23,9 +23,9 @@ marketPrice: string;
 competitors: string[];
 roi: string;
 setupTime: string;
-integrations: string[];
+integrations: string[];,
 freeTier: boolean;,
-trialPeriod: string;}
+trialPeriod: string;}origin/main
 
 export interface ITService {
 id: number;
@@ -42,9 +42,9 @@ contactInfo: ServiceContact;
 marketPrice: string;
 responseTime: string;
 sla: string;
-certifications: string[];
+certifications: string[];,
 deliveryTime: string;,
-support: string;}
+support: string;}origin/main
 
 export interface AIService {
 id: number;
@@ -63,19 +63,18 @@ marketPrice: string;
 aiModels: string[];
 accuracy: string;
 trainingData: string;
-compliance: string[];
+compliance: string[];,
 aiScore: number;,
-useCases: string[];}
+useCases: string[];}origin/main
 
 // Advanced AI & Machine Learning Services;
 export const advancedAIServices2025: AIService[] = [
-{
-id: 1;
+{id: 1;
 name: "QuantumAI Vision Pro";
 category: "Computer Vision";
 description: "Next-generation AI-powered computer vision platform with quantum-inspired algorithms for ultra-accurate image and video analysis";
 pricing: "Enterprise";
-price: 2500;
+price: 2500;,
 pricingModel: "monthly";,
 features: [
 "Quantum-inspired neural networks";
@@ -99,24 +98,23 @@ targetAudience: ["Manufacturing", "Healthcare", "Security", "Automotive", "Retai
 tags: ["AI", "Computer Vision", "Quantum", "Machine Learning", "Real-time"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/quantumai-vision";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;500-8;000/month",
 aiModels: ["Quantum Neural Networks", "Vision Transformers", "Custom CNN", "YOLO v8"],
-accuracy: "99.7%";
+accuracy: "99.7%";,
 trainingData: "Multi-domain datasets";,
 compliance: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"],
 aiScore: 97;,
 useCases: ["Medical diagnosis", "Quality control", "Security monitoring", "Autonomous systems"];
 },
-{
-id: 2;
+{id: 2;
 name: "NeuralFlow Studio";
 category: "AI Development";
 description: "Comprehensive AI model development and deployment platform with automated MLOps and model lifecycle management";
 pricing: "Professional";
-price: 299;
+price: 299;,
 pricingModel: "monthly";,
 features: [
 "AutoML model generation";
@@ -140,24 +138,23 @@ targetAudience: ["Data scientists", "ML engineers", "DevOps teams", "Startups"],
 tags: ["AI Development", "MLOps", "AutoML", "Model Management", "Deployment"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/neuralflow-studio";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$299-999/month";,
 aiModels: ["Custom ML models", "AutoML", "Deep learning", "Ensemble methods"],
-accuracy: "Variable based on use case";
+accuracy: "Variable based on use case";,
 trainingData: "User-provided datasets";,
 compliance: ["GDPR", "SOC 2", "ISO 27001"],
 aiScore: 92;,
 useCases: ["Predictive analytics", "Recommendation systems", "Fraud detection", "Process optimization"];
 },
-{
-id: 3;
-name: "EmotionAI Analytics";
+{id: 3;
+name: "EmotionAI Analytics";,
 category: "Emotional Intelligence";,
 description: "Advanced emotional intelligence platform that analyzes human emotions; sentiment; and behavioral patterns in real-time",
 pricing: "Professional";
-price: 199;
+price: 199;,
 pricingModel: "monthly";,
 features: [
 "Real-time emotion detection";
@@ -181,12 +178,12 @@ targetAudience: ["HR departments", "Customer service", "Marketing teams", "Healt
 tags: ["Emotional Intelligence", "Sentiment Analysis", "Behavioral AI", "HR Tech"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/emotionai-analytics";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$199-599/month";,
 aiModels: ["BERT", "GPT-4", "Custom emotion models", "Multimodal AI"],
-accuracy: "94.2%";
+accuracy: "94.2%";,
 trainingData: "Emotional datasets";,
 compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2"],
 aiScore: 94;,
@@ -196,14 +193,13 @@ useCases: ["Customer feedback", "Employee surveys", "Market research", "Therapeu
 
 // Blockchain & Web3 Services;
 export const blockchainWeb3Services2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "DeFi Portfolio Manager";
-category: "DeFi";
+category: "DeFi";,
 pricing: "Freemium";,
 description: "Comprehensive DeFi portfolio management platform with yield optimization; risk assessment; and automated rebalancing",
 price: 79;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Unlimited portfolios";,
 features: [
 "Multi-chain portfolio tracking";
@@ -227,24 +223,24 @@ targetAudience: ["Crypto investors", "DeFi users", "Financial advisors", "Instit
 tags: ["DeFi", "Portfolio Management", "Yield Farming", "Risk Management"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/defi-portfolio";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$79-299/month";,
 competitors: ["Zapper", "DeBank", "Zerion"],
-roi: "500% within 12 months";
+roi: "500% within 12 months";,
 setupTime: "20 minutes";,
 integrations: ["Ethereum", "Polygon", "BSC", "Arbitrum", "Optimism"],
 freeTier: true;,
 trialPeriod: "7 days"};
 {
-id: 2;
+id: 2;origin/main
 name: "NFT Marketplace Builder";
-category: "NFT";
+category: "NFT";,
 pricing: "Professional";,
 description: "White-label NFT marketplace creation platform with customizable features; royalty management; and multi-chain support",
 price: 299;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Unlimited users";,
 features: [
 "Custom marketplace design";
@@ -268,12 +264,12 @@ targetAudience: ["Artists", "Brands", "Gaming companies", "Entertainment"],
 tags: ["NFT", "Marketplace", "Blockchain", "Digital Art", "Gaming"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/nft-marketplace";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$299-999/month";,
 competitors: ["OpenSea", "Rarible", "Foundation"],
-roi: "400% within 6 months";
+roi: "400% within 6 months";,
 setupTime: "2-3 days";,
 integrations: ["Ethereum", "Polygon", "Solana", "Flow", "Tezos"],
 freeTier: false;,
@@ -281,12 +277,11 @@ trialPeriod: "14 days"}
 ];
 // Cybersecurity & Compliance Services;
 export const cybersecurityServices2025: ITService[] = [
-{
-id: 1;
-name: "Zero Trust Security Suite";
+{id: 1;
+name: "Zero Trust Security Suite";,
 category: "Cybersecurity";,
 description: "Comprehensive zero trust security platform with advanced threat detection; identity management; and compliance monitoring",
-hourlyRate: 150;
+hourlyRate: 150;,
 projectRate: 15000;,
 features: [
 "Identity verification";
@@ -310,21 +305,21 @@ targetAudience: ["Enterprises", "Healthcare", "Financial services", "Government"
 tags: ["Cybersecurity", "Zero Trust", "Compliance", "Threat Detection"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/zero-trust-security";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000-50;000/project",
-responseTime: "2 hours";
+responseTime: "2 hours";,
 sla: "99.9% uptime";,
 certifications: ["CISSP", "CISM", "ISO 27001", "SOC 2"],
 deliveryTime: "4-6 weeks";,
 support: "24/7"};
 {
-id: 2;
+id: 2;origin/main
 name: "AI-Powered Threat Hunting";
 category: "Threat Intelligence";
 description: "Advanced AI-driven threat hunting and incident response service with real-time monitoring and automated remediation";
-hourlyRate: 200;
+hourlyRate: 200;,
 projectRate: 25000;,
 features: [
 "AI threat detection";
@@ -348,11 +343,11 @@ targetAudience: ["Large enterprises", "Financial institutions", "Healthcare", "G
 tags: ["Threat Hunting", "AI Security", "Incident Response", "Forensics"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-threat-hunting";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000-75;000/project",
-responseTime: "1 hour";
+responseTime: "1 hour";,
 sla: "99.99% uptime";,
 certifications: ["GCIH", "GCFA", "CISSP", "CEH"],
 deliveryTime: "6-8 weeks";,
@@ -360,12 +355,11 @@ support: "24/7"}
 ];
 // Cloud & DevOps Services;
 export const cloudDevOpsServices2025: ITService[] = [
-{
-id: 1;
-name: "Multi-Cloud Orchestration";
+{id: 1;
+name: "Multi-Cloud Orchestration";,
 category: "Cloud Management";,
 description: "Unified multi-cloud management platform with automated provisioning; cost optimization; and compliance monitoring",
-hourlyRate: 125;
+hourlyRate: 125;,
 projectRate: 12000;,
 features: [
 "Multi-cloud management";
@@ -389,11 +383,11 @@ targetAudience: ["Enterprises", "Startups", "DevOps teams", "IT departments"],
 tags: ["Multi-Cloud", "DevOps", "Automation", "Cost Optimization"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/multi-cloud-orchestration";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$12;000-40;000/project",
-responseTime: "4 hours";
+responseTime: "4 hours";,
 sla: "99.5% uptime";,
 certifications: ["AWS", "Azure", "GCP", "Kubernetes"],
 deliveryTime: "3-5 weeks";,
@@ -401,13 +395,12 @@ support: "Business hours"}
 ];
 // Healthcare & Biotech Services;
 export const healthcareBiotechServices2025: AIService[] = [
-{
-id: 1;
-name: "MedAI Diagnostics";
+{id: 1;
+name: "MedAI Diagnostics";,
 category: "Healthcare AI";,
 description: "AI-powered medical diagnostics platform with advanced imaging analysis; disease prediction; and treatment recommendations",
 pricing: "Enterprise";
-price: 3500;
+price: 3500;,
 pricingModel: "monthly";,
 features: [
 "Medical image analysis";
@@ -431,12 +424,12 @@ targetAudience: ["Hospitals", "Clinics", "Radiologists", "General practitioners"
 tags: ["Healthcare AI", "Medical Diagnostics", "Image Analysis", "Clinical Support"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/medai-diagnostics";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;500-12;000/month",
 aiModels: ["Medical vision models", "NLP for records", "Predictive models", "Custom ML"],
-accuracy: "96.8%";
+accuracy: "96.8%";,
 trainingData: "Medical datasets";,
 compliance: ["HIPAA", "FDA", "GDPR", "SOC 2"],
 aiScore: 96;,
@@ -446,14 +439,13 @@ useCases: ["Radiology", "Pathology", "Cardiology", "Oncology"];
 
 // IoT & Edge Computing Services;
 export const iotEdgeServices2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "SmartCity IoT Platform";
-category: "IoT";
+category: "IoT";,
 pricing: "Enterprise";,
 description: "Comprehensive IoT platform for smart city management with real-time monitoring; predictive analytics; and automated control systems",
 price: 1200;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Unlimited devices";,
 features: [
 "IoT device management";
@@ -477,12 +469,12 @@ targetAudience: ["City governments", "Municipalities", "Utility companies", "Tra
 tags: ["IoT", "Smart City", "Edge Computing", "Predictive Analytics"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/smartcity-iot";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;200-5;000/month",
 competitors: ["Siemens", "IBM", "Cisco"],
-roi: "300% within 18 months";
+roi: "300% within 18 months";,
 setupTime: "2-4 weeks";,
 integrations: ["5G networks", "Edge devices", "Cloud platforms", "Legacy systems"],
 freeTier: false;,
@@ -490,13 +482,12 @@ trialPeriod: "30 days"}
 ];
 // Quantum Computing Services;
 export const quantumComputingServices2025: AIService[] = [
-{
-id: 1;
-name: "Quantum Optimization Engine";
+{id: 1;
+name: "Quantum Optimization Engine";,
 category: "Quantum Computing";,
 description: "Quantum computing optimization platform for complex mathematical problems; logistics optimization; and financial modeling",
 pricing: "Enterprise";
-price: 5000;
+price: 5000;,
 pricingModel: "monthly";,
 features: [
 "Quantum algorithm optimization";
@@ -520,12 +511,12 @@ targetAudience: ["Research institutions", "Financial services", "Pharmaceuticals
 tags: ["Quantum Computing", "Optimization", "Scientific Computing", "Financial Modeling"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/quantum-optimization";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;000-20;000/month",
 aiModels: ["Quantum algorithms", "Hybrid quantum-classical", "Quantum ML", "Optimization models"],
-accuracy: "Quantum advantage";
+accuracy: "Quantum advantage";,
 trainingData: "Quantum datasets";,
 compliance: ["Research standards", "Security protocols", "Data protection"],
 aiScore: 95;,
@@ -535,14 +526,13 @@ useCases: ["Portfolio optimization", "Supply chain", "Drug discovery", "Climate 
 
 // Space & Aerospace Services;
 export const spaceAerospaceServices2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "Satellite Data Analytics";
-category: "Space Tech";
+category: "Space Tech";,
 pricing: "Professional";,
 description: "Advanced satellite data analytics platform for Earth observation; climate monitoring; and agricultural insights",
 price: 399;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Up to 50 users";,
 features: [
 "Satellite imagery analysis";
@@ -566,12 +556,12 @@ targetAudience: ["Agriculture", "Environmental agencies", "Urban planners", "Ins
 tags: ["Satellite", "Earth Observation", "Climate Monitoring", "Agriculture"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/satellite-analytics";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$399-1;299/month",
 competitors: ["Planet Labs", "Maxar", "Airbus"],
-roi: "400% within 12 months";
+roi: "400% within 12 months";,
 setupTime: "1-2 weeks";,
 integrations: ["GIS systems", "Weather APIs", "Agricultural platforms", "Environmental databases"],
 freeTier: true;,
@@ -579,14 +569,13 @@ trialPeriod: "14 days"}
 ];
 // Sustainability & Green Tech Services;
 export const sustainabilityServices2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "Carbon Footprint Tracker";
 category: "Sustainability";
 pricing: "Freemium";
 description: "Comprehensive carbon footprint tracking and sustainability management platform for businesses and individuals";
 price: 49;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Up to 100 users";,
 features: [
 "Carbon footprint calculation";
@@ -610,12 +599,12 @@ targetAudience: ["Corporations", "Small businesses", "Individuals", "Government"
 tags: ["Sustainability", "Carbon Tracking", "Environmental", "Compliance"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/carbon-tracker";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$49-199/month";,
 competitors: ["Carbon Trust", "EcoAct", "Carbonfund"],
-roi: "200% within 6 months";
+roi: "200% within 6 months";,
 setupTime: "1 week";,
 integrations: ["ERP systems", "Energy meters", "Transportation data", "Supply chain platforms"],
 freeTier: true;,
@@ -623,14 +612,13 @@ trialPeriod: "30 days"}
 ];
 // Fintech & Digital Banking Services;
 export const fintechServices2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "AI-Powered Credit Scoring";
 category: "Fintech";
 pricing: "Professional";
 description: "Advanced AI-driven credit scoring platform with alternative data analysis and real-time risk assessment";
 price: 199;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Unlimited assessments";,
 features: [
 "Alternative data analysis";
@@ -654,12 +642,12 @@ targetAudience: ["Banks", "Lending companies", "Credit unions", "Fintech startup
 tags: ["Credit Scoring", "AI", "Risk Assessment", "Alternative Data"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-credit-scoring";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$199-599/month";,
 competitors: ["FICO", "VantageScore", "Experian"],
-roi: "350% within 8 months";
+roi: "350% within 8 months";,
 setupTime: "2-3 weeks";,
 integrations: ["Banking systems", "Credit bureaus", "Alternative data sources", "CRM platforms"],
 freeTier: false;,
@@ -667,14 +655,13 @@ trialPeriod: "14 days"}
 ];
 // Education & EdTech Services;
 export const educationEdTechServices2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "Adaptive Learning Platform";
 category: "EdTech";
 pricing: "Freemium";
 description: "AI-powered adaptive learning platform that personalizes education based on individual learning styles and progress";
 price: 29;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Up to 500 students";,
 features: [
 "Personalized learning paths";
@@ -698,12 +685,12 @@ targetAudience: ["Schools", "Universities", "Corporate training", "Online educat
 tags: ["EdTech", "Adaptive Learning", "AI", "Personalization"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/adaptive-learning";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$29-99/month";,
 competitors: ["Khan Academy", "Duolingo", "Coursera"],
-roi: "250% within 6 months";
+roi: "250% within 6 months";,
 setupTime: "1 week";,
 integrations: ["LMS systems", "Video platforms", "Assessment tools", "Communication platforms"],
 freeTier: true;,
@@ -711,14 +698,13 @@ trialPeriod: "30 days"}
 ];
 // Real Estate & PropTech Services;
 export const realEstatePropTechServices2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "Smart Property Management";
-category: "PropTech";
+category: "PropTech";,
 pricing: "Professional";,
 description: "Comprehensive property management platform with IoT integration; predictive maintenance; and tenant experience optimization",
 price: 149;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Up to 100 properties";,
 features: [
 "Property portfolio management";
@@ -742,12 +728,12 @@ targetAudience: ["Property managers", "Real estate investors", "Landlords", "Pro
 tags: ["PropTech", "IoT", "Property Management", "Predictive Maintenance"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/smart-property";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$149-499/month";,
 competitors: ["AppFolio", "Buildium", "Yardi"],
-roi: "300% within 12 months";
+roi: "300% within 12 months";,
 setupTime: "2-3 weeks";,
 integrations: ["IoT devices", "Accounting software", "Payment gateways", "Communication tools"],
 freeTier: false;,
@@ -755,14 +741,13 @@ trialPeriod: "14 days"}
 ];
 // Logistics & Supply Chain Services;
 export const logisticsSupplyChainServices2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "Supply Chain Intelligence";
-category: "Logistics";
+category: "Logistics";,
 pricing: "Enterprise";,
 description: "AI-powered supply chain optimization platform with real-time tracking; demand forecasting; and risk management",
 price: 899;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Unlimited users";,
 features: [
 "Real-time tracking";
@@ -786,12 +771,12 @@ targetAudience: ["Manufacturers", "Retailers", "Logistics companies", "E-commerc
 tags: ["Supply Chain", "Logistics", "AI", "Optimization"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/supply-chain-intelligence";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$899-2;999/month",
 competitors: ["SAP", "Oracle", "Manhattan Associates"],
-roi: "400% within 18 months";
+roi: "400% within 18 months";,
 setupTime: "4-6 weeks";,
 integrations: ["ERP systems", "WMS", "TMS", "E-commerce platforms"],
 freeTier: false;,
@@ -799,14 +784,13 @@ trialPeriod: "30 days"}
 ];
 // Entertainment & Media Services;
 export const entertainmentMediaServices2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "AI Content Creation Studio";
-category: "Media";
+category: "Media";,
 pricing: "Professional";,
 description: "AI-powered content creation platform for video; audio; and text content with automated editing and optimization",
 price: 199;
-pricingModel: "monthly";
+pricingModel: "monthly";,
 userLimit: "Up to 25 users";,
 features: [
 "AI video generation";
@@ -830,12 +814,12 @@ targetAudience: ["Content creators", "Marketing agencies", "Media companies", "B
 tags: ["Content Creation", "AI", "Video", "Audio", "Text"],
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-content-studio";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$199-599/month";,
 competitors: ["Runway ML", "Synthesia", "Jasper"],
-roi: "300% within 6 months";
+roi: "300% within 6 months";,
 setupTime: "1 week";,
 integrations: ["Video platforms", "Social media", "CMS systems", "Design tools"],
 freeTier: true;,
@@ -854,9 +838,9 @@ space: spaceAerospaceServices2025;
 sustainability: sustainabilityServices2025;
 fintech: fintechServices2025;
 education: educationEdTechServices2025;
-realEstate: realEstatePropTechServices2025;
+realEstate: realEstatePropTechServices2025;,
 logistics: logisticsSupplyChainServices2025;,
-entertainment: entertainmentMediaServices2025;};
+entertainment: entertainmentMediaServices2025;};origin/main
 // Helper functions;
 export const getServicesByCategory: any = (category: string) => {;
 const allServices = Object.values(allExpandedServices2025).flat();

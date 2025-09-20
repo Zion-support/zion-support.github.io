@@ -8,5 +8,5 @@ export default function LandingPage() {
         <p className="text-lg text-gray-600">Your technology partner...</p>
       </div>
     </div>
-  );
+  );origin/main
 }

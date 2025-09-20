@@ -1,16 +1,16 @@
 import { Routes, Route  } from "react-router-dom, ";
 export interface IndustrySpecificSolution {
-id: string; title: string; description: string; industry: string; category: string; subcategory: string; price: number; currency: string; pricingModel: "monthly" | "yearly" | "one-time" | "per-user" | "per-project" | "usage-based";,
+id: string; title: string; description: string; industry: string; category: string; subcategory: string; price: number; currency: string; pricingModel: "monthly" | "yearly" | "one-time" | "per-user" | "per-project" | "usage-based";,origin/main
 features: string[], benefits: string[];,
 useCases: string[], targetAudience: string[];,
 tags: string[], estimatedDelivery: string;,
 supportLevel: "basic" | "standard" | "premium" | "enterprise", marketPrice: string;
-contactInfo: {,
+contactInfo: {,origin/main
 phone: string; email: string; website: string};
 industryExpertise: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; demoUrl: string; documentationUrl: string; technology: string[];,
 integrations: string[], compliance: string[];,
 roi: string; competitors: string[], industryPartners: string[];,
-certifications: string[];}
+certifications: string[];}origin/main
 
 export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
 {,
@@ -69,8 +69,7 @@ roi: "400% within 18 months", competitors: ["IBM Watson Health", "Google Health"
 industryPartners: ["Mayo Clinic", "Johns Hopkins", "Stanford Medicine", "Cleveland Clinic", "Medical associations"],
 certifications: ["FDA 510(k)", "CE Mark", "ISO 13485", "HIPAA Business Associate", "SOC 2 Type II"];
 },
-{
-id: "manufacturing-industry-4-0", title: "Manufacturing Industry 4.0 & Smart Factory Platform";,
+{id: "manufacturing-industry-4-0", title: "Manufacturing Industry 4.0 & Smart Factory Platform";,
 description: "Comprehensive Industry 4.0 platform for smart manufacturing including IoT integration; predictive maintenance; quality control; and supply chain optimization.",
 industry: "Manufacturing", category: "Industry 4.0";,
 subcategory: "Smart Factory", price: 2200;,
@@ -125,8 +124,7 @@ roi: "350% within 20 months", competitors: ["Siemens", "GE Digital", "PTC", "Roc
 industryPartners: ["Manufacturing associations", "Industry 4.0 consortia", "Technology partners", "Research institutions"],
 certifications: ["ISO 9001", "ISO 14001", "OHSAS 18001", "Industry 4.0", "Safety certifications"];
 },
-{
-id: "financial-services-ai", title: "Financial Services AI & Risk Management Platform";,
+{id: "financial-services-ai", title: "Financial Services AI & Risk Management Platform";,
 description: "Advanced AI platform for financial services including fraud detection; risk assessment; portfolio optimization; and regulatory compliance automation.",
 industry: "Financial Services", category: "AI & Risk Management";,
 subcategory: "Financial Technology", price: 3500;,
@@ -181,8 +179,7 @@ roi: "450% within 24 months", competitors: ["Palantir", "SAS", "IBM", "Oracle", 
 industryPartners: ["Financial institutions", "Regulatory bodies", "Industry associations", "Technology partners"],
 certifications: ["SOC 2 Type II", "ISO 27001", "PCI DSS", "Financial industry certifications", "Regulatory compliance"];
 },
-{
-id: "retail-ecommerce-ai", title: "Retail & E-commerce AI Optimization Platform";,
+{id: "retail-ecommerce-ai", title: "Retail & E-commerce AI Optimization Platform";,
 description: "Comprehensive AI platform for retail and e-commerce including customer personalization; inventory optimization; demand forecasting; and marketing automation.",
 industry: "Retail & E-commerce", category: "AI Optimization";,
 subcategory: "Customer Experience", price: 1500;,
@@ -237,8 +234,7 @@ roi: "320% within 15 months", competitors: ["Segment", "Amplitude", "Mixpanel", 
 industryPartners: ["E-commerce platforms", "Retail associations", "Technology partners", "Marketing platforms"],
 certifications: ["SOC 2 Type II", "ISO 27001", "PCI DSS", "Retail industry certifications"];
 },
-{
-id: "energy-utility-optimization", title: "Energy & Utility AI Optimization Platform";,
+{id: "energy-utility-optimization", title: "Energy & Utility AI Optimization Platform";,
 description: "Advanced AI platform for energy and utility companies including grid optimization; demand forecasting; renewable energy integration; and predictive maintenance.",
 industry: "Energy & Utilities", category: "AI Optimization";,
 subcategory: "Grid Management", price: 2800;,
@@ -293,8 +289,7 @@ roi: "380% within 24 months", competitors: ["Siemens", "GE Digital", "ABB", "Sch
 industryPartners: ["Utility associations", "Grid operators", "Technology partners", "Research institutions"],
 certifications: ["NERC CIP", "ISO 27001", "Grid security certifications", "Energy industry standards"];
 },
-{
-id: "transportation-logistics-ai", title: "Transportation & Logistics AI Platform";,
+{id: "transportation-logistics-ai", title: "Transportation & Logistics AI Platform";,
 description: "Comprehensive AI platform for transportation and logistics including route optimization; fleet management; supply chain optimization; and predictive analytics.",
 industry: "Transportation & Logistics", category: "AI Platform";,
 subcategory: "Logistics Optimization", price: 1800;,

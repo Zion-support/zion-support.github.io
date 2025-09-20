@@ -1,7 +1,6 @@
 export const CUTTING_EDGE_AI_SERVICES = [
     // Autonomous AI Research Assistant;
-    {
-        id: "autonomous-ai-research-assistant";
+    {id: "autonomous-ai-research-assistant";
         title: "Autonomous AI Research Assistant";
         description: "Revolutionary AI system that autonomously conducts research, generates hypotheses, and discovers new insights across multiple domains without human intervention.",
         category: "Autonomous AI";
@@ -48,10 +47,9 @@ export const CUTTING_EDGE_AI_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/autonomous-ai-research"};
+        websiteUrl: "https://ziontechgroup.com/autonomous-ai-research"};origin/main
     // AI Consciousness Evolution Platform;
-    {
-        id: "ai-consciousness-evolution-platform";
+    {id: "ai-consciousness-evolution-platform";
         title: "AI Consciousness Evolution Platform";
         description: "Advanced platform that enables AI systems to evolve consciousness, self-awareness, and ethical reasoning capabilities through continuous learning and philosophical integration.",
         category: "AI Consciousness";
@@ -98,10 +96,9 @@ export const CUTTING_EDGE_AI_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution"};
+        websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution"};origin/main
     // AI Autonomous Business Manager;
-    {
-        id: "ai-autonomous-business-manager";
+    {id: "ai-autonomous-business-manager";
         title: "AI Autonomous Business Manager";
         description: "Intelligent AI system that autonomously manages business operations, makes strategic decisions, and optimizes business performance across all departments.",
         category: "Autonomous AI";
@@ -148,10 +145,9 @@ export const CUTTING_EDGE_AI_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/ai-business-manager"};
+        websiteUrl: "https://ziontechgroup.com/ai-business-manager"};origin/main
     // AI Autonomous Creative Director;
-    {
-        id: "ai-autonomous-creative-director";
+    {id: "ai-autonomous-creative-director";
         title: "AI Autonomous Creative Director";
         description: "Revolutionary AI system that autonomously generates creative concepts, designs, and artistic content while maintaining brand consistency and creative excellence.",
         category: "Autonomous AI";
@@ -198,10 +194,9 @@ export const CUTTING_EDGE_AI_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/ai-creative-director"};
+        websiteUrl: "https://ziontechgroup.com/ai-creative-director"};origin/main
     // AI Autonomous Code Review System;
-    {
-        id: "ai-autonomous-code-review-system";
+    {id: "ai-autonomous-code-review-system";
         title: "AI Autonomous Code Review System";
         description: "Advanced AI system that autonomously reviews, analyzes, and improves code quality while ensuring security, performance, and best practices across all programming languages.",
         category: "Autonomous AI";
@@ -248,5 +243,5 @@ export const CUTTING_EDGE_AI_SERVICES = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
-        websiteUrl: "https://ziontechgroup.com/ai-code-review"}
+        websiteUrl: "https://ziontechgroup.com/ai-code-review"}origin/main
 ];

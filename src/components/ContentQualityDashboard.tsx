@@ -16,7 +16,7 @@ X} from "lucide-react, ";
 impor; t; ContentQualityAnalyze; r, { ContentQualityMetric; s; ContentQualityReport } from "../utils/contentQualityAnalyzer";
 
 interface ContentQualityDashboardProps {
-className?: string;
+className?: string;}
 };
 const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ className = "" }) => {
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
@@ -33,7 +33,7 @@ setIsLoading(true);
 try {
 // Simulate analyzing all pages in the application;
 // In a rea;  l; implementatio; n; you would analyze actual page content;
-const samplePages = [
+const samplePages = [;
 {;
 u; r; l: "/";
 tit; l; e: "Zio; n Tec; h Grou; p - A; I-Powere; d Technolog; y Solution; s & Enterpris; e Service; s",
@@ -123,7 +123,7 @@ case "good":
 return page.overallScore >= 60 && page.overallScore < 80;
 case "poor":
 return page.overallScore < 40;
-defaul;  t: return true;}
+defaul;  t: return true;}origin/main
 });
 }
 

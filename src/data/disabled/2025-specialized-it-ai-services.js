@@ -1,7 +1,6 @@
 export const specializedITServices2025 = [
     // Neuromorphic Computing Platform;
-    {
-        id: 'neuromorphic-computing';
+    {id: 'neuromorphic-computing';
         name: 'Neuromorphic Computing Platform';
         tagline: 'Brain-inspired computing architecture for ultra-efficient AI processing';
         price: '$3,999',
@@ -54,8 +53,7 @@ export const specializedITServices2025 = [
         sla: '99.0% uptime guarantee';
         support: 'Research hours support with dedicated neuromorphic specialists'};
     // Federated Learning Platform;
-    {
-        id: 'federated-learning';
+    {id: 'federated-learning';
         name: 'Federated Learning Platform';
         tagline: 'Privacy-preserving AI training across distributed data sources';
         price: '$2,299',
@@ -108,8 +106,7 @@ export const specializedITServices2025 = [
         sla: '99.9% uptime guarantee';
         support: 'Business hours support with dedicated privacy specialists'};
     // AI Ethics & Governance Platform;
-    {
-        id: 'ai-ethics-governance';
+    {id: 'ai-ethics-governance';
         name: 'AI Ethics & Governance Platform';
         tagline: 'Comprehensive framework for ethical AI development and governance';
         price: '$1,899',
@@ -162,8 +159,7 @@ export const specializedITServices2025 = [
         sla: '99.9% uptime guarantee';
         support: 'Business hours support with dedicated ethics specialists'};
     // Edge AI Orchestration Platform;
-    {
-        id: 'edge-ai-orchestration';
+    {id: 'edge-ai-orchestration';
         name: 'Edge AI Orchestration Platform';
         tagline: 'Intelligent orchestration of AI workloads across distributed edge computing';
         price: '$1,799',
@@ -216,8 +212,7 @@ export const specializedITServices2025 = [
         sla: '99.9% uptime guarantee';
         support: 'Business hours support with dedicated edge computing specialists'};
     // AI-Powered DevOps Automation;
-    {
-        id: 'ai-devops-automation';
+    {id: 'ai-devops-automation';
         name: 'AI-Powered DevOps Automation Platform';
         tagline: 'Intelligent DevOps automation with AI-driven optimization';
         price: '$1,399',
@@ -270,8 +265,7 @@ export const specializedITServices2025 = [
         sla: '99.9% uptime guarantee';
         support: '24/7 technical support with dedicated DevOps specialists'};
     // AI-Powered Data Quality Platform;
-    {
-        id: 'ai-data-quality';
+    {id: 'ai-data-quality';
         name: 'AI Data Quality Platform';
         tagline: 'Intelligent data quality management and validation';
         price: '$1,299',
@@ -324,8 +318,7 @@ export const specializedITServices2025 = [
         sla: '99.9% uptime guarantee';
         support: 'Business hours support with dedicated data specialists'};
     // AI-Powered API Management Platform;
-    {
-        id: 'ai-api-management';
+    {id: 'ai-api-management';
         name: 'AI-Powered API Management Platform';
         tagline: 'Intelligent API management with AI-driven optimization';
         price: '$1,199',
@@ -378,8 +371,7 @@ export const specializedITServices2025 = [
         sla: '99.9% uptime guarantee';
         support: 'Business hours support with dedicated API specialists'};
     // AI-Powered Network Security Platform;
-    {
-        id: 'ai-network-security';
+    {id: 'ai-network-security';
         name: 'AI-Powered Network Security Platform';
         tagline: 'Intelligent network security with AI-driven threat detection';
         price: '$2,199',

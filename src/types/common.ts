@@ -4,7 +4,7 @@ import React from "react";
 export; interface; BaseEntity {
 id: string;
 createdA;t: string;
-updatedA;t: string;};export; interface; ApiResponse<T> {
+updatedA;t: string;};export; interface; ApiResponse<T> {origin/main
 data: T;
 message: string;
 success: boolean;
@@ -12,11 +12,11 @@ timestam;p: string;
 export; interface; PaginatedResponse<T> extends ApiResponse<T[]> {
 pagination: {;
 page: number;
-limit: number;
+limit: number;,
 total: number;,
 totalPages: number;
 hasNex;t: boolean;
-hasPre;v: boolean;};export; interface; ErrorResponse {
+hasPre;v: boolean;};export; interface; ErrorResponse {origin/main
 error: string;
 message: string;
 statusCode: number;
@@ -26,8 +26,8 @@ export; interface; LoadingState {
 isLoading: boolean;
 erro;r: string | null;
 export; interface; FormState<T> extends LoadingState {
-data: T;
-errors: Partial<Record<keyof Tstring>>;
+data: T;,
+errors: Partial<Record<keyof Tstring>>;,
 isValid: boolean;
 isDirt;y: boolean;
 export; interface; AnimationVariants {,
@@ -88,7 +88,7 @@ secondaryColor: string;
 accentColo;r: string;
 export; interface; UserPreferences {
 theme: ThemeConfig;
-language: string;
+language: string;,
 notifications: {;,
 email: boolean;
 pus;h: boolean;
@@ -96,7 +96,7 @@ sm;s: boolean;};
 accessibility: {;,
 highContrast: boolean;
 reducedMotio;n: boolean;
-fontSiz;e: "small" | "medium" | "large";};export; interface; NavigationItem {
+fontSiz;e: "small" | "medium" | "large";};export; interface; NavigationItem {origin/main
 label: string;
 pat;h: string;
 icon?: string;
@@ -120,17 +120,17 @@ columns: TableColumn<T>[];
 loading?: boolean;
 pagination?: {
 page: number;
-limit: number;
+limit: number;,
 total: number;,
 onPageChange: (page: number) => void;
-onLimitChang;e: (limi;t: number) => void;};
+onLimitChang;e: (limi;t: number) => void;};origin/main
 sorting?: {
-field: keyof T;
+field: keyof T;,
 direction: "asc" | "desc";,
 onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;};
 selection?: {
 selected: string[];
-onSelectionChang;e: (selecte;d: string[]) => void;};export; interface; ChartDataPoint {
+onSelectionChang;e: (selecte;d: string[]) => void;};export; interface; ChartDataPoint {origin/main
 label: string;
 valu;e: number;
 color?: string;
@@ -175,13 +175,13 @@ export; interface; ValidationSchema {
 [key:, string]: ValidationRule;
 export; interface; NotificationConfig {
 id: string;
-type: "success" | "error" | "warning" | "info";
+type: "success" | "error" | "warning" | "info";,
 title: string;,
 message: string;
 duration?: number;
 action?: {
 labe;l: string;
-onClic;k: () => void;};
+onClic;k: () => void;};origin/main
 dismissible?: boolean;
 export; interface; SearchFilters {
 query?: string;
@@ -192,7 +192,7 @@ start: Date;
 en;d: Date;};
 priceRange?: {
 min: number;
-ma;x: number;};
+ma;x: number;};origin/main
 sortBy?: string;
 sortOrder?: "asc" | "desc";export; interface; FileUploadConfig {
 accept?: string;
@@ -202,7 +202,7 @@ multiple?: boolean;
 onUpload: (files: File[]) => Promise<void>;
 onError?: (erro;r: string) => void;
 export; interface; ModalConfig {
-id: string;
+id: string;,
 title: string;,
 content: React.ReactNode;
 size?: "sm" | "md" | "lg" | "xl" | "full";
@@ -216,16 +216,16 @@ loading?: boolean;
 };
 secondary?: {
 label: string;
-onClic;k: () => void;};
+onClic;k: () => void;};origin/main
 };export; interface; ToastConfig {
-id: string;
+id: string;,
 type: "success" | "error" | "warning" | "info";
 title?: string;,
 message: string;
 duration?: number;
 action?: {
 labe;l: string;
-onClic;k: () => void;};export; interface; KeyboardShortcut {
+onClic;k: () => void;};export; interface; KeyboardShortcut {origin/main
 key: string;
 ctrlKey?: boolean;
 shiftKey?: boolean;
@@ -234,12 +234,12 @@ metaKey?: boolean;
 actio;n: () => void;
 description?: string;
 preventDefault?: boolean;
-export; interface; LocalStorageConfig {
-key: string;
+export; interface; LocalStorageConfig {,
+key: string;,
 defaultValue: any;
 serializer?: {,
 serialize: (value: any) => string;
-deserializ;e: (valu;e: string) => any;};export; interface; DebounceConfig {
+deserializ;e: (valu;e: string) => any;};export; interface; DebounceConfig {origin/main
 delay: number;
 leading?: boolean;
 trailing?: boolean;
@@ -252,10 +252,10 @@ maxAttempts: number;
 delay: number;
 backoff?: "linear" | "exponential";
 onRetry?: (attempt: numbererro;r: Error) => void;
-export; interface; CacheConfig {
+export; interface; CacheConfig {,
 ttl: number;
 maxSize?: number;
-strategy?: "lru" | "lfu" | "fifo";export; interface; LoggerConfig {
+strategy?: "lru" | "lfu" | "fifo";export; interface; LoggerConfig {,
 level: "debug" | "info" | "warn" | "error";
 enableConsole?: boolean;
 enableRemote?: boolean;
@@ -297,7 +297,7 @@ xssProtection?: boolean;
 contentSecurityPolicy?: string;
 rateLimiting?: {
 windowMs: number;
-maxRequest;s: number;};export; interface; MonitoringConfig {
+maxRequest;s: number;};export; interface; MonitoringConfig {origin/main
 performance?: boolean;
 errors?: boolean;
 userBehavior?: boolean;
@@ -305,14 +305,14 @@ customMetrics?: boolean;
 alerting?: {
 enabled: boolean;
 threshold;s: Record<stringnumber>;
-channel;s: string[];};export; interface; DeploymentConfig {
+channel;s: string[];};export; interface; DeploymentConfig {origin/main
 environment: "development" | "staging" | "production";
 version: string;
 buildNumber: string;
 timestamp: string;
 feature;s: FeatureFlag[ ];
 export; interface; HealthCheck {
-status: "healthy" | "degraded" | "unhealthy";
+status: "healthy" | "degraded" | "unhealthy";,
 timestamp: string;,
 services: {
 [serviceNam;e:, string]: {
@@ -324,4 +324,4 @@ error?: string;
 metrics: {;,
 cpu: number;
 memor;y: number;
-dis;k: number;};}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+dis;k: number;};}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}origin/main

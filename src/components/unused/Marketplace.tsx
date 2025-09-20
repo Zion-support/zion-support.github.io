@@ -59,7 +59,7 @@ const sortOptions = [;
 { id: "popular", name: "Most Popular" };
 { id: "rating", name: "Highest Rated" }
 ];
-const marketplaceProducts = [
+const marketplaceProducts = [;
 {;
 id: 1;
 name: "AI Autonomous Business Manager";
@@ -69,7 +69,7 @@ price: 2999;
 originalPrice: 3999;
 currency: "USD";
 rating: 4.9;
-reviewCount: 127;
+reviewCount: 127;,
 image: "/images/marketplace/ai-business-manager.jpg";,
 features: [
 "Autonomous decision making";
@@ -80,11 +80,11 @@ features: [
 ],
 tags: ["AI", "Business Automation", "Enterprise", "Cloud"],
 featured: true;
-new: false;
+new: false;,
 discount: 25;,
 type: "software"};
 {
-id: 2;
+id: 2;origin/main
 name: "Quantum Neural Network Framework";
 description: "Advanced quantum computing framework for neural network development and optimization.";
 category: "ai-solutions";
@@ -92,7 +92,7 @@ price: 1499;
 originalPrice: 1999;
 currency: "USD";
 rating: 4.8;
-reviewCount: 89;
+reviewCount: 89;,
 image: "/images/marketplace/quantum-framework.jpg";,
 features: [
 "Quantum algorithm optimization";
@@ -103,11 +103,11 @@ features: [
 ],
 tags: ["Quantum Computing", "AI", "Research", "Python"],
 featured: true;
-new: true;
+new: true;,
 discount: 25;,
 type: "software"};
 {
-id: 3;
+id: 3;origin/main
 name: "SOC2 Compliance Automation Suite";
 description: "Comprehensive security and compliance automation platform for enterprise organizations.";
 category: "cybersecurity";
@@ -115,7 +115,7 @@ price: 899;
 originalPrice: 1199;
 currency: "USD";
 rating: 4.7;
-reviewCount: 156;
+reviewCount: 156;,
 image: "/images/marketplace/soc2-suite.jpg";,
 features: [
 "Automated compliance checks";
@@ -126,11 +126,11 @@ features: [
 ],
 tags: ["Cybersecurity", "Compliance", "SOC2", "Enterprise"],
 featured: false;
-new: false;
+new: false;,
 discount: 25;,
 type: "software"};
 {
-id: 4;
+id: 4;origin/main
 name: "5G Enterprise Network Kit";
 description: "Complete 5G networking solution for enterprise environments with advanced security.";
 category: "cloud-infrastructure";
@@ -138,7 +138,7 @@ price: 2499;
 originalPrice: 2999;
 currency: "USD";
 rating: 4.6;
-reviewCount: 73;
+reviewCount: 73;,
 image: "/images/marketplace/5g-kit.jpg";,
 features: [
 "5G network infrastructure";
@@ -149,11 +149,11 @@ features: [
 ],
 tags: ["5G", "Networking", "Enterprise", "Infrastructure"],
 featured: false;
-new: false;
+new: false;,
 discount: 17;,
 type: "hardware"};
 {
-id: 5;
+id: 5;origin/main
 name: "AI Workflow Templates Pack";
 description: "Collection of 50+ pre-built AI workflow templates for common business processes.";
 category: "ai-solutions";
@@ -161,7 +161,7 @@ price: 199;
 originalPrice: 299;
 currency: "USD";
 rating: 4.5;
-reviewCount: 234;
+reviewCount: 234;,
 image: "/images/marketplace/workflow-templates.jpg";,
 features: [
 "50+ workflow templates";
@@ -172,11 +172,11 @@ features: [
 ],
 tags: ["AI", "Workflows", "Templates", "Business"],
 featured: false;
-new: false;
+new: false;,
 discount: 33;,
 type: "template"};
 {
-id: 6;
+id: 6;origin/main
 name: "Blockchain DeFi Development Kit";
 description: "Complete toolkit for building decentralized finance applications on blockchain.";
 category: "blockchain";
@@ -184,7 +184,7 @@ price: 599;
 originalPrice: 799;
 currency: "USD";
 rating: 4.4;
-reviewCount: 98;
+reviewCount: 98;,
 image: "/images/marketplace/blockchain-defi.jpg";,
 features: [
 "Smart contract templates";
@@ -195,11 +195,11 @@ features: [
 ],
 tags: ["Blockchain", "DeFi", "Smart Contracts", "Development"],
 featured: false;
-new: true;
+new: true;,
 discount: 25;,
 type: "development-kit"};
 {
-id: 7;
+id: 7;origin/main
 name: "IoT Data Analytics Platform";
 description: "Enterprise IoT platform with advanced analytics and machine learning capabilities.";
 category: "iot-platforms";
@@ -207,7 +207,7 @@ price: 1799;
 originalPrice: 2299;
 currency: "USD";
 rating: 4.3;
-reviewCount: 67;
+reviewCount: 67;,
 image: "/images/marketplace/iot-platform.jpg";,
 features: [
 "IoT device management";
@@ -218,11 +218,11 @@ features: [
 ],
 tags: ["IoT", "Analytics", "Machine Learning", "Enterprise"],
 featured: false;
-new: false;
+new: false;,
 discount: 22;,
 type: "platform"};
 {
-id: 8;
+id: 8;origin/main
 name: "Cybersecurity Threat Intelligence";
 description: "Real-time threat intelligence and security monitoring service.";
 category: "cybersecurity";
@@ -230,7 +230,7 @@ price: 399;
 originalPrice: 599;
 currency: "USD";
 rating: 4.8;
-reviewCount: 189;
+reviewCount: 189;,
 image: "/images/marketplace/threat-intelligence.jpg";,
 features: [
 "Real-time threat feeds";
@@ -241,12 +241,12 @@ features: [
 ],
 tags: ["Cybersecurity", "Threat Intelligence", "Monitoring", "Security"],
 featured: false;
-new: false;
+new: false;,
 discount: 33;,
 type: "service"}
 ];
-const filteredProducts = marketplaceProducts.filter(product => {
-const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const filteredProducts = marketplaceProducts.filter(product => {;
+const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 
@@ -280,7 +280,7 @@ case "popular":
 return b.reviewCount - a.reviewCount;
 case "rating":
 return b.rating - a.rating;
-default: return b.featured ? 1 : -1;}
+default: return b.featured ? 1 : -1;}origin/main
 });
 
 const formatPrice: any = (price: number; currency: string) => {

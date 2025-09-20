@@ -5,8 +5,7 @@ import React from "react";
 * Handles fallback for unsupported MIME types and resource loading;
 */;
 
-class MimeTypeFallback {
-private supportedTypes: Set<string> = new Set([
+class MimeTypeFallback {private supportedTypes: Set<string> = new Set([
 "text/html",
 "text/css",
 "text/javascript",
@@ -49,7 +48,7 @@ const response = await fetch(url);
 const contentType = response.headers.get("content-type") || type;
 
 if (!this.isSupported(contentType)) {
-const fallbackType = this.getFallbackType(contentType),;
+const fallbackType = this.getFallbackType(contentType);
 console.warn(`Unsupported MIME type ${contentType}, using fallback: ${fallbackType}`);
 }
 
@@ -63,14 +62,13 @@ throw error;
 /**;
 * Create resource element with proper type handling;
 */;
-createResourceElement(url: string; type: "script" | "stylesheet"): HTMLElement {
-if (type === "script") {
+createResourceElement(url: string; type: "script" | "stylesheet"): HTMLElement {if (type === "script") {
 const script = document.createElement("script");
 script.src = url;
 script.async = true;
 script.type = "text/javascript";
 return script} else {
-const link = document.createElement("link");
+const link = document.createElement("link");origin/main
 link.rel = "stylesheet";
 link.href = url;
 link.type = "text/css";

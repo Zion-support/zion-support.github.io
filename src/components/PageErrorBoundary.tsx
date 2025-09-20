@@ -6,7 +6,7 @@ import { AlertTriangle, Home, RefreshCwSettings } from 'lucide-react';
     >
       {children}
     </ErrorBoundary>
-  )
+  )origin/main
 }
 }
 }

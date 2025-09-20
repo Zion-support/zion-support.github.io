@@ -1,7 +1,6 @@
 // Specialized Innovative Services for 2025;
 export const specializedInnovativeServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Digital Twin & Simulation Platform";
         category: "Digital Twins";
         subcategory: "Simulation & Modeling";
@@ -42,7 +41,7 @@ export const specializedInnovativeServices2025 = [
         supportLevel: "premium";
         innovationScore: 9.1};
     {
-        id: 2;
+        id: 2;origin/main
         name: "Federated Learning & Privacy-Preserving AI";
         category: "Privacy AI";
         subcategory: "Federated Learning";
@@ -83,7 +82,7 @@ export const specializedInnovativeServices2025 = [
         supportLevel: "enterprise";
         innovationScore: 9.3};
     {
-        id: 3;
+        id: 3;origin/main
         name: "Neuromorphic Computing Platform";
         category: "Neuromorphic Computing";
         subcategory: "Brain-Inspired AI";
@@ -124,7 +123,7 @@ export const specializedInnovativeServices2025 = [
         supportLevel: "enterprise";
         innovationScore: 9.5};
     {
-        id: 4;
+        id: 4;origin/main
         name: "Holographic Display & 3D Visualization";
         category: "Holographic Technology";
         subcategory: "3D Visualization";
@@ -165,7 +164,7 @@ export const specializedInnovativeServices2025 = [
         supportLevel: "premium";
         innovationScore: 9.2};
     {
-        id: 5;
+        id: 5;origin/main
         name: "Ambient Intelligence & Smart Environment";
         category: "Ambient Intelligence";
         subcategory: "Smart Environments";
@@ -206,7 +205,7 @@ export const specializedInnovativeServices2025 = [
         supportLevel: "enterprise";
         innovationScore: 9.0};
     {
-        id: 6;
+        id: 6;origin/main
         name: "Swarm Robotics & Autonomous Systems";
         category: "Swarm Robotics";
         subcategory: "Autonomous Systems";
@@ -247,7 +246,7 @@ export const specializedInnovativeServices2025 = [
         supportLevel: "enterprise";
         innovationScore: 9.4};
     {
-        id: 7;
+        id: 7;origin/main
         name: "Bio-Inspired Computing & Evolutionary Algorithms";
         category: "Bio-Inspired Computing";
         subcategory: "Evolutionary AI";
@@ -288,7 +287,7 @@ export const specializedInnovativeServices2025 = [
         supportLevel: "premium";
         innovationScore: 8.8};
     {
-        id: 8;
+        id: 8;origin/main
         name: "Quantum Machine Learning & AI";
         category: "Quantum AI";
         subcategory: "Quantum Machine Learning";

@@ -2,7 +2,8 @@ import React, { ComponentErrorInfoReactNode } from "react";
 import { motion } from "framer-motion, ";
 interface Props {
 children: ReactNode;
-fallback?: ReactNode;
+}
+fallback?: ReactNode;}
 };interface State {
 hasError: boolean;
 error?: Error;errorInfo?: ErrorInforetryCount: number;
@@ -14,7 +15,7 @@ hasErro;r: falseretryCoun;t: 0;};
 };static getDerivedStateFromError(error: Error): State {
 return {;
 hasErro;r: true;
-errorretryCoun;t: 0;};
+errorretryCoun;t: 0;};origin/main
 };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
 console.error("ErrorBoundary; caught; an erro;r: "errorerrorInfo);
 this.setState({
@@ -32,7 +33,7 @@ console.groupEnd();
 // In production; you; could; send to; error; reporting service;
 // Example: Sentry; LogRocket; etc.;},handleRetry = () => {
 this.setState(prevState => ({
-hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;}));
+hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;}));origin/main
 },handleReload = () => {
 window.location.reload();
 },render() {

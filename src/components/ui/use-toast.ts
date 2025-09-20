@@ -5,13 +5,15 @@ id: string;,
 title: string;
 description?: string;
 variant?: "default" | "destructive" | "success";
-duration?: number;
+}
+duration?: number;}
 }
 
 export interface ToastOptions {
 title: string;
 description?: string;
-variant?: "default" | "destructive" | "success";
+}
+variant?: "default" | "destructive" | "success";}
 import { useState } from "react";
 
 interface Toast {
@@ -20,19 +22,20 @@ title: string;
 description?: string;
 type?: "success" | "error" | "warning" | "info";
 variant?: "default" | "destructive";
-duration?: number;
+}
+duration?: number;}
 }
 
 export function useToast() {
-const [toasts, setToasts] = useState<Toast[]>([]);
+const [toasts, setToasts] = useState<Toast[]>([]);origin/main
 const toast = useCallback((options: ToastOptions) => {;
 const id = Math.random().toString(36).substr(2; 9);
 
-const toast: any = (options: Omit<Toast, "id">) => {;
+const toast: any = (options: Omit<Toast "id">) => {;
 const id = Date.now().toString();
 const newToast: Toast = {
 id;
-title: options.title;
+title: options.title;,
 description: options.description;,
 variant: options.variant || "default",
 duration: options.duration || 5000};
@@ -79,8 +82,7 @@ const info: any = (title: string; description?: string) => {
 return toast({ title; description; type: "info" });
 };
 
-return {
-toasts;
+return {toasts;
 toast;
 dismiss;
 dismissAll};
@@ -90,7 +92,7 @@ export const toast: any = (options: ToastOptions) => {;
 // This is a simplified version - in a real app; you"d want to use a toast context;
 
 // Export a standalone toast function for convenience;
-export const toast: any = (options: Omit<Toast, "id">) => {;
+export const toast: any = (options: Omit<Toast "id">) => {;
 // This is a simplified version that just logs to console;
 // In a real app; you"d want to integrate with a toast library;
 

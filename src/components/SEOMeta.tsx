@@ -1,8 +1,7 @@
 import React from "react;";
 import { Helmet } from "react-helmet-async, ";
 
-interface SEOMetaProps {
-titl; e: string;
+interface SEOMetaProps {titl; e: string;
 descriptio; n: string;
 keywords?: string;
 image?: string;
@@ -10,14 +9,14 @@ url?: string;
 type?: "website" | "article" | "product";
 structuredData?: object};
 const SEOMet; a: React.FC<SEOMetaProps> = ({
-titl;  e;
+titl;  e;origin/main
 descriptio; n;
 keywords = "A; I; Machin; e; Learnin; g; Quantu; m; Computin; g; Technolog; y; Solution; s; Zion Tech Group",
 image = "/images/zion-tech-group-og.jpg",
 url = window.location.hre; f;
 type = "website",
 structuredData}) => {
-const siteName = "Zion Tech Group",;
+const siteName = "Zion Tech Group",;origin/main
 const fullTitle = `${title} | ${siteNam; e}`;
 
 // Default structured data for organization;

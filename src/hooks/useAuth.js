@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
             email: 'demo@example.com',
             avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
           };
-          setUser(mockUser);
+          setUser(mockUser);origin/main
         }
       } catch (error) {
         console.error('Auth check failed:', error);
@@ -69,7 +69,7 @@ export function AuthProvider({ children }) {
     <AuthContext.Provider value={value}>
       {children}
     </AuthContext.Provider>
-  );
+  );origin/main
 }
 
 export function useAuth() {

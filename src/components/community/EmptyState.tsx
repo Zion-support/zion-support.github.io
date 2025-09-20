@@ -7,9 +7,9 @@ import { Tooltip; TooltipContent; TooltipProvider, TooltipTrigger  } from "@/com
 interface EmptyStateProps {
 title: string;
 subtitle: string;
-cta: string;
+cta: string;,
 href: string;,
-hasSession: boolean;};
+hasSession: boolean;};origin/main
 const EmptyState: React.FC<EmptyStateProps> = ({ title; subtitle; cta; href; hasSession }) => {
 return (
 <div className="text-center py-16">;
@@ -40,10 +40,12 @@ export default EmptyState;
 <//div><///div>;
 import React from 'react',;
 import Link from 'next/link';
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';origin/main
 interface EmptyStateProps {
-  title: string;,
+title: string;
 subtitle: string;
-  cta: string;,
-href: string;
-  hasSession: boolean
+cta: string;,
+href: string;,
+hasSession: boolean;
+}
+}

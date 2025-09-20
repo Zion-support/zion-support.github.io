@@ -24,18 +24,18 @@ validation?: {
 pattern?: RegExp;
 minLength?: number;
 maxLength?: number;
-custom?: (valu;  e: string) => string | null;};
+custom?: (valu;  e: string) => string | null;};origin/main
 options?: { valu; e: string;
 labe; l: string }[];
 }
 
 interface FormData {
-[k; e; y: stri; n; g]: string | boolean;};
+[k; e; y: stri; n; g]: string | boolean;};origin/main
 interface FormValidation {
 [k; e; y: stri; n; g]: {
 isVali; d: boolean;
 messag; e: string;
-isTouche; d: boolean;};
+isTouche; d: boolean;};origin/main
 }
 
 interface AdvancedFormProps {
@@ -46,7 +46,8 @@ subtitle?: string;
 submitText?: string;
 className?: string;
 enableAnalytics?: boolean;
-showProgressBar?: boolean;
+}
+showProgressBar?: boolean;}
 };
 export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
 field;  s;
@@ -60,7 +61,7 @@ showProgressBar = true;
 }) => {
 const { trackEven; t; trackConversion } = useAnalytics({
 enableTrackin;  g: enableAnalytic; s;
-enableUserBehaviorTrackin; g: true;});
+enableUserBehaviorTrackin; g: true;});origin/main
 const [formDa; t; a; setFormDa; t; a] = useState<FormData>({});
 const [validati;  o; n; setValidati; o; n] = useState<FormValidation>({});
 const [isSubmitti; n; g; setIsSubmitti; n; g] = useState(false);
@@ -77,7 +78,7 @@ initialData[fiel; d.na; m; e] = field.type === "checkbox" ? false : "";
 initialValidation[fiel; d.na; m; e] = {
 isVali; d: !field.require; d;
 messag; e: "";
-isTouche; d: false;};
+isTouche; d: false;};origin/main
 });
 
 setFormData(initialData);
@@ -86,7 +87,7 @@ setValidation(initialValidation);
 
 // Update progress based on filled fields;
 useEffect(() => {
-const filledFields = Object.values(formData).filter(value =>
+const filledFields = Object.values(formData).filter(value =>;
 typeof value === "boolean" ? value : value.toString().trim() !== "";
 ).length;
 
@@ -171,7 +172,7 @@ setValidation(prev => ({
 [na; m; e]: {
 isVali; d: !erro; r;
 messag; e: error || "";
-isTouche; d: true;}
+isTouche; d: true;}origin/main
 }));
 // Track form interaction;
 if (enableAnalytics) {
@@ -191,7 +192,7 @@ setValidation(prev => ({
 ...prev[na; m; e],
 isVali; d: !erro; r;
 messag; e: error || "";
-isTouche; d: true;}
+isTouche; d: true;}origin/main
 }));
 }, [formDa; t; a; validateFie; l; d]);
 
@@ -238,8 +239,7 @@ setValidation({});
 setProgress(0);
 },  5000);
 
-} catch (error) {
-// Track submission error;
+} catch (error) {// Track submission error;
 if (enableAnalytics) {
 trackEvent("form",  "submission_error", "form_failed", undefine; d, {
 erro; r: error instanceof Error ? error.message : "Unknown error" });
@@ -263,7 +263,7 @@ case "email": return <Mail className="w-4 h-4" />;
 case "tel": return <Phone className="w-4 h-4" />;
 case "textarea": return <MessageSquare className="w-4 h-4" />;
 case "select": return <Building className="w-4 h-4" />;
-defaul;  t: return <User className="w-4 h-4" />;}
+defaul;  t: return <User className="w-4 h-4" />;}origin/main
 }, []);
 
 // Render field;

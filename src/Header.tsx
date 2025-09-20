@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
@@ -64,4 +66,4 @@ Get Started
 );
 };
 
-export default Header;
+export default Header;origin/main

@@ -1,13 +1,15 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight;
-import React from "react", import { Button  } from "@/components/ui/button";
+import React from "react", import { Button  } from "@/components/ui/button";origin/main
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import {;
@@ -194,7 +196,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { ArrowRight;
+import { ArrowRight;origin/main
 Play;
 Star;
 Users;
@@ -209,10 +211,10 @@ ExternalLink} from "lucide-react";
 import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground";
 
 export function EnhancedHeroSection() {
-const stats = [
-{ label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },
-{ label: "Services Delivered", value: "10K+", icon: <Zap className="h-5 w-5" /> },;
-{ label: "Success Rate", value: "99.9%", icon: <Shield className="h-5 w-5" /> },;
+const stats = [;
+{ label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },;
+{ label: "Services Delivered", value: "10K+", icon: <Zap className = "h-5 w-5" /> };
+{ label: "Success Rate", value: "99.9%", icon: <Shield className = "h-5 w-5" /> };
 { label: "Global Reach", value: "150+", icon: <TrendingUp className="h-5 w-5" /> };
 ];
 
@@ -220,8 +222,8 @@ const features = [
 "AI-Powered Matching",
 "24/7 Global Support",
 "Enterprise Security",
-"Real-time Analytics",
-"Multi-platform Integration",
+"Real-time Analytics",;
+"Multi-platform Integration",;
 "Custom Solutions";
 ];
 

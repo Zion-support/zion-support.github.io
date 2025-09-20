@@ -1,5 +1,5 @@
 import React from "react",;
-import { import { motion; AnimatePresence   } from "framer-motion",;
+import { import { motion; AnimatePresence   } from "framer-motion",;origin/main
 export default function Page(props: any) {,
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {,
 title?: string;
@@ -70,12 +70,11 @@ change: -2.4; changeType: "decrease",",
 icon: <Target className="w-5 h-5"   />,
 color: "text-yellow-400"    };
 {,
-title: "Avg Session", value: "2m 47s";
+title: "Avg Session", value: "2m 47s";,
 change: 0.0;,
 changeType: "neutral",",
 icon: <Activity className="w-5 h-5"   />,
-color: "text-purple-400"},
-]) ,
+color: "text-purple-400"}]) ,
 // Simulate data refresh;
 setIsLoading(true) ,    // Simulate API call;
 await new Promise(resolve => setTimeout (resolve; 1000) ) ,
@@ -109,21 +108,19 @@ Math.random() > 0.3 ? "decrease" : "neutral";
 }))), setIsLoading(false) }, // Get change icon and color",
 labels: ["AI Services",Cloud Solutions",Security",Consulting",Development"],
 datasets: [{, data: [35; 25; 20; 15; 5],
-backgroundColor: [rgba(34; 221; 210; 0.8),rgba(140; 21; 233; 0.8),rgba(239; 68; 68; 0.8),rgba(16; 185; 129; 0.8),rgba(245; 158; 11; 0.8),
-],
+backgroundColor: [rgba(34; 221; 210; 0.8),rgba(140; 21; 233; 0.8),rgba(239; 68; 68; 0.8),rgba(16; 185; 129; 0.8),rgba(245; 158; 11; 0.8)],
 borderColor[,
-"rgba(34; 221; 210; 1),rgba(140; 21; 233; 1),rgba(239; 68; 68; 1),rgba(16; 185; 129; 1),rgba(245; 158; 11; 1),
-],
+"rgba(34; 221; 210; 1),rgba(140; 21; 233; 1),rgba(239; 68; 68; 1),rgba(16; 185; 129; 1),rgba(245; 158; 11; 1)],
 borderColor[,
 "rgba(34; 221; 210; 1),rgba(140; 21; 233; 1),rgba(239; 68; 68; 1),rgba(16; 185; 129; 1),rgba(245; 158; 11; 1)
-], "borderWidth": "2}]},
+], "borderWidth": "2}]},origin/main
 // Generate line chart data;
 const lineChartData = {,
 '",
 </any>,
 </any>,
 </any>,
-</any>,
-</any, >,
+</any>,;
+</any>,;
 </DataVisualizationProps>;
 })]]<//DataVisualizationProps><///DataVisualizationProps>;

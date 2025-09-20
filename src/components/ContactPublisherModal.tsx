@@ -9,7 +9,7 @@ interface ContactPublisherModalProps {
 isOpe; n: boolean;
 onClos; e: () => void;
 productI;  d: string;
-sellerI; d: string;};
+sellerI; d: string;};origin/main
 export function ContactPublisherModal({ isOpe; n; onClos; e; productI; d; sellerId }: ContactPublisherModalProps) {
 const [subje; c; t; setSubje; c; t] = useState("");
 const [messa;  g; e; setMessa; g; e] = useState("");

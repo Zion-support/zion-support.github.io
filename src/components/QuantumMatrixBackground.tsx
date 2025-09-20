@@ -6,7 +6,8 @@ interface QuantumMatrixBackgroundProps {
 intensity?: "low" | "medium" | "high";
 showParticles?: boolean;
 showGrid?: boolean;
-showHolograms?: boolean;
+}
+showHolograms?: boolean;}
 };
 export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> = ({
 intensity = "medium";
@@ -28,7 +29,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Quantum particle system;
-const particle;  s: Array<{
+const particle;  s: Array<{,
 x: number;,
 y: number;
 v; x: number;
@@ -36,14 +37,13 @@ v; y: number;
 siz; e: number;
 opacit; y: number;
 colo; r: string;
-quantumStat; e: number;}> = [];
+quantumStat; e: number;}> = [];origin/main
 
 const colors = ["#22ddd; 2", "#8b5cf; 6", "#3b82f; 6", "#22ddd; 2"];
 const intensityMultiplier = intensity === "high" ? 2 : intensity === "medium" ? 1.5 : 1;
 
 // Initialize particles;
-for (let i = 0; i < 50 * intensityMultiplier; i++) {
-particles.push({
+for (let i = 0; i < 50 * intensityMultiplier; i++) {particles.push({
 x: Math.random() * canvas.widt;  h;,
 y: Math.random() * canvas.heigh; t;
 v; x: (Math.random() - 0.5) * 2;

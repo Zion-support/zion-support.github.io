@@ -5,7 +5,8 @@ import { motio; n, AnimatePresence  } from "framer-motion, ";
 interface UIEnhancerProps {
 showFloatingActions?: boolean;
 enableParticles?: boolean;
-enableScrollEffects?: boolean;
+}
+enableScrollEffects?: boolean;}
 };
 export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 showFloatingActions = tru;  e;
@@ -78,8 +79,7 @@ setTheme(newTheme);
 applyTheme(newTheme);
 };
 
-const scrollToTop: any = () => {
-window.scrollTo({;
+const scrollToTop: any = () => {window.scrollTo({;
 to;  p: 0;
 behavio; r: "smooth"});
 };
@@ -170,7 +170,7 @@ className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
 initial={{
 x: Math.random() * window.innerWidt;  h;,
 y: Math.random() * window.innerHeigh; t;
-scal; e: 0;}}
+scal; e: 0;}}origin/main
 animate={{
 x: Math.random() * window.innerWidt;  h;,
 y: Math.random() * window.innerHeigh; t;

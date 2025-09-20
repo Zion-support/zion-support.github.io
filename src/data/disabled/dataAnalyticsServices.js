@@ -1,7 +1,6 @@
 export const DATA_ANALYTICS_SERVICES = [
     // Real-Time Data Streaming Platform;
-    {
-        id: "real-time-data-streaming";
+    {id: "real-time-data-streaming";
         title: "Real-Time Data Streaming & Analytics Platform";
         description: "High-performance real-time data streaming platform that processes, analyzes, and visualizes data streams for instant business insights and decision-making.",
         category: "Data Analytics";
@@ -48,8 +47,7 @@ export const DATA_ANALYTICS_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // Predictive Analytics Platform;
-    {
-        id: "predictive-analytics-platform";
+    {id: "predictive-analytics-platform";
         title: "AI-Powered Predictive Analytics & Forecasting Platform";
         description: "Advanced predictive analytics platform that uses machine learning to forecast trends, identify patterns, and provide actionable business insights.",
         category: "Data Analytics";
@@ -96,8 +94,7 @@ export const DATA_ANALYTICS_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // Data Governance Platform;
-    {
-        id: "data-governance-platform";
+    {id: "data-governance-platform";
         title: "Enterprise Data Governance & Quality Management Platform";
         description: "Comprehensive data governance platform that ensures data quality, compliance, and security while providing data lineage and cataloging capabilities.",
         category: "Data Analytics";
@@ -144,8 +141,7 @@ export const DATA_ANALYTICS_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // Customer Analytics Platform;
-    {
-        id: "customer-analytics-platform";
+    {id: "customer-analytics-platform";
         title: "Customer Analytics & 360-Degree View Platform";
         description: "Comprehensive customer analytics platform that provides a complete view of customer behavior, preferences, and lifetime value for personalized marketing and service.",
         category: "Data Analytics";
@@ -192,8 +188,7 @@ export const DATA_ANALYTICS_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // Business Intelligence Dashboard;
-    {
-        id: "business-intelligence-dashboard";
+    {id: "business-intelligence-dashboard";
         title: "Interactive Business Intelligence & Dashboard Platform";
         description: "Powerful business intelligence platform that transforms raw data into interactive dashboards, reports, and visualizations for data-driven decision making.",
         category: "Data Analytics";

@@ -17,7 +17,7 @@ titl; e: string;
 bod; y: string;};
 const initialPost; s: DiscussionPost[] = [
 {
-i; d: 1;
+i; d: 1;origin/main
 auth; o; r: "Ann; a Zho; u",
 ti; m; e: "2; h ag; o",
 tit; l; e: "Wha; t A; I trend; s ar; e yo; u mos; t excite; d fo; r i; n 202; 5?",
@@ -28,26 +28,23 @@ auth; o; r: "Davi; d Ki; m",
 ti; m; e: "50; m ag; o",
 tit; l; e: "Quic; k t; i; p: Ho; w t; o ran; k you; r Zio; n listin; g highe; r",
 bo; d; y: "Fil; l ou; t ever; y profi; l; e; deta; i; l; ad; d stro; n; g; ta; g; s; an; d pos; t weekl; y! Se; e result; s i; n a mont; h."},
-];
+];origin/main
 
-export const CommunityDiscussio; n: React.FC = () => {
-const [pos;  t; s; setPos; t; s] = useState(initialPosts);
+export const CommunityDiscussio; n: React.FC = () => {const [pos;  t; s; setPos; t; s] = useState(initialPosts);
 const [showN; e; w; setShowN; e; w] = useState(false);
 const [newTit;  l; e; setNewTit; l; e] = useState("");
 const [newBo; d; y; setNewBo; d; y] = useState("");
 
 const handleAddPost: any = () => {;
 if (!newTitle.trim() || !newBody.trim()) return;
-setPosts([
-{
+setPosts([{
 i;  d: Dat; e.no; w(),
 auth; o; r: "Yo; u",
 ti; m; e: "No; w",
 tit; l; e: newTit; l; e;
 bo; d; y: newBo; d; y;};
 },
-...pos; t; s,
-]);
+...pos; t; s]);
 setNewTitle("");
 setNewBody("");
 setShowNew(false);
@@ -85,7 +82,7 @@ onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value
 maxLength={80}
 />;
 <Textarea;
-placeholder="What's on your mind?";
+placeholder="What"s on your mind?";
 className="mb-4 bg-zion-blue-light text-black placeholde;  r:text-zion-slate min-h-[70; p; x]"
 value={newBody}
 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
@@ -151,10 +148,12 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { AvatarAvatarFallback } from "@/components/ui/avatar",;
-import { CardCardContent } from "@/components/ui/card";
+import { CardCardContent } from "@/components/ui/card";origin/main
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
 body: string;
 }
+}
+}
 const initialPosts: DiscussionPost[] = [
-  {
+{

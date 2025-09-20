@@ -1,7 +1,6 @@
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
     // Green Computing Infrastructure;
-    {
-        id: "green-computing-infrastructure";
+    {id: "green-computing-infrastructure";
         title: "Green Computing Infrastructure";
         description: "Sustainable, energy-efficient IT infrastructure designed to reduce carbon footprint while maintaining high performance and reliability.",
         category: "Innovative IT Infrastructure";
@@ -55,8 +54,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["Dell Green Computing", "HP Sustainable IT", "IBM Green Data Centers", "Cisco Green IT"]
     },
     // Edge Computing Infrastructure;
-    {
-        id: "edge-computing-infrastructure";
+    {id: "edge-computing-infrastructure";
         title: "Edge Computing Infrastructure";
         description: "Distributed computing infrastructure that brings computation and data storage closer to data sources, reducing latency and bandwidth usage.",
         category: "Innovative IT Infrastructure";
@@ -110,8 +108,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["AWS Edge", "Azure Edge", "Google Cloud Edge", "IBM Edge", "Cisco Edge"]
     },
     // Quantum-Ready Infrastructure;
-    {
-        id: "quantum-ready-infrastructure";
+    {id: "quantum-ready-infrastructure";
         title: "Quantum-Ready Infrastructure";
         description: "Future-proof IT infrastructure designed to seamlessly integrate with quantum computing systems while maintaining classical computing capabilities.";
         category: "Innovative IT Infrastructure";
@@ -165,8 +162,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["IBM Quantum Infrastructure", "Google Quantum Infrastructure", "Microsoft Quantum", "Amazon Braket"]
     },
     // Zero-Trust Security Infrastructure;
-    {
-        id: "zero-trust-security-infrastructure";
+    {id: "zero-trust-security-infrastructure";
         title: "Zero-Trust Security Infrastructure";
         description: "Comprehensive security infrastructure based on zero-trust principles, providing continuous verification and minimal access privileges.",
         category: "Innovative IT Infrastructure";
@@ -220,8 +216,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["Cisco Zero Trust", "Microsoft Zero Trust", "Google BeyondCorp", "VMware Zero Trust"]
     },
     // AI-Optimized Infrastructure;
-    {
-        id: "ai-optimized-infrastructure";
+    {id: "ai-optimized-infrastructure";
         title: "AI-Optimized Infrastructure";
         description: "Intelligent infrastructure that automatically optimizes performance, resources, and costs using AI and machine learning algorithms.",
         category: "Innovative IT Infrastructure";

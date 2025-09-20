@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import * as React from "react";
@@ -52,4 +54,4 @@ return (
 );
 };
 
-export default App;
+export default App;origin/main

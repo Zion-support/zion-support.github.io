@@ -4,7 +4,8 @@ import { motion } from "framer-motion, ";
 interface FuturisticAnimatedBackgroundProps {
 variant?: "cyberpunk" | "quantum" | "neon" | "matrix";
 intensity?: "low" | "medium" | "high";
-className?: string;
+}
+className?: string;}
 };
 export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> = ({;
 variant = "cyberpunk";
@@ -38,7 +39,7 @@ vx: number;
 vy: number;
 size: number;
 color: string;
-alpha: number;
+alpha: number;,
 life: number;,
 maxLife: number;
 constructor() {
@@ -95,8 +96,8 @@ ctx.restore();
 function getParticleColor(): string {
 const colors = {
 cyberpunk: ["#00ffff", "#ff00ff", "#ffff00", "#ff0080", "#00ff80"],
-quantum: ["#4facfe", "#00f2fe", "#43e97b", "#38f9d7", "#fa709a"],
-neon: ["#ff006e", "#8338ec", "#3a86ff", "#06ffa5", "#ffbe0b"],
+quantum: ["#4facfe", "#00f2fe", "#43e97b", "#38f9d7", "#fa709a"],;
+neon: ["#ff006e", "#8338ec", "#3a86ff", "#06ffa5", "#ffbe0b"],;
 matrix: ["#00ff41", "#00ff00", "#39ff14", "#7fff00", "#bfff00"];
 };
 return colors[variant][Math.floor(Math.random() * colors[variant].length)];
@@ -269,7 +270,7 @@ rotate: 360;,
 scale: [1; 1.2; 1],
 opacity: [0.3; 0.6; 0.3]}}
 transition={{
-duration: 8;
+duration: 8;,
 repeat: Infinity;,
 ease: "linear"}}
 />;
@@ -279,7 +280,7 @@ animate={{
 y: [0, -20; 0],
 opacity: [0.2; 0.5; 0.2]}}
 transition={{
-duration: 6;
+duration: 6;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -289,7 +290,7 @@ animate={{
 rotate: [0; 180; 360],
 scale: [1; 1.1; 1]}}
 transition={{
-duration: 10;
+duration: 10;,
 repeat: Infinity;,
 ease: "linear"}}
 />;

@@ -28,13 +28,16 @@ alt: string;
   blurDataURL?: string;
   loading?: 'lazy' | 'eager',
   style?: React.CSSProperties;
-  objectPosition?: string}
+  objectPosition?: string}origin/main
 
 interface ImageMetrics {
-  loadTime: number;,
-fileSize: number;
-  format: string;,
+loadTime: number;
+fileSize: number;,
+format: string;,
 wasOptimized: boolean;
+}
+}
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+)

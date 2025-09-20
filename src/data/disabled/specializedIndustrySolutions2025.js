@@ -1,7 +1,6 @@
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     // Healthcare & Life Sciences;
-    {
-        id: "ai-healthcare-diagnostic-platform";
+    {id: "ai-healthcare-diagnostic-platform";
         title: "AI Healthcare Diagnostic Platform Pro";
         description: "Advanced AI-powered diagnostic platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
         category: "Healthcare & Life Sciences";
@@ -65,8 +64,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         caseStudies: ["Hospital 40% faster diagnosis", "Clinic 95% accuracy improvement"]
     },
     // Financial Services & Banking;
-    {
-        id: "ai-fraud-detection-suite";
+    {id: "ai-fraud-detection-suite";
         title: "AI Fraud Detection Suite Elite";
         description: "Comprehensive fraud detection platform that uses AI to identify and prevent financial fraud in real-time across multiple channels and transaction types.";
         category: "Financial Services & Banking";
@@ -128,8 +126,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         competitors: ["FICO", "LexisNexis", "Experian", "TransUnion"],
         demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection"};
     // Manufacturing & Industry 4.0;
-    {
-        id: "smart-manufacturing-platform";
+    {id: "smart-manufacturing-platform";
         title: "Smart Manufacturing Platform Pro";
         description: "Comprehensive Industry 4.0 platform that integrates IoT, AI, and automation to optimize manufacturing processes, predict maintenance, and improve quality control.",
         category: "Manufacturing & Industry 4.0";
@@ -191,8 +188,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         competitors: ["Siemens", "GE Digital", "Rockwell Automation", "ABB"],
         demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing"};
     // Retail & E-commerce;
-    {
-        id: "ai-retail-optimization-platform";
+    {id: "ai-retail-optimization-platform";
         title: "AI Retail Optimization Platform Elite";
         description: "Intelligent retail platform that uses AI to optimize inventory, personalize customer experiences, and predict demand for maximum profitability.",
         category: "Retail & E-commerce";
@@ -254,8 +250,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
         demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization"};
     // Transportation & Logistics;
-    {
-        id: "autonomous-logistics-platform";
+    {id: "autonomous-logistics-platform";
         title: "Autonomous Logistics Platform Pro";
         description: "AI-powered logistics platform that optimizes routes, predicts demand, and automates supply chain operations for maximum efficiency and cost savings.",
         category: "Transportation & Logistics";
@@ -317,8 +312,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         competitors: ["Manhattan Associates", "Oracle Transportation", "SAP Transportation", "JDA Software"],
         demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics"};
     // Energy & Utilities;
-    {
-        id: "smart-energy-management-platform";
+    {id: "smart-energy-management-platform";
         title: "Smart Energy Management Platform Elite";
         description: "Intelligent energy management platform that optimizes power generation, distribution, and consumption using AI and IoT for maximum efficiency and sustainability.",
         category: "Energy & Utilities";
@@ -380,8 +374,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
         demoUrl: "https://ziontechgroup.com/demo/smart-energy-management"};
     // Education & EdTech;
-    {
-        id: "ai-education-platform";
+    {id: "ai-education-platform";
         title: "AI Education Platform Pro";
         description: "Intelligent education platform that personalizes learning experiences, tracks student progress, and provides adaptive content for maximum educational outcomes.",
         category: "Education & EdTech";
@@ -443,8 +436,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         competitors: ["Blackboard", "Canvas", "Moodle", "Google Classroom"],
         demoUrl: "https://ziontechgroup.com/demo/ai-education-platform"};
     // Real Estate & Property Management;
-    {
-        id: "smart-property-management-platform";
+    {id: "smart-property-management-platform";
         title: "Smart Property Management Platform Elite";
         description: "Intelligent property management platform that automates operations, optimizes maintenance, and enhances tenant experiences using AI and IoT technology.",
         category: "Real Estate & Property Management";
@@ -506,8 +498,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         competitors: ["Yardi", "RealPage", "AppFolio", "Buildium"],
         demoUrl: "https://ziontechgroup.com/demo/smart-property-management"};
     // Legal & Compliance;
-    {
-        id: "ai-legal-compliance-platform";
+    {id: "ai-legal-compliance-platform";
         title: "AI Legal Compliance Platform Pro";
         description: "Intelligent legal compliance platform that automates regulatory monitoring, risk assessment, and compliance reporting using AI and machine learning.",
         category: "Legal & Compliance";

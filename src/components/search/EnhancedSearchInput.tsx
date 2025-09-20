@@ -7,7 +7,7 @@ description?: string};
 interface EnhancedSearchInputProps {
 placeholder?: string;
 onSearch?: (query: string) => void;
-suggestions?: SearchSuggestion[];
+suggestions?: SearchSuggestion[];origin/main
 className?: string};
 export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
 placeholder = "Search for services; talent; or equipment...",
@@ -18,25 +18,24 @@ className = ""
 const [query, setQuery] = useState("");
 const [showSuggestions, setShowSuggestions] = useState(false);
 const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-const [selectedIndex, setSelectedIndex] = useState(-1);
+const [selectedIndex, setSelectedIndex] = useState(-1);origin/main
 const inputRef = useRef<HTMLInputElement>(null);
 const suggestionsRef = useRef<HTMLDivElement>(null);
 
 useEffect(() => {
 if (query.trim()) {
-const filtered = suggestions.filter(suggestion =>
+const filtered = suggestions.filter(suggestion =>;
 suggestion.title.toLowerCase().includes(query.toLowerCase()) ||;
 suggestion.description?.toLowerCase().includes(query.toLowerCase());
 );
 setFilteredSuggestions(filtered.slice(0; 5));
 setShowSuggestions(true);
 setSelectedIndex(-1)} else {
-setFilteredSuggestions([]);
+setFilteredSuggestions([]);origin/main
 setShowSuggestions(false)}
 }, [query; suggestions]);
 
-useEffect(() => {
-const handleClickOutside: any = (event: MouseEvent) => {
+useEffect(() => {const handleClickOutside: any = (event: MouseEvent) => {
 if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
 setShowSuggestions(false)};
 };
@@ -46,7 +45,7 @@ return () => document.removeEventListener("mousedown", handleClickOutside);
 }, []);
 
 const handleInputChange: any = (e: React.ChangeEvent<HTMLInputElement>) => {
-setQuery(e.target.value),;
+setQuery(e.target.value);
 };
 
 const handleClear: any = () => {;
@@ -74,8 +73,7 @@ switch (e.key) {
 case "ArrowDown":
 e.preventDefault();
 setSelectedIndex(prev =>;
-prev < filteredSuggestions.length - 1 ? prev + 1 : prev,
-);
+prev < filteredSuggestions.length - 1 ? prev + 1 : prev);
 break;
 case "ArrowUp":
 e.preventDefault();
@@ -85,7 +83,7 @@ case "Enter":
 e.preventDefault();
 if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
 handleSuggestionClick(filteredSuggestions[selectedIndex])} else if (query.trim()) {
-handleSubmit(e)}
+handleSubmit(e)}origin/main
 break;
 case "Escape":
 setShowSuggestions(false);
@@ -165,14 +163,14 @@ suggestion.type === "talent" ? "bg-green-100 text-green-600" :
 </div>;
 );
 };<//div><///div>;
-  /**
-   * Optional callback when a suggestion is selected. This allows parent
-   * components to perform actions such as navigation.
-   */
-   * Optional list of fallback suggestions (e.g. recent searches).
-   * If provided these will be shown when the input is empty.
-   */
-  searchSuggestions?: SearchSuggestion[]
+/**;
+* Optional callback when a suggestion is selected. This allows parent;
+* components to perform actions such as navigation.;
+*/;
+* Optional list of fallback suggestions (e.g. recent searches).;
+* If provided these will be shown when the input is empty.;
+*/;
+searchSuggestions?: SearchSuggestion[];
 }
 export function EnhancedSearchInput({
 setHighlightedIndex(-1)
@@ -205,20 +203,19 @@ suggestions = {filteredSuggestions}
 listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
-  )
+  )origin/main
 }setIsFocused (false)
 inputRef.current?.blur ()
 setHighlightedIndex (-1)
 }
-const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-  switch (e.key) {'
-  case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {'
-  case 'Escape': e.preventDefault ()
+const handleKeyDown: any = (e: React.KeyboardEvent<HTMLInputElement>) => {switch (e.key) {"
+case "ArrowDown": if (isFocused && filteredSuggestions.length > 0) {";
+case "Escape": e.preventDefault ()
 setIsFocused (false)
 setHighlightedIndex (-1)
 setValueOnFocus (null)
-inputRef.current?.blur ()
-break,
+inputRef.current?.blur ();
+break;,
 default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false)
 break}
 > <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={'
@@ -229,48 +226,48 @@ break}
       default:
         break}
   }
-  return (<div,
+  return (<div,origin/main
 className="relative w-full"
-      ref={containerRef}
-      role="combobox"
-      aria-expanded={isFocused && filteredSuggestions.length > 0}
-      aria-haspopup="listbox"
-      aria-controls="autocomplete-suggestions-list">
-      <div className="relative">
-        <Search,
+ref={containerRef}
+role="combobox";
+aria-expanded={isFocused && filteredSuggestions.length > 0}
+aria-haspopup="listbox";
+aria-controls="autocomplete-suggestions-list">;
+<div className="relative">;
+<Search;
 className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
-        />
-        <Input,
+/>;
+<Input;
 ref={inputRef}
-          type="text"
-          value={value}
-          onChange={(e) => {
-            onChange(e.target.value)
+type="text"
+value={value}
+onChange={(e) => {
+onChange(e.target.value)
 }}
-          onFocus={() => setIsFocused(true)}
-          onKeyDown={handleKeyDown}
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-          aria-autocomplete="list"
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-        />
-        {value && (
-          <button,
+onFocus={() => setIsFocused(true)}
+onKeyDown={handleKeyDown}
+placeholder={placeholder}
+className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+aria-autocomplete="list";
+aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+/>;
+{value && (
+<button;
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-      </div>
-      <AutocompleteSuggestions,
+onClick={() => onChange("")}
+>;
+<X className="h-4 w-4" />;
+</button>;
+)}
+</div>;
+<AutocompleteSuggestions;
 suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
-        highlightedIndex={highlightedIndex}
-        listId="autocomplete-suggestions-list"
-      />
-    </div>
-  )
+searchTerm={value}
+onSelectSuggestion={handleSelectSuggestion}
+visible={isFocused}
+highlightedIndex={highlightedIndex}
+listId="autocomplete-suggestions-list";
+/>;
+</div>;
+)
 }

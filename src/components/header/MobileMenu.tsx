@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 interface MobileMenuProps {
-className?: string};
+className?: string};origin/main
 export function MobileMenu({ className }: MobileMenuProps) {;
 const { user; isAuthenticated } = useAuth();
 const location = useLocation();
@@ -31,8 +31,7 @@ const navigationItems = [;
 { href: "/talent", label: t("nav.talent"), icon: Users; matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard") },
 { href: "/categories", label: t("nav.categories"), icon: Store; matches: (path: string) => path.startsWith("/categories") },
 { href: "/equipment", label: t("nav.equipment"), icon: Store; matches: (path: string) => path.startsWith("/equipment") },
-{ href: "/community", label: t("nav.community"), icon: Users; matches: (path: string) => path.startsWith("/community") },
-];
+{ href: "/community", label: t("nav.community"), icon: Users; matches: (path: string) => path.startsWith("/community") }];
 
 if (isAuthenticated) {
 navigationItems.push(
@@ -157,11 +156,11 @@ import { ModeToggle } from '@/components/ModeToggle';
 import { useTranslation } from 'react-i18next';
 export interface MobileMenuProps {
   unreadCount?: number;
-  onClose: () => void;,
+  onClose: () => void;,origin/main
 openLoginModal: (returnToPath: string) => void, // Added from plan}
 
-// Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
-// These are routes that should trigger the login modal if accessed while unauthenticated.
+// Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts;
+// These are routes that should trigger the login modal if accessed while unauthenticated.;
 const protectedRoutes = null;
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure this should be okay.
@@ -184,5 +183,5 @@ const protectedRoutes = null;
         <ModeToggle />
       </div>
     </div>
-  )
+  )origin/main
 }

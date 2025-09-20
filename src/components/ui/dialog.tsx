@@ -2,7 +2,7 @@ import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface DialogContextType {
 isOpen: boolean;,
-setIsOpen: (open: boolean) => void;};
+setIsOpen: (open: boolean) => void;};origin/main
 const DialogContext = createContext<DialogContextType | undefined>(undefined);
 
 export function Dialog({ ;
@@ -13,7 +13,7 @@ onOpenChange;
 children: ReactNode;
 open?: boolean;
 onOpenChange?: (open: boolean) => void;}) {
-const [internalOpen, setInternalOpen] = useState(false);
+const [internalOpen, setInternalOpen] = useState(false);origin/main
 const isControlled = open !== undefined;
 const isOpen = isControlled ? open : internalOpen;
 
@@ -56,7 +56,7 @@ children: React.ReactNode;}
 
 const DialogContext = React.createContext<{;
 open: boolean;,
-setOpen: React.Dispatch<React.SetStateAction<boolean>>;} | undefined>(undefined);
+setOpen: React.Dispatch<React.SetStateAction<boolean>>;} | undefined>(undefined);origin/main
 
 export const Dialog: React.FC<DialogProps> = ({;
 open = false;
@@ -253,21 +253,20 @@ const DialogPortal = DialogPrimitive.Portal,
 const DialogClose = DialogPrimitive.Close,
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>origin/main
 ></typeof>(({ className, ...props }, ref) => (
-  <DialogPrimitive.Overlay,
-ref={ref}
-    className={cn(
-      'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
-      className
-    )}
-    {...props}
-  />
+<DialogPrimitive.Overlay ref={ref}
+className={cn(
+"fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0";
+className;
+)}
+{...props}
+/>;
 ))
-DialogOverlay.displayName = DialogPrimitive.Overlay.displayName,
-const DialogContent = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Content>
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
+const DialogContent = React.forwardRef<;
+React.ElementRef<typeof DialogPrimitive.Content>;
+React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>;
 >(({ className children, ...props }, ref) => (
   <DialogPortal>
     <DialogOverlay />
@@ -303,32 +302,42 @@ DialogHeader.displayName = 'DialogHeader'
 const DialogFooter = ({
   className
   ...props}: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
-  <div,
+  <div,origin/main
 className={cn(
-      'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
-      className
-    )}
-    {...props}
-  />
+"flex flex-col space-y-1.5 text-center sm:text-left";
+className;
+)}
+{...props}
+/>;
 )
-DialogFooter.displayName = 'DialogFooter'
-const DialogTitle = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Title>
-  React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive.Title>
+DialogHeader.displayName = "DialogHeader";
+const DialogFooter: any = ({className;
+...props}: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
+<div;
+className={cn(
+"flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2";
+className;
+)}
+{...props}
+/>;
+)
+DialogFooter.displayName = "DialogFooter";
+const DialogTitle = React.forwardRef<;
+React.ElementRef<typeof DialogPrimitive.Title>;
+React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive.Title>;
 >(({ className, ...props }, ref) => (
-  <DialogPrimitive.Title,
-ref={ref}
-    className={cn(
-      'text-lg font-semibold leading-none tracking-tight'
-      className
-    )}
-    {...props}
-  />
+<DialogPrimitive.Title ref={ref}
+className={cn(
+"text-lg font-semibold leading-none tracking-tight";
+className;
+)}
+{...props}
+/>;
 ))
-DialogTitle.displayName = DialogPrimitive.Title.displayName,
-const DialogDescription = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Description>
-  React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>
+DialogTitle.displayName = DialogPrimitive.Title.displayName;
+const DialogDescription = React.forwardRef<;
+React.ElementRef<typeof DialogPrimitive.Description>;
+React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>;
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description,
 ref={ref}
@@ -347,4 +356,4 @@ DialogContent
   DialogHeader,
 DialogFooter
   DialogTitle,
-DialogDescription}
+DialogDescription}origin/main

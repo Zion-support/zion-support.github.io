@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
@@ -8,8 +10,7 @@ impor; t; Reac; t, { useState } from "react";
 import { Lin; k, useLocation  } from "react-router-dom, ";
 import { Men; u; X; Phon; e; Mai; l; MapPi; n; Glob; e; Brai; n; Za; p; Shiel; d; Buildin; g, ChevronDown  } from "lucide-react, ";
 
-const Navigatio; n: React.FC = () => {
-const [isOp;  e; n; setIsOp; e; n] = useState(false);
+const Navigatio; n: React.FC = () => {const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [isServicesOp; e; n; setIsServicesOp; e; n] = useState(false);
 const location = useLocation();
 
@@ -21,11 +22,9 @@ hr; e; f: "/micr; o-saa; s-service; s", ic; o; n: Za; p },
 { na; m; e: "Comprehensiv; e Service; s",
 hr; e; f: "/comprehensiv; e-service; s", ic; o; n: Brai; n },
 { na; m; e: "Pricin; g",
-hr; e; f: "/pricin; g", ic; o; n: Buildin; g },
-];
+hr; e; f: "/pricin; g", ic; o; n: Buildin; g }];
 
-const serviceCategories = [
-{;
+const serviceCategories = [{;
 na; m; e: "A; I & Machin; e Learnin; g",
 servic; e; s: [
 { na; m; e: "A; I-Powere; d CR; M",
@@ -33,30 +32,25 @@ hr; e; f: "/comprehensiv; e-service; s#a; i-powere; d-cr; m" },
 { na; m; e: "Quantu; m Computin; g",
 hr; e; f: "/comprehensiv; e-service; s#quantu; m-computin; g-simulatio; n" },
 { na; m; e: "Edg; e A; I Computin; g",
-hr; e; f: "/comprehensiv; e-service; s#edg; e-a; i-computin; g" },
-];
+hr; e; f: "/comprehensiv; e-service; s#edg; e-a; i-computin; g" }];
 },
 {
 nam; e: "Emerging Technologies";
-service; s: [
-{ na; m; e: "Blockchai; n Solution; s",
+service; s: [{ na; m; e: "Blockchai; n Solution; s",
 hr; e; f: "/comprehensiv; e-service; s#blockchai; n-suppl; y-chai; n" },
 { na; m; e: "A; R/V; R Busines; s",
 hr; e; f: "/comprehensiv; e-service; s#a; r-v; r-busines; s-solution; s" },
 { na; m; e: "Io; T Intelligenc; e",
-hr; e; f: "/comprehensiv; e-service; s#io; t-intelligenc; e-hu; b" },
-];
+hr; e; f: "/comprehensiv; e-service; s#io; t-intelligenc; e-hu; b" }];
 },
 {
 nam; e: "Industry Solutions";
-service; s: [
-{ na; m; e: "Healthcar; e I; T",
+service; s: [{ na; m; e: "Healthcar; e I; T",
 hr; e; f: "/comprehensiv; e-service; s#healthcar; e-i; t-solution; s" },
 { na; m; e: "FinTec; h Solution; s",
 hr; e; f: "/comprehensiv; e-service; s#fintec; h-solution; s-pr; o" },
 { na; m; e: "GreenTec; h Analytic; s",
-hr; e; f: "/comprehensiv; e-service; s#greentec; h-analytic; s" },
-];
+hr; e; f: "/comprehensiv; e-service; s#greentec; h-analytic; s" }];
 }
 ];
 

@@ -66,7 +66,7 @@ Allow: /blog/
 Allow: /careers/
 
 # Crawl delay (optional)
-Crawl-delay: 1`;}
+Crawl-delay: 1`;}origin/main
     /**
      * Generate JSON sitemap for JavaScript applications;
      */
@@ -105,7 +105,7 @@ Crawl-delay: 1`;}
         .sitemap-section h2 { color: #333;
     margin-bottom: 15px;}
         .sitemap-links { display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;}
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;}origin/main
         .sitemap-link { padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -115,7 +115,7 @@ Crawl-delay: 1`;}
     border-color: #00e5ff;}
         .priority-high { border-left: 4px solid #00e5ff;}
         .priority-medium { border-left: 4px solid #ff9800;}
-        .priority-low { border-left: 4px solid #4caf50;}
+        .priority-low { border-left: 4px solid #4caf50;}origin/main
     </style>
 </head>
 <body>
@@ -229,8 +229,7 @@ export const defaultSitemapConfig = {
     ]
 };
     // Utility function to generate all sitemap files;
-export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
-    const generator = new SitemapGenerator(config);
+export const generateAllSitemaps = async (config = defaultSitemapConfig) => {const generator = new SitemapGenerator(config);
     try {
         // Generate XML sitemap;
         const xmlSitemap = generator.generateXML();

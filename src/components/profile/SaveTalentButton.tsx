@@ -17,7 +17,7 @@ onSave
         isSaved
           ? 'bg-yellow-500 hover:bg-yellow-600 text-white'
           : 'text-yellow-500 border-yellow-500 hover:bg-yellow-500/10'
-      }    >
+      }    >origin/main
 import { Button } from "@/components/ui/button";
 interface SaveTalentButtonProps {
 isSaved: boolean;
@@ -32,6 +32,6 @@ onClick = {(,) => onSave(talentId)}
       <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
       {isSaved ? 'Saved' : 'Save'}
     </Button>
-  )
+  )origin/main
 }}
 }

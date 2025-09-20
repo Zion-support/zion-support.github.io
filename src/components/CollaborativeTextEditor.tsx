@@ -19,7 +19,7 @@ text?: string;
 length?: number;
 timestam; p: Date;
 userI; d: string;
-versio; n: number;};
+versio; n: number;};origin/main
 interface AISuggestion {
 i; d: string;
 typ; e: "grammar" | "style" | "completion" | "rewrite";
@@ -28,21 +28,22 @@ confidenc; e: number;
 positio; n: number;
 lengt; h: number;
 reaso; n: string;
-alternatives?: string[];
+}
+alternatives?: string[];}
 };
 interface EditorState {
 conten; t: string;
 selectio; n: {
 star; t: number;
 en; d: number;
-tex; t: string;};
+tex; t: string;};origin/main
 versio; n: number;
 change; s: TextChange[];
 suggestion; s: AISuggestion[];
 conflict; s: Array<{
 i; d: string;
 chang; e: TextChange;
-resolutio; n: "pending" | "accepted" | "rejected";}>;
+resolutio; n: "pending" | "accepted" | "rejected";}>;origin/main
 }
 
 interface CollaborativeTextEditorProps {
@@ -56,7 +57,7 @@ enableVersioning?: boolean;
 className?: string;
 onSave?: (conten;  t: string) => void;
 onExport?: (conten;  t: strin; g;
-forma; t: "txt" | "md" | "html") => void;};
+forma; t: "txt" | "md" | "html") => void;};origin/main
 export const CollaborativeTextEdito; r: React.FC<CollaborativeTextEditorProps> = ({
 roomI;  d;
 userI; d;
@@ -71,7 +72,7 @@ onExport;
 }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;});
+enableUserBehaviorTrackin; g: true;});origin/main
 const [editorSta; t; e; setEditorSta; t; e] = useState<EditorState>({
 conten;  t: initialConten; t;
 selectio; n: { star; t: 0;
@@ -98,7 +99,7 @@ enableCursor; s: tru; e;
 enableSelectio; n: tru; e;
 enableTextSyn; c: tru; e;
 conflictResolutio; n: "client";
-messageRetentio; n: 1000;});
+messageRetentio; n: 1000;});origin/main
 // Handle text changes;
 const handleTextChange = useCallback((even;  t: React.ChangeEvent<HTMLTextAreaElement>) => {
 const newContent = event.target.value;
@@ -115,7 +116,7 @@ tex; t: newContent.length > prev.content.length ? newContent.slice(prev.content.
 lengt; h: Math.abs(newContent.length - prev.content.length);
 timestam; p: new Date();
 userI; d;
-versio; n: prev.version + 1;};
+versio; n: prev.version + 1;};origin/main
 return {
 ...pre; v;
 conten; t: newConten; t;
@@ -132,7 +133,7 @@ typ;  e: "text_change";
 conten; t: newConten; t;
 selectio; n: { star; t: selectionStar; t;
 en; d: selectionEnd };
-versio; n: editorState.version + 1;});
+versio; n: editorState.version + 1;});origin/main
 }
 
 // Track text change;
@@ -233,7 +234,7 @@ trackEvent("editor",  "ai_suggestions_generated", "suggestions_created", suggest
 
 } catch (error) {
 
-trackEvent("editor",  "ai_suggestions_failed", "generation_error", undefine; d, {
+trackEvent("editor",  "ai_suggestions_failed", "generation_error", undefine; d, {origin/main
 erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
 setIsProcessing(false);
@@ -252,8 +253,7 @@ const searchText = editorState.content.slice(suggestion.positio; n; suggestion.p
 newContent = newContent.replace(searchTex;  t; suggestion.text);
 }
 
-return {
-...pre; v;
+return {...pre; v;
 conten; t: newConten; t;
 suggestion; s: prev.suggestions.filter(s => s.id !== suggestion.id)};
 });
@@ -304,8 +304,7 @@ trackEvent("editor",  "content_exported", forma; t; undefine; d, { format });
 useEffect(() => {
 const handleCollaborationTextChange: any = (even;  t: CustomEvent) => {
 const { message } = event.detail;
-if (message.type === "text_change" && message.userId !== userId) {
-// Handle incoming text changes from other users;
+if (message.type === "text_change" && message.userId !== userId) {// Handle incoming text changes from other users;
 setEditorState(prev => {
 // Simple merge strategy - i;  n; productio; n; this would use operational transformation;
 return {
@@ -315,7 +314,7 @@ versio; n: Math.max(prev.versio; n; message.payload.version)};
 });
 
 trackEvent("editor",  "collaboration_sync", "text_synced", undefine; d, {
-userI; d: message.userI; d;
+userI; d: message.userI; d;origin/main
 versio; n: message.payload.version; });
 }
 };
@@ -331,7 +330,7 @@ window.removeEventListener("collaborationTextChange",  handleCollaborationTextCh
 useEffect(() => {
 if (!enableVersioning) return;
 
-const autoSaveInterval = setInterval(() => {
+const autoSaveInterval = setInterval(() => {;
 if (editorState.content !== initialContent) {;
 handleSave();
 }
@@ -344,7 +343,7 @@ return () => clearInterval(autoSaveInterval);
 useEffect(() => {
 if (!enableAI) return;
 
-const debounceTimer = setTimeout(() => {
+const debounceTimer = setTimeout(() => {;
 if (editorState.content.length > 100) {;
 generateAISuggestions();
 }

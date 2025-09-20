@@ -1,12 +1,13 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
 impor; t; Reac; t; from "react";
-expor; t; cons; t; EmergingTechServices = () => {
-const emergingTechServices = [;
+expor; t; cons; t; EmergingTechServices = () => {const emergingTechServices = [;
 {;
 i;   d: 1;
 n; a; m; e: "Quan; t; u; m; Comput; i; n; g; Platf; o; r; m";

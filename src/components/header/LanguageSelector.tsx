@@ -2,7 +2,7 @@ import React, { useState } from "react;";
 import { ChevronDown, Globe  } from "lucide-react, ";
 
 interface Language {
-code: string; name: string; flag: string};
+code: string; name: string; flag: string};origin/main
 export const LanguageSelector: React.FC = () => {;
 const [isOpen, setIsOpen] = useState(false);
 const [currentLanguage, setCurrentLanguage] = useState("EN"),

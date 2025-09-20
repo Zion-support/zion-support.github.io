@@ -3,8 +3,7 @@ import { cn } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-interface LoadingSpinnerProps {
-size?: "sm" | "md" | "lg" | "xl";
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg" | "xl";
 color?: "primary" | "secondary" | "white" | "custom";
 customColor?: string;
 className?: string;
@@ -12,22 +11,22 @@ text?: string;
 showText?: boolean};
 export function LoadingSpinner({
 size = "md",;
-color = "primary",;
+color = "primary",;origin/main
 customColor;
 className;
 text = "Loading...",
 showText = false}: LoadingSpinnerProps) {
 const sizeClasses = {
 sm: "w-4 h-4",
-md: "w-6 h-6",
-lg: "w-8 h-8",
+md: "w-6 h-6",;
+lg: "w-8 h-8",;
 xl: "w-12 h-12",;
 };
 
 const colorClasses = {
 primary: "border-zion-purple",
-secondary: "border-zion-cyan",
-white: "border-white",
+secondary: "border-zion-cyan",;
+white: "border-white",;
 custom: "",;
 };
 
@@ -36,19 +35,16 @@ const borderColor = customColor || colorClasses[color];
 return (
 <div className={cn("flex flex-col items-center justify-center", className)}>;
 <motion.div;
-className={cn(
-"border-2 border-t-transparent rounded-full animate-spin",
+className={cn("border-2 border-t-transparent rounded-full animate-spin",
 sizeClasses[size],
-borderColor,
-)}
+borderColor)}
 animate={{ rotate: 360 }}
 transition={{
 duration: 1; repeat: Infinity;,
 ease: "linear"}}
 role="status";
 aria-label="Loading";
-export function LoadingSpinner({
-size = "md", ;
+export function LoadingSpinner({size = "md", ;
 color = "primary", ;
 customColor;
 className = "",
@@ -56,22 +52,22 @@ text = "Loading...",
 showText = false}: LoadingSpinnerProps) {
 const sizeClasses = {
 sm: "w-4 h-4",
-md: "w-8 h-8",
-lg: "w-12 h-12",
+md: "w-8 h-8",;
+lg: "w-12 h-12",;
 xl: "w-16 h-16",;
 };
 
 const colorClasses = {
 primary: "border-zion-cyan border-t-transparent",
-secondary: "border-zion-blue border-t-transparent",
-white: "border-white border-t-transparent",
+secondary: "border-zion-blue border-t-transparent",;
+white: "border-white border-t-transparent",;
 custom: customColor ? `border-${customColor} border-t-transparent` : "border-zion-cyan border-t-transparent";
 };
 
 const textSizes = {
 sm: "text-xs",
-md: "text-sm",
-lg: "text-base",
+md: "text-sm",;
+lg: "text-base",;
 xl: "text-lg",;
 };
 
@@ -108,19 +104,16 @@ export function SkeletonLoader({;
 className;
 lines = 3;
 height = "h-4";
-}: {
-className?: string;
+}: {className?: string;
 lines?: number;
 height?: string}) {
 return (
 <div className={cn("space-y-3", className)}>;
-{Array.from({ length: lines }).map((_; index) => (
-<motion.div;
+{Array.from({ length: lines }).map((_; index) => (<motion.div;
 key={index}
 className={cn(
 "bg-zion-slate-light/20 rounded animate-pulse",
-height,
-)}
+height)}
 initial={{ opacity: 0 }}
 animate={{ opacity: 1 }}
 transition={{ delay: index * 0.1 }}
@@ -129,8 +122,7 @@ export function SkeletonLoader({ ;
 className = "", ;
 lines = 3;
 height = "h-4";
-}: {
-className?: string;
+}: {className?: string;
 lines?: number;
 height?: string}) {
 return (
@@ -168,7 +160,7 @@ return (
 export function ButtonLoader({
 size = "sm",
 className}: {
-size?: "sm" | "md" | "lg",
+size?: "sm" | "md" | "lg",origin/main
 className?: string}) {
 return (
 <div className={cn("inline-flex items-center", className)}>;
@@ -178,7 +170,7 @@ return (
 export function PageLoader({
 text = "Loading page...",
 showSpinner = true, ;
-}: { ;
+}: {;
 text?: string;
 showSpinner?: boolean}) {
 return (
@@ -207,13 +199,13 @@ className="mt-4 text-lg text-zion-slate-light font-medium"
 export function ContentPlaceholder({
 className = "",
 variant = "default";
-}: { ;
+}: {;
 className?: string;
 variant?: "default" | "card" | "list" | "grid"}) {
 const variants = {
 default: "space-y-4",
-card: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
-list: "space-y-3",
+card: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",;
+list: "space-y-3",;
 grid: "grid grid-cols-2 md:grid-cols-4 gap-4",;
 };
 

@@ -71,36 +71,36 @@ className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90
                 <TableRow key={feature.name}>
                   <TableCell className='font-medium'>{feature.name}</TableCell>
                   {plans.map(plan => (
-                    <TableCell,
+                    <TableCell,origin/main
 key={`${plan.name}-${feature.name}`}
-                      className='text-center'
-                    >
-                        <Check className='h-5 w-5 text-green-500 mx-auto' />
-                      ) : (
-                        <X className='h-5 w-5 text-muted-foreground mx-auto' />                      )}
-                        <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                      {plan.features[index]?.included ? (
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-muted-foreground mx-auto" />
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-        <div className='mt-8 text-center text-sm text-muted-foreground'>
-          All plans include SSL security 99.9% uptime SLA and dedicated,
-support        </div>
-      </div>
-    </section>
-  )
-}        <div className="mt-8 text-center text-sm text-muted-foreground">
-          All plans include SSL security 99.9% uptime SLA and dedicated support
-        </div>
-      </div>
-    </section>
-  )
+className="text-center"
+>;
+<Check className="h-5 w-5 text-green-500 mx-auto" />;
+) : (
+<X className="h-5 w-5 text-muted-foreground mx-auto" />                      )}
+<X className="h-5 w-5 text-muted-foreground mx-auto" />;
+{plan.features[index]?.included ? (
+<Check className="h-5 w-5 text-green-500 mx-auto" />;
+) : (
+<X className="h-5 w-5 text-muted-foreground mx-auto" />;
+)}
+</TableCell>;
+))}
+</TableRow>;
+))}
+</TableBody>;
+</Table>;
+</div>;
+<div className="mt-8 text-center text-sm text-muted-foreground">;
+All plans include SSL security 99.9% uptime SLA and dedicated;
+support        </div>;
+</div>;
+</section>;
+)
+}        <div className="mt-8 text-center text-sm text-muted-foreground">;
+All plans include SSL security 99.9% uptime SLA and dedicated support;
+</div>;
+</div>;
+</section>;
+)
 }

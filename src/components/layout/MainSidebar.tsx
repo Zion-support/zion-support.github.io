@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Home;
+import { Home;origin/main
 Briefcase;
 Users;
 Settings;
@@ -19,55 +19,46 @@ MapPin} from "lucide-react";
 
 interface MainSidebarProps {
 isOpen: boolean;,
-onClose: () => void;};
+onClose: () => void;};origin/main
 export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
 const location = useLocation();
 
-const navigationItems = [
-{
+const navigationItems = [{
 title: "Main",
 items: [
 { name: "Home", href: "/", icon: Home },
-{ name: "About", href: "/about", icon: Building },
-{ name: "Contact", href: "/contact", icon: Mail },
-{ name: "Blog", href: "/blog", icon: FileText },
-];
+{ name: "About", href: "/about", icon: Building },;
+{ name: "Contact", href: "/contact", icon: Mail },;
+{ name: "Blog", href: "/blog", icon: FileText }];
 },
 {
 title: "Marketplace",
-items: [
-{ name: "Products", href: "/marketplace", icon: Briefcase },
+items: [{ name: "Products", href: "/marketplace", icon: Briefcase },
 { name: "Services", href: "/services", icon: Settings },
 { name: "Equipment", href: "/equipment", icon: BarChart3 },
 { name: "Categories", href: "/categories", icon: Globe },
-{ name: "Green IT", href: "/green-it", icon: Globe },
-];
+{ name: "Green IT", href: "/green-it", icon: Globe }];
 },
 {
 title: "Talent & Community",
-items: [
-{ name: "Find Talent", href: "/talent", icon: Users },
+items: [{ name: "Find Talent", href: "/talent", icon: Users },
 { name: "Community", href: "/community", icon: Users },
 { name: "AI Hiring", href: "/zion-hire-ai", icon: Smartphone },
-{ name: "Partners", href: "/partners", icon: Building },
-];
+{ name: "Partners", href: "/partners", icon: Building }];
 },
 {
 title: "Resources",
-items: [
-{ name: "Help Center", href: "/help", icon: HelpCircle },
+items: [{ name: "Help Center", href: "/help", icon: HelpCircle },
 { name: "Developer Portal", href: "/developers", icon: Code },
 { name: "API Docs", href: "/api-docs", icon: Code },
-{ name: "Mobile App", href: "/mobile", icon: Smartphone },
-];
+{ name: "Mobile App", href: "/mobile", icon: Smartphone }];
 };
 ];
 
 const contactInfo = [;
 { icon: Mail; text: "info@ziontechgroup.com", href: "mailto:info@ziontechgroup.com" },
 { icon: Phone; text: "+1 (555) 123-4567", href: "tel:+15551234567" },
-{ icon: MapPin; text: "San Francisco; CA", href: "#location" },
-];
+{ icon: MapPin; text: "San Francisco; CA", href: "#location" }];
 
 return (
 <>;

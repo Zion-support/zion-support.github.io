@@ -18,9 +18,9 @@ estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
 contactInfo: {
-phone: string;
+phone: string;,
 email: string;,
-website: string;};
+website: string;};origin/main
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -28,14 +28,13 @@ documentationUrl?: string;
 
 export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution2025[] = [
 // AI-Powered Content Generation Suite;
-{
-id: "ai-content-generation-suite";
+{id: "ai-content-generation-suite";,
 title: "AI-Powered Content Generation Suite";,
 description: "Comprehensive AI platform that generates high-quality; SEO-optimized content across multiple formats including articles; videos; social media posts; and marketing materials.",
 category: "AI Content Creation";
 subcategory: "Content Generation";
 price: 199;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Multi-format content generation";
@@ -73,19 +72,18 @@ estimatedDelivery: "2-3 weeks";
 supportLevel: "premium";
 marketPrice: "$199 - $799/month";
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-content-generation"};
+websiteUrl: "https://ziontechgroup.com/ai-content-generation"};origin/main
 // Blockchain DeFi Analytics Platform;
-{
-id: "blockchain-defi-analytics-platform";
+{id: "blockchain-defi-analytics-platform";,
 title: "Blockchain DeFi Analytics Platform";,
 description: "Advanced analytics platform for DeFi protocols; providing real-time insights; risk assessment; and yield optimization strategies for cryptocurrency investors and traders.",
 category: "Blockchain & DeFi";
 subcategory: "Analytics & Trading";
 price: 299;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Real-time DeFi analytics";
@@ -119,23 +117,22 @@ targetAudience: [
 "Crypto funds";
 ],
 tags: ["Blockchain", "DeFi", "Analytics", "Cryptocurrency", "Trading"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$299 - $1;299/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"};
+websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"};origin/main
 // IoT Smart Home Management Platform;
-{
-id: "iot-smart-home-management";
+{id: "iot-smart-home-management";,
 title: "IoT Smart Home Management Platform";,
 description: "Comprehensive IoT platform that integrates and manages all smart home devices; providing automation; energy optimization; and security monitoring in one unified interface.",
 category: "IoT & Smart Home";
 subcategory: "Home Automation";
 price: 149;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Device integration hub";
@@ -173,19 +170,18 @@ estimatedDelivery: "3-4 weeks";
 supportLevel: "premium";
 marketPrice: "$149 - $599/month";
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/iot-smart-home"};
+websiteUrl: "https://ziontechgroup.com/iot-smart-home"};origin/main
 // AI-Powered Customer Service Automation;
-{
-id: "ai-customer-service-automation";
+{id: "ai-customer-service-automation";,
 title: "AI-Powered Customer Service Automation";,
 description: "Intelligent customer service platform that automates responses; handles inquiries; and provides personalized support using advanced AI and natural language processing.",
 category: "AI & Customer Service";
 subcategory: "Service Automation";
 price: 249;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI chatbot integration";
@@ -223,19 +219,18 @@ estimatedDelivery: "3-4 weeks";
 supportLevel: "premium";
 marketPrice: "$249 - $999/month";
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-customer-service"};
+websiteUrl: "https://ziontechgroup.com/ai-customer-service"};origin/main
 // Quantum-Ready Cybersecurity Suite;
-{
-id: "quantum-ready-cybersecurity-suite";
+{id: "quantum-ready-cybersecurity-suite";,
 title: "Quantum-Ready Cybersecurity Suite";,
 description: "Future-proof cybersecurity platform that combines traditional security measures with quantum-resistant encryption; preparing organizations for the quantum computing era.",
 category: "Cybersecurity";
 subcategory: "Quantum Security";
 price: 399;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Quantum-resistant encryption";
@@ -269,12 +264,12 @@ targetAudience: [
 "Risk managers";
 ],
 tags: ["Cybersecurity", "Quantum Security", "Encryption", "Threat Protection", "Compliance"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$399 - $1;999/month",
 contactInfo: {
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"}
+websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"}origin/main
 ];

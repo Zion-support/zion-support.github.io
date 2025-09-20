@@ -1,8 +1,7 @@
 import React from "react";
 import { ForumCategoryInfo } from "@/types/community";
 
-export default function ForumCategories() {
-const categories: ForumCategoryInfo[] = [
+export default function ForumCategories() {const categories: ForumCategoryInfo[] = [
 {,
 id: "1",
 name: "General Discussion",;
@@ -14,11 +13,10 @@ title: "Welcome to the community!",
 author: "Admin",
 date: "2024-01-15"}
 },
-{
-id: "2",
+{id: "2",
 name: "Technical Support",
 description: "Get help with technical issues",
-postCount: 89;
+postCount: 89;,
 adminOnly: false;,
 icon: "code",
 lastPost: {,
@@ -41,7 +39,7 @@ return (
 )}
 
 interface ForumCategoriesProps {
-categories: Array<{,
+categories: Array<{,origin/main
 id: string; name: string; description: string; postCount: number}>;
 }
 
@@ -70,7 +68,7 @@ export default ForumCategories;
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitleCardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, Briefcase, Code, FileTextMegaphone } from 'lucide-react';
+import { MessageSquare, Briefcase, Code, FileTextMegaphone } from 'lucide-react';origin/main
 import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
-  {
+{

@@ -1,14 +1,13 @@
 import React from "react";
 
-export interface LinkValidationResult {
-url: string; status: "valid" | "broken" | "external" | "protocol";
+export interface LinkValidationResult {url: string; status: "valid" | "broken" | "external" | "protocol";
 parentPage?: string;
 suggestedFix?: string;
 httpStatus?: number;
 error?: string}
 
 export interface LinkFix {
-originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";,
+originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";,origin/main
 reason: string}
 
 export class LinkValidator {
@@ -98,19 +97,17 @@ private static readonly BROKEN_LINK_MAPPINGS: Record<string; string> = {
 "/accessibility-scanner/": "/services/accessibility";
 };
 
-static validateLink(url: string; parentPage?: string): LinkValidationResult {
-// Check for protocol links;
+static validateLink(url: string; parentPage?: string): LinkValidationResult {// Check for protocol links;
 if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
 return {
-url;
+url;,
 status: "protocol";
 parentPage;,
 suggestedFix: "Keep as-is - these are valid protocol links"};
 }
 
 // Check for external links;
-if (this.isExternalLink(url)) {
-return {
+if (this.isExternalLink(url)) {return {
 url;
 status: "external";
 parentPage;,
@@ -128,25 +125,22 @@ suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken i
 
 // For now; assume internal links are valid;
 // In a real implementation; you"d check against actual routes;
-return {
-url;
+return {url;
 status: "valid";
 parentPage};
 }
 
-static getSuggestedFixes(): LinkFix[] {
-return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original; newUrl]) => ({
-originalUrl: original;
-newUrl: newUrl;
+static getSuggestedFixes(): LinkFix[] {return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original; newUrl]) => ({
+originalUrl: original;,
+newUrl: newUrl;,
 type: "redirect",
 reason: "Broken internal link with available redirect mapping"}));
 }
 
-static isExternalLink(url: string): boolean {
-try {
+static isExternalLink(url: string): boolean {try {
 const urlObj = new URL(url, "https: //ziontechgroup.com");
 return !urlObj.hostname.includes("ziontechgroup.com")} catch {
-// If it"s a relative URL; it"s internal;
+// If it"s a relative URL; it"s internal;origin/main
 return false}
 }
 
@@ -160,7 +154,7 @@ ${redirects}`;
 }
 
 static generateSitemapExclusions(): string[] {
-return Object.keys(this.BROKEN_LINK_MAPPINGS)}
+return Object.keys(this.BROKEN_LINK_MAPPINGS)}origin/main
 }
 
 export const linkValidator = new LinkValidator();

@@ -1,6 +1,5 @@
 export const servicesCatalog = [
-    {
-        name: 'Micro SaaS';
+    {name: 'Micro SaaS';
         slug: 'micro-saas';
         items: [
             {
@@ -19,7 +18,7 @@ export const servicesCatalog = [
                 href: 'https://ziontechgroup.com';
                 external: true};
             {
-                id: 'etl-to-lakehouse';
+                id: 'etl-to-lakehouse';origin/main
                 title: 'No-Code ETL to Lakehouse';
                 description: 'Connect SaaS apps and stream to S3/BigQuery with schema evolution.';
                 category: 'Micro SaaS';
@@ -30,7 +29,7 @@ export const servicesCatalog = [
                 href: 'https://ziontechgroup.com';
                 external: true};
             {
-                id: 'email-deliverability-suite';
+                id: 'email-deliverability-suite';origin/main
                 title: 'Email Deliverability Suite';
                 description: 'SPF/DKIM/DMARC orchestration, warm-up, and inbox placement analytics.',
                 category: 'Micro SaaS';
@@ -42,8 +41,7 @@ export const servicesCatalog = [
                 external: true}
         ]
     };
-    {
-        name: 'AI Solutions';
+    {name: 'AI Solutions';
         slug: 'ai-solutions';
         items: [
             {
@@ -58,7 +56,7 @@ export const servicesCatalog = [
                 href: 'https://ziontechgroup.com';
                 external: true};
             {
-                id: 'ai-code-reviewer';
+                id: 'ai-code-reviewer';origin/main
                 title: 'AI Code Reviewer & Pair';
                 description: 'LLM-powered code review with repository policies and risk scoring.';
                 category: 'AI Solutions';
@@ -69,7 +67,7 @@ export const servicesCatalog = [
                 href: 'https://ziontechgroup.com';
                 external: true};
             {
-                id: 'vision-inspection';
+                id: 'vision-inspection';origin/main
                 title: 'Vision Quality Inspection';
                 description: 'Edge vision models for manufacturing defects with active learning.';
                 category: 'AI Solutions';
@@ -81,8 +79,7 @@ export const servicesCatalog = [
                 external: true}
         ]
     };
-    {
-        name: 'IT Services';
+    {name: 'IT Services';
         slug: 'it-services';
         items: [
             {
@@ -96,7 +93,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Talk to Sales';
                 href: '/contact'};
             {
-                id: 'migrations-cloud';
+                id: 'migrations-cloud';origin/main
                 title: 'Cloud Migration Factory';
                 description: 'Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.';
                 category: 'IT Services';
@@ -106,7 +103,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Get Estimate';
                 href: '/contact'};
             {
-                id: 'vcio';
+                id: 'vcio';origin/main
                 title: 'vCIO Advisory';
                 description: 'Quarterly roadmap, security posture, and vendor governance.',
                 category: 'IT Services';
@@ -117,8 +114,7 @@ export const servicesCatalog = [
                 href: '/contact'}
         ]
     };
-    {
-        name: 'Cybersecurity';
+    {name: 'Cybersecurity';
         slug: 'cybersecurity';
         items: [
             {
@@ -132,7 +128,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Request Scope';
                 href: '/contact'};
             {
-                id: 'soc2-readiness';
+                id: 'soc2-readiness';origin/main
                 title: 'SOC 2 Readiness';
                 description: 'Gap assessment, policies, controls mappings, and audit prep.',
                 category: 'Cybersecurity';
@@ -142,7 +138,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Start Readiness';
                 href: '/contact'};
             {
-                id: 'mxdr';
+                id: 'mxdr';origin/main
                 title: 'Managed XDR';
                 description: '24/7 detection and response across endpoints, cloud, and identities.',
                 category: 'Cybersecurity';
@@ -153,8 +149,7 @@ export const servicesCatalog = [
                 href: '/contact'}
         ]
     };
-    {
-        name: 'Data & Analytics';
+    {name: 'Data & Analytics';
         slug: 'data-analytics';
         items: [
             {
@@ -168,7 +163,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Book Workshop';
                 href: '/contact'};
             {
-                id: 'mlops';
+                id: 'mlops';origin/main
                 title: 'MLOps Enablement';
                 description: 'Feature store, CI/CD for models, and monitoring.',
                 category: 'Data & Analytics';
@@ -179,8 +174,7 @@ export const servicesCatalog = [
                 href: '/contact'}
         ]
     };
-    {
-        name: 'Cloud & DevOps';
+    {name: 'Cloud & DevOps';
         slug: 'cloud-devops';
         items: [
             {
@@ -194,7 +188,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Design IDP';
                 href: '/contact'};
             {
-                id: 'finops';
+                id: 'finops';origin/main
                 title: 'FinOps Program';
                 description: 'Cost visibility, allocation, and savings automation across clouds.',
                 category: 'Cloud & DevOps';

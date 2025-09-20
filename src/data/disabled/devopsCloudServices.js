@@ -1,7 +1,6 @@
 export const DEVOPS_CLOUD_SERVICES = [
     // GitOps Platform;
-    {
-        id: "gitops-platform";
+    {id: "gitops-platform";
         title: "GitOps Platform & Infrastructure Automation";
         description: "Complete GitOps platform that automates infrastructure deployment, configuration management, and application delivery using Git as the single source of truth.",
         category: "DevOps & Cloud";
@@ -48,8 +47,7 @@ export const DEVOPS_CLOUD_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // Multi-Cloud Management Platform;
-    {
-        id: "multi-cloud-management";
+    {id: "multi-cloud-management";
         title: "Multi-Cloud Management & Cost Optimization Platform";
         description: "Unified multi-cloud management platform that provides centralized monitoring, cost optimization, and governance across AWS, Azure, GCP, and other cloud providers.",
         category: "DevOps & Cloud";
@@ -96,8 +94,7 @@ export const DEVOPS_CLOUD_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // Kubernetes Management Platform;
-    {
-        id: "kubernetes-management";
+    {id: "kubernetes-management";
         title: "Enterprise Kubernetes Management & Operations Platform";
         description: "Comprehensive Kubernetes management platform that simplifies cluster operations, monitoring, security, and application deployment across multiple clusters.",
         category: "DevOps & Cloud";
@@ -144,8 +141,7 @@ export const DEVOPS_CLOUD_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // Observability Platform;
-    {
-        id: "observability-platform";
+    {id: "observability-platform";
         title: "Full-Stack Observability & Monitoring Platform";
         description: "Comprehensive observability platform that provides unified monitoring, logging, tracing, and alerting across applications, infrastructure, and business metrics.",
         category: "DevOps & Cloud";
@@ -192,8 +188,7 @@ export const DEVOPS_CLOUD_SERVICES = [
             website: "https://ziontechgroup.com"}
     };
     // Serverless Development Platform;
-    {
-        id: "serverless-development";
+    {id: "serverless-development";
         title: "Serverless Development & Deployment Platform";
         description: "End-to-end serverless development platform that simplifies building, testing, deploying, and monitoring serverless applications across multiple cloud providers.",
         category: "DevOps & Cloud";

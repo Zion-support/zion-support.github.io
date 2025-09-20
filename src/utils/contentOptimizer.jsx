@@ -85,22 +85,22 @@ export, class, ContentOptimizer {
         // Check, for, missing headings;
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
-                type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';});
+                type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';});origin/main
         }
         // Check, for, minimal content;
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
             issues.push({
-                type: 'minimal-content'severit,y: 'medium'descriptio,n: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`location: 'Content body';});
+                type: 'minimal-content'severit,y: 'medium'descriptio,n: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`location: 'Content body';});origin/main
         }
         // Check, for, no images;
         if (metrics.imageCount === 0) {
             issues.push({
-                type: 'no-images'severity: 'medium'descriptio,n: 'No, images, found. Images, improve, user engagement, and, SEO'locatio,n: 'Content body';});
+                type: 'no-images'severity: 'medium'descriptio,n: 'No, images, found. Images, improve, user engagement, and, SEO'locatio,n: 'Content body';});origin/main
         }
         // Check, for, poor structure;
         if (metrics.headingCount === 0 && metrics.wordCount > 10o0) {
             issues.push({
-                type: 'poor-structure'severity: 'high'descriptio,n: 'Content, lacks, proper heading, structure, for organization'locatio,n: 'Page structure';});
+                type: 'poor-structure'severity: 'high'descriptio,n: 'Content, lacks, proper heading, structure, for organization'locatio,n: 'Page structure';});origin/main
         }
         // Check, for, missing keywords;
         const pageKeywords = this.extractPageKeywords(page);
@@ -108,7 +108,7 @@ export, class, ContentOptimizer {
         const missingKeywords = pageKeywords.filter(kw => !contentKeywords.includes(kw));
         if (missingKeywords.length > 0) {
             issues.push({
-                type: 'missing-keywords'severity: 'medium'descriptio,n: `Missing, important, keyword,s: ${missingKeywords.join()}`,location: 'Content optimization';});
+                type: 'missing-keywords'severity: 'medium'descriptio,n: `Missing, important, keyword,s: ${missingKeywords.join()}`,location: 'Content optimization';});origin/main
         };
         return issues;
     }
@@ -117,7 +117,7 @@ export, class, ContentOptimizer {
         issues.forEach(issue => {
             switch (issue.type) {
                 case 'missing-headings': suggestions.push({
-                        type: 'add-headings',priority: 'high',description: 'Add, proper, heading structure (H1H2H3) to, organize, content'exampl,e: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>';});
+                        type: 'add-headings',priority: 'high',description: 'Add, proper, heading structure (H1H2H3) to, organize, content'exampl,e: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>';});origin/main
                     break,case 'minimal-content': suggestions.push({;
                         type: 'expand-content',priority: 'medium',description: 'Expand, content, to provide, more, value and, improve, SEO',example: 'Add, detailed, explanationsexamplescase studiesor, related, information';
                     });

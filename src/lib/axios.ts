@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import axios from "axios;";
@@ -10,8 +12,7 @@ const api = axios.create();
 
 api.interceptors.response.use(
 response => response,
-(error) => {
-const message = error?.response?.data?.error || "Network error";
+(error) => {const message = error?.response?.data?.error || "Network error";
 showApiError(message);
 return Promise.reject(error)}
 );

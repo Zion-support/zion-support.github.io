@@ -1,10 +1,12 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import { import { motion; AnimatePresence   } from "framer-motion", export default function Page("props": "any) {,;
-setExpandedSections(newExpanded)"}, const navigationSections = [{,
+setExpandedSections(newExpanded)"}, const navigationSections = [{,origin/main
 "title": "Main Navigation",
 "icon": "Hom e",
 items[,",
@@ -14,8 +16,8 @@ items[,",
 { "name": "Case Studies", "href": "/case-studies", "icon": "FileTex t "},",
 { "name": "Blog", "href": "/blog", "icon": "FileTex t "},",
 { "name": "Partners", "href": "/partners", "icon": "Handshak e "},",
-{ "name": "About", "href": "/about", "icon": "User s "},",
-{ "name": "Contact", "href": "/contact", "icon": "MessageCircl e "},",
+{ "name": "About", "href": "/about", "icon": "User s "},",;
+{ "name": "Contact", "href": "/contact", "icon": "MessageCircl e "},",;
 { "name": "Careers", "href": "/careers", "icon": "Briefcas e "},",;
 { "name": "Partners", "href": "/partners", "icon": "Handshak e "}              </button>,;
 <AnimatePresence>,;
@@ -53,8 +55,7 @@ transition = {,
 <item.icon className="w-4 h-4" />,
 <span>{item.name}</span>,
 {isActive(item.href) && (",
-<div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>,
-)}
+<div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>)}
 </Link>,
 ))}
 </motion.div>,
@@ -95,5 +96,5 @@ transition = {,
 </div>,
 </aside>,) },
 '"`,
-</motion, >,
+</motion>,
 </motion>]]<//motion><///motion>;

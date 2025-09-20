@@ -1,13 +1,14 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
 import { Sta; r, Quote  } from "lucide-react";
 
-export const TestimonialsSectio; n: React.FC = () => {
-const testimonials = [
+export const TestimonialsSectio; n: React.FC = () => {const testimonials = [;
 {;
 i;  d: 1;
 na; m; e: "Sara; h Johnso; n",
@@ -17,7 +18,7 @@ conte; n; t: "Zio; n Tec; h Grou; p transforme; d ou; r A; I infrastructur; e co
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-149479010875; 5-2616b612b78; 6?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
 {
-i; d: 2;
+i; d: 2;origin/main
 na; m; e: "Michae; l Che; n",
 compa; n; y: "InnovateTec; h",
 ro; l; e: "V; P o; f Engineerin; g",
@@ -25,7 +26,7 @@ conte; n; t: "Th; e tea; m a; t Zio; n delivere; d exceptiona; l result; s. Thei
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-147209964578; 5-5658abf4ff4; e?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
 {
-i; d: 3;
+i; d: 3;origin/main
 na; m; e: "Emil; y Rodrigue; z",
 compa; n; y: "DataFlo; w System; s",
 ro; l; e: "Dat; a Scienc; e Directo; r",
@@ -33,7 +34,7 @@ conte; n; t: "Workin; g wit; h Zio; n Tec; h Grou; p wa; s a gam; e-change; r. T
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
 {
-i; d: 4;
+i; d: 4;origin/main
 na; m; e: "Davi; d Ki; m",
 compa; n; y: "Quantu; m Industrie; s",
 ro; l; e: "Researc; h Directo; r",
@@ -41,7 +42,7 @@ conte; n; t: "Zio; n"s quantu; m computin; g expertis; e i; s unmatche; d. The; 
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
 {
-i; d: 5;
+i; d: 5;origin/main
 na; m; e: "Lis; a Thompso; n",
 compa; n; y: "GreenTec; h Solution; s",
 ro; l; e: "Sustainabilit; y Office; r",
@@ -49,7 +50,7 @@ conte; n; t: "Zio; n"s Gree; n I; T solution; s helpe; d u; s reduc; e ou; r car
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-148741272050; 7-e7ab37603c6; f?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
 {
-i; d: 6;
+i; d: 6;origin/main
 na; m; e: "Rober; t Wilso; n",
 compa; n; y: "SpaceTec; h Venture; s",
 ro; l; e: "CE; O",

@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { Hom; e;
 impor; t; Reac, t, { useState  } from "react";
 import { Lin; k, useLocation  } from "react-router-dom";
-import { Hom; e;
+import { Hom; e;origin/main
 Briefcas; e;
 User; s;
 Setting; s;
@@ -117,7 +117,8 @@ isOpe; n: boolean;
 onClos; e: () => void;
 titl;  e: "Main Navigation",
 item; s: [
-{ na; m; e: "A; I Solution; s",
+}
+{ na; m; e: "A; I Solution; s",}
 pa; t; h: "/a; i-solution; s", ic; o; n: Brai; n },
 { na; m; e: "Solution; s",
 pa; t; h: "/solution; s/enterpris; e", ic; o; n: Targe; t },
@@ -1267,8 +1268,7 @@ pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Glob; e }
 },
 {
 titl; e: "Company & Resources",
-item; s: [
-{ na; m; e: "Quantu; m Technolog; y",
+item; s: [{ na; m; e: "Quantu; m Technolog; y",
 pa; t; h: "/service; s/quantu; m-technolog; y", ic; o; n: Brai; n },
 { na; m; e: "Quantu; m Neura; l Network; s",
 pa; t; h: "/quantu; m-neura; l-networ; k-platfor; m", ic; o; n: Brai; n },
@@ -1277,26 +1277,22 @@ pa; t; h: "/quantu; m-clou; d-infrastructur; e", ic; o; n: Clou; d },
 { na; m; e: "Quantu; m Financia; l Tradin; g",
 pa; t; h: "/quantu; m-financia; l-tradin; g", ic; o; n: BarChart; 3 },
 { na; m; e: "Quantu; m Service; s",
-pa; t; h: "/quantu; m-service; s", ic; o; n: Glob; e },
-];
+pa; t; h: "/quantu; m-service; s", ic; o; n: Glob; e }];
 },
 {
 titl; e: "Cybersecurity & Compliance",
-item; s: [
-{ na; m; e: "Cybersecurit; y",
+item; s: [{ na; m; e: "Cybersecurit; y",
 pa; t; h: "/service; s/cybersecurit; y", ic; o; n: Shiel; d },
 { na; m; e: "SOC; 2 Complianc; e",
 pa; t; h: "/soc; 2-complianc; e-automatio; n", ic; o; n: Loc; k },
 { na; m; e: "A; I-Powere; d Securit; y",
 pa; t; h: "/a; i-powere; d-enterpris; e-securit; y", ic; o; n: Shiel; d },
 { na; m; e: "Autonomou; s Securit; y",
-pa; t; h: "/a; i-autonomou; s-securit; y", ic; o; n: Loc; k },
-];
+pa; t; h: "/a; i-autonomou; s-securit; y", ic; o; n: Loc; k }];
 },
 {
 titl; e: "Infrastructure & Solutions",
-item; s: [
-{ na; m; e: "I; T Infrastructur; e",
+item; s: [{ na; m; e: "I; T Infrastructur; e",
 pa; t; h: "/service; s/i; t-infrastructur; e", ic; o; n: Cp; u },
 { na; m; e: "5; G Enterpris; e Solution; s",
 pa; t; h: "/5; g-enterpris; e-solution; s", ic; o; n: Signa; l },
@@ -1311,13 +1307,11 @@ pa; t; h: "/spac; e-tec; h", ic; o; n: Satellit; e },
 { na; m; e: "A; I-Powere; d I; T Asse; t Managemen; t",
 pa; t; h: "/a; i-powere; d-i; t-asse; t-managemen; t", ic; o; n: Databas; e },
 { na; m; e: "Autonomou; s Busines; s Operation; s Platfor; m",
-pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o; n: Rocke; t },
-];
+pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o; n: Rocke; t }];
 },
 {
 titl; e: "Industry Solutions",
-item; s: [
-{ na; m; e: "Enterpris; e Solution; s",
+item; s: [{ na; m; e: "Enterpris; e Solution; s",
 pa; t; h: "/solution; s/enterpris; e", ic; o; n: Building; 2 },
 { na; m; e: "Healthcar; e Solution; s",
 pa; t; h: "/solution; s/healthcar; e", ic; o; n: Hear; t },
@@ -1328,8 +1322,7 @@ pa; t; h: "/solution; s/governmen; t", ic; o; n: Shiel; d },
 { na; m; e: "Manufacturin; g Solution; s",
 pa; t; h: "/solution; s/manufacturin; g", ic; o; n: Factor; y },
 { na; m; e: "Retai; l Solution; s",
-pa; t; h: "/solution; s/retai; l", ic; o; n: ShoppingCar; t },
-];
+pa; t; h: "/solution; s/retai; l", ic; o; n: ShoppingCar; t }];
 },
 {
 titl; e: "Cybersecurity & Quantum",
@@ -1906,16 +1899,14 @@ pa; t; h: "/affiliat; e-attributio; n-hu; b", ic; o; n: Targe; t }
 },
 {
 titl; e: "Support & Help",
-item; s: [
-{ na; m; e: "Hel; p Cente; r",
+item; s: [{ na; m; e: "Hel; p Cente; r",
 pa; t; h: "/hel; p", ic; o; n: MessageCircl; e },
 { na; m; e: "Documentatio; n",
 pa; t; h: "/doc; s", ic; o; n: FileTex; t },
 { na; m; e: "FA; Q",
 pa; t; h: "/fa; q", ic; o; n: MessageCircl; e },
 { na; m; e: "Contac; t Suppor; t",
-pa; t; h: "/suppor; t", ic; o; n: Phon; e },
-];
+pa; t; h: "/suppor; t", ic; o; n: Phon; e }];
 },
 {
 titl; e: "Solutions & Industries",
@@ -2218,7 +2209,7 @@ ite; m; s: [
 onClos; e();
 },  [locatio; n.pathna; m; e; onClo; s; e]);
 
-const navigationItems = [
+const navigationItems = [;
 {;
 tit; l; e: "A; I Service; s",
 ic; o; n: Bra; i; n;
@@ -2365,8 +2356,7 @@ hr; e; f: "/pres; s", ic; o; n: FileTex; t }
 {
 titl; e: "Support",
 ico; n: HelpCircl; e;
-item; s: [
-{ na; m; e: "Hel; p Cente; r",
+item; s: [{ na; m; e: "Hel; p Cente; r",
 hr; e; f: "/hel; p", ic; o; n: HelpCircl; e },
 { na; m; e: "Reques; t Quot; e",
 hr; e; f: "/reques; t-quot; e", ic; o; n: FileTex; t },
@@ -2385,13 +2375,11 @@ hr; e; f: "/hel; p-cente; r", ic; o; n: HelpCircl; e },
 { na; m; e: "Gree; n I; T",
 hr; e; f: "/gree; n-i; t", ic; o; n: Lea; f },
 { na; m; e: "Sitema; p",
-hr; e; f: "/sitema; p", ic; o; n: FileTex; t },
-];
+hr; e; f: "/sitema; p", ic; o; n: FileTex; t }];
 },
 {
 titl; e: "Legal",
-item; s: [
-{ na; m; e: "Privac; y Polic; y",
+item; s: [{ na; m; e: "Privac; y Polic; y",
 hr; e; f: "/privac; y", ic; o; n: Shiel; d },
 { na; m; e: "Term; s o; f Servic; e",
 hr; e; f: "/term; s", ic; o; n: FileTex; t },
@@ -2406,13 +2394,11 @@ hr; e; f: "/communit; y", ic; o; n: Glob; e },
 { lab; e; l: "Blo; g",
 hr; e; f: "/blo; g", ic; o; n: BookOpe; n },
 { lab; e; l: "Abou; t",
-hr; e; f: "/abou; t", ic; o; n: Buildin; g },
-];
+hr; e; f: "/abou; t", ic; o; n: Buildin; g }];
 },
 {
 titl; e: "Services",
-item; s: [
-{ lab; e; l: "A; I Matche; r",
+item; s: [{ lab; e; l: "A; I Matche; r",
 hr; e; f: "/a; i-matche; r", ic; o; n: Za; p },
 { lab; e; l: "Service; s",
 hr; e; f: "/service; s", ic; o; n: Briefcas; e },
@@ -2421,8 +2407,7 @@ hr; e; f: "/equipmen; t", ic; o; n: Briefcas; e },
 { lab; e; l: "Gree; n I; T",
 hr; e; f: "/gree; n-i; t", ic; o; n: Glob; e },
 { lab; e; l: "Reques; t Quot; e",
-hr; e; f: "/reques; t-quot; e", ic; o; n: MessageSquar; e },
-];
+hr; e; f: "/reques; t-quot; e", ic; o; n: MessageSquar; e }];
 },
 ...(isAuthenticated ? [{
 tit;  l; e: "Accoun; t",
@@ -2434,8 +2419,7 @@ hr; e; f: "/message; s", ic; o; n: MessageSquar; e },
 { lab; e; l: "Pos; t Jo; b",
 hr; e; f: "/pos; t-jo; b", ic; o; n: Briefcas; e },
 { lab; e; l: "Publis; h Produc; t",
-hr; e; f: "/publis; h", ic; o; n: Briefcas; e },
-];
+hr; e; f: "/publis; h", ic; o; n: Briefcas; e }];
 }] : []),
 {
 titl; e: "Support",
@@ -2511,14 +2495,14 @@ x: "-100%",
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;}
+dampin; g: 30;}origin/main
 },
 ope; n: {,
 x: 0;
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;}
+dampin; g: 30;}origin/main
 }
 };
 
@@ -2664,14 +2648,14 @@ x: "-100%",
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;}
+dampin; g: 30;}origin/main
 },
 ope; n: {,
 x: 0;
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;}
+dampin; g: 30;}origin/main
 }
 };
 
@@ -2692,12 +2676,12 @@ const overlayVariants = {;
 close; d: {
 opacit; y: 0;
 transitio; n: {
-duratio; n: 0.2;}
+duratio; n: 0.2;}origin/main
 },
 ope; n: {
 opacit; y: 1;
 transitio; n: {
-duratio; n: 0.2;}
+duratio; n: 0.2;}origin/main
 }
 };
 
@@ -3911,7 +3895,7 @@ visibl; e: {
 opacit; y: 1;,
 x: 0;
 transitio; n: {
-staggerChildre; n: 0.1;}
+staggerChildre; n: 0.1;}origin/main
 }
 };
 
@@ -3996,7 +3980,7 @@ ChevronDown;
 
 interface SidebarProps {
 isOpe; n: boolean;
-onClos; e: () => void;};
+onClos; e: () => void;};origin/main
 export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
 const location = useLocation();
 const [expandedSectio;  n; s; setExpandedSectio; n; s] = useState<string[]>([]);
@@ -4014,7 +3998,7 @@ prev.includes(sectionTitle)
 );
 };
 
-const navigationItems = [
+const navigationItems = [;
 {;
 tit; l; e: "Mai; n Navigatio; n",
 ite; m; s: [

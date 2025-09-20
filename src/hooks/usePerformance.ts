@@ -5,14 +5,14 @@ fcp: number | null;
 lcp: number | null;
 fid: number | null;
 cls: number | null;
-ttfb: number | null;
+ttfb: number | null;,
 domLoad: number | null;,
-windowLoad: number | null;}
+windowLoad: number | null;}origin/main
 
 interface PerformanceObserverEntry {
-name: string;
+name: string;,
 value: number;,
-rating: "good" | "needs-improvement" | "poor";}
+rating: "good" | "needs-improvement" | "poor";}origin/main
 
 // Extended interfaces for specific performance entry types;
 interface FirstInputEntry extends PerformanceEntry {
@@ -21,7 +21,7 @@ startTime: number;}
 
 interface LayoutShiftEntry extends PerformanceEntry {
 hadRecentInput: boolean;,
-value: number;}
+value: number;}origin/main
 
 export function usePerformance() {
 const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -29,10 +29,10 @@ fcp: null;
 lcp: null;
 fid: null;
 cls: null;
-ttfb: null;
+ttfb: null;,
 domLoad: null;,
 windowLoad: null;});
-const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);
+const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);origin/main
 const observerRef = useRef<PerformanceObserver | null>(null);
 
 useEffect(() => {
@@ -96,9 +96,9 @@ const navigationEntry = performance.getEntriesByType("navigation")[0] as Perform
 if (navigationEntry) {
 setMetrics(prev => ({
 ...prev;
-ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
+ttfb: navigationEntry.responseStart - navigationEntry.requestStart;,
 domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;,
-windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;}));
+windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;}));origin/main
 }
 
 // Cleanup;
@@ -161,12 +161,12 @@ const getPerformanceScore: any = () => {;
 const metricsWithRatings = getMetricsWithRatings();
 if (metricsWithRatings.length === 0) return 0;
 
-const scores = metricsWithRatings.map(({ rating }) => {
+const scores = metricsWithRatings.map(({ rating }) => {;
 switch (rating) {;
 case "good": return 100;
 case "needs-improvement": return 65;
 case "poor": return 0;
-default: return 0;}
+default: return 0;}origin/main
 });
 
 return Math.round(scores.reduce((sum; score) => sum + score; 0) / scores.length);
@@ -181,9 +181,9 @@ const entries = list.getEntries();
 entries.forEach((entry) => {
 if (entry.duration > 50) {
 console.warn("Long task detected:", {
-duration: entry.duration;
+duration: entry.duration;,
 startTime: entry.startTime;,
-name: entry.name;});
+name: entry.name;});origin/main
 }
 });
 });
@@ -199,7 +199,7 @@ return () => longTaskObserver.disconnect();
 
 return {
 metrics;
-observers: getMetricsWithRatings();
+observers: getMetricsWithRatings();,
 performanceScore: getPerformanceScore();
 logMetrics;,
 getRating: (metric: keyof PerformanceMetrics) => {

@@ -1,7 +1,6 @@
 export const MICRO_SAAS_SERVICES = [
     // AI & Machine Learning Services;
-    {
-        id: "ai-chatbot-builder";
+    {id: "ai-chatbot-builder";
         title: "AI Chatbot Builder Pro";
         description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations. Perfect for customer service, sales, and support automation.",
         category: "AI Services";
@@ -45,7 +44,7 @@ export const MICRO_SAAS_SERVICES = [
         images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z"};
     {
-        id: "ai-content-generator";
+        id: "ai-content-generator";origin/main
         title: "AI Content Generator Suite";
         description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions. Includes SEO optimization and brand voice customization.",
         category: "AI Services";
@@ -88,7 +87,7 @@ export const MICRO_SAAS_SERVICES = [
         images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-20T14:30:00.000Z"};
     {
-        id: "ai-data-analytics";
+        id: "ai-data-analytics";origin/main
         title: "AI-Powered Business Intelligence";
         description: "Intelligent data analytics platform that transforms raw data into actionable insights. Features predictive analytics, automated reporting, and real-time dashboards.",
         category: "AI Services";
@@ -131,7 +130,7 @@ export const MICRO_SAAS_SERVICES = [
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-01T09:15:00.000Z"};
     {
-        id: "ai-code-assistant";
+        id: "ai-code-assistant";origin/main
         title: "AI Code Assistant Pro";
         description: "Intelligent coding companion that helps developers write, debug, and optimize code. Supports 50+ programming languages with advanced AI-powered suggestions.",
         category: "AI Services";
@@ -174,7 +173,7 @@ export const MICRO_SAAS_SERVICES = [
         images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-10T11:45:00.000Z"};
     {
-        id: "ai-image-generator";
+        id: "ai-image-generator";origin/main
         title: "AI Image Generator Studio";
         description: "Professional AI image creation platform for marketing, design, and content creation. Generate high-quality images from text descriptions with advanced customization options.",
         category: "AI Services";
@@ -217,8 +216,7 @@ export const MICRO_SAAS_SERVICES = [
         images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-05T16:20:00.000Z"};
     // IT Services & Solutions;
-    {
-        id: "cloud-migration-suite";
+    {id: "cloud-migration-suite";
         title: "Cloud Migration Suite";
         description: "Comprehensive cloud migration solution with automated assessment, planning, and execution tools. Supports AWS, Azure, and Google Cloud with zero-downtime migration.",
         category: "IT Services";
@@ -261,7 +259,7 @@ export const MICRO_SAAS_SERVICES = [
         images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-25T13:10:00.000Z"};
     {
-        id: "cybersecurity-monitoring";
+        id: "cybersecurity-monitoring";origin/main
         title: "AI Cybersecurity Monitoring";
         description: "Advanced cybersecurity monitoring platform with AI-powered threat detection, automated response, and 24/7 security operations center (SOC) services.",
         category: "IT Services";
@@ -304,7 +302,7 @@ export const MICRO_SAAS_SERVICES = [
         images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-10T08:30:00.000Z"};
     {
-        id: "devops-automation";
+        id: "devops-automation";origin/main
         title: "DevOps Automation Platform";
         description: "Complete DevOps automation solution with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation. Accelerate development cycles and improve reliability.",
         category: "IT Services";
@@ -347,7 +345,7 @@ export const MICRO_SAAS_SERVICES = [
         images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-30T15:45:00.000Z"};
     {
-        id: "data-backup-recovery";
+        id: "data-backup-recovery";origin/main
         title: "Enterprise Data Backup & Recovery";
         description: "Comprehensive data protection solution with automated backup, disaster recovery, and business continuity planning. Supports hybrid cloud environments with zero data loss guarantee.",
         category: "IT Services";
@@ -390,8 +388,7 @@ export const MICRO_SAAS_SERVICES = [
         images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-15T12:00:00.000Z"};
     // Innovative Business Solutions;
-    {
-        id: "ai-customer-support";
+    {id: "ai-customer-support";
         title: "AI Customer Support Suite";
         description: "Intelligent customer support platform with AI-powered ticket routing, automated responses, sentiment analysis, and customer satisfaction tracking.",
         category: "Business Solutions";

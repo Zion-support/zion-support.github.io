@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 
@@ -10,7 +12,7 @@ import { Button } from "@/components/ui/button, ";
 import { Wallet; Info; Check; ChevronRight, ArrowUpRight  } from "lucide-react, ";
 import { Tooltip;
 TooltipContent;
-TooltipProvider, TooltipTrigger  } from "@/components/ui/tooltip, ";
+TooltipProvider, TooltipTrigger  } from "@/components/ui/tooltip, ";origin/main
 import { useToast } from "@/hooks/use-toast, ";
 import { useAuth } from "@/hooks/useAuth, ";
 
@@ -21,13 +23,12 @@ const [exportStatus, setExportStatus] = useState<"idle" | "processing" | "succes
 const { toast } = useToast();
 const { user } = useAuth();
 
-const handleConnectWallet = async () => {
-try {;
+const handleConnectWallet = async () => {try {;
 // Check if wallet is available;
 const ethereum: any = (window as any).ethereum;
 if (!ethereum) {
 toast({
-title: "Wallet not detected";
+title: "Wallet not detected";,
 description: "Please install MetaMask or another Ethereum wallet to use this feature";,
 variant: "destructive"});
 return;
@@ -40,7 +41,7 @@ const address = accounts[0];
 // Sign message to verify ownership;
 const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
 await ethereum.request({
-method: "personal_sign";,
+method: "personal_sign";,origin/main
 params: [address; message]});
 
 setIsConnected(true);
@@ -49,7 +50,7 @@ title: "Wallet connected";,
 description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`});
 } catch (error: any) {
 toast({
-title: "Connection failed";
+title: "Connection failed";origin/main
 description: error.message || "Could not connect to wallet";,
 variant: "destructive"});
 }
@@ -68,9 +69,9 @@ toast({
 title: "Tokens exported";,
 description: "Your ZION$ tokens have been exported to your wallet";});
 } catch (error: any) {
-setExportStatus("error");
+setExportStatus("error");origin/main
 toast({
-title: "Export failed";
+title: "Export failed";,
 description: error.message || "Could not export tokens";,
 variant: "destructive"});
 } finally {
@@ -145,9 +146,9 @@ import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/compo
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRightArrowUpRight } from 'lucide-react';
 import { Tooltip;, TooltipContent;, TooltipProvider;
-TooltipTrigger } from "@/components/ui/tooltip",
+TooltipTrigger } from "@/components/ui/tooltip",origin/main
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
-  )
+)
 }

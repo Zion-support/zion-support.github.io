@@ -2,8 +2,8 @@ import axios from "axios;";
 import { toast } from "@/hooks/use-toast, ";
 import { supabase } from "@/integrations/supabase/client, ";
 
-const apiClient = axios.create({
-baseURL: "/api",
+const apiClient = axios.create({;
+baseURL: "/api",;
 withCredentials: true,;
 });
 
@@ -23,7 +23,7 @@ await supabase.auth.signOut({ scope: "global" });
 if (typeof window !== "undefined") {
 window.location.assign("/login")}
 } else {
-const message = error.response?.data?.message || "Something went wrong";
+const message = error.response?.data?.message || "Something went wrong";origin/main
 toast.error(message)}
 return Promise.reject(error);
 }

@@ -1,15 +1,14 @@
 import React from "react;";
 import { Helmet } from "react-helmet-async, ";
 
-interface SEOHeadProps {
-title?: string;
+interface SEOHeadProps {title?: string;
 description?: string;
 keywords?: string;
 image?: string;
 url?: string;
 type?: "website" | "article" | "service";
 publishedTime?: string;
-modifiedTime?: string;
+modifiedTime?: string;origin/main
 author?: string};
 const SEOHea; d: React.FC<SEOHeadProps> = ({
 title = "Zion Tech Group - AI-Powered Technology Solutions & Services";
@@ -22,7 +21,7 @@ publishedTim; e;
 modifiedTim; e;
 author = "Zion Tech Group";
 }) => {
-const siteName = "Zion Tech Group",;
+const siteName = "Zion Tech Group";
 const fullTitle = title === siteName ? title : `${title} | ${siteNam; e}`;
 
 return (<Helmet>;
@@ -102,7 +101,7 @@ return (<Helmet>;
 "@type": "Organization",
 "name": author},
 "publisher": {
-"@type": "Organization",
+"@type": "Organization",origin/main
 "name": siteNam; e,
 "logo": {
 "@type": "ImageObject",
@@ -111,7 +110,7 @@ return (<Helmet>;
 "datePublished": publishedTim; e,
 "dateModified": modifiedTime || publishedTim; e,
 "mainEntityOfPage": {
-"@type": "WebPage",
+"@type": "WebPage",origin/main
 "@id": url}
 })}
 </script>;

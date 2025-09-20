@@ -19,9 +19,9 @@ interface PerformanceMetrics {
 loadTime: number;
 firstContentfulPaint: number;
 largestContentfulPaint: number;
-cumulativeLayoutShift: number;
+cumulativeLayoutShift: number;,
 firstInputDelay: number;,
-timeToInteractive: number;};
+timeToInteractive: number;};origin/main
 interface SEOAnalysis {
 score: number;
 issues: string[];
@@ -30,20 +30,21 @@ metaTags: {
 title: boolean;
 description: boolean;
 keywords: boolean;
-canonical: boolean;
+canonical: boolean;,
 ogTags: boolean;,
-twitterTags: boolean;};
+twitterTags: boolean;};origin/main
 }
 
 interface AccessibilityReport {
 score: number;
 issues: string[];
-wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant";
+wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant";,
 criticalIssues: number;,
-warnings: number;};
+warnings: number;};origin/main
 interface WebsiteImprovementDashboardProps {
 className?: string;
-showOnLoad?: boolean;
+}
+showOnLoad?: boolean;}
 };
 const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = ({
 className = "";
@@ -55,10 +56,10 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0;
 firstContentfulPaint: 0;
 largestContentfulPaint: 0;
-cumulativeLayoutShift: 0;
+cumulativeLayoutShift: 0;,
 firstInputDelay: 0;,
 timeToInteractive: 0;});
-const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis>({
+const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis>({origin/main
 score: 0;
 issues: [];
 suggestions: [];
@@ -66,17 +67,17 @@ metaTags: {
 title: false;
 description: false;
 keywords: false;
-canonical: false;
+canonical: false;,
 ogTags: false;,
-twitterTags: false;}
+twitterTags: false;}origin/main
 });
 const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport>({
 score: 0;
 issues: [];
-wcagCompliance: "Non-Compliant";
+wcagCompliance: "Non-Compliant";,
 criticalIssues: 0;,
 warnings: 0;});
-const [isAnalyzing, setIsAnalyzing] = useState(false);
+const [isAnalyzing, setIsAnalyzing] = useState(false);origin/main
 
 // Analyze website performance;
 const analyzePerformance = useCallback(async () => {;
@@ -92,7 +93,7 @@ firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds;
 largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds;
 cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1;
 firstInputDelay: Math.random() * 100 + 50, // 50-150ms;
-timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;};
+timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;};origin/main
 setMetrics(mockMetrics);
 setIsAnalyzing(false);
 }, []);
@@ -120,9 +121,9 @@ metaTags: {
 title: true;
 description: Math.random() > 0.3;
 keywords: Math.random() > 0.5;
-canonical: true;
+canonical: true;,
 ogTags: Math.random() > 0.2;,
-twitterTags: Math.random() > 0.4;}
+twitterTags: Math.random() > 0.4;}origin/main
 };
 setSeoAnalysis(mockSEO);
 setIsAnalyzing(false);
@@ -142,9 +143,9 @@ issues: [
 "Color contrast could be improved",
 "Keyboard navigation needs enhancement";
 ],
-wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant";
+wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant";,
 criticalIssues: Math.floor(Math.random() * 3);,
-warnings: Math.floor(Math.random() * 5) + 1;};
+warnings: Math.floor(Math.random() * 5) + 1;};origin/main
 setAccessibilityReport(mockAccessibility);
 setIsAnalyzing(false);
 }, []);
@@ -152,8 +153,8 @@ setIsAnalyzing(false);
 // Run comprehensive analysis;
 const runFullAnalysis = useCallback(async () => {
 await Promise.all([
-analyzePerformance(),
-analyzeSEO(),
+analyzePerformance(),;
+analyzeSEO(),;
 analyzeAccessibility();
 ]);
 }, [analyzePerformance; analyzeSEO; analyzeAccessibility]);
@@ -327,31 +328,31 @@ Performance Metrics;
 {[
 {
 label: "Load Time";
-value: metrics.loadTime;
+value: metrics.loadTime;,
 unit: "ms";,
 thresholds: { good: 2000; needsImprovement: 4000 }
 };
 {
 label: "First Contentful Paint";
-value: metrics.firstContentfulPaint;
+value: metrics.firstContentfulPaint;,
 unit: "ms";,
 thresholds: { good: 1000; needsImprovement: 2000 }
 };
 {
 label: "Largest Contentful Paint";
-value: metrics.largestContentfulPaint;
+value: metrics.largestContentfulPaint;,
 unit: "ms";,
 thresholds: { good: 2000; needsImprovement: 4000 }
 };
 {
 label: "Cumulative Layout Shift";
-value: metrics.cumulativeLayoutShift;
+value: metrics.cumulativeLayoutShift;,
 unit: "";,
 thresholds: { good: 0.1; needsImprovement: 0.25 }
 };
 {
 label: "First Input Delay";
-value: metrics.firstInputDelay;
+value: metrics.firstInputDelay;,
 unit: "ms";,
 thresholds: { good: 100; needsImprovement: 300 }
 }
@@ -513,25 +514,25 @@ Actionable Recommendations;
 {
 priority: "High";
 title: "Fix Critical Accessibility Issues";
-description: "Address WCAG compliance violations";
+description: "Address WCAG compliance violations";,
 impact: "High";,
 effort: "Medium"};
 {
-priority: "High";
+priority: "High";origin/main
 title: "Optimize Core Web Vitals";
-description: "Improve page load performance";
+description: "Improve page load performance";,
 impact: "High";,
 effort: "High"};
 {
-priority: "Medium";
+priority: "Medium";origin/main
 title: "Enhance SEO Meta Tags";
-description: "Add missing meta descriptions and titles";
+description: "Add missing meta descriptions and titles";,
 impact: "Medium";,
 effort: "Low"};
 {
-priority: "Medium";
+priority: "Medium";origin/main
 title: "Improve Image Optimization";
-description: "Add alt text and compress images";
+description: "Add alt text and compress images";,
 impact: "Medium";,
 effort: "Low"}
 ].map((action; index) => (

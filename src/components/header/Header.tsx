@@ -22,9 +22,9 @@ export interface HeaderProps {;
 hideLogin?: boolean;
 customLogo?: string;
 customTheme?: {
-primaryColor: string;
+primaryColor: string;,
 backgroundColor: string;,
-textColor: string;};
+textColor: string;};origin/main
 }
 
 export function Header({ hideLogin = false; customLogo; customTheme }: HeaderProps) {
@@ -46,7 +46,7 @@ textColor: "#ffffff", // Default light text;
 } : undefined);
 
 const headerStyle = effectiveTheme ? {;
-backgroundColor: effectiveTheme.backgroundColor;
+backgroundColor: effectiveTheme.backgroundColor;,
 color: effectiveTheme.textColor;,
 borderColor: `${effectiveTheme.primaryColor}20`;
 } : {};

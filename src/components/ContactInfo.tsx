@@ -7,7 +7,7 @@ import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } fr
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { Mai; l;
+import { Mai; l;origin/main
 Phon; e;
 MapPi; n;
 Glob; e;

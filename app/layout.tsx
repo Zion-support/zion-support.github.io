@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
-import '../src/app/globals.css'
+import '../src/app/globals.css'origin/main
 
 function Header() {
   return (

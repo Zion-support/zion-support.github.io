@@ -4,7 +4,7 @@ import { PrimaryNav } from "./PrimaryNav, ";
 import { Footer } from "@/components/Footer, ";
 
 interface AppLayoutProps {
-children?: React.ReactNode;
+children?: React.ReactNode;origin/main
 hideFooter?: boolean};
 export function AppLayout({ children; hideFooter = false }: AppLayoutProps) {
 return (

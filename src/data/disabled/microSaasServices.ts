@@ -1,11 +1,10 @@
 import React from "react";
 
-export interface MicroSaasService {
-id: string; title: string; description: string; category: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; tags: string[], aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; author: {
+export interface MicroSaasService {id: string; title: string; description: string; category: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; tags: string[], aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; author: {,
 name: string; id: string;
 avatarUrl?: string;,
 verified: boolean; verified: boolean; verified: boolean};
-images: string[], createdAt: string;}
+images: string[], createdAt: string;}origin/main
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
 // AI & Machine Learning Services;
@@ -50,7 +49,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z"},
 {
-id: "ai-content-generator",
+id: "ai-content-generator",origin/main
 title: "AI Content Generator Suite",
 description: "Advanced AI-powered content creation platform for blogs; social media; marketing copy; and product descriptions. Includes SEO optimization and brand voice customization.",
 category: "AI Services",
@@ -88,7 +87,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-20T14:30:00.000Z"},
 {
-id: "ai-data-analytics",
+id: "ai-data-analytics",origin/main
 title: "AI-Powered Business Intelligence",
 description: "Intelligent data analytics platform that transforms raw data into actionable insights. Features predictive analytics; automated reporting; and real-time dashboards.",
 category: "AI Services",
@@ -126,7 +125,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-01T09:15:00.000Z"},
 {
-id: "ai-code-assistant",
+id: "ai-code-assistant",origin/main
 title: "AI Code Assistant Pro",
 description: "Intelligent coding companion that helps developers write; debug; and optimize code. Supports 50+ programming languages with advanced AI-powered suggestions.",
 category: "AI Services",
@@ -164,7 +163,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-10T11:45:00.000Z"},
 {
-id: "ai-image-generator",
+id: "ai-image-generator",origin/main
 title: "AI Image Generator Studio",
 description: "Professional AI image creation platform for marketing; design; and content creation. Generate high-quality images from text descriptions with advanced customization options.",
 category: "AI Services",
@@ -202,8 +201,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-05T16:20:00.000Z"},
 // IT Services & Solutions;
-{
-id: "cloud-migration-suite",
+{id: "cloud-migration-suite",
 title: "Cloud Migration Suite",
 description: "Comprehensive cloud migration solution with automated assessment; planning; and execution tools. Supports AWS; Azure; and Google Cloud with zero-downtime migration.",
 category: "IT Services",
@@ -241,7 +239,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-25T13:10:00.000Z"},
 {
-id: "cybersecurity-monitoring",
+id: "cybersecurity-monitoring",origin/main
 title: "AI Cybersecurity Monitoring",
 description: "Advanced cybersecurity monitoring platform with AI-powered threat detection; automated response; and 24/7 security operations center (SOC) services.",
 category: "IT Services",
@@ -279,7 +277,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-10T08:30:00.000Z"},
 {
-id: "devops-automation",
+id: "devops-automation",origin/main
 title: "DevOps Automation Platform",
 description: "Complete DevOps automation solution with CI/CD pipelines; infrastructure as code; monitoring; and deployment automation. Accelerate development cycles and improve reliability.",
 category: "IT Services",
@@ -317,7 +315,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-30T15:45:00.000Z"},
 {
-id: "data-backup-recovery",
+id: "data-backup-recovery",origin/main
 title: "Enterprise Data Backup & Recovery",
 description: "Comprehensive data protection solution with automated backup; disaster recovery; and business continuity planning. Supports hybrid cloud environments with zero data loss guarantee.",
 category: "IT Services",
@@ -355,8 +353,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-15T12:00:00.000Z"},
 // Innovative Business Solutions;
-{
-id: "ai-customer-support",
+{id: "ai-customer-support",
 title: "AI Customer Support Suite",
 description: "Intelligent customer support platform with AI-powered ticket routing; automated responses; sentiment analysis; and customer satisfaction tracking.",
 category: "Business Solutions",
@@ -370,15 +367,15 @@ features: [
 "Customer satisfaction tracking",
 "Multi-channel support",
 "Knowledge base",
-pricing: {
+pricing: {,
 monthly: number; yearly: number; currency: string;,
 features: string[]};
 features: string[], benefits: string[];,
 useCases: string[], targetAudience: string[];,
-integration: string[], support: string[];
+integration: string[], support: string[];,
 link: string;
 badge?: string;,
-icon: string;}
+icon: string;}origin/main
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
 {,
@@ -387,7 +384,7 @@ title: "AI Content Generator Pro",
 description: "Generate high-quality; SEO-optimized content for blogs; social media; and marketing campaigns using advanced AI.",
 category: "Content & Marketing",
 pricing: {
-monthly: 29;
+monthly: 29;,
 yearly: 290;,
 currency: "$",
 features: ["Unlimited content generation", "SEO optimization", "Multi-language support", "Brand voice customization"];
@@ -424,7 +421,7 @@ id: "smart-invoice-manager",
 title: "Smart Invoice Manager",
 description: "Automated invoice processing; expense tracking; and financial reporting for small to medium businesses.",
 category: "Finance & Accounting",
-pricing: {
+pricing: {,
 monthly: 19; yearly: 190;,
 currency: "$",
 features: ["Unlimited invoices", "Expense tracking", "Financial reports", "Multi-currency support"];
@@ -460,7 +457,7 @@ id: "project-collaboration-hub",
 title: "Project Collaboration Hub",
 description: "Streamlined project management with real-time collaboration; task tracking; and team communication tools.",
 category: "Project Management",
-pricing: {
+pricing: {,
 monthly: 25; yearly: 250;,
 currency: "$",
 features: ["Unlimited projects", "Team collaboration", "File sharing", "Time tracking"];
@@ -497,7 +494,7 @@ id: "ai-customer-support",
 title: "AI Customer Support Suite",
 description: "Intelligent customer support automation with chatbots; ticket management; and analytics.",
 category: "Customer Support",
-pricing: {
+pricing: {,
 monthly: 39; yearly: 390;,
 currency: "$",
 features: ["Unlimited conversations", "AI chatbot", "Ticket management", "Analytics dashboard"];
@@ -533,7 +530,7 @@ id: "data-analytics-platform",
 title: "Data Analytics Platform",
 description: "Comprehensive data analytics and visualization platform for business intelligence and decision making.",
 category: "Analytics & BI",
-pricing: {
+pricing: {,
 monthly: 49; yearly: 490;,
 currency: "$",
 features: ["Unlimited data sources", "Custom dashboards", "Real-time analytics", "Advanced reporting"];
@@ -569,7 +566,7 @@ id: "ai-recruitment-assistant",
 title: "AI Recruitment Assistant",
 description: "Intelligent hiring platform that automates candidate screening; matching; and interview scheduling.",
 category: "HR & Recruitment",
-pricing: {
+pricing: {,
 monthly: 35; yearly: 350;,
 currency: "$",
 features: ["Unlimited job postings", "AI candidate matching", "Interview scheduling", "Analytics dashboard"];
@@ -606,7 +603,7 @@ id: "cybersecurity-monitor",
 title: "Cybersecurity Monitor",
 description: "Real-time threat detection; vulnerability assessment; and security compliance monitoring.",
 category: "Cybersecurity",
-pricing: {
+pricing: {,
 monthly: 45; yearly: 450;,
 currency: "$",
 features: ["Threat monitoring", "Vulnerability scanning", "Compliance reporting", "Security alerts"];
@@ -642,7 +639,7 @@ id: "cloud-cost-optimizer",
 title: "Cloud Cost Optimizer",
 description: "Intelligent cloud cost management and optimization for AWS; Azure; and Google Cloud platforms.",
 category: "Cloud Management",
-pricing: {
+pricing: {,
 monthly: 30; yearly: 300;,
 currency: "$",
 features: ["Multi-cloud monitoring", "Cost optimization", "Resource management", "Budget alerts"];
@@ -678,7 +675,7 @@ id: "ai-marketing-automation",
 title: "AI Marketing Automation",
 description: "Intelligent marketing automation with AI-powered personalization; campaign optimization; and analytics.",
 category: "Marketing Automation",
-pricing: {
+pricing: {,
 monthly: 55; yearly: 550;,
 currency: "$",
 features: ["Unlimited campaigns", "AI personalization", "Advanced analytics", "Multi-channel marketing"];
@@ -715,7 +712,7 @@ id: "api-management-platform",
 title: "API Management Platform",
 description: "Comprehensive API development; testing; monitoring; and documentation platform for developers.",
 category: "Developer Tools",
-pricing: {
+pricing: {,
 monthly: 40; yearly: 400;,
 currency: "$",
 features: ["Unlimited APIs", "Testing tools", "Performance monitoring", "Developer portal"];
@@ -749,13 +746,13 @@ icon: "⚡"}
 ];
 
 export const getMicroSaasServiceById: any = (id: string): MicroSaasService | undefined => {
-return MICRO_SAAS_SERVICES.find(service => service.id === id),;
+return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
 
 export const getMicroSaasServicesByCategory: any = (category: string): MicroSaasService[] => {
-return MICRO_SAAS_SERVICES.filter(service => service.category === category),;
+return MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
 
 export const getMicroSaasCategories: any = (): string[] => {
-return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))],;
+return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
 };

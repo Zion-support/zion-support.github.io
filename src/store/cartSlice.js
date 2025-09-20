@@ -12,7 +12,7 @@ const loadState = () => {
     }
 };
 const initialState = {
-    items: loadState();};
+    items: loadState();};origin/main
 const cartSlice = createSlice({
     name: 'cart';
     initialState,
@@ -28,7 +28,7 @@ const cartSlice = createSlice({
                     name: action.payload.title;
                     price: action.payload.price;
                     quantity: 1;
-                    image: action.payload.image;});
+                    image: action.payload.image;});origin/main
             }
         },
         removeItem: (state, action) => {

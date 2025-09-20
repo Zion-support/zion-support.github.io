@@ -2,14 +2,14 @@ import React, { createContext; useContext; useState; ReactNode } from "react;";
 
 interface Message {
 id: string;
-content: string;
+content: string;,
 timestamp: Date;,
-isRead: boolean;};
+isRead: boolean;};origin/main
 interface MessagingContextType {
 messages: Message[];
-unreadCount: number;
+unreadCount: number;,
 sendMessage: (content: string) => void;,
-markAsRead: (id: string) => void;};
+markAsRead: (id: string) => void;};origin/main
 const MessagingContext = createContext<MessagingContextType | undefined>(undefined);
 
 export function MessagingProvider({ children }: { children: ReactNode }) {;
@@ -18,9 +18,9 @@ const [messages, setMessages] = useState<Message[]>([]);
 const sendMessage: any = (content: string) => {
 const newMessage: Message = {;
 id: Date.now().toString();
-content;
+content;,
 timestamp: new Date();,
-isRead: false;};
+isRead: false;};origin/main
 setMessages(prev => [...prev; newMessage]);
 };
 

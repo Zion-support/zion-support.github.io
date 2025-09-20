@@ -1,7 +1,6 @@
 export const INNOVATIVE_AI_SERVICES = [
     // AI-Powered Content Generation & Marketing;
-    {
-        id: "ai-content-marketing-suite";
+    {id: "ai-content-marketing-suite";
         title: "AI Content Marketing Suite";
         description: "Comprehensive AI-powered content creation platform that generates high-quality marketing materials, social media posts, and SEO-optimized content.",
         category: "AI & Marketing";
@@ -57,8 +56,7 @@ export const INNOVATIVE_AI_SERVICES = [
         trainingData: "10M+ high-quality content samples";
         accuracy: "95% human-like quality"};
     // AI-Powered Video Analytics;
-    {
-        id: "ai-video-analytics-platform";
+    {id: "ai-video-analytics-platform";
         title: "AI Video Analytics Platform";
         description: "Advanced video analysis platform that uses computer vision to extract insights, detect objects, and analyze customer behavior in retail and security applications.",
         category: "AI & Computer Vision";
@@ -114,8 +112,7 @@ export const INNOVATIVE_AI_SERVICES = [
         trainingData: "5M+ video frames";
         accuracy: "98% detection accuracy"};
     // AI-Powered Financial Trading Assistant;
-    {
-        id: "ai-financial-trading-assistant";
+    {id: "ai-financial-trading-assistant";
         title: "AI Financial Trading Assistant";
         description: "Intelligent trading platform that uses machine learning to analyze market trends, predict price movements, and provide automated trading recommendations.",
         category: "AI & Finance";
@@ -171,8 +168,7 @@ export const INNOVATIVE_AI_SERVICES = [
         trainingData: "20+ years of market data";
         accuracy: "78% prediction accuracy"};
     // AI-Powered Healthcare Diagnostics;
-    {
-        id: "ai-healthcare-diagnostics";
+    {id: "ai-healthcare-diagnostics";
         title: "AI Healthcare Diagnostics Platform";
         description: "Advanced medical imaging analysis platform that uses deep learning to assist healthcare professionals in diagnosing diseases and conditions.";
         category: "AI & Healthcare";
@@ -228,8 +224,7 @@ export const INNOVATIVE_AI_SERVICES = [
         trainingData: "1M+ medical images";
         accuracy: "94% diagnostic accuracy"};
     // AI-Powered Supply Chain Optimization;
-    {
-        id: "ai-supply-chain-optimization";
+    {id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization Platform";
         description: "Intelligent supply chain management system that uses AI to predict demand, optimize inventory, and streamline logistics operations.",
         category: "AI & Operations";

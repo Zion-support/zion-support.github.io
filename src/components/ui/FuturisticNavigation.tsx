@@ -4,22 +4,22 @@ import { Menu; X; Home; Briefcase; Users; Phone; Globe;
 Zap; Brain; Shield; Rocket; Star; ChevronDown} from "lucide-react, ";
 
 interface NavigationItem {
-name: string;
+name: string;,
 href: string;,
 icon: React.ReactNode;
 description?: string;
-children?: NavigationItem[];
+}
+children?: NavigationItem[];}
 };
 const navigationItems: NavigationItem[] = [
-{
-name: "Home";
-href: "/";
+{name: "Home";
+href: "/";,
 icon: <Home className="w-5 h-5" />;,
 description: "Welcome to the future"};
 {
 name: "Services";
 href: "/services";
-icon: <Briefcase className="w-5 h-5" />;
+icon: <Briefcase className="w-5 h-5" />;,
 description: "Our revolutionary solutions";,
 children: [
 { name: "AI & Automation", href: "/services/ai-automation", icon: <Brain className="w-4 h-4" /> };
@@ -29,14 +29,13 @@ children: [
 { name: "Quantum Computing", href: "/services/quantum-computing", icon: <Rocket className="w-4 h-4" /> }
 ];
 };
-{
-name: "About";
-href: "/about";
+{name: "About";
+href: "/about";,
 icon: <Users className="w-5 h-5" />;,
 description: "Our mission and vision"};
 {
 name: "Contact";
-href: "/contact";
+href: "/contact";origin/main
 icon: <Phone className="w-5 h-5" />;,
 description: "Get in touch with us"}
 ];

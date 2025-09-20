@@ -9,5 +9,6 @@ import { cn } from "@/lib/utils";
 import { getDocsSearchPath;
 , docsSearchSuggestions } from "@/data/docsSearchData"
 interface ApiDocsLayoutProps {
-  children: React.ReactNode}
+  children: React.ReactNode}origin/main
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+}

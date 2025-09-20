@@ -8,5 +8,5 @@ export default function EquipmentPage() {
         <p className="text-lg text-gray-600">Browse our equipment catalog...</p>
       </div>
     </div>
-  );
+  );origin/main
 }

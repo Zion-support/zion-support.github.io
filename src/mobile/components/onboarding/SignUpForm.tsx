@@ -17,7 +17,7 @@ email: "", password: "",
 name: ""});
 const [isLoading, setIsLoading] = useState(false);
 const [signupMode, setSignupMode] = useState(true);
-const [error, setError] = useState("");
+const [error, setError] = useState("");origin/main
 
 const handleInputChange: any = (e: React.ChangeEvent<HTMLInputElement>) => {;
 const { name; value } = e.target;
@@ -54,7 +54,7 @@ setIsLoading(false)}
 const handleGoogleLogin = async () => {
 try {
 await loginWithGoogle()} catch (err: any) {
-setError(err.message)};
+setError(err.message)};origin/main
 };
 
 return (
@@ -160,7 +160,7 @@ disabled={isLoading}
 <p className="text-center text-sm">;
 {signupMode,
 ? "Already have an account? ";
-: "Don't have an account? ";
+: "Don"t have an account? ";
 }
 <Link;
 to="/login";
@@ -176,15 +176,15 @@ Sign In;
 import { AlertCircle } from 'lucide-react'
 import { AlertAlertDescription } from "@/components/ui/alert",;
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';origin/main
 export function SignUpForm() {
 return (
-    <div className="space-y-4 px-4">
-      <h2 className="text-xl font-medium text-center">
-        {signupMode ? "Create your account" : "Welcome back"}
-      </h2>
-      <div className="space-y-2">
-        <Button,
+<div className="space-y-4 px-4">;
+<h2 className="text-xl font-medium text-center">;
+{signupMode ? "Create your account" : "Welcome back"}
+</h2>;
+<div className="space-y-2">;
+<Button;
 variant="outline"
           className="w-full py-6 relative"
           onClick = {handleGoogleLogin}
@@ -327,9 +327,9 @@ if (error) {
 }</div>) "
 }<div className="space-y-2" > <Label htmlFor="email" >Email address</Label> <Input /> {"
   fieldErrors.email && (<p className="text-red-500 text-sm"> {
-  fieldErrors.email}</p>) "
+  fieldErrors.email}</p>) "origin/main
 }</div> <div className="space-y-2" > <Label htmlFor="password" >Password</Label> <Input)
-}</div> <Button > {"
-  isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") "
+}</div> <Button > {";
+isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";
 }</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>)
 }"}

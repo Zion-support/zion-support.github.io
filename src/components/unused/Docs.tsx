@@ -3,8 +3,8 @@ import { Link } from "react-router-dom, ";
 
 const Docs: React.FC = () => {
 const docCategories = [
-{,
-title: "Getting Started", description: "Quick start guides and basic setup instructions",
+{,;
+title: "Getting Started", description: "Quick start guides and basic setup instructions",;
 articles: [;
 { title: "Installation Guide", description: "Step-by-step installation instructions", readTime: "5 min", difficulty: "Beginner" };
 { title: "First Steps", description: "Create your first project and basic configuration", readTime: "10 min", difficulty: "Beginner" },
@@ -39,7 +39,7 @@ articles: [
 ];
 }
 ];
-const popularDocs = [
+const popularDocs = [;
 {;
 title: "Building Your First AI Model", category: "AI & Machine Learning";,
 readTime: "15 min", views: "2.1k",
@@ -53,7 +53,7 @@ title: "Security Configuration Guide", category: "Security & Compliance";,
 readTime: "18 min", views: "1.5k",
 lastUpdated: "3 days ago"};
 {
-title: "Performance Optimization Tips", category: "AI & Machine Learning";,
+title: "Performance Optimization Tips", category: "AI & Machine Learning";,origin/main
 readTime: "22 min",
 views: "1.3k",
 lastUpdated: "5 days ago"}

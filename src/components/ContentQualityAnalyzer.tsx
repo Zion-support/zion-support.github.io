@@ -20,7 +20,7 @@ issueTyp; e: "missing_title" | "missing_meta" | "no_headings" | "minimal_content
 severit; y: "low" | "medium" | "high";
 descriptio; n: string;
 recommendatio; n: string;
-statu; s: "open" | "in_progress" | "resolved";};
+statu; s: "open" | "in_progress" | "resolved";};origin/main
 interface ContentQualityReport {
 totalPage; s: number;
 pagesWithIssue; s: number;
@@ -32,7 +32,7 @@ pagesWithImage; s: number;
 pagesWithMetaDescription; s: number;
 lastUpdate; d: Date;};
 const ContentQualityAnalyze; r: React.FC = () => {
-const [isOp;  e; n; setIsOp; e; n] = useState(false);
+const [isOp;  e; n; setIsOp; e; n] = useState(false);origin/main
 const [isAnalyzi; n; g; setIsAnalyzi; n; g] = useState(false);
 const [contentIssu;  e; s; setContentIssu; e; s] = useState<ContentIssue[]>([]);
 const [repo; r; t; setRepo; r; t] = useState<ContentQualityReport | null>(null);
@@ -51,7 +51,7 @@ descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n
 recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O"};
 stat; u; s: "ope; n"},
 {
-i; d: "2";
+i; d: "2";origin/main
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/_nex; t/stati; c/chunk; s/webpac; k-e219339f62a4a96; e.j; s",
 pageTit; l; e: "Missin; g",
 issueTy; p; e: "missing_met; a",
@@ -60,7 +60,7 @@ descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n
 recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
 stat; u; s: "ope; n"},
 {
-i; d: "3";
+i; d: "3";origin/main
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/abou; t/",
 pageTit; l; e: "Abou; t",
 issueTy; p; e: "minimal_conten; t",
@@ -69,7 +69,7 @@ descripti; o; n: "Suspiciousl; y smal; l HTM; L conten; t",
 recommendati; o; n: "Ad; d mor; e meaningf; u; l; conte; n; t; headin; g; s; an; d image; s t; o improv; e use; r experienc; e",
 stat; u; s: "ope; n"},
 {
-i; d: "4";
+i; d: "4";origin/main
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/service; s/",
 pageTit; l; e: "Service; s",
 issueTy; p; e: "no_heading; s",
@@ -84,8 +84,7 @@ setContentIssues(sampleIssues);
 generateReport(sampleIssues);
 },  []);
 
-const generateReport: any = (issue;  s: ContentIssue[]) => {
-const totalPages = 79;
+const generateReport: any = (issue;  s: ContentIssue[]) => {const totalPages = 79;
 // From analysis report;
 const pagesWithIssues = issues.length;
 const criticalIssues = issues.filter(i => i.severity === "high").length;
@@ -119,7 +118,7 @@ case "medium":
 return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
 case "low":
 return <Info className="w-4 h-4 text-blue-400" />;
-defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;}
+defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;}origin/main
 };
 
 const getSeverityColor: any = (severit; y: string) => {
@@ -130,7 +129,7 @@ case "medium":
 return "text-yellow-400";
 case "low":
 return "text-blue-400";
-defaul;  t: return "text-gray-400";}
+defaul;  t: return "text-gray-400";}origin/main
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -141,7 +140,7 @@ case "in_progress":
 return "text-yellow-400";
 case "open":
 return "text-red-400";
-defaul;  t: return "text-gray-400";}
+defaul;  t: return "text-gray-400";}origin/main
 };
 
 const filteredIssues = contentIssues.filter(issue => {;
@@ -163,7 +162,7 @@ case "minimal_content":
 return "Minimal Content";
 case "no_images":
 return "No Images";
-defaul;  t: return type;}
+defaul;  t: return type;}origin/main
 };
 
 return (

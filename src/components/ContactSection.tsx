@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react";
@@ -13,10 +15,9 @@ Cloc; k;
 MessageSquar; e;
 ArrowRigh; t;
 Glob; e;
-Shiel; d, Users  } from "lucide-react";
+Shiel; d, Users  } from "lucide-react";origin/main
 
-export function ContactSection() {
-const contactMethods = [;
+export function ContactSection() {const contactMethods = [;
 {;
 ic;  o; n: <Mai; l classNam; e="w-6 h-6" />,
 tit; l; e: "Emai; l U; s",
@@ -25,14 +26,14 @@ conta; c; t: "hell; o@ziontechgrou; p.co; m",
 li; n; k: "mail; t; o:hell; o@ziontechgrou; p.co; m",
 col; o; r: "fro; m-zio; n-cya; n t; o-zio; n-blu; e"},
 {
-ic; o; n: <Phon; e classNam; e="w-6 h-6" />,
+ic; o; n: <Phon; e classNam; e="w-6 h-6" />,origin/main
 tit; l; e: "Cal; l U; s",
 descripti; o; n: "Spea; k directl; y wit; h ou; r tea; m",
 conta; c; t: "+1 (30; 2) 46; 4-095; 0",
 li; n; k: "t; e; l:+1302464095; 0",
 col; o; r: "fro; m-zio; n-purpl; e t; o-zio; n-cya; n"},
 {
-ic; o; n: <MessageSquar; e classNam; e="w-6 h-6" />,
+ic; o; n: <MessageSquar; e classNam; e="w-6 h-6" />,origin/main
 tit; l; e: "Liv; e Cha; t",
 descripti; o; n: "Cha; t wit; h ou; r suppor; t tea; m i; n rea; l-tim; e",
 conta; c; t: "Availabl; e 2; 4/7",
@@ -40,7 +41,7 @@ li; n; k: "/cha; t",
 col; o; r: "fro; m-zio; n-blu; e t; o-zio; n-purpl; e"}
 ];
 
-const officeLocations = [
+const officeLocations = [;
 {;
 ci; t; y: "Wilmingt; o; n; D; E",
 count; r; y: "Unite; d State; s",
@@ -52,13 +53,13 @@ count; r; y: "Unite; d State; s",
 addre; s; s: "35; 0 5; t; h; A; v; e; N; e; w; Yo; r; k; N; Y 1011; 8",
 ic; o; n: <MapPi; n classNam; e="w-5 h-5" />},
 {
-ci; t; y: "Lond; o; n; U; K",
+ci; t; y: "Lond; o; n; U; K",origin/main
 count; r; y: "Unite; d Kingdo; m",
 addre; s; s: "1 Cana; r; y; Wha; r; f; Londo; n E1; 4 5A; B",
 ic; o; n: <MapPi; n classNam; e="w-5 h-5" />}
 ];
 
-const supportFeatures = [
+const supportFeatures = [;
 {;
 ic; o; n: <Cloc; k classNam; e="w-6 h-6" />,
 tit; l; e: "2; 4/7 Suppor; t",
@@ -72,7 +73,7 @@ ic; o; n: <User; s classNam; e="w-6 h-6" />,
 tit; l; e: "Exper; t Tea; m",
 descripti; o; n: "Certifie; d professional; s read; y t; o hel; p"},
 {
-ic; o; n: <Glob; e classNam; e="w-6 h-6" />,
+ic; o; n: <Glob; e classNam; e="w-6 h-6" />,origin/main
 tit; l; e: "Globa; l Reac; h",
 descripti; o; n: "Suppor; t availabl; e i; n multipl; e tim; e zone; s"}
 ];
@@ -86,7 +87,7 @@ Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion
 </h2>;
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">;
 Ready to transform your business with cutting-edge technology?;
-Let's discuss how Zion Tech Group can help you achieve your goals.;
+Let"s discuss how Zion Tech Group can help you achieve your goals.;
 </p>;
 </div>;
 
@@ -218,11 +219,11 @@ Request Quote;
 );
 }<//section><///section>;
 
-const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    subject?: string;
-    message?: string,
+const [errors; setErrors] = useState<{
+name?: string;
+email?: string;
+subject?: string;
+message?: string;
 return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -349,20 +350,19 @@ type="submit"
   )
 }setErrors (fieldErrors)
 toast ({
-  return}setErrors ({
+  return}setErrors ({origin/main
 })
 setIsSubmitting (true)
-}) .catch ( (err) => {
-  setIsSubmitting (false)
+}) .catch ( (err) => {setIsSubmitting (false)
 toast ({
   title: "Submission Error",
 description: err.message})
 };"
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) "
-}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) "
+}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) "origin/main
 }</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea)
-}</div> <div> <Button > {'
-  isSubmitting ? 'Sending...' : 'Send Message'
+}</div> <div> <Button > {";
+isSubmitting ? "Sending..." : "Send Message";
 }</Button>)
 }</div> </form> </div> </div> </div> </div> </section>)
-}'"}
+}""}

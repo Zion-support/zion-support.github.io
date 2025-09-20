@@ -1,7 +1,6 @@
 export const emergingTechServices2025 = [
     // Quantum Computing Services;
-    {
-        id: 'quantum-computing-as-a-service';
+    {id: 'quantum-computing-as-a-service';
         name: 'Quantum Computing as a Service';
         tagline: 'Enterprise quantum computing access with advanced algorithm optimization';
         description: 'Revolutionary quantum computing platform that provides enterprise access to quantum processors through the cloud. Features advanced algorithm optimization, quantum error correction, and hybrid quantum-classical workflows for complex computational problems.',
@@ -52,8 +51,7 @@ export const emergingTechServices2025 = [
         patents: ['Quantum Error Correction Method', 'Hybrid Quantum-Classical Workflow', 'Quantum Algorithm Optimization']
     },
     // Neuromorphic Computing;
-    {
-        id: 'neuromorphic-computing-platform';
+    {id: 'neuromorphic-computing-platform';
         name: 'Neuromorphic Computing Platform';
         tagline: 'Brain-inspired computing for next-generation AI applications';
         description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing. Provides brain-inspired algorithms, spiking neural networks, and energy-efficient computing for edge AI applications.',
@@ -104,8 +102,7 @@ export const emergingTechServices2025 = [
         patents: ['Spiking Neural Network Architecture', 'Brain-Inspired Learning Algorithm', 'Neuromorphic Hardware Interface']
     },
     // DNA Computing & Storage;
-    {
-        id: 'dna-computing-storage-platform';
+    {id: 'dna-computing-storage-platform';
         name: 'DNA Computing & Storage Platform';
         tagline: 'Revolutionary DNA-based computing and data storage solutions';
         description: 'Groundbreaking platform that leverages DNA molecules for computing and ultra-dense data storage. Provides DNA synthesis, molecular computing algorithms, and biological data processing for next-generation computational challenges.',
@@ -156,8 +153,7 @@ export const emergingTechServices2025 = [
         patents: ['DNA Computing Method', 'Molecular Storage System', 'Biological Algorithm Framework']
     },
     // Photonic Computing;
-    {
-        id: 'photonic-computing-platform';
+    {id: 'photonic-computing-platform';
         name: 'Photonic Computing Platform';
         tagline: 'Light-speed computing with photonic processors and optical networks';
         description: 'Advanced photonic computing platform that uses light instead of electricity for ultra-fast processing and communication. Provides photonic processors, optical neural networks, and light-speed data transmission for next-generation computing.',
@@ -208,8 +204,7 @@ export const emergingTechServices2025 = [
         patents: ['Photonic Processor Design', 'Optical Neural Network', 'Light-Speed Computing Method']
     },
     // Biological Computing;
-    {
-        id: 'biological-computing-platform';
+    {id: 'biological-computing-platform';
         name: 'Biological Computing Platform';
         tagline: 'Living computers powered by biological systems and cellular networks';
         description: 'Revolutionary biological computing platform that uses living cells, proteins, and biological networks for computation. Provides cellular computing frameworks, protein-based algorithms, and biological circuit design for next-generation computing.',
@@ -260,8 +255,7 @@ export const emergingTechServices2025 = [
         patents: ['Biological Computing Method', 'Cellular Algorithm Framework', 'Living Computer System']
     },
     // Swarm Robotics;
-    {
-        id: 'swarm-robotics-platform';
+    {id: 'swarm-robotics-platform';
         name: 'Swarm Robotics Platform';
         tagline: 'Coordinated multi-robot systems for complex autonomous operations';
         description: 'Advanced swarm robotics platform that enables coordinated operation of multiple robots for complex tasks. Provides swarm intelligence algorithms, multi-robot coordination, and autonomous decision-making for industrial and research applications.',
@@ -312,8 +306,7 @@ export const emergingTechServices2025 = [
         patents: ['Swarm Coordination Algorithm', 'Multi-Robot Communication', 'Autonomous Decision System']
     },
     // Brain-Computer Interfaces;
-    {
-        id: 'brain-computer-interface-platform';
+    {id: 'brain-computer-interface-platform';
         name: 'Brain-Computer Interface Platform';
         tagline: 'Direct neural interface for human-computer interaction and control';
         description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers. Provides neural signal processing, thought-to-action conversion, and assistive technology for medical and research applications.',
@@ -364,8 +357,7 @@ export const emergingTechServices2025 = [
         patents: ['Neural Signal Processing', 'Thought-to-Action Conversion', 'BCI Development Framework']
     },
     // Synthetic Biology;
-    {
-        id: 'synthetic-biology-platform';
+    {id: 'synthetic-biology-platform';
         name: 'Synthetic Biology Platform';
         tagline: 'Design and engineering of biological systems for novel applications';
         description: 'Advanced synthetic biology platform that enables design and engineering of biological systems for novel applications. Provides DNA design tools, genetic circuit engineering, and biological system optimization for research and commercial applications.',

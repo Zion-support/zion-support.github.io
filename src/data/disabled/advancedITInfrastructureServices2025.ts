@@ -21,21 +21,20 @@ implementation?: string;
 sla?: string;
 contactInfo: {
 phone: string;
-email: string;
+email: string;,
 website: string;,
-address: string;};
+address: string;};origin/main
 }
 
 export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureService[] = [
 // Edge Computing & 5G Integration;
-{
-id: "intelligent-edge-computing-platform";
+{id: "intelligent-edge-computing-platform";,
 title: "Intelligent Edge Computing Platform";,
 description: "Next-generation edge computing infrastructure that processes data at the source with AI acceleration; 5G integration; and real-time decision-making capabilities.",
 category: "Edge Computing";
 subcategory: "AI-Powered Infrastructure";
 price: 15000;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-accelerated edge processors";
@@ -71,25 +70,24 @@ targetAudience: [
 "Healthcare systems";
 ],
 tags: ["Edge Computing", "5G", "AI", "Real-time", "IoT"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "24/7 Premium Support";,
 marketPrice: "Starting from $15;000/month",
 implementation: "Turnkey deployment with dedicated engineers";
 sla: "99.99% uptime with performance guarantees";
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
-{
-id: "quantum-secure-cloud-infrastructure";
+{id: "quantum-secure-cloud-infrastructure";
 title: "Quantum-Secure Cloud Infrastructure";
 description: "Revolutionary cloud infrastructure protected by quantum-resistant encryption and quantum key distribution for ultimate security against future quantum attacks.";
 category: "Cloud Security";
 subcategory: "Quantum Protection";
 price: 25000;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Post-quantum cryptography";
@@ -125,25 +123,24 @@ targetAudience: [
 "Defense contractors";
 ],
 tags: ["Quantum Security", "Cloud", "Encryption", "Zero Trust"],
-estimatedDelivery: "8-12 weeks";
+estimatedDelivery: "8-12 weeks";,
 supportLevel: "24/7 Quantum Expert Support";,
 marketPrice: "Starting from $25;000/month",
 implementation: "Phased migration with quantum security specialists";
 sla: "99.999% availability with quantum-grade security";
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
-{
-id: "autonomous-infrastructure-management";
+{id: "autonomous-infrastructure-management";,
 title: "Autonomous Infrastructure Management System";,
 description: "Self-managing IT infrastructure powered by AI that automatically optimizes performance; predicts failures; and resolves issues without human intervention.",
 category: "Infrastructure Automation";
 subcategory: "AI Operations";
 price: 12000;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Autonomous healing systems";
@@ -179,25 +176,24 @@ targetAudience: [
 "CTOs";
 ],
 tags: ["AI Operations", "Automation", "Predictive", "Self-Healing"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "24/7 AI Operations Support";,
 marketPrice: "Starting from $12;000/month",
 implementation: "Gradual rollout with AI training period";
 sla: "99.9% automated resolution rate";
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
-{
-id: "immersive-collaboration-infrastructure";
+{id: "immersive-collaboration-infrastructure";,
 title: "Immersive Collaboration Infrastructure";,
 description: "Advanced infrastructure supporting virtual and augmented reality collaboration with spatial computing; haptic feedback; and real-time 3D rendering capabilities.",
 category: "Collaboration Technology";
 subcategory: "Immersive Computing";
 price: 18000;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Spatial computing platform";
@@ -233,25 +229,24 @@ targetAudience: [
 "Technology companies";
 ],
 tags: ["VR/AR", "Collaboration", "Spatial Computing", "3D Rendering"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "Specialized VR/AR Support";,
 marketPrice: "Starting from $18;000/month",
 implementation: "Custom setup with immersive technology specialists";
 sla: "99.5% availability with performance optimization";
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
-{
-id: "green-computing-optimization-platform";
+{id: "green-computing-optimization-platform";,
 title: "Green Computing Optimization Platform";,
 description: "Sustainable IT infrastructure solution that optimizes energy consumption; reduces carbon footprint; and maximizes renewable energy usage through AI-driven efficiency.",
 category: "Sustainable Computing";
 subcategory: "Green Technology";
 price: 8000;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Energy consumption optimization";
@@ -287,25 +282,24 @@ targetAudience: [
 "Corporate executives";
 ],
 tags: ["Sustainability", "Green Computing", "Energy Efficiency", "ESG"],
-estimatedDelivery: "3-4 weeks";
+estimatedDelivery: "3-4 weeks";,
 supportLevel: "Green Technology Support";,
 marketPrice: "Starting from $8;000/month",
 implementation: "Sustainability assessment and gradual optimization";
 sla: "Guaranteed energy savings with monitoring";
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
-{
-id: "blockchain-infrastructure-as-a-service";
+{id: "blockchain-infrastructure-as-a-service";,
 title: "Enterprise Blockchain Infrastructure as a Service";,
 description: "Complete blockchain infrastructure platform supporting multiple protocols; smart contracts; DeFi applications; and enterprise-grade security for Web3 transformation.",
 category: "Blockchain Infrastructure";
 subcategory: "Web3 Platform";
 price: 20000;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Multi-protocol blockchain support";
@@ -341,25 +335,24 @@ targetAudience: [
 "Web3 startups";
 ],
 tags: ["Blockchain", "Web3", "DeFi", "Smart Contracts", "Enterprise"],
-estimatedDelivery: "8-10 weeks";
+estimatedDelivery: "8-10 weeks";,
 supportLevel: "24/7 Blockchain Expert Support";,
 marketPrice: "Starting from $20;000/month",
 implementation: "Blockchain architecture design and deployment";
 sla: "99.9% network availability with security guarantees";
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
-{
-id: "hyper-converged-ai-infrastructure";
+{id: "hyper-converged-ai-infrastructure";,
 title: "Hyper-Converged AI Infrastructure Platform";,
 description: "Integrated infrastructure combining compute; storage; networking; and AI acceleration in a single platform optimized for machine learning workloads and AI applications.",
 category: "AI Infrastructure";
 subcategory: "Hyper-Converged Systems";
 price: 30000;
-currency: "$";
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "GPU acceleration clusters";
@@ -395,14 +388,14 @@ targetAudience: [
 "Research institutions";
 ],
 tags: ["AI Infrastructure", "GPU Computing", "Machine Learning", "HCI"],
-estimatedDelivery: "10-12 weeks";
+estimatedDelivery: "10-12 weeks";,
 supportLevel: "24/7 AI Infrastructure Support";,
 marketPrice: "Starting from $30;000/month",
 implementation: "Custom AI infrastructure design and optimization";
 sla: "99.95% availability with performance guarantees";
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 }

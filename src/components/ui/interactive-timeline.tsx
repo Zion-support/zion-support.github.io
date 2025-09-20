@@ -39,9 +39,9 @@ tags: string[];
 metadata: {
 progress: number;
 dependencies: string[];
-impact: "low" | "medium" | "high";
+impact: "low" | "medium" | "high";,
 verified: boolean;,
-featured: boolean;};
+featured: boolean;};origin/main
 actions?: {
 label: string;,
 icon: React.ComponentType<{ className?: string }>;
@@ -57,7 +57,8 @@ autoPlay?: boolean;
 showProgress?: boolean;
 onEventClick?: (event: TimelineEvent) => void;
 onStatusChange?: (eventId: string; status: TimelineEvent["status"]) => void;
-className?: string;
+}
+className?: string;}
 };
 export function InteractiveTimeline({;
 enabled = true;
@@ -75,11 +76,11 @@ const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null);
 const [showFilters, setShowFilters] = useState(false);
 const [filters, setFilters] = useState({
 status: [] as TimelineEvent["status"][];
-category: [] as string[];
+category: [] as string[];,
 priority: [] as TimelineEvent["priority"][];,
 progress: 0;});
 const [viewMode, setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
-const [zoomLevel, setZoomLevel] = useState(1);
+const [zoomLevel, setZoomLevel] = useState(1);origin/main
 
 const timelineRef = useRef<HTMLDivElement>(null);
 const { scrollYProgress: _scrollYProgress } = useScroll({
@@ -99,7 +100,7 @@ return matchesStatus && matchesCategory && matchesPriority;
 useEffect(() => {
 if (!isPlaying || filteredEvents.length === 0) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 setCurrentEventIndex(prev => {;
 const next: any = (prev + 1) % filteredEvents.length;
 if (next === 0) {
@@ -150,7 +151,7 @@ case "medium":
 return "border-yellow-500/50 bg-yellow-500/10";
 case "low":
 return "border-green-500/50 bg-green-500/10";,
-default: return "border-zinc-500/50 bg-zinc-500/10";}
+default: return "border-zinc-500/50 bg-zinc-500/10";}origin/main
 };
 
 // Get category icon;
@@ -191,12 +192,12 @@ URL.revokeObjectURL(url);
 }, [filteredEvents]);
 
 // Share timeline;
-const shareTimeline = useCallback(() => {
-if (navigator.share) {
+const shareTimeline = useCallback(() => {;
+if (navigator.share) {;
 navigator.share({;
-title: "Project Timeline";
+title: "Project Timeline";,
 text: "Check out our project timeline";,
-url: window.location.href;});
+url: window.location.href;});origin/main
 } else {
 navigator.clipboard.writeText(window.location.href);
 }

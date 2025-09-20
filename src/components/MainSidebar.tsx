@@ -15,33 +15,33 @@ Leaf;
 Building;
 Mail;
 Calendar;
-Globe, Zap  } from "lucide-react";
+Globe, Zap  } from "lucide-react";origin/main
 
 const navigation = [
 { name: "Dashboard", href: "/", icon: Home },
 { name: "Services", href: "/services", icon: Code },
 { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
 { name: "Community", href: "/community", icon: Users },
-{ name: "Blog", href: "/blog", icon: FileText },
-{ name: "Contact", href: "/contact", icon: Mail },
+{ name: "Blog", href: "/blog", icon: FileText },;
+{ name: "Contact", href: "/contact", icon: Mail },;
 { name: "About", href: "/about", icon: HelpCircle },;
 ];
 
 const tools = [
 { name: "AI Tools", href: "/tools", icon: Zap },
-{ name: "Analytics", href: "/analytics", icon: BarChart3 },
-{ name: "Projects", href: "/projects", icon: Briefcase },
+{ name: "Analytics", href: "/analytics", icon: BarChart3 },;
+{ name: "Projects", href: "/projects", icon: Briefcase },;
 { name: "Calendar", href: "/calendar", icon: Calendar },;
 ];
 
 const company = [
-{ name: "Sustainability", href: "/sustainability", icon: Leaf },
-{ name: "Enterprise", href: "/enterprise", icon: Building },
+{ name: "Sustainability", href: "/sustainability", icon: Leaf },;
+{ name: "Enterprise", href: "/enterprise", icon: Building },;
 { name: "Global", href: "/global", icon: Globe },;
 ];
 
 interface MainSidebarProps {
-className?: string};
+className?: string};origin/main
 export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {;
 const location = useLocation();
 

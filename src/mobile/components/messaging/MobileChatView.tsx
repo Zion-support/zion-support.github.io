@@ -1,7 +1,6 @@
-interface Message {
-  id: string;,
+interface Message {id: string;
 content: string;
-  timestamp: string;,
+timestamp: string;,
 isMe: boolean;
   sender?: string;
   avatar?: string;
@@ -31,22 +30,22 @@ onBack: () => void;
           <Button variant='ghost' size='icon' aria-label='Attach file'>
             <PaperclipIcon className='h-5 w-5' />
           </Button>
-          <Input,
+          <Input,origin/main
 value={newMessage}
-            onChange={e => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
-            className='flex-1'          />
-          <Button,
-size='icon'
-            onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
-            <Send className='h-5 w-5' />
-          </Button>
-        </div>
-      </div>
-    </div>
-  )
+onChange={e => setNewMessage(e.target.value)}
+onKeyDown={handleKeyDown}
+placeholder="Type a message...";
+className="flex-1"          />
+<Button;
+size="icon";
+onClick={handleSend}
+disabled={!newMessage.trim()}
+className={!newMessage.trim() ? "opacity-50" : ""}
+aria-label="Send message"          >;
+<Send className="h-5 w-5" />;
+</Button>;
+</div>;
+</div>;
+</div>;
+)
 }

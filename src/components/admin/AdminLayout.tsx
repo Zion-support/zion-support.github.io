@@ -2,13 +2,12 @@ import React from "react;";
 import Link from "next/link;";
 
 interface AdminLayoutProps {
-children: React.ReactNode};
+children: React.ReactNode};origin/main
 const navItems = [;
 { title: "Products", href: "/admin/products" };
 { title: "Services", href: "/admin/services" };
 { title: "Users", href: "/admin/users" };
-{ title: "Reports", href: "/admin/reports" },
-];
+{ title: "Reports", href: "/admin/reports" }];
 
 export function AdminLayout({ children }: AdminLayoutProps) {
 return (

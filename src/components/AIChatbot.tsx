@@ -22,7 +22,8 @@ metadata?: {
 confidence?: number;
 intent?: string;
 entities?: string[];
-suggestions?: string[];
+}
+suggestions?: string[];}
 };
 }
 
@@ -31,7 +32,8 @@ welcomeMessage?: string;
 maxMessages?: number;
 enableSuggestions?: boolean;
 enableContext?: boolean;
-responseDelay?: number;
+}
+responseDelay?: number;}
 };
 export const AIChatbo; t: React.FC<ChatbotConfig> = ({
 welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant. How can I help you today?";
@@ -42,7 +44,7 @@ responseDelay = 1000;
 }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;});
+enableUserBehaviorTrackin; g: true;});origin/main
 const [isOp; e; n; setIsOp; e; n] = useState(false);
 const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
 const [messag; e; s; setMessag; e; s] = useState<ChatMessage[]>([]);
@@ -107,8 +109,7 @@ metadata;
 });
 
 // Track bot response;
-trackChatbotInteraction("bot_response",  {
-messageI; d: message.i; d;
+trackChatbotInteraction("bot_response",  {messageI; d: message.i; d;
 inten; t: metadata?.inten; t;
 confidenc; e: metadata?.confidence; });
 return message;
@@ -132,7 +133,7 @@ return "I"d be happy to help you get a quote! Could you tell me more about your 
 }
 
 if (input.includes("contact") || input.includes("phone") || input.includes("email")) {
-return "You can reach us a;  t: \n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http; s: //ziontechgroup.com\n\nWhen would be the best time to call you?";}
+return "You can reach us a;  t: \n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http; s: //ziontechgroup.com\n\nWhen would be the best time to call you?";}origin/main
 
 if (input.includes("technology") || input.includes("tech") || input.includes("stack")) {
 return "We work with cutting-edge technologies includin;  g; Reac; t; Node.j; s; Pytho; n; AW; S; Azur; e; AI/M; L; framework; s; and more. What technology stack are you currently using?";
@@ -147,15 +148,14 @@ return "I understand you"re asking about "" + userInput + "". Let me help you be
 }, [responseDel; a; y]);
 
 // Handle user input;
-const handleUserInput = useCallback(async (inpu;  t: string) => {
-if (!input.trim()) return;
+const handleUserInput = useCallback(async (inpu;  t: string) => {if (!input.trim()) return;
 // Add user message;
 const userMessage = addMessage({;
 typ;  e: "user";
 conten; t: input.trim()});
 // Track user input;
 trackChatbotInteraction("user_input",  {
-messageI; d: userMessage.i; d;
+messageI; d: userMessage.i; d;origin/main
 inputLengt; h: input.length; });
 // Clear input;
 setInputValue("");
@@ -179,7 +179,7 @@ suggestion; s: [
 
 // Track successful interaction;
 trackChatbotInteraction("conversation_success",  {
-userInpu; t: inpu; t;
+userInpu; t: inpu; t;origin/main
 responseLengt; h: response.length; });
 } catch (error) {
 // Handle error;
@@ -187,7 +187,7 @@ addBotMessage("I;  apologiz; e; but I"m experiencing some technical difficulties
 inten; t: "error";
 confidenc; e: 0.8;});
 trackChatbotInteraction("conversation_error",  {
-erro; r: error instanceof Error ? error.message : "Unknown error" });
+erro; r: error instanceof Error ? error.message : "Unknown error" });origin/main
 } finally {
 setIsTyping(false);
 }

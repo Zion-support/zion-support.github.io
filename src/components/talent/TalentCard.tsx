@@ -9,9 +9,9 @@ import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentCardProps {;
 talent: TalentProfile;
-onBook: (talent: TalentProfile) => void;
+onBook: (talent: TalentProfile) => void;,
 onMessage: (talent: TalentProfile) => void;,
-isAuthenticated: boolean;};
+isAuthenticated: boolean;};origin/main
 const TalentCardComponent: any = ({;
 talent;
 onBook;
@@ -171,5 +171,6 @@ import { FavoriteButton } from "@/components/FavoriteButton",;
 import { TalentProfile } from "@/types/talent";
 import { RatingStars } from '@/components/RatingStars';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { useCart } from '@/context/CartContext';
+import { useCart } from '@/context/CartContext';origin/main
 export interface TalentCardProps {
+}

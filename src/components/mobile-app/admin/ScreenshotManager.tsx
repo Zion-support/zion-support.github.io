@@ -7,11 +7,11 @@ import { AppPlatform } from "./MetadataManager, ";
 import { toast } from "sonner, ";
 
 interface ScreenshotManagerProps {
-platform: AppPlatform;};
+platform: AppPlatform;};origin/main
 type Screenshot = {;
-id: string;
+id: string;,
 url: string;,
-file: File;};
+file: File;};origin/main
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
 const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
@@ -155,9 +155,11 @@ className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opac
 import React { useState useRef } from "react",
 import { Card, CardHeader, CardTitleCardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-import { Upload, Trash2Plus } from 'lucide-react';
+import { Upload, Trash2Plus } from 'lucide-react';origin/main
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 interface ScreenshotManagerProps {
-  platform: AppPlatform;
+platform: AppPlatform;
+}
+}
 }

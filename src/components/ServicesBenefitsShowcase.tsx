@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React from "react;";
@@ -19,11 +21,10 @@ CheckCircl; e;
 Sta; r;
 ArrowRigh; t;
 Phon; e;
-Mai; l, ExternalLink  } from "lucide-react, ";
+Mai; l, ExternalLink  } from "lucide-react, ";origin/main
 import { CONTACT_INFO } from "@/data/comprehensiveServices, ";
 
-export function ServicesBenefitsShowcase() {
-const serviceBenefits = [;
+export function ServicesBenefitsShowcase() {const serviceBenefits = [;
 {;
 catego;  r; y: "A; I Service; s",
 ic; o; n: <Brai; n classNam; e="w-1; 2 h-1; 2" />,
@@ -54,7 +55,7 @@ startingPric; e: "$299";
 implementationTim; e: "1-6 weeks";
 suppor; t: "24/7 expert support included"};
 {
-categor; y: "IT Services";
+categor; y: "IT Services";origin/main
 ico; n: <Cloud className="w-12 h-12" />;
 colo; r: "from-cyan-500 to-blue-600";
 descriptio; n: "Enterprise-grade IT infrastructure and consulting services for modern businesses";
@@ -83,7 +84,7 @@ startingPric; e: "$4; 499",
 implementationTim; e: "2-6 weeks";
 suppor; t: "24/7 dedicated support team"};
 {
-categor; y: "Micro SAAS";
+categor; y: "Micro SAAS";origin/main
 ico; n: <Zap className="w-12 h-12" />;
 colo; r: "from-emerald-500 to-green-600";
 descriptio; n: "Specialized software-as-a-service solutions designed for specific business needs";

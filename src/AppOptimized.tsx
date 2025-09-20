@@ -1,6 +1,8 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
+}
+}
 }
 
 import React, { Suspense, lazy } from "react";
@@ -33,7 +35,7 @@ retry: 3,
 retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
 },
 mutations: {
-retry: 1,
+retry: 1,origin/main
 }
 }
 });

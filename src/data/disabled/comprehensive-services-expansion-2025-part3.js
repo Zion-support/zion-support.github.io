@@ -1,7 +1,6 @@
 // Neuromorphic Computing Services;
 export const neuromorphicComputingServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Brain-Inspired AI Platform";
         category: "Neuromorphic Computing";
         description: "Revolutionary neuromorphic computing platform that mimics human brain architecture for ultra-efficient AI processing and learning";
@@ -44,8 +43,7 @@ export const neuromorphicComputingServices2025 = [
 ];
 // Brain-Computer Interface Services;
 export const brainComputerInterfaceServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Neural Control Platform";
         category: "Brain-Computer Interface";
         pricing: "Enterprise";
@@ -88,8 +86,7 @@ export const brainComputerInterfaceServices2025 = [
 ];
     // Synthetic Biology Services;
 export const syntheticBiologyServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Bio-Design Studio";
         category: "Synthetic Biology";
         description: "Comprehensive synthetic biology platform for designing, modeling, and engineering biological systems with AI assistance",
@@ -132,8 +129,7 @@ export const syntheticBiologyServices2025 = [
 ];
 // Advanced Robotics Services;
 export const advancedRoboticsServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Autonomous Robotics Platform";
         category: "Advanced Robotics";
         pricing: "Enterprise";
@@ -176,8 +172,7 @@ export const advancedRoboticsServices2025 = [
 ];
     // Advanced Materials Services;
 export const advancedMaterialsServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Smart Materials Platform";
         category: "Advanced Materials";
         pricing: "Professional";
@@ -220,8 +215,7 @@ export const advancedMaterialsServices2025 = [
 ];
     // Advanced Energy Services;
 export const advancedEnergyServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Fusion Energy Management";
         category: "Fusion Energy";
         pricing: "Enterprise";
@@ -264,8 +258,7 @@ export const advancedEnergyServices2025 = [
 ];
     // Advanced Transportation Services;
 export const advancedTransportationServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Hyperloop Management System";
         category: "Advanced Transportation";
         pricing: "Enterprise";
@@ -308,8 +301,7 @@ export const advancedTransportationServices2025 = [
 ];
     // Advanced Communication Services;
 export const advancedCommunicationServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Quantum Communication Network";
         category: "Quantum Communication";
         pricing: "Enterprise";
@@ -352,8 +344,7 @@ export const advancedCommunicationServices2025 = [
 ];
     // Advanced Manufacturing Services;
 export const advancedManufacturingServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "4D Printing Platform";
         category: "4D Manufacturing";
         pricing: "Professional";
@@ -396,8 +387,7 @@ export const advancedManufacturingServices2025 = [
 ];
     // Advanced Gaming Services;
 export const advancedGamingServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Neural Gaming Platform";
         category: "Neural Gaming";
         pricing: "Professional";
@@ -439,8 +429,7 @@ export const advancedGamingServices2025 = [
         trialPeriod: "14 days"}
 ];
     // Export all cutting-edge services;
-export const allCuttingEdgeServices2025 = {
-    neuromorphic: neuromorphicComputingServices2025;
+export const allCuttingEdgeServices2025 = {neuromorphic: neuromorphicComputingServices2025;
     bci: brainComputerInterfaceServices2025;
     syntheticBiology: syntheticBiologyServices2025;
     robotics: advancedRoboticsServices2025;
@@ -484,4 +473,4 @@ export const searchCuttingEdgeServices = (query) => {
 };
 // Master export combining all services;
 export const masterServicesExport = {
-    cuttingEdge: allCuttingEdgeServices2025};
+    cuttingEdge: allCuttingEdgeServices2025};origin/main
