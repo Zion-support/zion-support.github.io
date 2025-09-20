@@ -5,8 +5,19 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+import { FlatCompat } from "@eslint/eslintrc";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname
+});
 
 export default [
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx}'],
@@ -22,7 +33,6 @@ export default [
         module: 'readonly',
         exports: 'readonly',
         require: 'readonly',
-        __dirname: 'readonly',
         setTimeout: 'readonly',
         setInterval: 'readonly',
         clearTimeout: 'readonly',
@@ -66,7 +76,6 @@ export default [
         module: 'readonly',
         exports: 'readonly',
         require: 'readonly',
-        __dirname: 'readonly',
         setTimeout: 'readonly',
         setInterval: 'readonly',
         clearTimeout: 'readonly',
@@ -196,7 +205,33 @@ export default [
       '**/src/features/**',
       '**/src/integrations/**',
       '**/src/test/**',
-      '**/src/vite-env.d.ts'
+      '**/src/vite-env.d.ts',
+      '**/temp_*/**',
+      '**/temp-*/**',
+      '**/temp*/**',
+      '**/broken*/**',
+      '**/corrupted*/**',
+      '**/disabled*/**',
+      '**/backup*/**',
+      '**/exclude*/**',
+      '**/conflicted*/**',
+      '**/working*/**',
+      '**/essential*/**',
+      '**/test_build/**',
+      '**/tests/**',
+      '**/utils/**',
+      '**/token/**',
+      '**/vite.config-backup.ts',
+      '**/zion-hire-ai.tsx',
+      '**/terms.tsx',
+      '**/test-utils.jsx',
+      '**/src_backup*/**',
+      '**/src_backup_temp/**',
+      '**/supabase/**',
+      '**/store/**',
+      '**/stories/**',
+      '**/talent/**',
+      '**/start-dev.js'
     ]
   }
 ];
