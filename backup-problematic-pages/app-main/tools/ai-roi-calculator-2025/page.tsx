@@ -1,8 +1,10 @@
 import React from 'react'
-const page: React.FC = () => {
+
+export default function AutonomousenterprisereadinessassessmentPage() {
   return (
-    <div>
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>)}
-export default page;
+    <div className="min-h-screen bg-gray-900 text-white p-8">
+      <h1 className="text-3xl font-bold mb-4">autonomous enterprise readiness assessment</h1>
+      <p className="text-gray-300">Tool description coming soon.</p>
+    </div>
+  )
+}
