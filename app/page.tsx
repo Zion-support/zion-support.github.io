@@ -3,9 +3,31 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ziontechgroup.com'),
   title: 'Zion Tech Group - Revolutionary AI & Technology Solutions',
-  description: 'Leading technology solutions provider specializing in AI, automation, quantum computing, and digital transformation. Transform your business with cutting-edge technology.',
-  keywords: ['AI solutions', 'quantum computing', 'automation', 'digital transformation', 'technology consulting', 'AI consulting']
+  description: 'Leading provider of AI automation, micro SaaS, and cutting-edge technology solutions. Transform your business with our innovative AI-powered services and enterprise solutions.',
+  keywords: ['AI automation', 'micro SaaS', 'technology solutions', 'enterprise AI', 'business transformation', 'artificial intelligence'],
+  openGraph: {
+    title: 'Zion Tech Group - Revolutionary AI & Technology Solutions',
+    description: 'Leading provider of AI automation, micro SaaS, and cutting-edge technology solutions.',
+    type: 'website',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - Revolutionary AI & Technology Solutions'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Revolutionary AI & Technology Solutions',
+    description: 'Leading provider of AI automation, micro SaaS, and cutting-edge technology solutions.',
+    images: ['/og-image.svg']
+  }
 }
 
 export default function HomePage() {
@@ -122,6 +144,30 @@ export default function HomePage() {
                 <p className="text-gray-300 text-sm">Real results from our implementations.</p>
               </div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold mb-2">500%</div>
+              <div className="text-blue-200">Average ROI</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">100+</div>
+              <div className="text-blue-200">Projects Delivered</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">24/7</div>
+              <div className="text-blue-200">Support Available</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">99.9%</div>
+              <div className="text-blue-200">Uptime Guarantee</div>
+            </div>
           </div>
         </div>
       </section>

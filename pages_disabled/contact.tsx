@@ -1,28 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const Contact: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Contact - Zion Tech Solutions</title>
-        <meta name="description" content="Contact page" />
-      </Head>
-      
-      <main>
-        <h1>Contact</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  );
-};
-
-export default Contact;
-=======
-import React from 'react';
-import Head from 'next/head';
+import React from 'react'
+import Head from 'next/head'
 
 export default function ContactPage() {
 	return (
@@ -39,54 +16,54 @@ export default function ContactPage() {
 				</div>
 			</main>
 		</>
-	);
+	)
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 export default function Page(){return null}
 =======
 =======
-import React from 'react';
+import React from 'react'
 =======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Send, User, Building2, MessageCircle, Clock as ClockIcon, Globe as GlobeIcon2, Shield as ShieldIcon2, Zap as ZapIcon4, Users as UsersIcon2, Rocket as RocketIcon2, Award as AwardIcon2, TrendingUp as TrendingUpIcon2, CheckCircle, AlertCircle, Info } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import React, { useState } from 'react'
+import Head from 'next/head'
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Send, User, Building2, MessageCircle, Clock as ClockIcon, Globe as GlobeIcon2, Shield as ShieldIcon2, Zap as ZapIcon4, Users as UsersIcon2, Rocket as RocketIcon2, Award as AwardIcon2, TrendingUp as TrendingUpIcon2, CheckCircle, AlertCircle, Info } from 'lucide-react'
+import Button from '../components/ui/Button'
+import Card from '../components/ui/Card'
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard'
 
 export default function ContactPage() {
   const contactInfo = [
     {
-      icon: Mail,
-      title: "Email",
-      content: "kleber@ziontechgroup.com",
-      link: "mailto:kleber@ziontechgroup.com",
+      icon: Mail
+      title: "Email"
+      content: "kleber@ziontechgroup.com"
+      link: "mailto:kleber@ziontechgroup.com"
       color: "from-blue-500 to-cyan-500"
-    },
+    }
     {
-      icon: Phone,
-      title: "Phone",
-      content: "+1 (302) 464-0950",
-      link: "tel:+13024640950",
+      icon: Phone
+      title: "Phone"
+      content: "+1 (302) 464-0950"
+      link: "tel:+13024640950"
       color: "from-green-500 to-emerald-500"
-    },
+    }
     {
-      icon: MapPin,
-      title: "Location",
-      content: "Delaware, United States",
-      link: "#",
+      icon: MapPin
+      title: "Location"
+      content: "Delaware, United States"
+      link: "#"
       color: "from-purple-500 to-pink-500"
-    },
+    }
     {
-      icon: Clock,
-      title: "Business Hours",
-      content: "Mon-Fri: 9AM-6PM EST",
-      link: "#",
+      icon: Clock
+      title: "Business Hours"
+      content: "Mon-Fri: 9AM-6PM EST"
+      link: "#"
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -103,146 +80,146 @@ export default function ContactPage() {
 
       <EnhancedNavigation />
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const Contact: NextPage = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    company: '',
-    jobTitle: '',
-    service: '',
-    projectType: '',
-    budget: '',
-    timeline: '',
-    message: '',
-    preferredContact: 'email',
+    firstName: ''
+    lastName: ''
+    email: ''
+    phone: ''
+    company: ''
+    jobTitle: ''
+    service: ''
+    projectType: ''
+    budget: ''
+    timeline: ''
+    message: ''
+    preferredContact: 'email'
     newsletter: false
-  });
+  })
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
 
   const services = [
-    'AI & Machine Learning Solutions',
-    'Cloud Migration & Optimization',
-    'Cybersecurity & Compliance',
-    'Custom Software Development',
-    'Data Analytics & Business Intelligence',
-    'DevOps & Infrastructure Automation',
-    'Digital Transformation Consulting',
-    'IoT & Smart Manufacturing',
-    'Mobile App Development',
-    'Web Application Development',
+    'AI & Machine Learning Solutions'
+    'Cloud Migration & Optimization'
+    'Cybersecurity & Compliance'
+    'Custom Software Development'
+    'Data Analytics & Business Intelligence'
+    'DevOps & Infrastructure Automation'
+    'Digital Transformation Consulting'
+    'IoT & Smart Manufacturing'
+    'Mobile App Development'
+    'Web Application Development'
     'Other (Please specify)'
-  ];
+  ]
 
   const projectTypes = [
-    'New Project Development',
-    'Existing System Enhancement',
-    'System Integration',
-    'Consulting & Strategy',
-    'Training & Support',
-    'Maintenance & Updates',
+    'New Project Development'
+    'Existing System Enhancement'
+    'System Integration'
+    'Consulting & Strategy'
+    'Training & Support'
+    'Maintenance & Updates'
     'Other'
-  ];
+  ]
 
   const budgetRanges = [
-    'Under $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $250,000',
-    '$250,000 - $500,000',
+    'Under $10,000'
+    '$10,000 - $25,000'
+    '$25,000 - $50,000'
+    '$50,000 - $100,000'
+    '$100,000 - $250,000'
+    '$250,000 - $500,000'
     'Over $500,000'
-  ];
+  ]
 
   const timelineOptions = [
-    'Immediate (1-2 months)',
-    'Short-term (3-6 months)',
-    'Medium-term (6-12 months)',
-    'Long-term (1+ years)',
+    'Immediate (1-2 months)'
+    'Short-term (3-6 months)'
+    'Medium-term (6-12 months)'
+    'Long-term (1+ years)'
     'Flexible'
-  ];
+  ]
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target;
+    const { name, value, type } = e.target
     setFormData(prev => ({
-      ...prev,
+      ...prev
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true)
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000))
     
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
+    setIsSubmitting(false)
+    setSubmitSuccess(true)
     
     // Reset form after success
     setTimeout(() => {
-      setSubmitSuccess(false);
+      setSubmitSuccess(false)
       setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        jobTitle: '',
-        service: '',
-        projectType: '',
-        budget: '',
-        timeline: '',
-        message: '',
-        preferredContact: 'email',
+        firstName: ''
+        lastName: ''
+        email: ''
+        phone: ''
+        company: ''
+        jobTitle: ''
+        service: ''
+        projectType: ''
+        budget: ''
+        timeline: ''
+        message: ''
+        preferredContact: 'email'
         newsletter: false
-      });
-    }, 5000);
-  };
+      })
+    }, 5000)
+  }
 
   const contactMethods = [
     {
-      title: 'Phone',
-      value: '+1 302 464 0950',
-      icon: '📞',
-      description: 'Call us directly for immediate assistance',
+      title: 'Phone'
+      value: '+1 302 464 0950'
+      icon: '📞'
+      description: 'Call us directly for immediate assistance'
       available: 'Mon-Fri 9AM-6PM EST'
-    },
+    }
     {
-      title: 'Email',
-      value: 'kleber@ziontechgroup.com',
-      icon: '✉️',
-      description: 'Send us a detailed message',
+      title: 'Email'
+      value: 'kleber@ziontechgroup.com'
+      icon: '✉️'
+      description: 'Send us a detailed message'
       available: '24/7 response within 4 hours'
-    },
+    }
     {
-      title: 'Office',
-      value: '364 E Main St STE 1008, Middletown DE 19709',
-      icon: '🏢',
-      description: 'Visit our headquarters',
+      title: 'Office'
+      value: '364 E Main St STE 1008, Middletown DE 19709'
+      icon: '🏢'
+      description: 'Visit our headquarters'
       available: 'By appointment only'
     }
-  ];
+  ]
 
   const businessHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
-    { day: 'Saturday', hours: '10:00 AM - 2:00 PM EST' },
+    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' }
+    { day: 'Saturday', hours: '10:00 AM - 2:00 PM EST' }
     { day: 'Sunday', hours: 'Closed' }
-  ];
+  ]
 
   const responseTimes = [
-    { type: 'Phone Calls', time: 'Immediate' },
-    { type: 'Emails', time: 'Within 4 hours' },
-    { type: 'Contact Form', time: 'Within 2 hours' },
+    { type: 'Phone Calls', time: 'Immediate' }
+    { type: 'Emails', time: 'Within 4 hours' }
+    { type: 'Contact Form', time: 'Within 2 hours' }
     { type: 'Emergency Support', time: 'Within 30 minutes' }
-  ];
+  ]
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -666,10 +643,10 @@ const Contact: NextPage = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
 =======
       <main className="pt-20">
         {/* Hero Section */}
@@ -785,6 +762,6 @@ export default Contact;
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

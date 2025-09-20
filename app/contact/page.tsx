@@ -2,9 +2,16 @@ import React from 'react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Zion Tech Group',
-  description: 'Get in touch with our AI and technology experts. Contact Zion Tech Group for consultation, support, and partnership opportunities.',
-  keywords: ['contact', 'consultation', 'support', 'partnership', 'AI consulting', 'technology consulting']
+  metadataBase: new URL('https://ziontechgroup.com'),
+  title: 'Contact Us - Zion Tech Group | Get Your Free Consultation',
+  description: 'Contact Zion Tech Group for AI automation, micro SaaS, and enterprise technology solutions. Get your free consultation and ROI analysis today.',
+  keywords: ['contact', 'consultation', 'AI automation', 'micro SaaS', 'enterprise solutions', 'ROI analysis'],
+  openGraph: {
+    title: 'Contact Us - Zion Tech Group',
+    description: 'Get your free consultation and ROI analysis for AI automation solutions.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/contact'
+  }
 }
 
 export default function ContactPage() {
