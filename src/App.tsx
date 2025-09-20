@@ -12,6 +12,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 import SkeletonLoader from './components/SkeletonLoader';
 import { useTheme } from './context/ThemeContext';
+import SEOOptimizer from './utils/seoOptimizer';
 
 // Service data with more details
 const services = [
