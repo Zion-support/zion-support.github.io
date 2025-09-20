@@ -1,4 +1,5 @@
 import React from "react";
+import EnhancedContactForm from "./EnhancedContactForm";
 import ContactForm from "./ContactForm";
 const Contact: React.FC = () => {
   return (
@@ -38,9 +39,9 @@ const Contact: React.FC = () => {
             </div>
           </section>
 
-          {/* Contact Form Section */}
-          <section className="py-20 px-4">
-            <ContactForm />
+          {/* Enhanced Contact Form Section */}
+          <section className="pb-20 px-4">
+            <EnhancedContactForm />
           </section>
 
           {/* Contact Information Section */}

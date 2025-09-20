@@ -1,8 +1,15 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import OptimizedImage from "./OptimizedImage";
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [hoveredService, setHoveredService] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState(0);
+
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.6]);
 
   const handleScroll = useCallback(() => {
     setScrollY(window.scrollY);
@@ -41,12 +48,54 @@ const Home: React.FC = () => {
     }
   ], []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
+    <motion.div 
+      className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       <div className="relative overflow-hidden">
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-600/10 via-transparent to-transparent"></div>
+        {/* Enhanced animated background */}
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"
+          animate={{ 
+            opacity: [0.3, 0.6, 0.3],
+            scale: [1, 1.05, 1]
+          }}
+          transition={{ 
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div 
+          className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-600/10 via-transparent to-transparent"
+          style={{ y, opacity }}
+        />
         
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
@@ -69,39 +118,89 @@ const Home: React.FC = () => {
           {/* Hero Section */}
           <section className="min-h-screen flex items-center justify-center px-4">
             <div className="max-w-6xl mx-auto text-center">
-              <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <motion.div
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                className="space-y-8"
+              >
+                <motion.h1 
+                  className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  animate={{ 
+                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
                   Zion
-                </h1>
-                <p className="text-2xl md:text-3xl mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                </motion.h1>
+                
+                <motion.p 
+                  className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+                  variants={itemVariants}
+                >
                   The future of technology is here. Transform your business with our cutting-edge AI, quantum computing, and space technology solutions.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                </motion.p>
+                
+                <motion.div 
+                  className="flex flex-col sm:flex-row gap-6 justify-center"
+                  variants={itemVariants}
+                >
+                  <motion.button 
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300 shadow-lg"
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     Explore Solutions
-                  </button>
-                  <button className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300">
+                  </motion.button>
+                  <motion.button 
+                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300"
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     View Portfolio
-                  </button>
-                </div>
-              </div>
+                  </motion.button>
+                </motion.div>
+              </motion.div>
             </div>
           </section>
 
           {/* Services Section */}
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
-              <div className={`transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <motion.div
+                variants={itemVariants}
+                className="text-center mb-16"
+              >
+                <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Our Services
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Discover our comprehensive suite of cutting-edge technology solutions designed to transform your business
+                </p>
+              </motion.div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <AnimatePresence>
                   {services.map((service, index) => (
-                    <div
+                    <motion.div
                       key={service.title}
-                      className={`group bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 cursor-pointer transition-all duration-1000 delay-${index * 100} ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                      variants={itemVariants}
+                      whileHover={{ 
+                        scale: 1.05,
+                        rotateY: 5,
+                        z: 50
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      className="group bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/25 cursor-pointer"
                       onMouseEnter={() => setHoveredService(index)}
                       onMouseLeave={() => setHoveredService(null)}
+                      style={{
+                        perspective: "1000px"
+                      }}
                     >
                       <div className={`text-4xl mb-4 transition-transform duration-300 ${hoveredService === index ? 'scale-110' : ''}`}>
                         {service.icon}
@@ -126,9 +225,9 @@ const Home: React.FC = () => {
                         ))}
                       </ul>
                       <div className={`mt-6 h-1 bg-gradient-to-r ${service.gradient} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></div>
-                    </div>
+                    </motion.div>
                   ))}
-                </div>
+                </AnimatePresence>
               </div>
             </div>
           </section>
@@ -269,7 +368,7 @@ const Home: React.FC = () => {
           </section>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 };
 export default Home;
