@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export const PerformanceOptimizer = ({ children }) => {
+const PerformanceOptimizer = ({ children }) => {
     const location = useLocation();
 
     // Optimize images on route change

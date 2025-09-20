@@ -156,7 +156,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
     );
 }
 
-export function ErrorBoundary({ children, fallback, onError }) {
+function ErrorBoundary({ children, fallback, onError }) {
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState(null);
     const [retryCount, setRetryCount] = useState(0);
@@ -243,3 +243,6 @@ export function withErrorBoundary(Component, fallback = null) {
         );
     };
 }
+
+// Default export
+export default ErrorBoundary;
