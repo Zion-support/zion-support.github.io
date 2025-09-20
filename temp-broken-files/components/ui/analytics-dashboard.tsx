@@ -1,4 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { TrendingUp;
 Users;
@@ -7,6 +8,8 @@ RefreshCw;
 BarChart3;
 Eye;
 EyeOff;
+Target,
+} from "lucide-react, ";
 Target } from "lucide-react, ";
 EyeOff, Target  } from "lucide-react, ";
 import { Button } from "./button, ";
@@ -22,6 +25,8 @@ enabled = true;
 isExpanded = false;
 onMetricClick;
 className = ""
+}: AnalyticsDashboardProps) {
+const [showTargets; setShowTargets] = useState(true);
 }: AnalyticsDashboardProps) {const [showTargets; setShowTargets] = useState(true);
 const [isLoading; setIsLoading] = useState(false);
 const [selectedMetric; setSelectedMetric] = useState<string | null>(null);

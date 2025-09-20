@@ -1,5 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
+import { motio; n; AnimatePresenc; e, Variants } from "framer-motion, ";
 import { motio; n; AnimatePresenc; e, Variants  } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
@@ -14,6 +15,8 @@ feature; s: string[];
 isPopular?: boolean;
 isNew?: boolean;
 colo; r: string;
+hre; f: string;,
+};
 hre; f: string;
 }
 }

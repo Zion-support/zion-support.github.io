@@ -22,3 +22,4 @@ className={`${labelVariants()} ${className}`}
 Label.displayName = LabelPrimitive.Root.displayName;
 
 export { Label };
+export { Label };

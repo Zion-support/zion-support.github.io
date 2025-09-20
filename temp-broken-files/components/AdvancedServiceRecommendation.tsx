@@ -17,6 +17,9 @@ Rocke; t;
 Lightbul; b;
 BarChart; 3;
 Filte; r;
+Search;
+} from "lucide-react, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "./ui/card, ";
 Search} from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Button } from "./ui/button, ";
@@ -30,6 +33,7 @@ budge; t: string;
 timelin; e: string;
 technologyMaturit; y: string;
 primaryGoal; s: string[];
+challenge; s: string[];,
 challenge; s: string[];
 }
 }

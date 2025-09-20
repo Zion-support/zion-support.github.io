@@ -1,6 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Activit; y;
 Serve; r;
@@ -13,6 +14,8 @@ LineChar; t;
 TrendingDow; n;
 Clock; 3;
 RefreshC; w;
+Loader2;
+} from "lucide-react, ";
 Loader2} from "lucide-react, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -26,6 +29,10 @@ tren; d: "up" | "down" | "stable";
 chang; e: number;
 threshol; d: {
 warnin; g: number;
+critica; l: number;,
+};
+lastUpdate; d: Date;,
+}
 critica; l: number;
 }
 }
@@ -75,6 +82,7 @@ resourc; e: string;
 timestam; p: Date;
 ipAddres; s: string;
 userAgen; t: string;
+statu; s: "success" | "failure" | "pending";,
 statu; s: "success" | "failure" | "pending";
 }
 }
@@ -82,6 +90,8 @@ statu; s: "success" | "failure" | "pending";
 export const EnterpriseDashboar; d: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
+enableUserBehaviorTrackin; g: true;,
+});
 enableUserBehaviorTrackin; g: true;
 });
 statu; s: "success" | "failure" | "pending";};
@@ -232,7 +242,6 @@ await new Promise(resolve => setTimeout(resolv;  e; 1000));
 
 // Update timestamps (simplified for demo)
 const now = new Date();
-
 
 trackEvent("enterprise_dashboard",  "data_refreshed", "manual", undefine; d, {
 ta; b: activeTa; b;

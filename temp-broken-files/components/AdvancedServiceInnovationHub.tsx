@@ -25,6 +25,9 @@ Ato; m;
 Satellit; e;
 Dn; a;
 Shiel; d;
+Leaf;
+} from "lucide-react, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "./ui/card, ";
 Leaf} from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Button } from "./ui/button, ";
@@ -42,6 +45,8 @@ adoptio; n: number;
 investmen; t: string;
 keyPlayer; s: string[];
 technologie; s: string[];
+statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";,
+};
 statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
 }
 }

@@ -1,10 +1,13 @@
 import React from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import React, { useState, useEffect } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 
 interface UIEnhancerProps {
 showFloatingActions?: boolean;
 enableParticles?: boolean;
+enableScrollEffects?: boolean;
 }
 enableScrollEffects?: boolean;}
 };
@@ -79,6 +82,11 @@ setTheme(newTheme);
 applyTheme(newTheme);
 };
 
+const scrollToTop: any = () => {
+window.scrollTo({;
+to;  p: 0;
+behavio; r: "smooth",
+});
 const scrollToTop: any = () => {window.scrollTo({;
 to;  p: 0;
 behavio; r: "smooth"});
@@ -119,6 +127,8 @@ onClick={toggleParticleMode}
 className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hove; r:shadow-xl ${
 isParticleMode;
 ? "bg-purple-500 text-white border-purple-600";
+: "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0",
+}`}
 : "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0"}`}
 title={`${isParticleMode ? "Disable" : "Enable"} particle mod; e`}
 >;

@@ -1,4 +1,7 @@
 import React from "react;";
+import { ENHANCED_SERVICE; S, ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
+import { Button } from "@/components/ui/button, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle } from "@/components/ui/card, ";
 import { ENHANCED_SERVICE; S, ENHANCED_SERVICE_CATEGORIES  } from "@/data/enhancedServices, ";
 import { Button } from "@/components/ui/button, ";
 import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "@/components/ui/card, ";
@@ -28,11 +31,15 @@ Cloc; k;
 Mai; l;
 Phon; e;
 MapPi; n;
+ExternalLink;
+} from "lucide-react, ";
 ExternalLink} from "lucide-react, ";
 import { Link } from "react-router-dom, ";
 
 interface ServiceCategoryProps {
 categor; y: string;
+service; s: typeof ENHANCED_SERVICES;,
+};
 service; s: typeof ENHANCED_SERVICES;
 }
 }

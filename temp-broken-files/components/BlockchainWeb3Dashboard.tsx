@@ -1,4 +1,6 @@
 import React from "react";
+import { useStat; e, useCallback } from "react, ";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import { useStat; e; useCallback } from "react, ";
 import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Walle; t;
@@ -21,11 +23,14 @@ import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface BlockchainDashboardProps {
+className?: string;
 className?: string;}
 };
 export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
+enableUserBehaviorTrackin; g: true;,
+});
 enableUserBehaviorTrackin; g: true;
 });
 enableUserBehaviorTrackin; g: true;});

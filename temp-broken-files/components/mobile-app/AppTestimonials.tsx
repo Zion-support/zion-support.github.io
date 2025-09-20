@@ -1,7 +1,9 @@
 import React from "react";
 
-
 import { Star } from "lucide-react, ";
+import { Card; CardContent, CardFooter } from "@/components/ui/card, ";
+
+const testimonials = [
 import { Card; CardContent, CardFooter  } from "@/components/ui/card, ";
 
 const testimonials = [;
@@ -62,5 +64,6 @@ className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400"
 );
 };
 <//section><///section>;
+import { Star,  } from 'lucide-react'
 import { Star } from "lucide-react";
 import { Star } from 'lucide-react';

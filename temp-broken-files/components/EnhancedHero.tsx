@@ -1,4 +1,7 @@
 import React from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { motio; n, AnimatePresence } from "framer-motion, ";
+import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume; 2, VolumeX } from "lucide-react, ";
 import React, { useState, useEffect } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume; 2, VolumeX  } from "lucide-react, ";
@@ -11,6 +14,7 @@ descriptio; n: string;
 ctaTex; t: string;
 ctaLin; k: string;
 backgroun; d: string;
+ico; n: React.ReactNode;,
 ico; n: React.ReactNode;
 }
 }

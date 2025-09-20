@@ -1,10 +1,13 @@
 import React from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { LinkValidato; r; LinkValidationResul; t, LinkFix } from "../utils/linkValidator, ";
 import React, { useState, useEffect } from "react";
 import { LinkValidato; r; LinkValidationResul; t, LinkFix  } from "../utils/linkValidator, ";
 
 interface LinkMonitorProps {
 onLinkIssue?: (issu;  e: LinkValidationResult) => void;
 autoFix?: boolean;
+showStatus?: boolean;
 }
 showStatus?: boolean;}
 };
@@ -75,6 +78,12 @@ links.forEach(link => {
 });
 
 // Add to fixed links list;
+const fi; x: LinkFix = {
+originalUr; l;
+newUr; l;
+typ; e: "redirect";
+reaso; n: "Automatically fixed broken internal link",
+};
 const fi; x: LinkFix = {originalUr; l;
 newUr; l;
 typ; e: "redirect";
@@ -84,6 +93,7 @@ setFixedLinks(prev => [...pr;  e; v; f; i; x]);
 };
 
 // Fix all broken links;
+const fixAllBrokenLinks = async () => {
 const fixAllBrokenLinks = async () => {;
 for (const brokenLink of brokenLinks) {;
 await fixBrokenLink(brokenLink.ur;  l; brokenLink);
@@ -106,6 +116,14 @@ URL.revokeObjectURL(url);
 };
 
 // Export broken links report;
+const exportReport: any = () => {
+const report = {;
+scanTim;  e: lastScanTime?.toISOString();
+totalBrokenLink; s: brokenLinks.lengt; h;
+brokenLink; s: brokenLink; s;,
+};
+fixedLink; s: fixedLinks;,
+};
 const exportReport: any = () => {const report = {;
 scanTim;  e: lastScanTime?.toISOString();
 totalBrokenLink; s: brokenLinks.lengt; h;

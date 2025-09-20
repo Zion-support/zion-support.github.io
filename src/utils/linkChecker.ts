@@ -6,23 +6,11 @@ error?: string}
 export interface PageInfo {path: string, title: string, links: LinkInfo[];
 }
 }
-exists: boolean}
+anchor?: string;
+error?: string}
 
-export class LinkChecker {private baseUrl: string;
-private visitedUrls: Set<string> = new Set();
-private brokenLinks: LinkInfo[] = [];
-private missingPages: string[] = [];
-
-constructor(baseUrl: string = "https://ziontechgroup.com") {
-this.baseUrl = baseUrl}
-
-isInternalLink(url: string): boolean {return url.startsWith("/") ||;
-url.startsWith(this.baseUrl) ||;
-url.startsWith("./") ||;
-url.startsWith("../")}
-
-normalizeUrl(url: string, basePage: string): string {if (url.startsWith("http")) {
-return url}
+export interface PageInfo {
+path: string; title: string; links: LinkInfo[];,return url}
 
 if (url.startsWith("/")) {
 return `${this.baseUrl}${url}`;
@@ -80,25 +68,22 @@ if (!exists) {
 link.status = "missing";
 this.missingPages.push(link.url)}
 } else {link.status = "external"}
-
-checkedLinks.push(link);
-}
-
-return {path: pagePath, title: this.extractPageTitle(pageContent)
-links: checkedLinks, exists: true};
-}
+} else {
+link.status = "external"}}
 
 private extractPageTitle(content: string): string {const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
 return titleMatch ? titleMatch[1].trim() : "Untitled"}
 
 getSummary() {return {
-totalLinks: this.visitedUrls.size, brokenLinks: this.brokenLinks.length;,
-missingPages: this.missingPages.length, externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
-}
+totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;,
+missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};}
 
 getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
 
 getMissingPages(): string[] {return this.missingPages}
+return {
+path: pagePath; title: this.extractPageTitle(pageContent),
+links: checkedLinks; exists: true};
 }
 
 private extractPageTitle(content: string): string {

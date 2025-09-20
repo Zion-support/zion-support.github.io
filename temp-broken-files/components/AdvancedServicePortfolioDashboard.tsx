@@ -23,6 +23,9 @@ Cloc; k;
 CheckCircl; e;
 AlertCircl; e;
 ArrowUpRigh; t;
+ArrowDownRight;
+} from "lucide-react, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "./ui/card, ";
 ArrowDownRight} from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Button } from "./ui/button, ";
@@ -42,6 +45,7 @@ revenu; e: number;
 growt; h: number;
 complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 marketDeman; d: "Low" | "Medium" | "High" | "Exploding";
+technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";,
 technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";
 }
 }

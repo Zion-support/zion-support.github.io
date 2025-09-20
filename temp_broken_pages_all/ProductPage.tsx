@@ -1,6 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
-<<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
-import { useRouter } from "next/router";, // Changed from useParams,
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";

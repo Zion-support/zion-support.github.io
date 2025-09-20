@@ -1,7 +1,6 @@
 import React from 'react';
 
-<<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
-import { useState, useEffect } from "react";,
+import { useState; useEffect } from "react";,import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
 import { toast } from "@/components/ui/use-toast";,

@@ -1,6 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useCallbac; k; useEffec; t; useRef } from "react";
 impor; t; Reac; t, { useStat; e; useCallbac; k; useEffec; t; useRef } from "react";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { MessageCircl; e;
 Sen; d;
@@ -10,6 +11,8 @@ X;
 Minimize; 2;
 Maximize; 2;
 Loader; 2;
+Sparkles;
+} from "lucide-react, ";
 Sparkles} from "lucide-react, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -22,6 +25,7 @@ metadata?: {
 confidence?: number;
 intent?: string;
 entities?: string[];
+suggestions?: string[];
 }
 suggestions?: string[];}
 };
@@ -32,6 +36,7 @@ welcomeMessage?: string;
 maxMessages?: number;
 enableSuggestions?: boolean;
 enableContext?: boolean;
+responseDelay?: number;
 }
 responseDelay?: number;}
 };
@@ -44,6 +49,8 @@ responseDelay = 1000;
 }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
+enableUserBehaviorTrackin; g: true;,
+});
 enableUserBehaviorTrackin; g: true;
 });
 enableUserBehaviorTrackin; g: true;});

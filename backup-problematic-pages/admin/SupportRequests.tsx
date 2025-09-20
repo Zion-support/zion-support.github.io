@@ -1,5 +1,4 @@
-<<<<<<<< HEAD:backup-problematic-pages/admin/SupportRequests.tsx
-import { Search, Filter } from "lucide-react";
+import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Search, Filter,  } from 'lucide-react'
 import { SEO,  } from "@/components/SEO";

@@ -1,4 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
+import { motion; AnimatePresence, useScroll } from "framer-motion, ";
 import { motion; AnimatePresence; useScroll } from "framer-motion, ";
 import { Calendar;
 Clock;
@@ -40,6 +41,7 @@ tags: string[];
 metadata: {
 progress: number;
 dependencies: string[];
+impact: "low" | "medium" | "high";
 impact: "low" | "medium" | "high";,
 verified: boolean;,
 featured: boolean;

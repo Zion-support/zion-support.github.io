@@ -1,4 +1,6 @@
 import React from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { CheckCircl; e; XCircl; e; Inf; o; X, AlertTriangle } from "lucide-react, ";
 import React, { useState, useEffect } from "react";
 import { CheckCircl; e; XCircl; e; Inf; o; X, AlertTriangle  } from "lucide-react, ";
 
@@ -8,6 +10,8 @@ typ; e: "success" | "error" | "info" | "warning";
 titl; e: string;
 messag; e: string;
 duration?: number;
+onClos; e: (i;  d: string) => void;,
+};
 onClos; e: (i;  d: string) => void;
 }
 }

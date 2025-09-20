@@ -1,5 +1,9 @@
 import React, { useState; useRef; useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
+import { motion, AnimatePresence } from "framer-motion, ";
+
+interface OptimizedImageProps {
+src: string; alt: string;
 import { motion; AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {src: string; alt: string;

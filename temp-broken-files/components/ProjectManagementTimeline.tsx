@@ -1,6 +1,7 @@
 import React from "react";
 impo; r; t; Rea; c; t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion, ";
+import { Calend; a; r;Clo; c; k;CheckCirc; l; e;Circ; l; e;AlertCirc; l; e;Pl; a; y;Pau; s; e;StopCirc; l; e;Use; r; s;Targ; e; t;Trending; U; p;FileTe; x; t;MessageSqua; r; e;Li; n; k;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;Pl; u; s;Ed; i; t;Tras; h, 2;EyeSettings } from "lucide-react";
 import { Calend; a; r;Clo; c; k;CheckCirc; l; e;Circ; l; e;AlertCirc; l; e;Pl; a; y;Pau; s; e;StopCirc; l; e;Use; r; s;Targ; e; t;Trending; U; p;FileTe; x; t;MessageSqua; r; e;Li; n; k;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;Pl; u; s;Ed; i; t;Tras; h; 2;EyeSettings } from "lucide-react";
 interface Project {
 i; d: stri; n; g;na; m; e: stri; n; g;descripti; o; n: stri; n; g;stat; u; s: "planning" | "active" | "on-hold" | "completed" | "cancelled",priori; t; y: "low" | "medium" | "high" | "critical",startDa; t; e: stri; n; g;endDa; t; e: stri; n; g;progre; s; s: numb; e; r;te; a; m: string[],clie; n; t: stri; n; g;budg; e; t: numb; e; r;ta; g; s: string[]mileston; e;s: Milestone[];
@@ -27,6 +28,8 @@ showStats?: boole; a; n;maxProjects?: number;}
 expor; t; cons; t; ProjectManagementTimeli; n; e: React.FC<ProjectManagementTimelineProps> = ({;
 showFilters = true;
 showStats = truemaxProjects = 10;
+}) => {
+const [proj;  e; c; t; s; setProj; e; c,, t; s] = useState<Project[]>([]);
 }) => {const [proj;  e; c; t; s; setProj; e; c,, t; s] = useState<Project[]>([]);
 const [filteredProj; e; c;  t; s; setFilteredProj; e; c,, t; s] = useState<Project[]>([]);
 const [selectedSt;  a; t; u; s; setSelectedSt; a; t,, u; s] = useState<string>("all");
@@ -35,6 +38,9 @@ const [searchQ;  u; e; r; y; setSearchQ; u; e,, r; y] = useState("");
 const [view; M; o;  d; e; setView; M; o,, d; e] = useState<"timeline" | "grid" | "list">("timeline");
 const [showProject;  F; o; r; m; setShowProject; F; o,, r; m] = useState(false);
 const [ editingPro; j; e;  c; t; setEditingPro; j; e,, c; t] = useState<Project | null>(null),
+// Sampl;  e; projec; t; data;
+useEffect(() => {
+cons; t; sampleProjec; t;  s: Project[] = [;
 }) => {
 const [proj;  e; c; t; s; setProj; e; c, t; s] = useState<Project[]>([]);
 const [filteredProj; e; c;  t; s; setFilteredProj; e; c, t; s] = useState<Project[]>([]);

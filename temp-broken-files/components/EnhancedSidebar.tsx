@@ -1,10 +1,12 @@
 interface Service {
+id: string;
 id: string;,
 name: string;
 }
 }
 }
 
+import { import { motion, AnimatePresence,  } from "framer-motion",
 import { import { motion; AnimatePresence   } from "framer-motion";
 ,
 export default function Page("props": "any) {,
@@ -102,5 +104,6 @@ transition = {,
 </div>,
 </aside>,) },
 '"`,
+</motion, >,
 </motion>,
 </motion>]]<//motion><///motion>;

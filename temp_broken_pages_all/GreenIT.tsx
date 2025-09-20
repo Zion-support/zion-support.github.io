@@ -258,7 +258,7 @@ BatteryLow, as, BatteryLow10;
 BatteryMedium, as, BatteryMedium10,;
 BatteryEmpty, as, BatteryEmpty10 } from "lucide-react";
 export default function GreenIT(...args: unknown[]): unknown {
-  
+
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
@@ -991,16 +991,5 @@ export default function GreenIT() {
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
     </div>
-  );
-}
-      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-white mb-4">GreenIT</h1>
-            <p className="text-zion-slate-light text-lg">Coming soon...</p>
-          </div>
-        </div>
-      </div>
-    </>
   );
 }

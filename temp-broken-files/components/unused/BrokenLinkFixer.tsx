@@ -1,4 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { LinkIcon;
 ExclamationTriangleIcon;
@@ -9,6 +10,11 @@ WrenchScrewdriverIcon;
 InformationCircleIcon;
 MagnifyingGlassIcon;
 GlobeAltIcon;
+DocumentTextIcon;
+} from "@heroicons/react/24/outline, ";
+
+interface LinkStatus {
+url: string;
 DocumentTextIcon} from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {

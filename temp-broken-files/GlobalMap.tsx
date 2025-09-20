@@ -8,7 +8,7 @@ import { NextSeo, ,  } from '@/components/NextSeo';
 import { Globe, MapPin,  } from 'lucide-react'
 >>>>>>>> pr-22690:temp-broken-files/GlobalMap.tsx
 interface Instance {
-  
+
   id: number;
 name: string;
   lat: number;
@@ -21,7 +21,7 @@ votesPending: number;
 const INSTANCES: Instance[] = [
   {
 interface FeedItem {
-  
+
   id: number;
 text: string
 }

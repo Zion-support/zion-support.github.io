@@ -221,6 +221,8 @@ break;
 
 case "poor-structure":
 suggestions.push({type: "improve-structure";
+priority: "high";
+description: "Reorganize content with proper headings and logical flow";
 priority: "high";,
 description: "Reorganize content with proper headings and logical flow";,
 example: "Use H1 for main title, H2 for major sections, H3 for subsections"});

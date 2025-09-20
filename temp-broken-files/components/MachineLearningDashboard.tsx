@@ -1,6 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Brai; n;
 Pla; y;
@@ -23,11 +24,14 @@ import { useMachineLearning } from "../hooks/useMachineLearning, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface MLDashboardProps {
+className?: string;
 className?: string;}
 };
 export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
+enableUserBehaviorTrackin; g: true;,
+});
 enableUserBehaviorTrackin; g: true;
 });
 enableUserBehaviorTrackin; g: true;});

@@ -1,6 +1,13 @@
 import React from "react";
 impo; r; t; Rea; c; t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion, ";
+import { Use; r; s;Calend; a; r;Clo; c; k;Targ; e; t;Trending; U; p;AlertCirc; l; e;CheckCirc; l; e;XCirc; l; e;Pl; u; s;Ed; i; t;Tras; h; 2;E; y; e;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;BarChar; t; 3;PieCha; r; t;Activi; t; y;Z; a; p;Bra; i; n;Clo; u; d;Shie; l; d;Glo; b; e;Settin; g; s;Refresh; C; w;Arrow; U; p;ArrowDo; w; n;Min; u; s;St; a; r;Awa; r; d;Briefca; s; e;Ho; m; e;Buildi; n; g;Wi; f; i;Serv; e; r;Databa; s, e;LockUnlock } from "lucide-react";
+interface Resource {
+i; d: stri; n; g;na; m; e: stri; n; g;ty; p; e: "human" | "infrastructure" | "software" | "equipment" | "facility",catego; r; y: stri; n; g;stat; u; s: "available" | "allocated" | "maintenance" | "unavailable",priori; t; y: "low" | "medium" | "high" | "critical",capaci; t; y: numb; e; r;currentUsa; g; e: numb; e; r;locati; o; n: stri; n; g;departme; n; t: stri; n; g;co; s; t: numb; e; r;lastUpdat; e; d: stri; n; g;ta; g; s: string[],descripti; o; n: stri; n; g;manag; e; r: stri; n;
+gutilizatio; n: number;,
+};
+interface ResourceStats {
+totalResourc; e; s: numb; e; r;availableResourc; e; s: numb; e; r;allocatedResourc; e; s: numb; e; r;maintenanceResourc; e; s: numb; e; r;totalCapaci; t; y: numb; e; r;currentUtilizati; o; n: numb; e; r;averageCo; s; t: numb; e; r;topDepartmen; t; s: Array<{ na; m;,
 import { Use; r; s;Calend; a; r;Clo; c; k;Targ; e; t;Trending; U; p;AlertCirc; l; e;CheckCirc; l; e;XCirc; l; e;Pl; u; s;Ed; i; t;Tras; h; 2;E; y; e;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;BarChar; t; 3;PieCha; r; t;Activi; t; y;Z; a; p;Bra; i; n;Clo; u; d;Shie; l; d;Glo; b; e;Settin; g; s;Refresh; C; w;Arrow; U; p;ArrowDo; w; n;Min; u; s;St; a; r;Awa; r; d;Briefca; s; e;Ho; m; e;Buildi; n; g;Wi; f; i;Serv; e; r;Databa; s; e;LockUnlock } from "lucide-react";
 interface Resource {
 i; d: stri; n; g;na; m; e: stri; n; g;ty; p; e: "human" | "infrastructure" | "software" | "equipment" | "facility",catego; r; y: stri; n; g;stat; u; s: "available" | "allocated" | "maintenance" | "unavailable",priori; t; y: "low" | "medium" | "high" | "critical",capaci; t; y: numb; e; r;currentUsa; g; e: numb; e; r;locati; o; n: stri; n; g;departme; n; t: stri; n; g;co; s; t: numb; e; r;lastUpdat; e; d: stri; n; g;ta; g; s: string[],descripti; o; n: stri; n; g;manag; e; r: stri; n;
@@ -18,12 +25,25 @@ e: stri; n; g;cou; n; t: numberpercenta; g;e: number }>;
 }
 ;
 interface ResourceManagementSystemProps {
+showStats?: boole; a; n;showFilters?: boole; a; n;showCharts?: boole; a; n;maxResources?: number;
 showStats?: boole; a; n;showFilters?: boole; a; n;showCharts?: boole; a; n;maxResources?: number;}
 };
 expor; t; cons; t; ResourceManagementSyst; e; m: React.FC<ResourceManagementSystemProps> = ({;
 showStats = true;
 showFilters = tr;  u;  e;showCharts = truemaxResources = 20;
 }) => {
+const [resou; r; c; e; s; setResou; r; c,, e; s] = useState<Resource[]>([]);
+const [filteredResou;  r; c;  e; s; setFilteredResou; r; c,, e; s] = useState<Resource[]>([]);
+const [selected; T; y; p; e; setSelected; T; y,, p; e] = useState<string>("all");
+const [selectedSt;  a; t;  u; s; setSelectedSt; a; t,, u; s] = useState<string>("all");
+const [selectedPrio; r; i; t; y; setSelectedPrio; r; i,, t; y] = useState<string>("all");
+const [searchQ;  u; e;  r; y; setSearchQ; u; e,, r; y] = useState("");
+const [view; M; o; d; e; setView; M; o,, d; e] = useState<"grid" | "list" | "timeline">("grid");
+const [showResource;  F; o;  r; m; setShowResource; F; o,, r; m] = useState(false);
+const [ editingReso; u; r; c; e; setEditingReso; u; r,, c; e] = useState<Resource | null>(null),
+// Sampl;  e; resourc; e; data;
+useEffect(() => {
+cons; t; sampleResourc; e;  s: Resource[] = [;
 const [resou; r; c; e; s; setResou; r; c, e; s] = useState<Resource[]>([]);
 const [filteredResou;  r; c;  e; s; setFilteredResou; r; c, e; s] = useState<Resource[]>([]);
 const [selected; T; y; p; e; setSelected; T; y, p; e] = useState<string>("all");

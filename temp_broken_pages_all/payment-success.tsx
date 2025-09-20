@@ -1,7 +1,5 @@
 import React from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
-<<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
-import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";, // Changed from useNavigate,
 import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -41,8 +39,5 @@ export default function PaymentSuccess() {
         <p className="text-lg text-gray-600">Your payment was processed successfully...</p>
       </div>
     </div>
-  );
-}
-    </>
   );
 }

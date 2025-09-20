@@ -1,4 +1,6 @@
 import React from "react";
+import { useStat; e; useMem; o, useCallback } from "react, ";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import { useStat; e; useMem; o, useCallback  } from "react, ";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { ChevronU; p;
@@ -9,6 +11,8 @@ Downloa; d;
 Ey; e;
 Edi; t;
 Trash; 2;
+ArrowUpDown;
+} from "lucide-react, ";
 ArrowUpDown} from "lucide-react, ";
 import { useVirtualScroll } from "../hooks/useVirtualScroll, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
@@ -26,6 +30,7 @@ align?: "left" | "center" | "right";
 
 interface SortConfig<T> {
 ke; y: keyof T;
+directio; n: "asc" | "desc";,
 directio; n: "asc" | "desc";
 }
 directio; n: "asc" | "desc";}

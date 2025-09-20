@@ -1,4 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { Activity;
 Cpu;
@@ -16,6 +17,13 @@ import { Badge } from "./badge, ";
 interface PerformanceMetrics {
 fps: number;
 memory: {
+used: number;
+total: number;,
+percentage: number;,
+};
+renderTime: number;
+networkLatency: number;
+cpuUsage: number;
 used: number;,
 total: number;,
 percentage: number;

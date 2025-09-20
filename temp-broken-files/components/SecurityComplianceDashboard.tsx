@@ -1,6 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Shiel; d;
 AlertTriangl; e;
@@ -14,16 +15,21 @@ FileTex; t;
 BarChart; 3;
 Cloc; k;
 Pla; y;
+Square;
+} from "lucide-react, ";
 Square} from "lucide-react, ";
 import { useSecurityCompliance } from "../hooks/useSecurityCompliance, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface SecurityDashboardProps {
+className?: string;
 className?: string;}
 };
 export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
+enableUserBehaviorTrackin; g: true;,
+});
 enableUserBehaviorTrackin; g: true;
 });
 enableUserBehaviorTrackin; g: true;});

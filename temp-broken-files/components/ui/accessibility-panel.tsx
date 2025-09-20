@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState; useCallback; useEffect } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { Eye;
 Type;
@@ -18,6 +19,7 @@ largeText: boolean;
 fontSize: number;
 colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 reducedMotion: boolean;
+screenReader: boolean;
 screenReader: boolean;,
 focusIndicator: boolean;,
 keyboardNavigation: boolean;

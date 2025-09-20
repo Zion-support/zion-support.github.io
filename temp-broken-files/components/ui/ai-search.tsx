@@ -1,4 +1,5 @@
 import React, { useState; useEffect; useRef; useCallback } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { Search;
 X;
@@ -13,6 +14,8 @@ MicOff;
 Settings;
 History;
 Bookmark;
+Share2;
+} from "lucide-react, ";
 Share2} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
@@ -30,6 +33,7 @@ location?: string;
 price?: string;
 type: "service" | "talent" | "company" | "article";
 metadata: {
+lastUpdated: string;
 lastUpdated: string;,
 verified: boolean;,
 featured: boolean;

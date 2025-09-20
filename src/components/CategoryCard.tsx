@@ -1,15 +1,21 @@
-
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 interface CategoryCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  href: string;
+  category: {
+    id: string;
+    name: string;
+    description: string;
+    icon?: string;
+    count?: number;
+  };
+  onClick?: () => void;
 }
 
-export function CategoryCard({ title, description, icon, href }: CategoryCardProps) {
+export function CategoryCard({ category, onClick }: CategoryCardProps) {
+  const href = `/category/${category.id}`;
+  const icon = category.icon || '📁';
+  
   return (
     <Link
       href={href}
@@ -19,13 +25,9 @@ export function CategoryCard({ title, description, icon, href }: CategoryCardPro
         <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 group-hover:bg-blue-200 transition-colors duration-200">
           {icon}
         </div>
+        <h3 className="ml-3 text-lg font-semibold text-gray-900">{category.name}</h3>
       </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
-        {title}
-      </h3>
-      <p className="text-gray-600 text-sm leading-relaxed">
-        {description}
-      </p>
+      <p className="text-gray-600">{category.description}</p>
     </Link>
   );
 }

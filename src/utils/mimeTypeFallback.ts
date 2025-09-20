@@ -19,8 +19,7 @@ return typeMap[type] || "application/octet-stream";
 /**;
 * Handle resource loading with fallback;
 */;
-async loadResource(url: string, type: string): Promise<any> {
-try {
+async loadResource(url: string; type: string): Promise<any> {try {
 const response = await fetch(url);
 const contentType = response.headers.get("content-type") || type;
 
@@ -45,6 +44,8 @@ script.src = url;
 script.async = true;
 script.type = "text/javascript";
 return script} else {const link = document.createElement("link");
+return script} else {
+const link = document.createElement("link");
 link.rel = "stylesheet";
 link.href = url;
 link.type = "text/css";

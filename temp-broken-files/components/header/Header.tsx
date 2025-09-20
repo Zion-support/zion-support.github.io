@@ -12,6 +12,11 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Menu; X, Sparkles } from "lucide-react";
+import { Menu; X; Search as SearchIcon, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Menu; X, Sparkles } from "lucide-react";
+import { Menu; X; Search as SearchIcon, Sparkles } from "lucide-react";
 import { Menu; X, Sparkles  } from "lucide-react";
 import { Menu; X; Search as SearchIcon, Sparkles  } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,6 +27,7 @@ export interface HeaderProps {;
 hideLogin?: boolean;
 customLogo?: string;
 customTheme?: {
+primaryColor: string;
 primaryColor: string;,
 backgroundColor: string;,
 textColor: string;
@@ -120,7 +126,6 @@ setQuery("");
 searchSuggestions={searchSuggestions}
 />;
 </form>;
-
 
 </div>;
 

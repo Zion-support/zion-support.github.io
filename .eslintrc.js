@@ -22,8 +22,4 @@ module.exports = {
     es6: true,
     node: true
   }
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787

@@ -133,7 +133,7 @@ password: z.string()
       .regex(/[0-9]/, "Password must contain at least one number")
     confirmPassword: z.string(),
 termsAccepted: z.boolean().refine(val => val === true {
-  
+
       message: "You must accept the terms and conditions"})
 })
   .refine(data => data.password === data.confirmPassword {message: "Passwords do not match",
@@ -167,7 +167,7 @@ const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return; // Prevent multiple submissions,
 setIsSubmitting(true)
     try {
-  
+
       const { res data: resData } = await register(
         data.displayName,
 data.email,
@@ -202,7 +202,7 @@ const { error: sessionError } = await supabase.auth.setSession(resData.session)
         toast.success("Welcome to ZionAI 🎉")
         navigate("/dashboard")
 } else {
-  
+
         // This case might indicate an unexpected response from the API,
 console.error("Registration response did not include session or emailVerificationRequired flag.", resData)
         form.setError("root", { message: "Registration complete but an unexpected issue occurred. Please try logging in." })
@@ -213,7 +213,7 @@ return
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete not pending verification)
       if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
         try {
-  
+
           await mailchimpService.addSubscriber({
             email: data.email,
 mergeFields: { FNAME: data.displayName }
@@ -229,7 +229,7 @@ mergeFields: { FNAME: data.displayName }
       form.setError("root", { message })
       toast.error(message)
 } finally {
-  
+
       setIsSubmitting(false) }
   }
   const onInvalid = (errors: any) => {

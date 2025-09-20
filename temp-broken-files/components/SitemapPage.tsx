@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { Routes; Route } from "react-router-dom";
 
 import React from "react";
@@ -7,18 +8,21 @@ import { completeSitemap } from "../config/sitemap";
 
 export default function SitemapPage() {;
 const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
+const talentRoutes = completeSitemap.filter(route =>
 const talentRoutes = completeSitemap.filter(route =>;
 route.requiredAuth &&;
 route.requiredRoles &&;
 (route.requiredRoles.includes("jobSeeker") ||;
 route.requiredRoles.includes("creator"));
 );
+const employerRoutes = completeSitemap.filter(route =>
 const employerRoutes = completeSitemap.filter(route =>;
 route.requiredAuth &&;
 route.requiredRoles &&;
 (route.requiredRoles.includes("employer") ||;
 route.requiredRoles.includes("buyer"));
 );
+const adminRoutes = completeSitemap.filter(route =>
 const adminRoutes = completeSitemap.filter(route =>;
 route.requiredAuth &&;
 route.requiredRoles &&;
