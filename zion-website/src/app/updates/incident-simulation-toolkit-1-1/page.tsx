@@ -37,5 +37,3 @@ export default function IncidentSimulationToolkitPage() {,
         </div>,
       </div>,
     </div>,
-  );
-}

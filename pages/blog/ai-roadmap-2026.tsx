@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 const AiRoadmap2026: NextPage = () => {,
   return (,
     <div>,

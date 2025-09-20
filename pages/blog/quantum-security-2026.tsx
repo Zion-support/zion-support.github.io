@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 const QuantumSecurity2026: NextPage = () => {,
   return (,
     <div>,

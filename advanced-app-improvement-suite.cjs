@@ -28,11 +28,16 @@ class AdvancedAppImprovementSuite {
   }
 
   async runCommand(command, description) {
-
+    try {
+      const result = await this.exec(command);
+      return { success: true, result };
+    } catch (error) {
       return { success: false, error: error.message };
     }
   }
 
+  getBuildCommands() {
+    return [
       { command: "npm run analyze", description: "Bundle Analysis" },
       { command: "npm run build", description: "Production Build" }
     ];

@@ -1,120 +1,43 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
+const { spawnSync } = require('child_process');
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-const logsDir = path.join(__dirname, 'logs');
-const logFile = path.join(logsDir, 'cloud-autonomous-orchestrator.log');
-if (!fs.existsSync(logsDir)) fs.mkdirSync(logsDir, { recursive: true });
-
-function log(message) {
-  const line = `[${new Date().toISOString()}] ${message}`;
-  console.log(line);
-  fs.appendFileSync(logFile, line + '\n');
-}
-
-function run(command, options = {}) {
-  log(`$ ${command}`);
-  try {
-    const output = execSync(command, { stdio: 'pipe', encoding: 'utf8', ...options });
-    if (output && output.trim()) log(output.trim());
-    return { ok: true, output };
-  } catch (error) {
-    const out = (error.stdout?.toString() || error.message || '').trim();
-    if (out) log(out);
-    return { ok: false, error };
+function run(cmd, args, opts = {}) {
+  console.log(`$ ${cmd} ${args.join(' ')}`);
+  const res = spawnSync(cmd, args, { stdio: 'inherit', ...opts });
+  if (res.status !== 0) {
+    console.warn(`Command failed: ${cmd} ${args.join(' ')}`);
   }
 }
 
-function fileExists(relPath) {
-  return fs.existsSync(path.join(process.cwd(), relPath));
+function main() {
+  // Build navigation data
+  run('node', ['automation/navigation-builder.cjs']);
+
+  // Generate schema.org JSON-LD
+  run('node', ['automation/schema-markup-generator.cjs']);
+
+  // Enhance SEO metadata
+  run('node', ['automation/seo-metadata-orchestrator.cjs']);
+
+  // Crawl and fix links
+  run('node', ['automation/site-link-crawler.cjs']);
+  run('node', ['automation/site-link-fixer.cjs']);
+
+  // SEO optimizer pass
+  try { run('node', ['automation/seo-optimizer.cjs']); } catch (_) {}
+
+  // Generate sitemap if script exists
+  run('node', ['scripts/generate-sitemap.mjs']);
+
+  // Sync-health checks and fixes
+  run('node', ['automation/sync-health-check.cjs', '--fix']);
+
+  // Update changelog
+  run('node', ['automation/changelog-generator.cjs']);
+
+  console.log('Automation run complete.');
 }
 
-async function main() {
-  log('🚀 Cloud Autonomous Orchestrator (fast) starting');
-
-  // Lightweight improvement and rule refresh
-  if (fileExists('automation/cursor-rules-generator.cjs')) run('node automation/cursor-rules-generator.cjs');
-
-  // Run selective single-cycle orchestrations (fast movers only)
-  const tasks = [
-    ['automation/revenue-ideas-orchestrator.cjs', 'once'],
-    ['automation/venture-orchestrator.cjs', 'once'],
-    ['automation/spec-dev-orchestrator.cjs', 'once'],
-    ['automation/frontend-sync-autonomous-orchestrator.cjs', 'once 0'],
-    ['automation/ui-evolution-launcher.js', 'once']
-  ];
-
-  for (const [script, args] of tasks) {
-    if (fileExists(script)) run(`node ${script} ${args}`);
-  }
-
-  // Quick lint --fix (best effort)
-  run('npx eslint . --ext .js,.jsx,.ts,.tsx --fix');
-
-      // Fast build to surface breaking issues (best effort, but don't fail the workflow)
-    log('Running build check...');
-    const buildResult = run('npm run build');
-    if (!buildResult.ok) {
-      log('Warning: Build failed, but continuing with sync...');
-    }
-
-    // Sync any changes
-    if (fileExists('automation/git-sync.cjs')) {
-      log('Running git sync...');
-      const syncResult = run('node automation/git-sync.cjs');
-      if (!syncResult.ok) {
-        log('Warning: Git sync failed');
-      }
-    }
-
-  log('✅ Cloud Autonomous Orchestrator finished');
+if (require.main === module) {
+  main();
 }
-
-main().catch(err => {
-  log(`Fatal error: ${err.message}`);
-  // Don't exit with error code to prevent workflow failure
-  log('Continuing despite error...');
-=======
-const fs = require('fs');
-const path = require('path');
-const { generateMetrics, generateOperatorSummary } = require('./lib/metrics-generator.cjs');
-
-function ensureDir(p) {
-  if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
-}
-
-function writeJson(filePath, data) {
-  ensureDir(path.dirname(filePath));
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-}
-
-function writeMarkdown(filePath, content) {
-  ensureDir(path.dirname(filePath));
-  fs.writeFileSync(filePath, content);
-}
-
-async function main() {
-  const runAt = new Date().toISOString();
-  const metrics = generateMetrics({ includeCompare: true });
-  const summary = generateOperatorSummary(metrics);
-
-  // Write artifacts
-  writeJson(path.join(__dirname, '..', 'public', 'metrics', 'latest.json'), metrics);
-  writeJson(path.join(__dirname, '..', 'public', 'automation', 'status.json'), { runAt, ok: true });
-
-  const today = new Date();
-  const ymd = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-  const md = `# Zion Operator Summary (${ymd})\n\n${summary.map((s) => `- ${s}`).join('\n')}\n`;
-  writeMarkdown(path.join(__dirname, '..', 'docs', 'reports', `summary-${ymd}.md`), md);
-
-  console.log('Automation run complete:', { runAt, summaryCount: summary.length });
-}
-
-main().catch((e) => {
-  console.error('Automation run failed', e);
-  process.exit(1);
->>>>>>> origin/auto/autonomy-17186719616
-});

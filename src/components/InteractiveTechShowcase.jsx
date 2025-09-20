@@ -1,0 +1,82 @@
+import React, { useState } from 'react';
+
+const InteractiveTechShowcase = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const techCategories = [
+    {
+      title: "AI & Machine Learning",
+      icon: "🤖",
+      technologies: [
+        { name: "Deep Learning", description: "Advanced neural networks for complex pattern recognition" },
+        { name: "Natural Language Processing", description: "AI-powered language understanding and generation" },
+        { name: "Computer Vision", description: "Image and video analysis using AI algorithms" },
+        { name: "Predictive Analytics", description: "Data-driven predictions and forecasting" }
+      ]
+    },
+    {
+      title: "Quantum Computing",
+      icon: "⚛️",
+      technologies: [
+        { name: "Quantum Algorithms", description: "Revolutionary algorithms for quantum computers" },
+        { name: "Quantum Cryptography", description: "Unbreakable encryption using quantum principles" },
+        { name: "Quantum Simulation", description: "Simulating complex quantum systems" },
+        { name: "Quantum Optimization", description: "Solving optimization problems with quantum speedup" }
+      ]
+    },
+    {
+      title: "Neural Interfaces",
+      icon: "🧬",
+      technologies: [
+        { name: "Brain-Computer Interface", description: "Direct communication between brain and computer" },
+        { name: "Neural Prosthetics", description: "AI-powered prosthetic devices controlled by thought" },
+        { name: "Cognitive Enhancement", description: "Augmenting human cognitive abilities" },
+        { name: "Medical Applications", description: "Neural interfaces for medical diagnosis and treatment" }
+      ]
+    }
+  ];
+
+  return (
+    <div className="bg-white rounded-2xl shadow-lg p-8">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Interactive Technology Showcase</h2>
+        <p className="text-lg text-gray-600">Explore our cutting-edge technologies</p>
+      </div>
+
+      {/* Tab Navigation */}
+      <div className="flex justify-center mb-8">
+        <div className="bg-gray-100 rounded-lg p-1">
+          {techCategories.map((category, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveTab(index)}
+              className={`px-6 py-3 rounded-md transition-all duration-300 ${
+                activeTab === index
+                  ? 'bg-white shadow-md text-blue-600'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              <span className="text-2xl mr-2">{category.icon}</span>
+              {category.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Tab Content */}
+      <div className="grid md:grid-cols-2 gap-6">
+        {techCategories[activeTab].technologies.map((tech, index) => (
+          <div
+            key={index}
+            className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-md transition-shadow"
+          >
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{tech.name}</h3>
+            <p className="text-gray-600">{tech.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default InteractiveTechShowcase;

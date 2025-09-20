@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 const AgenticProductPlaybooks: NextPage = () => {,
   return (,
     <div>,

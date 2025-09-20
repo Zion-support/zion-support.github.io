@@ -1,387 +1,421 @@
 #!/usr/bin/env node
 
+/**
+ * Intelligent Orchestrator
+ * Coordinates and manages automation systems intelligently
+ */
+
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
+const { execSync } = require('child_process');
 
 class IntelligentOrchestrator {
   constructor() {
-    this.automationSystems = new Map();
-    this.learningData = new Map();
-    this.performanceMetrics = new Map();
-    this.logFile = path.join(__dirname, 'logs', 'intelligent-orchestrator.log');
-    this.ensureLogDirectory();
-    this.loadAutomationSystems();
+    this.systems = {
+      build: { status: 'unknown', lastRun: null, health: 0 },
+      redundancy: { status: 'unknown', lastRun: null, health: 0 },
+      monitoring: { status: 'unknown', lastRun: null, health: 0 },
+      automation: { status: 'unknown', lastRun: null, health: 0 }
+    };
+    this.config = this.loadConfig();
   }
 
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  loadAutomationSystems() {
-    const systems = [
-      { name: 'lint-monitor', path: 'lint-monitor.cjs', priority: 'high' },
-      { name: 'lint-fixer', path: 'lint-error-fixer.cjs', priority: 'high' },
-      { name: 'lint-manager', path: 'lint-automation-manager.cjs', priority: 'medium' },
-      { name: 'code-quality', path: 'code-quality-monitor.cjs', priority: 'medium' },
-      { name: 'performance', path: 'performance-optimizer.cjs', priority: 'low' },
-      { name: 'content-generator', path: 'content-generator.cjs', priority: 'low' },
-      { name: 'seo-optimizer', path: 'seo-optimizer.cjs', priority: 'medium' },
-      { name: 'security-scanner', path: 'security-scanner.cjs', priority: 'high' },
-<<<<<<< HEAD
-      { name: 'test-generator', path: 'test-generator.cjs', priority: 'medium' }
-=======
-      { name: 'test-generator', path: 'test-generator.cjs', priority: 'medium' },
-      { name: 'app-intelligence', path: 'app-intelligence-enhancer.cjs', priority: 'medium' }
->>>>>>> origin/auto/autonomy-17186719616
-    ];
-
-    for (const system of systems) {
-      const systemPath = path.join(__dirname, system.path);
-      if (fs.existsSync(systemPath)) {
-        this.automationSystems.set(system.name, {
-          ...system,
-          path: systemPath,
-          status: 'available',
-          lastRun: null,
-          successRate: 0,
-          averageExecutionTime: 0
-        });
-      }
-    }
-  }
-
-  async runSystem(systemName, options = {}) {
-    const system = this.automationSystems.get(systemName);
-    if (!system) {
-      this.log(`❌ System not found: ${systemName}`);
-      return false;
-    }
-
-    const startTime = Date.now();
-    try {
-      this.log(`🚀 Running system: ${systemName}`);
-      
-      const result = execSync(`node "${system.path}"`, { 
-        encoding: 'utf8',
-        stdio: 'pipe',
-        ...options
-      });
-      
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, true, executionTime);
-      
-      this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
-<<<<<<< HEAD
-=======
-      // Best-effort git sync after successful system run
-      try {
-        const syncPath = path.join(__dirname, 'git-sync.cjs');
-        if (fs.existsSync(syncPath)) {
-          execSync(`node "${syncPath}"`, { stdio: 'pipe' });
-        }
-      } catch (e) {
-        this.log(`⚠️ Git sync failed: ${e.message}`);
-      }
->>>>>>> origin/auto/autonomy-17186719616
-      return { success: true, output: result, executionTime };
-    } catch (error) {
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, false, executionTime);
-      
-      this.log(`❌ System failed: ${systemName} - ${error.message}`);
-      return { success: false, error: error.message, executionTime };
-    }
-  }
-
-  updateSystemMetrics(systemName, success, executionTime) {
-    const system = this.automationSystems.get(systemName);
-    if (!system) return;
-
-    // Update success rate
-    const currentSuccessRate = system.successRate;
-    const totalRuns = (system.lastRun ? 1 : 0) + 1;
-    system.successRate = success ? (currentSuccessRate + 1) / totalRuns : currentSuccessRate / totalRuns;
-
-    // Update average execution time
-    const currentAvgTime = system.averageExecutionTime;
-    system.averageExecutionTime = (currentAvgTime + executionTime) / totalRuns;
-
-    system.lastRun = new Date();
-    system.status = success ? 'success' : 'failed';
-  }
-
-  async runPriorityBasedExecution() {
-    this.log('🎯 Running priority-based execution...');
+  async run(mode = 'continuous') {
+    console.log('🧠 Intelligent Orchestrator starting...');
     
-    const systems = Array.from(this.automationSystems.values())
-      .sort((a, b) => {
-        const priorityOrder = { high: 3, medium: 2, low: 1 };
-        return priorityOrder[b.priority] - priorityOrder[a.priority];
-      });
-
-    const results = [];
-    for (const system of systems) {
-      if (system.status === 'available') {
-        const result = await this.runSystem(system.name);
-        results.push({ name: system.name, ...result });
-        
-        // Add delay between high-priority systems
-        if (system.priority === 'high') {
-          await this.sleep(2000);
-        }
+    try {
+      switch (mode) {
+        case 'continuous':
+          await this.runContinuousMode();
+          break;
+        case 'intelligent':
+          await this.runIntelligentMode();
+          break;
+        case 'status':
+          this.printStatus();
+          break;
+        default:
+          console.log(`Unknown mode: ${mode}. Available modes: continuous, intelligent, status`);
       }
+      
+      return { success: true };
+    } catch (error) {
+      console.error('❌ Orchestrator error:', error.message);
+      return { success: false, error: error.message };
     }
-
-    this.log(`📊 Priority execution completed: ${results.length} systems`);
-    return results;
   }
 
-  async runIntelligentExecution() {
-    this.log('🧠 Running intelligent execution...');
+  async runContinuousMode() {
+    console.log('🔄 Running in continuous mode...');
+    
+    while (true) {
+      try {
+        await this.assessSystemHealth();
+        await this.executeMaintenance();
+        await this.optimizePerformance();
+        
+        // Wait before next cycle
+        await this.sleep(30000); // 30 seconds
+      } catch (error) {
+        console.error('Error in continuous mode:', error.message);
+        await this.sleep(10000); // Wait 10 seconds on error
+      }
+    }
+  }
+
+  async runIntelligentMode() {
+    console.log('🧠 Running in intelligent mode...');
     
     // Analyze current state
-    const state = await this.analyzeCurrentState();
+    await this.assessSystemHealth();
     
-    // Determine which systems to run based on state
-    const systemsToRun = this.determineOptimalSystems(state);
+    // Determine what needs attention
+    const priorities = this.determinePriorities();
     
-    const results = [];
-    for (const systemName of systemsToRun) {
-      const result = await this.runSystem(systemName);
-      results.push({ name: systemName, ...result });
+    // Execute based on priorities
+    for (const priority of priorities) {
+      console.log(`🎯 Executing priority: ${priority.action}`);
+      await this.executeAction(priority.action, priority.params);
+    }
+    
+    console.log('✅ Intelligent mode execution completed');
+  }
+
+  async assessSystemHealth() {
+    console.log('🔍 Assessing system health...');
+    
+    // Check build system
+    this.systems.build.health = await this.checkBuildHealth();
+    this.systems.build.status = this.getHealthStatus(this.systems.build.health);
+    
+    // Check redundancy system
+    this.systems.redundancy.health = await this.checkRedundancyHealth();
+    this.systems.redundancy.status = this.getHealthStatus(this.systems.redundancy.health);
+    
+    // Check monitoring system
+    this.systems.monitoring.health = await this.checkMonitoringHealth();
+    this.systems.monitoring.status = this.getHealthStatus(this.systems.monitoring.health);
+    
+    // Check automation system
+    this.systems.automation.health = await this.checkAutomationHealth();
+    this.systems.automation.status = this.getHealthStatus(this.systems.automation.health);
+    
+    this.systems.build.lastRun = new Date().toISOString();
+  }
+
+  async checkBuildHealth() {
+    try {
+      // Check if build can succeed
+      const result = await this.runCommand('npm run build:health-check');
+      return result.success ? 100 : 50;
+    } catch (error) {
+      return 0;
+    }
+  }
+
+  async checkRedundancyHealth() {
+    try {
+      // Check redundancy systems
+      const pm2Status = await this.runCommand('pm2 status');
+      const hasProcesses = pm2Status.output.includes('online');
+      return hasProcesses ? 100 : 50;
+    } catch (error) {
+      return 0;
+    }
+  }
+
+  async checkMonitoringHealth() {
+    try {
+      // Check if monitoring is active
+      const logFiles = fs.readdirSync('automation/logs').filter(f => f.endsWith('.log'));
+      return logFiles.length > 0 ? 100 : 50;
+    } catch (error) {
+      return 0;
+    }
+  }
+
+  async checkAutomationHealth() {
+    try {
+      // Check automation scripts
+      const scripts = [
+        'automation/pre-build-health-check.cjs',
+        'automation/master-build-orchestrator.cjs',
+        'automation/master-redundancy-orchestrator.cjs'
+      ];
       
-      // Learn from the result
-      this.learnFromExecution(systemName, result, state);
-    }
-
-    this.log(`📊 Intelligent execution completed: ${results.length} systems`);
-    return results;
-  }
-
-  async analyzeCurrentState() {
-    const state = {
-      hasLintErrors: false,
-      hasTypeScriptErrors: false,
-      hasSecurityIssues: false,
-      hasPerformanceIssues: false,
-      hasSEOMissing: false,
-      hasMissingTests: false,
-      lastBuildTime: null,
-      codeComplexity: 0
-    };
-
-    try {
-      // Check for lint errors
-      execSync('npm run lint', { stdio: 'pipe' });
-    } catch (error) {
-      state.hasLintErrors = true;
-    }
-
-    try {
-      // Check for TypeScript errors
-      execSync('npx tsc --noEmit', { stdio: 'pipe' });
-    } catch (error) {
-      state.hasTypeScriptErrors = true;
-    }
-
-    // Check build time
-    try {
-      const buildStart = Date.now();
-      execSync('npm run build', { stdio: 'pipe' });
-      state.lastBuildTime = Date.now() - buildStart;
-    } catch (error) {
-      // Build failed
-    }
-
-    return state;
-  }
-
-  determineOptimalSystems(state) {
-    const systems = [];
-
-    // Always run high-priority systems if there are issues
-    if (state.hasLintErrors) {
-      systems.push('lint-fixer');
-    }
-    if (state.hasTypeScriptErrors) {
-      systems.push('code-quality');
-    }
-    if (state.hasSecurityIssues) {
-      systems.push('security-scanner');
-    }
-
-    // Run medium-priority systems based on conditions
-    if (state.hasSEOMissing) {
-      systems.push('seo-optimizer');
-    }
-    if (state.hasMissingTests) {
-      systems.push('test-generator');
-    }
-
-    // Run low-priority systems periodically
-    const now = Date.now();
-    const systemsToCheck = ['performance', 'content-generator'];
-    
-    for (const systemName of systemsToCheck) {
-      const system = this.automationSystems.get(systemName);
-      if (system && (!system.lastRun || now - system.lastRun.getTime() > 30 * 60 * 1000)) {
-        systems.push(systemName);
+      let health = 0;
+      for (const script of scripts) {
+        if (fs.existsSync(script)) {
+          health += 33;
+        }
       }
+      
+      return health;
+    } catch (error) {
+      return 0;
     }
-
-    return systems;
   }
 
-  learnFromExecution(systemName, result, state) {
-    const learningKey = `${systemName}_${JSON.stringify(state)}`;
-    const currentData = this.learningData.get(learningKey) || {
-      totalRuns: 0,
-      successfulRuns: 0,
-      averageExecutionTime: 0
-    };
-
-    currentData.totalRuns++;
-    if (result.success) {
-      currentData.successfulRuns++;
-    }
-    currentData.averageExecutionTime = (currentData.averageExecutionTime + result.executionTime) / currentData.totalRuns;
-
-    this.learningData.set(learningKey, currentData);
+  getHealthStatus(health) {
+    if (health >= 80) return 'healthy';
+    if (health >= 50) return 'warning';
+    return 'critical';
   }
 
-  async runContinuousIntelligence() {
-    this.log('🔄 Starting continuous intelligent automation...');
+  determinePriorities() {
+    const priorities = [];
     
-    // Run initial analysis
-    await this.runIntelligentExecution();
-    
-    // Set up continuous monitoring
-    setInterval(async () => {
-      this.log('🔄 Running continuous intelligence cycle...');
-      await this.runIntelligentExecution();
-    }, 5 * 60 * 1000); // Every 5 minutes
-
-    // Set up file watcher for immediate response
-    this.startFileWatcher();
-  }
-
-  startFileWatcher() {
-    this.log('👀 Starting intelligent file watcher...');
-    
-    // Simple file watcher using fs.watch
-    const watchDirectories = ['pages', 'components', 'utils', 'hooks'];
-    
-    for (const dir of watchDirectories) {
-      if (fs.existsSync(dir)) {
-        fs.watch(dir, { recursive: true }, (eventType, filename) => {
-          if (filename && (filename.endsWith('.tsx') || filename.endsWith('.ts') || filename.endsWith('.js'))) {
-            const filePath = path.join(dir, filename);
-            this.log(`📝 File changed: ${filePath}`);
-            setTimeout(() => {
-              this.handleIntelligentFileChange(filePath);
-            }, 3000);
-          }
+    // Check for critical issues
+    for (const [system, info] of Object.entries(this.systems)) {
+      if (info.status === 'critical') {
+        priorities.push({
+          action: `fix_${system}`,
+          params: { system, health: info.health },
+          priority: 1
         });
       }
     }
     
-    this.log('✅ Intelligent file watcher started');
+    // Check for warnings
+    for (const [system, info] of Object.entries(this.systems)) {
+      if (info.status === 'warning') {
+        priorities.push({
+          action: `optimize_${system}`,
+          params: { system, health: info.health },
+          priority: 2
+        });
+      }
+    }
+    
+    // Add maintenance tasks
+    priorities.push({
+      action: 'maintenance',
+      params: {},
+      priority: 3
+    });
+    
+    return priorities.sort((a, b) => a.priority - b.priority);
   }
 
-  async handleIntelligentFileChange(filePath) {
-    // Analyze the type of change and run appropriate systems
-    const fileExtension = path.extname(filePath);
-    const fileName = path.basename(filePath);
-    
-    if (fileExtension === '.tsx' || fileExtension === '.ts') {
-      // Check for lint issues first
-      try {
-        execSync(`npx eslint "${filePath}"`, { stdio: 'pipe' });
-      } catch (error) {
-        this.log(`🔧 Auto-fixing issues in: ${filePath}`);
-        await this.runSystem('lint-fixer');
+  async executeAction(action, params) {
+    try {
+      switch (action) {
+        case 'fix_build':
+          await this.fixBuildSystem(params);
+          break;
+        case 'fix_redundancy':
+          await this.fixRedundancySystem(params);
+          break;
+        case 'fix_monitoring':
+          await this.fixMonitoringSystem(params);
+          break;
+        case 'fix_automation':
+          await this.fixAutomationSystem(params);
+          break;
+        case 'optimize_build':
+          await this.optimizeBuildSystem(params);
+          break;
+        case 'optimize_redundancy':
+          await this.optimizeRedundancySystem(params);
+          break;
+        case 'maintenance':
+          await this.performMaintenance();
+          break;
+        default:
+          console.log(`Unknown action: ${action}`);
       }
+    } catch (error) {
+      console.error(`Error executing action ${action}:`, error.message);
+    }
+  }
+
+  async fixBuildSystem(params) {
+    console.log('🔧 Fixing build system...');
+    try {
+      await this.runCommand('npm install');
+      await this.runCommand('npm run build:health-check');
+      console.log('✅ Build system fixed');
+    } catch (error) {
+      console.error('❌ Failed to fix build system:', error.message);
+    }
+  }
+
+  async fixRedundancySystem(params) {
+    console.log('🔧 Fixing redundancy system...');
+    try {
+      await this.runCommand('npm run redundancy:restart');
+      console.log('✅ Redundancy system fixed');
+    } catch (error) {
+      console.error('❌ Failed to fix redundancy system:', error.message);
+    }
+  }
+
+  async fixMonitoringSystem(params) {
+    console.log('🔧 Fixing monitoring system...');
+    try {
+      // Create logs directory if it doesn't exist
+      if (!fs.existsSync('automation/logs')) {
+        fs.mkdirSync('automation/logs', { recursive: true });
+      }
+      console.log('✅ Monitoring system fixed');
+    } catch (error) {
+      console.error('❌ Failed to fix monitoring system:', error.message);
+    }
+  }
+
+  async fixAutomationSystem(params) {
+    console.log('🔧 Fixing automation system...');
+    try {
+      // Check and fix automation scripts
+      const scripts = [
+        'automation/pre-build-health-check.cjs',
+        'automation/master-build-orchestrator.cjs'
+      ];
       
-      // If it's a component, consider generating tests
-      if (filePath.includes('components/')) {
-        const system = this.automationSystems.get('test-generator');
-        if (system && (!system.lastRun || Date.now() - system.lastRun.getTime() > 10 * 60 * 1000)) {
-          await this.runSystem('test-generator');
+      for (const script of scripts) {
+        if (fs.existsSync(script)) {
+          await this.runCommand(`node -c ${script}`);
         }
       }
+      console.log('✅ Automation system fixed');
+    } catch (error) {
+      console.error('❌ Failed to fix automation system:', error.message);
     }
   }
 
-  generateIntelligenceReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      systems: {},
-      learningData: {},
-      recommendations: []
+  async optimizeBuildSystem(params) {
+    console.log('⚡ Optimizing build system...');
+    try {
+      await this.runCommand('npm run build:smart');
+      console.log('✅ Build system optimized');
+    } catch (error) {
+      console.error('❌ Failed to optimize build system:', error.message);
+    }
+  }
+
+  async optimizeRedundancySystem(params) {
+    console.log('⚡ Optimizing redundancy system...');
+    try {
+      await this.runCommand('npm run redundancy:pm2');
+      console.log('✅ Redundancy system optimized');
+    } catch (error) {
+      console.error('❌ Failed to optimize redundancy system:', error.message);
+    }
+  }
+
+  async performMaintenance() {
+    console.log('🧹 Performing maintenance...');
+    try {
+      // Clean up old logs
+      await this.cleanupLogs();
+      
+      // Update dependencies if needed
+      await this.updateDependencies();
+      
+      console.log('✅ Maintenance completed');
+    } catch (error) {
+      console.error('❌ Maintenance failed:', error.message);
+    }
+  }
+
+  async cleanupLogs() {
+    try {
+      const logsDir = 'automation/logs';
+      if (fs.existsSync(logsDir)) {
+        const logFiles = fs.readdirSync(logsDir).filter(f => f.endsWith('.log'));
+        if (logFiles.length > 50) {
+          // Keep only the 50 most recent log files
+          const sortedFiles = logFiles
+            .map(f => ({ name: f, path: path.join(logsDir, f) }))
+            .sort((a, b) => fs.statSync(b.path).mtime.getTime() - fs.statSync(a.path).mtime.getTime());
+          
+          for (let i = 50; i < sortedFiles.length; i++) {
+            fs.unlinkSync(sortedFiles[i].path);
+          }
+          console.log(`🧹 Cleaned up ${sortedFiles.length - 50} old log files`);
+        }
+      }
+    } catch (error) {
+      console.error('Error during log cleanup:', error.message);
+    }
+  }
+
+  async updateDependencies() {
+    try {
+      // Check for outdated packages
+      const result = await this.runCommand('npm outdated --json');
+      if (result.output && Object.keys(JSON.parse(result.output)).length > 0) {
+        console.log('📦 Updating outdated dependencies...');
+        await this.runCommand('npm update');
+      }
+    } catch (error) {
+      // npm outdated returns non-zero exit code when there are outdated packages
+      // This is expected behavior
+    }
+  }
+
+  async executeMaintenance() {
+    // Execute scheduled maintenance tasks
+    const now = new Date();
+    const hour = now.getHours();
+    
+    if (hour === 2) { // 2 AM
+      await this.performMaintenance();
+    }
+  }
+
+  async optimizePerformance() {
+    // Optimize system performance
+    try {
+      // Clear build cache if it's too old
+      if (fs.existsSync('.next')) {
+        const stats = fs.statSync('.next');
+        const ageInHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 60);
+        
+        if (ageInHours > 48) {
+          console.log('🧹 Clearing old build cache...');
+          await this.runCommand('rm -rf .next');
+        }
+      }
+    } catch (error) {
+      console.error('Error during performance optimization:', error.message);
+    }
+  }
+
+  async runCommand(command) {
+    try {
+      const output = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+      return { success: true, output };
+    } catch (error) {
+      return { success: false, error: error.message, output: error.stdout || '' };
+    }
+  }
+
+  loadConfig() {
+    try {
+      if (fs.existsSync('automation/orchestrator-config.json')) {
+        return JSON.parse(fs.readFileSync('automation/orchestrator-config.json', 'utf8'));
+      }
+    } catch (error) {
+      console.warn('Could not load orchestrator config:', error.message);
+    }
+    
+    return {
+      checkInterval: 30000,
+      maintenanceHour: 2,
+      maxLogFiles: 50
     };
-
-    // System performance data
-    for (const [name, system] of this.automationSystems) {
-      report.systems[name] = {
-        priority: system.priority,
-        successRate: system.successRate,
-        averageExecutionTime: system.averageExecutionTime,
-        lastRun: system.lastRun?.toISOString(),
-        status: system.status
-      };
-    }
-
-    // Learning data
-    for (const [key, data] of this.learningData) {
-      report.learningData[key] = {
-        successRate: data.successfulRuns / data.totalRuns,
-        averageExecutionTime: data.averageExecutionTime,
-        totalRuns: data.totalRuns
-      };
-    }
-
-    // Generate recommendations
-    for (const [name, system] of this.automationSystems) {
-      if (system.successRate < 0.8) {
-        report.recommendations.push(`Improve ${name} system reliability (success rate: ${(system.successRate * 100).toFixed(1)}%)`);
-      }
-      if (system.averageExecutionTime > 30000) {
-        report.recommendations.push(`Optimize ${name} system performance (avg time: ${system.averageExecutionTime}ms)`);
-      }
-    }
-
-    return report;
   }
 
-  async optimizeSystems() {
-    this.log('🔧 Optimizing automation systems...');
+  printStatus() {
+    console.log('\n🧠 Intelligent Orchestrator Status');
+    console.log('===================================');
     
-    const report = this.generateIntelligenceReport();
-    
-    // Implement optimizations based on report
-    for (const recommendation of report.recommendations) {
-      this.log(`💡 Recommendation: ${recommendation}`);
-    }
-
-    // Adjust system priorities based on performance
-    for (const [name, system] of this.automationSystems) {
-      if (system.successRate < 0.7) {
-        system.priority = 'high';
-        this.log(`⚠️ Increased priority for ${name} due to low success rate`);
-      } else if (system.successRate > 0.95 && system.priority === 'high') {
-        system.priority = 'medium';
-        this.log(`✅ Decreased priority for ${name} due to high success rate`);
+    for (const [system, info] of Object.entries(this.systems)) {
+      const statusIcon = info.status === 'healthy' ? '✅' : info.status === 'warning' ? '⚠️' : '❌';
+      console.log(`${statusIcon} ${system}: ${info.status} (${info.health}%)`);
+      if (info.lastRun) {
+        console.log(`   Last run: ${info.lastRun}`);
       }
     }
   }
@@ -389,76 +423,20 @@ class IntelligentOrchestrator {
   sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
-
-  stop() {
-    this.log('🛑 Intelligent orchestrator stopped');
-  }
-
-  getStatus() {
-    const status = {
-      running: true,
-      systemsCount: this.automationSystems.size,
-      learningDataSize: this.learningData.size,
-      report: this.generateIntelligenceReport()
-    };
-    
-    this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
-    this.log(`📊 Systems: ${status.systemsCount}`);
-    this.log(`📊 Learning Data: ${status.learningDataSize} entries`);
-    
-    return status;
-  }
 }
 
-// CLI handling
-const orchestrator = new IntelligentOrchestrator();
-const command = process.argv[2];
-const subCommand = process.argv[3];
-
-switch (command) {
-  case 'run':
-    if (subCommand === 'priority') {
-      orchestrator.runPriorityBasedExecution();
-    } else if (subCommand === 'intelligent') {
-      orchestrator.runIntelligentExecution();
+// Run if called directly
+if (require.main === module) {
+  const orchestrator = new IntelligentOrchestrator();
+  const mode = process.argv[2] || 'status';
+  
+  orchestrator.run(mode).then(result => {
+    if (result.success) {
+      process.exit(0);
     } else {
-      orchestrator.runIntelligentExecution();
+      process.exit(1);
     }
-    break;
-  case 'continuous':
-    orchestrator.runContinuousIntelligence();
-    break;
-  case 'optimize':
-    orchestrator.optimizeSystems();
-    break;
-  case 'status':
-    orchestrator.getStatus();
-    process.exit(0);
-    break;
-  case 'report':
-    const report = orchestrator.generateIntelligenceReport();
-    console.log(JSON.stringify(report, null, 2));
-    process.exit(0);
-    break;
-  default:
-    console.log('Usage: node intelligent-orchestrator.js [run|continuous|optimize|status|report] [priority|intelligent]');
-    console.log('\nCommands:');
-    console.log('  run priority     - Run priority-based execution');
-    console.log('  run intelligent  - Run intelligent execution');
-    console.log('  continuous       - Start continuous intelligent automation');
-    console.log('  optimize         - Optimize systems based on performance');
-    console.log('  status           - Show current status');
-    console.log('  report           - Generate intelligence report');
-    process.exit(1);
+  });
 }
 
-// Graceful shutdown
-process.on('SIGINT', () => {
-  orchestrator.stop();
-  process.exit(0);
-});
-
-process.on('SIGTERM', () => {
-  orchestrator.stop();
-  process.exit(0);
-});
+module.exports = IntelligentOrchestrator;

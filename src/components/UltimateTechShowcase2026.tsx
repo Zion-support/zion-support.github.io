@@ -1,5 +1,13 @@
-        </div>,
-      </div>,
-    </div>,
+    }
+  };
+
+  return (
+        </div>
+      </div>
+    </div>
   );
+
 };
+
+
+export default UltimateTechShowcase2026;

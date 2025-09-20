@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 const Ai2026AutonomousEvidenceLedOps: NextPage = () => {,
   return (,
     <div>,
@@ -13,3 +12,6 @@ const Ai2026AutonomousEvidenceLedOps: NextPage = () => {,
       </main>,
     </div>,
   ),};
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+export default Ai2026AutonomousEvidenceLedOps;

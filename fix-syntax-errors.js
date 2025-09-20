@@ -1,190 +1,102 @@
-#!/usr/bin/env node,
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import pkg from 'glob';
-const { glob } = pkg;
-// Common syntax fixes,
-const fixes = [,
-  // Fix unclosed button tags,
-  {,
-    pattern: /<button([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</button>')) {,
-        return `<button${attrs}>${content}</button>`;
-      }
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Function to fix common JSX syntax errors
+function fixJSXErrors(content) {
+  // Fix missing closing tags and other common issues
+  let fixed = content;
+  
+  // Fix unclosed div tags
+  fixed = fixed.replace(/<div([^>]*)>/g, (match, attrs) => {
+    // Check if this div has a corresponding closing tag
+    const openDivs = (fixed.match(/<div/g) || []).length;
+    const closeDivs = (fixed.match(/<\/div>/g) || []).length;
+    
+    if (openDivs > closeDivs) {
       return match;
     }
-  };
-  // Fix unclosed div tags,
-  {,
-    pattern: /<div([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</div>')) {,
-        return `<div${attrs}>${content}</div>`;
-      }
-      return match;
-    }
-  };
-  // Fix unclosed span tags,
-  {,
-    pattern: /<span([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</span>')) {,
-        return `<span${attrs}>${content}</span>`;
-      }
-      return match;
-    }
-  };
-  // Fix unclosed p tags,
-  {,
-    pattern: /<p([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</p>')) {,
-        return `<p${attrs}>${content}</p>`;
-      }
-      return match;
-    }
-  };
-  // Fix unclosed a tags,
-  {,
-    pattern: /<a([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</a>')) {,
-        return `<a${attrs}>${content}</a>`;
-      }
-      return match;
-    }
-  };
-  // Fix unclosed label tags,
-  {,
-    pattern: /<label([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</label>')) {,
-        return `<label${attrs}>${content}</label>`;
-      }
-      return match;
-    }
-  };
-  // Fix unclosed Link tags,
-  {,
-    pattern: /<Link([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</Link>')) {,
-        return `<Link${attrs}>${content}</Link>`;
-      }
-      return match;
-    }
-  };
-  // Fix unclosed ul tags,
-  {,
-    pattern: /<ul([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</ul>')) {,
-        return `<ul${attrs}>${content}</ul>`;
-      }
-      return match;
-    }
-  };
-  // Fix unclosed motion.div tags,
-  {,
-    pattern: /<motion\.div([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</motion.div>')) {,
-        return `<motion.div${attrs}>${content}</motion.div>`;
-      }
-      return match;
-    }
-  };
-  // Fix unclosed Select tags,
-  {,
-    pattern: /<Select([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</Select>')) {,
-        return `<Select${attrs}>${content}</Select>`;
-      }
-      return match;
-    }
-  };
-  // Fix unclosed Button tags,
-  {,
-    pattern: /<Button([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm;
-    replacement: (match, attrs, content) => {,
-      if (!match.includes('</Button>')) {,
-        return `<Button${attrs}>${content}</Button>`;
-      }
-      return match;
-    }
-  }
-];
-// Fix incomplete files,
-const incompleteFiles = [,
-  'src/pages/QuantumNeuralInterface2026.tsxsrc/pages/RevolutionaryServicesShowcase2026.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2033.tsxsrc/pages/RevolutionaryTechBlog2026.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2038.tsxsrc/pages/RevolutionaryTechShowcase2026.tsx';
-  'src/pages/RevolutionaryTechShowcase2032.tsxsrc/pages/RevolutionaryTechShowcase2042.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2034.tsxsrc/pages/RevolutionaryTechBreakthrough2030.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2032.tsxsrc/pages/RevolutionaryTechBreakthrough2036.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2037.tsxsrc/pages/RevolutionaryTechBreakthrough2039.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2043.tsxsrc/pages/RevolutionaryTechBreakthrough2035.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2031.tsxsrc/pages/RevolutionaryTechBreakthrough2038.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2042.tsxsrc/pages/RevolutionaryTechBreakthrough2044.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2045.tsxsrc/pages/RevolutionaryTechBreakthrough2046.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2047.tsxsrc/pages/RevolutionaryTechBreakthrough2048.tsx';
-  'src/pages/RevolutionaryTechBreakthrough2049.tsxsrc/pages/RevolutionaryTechBreakthrough2050.tsx',
-];
-function fixFile(filePath) {,
-  try {,
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    // Apply fixes,
-    for (const fix of fixes) {,
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {,
-        content = newContent;
-        modified = true;
-      }
-    }
-,
-    // Fix specific incomplete files,
-    if (incompleteFiles.some(f => filePath.includes(f))) {,
-      if (content.trim().length < 100) {,
-        content = `import React from 'react';
-const ${path.basename(filePath, '.tsx')}: React.FC = () => {,
-  return (,
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">,
-      <div className="container mx-auto px-4 py-20">,
-        <h1 className="text-4xl font-bold mb-6">${path.basename(filePath, '.tsx')}</h1>,
-        <p className="text-xl opacity-90">Coming soon...</p>,
-      </div>,
-    </div>,
+    return match;
+  });
+  
+  // Fix common syntax issues
+  fixed = fixed.replace(/<divdiv/g, '<div');
+  fixed = fixed.replace(/<\/divdiv>/g, '</div>');
+  fixed = fixed.replace(/<p([^>]*)>([^<]*)$/gm, '<p$1>$2</p>');
+  fixed = fixed.replace(/<button([^>]*)>([^<]*)$/gm, '<button$1>$2</button>');
+  
+  // Fix missing closing tags at the end of files
+  const openTags = (fixed.match(/<[^/][^>]*>/g) || []).filter(tag => 
+    !tag.includes('/>') && !tag.includes('</')
   );
-};
-export default ${path.basename(filePath, '.tsx')},`;
-        modified = true;
+  const closeTags = (fixed.match(/<\/[^>]*>/g) || []).filter(tag => 
+    tag !== '</>' && tag !== '</div>' // Exclude fragments and divs
+  );
+  
+  // Add missing closing tags
+  if (openTags.length > closeTags.length) {
+    const missingTags = openTags.length - closeTags.length;
+    for (let i = 0; i < missingTags; i++) {
+      fixed += '\n  </div>';
+    }
+  }
+  
+  return fixed;
+}
+
+// Function to fix specific file types
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixJSXErrors(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed);
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to recursively find and fix TypeScript/JSX files
+function fixFilesInDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += fixFilesInDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
       }
     }
-,
-    if (modified) {,
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath,}`);
-    }
-  } catch (error) {,
-    console.error(`Error fixing ${filePath}:`, error.message);
   }
+  
+  return fixedCount;
 }
-,
-// Main execution,
-async function main() {,
-  // Get all TypeScript/TSX files,
-  const files = await glob('src/**/*.{ts,tsx}');
-  console.log(`Found ${files.length} files to check...`);
-  let fixedCount = 0;
-  for (const file of files) {,
-    fixFile(file);
-    fixedCount++;
-  }
-,
-  console.log(`Processed ${fixedCount} files`);
+
+// Main execution
+console.log('🔧 Starting syntax error fixes...');
+
+const srcDir = path.join(__dirname, 'src');
+if (fs.existsSync(srcDir)) {
+  const fixedCount = fixFilesInDirectory(srcDir);
+  console.log(`🎉 Fixed ${fixedCount} files`);
+} else {
+  console.log('❌ src directory not found');
 }
-,
-main().catch(console.error);
+
+console.log('✅ Syntax error fixes completed!');

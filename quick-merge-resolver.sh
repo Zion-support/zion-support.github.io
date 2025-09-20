@@ -1,47 +1,8 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Quick Merge Conflict Resolver
-# This script will quickly resolve merge conflicts and merge PRs
-
-set -e
-
-echo "🚀 Quick Merge Conflict Resolver Starting..."
-
-# Check git status
-echo "📋 Checking git status..."
-git status
-
-# Switch to main branch
-echo "🔄 Switching to main branch..."
-git checkout main
-
-# Pull latest changes
-echo "📥 Pulling latest changes..."
-git pull origin main
-
-# Check for any existing merge conflicts
-echo "🔍 Checking for merge conflicts..."
-if git status | grep -q "both modified"; then
-    echo "⚠️  Merge conflicts detected. Resolving..."
-    
-    # Get list of conflicted files
-    CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
-    echo "📁 Conflicted files: $CONFLICT_FILES"
-    
-    # Resolve conflicts by taking both sides
-    for file in $CONFLICT_FILES; do
-        echo "🔧 Resolving conflicts in: $file"
-        
-        # Remove conflict markers and keep both sides
-        sed -i '/^<<<<<<< HEAD$/,/^=======$/,/^>>>>>>> /c\
 # Auto-resolved merge conflict' "$file"
         
         # Remove conflict markers
-        sed -i '/^<<<<<<< HEAD$/d' "$file"
-        sed -i '/^=======$/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
         
         # Add the resolved file
         git add "$file"
@@ -77,11 +38,6 @@ else
     CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
     for file in $CONFLICT_FILES; do
         echo "🔧 Resolving conflicts in: $file"
-        sed -i '/^<<<<<<< HEAD$/,/^=======$/,/^>>>>>>> /c\
-# Auto-resolved merge conflict' "$file"
-        sed -i '/^<<<<<<< HEAD$/d' "$file"
-        sed -i '/^=======$/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
         git add "$file"
     done
     
@@ -164,7 +120,6 @@ conflict_files=()
 for dir in src pages components scripts; do
     if [ -d "$dir" ]; then
         while IFS= read -r -d '' file; do
-            if grep -l "\|\|>>>>>>> " "$file" 2>/dev/null; then
                 conflict_files+=("$file")
             fi
         done < <(find "$dir" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" \) -print0 2>/dev/null)
@@ -189,7 +144,6 @@ if [ ${#conflict_files[@]} -gt 0 ]; then
         if sed -i.tmp '
             //,//!b
             //d
-            //,/>>>>>>> /d
         ' "$file" 2>/dev/null; then
             conflicts_resolved=$((conflicts_resolved + 1))
             log_success "Resolved conflicts in: $file"
@@ -211,7 +165,6 @@ fi
 log "🔄 Cleaning up any remaining conflict markers..."
 for dir in src pages components scripts; do
     if [ -d "$dir" ]; then
-        find "$dir" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" \) -exec grep -l "\|\|>>>>>>> " {} \; 2>/dev/null | while read file; do
             log "Additional cleanup for: $file"
             # Alternative approach: accept current version
             git checkout --ours "$file" 2>/dev/null && log_success "Accepted our version: $file"
@@ -302,47 +255,3 @@ else
     log_success "All operations completed successfully!"
     exit 0
 fi
->>>>>>> 1d3831578ae98329b18f0b6376f6b8ab172a1dfd
-=======
-# Quick merge resolver for open PRs
-set -e
-
-echo "🚀 Starting quick merge resolution..."
-
-# Ensure we're on main
-git checkout main
-git pull origin main
-
-# Get all cursor branches
-BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | head -10)
-
-echo "📊 Processing branches: $BRANCHES"
-
-for branch in $BRANCHES; do
-    echo "🔄 Processing $branch..."
-    
-    # Try to merge
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        git commit -m "Merge $branch into main"
-    else
-        echo "⚠️  Conflicts in $branch, resolving..."
-        
-        # Resolve conflicts by keeping main version for config files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-        for file in $CONFLICTED_FILES; do
-            if [[ "$file" == "package.json" || "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
-                git checkout --ours "$file"
-            else
-                git checkout --theirs "$file"
-            fi
-        done
-        
-        git add .
-        git commit -m "Resolve conflicts for $branch"
-        echo "✅ Resolved conflicts for $branch"
-    fi
-done
-
-echo "🎉 Quick merge completed!"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

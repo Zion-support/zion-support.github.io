@@ -1,2 +1,0 @@
-// helpers.ts,
-// Utility functions,

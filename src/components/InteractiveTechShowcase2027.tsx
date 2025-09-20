@@ -1,21 +1,3 @@
-import React, { useState, useEffect } from 'react';
-    {,
-      id: 0;
-      title: "Conscious AI Systems";
-      icon: "🧠";
-      description: "AI that thinks, feels, and creates with human-level consciousness";
-      features: [,
-        "Emotional Intelligence";
-        "Creative Problem Solving";
-        "Self-Directed Learning";
-        "Autonomous Decision Making",
-      ];
-      gradient: "from-purple-600 to-pink-600";
-            </button>,
-          ))}
-        </div>,
-      </div>,
-    </div>,
-  );
-};
-export default InteractiveTechShowcase2027;
+      id: 0,
+            <p className="text-xl text-purple-100 max-w-4xl mx-auto"></p>
+              Experience our technologies through immersive interactive features and real-time demonstrations</p>

@@ -1,23 +1,18 @@
-<<<<<<< HEAD
-name: autonomous-intelligence
-on:
+name: Autonomous Intelligence
+'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '0 2 * * *'
+    - cron: 0 */6 * * *
 permissions:
-  contents: read
+  contents: write
   actions: read
-  
-concurrency:
-  group: autonomous-intelligence-\${{ github.ref }}
-  cancel-in-progress: false
 jobs:
   main:
-    name: Autonomous Intelligence Job
+    name: Main Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
@@ -27,43 +22,22 @@ jobs:
         node-version: '20'
         cache: npm
     - name: Install dependencies
-      run: npm ci --no-audit --no-fund
-    - name: Run workflow
-      run: echo "Workflow completed successfully"
-=======
-name: Autonomous Intelligence
+      run: npm ci
+    - name: Clean git state
+      run: 'git config --global user.name "github-actions[bot]"
 
-on:
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: write
-  actions: read
-
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - name: Checkout repository
+  orchestrate:
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
           cache: 'npm'
-
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
->>>>>>> origin/auto/autonomy-17186719616
+      - name: Run autonomous intelligence
+        run: echo "Autonomous Intelligence workflow completed successfully"
+    runs_on: ubuntu-latest

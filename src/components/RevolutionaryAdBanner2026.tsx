@@ -1,69 +1,39 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-const RevolutionaryAdBanner2026: React.FC = () => {,
-        </div>,
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">,
-          <motion.div,
-            initial={{ opacity: 0, y: 50 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.5 ,}}
-            className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover: scale-105 transition-all duration-300",
-          >,
-            <div className="text-5xl mb-4 text-center">🤖</div>,
-            <h3 className="text-xl font-bold mb-3 text-center">Synthetic Intelligence</h3>,
-            <p className="text-indigo-100 mb-4 text-sm text-center">,
-              AI that surpasses human intelligence in every measurable way,
-            </p>,
-            <div className="text-xs text-indigo-300 space-y-1">,
-              <div>• 1000x faster processing</div>,
-              <div>• Perfect memory retention</div>,
-              <div>• Instant learning</div>,
-            </div>,
-          </motion.div>,
-            transition={{ duration: 0.8, delay: 0.6 ,}}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover: scale-105 transition-all duration-300",
-            <div className="text-5xl mb-4 text-center">🧬</div>,
-            <h3 className="text-xl font-bold mb-3 text-center">Neural Quantum Fusion</h3>,
-            <p className="text-purple-100 mb-4 text-sm text-center">,
-              The perfect fusion of quantum computing and neural networks,
-            <div className="text-xs text-purple-300 space-y-1">,
-              <div>• Quantum neural processing</div>,
-              <div>• Infinite parallel paths</div>,
-              <div>• Consciousness simulation</div>,
-            transition={{ duration: 0.8, delay: 0.7 ,}}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover: scale-105 transition-all duration-300",
-            <div className="text-5xl mb-4 text-center">🌐</div>,
-            <h3 className="text-xl font-bold mb-3 text-center">Reality Engine</h3>,
-            <p className="text-cyan-100 mb-4 text-sm text-center">,
-              Create and manipulate reality itself through advanced computing,
-            <div className="text-xs text-cyan-300 space-y-1">,
-              <div>• Reality simulation</div>,
-              <div>• Matter manipulation</div>,
-              <div>• Dimension creation</div>,
-            transition={{ duration: 0.8, delay: 0.8 ,}}
-            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover: scale-105 transition-all duration-300",
-            <div className="text-5xl mb-4 text-center">🔮</div>,
-            <h3 className="text-xl font-bold mb-3 text-center">Time Computing</h3>,
-            <p className="text-emerald-100 mb-4 text-sm text-center">,
-              Process information across multiple timelines simultaneously,
-            <div className="text-xs text-emerald-300 space-y-1">,
-              <div>• Temporal processing</div>,
-              <div>• Future prediction</div>,
-              <div>• Past analysis</div>,
-        <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8, delay: 0.9 ,}}
-          className="text-center mt-8",
-        >,
-          <div className="inline-flex items-center space-x-4">,
-            <span className="text-lg font-semibold">Ready for the breakthrough?</span>,
-            <a href="/pages/RevolutionaryTechBreakthrough2026" className="bg-gradient-to-r from-indigo-600 to-pink-600 px-8 py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold">,
-              Experience Now →,
-            </a>,
-          </div>,
-        </motion.div>,
-      </div>,
-    </motion.div>,
-  ),};
-export default RevolutionaryAdBanner2026;
+  return (
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}>
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center text-white">
+          <div className="inline-block bg-gradient-to-r from-cyan-400 to-purple-400 text-black px-4 py-2 rounded-full text-sm font-bold mb-4">
+            🚀 NEW IN 2026
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Revolutionary Tech Insights & Case Studies
+          </h2>
+          <p className="text-xl mb-8 max-w-4xl mx-auto text-gray-300"></p>
+            Discover the latest breakthroughs in AI consciousness, quantum computing, neural interfaces, </p>
+            and more. See how leading organizations are transforming their industries with our cutting-edge solutions.</p>
+              View Case Studies
+            </Link>
+            <Link 
+              to="/contact" 
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 font-semibold text-lg w-full sm:w-auto"
+            >
+              Get Started
+            </Link>
+          {/* Stats */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-1">500+
+              <div className="text-gray-300 text-sm">Projects Delivered
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-1">$2B+
+              <div className="text-gray-300 text-sm">Value Created
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-1">99%
+              <div className="text-gray-300 text-sm">Success Rate
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">24/7
+              <div className="text-gray-300 text-sm">Support

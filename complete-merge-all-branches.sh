@@ -35,15 +35,6 @@ resolve_conflicts_in_file() {
         return 1
     fi
     
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        log_message "🔧 Resolving conflicts in $file..."
-        
-        # Create backup
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Remove conflict markers and keep both versions where possible
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
         
         log_message "✅ Resolved conflicts in $file"
         return 0

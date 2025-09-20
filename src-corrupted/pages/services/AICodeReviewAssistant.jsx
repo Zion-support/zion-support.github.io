@@ -1,4 +1,3 @@
-import React from 'react';
       <Helmet>,
         <title>AICodeReviewAssistant | Zion Tech Group</title>,
         <meta name="description" content="AICodeReviewAssistant - Revolutionary technology solutions" />,
@@ -10,6 +9,3 @@ import React from 'react';
         </div>,
       </div>,
     </div>,
-  );
-};
-export default AICodeReviewAssistant;

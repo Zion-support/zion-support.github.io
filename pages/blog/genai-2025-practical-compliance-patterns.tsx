@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 const Genai2025PracticalCompliancePatterns: NextPage = () => {,
   return (,
     <div>,

@@ -1,99 +1,117 @@
-import { useEffect, useCallback }  from 'react';
-interface PerformanceMetrics {,
+import { useEffect, useCallback } from 'react';
+
+interface PerformanceMetrics {
   loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
-export const usePerformanceMonitor = () => {,
-  const measurePerformance = useCallback(() => {,
-    if (typeof window === 'undefined' || !('performance' in window)) {,
-      return null,
-    };
-const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    const metrics: Partial<PerformanceMetrics> = {};
-    // Load time,
-    if (navigation) {,
-      metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-    };
-    // First Contentful Paint,
-    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    if (fcpEntry) {,
-      metrics.firstContentfulPaint = fcpEntry.startTime;
-    };
-    // Largest Contentful Paint,
-    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-    if (lcpEntries.length > 0) {,
-      metrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
-    };
-    // First Input Delay,
-    const fidEntries = performance.getEntriesByType('first-input');
-    if (fidEntries.length > 0) {,
-      const fidEntry = fidEntries[0] as any;
-      metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
-    };
-    // Cumulative Layout Shift,
-    const clsEntries = performance.getEntriesByType('layout-shift');
-    let clsValue = 0;
-    clsEntries.forEach((entry: any) => {,
-      if (!entry.hadRecentInput) {,
-        clsValue += entry.value,};
-    });
-    metrics.cumulativeLayoutShift = clsValue;
-    // Time to Interactive (approximation),
-    if (navigation) {,
-      metrics.timeToInteractive = navigation.domContentLoadedEventEnd - navigation.navigationStart;
-    };
-return metrics as PerformanceMetrics;
-  }, []);
-  const logPerformanceMetrics = useCallback((metrics: PerformanceMetrics) => {,
-    console.group('🚀 Performance Metrics');
-    console.log('Load Time:', `${metrics.loadTime?.toFixed(2)}ms`);
-    console.log('First Contentful Paint:', `${metrics.firstContentfulPaint?.toFixed(2)}ms`);
-    console.log('Largest Contentful Paint:', `${metrics.largestContentfulPaint?.toFixed(2)}ms`);
-    console.log('First Input Delay:', `${metrics.firstInputDelay?.toFixed(2)}ms`);
-    console.log('Cumulative Layout Shift:', metrics.cumulativeLayoutShift?.toFixed(4));
-    console.log('Time to Interactive:', `${metrics.timeToInteractive?.toFixed(2)}ms`);
-    console.groupEnd();
-    // Send to analytics service in production,
-    if (process.env.NODE_ENV === 'production') {,
-      // Example: Send to Google Analytics,
-      if (typeof window !== 'undefined' && (window as any).gtag) {,
-        (window as any).gtag('eventperformance_metrics', {,
-          load_time: metrics.loadTime;
-          first_contentful_paint: metrics.firstContentfulPaint;
-          largest_contentful_paint: metrics.largestContentfulPaint;
-          first_input_delay: metrics.firstInputDelay;
-          cumulative_layout_shift: metrics.cumulativeLayoutShift;
-          time_to_interactive: metrics.timeToInteractive,});
-      };
-    };
-  }, []);
-  useEffect(() => {,
-    const handleLoad = () => {,
-      // Wait a bit for all metrics to be available,
-      setTimeout(() => {,
-        const metrics = measurePerformance();
-        if (metrics) {,
-          logPerformanceMetrics(metrics);
-        };
-      }, 1000);
-  };
-    if (document.readyState === 'complete') {,
-      handleLoad();
-    } else {,
-      window.addEventListener('load', handleLoad);
-    };
-return () => {,
-      window.removeEventListener('load', handleLoad);
-  };
-  }, [measurePerformance, logPerformanceMetrics]);
-  return {,
-    measurePerformance;
-    logPerformanceMetrics,
-  };
-  };
-export default usePerformanceMonitor;
+  renderTime: number;
+  interactionTime: number;
 }
+
+interface UsePerformanceMonitorOptions {
+  trackPageLoad?: boolean;
+  trackInteractions?: boolean;
+  onMetrics?: (metrics: Partial<PerformanceMetrics>) => void;
+}
+
+export const usePerformanceMonitor = (
+  componentName: string,
+  options: UsePerformanceMonitorOptions = {}
+) => {
+  const {
+    trackPageLoad = true,
+    trackInteractions = true,
+    onMetrics
+  } = options;
+
+  // Track page load performance
+  useEffect(() => {
+    if (!trackPageLoad) return;
+
+    const startTime = performance.now();
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      
+      for (const entry of entries) {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          const loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
+          
+          onMetrics?.({ loadTime });
+          
+          // Log to analytics
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'page_load_time', {
+              event_category: 'Performance',
+              event_label: componentName,
+              value: Math.round(loadTime)
+            });
+          }
+        }
+        
+        if (entry.entryType === 'paint') {
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry.name === 'first-contentful-paint') {
+            onMetrics?.({ renderTime: paintEntry.startTime });
+          }
+        }
+      }
+    });
+
+    observer.observe({ entryTypes: ['navigation', 'paint'] });
+
+    return () => {
+      observer.disconnect();
+      const endTime = performance.now();
+      const componentRenderTime = endTime - startTime;
+      
+      console.log(`${componentName} render time: ${componentRenderTime.toFixed(2)}ms`);
+    };
+  }, [componentName, trackPageLoad, onMetrics]);
+
+  // Track user interactions
+  const trackInteraction = useCallback((interactionName: string) => {
+    if (!trackInteractions) return;
+
+    const startTime = performance.now();
+    
+    return () => {
+      const endTime = performance.now();
+      const interactionTime = endTime - startTime;
+      
+      onMetrics?.({ interactionTime });
+      
+      // Log to analytics
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'user_interaction', {
+          event_category: 'Performance',
+          event_label: `${componentName}_${interactionName}`,
+          value: Math.round(interactionTime)
+        });
+      }
+      
+      console.log(`${componentName} ${interactionName} interaction time: ${interactionTime.toFixed(2)}ms`);
+    };
+  }, [componentName, trackInteractions, onMetrics]);
+
+  // Get current performance metrics
+  const getMetrics = useCallback(() => {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paint = performance.getEntriesByType('paint');
+    
+    const fcp = paint.find(entry => entry.name === 'first-contentful-paint');
+    const lcp = paint.find(entry => entry.name === 'largest-contentful-paint');
+    
+    return {
+      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+      renderTime: fcp ? fcp.startTime : 0,
+      largestContentfulPaint: lcp ? lcp.startTime : 0,
+      domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
+      totalPageLoad: navigation ? navigation.loadEventEnd - navigation.fetchStart : 0
+    };
+  }, []);
+
+  return {
+    trackInteraction,
+    getMetrics
+  };
+};

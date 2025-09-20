@@ -1,10 +1,56 @@
-import React from 'react';
-export function NotificationContext() {,
-  return (,
-    <div>,
-      <h1>Component</h1>,
-      <p>Component placeholder</p>,
-    </div>,
-  );
-}
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+export default function Page() {
 ,
+  fetchNotifications: async () => {},
+};
+
+export const useNotifications = () => {
+  const context = useContext<NotificationContextType>(NotificationContext);
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider');
+  }
+  return context;
+};
+
+export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+  const { user } = useAuth();
+  const notificationOps = useNotificationOperations(user?.id);
+  
+  useEffect(() => {
+    // Ensure fetchNotifications is called only if notificationOps is available
+    if(notificationOps) {
+      notificationOps.fetchNotifications();
+    }
+    
+    let channel: ReturnType<typeof supabase.channel> | undefined;
+    if(user && notificationOps) { // Ensure notificationOps is available for fetch on change
+      channel = supabase
+        .channel('notifications-changes')
+        .on('postgres_changes', 
+          {
+            event: '*', 
+            schema: 'public',
+            table: 'notifications',
+            filter: `user_id=eq.${user.id}`
+          },
+          (payload) => {
+            console.log('Notification change received:', payload);
+            notificationOps.fetchNotifications(); // Call fetchNotifications from the stable notificationOps
+          }
+        )
+        .subscribe();
+        
+      return () => {
+        if(channel) {
+          supabase.removeChannel(channel);
+        }
+      };
+    }
+  }, [user, notificationOps]); // Added notificationOps
+  
+  return (<NotificationContext.Provider value={notificationOps}>
+      {children}
+    </NotificationContext.Provider>
+  );
+};

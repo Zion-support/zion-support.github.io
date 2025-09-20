@@ -305,11 +305,6 @@ export default function App(): JSX.Element {,
                 {/* NEW: Ultimate Content Showcase 2025 - Comprehensive Technology Content */,}
                 <div className="mb-12">,
                 </div>,
-                {/* Revolutionary Content Showcase */}
-                <div className="mb-12">,
-                  <RevolutionaryContentShowcase />,
-                </div>,
-                {/* Revolutionary Content Showcase 2026 */}
 ,
                 {/* Featured New Services */}
                 <section className="mb-12">,
@@ -593,11 +588,6 @@ export default function App(): JSX.Element {,
                 {/* NEW: Interactive Technology Showcase 2025 - Latest Interactive Features */,}
                 <div className="mb-12">,
                 </div>,
-                {/* Interactive Tech Demo 2027 */}
-                <div className="mb-12">,
-                  <InteractiveTechDemo2027 />,
-                </div>,
-                {/* Interactive Technology Showcase 2027 */}
                 <div className="mb-12">,
                 </div>,
                 {/* Interactive Technology Showcase 2028 */}
@@ -665,6 +655,3 @@ export default function App(): JSX.Element {,
             </main>,
           } />,
         </Routes>,
-  );
-}
-,

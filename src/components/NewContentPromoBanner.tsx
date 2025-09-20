@@ -1,1 +1,2 @@
-import React from 'react';
+import { getRecentBlogPosts } from '../data/blog-posts';
+export default NewContentPromoBanner;

@@ -1,211 +1,146 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Button } from './ui/button';
-// Sidebar context optional in this build,
-const useSidebar = () => ({ isSidebarOpen: false, toggleSidebar: () => {} });
-import {,
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Brain;
-  Users;
-  Target;
-  Shield;
-  Zap;
-  Building;
-  Cpu;
-  Globe;
-  Rocket;
-  Star;
-  ArrowRight,
-} from 'lucide-react';
-export const Header: React.FC = () => {,
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isSidebarOpen, toggleSidebar } = useSidebar();
+
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const theme = 'dark';
-  const setTheme = (_: string) => {};
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  useEffect(() => {,
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const toggleMenu = () => {,
-    setIsMenuOpen(!isMenuOpen);
-  };
-  const closeMenu = () => {,
-    setIsMenuOpen(false);
-    setActiveDropdown(null);
-  const toggleDropdown = (dropdown: string) => {,
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  const navigationItems = [,
-    { name: 'Home', href: '/' ,};
-    {,
-      name: 'Services';
-      href: '#';
-      dropdown: [,
-        { name: 'AI Solutions', href: '/ai-solutions', description: 'Advanced AI and machine learning services' ,};
-        { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems-platform', description: 'AI-powered business automation' ,};
-        { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation quantum computing' ,};
-        { name: 'Cybersecurity', href: '/cybersecurity', description: 'Comprehensive security solutions' ,};
-        { name: 'Cloud & DevOps', href: '/cloud-devops', description: 'Scalable cloud infrastructure' ,};
-        { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' ,};
-        { name: '5G Solutions', href: '/5g-enterprise-solutions', description: '5G enterprise deployment' ,}
-      ],
-    };
-      name: 'Solutions';
-      href: '/solutions';
-        { name: 'Healthcare', href: '/solutions/healthcare', description: 'AI-powered healthcare solutions' ,};
-        { name: 'Finance', href: '/solutions/finance', description: 'Financial technology innovations' ,};
-        { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing systems' ,};
-        { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' ,}
-      name: 'Company';
-      href: '/about';
-        { name: 'About Us', href: '/about', description: 'Learn about our mission and values' ,};
-        { name: 'Our Team', href: '/team', description: 'Meet our leadership and experts' ,};
-        { name: 'Careers', href: '/careers', description: 'Join our growing team' ,};
-        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' ,}
-      name: 'Resources';
-      href: '/blog';
-        { name: 'Blog', href: '/blog', description: 'Latest insights and updates' ,};
-        { name: 'Documentation', href: '/docs', description: 'Technical guides and APIs' ,};
-        { name: 'Help Center', href: '/help', description: 'Support and troubleshooting' ,};
-        { name: 'Community', href: '/community', description: 'Connect with peers' ,}
-    { name: 'Contact', href: '/contact' ,}
+
+  const navigationItems = [
+    { name: 'Home', path: '/', icon: '🏠' },
+    { name: 'Services', path: '/services', icon: '🚀' },
+    { name: 'AI Solutions', path: '/ai-solutions', icon: '🤖' },
+    { name: 'Micro SAAS', path: '/micro-saas', icon: '💻' },
+    { name: 'IT Services', path: '/it-services', icon: '🖥️' },
+    { name: 'About', path: '/about', icon: 'ℹ️' },
+    { name: 'Contact', path: '/contact', icon: '📞' }
   ];
-  const isActive = (href: string) => {,
-    if (href === '/') {,
-      return location.pathname === '/',}
-    return location.pathname.startsWith(href);
-  return (,
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${,
-      isScrolled,
-        ? 'bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10',
-        : 'bg-transparent',
-    }`}>,
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        <div className="flex justify-between items-center h-20">,
-          {/* Logo */,}
-          <div className="flex items-center">,
-            <Link to="/" className="flex-shrink-0" onClick={closeMenu}>,
-              <div className="flex items-center space-x-2">,
-                <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">,
-                  <span className="text-white font-bold text-lg">Z</span>,
-                </div>,
-                <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">,
-                  Zion Tech Group,
-                </span>,
-              </div>,
-            </Link>,
-          </div>,
-          {/* Desktop Navigation */}
-          <nav className="hidden lg: flex space-x-8">,
-            {navigationItems.map((item) => (,
-              <div key={item.name,} className="relative">,
-                {item.dropdown ? (,
-                  <div className="relative">,
-                    <button,
-                      onClick={() => toggleDropdown(item.name)}
-                      className={`flex items-center space-x-1 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${,
-                        isActive(item.href),
-                          ? 'text-zion-cyan bg-zion-cyan/10',
-                          : 'text-zion-slate-light hover: text-white hover:bg-zion-blue-light/20',}`}
-                    >,
-                      <span>{item.name}</span>,
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${,
-                        activeDropdown === item.name ? 'rotate-180' : '',
-                      }`} />,
-                    </button>,
-                    {activeDropdown === item.name && (,
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden">,
-                        {item.dropdown.map((dropdownItem) => (,
-                          <Link,
-                            key={dropdownItem.name}
-                            to={dropdownItem.href}
-                            className="block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-cyan/10 transition-all duration-200 border-b border-zion-blue-light/20 last:border-b-0",
-                            onClick={() => setActiveDropdown(null),}
-                          >,
-                            {dropdownItem.name}
-                          </Link>,
-                        ))}
-                      </div>,
-                    )}
-                  </div>,
-                ) : (,
-                  <Link,
-                    to={item.href}
-                    className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${,
-                      isActive(item.href),
-                        ? 'text-zion-cyan bg-zion-cyan/10',
-                        : 'text-zion-slate-light hover: text-white hover:bg-zion-blue-light/20',}`}
-                  >,
-                    {item.name}
-                  </Link>,
-                )}
-            ))}
-          </nav>,
-          {/* Right side buttons */}
-          <div className="flex items-center space-x-4">,
-            {/* Theme toggle */}
-            <button,
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 text-zion-slate-light hover: text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200",
-            >,
-              {theme === 'dark' ? null : null,}
-            </button>,
-            {/* Language selector */}
-            <button className="p-2 text-zion-slate-light hover: text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200">,
-              <Globe className="w-5 h-5" />,
-            {/* Auth buttons */,}
-            <div className="hidden md: flex items-center space-x-3">,
-              <Button variant="outline" size="sm" className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white">,
-                Sign In,
-              </Button>,
-              <Button size="sm" className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:shadow-lg hover:shadow-zion-cyan/25">,
-                Get Started,
-            </div>,
-            {/* Mobile menu button */,}
-              onClick={toggleMenu}
-              className="lg: hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200",
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />,}
-          {/* Sidebar Toggle Button */}
-          <button,
-            onClick={toggleSidebar}
-            className="lg: hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 mr-2",
-            aria-label="Toggle sidebar",
-          >,
-            <Menu className="w-6 h-6" />,
-          </button>,
-          {/* Mobile Menu Button */,}
-            onClick={() => {}}
-            className="lg: hidden p-2 text-white hover:text-zion-cyan transition-colors",
-        </div>,
-      </div>,
-      {/* Mobile Navigation */,}
-      {isMenuOpen && (,
-        <div className="lg: hidden bg-zion-blue-dark/98 backdrop-blur-md border-t border-zion-cyan/20">,
-          <div className="px-4 py-6 space-y-4">,
-              <div key={item.name,}>,
-                  <div>,
-                      className="flex items-center justify-between w-full px-3 py-2 text-left text-zion-slate-light hover: text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200",
-                      <div className="ml-4 mt-2 space-y-2">,
-                            className="block px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200",
-                            onClick={closeMenu,}
-                    className={`block px-3 py-2 text-zion-slate-light hover: text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200 ${,
-                      isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : '',
-                    onClick={closeMenu,}
-            {/* Mobile auth buttons */}
-            <div className="pt-4 space-y-3">,
-              <Button variant="outline" className="w-full border-zion-cyan/30 text-zion-cyan hover: bg-zion-cyan hover:text-white">,
-              <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:shadow-lg hover:shadow-zion-cyan/25">,
-      ),}
-    </header>,
+
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
+
+  return (
+    <header className="bg-white shadow-sm border-b">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0">
+              <h1 className="text-xl font-bold text-gray-900">Zion Tech Group</h1>
+            </Link>
+          </div>
+          
+          <nav className="hidden md:flex space-x-8">
+            <Link to="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              Home
+            </Link>
+            
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
+                Services
+                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    All Services
+                  </Link>
+                  <Link to="/micro-saas-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Micro SAAS Services
+                  </Link>
+                  <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    AI & Machine Learning
+                  </Link>
+                  <Link to="/cloud-devops-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Cloud & DevOps
+                  </Link>
+                  <Link to="/cybersecurity" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Cybersecurity
+                  </Link>
+                  <Link to="/enterprise-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Enterprise Solutions
+                  </Link>
+                  <Link to="/it-onsite-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    IT Onsite Services
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
+                Solutions
+                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link to="/ai-business-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    AI Business Solutions
+                  </Link>
+                  <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Digital Transformation
+                  </Link>
+                  <Link to="/industry-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Industry Solutions
+                  </Link>
+                  <Link to="/green-it" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Green IT Solutions
+                  </Link>
+                  <Link to="/5g-enterprise-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    5G Enterprise Solutions
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            <Link to="/about" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              About
+            </Link>
+            
+            <Link to="/blog" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              Blog
+            </Link>
+            
+            <Link to="/contact" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              Contact
+            </Link>
+          </nav>
+          
+          <div className="flex items-center space-x-4">
+            <Link to="/faq">
+              <Button variant="outline" size="sm">
+                Help
+              </Button>
+            </Link>
+            <Link to="/login">
+              <Button variant="outline" size="sm">
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button size="sm">
+                Get Started
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }
-export default Header;
-}}}}}

@@ -2,145 +2,99 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-function ensureDir(dirPath) {
-  fs.mkdirSync(dirPath, { recursive: true });
-}
-
-function readText(filePath) {
-  try { return fs.readFileSync(filePath, 'utf8'); } catch { return ''; }
-}
-
-function getAllFiles(patterns, cwd) {
-  const files = new Set();
-  for (const pattern of patterns) {
-    for (const f of glob.sync(pattern, { cwd, nodir: true, dot: false })) {
-      files.add(path.join(cwd, f));
-    }
-  }
-  return Array.from(files);
-}
-
-function analyzeContentGaps(rootDir) {
-  const pagesDir = path.join(rootDir, 'pages');
-  const componentsDir = path.join(rootDir, 'components');
-  const docsDir = path.join(rootDir, 'docs');
-
-  const pageFiles = getAllFiles(['pages/**/*.{tsx,ts,jsx,js,md,mdx}'], rootDir);
-  const componentFiles = getAllFiles(['components/**/*.{tsx,ts,jsx,js}'], rootDir);
-  const docFiles = getAllFiles(['docs/**/*.{md,mdx}'], rootDir);
-
-  const pagesByDir = {};
-  for (const file of pageFiles) {
-    const rel = path.relative(rootDir, file);
-    const dir = rel.split(path.sep)[1] || '';
-    pagesByDir[dir] = pagesByDir[dir] || [];
-    pagesByDir[dir].push(rel);
-  }
-
-  const componentsByDir = {};
-  for (const file of componentFiles) {
-    const rel = path.relative(rootDir, file);
-    const dir = rel.split(path.sep)[1] || '';
-    componentsByDir[dir] = componentsByDir[dir] || [];
-    componentsByDir[dir].push(rel);
-  }
-
-  const docsByDir = {};
-  for (const file of docFiles) {
-    const rel = path.relative(rootDir, file);
-    const dir = rel.split(path.sep)[1] || '';
-    docsByDir[dir] = docsByDir[dir] || [];
-    docsByDir[dir].push(rel);
-  }
-
-  // Heuristics for gaps
-  const gaps = [];
-
-  // 1) Orphaned sections: top-level page directories with only index or very few pages
-  for (const [dir, files] of Object.entries(pagesByDir)) {
-    if (!dir || dir === 'api') continue;
-    const nonIndex = files.filter(f => !/index\.(tsx|ts|jsx|js|mdx?)$/.test(f));
-    if (nonIndex.length === 0) {
-      gaps.push({
-        type: 'thin-section',
-        severity: 'medium',
-        area: 'pages',
-        dir,
-        message: `Section \'/${dir}\' has only an index page. Consider adding at least one deep page.`
-      });
-    }
-  }
-
-  // 2) Components with no direct references from pages (simple grep)
-  const pagesText = pageFiles.map(readText).join('\n');
-  for (const [dir, files] of Object.entries(componentsByDir)) {
-    for (const rel of files) {
-      const name = path.basename(rel, path.extname(rel));
-      if (!new RegExp(`\b${name}\b`).test(pagesText)) {
-        gaps.push({
-          type: 'unused-component-suspect',
-          severity: 'low',
-          area: 'components',
-          file: rel,
-          message: `Component '${name}' is not referenced directly in pages. Verify usage or consider surfacing.`
-        });
+function walkDir(rootDir) {
+  const files = [];
+  const stack = [rootDir];
+  while (stack.length) {
+    const current = stack.pop();
+    let entries = [];
+    try { entries = fs.readdirSync(current, { withFileTypes: true }); } catch { continue; }
+    for (const e of entries) {
+      const full = path.join(current, e.name);
+      if (e.isDirectory()) {
+        if (e.name === 'api') continue; // skip API routes
+        stack.push(full);
+      } else if (/\.(tsx|ts|jsx|js)$/i.test(e.name)) {
+        files.push(full);
       }
     }
   }
-
-  // 3) Missing docs companion for key pages (heuristic by page dir name)
-  for (const [dir, files] of Object.entries(pagesByDir)) {
-    if (!dir || dir === 'api') continue;
-    const hasDocs = !!docsByDir[dir];
-    if (!hasDocs) {
-      gaps.push({
-        type: 'missing-docs',
-        severity: 'low',
-        area: 'docs',
-        dir,
-        message: `No docs found for '/${dir}'. Consider adding docs/${dir}/overview.md` 
-      });
-    }
-  }
-
-  return { summary: { pages: pageFiles.length, components: componentFiles.length, docs: docFiles.length }, gaps };
+  return files;
 }
 
-function writeReports(rootDir, result) {
-  const outDir = path.join(rootDir, 'public', 'automation');
-  ensureDir(outDir);
-  const jsonPath = path.join(outDir, 'content-gaps.json');
-  fs.writeFileSync(jsonPath, JSON.stringify({ generatedAt: new Date().toISOString(), ...result }, null, 2));
+function readFileSafe(p) {
+  try { return fs.readFileSync(p, 'utf8'); } catch { return ''; }
+}
 
-  const mdLines = [];
-  mdLines.push('# Content Gap Report');
-  mdLines.push('');
-  mdLines.push(`Generated: ${new Date().toISOString()}`);
-  mdLines.push('');
-  mdLines.push('## Summary');
-  mdLines.push(`- Pages: ${result.summary.pages}`);
-  mdLines.push(`- Components: ${result.summary.components}`);
-  mdLines.push(`- Docs: ${result.summary.docs}`);
-  mdLines.push('');
-  mdLines.push('## Gaps');
-  if (result.gaps.length === 0) {
-    mdLines.push('- No gaps detected.');
-  } else {
-    for (const gap of result.gaps.slice(0, 200)) {
-      mdLines.push(`- [${gap.severity}] (${gap.type}) ${gap.message}`);
-    }
-  }
-  const mdPath = path.join(outDir, 'content-gaps.md');
-  fs.writeFileSync(mdPath, mdLines.join('\n'));
+function deriveRoute(pagesRoot, filePath) {
+  const rel = path.relative(pagesRoot, filePath).replace(/\\/g, '/');
+  let route = '/' + rel.replace(/\.(tsx|ts|jsx|js)$/i, '');
+  route = route.replace(/index$/i, '');
+  route = route.replace(/\[(.*?)\]/g, ':$1');
+  route = route.replace(/\/+/, '/');
+  if (route === '/') return '/';
+  return route.replace(/\/$/, '');
+}
 
-  return { jsonPath, mdPath };
+function stripJsxAndImports(src) {
+  let s = src;
+  s = s.replace(/<[^>]+>/g, ' '); // strip JSX tags
+  s = s.replace(/import\s+[^;]+;?/g, ' ');
+  s = s.replace(/export\s+[^;]+;?/g, ' ');
+  s = s.replace(/\{[^}]*\}/g, ' ');
+  s = s.replace(/\s+/g, ' ');
+  return s.trim();
 }
 
 (function main() {
-  const rootDir = path.resolve(__dirname, '..');
-  const result = analyzeContentGaps(rootDir);
-  const outputs = writeReports(rootDir, result);
-  console.log(JSON.stringify({ ok: true, ...outputs, counts: result.summary, gaps: result.gaps.length }, null, 2));
+  const workspaceRoot = path.resolve(__dirname, '..');
+  const pagesDir = path.join(workspaceRoot, 'pages');
+  const outJson = path.join(workspaceRoot, 'public', 'automation', 'content-gaps.json');
+  const outMd = path.join(workspaceRoot, 'docs', 'reports', 'content-gaps.md');
+
+  let files = [];
+  try { files = walkDir(pagesDir); } catch { files = []; }
+
+  const results = [];
+
+  for (const f of files) {
+    const src = readFileSafe(f);
+    if (!src) continue;
+    const route = deriveRoute(pagesDir, f);
+    const flat = stripJsxAndImports(src);
+    const words = flat ? flat.split(/\s+/).filter(Boolean).length : 0;
+    const hasHead = /from\s+['\"]next\/head['\"]/i.test(src) || /<Head>/i.test(src);
+    const hasMetaDesc = /<meta[^>]+name=["']description["'][^>]*>/i.test(src);
+
+    const suggestions = [];
+    if (!hasHead || !hasMetaDesc) suggestions.push('Add <Head> with meta description');
+    if (words < 120) suggestions.push('Low content density — consider adding more helpful copy');
+
+    results.push({ route, file: path.relative(workspaceRoot, f), words, hasMetaDescription: !!hasMetaDesc, suggestions });
+  }
+
+  results.sort((a, b) => a.route.localeCompare(b.route));
+
+  fs.mkdirSync(path.dirname(outJson), { recursive: true });
+  fs.mkdirSync(path.dirname(outMd), { recursive: true });
+
+  const json = { generatedAt: new Date().toISOString(), totalPages: results.length, pages: results };
+  fs.writeFileSync(outJson, JSON.stringify(json, null, 2));
+
+  const mdLines = [];
+  mdLines.push('# Content Gaps Report');
+  mdLines.push('');
+  mdLines.push(`Generated at: ${json.generatedAt}`);
+  mdLines.push('');
+  mdLines.push(`Total pages scanned: ${json.totalPages}`);
+  mdLines.push('');
+  mdLines.push('| Route | Words | Meta Description | Suggestions |');
+  mdLines.push('| --- | ---:| :---: | --- |');
+  json.pages.slice(0, 1000).forEach((p) => {
+    mdLines.push(`| ${p.route} | ${p.words} | ${p.hasMetaDescription ? 'Yes' : 'No'} | ${p.suggestions.join('; ')} |`);
+  });
+  fs.writeFileSync(outMd, mdLines.join('\n'));
+
+  console.log(`Wrote ${outJson} and ${outMd}`);
 })();

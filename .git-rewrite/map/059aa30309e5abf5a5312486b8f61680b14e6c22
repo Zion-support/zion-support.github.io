@@ -1,1 +1,5 @@
-d3c660168898cf953ff29bf4dfd4b7ab99c003f3
+
+> zion-tech-group@0.1.0 test
+> jest --coverage
+
+Coverage generation failed

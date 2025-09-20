@@ -1,2 +1,2 @@
 
-,
+// Date-fns type declarations

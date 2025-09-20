@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 const CloudCostOptimization2025: NextPage = () => {,
   return (,
     <div>,

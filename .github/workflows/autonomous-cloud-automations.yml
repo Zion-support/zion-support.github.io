@@ -1,23 +1,18 @@
-<<<<<<< HEAD
 name: autonomous-cloud-automations
-on:
+'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '0 2 * * *'
+    - cron: 0 */2 * * *
 permissions:
-  contents: read
+  contents: write
   actions: read
-  
-concurrency:
-  group: autonomous-cloud-automations-\${{ github.ref }}
-  cancel-in-progress: false
 jobs:
   main:
-    name: Autonomous Cloud Automations Job
+    name: Main Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
@@ -27,40 +22,23 @@ jobs:
         node-version: '20'
         cache: npm
     - name: Install dependencies
-      run: npm ci --no-audit --no-fund
-    - name: Run workflow
-      run: echo "Autonomous cloud automations workflow completed successfully"
-=======
-name: Autonomous Cloud Automations
+      run: npm ci
+    - name: Clean git state
+      run: 'git config --global user.name "github-actions[bot]"
 
-on:
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: write
-  actions: read
-
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - name: Checkout repository
+  run-automations:
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
+          persist-credentials: true
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-      - name: Run workflow
-        run: echo "Workflow completed successfully"
->>>>>>> origin/auto/autonomy-17186719616
+      
+      - name: Clean git state
+        run: |
+          echo "Workflow completed successfully"
+          

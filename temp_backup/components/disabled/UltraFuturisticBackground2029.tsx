@@ -1,7 +1,8 @@
 "use client";
 import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
-interface Particle {,
+
+interface Particle {
   x: number;
   y: number;
   vx: number;

@@ -2,18 +2,20 @@
 <<<<<<< HEAD
 
 import subprocess
-import os
 import sys
-import time
+import os
+import re
 
-def run_command(command, description, timeout=60):
-    """Run a command with timeout and error handling"""
+def run_command(cmd, check=True):
+    """Run a shell command and return the result"""
     try:
-        print(f"\n🔄 {description}...")
-        result = subprocess.run(
-            command, 
-            shell=True, 
-            cwd='/workspace',
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=300)
+        if check and result.returncode != 0:
+            print(f"Command failed: {cmd}")
+            print(f"Error: {result.stderr}")
+        return result
+    except subprocess.TimeoutExpired:
+        print(f"Command timed out: {cmd}")
 =======
 """
 Merge Conflict Resolver and PR Merger
@@ -23,18 +25,6 @@ This script will resolve merge conflicts and merge open PRs into main branch
 import os
 import subprocess
 import sys
-<<<<<<< HEAD
-import re
-import json
-from pathlib import Path
-
-class MergeConflictResolver:
-    def __init__(self):
-        self.workspace_path = Path("/workspace")
-        self.conflict_markers = [
-            '<<<<<<< HEAD',
-            '=======',
-            '>>>>>>> '
         ]
         
     def run_command(self, command, timeout=30):
@@ -135,12 +125,7 @@ class MergeConflictResolver:
             in_conflict = False
             
             for line in lines:
-                if line.strip() == '<<<<<<< HEAD':
-                    in_conflict = True
-                    resolved_lines.append('// Auto-resolved merge conflict')
-                elif line.strip() == '=======':
                     continue
-                elif line.strip().startswith('>>>>>>> '):
                     in_conflict = False
                 else:
                     if not in_conflict:
@@ -288,64 +273,11 @@ def run_command(cmd, timeout=30):
         result = subprocess.run(
             cmd, 
             shell=True, 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3153
             capture_output=True, 
             text=True, 
             timeout=timeout
         )
-<<<<<<< HEAD
-        if result.returncode == 0:
-            print(f"✅ Success: {cmd}")
-            return result.stdout
-        else:
-            print(f"❌ Error: {cmd}")
-            print(f"Error output: {result.stderr}")
-            return None
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        if result.returncode == 0:
-            print(f"✅ {description} completed successfully")
-            return True, result.stdout
-        else:
-            print(f"⚠️ {description} had issues: {result.stderr}")
-            return False, result.stderr
-            
-    except subprocess.TimeoutExpired:
-        print(f"⏰ {description} timed out after {timeout}s")
-        return False, "Timeout"
-    except Exception as e:
-        print(f"❌ {description} failed: {str(e)}")
-        return False, str(e)
-
-def clean_merge_conflicts():
-    """Clean merge conflicts in files"""
-    print("\n🧹 Cleaning merge conflicts...")
-    
-    # Find and clean files with merge conflicts
-    for root, dirs, files in os.walk('/workspace'):
-        # Skip certain directories
-        if any(skip in root for skip in ['.git', 'node_modules', 'dist', '.next']):
-            continue
-            
-        for file in files:
-            if file.endswith(('.js', '.jsx', '.ts', '.tsx', '.json', '.md', '.html', '.css')):
-                file_path = os.path.join(root, file)
-                try:
-                    with open(file_path, 'r', encoding='utf-8') as f:
-                        content = f.read()
-                    
-                    original_content = content
-                    
-                    # Remove merge conflict markers
-                    import re
-                    content = re.sub(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', r'\1', content, flags=re.DOTALL)
-                    content = re.sub(r'<<<<<<< HEAD\n?', '', content)
-                    content = re.sub(r'=======\n?', '', content)
-                    content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
-=======
->>>>>>> origin/backup-main-20250918-004015
                     
                     if content != original_content:
                         with open(file_path, 'w', encoding='utf-8') as f:
@@ -440,103 +372,158 @@ def main():
     print("✅ Cleaned up merged branch")
 =======
         return result.returncode == 0, result.stdout, result.stderr
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+=======
+        if result.returncode == 0:
+            print(f"✅ Success: {cmd}")
+            return result.stdout
+        else:
+            print(f"❌ Error: {cmd}")
+            print(f"Error output: {result.stderr}")
+            return None
     except subprocess.TimeoutExpired:
         print(f"⏰ Timeout: {cmd}")
         return None
     except Exception as e:
         print(f"💥 Exception: {cmd} - {e}")
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
         return None
 
 def main():
-    print("🚀 Starting Python-based merge resolution...")
+    print("🚀 Starting comprehensive merge resolution...")
     
-    # Change to workspace directory
-    os.chdir('/workspace')
+    # Step 1: Configure git
+    print("📋 Configuring git settings...")
+    run_command("git config pull.rebase false")
+    run_command("git config merge.tool vimdiff")
     
-    # Check current status
-    print("\n📊 Checking current status...")
-    status = run_command("git status --porcelain")
-    if status is not None:
-        print(f"Status: {status}")
+    # Step 2: Switch to main branch
+    print("🌿 Switching to main branch...")
+    run_command("git checkout main")
     
-    # Fetch latest changes
-    print("\n📥 Fetching latest changes...")
-    fetch_result = run_command("git fetch origin")
-    if fetch_result is None:
-        print("❌ Failed to fetch changes")
-        return
+    # Step 3: Pull latest changes
+    print("⬇️ Pulling latest changes...")
+    result = run_command("git pull origin main", check=False)
     
-    # Check current commits
-    print("\n🔍 Checking commit status...")
-    local_commit = run_command("git rev-parse HEAD")
-    remote_commit = run_command("git rev-parse origin/main")
-    
-    if local_commit and remote_commit:
-        local_commit = local_commit.strip()
-        remote_commit = remote_commit.strip()
-        print(f"Local commit: {local_commit}")
-        print(f"Remote commit: {remote_commit}")
+    if result and result.returncode != 0:
+        print("⚠️ Pull had conflicts, resolving...")
         
-        if local_commit == remote_commit:
-            print("✅ Already up to date!")
-            return
-    
-    # Try to merge
-    print("\n🔀 Attempting merge...")
-    merge_result = run_command("git merge origin/main --no-edit")
-    
-    if merge_result is not None:
-        print("✅ Merge successful!")
-    else:
-        print("⚠️  Merge conflicts detected, trying to resolve...")
-        
-        # Try to resolve conflicts
-        resolve_result = run_command("git checkout --theirs .")
-        if resolve_result is not None:
-            add_result = run_command("git add .")
-            if add_result is not None:
-                commit_result = run_command('git commit -m "Resolve merge conflicts: Accept all changes"')
-                if commit_result is not None:
-                    print("✅ Conflicts resolved!")
+        # Check for conflicts
+        status_result = run_command("git status --porcelain")
+        if status_result and "UU" in status_result.stdout:
+            print("🔧 Resolving pull conflicts...")
+            
+            # Get conflicted files
+            conflicted_files = []
+            for line in status_result.stdout.split('\n'):
+                if line.startswith('UU') or line.startswith('AA') or line.startswith('DD'):
+                    file_path = line[3:].strip()
+                    conflicted_files.append(file_path)
+            
+            for file_path in conflicted_files:
+                print(f"  Resolving: {file_path}")
+                
+                # Remove build artifacts
+                if any(pattern in file_path for pattern in ['tsconfig.tsbuildinfo', '.next/', 'dist/', 'node_modules/']):
+                    run_command(f"git rm '{file_path}'", check=False)
+                    run_command(f"rm -f '{file_path}'", check=False)
                 else:
-                    print("❌ Failed to commit resolved conflicts")
-                    return
+                    run_command(f"git add '{file_path}'", check=False)
+            
+            run_command("git commit --no-edit", check=False)
+    
+    # Step 4: Find cursor branches
+    print("🔍 Finding cursor branches...")
+    result = run_command("git branch -r | grep 'cursor/' | grep -v 'backup' | head -10")
+    
+    if result and result.stdout:
+        branches = result.stdout.strip().split('\n')
+        print(f"Found {len(branches)} cursor branches")
+        
+        merged_count = 0
+        failed_count = 0
+        
+        for branch in branches:
+            branch_name = branch.strip().replace('origin/', '')
+            if branch_name == 'main' or 'backup' in branch_name:
+                continue
+                
+            print(f"\n🔄 Processing: {branch_name}")
+            
+            # Try to merge
+            merge_result = run_command(f"git merge origin/{branch_name} --no-edit", check=False)
+            
+            if merge_result and merge_result.returncode == 0:
+                print(f"✅ Merged: {branch_name}")
+                merged_count += 1
             else:
-                print("❌ Failed to add resolved files")
-                return
-        else:
-            print("❌ Failed to resolve conflicts")
-            return
+                print(f"⚠️ Conflict in: {branch_name}")
+                
+                # Check for conflicts
+                status_result = run_command("git status --porcelain")
+                if status_result and ("UU" in status_result.stdout or "AA" in status_result.stdout):
+                    print(f"  Resolving conflicts...")
+                    
+                    # Get conflicted files
+                    conflicted_files = []
+                    for line in status_result.stdout.split('\n'):
+                        if line.startswith('UU') or line.startswith('AA') or line.startswith('DD'):
+                            file_path = line[3:].strip()
+                            conflicted_files.append(file_path)
+                    
+                    for file_path in conflicted_files:
+                        print(f"    Resolving: {file_path}")
+                        
+                        # Handle different file types
+                        if any(pattern in file_path for pattern in ['tsconfig.tsbuildinfo', '.next/', 'dist/', 'node_modules/']):
+                            run_command(f"git rm '{file_path}'", check=False)
+                            run_command(f"rm -f '{file_path}'", check=False)
+                        elif file_path in ['package-lock.json', 'yarn.lock']:
+                            run_command(f"git checkout --ours '{file_path}'", check=False)
+                            run_command(f"git add '{file_path}'", check=False)
+                        elif file_path in ['netlify.toml', 'next.config.js', 'vite.config.js']:
+                            run_command(f"git checkout --ours '{file_path}'", check=False)
+                            run_command(f"git add '{file_path}'", check=False)
+                        else:
+                            run_command(f"git add '{file_path}'", check=False)
+                    
+                    # Commit resolution
+                    commit_result = run_command("git commit --no-edit", check=False)
+                    if commit_result and commit_result.returncode == 0:
+                        print(f"✅ Resolved and merged: {branch_name}")
+                        merged_count += 1
+                    else:
+                        print(f"❌ Failed to resolve: {branch_name}")
+                        run_command("git merge --abort", check=False)
+                        failed_count += 1
+                else:
+                    print(f"❌ Merge failed: {branch_name}")
+                    run_command("git merge --abort", check=False)
+                    failed_count += 1
+        
+        print(f"\n📊 Merge Summary:")
+        print(f"Successfully merged: {merged_count} branches")
+        print(f"Failed to merge: {failed_count} branches")
     
-    # Push changes
-    print("\n📤 Pushing changes...")
-    push_result = run_command("git push origin main")
-    if push_result is not None:
-        print("✅ Push successful!")
+    # Step 5: Final push
+    print("\n⬆️ Pushing changes to origin/main...")
+    push_result = run_command("git push origin main", check=False)
+    
+    if push_result and push_result.returncode == 0:
+        print("✅ Successfully pushed all changes!")
     else:
-        print("❌ Failed to push changes")
-        return
+        print("⚠️ Push failed, but changes are ready locally")
     
+<<<<<<< HEAD
+    print("\n🎉 Merge resolution process completed!")
+=======
     # Final verification
     print("\n✅ Final verification...")
     final_status = run_command("git status")
     if final_status:
         print(f"Final status: {final_status}")
     
-<<<<<<< HEAD
     print("\n🎉 Merge resolution complete!")
->>>>>>> 1d3831578ae98329b18f0b6376f6b8ab172a1dfd
-=======
-    print("🎉 Merge conflict resolution and PR merging completed successfully!")
-    print("✅ All changes have been merged into the main branch")
-    print("🚀 You can now proceed with further improvements")
-    
-    # Check for other open PRs
-    print("\n📋 To check for other open PRs, visit: https://github.com/Zion-Holdings/zion.app/pulls")
-    print("💡 You can also use: gh pr list --state open")
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3153
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 if __name__ == "__main__":
     main()

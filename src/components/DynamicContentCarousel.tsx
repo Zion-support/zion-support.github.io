@@ -1,6 +1,12 @@
-import React from 'react';
-const DynamicContentCarousel = () => {,
-    </div>,
-  );
-};
-export default DynamicContentCarousel;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

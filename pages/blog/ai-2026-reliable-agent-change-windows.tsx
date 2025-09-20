@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 const Ai2026ReliableAgentChangeWindows: NextPage = () => {,
   return (,
     <div>,

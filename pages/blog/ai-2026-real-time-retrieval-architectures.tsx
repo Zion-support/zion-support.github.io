@@ -1,5 +1,4 @@
 import Link from 'next/link';
->>>>>>> origin/backup-main-20250918-004015,
   return (,
     <div>,
       <Head>,
@@ -13,4 +12,3 @@ import Link from 'next/link';
       </main>,
     </div>,
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,

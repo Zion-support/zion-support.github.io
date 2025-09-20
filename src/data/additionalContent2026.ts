@@ -1,113 +1,122 @@
-export const ADDITIONAL_BLOG_POSTS_2026 = [,
-  {,
-    id: "ai-2026-next-gen-breakthrough";
-    title: "AI 2026: Next-Generation Breakthrough Technologies";
-    excerpt: "Explore the revolutionary AI technologies that are reshaping industries in 2026 from quantum-enhanced machine learning to consciousness-driven automation.";
-    content: "The year 2026 marks a pivotal moment in artificial intelligence evolution. We're witnessing breakthroughs that were once considered science fiction becoming reality. From quantum-enhanced neural networks to AI systems with genuine consciousness, the landscape of artificial intelligence is transforming at an unprecedented pace. This comprehensive guide explores the cutting-edge AI technologies that are revolutionizing industries worldwide, providing insights into implementation strategies, real-world applications, and the future implications of these revolutionary systems.";
-    author: "Dr. Sarah Chen";
-    publishDate: "2026-01-28";
-    category: "AI Technology";
-    tags: ["AI 2026", "Breakthrough Technology", "Quantum AI", "Machine Learning"];
-    featured: "true";
-    readTime: "12 min read";
-    image: "/images/blog/ai-2026-next-gen-breakthrough.jpg";
-    views: "15600";
-    likes: "1234";
-    isNew: "true";
-    urgency: "Hot Topic";
-    type: "blog",};
-  {,
-    id: "quantum-computing-business-2026";
-    title: "Quantum Computing for Business: A Complete Implementation Guide";
-    excerpt: "Learn how businesses are leveraging quantum computing to solve complex problems, optimize operations, and gain competitive advantages in 2026.";
-    content: "Quantum computing is no longer a theoretical concept—it's a practical business tool that's transforming how organizations approach complex problem-solving. In 2026, forward-thinking companies are implementing quantum computing solutions to optimize supply chains, accelerate drug discovery, enhance financial modeling, and revolutionize cybersecurity. This comprehensive guide provides actionable insights into quantum computing implementation, ROI analysis, and real-world success stories from leading enterprises.";
-    author: "Prof. Michael Quantum";
-    publishDate: "2026-01-29";
-    category: "Quantum Computing";
-    tags: ["Quantum Computing", "Business Implementation", "ROI", "Enterprise Solutions"];
-    featured: "true";
-    readTime: "15 min read";
-    image: "/images/blog/quantum-computing-business-2026.jpg";
-    views: "18900";
-    likes: "1456";
-    isNew: "true";
-    urgency: "Must Read";
-    type: "blog",};
-  {,
-    id: "autonomous-systems-enterprise-2026";
-    title: "Autonomous Systems in Enterprise: The Complete Transformation Guide";
-    excerpt: "Discover how autonomous AI systems are revolutionizing enterprise operations from automated decision-making to self-managing business processes.";
-    content: "Enterprise autonomy is the next frontier in business transformation. Organizations worldwide are implementing autonomous systems that can make complex decisions, manage operations, and drive growth without human intervention. This guide explores the practical implementation of autonomous systems in enterprise environments, covering technical architecture, change management, ROI metrics, and real-world case studies from Fortune 500 companies that have successfully transformed their operations.";
-    author: "Dr. Lisa Autonomous";
-    publishDate: "2026-01-30";
-    category: "Autonomous Systems";
-    tags: ["Autonomous Systems", "Enterprise AI", "Business Automation", "Digital Transformation"];
-    featured: "true";
-    readTime: "18 min read";
-    image: "/images/blog/autonomous-systems-enterprise-2026.jpg";
-    views: "22300";
-    likes: "1789";
-    isNew: "true";
-    urgency: "Trending";
-    type: "blog",};
-export const ADDITIONAL_SERVICES_2026 = [,
-  {,
-    id: "ai-transformation-consulting";
-    title: "AI Transformation Consulting Services";
-    description: "Comprehensive AI transformation consulting to help organizations implement cutting-edge AI technologies and achieve digital transformation goals.";
-    features: [,
-      "AI strategy development and roadmap creation";
-      "Technology assessment and selection";
-      "Implementation planning and execution";
-      "Change management and training programs";
-      "ROI analysis and performance monitoring";
-      "24/7 expert support and guidance",
-    ];
-    pricing: {,
-      basic: "50000";
-      pro: "150000";
-      enterprise: 500000,};
-    category: "AI Consulting";
-    isNew: "true";
-    featured: "true";
-    icon: "ai-consulting",};
-  {,
-    id: "quantum-computing-solutions";
-    title: "Quantum Computing Solutions for Enterprise";
-    description: "End-to-end quantum computing solutions designed to solve complex business problems and unlock unprecedented computational capabilities.";
-    features: [,
-      "Quantum algorithm development and optimization";
-      "Quantum hardware integration and management";
-      "Hybrid classical-quantum system design";
-      "Quantum security and encryption solutions";
-      "Performance monitoring and optimization";
-      "Expert quantum computing consultation",
-    ];
-    pricing: {,
-      basic: "75000";
-      pro: "200000";
-      enterprise: 750000,};
-    category: "Quantum Solutions";
-    isNew: "true";
-    featured: "true";
-    icon: "quantum-solutions",};
-  {,
-    id: "autonomous-business-platform";
-    title: "Autonomous Business Platform";
-    description: "Complete platform for building autonomous business systems that can operate independently and drive growth without human intervention.";
-    features: [,
-      "Autonomous decision-making systems";
-      "Self-managing business processes";
-      "Intelligent automation frameworks";
-      "Real-time performance optimization";
-      "Predictive analytics and forecasting";
-      "Comprehensive monitoring and control",
-    ];
-    pricing: {,
-      basic: "100000";
-      pro: "300000";
-      enterprise: 1000000,};
-    category: "Autonomous Systems";
-    isNew: "true";
-    featured: "true";
-    icon: "autonomous-platform",};]]
+export const ADDITIONAL_BLOG_POSTS_2026 = [
+  {
+    id: "ai-2026-next-gen-breakthrough",
+    title: "AI 2026: Next-Generation Breakthrough Technologies",
+    excerpt: "Explore the revolutionary AI technologies that are reshaping industries in 2026 from quantum-enhanced machine learning to consciousness-driven automation.",
+    content: "The year 2026 marks a pivotal moment in artificial intelligence evolution. We're witnessing breakthroughs that were once considered science fiction becoming reality. From quantum-enhanced neural networks to AI systems with genuine consciousness, the landscape of artificial intelligence is transforming at an unprecedented pace. This comprehensive guide explores the cutting-edge AI technologies that are revolutionizing industries worldwide, providing insights into implementation strategies, real-world applications, and the future implications of these revolutionary systems.",
+    author: "Dr. Sarah Chen",
+    publishDate: "2026-01-28",
+    category: "AI Technology",
+    tags: ["AI 2026", "Breakthrough Technology", "Quantum AI", "Machine Learning"],
+    featured: "true",
+    readTime: "12 min read",
+    image: "/images/blog/ai-2026-next-gen-breakthrough.jpg",
+    views: "15600",
+    likes: "1234",
+    isNew: "true",
+    urgency: "Hot Topic",
+    type: "blog"
+  },
+  {
+    id: "quantum-computing-business-2026",
+    title: "Quantum Computing for Business: A Complete Implementation Guide",
+    excerpt: "Learn how businesses are leveraging quantum computing to solve complex problems, optimize operations, and gain competitive advantages in 2026.",
+    content: "Quantum computing is no longer a theoretical concept—it's a practical business tool that's transforming how organizations approach complex problem-solving. In 2026, forward-thinking companies are implementing quantum computing solutions to optimize supply chains, accelerate drug discovery, enhance financial modeling, and revolutionize cybersecurity. This comprehensive guide provides actionable insights into quantum computing implementation, ROI analysis, and real-world success stories from leading enterprises.",
+    author: "Prof. Michael Quantum",
+    publishDate: "2026-01-29",
+    category: "Quantum Computing",
+    tags: ["Quantum Computing", "Business Implementation", "ROI", "Enterprise Solutions"],
+    featured: "true",
+    readTime: "15 min read",
+    image: "/images/blog/quantum-computing-business-2026.jpg",
+    views: "18900",
+    likes: "1456",
+    isNew: "true",
+    urgency: "Must Read",
+    type: "blog"
+  },
+  {
+    id: "autonomous-systems-enterprise-2026",
+    title: "Autonomous Systems in Enterprise: The Complete Transformation Guide",
+    excerpt: "Discover how autonomous AI systems are revolutionizing enterprise operations from automated decision-making to self-managing business processes.",
+    content: "Enterprise autonomy is the next frontier in business transformation. Organizations worldwide are implementing autonomous systems that can make complex decisions, manage operations, and drive growth without human intervention. This guide explores the practical implementation of autonomous systems in enterprise environments, covering technical architecture, change management, ROI metrics, and real-world case studies from Fortune 500 companies that have successfully transformed their operations.",
+    author: "Dr. Lisa Autonomous",
+    publishDate: "2026-01-30",
+    category: "Autonomous Systems",
+    tags: ["Autonomous Systems", "Enterprise AI", "Business Automation", "Digital Transformation"],
+    featured: "true",
+    readTime: "18 min read",
+    image: "/images/blog/autonomous-systems-enterprise-2026.jpg",
+    views: "22300",
+    likes: "1789",
+    isNew: "true",
+    urgency: "Trending",
+    type: "blog"
+  };
+export const ADDITIONAL_SERVICES_2026 = [
+  {
+    id: "ai-transformation-consulting",
+    title: "AI Transformation Consulting Services",
+    description: "Comprehensive AI transformation consulting to help organizations implement cutting-edge AI technologies and achieve digital transformation goals.",
+    features: [
+      "AI strategy development and roadmap creation",
+      "Technology assessment and selection",
+      "Implementation planning and execution",
+      "Change management and training programs",
+      "ROI analysis and performance monitoring",
+      "24/7 expert support and guidance"
+    ],
+    pricing: {
+      basic: "50000",
+      pro: "150000",
+      enterprise: 500000
+    },
+    category: "AI Consulting",
+    isNew: "true",
+    featured: "true",
+    icon: "ai-consulting"
+  },
+  {
+    id: "quantum-computing-solutions",
+    title: "Quantum Computing Solutions for Enterprise",
+    description: "End-to-end quantum computing solutions designed to solve complex business problems and unlock unprecedented computational capabilities.",
+    features: [
+      "Quantum algorithm development and optimization",
+      "Quantum hardware integration and management",
+      "Hybrid classical-quantum system design",
+      "Quantum security and encryption solutions",
+      "Performance monitoring and optimization",
+      "Expert quantum computing consultation"
+    ],
+    pricing: {
+      basic: "75000",
+      pro: "200000",
+      enterprise: 750000
+    },
+    category: "Quantum Solutions",
+    isNew: "true",
+    featured: "true",
+    icon: "quantum-solutions"
+  },
+  {
+    id: "autonomous-business-platform",
+    title: "Autonomous Business Platform",
+    description: "Complete platform for building autonomous business systems that can operate independently and drive growth without human intervention.",
+    features: [
+      "Autonomous decision-making systems",
+      "Self-managing business processes",
+      "Intelligent automation frameworks",
+      "Real-time performance optimization",
+      "Predictive analytics and forecasting",
+      "Comprehensive monitoring and control"
+    ],
+    pricing: {
+      basic: "100000",
+      pro: "300000",
+      enterprise: 1000000
+    },
+    category: "Autonomous Systems",
+    isNew: "true",
+    featured: "true",
+    icon: "autonomous-platform"
+  };

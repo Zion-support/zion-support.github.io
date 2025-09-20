@@ -1,29 +1,454 @@
-import React from 'react'
-import './App.css'
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import './App.css';
+import './styles/accessibility.css';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import LazyImage from './components/LazyImage';
+import VirtualList from './components/VirtualList';
+import MemoizedComponent from './components/MemoizedComponent';
+import ErrorBoundary from './components/ErrorBoundary';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import LoadingSpinner from './components/LoadingSpinner';
+import SkeletonLoader from './components/SkeletonLoader';
+import { useTheme } from './context/ThemeContext';
+
+// Service data with more details
+const services = [
+  {
+    id: 1,
+    icon: '🤖',
+    title: 'AI & Autonomous Systems',
+    description: 'Advanced AI platforms and intelligent automation solutions.',
+    features: ['Machine Learning', 'Neural Networks', 'Computer Vision', 'NLP'],
+    pricing: 'From $5,000/month',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop'
+  },
+  {
+    id: 2,
+    icon: '⚛️',
+    title: 'Quantum Computing',
+    description: 'Next-generation quantum computing solutions for complex problems.',
+    features: ['Quantum Algorithms', 'Quantum Simulation', 'Quantum Optimization', 'Quantum ML'],
+    pricing: 'From $10,000/month',
+    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop'
+  },
+  {
+    id: 3,
+    icon: '🚀',
+    title: 'Space Technology',
+    description: 'Satellite systems and advanced aerospace solutions.',
+    features: ['Satellite Design', 'Launch Services', 'Space Analytics', 'Orbital Mechanics'],
+    pricing: 'From $50,000/month',
+    image: 'https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=400&h=300&fit=crop'
+  },
+  {
+    id: 4,
+    icon: '🏢',
+    title: 'Enterprise IT',
+    description: 'Infrastructure management and digital transformation services.',
+    features: ['Cloud Migration', 'DevOps', 'Security', 'Monitoring'],
+    pricing: 'From $2,000/month',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop'
+  }
+];
+
+// Testimonials data
+const testimonials = [
+  {
+    id: 1,
+    name: 'Sarah Johnson',
+    role: 'CTO',
+    company: 'TechCorp',
+    content: 'Zion Tech Group transformed our AI capabilities. Their solutions are cutting-edge and reliable.',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face'
+  },
+  {
+    id: 2,
+    name: 'Michael Chen',
+    role: 'CEO',
+    company: 'QuantumLabs',
+    content: 'The quantum computing solutions provided by Zion have revolutionized our research capabilities.',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
+  },
+  {
+    id: 3,
+    name: 'Emily Rodriguez',
+    role: 'VP Engineering',
+    company: 'SpaceX',
+    content: 'Outstanding space technology solutions. Zion delivered exactly what we needed for our satellite program.',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face'
+  }
+];
+
+// Stats data
+const stats = [
+  { label: 'Projects Completed', value: '500+', color: 'var(--primary-color)' },
+  { label: 'Happy Clients', value: '200+', color: 'var(--secondary-color)' },
+  { label: 'Years Experience', value: '10+', color: 'var(--accent-color)' },
+  { label: 'Team Members', value: '50+', color: 'var(--purple-color)' }
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Zion Tech Group</h1>
-        <p>Welcome to our innovative technology solutions</p>
-        <div className="features">
-          <div className="feature-card">
-            <h3>AI Solutions</h3>
-            <p>Advanced artificial intelligence services</p>
-          </div>
-          <div className="feature-card">
-            <h3>Blockchain Technology</h3>
-            <p>Secure and decentralized solutions</p>
-          </div>
-          <div className="feature-card">
-            <h3>IT Services</h3>
-            <p>Comprehensive IT infrastructure management</p>
+  const { isDarkMode, toggleTheme } = useTheme();
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [contactData, setContactData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+
+  // Performance monitoring
+  useEffect(() => {
+    // Add performance monitoring
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Performance entry:', entry);
+        }
+      });
+    });
+    observer.observe({ entryTypes: ['measure', 'navigation'] });
+    
+    return () => observer.disconnect();
+  }, []);
+
+  // Theme toggle is now handled by the context
+
+  // Testimonial carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Contact form handlers
+  const handleContactSubmit = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Contact form submitted:', contactData);
+    }
+    // In a real app, you would send this to your backend
+    alert('Thank you for your message! We will get back to you soon.');
+    setContactData({ name: '', email: '', company: '', message: '' });
+    setShowContactForm(false);
+  }, [contactData]);
+
+  const handleContactChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setContactData(prev => ({ ...prev, [name]: value }));
+  }, []);
+
+  // Memoized components for performance
+  const ServiceCard = useMemo(() => 
+    React.memo(({ service }: { service: typeof services[0] }) => (
+      <div className="service-card interactive-card">
+        <LazyImage
+          src={service.image}
+          alt={service.title}
+          className="service-image"
+        />
+        <div className="service-icon">{service.icon}</div>
+        <h3 className="service-title">{service.title}</h3>
+        <p className="service-description">{service.description}</p>
+        <ul className="service-features">
+          {service.features.map((feature, index) => (
+            <li key={index} className="feature-item">✓ {feature}</li>
+          ))}
+        </ul>
+        <div className="service-pricing">
+          <span className="price">{service.pricing}</span>
+        </div>
+        <button className="service-btn">Learn More</button>
+      </div>
+    )), []
+  );
+
+  const TestimonialCard = useMemo(() => 
+    React.memo(({ testimonial }: { testimonial: typeof testimonials[0] }) => (
+      <div className="testimonial-card">
+        <div className="quote-mark">"</div>
+        <div className="testimonial-content">
+          <p>{testimonial.content}</p>
+          <div className="testimonial-rating">
+            {[...Array(testimonial.rating)].map((_, i) => (
+              <span key={i} className="star filled">★</span>
+            ))}
           </div>
         </div>
+        <div className="testimonial-author">
+          <div className="author-avatar">
+            <LazyImage
+              src={testimonial.avatar}
+              alt={testimonial.name}
+              className="avatar-placeholder"
+            />
+          </div>
+          <div className="author-info">
+            <h4 className="author-name">{testimonial.name}</h4>
+            <p className="author-role">{testimonial.role}</p>
+            <p className="author-company">{testimonial.company}</p>
+          </div>
+        </div>
+      </div>
+    )), []
+  );
+
+  return (
+    <ErrorBoundary>
+      <AccessibilityEnhancer>
+        <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
+        <PerformanceMonitor />
+      
+      <main id="main-content">
+      <header className="App-header">
+        <div className="header-controls">
+          <div className="current-time">
+            {new Date().toLocaleTimeString()}
+          </div>
+          <button 
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle dark mode"
+          >
+            {isDarkMode ? '☀️' : '🌙'}
+          </button>
+        </div>
+        
+        <h1 className="main-title">Zion Tech Group</h1>
+        <p className="subtitle">Revolutionary AI & Technology Solutions</p>
+        
+        <div className="hero-section">
+          <h2>Transform Your Business with Cutting-Edge Technology</h2>
+          <p>Leading provider of AI, quantum computing, space technology, and enterprise IT solutions.</p>
+          <div className="cta-buttons">
+            <button 
+              className="btn-primary"
+              onClick={() => setShowContactForm(true)}
+            >
+              Get Started
+            </button>
+            <button className="btn-secondary">Learn More</button>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="stats-container">
+          {stats.map((stat, index) => (
+            <div key={index} className="stat-card">
+              <div 
+                className="stat-number"
+                style={{ color: stat.color }}
+              >
+                {stat.value}
+              </div>
+              <div className="stat-label">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </header>
-    </div>
-  )
+      
+      <main>
+        {/* Services Section */}
+        <section className="services">
+          <h2>Our Services</h2>
+          <div className="services-grid">
+            {services.map((service) => (
+              <ServiceCard key={service.id} service={service} />
+            ))}
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="testimonials-section">
+          <div className="testimonials-container">
+            <h2>What Our Clients Say</h2>
+            <p>Don't just take our word for it - hear from our satisfied customers</p>
+            <div className="testimonials-carousel">
+              <TestimonialCard testimonial={testimonials[currentTestimonial]} />
+              <div className="carousel-controls">
+                <button 
+                  className="carousel-btn"
+                  onClick={() => setCurrentTestimonial(prev => 
+                    prev === 0 ? testimonials.length - 1 : prev - 1
+                  )}
+                >
+                  ‹
+                </button>
+                <button 
+                  className="carousel-btn"
+                  onClick={() => setCurrentTestimonial(prev => 
+                    (prev + 1) % testimonials.length
+                  )}
+                >
+                  ›
+                </button>
+              </div>
+              <div className="carousel-indicators">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`indicator ${index === currentTestimonial ? 'active' : ''}`}
+                    onClick={() => setCurrentTestimonial(index)}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form Section */}
+        {showContactForm && (
+          <section className="contact-form-section">
+            <div className="contact-form-container">
+              <h2>Get In Touch</h2>
+              <p>Ready to transform your business? Let's discuss your project.</p>
+              <form className="contact-form" onSubmit={handleContactSubmit}>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="name">Name *</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={contactData.name}
+                      onChange={handleContactChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="email">Email *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={contactData.email}
+                      onChange={handleContactChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="company">Company</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={contactData.company}
+                    onChange={handleContactChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={contactData.message}
+                    onChange={handleContactChange}
+                    rows={5}
+                    required
+                  />
+                </div>
+                <button type="submit" className="submit-btn">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </section>
+        )}
+
+        {/* CTA Section */}
+        <section className="cta-section">
+          <h2>Ready to Get Started?</h2>
+          <p>Join hundreds of companies already using our cutting-edge technology solutions.</p>
+          <div className="cta-buttons">
+            <button 
+              className="btn-primary"
+              onClick={() => setShowContactForm(true)}
+            >
+              Start Your Project
+            </button>
+            <button className="btn-secondary">View Case Studies</button>
+          </div>
+        </section>
+      </main>
+      
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-content">
+            <div className="footer-section">
+              <h3>Zion Tech Group</h3>
+              <p>Leading the future of technology with innovative AI, quantum computing, and space solutions.</p>
+              <div className="social-links">
+                <a href="#" className="social-link" aria-label="LinkedIn">
+                  <span className="social-icon">💼</span>
+                </a>
+                <a href="#" className="social-link" aria-label="Twitter">
+                  <span className="social-icon">🐦</span>
+                </a>
+                <a href="#" className="social-link" aria-label="GitHub">
+                  <span className="social-icon">🐙</span>
+                </a>
+              </div>
+            </div>
+            <div className="footer-section">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#">AI & Machine Learning</a></li>
+                <li><a href="#">Quantum Computing</a></li>
+                <li><a href="#">Space Technology</a></li>
+                <li><a href="#">Enterprise IT</a></li>
+              </ul>
+            </div>
+            <div className="footer-section">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">News</a></li>
+              </ul>
+            </div>
+            <div className="footer-section">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">API Reference</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div className="footer-section">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">GDPR</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <div className="footer-bottom-content">
+              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+              <div className="footer-bottom-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Cookies</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      </main>
+        </div>
+      </AccessibilityEnhancer>
+    </ErrorBoundary>
+  );
 }
 
-export default App
+export default App;
