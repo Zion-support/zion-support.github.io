@@ -2,6 +2,28 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'node:path'
 
+// Custom plugin to handle CSS Modules syntax
+const cssModulesPlugin = () => ({
+  name: 'css-modules-handler',
+  transform(code, id) {
+    if (id.endsWith('.css') && id.includes('node_modules')) {
+      // Skip processing CSS files from node_modules that contain :global
+      if (code.includes(':global')) {
+        return {
+          code: `export default ${JSON.stringify(code)}`,
+          map: null
+        }
+      }
+    }
+  },
+  load(id) {
+    if (id.endsWith('.css') && id.includes('node_modules') && id.includes('react-datepicker')) {
+      // Skip loading CSS files from react-datepicker that contain :global
+      return `export default ${JSON.stringify('')}`;
+    }
+  }
+})
+
 // https://vitejs.dev/config/
 export default defineConfig({
   // Keep project root
@@ -14,6 +36,16 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
+  // Exclude broken directories from build
+  exclude: [
+    'src.broken/**/*',
+    'src.disabled/**/*',
+    'src.corrupted/**/*',
+    'recovered-branches/**/*',
+    'scripts/**/*',
+    'automation/**/*',
+    'node_modules/**/*'
+  ],
   build: {
     rollupOptions: {
       input: path.resolve(__dirname, 'public/index.html'),
@@ -48,7 +80,7 @@ export default defineConfig({
           'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
           'icons-vendor': ['lucide-react'],
           'charts-vendor': ['recharts'],
-          'date-vendor': ['date-fns', 'react-day-picker'],
+          'date-vendor': ['react-datepicker'],
         },
         chunkFileNames: `js/[name]-[hash].js`,
         entryFileNames: 'js/[name]-[hash].js',
@@ -87,9 +119,13 @@ export default defineConfig({
       'clsx',
       'tailwind-merge',
     ],
-    exclude: ['@radix-ui/react-icons'],
+    exclude: ['@radix-ui/react-icons', 'react-datepicker'],
   },
-  css: { devSourcemap: false },
+  css: { 
+    devSourcemap: false,
+    // Disable CSS modules processing entirely
+    modules: false
+  },
   server: {
     port: 3000,
     host: true,
