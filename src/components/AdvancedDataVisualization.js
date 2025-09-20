@@ -100,7 +100,7 @@ export function AdvancedDataVisualization() {
     },  [autoRefre, s, h]);
     const downloadChart = (format) => {
         // Simulate chart download
-        console.log(`Downloading chart as ${forma, t}`);
+        
     };
     const renderChart = () => {
         switch (selectedChartType) {

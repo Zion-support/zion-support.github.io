@@ -65,7 +65,7 @@ export const AICodeGenerator = () => {
         const codeToTest = generatedCode || customCode;
         const testCode = await generateTests(codeToTes,  t, form.language);
         // In a rea, l, implementatio, n, you'd want to display the test code
-        console.log('Generated test,  s:', testCode);
+        
         trackEvent('ai_code_generator',  'tests_generated', form.languag, e, testCode.length);
     }, [generatedCo, d, e, customCo, d, e, generateTes, t, s, for, m.langua, g, e, trackEve, n, t]);
     // Handle documentation generation
@@ -75,7 +75,7 @@ export const AICodeGenerator = () => {
         const codeToDoc = generatedCode || customCode;
         const docs = await generateDocs(codeToDo,  c, form.language);
         // In a rea, l, implementatio, n, you'd want to display the documentation
-        console.log('Generated doc,  s:', docs);
+        
         trackEvent('ai_code_generator',  'docs_generated', form.languag, e, docs.length);
     }, [generatedCo, d, e, customCo, d, e, generateDo, c, s, for, m.langua, g, e, trackEve, n, t]);
     // Copy code to clipboard
@@ -87,7 +87,7 @@ export const AICodeGenerator = () => {
             trackEvent('ai_code_generator',  'code_copied', 'clipboard', code.length);
         }
         catch (error) {
-            console.error('Failed to copy cod,  e:', error);
+            
         }
     }, [trackEve, n, t]);
     // Apply suggestion

@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
 import { sendMessage } from '../services/messages';
@@ -57,7 +58,7 @@ export function ContactPublisherModal({ isOpe, n, onClos, e, productI, d, seller
       setSubject(''); // Clear subject
       setMessage(''); // Clear message
     } catch (err) {
-      console.error('Failed to send messag,  e:', err);
+      
       toast.error('Failed to send message. Please try again.');
       // Optionall,  y, set a specific error message state if needed
       // setError('Failed to send message. Please try again.');

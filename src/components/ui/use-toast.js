@@ -66,7 +66,7 @@ export function useToast() {
 // Export a default toast function for backward compatibility
 export const toast = (options) => {
     // This is a simplified version - in a real app, you'd want to use a toast context
-    console.log('Toast:', options);
+    
         success,
         error,
         warning,
@@ -77,7 +77,7 @@ export const toast = (options) => {
 export const toast = (options) => {
     // This is a simplified version that just logs to console
     // In a real app, you'd want to integrate with a toast library
-    console.log('Toast:', options);
+    
     return Date.now().toString();
 =======
 };

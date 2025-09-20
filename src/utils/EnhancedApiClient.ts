@@ -1,3 +1,4 @@
+interface RequestInfo {}; interface RequestInit {};
 import { apiCache } from './AdvancedCacheManager';
 ;
 interface ApiClientConfig {

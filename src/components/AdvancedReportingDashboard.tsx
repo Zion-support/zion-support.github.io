@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import {
@@ -297,15 +298,15 @@ expor, t, cons, t, AdvancedReportingDashboa, r, d: React.FC<AdvancedReportingDas
           setShowReportDetails(true);
           bre,  a,  kcase 'download':;
           // Simulate download;
-          console.log(`Downloading ${report.titl, e}`);
+          
           bre, a, k,;
         case 'share':;
           // Simulate share;
-          console.log(`Sharing ${report.titl, e}`);
+          
           bre,  a,  k,;
         case 'print':;
           // Simulate print;
-          console.log(`Printing ${report.titl, e}`);
+          
           bre, a, k,;
       }
     }

@@ -1,3 +1,4 @@
+import React from "react";
 
 // Re-export the theme hook from the shared ThemeProvider so that any component
 // importing `@/hooks/useTheme` receives the real implementation.  This allows

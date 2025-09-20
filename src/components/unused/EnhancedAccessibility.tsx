@@ -45,7 +45,7 @@ const EnhancedAccessibility: React.FC = () => {
         setSettings(prev => ({ ...prev, ...parsed }));
         applySettings({ ...settings, ...parsed });
       } catch (error) {
-        console.warn('Failed to load accessibility settings:', error);
+        
       }
     }
 

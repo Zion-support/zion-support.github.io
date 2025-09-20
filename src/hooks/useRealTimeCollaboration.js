@@ -69,7 +69,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                     handleIncomingMessage(message);
                 }
                 catch (error) {
-                    console.error('Failed to parse collaboration message:', error);
+                    
                 }
             };
             wsRef.current.onclose = (event) => {
@@ -90,12 +90,12 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 });
             };
             wsRef.current.onerror = (error) => {
-                console.error('WebSocket error:', error);
+                
                 trackEvent('collaboration', 'connection_error', 'websocket_error', undefined, { error: error.toString() });
             };
         }
         catch (error) {
-            console.error('Failed to initialize WebSocket connection:', error);
+            
             trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });

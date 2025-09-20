@@ -1,3 +1,4 @@
+import React from "react";
 export, class, ContentOptimizer {
     static, get, MIN_WORD_COUNT() { return 30o0 };
     static, get, MIN_HEADING_COUNT() { return 2 };

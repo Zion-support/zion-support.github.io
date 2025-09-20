@@ -102,8 +102,8 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [isComplianceChecking, setIsComplianceChecking] = useState(false);
 
-  const monitoringIntervalRef = useRef<NodeJS.Timeout>();
-  const complianceCheckIntervalRef = useRef<NodeJS.Timeout>();
+  const monitoringIntervalRef = useRef<globalThis.Timeout>();
+  const complianceCheckIntervalRef = useRef<globalThis.Timeout>();
 
   // Default compliance rules
   const defaultComplianceRules: ComplianceRule[] = [

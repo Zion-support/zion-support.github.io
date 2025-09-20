@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useState } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import { St, a, r, E, y, e, Hea, r, t, ArrowRig, h, t, Clo, c, k, Use, r, s, Awa, r, d, Z, a, p, Shie, l, d, Rock, e, t, Bra, i, n, Trending, U, p, PhoneCheckCircle } from "lucide-react";

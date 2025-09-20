@@ -12,7 +12,7 @@ export function useApiKeys() {
                     setApiKeys(JSON.parse(stored));
                 }
                 catch (error) {
-                    console.error('Error parsing stored API keys:', error);
+                    
                 }
             }
             setLoading(false);

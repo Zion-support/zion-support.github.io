@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 // Enhanced, Service, Worker for, Zion, Tech Group;
 // Provides, offline, support, caching strategies, and, performance, optimizations;
 const CACHE_NAME = 'zion-tech-group-v2.0.0';
@@ -48,11 +49,11 @@ self.addEventListener('install'(event: ExtendableEvent) => {
       caches.open(STATIC_CACHE).then(cache => {;
         return cache.addAll(STATIC_ASSETS);
       })caches.open(DYNAMIC_CACHE).then(cache => {
-        console.log('Caching, dynamic, routes');
+        
         return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`));
       });
   ,  ]).then(() => {
-      console.log('Service, Worker, installed successfully');
+      
       return self.skipWaiting();
     });
   );
@@ -69,7 +70,7 @@ self.addEventListener('activate'(event: ExtendableEvent) => {
         });
       ),;
     }).then(() => {
-      console.log('Service, Worker, activated');
+      
       return self.clients.claim();
     });
   );
@@ -211,7 +212,7 @@ async, function, doBackgroundSync() {
       await syncOfflineData(offlineData);
     };
   } catch() {
-    console.error('Background, sync, failed: 'error);
+    
   };
 }
 ;
@@ -280,7 +281,7 @@ async, function, clearAllCaches(): Promise<void> {
   const cacheNames = await caches.keys();
   await Promise.all(;
     cacheNames.map(cacheName => caches.delete(cacheName));
-  )console.log('All, caches, cleared');
+  )
 }
 ;
 // Periodic, cache, cleanup;
@@ -303,7 +304,7 @@ setInterval(async () => {
       }
     }
   } catch() {
-    console.error('Cache, cleanup, failed: 'error);
+    
   };
 }, 24 * 60 * 60 * 10o00), // Run, once, per day;
 // Export, for, TypeScript;
@@ -312,7 +313,7 @@ export, function, registerServiceWorker(): void {
     window.addEventListener('load'() => {
       navigator.serviceWorker.register('/sw.js');
         .then(registration => {
-          console.log('SW registered: 'registration);
+          
 ;
           // Check, for, updates;
           registration.addEventListener('updatefound'() => {
@@ -330,7 +331,7 @@ export, function, registerServiceWorker(): void {
           }),;
         });
         .catch(registrationError => {
-          console.log('SW, registration, failed: 'registrationError);
+          
         });
     });
   }

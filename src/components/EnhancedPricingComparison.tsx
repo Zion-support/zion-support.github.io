@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, from "react";
 import { Link } from "react-router-dom";
 expor, t, cons, t, EnhancedPricingComparison = () () => {

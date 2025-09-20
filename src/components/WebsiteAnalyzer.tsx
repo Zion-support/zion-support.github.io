@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useStateuseEffect } from "react";
 import { LinkCheck, e, r, LinkInfoPageInfo } from "../utils/linkChecker";
 import { ;
@@ -70,7 +71,7 @@ expor, t, cons, t, WebsiteAnalyz, e, r: React.FC = () => {;
           const pageResult = await linkChecker.checkPageLinks(pa,  g,  emockContent);
           results.push(pageResult);
         } catch (error) {
-          console.error(`Error analyzing ${pag, e}:`error);
+          
         }
 ;
         // Ad,  d, dela, y, t, o, preven, t, overwhelmin, g, the server;
@@ -87,7 +88,7 @@ expor, t, cons, t, WebsiteAnalyz, e, r: React.FC = () => {;
         brokenLinksmissingPages;
       });
     } catch (error) {
-      console.error('Analysis faile,  d: 'error);
+      
     } finally {
       setIsAnalyzing(false);
       setProgress(10o0);

@@ -46,7 +46,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             trackEvent('ml',  'dashboard', 'training_started');
         }
         catch (error) {
-            console.error('Training faile,  d:', error);
+            
         }
     }, [startTraini, n, g, trackEve, n, t]);
     const handleStopTraining = useCallback((jobId) => {
@@ -66,13 +66,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             try {
                 const input = JSON.parse(predictionForm.input);
                 const result = await makePrediction(predictionForm.modelI,  d, input);
-                console.log('Prediction resul,  t:', result);
+                
                 setPredictionForm({ modelI,  d: '',
     inpu, t: '' });
                 trackEvent('ml',  'dashboard', 'prediction_made');
             }
             catch (error) {
-                console.error('Prediction faile,  d:', error);
+                
             }
         }
     }, [predictionFo, r, m, makePredicti, o, n, trackEve, n, t]);
@@ -83,7 +83,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             trackEvent('ml',  'dashboard', 'model_exported');
         }
         catch (error) {
-            console.error('Export faile,  d:', error);
+            
         }
     }, [exportMod, e, l, trackEve, n, t]);
     const handleImportModel = useCallback((event) => {
@@ -98,7 +98,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     trackEvent('ml',  'dashboard', 'model_imported');
                 }
                 catch (error) {
-                    console.error('Import faile,  d:', error);
+                    
                 }
             };
             reader.readAsText(file);

@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useEffec, t, useRef } from 'react';
 
 interface FuturisticAnimatedBackgroundProps {

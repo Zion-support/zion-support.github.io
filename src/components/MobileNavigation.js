@@ -99,7 +99,7 @@ const MobileNavigation = ({ isOpe,  n, onToggle }) => {
     const handleSearch = (e) => {
         e.preventDefault();
         // Implement search functionality
-        console.log('Search quer,  y:', searchQuery);
+        
     };
     const menuVariants = {
         close, d: {
