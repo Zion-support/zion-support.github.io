@@ -7,43 +7,41 @@ interface ResourceError {
 
 class ResourceMonitor {
   private errors: ResourceError[] = [];
-  private retryAttempts: Map<string, number> = new Map();
-  private maxRetries: number = 3;
+  private retryAttempts = new Map<string, number>();
+  private maxRetries = 3;
 
   constructor() {
-    this.initializeMonitoring();
+    this.setupErrorHandling();
   }
 
-  private initializeMonitoring(): void {
-    if (typeof window === "undefined") return;
-
-    // Monitor resource loading errors
+  private setupErrorHandling(): void {
+    // Monitor script errors
     window.addEventListener('error', (event) => {
-      if (event.target !== window) {
+      if (event.target && event.target !== window) {
         const target = event.target as HTMLElement;
-        const url = this.getResourceUrl(target);
+        const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).href;
         if (url) {
-          const resourceError: ResourceError = {
-            url,
-            type: this.getResourceTypeFromUrl(url),
-            error: event.message || 'Resource failed to load',
-            timestamp: Date.now()
-          };
-          this.errors.push(resourceError);
+          this.recordError(url, event.error?.message || 'Unknown error');
         }
       }
-    }, true);
+    });
+
+    // Monitor resource load failures
+    window.addEventListener('unhandledrejection', (event) => {
+      if (event.reason && typeof event.reason === 'string') {
+        this.recordError('unknown', event.reason);
+      }
+    });
   }
 
-  private getResourceUrl(element: HTMLElement): string | null {
-    if (element instanceof HTMLScriptElement) {
-      return element.src;
-    } else if (element instanceof HTMLLinkElement) {
-      return element.href;
-    } else if (element instanceof HTMLImageElement) {
-      return element.src;
-    }
-    return null;
+  private recordError(url: string, errorMessage: string): void {
+    const resourceError: ResourceError = {
+      url,
+      type: this.getResourceTypeFromUrl(url),
+      error: errorMessage,
+      timestamp: Date.now()
+    };
+    this.errors.push(resourceError);
   }
 
   private getResourceTypeFromUrl(url: string): ResourceError["type"] {
@@ -71,39 +69,20 @@ class ResourceMonitor {
     this.retryAttempts.clear();
   }
 
-  getErrorSummary(): {
-    total: number;
-    byType: Record<string, number>;
-    recent: number;
-  } {
+  getErrorSummary() {
     const summary = {
       total: this.errors.length,
       byType: {} as Record<string, number>,
       recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute
     };
 
-    // Count errors by type
     this.errors.forEach(error => {
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
     });
 
     return summary;
   }
-
-  getErrorsByType(type: ResourceError["type"]): ResourceError[] {
-    return this.errors.filter(error => error.type === type);
-  }
-
-  getRecentErrors(minutes: number = 5): ResourceError[] {
-    const cutoff = Date.now() - (minutes * 60 * 1000);
-    return this.errors.filter(error => error.timestamp > cutoff);
-  }
-
-  isResourceHealthy(url: string): boolean {
-    const recentErrors = this.getRecentErrors(5);
-    return !recentErrors.some(error => error.url === url);
-  }
 }
 
-export { ResourceMonitor };
-export type { ResourceError };
+export const resourceMonitor = new ResourceMonitor();
+export default resourceMonitor;
