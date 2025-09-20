@@ -2,6 +2,7 @@ import React, { useState, createContext, useContext } from 'react';
 
 const TabsContext = createContext();
 
+// Tabs component
 export function Tabs({ defaultValue, children, className = '' }) {
   const [activeTab, setActiveTab] = useState(defaultValue || '');
   
@@ -14,6 +15,7 @@ export function Tabs({ defaultValue, children, className = '' }) {
   );
 }
 
+// TabsList component
 export function TabsList({ children, className = '' }) {
   return (
     <div className={`inline-flex h-10 items-center justify-center rounded-md bg-gray-100 p-1 ${className}`}>
@@ -22,6 +24,7 @@ export function TabsList({ children, className = '' }) {
   );
 }
 
+// TabsTrigger component
 export function TabsTrigger({ value, children, className = '' }) {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsTrigger must be used within Tabs');
@@ -41,6 +44,7 @@ export function TabsTrigger({ value, children, className = '' }) {
   );
 }
 
+// TabsContent component
 export function TabsContent({ value, children, className = '' }) {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsContent must be used within Tabs');
