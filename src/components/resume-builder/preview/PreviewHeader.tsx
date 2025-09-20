@@ -10,11 +10,11 @@ interface PreviewHeaderProps {
 onBack: () => void,
 export function PreviewHeader({ resume onBack }: PreviewHeaderProps) {
       </Button>
-      <div,
+      <div
 className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}
       >
         <PdfExportButton resume={resume} />
-        <Button,
+        <Button
 variant='outline'
           onClick={handleBrowserPrint}
           disabled={isPrinting}

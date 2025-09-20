@@ -11,11 +11,11 @@ export function TimelineStep({ formData updateFormData }: TimelineStepProps) {
                       )}
                     </Button>
                   </PopoverTrigger>
-                  <PopoverContent,
+                  <PopoverContent
 className='w-auto p-0 bg-zion-blue-dark border border-zion-blue-light'
                     align='start'
                   >
-                    <Calendar,
+                    <Calendar
 mode='single'
                       selected={formData.endDate}
                       onSelect={date => updateFormData({ endDate: date })}

@@ -30,7 +30,7 @@ export function TranslatableJobForm({ onSubmit isSubmitting;
             <label htmlFor="title" className="text-lg font-medium">
               {t('jobs.job_title')}
             </label>
-            <Button,
+            <Button
 type="button"
               size="sm"
               variant="outline"
@@ -59,7 +59,7 @@ type="button"
             {supportedLanguages.map((lang) => (
               <TabsContent key={lang.code} value={lang.code} className="mt-2">
                 <div className="space-y-1">
-                  <Input,
+                  <Input
 id={`title-${lang.code}`}
                     value={title[lang.code] || ''}
                     onChange={(e) => handleTitleChange(e.target.value)}
@@ -77,7 +77,7 @@ id={`title-${lang.code}`}
             <label htmlFor="description" className="text-lg font-medium">
               {t('jobs.job_description')}
             </label>
-            <Button,
+            <Button
 type="button"
               size="sm"
               variant="outline"
@@ -105,7 +105,7 @@ type="button"
             
             {supportedLanguages.map((lang) => (
               <TabsContent key={lang.code} value={lang.code} className="mt-2">
-                <Textarea,
+                <Textarea
 id={`description-${lang.code}`}
                   value={description[lang.code] || ''}
                   onChange={(e) => handleDescriptionChange(e.target.value)}
@@ -122,7 +122,7 @@ id={`description-${lang.code}`}
             <label htmlFor="requirements" className="text-lg font-medium">
               {t('jobs.skills_required')}
             </label>
-            <Button,
+            <Button
 type="button"
               size="sm"
               variant="outline"
@@ -150,7 +150,7 @@ type="button"
             
             {supportedLanguages.map((lang) => (
               <TabsContent key={lang.code} value={lang.code} className="mt-2">
-                <Textarea,
+                <Textarea
 id={`requirements-${lang.code}`}
                   value={requirements[lang.code] || ''}
                   onChange={(e) => handleRequirementsChange(e.target.value)}
@@ -167,7 +167,7 @@ id={`requirements-${lang.code}`}
             <label htmlFor="budget" className="text-lg font-medium">
               {t('jobs.budget')}
             </label>
-            <Input,
+            <Input
 id="budget"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
@@ -179,7 +179,7 @@ id="budget"
             <label htmlFor="deadline" className="text-lg font-medium">
               {t('jobs.deadline')}
             </label>
-            <Input,
+            <Input
 id="deadline"
               type="date"
               value={deadline}
@@ -191,7 +191,7 @@ id="deadline"
       </div>
       
       <div className="pt-4">
-        <Button,
+        <Button
 type="submit"
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
           disabled={isSubmitting || isTranslating}

@@ -1,12 +1,12 @@
-import { BadgeDollarSignBadge } from 'lucide-react';
+import { BadgeDollarSign,, Badge,  } from 'lucide-react'
 interface RewardsCardProps {
   rewards: ReferralReward[],
 isLoading: boolean,
-import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card"
-import { ReferralReward } from "@/types/referrals"
-import { formatDate } from "@/utils/referralUtils"
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescriptionCardFooter } from '@/components/ui/card';
+import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card"
+import { ReferralReward,  } from "@/types/referrals"
+import { formatDate,  } from "@/utils/referralUtils"
+import { Badge,  } from '@/components/ui/badge'
+import { Card,, CardContent,, CardHeader,, CardTitle,, CardDescription,, CardFooter,  } from '@/components/ui/card'
 interface RewardsCardProps {
 isLoading: boolean;
 }
@@ -84,12 +84,12 @@ export function RewardsCard({ rewards isLoading }: RewardsCardProps) {
       </CardHeader>
       <CardContent>
         <div className='space-y-4'>          {rewards.map((reward index) => (
-            <div,
+            <div
 key={reward.id}
         <div className="space-y-4">
           {rewards.map((reward index,) => (
-            <div,
-key = {reward.id}
+            <div
+key = {reward.id,}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? 'border-b pb-3' : ''
               }`}

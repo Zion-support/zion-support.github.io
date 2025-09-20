@@ -77,13 +77,13 @@ return (
           </div>
         ) : (
           <div className='flex gap-2 w-full'>
-            <Button,
+            <Button
 className='flex-1'
               onClick={() => onApply(match.id job.id)}
             >
               Apply Now
             </Button>
-            <Button,
+            <Button
 variant='outline'
               className='flex-1'
               onClick={() => onDecline(match.id)}            >

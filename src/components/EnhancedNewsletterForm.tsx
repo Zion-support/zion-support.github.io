@@ -42,14 +42,14 @@ deals
           </p>
         </div>
       ) : (
-        <form,
+        <form
 onSubmit={handleSubmit}
           className='flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2'
         >
           <label htmlFor='enhanced-newsletter-email' className='sr-only'>
             Email address for newsletter subscription
           </label>
-          <Input,
+          <Input
 type='email'
             id='enhanced-newsletter-email'
             name='email'
@@ -62,7 +62,7 @@ type='email'
             autoComplete='email'
             required
           />
-          <Button,
+          <Button
 type='submit'
             disabled={isSubmitting}
             className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'          >
@@ -73,7 +73,7 @@ type='submit'
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>
         <div className='flex -space-x-1 mr-2'>
           {[...Array(3)].map((_ i) => (
-            <div,
+            <div
 key={i}
               className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'
             >              {String.fromCharCode(65 + i)}

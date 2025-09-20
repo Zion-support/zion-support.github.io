@@ -22,7 +22,7 @@ onMessageTalent}: TalentProfileProps) {
 return (
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
-      <ProfileHero,
+      <ProfileHero
 name={profile.full_name}
         title={profile.professional_title}
         avatarUrl={profile.profile_picture_url}
@@ -35,7 +35,7 @@ name={profile.full_name}
         <div className='space-y-8'>
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
-          <ProfileContact,
+          <ProfileContact
 email={profile.user_id}
             profileName={profile.full_name}
             profileType='talent'          />
@@ -61,7 +61,7 @@ email={profile.user_id}
               <Star className='mr-2 h-5 w-5 text-yellow-400' />
               Reviews & Ratings
             </h2>
-            <ProfileRatings,
+            <ProfileRatings
 userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}            />
@@ -80,7 +80,7 @@ started right away.
                     ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
                 <div className='flex flex-wrap gap-4 justify-center'>
-                  <Button,
+                  <Button
 size='lg'
                     className='bg-zion-purple text-white hover:bg-zion-purple-dark'
                     onClick={onRequestHire}                  >
@@ -88,7 +88,7 @@ size='lg'
                     Hire Now
                   </Button>
                   {onMessageTalent && (
-                    <Button,
+                    <Button
 size='lg'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'

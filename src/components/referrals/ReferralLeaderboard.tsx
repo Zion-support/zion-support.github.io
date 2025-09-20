@@ -30,12 +30,12 @@ const leaderboardData: LeaderboardEntry[] = [
       <CardContent>
         <div className='space-y-2'>
           {leaderboardData.map(entry => (
-            <div,
+            <div
 key={entry.rank}
               className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors'              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
             >
               <div className='flex items-center gap-3'>
-                <div,
+                <div
 className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry.rank === 1
                       ? 'bg-yellow-200 text-yellow-800'

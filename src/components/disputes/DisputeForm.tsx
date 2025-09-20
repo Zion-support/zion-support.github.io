@@ -17,7 +17,7 @@ import {
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-          <FormField,
+          <FormField
 control={form.control}
             name='reason_code'
             render={({
@@ -28,7 +28,7 @@ control={form.control}
               >
             }) => (              <FormItem>
                 <FormLabel>Reason for dispute</FormLabel>
-                <Select,
+                <Select
 onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
@@ -50,7 +50,7 @@ onValueChange={field.onChange}
               </FormItem>
             )}
           />
-          <FormField,
+          <FormField
 control={form.control}
             name='description'
             render={({
@@ -62,7 +62,7 @@ control={form.control}
             }) => (              <FormItem>
                 <FormLabel>Describe the issue in detail</FormLabel>
                 <FormControl>
-                  <Textarea,
+                  <Textarea
 placeholder='Please provide specific details about the issue...'
                     className='min-h-[150px]'
                     {...field}
@@ -76,7 +76,7 @@ placeholder='Please provide specific details about the issue...'
             <FormLabel>Attachments (optional)</FormLabel>
             <FormControl>
               <div className='space-y-4'>
-                <Input,
+                <Input
 type='file'
                   multiple,
 onChange={handleFileChange}
@@ -86,14 +86,14 @@ onChange={handleFileChange}
                     <p className='text-sm font-medium'>Selected files:</p>
                     <ul className='space-y-1'>
                       {files.map((file index) => (
-                        <li,
+                        <li
 key={index}
                           className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'
                         >
                           <span>
                             {file.name} ({(file.size / 1024).toFixed(1)} KB)
                           </span>
-                          <Button,
+                          <Button
 type='button'
                             variant='ghost'
                             size='sm'

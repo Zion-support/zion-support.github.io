@@ -11,14 +11,14 @@ export function Step({
   description;
   className}: StepProps) {
   return (
-    <li,
+    <li
 return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
-          <div,
+          <div
 className="h-full bg-zion-purple transition-all"
             style={{
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}

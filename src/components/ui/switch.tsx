@@ -1,26 +1,42 @@
-import * as React from "react";
-import * as SwitchPrimitives from "@radix-ui/react-switch";
-import { cn } from "@/lib/utils";
+import React from 'react';
 
-const Switch = React.forwardRef<
-  React.ElementRef<typeof SwitchPrimitives.Root>,
-  React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
->(({ className, ...props }, ref) => (
-  <SwitchPrimitives.Root
-    className={cn(
-      "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
-      className
-    )}
-    {...props}
-    ref={ref}
-  >
-    <SwitchPrimitives.Thumb
-      className={cn(
-        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
-      )}
-    />
-  </SwitchPrimitives.Root>
-));
-Switch.displayName = SwitchPrimitives.Root.displayName;
+interface SwitchProps {
+  id?: string;
+  checked?: boolean;
+  onCheckedChange?: (checked: boolean) => void;
+  className?: string;
+  disabled?: boolean;
+}
 
-export { Switch };
+export function Switch({ 
+  id, 
+  checked = false, 
+  onCheckedChange, 
+  className = '', 
+  disabled = false 
+}: SwitchProps) {
+  return (
+    <button
+      id={id}
+      type="button"
+      role="switch"
+      aria-checked={checked}
+      disabled={disabled}
+      onClick={() => onCheckedChange?.(!checked)}
+      className={`
+        relative inline-flex h-6 w-11 items-center rounded-full border-2 border-transparent 
+        transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 
+        disabled:cursor-not-allowed disabled:opacity-50
+        ${checked ? 'bg-zion-cyan' : 'bg-gray-200'}
+        ${className}
+      `}
+    >
+      <span
+        className={`
+          inline-block h-4 w-4 transform rounded-full bg-white transition-transform
+          ${checked ? 'translate-x-6' : 'translate-x-1'}
+        `}
+      />
+    </button>
+  );
+}

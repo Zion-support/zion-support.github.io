@@ -16,7 +16,7 @@ return (
       <p className='text-2xl font-bold text-zion-cyan mb-6'>
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
-      <PaymentButton,
+      <PaymentButton
 amount={selectedCountry.pricePerIncident}
         serviceId='it-onsite-service'
         providerId='zion-tech-group'

@@ -1,16 +1,21 @@
-import { useRefuseState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter
-CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input';
-import { Copy, Download, LinkPlus } from 'lucide-react';
+import { useRef,, useState,  } from 'react'
+import { Button,  } from '@/components/ui/button'
+import { Card,
+CardContent
+, , CardDescription,
+CardFooter
+, , CardHeader,
+CardTitle,
+ } from '@/components/ui/card'
+import { Input,  } from '@/components/ui/input'
+import { Copy,, Download,, Link,, Plus,  } from 'lucide-react'
 return (
     <div className='space-y-6'>
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader>
           <CardTitle className='flex items-center justify-between'>
             <span>Your Referral Link</span>
-            <Button,
+            <Button
 variant='outline'
               size='sm'
               onClick={handleDownloadLinks}
@@ -38,7 +43,7 @@ variant='outline'
         </h3>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
-            <Button,
+            <Button
 variant='outline'
               size='sm'
               className='flex items-center gap-2'
@@ -57,7 +62,7 @@ variant='outline'
             <div className='grid gap-4 py-4'>
               <div className='grid gap-2'>
                 <Label htmlFor='campaign'>Campaign Type</Label>
-                <Select,
+                <Select
 value={selectedCampaign}
                   onValueChange={setSelectedCampaign}                >
                   <SelectTrigger id='campaign'>
@@ -75,7 +80,7 @@ value={selectedCampaign}
               </div>
               <div className='grid gap-2'>
                 <Label htmlFor='custom'>Custom Parameter (Optional)</Label>
-                <Input,
+                <Input
 id='custom'
                   placeholder='spring_campaign video_123 etc.'
                   value={customParam}
@@ -83,14 +88,14 @@ id='custom'
               </div>
             </div>
             <DialogFooter>
-              <Button,
+              <Button
 type='button'
                 variant='secondary'
                 onClick={() => setIsDialogOpen(false)}
               >
                 Cancel
               </Button>
-              <Button,
+              <Button
 type='button'
                 onClick={handleGenerateLink}
                 className='bg-zion-purple hover:bg-zion-purple-dark'              >
@@ -103,7 +108,7 @@ type='button'
       <div className='grid gap-4'>
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item index) => (
-            <Card,
+            <Card
 key={index}
               className='bg-zion-blue-dark border-zion-blue-light'
             >
@@ -116,12 +121,12 @@ key={index}
               </CardHeader>
               <CardContent className='pb-4'>
                 <div className='flex space-x-2'>
-                  <Input,
-value = {item.link}
+                  <Input
+value = {item.link,}
                     readOnly,
 className='font-mono text-xs'
                   />
-                  <Button,
+                  <Button
 variant='outline'
                     size='sm'
                     onClick={() => handleCopyLink(item.link)}                  >
@@ -139,7 +144,7 @@ variant='outline'
                 Create custom campaign links to track different marketing,
 efforts
               </p>
-              <Button,
+              <Button
 variant='outline'
                 onClick={() => setIsDialogOpen(true)}
                 className='flex items-center gap-2'              >
@@ -155,9 +160,11 @@ variant='outline'
 }//Add custom parameter if provided if (customParam) {
 }const newLink = {
   name: `$ {
-  selectedCampaign}$ {
+  selectedCampaign,
+}$ {
   customParam ? `-$ {
-  customParam}`: ""
+  customParam,
+}`: ""
 }`
 }
 }
@@ -169,7 +176,8 @@ document.body.removeChild (link)
 };"
   baseLink "
 }readOnly className="font-mono text-sm"/> <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card> <div className="flex justify-between items-center"> <DialogTrigger asChild> <Button variant=" outline"size=" sm"className="flex items-center gap-2"> <Plus className="h-4 w-4"/> Create New Link </Button> </DialogTrigger> <DialogContent className="sm:max-w-md bg-zion-blue border-zion-blue-light"> <DialogHeader> <DialogTitle>Create Custom Campaign Link</DialogTitle> <DialogDescription> Generate a trackable link for specific marketing campaigns </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4"> <div className="grid gap-2"> <Label htmlFor=" campaign">Campaign Type</Label> <Select value= {
-  selectedCampaign}onValueChange= {
+  selectedCampaign,
+}onValueChange= {
   setSelectedCampaign "
 }> <SelectTrigger id=" campaign"> <SelectValue placeholder=" Select campaign type"/> </SelectTrigger> <SelectContent> <SelectItem value=" default">General (Default) </SelectItem> <SelectItem value=" youtube">YouTube</SelectItem> <SelectItem value=" newsletter">Newsletter</SelectItem> <SelectItem value=" blog">Blog</SelectItem> <SelectItem value=" podcast">Podcast</SelectItem> <SelectItem value=" social">Social Media</SelectItem> </SelectContent> </Select> </div> <div className="grid gap-2"> <Label htmlFor=" custom">Custom Parameter (Optional) </Label> <Input /> </div> </div> <DialogFooter> <Button > Cancel </Button> <Button className="bg-zion-purple hover:bg-zion-purple-dark"> Generate Link </Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className="grid gap-4"> {
   generatedLinks.length > 0 ? (generatedLinks.map ( (item index) => (<Card key= {

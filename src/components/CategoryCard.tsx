@@ -1,34 +1,35 @@
 import React from 'react';
+import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 
 interface CategoryCardProps {
-  category: {
-    id: string;
-    name: string;
-    description: string;
-    icon: React.ReactNode;
-    count: number;
-  };
-  className?: string;
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  href: string;
 }
 
-export function CategoryCard({ category, className }: CategoryCardProps) {
+export const CategoryCard: React.FC<CategoryCardProps> = ({
+  title,
+  description,
+  icon: Icon,
+  href
+}) => {
   return (
-    <Card className={`cursor-pointer hover:shadow-lg transition-shadow ${className}`}>
-      <CardContent className="p-6">
-        <div className="flex items-center mb-4">
-          <div className="text-blue-600 mr-3">
-            {category.icon}
+    <Link href={href}>
+      <Card className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-cyan transition-all duration-300 group hover:shadow-lg">
+        <CardContent className="p-6 text-center">
+          <div className="mb-4 flex justify-center">
+            <Icon className="w-12 h-12 text-zion-cyan group-hover:text-zion-cyan-light transition-colors" />
           </div>
-          <h3 className="text-lg font-semibold text-gray-900">{category.name}</h3>
-        </div>
-        <p className="text-gray-600 mb-4">{category.description}</p>
-        <div className="text-sm text-blue-600 font-medium">
-          {category.count} services
-        </div>
-      </CardContent>
-    </Card>
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+            {title}
+          </h3>
+          <p className="text-zion-slate-light text-sm">
+            {description}
+          </p>
+        </CardContent>
+      </Card>
+    </Link>
   );
-}
-
-export default CategoryCard;
+};

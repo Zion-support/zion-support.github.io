@@ -8,7 +8,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 return (
     <div className='mt-12 flex flex-wrap gap-2'>
       {buttons.map(btn => (
-        <Button,
+        <Button
 key={btn.label}
           variant='outline'
           size='sm'

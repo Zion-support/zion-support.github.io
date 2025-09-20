@@ -19,11 +19,11 @@ to set up integrations.
               <div className='space-y-2'>
                 <label className='text-sm font-medium'>Your Zion API Key</label>
                 <div className='flex gap-2'>
-                  <Input,
+                  <Input
 value={apiKey}
                     readOnly,
 className='font-mono text-sm'                  />
-                  <Button,
+                  <Button
 size='sm'
                     variant='outline'
                     onClick={handleCopyApiKey}

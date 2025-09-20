@@ -41,7 +41,7 @@ initialJobTitle
           <BudgetFields form={form} talent={talent} />
         </div>
         <DialogFooter className='pt-4'>
-          <Button,
+          <Button
 type='button'
             variant='outline'
             onClick={onClose}
@@ -49,7 +49,7 @@ type='button'
           >
             Cancel
           </Button>
-          <Button,
+          <Button
 type='submit'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'            disabled={isSubmitting}
           >
@@ -69,14 +69,14 @@ return (
           <BudgetFields form={form} talent={talent} />
         </div>
         <DialogFooter className="pt-4">
-          <Button,
+          <Button
 type="button"
             variant="outline"
             onClick={onClose}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled={isSubmitting}
         <DialogFooter className="pt-4">
-          <Button,
+          <Button
 type="button"
             variant="outline"
             onClick = {onClose}
@@ -85,9 +85,9 @@ type="button"
           >
             Cancel
           </Button>
-          <Button,
+          <Button
 type='submit'
-            className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button,
+            className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button
 type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             disabled={isSubmitting}

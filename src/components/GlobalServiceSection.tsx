@@ -11,7 +11,7 @@ solutions for businesses of all sizes
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.map((service index) => (
-            <div,
+            <div
 key={index}
               className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'
             >

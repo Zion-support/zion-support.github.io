@@ -19,7 +19,7 @@ onFileUpload}: UploadSectionProps) {
         </p>
         <Button variant='outline' className='relative'>
           Browse Files
-          <input,
+          <input
 type='file'
             className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
             accept='.pdf'            onChange={onFileUpload}

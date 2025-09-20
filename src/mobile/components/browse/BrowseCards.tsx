@@ -50,7 +50,7 @@ export function BrowseCards({ items type onViewDetails }: BrowseCardsProps) {
                     </p>
                   </div>
                 </div>
-                <button,
+                <button
 className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item.id)}                >
                   {savedItems.includes(item.id) ? (
@@ -62,7 +62,7 @@ className='h-8 w-8 flex items-center justify-center'
               </div>
               <div className='mt-3 flex flex-wrap gap-1'>
                 {item.badges.map((badge index) => (
-                  <Badge,
+                  <Badge
 key={index}
                     variant='outline'
                     className='text-xs font-normal'                  >                      <AvatarImage src={item.image} alt={item.title} />
@@ -78,7 +78,7 @@ key={index}
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
                 </div>
-                <button,
+                <button
 className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item.id)}
                 >
@@ -91,8 +91,8 @@ className="h-8 w-8 flex items-center justify-center"
               </div>
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge index) => (
-                  <Badge,
-key = {index}
+                  <Badge
+key = {index,}
                     variant="outline"
                     className="text-xs font-normal"
                     {badge}
@@ -146,7 +146,7 @@ key = {index}
               </div>
             </div>
             <div className='border-t border-border p-3 flex justify-end'>
-              <Button,
+              <Button
 size='sm'
                 onClick={() => onViewDetails(item.id)}
                 className='gap-1'              >

@@ -12,7 +12,7 @@ type UserRole = any;
         Choose how you want to use our platform
       </p>
       <div className='space-y-3 mt-6'>
-        <Card,
+        <Card
 className={`cursor-pointer transition-all ${
             selectedRole === 'talent'
               ? 'border-primary bg-primary/5'
@@ -37,7 +37,7 @@ className={`cursor-pointer transition-all ${
             </div>
           </CardContent>
         </Card>
-        <Card,
+        <Card
 className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? 'border-primary bg-primary/5'

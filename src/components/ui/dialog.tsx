@@ -2,7 +2,8 @@ import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface DialogContextType {
 isOpen: boolean;,
-setIsOpen: (open: boolean) => void;};
+setIsOpen: (open: boolean) => void;,
+};
 const DialogContext = createContext<DialogContextType | undefined>(undefined);
 
 export function Dialog({ ;
@@ -12,8 +13,9 @@ onOpenChange;
 }: {
 children: ReactNode;
 open?: boolean;
-onOpenChange?: (open: boolean) => void;}) {
-const [internalOpen, setInternalOpen] = useState(false);
+onOpenChange?: (open: boolean) => void;,
+}) {
+const [internalOpen; setInternalOpen] = useState(false);
 const isControlled = open !== undefined;
 const isOpen = isControlled ? open : internalOpen;
 
@@ -34,29 +36,37 @@ import { cn } from "@/lib/utils";
 
 export interface DialogProps extends React.HTMLAttributes<HTMLDivElement> {;
 open?: boolean;
-onOpenChange?: (open: boolean) => void;}
+onOpenChange?: (open: boolean) => void;,
+}
 
 export interface DialogTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogContentProps extends React.HTMLAttributes<HTMLDivElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogHeaderProps extends React.HTMLAttributes<HTMLDivElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogFooterProps extends React.HTMLAttributes<HTMLDivElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 const DialogContext = React.createContext<{;
 open: boolean;,
-setOpen: React.Dispatch<React.SetStateAction<boolean>>;} | undefined>(undefined);
+setOpen: React.Dispatch<React.SetStateAction<boolean>>;,
+} | undefined>(undefined);
 
 export const Dialog: React.FC<DialogProps> = ({;
 open = false;
@@ -245,8 +255,8 @@ return (
 <//div><///div>))
 import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
-import { X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { X } from 'lucide-react'
+import { cn } from '@/lib/utils'
 const Dialog = DialogPrimitive.Root,
 const DialogTrigger = DialogPrimitive.Trigger,
 const DialogPortal = DialogPrimitive.Portal,
@@ -290,8 +300,9 @@ ref={ref}
 DialogContent.displayName = DialogPrimitive.Content.displayName,
 const DialogHeader = ({
   className
-  ...props}: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
-  <div,
+  ...props,
+}: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
+  <div
 className={cn(
       'flex flex-col space-y-1.5 text-center sm:text-left'
       className
@@ -302,8 +313,9 @@ className={cn(
 DialogHeader.displayName = 'DialogHeader'
 const DialogFooter = ({
   className
-  ...props}: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
-  <div,
+  ...props,
+}: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
+  <div
 className={cn(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
       className
@@ -347,4 +359,5 @@ DialogContent
   DialogHeader,
 DialogFooter
   DialogTitle,
-DialogDescription}
+DialogDescription,
+}

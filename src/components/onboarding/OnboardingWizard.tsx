@@ -34,13 +34,13 @@ onComplete: () => void;
         </div>
       </CardContent>
       <CardFooter className='flex flex-col space-y-2'>
-        <Button,
+        <Button
 className='w-full bg-zion-purple hover:bg-zion-purple-light'
           onClick={handleAction}        >
           {steps[currentStep]?.action.text}
         </Button>
         {steps[currentStep]?.skipText && (
-          <Button,
+          <Button
 variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}          >

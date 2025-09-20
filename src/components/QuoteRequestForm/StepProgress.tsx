@@ -12,7 +12,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps label: string }[] = [
                   "text-zion-slate-light"
                 )}
-              <span,
+              <span
 className = {cn(
                   "text-xs mt-2 font-medium"
                   status === "complete" ? "text-zion-cyan" :

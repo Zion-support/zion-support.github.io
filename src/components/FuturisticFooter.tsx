@@ -124,7 +124,7 @@ initial={{ opacity: 0 y: 20 }}
 </ul>
                     <li key={link.name}>
 </li>
-                      <Link,
+                      <Link
 href={link.href}"
                         className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"", >
 </Link>"

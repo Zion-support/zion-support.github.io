@@ -18,7 +18,7 @@ matches
       <CardContent>
         <div className='space-y-4'>
           <div className='space-y-2'>
-            <Textarea,
+            <Textarea
 placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
@@ -26,7 +26,7 @@ placeholder="Describe what you need... (e.g., 'I need a senior machine learning 
               }
               className='min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white'
             />
-            <Button,
+            <Button
 onClick={handleSearch}
               disabled={isMatchmaking}
               className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'            >
@@ -41,7 +41,7 @@ onClick={handleSearch}
             </Button>
           </div>
           {hasSearched && (
-            <AIMatchingResults,
+            <AIMatchingResults
 matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}

@@ -1,7 +1,7 @@
-import { Button } from './ui/button'
-import { Twitter, Facebook, LinkedinLink } from 'lucide-react';
-import { toast } from "./ui/use-toast";
-import { useTranslation } from 'react-i18next';
+import { Button,  } from './ui/button'
+import { Twitter,, Facebook,, Linkedin,, Link,  } from 'lucide-react'
+import { toast,  } from "./ui/use-toast";
+import { useTranslation,  } from 'react-i18next';
 export function SocialShareSection() {
   const { t } = useTranslation();
   // Current URL is not available during SSR guard with typeof check,
@@ -18,8 +18,8 @@ return (
             </p>
           </div>
           <div className='flex flex-wrap gap-3'>
-            {shareLinks.map((link index) => (              <Button,
-key = {index}
+            {shareLinks.map((link index) => (              <Button
+key = {index,}
                 className={`${link.color} text-white`}
                 size='sm'
                 onClick={link.onClick}

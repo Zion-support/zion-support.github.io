@@ -8,7 +8,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
 export function CartDrawer() {
 return (
     <>
-      <Link,
+      <Link
 href='/cart'
         aria-label='Cart'
         className='relative p-1'

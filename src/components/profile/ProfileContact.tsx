@@ -17,11 +17,11 @@ return (
       {email && (
         <div className='mb-4 text-zion-slate-light'>
           <span className='block'>Email: </span>
-          <a,
+          <a
 href={`mailto:${email}`}
             className='text-zion-cyan hover:underline truncate block'          >        <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
-          <a,
+          <a
 href={`mailto:${email}`}
             className="text-zion-cyan hover:underline truncate block"
             {email}
@@ -31,7 +31,7 @@ href={`mailto:${email}`}
       <form onSubmit={handleSendMessage}>
         <div className='space-y-4'>
           <div>
-            <Input,
+            <Input
 placeholder='Subject'
               value={subject}
               onChange={e => setSubject(e.target.value)}
@@ -39,7 +39,7 @@ placeholder='Subject'
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
-            <Input,
+            <Input
 placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
@@ -48,7 +48,7 @@ placeholder="Subject"
             />
           </div>
           <div>
-            <Textarea,
+            <Textarea
 placeholder={`Message to ${profileName}...`}
               value={message}
               onChange={e => setMessage(e.target.value)}
@@ -56,13 +56,13 @@ placeholder={`Message to ${profileName}...`}
               required
             />
           </div>
-          <Button,
+          <Button
 type='submit'
             className='w-full bg-zion-cyan hover:bg-zion-cyan/90'
             disabled={isSending}              required
             />
           </div>
-          <Button,
+          <Button
 type="submit"
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled = {isSending}

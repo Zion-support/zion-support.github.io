@@ -85,7 +85,7 @@ export function ContractTypeCards({ onStandardClick onSmartClick }: ContractType
           </ul>
         </CardContent>
         <CardFooter>
-          <Button,
+          <Button
 className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onClick={onSmartClick}          <ul className="space-y-2">
             <li className="text-sm">✓ All standard contract features</li>
             <li className="text-sm">✓ Automatic escrow payment release</li>
@@ -95,7 +95,7 @@ className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onCli
           </ul>
         </CardContent>
         <CardFooter>
-          <Button,
+          <Button
 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
             onClick = {onSmartClick}
           >

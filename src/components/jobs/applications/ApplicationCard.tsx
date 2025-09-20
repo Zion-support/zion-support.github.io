@@ -49,7 +49,7 @@ return (
                       {application.resume.title |'Resume'}
                     </span>
                   </div>
-                  <Button,
+                  <Button
 variant='ghost'
                     size='sm'
                     onClick={handleDownloadResume}
@@ -104,7 +104,7 @@ variant='ghost'
       </CardContent>
       <CardFooter className='flex flex-col gap-3 pt-0'>
         <div className='flex justify-between items-center w-full'>
-          <Button,
+          <Button
 variant='ghost'
             size='sm'
             onClick={() => setExpanded(!expanded)}
@@ -124,7 +124,7 @@ variant='ghost'
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client          </Link>          </Button>
           <div className="flex gap-2">
             {renderActionButtons()}
-            <Button,
+            <Button
 variant="outline"
               size="sm"
               asChild
@@ -138,7 +138,7 @@ variant="outline"
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client
-        <Button,
+        <Button
 variant="secondary"
           size="sm"
           className="w-full"

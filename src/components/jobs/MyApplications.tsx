@@ -60,7 +60,7 @@ if (isLoading) {
                 </p>
               )}
               <div className="flex justify-between items-center">
-                <Button,
+                <Button
 variant="outline"
                   size="sm"
                   className="text-xs"
@@ -70,7 +70,7 @@ variant="outline"
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-                <Button,
+                <Button
 variant="default"
                   size="sm"
                   className="text-xs"

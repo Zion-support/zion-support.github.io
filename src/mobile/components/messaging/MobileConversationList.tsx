@@ -10,7 +10,7 @@ interface Conversation {
             onClick={() => onSelectConversation(conversation.id)}          >
             <div className='flex items-center gap-3 py-3 cursor-pointer'>
               <Avatar>
-                <AvatarImage,
+                <AvatarImage
 src={conversation.avatar}
                   alt={conversation.name}
                 />                <AvatarFallback>

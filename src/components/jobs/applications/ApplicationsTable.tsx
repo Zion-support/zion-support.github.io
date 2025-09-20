@@ -3,7 +3,8 @@ interface ApplicationsTableProps {
 processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;,
 onStatusChange: (applicationId: string newStatus: string) => Promise<void>;,
-onViewScore: (application: JobApplication) => void}
+onViewScore: (application: JobApplication) => void,
+}
 // Sub-component for avatar to handle its own error state,
 return (
     <>
@@ -46,7 +47,7 @@ return (
                 <TableCell className='hidden lg:table-cell'>
                   {application.match_score !== undefined &&
                   application.match_score !== null ? (
-                    <ClickableBadge,
+                    <ClickableBadge
 variant='outline'
                       className='cursor-pointer'
                       onClick={() => onViewScore(application)}                    >
@@ -60,17 +61,17 @@ variant='outline'
                 </TableCell>
                 <TableCell className='text-right'>
                   <div className='flex items-center justify-end gap-2'>
-                    <ClickableBadge,
+                    <ClickableBadge
 variant='outline'
                       className='cursor-pointer bg-green-50 hover:bg-green-100 text-green-700'
                       onClick={() => handleHireClick(application)}                    >
                       <Briefcase className='h-3 w-3 mr-1' /> Hire
                     </ClickableBadge>
-                    <ApplicationActions,
-application = {application}
-                      processingId = {processingId}
-                      onViewApplication = {onViewApplication}
-                      onStatusChange = {onStatusChange}
+                    <ApplicationActions
+application = {application,}
+                      processingId = {processingId,}
+                      onViewApplication = {onViewApplication,}
+                      onStatusChange = {onStatusChange,}
                     />
                   </div>
                 </TableCell>
@@ -79,20 +80,23 @@ application = {application}
           </TableBody>
         </Table>
       </div>
-      <HireConfirmationModal,
-isOpen = {hireModalOpen}
-        onClose = {() => setHireModalOpen(false)}
-        application = {selectedApplication |undefined}
-        onConfirm = {handleHireConfirmed}
+      <HireConfirmationModal
+isOpen = {hireModalOpen,}
+        onClose = {() => setHireModalOpen(false),}
+        application = {selectedApplication |undefined,}
+        onConfirm = {handleHireConfirmed,}
       />
     </>
   )
   /* Using Renamed AvatarPrimitive */
 }{
   application.talent profile?.profile picture url && !avatarError ? (<Image src= {
-  application.talent profile.profile picture url}alt= {
-  talentName}width= {
-  32}//for h-8 w-8 height= {
+  application.talent profile.profile picture url,
+}alt= {
+  talentName,
+}width= {
+  32,
+}//for h-8 w-8 height= {
   32 "
 }//for h-8 w-8 className="rounded-full object-cover" onError= {
   () => setAvatarError (true)
@@ -103,20 +107,28 @@ isOpen = {hireModalOpen}
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
-  application.id}> <TableCell> </div> </div> </div> </TableCell> onClick={
+  application.id,
+}> <TableCell> </div> </div> </div> </TableCell> onClick={
   () => onViewScore (application)
 }> {
   application.match score "
 }% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) "
 }</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {
-  application}processingId= {
-  processingId}onViewApplication= {
-  onViewApplication}onStatusChange= {
-  onStatusChange}/> </div> </TableCell> </TableRow>) )
+  application,
+}processingId= {
+  processingId,
+}onViewApplication= {
+  onViewApplication,
+}onStatusChange= {
+  onStatusChange,
+}/> </div> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> <HireConfirmationModal isOpen= {
-  hireModalOpen}onClose= {
+  hireModalOpen,
+}onClose= {
   () => setHireModalOpen (false)
 }application= {
-  selectedApplication |undefined}onConfirm= {
-  handleHireConfirmed}/> </>)
+  selectedApplication |undefined,
+}onConfirm= {
+  handleHireConfirmed,
+}/> </>)
 }'"}

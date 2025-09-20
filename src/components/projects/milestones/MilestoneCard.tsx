@@ -1,9 +1,10 @@
-import { Check, ArrowDownX } from 'lucide-react';
-import { useDisputeCheck } from '@/hooks/useDisputeCheck';
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+import { Check,, ArrowDown,, X,  } from 'lucide-react'
+import { useDisputeCheck,, ,  } from '@/hooks/useDisputeCheck';
+import { DisputeStatusBadge,, ,  } from '@/components/disputes/DisputeStatusBadge';
+import { RaiseDisputeButton,  } from '@/components/disputes/RaiseDisputeButton';
 interface MilestoneCardProps {
-onReject}: MilestoneCardProps) {
+onReject,
+}: MilestoneCardProps) {
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId id);
   function getStatusBadgeColor() {
     switch (status) {
@@ -42,7 +43,7 @@ onReject}: MilestoneCardProps) {
             )}
           </div>
           <div className='flex gap-2'>
-            <Badge,
+            <Badge
 variant='outline'
               className={`capitalize ${getStatusBadgeColor()} text-white`}
             >
@@ -66,13 +67,13 @@ variant='outline'
       <CardFooter className='pt-2 flex justify-between'>
         <div>
           {status !== 'completed' && status !== 'rejected' && (
-            <RaiseDisputeButton,
+            <RaiseDisputeButton
 projectId={projectId}
               milestoneId={id}
               variant='ghost'
-              size='sm'            <RaiseDisputeButton,
-projectId = {projectId}
-              milestoneId = {id}
+              size='sm'            <RaiseDisputeButton
+projectId = {projectId,}
+              milestoneId = {id,}
               variant="ghost"
               size="sm"
             />

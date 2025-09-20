@@ -1,5 +1,5 @@
-import { formatDistanceToNow } from 'date-fns';
-import { Calendar, User, FileTextBarChart } from 'lucide-react';
+import { formatDistanceToNow,  } from 'date-fns'
+import { Calendar,, User,, FileText,, BarChart,  } from 'lucide-react'
 }
 export function ApplicationRow({
 return (
@@ -10,7 +10,7 @@ return (
             {' '}
             {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
-              <Image,
+              <Image
 src={application.talent_profile.profile_picture_url}
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
@@ -44,7 +44,7 @@ onError={() => setAvatarError(true)}
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
-        <Button,
+        <Button
 variant='ghost'
           size='sm'
           onClick={() => onViewScore(application)}
@@ -56,7 +56,7 @@ variant='ghost'
       <TableCell>
         {application.resume ? (
           <Button variant='ghost' size='sm' asChild>
-            <a,
+            <a
 href={application.resume.file_url |'#'}
               target='_blank'
               rel='noopener noreferrer'
@@ -69,11 +69,11 @@ href={application.resume.file_url |'#'}
         )}
       </TableCell>
       <TableCell className='text-right'>
-        <ApplicationActions,
-application = {application}
-          processingId = {processingId}
-          onViewApplication = {onViewApplication}
-          onStatusChange = {onStatusChange}
+        <ApplicationActions
+application = {application,}
+          processingId = {processingId,}
+          onViewApplication = {onViewApplication,}
+          onStatusChange = {onStatusChange,}
         />
       </TableCell>
     </TableRow>

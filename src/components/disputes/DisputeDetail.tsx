@@ -43,7 +43,7 @@ export function DisputeDetail() {
             <CardContent className='space-y-6'>
               <div className='flex items-start gap-4'>
                 <Avatar className='h-10 w-10'>
-                  <AvatarImage,
+                  <AvatarImage
 src={dispute.client_profile?.avatar_url}
                     alt={
                       dispute.client_profile?.display_name |'Client avatar'
@@ -63,7 +63,7 @@ src={dispute.client_profile?.avatar_url}
               </div>
               <div className='flex items-start gap-4'>
                 <Avatar className='h-10 w-10'>
-                  <AvatarImage,
+                  <AvatarImage
 src={dispute.talent_profile?.avatar_url}
                     alt={
                       dispute.talent_profile?.display_name |'Talent avatar'

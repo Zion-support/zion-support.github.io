@@ -1,6 +1,6 @@
-import { Project } from '@/types/projects';
-import { useState } from "react",;
-import { Star } from 'lucide-react';
+import { Project,, ,  } from '@/types/projects';
+import { useState,  } from "react",
+import { Star,  } from 'lucide-react'
 return (
     <Card className='mt-6'>
       <CardHeader>
@@ -40,7 +40,7 @@ submit feedback
                         : 'pending approval'}
                     </p>
                     {userReview.status === 'pending' && (
-                      <Button,
+                      <Button
 variant='outline'
                         onClick={() => setIsReviewModalOpen(true)}
                       >                        Edit Review
@@ -50,10 +50,10 @@ variant='outline'
                 ) : null}
               </div>
             )}
-            <ReviewsList,
-reviews = {reviews}
-              isLoading = {isLoading}
-              onReportReview = {reportReview}
+            <ReviewsList
+reviews = {reviews,}
+              isLoading = {isLoading,}
+              onReportReview = {reportReview,}
             />
           </div>
         ) : (
@@ -70,12 +70,12 @@ able to leave reviews
       </CardContent>
       {/* Review Modal */}
       {(isClient |isTalent) && (
-        <LeaveReviewModal,
-projectId = {project.id}
-          revieweeId = {revieweeId}
-          revieweeName = {revieweeName}
-          isOpen = {isReviewModalOpen}
-          onClose = {(,) => setIsReviewModalOpen(false)}
+        <LeaveReviewModal
+projectId = {project.id,}
+          revieweeId = {revieweeId,}
+          revieweeName = {revieweeName,}
+          isOpen = {isReviewModalOpen,}
+          onClose = {(,) => setIsReviewModalOpen(false),}
         />
       )}
     </Card>

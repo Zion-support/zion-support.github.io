@@ -1,13 +1,13 @@
 import React { useState useEffect useRef } from 'react';
-import { useRouter } from 'next/router';
-import { SearchX } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
-import { fireEvent } from '@/lib/analytics';
-import { SearchSuggestion } from '@/types/search';
-import { slugify } from '@/lib/slugify';
-import { useDebounce } from '@/hooks/useDebounce';
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+import { useRouter,, ,  } from 'next/router';
+import { Search,, X,  } from 'lucide-react'
+import { Input,, ,  } from '@/components/ui/input';
+import { AutocompleteSuggestions,, ,  } from '@/components/search/AutocompleteSuggestions';
+import { fireEvent,, ,  } from '@/lib/analytics';
+import { SearchSuggestion,, ,  } from '@/types/search';
+import { slugify,, ,  } from '@/lib/slugify';
+import { useDebounce,, ,  } from '@/hooks/useDebounce';
+import { useOnClickOutside,  } from '@/hooks/useOnClickOutside';
 /**
  * SearchBar component props
  */
@@ -26,7 +26,8 @@ interface SearchBarProps {
   /**
    * The placeholder text for the search input
    */
-  placeholder?: string}
+  placeholder?: string,
+}
 /**
  * SearchBar component that allows users to search for content.
  */
@@ -34,7 +35,7 @@ interface SearchBarProps {
           }}
         />
         {value && (
-          <button,
+          <button
 className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
             onClick={() => onChange('')}
             aria-label='Clear search'          >
@@ -47,13 +48,13 @@ className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-
           </button>
         )}
       </div>
-      <AutocompleteSuggestions,
-suggestions = {suggestions}
-        searchTerm = {value}
-        onSelectSuggestion = {handleSelect}
-        visible = {focused}
-        highlightedIndex = {highlightedIndex}
-        listId = {listId}
+      <AutocompleteSuggestions
+suggestions = {suggestions,}
+        searchTerm = {value,}
+        onSelectSuggestion = {handleSelect,}
+        visible = {focused,}
+        highlightedIndex = {highlightedIndex,}
+        listId = {listId,}
       />
     </div>
   )
@@ -61,11 +62,17 @@ suggestions = {suggestions}
   () => onChange ('') "
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
 }</div> <AutocompleteSuggestions suggestions= {
-  suggestions}searchTerm= {
-  value}onSelectSuggestion= {
-  handleSelect}visible= {
-  focused}highlightedIndex= {
-  highlightedIndex}listId= {
-  listId}/> </div>)
+  suggestions,
+}searchTerm= {
+  value,
+}onSelectSuggestion= {
+  handleSelect,
+}visible= {
+  focused,
+}highlightedIndex= {
+  highlightedIndex,
+}listId= {
+  listId,
+}/> </div>)
 }'"  )
 }

@@ -2,115 +2,156 @@ import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
+
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+}
+
+export interface Testimonial {
+  name: string;
+  role?: string;
+  text: string;
+  avatar?: string;
+}
 
 interface ServiceLandingTemplateProps {
   title: string;
   subtitle: string;
+  heroImage?: string;
   description: string;
-  benefits?: string[];
-  features?: Array<{
-    icon: React.ReactNode;
-    title: string;
-    description: string;
-  }>;
-  stats?: Array<{
-    label: string;
-    value: string;
-  }>;
+  benefits: Benefit[];
+  testimonials: Testimonial[];
   ctaText: string;
   ctaLink: string;
 }
 
-export function ServiceLandingTemplate({
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   title,
   subtitle,
+  heroImage,
   description,
-  benefits = [],
-  features = [],
-  stats = [],
+  benefits,
+  testimonials,
   ctaText,
   ctaLink
-}: ServiceLandingTemplateProps) {
+}) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-zion-blue">
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
-        <GradientHeading
-          title={title}
-          subtitle={subtitle}
-          className="text-center mb-8"
-        />
-        
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <p className="text-lg text-gray-600 leading-relaxed">
-            {description}
-          </p>
+      <section className="container mx-auto px-4 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <GradientHeading level="h1" className="text-4xl md:text-6xl font-bold mb-6">
+              {title}
+            </GradientHeading>
+            <p className="text-xl text-zion-slate-light mb-8">
+              {subtitle}
+            </p>
+            <p className="text-lg text-zion-slate-light mb-8">
+              {description}
+            </p>
+            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark">
+              {ctaText}
+            </Button>
+          </div>
+          {heroImage && (
+            <div className="relative">
+              <Image
+                src={heroImage}
+                alt={title}
+                width={600}
+                height={400}
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+          )}
         </div>
+      </section>
 
-        {/* CTA Button */}
+      {/* Benefits Section */}
+      <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
-            <a href={ctaLink}>{ctaText}</a>
+          <GradientHeading level="h2" className="text-3xl md:text-4xl font-bold mb-4">
+            Why Choose Our Service
+          </GradientHeading>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {benefits.map((benefit, index) => (
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
+              <CardContent className="p-6">
+                {benefit.icon && (
+                  <div className="mb-4 text-zion-cyan">
+                    {benefit.icon}
+                  </div>
+                )}
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-zion-slate-light">
+                  {benefit.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      {testimonials.length > 0 && (
+        <section className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <GradientHeading level="h2" className="text-3xl md:text-4xl font-bold mb-4">
+              What Our Clients Say
+            </GradientHeading>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
+                <CardContent className="p-6">
+                  <p className="text-zion-slate-light mb-4">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="flex items-center">
+                    {testimonial.avatar && (
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        width={40}
+                        height={40}
+                        className="rounded-full mr-3"
+                      />
+                    )}
+                    <div>
+                      <p className="text-white font-semibold">{testimonial.name}</p>
+                      {testimonial.role && (
+                        <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
+                      )}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* CTA Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <GradientHeading level="h2" className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Get Started?
+          </GradientHeading>
+          <p className="text-xl text-zion-slate-light mb-8">
+            Contact us today to learn more about our services
+          </p>
+          <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark">
+            {ctaText}
           </Button>
         </div>
-
-        {/* Benefits Section */}
-        {benefits.length > 0 && (
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8">Key Benefits</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <Card key={index} className="text-center p-6">
-                  <CardContent>
-                    <p className="text-gray-700">{benefit}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Features Section */}
-        {features.length > 0 && (
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8">Features</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <Card key={index} className="text-center p-6">
-                  <CardContent>
-                    <div className="mb-4 text-blue-600">
-                      {feature.icon}
-                    </div>
-                    <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
-                    <p className="text-gray-600">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Stats Section */}
-        {stats.length > 0 && (
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8">Our Impact</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {stats.map((stat, index) => (
-                <Card key={index} className="text-center p-6">
-                  <CardContent>
-                    <div className="text-3xl font-bold text-blue-600 mb-2">
-                      {stat.value}
-                    </div>
-                    <p className="text-gray-600">{stat.label}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
+      </section>
     </div>
   );
-}
-
-export default ServiceLandingTemplate;
+};

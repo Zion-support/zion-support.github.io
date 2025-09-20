@@ -31,7 +31,7 @@ return (
 team.
           </p>
           <div className='relative mb-8'>
-            <Input,
+            <Input
 placeholder='Search for help articles...'
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
@@ -46,21 +46,21 @@ placeholder='Search for help articles...'
             </TabsList>
             <TabsContent value='articles'>
               {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList,
+                <HelpCategoryList
 categories={HELP_CATEGORIES}
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}                />
               )}
               {selectedCategory && !selectedArticle && (
                 <>
-                  <Button,
+                  <Button
 variant='ghost'
                     onClick={handleBackToCategories}
                     className='mb-4'
                   >
                     ← All Categories
                   </Button>
-                  <HelpArticleList,
+                  <HelpArticleList
 categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}                  />
@@ -68,7 +68,7 @@ categoryId={selectedCategory}
               )}
               {selectedArticle && (
                 <>
-                  <Button,
+                  <Button
 variant='ghost'
                     onClick={handleBackToArticles}
                     className='mb-4'                  >
@@ -145,7 +145,7 @@ questions or issues.
                   <div className='space-y-4'>
                     <div className='flex items-center'>
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
-                        <svg,
+                        <svg
 xmlns='http://www.w3.org/2000/svg'
                           className='h-5 w-5 text-zion-purple'
                           viewBox='0 0 20 20'
@@ -155,7 +155,7 @@ xmlns='http://www.w3.org/2000/svg'
                           <path d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z' />
                         </svg>
                       </div>
-                      <a,
+                      <a
 href='mailto:support@ziontechgroup.com'
                         className='text-zion-cyan hover:underline'
                       >
@@ -164,7 +164,7 @@ href='mailto:support@ziontechgroup.com'
                     </div>
                     <div className='flex items-center'>
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
-                        <svg,
+                        <svg
 xmlns='http://www.w3.org/2000/svg'
                           className='h-5 w-5 text-zion-purple'
                           viewBox='0 0 20 20'
@@ -198,7 +198,7 @@ our platform.
                       <Input placeholder='Subject' />
                     </div>
                     <div>
-                      <textarea,
+                      <textarea
 className='w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black'
                         placeholder='Your feedback or suggestion'
                       />

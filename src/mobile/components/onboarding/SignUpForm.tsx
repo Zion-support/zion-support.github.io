@@ -184,7 +184,7 @@ return (
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
       <div className="space-y-2">
-        <Button,
+        <Button
 variant="outline"
           className="w-full py-6 relative"
           onClick = {handleGoogleLogin}
@@ -197,7 +197,7 @@ variant="outline"
           </svg>
           Continue with Google
         </Button>
-        <Button,
+        <Button
 variant="outline"
           className="w-full py-6 relative"
         >
@@ -232,7 +232,7 @@ variant="outline"
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
-            <Input,
+            <Input
 id="name"
               name="name"
               value = {formData.name}
@@ -248,7 +248,7 @@ aria-invalid = {!!fieldErrors.name}
         )}
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
-          <Input,
+          <Input
 id="email"
             name="email"
             type="email"
@@ -264,7 +264,7 @@ aria-invalid = {!!fieldErrors.email}
         </div>
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
-          <Input,
+          <Input
 id="password"
             name="password"
             type="password"
@@ -279,7 +279,7 @@ aria-invalid = {!!fieldErrors.password}
             <p className="text-red-500 text-sm">{fieldErrors.password}</p>
           )}
         </div>
-        <Button,
+        <Button
 type="submit"
           className="w-full py-6"
           disabled = {isLoading}
@@ -299,7 +299,7 @@ type="submit"
           ? "Already have an account? "
           : "Don't have an account? "
         }
-        <Link,
+        <Link
 href="/login"
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer"
         >

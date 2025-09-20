@@ -37,7 +37,7 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {
 be a temporary issue.
               </p>
               <div className='flex gap-2 justify-center'>
-                <Button,
+                <Button
 onClick={() =>
                     this.setState({ hasError: false error: undefined })
                   }
@@ -45,14 +45,14 @@ onClick={() =>
                   <RefreshCw className='h-4 w-4 mr-2' />
                   Try Again
                 </Button>
-                <Button,
+                <Button
 onClick={() => window.location.reload()}
                   variant='default'
                 >                  Refresh Page
                 <Button onClick={() => window.location.reload()} variant="default">
               </p>
               <div className="flex gap-2 justify-center">
-                <Button,
+                <Button
 onClick={() => this.setState({ hasError: false error: undefined })}
                   variant="outline"
                 >

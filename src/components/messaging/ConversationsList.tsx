@@ -24,7 +24,7 @@ return (
           </p>
         </div>
       ) : (
-        <List,
+        <List
 height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}

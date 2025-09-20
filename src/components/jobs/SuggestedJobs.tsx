@@ -1,5 +1,6 @@
 interface SuggestedJobsProps {
-  talentId?: string}
+  talentId?: string,
+}
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 if (isLoading) {
     return (
@@ -24,11 +25,11 @@ if (isLoading) {
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
-              <JobMatchesCard,
-key = {match.id}
-                match = {match}
-                onApply = {handleApply}
-                onDecline = {handleDecline}
+              <JobMatchesCard
+key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
               />
             ))}
           </div>
@@ -42,11 +43,11 @@ key = {match.id}
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
-              <JobMatchesCard,
-key = {match.id}
-                match = {match}
-                onApply = {handleApply}
-                onDecline = {handleDecline}
+              <JobMatchesCard
+key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
               />
             ))}
           </div>
@@ -60,12 +61,12 @@ key = {match.id}
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
-              <JobMatchesCard,
-key = {match.id}
-                match = {match}
-                onApply = {handleApply}
-                onDecline = {handleDecline}
-                showApplied = {true}
+              <JobMatchesCard
+key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+                showApplied = {true,}
               />
             ))}
           </div>
@@ -76,7 +77,8 @@ key = {match.id}
 }= useJobSuggestions (currentTalentId)
 const handleApply = (matchId: string jobId: string) => {
   updateJobMatchStatus (matchId,  'applied')
-//In a real app this might redirect to application form or open a modal}
+//In a real app this might redirect to application form or open a modal,
+}
 const handleDecline = (matchId: string) => {'
   updateJobMatchStatus (matchId, 'declined')
 }
@@ -87,26 +89,40 @@ if (isLoading) {
 }return (<div className="space-y-6" > {
   /* New Matches Section */
 }{"
-  newMatches.length > 0 && (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches.length}New </Badge> </div> <JobMatchesCard key= {
-  match.id}match= {
-  match}onApply= {
-  handleApply}onDecline= {
-  handleDecline}/>) )
+  newMatches.length > 0 && (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches.length,
+}New </Badge> </div> <JobMatchesCard key= {
+  match.id,
+}match= {
+  match,
+}onApply= {
+  handleApply,
+}onDecline= {
+  handleDecline,
+}/>) )
 }</div> </div>) "
 }</div> <div className="grid gap-4 md:grid-cols-2" > {
   viewedMatches.map (match => (<JobMatchesCard key= {
-  match.id}match= {
-  match}onApply= {
-  handleApply}onDecline= {
-  handleDecline}/>) )
+  match.id,
+}match= {
+  match,
+}onApply= {
+  handleApply,
+}onDecline= {
+  handleDecline,
+}/>) )
 }</div> </div>) "
 }</div> <div className="grid gap-4 md:grid-cols-2" > {
   appliedMatches.map (match => (<JobMatchesCard key= {
-  match.id}match= {
-  match}onApply= {
-  handleApply}onDecline= {
-  handleDecline}showApplied= {
-  true}/>) )
+  match.id,
+}match= {
+  match,
+}onApply= {
+  handleApply,
+}onDecline= {
+  handleDecline,
+}showApplied= {
+  true,
+}/>) )
 }</div> </div>)
 }</div>)
 }'"}

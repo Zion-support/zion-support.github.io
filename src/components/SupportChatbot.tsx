@@ -20,7 +20,7 @@ if (!open) {
     <div className='fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40'>
       <div className='bg-zion-blue-dark p-2 flex justify-between items-center'>
         <span className='text-white font-medium'>Help Bot</span>
-        <Button,
+        <Button
 variant='ghost'
           size='icon'
           className='text-white'
@@ -29,12 +29,12 @@ variant='ghost'
           <X className='h-5 w-5' />
         </Button>
       </div>
-      <div,
+      <div
 className='flex-1 overflow-y-auto p-3 space-y-4'
         style={{ maxHeight: '400px' }}
       >
         {messages.length === 0 && (
-          <ChatMessage,
+          <ChatMessage
 role='assistant'
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?"
           />

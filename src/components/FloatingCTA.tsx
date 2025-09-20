@@ -39,7 +39,7 @@ return (
           </p>
         </div>
         <div className='flex items-center gap-2'>
-          <Button,
+          <Button
 variant='default'
             size='sm'
             className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap'
@@ -47,7 +47,7 @@ variant='default'
           >
             <Link href='/signup'>Register Now</Link>
           </Button>
-          <button,
+          <button
 onClick={handleClose}
             className='text-zion-slate hover:text-white p-1'
             aria-label='Close'          >

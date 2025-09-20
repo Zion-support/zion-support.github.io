@@ -25,7 +25,7 @@ return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
-          <ReviewStats,
+          <ReviewStats
 averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}          />
@@ -53,26 +53,26 @@ averageRating={averageRating}
                 onReportReview={reportReview}              />
             </TabsContent>
             <TabsContent value='positive'>
-              <ReviewsList,
+              <ReviewsList
 reviews={reviews.filter(r => r.rating >= 4)}                isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
             <TabsContent value='critical'>
-              <ReviewsList,
+              <ReviewsList
 reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
             <TabsContent value="positive">
-              <ReviewsList,
+              <ReviewsList
 reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
             <TabsContent value='critical'>
-              <ReviewsList,
+              <ReviewsList
 reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
             <TabsContent value="critical">
-              <ReviewsList,
+              <ReviewsList
 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}

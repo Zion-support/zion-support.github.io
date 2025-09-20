@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeaderTableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge";
-import { Loader2, RefreshCw, Play, CheckCircleAlertCircle } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { ModelConfig } from '@/utils/zion-gpt';
+import { useState,, useEffect,, ,  } from 'react';
+import { Button,  } from "@/components/ui/button",
+import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card",
+import { Table,, TableBody,, TableCell,, TableHead,, TableHeader,, TableRow,  } from "@/components/ui/table",
+import { Badge,  } from "@/components/ui/badge";
+import { Loader2,, RefreshCw,, Play,, CheckCircle,, AlertCircle,  } from 'lucide-react'
+import { supabase,, ,  } from '@/integrations/supabase/client';
+import { ModelConfig,, ,  } from '@/utils/zion-gpt';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string}
+  errorMessage?: string,
+}
 
 return (
     <Card className="w-full">
@@ -64,11 +65,11 @@ return (
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
-                      <Button,
+                      <Button
 variant="ghost"
                         size="sm"
-                        onClick = {(,) => checkTrainingStatus(model.id)}
-                        disabled = {activeJobs[model.id]}
+                        onClick = {(,) => checkTrainingStatus(model.id),}
+                        disabled = {activeJobs[model.id],}
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -78,10 +79,10 @@ variant="ghost"
                         <span className="ml-1">Check</span>
                       </Button>
                     ) : model.trainingStatus === 'succeeded' ? (
-                      <Button,
-variant = {model.active ? "outline" : "default"}
+                      <Button
+variant = {model.active ? "outline" : "default",}
                         size="sm"
-                        onClick = {(,) => toggleModelActive(model.id model.active model.purpose)}
+                        onClick = {(,) => toggleModelActive(model.id model.active model.purpose),}
                       >
                         {model.active ? (
                           <>
@@ -94,11 +95,11 @@ variant = {model.active ? "outline" : "default"}
                         )}
                       </Button>
                     ) : (
-                      <Button,
+                      <Button
 variant="ghost"
                         size="sm"
                         className="text-red-500"
-                        title = {model.errorMessage |"Training failed"}
+                        title = {model.errorMessage |"Training failed",}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>

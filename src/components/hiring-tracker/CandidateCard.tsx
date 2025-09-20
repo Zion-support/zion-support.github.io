@@ -5,7 +5,7 @@ import { Draggable } from "@hello-pangea/dnd, ";
 import { formatDistanceToNow } from "date-fns, ";
 import { Link } from "react-router-dom, ";
 import { JobApplication } from "@/types/jobs, ";
-import { Card, CardContent  } from "@/components/ui/card, ";
+import { Card; CardContent } from "@/components/ui/card, ";
 import { Avatar } from "@/components/ui/avatar, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -15,21 +15,25 @@ FileText;
 MoreVertical;
 Calendar;
 AlertTriangle;
-BriefcaseIcon} from "lucide-react, ";
+BriefcaseIcon;
+} from "lucide-react, ";
 import { DropdownMenu;
 DropdownMenuContent;
-DropdownMenuItem, DropdownMenuTrigger  } from "@/components/ui/dropdown-menu, ";
+DropdownMenuItem;
+DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu, ";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge, ";
 import { toast } from "@/hooks/use-toast, ";
 import { HireConfirmationModal } from "./HireConfirmationModal, ";
 
 interface CandidateCardProps {
 application: JobApplication;,
-index: number;};
+index: number;,
+};
 export function CandidateCard({ application; index }: CandidateCardProps) {
-const [showNotes, setShowNotes] = useState(false);
-const [notes, setNotes] = useState(application.notes || "");
-const [showHireModal, setShowHireModal] = useState(false);
+const [showNotes; setShowNotes] = useState(false);
+const [notes; setNotes] = useState(application.notes || "");
+const [showHireModal; setShowHireModal] = useState(false);
 
 // Check if application is stalled (no activity for 7 days)
 const isStalled = application.updated_at &&
@@ -41,7 +45,8 @@ const handleSaveNotes: any = () => {;
 // For now; we'll just show a toast;
 toast({
 title: "Notes saved";,
-description: "Your notes have been saved"});
+description: "Your notes have been saved",
+});
 setShowNotes(false);
 };
 
@@ -49,7 +54,8 @@ const handleHireConfirmed: any = () => {;
 // Hiring process completed via the modal;
 toast({
 title: "Hiring process initiated";,
-description: "Offer has been sent to the talent."});
+description: "Offer has been sent to the talent.",
+});
 };
 
 return (
@@ -207,13 +213,13 @@ onConfirm={handleHireConfirmed}
 );
 }
 <//><///>;
-import { useState } from 'react';
+import { useState,  } from 'react'
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
-import { Avatar, asAvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict,;
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangleBriefcaseIcon } from 'lucide-react';
+import { Avatar,, as,, AvatarPrimitive,  } from "@/components/ui/avatar", // Renamed to avoid conflict,
+import { Button,  } from "@/components/ui/button";
+import { Textarea,  } from "@/components/ui/textarea";
+import { MessageSquare,, User,, FileText,, MoreVertical,, Calendar,, AlertTriangle,, BriefcaseIcon,  } from 'lucide-react'
 interface CandidateCardProps {
   application: JobApplication;,
 index: number,
@@ -222,7 +228,7 @@ return (
     <>
       <Draggable draggableId={application.id} index={index}>
         {provided => (
-          <Card,
+          <Card
 className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -236,7 +242,7 @@ className='mb-2 p-0 shadow-sm border'
                     {/* Using renamed AvatarPrimitive */}
                     {application.talent_profile?.profile_picture_url &&
                     !avatarError ? (
-                      <Image,
+                      <Image
 src={application.talent_profile.profile_picture_url}
                         alt={candidateName}
                         width={32} // Match h-8 w-8,
@@ -267,14 +273,14 @@ onError={() => setAvatarError(true)}                        priority={false} // 
                       {showNotes ? 'Hide notes' : 'Add notes'}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>
-                      <BriefcaseIcon,
+                      <BriefcaseIcon
 className='h-4 w-4 mr-2'
                         aria-hidden='true'
                       />{' '}
                       Hire Candidate
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <Link,
+                      <Link
 href={`/messages?talentId=${application.talent_id}`}
                       >
                         Message
@@ -282,7 +288,7 @@ href={`/messages?talentId=${application.talent_id}`}
                     </DropdownMenuItem>
                     {application.resume?.file_url && (
                       <DropdownMenuItem asChild>
-                        <a,
+                        <a
 href={application.resume.file_url}
                           target='_blank'
                           rel='noopener noreferrer'
@@ -319,7 +325,7 @@ href={application.resume.file_url}
               {/* Notes Section */}
               {showNotes && (
                 <div className='mt-2'>
-                  <Textarea,
+                  <Textarea
 placeholder='Add private notes about this candidate...'
                     className='text-xs min-h-[60px]'
                     value={notes}
@@ -340,7 +346,7 @@ placeholder='Add private notes about this candidate...'
                 </Button>
                 <Button variant='outline' size='sm' className='flex-1' asChild>
                   {application.resume?.file_url ? (
-                    <a,
+                    <a
 href={application.resume.file_url}
                       target='_blank'
                       rel='noopener noreferrer'
@@ -353,7 +359,7 @@ href={application.resume.file_url}
                     </span>
                   )}
                 </Button>
-                <Button,
+                <Button
 variant='default'
                   size='sm'
                   className='flex-1'
@@ -366,11 +372,11 @@ variant='default'
         )}
       </Draggable>
       {/* Hire Confirmation Modal */}
-      <HireConfirmationModal,
-isOpen = {showHireModal}
-        onClose = {() => setShowHireModal(false)}
-        application = {application}
-        onConfirm = {handleHireConfirmed}
+      <HireConfirmationModal
+isOpen = {showHireModal,}
+        onClose = {() => setShowHireModal(false),}
+        application = {application,}
+        onConfirm = {handleHireConfirmed,}
       />
     </>
   )
@@ -378,11 +384,15 @@ isOpen = {showHireModal}
   setShowNotes (false)
 }
   //Hiring process completed via the modal toast ({
-  application.id}index= {
-  index}> {
+  application.id,
+}index= {
+  index,
+}> {
   (provided) => (<Card className="mb-2 p-0 shadow-sm border" ref= {
-  provided.innerRef}{
-  ...provided.draggableProps}{
+  provided.innerRef,
+}{
+  ...provided.draggableProps,
+}{
   ...provided.dragHandleProps "
 }> <CardContent className="p-3"> {
   /* Candidate Header */ "
@@ -390,9 +400,12 @@ isOpen = {showHireModal}
   /* Using renamed AvatarPrimitive */
 }{
   application.talent profile?.profile picture url && !avatarError ? (<Image src= {
-  application.talent profile.profile picture url}alt= {
-  candidateName}width= {
-  32}//Match h-8 w-8 height= {
+  application.talent profile.profile picture url,
+}alt= {
+  candidateName,
+}width= {
+  32,
+}//Match h-8 w-8 height= {
   32 "
 }//Match h-8 w-8 className="rounded-full object-cover" //Ensure rounded and object-cover onError= {
   () => setAvatarError (true)
@@ -403,7 +416,8 @@ isOpen = {showHireModal}
   candidateName "
 }</h4> </p> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" className="h-8 w-8 p-0"> <MoreVertical className="h-4 w-4" /> </Button> </DropdownMenuTrigger> </DropdownMenuItem> <DropdownMenuItem asChild> <Link href= {
   `/messages?talentId=$ {
-  application.talent id}`
+  application.talent id,
+}`
 }> Message </Link> </DropdownMenuItem> {
   application.resume?.file url && (<DropdownMenuItem asChild> <a href= {
   application.resume.file url "
@@ -420,9 +434,11 @@ isOpen = {showHireModal}
   /* Match Score */
 }{"
   application.match score !== null && application.match score !== undefined && (<div className="mb-2"> <ScoreBadge application= {
-  application}/> </div>) "
+  application,
+}/> </div>) "
 }<Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value= {
-  notes}onChange= {
+  notes,
+}onChange= {
   (e) => setNotes (e.target.value)
 }/> </div> </div>) "
 }<Button variant="outline" size="sm" className="flex-1" asChild > </Link> </Button> <Button variant="outline" size="sm" className="flex-1" asChild > <FileText className="h-3 w-3 mr-1" /> Resume </Link>) : (<span> <FileText className="h-3 w-3 mr-1" /> No Resume </span>) "
@@ -432,9 +448,12 @@ isOpen = {showHireModal}
 }</Draggable> {
   /* Hire Confirmation Modal */
 }<HireConfirmationModal isOpen= {
-  showHireModal}onClose= {
+  showHireModal,
+}onClose= {
   () => setShowHireModal (false)
 }application= {
-  application}onConfirm= {
-  handleHireConfirmed}/> </>)
+  application,
+}onConfirm= {
+  handleHireConfirmed,
+}/> </>)
 }'"}

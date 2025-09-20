@@ -1,83 +1,64 @@
-import { useState, useEffect, createContext, useContext } from 'react';
+import { useState, useEffect } from 'react';
 
-const AuthContext = createContext();
-
-export function AuthProvider({ children }) {
+export function useAuth() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check for existing session
-    const checkAuth = async () => {
-      try {
-        const token = localStorage.getItem('auth_token');
-        if (token) {
-          // Simulate API call
-          await new Promise(resolve => setTimeout(resolve, 1000));
-          const mockUser = {
-            id: '1',
-            name: 'Demo User',
-            email: 'demo@example.com',
-            avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
-          };
-          setUser(mockUser);
+    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+    const checkAuth = () => {
+      const storedUser = localStorage.getItem('zion_user');
+      if (storedUser) {
+        try {
+          setUser(JSON.parse(storedUser));
+        } catch (error) {
+          console.error('Error parsing stored user:', error);
         }
-      } catch (error) {
-        console.error('Auth check failed:', error);
-      } finally {
-        setLoading(false);
       }
+      setLoading(false);
     };
 
     checkAuth();
   }, []);
 
   const login = async (email, password) => {
-    try {
-      setLoading(true);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      const mockUser = {
-        id: '1',
-        name: 'Demo User',
-        email,
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
-      };
-      setUser(mockUser);
-      localStorage.setItem('auth_token', 'mock_token');
-      return { success: true };
-    } catch (error) {
-      return { success: false, error: error.message };
-    } finally {
-      setLoading(false);
-    }
+    // Implement actual login logic here
+    const mockUser = {
+      id: '1',
+      email,
+      name: 'User',
+      role: 'user',
+    };
+    setUser(mockUser);
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    return mockUser;
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('auth_token');
+    localStorage.removeItem('zion_user');
   };
 
-  const value = {
+  const register = async (email, password, name) => {
+    // Implement actual registration logic here
+    const mockUser = {
+      id: '1',
+      email,
+      name,
+      role: 'user',
+    };
+    setUser(mockUser);
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    return mockUser;
+  };
+
+  return {
     user,
     loading,
     login,
     logout,
+    register,
+    isAuthenticated: !!user,
+    isAdmin: user?.role === 'admin',
   };
-
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  );
 }
-
-export function useAuth() {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
-}
-
-export default useAuth;

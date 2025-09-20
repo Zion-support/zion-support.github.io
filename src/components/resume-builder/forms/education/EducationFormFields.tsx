@@ -1,20 +1,20 @@
 
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react';
+import { useForm,, ,  } from 'react-hook-form';
+import { zodResolver,, ,  } from '@hookform/resolvers/zod';
+import { z,, ,  } from 'zod';
+import { format,, ,  } from 'date-fns';
+import { Loader2,  } from 'lucide-react'
 return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-4'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <FormField,
+          <FormField
 control={form.control}
             name='institution'
             render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
-                  <Input,
+                  <Input
 placeholder='University of California MIT etc.'
                     {...field}
                   />
@@ -23,13 +23,13 @@ placeholder='University of California MIT etc.'
               </FormItem>
             )}
           />
-          <FormField,
+          <FormField
 control={form.control}
             name='degree'
             render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
-                  <Input,
+                  <Input
 placeholder="Bachelor's Master's Ph.D etc."
                     {...field}
                   />
@@ -39,13 +39,13 @@ placeholder="Bachelor's Master's Ph.D etc."
             )}
           />
         </div>
-        <FormField,
+        <FormField
 control={form.control}
           name='field_of_study'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
-                <Input,
+                <Input
 placeholder='Computer Science Engineering etc.'
                   {...field}
                 />
@@ -55,7 +55,7 @@ placeholder='Computer Science Engineering etc.'
           )}
         />
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <FormField,
+          <FormField
 control={form.control}
             name='start_date'
             render={({ field }: { field: any }) => (
@@ -68,14 +68,14 @@ control={form.control}
             )}
           />
           <div className='space-y-4'>
-            <FormField,
+            <FormField
 control={form.control}
               name='is_current'
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
-                    <Checkbox,
-checked = {field.value}
-                      onCheckedChange = {field.onChange}
+                    <Checkbox
+checked = {field.value,}
+                      onCheckedChange = {field.onChange,}
                     />
                   </FormControl>
                   <div className='space-y-1 leading-none'>
@@ -85,7 +85,7 @@ checked = {field.value}
               )}
             />
             {!form.watch('is_current') && (
-              <FormField,
+              <FormField
 control={form.control}
                 name='end_date'
                 render={({ field }: { field: any }) => (
@@ -100,7 +100,7 @@ control={form.control}
             )}
           </div>
         </div>
-        <FormField,
+        <FormField
 control={form.control}
           name='location'
           render={({ field }: { field: any }) => (            <FormItem>
@@ -112,13 +112,13 @@ control={form.control}
             </FormItem>
           )}
         />
-        <FormField,
+        <FormField
 control={form.control}
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>
-                <Textarea,
+                <Textarea
 placeholder='Notable achievements courses activities...'
                   className='min-h-[100px]'
                   {...field}

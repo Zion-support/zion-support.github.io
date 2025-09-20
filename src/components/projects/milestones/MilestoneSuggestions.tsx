@@ -8,7 +8,7 @@ export function MilestoneSuggestions({
 return (
     <div className='space-y-4'>
       {!showSuggestions && (
-        <Button,
+        <Button
 variant='outline'
           onClick={handleGenerateMilestones}
           disabled={isGenerating |!scopeSummary |!startDate}

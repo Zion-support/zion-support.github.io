@@ -62,7 +62,7 @@ features to help you succeed
         </div>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {highlightsData.map((category index) => (
-            <Card,
+            <Card
 key={index}
               className='bg-zion-blue-dark border-zion-blue-light'
             >

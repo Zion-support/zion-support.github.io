@@ -20,7 +20,7 @@ const signupSchema = null;
               </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div,
+              <div
 className={cn('h-2 rounded-full transition-all duration-300', passwordStrength.color)}
                 style={{ width: `${passwordStrength.percentage}%` }}
               />
