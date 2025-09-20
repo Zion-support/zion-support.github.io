@@ -1,5 +1,5 @@
 import React from 'react'
-import { SEO } from '../../components/SEO'
+import SEO from '../../components/SEO'
 import { Bot, MessageSquare, Headphones, Zap, PieChart, CheckCircle2 } from 'lucide-react'
 
 export default function AIAgentHelpdesk() {
