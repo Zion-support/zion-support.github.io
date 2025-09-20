@@ -1,9 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import SEO from '../../components/SEO';
+import SEO from '../../components/SEO'
 export const metadata: Metadata = {
-<<<<<<< HEAD:app/case-studies/neural-interface-revolution-2025/page.tsx
   title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business | Zion Tech Group'
   description: 'Explore groundbreaking case studies of neural interface implementations in business, from enhanced productivity to accessibility solutions, and discover the future of human-computer interaction.'
   keywords: ['neural interfacesBCIbrain-computer interfaceinnovation', 'future technologyproductivityaccessibility']
@@ -12,15 +11,6 @@ export const metadata: Metadata = {
     description: 'Brain-computer interfaces transforming business operations and productivity'
     type: 'article'
     publishedTime: '2025-01-14'
-=======
-  title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business | Zion Tech Group',
-  description: 'Explore groundbreaking case studies of neural interface implementations in business, from enhanced productivity to accessibility solutions, and discover the future of human-computer interaction.',
-  keywords: ['neural interfacesBCIbrain-computer interfaceinnovation', 'future technologyproductivityaccessibility'],
-  openGraph: {
-    title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business',
-    description: 'Brain-computer interfaces transforming business operations and productivity',
-    type: 'article',
-    publishedTime: '2025-01-14',
 >>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39:temp-problematic-files/neural-interface-revolution-2025/page.tsx
     authors: ['Zion Tech Group']}
 }
