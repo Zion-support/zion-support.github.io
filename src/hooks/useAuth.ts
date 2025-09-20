@@ -1,3 +1,8 @@
-import { useAuth as useAuthContext } from '@/context/auth/AuthProvider';
-
-export const useAuth = useAuthContext;
+export function useAuth() {
+  return {
+    isAuthenticated: false,
+    user: null,
+    login: () => {},
+    logout: () => {}
+  };
+}

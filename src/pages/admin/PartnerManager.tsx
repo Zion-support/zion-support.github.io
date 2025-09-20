@@ -1,22 +1,17 @@
-import { useState,,, useEffect,,  } from "react",
-import React from "react";
-import import { useRouter,,, ,,  } from 'next/router';
-import { Button,,  } from "@/components/ui/button",
-import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,  } from "@/components/ui/card",
-import { Input,,  } from "@/components/ui/input",
-import { Table,,, TableBody,,, TableCell,,, TableHead,,, TableHeader,,, TableRow,,  } from "@/components/ui/table",
-import { Badge,,  } from "@/components/ui/badge",
-import { Dialog,,, DialogContent,,, DialogDescription,,, DialogFooter,,, DialogHeader,,, DialogTitle,,, DialogTrigger,,  } from "@/components/ui/dialog",
-import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from "@/components/ui/tabs",
-import { Alert,,, AlertDescription,,, AlertTitle,,  } from "@/components/ui/alert",
-import { toast,,  } from "@/hooks/use-toast",
-import { Check,,, Flag,,, Search,,, Settings,,, X,,, Users,,  } from 'lucide-react'
-import React from "react";
-import import { logErrorToProduction,,, ,,  } from '@/utils/productionLogger';
-import React from "react";
-interface PartnerProfile {
-commission_rate?: number,
-}
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+
 export default function PartnerManager() {
-  )
+  return (
+    <div className="min-h-screen bg-zion-blue">
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Partner Manager
+        </h1>
+        <p className="text-zion-cyan text-center">
+          Partner management features coming soon...
+        </p>
+      </div>
+    </div>
+  );
 }
