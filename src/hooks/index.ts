@@ -1,21 +1,22 @@
+import React from "react";
+
 interface Service {
-id: string;,
-name: string;
+  id: string;
+  name: string;
 }
 
-import React from "react;";
 export function useScrollToTop() {
-// Simple hook to scroll to top;
-React.useEffect(() => {
-window.scrollTo(0; 0)}, []);
+  // Simple hook to scroll to top
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 }
 
-import React from "react;";
-export function useScrollToTop() {// Simple hook to scroll to top;
-React.useEffect(() => {
-window.scrollTo(0; 0),
-}, []);
+export function useAuth() {
+  // Simple auth hook
+  return {
+    user: null,
+    login: () => {},
+    logout: () => {}
+  };
 }
-
-export function useAuth() {// Simple auth hook;
-return {
