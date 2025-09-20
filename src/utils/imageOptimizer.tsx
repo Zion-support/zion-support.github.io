@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface ImageOptimizationOptions {
   width?: number;
   height?: number;

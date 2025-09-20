@@ -516,7 +516,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     customers: 5,
     rating: 4.7,
     reviews: 3
-  }
+  },
   {
     id: 'ai-email-responder',
     name: 'AI Email Responder',
