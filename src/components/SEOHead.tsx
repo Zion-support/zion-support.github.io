@@ -141,7 +141,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           "@type": "ImageObject",
           "url": "https://ziontechgroup.com/logo.png"
         }
-      }
+      },
       ...(data.publishedTime && { "datePublished": data.publishedTime }),
       ...(data.modifiedTime && { "dateModified": data.modifiedTime }),
       ...(data.section && { "articleSection": data.section }),

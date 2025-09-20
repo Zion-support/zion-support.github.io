@@ -197,11 +197,11 @@ function ErrorBoundary({ children, fallback, onError }) {
         setHasError(false);
         setError(null);
         setRetryCount(prev => prev + 1);
-    },
+    };
 
     if (hasError) {
         if (fallback) {
-            return fallback,
+            return fallback;
         }
         return (
             <ErrorFallback 
@@ -209,24 +209,24 @@ function ErrorBoundary({ children, fallback, onError }) {
                 resetError={resetError}
                 retryCount={retryCount}
             />
-        ),
+        );
     }
 
-    return <>{children}</>,
+    return <>{children}</>;
 }
 
 // Hook for functional components to handle errors
 export function useErrorHandler() {
-    const [error, setError] = useState(null),
+    const [error, setError] = useState(null);
 
     const handleError = (error) => {
-        setError(error),
-        console.error('useErrorHandler caught an error:', error),
-    },
+        setError(error);
+        console.error('useErrorHandler caught an error:', error);
+    };
 
     const clearError = () => {
-        setError(null),
-    },
+        setError(null);
+    };
 
     return { error, handleError, clearError };
 }
