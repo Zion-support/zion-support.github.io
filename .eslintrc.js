@@ -15,5 +15,9 @@ module.exports = {
     browser: true,
     es2022: true,
     node: true
-  }
+  },
+  ignorePatterns: [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 };
