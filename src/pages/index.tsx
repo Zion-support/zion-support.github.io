@@ -1,12 +1,24 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { EnhancedSEO } from '@/components/seo/EnhancedSEO';
 
 export default function Home() {
   return (
     <>
-      <SEO
+      <EnhancedSEO
         title="Zion AI - Advanced AI Solutions and Technology Services"
         description="Discover cutting-edge AI solutions, machine learning services, and innovative technology solutions to transform your business."
+        keywords="AI, artificial intelligence, machine learning, technology services, automation, digital transformation, innovation"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion AI",
+          "description": "Advanced AI Solutions and Technology Services",
+          "url": "https://ziontechgroup.com",
+          "sameAs": [
+            "https://linkedin.com/company/zion-tech-group",
+            "https://twitter.com/ziontechgroup"
+          ]
+        }}
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
