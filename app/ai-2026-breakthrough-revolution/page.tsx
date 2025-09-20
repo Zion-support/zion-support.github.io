@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
-import Card from '../../components/ui/Card';
+import Card from '../../src/components/ui/card';
 export const metadata = {
   title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence',
   description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.',
@@ -11,8 +11,8 @@ export default function AI2026BreakthroughRevolution() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence"
+        description="Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology."
         keywords="AI 2026, artificial intelligence breakthrough, machine learning revolution, neural networks, quantum AI"
         url="/ai-2026-breakthrough-revolution"
       />
@@ -24,31 +24,31 @@ export default function AI2026BreakthroughRevolution() {
               <span className="text-sm font-medium">🚀 REVOLUTIONARY BREAKTHROUGH</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              AI 2026 Breakthrough Revolution,
+              AI 2026 Breakthrough Revolution
             </h1>
             <p>
-              Experience the most transformative AI breakthroughs of 2026. From quantum-enhanced neural networks,
-              to autonomous business systems, discover how AI is revolutionizing every aspect of human life.,
+              Experience the most transformative AI breakthroughs of 2026. From quantum-enhanced neural networks
+              to autonomous business systems, discover how AI is revolutionizing every aspect of human life.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
               >
-                Get Early Access,
+                Get Early Access
               </Link>
-              <Link,
-                href="/ai-2026",
+              <Link
+                href="/ai-2026"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
               >
-                Explore More,
+                Explore More
               </Link>
             </div>
           </div>
         </div>
       </section>
       {/* Key Breakthroughs Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div>
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary AI Breakthroughs</h2>
           <div>
@@ -57,7 +57,7 @@ export default function AI2026BreakthroughRevolution() {
               <h3 className="text-2xl font-bold mb-4">Quantum Neural Networks</h3>
               <p>
                 Revolutionary quantum-enhanced neural networks that process information at unprecedented speeds,
-                enabling real-time complex decision making across all industries.,
+                enabling real-time complex decision making across all industries.
               </p>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>• 1000x faster processing speeds</li>
@@ -70,7 +70,7 @@ export default function AI2026BreakthroughRevolution() {
               <h3 className="text-2xl font-bold mb-4">Autonomous Business Systems</h3>
               <p>
                 Fully autonomous business operations powered by advanced AI that can make complex decisions,
-                manage resources, and optimize processes without human intervention.,
+                manage resources, and optimize processes without human intervention.
               </p>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>• 99.9% operational efficiency</li>
@@ -82,8 +82,8 @@ export default function AI2026BreakthroughRevolution() {
               <div className="text-4xl mb-4">🔮</div>
               <h3 className="text-2xl font-bold mb-4">Predictive Intelligence</h3>
               <p>
-                Advanced predictive AI systems that can forecast market trends, customer behavior, and,
-                business outcomes with unprecedented accuracy and detail.,
+                Advanced predictive AI systems that can forecast market trends, customer behavior, and
+                business outcomes with unprecedented accuracy and detail.
               </p>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>• 98% prediction accuracy</li>
@@ -119,7 +119,7 @@ export default function AI2026BreakthroughRevolution() {
         </div>
       </section>
       {/* Technology Stack */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div>
           <h2 className="text-4xl font-bold text-center mb-12">Cutting-Edge Technology</h2>
           <div>
@@ -173,21 +173,21 @@ export default function AI2026BreakthroughRevolution() {
         <div>
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
           <p>
-            Join thousands of forward-thinking organizations already leveraging AI 2026 breakthrough technology,
-            to revolutionize their operations and achieve unprecedented success.,
+            Join thousands of forward-thinking organizations already leveraging AI 2026 breakthrough technology
+            to revolutionize their operations and achieve unprecedented success.
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
             >
-              Start Your AI Journey,
+              Start Your AI Journey
             </Link>
-            <Link,
-              href="/ai-2026",
+            <Link
+              href="/ai-2026"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
             >
-              Learn More,
+              Learn More
             </Link>
           </div>
         </div>

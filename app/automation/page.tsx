@@ -10,8 +10,8 @@ export default function AutomationPage() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="Advanced Automation 2025 - AI-Powered Business Automation | Zion Tech Group"
+        description="Transform your business with intelligent automation solutions. Reduce costs by 60% while increasing productivity by 300% with our AI-powered automation."
         keywords="automation, business automation, AI automation, process automation, intelligent automation"
         url="/automation"
       />

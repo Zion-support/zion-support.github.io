@@ -10,8 +10,8 @@ export default function AI2026Page() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="AI 2026 - Future AI Technologies | Zion Tech Group"
+        description="Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions."
         keywords="AI 2026, future AI, quantum AI, revolutionary technology, artificial general intelligence"
         url="/ai-2026"
       />
@@ -93,16 +93,16 @@ export default function AI2026Page() {
       <section className="bg-gradient-to-r from-violet-50 to-purple-50 py-16">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Be Part of the AI Revolution,
+            Be Part of the AI Revolution
           </h2>
           <p>
-            Join the pioneers who are shaping the future of artificial intelligence and technology.,
+            Join the pioneers who are shaping the future of artificial intelligence and technology.
           </p>
-          <Link,
-            href="/ai-2026/early-access",
+          <Link
+            href="/ai-2026/early-access"
             className="bg-violet-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-700 transition-colors"
           >
-            Request Early Access,
+            Request Early Access
           </Link>
         </div>
       </section>

@@ -374,17 +374,17 @@ export default function AutonomousSystems2026Page() {
             adapt to changing conditions, and continuously optimize performance. The future of business is autonomous.,
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-green-500 to-blue-500 px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all transform hover:scale-105"
             >
-              Start Your Autonomous Journey,
+              Start Your Autonomous Journey
             </Link>
-            <Link,
-              href="/ai-2026-ultimate-business-transformation",
+            <Link
+              href="/ai-2026-ultimate-business-transformation"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
             >
-              Explore More Content,
+              Explore More Content
             </Link>
           </div>
         </div>
