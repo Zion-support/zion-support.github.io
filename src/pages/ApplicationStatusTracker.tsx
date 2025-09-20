@@ -4,9 +4,12 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Briefcase, Inbox } from 'lucide-react';
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
+import Header from '@/components/Header';
+import { useAuth } from '@/hooks/useAuth';
 
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
+  const { user } = useAuth();
   
   return (
     <>
@@ -14,6 +17,7 @@ function ApplicationStatusTrackerContent() {
         title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
       />
+      <Header />
       <div className='container mx-auto px-4 py-8'>
         <div className='mb-8'>
           <h1 className='text-3xl font-bold text-white mb-2'>Application Status Tracker</h1>

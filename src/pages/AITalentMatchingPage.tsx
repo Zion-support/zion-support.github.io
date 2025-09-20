@@ -1,6 +1,7 @@
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react';
+import Header from "@/components/Header";
 
 const benefits = [
   "AI-powered matching algorithm",

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
-import { Header } from '@/components/Header';
+import Header from '@/components/Header';
 import { SEO } from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -12,7 +12,38 @@ import { Separator } from '@/components/ui/separator';
 import { Wallet, Database, Save } from 'lucide-react';
 
 export default function AccountSettings() {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
+  
+  // Handle case where user might not be available during static generation
+  if (loading) {
+    return (
+      <>
+        <SEO title='Account Settings' description='Manage your account' />
+        <Header />
+        <main className='container mx-auto py-8 px-4'>
+          <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
+          <div className='text-center py-8'>
+            <p className='text-gray-300'>Loading...</p>
+          </div>
+        </main>
+      </>
+    );
+  }
+  
+  if (!user) {
+    return (
+      <>
+        <SEO title='Account Settings' description='Manage your account' />
+        <Header />
+        <main className='container mx-auto py-8 px-4'>
+          <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
+          <div className='text-center py-8'>
+            <p className='text-gray-300'>Please log in to access your account settings.</p>
+          </div>
+        </main>
+      </>
+    );
+  }
   const [didHandle, setDidHandle] = useLocalStorage('didHandle', '');
   const [displayWeb3, setDisplayWeb3] = useLocalStorage('displayWeb3', false);
   const [enableBackup, setEnableBackup] = useLocalStorage('enableBackup', false);
