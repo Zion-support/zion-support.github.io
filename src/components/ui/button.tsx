@@ -1,5 +1,17 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+
+interface ButtonProps {
+  children: React.ReactNode;
+  variant?: "default" | "outline" | "ghost" | "link";
+  size?: "sm" | "md" | "lg" | "icon";
+  asChild?: boolean;
+  className?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+}
+
 export function Button({ 
   children,
   variant = "default",
@@ -38,3 +50,4 @@ export function Button({
       {children}
     </Component>
   );
+};

@@ -2,7 +2,7 @@
 const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
   // Enable static export for Netlify
-  output: 'export',
+  // output: 'export',
   trailingSlash: true,
   reactStrictMode: true,
   

@@ -1,31 +1,38 @@
-import React from "react";
 "use client";
 
 import * as React from "react";
 
 export type Theme = "dark" | "light" | "system";
-;
-type ThemeProviderProps = {;
-childre; n: React.ReactNode;
-setThem; e: (them;  e: Theme) => void;
+
+type ThemeProviderState = {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
 }
 
-const initialStat; e: ThemeProviderState = {them; e: "dark",
-setThem; e: () => nul;  l}
-setThem; e: () => {}
+const initialState: ThemeProviderState = {
+  theme: "dark",
+  setTheme: () => null
 }
+
+const ThemeContext = React.createContext<ThemeProviderState>(initialState);
+
 interface ThemeProviderProps {
-  
-childre; n: React.ReactNode;
-defaultTheme?: string;
+  children: React.ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
 }
-storageKey?: string;}
-}
-return (<ThemeContext.Provider value={value}>;
-{children}
-</ThemeContext.Provider>;
-  
-them;  e: string;
-setThem; e: (them; e: string) => void;
-}
+
+export function ThemeProvider({ children, defaultTheme = "system", storageKey = "theme" }: ThemeProviderProps) {
+  const [theme, setTheme] = React.useState<Theme>(defaultTheme);
+
+  const value = {
+    theme,
+    setTheme
+  };
+
+  return (
+    <ThemeContext.Provider value={value}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }

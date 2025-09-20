@@ -1,6 +1,9 @@
 
 import * as React from "react";
-import { Toaster as HotToaster } from "react-hot-toast";
+import { Toaster as SonnerToaster } from "sonner";
 
-export function Toaster() {return (;
-<HotToaster position="top-right" />;
+export function Toaster() {
+  return (
+    <SonnerToaster position="top-right" />
+  );
+}
