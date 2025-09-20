@@ -1,139 +1,146 @@
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
+import type { Config } from 'tailwindcss'
 
-const config: Config = {
-  darkMode: "class",
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"
-  ],
-  safelist: ['border-border'],
-  theme: {
-    extend: {
-      colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
-        },
-        // Custom Zion colors
-        "zion-blue": {
-          DEFAULT: "#0a0f1f",
-          light: "#1e263b",
-          dark: "#090c1a"
+        "zion-neon": {
+          DEFAULT: "#22ddd2",
+          light: "#7aeae4",
+          dark: "#14847e",
+          glow: "#22ddd2",
         },
         "zion-purple": {
-          DEFAULT: "#a855f7",
-          light: "#d8b4fe",
-          dark: "#9333ea"
+          DEFAULT: "#8c15e9",
+          light: "#b971f2",
+          dark: "#530c8b",
+          neon: "#b971f2",
         },
-        "zion-cyan": {
-          DEFAULT: "#00e5ff",
-          light: "#7df9ff",
-          dark: "#00c4cc"
-        },
-        "zion-slate": {
-          DEFAULT: "#94A3B8",
-          light: "#CBD5E1",
-          dark: "#64748B"
-        }
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: [
-          'var(--font-inter), Inter',
-          ...defaultTheme.fontFamily.sans
-        ],
-        heading: [
-          'var(--font-poppins), Poppins',
-          ...defaultTheme.fontFamily.sans
-        ]
+        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' }
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' }
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
-        'gradient-x': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(10px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { 
+            boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)",
+            transform: "scale(1)"
           },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          }
-        },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' }
-        },
-        'glow': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
-          '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' }
-        },
-        'neon-pulse': {
-          '0%, 100%': { 
-            textShadow: '0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff' 
+          "50%": { 
+            boxShadow: "0 0 40px rgba(34, 221, 210, 0.8)",
+            transform: "scale(1.05)"
           },
-          '50%': { 
-            textShadow: '0 0 2px #00e5ff, 0 0 5px #00e5ff, 0 0 7px #00e5ff, 0 0 10px #00e5ff' 
-          }
-        }
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate'
-      }
-    }
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.5s ease-out",
+        "slide-in": "slide-in 0.3s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 3s ease infinite",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-mesh": "linear-gradient(45deg, #8c15e9, #22ddd2, #2e73ea, #8c15e9)",
+        "gradient-neon": "linear-gradient(45deg, #22ddd2, #8c15e9, #22ddd2)",
+      },
+      backdropBlur: {
+        xs: "2px",
+      },
+      boxShadow: {
+        "neon": "0 0 20px rgba(34, 221, 210, 0.5)",
+        "neon-purple": "0 0 20px rgba(140, 21, 233, 0.5)",
+        "neon-blue": "0 0 20px rgba(46, 115, 234, 0.5)",
+        "glow": "0 0 40px rgba(34, 221, 210, 0.3)",
+        "glow-purple": "0 0 40px rgba(140, 21, 233, 0.3)",
+        "glow-blue": "0 0 40px rgba(46, 115, 234, 0.3)",
+      },
+    },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio')
-  ]
+    animatePlugin,
+    plugin(function({ addUtilities }) {
+      const newUtilities = {
+        '.rtl': {
+          direction: 'rtl',
+          textAlign: 'right',
+        },
+        '.ltr': {
+          direction: 'ltr',
+          textAlign: 'left',
+        },
+        '.text-gradient': {
+          background: 'linear-gradient(45deg, #22ddd2, #8c15e9, #2e73ea)',
+          backgroundClip: 'text',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+        },
+        '.bg-mesh': {
+          background: 'linear-gradient(45deg, #8c15e9, #22ddd2, #2e73ea, #8c15e9)',
+          backgroundSize: '400% 400%',
+          animation: 'gradient-shift 3s ease infinite',
+        },
+        '.glass': {
+          background: 'rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(10px)',
+          border: '1px solid rgba(255, 255, 255, 0.2)',
+        },
+        '.glass-dark': {
+          background: 'rgba(0, 0, 0, 0.3)',
+          backdropFilter: 'blur(10px)',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+        },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
 };
 
 export default config;
+=======
+export default {
+	content: [
+		'./index.html',
+		'./src/**/*.{js,ts,jsx,tsx}',
+	],
+	theme: {
+		extend: {
+			colors: {
+				'zion-blue': { DEFAULT: '#0ea5e9', dark: '#0b76a8', light: '#38bdf8' },
+				'zion-purple': { DEFAULT: '#7c3aed', dark: '#5b21b6', light: '#a78bfa' },
+				'zion-cyan': { DEFAULT: '#22d3ee', dark: '#0891b2', light: '#67e8f9' },
+				'zion-slate': { DEFAULT: '#64748b', dark: '#334155', light: '#94a3b8' },
+				'background': '#0b1220',
+			},
+		},
+	},
+	plugins: [],
+} satisfies Config

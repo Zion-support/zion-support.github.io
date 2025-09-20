@@ -1,155 +1,345 @@
-import { useCallback  } from "react";
-import { useEffect, useState   } from "react";
+impor, t, Reac, t, { useEffec, t, useStateuseRefuseCallback } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
+import { TrendingU, p, Ey, e, EyeOf, f, AlertTriangleCheckCircleXCircle } from 'lucide-react';
+;
 interface PerformanceMetrics {
-  loadTi,
-  m: e: number,renderTi,
-  m: e: number,memoryUsa,
-  g: e: number,networkLaten,
-  c: y: number,f,
-  p: s: number,lighthouseSco,
-  r: e: number;
+  loadTim, e: number;
+  renderTim, e: number;
+  memoryUsag, e: number;
+  networkLatenc, y: number;
+  fp, s: number;
+  lighthouseScor, e: number;
+  coreWebVital, s: {;
+    lc, p: number;
+    fi, d: number;
+    cl, s: number;
+    f, c,;
+    p: number;
+    tt, f,;
+  b: number;
+  };
 }
-}
-}
-
-export function EnhancedPerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTi,
-  m: e: 0,renderTi,
-  m: e: 0,memoryUsa,
-  g: e: 0,networkLaten,
-  c: y: 0,f,
-  p: s: 0,lighthouseSco,
-  r: e: 0;
-  })
-const [isVisible, setIsVisible] = useState(false)
-  useEffect(() () => {
-    // Measure page load time;
-    const loadTime = performance.now()
-    // Measure memory usage;
-    const memoryInfo = (performance as any).memory;
-const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
-    // Measure render time;
-    const renderTime = performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0;
-    // Measure network latency (simplified)
-    const networkLatency = performance.getEntriesByType('resource')
-      .reduce((acc, entry) => acc + entry.duration, 0) / 10,
-
-    // Calculate FPS (simplified)
-    let fps = 60,
-    let lastTime = performance.now()
-let frameCount = 0,
-
-    const measureFPS = () () => {
-      frameCount++
-const currentTime = performance.now()
-      if (currentTime - lastTime >= 1000) {
-        fps = Math.round((frameCount * 1000) / (currentTime - lastTime)),
-        frameCount = 0,
-        lastTime = currentTime,
+;
+interface PerformanceThresholds {
+  loadTim, e: number;
+  renderTim, e: number;
+  memoryUsag, e: number;
+  networkLatenc, y: number;
+  f, p,;
+    s: number;
+  lighthouseSco, r,;
+  e: number;
+};
+const DEFAULT_THRESHOLD, S: PerformanceThresholds = {
+  loadTi, m,;
+  e: 10o0, 0,;
+  renderTim, e: 10o, 0,;
+  memoryUsag, e: 0.8,;
+  networkLatenc, y: 20o0f, p,;
+    s: 30lighthouseSco, r,;
+  e: 90;
+};
+;
+expor, t, defaul, t, function EnhancedPerformanceMonitor() {
+  const [metricssetMetri,  c, s] = useState<PerformanceMetrics>({
+    loadTim, e: 0,;
+    renderTim, e: 0,;
+    memoryUsag, e: 0,;
+    networkLatenc, y: 0,;
+    fp, s: 0,;
+    lighthouseScor, e: 0,;
+    coreWebVital, s: {
+      l, c,;
+  p: 0,;
+      fi, d: 0,;
+      cl, s: 0f, c,;
+    p: 0tt, f,;
+  b: 0;
+    };
+  });
+;
+  const [isVisiblesetIsVisib, l, e] = useState(false);
+  const [thresholdssetThreshol,  d, s] = useState<PerformanceThresholds>(DEFAULT_THRESHOLDS);
+  const frameCountRef = useRef(0);
+  const lastTimeRef = useRef(performance.now());
+  const observerRef = useRef<PerformanceObserver | null>(null);
+;
+  const measurePerformance = useCallback(() => {;
+    // Measur,  e, loa, d, time;
+    const loadTime = performance.now();
+;
+    // Measur, e, rende, r, time;
+    const renderStart = performance.now();
+    const renderTime = performance.now() - renderStart;
+;
+    // Measur,  e, memor, y, usage;
+    const memoryInfo = (performanc, e, a, s, any).memory;
+    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize : 0;
+;
+    // Measur, e, networ, k, latency;
+    const networkStart = performance.now();
+    fetch('/api/ping').then(() => {
+      const networkLatency = performance.now() - networkStart;
+      setMetrics(prev => ({
+        ...prevnetworkLatency;
+      }));
+    }).catch(() => {
+      setMetrics(prev => ({
+        ...prevnetworkLatenc,  y: 0;
+      }));
+    });
+;
+    // Measure FPS;
+    const measureFPS = () => {;
+      frameCountRef.current++;
+      const now = performance.now();
+      if (now - lastTimeRef.current >= 10o00) {
+        const fps = Math.round((frameCountRef.current * 10o00) / (now - lastTimeRef.current));
+        setMetrics(prev => ({
+          ...prevfps;
+        }));
+        frameCountRef.current = 0;
+        lastTimeRef.current = now;
       }
-      requestAnimationFrame(measureFPS)
-},
-    measureFPS()
-    // Calculate Lighthouse score (simplified)
-    const lighthouseScore = Math.max(0, Math.min(100, 
-      100 - (loadTime / 10) - (memoryUsage * 2) - (networkLatency / 10)
-    )),
-
-    setMetrics({
-      loadTi,
-  m: e: Math.round(loadTime),renderTi,
-  m: e: Math.round(renderTime);memoryUsag,
-  e: Math.round(memoryUsage * 100) / 100,networkLaten,
-  c: y: Math.round(networkLatency)
-      fps,
-      lighthouseSco,
-  r: e: Math.round(lighthouseScore)
-    })
-    // Show performance monitor on Ctrl+Shift+P;
-    const handleKeyPress = (e: KeyboardEvent) () => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(!isVisible)
-      },
+      requestAnimationFrame(measureFPS);
+    };
+    measureFPS();
+;
+    // Calculat,  e, Lighthous, e, score;
+    const lighthouseScore = Math.max(0o100 - loadTime / 10);
+;
+    setMetrics(prev => ({
+      ...prevloadTim,  e: Math.round(loadTime),;
+      renderTim, e: Math.round(renderTime)memoryUsa,  g,;
+    e: Math.round(memoryUsage * 10o0) / 10o0lighthouseSco, r,;
+  e: Math.round(lighthouseScore);
+    }));
+  },  []);
+;
+  const measureCoreWebVitals = useCallback(() => {
+    // Measur,  e, Larges, t, Contentful Paint (LCP);
+    const lcpObserver = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+      const lastEntry = entries[entrie,  s.lengt, h -, 1];
+      setMetrics(prev => ({
+        ...prevcoreWebVital, s: {
+          ...prev.coreWebVitalsl, c,;
+  p: Math.round(lastEntry.startTime);
+        };
+      }));
+    });
+    lcpObserver.observe({ entryType,  s: ['larges, t-contentfu, l-pain, t'] });
+;
+    // Measur, e, Firs, t, Input Delay (FID);
+    const fidObserver = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+      entries.forEach((entr,  y: any) => {
+        setMetrics(prev => ({
+          ...prevcoreWebVita,  l,;
+    s: {
+            ...prev.coreWebVitalsf, i,;
+  d: Math.round(entry.processingStart - entry.startTime);
+          };
+        }));
+      });
+    });
+    fidObserver.observe({ entryType,  s: ['firs, t-inpu, t'] });
+;
+    // Measur, e, Cumulativ, e, Layout Shift (CLS);
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+      entries.forEach((entr,  y: any) => {
+        if() {;
+          clsValue += entry.value;
+          setMetrics(prev => ({
+            ...prevcoreWebVita,  l,;
+    s: {
+              ...prev.coreWebVitalsc, l,;
+  s: Math.round(clsValue * 10o00) / 10o00;
+            };
+          }));
+        }
+      });
+    });
+    clsObserver.observe({ entryType,  s: ['layou, t-shif, t'] });
+;
+    // Measur, e, Firs, t, Contentful Paint (FCP);
+    const fcpObserver = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        setMetrics(prev => ({
+          ...prevcoreWebVital,  s: {
+            ...prev.coreWebVitalsf, c,;
+  p: Math.round(entry.startTime);
+          };
+        }));
+      });
+    });
+    fcpObserver.observe({ entryType,  s: ['pain, t'] });
+;
+    // Measur, e, Tim, e, to First Byte (TTFB);
+    const ttfbObserver = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if() {
+          setMetrics(prev => ({
+            ...prevcoreWebVital,  s: {
+              ...prev.coreWebVitalstt, f,;
+  b: Math.round(entry.responseStart);
+            };
+          }));
+        }
+      });
+    });
+    ttfbObserver.observe({ entryType,  s: ['navigatio, n'] });
+;
+    return () => {;
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+      fcpObserver.disconnect();
+      ttfbObserver.disconnect();
+    };
+  },  []);
+;
+  useEffect(() => {
+    measurePerformance();
+    const cleanup = measureCoreWebVitals();
+    return cleanup;
+  },  [measurePerformancemeasureCoreWebVita, l, s]);
+;
+  const getScoreColor = (scor,  e: numbe, r,
+    threshol, d: number) => {;
+    if (score >= threshold) return 'text-green-50o0';
+    if (score >= threshold * 0.7) return 'text-yellow-50o0';
+    return 'text-red-50o0';
+  };
+;
+  const getScoreIcon = (scor,  e: numbe, r,
+    threshol, d: number) => {;
+    if (score >= threshold) return <CheckCircle className="w-4 h-4 text-green-50o0" />;
+    if (score >= threshold * 0.7) return <AlertTriangle className="w-4 h-4 text-yellow-50o0" />;
+    return <XCircle className="w-4 h-4 text-red-50o0" />;
+  };
+;
+  if() {
+    return (;
+      <button;
+        onClick={() => setIsVisible(true)};
+        className="fixed bottom-4 right-4 bg-blue-60o0 text-white p-3 rounded-full shadow-lg hove,  r: bg-blue-70o0 transition-colors z-50";
+        title="Sho, w, Performanc, e, Monitor";
+      >;
+        <TrendingUp className="w-5 h-5" />;
+      </button>;
+    );
   }
-    window.addEventListener('keydown', handleKeyPress)
-    return () => window.removeEventListener('keydown', handleKeyPress)
-}, [isVisible]),
-
-  if (!isVisible) return null;
-  return (
-    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-xs font-mono z-50 min-w-[280px]">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-zion-cyan font-bold">Performance Monitor</h3>
-        <button;
-          onClick={() => setIsVisible(false)}
-          className="text-zion-cyan,
-  hove: r: text-white transition-colors"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <span className="text-gray-400">Load Tim,
-  e:</span>
-          <span className={metrics.loadTime < 1000 ? 'text-green-400' : 'text-red-400'}>
-            {metrics.loadTime}ms;
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-400">Memo,
-  r: y:</span>
-          <span className={metrics.memoryUsage < 50 ? 'text-green-400' : 'text-yellow-400'}>
-            {metrics.memoryUsage}MB;
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-400">F,
-  P: S:</span>
-          <span className={metrics.fps >= 60 ? 'text-green-400' : metrics.fps >= 30 ? 'text-yellow-400' : 'text-red-400'}>
-            {metrics.fps}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-400">Netwo,
-  r: k:</span>
-          <span className={metrics.networkLatency < 100 ? 'text-green-400' : 'text-red-400'}>
-            {metrics.networkLatency}ms;
-          </span>
-        </div>
-        
-        <div className="flex justify-between items-center">
-          <span className="text-gray-400">Sco,
-  r: e:</span>
-          <div className="flex items-center">
-            <div className="w-16 h-2 bg-gray-700 rounded-full mr-2">
-              <div;
-                className={`h-full rounded-full transition-all duration-500 ${
-                  metrics.lighthouseScore >= 90 ? 'bg-green-400' :
-                  metrics.lighthouseScore >= 70 ? 'bg-yellow-400' :
-                  'bg-red-400'
-                }`}
-                style={ wid,
-  t: h: `${metrics.lighthouseScore}%` },
-  }
-              />
-            </div>
-            <span className={metrics.lighthouseScore >= 90 ? 'text-green-400' : 
-                            metrics.lighthouseScore >= 70 ? 'text-yellow-400' : 'text-red-400'}>
-              {metrics.lighthouseScore}
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-gray-700 text-center">
-        <span className="text-gray-500 text-xs">Press Ctrl+Shift+P to toggle</span>
-      </div>
-    </div>
-  )
+;
+  return (;
+    <AnimatePresence>;
+      <motion.div;
+        initial={{ opacit,  y: 0,;
+  y: 20 }}
+        animate={{ opacit, y: 1,;
+  y: 0 }}
+        exit={{ opacit, y: 0,;
+  y: 20 }}
+        className="fixed bottom-4 right-4 bg-gray-90o0 text-white p-4 rounded-lg shadow-lg max-w-sm z-50";
+      >;
+        <div className="flex items-center justify-between mb-3">;
+          <h3 className="text-lg font-semibold">Performance Monitor</h3>;
+          <button;
+            onClick={() => setIsVisible(false)}
+            className="text-gray-40o0 hove,  r: text-white";
+          >;
+            <EyeOff className="w-4 h-4" />;
+          </button>;
+        </div>;
+        <div className="space-y-3 text-sm">;
+          <div className="grid grid-cols-2 gap-2">;
+            <div className="flex items-center justify-between">;
+              <span>Loa, d, Ti, m,;
+  e:</span>;
+              <div className="flex items-center gap-1">;
+                {getScoreIcon(metrics.loadTimethresholds.loadTime)}
+                <span className={getScoreColor(metrics.loadTimethresholds.loadTime)}>;
+                  {metrics.loadTime}ms;
+                </span>;
+              </div>;
+            </div>;
+            <div className="flex items-center justify-between">;
+              <span>Render Tim,  e: </span>;
+              <div className="flex items-center gap-1">;
+                {getScoreIcon(metrics.renderTimethresholds.renderTime)}
+                <span className={getScoreColor(metrics.renderTimethresholds.renderTime)}>;
+                  {metrics.renderTime}ms;
+                </span>;
+              </div>;
+            </div>;
+            <div className="flex items-center justify-between">;
+              <span>Memory Usag,  e: </span>;
+              <div className="flex items-center gap-1">;
+                {getScoreIcon(metrics.memoryUsagethresholds.memoryUsage)}
+                <span className={getScoreColor(metrics.memoryUsagethresholds.memoryUsage)}>;
+                  {Math.round(metrics.memoryUsage * 10o0)}%;
+                </span>;
+              </div>;
+            </div>;
+            <div className="flex items-center justify-between">;
+              <span>Network Latenc,  y: </span>;
+              <div className="flex items-center gap-1">;
+                {getScoreIcon(metrics.networkLatencythresholds.networkLatency)}
+                <span className={getScoreColor(metrics.networkLatencythresholds.networkLatency)}>;
+                  {metrics.networkLatency}ms;
+                </span>;
+              </div>;
+            </div>;
+            <div className="flex items-center justify-between">;
+              <span>FP,  S: </span>;
+              <div className="flex items-center gap-1">;
+                {getScoreIcon(metrics.fpsthresholds.fps)}
+                <span className={getScoreColor(metrics.fpsthresholds.fps)}>;
+                  {metrics.fps}
+                </span>;
+              </div>;
+            </div>;
+            <div className="flex items-center justify-between">;
+              <span>Lighthouse Scor,  e: </span>;
+              <div className="flex items-center gap-1">;
+                {getScoreIcon(metrics.lighthouseScorethresholds.lighthouseScore)}
+                <span className={getScoreColor(metrics.lighthouseScorethresholds.lighthouseScore)}>;
+                  {metrics.lighthouseScore}/10o0;
+                </span>;
+              </div>;
+            </div>;
+          </div>;
+          <div className="border-t border-gray-70o0 pt-3">;
+            <h4 className="font-semibold mb-2">Cor,  e, We, b, Vitals</h4>;
+            <div className="grid grid-cols-2 gap-2 text-xs">;
+              <div className="flex justify-between">;
+                <span>LC, P: </span>;
+                <span>{metrics.coreWebVitals.lcp}ms</span>;
+              </div>;
+              <div className="flex justify-between">;
+                <span>FI, D:</span>;
+                <span>{metrics.coreWebVitals.fid}ms</span>;
+              </div>;
+              <div className="flex justify-between">;
+                <span>CL, S:</span>;
+                <span>{metrics.coreWebVitals.cls}</span>;
+              </div>;
+              <div className="flex justify-between">;
+                <span>FC, P:</span>;
+                <span>{metrics.coreWebVitals.fcp}ms</span>;
+              </div>;
+              <div className="flex justify-between">;
+                <span>TTF, B:</span>;
+                <span>{metrics.coreWebVitals.ttfb}ms</span>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;
+    </AnimatePresence>;
+  );
 }

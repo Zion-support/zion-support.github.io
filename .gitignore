@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 node_modules/
 npm-debug.log*
@@ -165,4 +166,32 @@ Desktop.ini
 logs/enhanced-sync-manager.log
 logs/enhanced-sync-manager.log.backup
 automation/logs/autonomous-system.log .next/
+=======
+.next
+node_modules
+.DS_Store
+.env*
+.next/
+tsconfig.tsbuildinfo
 dist/
+dist/
+
+# Automation logs and data (continuously changing)
+automation/logs/*.log
+automation/logs/*.runtime.log
+automation/data/*.json
+!automation/data/autonomous-config.json
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+
+automation/logs/**
+automation/backups/**
+dist/**
+tsconfig.tsbuildinfo
+
+.next/**
+# Ignore Next.js build output and caches
+.next
+out
+dist
+node_modules
+

@@ -1,8 +1,20 @@
-import React from 'react',
-const blockchain-solutions: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">blockchain-solutions</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>)},
-export default blockchain-solutions,
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const BlockchainSolutions: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>BlockchainSolutions - Zion Tech Solutions</title>
+        <meta name="description" content="BlockchainSolutions page" />
+      </Head>
+      
+      <main>
+        <h1>BlockchainSolutions</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+  );
+};
+
+export default BlockchainSolutions;

@@ -1,8 +1,20 @@
-import React from 'react',
-const research-development: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">research-development</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>)},
-export default research-development,
+import React from 'react';
+import Head from 'next/head';
+
+export default function ResearchDevelopmentPage() {
+	return (
+		<>
+			<Head>
+				<title>Research & Development | Zion Tech Group</title>
+				<meta name="description" content="Research & Development at Zion Tech Group" />
+				<link rel="canonical" href="https://ziontechgroup.com/research-development" />
+			</Head>
+			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+				<div className="container mx-auto px-6 py-16">
+					<h1 className="text-4xl font-bold mb-4">Research & Development</h1>
+					<p className="text-white/80 max-w-2xl">Exploring AI, quantum, and autonomous systems.</p>
+				</div>
+			</main>
+		</>
+	);
+}

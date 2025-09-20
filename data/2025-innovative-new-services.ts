@@ -1,44 +1,46 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeNewService2025 {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: ServiceVariant,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  },
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
 }
+
 export const innovativeNewServices2025: InnovativeNewService2025[] = [
   // AI-Powered Content Intelligence Platform
   {
@@ -49,11 +51,16 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes content performance, generates insights, and optimizes content strategy across all digital channels with predictive analytics.',
     features: [
-      'Real-time content performance analyticsAI-powered content optimization suggestions',
-      'Predictive content performance modelingMulti-channel content strategy optimization',
-      'Competitor content analysisSEO content gap identification',
-      'Content ROI tracking and reportingAutomated content scheduling',
-      'A/B testing for content optimizationContent personalization engine'
+      'Real-time content performance analytics',
+      'AI-powered content optimization suggestions',
+      'Predictive content performance modeling',
+      'Multi-channel content strategy optimization',
+      'Competitor content analysis',
+      'SEO content gap identification',
+      'Content ROI tracking and reporting',
+      'Automated content scheduling',
+      'A/B testing for content optimization',
+      'Content personalization engine'
     ],
     popular: true,
     icon: '🧠',
@@ -87,6 +94,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.8,
     reviews: 23
   },
+
   // Quantum-Secure Communication Network
   {
     id: 'quantum-secure-communication-network',
@@ -96,11 +104,16 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     period: '/month',
     description: 'Next-generation quantum-secure communication network that provides unbreakable encryption for government, financial, and enterprise communications using quantum key distribution.',
     features: [
-      'Quantum key distribution (QKD)Unbreakable encryption protocols',
-      'Real-time quantum state monitoringMulti-node quantum network',
-      'Quantum-resistant algorithmsSecure quantum memory',
-      'Quantum entanglement distributionPost-quantum cryptography',
-      'Quantum network managementCompliance and audit trails'
+      'Quantum key distribution (QKD)',
+      'Unbreakable encryption protocols',
+      'Real-time quantum state monitoring',
+      'Multi-node quantum network',
+      'Quantum-resistant algorithms',
+      'Secure quantum memory',
+      'Quantum entanglement distribution',
+      'Post-quantum cryptography',
+      'Quantum network management',
+      'Compliance and audit trails'
     ],
     popular: true,
     icon: '🔐',
@@ -134,6 +147,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 5.0,
     reviews: 8
   },
+
   // Autonomous AI Operations Center
   {
     id: 'autonomous-ai-operations-center',
@@ -143,11 +157,16 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     period: '/month',
     description: 'Fully autonomous AI operations center that manages, monitors, and optimizes your entire business infrastructure without human intervention, using advanced AI agents and machine learning.',
     features: [
-      'Autonomous system monitoringSelf-healing infrastructure',
-      'Predictive maintenanceAutomated incident response',
-      'AI-powered resource optimizationContinuous performance tuning',
-      'Intelligent scaling decisionsAutomated security responses',
-      'Business process automationReal-time optimization'
+      'Autonomous system monitoring',
+      'Self-healing infrastructure',
+      'Predictive maintenance',
+      'Automated incident response',
+      'AI-powered resource optimization',
+      'Continuous performance tuning',
+      'Intelligent scaling decisions',
+      'Automated security responses',
+      'Business process automation',
+      'Real-time optimization'
     ],
     popular: true,
     icon: '🤖',
@@ -181,6 +200,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.9,
     reviews: 15
   },
+
   // Blockchain-Powered Supply Chain Intelligence
   {
     id: 'blockchain-supply-chain-intelligence',
@@ -190,11 +210,16 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     period: '/month',
     description: 'Comprehensive blockchain-powered supply chain platform that provides end-to-end visibility, traceability, and intelligence for global supply chains with AI-powered analytics.',
     features: [
-      'End-to-end supply chain trackingBlockchain-based transparency',
-      'AI-powered demand forecastingReal-time inventory management',
-      'Smart contract automationQuality control monitoring',
-      'Sustainability trackingRisk assessment and mitigation',
-      'Supplier performance analyticsCompliance automation'
+      'End-to-end supply chain tracking',
+      'Blockchain-based transparency',
+      'AI-powered demand forecasting',
+      'Real-time inventory management',
+      'Smart contract automation',
+      'Quality control monitoring',
+      'Sustainability tracking',
+      'Risk assessment and mitigation',
+      'Supplier performance analytics',
+      'Compliance automation'
     ],
     popular: true,
     icon: '⛓️',
@@ -228,6 +253,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.7,
     reviews: 19
   },
+
   // Metaverse Development Platform
   {
     id: 'metaverse-development-platform',
@@ -237,11 +263,16 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     period: '/month',
     description: 'Comprehensive metaverse development platform that enables businesses to create immersive 3D experiences, virtual events, and digital twins with AI-powered content generation.',
     features: [
-      '3D world building toolsAI-powered content generation',
-      'Virtual event hostingDigital twin creation',
-      'Multi-user collaborationVR/AR integration',
-      'Real-time renderingAsset marketplace',
-      'Analytics and insightsCross-platform deployment'
+      '3D world building tools',
+      'AI-powered content generation',
+      'Virtual event hosting',
+      'Digital twin creation',
+      'Multi-user collaboration',
+      'VR/AR integration',
+      'Real-time rendering',
+      'Asset marketplace',
+      'Analytics and insights',
+      'Cross-platform deployment'
     ],
     popular: true,
     icon: '🌐',
@@ -275,6 +306,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.6,
     reviews: 21
   },
+
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading-platform',
@@ -284,11 +316,16 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     period: '/month',
     description: 'Next-generation financial trading platform that leverages quantum computing for ultra-fast market analysis, AI-powered predictions, and automated trading strategies.',
     features: [
-      'Quantum-powered market analysisAI trading strategy optimization',
-      'Real-time risk assessmentAutomated trading execution',
-      'Portfolio optimizationMarket prediction models',
-      'Risk management toolsCompliance automation',
-      'Performance analyticsMulti-exchange integration'
+      'Quantum-powered market analysis',
+      'AI trading strategy optimization',
+      'Real-time risk assessment',
+      'Automated trading execution',
+      'Portfolio optimization',
+      'Market prediction models',
+      'Risk management tools',
+      'Compliance automation',
+      'Performance analytics',
+      'Multi-exchange integration'
     ],
     popular: true,
     icon: '📈',
@@ -322,6 +359,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 5.0,
     reviews: 12
   },
+
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics-platform',
@@ -331,11 +369,16 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     period: '/month',
     description: 'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis, treatment recommendations, and patient monitoring using deep learning and medical imaging.',
     features: [
-      'AI-powered medical imaging analysisAutomated diagnosis generation',
-      'Treatment recommendation enginePatient monitoring systems',
-      'Medical record analysisDrug interaction checking',
-      'Symptom assessment toolsTelemedicine integration',
-      'Compliance and securityClinical decision support'
+      'AI-powered medical imaging analysis',
+      'Automated diagnosis generation',
+      'Treatment recommendation engine',
+      'Patient monitoring systems',
+      'Medical record analysis',
+      'Drug interaction checking',
+      'Symptom assessment tools',
+      'Telemedicine integration',
+      'Compliance and security',
+      'Clinical decision support'
     ],
     popular: true,
     icon: '🏥',
@@ -369,6 +412,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.9,
     reviews: 14
   },
+
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
@@ -378,11 +422,16 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     period: '/month',
     description: 'Advanced edge computing orchestration platform that manages distributed computing resources, optimizes performance, and provides real-time analytics for IoT and edge applications.',
     features: [
-      'Distributed edge managementReal-time performance optimization',
-      'IoT device orchestrationEdge AI deployment',
-      'Load balancing and scalingSecurity and compliance',
-      'Monitoring and analyticsAutomated failover',
-      'Resource optimizationMulti-cloud edge integration'
+      'Distributed edge management',
+      'Real-time performance optimization',
+      'IoT device orchestration',
+      'Edge AI deployment',
+      'Load balancing and scaling',
+      'Security and compliance',
+      'Monitoring and analytics',
+      'Automated failover',
+      'Resource optimization',
+      'Multi-cloud edge integration'
     ],
     popular: true,
     icon: '⚡',
@@ -416,4 +465,4 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.8,
     reviews: 20
   }
-],
+];

@@ -1,799 +1,580 @@
-import { useCallback  } from "react";
-import React, { useState, useEffect } from "react"
-import { Link   } from "react-router-dom";
-import {
-  FileText,
-  Download, 
-  Globe, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  Star,
-  Atom,
-  Network,
-  Eye,
-  PenTool,
-  TrendingUp,
-  Rocket,
-  Heart,
-  Crown,
-  Sparkles,
-  Flame,
-  DollarSign,
-  Workflow,
-  Settings,
-  Lock,
-  BarChart3,
-  Cpu,
-  Building,
-  Server,
-  Activity,
-  GraduationCap,
-  Newspaper,
-  Target,
-  Briefcase,
-  Phone,
-  MapPin,
-  Mail;
-}
-}
- } from "lucide-react";
+impo, r, t, Rea, c, t, { useStateuseEffect } from "react";
+import { Link } from "react-router-dom";
+import { ;
+  FileTe, x, t,;
+  Downlo, a, d,;
+  Glo, b, e,;
+  Z, a, p,;
+  Bra, i, n,;
+  Shie, l, d,;
+  Clo, u, d,;
+  Use, r, s,;
+  ShoppingCa, r, t,;
+  BookOp, e, n,;
+  MessageCirc, l, e,;
+  HelpCirc, l, e,;
+  St, a, r,;
+  At, o, m,;
+  Netwo, r, k,;
+  E, y, e,;
+  PenTo, o, l,;
+  Trending, U, p,;
+  Rock, e, t,;
+  Hea, r, t,;
+  Cro, w, n,;
+  Sparkl, e, s,;
+  Fla, m, e,;
+  DollarSi, g, n,;
+  Workfl, o, w,;
+  Settin, g, s,;
+  Lo, c, k,;
+  BarChar, t, 3,;
+  C, p, u,;
+  Buildi, n, g,;
+  Serv, e, r,;
+  Activi, t, y,;
+  GraduationC, a, p,;
+  Newspap, e, r,;
+  Targ, e, t,;
+  Briefca, s, e,;
+  Pho, n, e,;
+  MapPinMail;
+} from "lucide-react";
 interface SitemapSection {
-  tit,
-  l: e: string,ic,
-  o: n: React.ComponentType<any>,descripti,
-  o: n: string,rout,
-  e: s: SitemapRoute[]
+  tit, l, e: stri, n, g,;
+    ic, o, n: React.ComponentType<any>,descripti, o, n: stri, n,
+    groute, s: SitemapRoute[];
   featured?: boolean;
-}
-}
-}
-
+};
 interface SitemapRoute {
-  pa,
-  t: h: string,na,
-  m: e: string,descripti,
-  o: n: string,ic,
-  o: n: React.ComponentType<any>,catego,
-  r: y: string;
-  featured?: boolean,
-  external?: boolean;
-}
-}
-}
-
-export,
-  const: SitemapGenerator: React.FC = () () => {
-  const [sitemapData, setSitemapData] = useState<SitemapSection[]>([]),
-  const [searchQuery, setSearchQuery] = useState('')
-const [selectedCategory, setSelectedCategory] = useState<string>('all')
-  useEffect(() () => {
-    generateSitemap()
-}, [])
-const generateSitemap = () () => {
-    const,
-  sitema: p: SitemapSection[] = [
+  pa, t, h: stri, n, g,;
+    na, m, e: stri, n, g,descripti, o, n: stri, n, g,;
+    ic, o, n: React.ComponentType<any>,catego, r, y: string;
+  featured?: booleanexternal?: boolean;
+};
+expor, t, cons, t, SitemapGenerat, o, r: React.FC = () => {;
+  const [sitemap,  D, a,  t, a, setSitemap, D, a,, t, a] = useState<SitemapSection[]>([]);
+  const [searchQ, u, e, r, y, setSearchQ, u, e,, r, y] = useState('');
+  const [selectedCate,  g, o,  r,, ysetSelectedCatego, r, y] = useState<string>('all');
+  useEffect(() => {
+    generateSitemap();
+  },   []);
+  const generateSitemap = () => {
+    cons,  t, sitem, a,  p: SitemapSection[] = [;
       {
-        titl,
-  e: 'Main Pages',ic,
-  o: n: Globe,descripti,
-  o: n: 'Core website pages and navigation',rout,
-  e: s: [
-          { pat,
-  h: '/', na,
-  m: e: 'Home', descripti,
-  o: n: 'Main landing page', ic,
-  o: n: Home, catego,
-  r: y: 'Main' }, { pa,
-  t: h: '/about', na,
-  m: e: 'About Us', descripti,
-  o: n: 'Company information and mission', ic,
-  o: n: Users, catego,
-  r: y: 'Main' }, { pa,
-  t: h: '/contact', na,
-  m: e: 'Contact', descripti,
-  o: n: 'Get in touch with our team', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'Main' }, { pa,
-  t: h: '/careers', na,
-  m: e: 'Careers', descripti,
-  o: n: 'Job opportunities and career information', ic,
-  o: n: Briefcase, catego,
-  r: y: 'Main' }, { pa,
-  t: h: '/partners', na,
-  m: e: 'Partners', descripti,
-  o: n: 'Strategic partnerships and collaborations', ic,
-  o: n: Users, catego,
-  r: y: 'Main' }, { pa,
-  t: h: '/blog', na,
-  m: e: 'Blog', descripti,
-  o: n: 'Latest news and insights', ic,
-  o: n: Newspaper, catego,
-  r: y: 'Main' }, { pa,
-  t: h: '/news', na,
-  m: e: 'News', descripti,
-  o: n: 'Company news and announcements', ic,
-  o: n: Newspaper, catego,
-  r: y: 'Main' }, { pa,
-  t: h: '/events', na,
-  m: e: 'Events', descripti,
-  o: n: 'Upcoming events and webinars', ic,
-  o: n: Calendar, catego,
-  r: y: 'Main' },
-  ],
-  }, {
-        tit,
-  l: e: 'Featured Services 2026-2027',ic,
-  o: n: Star,descripti,
-  o: n: 'Latest and most innovative service offerings',featur,
-  e: d: true,rout,
-  e: s: [
-          { pat,
-  h: '/services2026', na,
-  m: e: '2026 Services Overview', descripti,
-  o: n: 'Revolutionary AI & Quantum Solutions', ic,
-  o: n: Star, catego,
-  r: y: 'Featured', featur,
-  e: d: true }, { pa,
-  t: h: '/services2027', na,
-  m: e: '2027 Services Overview', descripti,
-  o: n: 'Cutting-edge Innovation & Emerging Tech', ic,
-  o: n: Star, catego,
-  r: y: 'Featured', featur,
-  e: d: true }, { pa,
-  t: h: '/ultimate-services-showcase-2026', na,
-  m: e: 'Ultimate Services 2026', descripti,
-  o: n: 'Comprehensive service portfolio', ic,
-  o: n: Crown, catego,
-  r: y: 'Featured', featur,
-  e: d: true }, { pa,
-  t: h: '/comprehensive-services-showcase-2025', na,
-  m: e: 'Comprehensive Services 2025', descripti,
-  o: n: 'Full service catalog overview', ic,
-  o: n: Globe, catego,
-  r: y: 'Featured', featur,
-  e: d: true },
-  ],
-  }, {
-        tit,
-  l: e: 'AI & Machine Learning Services',ic,
-  o: n: Brain,descripti,
-  o: n: 'Advanced artificial intelligence and machine learning solutions',rout,
-  e: s: [
-          { pat,
-  h: '/services/ai-business-intelligence', na,
-  m: e: 'AI Business Intelligence', descripti,
-  o: n: 'Advanced analytics & ML insights', ic,
-  o: n: BarChart3, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-compliance-assistant', na,
-  m: e: 'AI Compliance Assistant', descripti,
-  o: n: 'Automated regulatory compliance', ic,
-  o: n: Shield, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-sales-copilot', na,
-  m: e: 'AI Sales Copilot', descripti,
-  o: n: 'Intelligent sales optimization', ic,
-  o: n: Users, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-seo', na,
-  m: e: 'AI-Powered SEO', descripti,
-  o: n: 'Machine learning SEO optimization', ic,
-  o: n: TrendingUp, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/interview-assessment', na,
-  m: e: 'Interview Assessment AI', descripti,
-  o: n: 'AI-powered candidate evaluation', ic,
-  o: n: Users, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-content-marketing-suite', na,
-  m: e: 'AI Content Marketing Suite', descripti,
-  o: n: 'Automated content creation and marketing', ic,
-  o: n: PenTool, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-supply-chain-optimization', na,
-  m: e: 'AI Supply Chain Optimization', descripti,
-  o: n: 'Intelligent supply chain management', ic,
-  o: n: TrendingUp, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-healthcare-platform', na,
-  m: e: 'AI Healthcare Platform', descripti,
-  o: n: 'Healthcare technology solutions', ic,
-  o: n: Heart, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-cybersecurity-platform', na,
-  m: e: 'AI Cybersecurity Platform', descripti,
-  o: n: 'Advanced security with AI', ic,
-  o: n: Shield, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-quantum-hybrid-platform', na,
-  m: e: 'AI Quantum Hybrid Platform', descripti,
-  o: n: 'Quantum-AI hybrid solutions', ic,
-  o: n: Atom, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-autonomous-research-assistant', na,
-  m: e: 'AI Autonomous Research Assistant', descripti,
-  o: n: 'Automated research and analysis', ic,
-  o: n: Brain, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-project-management', na,
-  m: e: 'AI Project Management', descripti,
-  o: n: 'Intelligent project coordination', ic,
-  o: n: Target, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-customer-support-automation', na,
-  m: e: 'AI Customer Support Automation', descripti,
-  o: n: 'Automated customer service', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-financial-analytics', na,
-  m: e: 'AI Financial Analytics', descripti,
-  o: n: 'Financial data analysis and insights', ic,
-  o: n: DollarSign, catego,
-  r: y: 'AI & ML' }, { pa,
-  t: h: '/services/ai-marketing-automation', na,
-  m: e: 'AI Marketing Automation', descripti,
-  o: n: 'Intelligent marketing workflows', ic,
-  o: n: TrendingUp, catego,
-  r: y: 'AI & ML' },
-  ],
-  }, {
-        tit,
-  l: e: 'Cloud & DevOps Services',ic,
-  o: n: Cloud,descripti,
-  o: n: 'Cloud infrastructure and development operations solutions',rout,
-  e: s: [
-          { pat,
-  h: '/services/cloud-devops', na,
-  m: e: 'Cloud DevOps', descripti,
-  o: n: 'Infrastructure automation & scaling', ic,
-  o: n: Cloud, catego,
-  r: y: 'Cloud & DevOps' }, { pa,
-  t: h: '/services/it-infrastructure', na,
-  m: e: 'IT Infrastructure', descripti,
-  o: n: 'Enterprise infrastructure solutions', ic,
-  o: n: Server, catego,
-  r: y: 'Cloud & DevOps' }, { pa,
-  t: h: '/services/finops-advisor', na,
-  m: e: 'FinOps Advisor', descripti,
-  o: n: 'Cloud cost optimization', ic,
-  o: n: DollarSign, catego,
-  r: y: 'Cloud & DevOps' }, { pa,
-  t: h: '/services/cloud-finops-optimizer', na,
-  m: e: 'Cloud FinOps Optimizer', descripti,
-  o: n: 'Financial operations automation', ic,
-  o: n: BarChart3, catego,
-  r: y: 'Cloud & DevOps' }, { pa,
-  t: h: '/services/digital-transformation', na,
-  m: e: 'Digital Transformation', descripti,
-  o: n: 'Strategic technology consulting', ic,
-  o: n: Zap, catego,
-  r: y: 'Cloud & DevOps' }, { pa,
-  t: h: '/services/digital-twin', na,
-  m: e: 'Digital Twin', descripti,
-  o: n: 'Virtual system replicas', ic,
-  o: n: Eye, catego,
-  r: y: 'Cloud & DevOps' },
-  ],
-  }, {
-        tit,
-  l: e: 'Cybersecurity & Privacy',ic,
-  o: n: Shield,descripti,
-  o: n: 'Security solutions and privacy protection services',rout,
-  e: s: [
-          { pat,
-  h: '/services/security-headers-csp', na,
-  m: e: 'Security Headers & CSP', descripti,
-  o: n: 'Web security hardening', ic,
-  o: n: Lock, catego,
-  r: y: 'Cybersecurity' }, { pa,
-  t: h: '/services/dsr-portal', na,
-  m: e: 'DSR Privacy Portal', descripti,
-  o: n: 'GDPR/CCPA compliance', ic,
-  o: n: Shield, catego,
-  r: y: 'Cybersecurity' }, { pa,
-  t: h: '/services/zero-trust-network-access', na,
-  m: e: 'Zero Trust Network Access', descripti,
-  o: n: 'Advanced network security', ic,
-  o: n: Lock, catego,
-  r: y: 'Cybersecurity' }, { pa,
-  t: h: '/privacy', na,
-  m: e: 'Privacy Policy', descripti,
-  o: n: 'Data protection and privacy', ic,
-  o: n: Shield, catego,
-  r: y: 'Cybersecurity' }, { pa,
-  t: h: '/security', na,
-  m: e: 'Security', descripti,
-  o: n: 'Security information and policies', ic,
-  o: n: Shield, catego,
-  r: y: 'Cybersecurity' },
-  ],
-  }, {
-        tit,
-  l: e: 'Emerging Technologies',ic,
-  o: n: Atom,descripti,
-  o: n: 'Cutting-edge and next-generation technology solutions',rout,
-  e: s: [
-          { pat,
-  h: '/services/quantum-computing', na,
-  m: e: 'Quantum Computing', descripti,
-  o: n: 'Next-gen computational power', ic,
-  o: n: Atom, catego,
-  r: y: 'Emerging Tech' }, { pa,
-  t: h: '/services/iot-edge-computing', na,
-  m: e: 'IoT Edge Computing', descripti,
-  o: n: 'Smart device networks', ic,
-  o: n: Network, catego,
-  r: y: 'Emerging Tech' }, { pa,
-  t: h: '/services/ai-content-creation', na,
-  m: e: 'AI Content Creation', descripti,
-  o: n: 'Automated content generation', ic,
-  o: n: PenTool, catego,
-  r: y: 'Emerging Tech' }, { pa,
-  t: h: '/services/ai-hr-platform', na,
-  m: e: 'AI HR Platform', descripti,
-  o: n: 'Human resources automation', ic,
-  o: n: Users, catego,
-  r: y: 'Emerging Tech' }, { pa,
-  t: h: '/services/sustainable-technology', na,
-  m: e: 'Sustainable Technology', descripti,
-  o: n: 'Green and eco-friendly solutions', ic,
-  o: n: Globe, catego,
-  r: y: 'Emerging Tech' }, { pa,
-  t: h: '/services/ai-predictive-maintenance', na,
-  m: e: 'AI Predictive Maintenance', descripti,
-  o: n: 'Predictive analytics for maintenance', ic,
-  o: n: TrendingUp, catego,
-  r: y: 'Emerging Tech' }, { pa,
-  t: h: '/services/quantum-machine-learning', na,
-  m: e: 'Quantum Machine Learning', descripti,
-  o: n: 'Quantum-enhanced ML algorithms', ic,
-  o: n: Brain, catego,
-  r: y: 'Emerging Tech' },
-  ],
-  }, {
-        tit,
-  l: e: 'Data & Analytics',ic,
-  o: n: BarChart3,descripti,
-  o: n: 'Business intelligence and data analysis services',rout,
-  e: s: [
-          { pat,
-  h: '/services/data-analytics', na,
-  m: e: 'Data Analytics', descripti,
-  o: n: 'Business intelligence & insights', ic,
-  o: n: BarChart3, catego,
-  r: y: 'Data & Analytics' }, { pa,
-  t: h: '/services/website-analytics', na,
-  m: e: 'Website Analytics', descripti,
-  o: n: 'Web performance and user behavior', ic,
-  o: n: BarChart3, catego,
-  r: y: 'Data & Analytics' }, { pa,
-  t: h: '/services/affiliate-tracking', na,
-  m: e: 'Affiliate Tracking', descripti,
-  o: n: 'Affiliate program management', ic,
-  o: n: TrendingUp, catego,
-  r: y: 'Data & Analytics' }, { pa,
-  t: h: '/analytics', na,
-  m: e: 'Analytics Dashboard', descripti,
-  o: n: 'Performance metrics and reporting', ic,
-  o: n: BarChart3, catego,
-  r: y: 'Data & Analytics' },
-  ],
-  }, {
-        tit,
-  l: e: 'Micro SaaS Solutions',ic,
-  o: n: Zap,descripti,
-  o: n: 'Specialized software-as-a-service applications',rout,
-  e: s: [
-          { pat,
-  h: '/services/micro-saas-solutions', na,
-  m: e: 'Micro SaaS Platform', descripti,
-  o: n: 'Niche software solutions', ic,
-  o: n: ShoppingCart, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/micro-crm', na,
-  m: e: 'Micro CRM', descripti,
-  o: n: 'Customer relationship management', ic,
-  o: n: Users, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/helpdesk', na,
-  m: e: 'Helpdesk Platform', descripti,
-  o: n: 'Customer support system', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/ai-auto-email-responder', na,
-  m: e: 'AI Auto Email Responder', descripti,
-  o: n: 'Automated email management', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/customer-feedback-surveys', na,
-  m: e: 'Customer Feedback Surveys', descripti,
-  o: n: 'Feedback collection and analysis', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/ai-compliance-copilot', na,
-  m: e: 'AI Compliance Copilot', descripti,
-  o: n: 'Compliance assistance and monitoring', ic,
-  o: n: Shield, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/llm-content-studio', na,
-  m: e: 'LLM Content Studio', descripti,
-  o: n: 'Large language model content creation', ic,
-  o: n: PenTool, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/returns-management', na,
-  m: e: 'Returns Management', descripti,
-  o: n: 'Product returns processing', ic,
-  o: n: ShoppingCart, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/email-sequencer', na,
-  m: e: 'Email Sequencer', descripti,
-  o: n: 'Automated email sequences', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/podcast-transcription', na,
-  m: e: 'Podcast Transcription', descripti,
-  o: n: 'Audio content transcription', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'Micro SaaS' }, { pa,
-  t: h: '/services/mobile-survey', na,
-  m: e: 'Mobile Survey', descripti,
-  o: n: 'Mobile survey solutions', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'Micro SaaS' },
-  ],
-  }, {
-        tit,
-  l: e: 'Business & Support',ic,
-  o: n: Building,descripti,
-  o: n: 'Business solutions and customer support services',rout,
-  e: s: [
-          { pat,
-  h: '/marketplace', na,
-  m: e: 'Marketplace', descripti,
-  o: n: 'Product and service marketplace', ic,
-  o: n: ShoppingCart, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/talent', na,
-  m: e: 'Talent Solutions', descripti,
-  o: n: 'Human resources and recruitment', ic,
-  o: n: Users, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/equipment', na,
-  m: e: 'Equipment Services', descripti,
-  o: n: 'Hardware and equipment solutions', ic,
-  o: n: Server, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/request-quote', na,
-  m: e: 'Request Quote', descripti,
-  o: n: 'Get pricing for our services', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/case-studies', na,
-  m: e: 'Case Studies', descripti,
-  o: n: 'Success stories and examples', ic,
-  o: n: BookOpen, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/help-center', na,
-  m: e: 'Help Center', descripti,
-  o: n: 'Customer support and documentation', ic,
-  o: n: HelpCircle, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/support', na,
-  m: e: 'Support', descripti,
-  o: n: 'Technical support and assistance', ic,
-  o: n: MessageCircle, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/training', na,
-  m: e: 'Training', descripti,
-  o: n: 'Professional development and education', ic,
-  o: n: GraduationCap, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/webinars', na,
-  m: e: 'Webinars', descripti,
-  o: n: 'Educational webinars and sessions', ic,
-  o: n: Video, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/white-papers', na,
-  m: e: 'White Papers', descripti,
-  o: n: 'Technical documentation and research', ic,
-  o: n: FileText, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/documentation', na,
-  m: e: 'Documentation', descripti,
-  o: n: 'Technical documentation and guides', ic,
-  o: n: FileText, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/developers', na,
-  m: e: 'Developer Portal', descripti,
-  o: n: 'Developer resources and APIs', ic,
-  o: n: Code, catego,
-  r: y: 'Business' }, { pa,
-  t: h: '/api', na,
-  m: e: 'API', descripti,
-  o: n: 'Application programming interfaces', ic,
-  o: n: Code, catego,
-  r: y: 'Business' },
-  ],
-  }, {
-        tit,
-  l: e: 'Legal & Information',ic,
-  o: n: FileText,descripti,
-  o: n: 'Legal documents and company information',rout,
-  e: s: [
-          { pat,
-  h: '/terms', na,
-  m: e: 'Terms of Service', descripti,
-  o: n: 'Service terms and conditions', ic,
-  o: n: FileText, catego,
-  r: y: 'Legal' }, { pa,
-  t: h: '/cookies', na,
-  m: e: 'Cookie Policy', descripti,
-  o: n: 'Cookie usage and privacy', ic,
-  o: n: FileText, catego,
-  r: y: 'Legal' }, { pa,
-  t: h: '/sitemap', na,
-  m: e: 'Sitemap', descripti,
-  o: n: 'Complete website structure', ic,
-  o: n: FileText, catego,
-  r: y: 'Legal' }, { pa,
-  t: h: '/status', na,
-  m: e: 'System Status', descripti,
-  o: n: 'Service status and uptime', ic,
-  o: n: Activity, catego,
-  r: y: 'Legal' }, { pa,
-  t: h: '/system-status', na,
-  m: e: 'System Status', descripti,
-  o: n: 'Detailed system information', ic,
-  o: n: Activity, catego,
-  r: y: 'Legal' },
-  ],
-  },
-  ]
-    setSitemapData(sitemap)
-},
-
-  const filteredSitemap = sitemapData.map(section => ({
-    ...section,
-  route: s: section.routes.filter(route () => {
-      const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           route.path.toLowerCase().includes(searchQuery.toLowerCase())
-const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory;
+        t, i, t, l, e: 'M, a, i, n, Pa, g, e, s',;
+    i, c, o, n: G, l, o, b, e,descrip, t, i, o, n: 'C, o, r, e, webs, i, t, e, pa, g, e, s, a, n, d, navigat, i, o, n',;
+    ro, u, t, e, s: [;
+          { p, a, t, h: '/',;
+    n, a, m, e: 'H, o, m, e', descrip, t, i, o, n: 'M, a, i, n, land, i, n, g, p, a, g, e',;
+    i, c, o, n: H, o, m, e, cate, g, o, r, y: 'Mai, n' };
+          { p, a, t, h: '/ab, o, u, t',;
+    n, a, m, e: 'Ab, o, u, t, U, s', descrip, t, i, o, n: 'Comp, a, n, y, informat, i, o, n, a, n, d, miss, i, o, n',;
+    i, c, o, n: U, s, e, r, s, cate, g, o, r, y: 'Mai, n' };
+          { p, a, t, h: '/cont, a, c, t',;
+    n, a, m, e: 'Cont, a, c, t', descrip, t, i, o, n: 'G, e, t, i, n, to, u, c, h, w, i, t, h, o, u, r, t, e, a, m',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'Mai, n' };
+          { p, a, t, h: '/care, e, r, s',;
+    n, a, m, e: 'Care, e, r, s', descrip, t, i, o, n: 'J, o, b, opportunit, i, e, s, a, n, d, car, e, e, r, informat, i, o, n',;
+    i, c, o, n: Brief, c, a, s, e, cate, g, o, r, y: 'Mai, n' };
+          { p, a, t, h: '/partn, e, r, s',;
+    n, a, m, e: 'Partn, e, r, s', descrip, t, i, o, n: 'Strate, g, i, c, partnersh, i, p, s, a, n, d, collaborati, o, n, s',;
+    i, c, o, n: U, s, e, r, s, cate, g, o, r, y: 'Mai, n' };
+          { p, a, t, h: '/b, l, o, g',;
+    n, a, m, e: 'B, l, o, g', descrip, t, i, o, n: 'Lat, e, s, t, n, e, w, s, a, n, d, insig, h, t, s',;
+    i, c, o, n: Newsp, a, p, e, r, cate, g, o, r, y: 'Mai, n' };
+          { p, a, t, h: '/n, e, w, s',;
+    n, a, m, e: 'N, e, w, s', descrip, t, i, o, n: 'Comp, a, n, y, n, e, w, s, a, n, d, announceme, n, t, s',;
+    i, c, o, n: Newsp, a, p, e, r, cate, g, o, r, y: 'Mai, n' },;
+          { p, a, t, h: '/eve, n, t, s',;
+    n, a, m, e: 'Eve, n, t, s', descrip, t, i, o, n: 'Upcom, i, n, g, eve, n, t, s, a, n, d, webin, a, r, s',;
+    i, c, o, n: Cale, n, d, a, r, catego, r, y: 'Mai, n' }
+      ,  ];
+      };
+      {
+        tit, l, e: 'Feature, d, Service, s, 20o26-20o27',;
+    ic, o, n: St, a, r,descripti, o, n: 'Lates, t, an, d, mos, t, innovativ, e, servic, e, offerings',;
+    featur, e, d: tr, u, e,rout, e, s: [;
+          { p, a, t, h: '/services20, o, 2, 6',;
+    n, a, m, e: '20, o, 2, 6, Servi, c, e, s, Overv, i, e, w', descrip, t, i, o, n: 'Revolution, a, r, y, A, I & Quan, t, u, m, Soluti, o, n, s',;
+    i, c, o, n: S, t, a, r, cate, g, o, r, y: 'Featu, r, e, d',;
+    feat, u, r, e, d: tru, e };
+          { p, a, t, h: '/services20, o, 2, 7',;
+    n, a, m, e: '20, o, 2, 7, Servi, c, e, s, Overv, i, e, w', descrip, t, i, o, n: 'Cutt, i, n, g-e, d, g, e, Innovat, i, o, n & Emerg, i, n, g, T, e, c, h',;
+    i, c, o, n: S, t, a, r, cate, g, o, r, y: 'Featu, r, e, d',;
+    feat, u, r, e, d: tru, e };
+          { p, a, t, h: '/ultim, a, t, e-servi, c, e, s-showc, a, s, e-20, o, 2, 6',;
+    n, a, m, e: 'Ultim, a, t, e, Servi, c, e, s, 20, o, 2, 6', descrip, t, i, o, n: 'Comprehens, i, v, e, serv, i, c, e, portfo, l, i, o',;
+    i, c, o, n: C, r, o, w, n, cate, g, o, r, y: 'Featu, r, e, d',;
+    feat, u, r, e, d: tru, e },;
+          { p, a, t, h: '/comprehens, i, v, e-servi, c, e, s-showc, a, s, e-20, o, 2, 5',;
+    n, a, m, e: 'Comprehens, i, v, e, Servi, c, e, s, 20, o, 2, 5', descrip, t, i, o, n: 'F, u, l, l, serv, i, c, e, cata, l, o, g, overv, i, e, w',;
+    i, c, o, n: G, l, o, b, e, cate, g, o, r, y: 'Featu, r, e, d',;
+    featur, e, d: tru, e }
+      ,  ];
+      };
+      {
+        tit, l, e: 'AI & Machin, e, Learnin, g, Services',;
+    ic, o, n: Bra, i, n,descripti, o, n: 'Advance, d, artificia, l, intelligenc, e, an, d, machin, e, learning solutions',;
+    rout, e, s: [;
+          { p, a, t, h: '/servi, c, e, s/a, i-busin, e, s, s-intellige, n, c, e',;
+    n, a, m, e: 'A, I, Busin, e, s, s, Intellige, n, c, e', descrip, t, i, o, n: 'Advan, c, e, d, analyt, i, c, s & M, L, insig, h, t, s',;
+    i, c, o, n: BarCh, a, r, t, 3, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-complia, n, c, e-assist, a, n, t',;
+    n, a, m, e: 'A, I, Complia, n, c, e, Assist, a, n, t', descrip, t, i, o, n: 'Automa, t, e, d, regulat, o, r, y, complia, n, c, e',;
+    i, c, o, n: Sh, i, e, l, d, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-sa, l, e, s-copi, l, o, t',;
+    n, a, m, e: 'A, I, Sa, l, e, s, Copi, l, o, t', descrip, t, i, o, n: 'Intellig, e, n, t, sa, l, e, s, optimizat, i, o, n',;
+    i, c, o, n: U, s, e, r, s, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-s, e, o',;
+    n, a, m, e: 'A, I-Powe, r, e, d, S, E, O', descrip, t, i, o, n: 'Mach, i, n, e, learn, i, n, g, S, E, O, optimizat, i, o, n',;
+    i, c, o, n: Trendi, n, g, U, p, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/interv, i, e, w-assessm, e, n, t',;
+    n, a, m, e: 'Interv, i, e, w, Assessm, e, n, t, A, I', descrip, t, i, o, n: 'A, I-powe, r, e, d, candid, a, t, e, evaluat, i, o, n',;
+    i, c, o, n: U, s, e, r, s, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-cont, e, n, t-market, i, n, g-su, i, t, e',;
+    n, a, m, e: 'A, I, Cont, e, n, t, Market, i, n, g, Su, i, t, e', descrip, t, i, o, n: 'Automa, t, e, d, cont, e, n, t, creat, i, o, n, a, n, d, market, i, n, g',;
+    i, c, o, n: Pen, T, o, o, l, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-sup, p, l, y-ch, a, i, n-optimizat, i, o, n',;
+    n, a, m, e: 'A, I, Sup, p, l, y, Ch, a, i, n, Optimizat, i, o, n', descrip, t, i, o, n: 'Intellig, e, n, t, sup, p, l, y, ch, a, i, n, managem, e, n, t',;
+    i, c, o, n: Trendi, n, g, U, p, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-healthc, a, r, e-platf, o, r, m',;
+    n, a, m, e: 'A, I, Healthc, a, r, e, Platf, o, r, m', descrip, t, i, o, n: 'Healthc, a, r, e, technol, o, g, y, soluti, o, n, s',;
+    i, c, o, n: H, e, a, r, t, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-cybersecur, i, t, y-platf, o, r, m',;
+    n, a, m, e: 'A, I, Cybersecur, i, t, y, Platf, o, r, m', descrip, t, i, o, n: 'Advan, c, e, d, secur, i, t, y, w, i, t, h, A, I',;
+    i, c, o, n: Sh, i, e, l, d, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-quan, t, u, m-hyb, r, i, d-platf, o, r, m',;
+    n, a, m, e: 'A, I, Quan, t, u, m, Hyb, r, i, d, Platf, o, r, m', descrip, t, i, o, n: 'Quan, t, u, m-A, I, hyb, r, i, d, soluti, o, n, s',;
+    i, c, o, n: A, t, o, m, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-autonom, o, u, s-resea, r, c, h-assist, a, n, t',;
+    n, a, m, e: 'A, I, Autonom, o, u, s, Resea, r, c, h, Assist, a, n, t', descrip, t, i, o, n: 'Automa, t, e, d, resea, r, c, h, a, n, d, analy, s, i, s',;
+    i, c, o, n: B, r, a, i, n, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-proj, e, c, t-managem, e, n, t',;
+    n, a, m, e: 'A, I, Proj, e, c, t, Managem, e, n, t', descrip, t, i, o, n: 'Intellig, e, n, t, proj, e, c, t, coordinat, i, o, n',;
+    i, c, o, n: Ta, r, g, e, t, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-custo, m, e, r-supp, o, r, t-automat, i, o, n',;
+    n, a, m, e: 'A, I, Custo, m, e, r, Supp, o, r, t, Automat, i, o, n', descrip, t, i, o, n: 'Automa, t, e, d, custo, m, e, r, serv, i, c, e',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'A, I & M, L' };
+          { p, a, t, h: '/servi, c, e, s/a, i-financ, i, a, l-analyt, i, c, s',;
+    n, a, m, e: 'A, I, Financ, i, a, l, Analyt, i, c, s', descrip, t, i, o, n: 'Financ, i, a, l, d, a, t, a, analy, s, i, s, a, n, d, insig, h, t, s',;
+    i, c, o, n: Dollar, S, i, g, n, cate, g, o, r, y: 'A, I & M, L' },;
+          { p, a, t, h: '/servi, c, e, s/a, i-market, i, n, g-automat, i, o, n',;
+    n, a, m, e: 'A, I, Market, i, n, g, Automat, i, o, n', descrip, t, i, o, n: 'Intellig, e, n, t, market, i, n, g, workfl, o, w, s',;
+    i, c, o, n: Trendi, n, g, U, p, cate, g, o, r, y: 'A, I & M, L' }
+      ,  ];
+      };
+      {
+        tit, l, e: 'Cloud & DevOps Services',;
+    ic, o, n: Clo, u, d,descripti, o, n: 'Clou, d, infrastructur, e, an, d, developmen, t, operation, s, solutions',;
+    rout, e, s: [;
+          { p, a, t, h: '/servi, c, e, s/cl, o, u, d-dev, o, p, s',;
+    n, a, m, e: 'Cl, o, u, d, Dev, O, p, s', descrip, t, i, o, n: 'Infrastruct, u, r, e, automat, i, o, n & scal, i, n, g',;
+    i, c, o, n: C, l, o, u, d, cate, g, o, r, y: 'Clou, d & DevOp, s' };
+          { p, a, t, h: '/servi, c, e, s/i, t-infrastruct, u, r, e',;
+    n, a, m, e: 'I, T, Infrastruct, u, r, e', descrip, t, i, o, n: 'Enterpr, i, s, e, infrastruct, u, r, e, soluti, o, n, s',;
+    i, c, o, n: Se, r, v, e, r, cate, g, o, r, y: 'Clou, d & DevOp, s' };
+          { p, a, t, h: '/servi, c, e, s/fin, o, p, s-advi, s, o, r',;
+    n, a, m, e: 'Fin, O, p, s, Advi, s, o, r', descrip, t, i, o, n: 'Cl, o, u, d, c, o, s, t, optimizat, i, o, n',;
+    i, c, o, n: Dollar, S, i, g, n, cate, g, o, r, y: 'Clou, d & DevOp, s' };
+          { p, a, t, h: '/servi, c, e, s/cl, o, u, d-fin, o, p, s-optimi, z, e, r',;
+    n, a, m, e: 'Cl, o, u, d, Fin, O, p, s, Optimi, z, e, r', descrip, t, i, o, n: 'Financ, i, a, l, operati, o, n, s, automat, i, o, n',;
+    i, c, o, n: BarCh, a, r, t, 3, cate, g, o, r, y: 'Clou, d & DevOp, s' };
+          { p, a, t, h: '/servi, c, e, s/digi, t, a, l-transformat, i, o, n',;
+    n, a, m, e: 'Digi, t, a, l, Transformat, i, o, n', descrip, t, i, o, n: 'Strate, g, i, c, technol, o, g, y, consult, i, n, g',;
+    i, c, o, n: Z, a, p, cate, g, o, r, y: 'Clou, d & DevOp, s' },;
+          { p, a, t, h: '/servi, c, e, s/digi, t, a, l-t, w, i, n',;
+    n, a, m, e: 'Digi, t, a, l, T, w, i, n', descrip, t, i, o, n: 'Virt, u, a, l, sys, t, e, m, repli, c, a, s',;
+    i, c, o, n: E, y, e, cate, g, o, r, y: 'Clou, d & DevOp, s' }
+      ,  ];
+      };
+      {
+        tit, l, e: 'Cybersecurity & Privacy',;
+    ic, o, n: Shie, l, d,descripti, o, n: 'Securit, y, solution, s, an, d, privac, y, protectio, n, services',;
+    rout, e, s: [;
+          { p, a, t, h: '/servi, c, e, s/secur, i, t, y-head, e, r, s-c, s, p',;
+    n, a, m, e: 'Secur, i, t, y, Head, e, r, s & C, S, P', descrip, t, i, o, n: 'W, e, b, secur, i, t, y, harden, i, n, g',;
+    i, c, o, n: L, o, c, k, cate, g, o, r, y: 'Cybersecurit, y' };
+          { p, a, t, h: '/servi, c, e, s/d, s, r-por, t, a, l',;
+    n, a, m, e: 'D, S, R, Priv, a, c, y, Por, t, a, l', descrip, t, i, o, n: 'G, D, P, R/C, C, P, A, complia, n, c, e',;
+    i, c, o, n: Sh, i, e, l, d, cate, g, o, r, y: 'Cybersecurit, y' };
+          { p, a, t, h: '/servi, c, e, s/z, e, r, o-tr, u, s, t-netw, o, r, k-acc, e, s, s',;
+    n, a, m, e: 'Z, e, r, o, Tr, u, s, t, Netw, o, r, k, Acc, e, s, s', descrip, t, i, o, n: 'Advan, c, e, d, netw, o, r, k, secur, i, t, y',;
+    i, c, o, n: L, o, c, k, cate, g, o, r, y: 'Cybersecurit, y' };
+          { p, a, t, h: '/priv, a, c, y',;
+    n, a, m, e: 'Priv, a, c, y, Pol, i, c, y', descrip, t, i, o, n: 'D, a, t, a, protect, i, o, n, a, n, d, priv, a, c, y',;
+    i, c, o, n: Sh, i, e, l, d, cate, g, o, r, y: 'Cybersecurit, y' },;
+          { p, a, t, h: '/secur, i, t, y',;
+    n, a, m, e: 'Secur, i, t, y', descrip, t, i, o, n: 'Secur, i, t, y, informat, i, o, n, a, n, d, polic, i, e, s',;
+    i, c, o, n: Sh, i, e, l, d, catego, r, y: 'Cybersecurit, y' }
+      ,  ];
+      };
+      {
+        tit, l, e: 'Emerging Technologies',;
+    ic, o, n: At, o, m,descripti, o, n: 'Cutting-edg, e, an, d, next-generatio, n, technolog, y, solutions',;
+    rout, e, s: [;
+          { p, a, t, h: '/servi, c, e, s/quan, t, u, m-comput, i, n, g',;
+    n, a, m, e: 'Quan, t, u, m, Comput, i, n, g', descrip, t, i, o, n: 'N, e, x, t-g, e, n, computatio, n, a, l, po, w, e, r',;
+    i, c, o, n: A, t, o, m, cate, g, o, r, y: 'Emergin, g Tec, h' };
+          { p, a, t, h: '/servi, c, e, s/i, o, t-e, d, g, e-comput, i, n, g',;
+    n, a, m, e: 'I, o, T, E, d, g, e, Comput, i, n, g', descrip, t, i, o, n: 'Sm, a, r, t, dev, i, c, e, netwo, r, k, s',;
+    i, c, o, n: Net, w, o, r, k, cate, g, o, r, y: 'Emergin, g Tec, h' };
+          { p, a, t, h: '/servi, c, e, s/a, i-cont, e, n, t-creat, i, o, n',;
+    n, a, m, e: 'A, I, Cont, e, n, t, Creat, i, o, n', descrip, t, i, o, n: 'Automa, t, e, d, cont, e, n, t, generat, i, o, n',;
+    i, c, o, n: Pen, T, o, o, l, cate, g, o, r, y: 'Emergin, g Tec, h' };
+          { p, a, t, h: '/servi, c, e, s/a, i-h, r-platf, o, r, m',;
+    n, a, m, e: 'A, I, H, R, Platf, o, r, m', descrip, t, i, o, n: 'Hu, m, a, n, resour, c, e, s, automat, i, o, n',;
+    i, c, o, n: U, s, e, r, s, cate, g, o, r, y: 'Emergin, g Tec, h' };
+          { p, a, t, h: '/servi, c, e, s/sustaina, b, l, e-technol, o, g, y',;
+    n, a, m, e: 'Sustaina, b, l, e, Technol, o, g, y', descrip, t, i, o, n: 'Gr, e, e, n, a, n, d, e, c, o-frien, d, l, y, soluti, o, n, s',;
+    i, c, o, n: G, l, o, b, e, cate, g, o, r, y: 'Emergin, g Tec, h' };
+          { p, a, t, h: '/servi, c, e, s/a, i-predict, i, v, e-maintena, n, c, e',;
+    n, a, m, e: 'A, I, Predict, i, v, e, Maintena, n, c, e', descrip, t, i, o, n: 'Predict, i, v, e, analyt, i, c, s, f, o, r, maintena, n, c, e',;
+    i, c, o, n: Trendi, n, g, U, p, cate, g, o, r, y: 'Emergin, g Tec, h' },;
+          { p, a, t, h: '/servi, c, e, s/quan, t, u, m-mach, i, n, e-learn, i, n, g',;
+    n, a, m, e: 'Quan, t, u, m, Mach, i, n, e, Learn, i, n, g', descrip, t, i, o, n: 'Quan, t, u, m-enhan, c, e, d, M, L, algorit, h, m, s',;
+    i, c, o, n: B, r, a, i, n, cate, g, o, r, y: 'Emergin, g Tec, h' }
+      ,  ];
+      };
+      {
+        tit, l, e: 'Data & Analytics',;
+    ic, o, n: BarChar, t, 3,descripti, o, n: 'Busines, s, intelligenc, e, an, d, dat, a, analysi, s, services',;
+    rout, e, s: [;
+          { p, a, t, h: '/servi, c, e, s/d, a, t, a-analyt, i, c, s',;
+    n, a, m, e: 'D, a, t, a, Analyt, i, c, s', descrip, t, i, o, n: 'Busin, e, s, s, intellige, n, c, e & insig, h, t, s',;
+    i, c, o, n: BarCh, a, r, t, 3, cate, g, o, r, y: 'Dat, a & Analytic, s' };
+          { p, a, t, h: '/servi, c, e, s/webs, i, t, e-analyt, i, c, s',;
+    n, a, m, e: 'Webs, i, t, e, Analyt, i, c, s', descrip, t, i, o, n: 'W, e, b, performa, n, c, e, a, n, d, u, s, e, r, behav, i, o, r',;
+    i, c, o, n: BarCh, a, r, t, 3, cate, g, o, r, y: 'Dat, a & Analytic, s' };
+          { p, a, t, h: '/servi, c, e, s/affili, a, t, e-track, i, n, g',;
+    n, a, m, e: 'Affili, a, t, e, Track, i, n, g', descrip, t, i, o, n: 'Affili, a, t, e, prog, r, a, m, managem, e, n, t',;
+    i, c, o, n: Trendi, n, g, U, p, cate, g, o, r, y: 'Dat, a & Analytic, s' },;
+          { p, a, t, h: '/analyt, i, c, s',;
+    n, a, m, e: 'Analyt, i, c, s, Dashbo, a, r, d', descrip, t, i, o, n: 'Performa, n, c, e, metr, i, c, s, a, n, d, report, i, n, g',;
+    i, c, o, n: BarCh, a, r, t, 3, cate, g, o, r, y: 'Dat, a & Analytic, s' }
+      ,  ];
+      };
+      {
+        tit, l, e: 'Micr, o, Saa, S, Solutions',;
+    ic, o, n: Z, a, p,descripti, o, n: 'Specialized software-as-a-service applications',;
+    rout, e, s: [;
+          { p, a, t, h: '/servi, c, e, s/mi, c, r, o-s, a, a, s-soluti, o, n, s',;
+    n, a, m, e: 'Mi, c, r, o, S, a, a, S, Platf, o, r, m', descrip, t, i, o, n: 'Ni, c, h, e, softw, a, r, e, soluti, o, n, s',;
+    i, c, o, n: Shopping, C, a, r, t, cate, g, o, r, y: 'Micr, o Saa, S' };
+          { p, a, t, h: '/servi, c, e, s/mi, c, r, o-c, r, m',;
+    n, a, m, e: 'Mi, c, r, o, C, R, M', descrip, t, i, o, n: 'Custo, m, e, r, relations, h, i, p, managem, e, n, t',;
+    i, c, o, n: U, s, e, r, s, cate, g, o, r, y: 'Micr, o Saa, S' };
+          { p, a, t, h: '/servi, c, e, s/helpd, e, s, k',;
+    n, a, m, e: 'Helpd, e, s, k, Platf, o, r, m', descrip, t, i, o, n: 'Custo, m, e, r, supp, o, r, t, sys, t, e, m',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'Micr, o Saa, S' };
+          { p, a, t, h: '/servi, c, e, s/a, i-a, u, t, o-em, a, i, l-respon, d, e, r',;
+    n, a, m, e: 'A, I, A, u, t, o, Em, a, i, l, Respon, d, e, r', descrip, t, i, o, n: 'Automa, t, e, d, em, a, i, l, managem, e, n, t',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'Micr, o Saa, S' };
+          { p, a, t, h: '/servi, c, e, s/custo, m, e, r-feedb, a, c, k-surv, e, y, s',;
+    n, a, m, e: 'Custo, m, e, r, Feedb, a, c, k, Surv, e, y, s', descrip, t, i, o, n: 'Feedb, a, c, k, collect, i, o, n, a, n, d, analy, s, i, s',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'Micr, o Saa, S' };
+          { p, a, t, h: '/servi, c, e, s/a, i-complia, n, c, e-copi, l, o, t',;
+    n, a, m, e: 'A, I, Complia, n, c, e, Copi, l, o, t', descrip, t, i, o, n: 'Complia, n, c, e, assista, n, c, e, a, n, d, monitor, i, n, g',;
+    i, c, o, n: Sh, i, e, l, d, cate, g, o, r, y: 'Micr, o Saa, S' };
+          { p, a, t, h: '/servi, c, e, s/l, l, m-cont, e, n, t-stu, d, i, o',;
+    n, a, m, e: 'L, L, M, Cont, e, n, t, Stu, d, i, o', descrip, t, i, o, n: 'La, r, g, e, langu, a, g, e, mo, d, e, l, cont, e, n, t, creat, i, o, n',;
+    i, c, o, n: Pen, T, o, o, l, cate, g, o, r, y: 'Micr, o Saa, S' };
+          { p, a, t, h: '/servi, c, e, s/retu, r, n, s-managem, e, n, t',;
+    n, a, m, e: 'Retu, r, n, s, Managem, e, n, t', descrip, t, i, o, n: 'Prod, u, c, t, retu, r, n, s, process, i, n, g',;
+    i, c, o, n: Shopping, C, a, r, t, cate, g, o, r, y: 'Micr, o Saa, S' };
+          { p, a, t, h: '/servi, c, e, s/em, a, i, l-sequen, c, e, r',;
+    n, a, m, e: 'Em, a, i, l, Sequen, c, e, r', descrip, t, i, o, n: 'Automa, t, e, d, em, a, i, l, sequen, c, e, s',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'Micr, o Saa, S' };
+          { p, a, t, h: '/servi, c, e, s/podc, a, s, t-transcript, i, o, n',;
+    n, a, m, e: 'Podc, a, s, t, Transcript, i, o, n', descrip, t, i, o, n: 'Au, d, i, o, cont, e, n, t, transcript, i, o, n',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'Micr, o Saa, S' },;
+          { p, a, t, h: '/servi, c, e, s/mob, i, l, e-sur, v, e, y',;
+    n, a, m, e: 'Mob, i, l, e, Sur, v, e, y', descrip, t, i, o, n: 'Mob, i, l, e, sur, v, e, y, soluti, o, n, s',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'Micr, o Saa, S' }
+      ,  ];
+      };
+      {
+        tit, l, e: 'Business & Support',;
+    ic, o, n: Buildi, n, g,descripti, o, n: 'Busines, s, solution, s, an, d, custome, r, suppor, t, services',;
+    rout, e, s: [;
+          { p, a, t, h: '/marketpl, a, c, e',;
+    n, a, m, e: 'Marketpl, a, c, e', descrip, t, i, o, n: 'Prod, u, c, t, a, n, d, serv, i, c, e, marketpl, a, c, e',;
+    i, c, o, n: Shopping, C, a, r, t, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/tal, e, n, t',;
+    n, a, m, e: 'Tal, e, n, t, Soluti, o, n, s', descrip, t, i, o, n: 'Hu, m, a, n, resour, c, e, s, a, n, d, recruitm, e, n, t',;
+    i, c, o, n: U, s, e, r, s, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/equipm, e, n, t',;
+    n, a, m, e: 'Equipm, e, n, t, Servi, c, e, s', descrip, t, i, o, n: 'Hardw, a, r, e, a, n, d, equipm, e, n, t, soluti, o, n, s',;
+    i, c, o, n: Se, r, v, e, r, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/requ, e, s, t-qu, o, t, e',;
+    n, a, m, e: 'Requ, e, s, t, Qu, o, t, e', descrip, t, i, o, n: 'G, e, t, pric, i, n, g, f, o, r, o, u, r, servi, c, e, s',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/c, a, s, e-stud, i, e, s',;
+    n, a, m, e: 'C, a, s, e, Stud, i, e, s', descrip, t, i, o, n: 'Succ, e, s, s, stor, i, e, s, a, n, d, examp, l, e, s',;
+    i, c, o, n: Book, O, p, e, n, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/h, e, l, p-cen, t, e, r',;
+    n, a, m, e: 'H, e, l, p, Cen, t, e, r', descrip, t, i, o, n: 'Custo, m, e, r, supp, o, r, t, a, n, d, documentat, i, o, n',;
+    i, c, o, n: HelpCi, r, c, l, e, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/supp, o, r, t',;
+    n, a, m, e: 'Supp, o, r, t', descrip, t, i, o, n: 'Techni, c, a, l, supp, o, r, t, a, n, d, assista, n, c, e',;
+    i, c, o, n: MessageCi, r, c, l, e, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/train, i, n, g',;
+    n, a, m, e: 'Train, i, n, g', descrip, t, i, o, n: 'Professio, n, a, l, developm, e, n, t, a, n, d, educat, i, o, n',;
+    i, c, o, n: Graduatio, n, C, a, p, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/webin, a, r, s',;
+    n, a, m, e: 'Webin, a, r, s', descrip, t, i, o, n: 'Educatio, n, a, l, webin, a, r, s, a, n, d, sessi, o, n, s',;
+    i, c, o, n: V, i, d, e, o, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/wh, i, t, e-pap, e, r, s',;
+    n, a, m, e: 'Wh, i, t, e, Pap, e, r, s', descrip, t, i, o, n: 'Techni, c, a, l, documentat, i, o, n, a, n, d, resea, r, c, h',;
+    i, c, o, n: File, T, e, x, t, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/documentat, i, o, n',;
+    n, a, m, e: 'Documentat, i, o, n', descrip, t, i, o, n: 'Techni, c, a, l, documentat, i, o, n, a, n, d, gui, d, e, s',;
+    i, c, o, n: File, T, e, x, t, cate, g, o, r, y: 'Busines, s' };
+          { p, a, t, h: '/develop, e, r, s',;
+    n, a, m, e: 'Develo, p, e, r, Por, t, a, l', descrip, t, i, o, n: 'Develo, p, e, r, resour, c, e, s, a, n, d, A, P, I, s',;
+    i, c, o, n: C, o, d, e, cate, g, o, r, y: 'Busines, s' },;
+          { p, a, t, h: '/a, p, i',;
+    n, a, m, e: 'A, P, I', descrip, t, i, o, n: 'Applicat, i, o, n, programm, i, n, g, interfa, c, e, s',;
+    i, c, o, n: C, o, d, e, catego, r, y: 'Busines, s' }
+      ,  ];
+      };
+      {
+        tit, l, e: 'Legal & Information',;
+    ic, o, n: FileTe, x, t,descripti, o, n: 'Lega, l, document, s, and company information',;
+    rout, e, s: [;
+          { p, a, t, h: '/te, r, m, s',;
+    n, a, m, e: 'Te, r, m, s, o, f, Serv, i, c, e', descrip, t, i, o, n: 'Serv, i, c, e, te, r, m, s, a, n, d, conditi, o, n, s',;
+    i, c, o, n: File, T, e, x, t, cate, g, o, r, y: 'Lega, l' };
+          { p, a, t, h: '/cook, i, e, s',;
+    n, a, m, e: 'Coo, k, i, e, Pol, i, c, y', descrip, t, i, o, n: 'Coo, k, i, e, us, a, g, e, a, n, d, priv, a, c, y',;
+    i, c, o, n: File, T, e, x, t, cate, g, o, r, y: 'Lega, l' };
+          { p, a, t, h: '/site, m, a, p',;
+    n, a, m, e: 'Site, m, a, p', descrip, t, i, o, n: 'Compl, e, t, e, webs, i, t, e, struct, u, r, e',;
+    i, c, o, n: File, T, e, x, t, cate, g, o, r, y: 'Lega, l' };
+          { p, a, t, h: '/sta, t, u, s',;
+    n, a, m, e: 'Sys, t, e, m, Sta, t, u, s', descrip, t, i, o, n: 'Serv, i, c, e, sta, t, u, s, a, n, d, upt, i, m, e',;
+    i, c, o, n: Acti, v, i, t, y, cate, g, o, r, y: 'Lega, l' },;
+          { p, a, t, h: '/sys, t, e, m-sta, t, u, s',;
+    n, a, m, e: 'Sys, t, e, m, Sta, t, u, s', descrip, t, i, o, n: 'Detai, l, e, d, sys, t, e, m, informat, i, o, n',;
+    i, c, o, n: Acti, v, i, t, y, catego, r, y: 'Lega, l' }
+      ,  ];
+      };
+    ];
+    setSitemapData(sitemap);
+  },;
+  const filteredSitemap = sitemapData.map(section => ({;
+    ...section;
+    route,  s: section.routes.filter(route => {
+      const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                           route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                           route.path.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory;
       return matchesSearch && matchesCategory;
-    })
-  })).filter(section => section.routes.length > 0)
-const allCategories = ['all', ...Array.from(new Set(sitemapData.flatMap(section => 
-    section.routes.map(route => route.category)
-  )))],
-
-  const exportSitemap = () () => {
-    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="ht,
-  t: p: //www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapData.flatMap(section => 
-  section.routes.map(route => 
-    `  <url>
-    <loc>http,
-  s://ziontechgroup.com${route.path}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0],
-  }</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`
-  )
-).join('\n')}
-</urlset>`
-const blob = new Blob([sitemapXml], { ty,
-  p: e: 'application/xml' })
-const url = URL.createObjectURL(blob)
-const a = document.createElement('a')
-    a.href = url,
-    a.download = 'sitemap.xml',
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
-},
-
-  const exportCSV = () () => {
-    const csvContent = [
-      ['PathName', 'DescriptionCategory', 'Featured'],
-      ...sitemapData.flatMap(section => 
-        section.routes.map(route => [
-          route.path,
-          route.name,
-          route.description,
-          route.category,
-          route.featured ? 'Yes' : 'No'
-        ])
-      )
-    ].map(row => row.map(field => `"${field}"`).join()).join('\n')
-const blob = new Blob([csvContent], { ty,
-  p: e: 'text/csv' })
-const url = URL.createObjectURL(blob)
-const a = document.createElement('a')
-    a.href = url,
-    a.download = 'sitemap.csv',
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
-},
-
-  return (
-    <div className="max-w-7xl mx-auto p-6 space-y-6">
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Website Sitemap</h1>
-            <p className="text-gray-600 mt-2">
-              Complete navigation structure and route documentation for Zion Tech Group;
-            </p>
-          </div>
-          <div className="flex space-x-3">
+    });
+  })).filter(section => section.routes.length > 0);
+;
+  const allCategories = ['a,  l,  l', ...Ar, r, a, y.f, r, o, m(n, e, w, S, e, t(sitemapD, a, t, a.flat, M, a, p(sect, i, o, n =>;
+    sect, i, o, n.rou, t, e, s.m, a, p(ro, u, t, e => rout, e.categor, y);
+ , )))],;
+  const exportSitemap = () => {
+    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>;
+<urlset xmlns="htt,  p: //www.sitemaps.org/schemas/sitemap/0.9">;
+${sitemapData.flatMap(section =>;
+  section.routes.map(rout, e =>;
+    `  <url>;
+    <loc>htt, p,;
+  s://ziontechgroup.com${route.path}</loc>;
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>;
+    <changefreq>weekly</changefreq>;
+    <priority>0.8</priority>;
+  </url>`;
+  );
+).join('\n')};
+</urlse, t>`;
+    const blob = new Blob([sitema,  p, X, , m, l]{ typ, e: 'application/xml' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = u,  r,  l,;
+    a.download = 'sitemap.xml',;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, ;
+  const exportCSV = () => {
+    const csvContent = [;
+      ['PathN, a, m, e', 'DescriptionCateg, o, r, y',, 'Feature, d'],;
+      ...sitemapData.flatMap(section =>;
+        section.routes.map(route => [;
+          ro,  u, t,  e.p, a, t, h,;
+          ro, u, t, e.n, a, m, e,;
+          ro, u, t, e.descrip, t, i, o, n,;
+          ro, u, t, e.cate, g, o, r, y,;
+          ro, u, t, e.feature, d ? 'Ye, s' : 'N, o';
+      ,  ]);
+      );
+    ].map(row => row.map(field => `"${fiel, d}"`).join()).join('\n');
+;
+    const blob = new Blob([csvCon,  t, e, , n, t]{ typ, e: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = u,  r,  l,;
+    a.download = 'sitemap.csv',;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, ;
+  return(<div className="max-w-7xl mx-auto p-6 space-y-6">;
+      <div className="bg-white rounded-lg shadow-lg p-6">;
+        <div className="flex items-center justify-between mb-6">;
+          <div>;
+            <h1 className="text-3xl font-bold text-gray-90o0">Website Sitemap</h1>;
+            <p className="text-gray-60o0 mt-2">;
+              Complet, e, navigatio, n, structur, e, an, d, rout, e, documentatio, n, fo, r, Zio, n, Tech Group;
+            </p>;
+          </div>;
+          <div className="flex space-x-3">;
             <button;
               onClick={exportSitemap}
-              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg,
-  hove: r:bg-blue-700"
-            >
-              <Download className="w-4 h-4 mr-2" />
+              className="flex items-center px-4 py-2 bg-blue-60o0 text-white rounded-lg hove, r: bg-blue-70o0";
+            >;
+              <Download className="w-4 h-4 mr-2" />;
               Export XML;
-            </button>
+            </button>;
             <button;
               onClick={exportCSV}
-              className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg,
-  hove: r:bg-green-700"
-            >
-              <Download className="w-4 h-4 mr-2" />
+              className="flex items-center px-4 py-2 bg-green-60o0 text-white rounded-lg hove, r: bg-green-70o0";
+            >;
+              <Download className="w-4 h-4 mr-2" />;
               Export CSV;
-            </button>
-          </div>
-        </div>
-
-        {/* Search and Filter */}
-        <div className="mb-6 space-y-4">
-          <div className="flex flex-col,
-  m: d:flex-row gap-4">
-            <div className="flex-1">
+            </button>;
+          </div>;
+        </div>;
+        {/* Searc, h, an, d, Filter */}
+        <div className="mb-6 space-y-4">;
+          <div className="flex flex-col m, d: flex-row gap-4">;
+            <div className="flex-1">;
               <input;
-                type="text"
-                placeholder="Search routes, names, or descriptions..."
+                type="text";
+                placeholder="Sear, c, h, rout, e, s, namesor descriptions...";
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg,
-  focu: s: ring-2,
-  focu: s:ring-blue-500,
-  focu: s:border-transparent"
-              />
-            </div>
-            <div className="w-full m,
-  d:w-48">
+                className="w-full px-4 py-2,  borde, r, border-gray-30o0 rounded-l, g, foc, u,  s: ring-2, foc, u,
+    s: ring-blue-50o, 0, foc, u, s: border-transparent";
+              />;
+            </div>;
+            <div className="w-ful, l, m,;
+  d:w-48">;
               <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg,
-  focu: s: ring-2,
-  focu: s:ring-blue-500 focu,
-  s:border-transparent"
-              >
-                {allCategories.map(category => (
-                  <option key={category} value={category}>
+                className="w-full px-4 py-2,  borde, r, border-gray-30o0 rounded-l, g, foc, u,  s: ring-2, foc, u,
+    s: ring-blue-50o, 0, foc, u, s:border-transparent";
+              >;
+                {allCategories.map(category => (;
+                  <option key={category} value={category}>;
                     {category === 'all' ? 'All Categories' : category}
-                  </option>
+                  </option>;
                 ))}
-              </select>
-            </div>
-          </div>
-        </div>
-
+              </select>;
+            </div>;
+          </div>;
+        </div>;
         {/* Sitemap Sections */}
-        <div className="space-y-8">
-          {filteredSitemap.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="border border-gray-200 rounded-lg p-6">
-              <div className="flex items-center mb-4">
-                <section.icon className="w-6 h-6 text-blue-600 mr-3" />
-                <h2 className={`text-xl font-semibold ${section.featured ? 'text-blue-600' : 'text-gray-900'}`}>
-                  {section.title},
-  {section.featured && <Star className="w-5 h-5 text-yellow-500 ml-2 inline" />}
-                </h2>
-              </div>
-              <p className="text-gray-600 mb-4">{section.description}</p>
-              
-              <div className="grid grid-cols-1,
-  m: d: grid-cols-2 l,
-  g:grid-cols-3 gap-4">
-                {section.routes.map((route, routeIndex) => (
-                  <div;
+        <div className="space-y-8">;
+          {filteredSitemap.map((sectionsectionIndex) => (<div key={sectionIndex} className="border border-gray-20o0 rounded-lg p-6">;
+              <div className="flex items-center mb-4">;
+                <section.icon className="w-6 h-6 text-blue-60o0 mr-3" />;
+                <h2 className={`text-xl font-semibold ${section.featured ? 'text-blue-60o0' : 'text-gray-90o, 0'}`}>;
+                  {section.title}
+                  {section.featured && <Star className="w-5 h-5 text-yellow-50o0 ml-2 inline" />}
+                </h2>;
+              </div>;
+              <p className="text-gray-60o0 mb-4">{section.description}</p>;
+              <div className="grid grid-cols-1,  m,  d: grid-cols-2, l,;
+  g:grid-cols-3 gap-4">;
+                {section.routes.map((routerouteIndex) => (<div;
                     key={routeIndex}
-                    className={`p-4 border rounded-lg transition-all duration-200,
-  hove: r:shadow-md ${
+                    className={`p-4,  borde, r, rounded-lg transition-all duration-20o0 hove, r: shadow-md ${;
                       route.featured;
-                        ? 'border-blue-300 bg-blue-50' 
-                        : 'border-gray-200 bg-white'
+                        ? 'border-blue-30o0 bg-blue-50';
+                        : 'border-gray-20o0 bg-whit, e';
                     }`}
-                  >
-                    <div className="flex items-start space-x-3">
+                  >;
+                    <div className="flex items-start space-x-3">;
                       <div className={`p-2 rounded-lg ${
                         route.featured;
-                          ? 'bg-blue-100 text-blue-600' 
-                          : 'bg-gray-100 text-gray-600'
-                      }`}>
-                        <route.icon className="w-4 h-4" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center space-x-2 mb-1">
-                          <h3 className="font-medium text-gray-900 truncate">{route.name}</h3>
-                          {route.featured && <Star className="w-4 h-4 text-yellow-500 flex-shrink-0" />}
-                        </div>
-                        <p className="text-sm text-gray-600 mb-2 line-clamp-2">{route.description}</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                          ? 'bg-blue-10o0 text-blue-60o0';
+                          : 'bg-gray-10o0 text-gray-60o, 0';
+                      }`}>;
+                        <route.icon className="w-4 h-4" />;
+                      </div>;
+                      <div className="flex-1 min-w-0">;
+                        <div className="flex items-center space-x-2 mb-1">;
+                          <h3 className="font-medium text-gray-90o0 truncate">{route.name}</h3>;
+                          {route.featured && <Star className="w-4 h-4 text-yellow-50o0 flex-shrink-0" />}
+                        </div>;
+                        <p className="text-sm text-gray-60o0 mb-2 line-clamp-2">{route.description}</p>;
+                        <div className="flex items-center justify-between">;
+                          <span className="text-xs text-gray-50o0 bg-gray-10o0 px-2 py-1 rounded">;
                             {route.category}
-                          </span>
+                          </span>;
                           <Link;
                             to={route.path}
-                            className="text-xs text-blue-600,
-  hove: r:text-blue-800 font-medium"
-                          >
-                            View →
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                            className="text-xs text-blue-60o0 hove, r: text-blue-80o0 font-medium";
+                          >;
+                            View →;
+                          </Link>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </div>;
                 ))}
-              </div>
-            </div>
+              </div>;
+            </div>;
           ))}
-        </div>
-
+        </div>;
         {/* Summary Stats */}
-        <div className="mt-8 pt-6 border-t border-gray-200">
-          <div className="grid grid-cols-1,
-  m: d:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600">
-                {sitemapData.reduce((total, section) => total + section.routes.length, 0)}
-              </div>
-              <div className="text-sm text-gray-600">Total Routes</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-600">
+        <div className="mt-8 pt-6 border-t border-gray-20o0">;
+          <div className="grid grid-cols-1 m, d: grid-cols-4 gap-4">;
+            <div className="text-center">;
+              <div className="text-2xl font-bold text-blue-60o0">;
+                {sitemapData.reduce((tot,  a,  lsection) => total + section.routes.length0)}
+              </div>;
+              <div className="text-sm text-gray-60o0">Total Routes</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-2xl font-bold text-green-60o0">;
                 {sitemapData.length}
-              </div>
-              <div className="text-sm text-gray-600">Categories</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-600">
+              </div>;
+              <div className="text-sm text-gray-60o0">Categories</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-2xl font-bold text-yellow-60o0">;
                 {sitemapData.flatMap(section => section.routes).filter(route => route.featured).length}
-              </div>
-              <div className="text-sm text-gray-600">Featured Routes</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">
-                {Array.from(new Set(sitemapData.flatMap(section => 
-                  section.routes.map(route => route.category)
+              </div>;
+              <div className="text-sm text-gray-60o0">Featured Routes</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-2xl font-bold text-purple-60o0">;
+                {Array.from(new Set(sitemapData.flatMap(section =>;
+                  section.routes.map(route => route.category);
                 ))).length}
-              </div>
-              <div className="text-sm text-gray-600">Unique Categories</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  ),
-},
-
-// Missing icon components;
-const Home = () => <Globe className="w-4 h-4" />
-const Calendar = () => <BookOpen className="w-4 h-4" />
-const Video = () => <MessageCircle className="w-4 h-4" />
-const Code = () => <Settings className="w-4 h-4" />
-export default SitemapGenerator;
+              </div>;
+              <div className="text-sm text-gray-60o0">Unique Categories</div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  ),  ;
+};
+;
+// Missin, g, ico, n, components;
+const Home = () => <Globe className="w-4 h-4" />;
+const Calendar = () => <BookOpen className="w-4 h-4" />;
+const Video = () => <MessageCircle className="w-4 h-4" />;
+const Code = () => <Settings className="w-4 h-4" />;
+;
+expor, t, defaul, t, SitemapGenerator;

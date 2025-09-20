@@ -1,43 +1,28 @@
 #!/usr/bin/env node
-/*
- * Generates or refreshes a lightweight Netlify functions manifest.
- * Safe no-op if the manifest already exists.
- */
 const fs = require('fs');
 const path = require('path');
 
-const functionsDir = path.join(__dirname, '..', 'netlify', 'functions');
-const manifestPath = path.join(functionsDir, 'functions-manifest.json');
+const manifestPath = path.join(process.cwd(), 'automation', 'netlify-functions-manifest.json');
+const functions = [
+	{
+		name: 'osv_dependency_audit',
+		path: '/.netlify/functions/osv_dependency_audit'
+	},
+	{
+		name: 'external_link_audit',
+		path: '/.netlify/functions/external_link_audit'
+	},
+	{
+		name: 'automation_summary',
+		path: '/.netlify/functions/automation_summary'
+	},
+	{
+		name: 'readme_badges_updater',
+		path: '/.netlify/functions/readme_badges_updater'
+	}
+];
 
-function listFunctions() {
-  if (!fs.existsSync(functionsDir)) {
-    console.log('Functions directory not found, creating empty manifest');
-    return [];
-  }
-  
-  const files = fs.readdirSync(functionsDir).filter(f => f.endsWith('.js') || f.endsWith('.ts'));
-  const names = files
-    .map(f => f.replace(/\.(js|ts)$/,'').trim())
-    .filter(name => !name.startsWith('_'))
-    .sort();
-  return names;
-}
-
-function main() {
-  const names = listFunctions();
-  const manifest = { 
-    generatedAt: new Date().toISOString(), 
-    functions: names 
-  };
-  
-  // Ensure the directory exists
-  const manifestDir = path.dirname(manifestPath);
-  if (!fs.existsSync(manifestDir)) {
-    fs.mkdirSync(manifestDir, { recursive: true });
-  }
-  
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log(`Updated functions manifest with ${names.length} entries.`);
-}
-
-main();
+const payload = { generatedAt: new Date().toISOString(), functions };
+fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
+fs.writeFileSync(manifestPath, JSON.stringify(payload, null, 2));
+console.log('[netlify:manifest] Wrote', manifestPath);

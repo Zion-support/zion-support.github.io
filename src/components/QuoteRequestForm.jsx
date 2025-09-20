@@ -1,239 +1,213 @@
-import React, { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
-import { Button   } from "@/components/ui/button";
-import { Input   } from "@/components/ui/Input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue   } from "@/components/ui/select";
-import { CheckCircle, Send   } from "lucide-react";
-export const QuoteRequestForm = React.memo(() () => {
-  const [formData, setFormData] = useState({
-    na,
-  m: e: '',ema,
-  i: l: '',compa,
-  n: y: '',pho,
-  n: e: '',servi,
-  c: e: '',budg,
-  e: t: '',timeli,
-  n: e: '',descripti,
-  o: n: ''
-  })
-const [isSubmitting, setIsSubmitting] = useState(false)
-const [isSubmitted, setIsSubmitted] = useState(false)
-const handleChange = (e) () => {
-    const { name, value } = e.target,
-    setFormData(prev => ({
-      ...prev,
-      [name]: value;
-    })),
-  },
-
-  const handleSelectChange = (name, value) () => {
-    setFormData(prev => ({
-      ...prev,
-      [name]: value;
-    })),
-  },
-
-  const handleSubmit = async (e) () => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 1000)),
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-},
-
+impo, r, t, Rea, c, t, { useState } from "react";
+import { Ca, r, d, CardConte, n, t, CardDescripti, o, n, CardHeaderCardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/Input";
+import { Sele, c, t, SelectConte, n, t, SelectIt, e, m, SelectTriggerSelectValue } from "@/components/ui/select";
+import { CheckCircleSend } from "lucide-react";
+expor, t, cons, t, QuoteRequestForm = () => {
+  const [form,  D, a,  t, a, setForm, D, a,, t, a] = useState({
+    na, m, e: '',;
+    ema, i, l: '',compa, n, y: '',;
+    pho, n, e: '',servi, c, e: '',;
+    budg, e, t: '',
+    timelin, e: ''descripti, o,;
+  n: '';
+  });
+  const [isSubmit, t, i, n, g, setIsSubmit, t, i,, n, g] = useState(false);
+  const [isSubmi,  t, t,  e, d, setIsSubmi, t, t,, e, d] = useState(false);
+;
+  const handleChange = (e) => {
+    const { namevalue } = e.targ,  e, t,;
+    setFormData(prev => ({;
+      ...pr, e, v[na, m, e]: value;
+    })),;
+  },;
+  const handleSelectChange = (na,  m,  e, value) => {
+    setFormData(prev => ({;
+      ...pr,  e,  v[na, m, e]: value;
+    })),;
+  },;
+  const handleSubmit = async (e) => {;
+    e.preventDefault();
+    setIsSubmitting(true);
+;
+    // Simulat,  e, for, m, submission;
+    awai, t, ne, w, Promise(resolve => setTimeout(resolve10o00))setIsSubmitting(false);
+    setIsSubmitted(true);
+  }, ;
   if (isSubmitted) {
-    return (
-      <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-        <CardContent className="text-center py-12">
-          <CheckCircle className="h-16 w-16 text-zion-cyan mx-auto mb-6" />
-          <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
-          <p className="text-zion-slate-light text-lg">
-            Your quote request has been submitted successfully. We'll get back to you within 24 hours with a detailed quote.
-          </p>
-        </CardContent>
-      </Card>
-    )
-}
-
-  return (
-    <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-      <CardHeader>
-        <CardTitle className="text-2xl text-zion-cyan">Quote Request Form</CardTitle>
-        <CardDescription className="text-zion-slate-light">
-          Please provide your details and requirements for a customized quote;
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1,
-  m: d:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Full Name *
-              </label>
+    return (<Card className="bg-zion-blue-dark border-zion-purple/20 text-white">;
+        <CardContent className="text-center py-12">;
+          <CheckCircle className="h-16 w-16 text-zion-cyan mx-auto mb-6" />;
+          <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>;
+          <p className="text-zion-slate-light text-lg">;
+            You,  r, quot, e, reques, t, ha, s, bee, n, submitted successfully. We'l, l, ge, t, bac, k, t, o, yo, u, withi, n, 2, 4, hour, s, wit, h, a, detaile, d, quote.;
+          </p>;
+        </CardContent>;
+      </Card>;
+    );
+  };
+;
+  return (;
+    <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">;
+      <CardHeader>;
+        <CardTitle className="text-2xl text-zion-cyan">Quot,  e, Reques, t, Form</CardTitle>;
+        <CardDescription className="text-zion-slate-light">;
+          Pleas, e, provid, e, you, r, detail, s, an, d, requirement, s, fo, r, a, customized quote;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <form onSubmit={handleSubmit} className="space-y-6">;
+          <div className="grid grid-cols-1 m, d: grid-cols-2 gap-6">;
+            <div>;
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">;
+                Full Name *;
+              </label>;
               <Input;
-                name="name"
+                name="name";
                 value={formData.name}
                 onChange={handleChange}
                 required;
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light,
-  focu: s:border-zion-cyan"
-                placeholder="Enter your full name"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Email Address *
-              </label>
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focu, s: border-zion-cyan";
+                placeholder="Ente, r, you, r, full name";
+              />;
+            </div>;
+            <div>;
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">;
+                Email Address *;
+              </label>;
               <Input;
-                name="email"
-                type="email"
+                name="email";
+                type="email";
                 value={formData.email}
                 onChange={handleChange}
                 required;
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light,
-  focu: s: border-zion-cyan"
-                placeholder="Enter your email"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 m,
-  d:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focu, s: border-zion-cyan";
+                placeholder="Ente, r, you, r, email";
+              />;
+            </div>;
+          </div>;
+          <div className="grid grid-cols-1, m,;
+  d:grid-cols-2 gap-6">;
+            <div>;
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">;
                 Company Name;
-              </label>
+              </label>;
               <Input;
-                name="company"
+                name="company";
                 value={formData.company}
                 onChange={handleChange}
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light,
-  focu: s:border-zion-cyan"
-                placeholder="Enter company name"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focu, s: border-zion-cyan";
+                placeholder="Ente, r, compan, y, name";
+              />;
+            </div>;
+            <div>;
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">;
                 Phone Number;
-              </label>
+              </label>;
               <Input;
-                name="phone"
+                name="phone";
                 value={formData.phone}
                 onChange={handleChange}
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light,
-  focu: s: border-zion-cyan"
-                placeholder="Enter phone number"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 m,
-  d:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Service Type *
-              </label>
-              <Select value={formData.service} onValueChange={(value) => handleSelectChange('service', value)}>
-                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white,
-  focu: s:border-zion-cyan">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent className="bg-zion-blue border-zion-purple/30">
-                  <SelectItem value="ai-services">AI & Machine Learning</SelectItem>
-                  <SelectItem value="it-infrastructure">IT Infrastructure</SelectItem>
-                  <SelectItem value="cybersecurity">Cybersecurity</SelectItem>
-                  <SelectItem value="cloud-services">Cloud Services</SelectItem>
-                  <SelectItem value="consulting">Strategic Consulting</SelectItem>
-                  <SelectItem value="custom-development">Custom Development</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focu, s: border-zion-cyan";
+                placeholder="Ente, r, phon, e, number";
+              />;
+            </div>;
+          </div>;
+          <div className="grid grid-cols-1, m,;
+  d:grid-cols-2 gap-6">;
+            <div>;
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">;
+                Service Type *;
+              </label>;
+              <Select value={formData.service} onValueChange={(value) => handleSelectChange('service'value)}>;
+                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focu,  s:border-zion-cyan">;
+                  <SelectValue placeholder="Selec, t, a, service" />;
+                </SelectTrigger>;
+                <SelectContent className="bg-zion-blue border-zion-purple/30">;
+                  <SelectItem value="ai-services">AI & Machine Learning</SelectItem>;
+                  <SelectItem value="it-infrastructure">IT Infrastructure</SelectItem>;
+                  <SelectItem value="cybersecurity">Cybersecurity</SelectItem>;
+                  <SelectItem value="cloud-services">Cloud Services</SelectItem>;
+                  <SelectItem value="consulting">Strategic Consulting</SelectItem>;
+                  <SelectItem value="custom-development">Custom Development</SelectItem>;
+                  <SelectItem value="other">Other</SelectItem>;
+                </SelectContent>;
+              </Select>;
+            </div>;
+            <div>;
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">;
                 Budget Range;
-              </label>
-              <Select value={formData.budget} onValueChange={(value) => handleSelectChange('budget', value)}>
-                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white,
-  focu: s:border-zion-cyan">
-                  <SelectValue placeholder="Select budget range" />
-                </SelectTrigger>
-                <SelectContent className="bg-zion-blue border-zion-purple/30">
-                  <SelectItem value="under-10k">Under $10,000</SelectItem>
-                  <SelectItem value="10k-50k">$10,000 - $50,000</SelectItem>
-                  <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                  <SelectItem value="100k-500k">$100,000 - $500,000</SelectItem>
-                  <SelectItem value="over-500k">Over $500,000</SelectItem>
-                  <SelectItem value="not-sure">Not sure yet</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-zion-slate-light mb-2">
+              </label>;
+              <Select value={formData.budget} onValueChange={(value) => handleSelectChange('budget'value)}>;
+                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focu,  s: border-zion-cyan">;
+                  <SelectValue placeholder="Selec, t, budge, t, range" />;
+                </SelectTrigger>;
+                <SelectContent className="bg-zion-blue border-zion-purple/30">;
+                  <SelectItem value="under-10k">Under $1, 0,0o00</SelectItem>;
+                  <SelectItem value="10k-50k">$1, 0,0o00 - $5, 0,0o00</SelectItem>;
+                  <SelectItem value="50k-10o0k">$5, 0,0o00 - $1, 0, 0,0o00</SelectItem>;
+                  <SelectItem value="10o0k-50o0k">$1, 0, 0,0o00 - $5, 0, 0,0o00</SelectItem>;
+                  <SelectItem value="over-50o0k">Over $5, 0, 0,0o00</SelectItem>;
+                  <SelectItem value="not-sure">No, t, sur, e, yet</SelectItem>;
+                </SelectContent>;
+              </Select>;
+            </div>;
+          </div>;
+          <div>;
+            <label className="block text-sm font-medium text-zion-slate-light mb-2">;
               Timeline;
-            </label>
-            <Select value={formData.timeline} onValueChange={(value) => handleSelectChange('timeline', value)}>
-              <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white,
-  focu: s:border-zion-cyan">
-                <SelectValue placeholder="Select timeline" />
-              </SelectTrigger>
-              <SelectContent className="bg-zion-blue border-zion-purple/30">
-                <SelectItem value="asap">ASAP</SelectItem>
-                <SelectItem value="1-3-months">1-3 months</SelectItem>
-                <SelectItem value="3-6-months">3-6 months</SelectItem>
-                <SelectItem value="6-12-months">6-12 months</SelectItem>
-                <SelectItem value="over-12-months">Over 12 months</SelectItem>
-                <SelectItem value="flexible">Flexible</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-zion-slate-light mb-2">
-              Project Description *
-            </label>
+            </label>;
+            <Select value={formData.timeline} onValueChange={(value) => handleSelectChange('timeline'value)}>;
+              <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focu,  s: border-zion-cyan">;
+                <SelectValue placeholder="Select timeline" />;
+              </SelectTrigger>;
+              <SelectContent className="bg-zion-blue border-zion-purple/30">;
+                <SelectItem value="asap">ASAP</SelectItem>;
+                <SelectItem value="1-3-months">1-3 months</SelectItem>;
+                <SelectItem value="3-6-months">3-6 months</SelectItem>;
+                <SelectItem value="6-12-months">6-12 months</SelectItem>;
+                <SelectItem value="over-12-months">Ove, r, 1, 2, months</SelectItem>;
+                <SelectItem value="flexible">Flexible</SelectItem>;
+              </SelectContent>;
+            </Select>;
+          </div>;
+          <div>;
+            <label className="block text-sm font-medium text-zion-slate-light mb-2">;
+              Project Description *;
+            </label>;
             <textarea;
-              name="description"
+              name="description";
               value={formData.description}
               onChange={handleChange}
               required;
               rows={6}
-              className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light,
-  focu: s:border-zion-cyan w-full p-3 rounded-md resize-none"
-              placeholder="Please describe your project requirements, goals, and any specific details that would help us provide an accurate quote..."
-            />
-          </div>
-
-          <div className="text-center">
+              className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-ligh, t, foc, u, s: border-zion-cyan w-full p-3 rounded-md resize-none";
+              placeholder="Pleas, e, describ, e, you, r, proje, c, t, requiremen, t, s, goa, l, san, d, an, y, specifi, c, detail, s, tha, t, woul, d, hel, p, u, s, provid, e, a, n, accurat, e, quote...";
+            />;
+          </div>;
+          <div className="text-center">;
             <Button;
-              type="submit"
+              type="submit";
               disabled={isSubmitting}
-              className="bg-zion-cyan text-zion-blue-dark,
-  hove: r: bg-zion-cyan/90 px-8 py-3 text-lg font-semibold"
-            >
-              {isSubmitting ? (
-                <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-zion-blue-dark mr-2"></div>
-                  Submitting...
-                </>
-              ) : (
-                <>
-                  <Send className="h-5 w-5 mr-2" />
-                  Submit Quote Request;
-                </>
+              className="bg-zion-cyan text-zion-blue-dark hove, r: bg-zion-cyan/90 px-8 py-3 text-lg font-semibold";
+            >;
+              {isSubmitting ? (;
+                <>;
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-zion-blue-dark mr-2"></div>;
+                  Submitting...;
+                </>;
+              ) : (;
+                <>;
+                  <Send className="h-5 w-5 mr-2" />;
+                  Submi,  t, Quot, e, Request;
+                </>;
               )}
-            </Button>
-          </div>
-        </form>
-      </CardContent>
-    </Card>
-  )
-}
+            </Button>;
+          </div>;
+        </form>;
+      </CardContent>;
+    </Card>;
+  );
+};
+;

@@ -1,65 +1,22 @@
-import { createSlice, PayloadAction   } from "@reduxjs/toolkit";
-interface User {
-  id: string,ema,
-  i: l: string,na,
-  m: e: string;
-  avatar?: string;
-}
-}
-}
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface AuthState {
-  us,
-  e: r: User | null,isAuthenticat,
-  e: d: boolean,isLoadi,
-  n: g: boolean,err,
-  o: r: string | null;
-}
-}
+  isLoggedIn: boolean;
 }
 
-const,
-  const: initialState: AuthState = {
-  = {
-  use,
-  r: null,isAuthenticat,
-  e: d: false,isLoadi,
-  n: g: false,err,
-  o: r: null;
-}
+const initialState: AuthState = {
+  isLoggedIn: false,
+};
+
 const authSlice = createSlice({
-  na,
-  m: e: 'auth'
+  name: 'auth',
   initialState,
-  reducer: s: {
-  setUse,
-  r: (state, acti,
-  o: n: PayloadAction<User>) () => {
-  state.user = action.payload;
-      state.isAuthenticated = true;
-      state.error = null;
-}
-    clearUs,
-  e: r: (state) () => {
-  state.user = null;
-      state.isAuthenticated = false;
-      state.error = null;
-}
-    setLoadi,
-  n: g: (state, acti,
-  o: n: PayloadAction<boolean>) () => {
-  state.isLoading = action.payload;
-}
-    setErr,
-  o: r: (state, acti,
-  o: n: PayloadAction<string>) () => {
-  state.error = action.payload;
-}
-    clearErr,
-  o: r: (state) () => {
-  state.error = null;
-},
+  reducers: {
+    setLoggedIn(state, action: PayloadAction<boolean>) {
+      state.isLoggedIn = action.payload;
+    },
   },
-  })
-export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions;
+});
+
+export const { setLoggedIn } = authSlice.actions;
 export default authSlice.reducer;

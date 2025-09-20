@@ -1,254 +1,486 @@
-import { useCallback  } from "react";
-import { useEffect, useState   } from "react";
+impor, t, Reac, t, { useEffec, t, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from '@/components/ui/card';
+// Switch component replaced with checkbox
+// Label component replaced with simple label
+// Separator component replaced with simple div
+=======
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import { Separator } from '@/components/ui/separator';
+=======
+import * as Switch from '@radix-ui/react-switch';
+import * as Label from '@radix-ui/react-label';
+import { Separator } from '@/components/ui/separator';
+
 interface AccessibilitySettings {
-  highContra,
-  s: t: boolean,largeTe,
-  x: t: boolean,reducedMoti,
-  o: n: boolean,focusVisib,
-  l: e: boolean,screenRead,
-  e: r: boolean,keyboardNavigati,
-  o: n: boolean;
-}
-}
+  highContras, t: boolean;
+  largeTex, t: boolean;
+  reducedMotio, n: boolean;
+  screenReade, r: boolean;
+  keyboardNavigatio, n: boolean;
+  focusIndicato, r: boolean;
 }
 
-export default function AccessibilityEnhancer({ children }: { childr,
-  e: n: React.ReactNode }) {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContra,
-  s: t: false,largeTe,
-  x: t: false,reducedMoti,
-  o: n: false,focusVisib,
-  l: e: false,screenRead,
-  e: r: false,keyboardNavigati,
-  o: n: false;
-  })
-const [isVisible, setIsVisible] = useState(false)
-const [announcements, setAnnouncements] = useState<string[]>([])
-  useEffect(() () => {
-    // Check for reduced motion preference;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-moti,
-  o: n: reduce)').matches;
-const prefersHighContrast = window.matchMedia('(prefers-contras,
-  t: high)').matches;
-    setSettings(prev => ({
-      ...prev,
-      reducedMoti,
-  o: n: prefersReducedMotion,highContra,
-  s: t: prefersHighContrast;
-    }))
-    // Apply accessibility settings to document;
-    const root = document.documentElement;
-    if (settings.highContrast) {
-      root.classList.add('high-contrast')
-} else {
-  root.classList.remove('high-contrast')
-}
-}
-}
+export function AccessibilityEnhancer() {
+  const [isOp,  e, n, setIsOp, e, n] = useState(false);
+  const [settin, g, s, setSettin, g, s] = useState<AccessibilitySettings>({
+    highContras,  t: fals, e,
+    largeTex, t: fals, e,
+    reducedMotio, n: fals, e,
+    screenReade, r: fals, e,
+    keyboardNavigatio, n: fals, e,
+    focusIndicato, r: fals, e,
+  });
 
-    if (settings.largeText) {
-      root.classList.add('large-text')
-      root.style.fontSize = '1.2em'
-} else {
-  root.classList.remove('large-text')
-      root.style.fontSize = ''
-}
-}
-}
-
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion')
-      root.style.setProperty('--animation-duration', '0.01ms')
-      root.style.setProperty('--animation-iteration-count', '1')
-} else {
-  root.classList.remove('reduced-motion')
-      root.style.removeProperty('--animation-duration')
-      root.style.removeProperty('--animation-iteration-count')
-}
-}
-}
-
-    // Show accessibility panel on Ctrl+Shift+A;
-    const handleKeyPress = (e: KeyboardEvent) () => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'A') {
-        setIsVisible(!isVisible)
-        announce('Accessibility panel toggled')
-},
-  }
-    window.addEventListener('keydown', handleKeyPress)
-    return () => window.removeEventListener('keydown', handleKeyPress)
-}, [settings, isVisible])
-const announce = (messa,
-  g: e: string) () => {
-    setAnnouncements(prev => [...prev.slice(-2), message])
-    // Create live region for screen readers;
-    const announcement = document.createElement('div')
-    announcement.setAttribute('aria-live', 'polite')
-    announcement.setAttribute('aria-atomic', 'true')
-    announcement.className = 'sr-only'
-    announcement.textContent = message;
-    document.body.appendChild(announcement)
-    setTimeout(() () => {
-      document.body.removeChild(announcement)
-}, 1000)
-}
-const toggleSetting = (setti,
-  n: g: keyof AccessibilitySettings) () => {
-    const newValue = !settings[setting]
-    setSettings(prev => ({ ...prev, [setting]: newValue }))
-const settingNames = {
-      highContra,
-  s: t: 'High contrast mode',
-      largeTe,
-  x: t: 'Large text',
-      reducedMoti,
-  o: n: 'Reduced motion',
-      focusVisib,
-  l: e: 'Focus indicators',
-      screenRead,
-  e: r: 'Screen reader mode',
-      keyboardNavigati,
-  o: n: 'Keyboard navigation'
+  useEffect(() => {
+    // Load saved settings
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings(parsed);
+        applySettings(parsed);
+      } catch (error) {
+        console.error('Failed to parse accessibility setting,  s:', error);
+      }
     }
-    announce(`${settingNames[setting],
-  } ${newValue ? 'enabled' : 'disabled'}`)
-}
-const resetSettings = () () => {
-    setSettings({
-      highContra,
-  s: t: false,
-      largeTe,
-  x: t: false,
-      reducedMoti,
-  o: n: false,
-      focusVisib,
-  l: e: false,
-      screenRead,
-  e: r: false,
-      keyboardNavigati,
-  o: n: false;
-    })
-    announce('Accessibility settings reset')
-}
+  }, []);
+
+  const applySettings = (newSetting,  s: AccessibilitySettings) => {
+    const root = document.documentElement;
+    
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+    
+    if (newSettings.largeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
+    
+    if (newSettings.reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+    
+    if (newSettings.focusIndicator) {
+      root.classList.add('focus-visible');
+    } else {
+      root.classList.remove('focus-visible');
+    }
+  };
+
+  const handleSettingChange = (ke,  y: keyo, f, AccessibilitySetting, s,
+    valu, e: boolean) => {
+    const newSettings = { ...setting, s, [k, e, y]: value };
+    setSettings(newSettings);
+    localStorage.setItem('accessibility-settings',  JSON.stringify(newSettings));
+    applySettings(newSettings);
+  };
+
+  const resetSettings = () => {
+    const defaultSetting,  s: AccessibilitySettings = {
+      highContras, t: fals, e,
+    largeTex, t: fals, e,
+      reducedMotio, n: fals, e,
+    screenReade, r: fals, e,
+      keyboardNavigatio, n: fals, e,
+    focusIndicato, r: fals, e,
+    };
+    setSettings(defaultSettings);
+    localStorage.removeItem('accessibility-settings');
+    applySettings(defaultSettings);
+  };
+
   return (
     <>
-      {/* Screen reader announcements */}
-      <div aria-live="polite" aria-atomic="true" className="sr-only">
-        {announcements[announcements.length - 1],
-  }
+      {/* Skip Links */}
+      <div className="sr-only focu,  s:not-sr-only focu, s:absolute focu, s:top-4 focu, s:left-4 z-50">
+        <a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">
+          Skip to main content
+        </a>
+        <a href="#navigation" className="bg-zion-cyan text-white px-4 py-2 rounded-md ml-2">
+          Skip to navigation
+        </a>
       </div>
 
-      {/* Accessibility Panel */},
-  {isVisible && (
-        <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320px]">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-blue-400 font-bold text-lg">♿ Accessibility</h3>
-            <button;
-              onClick={() => setIsVisible(false)}
-              className="text-blue-400,
-  hove: r:text-white transition-colors p-1"
-              aria-label="Close accessibility panel"
-            >
-              ×
-            </button>
-          </div>
-          
-          <div className="space-y-3">
+      {/* Accessibility Toggle Button */}
+      <Button
+        onClick={() => setIsOpen(!isOpen)}
+        variant="outline"
+        size="sm"
+=======
+        size="icon"
+=======
+        size="icon"
+        className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hove,  r:bg-zion-cyan/10"
+        aria-label="Accessibility Settings"
+      >
+        <span className="text-zion-cyan">A</span>
+      </Button>
+
+      {/* Accessibility Panel */}
+      {isOpen && (
+        <Card className="fixed top-16 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 shadow-2xl">
+          <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
-              <label htmlFor="high-contrast" className="text-gray-300">
-                High Contrast;
-              </label>
-              <button;
-                id="high-contrast"
-                onClick={() => toggleSetting('highContrast')}
-                className={`w-12 h-6 rounded-full transition-colors ${
-                  settings.highContrast ? 'bg-blue-400' : 'bg-gray-600'
-                }`}
-                aria-pressed={settings.highContrast}
-                aria-label={`Toggle high contrast mode. Currently ${settings.highContrast ? 'on' : 'off'}`}
+              <CardTitle className="text-lg flex items-center gap-2">
+                <span className="text-zion-cyan">A</span>
+                Accessibility Settings
+              </CardTitle>
+              <Button
+                variant="ghost"
+                size="sm"
+=======
+                size="icon"
+=======
+                size="icon"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close accessibility settings"
               >
-                <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                  settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
-                }`} />
-              </button>
+                ×
+              </Button>
+            </div>
+            <CardDescription>
+              Customize your experience for better accessibility
+            </CardDescription>
+          </CardHeader>
+          
+          <CardContent className="space-y-4">
+            {/* Visual Enhancements */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold flex items-center gap-2">
+                <span>👁️</span>
+                Visual Enhancements
+              </h4>
+              
+              <div className="flex items-center justify-between">
+                <Label.Root htmlFor="high-contrast" className="text-sm">
+                  High Contrast
+                </Label.Root>
+                <Switch.Root
+                  id="high-contrast"
+                  checked={settings.highContrast}
+                  onCheckedChange={(checked) => handleSettingChange('highContrast',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
+                </Switch.Root>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <Label.Root htmlFor="large-text" className="text-sm">
+                  Large Text
+                </Label.Root>
+                <Switch.Root
+                  id="large-text"
+                  checked={settings.largeText}
+                  onCheckedChange={(checked) => handleSettingChange('largeText',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
+                </Switch.Root>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <Label.Root htmlFor="focus-indicator" className="text-sm">
+                  Enhanced Focus
+                </Label.Root>
+                <Switch.Root
+                  id="focus-indicator"
+                  checked={settings.focusIndicator}
+                  onCheckedChange={(checked) => handleSettingChange('focusIndicator',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
+                </Switch.Root>
+                <Label htmlFor="high-contrast" className="text-sm">
+                  High Contrast
+                </Label>
+                <Switch
+                  id="high-contrast"
+                  checked={settings.highContrast}
+                  onCheckedChange={(checked) => handleSettingChange('highContrast',  checked)}
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <Label htmlFor="large-text" className="text-sm">
+                  Large Text
+                </Label>
+                <Switch
+                  id="large-text"
+                  checked={settings.largeText}
+                  onCheckedChange={(checked) => handleSettingChange('largeText',  checked)}
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <Label htmlFor="focus-indicator" className="text-sm">
+                  Enhanced Focus
+                </Label>
+                <Switch
+                  id="focus-indicator"
+                  checked={settings.focusIndicator}
+                  onCheckedChange={(checked) => handleSettingChange('focusIndicator',  checked)}
+                />
+=======
+              </div>
             </div>
             
-            <div className="flex items-center justify-between">
-              <label htmlFor="large-text" className="text-gray-300">
-                Large Text;
-              </label>
-              <button;
-                id="large-text"
-                onClick={() => toggleSetting('largeText')}
-                className={`w-12 h-6 rounded-full transition-colors ${
-                  settings.largeText ? 'bg-blue-400' : 'bg-gray-600'
-                }`}
-                aria-pressed={settings.largeText}
-                aria-label={`Toggle large text. Currently ${settings.largeText ? 'on' : 'off'}`}
-              >
-                <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                  settings.largeText ? 'translate-x-6' : 'translate-x-0.5'
-                }`} />
-              </button>
+            <Separator />
+                <label htmlFor="high-contrast" className="text-sm">
+                  High Contrast
+                </label>
+                <input
+                  type="checkbox"
+                  id="high-contrast"
+                  checked={settings.highContrast}
+                  onChange={(e) => handleSettingChange('highContrast',  e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="large-text" className="text-sm">
+                  Large Text
+                </label>
+                <input
+                  type="checkbox"
+                  id="large-text"
+                  checked={settings.largeText}
+                  onChange={(e) => handleSettingChange('largeText',  e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="focus-indicator" className="text-sm">
+                  Enhanced Focus
+                </label>
+                <input
+                  type="checkbox"
+                  id="focus-indicator"
+                  checked={settings.focusIndicator}
+                  onChange={(e) => handleSettingChange('focusIndicator',  e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
             </div>
             
-            <div className="flex items-center justify-between">
-              <label htmlFor="reduced-motion" className="text-gray-300">
-                Reduced Motion;
-              </label>
-              <button;
-                id="reduced-motion"
-                onClick={() => toggleSetting('reducedMotion')}
-                className={`w-12 h-6 rounded-full transition-colors ${
-                  settings.reducedMotion ? 'bg-blue-400' : 'bg-gray-600'
-                }`}
-                aria-pressed={settings.reducedMotion}
-                aria-label={`Toggle reduced motion. Currently ${settings.reducedMotion ? 'on' : 'off'}`}
-              >
-                <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                  settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
-                }`} />
-              </button>
+            <div className="border-t border-border my-2" />
+=======
+=======
+            
+            {/* Motion and Navigation */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold flex items-center gap-2">
+                <span>🖱️</span>
+                Navigation & Motion
+              </h4>
+              
+              <div className="flex items-center justify-between">
+                <Label.Root htmlFor="reduced-motion" className="text-sm">
+                  Reduced Motion
+                </Label.Root>
+                <Switch.Root
+                  id="reduced-motion"
+                  checked={settings.reducedMotion}
+                  onCheckedChange={(checked) => handleSettingChange('reducedMotion',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
+                </Switch.Root>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <Label.Root htmlFor="keyboard-nav" className="text-sm">
+                  Keyboard Navigation
+                </Label.Root>
+                <Switch.Root
+                  id="keyboard-nav"
+                  checked={settings.keyboardNavigation}
+                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
+                </Switch.Root>
+                <Label htmlFor="reduced-motion" className="text-sm">
+                  Reduced Motion
+                </Label>
+                <Switch
+                  id="reduced-motion"
+                  checked={settings.reducedMotion}
+                  onCheckedChange={(checked) => handleSettingChange('reducedMotion',  checked)}
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <Label htmlFor="keyboard-nav" className="text-sm">
+                  Keyboard Navigation
+                </Label>
+                <Switch
+                  id="keyboard-nav"
+                  checked={settings.keyboardNavigation}
+                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation',  checked)}
+                />
+=======
+              </div>
             </div>
             
-            <div className="flex items-center justify-between">
-              <label htmlFor="focus-visible" className="text-gray-300">
-                Focus Indicators;
-              </label>
-              <button;
-                id="focus-visible"
-                onClick={() => toggleSetting('focusVisible')}
-                className={`w-12 h-6 rounded-full transition-colors ${
-                  settings.focusVisible ? 'bg-blue-400' : 'bg-gray-600'
-                }`}
-                aria-pressed={settings.focusVisible}
-                aria-label={`Toggle focus indicators. Currently ${settings.focusVisible ? 'on' : 'off'}`}
-              >
-                <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                  settings.focusVisible ? 'translate-x-6' : 'translate-x-0.5'
-                }`} />
-              </button>
+            <Separator />
+                <label htmlFor="reduced-motion" className="text-sm">
+                  Reduced Motion
+                </label>
+                <input
+                  type="checkbox"
+                  id="reduced-motion"
+                  checked={settings.reducedMotion}
+                  onChange={(e) => handleSettingChange('reducedMotion',  e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="keyboard-nav" className="text-sm">
+                  Keyboard Navigation
+                </label>
+                <input
+                  type="checkbox"
+                  id="keyboard-nav"
+                  checked={settings.keyboardNavigation}
+                  onChange={(e) => handleSettingChange('keyboardNavigation',  e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
             </div>
-          </div>
-          
-          <div className="mt-4 pt-3 border-t border-gray-700">
-            <button;
-              onClick={resetSettings}
-              className="w-full bg-blue-400/20,
-  hove: r:bg-blue-400/30 text-blue-400 py-2 px-4 rounded transition-colors"
-              aria-label="Reset all accessibility settings"
-            >
-              Reset Settings;
-            </button>
-          </div>
-          
-          <div className="mt-3 pt-2 border-t border-gray-700 text-center">
-            <span className="text-gray-500 text-xs">Press Ctrl+Shift+A to toggle</span>
-          </div>
-        </div>
-      )},
-  {children}
+            
+            <div className="border-t border-border my-2" />
+=======
+=======
+            
+            {/* Screen Reader */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold flex items-center gap-2">
+                <span>🔊</span>
+                Screen Reader
+              </h4>
+              
+              <div className="flex items-center justify-between">
+                <Label.Root htmlFor="screen-reader" className="text-sm">
+                  Enhanced Support
+                </Label.Root>
+                <Switch.Root
+                  id="screen-reader"
+                  checked={settings.screenReader}
+                  onCheckedChange={(checked) => handleSettingChange('screenReader',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
+                </Switch.Root>
+                <label htmlFor="screen-reader" className="text-sm">
+                  Enhanced Support
+                </label>
+                <input
+                  type="checkbox"
+                  id="screen-reader"
+                  checked={settings.screenReader}
+                  onChange={(e) => handleSettingChange('screenReader',  e.target.checked)}
+                  className="ml-2"
+                />
+=======
+                <Label htmlFor="screen-reader" className="text-sm">
+                  Enhanced Support
+                </Label>
+                <Switch
+                  id="screen-reader"
+                  checked={settings.screenReader}
+                  onCheckedChange={(checked) => handleSettingChange('screenReader',  checked)}
+                />
+=======
+              </div>
+            </div>
+            
+            {/* Quick Actions */}
+            <div className="pt-2">
+              <Button
+                onClick={resetSettings}
+                variant="outline"
+                size="sm"
+                className="w-full"
+              >
+                <span className="mr-2">⚙️</span>
+                Reset to Defaults
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      )}
     </>
-  )
+  );
 }
+
+// CSS classes for accessibility features
+export const accessibilityStyles = `
+  /* High Contrast Mode */
+  .high-contrast {
+    --backgroun, d: 0 0% 0%;
+    --foregroun, d: 0 0% 100%;
+    --primar, y: 0 0% 100%;
+    --secondar, y: 0 0% 20%;
+    --mute, d: 0 0% 20%;
+    --accen, t: 0 0% 100%;
+    --borde, r: 0 0% 100%;
+    --inpu, t: 0 0% 100%;
+    --rin, g: 0 0% 100%;
+  }
+  
+  /* Large Text Mode */
+  .large-text {
+    font-siz, e: 1.2em;
+    line-heigh, t: 1.6;
+  }
+  
+  .large-text h1 { font-siz, e: 2.5em; }
+  .large-text h2 { font-siz, e: 2em; }
+  .large-text h3 { font-siz, e: 1.75em; }
+  .large-text p { font-siz, e: 1.2em; }
+  
+  /* Reduced Motion */
+  .reduced-motion *, .reduced-motion *::befor, e, .reduced-motion *::after {
+    animation-duratio, n: 0.01ms !important;
+    animation-iteration-coun, t: 1 !important;
+    transition-duratio, n: 0.01ms !important;
+    scroll-behavio, r: auto !important;
+  }
+  
+  /* Focus Indicator */
+  .focus-visibl, e:focus {
+    outlin, e: 3px solid hsl(var(--ring));
+    outline-offse,  t: 2px;
+  }
+  
+  /* Screen Reader Only */
+  .sr-only {
+    positio, n: absolute;
+    widt, h: 1px;
+    heigh, t: 1px;
+    paddin, g: 0;
+    margi, n: -1px;
+    overflo, w: hidden;
+    cli, p: rect(0, 0, 0, 0);
+    white-spac, e: nowrap;
+    borde, r: 0;
+  }
+  
+  /* Focus visible utility */
+  .focus-visibl, e:focus-visible {
+    outlin, e: 2px solid hsl(var(--ring));
+    outline-offse, t: 2p, x;
+  }
+`;

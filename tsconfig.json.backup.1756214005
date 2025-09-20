@@ -1,0 +1,128 @@
+{
+  "compilerOptions": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "target": "ES2020",
+=======
+    "target": "ES2024",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+<<<<<<< HEAD
+      "@/pages/*": ["./src/pages/*", "./pages/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/api/*": ["./src/api/*"],
+      "@/types/*": ["./src/types/*", "./types/*"],
+=======
+      "@/pages/*": ["./src/pages/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/api/*": ["./src/api/*"],
+      "@/types/*": ["./src/types/*"],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/context/*": ["./src/context/*"],
+      "@/services/*": ["./src/services/*"],
+<<<<<<< HEAD
+      "react-router-dom": ["./src/stubs/react-router-dom.tsx"],
+      "react-router": ["./src/stubs/react-router-dom.tsx"],
+      "next-cloudinary": ["./types/next-cloudinary.d.ts"],
+      "types/*": ["./types/*"]
+=======
+      "axios": ["./src/lib/axios.ts"],
+      "notistack": ["./src/stubs/notistack.ts"],
+      "@sentry/browser": ["./src/stubs/sentry.ts"]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
+    },
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"],
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+<<<<<<< HEAD
+    "jsx": "preserve",
+=======
+    "jsx": "react-jsx",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+=======
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+>>>>>>> origin/cursor/website-audit-and-enhancement-145a
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+<<<<<<< HEAD
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+<<<<<<< HEAD
+    "incremental": true,
+    "plugins": [{ "name": "next" }]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+=======
+    "incremental": true
+  },
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/index.css",
+    "vite-env.d.ts"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
+  ],
+  "exclude": [
+    "src/**",
+    "node_modules"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
