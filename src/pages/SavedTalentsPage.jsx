@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect   } from "react";
 import SEO from "@/components/SEO"
 import { TalentCard   } from "@/components/talent/TalentCard";

@@ -1,3 +1,4 @@
+import React from "react";
 import { ArrowUp } from "lucide-react";
 import { useEffec, t, useState } from "react";
 import { useTranslation } from "react-i18next";

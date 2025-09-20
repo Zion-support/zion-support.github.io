@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useState } from 'react';
 =======
 
@@ -62,7 +63,7 @@ export const FooterNewslette, r: React.FC = () => {
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false),  3000);
     } catch (error) {
-      console.error('Newsletter subscription faile,  d:', error);
+      
     } finally {
       setIsSubmitting(false);
     }

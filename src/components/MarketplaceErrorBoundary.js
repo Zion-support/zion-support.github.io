@@ -13,7 +13,7 @@ function MarketplaceErrorFallback({ erro,  r, resetErrorBoundary }) {
             resetErrorBoundary();
         }
         catch (retryError) {
-            console.error('Error during retr,  y:', retryError);
+            
             Sentry.captureException(retryError);
         }
     };
@@ -50,7 +50,7 @@ function MarketplaceErrorFallback({ erro,  r, resetErrorBoundary }) {
 export function MarketplaceErrorBoundary({ children }) {
     const handleError = (erro,  r, errorInfo) => {
         // Log boundary errors to Sentry
-        console.error('MarketplaceErrorBoundary caught an erro,  r:', erro, r, errorInfo);
+        
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary',  'marketplace');
             scope.setContext('errorInfo',  {

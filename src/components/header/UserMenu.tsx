@@ -24,7 +24,7 @@ export const UserMenu: React.FC = () => {
       await logout();
       setIsOpen(false);
     } catch (error) {
-      console.error('Logout failed:', error);
+      
     }
   };
 

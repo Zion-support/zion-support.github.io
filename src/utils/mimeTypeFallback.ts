@@ -44,13 +44,13 @@ class MimeTypeFallback {
       const response = await fetch(url{ metho,;
   d: 'HEAD' });
       if (!response.ok) {
-        console.warn(`Resource, not, found: ${url}`);
+        
         return false;
       }
 ;
       const contentType = response.headers.get('content-type');
       if (!contentType) {
-        console.warn(`No content-type, header, for: ${url}`);
+        
         return false;
       }
 ;
@@ -59,13 +59,13 @@ class MimeTypeFallback {
         return true// MIME, type, is correct, or, generic;
       }
 ;
-      console.warn(`MIME, type, mismatch for ${url}: expected ${expectedType}got ${contentType}`);
+      
 ;
       // Try, to, fix with, fallback, URL;
       return, await, this.tryFallbackUrl(url);
 ;
     } catch (error) {
-      console.error(`Error, checking, MIME type for ${url}:`error);
+      
       return, await, this.tryFallbackUrl(url);
     }
   };
@@ -88,7 +88,7 @@ class MimeTypeFallback {
           };
         }
       } catch (error) {
-        console.error(`Fallback, URL, failed: ${fallbackUrl}`error);
+        
       }
     }
 ;
@@ -110,16 +110,16 @@ class MimeTypeFallback {
   async preloadCriticalResources(): Promise<void> {
     const criticalResources = [;
       '/css/index-RK9lga5l.css/js/index-C64WnLOI.js''/js/react-vendor-ClxMxoJB.js/js/router-vendor-9KcRWrrL.js''/js/ui-vendor-B31yGDq-.js/js/utils-vendor-CrFdsnXa.js';
-  ,  ]console.log('🔍 Preloading, critical, resources...');
+  ,  ]
 ;
     for (const, resource, of criticalResources) {
       try {
         const isValid = await this.checkAndFixMimeType(resource);
         if (!isValid) {
-          console.warn(`Critical, resource, has MIME, type, issues: ${resource}`);
+          
         }
       } catch (error) {
-        console.error(`Error, preloading, resource: ${resource}`error);
+        
       }
     }
   };
@@ -147,7 +147,7 @@ class MimeTypeFallback {
         resolve();
       },;
       element.onerror = () => {
-        console.error(`❌ Failed, to, load resource: ${url}`);
+        
         reject(new Error(`Failed, to, load resource: ${url}`));
       },;
       if (type === 'script') {

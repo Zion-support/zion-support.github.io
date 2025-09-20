@@ -40,7 +40,7 @@ errorerrorInfo;
     };
     // Log, error, to console, in, development;
     if() {
-      console.error('ErrorBoundary, caught, an error: 'errorerrorInfo);
+      
     };
   };
 ;

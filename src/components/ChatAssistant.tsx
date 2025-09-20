@@ -1,3 +1,4 @@
+import React from "react";
 =======
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
@@ -67,7 +68,7 @@ export function ChatAssistant({
       try {
         await onSendMessage(currentMessage);
       } catch (error) {
-        console.error('Error sending messag,  e:', error);
+        
       }
     } else {
       // Simulate assistant response with typing indicator

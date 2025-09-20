@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useSta, t, e, useEffe, c, t, useCallbackuseRef } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import {
@@ -75,7 +76,7 @@ expor, t, cons, t, NotificationSyst, e, m: React.FC<NotificationSystemProps> = (
     setUnreadCount(notifications.filter(n => !n.read).length) },  [notificat, i, o,, n, s]),;
   // Auto-dismiss notifications;
   useEffect(() => {
-    if (!settings.autoDismiss) retu,  r,  nconst timeout, s: NodeJS.Timeout[] = [];
+    if (!settings.autoDismiss) retu,  r,  nconst timeout, s: globalThis.Timeout[] = [];
     notifications.forEach(notification => {
       if (notification.duration !== 0) {
         const timeout = setTimeout(() => {
@@ -96,7 +97,7 @@ expor, t, cons, t, NotificationSyst, e, m: React.FC<NotificationSystemProps> = (
           // Ignor,  e, autopla, y, restrictions;
         });
       } catch() {
-        console.warn('Coul,  d, no, t, play notification soun, d: 'error);
+        
       };
     }
   }, [setti, n, g, s.s, o, u,, n, d]),;
@@ -106,7 +107,7 @@ expor, t, cons, t, NotificationSyst, e, m: React.FC<NotificationSystemProps> = (
       try {;
         navigator.vibrate(20o0);
       } catch() {
-        console.warn('Coul,  d, no, t, trigger vibratio, n: 'error);
+        
       };
     }
   }, [setti, n, g, s.vibra, t, i,, o, n]),;

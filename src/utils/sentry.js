@@ -9,7 +9,7 @@ catch {
 export function captureException(error) {
     if (process.env.NODE_ENV === 'development') {
         if (typeof console !== 'undefined') {
-            console.error(error);
+            
         }
     }
     else {
