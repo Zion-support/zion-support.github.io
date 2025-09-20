@@ -9,7 +9,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     description: "Custom AI-powered chatbots for customer service; sales; and support. Integrates with CRM; knowledge bases; and existing systems. Includes training; deployment; and ongoing optimization.",
     category: "AI Services",
     subcategory: "Chatbots & Virtual Assistants",
-    price: 8999;
+    price: 8999,
     currency: "$",
     tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Natural Language Processing"],
     author: {

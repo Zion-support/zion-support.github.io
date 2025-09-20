@@ -1,9 +1,9 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route } from "react-router-dom";
 export interface ServiceContact {
   phone: string;
     email: string;
     website: string;
-    address: string;,
+    address: string;
 }
 
 export interface MicroSaasService {
