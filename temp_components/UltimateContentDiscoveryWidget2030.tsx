@@ -139,7 +139,7 @@ const UltimateContentDiscoveryWidget2030 = () => {
     return matchesSearch && matchesCategory,
   }),
 
-  const getCategoryInfo = (categoryId) : any => {
+  const getCategoryInfo = (categoryId) => {
     return categories.find(cat => cat.id === categoryId) || categories[0],
   },
 
@@ -152,5 +152,4 @@ const UltimateContentDiscoveryWidget2030: React.FC = () => {
   )
 },
 
-export default UltimateContentDiscoveryWidget2030;
-  }
+export default UltimateContentDiscoveryWidget2030,

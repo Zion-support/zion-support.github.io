@@ -22,8 +22,8 @@ function findImages(dir, images = []) {,
     } else {,
       const ext = path.extname(file).toLowerCase(),
       if (imageExtensions.includes(ext)) {,
-        images.push(filePath);
-};
+        images.push(filePath),
+      }
     }
   }),
   return images,
@@ -42,8 +42,8 @@ function optimizeImage(imagePath) {,
     // For now, we'll just copy the original,
     if (!fs.existsSync(optimizedPath)) {,
       fs.copyFileSync(imagePath, optimizedPath),
-      optimizedImages.push(optimizedPath);
-};
+      optimizedImages.push(optimizedPath),
+    }
   }),
   return optimizedImages,
 }
@@ -101,5 +101,5 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({,
   console.log('✅ Created responsive image component'),
 } catch (error) {,
   console.error('❌ Image optimization failed:', error),
-  process.exit(1);
-  }'
+  process.exit(1),
+}

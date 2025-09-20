@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
-export default function QuantumCybersecurityPage() : any {
+export default function QuantumCybersecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-cybersecurity'));
   if (!service) return null;
 
@@ -51,12 +51,12 @@ export default function QuantumCybersecurityPage() : any {
         </div>
       </div>
     </Layout>
-  ),
+  );
 
-export async function getServerSideProps() : any {
+export async function getServerSideProps() {
   return {
     props: {}
   };
-  }
+}
 }
 

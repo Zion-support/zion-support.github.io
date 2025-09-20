@@ -24,8 +24,9 @@ serve(async () => {
       await mailchimp.request(`/lists/${listId}/segments`, {
         method: 'POST',
         body: JSON.stringify({ name: segmentName, static_segment: emails })
-      });
-};
+      }),
+    }
+
     return new Response(JSON.stringify({ exported: (users || []).length }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
@@ -35,6 +36,6 @@ serve(async () => {
     return new Response(JSON.stringify({ error: err.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
-    });
+    }),
   }
 }),

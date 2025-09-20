@@ -11,7 +11,7 @@ export default function FeatureCTAsSection({ }: FeatureCTAsSectionProps) {,
     <div>,
       <h1>FeatureCTAsSection</h1>,
       <p>This component is currently under development.</p>,
-    </div>);
-  }
+    </div>),
+}
 
 }}}}}}}}

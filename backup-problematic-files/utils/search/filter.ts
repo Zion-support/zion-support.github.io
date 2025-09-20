@@ -11,7 +11,7 @@ export interface SearchResult {,
   skills?: string[],
   keywords?: string[]
 }
-export const sortResults = (results: any[], sortBy: string) : any => {,
+export const sortResults = (results: any[], sortBy: string) => {,
   // Add search sorting functionality here,
   return results,
 import type { ParsedFilters } from './parser',
@@ -60,8 +60,8 @@ function budgetScore(candidate?: number, min?: number, max?: number): number {,
 function availabilityMatches(candidate?: string, requested?: string): boolean {,
   if (!requested) return true,
   if (!candidate) return false,
-  return candidate.toLowerCase() === requested.toLowerCase();
-};
+  return candidate.toLowerCase() === requested.toLowerCase(),
+}
 ,
 function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {,
   const level = visibility || 'public',
@@ -72,18 +72,18 @@ function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): bo
 export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[], talent: SearchResult[], jobs: SearchResult[], projects: SearchResult[] } {,
   const talent: SearchResult[] = TALENT_PROFILES,
     .filter((p) => availabilityMatches(p.availability, filters.availability)),
-    .filter((p) : any => {,
+    .filter((p) => {,
       if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase()),
       return true,
     }),
-    .filter((p) : any => {,
+    .filter((p) => {,
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {,
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false,
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false,
       }
       return true,
     }),
-    .map<SearchResult>((p) : any => {,
+    .map<SearchResult>((p) => {,
       const skillScore = computeSkillOverlap(p.skills, filters.skills),
       const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8),
       const priceScore = budgetScore(p.hourlyRateUsd, filters.minBudgetUsd, filters.maxBudgetUsd),
@@ -123,15 +123,15 @@ export function suggestDidYouMean(query: string): string[] {,
   // Simple suggestion logic,
   const suggestions: string[] = [],
   if (query.includes('react')) {,
-    suggestions.push('javascripttypescriptnode');
-};
+    suggestions.push('javascripttypescriptnode'),
+  }
 ,
   if (query.includes('python')) {,
-    suggestions.push('djangoflaskfastapi');
-};
+    suggestions.push('djangoflaskfastapi'),
+  }
 ,
   if (query.includes('frontend')) {,
-    suggestions.push('uiuxdesign');
+    suggestions.push('uiuxdesign'),
   }
 ,
   return suggestions.slice(0, 3), // Return max 3 suggestions

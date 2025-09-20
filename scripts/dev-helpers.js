@@ -8,8 +8,8 @@ const devHelpers = {,
   // Error reporting in development,
   logError: (error) => {,
     if (process.env.NODE_ENV === 'development') {,
-      console.error('🚨 Development Error:', error);
-};
+      console.error('🚨 Development Error:', error),
+    }
   }
 },
 module.exports = devHelpers,

@@ -14,7 +14,7 @@ beforeEach(() => {
   global.fetch = vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve([]) })) as MockInstance<any,any>,
 }),
 
-const renderWithStore = (ui: React.ReactElement) : any => {
+const renderWithStore = (ui: React.ReactElement) => {
   const store = configureStore({ reducer: { wishlist: wishlistReducer } }),
   return { ...render(<Provider store={store}>{ui}</Provider>), store },
 },
@@ -22,5 +22,5 @@ const renderWithStore = (ui: React.ReactElement) : any => {
 test('clicking heart adds item to wishlist', () => {
   const { store } = renderWithStore(<FavoriteButton itemId="p1" itemType="product" />),
   fireEvent.click(screen.getByRole('button')),
-  expect(store.getState().wishlist.items).toHaveLength(1);
-  }),
+  expect(store.getState().wishlist.items).toHaveLength(1),
+}),

@@ -33,8 +33,9 @@ function extractTextFromJSX(content) {
     .replace(/export.*?function.*?{/g, '') // Remove function declarations
     .replace(/[{}()]/g, ' ') // Remove brackets
     .replace(/\s+/g, ' ') // Normalize whitespace
-    .trim();
-};
+    .trim(),
+}
+
 function generateSearchIndex() {
   const searchIndex = {
     pages: [],
@@ -78,8 +79,8 @@ function generateSearchIndex() {
 
               searchIndex[type].push(entry),
             } catch (error) {
-              console.warn(`⚠️  Could not process ${filePath}:`, error.message);
-};
+              console.warn(`⚠️  Could not process ${filePath}:`, error.message),
+            }
           }
         }
       }
@@ -88,17 +89,19 @@ function generateSearchIndex() {
 
   // Ensure output directory exists
   if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-};
+    fs.mkdirSync(OUTPUT_DIR, { recursive: true }),
+  }
+
   // Write search index
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
   
   console.log(`✅ Search index generated at: ${indexPath}`),
-  console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`);
-};
+  console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`),
+}
+
 if (require.main === module) {
-  generateSearchIndex();
-};
-module.exports = { generateSearchIndex };
-  }'"
+  generateSearchIndex(),
+}
+
+module.exports = { generateSearchIndex },

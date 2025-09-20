@@ -5,10 +5,10 @@ function mergeRecords(targetMap, incoming) {,
     if (!item || !item.id) return,
     const existing = targetMap.get(item.id),
     if (!existing || existing.version < (item.version || 0)) {,
-      targetMap.set(item.id, item);
-};
-  });
-};
+      targetMap.set(item.id, item),
+    }
+  }),
+}
 ,
 exports.receiveSyncUpdate = (req, res) => {,
   const { proposals = [], tokenTransfers = [], talentMoves = [], resolutions = [], leaderboard = [], merkleRoot } = req.body,
@@ -32,5 +32,5 @@ exports.getSyncState = (_req, res) => {,
     resolutions: Array.from(syncStore.resolutions.values()),
     leaderboard: Array.from(syncStore.leaderboard.values()),
     lastUpdated: syncStore.lastUpdated},
-  res.json(state);
-  },'
+  res.json(state),
+},

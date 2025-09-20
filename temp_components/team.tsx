@@ -9,7 +9,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 
-export default function TeamPage() : any {
+export default function TeamPage() {
   const teamMembers = [
     {
       name: 'Kleber Oliveira',

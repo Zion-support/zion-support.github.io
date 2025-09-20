@@ -15,20 +15,20 @@ class ErrorPreventionAutomation {,
     this.runInterval = 60000, // 1 minute,
     this.isRunning = false,
     this.setupLogging(),
-    this.log('Error Prevention Automation started');
-};
+    this.log('Error Prevention Automation started'),
+  }
   setupLogging() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { "recursive": true });
-};
+      fs.mkdirSync(logDir, { "recursive": true }),
+    }
   }
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(message),
-    fs.appendFileSync(this.logFile, logMessage);
-};
+    fs.appendFileSync(this.logFile, logMessage),
+  }
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
   async runErrorPrevention() {,
     try {,
@@ -56,8 +56,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
       this.log(`Error prevention completed in ${results.duration}ms`),
     } catch (error) {,
       this.log(`Error prevention "failed": ${error.message}`),
-      await this.reportError('error-prevention', error);
-};
+      await this.reportError('error-prevention', error),
+    }
   }
   async checkLinting() {,
     try {,
@@ -115,14 +115,14 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
       const moderateMatch = output.match(/(\d+) moderate,/,),
       const lowMatch = output.match(/(\d+) low,/,),
       if (vulnerabilities.critical = parseInt(criticalMatch[1])) {,
-    vulnerabilities.critical = parseInt(criticalMatch[1]);
-};
+    vulnerabilities.critical = parseInt(criticalMatch[1]),
+  }
       if (vulnerabilities.high = parseInt(highMatch[1])) {,
-    vulnerabilities.high = parseInt(highMatch[1]);
-};
+    vulnerabilities.high = parseInt(highMatch[1]),
+  }
       if (vulnerabilities.moderate = parseInt(moderateMatch[1])) {,
-    vulnerabilities.moderate = parseInt(moderateMatch[1]);
-};
+    vulnerabilities.moderate = parseInt(moderateMatch[1]),
+  }
       if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {,
       this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     return vulnerabilities) {,
@@ -159,8 +159,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
       if ( {,
         this.log('Applying linting fixes...')) {,
      {,
-        this.log('Applying linting fixes...');
-};
+        this.log('Applying linting fixes...'),
+  }
         try {,
           execSync('npm run "lint": fix', { "cwd": this.projectRoot, "timeout": 60000 }),
           fixes.linting = { "success": true, "message": 'Linting fixes applied' }} catch (error) {,
@@ -170,8 +170,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
       if ( {,
         this.log('Updating dependencies...')) {,
      {,
-        this.log('Updating dependencies...');
-};
+        this.log('Updating dependencies...'),
+  }
         try {,
           execSync('npm update', { "cwd": this.projectRoot, "timeout": 300000 }),
           fixes.dependencies = { "success": true, "message": 'Dependencies updated' }} catch (error) {,
@@ -181,8 +181,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
       if ( {,
         this.log('Applying security fixes...')) {,
      {,
-        this.log('Applying security fixes...');
-};
+        this.log('Applying security fixes...'),
+  }
         try {,
           execSync('npm audit fix', { "cwd": this.projectRoot, "timeout": 300000 }),
           fixes.security = { "success": true, "message": 'Security fixes applied' }} catch (error) {,
@@ -192,8 +192,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
       if ( {,
         this.log('Applying performance optimizations...')) {,
      {,
-        this.log('Applying performance optimizations...');
-};
+        this.log('Applying performance optimizations...'),
+  }
         try {,
           execSync('npm run clean', { "cwd": this.projectRoot, "timeout": 30000 }),
           execSync('npm run build', { "cwd": this.projectRoot, "timeout": 300000 }),
@@ -249,5 +249,5 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
 const automation = new ErrorPreventionAutomation,(),
 automation.start().catch(error => {,
   console.error('Failed to start error prevention "automation": ', error),
-  process.exit(1)});
-  }
+  process.exit(1)}),
+}

@@ -2,7 +2,7 @@ import { expect, test, vi } from vitest',import handler from @/pages/api/users/[
 function mockReq(method: string, query: unknown = {}, body?: any) {,
   return { method, query, body } as any,
 },
-function mockRes() : any {,
+function mockRes() {,
   const res: unknown = {},
   res.status = vi.fn().mockReturnValue(res),
   res.json = vi.fn().mockReturnValue(res),
@@ -15,5 +15,5 @@ test('PATCH updates user fields', () => {'  const req = mockReq('PATCH', { id: 1
   handler(req, res),
   expect(res.status).toHaveBeenCalledWith(200),
   expect(res.json).toHaveBeenCalledWith(,
-    expect.objectContaining({ name: New', bio: Bio', avatarUrl: img.png' })  );
-  }),'
+    expect.objectContaining({ name: New', bio: Bio', avatarUrl: img.png' })  ),
+}),

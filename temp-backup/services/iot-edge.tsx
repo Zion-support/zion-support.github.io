@@ -8,6 +8,6 @@ export default function Iotedge({ }: IotedgeProps) {,
     <div>,
       <h1>Iotedge</h1>,
       <p>This component is currently under development.</p>,
-    </div>);
-  }
+    </div>),
+}
 ,

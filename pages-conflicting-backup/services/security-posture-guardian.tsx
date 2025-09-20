@@ -1,7 +1,7 @@
 import Head from 'next/head',
 import Link from 'next/link',
 
-export default function SecurityPostureGuardian() : any {
+export default function SecurityPostureGuardian() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>

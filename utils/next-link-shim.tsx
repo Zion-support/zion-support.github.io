@@ -18,8 +18,8 @@ export default function Link({ hrefchildrenclassName, ...rest }: LinkProps) {,
     return React.cloneElement(children as any, {,
       href: resolvedclassName: mergedClassName,
       ...rest
-    });
-};
+    }),
+  }
 type Href = string | { pathname?: string, href?: string },
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {,
   "href": Href,
@@ -36,13 +36,13 @@ export default function Link({ hrefchildrenclassName, ...rest }: LinkProps) {,
     return React.cloneElement(children as React.ReactElement, {,
       "href": resolved,
       "className": mergedClassName,
-      ...rest});
-};
+      ...rest}),
+  }
   return (,
     <a href={resolved} className={className} {...rest}>,
       {children}
-    </a>);
-  }
+    </a>),
+}
 }
 }
 }

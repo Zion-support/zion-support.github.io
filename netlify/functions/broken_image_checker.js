@@ -8,11 +8,11 @@ function extractImages(html, origin) {,
     if (src.startsWith('http')) {,
       if (src.startsWith(origin)) imgs.push(src),
     } else if (src.startsWith('/')) {,
-      imgs.push(origin.replace(/\/$/, '') + src);
-};
+      imgs.push(origin.replace(/\/$/, '') + src),
+    }
   }
-  return Array.from(new Set(imgs));
-};
+  return Array.from(new Set(imgs)),
+}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -36,8 +36,8 @@ exports.handler = async function(event, context) {,
         const res = await fetch(url, { method: 'HEAD' }),
         results.push({ url, status: res.status, ok: res.ok }),
       } catch (e) {,
-        results.push({ url, status: 0, ok: false, error: String(e) });
-};
+        results.push({ url, status: 0, ok: false, error: String(e) }),
+      }
     }
 ,
     const payload = { origin, generatedAt: new Date().toISOString(), results },
@@ -65,6 +65,6 @@ exports.handler = async function(event, context) {,
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
-},'"
+},

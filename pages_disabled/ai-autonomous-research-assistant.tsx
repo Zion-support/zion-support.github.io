@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
-export default function AiAutonomousResearchAssistant() : any {
+export default function AiAutonomousResearchAssistant() {
 	return (
 		<ServiceLanding
 			title="AI Autonomous Research Assistant"
@@ -21,7 +21,7 @@ export default function AiAutonomousResearchAssistant() : any {
 				"One-click share and exports"
 			]}
 			industries={["SaaS", "Consulting", "VC/PE", "Enterprises"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
+			canonical="https://ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	);
-  }
+}

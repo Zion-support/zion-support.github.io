@@ -225,8 +225,8 @@ class ComprehensiveAutomationRunner {,
       this.log(`❌ Automation runner failed: ${error.message}`, "ERROR"),
       throw error
     },
-  };
   },
+},
 ,
 // Main execution,
 if (import.meta.url === `file: //${process.argv[1]}`) {,

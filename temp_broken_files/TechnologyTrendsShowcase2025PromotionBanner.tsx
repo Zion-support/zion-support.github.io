@@ -90,7 +90,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {,
             </div>,
             {/* Center - Rotating Trends */}
             <div className="hidden md: flex items-center gap-8">,
-              {trends.map((trendindex) : any => {,
+              {trends.map((trendindex) => {,
                 const Icon = trend.icon,
                 return (,
                   <div,
@@ -102,8 +102,8 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {,
                     <Icon className="w-8 h-8 mx-auto mb-2" />,
                     <div className="text-xs font-medium">{trend.name}</div>,
                     <div className="text-lg font-bold">{trend.adoption}</div>,
-                  </div>);
-  })}
+                  </div>),
+              })}
             </div>,
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm: flex-row items-center gap-3">,

@@ -65,13 +65,14 @@ export class PerformanceMonitorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Performance monitoring failed: ${response.statusText}`);
-};
+        throw new Error(`Performance monitoring failed: ${response.statusText}`),
+      }
+
       return await response.json(),
     } catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockMetrics(url);
-};
+      return this.generateMockMetrics(url),
+    }
   }
 
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
@@ -83,13 +84,14 @@ export class PerformanceMonitorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch historical data: ${response.statusText}`);
-};
+        throw new Error(`Failed to fetch historical data: ${response.statusText}`),
+      }
+
       return await response.json(),
     } catch (error) {
       // Generate mock historical data
-      return this.generateMockHistoricalData(url, days);
-};
+      return this.generateMockHistoricalData(url, days),
+    }
   }
 
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
@@ -104,8 +106,8 @@ export class PerformanceMonitorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to set monitoring config: ${response.statusText}`);
-};
+        throw new Error(`Failed to set monitoring config: ${response.statusText}`),
+      }
     } catch (error) {
       console.error('Failed to set monitoring config:', error),
       throw error,
@@ -122,13 +124,14 @@ export class PerformanceMonitorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch alerts: ${response.statusText}`);
-};
+        throw new Error(`Failed to fetch alerts: ${response.statusText}`),
+      }
+
       return await response.json(),
     } catch (error) {
       // Generate mock alerts
-      return this.generateMockAlerts(url);
-};
+      return this.generateMockAlerts(url),
+    }
   }
 
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
@@ -213,8 +216,9 @@ export class PerformanceMonitorService {
         accessibilityScore: Math.floor(Math.random() * 20) + 80,
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,
         seoScore: Math.floor(Math.random() * 20) + 80
-      });
-};
+      }),
+    }
+
     return data,
   }
 
@@ -244,7 +248,7 @@ export class PerformanceMonitorService {
       }
     ],
 
-    return url ? alerts.filter(a => a.url === url) : alerts;
+    return url ? alerts.filter(a => a.url === url) : alerts,
   }
 }
 

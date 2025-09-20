@@ -42,7 +42,7 @@ const LoginPage = () => {
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
             <div className="mx-auto h-12 w-auto">
@@ -50,8 +50,8 @@ const LoginPage = () => {
                 className="mx-auto h-12 w-auto" 
                 src="/logos/zion-logo.png" 
                 alt="Zion Tech" 
-                onError={(e) : any => {
-                  const target = e.target as HTMLImageElement,
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
                 }}
               />
@@ -149,7 +149,7 @@ const LoginPage = () => {
           <div className="text-center">
             <p className="text-xs text-gray-500">
               By signing in, you agree to our{' '}
-              <Link href="/legal/terms" className="text-blue-600 hover: text-blue-500">
+              <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">
                 Terms of Service
               </Link>{' '}
               and{' '}
@@ -162,6 +162,6 @@ const LoginPage = () => {
       </div>
     </>
   );
-  };
+};
 
 export default LoginPage;

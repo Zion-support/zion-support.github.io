@@ -12,8 +12,8 @@ function extractExternalLinks(html, origin) {,
         set.add(u.toString())}
     } catch {}
   }
-  return Array.from(set);
-};
+  return Array.from(set),
+}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -44,8 +44,8 @@ exports.handler = async function(event, context) {,
         const res = await fetch(url, { method: 'HEAD' }),
         results.push({ url, status: res.status, ok: res.ok }),
       } catch (e) {,
-        results.push({ url, status: 0, ok: false, error: String(e) });
-};
+        results.push({ url, status: 0, ok: false, error: String(e) }),
+      }
     }
 ,
     const failing = results.filter(r => !r.ok),
@@ -80,12 +80,12 @@ exports.handler = async function(event, context) {,
       if (existing) {,
         await fetch(existing.comments_url, { method: 'POST', headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' }, body: JSON.stringify({ body }) }),
       } else {,
-        await fetch(`https: //api.github.com/repos/${repo}/issues`, { method: 'POST', headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' }, body: JSON.stringify({ title, body, labels: ['automationexternal-links'] }) });
-};
+        await fetch(`https: //api.github.com/repos/${repo}/issues`, { method: 'POST', headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' }, body: JSON.stringify({ title, body, labels: ['automationexternal-links'] }) }),
+      }
     }
 ,
     return { statusCode: 200, body: JSON.stringify({ ok: true, report: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
-},'"
+},

@@ -408,11 +408,11 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
   }
 ],
 
-export const getServicesByIndustry = (industry: string) : any => {
+export const getServicesByIndustry = (industry: string) => {
   return specializedIndustryServices.filter(service => service.industry === industry)
 },
 
-export const getServicesByCategory = (category: string) : any => {
+export const getServicesByCategory = (category: string) => {
   return specializedIndustryServices.filter(service => service.category === category)
 },
 
@@ -421,5 +421,5 @@ export const getPopularServices = () => {
 },
 
 export const getNewServices = () => {
-  return specializedIndustryServices.filter(service => service.isNew);
-  },
+  return specializedIndustryServices.filter(service => service.isNew),
+},

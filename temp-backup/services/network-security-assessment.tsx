@@ -8,6 +8,6 @@ export default function Networksecurityassessment({ }: Networksecurityassessment
     <div>,
       <h1>Networksecurityassessment</h1>,
       <p>This component is currently under development.</p>,
-    </div>);
-  }
+    </div>),
+}
 ,

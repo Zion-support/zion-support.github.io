@@ -229,7 +229,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default BusinessSuccessStories2025PromotionBanner,
-</div></div></div></div></div>,'
+</div></div></div></div></div>,

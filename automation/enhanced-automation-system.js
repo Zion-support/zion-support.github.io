@@ -16,8 +16,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  );
-};
+  ),
+}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -27,14 +27,14 @@ class EnhancedAutomationSystem {,
   constructor() {,
     this.config = this.loadConfig(),
     this.logFile = path.join(__dirname, 'logsenhanced-automation.log'),
-    this.ensureLogDirectory();
-};
+    this.ensureLogDirectory(),
+  }
 ,
   loadConfig() {,
     const configPath = path.join(__dirname, 'config.json'),
     if (fs.existsSync(configPath)) {,
-      return JSON.parse(fs.readFileSync(configPath, 'utf8'));
-};
+      return JSON.parse(fs.readFileSync(configPath, 'utf8')),
+    }
     return {,
       enableLogging: true,
       maxRetries: 3,
@@ -44,8 +44,8 @@ class EnhancedAutomationSystem {,
   ensureLogDirectory() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true });
-};
+      fs.mkdirSync(logDir, { recursive: true }),
+    }
   }
 ,
   log(message, level = 'info') {,
@@ -55,19 +55,19 @@ class EnhancedAutomationSystem {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      logger.error('Failed to write to log file:', error.message);
-};
+      logger.error('Failed to write to log file:', error.message),
+    }
 ,
     if (level === 'error') {} else {,
-      logger.info(message);
-};
+      logger.info(message),
+    }
   }
 ,
   async run() {,
     this.log('Enhanced automation system started'),
     // Add your automation logic here,
-    this.log('Enhanced automation system completed');
-};
+    this.log('Enhanced automation system completed'),
+  }
 }
 ,
 // Export the class,
@@ -84,8 +84,8 @@ if (require.main === module) {,
     .catch((error) => {,
       logger.error('❌ Enhanced automation failed:', error),
       process.exit(1),
-    });
-};
+    }),
+}
 ,
 // Graceful shutdown handling,
 process.on('SIGINT', () => {,
@@ -96,5 +96,5 @@ process.on('SIGINT', () => {,
 process.on('SIGTERM', () => {,
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0);
-  }),
+  process.exit(0),
+}),

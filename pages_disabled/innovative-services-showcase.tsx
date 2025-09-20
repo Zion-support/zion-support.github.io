@@ -11,13 +11,13 @@ import { innovativeAIServices } from '../data/innovative-ai-services';
 import { innovativeITServices } from '../data/innovative-it-services';
 import { innovativeMicroSaas } from '../data/innovative-micro-saas';
 
-export default function InnovativeServicesShowcase() : any {
+export default function InnovativeServicesShowcase() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -28,7 +28,7 @@ export default function InnovativeServicesShowcase() : any {
         delayChildren: 0.2
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -40,9 +40,9 @@ export default function InnovativeServicesShowcase() : any {
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
-  const ServiceCard = ({ service, index }: { service: any, index: number }) => (
+  const ServiceCard = ({ service, index }: { service: any; index: number }) => (
     <motion.div
       variants={itemVariants}
       className="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-xl transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/25"
@@ -136,7 +136,7 @@ export default function InnovativeServicesShowcase() : any {
       {/* Hover Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
     </motion.div>
-  ),
+  );
 
   return (
     <UltraAdvancedFuturisticBackground intensity={1.5} variant="quantum-holographic-advanced">
@@ -356,4 +356,4 @@ export default function InnovativeServicesShowcase() : any {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-  }
+}

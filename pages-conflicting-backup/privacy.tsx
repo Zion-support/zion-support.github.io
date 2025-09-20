@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Shield, Eye, Lock, Database, Users, ArrowRight } from 'lucide-react'
 
 
-export default function Privacy() : any {
+export default function Privacy() {
 	return (
 		<>
 			{/* Hero Section */}
@@ -237,4 +237,3 @@ export default function Privacy() : any {
 		</>
 	)
 }
-'

@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString();
-};
+  return new Date().toISOString(),
+}
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-SECURITY-HEALTH] ${message}`,
-  console.log(line);
-};
+  console.log(line),
+}
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,20 +26,20 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr);
-};
+    if (stderr) console.error(stderr),
+  }
   return { status, stdout, stderr },
 }
 ,
 function runGit(args, options = {}) {,
-  return run("git", args, options);
-};
+  return run("git", args, options),
+}
 ,
 function ensureRepoRoot() {,
   const gitDir = path.join(process.cwd(), ".git"),
   if (!fs.existsSync(gitDir)) {,
-    throw new Error(`No .git directory found in ${process.cwd()}`);
-};
+    throw new Error(`No .git directory found in ${process.cwd()}`),
+  }
 }
 ,
 function runSecurityScan() {,
@@ -101,8 +101,8 @@ function checkVulnerableDependencies() {,
         vulnerablePackages.push({,
           package: pkg,
           version: packageLock.dependencies[pkg].version,
-          risk: "medium"});
-};
+          risk: "medium"}),
+      }
     }
 ,
     if (vulnerablePackages.length > 0) {,
@@ -143,8 +143,8 @@ function validateSecurityFiles() {,
           file: file,
           exists: false,
           size: 0,
-          healthy: false});
-};
+          healthy: false}),
+      }
     }
 ,
     const healthy = validationResults.filter(r => r.healthy).length,
@@ -186,8 +186,8 @@ function checkEnvironmentSecurity() {,
         exists: false,
         hasSecrets: false,
         healthy: true,
-        risk: "none"});
-};
+        risk: "none"}),
+    }
 ,
     // Check for .env.local file,
     if (fs.existsSync(envLocalFile)) {,
@@ -205,8 +205,8 @@ function checkEnvironmentSecurity() {,
         exists: false,
         hasSecrets: false,
         healthy: true,
-        risk: "none"});
-};
+        risk: "none"}),
+    }
 ,
     const healthy = envResults.filter(r => r.healthy).length,
     const total = envResults.length,
@@ -242,8 +242,8 @@ function runHealthChecks() {,
       healthResults.push({,
         check: "automation-directory",
         healthy: false,
-        details: "Automation directory not found"});
-};
+        details: "Automation directory not found"}),
+    }
 ,
     // Check if scripts directory exists,
     const scriptsDir = path.join(process.cwd(), "scripts"),
@@ -258,8 +258,8 @@ function runHealthChecks() {,
       healthResults.push({,
         check: "scripts-directory",
         healthy: false,
-        details: "Scripts directory not found"});
-};
+        details: "Scripts directory not found"}),
+    }
 ,
     // Check if logs directory exists and is writable,
     const logsDir = path.join(process.cwd(), "automation", "logs"),
@@ -274,14 +274,14 @@ function runHealthChecks() {,
         healthResults.push({,
           check: "logs-directory",
           healthy: false,
-          details: "Logs directory not writable"});
-};
+          details: "Logs directory not writable"}),
+      }
     } else {,
       healthResults.push({,
         check: "logs-directory",
         healthy: false,
-        details: "Logs directory not found"});
-};
+        details: "Logs directory not found"}),
+    }
 ,
     const healthy = healthResults.filter(r => r.healthy).length,
     const total = healthResults.length,
@@ -425,12 +425,13 @@ async function main() {,
     if (securityScan.success && npmAudit.success && healthChecks.healthy === healthChecks.total) {,
       process.exit(0),
     } else {,
-      process.exit(1);
-};
+      process.exit(1),
+    }
+
   } catch (error) {,
     log(`Fatal error: ${String(error)}`),
-    process.exit(1);
-};
+    process.exit(1),
+  }
 }
 ,
 // Run if called directly,
@@ -438,8 +439,8 @@ if (require.main === module) {,
   main().catch(error => {,
     log(`Unhandled error: ${String(error)}`),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
 module.exports = {,
   main,

@@ -28,7 +28,7 @@ vi.mock('@/utils/apiErrorHandler', () => ({ // Changed vi.mock to vi.mock'  show
 })),
 vi.mock('@/hooks/use-toast', () => ({ // Changed vi.mock to vi.mock'  toast: vi.fn(), // Changed vi.fn to vi.fn
 })),
-vi.mock('@/utils/referralUtils', async (importOriginal) : any => { // Changed vi.mock to vi.mock'    const actual = await importOriginal<typeof referralUtils>(),
+vi.mock('@/utils/referralUtils', async (importOriginal) => { // Changed vi.mock to vi.mock'    const actual = await importOriginal<typeof referralUtils>(),
     return {,
         ...actual,
         trackReferral: vi.fn().mockResolvedValue(false), // Changed vi.fn to vi.fn,
@@ -96,8 +96,8 @@ describe('useAuthOperations', () => {'  let _setUser: vi.Mock, // Changed vi.Moc
       (referralUtils.trackReferral as vi.Mock).mockResolvedValueOnce(true), // Simulate referral was used, changed vi.Mock,
       const { _result } = renderHook(() => useAuthOperations(setUser, setIsLoading, setAvatarUrl)),
       await act(async () => {,
-        await result.current.signUp(signUpParams.email, signUpParams.password, { name: signUpParams.display_name });
-  }),
+        await result.current.signUp(signUpParams.email, signUpParams.password, { name: signUpParams.display_name }),
+      }),
       expect(referralUtils.trackReferral).toHaveBeenCalledWith(mockUser.id, signUpParams.email),
       expect(fetch).toHaveBeenCalledWith('/api/points/increment', expect.objectContaining({'        body: JSON.stringify({ userId: mockUser.id, amount: 10, reason: signup' })      })),
       expect(fetch).toHaveBeenCalledWith('/api/points/increment', expect.objectContaining({'        body: JSON.stringify({ userId: mockUser.id, amount: 20, reason: referral_signup' }) // Bonus for referral'      })),

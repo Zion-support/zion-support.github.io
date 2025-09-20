@@ -7,8 +7,8 @@ class AutomationTask {,
   }
 ,
   async run() {,
-    throw new Error('run() must be implemented by subclass');
-};
+    throw new Error('run() must be implemented by subclass'),
+  }
 ,
   getStatus() {,
     return {,
@@ -19,8 +19,8 @@ class AutomationTask {,
   }
 ,
   getConfig() {,
-    return this.config;
+    return this.config,
   }
 }
 ,
-module.exports = AutomationTask,'
+module.exports = AutomationTask,

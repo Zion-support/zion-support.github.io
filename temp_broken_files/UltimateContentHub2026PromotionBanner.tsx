@@ -93,7 +93,7 @@ const UltimateContentHub2026PromotionBanner = () => {,
     { icon: BookOpenlabel: ''Whitepaperscount: '98'color: 'text-orange-400' },
     { icon: Calendarlabel: ''Webinarscount: '67'color: 'text-pink-400' }
   ],
-  const getTypeIcon = (type) : any => {,
+  const getTypeIcon = (type) => {,
     const typeMap = {,
       article: FileText,
       video: Video,
@@ -289,7 +289,7 @@ const UltimateContentHub2026PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  );
-  },
+  ),
+},
 export default UltimateContentHub2026PromotionBanner,
 </div></div></div></div></div></div></div></div></div></div></div>,

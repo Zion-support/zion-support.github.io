@@ -3,7 +3,7 @@ import Head from 'next/head',
 import Comprehensive2029ServicesShowcase from '../components/sections/Comprehensive2029ServicesShowcase',
 import UltraFuturisticNavigation2031 from '../components/layout/UltraFuturisticNavigation2031',
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
-export default function Comprehensive2029ServicesPage() : any {,
+export default function Comprehensive2029ServicesPage() {,
   return (,
     <>,
       <Head>,
@@ -67,5 +67,5 @@ export default function Comprehensive2029ServicesPage() : any {,
         <UltraFuturisticFooter2030 />,
       </div>,
     </>,
-  );
-  }
+  ),
+}

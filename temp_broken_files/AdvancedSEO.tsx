@@ -10,5 +10,5 @@ const function AdvancedSEO({ = () => {,
       </div>,
     </div>),
 },
-export default function AdvancedSEO({;
-  }}})))
+export default function AdvancedSEO({,
+}}})))

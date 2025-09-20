@@ -8,13 +8,13 @@ interface AccessibilityControlsProps {
 export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({ 
   className = '',
   position = 'floating'
-}) : any => {
+}) => {
   const [isOpen, setIsOpen] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
   const { preferences, savePreferences, announceToScreenReader } = useAccessibility(),
   // Close panel when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) : any => {
+    const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement,
       if (!target.closest('.accessibility-controls')) {
         setIsOpen(false),
@@ -23,19 +23,19 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
     },
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside),
-      return () => document.removeEventListener('mousedown', handleClickOutside);
-};
+      return () => document.removeEventListener('mousedown', handleClickOutside),
+    }
   }, [isOpen]),
   const togglePanel = () => {
     setIsOpen(!isOpen),
     if (!isOpen) {
-      announceToScreenReader('Accessibility controls opened');
-};
+      announceToScreenReader('Accessibility controls opened'),
+    }
   },
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded),
   },
-  const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) : any => {
+  const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {
     savePreferences({ [key]: value }),
     announceToScreenReader(`${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`),
   },
@@ -200,5 +200,5 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         </div>
       )}
     </div>
-  );
-  },
+  ),
+},

@@ -77,5 +77,5 @@ describe('apiErrorHandler', () => {'  beforeEach(() => {,
       expect(toast).toHaveBeenCalledWith({,
         title: Error',        description: 503: The service is temporarily unavailable. Please try again in a few moments.',        variant: destructive',        onRetry: mockRetryCallback}),
     }),
-  });
-  }),"
+  }),
+}),

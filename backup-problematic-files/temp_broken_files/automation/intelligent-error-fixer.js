@@ -13,14 +13,14 @@ class IntelligentErrorFixer {,
     this.errorPatterns = this.initializeErrorPatterns(),
     // Ensure directories exist,
     fs.mkdirSync(path.dirname(this.logFile), { recursive: true }),
-    fs.mkdirSync(path.dirname(this.reportFile), { recursive: true });
-};
+    fs.mkdirSync(path.dirname(this.reportFile), { recursive: true }),
+  }
   log(message, level = 'INFO') {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,
     console.log(logMessage.trim()),
-    fs.appendFileSync(this.logFile, logMessage);
-};
+    fs.appendFileSync(this.logFile, logMessage),
+  }
   initializeErrorPatterns() {,
     return {,
       // Syntax errors,
@@ -36,8 +36,8 @@ class IntelligentErrorFixer {,
         pattern: /["'][\w\s]*$/m,
         fix: (content, match) => {,
           // Simple fix for unterminated strings - add closing quote,
-          return content.replace(match[0], match[0] + match[0].charAt(0));
-};
+          return content.replace(match[0], match[0] + match[0].charAt(0)),
+        }
       },
       mergeConflicts: {,
         pattern: /||        fix: (content) => {,
@@ -118,8 +118,8 @@ class IntelligentErrorFixer {,
           file: fileMatch[1],
           line: line,
           context: lines.slice(Math.max(0, index - 2), index + 3)
-        });
-};
+        }),
+      }
     }),
     return errors,
   }
@@ -143,8 +143,8 @@ class IntelligentErrorFixer {,
           if (newContent !== content) {,
             content = newContent,
             modified = true,
-            this.log(`Applied ${patternName} fix to ${filePath}`);
-};
+            this.log(`Applied ${patternName} fix to ${filePath}`),
+          }
         }
       }
 ,
@@ -202,11 +202,11 @@ class IntelligentErrorFixer {,
           if (seen.has(relativePath)) {,
             duplicates.push(path.join(dir, file.name)),
           } else {,
-            seen.add(relativePath);
-};
+            seen.add(relativePath),
+          }
         }
-      });
-};
+      }),
+    }
 ,
     scanDirectory(pagesDir),
     // Remove duplicate .js files if .tsx exists,
@@ -215,8 +215,8 @@ class IntelligentErrorFixer {,
         const tsxVersion = duplicate.replace('.js.tsx'),
         if (fs.existsSync(tsxVersion)) {,
           this.log(`Removing duplicate JS file: ${duplicate}`),
-          fs.unlinkSync(duplicate);
-};
+          fs.unlinkSync(duplicate),
+        }
       }
 const fs = require('fs'),
 const path = require('path'),
@@ -235,14 +235,14 @@ const {,
       this.errorPatterns = this.initializeErrorPatterns(),
       // Ensure directories exist,
       fs.mkdirSync(path.dirname(this.logFile), { "recursive": true }),
-      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
-};
+      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true }),
+    }
     log(message, level = 'INFO') {,
       const timestamp = new Date().toISOString(),
       const logMessage = `[${timestamp}] [${level}] ${message}\n`,
       ),
-      fs.appendFileSync(this.logFile, logMessage);
-};
+      fs.appendFileSync(this.logFile, logMessage),
+    }
     initializeErrorPatterns() {,
       return {,
         // Syntax errors,
@@ -343,8 +343,8 @@ const {,
             fixes.push({,
               type: 'syntax',
               file: file,
-              timestamp: new Date().toISOString()});
-};
+              timestamp: new Date().toISOString()}),
+          }
         }
         // Run build again after fixes,
         if (fixes.length > 0) {,
@@ -353,8 +353,8 @@ const {,
           if (secondBuildResult.success) {,
             this.log('Build successful after applying fixes!SUCCESS'),
           } else {,
-            this.log('Build still failing after fixesWARN');
-};
+            this.log('Build still failing after fixesWARN'),
+          }
         }
       }
       // 4. Run other checks,
@@ -364,8 +364,8 @@ const {,
       await this.generateReport(errors, fixes),
       this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`),
     } catch (error) {,
-      this.log(`Error in main execution: ${error.message}`, 'ERROR');
-};
+      this.log(`Error in main execution: ${error.message}`, 'ERROR'),
+    }
   }
 }
     }
@@ -394,8 +394,8 @@ const {,
           errors.push({,
             file: fileMatch[1],
             "line": line,
-            "context": lines.slice(Math.max(0, index - 2), index + 3)});
-};
+            "context": lines.slice(Math.max(0, index - 2), index + 3)}),
+        }
       }),
       return errors,
     }
@@ -418,8 +418,8 @@ const {,
             if (newContent !== content) {,
               content = newContent,
               modified = true,
-              this.log(`Applied ${patternName} fix to ${filePath}`);
-};
+              this.log(`Applied ${patternName} fix to ${filePath}`),
+            }
           }
         }
         // Specific fixes for common issues,
@@ -473,11 +473,11 @@ const {,
             if (seen.has(relativePath)) {,
               duplicates.push(path.join(dir, file.name)),
             } else {,
-              seen.add(relativePath);
-};
+              seen.add(relativePath),
+            }
           }
-        });
-};
+        }),
+      }
       scanDirectory(pagesDir),
       // Remove duplicate .js files if .tsx exists,
       for (const duplicate of duplicates) {,
@@ -485,8 +485,8 @@ const {,
           const tsxVersion = duplicate.replace('.js.tsx'),
           if (fs.existsSync(tsxVersion)) {,
             this.log(`Removing duplicate JS "file": ${duplicate}`),
-            fs.unlinkSync(duplicate);
-};
+            fs.unlinkSync(duplicate),
+          }
         }
       }
     }
@@ -504,8 +504,8 @@ const {,
           execSync(`yarn add ${toInstall.join(' ')}`, { "stdio": 'pipe' }),
           this.log('Successfully installed missing dependencies'),
         } catch (error) {,
-          this.log(`Failed to install "dependencies": ${error.message}`, 'ERROR');
-};
+          this.log(`Failed to install "dependencies": ${error.message}`, 'ERROR'),
+        }
       }
     }
     async generateReport(errors, fixes) {,
@@ -548,8 +548,8 @@ const {,
               fixes.push({,
                 "type": 'syntax',
                 "file": file,
-                "timestamp": new Date().toISOString()});
-};
+                "timestamp": new Date().toISOString()}),
+            }
           }
           // Run build again after fixes,
           if (fixes.length > 0) {,
@@ -558,8 +558,8 @@ const {,
             if (secondBuildResult.success) {,
               this.log('Build successful after applying fixes!SUCCESS'),
             } else {,
-              this.log('Build still failing after fixesWARN');
-};
+              this.log('Build still failing after fixesWARN'),
+            }
           }
         }
         // 4. Run other checks,
@@ -569,17 +569,17 @@ const {,
         await this.generateReport(errors, fixes),
         this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`),
       } catch (error) {,
-        this.log(`Error in main "execution": ${error.message}`, 'ERROR');
-};
+        this.log(`Error in main "execution": ${error.message}`, 'ERROR'),
+      }
     }
   },
 // Main execution,
 if (require.main === module) {,
   const fixer = new IntelligentErrorFixer(),
-  fixer.run().catch(console.error);
-  }
+  fixer.run().catch(console.error),
+}
 module.exports = IntelligentErrorFixer,
 module.exports = IntelligentErrorFixer,
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logserror-fixer.log'), this.reportFile = path.join( __dirname,'reportserror-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||,
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logserror-fixer.log'), this.reportFile = path.join( __dirname,'reportserror-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||,
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logserror-fixer.log'), this.reportFile = path.join( __dirname,'reportserror-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||,)))))))))))))))))))'"
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logserror-fixer.log'), this.reportFile = path.join( __dirname,'reportserror-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||,)))))))))))))))))))

@@ -21,8 +21,8 @@ class AlertingSystem {,
     this.alerts = new Map(),
     this.notificationHistory = new Map(),
     this.emailTransporter = null,
-    this.initializeEmailTransporter();
-};
+    this.initializeEmailTransporter(),
+  }
 ,
   initializeEmailTransporter() {,
     if (this.config.email.host && this.config.email.user && this.config.email.pass) {,
@@ -33,8 +33,8 @@ class AlertingSystem {,
         auth: {,
           user: this.config.email.user,
           pass: this.config.email.pass}
-      });
-};
+      }),
+    }
   }
 ,
   /**,
@@ -48,14 +48,14 @@ class AlertingSystem {,
       alerts.forEach(alert => {,
         if (this.shouldSendAlert(alert, currentTime)) {,
           newAlerts.push(alert),
-          this.alerts.set(alert.id, alert);
-};
+          this.alerts.set(alert.id, alert),
+        }
       }),
     }),
     // Send notifications for new alerts,
     for (const alert of newAlerts) {,
-      await this.sendNotifications(alert);
-};
+      await this.sendNotifications(alert),
+    }
 ,
     // Clean up old alerts,
     this.cleanupOldAlerts(currentTime),
@@ -81,8 +81,8 @@ class AlertingSystem {,
           threshold: this.config.thresholds.memory,
           percentage: Math.round((process.memory / this.config.thresholds.memory) * 100)},
         timestamp: currentTime,
-        category: 'resource'});
-};
+        category: 'resource'}),
+    }
 ,
     // CPU usage alert,
     if (process.cpu > this.config.thresholds.cpu) {,
@@ -97,8 +97,8 @@ class AlertingSystem {,
           threshold: this.config.thresholds.cpu,
           percentage: Math.round((process.cpu / this.config.thresholds.cpu) * 100)},
         timestamp: currentTime,
-        category: 'resource'});
-};
+        category: 'resource'}),
+    }
 ,
     // Process stopped alert,
     if (process.status === 'stopped') {,
@@ -113,8 +113,8 @@ class AlertingSystem {,
           uptime: process.uptime,
           restartCount: process.restartCount},
         timestamp: currentTime,
-        category: 'status'});
-};
+        category: 'status'}),
+    }
 ,
     // High restart count alert,
     if (process.restartCount > this.config.thresholds.restartCount) {,
@@ -129,8 +129,8 @@ class AlertingSystem {,
           threshold: this.config.thresholds.restartCount,
           uptime: process.uptime},
         timestamp: currentTime,
-        category: 'stability'});
-};
+        category: 'stability'}),
+    }
 ,
     // Process not responding alert (if uptime is very low),
     if (process.uptime < 60000 && process.status === 'online') { // Less than 1 minute,
@@ -145,8 +145,8 @@ class AlertingSystem {,
           status: process.status,
           restartCount: process.restartCount},
         timestamp: currentTime,
-        category: 'stability'});
-};
+        category: 'stability'}),
+    }
 ,
     return alerts,
   }
@@ -174,25 +174,25 @@ class AlertingSystem {,
     const promises = [],
     // Email notifications,
     if (this.emailTransporter && this.config.email.recipients) {,
-      promises.push(this.sendEmailAlert(alert));
-};
+      promises.push(this.sendEmailAlert(alert)),
+    }
 ,
     // Slack notifications,
     if (this.config.slack.webhookUrl) {,
-      promises.push(this.sendSlackAlert(alert));
-};
+      promises.push(this.sendSlackAlert(alert)),
+    }
 ,
     // Webhook notifications,
     if (this.config.webhook.url) {,
-      promises.push(this.sendWebhookAlert(alert));
-};
+      promises.push(this.sendWebhookAlert(alert)),
+    }
 ,
     try {,
       await Promise.allSettled(promises),
       // // // // // // console.log(`✅ Notifications sent for alert: ${alert.id}`),
     } catch (error) {,
-      console.error(`❌ Error sending notifications for alert ${alert.id}:`, error);
-};
+      console.error(`❌ Error sending notifications for alert ${alert.id}:`, error),
+    }
   }
 ,
   /**,
@@ -210,8 +210,8 @@ class AlertingSystem {,
         priority: alert.severity === 'high' ? 'high' : 'normal'}),
       // // // // // // console.log(`📧 Email alert sent for ${alert.process}`),
     } catch (error) {,
-      console.error(`❌ Failed to send email alert:`, error);
-};
+      console.error(`❌ Failed to send email alert:`, error),
+    }
   }
 ,
   /**,
@@ -224,8 +224,8 @@ class AlertingSystem {,
       await axios.post(this.config.slack.webhookUrl, slackMessage),
       // // // // // // console.log(`💬 Slack alert sent for ${alert.process}`),
     } catch (error) {,
-      console.error(`❌ Failed to send Slack alert:`, error);
-};
+      console.error(`❌ Failed to send Slack alert:`, error),
+    }
   }
 ,
   /**,
@@ -244,8 +244,8 @@ class AlertingSystem {,
         timeout: 10000}),
       // // // // // // console.log(`🌐 Webhook alert sent for ${alert.process}`),
     } catch (error) {,
-      console.error(`❌ Failed to send webhook alert:`, error);
-};
+      console.error(`❌ Failed to send webhook alert:`, error),
+    }
   }
 ,
   /**,
@@ -344,8 +344,8 @@ class AlertingSystem {,
     const alertsToRemove = [],
     this.alerts.forEach((alert, id) => {,
       if (currentTime - alert.timestamp > maxAge) {,
-        alertsToRemove.push(id);
-};
+        alertsToRemove.push(id),
+      }
     }),
     alertsToRemove.forEach(id => {,
       this.alerts.delete(id),
@@ -355,40 +355,40 @@ class AlertingSystem {,
       const sortedAlerts = Array.from(this.alerts.entries()),
         .sort((a, b) => b[1].timestamp - a[1].timestamp),
       const toRemove = sortedAlerts.slice(this.config.maxAlerts),
-      toRemove.forEach(([id]) => this.alerts.delete(id));
-};
+      toRemove.forEach(([id]) => this.alerts.delete(id)),
+    }
   }
 ,
   /**,
    * Get current alerts,
    */,
   getAlerts() {,
-    return Array.from(this.alerts.values());
-};
+    return Array.from(this.alerts.values()),
+  }
 ,
   /**,
    * Get alerts by severity,
    */,
   getAlertsBySeverity(severity) {,
     return Array.from(this.alerts.values()),
-      .filter(alert => alert.severity === severity);
-};
+      .filter(alert => alert.severity === severity),
+  }
 ,
   /**,
    * Get alerts by process,
    */,
   getAlertsByProcess(processName) {,
     return Array.from(this.alerts.values()),
-      .filter(alert => alert.process === processName);
-};
+      .filter(alert => alert.process === processName),
+  }
 ,
   /**,
    * Clear all alerts,
    */,
   clearAlerts() {,
     this.alerts.clear(),
-    this.notificationHistory.clear();
-};
+    this.notificationHistory.clear(),
+  }
 ,
   /**,
    * Update configuration,
@@ -396,8 +396,8 @@ class AlertingSystem {,
   updateConfig(newConfig) {,
     this.config = { ...this.config, ...newConfig },
     if (newConfig.email) {,
-      this.initializeEmailTransporter();
-};
+      this.initializeEmailTransporter(),
+    }
   }
 ,
   /**,
@@ -418,7 +418,7 @@ class AlertingSystem {,
       recentAlerts: alerts,
         .sort((a, b) => b.timestamp - a.timestamp),
         .slice(0, 10)
-    };
+    },
   }
 }
 ,

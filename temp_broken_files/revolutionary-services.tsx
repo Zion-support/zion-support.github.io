@@ -1,5 +1,5 @@
 
-export default function RevolutionaryServicesPage() : any {,
+export default function RevolutionaryServicesPage() {,
   const [selectedCategory, setSelectedCategory] = useState('All'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All'),
@@ -25,13 +25,13 @@ export default function RevolutionaryServicesPage() : any {,
   let filteredServices = revolutionaryMicroSaasServices,
   // Category filter,
   if (selectedCategory !== 'All') {,
-    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
-};
+    filteredServices = getRevolutionaryServicesByCategory(selectedCategory),
+  }
   // Price range filter,
   if (priceRange !== 'All') {,
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);
-};
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max),
+  }
   // Search filter,
   if (searchQuery) {,
     filteredServices = filteredServices.filter(service =>,
@@ -39,10 +39,10 @@ export default function RevolutionaryServicesPage() : any {,
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       service.category.toLowerCase().includes(searchQuery.toLowerCase()),
-    );
-};
+    ),
+  }
   // Sort services,
-  filteredServices.sort((a, b) : any => {,
+  filteredServices.sort((a, b) => {,
     switch (sortBy) {,
       case 'price':,
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
@@ -621,17 +621,17 @@ export default function RevolutionaryServicesPage() : any {,
   ),
 export default revolutionary-services,
 import React from "react",
-const function RevolutionaryServicesPage() : any { = () => {,
+const function RevolutionaryServicesPage() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
       <div className="container mx-auto px-4 py-20">,
         <div className="text-center">,
-          <h1 className="text-5xl font-bold mb-6">function RevolutionaryServicesPage() : any {</h1>,
+          <h1 className="text-5xl font-bold mb-6">function RevolutionaryServicesPage() {</h1>,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
         </div>,
       </div>,
     </div>,
   ),
 },
-export default function RevolutionaryServicesPage() : any {;
-  }}}}'
+export default function RevolutionaryServicesPage() {,
+}}}}

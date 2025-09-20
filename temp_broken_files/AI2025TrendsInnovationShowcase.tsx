@@ -27,7 +27,7 @@ const AI2025TrendsInnovationShowcase = () => {,
     const interval = setInterval(() => {,
       setActiveTrend((prev) => (prev + 1) % trends.length),
     }4000),
-    return () => clearInterval(interval);
+    return () => clearInterval(interval),
   }[]),
   const trends = [,
     {,

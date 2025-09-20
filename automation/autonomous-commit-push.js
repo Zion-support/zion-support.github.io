@@ -16,8 +16,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  );
-};
+  ),
+}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -27,14 +27,14 @@ class AutonomousCommitPush {,
   constructor() {,
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
-    this.ensureLogDirectory();
-};
+    this.ensureLogDirectory(),
+  }
 ,
   loadConfig() {,
     const configPath = path.join(__dirname, 'config.json'),
     if (fs.existsSync(configPath)) {,
-      return JSON.parse(fs.readFileSync(configPath, 'utf8'));
-};
+      return JSON.parse(fs.readFileSync(configPath, 'utf8')),
+    }
     return {,
       maxCommitSize: 50,
       branch: 'main',
@@ -46,8 +46,8 @@ class AutonomousCommitPush {,
   ensureLogDirectory() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true });
-};
+      fs.mkdirSync(logDir, { recursive: true }),
+    }
   }
 ,
   log(message, level = 'info') {,
@@ -57,12 +57,12 @@ class AutonomousCommitPush {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      logger.error('Failed to write to log file:', error.message);
-};
+      logger.error('Failed to write to log file:', error.message),
+    }
 ,
     if (level === 'error') {} else {,
-      logger.info(message);
-};
+      logger.info(message),
+    }
   }
 ,
   async getGitStatus() {,
@@ -108,8 +108,8 @@ class AutonomousCommitPush {,
     const fileTypes = this.analyzeFileTypes(files),
     const description = this.generateDescription(fileTypes),
     return this.config.commitMessageTemplate.replace('{description}',
-      description);
-};
+      description),
+  }
 ,
   analyzeFileTypes(files) {,
     const types = {},
@@ -134,11 +134,11 @@ class AutonomousCommitPush {,
       } else {,
         descriptions.push(,
           `${count} ${ext.slice(1)} file${count > 1 ? 's' : ''}`,
-        );
-};
+        ),
+      }
     }
-    return descriptions.join();
-};
+    return descriptions.join(),
+  }
 ,
   async commit(message) {,
     try {,
@@ -193,8 +193,8 @@ class AutonomousCommitPush {,
       this.log(`File changed: ${path}`),
       // Clear existing timeout,
       if (commitTimeout) {,
-        clearTimeout(commitTimeout);
-};
+        clearTimeout(commitTimeout),
+      }
 ,
       // Set new timeout for commit,
       commitTimeout = setTimeout(async () => {,
@@ -204,8 +204,8 @@ class AutonomousCommitPush {,
     watcher.on('error', (error) => {,
       this.log(`Watcher error: ${error.message}`, 'error'),
     }),
-    this.log('✅ File watcher started. Changes will be auto-committed after 5 seconds of inactivity.');
-};
+    this.log('✅ File watcher started. Changes will be auto-committed after 5 seconds of inactivity.'),
+  }
 ,
   async execute() {,
     this.log('🚀 Starting autonomous commit and push...'),
@@ -232,10 +232,10 @@ class AutonomousCommitPush {,
 ,
     // Push if enabled,
     if (this.config.autoPush) {,
-      await this.push();
-};
+      await this.push(),
+    }
 ,
-    this.log('✅ Autonomous commit and push completed successfully!');
+    this.log('✅ Autonomous commit and push completed successfully!'),
   }
 }
 ,

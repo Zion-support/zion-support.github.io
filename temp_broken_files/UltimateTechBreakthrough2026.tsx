@@ -53,4 +53,4 @@ const UltimateTechBreakthrough2026: React.FC = () => {,
         </div>,
       </div>,
     </div>)},
-export default UltimateTechBreakthrough2026,'
+export default UltimateTechBreakthrough2026,

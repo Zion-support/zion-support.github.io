@@ -80,6 +80,6 @@ ursor/fix-netlify-build-and-merge-to-main-c435:src/components/DynamicContentCaro
         ))}
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default DynamicContentCarousel,

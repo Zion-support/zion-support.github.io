@@ -18,7 +18,7 @@ class IntelligentOrchestrator {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
-};
+    }
   }
 
   log(message) {
@@ -39,7 +39,7 @@ class IntelligentOrchestrator {
       { name: 'seo-optimizer', path: 'seo-optimizer.js', priority: 'medium' },
       { name: 'security-scanner', path: 'security-scanner.js', priority: 'high' },
       { name: 'test-generator', path: 'test-generator.js', priority: 'medium' }
-    ],
+    ];
 
     for (const system of systems) {
       const systemPath = path.join(__dirname, system.path);
@@ -52,37 +52,37 @@ class IntelligentOrchestrator {
           successRate: 0,
           averageExecutionTime: 0
         });
-};
+      }
     }
   }
 
   async runSystem(systemName, options = {}) {
     const system = this.automationSystems.get(systemName);
     if (!system) {
-      this.log(`❌ System not found: ${systemName}`),
+      this.log(`❌ System not found: ${systemName}`);
       return false;
     }
 
     const startTime = Date.now();
     try {
-      this.log(`🚀 Running system: ${systemName}`),
+      this.log(`🚀 Running system: ${systemName}`);
       
       const result = execSync(`node "${system.path}"`, { 
         encoding: 'utf8',
         stdio: 'pipe',
         ...options
       });
-
-  const executionTime = Date.now() - startTime;
+      
+      const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, true, executionTime);
       
-      this.log(`✅ System completed: ${systemName} (${executionTime}ms)`),
+      this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
       return { success: true, output: result, executionTime };
     } catch (error) {
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, false, executionTime);
       
-      this.log(`❌ System failed: ${systemName} - ${error.message}`),
+      this.log(`❌ System failed: ${systemName} - ${error.message}`);
       return { success: false, error: error.message, executionTime };
     }
   }
@@ -109,11 +109,11 @@ class IntelligentOrchestrator {
     
     const systems = Array.from(this.automationSystems.values())
       .sort((a, b) => {
-        const priorityOrder = { high: 3, medium: 2, low: 1 },
+        const priorityOrder = { high: 3, medium: 2, low: 1 };
         return priorityOrder[b.priority] - priorityOrder[a.priority];
       });
 
-  const results = [];
+    const results = [];
     for (const system of systems) {
       if (system.status === 'available') {
         const result = await this.runSystem(system.name);
@@ -126,7 +126,7 @@ class IntelligentOrchestrator {
       }
     }
 
-    this.log(`📊 Priority execution completed: ${results.length} systems`),
+    this.log(`📊 Priority execution completed: ${results.length} systems`);
     return results;
   }
 
@@ -148,7 +148,7 @@ class IntelligentOrchestrator {
       this.learnFromExecution(systemName, result, state);
     }
 
-    this.log(`📊 Intelligent execution completed: ${results.length} systems`),
+    this.log(`📊 Intelligent execution completed: ${results.length} systems`);
     return results;
   }
 
@@ -162,18 +162,18 @@ class IntelligentOrchestrator {
       hasMissingTests: false,
       lastBuildTime: null,
       codeComplexity: 0
-    },
+    };
 
     try {
       // Check for lint errors
-      execSync('npm run lint', { stdio: 'pipe' }),
+      execSync('npm run lint', { stdio: 'pipe' });
     } catch (error) {
       state.hasLintErrors = true;
     }
 
     try {
       // Check for TypeScript errors
-      execSync('npx tsc --noEmit', { stdio: 'pipe' }),
+      execSync('npx tsc --noEmit', { stdio: 'pipe' });
     } catch (error) {
       state.hasTypeScriptErrors = true;
     }
@@ -181,7 +181,7 @@ class IntelligentOrchestrator {
     // Check build time
     try {
       const buildStart = Date.now();
-      execSync('npm run build', { stdio: 'pipe' }),
+      execSync('npm run build', { stdio: 'pipe' });
       state.lastBuildTime = Date.now() - buildStart;
     } catch (error) {
       // Build failed
@@ -232,7 +232,7 @@ class IntelligentOrchestrator {
       totalRuns: 0,
       successfulRuns: 0,
       averageExecutionTime: 0
-    },
+    };
 
     currentData.totalRuns++;
     if (result.success) {
@@ -270,7 +270,7 @@ class IntelligentOrchestrator {
         fs.watch(dir, { recursive: true }, (eventType, filename) => {
           if (filename && (filename.endsWith('.tsx') || filename.endsWith('.ts') || filename.endsWith('.js'))) {
             const filePath = path.join(dir, filename);
-            this.log(`📝 File changed: ${filePath}`),
+            this.log(`📝 File changed: ${filePath}`);
             setTimeout(() => {
               this.handleIntelligentFileChange(filePath);
             }, 3000);
@@ -290,9 +290,9 @@ class IntelligentOrchestrator {
     if (fileExtension === '.tsx' || fileExtension === '.ts') {
       // Check for lint issues first
       try {
-        execSync(`npx eslint "${filePath}"`, { stdio: 'pipe' }),
+        execSync(`npx eslint "${filePath}"`, { stdio: 'pipe' });
       } catch (error) {
-        this.log(`🔧 Auto-fixing issues in: ${filePath}`),
+        this.log(`🔧 Auto-fixing issues in: ${filePath}`);
         await this.runSystem('lint-fixer');
       }
       
@@ -312,7 +312,7 @@ class IntelligentOrchestrator {
       systems: {},
       learningData: {},
       recommendations: []
-    },
+    };
 
     // System performance data
     for (const [name, system] of this.automationSystems) {
@@ -322,7 +322,7 @@ class IntelligentOrchestrator {
         averageExecutionTime: system.averageExecutionTime,
         lastRun: system.lastRun?.toISOString(),
         status: system.status
-      },
+      };
     }
 
     // Learning data
@@ -331,17 +331,17 @@ class IntelligentOrchestrator {
         successRate: data.successfulRuns / data.totalRuns,
         averageExecutionTime: data.averageExecutionTime,
         totalRuns: data.totalRuns
-      },
+      };
     }
 
     // Generate recommendations
     for (const [name, system] of this.automationSystems) {
       if (system.successRate < 0.8) {
         report.recommendations.push(`Improve ${name} system reliability (success rate: ${(system.successRate * 100).toFixed(1)}%)`);
-};
+      }
       if (system.averageExecutionTime > 30000) {
         report.recommendations.push(`Optimize ${name} system performance (avg time: ${system.averageExecutionTime}ms)`);
-};
+      }
     }
 
     return report;
@@ -355,7 +355,8 @@ class IntelligentOrchestrator {
     // Implement optimizations based on report
     for (const recommendation of report.recommendations) {
       this.log(`💡 Recommendation: ${recommendation}`);
-};
+    }
+
     // Adjust system priorities based on performance
     for (const [name, system] of this.automationSystems) {
       if (system.successRate < 0.7) {
@@ -382,11 +383,11 @@ class IntelligentOrchestrator {
       systemsCount: this.automationSystems.size,
       learningDataSize: this.learningData.size,
       report: this.generateIntelligenceReport()
-    },
+    };
     
-    this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`),
-    this.log(`📊 Systems: ${status.systemsCount}`),
-    this.log(`📊 Learning Data: ${status.learningDataSize} entries`),
+    this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
+    this.log(`📊 Systems: ${status.systemsCount}`);
+    this.log(`📊 Learning Data: ${status.learningDataSize} entries`);
     
     return status;
   }
@@ -422,8 +423,9 @@ switch (command) {
     console.log(JSON.stringify(report, null, 2));
     process.exit(0);
     break;
-  default: console.log('Usage: node intelligent-orchestrator.js [run|continuous|optimize|status|report] [priority|intelligent]'),
-    console.log('\nCommands: '),
+  default:
+    console.log('Usage: node intelligent-orchestrator.js [run|continuous|optimize|status|report] [priority|intelligent]');
+    console.log('\nCommands:');
     console.log('  run priority     - Run priority-based execution');
     console.log('  run intelligent  - Run intelligent execution');
     console.log('  continuous       - Start continuous intelligent automation');
@@ -443,4 +445,3 @@ process.on('SIGTERM', () => {
   orchestrator.stop();
   process.exit(0);
 });
-'

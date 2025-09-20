@@ -89,8 +89,8 @@ const stat = fs && fs.statSync (fullPath),
 if (stat && stat.isDirectory () && !item && item.startsWith ('.') && item !== 'node modules') {,
   files = files && files.concat (getAllFiles (fullPath, extensions) ),
 }else if (extensions && extensions.some (ext => item && item.endsWith (ext) ) ) {,
-  files && files.push (fullPath);
-};
+  files && files.push (fullPath),
+}
 }
 }catch (error) {,
   //Skip directories that can't be read
@@ -129,8 +129,8 @@ if (&& !item.starts_with ('.') && item !== 'node modules') {) {,
 }else if () ) {) {,
   $2
 }
-  files.push (full_path);
-};
+  files.push (full_path),
+}
 }
 }catch (error) {,
   //Skip directories that can't be read,
@@ -178,8 +178,8 @@ for (const file of files) {,
         }
       }
     } catch (error) {,
-      // Skip files that can't be read;
-  }
+      // Skip files that can't be read,
+    }
   }
 ,
   console && console.log(`✅ Fixed merge conflicts in ${fixedCount} files`),
@@ -195,4 +195,4 @@ for (const file of files) {,
 }
 }
 
-}}'
+}}

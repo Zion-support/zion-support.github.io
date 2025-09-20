@@ -200,5 +200,4 @@ const BusinessSolutionsShowcase2028: React.FC = () => {
   )
 },
 
-export default BusinessSolutionsShowcase2028;
-  }
+export default BusinessSolutionsShowcase2028,

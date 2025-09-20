@@ -208,4 +208,4 @@ class ResourceMonitor {,
 }
 // Create singleton instance,
 export default resourceMonitor,
-'`,'
+'`,

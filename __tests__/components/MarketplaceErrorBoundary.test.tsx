@@ -12,10 +12,10 @@ vi.mock('@sentry/nextjs', () => ({
 })),
 vi.mock('swr'),
 
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) : any => {
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error');
-};
+    throw new Error('Test error'),
+  }
   return <div>Working component</div>,
 },
 
@@ -56,7 +56,7 @@ describe('MarketplaceErrorBoundary', () => {
   }),
 
   it('logs error to Sentry when an error occurs', () => {
-    const mockWithScope = vi.fn((callback) : any => {
+    const mockWithScope = vi.fn((callback) => {
       const scope = {
         setTag: vi.fn(),
         setContext: vi.fn(),
@@ -114,5 +114,5 @@ describe('MarketplaceErrorBoundary', () => {
     fireEvent.click(reloadButton),
 
     expect(mockReload).toHaveBeenCalled(),
-  });
-  }), 
+  }),
+}), 

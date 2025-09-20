@@ -15,8 +15,8 @@ exports.handler = async function(event, context) {,
         const res = await fetch(url, { method: 'HEAD' }),
         results.push({ route, status: res.status, ok: res.ok }),
       } catch (e) {,
-        results.push({ route, status: 0, ok: false, error: String(e) });
-};
+        results.push({ route, status: 0, ok: false, error: String(e) }),
+      }
     }
 ,
     // Commit report to repo,
@@ -63,6 +63,6 @@ exports.handler = async function(event, context) {,
 ,
     return { statusCode: 200, body: JSON.stringify({ ok: true, results, commit: commitJson.commit && commitJson.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
 },

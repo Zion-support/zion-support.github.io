@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 /**,
  * Zion App - Autonomous Daemon for Infinite Improvement Loop,
@@ -53,8 +53,8 @@ class AutonomousDaemon extends EventEmitter {,
     this.restart = this.restart.bind(this),
     this.healthCheck = this.healthCheck.bind(this),
     this.handleProcessExit = this.handleProcessExit.bind(this),
-    this.handleProcessError = this.handleProcessError.bind(this);
-};
+    this.handleProcessError = this.handleProcessError.bind(this),
+  }
 ,
   /**,
    * Initialize the daemon,
@@ -123,15 +123,15 @@ class AutonomousDaemon extends EventEmitter {,
       exec(`ps -p ${pid}`, (error) => {,
         resolve(!error),
       }),
-    });
-};
+    }),
+  }
 ,
   /**,
    * Write PID file,
    */,
   async writePidFile() {,
-    await fs.writeFile(this.config.pidPath, process.pid.toString());
-};
+    await fs.writeFile(this.config.pidPath, process.pid.toString()),
+  }
 ,
   /**,
    * Start the daemon,
@@ -151,15 +151,15 @@ class AutonomousDaemon extends EventEmitter {,
     this.startInfiniteImprovementLoop(),
     // Start health check if enabled,
     if (this.config.healthCheck) {,
-      this.startHealthCheck();
-};
+      this.startHealthCheck(),
+    }
 ,
     // Handle process signals,
     this.setupSignalHandlers(),
     logger.info('✅ Autonomous daemon started successfully'),
     logger.info(`📊 Dashboard available at: http://localhost:${this.config.port}`),
-    logger.info(`📝 Logs: ${this.config.logPath}`);
-};
+    logger.info(`📝 Logs: ${this.config.logPath}`),
+  }
 ,
   /**,
    * Start the infinite improvement loop process,
@@ -186,8 +186,8 @@ class AutonomousDaemon extends EventEmitter {,
     // Log process start,
     const timestamp = new Date().toISOString(),
     logStream.write(`\n[${timestamp}] 🚀 Infinite improvement loop process started (PID: ${this.process.pid})\n`),
-    logger.info(`✅ Infinite improvement loop process started (PID: ${this.process.pid})`);
-};
+    logger.info(`✅ Infinite improvement loop process started (PID: ${this.process.pid})`),
+  }
 ,
   /**,
    * Handle process exit,
@@ -341,8 +341,8 @@ const timeoutId = setTimeout(() => {,
 ,
     } else if (this.restartCount >= this.maxRestarts) {,
       logger.info('❌ Maximum restart attempts reached. Stopping daemon.'),
-      this.stop();
-};
+      this.stop(),
+    }
   }
 ,
   /**,
@@ -352,8 +352,8 @@ const timeoutId = setTimeout(() => {,
     const timestamp = new Date().toISOString(),
     logger.error(`[${timestamp}] ❌ Process error:`, error),
     // Log error to file,
-    fs.appendFile(this.config.logPath, `[${timestamp}] ❌ Process error: ${error.message}\n`).catch(() => {});
-};
+    fs.appendFile(this.config.logPath, `[${timestamp}] ❌ Process error: ${error.message}\n`).catch(() => {}),
+  }
 ,
   /**,
    * Start health check,
@@ -361,8 +361,8 @@ const timeoutId = setTimeout(() => {,
   startHealthCheck() {,
     this.healthCheckTimer = setInterval(async () => {,
       await this.healthCheck(),
-    }, this.healthCheckInterval);
-};
+    }, this.healthCheckInterval),
+  }
 ,
   /**,
    * Perform health check,
@@ -375,12 +375,12 @@ const timeoutId = setTimeout(() => {,
         const isResponsive = await this.checkProcessResponsiveness(),
         if (!isResponsive) {,
           logger.info('⚠️ Process is not responsive, restarting...'),
-          this.restart();
-};
+          this.restart(),
+        }
       }
     } catch (error) {,
-      logger.error('❌ Health check failed:', error);
-};
+      logger.error('❌ Health check failed:', error),
+    }
   }
 ,
   /**,
@@ -406,8 +406,8 @@ const timeoutId = setTimeout(() => {,
         resolve(false),
       }),
       req.end(),
-    });
-};
+    }),
+  }
 ,
   /**,
    * Restart the process,
@@ -415,8 +415,8 @@ const timeoutId = setTimeout(() => {,
   restart() {,
     logger.info('🔄 Restarting infinite improvement loop process...'),
     if (this.process) {,
-      this.process.kill('SIGTERM');
-};
+      this.process.kill('SIGTERM'),
+    }
 ,
 const timeoutId =,
 const timeoutId =,
@@ -724,8 +724,8 @@ const timeoutId = setTimeout(resolve,                                           
       }),
       // Force kill if still running,
       if (this.process.exitCode === null) {,
-        this.process.kill('SIGKILL');
-};
+        this.process.kill('SIGKILL'),
+      }
     }
 ,
     // Clean up PID file,
@@ -735,8 +735,8 @@ const timeoutId = setTimeout(resolve,                                           
       // PID file might not exist
     }
 ,
-    logger.info('✅ Autonomous daemon stopped');
-};
+    logger.info('✅ Autonomous daemon stopped'),
+  }
 ,
   /**,
    * Setup signal handlers,
@@ -759,8 +759,8 @@ const timeoutId = setTimeout(resolve,                                           
     process.on('SIGUSR2', () => {,
       logger.info('🔄 Restart request received'),
       this.restart(),
-    });
-};
+    }),
+  }
 ,
   /**,
    * Log current status,
@@ -771,8 +771,8 @@ const timeoutId = setTimeout(resolve,                                           
       processPid: this.process ? this.process.pid : null,
       restartCount: this.restartCount,
       timestamp: new Date().toISOString()},
-    logger.info('📊 Daemon Status:', JSON.stringify(status, null, 2));
-};
+    logger.info('📊 Daemon Status:', JSON.stringify(status, null, 2)),
+  }
 ,
   /**,
    * Get daemon status,
@@ -814,8 +814,8 @@ if (require.main === module) {,
     case status':,
       daemon.getStatus().then(status => {,
         logger.info('Status:', status),
-        process.exit(0);
-  }),
+        process.exit(0),
+      }),
       break,
     default: logger.info('Usage: node autonomous-daemon.js [start|stop|restart|status]),
       process.exit(1)

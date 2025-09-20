@@ -7,6 +7,6 @@ export default function ContentRoutes({ }: ContentRoutesProps) {,
     <div>,
       <h1>ContentRoutes</h1>,
       <p>This component is currently under development.</p>,
-    </div>);
-  }
+    </div>),
+}
 ,

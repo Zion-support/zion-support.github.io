@@ -98,5 +98,5 @@ async function checkUltimateBuildHealth() {
       buildOptimization: 'enabled',
       caching: 'active'
     }
-  };
-  }
+  },
+}

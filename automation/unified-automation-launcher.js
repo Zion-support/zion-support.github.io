@@ -21,14 +21,14 @@ class UnifiedAutomationLauncher {,
     this.logFile = path.join(__dirname, 'logsunified-automation.log'),
     this.statusFile = path.join(__dirname, '.unified-automation-status.json'),
     this.ensureDirectories(),
-    this.initializeStatus();
-};
+    this.initializeStatus(),
+  }
 ,
   loadConfig() {,
     const configPath = path.join(__dirname, 'automation-config.json'),
     if (fs.existsSync(configPath)) {,
-      return JSON.parse(fs.readFileSync(configPath, 'utf8'));
-};
+      return JSON.parse(fs.readFileSync(configPath, 'utf8')),
+    }
 ,
     // Fallback configuration,
     return {,
@@ -43,8 +43,8 @@ class UnifiedAutomationLauncher {,
   ensureDirectories() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true });
-};
+      fs.mkdirSync(logDir, { recursive: true }),
+    }
   }
 ,
   initializeStatus() {,
@@ -57,8 +57,8 @@ class UnifiedAutomationLauncher {,
         errors: [],
         performance: {}
       },
-      fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2));
-};
+      fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2)),
+    }
   }
 ,
   log(message, level = 'info') {,
@@ -67,8 +67,8 @@ class UnifiedAutomationLauncher {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message);
-};
+      console.error('Failed to write to log file:', error.message),
+    }
 ,
     if (level === 'error') {,
       console.error(`❌ ${message}`),
@@ -77,8 +77,8 @@ class UnifiedAutomationLauncher {,
     } else if (level === 'success') {,
       console.log(`✅ ${message}`),
     } else {,
-      console.log(`ℹ️ ${message}`);
-};
+      console.log(`ℹ️ ${message}`),
+    }
   }
 ,
   updateStatus(component, status) {,
@@ -92,8 +92,8 @@ class UnifiedAutomationLauncher {,
       currentStatus.lastUpdate = new Date().toISOString(),
       fs.writeFileSync(this.statusFile, JSON.stringify(currentStatus, null, 2)),
     } catch (error) {,
-      this.log(`Error updating status: ${error.message}`, 'warn');
-};
+      this.log(`Error updating status: ${error.message}`, 'warn'),
+    }
   }
 ,
   async startComponent(name, scriptPath, args = []) {,
@@ -178,28 +178,28 @@ class UnifiedAutomationLauncher {,
       components.push({,
         name: 'gitManager',
         script: path.join(__dirname, 'autonomous-git-manager.js'),
-        args: ['watch']});
-};
+        args: ['watch']}),
+    }
 ,
     if (this.config.intelligentGit?.enabled) {,
       components.push({,
         name: 'intelligentGit',
         script: path.join(__dirname, 'intelligent-git-orchestrator.js'),
-        args: ['watch']});
-};
+        args: ['watch']}),
+    }
 ,
     if (this.config.enhancedGit?.enabled) {,
       components.push({,
         name: 'enhancedGit',
         script: path.join(__dirname, 'enhanced-git-automation.js'),
-        args: ['watch']});
-};
+        args: ['watch']}),
+    }
 ,
     for (const component of components) {,
       await this.startComponent(component.name,
         component.script,
-        component.args);
-};
+        component.args),
+    }
   }
 ,
   async startMonitoring() {,
@@ -213,8 +213,8 @@ class UnifiedAutomationLauncher {,
       await this.startComponent(,
         'healthChecker',
         path.join(__dirname, 'corehealth-checker.js'),
-      );
-};
+      ),
+    }
   }
 ,
   async startDashboard() {,
@@ -222,8 +222,8 @@ class UnifiedAutomationLauncher {,
       await this.startComponent(,
         'dashboard',
         path.join(__dirname, 'dashboardserver.js'),
-      );
-};
+      ),
+    }
   }
 ,
   async startSecurityScanner() {,
@@ -231,8 +231,8 @@ class UnifiedAutomationLauncher {,
       await this.startComponent(,
         'securityScanner',
         path.join(__dirname, 'securityscanner.js'),
-      );
-};
+      ),
+    }
   }
 ,
   async startCodeQualityEnforcer() {,
@@ -240,8 +240,8 @@ class UnifiedAutomationLauncher {,
       await this.startComponent(,
         'codeQuality',
         path.join(__dirname, 'corecode-quality-enforcer.js'),
-      );
-};
+      ),
+    }
   }
 ,
   async startAll() {,
@@ -284,15 +284,15 @@ class UnifiedAutomationLauncher {,
     this.updateStatus('system', {,
       status: 'stopped',
       stopTime: new Date().toISOString()}),
-    this.log('✅ Unified Automation System stopped successfullysuccess');
-};
+    this.log('✅ Unified Automation System stopped successfullysuccess'),
+  }
 ,
   async restart() {,
     this.log('🔄 Restarting Unified Automation System...'),
     await this.stopAll(),
     await new Promise((resolve) => setTimeout(resolve, 2000)),
-    await this.startAll();
-};
+    await this.startAll(),
+  }
 ,
   getStatus() {,
     try {,
@@ -324,8 +324,8 @@ class UnifiedAutomationLauncher {,
         process.on('close', (code) => {,
           resolve(code === 0),
         }),
-      });
-};
+      }),
+    }
   }
 }
 ,
@@ -401,6 +401,6 @@ process.on('SIGINT', async () => {,
 process.on('SIGTERM', async () => {,
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   await launcher.stopAll(),
-  process.exit(0);
-  }),
+  process.exit(0),
+}),
 module.exports = UnifiedAutomationLauncher,

@@ -1,4 +1,4 @@
-export default function HomePage() : any {,
+export default function HomePage() {,
   return (,
     <>,
       <Head>,

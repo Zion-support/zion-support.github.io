@@ -48,5 +48,4 @@ const AI2030FuturePredictionsUltimatePromotionBanner: React.FC = () => {
   )
 },
 
-export default AI2030FuturePredictionsUltimatePromotionBanner;
-  }
+export default AI2030FuturePredictionsUltimatePromotionBanner,

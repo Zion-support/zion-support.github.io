@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function EdgeComputingPage() : any {
+export default function EdgeComputingPage() {
   const services = [
     {
       title: "Edge Orchestration",
@@ -46,7 +46,7 @@ export default function EdgeComputingPage() : any {
       price: "$599/month",
       icon: Server
     }
-  ],
+  ];
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function EdgeComputingPage() : any {
       title: "Scalable Architecture",
       description: "Easily scale your edge computing resources as needed"
     }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -251,4 +251,4 @@ export default function EdgeComputingPage() : any {
       <EnhancedFooter />
     </div>
   );
-  }'
+}

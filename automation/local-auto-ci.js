@@ -24,8 +24,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const { execSync, spawnSync } = require('child_process'),
 const fs = require('fs'),
@@ -38,8 +38,8 @@ function log(message)  {,
   const timestamp = new Date().toISOString(),
 const logMessage = `[${timestamp}] ${message}`,
   logger.info(logMessage),
-  fs.appendFileSync(LOG_FILE, logMessage + \n');
-};
+  fs.appendFileSync(LOG_FILE, logMessage + \n'),
+}
 ,
 async function mainLoop()  {,
   while (true) {,
@@ -199,8 +199,8 @@ const timeoutId = setTimeout(res,                                               
 // Store timeoutId for cleanup if needed,
 ,
 // Store timeoutId for cleanup if needed,
-);
-};
+),
+  }
 }
 ,
 mainLoop(),
@@ -212,8 +212,8 @@ mainLoop(),
 ,
   stop() {,
     this.isRunning = false,
-    console.log('Stopping Script...');
-};
+    console.log('Stopping Script...'),
+  }
 }
 ,
 // Start the script,
@@ -222,8 +222,8 @@ if (require.main === module) {,
   script.start().catch(error => {,
     console.error('Failed to start Script:', error),
     process.exit(1),
-  });
-};
+  }),
+}
 ,
 module.exports = Script,
 // Graceful shutdown handling,
@@ -236,4 +236,4 @@ process.on('SIGTERM', () => {,
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0),
-}),'
+}),

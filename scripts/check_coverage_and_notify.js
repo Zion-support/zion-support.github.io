@@ -20,8 +20,9 @@ function main() {
     console.error('Error: Coverage summary JSON path not provided.'),
     // Try to write status even on early exit, to indicate failure cause
     writeTestStatus({ passed: 0, failed: 0, total: 0, coverage: 0, error: 'Coverage summary path missing' }),
-    process.exit(1);
-};
+    process.exit(1),
+  }
+
   let coverageData,
   try {
     coverageData = JSON.parse(fs.readFileSync(coverageSummaryPath, 'utf-8')),
@@ -47,12 +48,13 @@ function main() {
       },
     } else {
       testCountsError = `Jest results file not found at ${JEST_RESULTS_FILE}. Test counts set to zero.`,
-      console.warn(testCountsError);
-};
+      console.warn(testCountsError),
+    }
   } catch (err) {
     testCountsError = `Error parsing Jest results file ${JEST_RESULTS_FILE}: ${err.message}. Test counts set to zero.`,
-    console.error(testCountsError);
-};
+    console.error(testCountsError),
+  }
+
   const testStatusPayload = {
     passed: jestResultsData.numPassedTests,
     failed: jestResultsData.numFailedTests,
@@ -76,8 +78,8 @@ function main() {
     console.error(`Error: Coverage (${coveragePct}%) is below threshold of ${COVERAGE_THRESHOLD}%.`),
     process.exit(1),
   } else {
-    console.log('Coverage check passed.');
-};
+    console.log('Coverage check passed.'),
+  }
 }
 
 function writeTestStatus(statusData) {
@@ -117,4 +119,3 @@ process.on('unhandledRejection', (reason, promise) => {
 }),
 
 main(),
-'

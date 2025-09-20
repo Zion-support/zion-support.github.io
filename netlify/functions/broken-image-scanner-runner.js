@@ -45,6 +45,6 @@ exports.handler = async function(event, context) {
         function: 'broken-image-scanner-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

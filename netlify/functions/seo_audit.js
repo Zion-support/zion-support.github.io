@@ -10,16 +10,16 @@ async function getRepoTree(repo, ref, token) {,
     headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot' }
   }),
   if (!res.ok) throw new Error(`tree fetch failed: ${res.status}`),
-  return res.json();
-};
+  return res.json(),
+}
 ,
 async function getFileContent(repo, path, ref, token) {,
   const res = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}?ref=${ref}`, {,
     headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotAccept': 'application/vnd.github.v3.raw' }
   }),
   if (!res.ok) throw new Error(`content fetch failed: ${res.status}`),
-  return res.text();
-};
+  return res.text(),
+}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -39,8 +39,8 @@ exports.handler = async function(event, context) {,
         const a = analyzeTsx(content),
         report.push({ path: file.path, ...a }),
       } catch (e) {,
-        report.push({ path: file.path, error: String(e) });
-};
+        report.push({ path: file.path, error: String(e) }),
+      }
     }
 ,
     const summary = {,
@@ -80,6 +80,6 @@ exports.handler = async function(event, context) {,
 ,
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
 },

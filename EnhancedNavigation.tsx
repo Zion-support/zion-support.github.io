@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-const EnhancedNavigation: React.FC = () => {
+const EnhancedNavigation: React.FC = () => {,
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
     { name: 'Home', href: '/' },
@@ -18,7 +18,8 @@ const EnhancedNavigation: React.FC = () => {
           </Link>
           <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <Link key={item.name}
+              <Link,
+key={item.name}
                 href={item.href}
                 className="text-gray-700 hover:text-blue-600 transition-colors"
               >
@@ -26,7 +27,8 @@ const EnhancedNavigation: React.FC = () => {
               </Link>
             ))}
           </div>
-          <button onClick={() => setIsOpen(!isOpen)}
+          <button,
+onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-gray-700 hover:text-blue-600"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -36,10 +38,11 @@ const EnhancedNavigation: React.FC = () => {
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-2 space-y-2">
               {navigationItems.map((item) => (
-                <Link key={item.name}
+                <Link,
+key={item.name}
                   href={item.href}
-                  className="block text-gray-700 hover:text-blue-600 py-2"
-                  onClick={() => setIsOpen(false)}
+                  className="block text-gray-700 hover: text-blue-600 py-2",
+  onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>

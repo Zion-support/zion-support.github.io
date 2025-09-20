@@ -38,8 +38,8 @@ class ErrorMonitor {,
     // Create logs directory,
     const logsDir = path.join(this.projectRoot, 'automationlogs'),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true });
-};
+      fs.mkdirSync(logsDir, { recursive: true }),
+    }
 ,
     // Initial health check,
     await this.performHealthCheck(),
@@ -47,8 +47,8 @@ class ErrorMonitor {,
     this.startContinuousMonitoring(),
     // Handle graceful shutdown,
     process.on('SIGINT', () => this.shutdown()),
-    process.on('SIGTERM', () => this.shutdown());
-};
+    process.on('SIGTERM', () => this.shutdown()),
+  }
 ,
   async performHealthCheck() {,
     console.log('🏥 Performing health check...'),
@@ -67,16 +67,16 @@ class ErrorMonitor {,
       this.logHealthStatus(),
       // Trigger error fixer if needed,
       if (this.monitoringReport.metrics.totalErrors > this.alertThreshold) {,
-        await this.triggerErrorFixer();
-};
+        await this.triggerErrorFixer(),
+      }
     } catch (error) {,
       console.error('❌ Health check failed:', error),
       this.monitoringReport.errorsDetected.push({,
         type: 'health_check_failure',
         message: error.message,
         timestamp: new Date().toISOString(),
-        timestamp: new Date().toISOString()});
-};
+        timestamp: new Date().toISOString()}),
+    }
   }
 ,
   async checkTypeScriptErrors() {,
@@ -94,8 +94,8 @@ class ErrorMonitor {,
         this.monitoringReport.errorsDetected.push(...errors),
         this.monitoringReport.metrics.totalErrors += errors.length,
         this.monitoringReport.metrics.typeCheckSuccess = false,
-        console.log(`❌ TypeScript check failed with ${errors.length} errors`);
-};
+        console.log(`❌ TypeScript check failed with ${errors.length} errors`),
+      }
     }
   }
 ,
@@ -114,8 +114,8 @@ class ErrorMonitor {,
         this.monitoringReport.errorsDetected.push(...errors),
         this.monitoringReport.metrics.totalErrors += errors.length,
         this.monitoringReport.metrics.lintSuccess = false,
-        console.log(`❌ ESLint check failed with ${errors.length} errors`);
-};
+        console.log(`❌ ESLint check failed with ${errors.length} errors`),
+      }
     }
   }
 ,
@@ -137,8 +137,8 @@ class ErrorMonitor {,
         message: error.message,
         timestamp: new Date().toISOString()}),
       this.monitoringReport.metrics.totalErrors += 1,
-      console.log('❌ Build check failed');
-};
+      console.log('❌ Build check failed'),
+    }
   }
 ,
   async checkCriticalFiles() {,
@@ -161,12 +161,12 @@ class ErrorMonitor {,
   parseESLintErrors(output) {,
     const errors = [],
     const lines = output.split('\n'),
-          timestamp: new Date().toISOString()});
-};
+          timestamp: new Date().toISOString()}),
+      }
     }
 ,
-          timestamp: new Date().toISOString()});
-};
+          timestamp: new Date().toISOString()}),
+      }
     }
 ,
     return errors,
@@ -194,8 +194,8 @@ class ErrorMonitor {,
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`),
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`),
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`),
-    );
-};
+    ),
+  }
 ,
   async triggerErrorFixer() {,
     console.log('🚀 Triggering error fixer...'),
@@ -207,8 +207,8 @@ class ErrorMonitor {,
         type: 'error_fixer_failure',
         message: error.message,
         timestamp: new Date().toISOString(),
-        timestamp: new Date().toISOString()});
-};
+        timestamp: new Date().toISOString()}),
+    }
   }
 ,
   startContinuousMonitoring() {,
@@ -218,10 +218,10 @@ class ErrorMonitor {,
     setInterval(async () => {,
       if (this.isRunning) {,
         await this.performHealthCheck(),
-        await this.saveReport();
-};
-    }, this.checkInterval);
-};
+        await this.saveReport(),
+      }
+    }, this.checkInterval),
+  }
 ,
   async saveReport() {,
     const reportPath = path.join(,
@@ -231,8 +231,8 @@ class ErrorMonitor {,
     ),
     const reportDir = path.dirname(reportPath),
     if (!fs.existsSync(reportDir)) {,
-      fs.mkdirSync(reportDir, { recursive: true });
-};
+      fs.mkdirSync(reportDir, { recursive: true }),
+    }
 ,
     // Add duration to report,
     this.monitoringReport.duration = Date.now() - this.startTime,
@@ -241,8 +241,8 @@ class ErrorMonitor {,
       JSON.stringify(this.monitoringReport, null, 2),
     ),
     // Keep only the latest 10 reports,
-    this.cleanupOldReports(reportDir);
-};
+    this.cleanupOldReports(reportDir),
+  }
 ,
   cleanupOldReports(reportDir) {,
     try {,
@@ -258,12 +258,12 @@ class ErrorMonitor {,
       // Remove old reports (keep only the latest 10),
       if (files.length > 10) {,
         for (let i = 10, i < files.length, i++) {,
-          fs.unlinkSync(files[i].path);
-};
+          fs.unlinkSync(files[i].path),
+        }
       }
     } catch (error) {,
-      console.error('Error cleaning up old reports:', error);
-};
+      console.error('Error cleaning up old reports:', error),
+    }
   }
 ,
   async shutdown() {,
@@ -272,7 +272,7 @@ class ErrorMonitor {,
     // Save final report,
     await this.saveReport(),
     console.log('✅ Error Monitor shutdown complete'),
-    process.exit(0);
+    process.exit(0),
   }
 ,
 // Run the monitor,

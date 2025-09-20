@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const AutomationTask = require('../core/AutomationTask'),
 const { execSync } = require('child_process'),
@@ -34,8 +34,8 @@ class StaleCleaner extends AutomationTask {,
       maxBranchesToClean: 10,
       maxPRsToClean: 5,
       ...config
-    });
-};
+    }),
+  }
 ,
   async run() {,
     logger.info('🧹 Starting stale branch and PR cleanup...'),
@@ -43,8 +43,8 @@ class StaleCleaner extends AutomationTask {,
       const startTime = Date.now(),
       // Check if we're in a git repository,
       if (!this.isGitRepository()) {,
-        throw new Error('Not in a git repository');
-};
+        throw new Error('Not in a git repository'),
+      }
 ,
       // Fetch latest from remote,
       await this.fetchLatest(),
@@ -176,15 +176,15 @@ class StaleCleaner extends AutomationTask {,
           const branchName = branch.name.replace('origin/'),
           execSync(`git push origin --delete ${branchName}`, {,
             cwd: process.cwd(),
-            stdio: pipe});
-};
+            stdio: pipe}),
+        }
 ,
         logger.info(`🗑️ Deleted stale branch: ${branch.name} (${branch.daysOld} days old)`),
         results.cleaned.push(branch),
       } catch (error) {,
         logger.error(`❌ Failed to delete branch ${branch.name}:`, error.message),
-        results.failed.push({ ...branch, error: error.message });
-};
+        results.failed.push({ ...branch, error: error.message }),
+      }
     }
 ,
     return results,
@@ -211,8 +211,8 @@ class StaleCleaner extends AutomationTask {,
         results.cleaned.push(pr),
       } catch (error) {,
         logger.error(`❌ Failed to close PR #${pr.number}:`, error.message),
-        results.failed.push({ ...pr, error: error.message });
-};
+        results.failed.push({ ...pr, error: error.message }),
+      }
     }
 ,
     return results,
@@ -238,8 +238,8 @@ class StaleCleaner extends AutomationTask {,
         cwd: process.cwd(),
         stdio: pipe}),
     } catch (error) {,
-      logger.warn('⚠️ Failed to fetch latest from remote:', error.message);
-};
+      logger.warn('⚠️ Failed to fetch latest from remote:', error.message),
+    }
   }
 ,
   isGitRepository() {,
@@ -280,8 +280,8 @@ class StaleCleaner extends AutomationTask {,
       const userEmail = execSync('git config user.email', { encoding: 'utf8', stdio: 'pipe' }).trim(),
       logger.info('✅ Git configuration:', { userName, userEmail }),
     } catch (error) {,
-      logger.error('❌ Git configuration issue:', error.message);
-};
+      logger.error('❌ Git configuration issue:', error.message),
+    }
   }
 ,
   async checkGitHubCLI() {,
@@ -292,8 +292,8 @@ class StaleCleaner extends AutomationTask {,
       const authStatus = execSync('gh auth status', { encoding: 'utf8', stdio: 'pipe' }),
       logger.info('✅ GitHub CLI auth status:', authStatus.trim()),
     } catch (error) {,
-      logger.error('❌ GitHub CLI issue:', error.message);
-};
+      logger.error('❌ GitHub CLI issue:', error.message),
+    }
   }
 ,
   getStatus() {,
@@ -305,7 +305,7 @@ class StaleCleaner extends AutomationTask {,
         dryRun: this.config.dryRun,
         autoDelete: this.config.autoDelete,
         protectedBranches: this.config.protectedBranches}
-    };
+    },
   }
 }
 ,

@@ -25,7 +25,7 @@ module.exports = {,
       ...config.resolve.alias,
       react-native$': react-native-web
     },
-    return config;
+    return config,
   },
   images: {,
     domains: ['localhost'],
@@ -34,4 +34,4 @@ module.exports = {,
     ignoreBuildErrors: false},
   eslint: {,
     ignoreDuringBuilds: false}
-},'
+},

@@ -41,8 +41,8 @@ if (typeof window !== 'undefined') {,
 ,
 // Ensure process is available globally,
 if (typeof (globalThis as any).process === 'undefined') {,
-  (globalThis as any).process = createProcessObject();
-};
+  (globalThis as any).process = createProcessObject(),
+}
 ,
 // Export a safe environment accessor,
 export const safeEnv = {,
@@ -87,6 +87,6 @@ platform: 'browser,
 arch: 'x64,
 version: '18.0.0',
 browser: true}),
-//Ensure process is available on globalThis ;
-  }
-}//Ensure process is available on window ,'
+//Ensure process is available on globalThis ,
+}
+}//Ensure process is available on window ,

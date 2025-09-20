@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function IndustrySolutionsPage() : any {
+export default function IndustrySolutionsPage() {
   const industries = [
     {
       title: "Financial Services",
@@ -46,7 +46,7 @@ export default function IndustrySolutionsPage() : any {
       icon: Factory,
       color: "from-orange-500 to-red-500"
     }
-  ],
+  ];
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function IndustrySolutionsPage() : any {
       title: "Best Practices",
       description: "Proven solutions based on industry best practices and standards"
     }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -249,4 +249,4 @@ export default function IndustrySolutionsPage() : any {
       <EnhancedFooter />
     </div>
   );
-  }'
+}

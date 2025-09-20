@@ -163,7 +163,7 @@ const AITrendsPredictions2025PromotionBanner = () => {,
           />,
         </div>,
       </div>,
-    </div>);
-  },
+    </div>),
+},
 export default AITrendsPredictions2025PromotionBanner,
-</div></div></div>,'
+</div></div></div>,

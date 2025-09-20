@@ -31,7 +31,8 @@ class ComprehensiveMergeResolver {
       const result = execSync(command, {
         "encoding": 'utf8'
         "stdio": 'pipe'
-        ...options});
+        ...options,
+});
       return { "success": true, "output": result }} catch (error) {
       this.log(`❌ Command "failed": ${error.message}`);
       return { "success": false, "error": error.message }}
@@ -78,11 +79,13 @@ class ComprehensiveMergeResolver {
                 content.includes('                content.includes(' ')) {
               conflictFiles.push(itemPath)}
           } catch (error) {
-            // Skip files that can't be read}
+            // Skip files that can't be read,
+}
         }
       }
     } catch (error) {
-      // Skip directories that can't be read}
+      // Skip directories that can't be read,
+}
   }
   async resolveConflictFile(filePath) {
     try {
@@ -223,8 +226,8 @@ if (this.conflictsResolved > 0 |this.prsProcessed > 0) {
       // Step "6": Save results,
 await this.saveResults();
       // Final summary,
-this.log('\n📈 MERGE RESOLUTION SUMMARY:');
-      this.log(`   ✅ Conflicts resolved: ${this.conflictsResolved}`);
+this.log('\n📈 MERGE RESOLUTION SUMMARY: ');,
+  this.log(`   ✅ Conflicts resolved: ${this.conflictsResolved}`);
       this.log(`   📋 PRs "processed": ${this.prsProcessed}`);
       this.log(`   ❌ Errors "encountered": ${this.results.errors.length}`);
       this.log(`   🎯 Success "operations": ${this.results.success.length}`);

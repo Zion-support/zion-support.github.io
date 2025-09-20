@@ -13,8 +13,8 @@ describe('AIChatAssistant Integration Tests', () => {,
     renderWithProviders(<AIChatAssistant />),
     expect(screen.getByText('AI Assistant')).toBeInTheDocument(),
     expect(screen.getByPlaceholderText('Type your message...')).toBeInTheDocument(),
-    expect(screen.getByRole('button')).toBeInTheDocument();
-};
+    expect(screen.getByRole('button')).toBeInTheDocument(),
+  }
     ),
     expect(screen.getByRole('button')).toBeInTheDocument()}),
   it('should send a message when user types and clicks send', async () => {,
@@ -26,10 +26,10 @@ describe('AIChatAssistant Integration Tests', () => {,
     fireEvent.change(input, { "target": { value: 'Hello AI' } }),
     fireEvent.click(sendButton),
     await waitFor(() => {,
-      expect(screen.getByText('Hello AI')).toBeInTheDocument();
-};
-    );
-};
+      expect(screen.getByText('Hello AI')).toBeInTheDocument(),
+    }
+    ),
+  }
     ),
       expect(screen.getByText('Hello AI')).toBeInTheDocument()})}),
   it('should send a message when user presses Enter', async () => {,
@@ -40,10 +40,10 @@ describe('AIChatAssistant Integration Tests', () => {,
     fireEvent.keyPress(input, { key: 'Enter', code: 'Enter' }
     ),
     await waitFor(() => {,
-      expect(screen.getByText('Hello AI')).toBeInTheDocument();
-};
-    );
-};
+      expect(screen.getByText('Hello AI')).toBeInTheDocument(),
+    }
+    ),
+  }
     ),
     fireEvent.change(input, { "target": { value: 'Hello AI' } }),
     fireEvent.keyPress(input, { "key": 'Enter', "code": 'Enter' }),
@@ -52,8 +52,8 @@ describe('AIChatAssistant Integration Tests', () => {,
   it('should not send empty messages', () => {,
     renderWithProviders(<AIChatAssistant />),
     const sendButton = screen.getByRole('button'),
-    expect(sendButton).toBeDisabled();
-};
+    expect(sendButton).toBeDisabled(),
+  }
     ),
     expect(sendButton).toBeDisabled()}),
   it('should display AI response after sending message', async () => {,

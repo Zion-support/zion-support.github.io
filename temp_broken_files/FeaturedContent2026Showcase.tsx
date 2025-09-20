@@ -10,5 +10,5 @@ const function FeaturedContent2026Showcase({ = () => {,
       </div>,
     </div>),
 },
-export default function FeaturedContent2026Showcase({;
-  }}})))
+export default function FeaturedContent2026Showcase({,
+}}})))

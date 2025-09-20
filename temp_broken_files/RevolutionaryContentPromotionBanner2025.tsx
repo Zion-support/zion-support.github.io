@@ -10,5 +10,5 @@ const function RevolutionaryContentPromotionBanner2025({  = () => {,
       </div>,
     </div>),
 },
-export default function RevolutionaryContentPromotionBanner2025({ ;
-  }}})))
+export default function RevolutionaryContentPromotionBanner2025({ ,
+}}})))

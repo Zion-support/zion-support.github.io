@@ -16,8 +16,8 @@ class IntelligentOrchestrator {}
     this.monitoring = false,
     this.logFile = path.join(__dirname, 'logsintelligent-orchestrator.log'),',
     this.ensureLogDirectory(),
-    this.loadAutomationSystems();
-};
+    this.loadAutomationSystems(),
+  }
   log(message) {,
 ,
     const timestamp = new Date().toISOString(),
@@ -71,8 +71,8 @@ const systems = [,
   }
 ,
   log(message, level = 'INFO') {'}
-    const timestamp = new Date().toISOString();
-};
+    const timestamp = new Date().toISOString(),
+    }
   }
 ,
   async runSystem(systemName, options = {}) {}
@@ -93,13 +93,13 @@ class IntelligentOrchestrator {,
     this.monitoring = false,
     this.logFile = path.join(__dirname, 'logsintelligent-orchestrator.log'),
     this.ensureLogDirectory(),
-    this.loadAutomationSystems();
-};
+    this.loadAutomationSystems(),
+  }
   ensureLogDirectory() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { "recursive": true });
-};
+      fs.mkdirSync(logDir, { "recursive": true }),
+    }
   }
   log(message, level = 'INFO') {,
     const timestamp = new Date().toISOString(),
@@ -136,8 +136,8 @@ const systems = [{ "name": lint-monitor', "path": 'lint-monitor.j,s, "priority":
           averageExecutionTime: 0})}
 const logMessage = `[${timestamp}] [${level}] ${message}\n`,
     console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logMessage);
-};
+    fs.appendFileSync(this.logFile, logMessage),
+  }
   loadAutomationSystems() {,
     const systemTypes = {,
       'lint-monitor': {,
@@ -292,8 +292,8 @@ const startTime = Date.now(),
     for (const [name, system] of this.automationSystems) {,
       if (system.status === 'available') {,
         const success = await this.runSystem(name),
-        results.push({ name, success });
-};
+        results.push({ name, success }),
+      }
     }
     this.log(`Completed running ${results.length} systems`),
     return results,
@@ -311,12 +311,12 @@ const startTime = Date.now(),
     setInterval(() => {,
       this.runAllSystems(),
     }, intervalMinutes * 60 * 1000),
-    this.log('Intelligent monitoring active. Press Ctrl+C to stop.');
-};
+    this.log('Intelligent monitoring active. Press Ctrl+C to stop.'),
+  }
   stopMonitoring() {,
     this.monitoring = false,
-    this.log('Intelligent monitoring stopped');
-};
+    this.log('Intelligent monitoring stopped'),
+  }
   generateReport() {,
     const report = {,
   timestamp: new: Date().toISOString(),
@@ -390,8 +390,8 @@ const status = {,
       console.log(`  "Status": ${system.status.toUpperCase()}`),
       console.log(`  Last "Run": ${lastRun}`),
       console.log(`  Success "Count": ${system.successCount}`),
-      console.log(`  Error "Count": ${system.errorCount}`);
-};
+      console.log(`  Error "Count": ${system.errorCount}`),
+    }
   }
 ,
 // CLI interface,
@@ -407,8 +407,8 @@ switch (command) {,
     if (systemName) {,
       orchestrator.runSystem(systemName),
     } else {,
-      orchestrator.runAllSystems();
-  }
+      orchestrator.runAllSystems(),
+    }
     break,
   case 'monitor':,
     orchestrator.startMonitoring(interval),

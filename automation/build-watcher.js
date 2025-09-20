@@ -34,8 +34,8 @@ class BuildWatcher {,
     // Create logs directory,
     const logsDir = path.join(this.projectRoot, 'automationlogs'),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { "recursive": true });
-};
+      fs.mkdirSync(logsDir, { "recursive": true }),
+    }
     // Initial build check,
     await this.performInitialBuild(),
     // Start file watching,
@@ -44,8 +44,8 @@ class BuildWatcher {,
     this.startPeriodicHealthChecks(),
     // Handle graceful shutdown,
     process.on('SIGINT', () => this.shutdown()),
-    process.on('SIGTERM', () => this.shutdown());
-};
+    process.on('SIGTERM', () => this.shutdown()),
+  }
   async performInitialBuild() {,
     console.log('🏗️ Performing initial build check...'),
     try {,
@@ -53,8 +53,8 @@ class BuildWatcher {,
       console.log('✅ Initial build successful'),
     } catch (error) {,
       console.log('❌ Initial build failed, triggering error fixer...'),
-      await this.triggerErrorFixer();
-};
+      await this.triggerErrorFixer(),
+    }
   }
   startFileWatching() {,
     console.log('👀 Starting file watching...'),
@@ -65,8 +65,8 @@ class BuildWatcher {,
     ],
     for (const dir of watchDirs) {,
       if (fs.existsSync(dir)) {,
-        this.watchDirectory(dir);
-};
+        this.watchDirectory(dir),
+      }
     }
     // Watch root config files,
     const configFiles = ['package.jsontsconfig.jsonnext.config.jseslint.config.js'
@@ -74,8 +74,8 @@ class BuildWatcher {,
     for (const file of configFiles) {,
       const filePath = path.join(this.projectRoot, file),
       if (fs.existsSync(filePath)) {,
-        this.watchFile(filePath);
-};
+        this.watchFile(filePath),
+      }
     }
   }
       const watcher = fs.watch(,
@@ -83,14 +83,14 @@ class BuildWatcher {,
         { "recursive": true },
         (eventType, filename) => {,
           if (filename && this.shouldWatchFile(filename)) {,
-            this.handleFileChange(eventType, path.join(dir, filename));
-};
+            this.handleFileChange(eventType, path.join(dir, filename)),
+          }
         }
       ),
       console.log(`👀 Watching "directory": ${dir}`),
     } catch (error) {,
-      console.error(`Error watching directory ${dir}:`, error);
-};
+      console.error(`Error watching directory ${dir}:`, error),
+    }
   }
   watchFile(filePath) {,
     try {,
@@ -99,8 +99,8 @@ class BuildWatcher {,
       }),
       console.log(`👀 Watching "file": ${filePath}`),
     } catch (error) {,
-      console.error(`Error watching file ${filePath}:`, error);
-};
+      console.error(`Error watching file ${filePath}:`, error),
+    }
   }
   shouldWatchFile(filename) {,
     if (!filename) return false,
@@ -125,8 +125,8 @@ class BuildWatcher {,
       .replace(/\?/g, '.'),
       .replace(/{([^}]+)}/g, '($1)'),
       .replace(/,/g, '|'),
-    return new RegExp(`^${regexStr}$`);
-};
+    return new RegExp(`^${regexStr}$`),
+  }
   handleFileChange(eventType, filePath) {,
     const relativePath = path.relative(this.projectRoot, filePath),
     console.log(`📝 File change "detected": ${eventType} - ${relativePath}`),
@@ -135,21 +135,21 @@ class BuildWatcher {,
       "file": relativePath,
       "timestamp": new Date().toISOString()}),
     // Queue build,
-    this.queueBuild();
-};
+    this.queueBuild(),
+  }
   queueBuild() {,
     const now = Date.now(),
     // Clear existing timeout,
     if (this.buildTimeout) {,
-      clearTimeout(this.buildTimeout);
-};
+      clearTimeout(this.buildTimeout),
+    }
     // Set new timeout for debounced build,
     this.buildTimeout = setTimeout(async () => {,
       if (this.isRunning && !this.isBuilding) {,
-        await this.runBuild();
-};
-    }, this.buildDebounceTime);
-};
+        await this.runBuild(),
+      }
+    }, this.buildDebounceTime),
+  }
   async runBuild() {,
     if (this.isBuilding) {,
       console.log('⏳ Build already in progress, skipping...'),
@@ -205,8 +205,8 @@ class BuildWatcher {,
       console.log('✅ Type check passed'),
     } catch (error) {,
       console.log('❌ Type check failed'),
-      throw new Error(`Type check "failed": ${error.message}`);
-};
+      throw new Error(`Type check "failed": ${error.message}`),
+    }
   }
   async runLintCheck() {,
     console.log('🧹 Running lint check...'),
@@ -220,8 +220,8 @@ class BuildWatcher {,
       console.log('✅ Lint check passed'),
     } catch (error) {,
       console.log('❌ Lint check failed'),
-      throw new Error(`Lint check "failed": ${error.message}`);
-};
+      throw new Error(`Lint check "failed": ${error.message}`),
+    }
   }
   async runNextBuild() {,
     console.log('🏗️ Running Next.js build...'),
@@ -234,8 +234,8 @@ class BuildWatcher {,
       console.log('✅ Next.js build completed'),
     } catch (error) {,
       console.log('❌ Next.js build failed'),
-      throw new Error(`Next.js build "failed": ${error.message}`);
-};
+      throw new Error(`Next.js build "failed": ${error.message}`),
+    }
   }
   async triggerErrorFixer() {,
     console.log('🚀 Triggering error fixer...'),
@@ -248,12 +248,12 @@ class BuildWatcher {,
       setTimeout(async () => {,
         if (this.isRunning) {,
           console.log('🔄 Retrying build after error fixing...'),
-          await this.runBuild();
-};
+          await this.runBuild(),
+        }
       }, 5000),
     } catch (error) {,
-      console.error('❌ Error fixer "failed": ', error);
-};
+      console.error('❌ Error fixer "failed": ', error),
+    }
   }
   startPeriodicHealthChecks() {,
     console.log('🔄 Starting periodic health checks...'),
@@ -261,12 +261,12 @@ class BuildWatcher {,
     setInterval(,
       async () => {,
         if (this.isRunning) {,
-          await this.performHealthCheck();
-};
+          await this.performHealthCheck(),
+        }
       },
       30 * 60 * 1000,
-    );
-};
+    ),
+  }
   async performHealthCheck() {,
     console.log('🏥 Performing build health check...'),
     try {,
@@ -275,8 +275,8 @@ class BuildWatcher {,
       console.log('✅ Health check passed'),
     } catch (error) {,
       console.log('❌ Health check failed, triggering error fixer...'),
-      await this.triggerErrorFixer();
-};
+      await this.triggerErrorFixer(),
+    }
   }
   async saveReport() {,
     const reportPath = path.join(,
@@ -286,14 +286,14 @@ class BuildWatcher {,
     ),
     const reportDir = path.dirname(reportPath),
     if (!fs.existsSync(reportDir)) {,
-      fs.mkdirSync(reportDir, { "recursive": true });
-};
+      fs.mkdirSync(reportDir, { "recursive": true }),
+    }
     // Add duration to report,
     this.buildReport.duration = Date.now() - this.startTime,
     fs.writeFileSync(reportPath, JSON.stringify(this.buildReport, null, 2)),
     // Keep only the latest 10 reports,
-    this.cleanupOldReports(reportDir);
-};
+    this.cleanupOldReports(reportDir),
+  }
   cleanupOldReports(reportDir) {,
     try {,
       const files = fs,
@@ -307,29 +307,29 @@ class BuildWatcher {,
       // Remove old reports (keep only the latest 10),
       if (files.length > 10) {,
         for (let i = 10, i < files.length, i++) {,
-          fs.unlinkSync(files[i].path);
-};
+          fs.unlinkSync(files[i].path),
+        }
       }
     } catch (error) {,
-      console.error('Error cleaning up old "reports": ', error);
-};
+      console.error('Error cleaning up old "reports": ', error),
+    }
   }
   async shutdown() {,
     console.log('🛑 Shutting down Build Watcher...'),
     this.isRunning = false,
     // Clear any pending timeouts,
     if (this.buildTimeout) {,
-      clearTimeout(this.buildTimeout);
-};
+      clearTimeout(this.buildTimeout),
+    }
     // Save final report,
     await this.saveReport(),
     console.log('✅ Build Watcher shutdown complete'),
-    process.exit(0);
-};
+    process.exit(0),
+  }
 }
 // Run the build watcher,
 if (require.main === module) {,
   const watcher = new BuildWatcher(),
-  watcher.start().catch(console.error);
-  }
+  watcher.start().catch(console.error),
+}
 module.exports = BuildWatcher,

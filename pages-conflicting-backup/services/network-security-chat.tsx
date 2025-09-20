@@ -17,6 +17,6 @@ const NetworkSecurityChat: NextPage = () => {
       </main>
     </div>
   );
-  };
+};
 
 export default NetworkSecurityChat;

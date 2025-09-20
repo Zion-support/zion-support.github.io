@@ -23,22 +23,22 @@ class AIBuildMonitor {,
     this.learningRate = 0.1,
     this.predictionWindow = 5, // Number of builds to analyze for patterns,
     // // // // // // console.log('🤖 AI Build Monitor Starting...'),
-    this.startMonitoring();
-};
+    this.startMonitoring(),
+  }
 ,
   ensureLogsDirectory() {,
     const logsDir = path.dirname(this.logFile),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true });
-};
+      fs.mkdirSync(logsDir, { recursive: true }),
+    }
   }
 ,
   log(message, level = 'INFO') {,
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level}] ${message}\n`,
     // // // // // // console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logEntry);
-};
+    fs.appendFileSync(this.logFile, logEntry),
+  }
 ,
   loadLearningData() {,
     try {,
@@ -96,8 +96,8 @@ class AIBuildMonitor {,
     setInterval(() => {,
       this.updateLearningModel(),
     }, 60 * 60 * 1000), // Every hour,
-    this.log('AI Build Monitor started successfully');
-};
+    this.log('AI Build Monitor started successfully'),
+  }
 ,
   async analyzeCurrentBuildState() {,
     this.log('Analyzing current build state...'),
@@ -115,11 +115,12 @@ class AIBuildMonitor {,
       this.log(`Current build risk score: ${riskScore.toFixed(2)}`),
       if (riskScore > 0.7) {,
         this.log('High risk detected! Initiating preventive measures...WARN'),
-        await this.applyPreventiveMeasures();
-};
+        await this.applyPreventiveMeasures(),
+      }
+
     } catch (error) {,
-      this.log(`Build state analysis failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Build state analysis failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async analyzePackageJson() {,
@@ -134,12 +135,12 @@ class AIBuildMonitor {,
       const packageData = JSON.parse(fs.readFileSync(packagePath, 'utf8')),
       // Check for common issues,
       if (!packageData.scripts || !packageData.scripts.build) {,
-        issues.push({ type: 'MISSING_BUILD_SCRIPT', severity: 'HIGH', weight: 0.8 });
-};
+        issues.push({ type: 'MISSING_BUILD_SCRIPT', severity: 'HIGH', weight: 0.8 }),
+      }
 ,
       if (!packageData.dependencies || Object.keys(packageData.dependencies).length === 0) {,
-        issues.push({ type: 'NO_DEPENDENCIES', severity: 'MEDIUM', weight: 0.5 });
-};
+        issues.push({ type: 'NO_DEPENDENCIES', severity: 'MEDIUM', weight: 0.5 }),
+      }
 ,
       // Check for outdated dependencies,
       const outdatedDeps = await this.checkOutdatedDependencies(),
@@ -148,11 +149,12 @@ class AIBuildMonitor {,
           type: 'OUTDATED_DEPENDENCIES',
           severity: 'MEDIUM',
           weight: 0.6,
-          details: outdatedDeps});
-};
+          details: outdatedDeps}),
+      }
+
     } catch (error) {,
-      issues.push({ type: 'PACKAGE_JSON_PARSE_ERROR', severity: 'CRITICAL', weight: 1.0 });
-};
+      issues.push({ type: 'PACKAGE_JSON_PARSE_ERROR', severity: 'CRITICAL', weight: 1.0 }),
+    }
 ,
     return issues,
   }
@@ -169,15 +171,16 @@ class AIBuildMonitor {,
       const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8')),
       // Check for common TypeScript issues,
       if (tsConfig.compilerOptions?.strict === false) {,
-        issues.push({ type: 'STRICT_MODE_DISABLED', severity: 'MEDIUM', weight: 0.4 });
-};
+        issues.push({ type: 'STRICT_MODE_DISABLED', severity: 'MEDIUM', weight: 0.4 }),
+      }
 ,
       if (!tsConfig.compilerOptions?.target || tsConfig.compilerOptions.target === 'es3') {,
-        issues.push({ type: 'OUTDATED_TARGET', severity: 'MEDIUM', weight: 0.5 });
-};
+        issues.push({ type: 'OUTDATED_TARGET', severity: 'MEDIUM', weight: 0.5 }),
+      }
+
     } catch (error) {,
-      issues.push({ type: 'TSCONFIG_PARSE_ERROR', severity: 'HIGH', weight: 0.8 });
-};
+      issues.push({ type: 'TSCONFIG_PARSE_ERROR', severity: 'HIGH', weight: 0.8 }),
+    }
 ,
     return issues,
   }
@@ -191,15 +194,16 @@ class AIBuildMonitor {,
         const viteConfig = fs.readFileSync(viteConfigPath, 'utf8'),
         // Check for common Vite issues,
         if (!viteConfig.includes('@vitejs/plugin-react')) {,
-          issues.push({ type: 'MISSING_REACT_PLUGIN', severity: 'MEDIUM', weight: 0.6 });
-};
+          issues.push({ type: 'MISSING_REACT_PLUGIN', severity: 'MEDIUM', weight: 0.6 }),
+        }
 ,
         if (!viteConfig.includes('defineConfig')) {,
-          issues.push({ type: 'MISSING_DEFINE_CONFIG', severity: 'LOW', weight: 0.3 });
-};
+          issues.push({ type: 'MISSING_DEFINE_CONFIG', severity: 'LOW', weight: 0.3 }),
+        }
+
       } catch (error) {,
-        issues.push({ type: 'VITE_CONFIG_PARSE_ERROR', severity: 'MEDIUM', weight: 0.6 });
-};
+        issues.push({ type: 'VITE_CONFIG_PARSE_ERROR', severity: 'MEDIUM', weight: 0.6 }),
+      }
     }
 ,
     return issues,
@@ -216,8 +220,8 @@ class AIBuildMonitor {,
           severity: 'HIGH',
           weight: 0.9,
           details: { count: auditResult.vulnerabilities }
-        });
-};
+        }),
+      }
 ,
       // Check for circular dependencies,
       const circularDeps = await this.checkCircularDependencies(),
@@ -226,11 +230,12 @@ class AIBuildMonitor {,
           type: 'CIRCULAR_DEPENDENCIES',
           severity: 'MEDIUM',
           weight: 0.7,
-          details: circularDeps});
-};
+          details: circularDeps}),
+      }
+
     } catch (error) {,
-      this.log(`Dependency analysis failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Dependency analysis failed: ${error.message}`, 'ERROR'),
+    }
 ,
     return issues,
   }
@@ -260,8 +265,8 @@ class AIBuildMonitor {,
       // Run preemptive build test,
       await this.runPreemptiveBuildTest(),
     } catch (error) {,
-      this.log(`Preventive measures failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Preventive measures failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async clearBuildCache() {,
@@ -274,8 +279,8 @@ class AIBuildMonitor {,
           fs.rmSync(cachePath, { recursive: true, force: true }),
           this.log(`Cleared cache: ${dir}`),
         } catch (error) {,
-          this.log(`Failed to clear cache ${dir}: ${error.message}`, 'WARN');
-};
+          this.log(`Failed to clear cache ${dir}: ${error.message}`, 'WARN'),
+        }
       }
     }
   }
@@ -294,17 +299,18 @@ class AIBuildMonitor {,
             updatedCount++,
             this.log(`Updated ${pkg} to ${info.latest}`),
           } catch (error) {,
-            this.log(`Failed to update ${pkg}: ${error.message}`, 'WARN');
-};
+            this.log(`Failed to update ${pkg}: ${error.message}`, 'WARN'),
+          }
         }
       }
 ,
       if (updatedCount > 0) {,
-        this.log(`Updated ${updatedCount} dependencies safely`);
-};
+        this.log(`Updated ${updatedCount} dependencies safely`),
+      }
+
     } catch (error) {,
-      this.log(`Dependency update check failed: ${error.message}`, 'WARN');
-};
+      this.log(`Dependency update check failed: ${error.message}`, 'WARN'),
+    }
   }
 ,
   isSafeUpdate(current, latest) {,
@@ -335,13 +341,13 @@ class AIBuildMonitor {,
     chunkSizeWarningLimit: 1000}`,
           config = config.replace('export default defineConfig({', `export default defineConfig({${optimizations}`),
           fs.writeFileSync(viteConfigPath, config),
-          this.log('Added build optimizations to Vite config');
-};
+          this.log('Added build optimizations to Vite config'),
+        }
       }
 
     } catch (error) {,
-      this.log(`Build config optimization failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Build config optimization failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async runPreemptiveBuildTest() {,
@@ -355,8 +361,8 @@ class AIBuildMonitor {,
       this.recordBuildSuccess(),
     } catch (error) {,
       this.log(`Preemptive build test failed: ${error.message}`, 'ERROR'),
-      this.recordBuildFailure(error.message);
-};
+      this.recordBuildFailure(error.message),
+    }
   }
 ,
   async performPredictiveAnalysis() {,
@@ -369,14 +375,14 @@ class AIBuildMonitor {,
       // Take preventive action if needed,
       if (predictions.riskLevel === 'HIGH') {,
         this.log('High risk predicted! Taking preventive action...WARN'),
-        await this.applyPreventiveMeasures();
-};
+        await this.applyPreventiveMeasures(),
+      }
 ,
       // Update prediction model,
       this.updatePredictionModel(predictions),
     } catch (error) {,
-      this.log(`Predictive analysis failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Predictive analysis failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   analyzeRecentPatterns() {,
@@ -410,8 +416,8 @@ class AIBuildMonitor {,
       recommendations.push('Review recent code changes'),
     } else if (riskScore > 0.3) {,
       recommendations.push('Check for outdated dependencies'),
-      recommendations.push('Verify build configuration');
-};
+      recommendations.push('Verify build configuration'),
+    }
 ,
     return recommendations,
   }
@@ -425,8 +431,8 @@ class AIBuildMonitor {,
     try {,
       fs.writeFileSync(this.predictionModelFile, JSON.stringify(this.predictionModel, null, 2)),
     } catch (error) {,
-      this.log(`Failed to save prediction model: ${error.message}`, 'ERROR');
-};
+      this.log(`Failed to save prediction model: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async updateLearningModel() {,
@@ -441,18 +447,18 @@ class AIBuildMonitor {,
       fs.writeFileSync(this.learningDataFile, JSON.stringify(this.learningData, null, 2)),
       this.log('Learning model updated successfully'),
     } catch (error) {,
-      this.log(`Learning model update failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Learning model update failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async loadBuildHistory() {,
     try {,
       if (fs.existsSync(this.buildHistoryFile)) {,
-        return JSON.parse(fs.readFileSync(this.buildHistoryFile, 'utf8'));
-};
+        return JSON.parse(fs.readFileSync(this.buildHistoryFile, 'utf8')),
+      }
     } catch (error) {,
-      this.log(`Failed to load build history: ${error.message}`, 'ERROR');
-};
+      this.log(`Failed to load build history: ${error.message}`, 'ERROR'),
+    }
 ,
     return [],
   }
@@ -521,5 +527,5 @@ process.on('SIGINT', () => {,
 process.on('SIGTERM', () => {,
   monitor.log('Shutting down AI Build Monitor...INFO'),
   process.exit(0),
-});
-  }}))
+}),
+}}))

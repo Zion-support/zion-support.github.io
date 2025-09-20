@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react'
 
-export default function Blog() : any {
+export default function Blog() {
   const blogPosts = [
     {
       id: 'ai-automation-trends-2025',
@@ -254,4 +254,4 @@ export default function Blog() : any {
       </section>
     </div>
   )
-}'
+}

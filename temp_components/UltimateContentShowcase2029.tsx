@@ -233,7 +233,7 @@ const UltimateContentShowcase2029 = () => {
     }
   ],
 
-  const getContentByCategory = (category) : any => {
+  const getContentByCategory = (category) => {
     switch (category) {
       case 'ai-breakthroughs':
         return aiBreakthroughs,
@@ -258,5 +258,4 @@ const UltimateContentShowcase2029: React.FC = () => {
   )
 },
 
-export default UltimateContentShowcase2029;
-  }'
+export default UltimateContentShowcase2029,

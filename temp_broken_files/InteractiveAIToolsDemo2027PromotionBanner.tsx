@@ -32,11 +32,11 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {,
       const interval = setInterval(() => {,
         setCurrentTool(prev => (prev + 1) % tools.length),
       }2000),
-      return () => clearInterval(interval);
-};
+      return () => clearInterval(interval),
+    }
   }[isVisibletools.length]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
+    setIsDismissed(true),
   },
   if (isDismissed) return null,
   return (,

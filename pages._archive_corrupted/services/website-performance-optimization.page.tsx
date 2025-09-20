@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function WebsitePerformanceOptimization() : any {,
+export default function WebsitePerformanceOptimization() {,
   return (,
     <>,
       <Head>,

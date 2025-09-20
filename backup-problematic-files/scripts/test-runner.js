@@ -25,8 +25,8 @@ class TestRunner {,
       console.log('⚠️ No test files found'),
       console && console.log('⚠️ No test files found'),
     } else {,
-      console && console.log(`✅ Found ${testFilesFound} test files`);
-};
+      console && console.log(`✅ Found ${testFilesFound} test files`),
+    }
     return testFilesFound,
   }
       console.log('⚠️ No test files found')} else {,
@@ -75,11 +75,11 @@ class TestRunner {,
         "testScriptExists": this && this.checkPackageJsonScripts()
       }
     fs && fs.writeFileSync('test-report && report.json', JSON && JSON.stringify(report, null, 2)),
-    console && console.log('Test report generated');
-};
-,
-  runner.generateReport();
+    console && console.log('Test report generated'),
   }
+,
+  runner.generateReport(),
+}
 module.exports = TestRunner,
   runner.generateReport()}
 module.exports = TestRunner,

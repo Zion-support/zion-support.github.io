@@ -1,16 +1,15 @@
+import React from "react";
 
+export interface LinkValidationResult {url: string, status: "valid" | "broken" | "external" | "protocol";
+parentPage?: string;
+suggestedFix?: string;
 }
 httpStatus?: number;}
 error?: string}
 
-export interface LinkFix {originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";
+export interface LinkFix {originalUrl: string, newUrl: string, type: "redirect" | "update" | "remove" | "external";
 }
 }
-httpStatus?: number;
-error?: string}
-
-export interface LinkFix {
-originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";,
 reason: string}
 
 export class LinkValidator {
@@ -31,7 +30,7 @@ private static readonly PROTOCOL_LINKS = [
 "sms:",
 "whatsapp: ";
 ];
-private static readonly BROKEN_LINK_MAPPINGS: Record<string; string> = {
+private static readonly BROKEN_LINK_MAPPINGS: Record<string, string> = {
 // Fix common broken internal links,
 "/quantum-neural-network-platform/": "/services/quantum-technology",
 "/autonomous-business-operations-platform/": "/services/ai-autonomous-systems",
@@ -100,7 +99,7 @@ private static readonly BROKEN_LINK_MAPPINGS: Record<string; string> = {
 "/accessibility-scanner/": "/services/accessibility";
 };
 
-static validateLink(url: string; parentPage?: string): LinkValidationResult {// Check for protocol links;
+static validateLink(url: string, parentPage?: string): LinkValidationResult {// Check for protocol links;
 if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
 return {
 url;,
@@ -123,34 +122,33 @@ return {
 url;
 status: "broken";
 parentPage;,
-suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect"};
+suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect"
+};
 }
 
-// For now; assume internal links are valid;
-// In a real implementation; you"d check against actual routes;
+// For now, assume internal links are valid;
+// In a real implementation, you"d check against actual routes;
 return {url;
 status: "valid";
 parentPage};
 }
 
-static getSuggestedFixes(): LinkFix[] {return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original; newUrl]) => ({
+static getSuggestedFixes(): LinkFix[] {return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
 originalUrl: original;,
 newUrl: newUrl;,
-type: "redirect",
+type: "redirect"
 reason: "Broken internal link with available redirect mapping"}));
 }
 
 static isExternalLink(url: string): boolean {try {
 const urlObj = new URL(url, "https: //ziontechgroup.com");
-return !urlObj.hostname.includes("ziontechgroup.com")} catch {// If it"s a relative URL; it"s internal;
-return !urlObj.hostname.includes("ziontechgroup.com")} catch {
-// If it"s a relative URL; it"s internal;
+return !urlObj.hostname.includes("ziontechgroup.com")} catch {// If it"s a relative URL, it"s internal;
 return false}
 }
 
 static generateRedirectRules(): string {
 const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS);
-.map(([from; to]) => `${from} ${to} 301`)
+.map(([from, to]) => `${from} ${to} 301`)
 .join("\n');
 
 return `# Redirect rules for broken links;
@@ -158,9 +156,6 @@ ${redirects}`;
 }
 
 static generateSitemapExclusions(): string[] {return Object.keys(this.BROKEN_LINK_MAPPINGS)}
-static generateSitemapExclusions(): string[] {
-return Object.keys(this.BROKEN_LINK_MAPPINGS)}
 }
 
 export const linkValidator = new LinkValidator();
-

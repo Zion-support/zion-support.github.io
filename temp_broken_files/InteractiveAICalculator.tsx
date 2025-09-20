@@ -165,6 +165,6 @@ const InteractiveAICalculator: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default InteractiveAICalculator,

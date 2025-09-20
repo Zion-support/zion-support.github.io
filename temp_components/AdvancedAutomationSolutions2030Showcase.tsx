@@ -176,5 +176,4 @@ const AdvancedAutomationSolutions2030Showcase: React.FC = () => {
   )
 },
 
-export default AdvancedAutomationSolutions2030Showcase;
-  }
+export default AdvancedAutomationSolutions2030Showcase,

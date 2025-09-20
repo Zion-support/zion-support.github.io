@@ -58,8 +58,8 @@ console.log('🌿 Getting all branches...');
     const branchList = branches.split('\n')
         .map(branch => branch.trim())
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
-    console.log(`Found ${branchList.length} branches to merge:`);
-    branchList.forEach(branch => console.log(`  - ${branch}`));
+    console.log(`Found ${branchList.length} branches to merge: `);,
+  branchList.forEach(branch => console.log(`  - ${branch}`));
     // Merge each branch,
 for (const branch of branchList) {
         try {
@@ -73,7 +73,8 @@ execSync('git checkout main');
             console.log(`✅ Successfully merged ${branchName}`);
         } catch (error) {
             console.log(`⚠️  Error merging ${branch}: ${error.message}`);
-            // Continue with other branches}
+            // Continue with other branches,
+}
     }
     // Push all changes,
 console.log('📤 Pushing all changes to main...');

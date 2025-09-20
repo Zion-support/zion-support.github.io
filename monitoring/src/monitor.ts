@@ -40,7 +40,7 @@ function loadConfig(): MonitoringConfig {
 const config = loadConfig(),
 // const checkHistory: Map<string, EndpointTestResult[]> = new Map(), // Removed checkHistory
 
-export async function runMonitoring() : any {
+export async function runMonitoring() {
   logger.info('Starting API latency monitoring run...'),
 
   const resolvedEndpoints: Endpoint[] = config.endpoints.map(e => ({
@@ -71,18 +71,18 @@ export async function runMonitoring() : any {
   if (slowestResponses.length > 0) {
     logger.info('Top 5 slowest responses:', { slowestResponses }),
   } else {
-    logger.info('No responses measured or all responses were errors before latency could be determined.');
-};
+    logger.info('No responses measured or all responses were errors before latency could be determined.'),
+  }
+
   results.forEach(result => {
     if (result.error) {
       logger.error('Endpoint test failed:', result),
     } else {
-      // logger.debug('Endpoint test succeeded:', result);
-};
+      // logger.debug('Endpoint test succeeded:', result),
+    }
   }),
 
-  logger.info('API latency monitoring run finished.');
-  }
+  logger.info('API latency monitoring run finished.'),
+}
 
 // Removed runMonitoring().catch(...) and process.exit(1) from here
-'

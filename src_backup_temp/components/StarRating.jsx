@@ -17,8 +17,8 @@ export default function StarRating(props: any) {}"}
   return [...Array(5)].map((_, i) => {}}
     )}),
     const idx = i + 1,"}
-    ),"}),';
-  }"}
+    ),"}),',
+}"}
     ),"}),',","}
     )}),
 export {StarRating}}

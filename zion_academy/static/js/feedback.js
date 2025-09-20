@@ -7,13 +7,13 @@ class ZionFeedback {,
         this.baseUrl = '/api/feedback',
         this.currentContent = this.getCurrentContent(),
         this.feedbackForms = new Map(),
-        this.init();
-};
+        this.init(),
+    }
 ,
     init() {,
         this.createFeedbackWidget(),
-        this.setupEventListeners();
-};
+        this.setupEventListeners(),
+    }
 ,
     getCurrentContent() {,
         // Extract content context from current page,
@@ -113,8 +113,8 @@ class ZionFeedback {,
         // Store reference,
         this.feedbackForms.set(feedbackModal, feedbackModal),
         // Add styles,
-        this.addStyles();
-};
+        this.addStyles(),
+    }
 ,
     addStyles() {,
         if (document.getElementById('zion-feedback-styles')) return,
@@ -143,8 +143,8 @@ class ZionFeedback {,
 ,
             .feedback-trigger: hover {,
                 transform: translateY(-2px),
-                box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-};
+                box-shadow: 0 6px 20px rgba(0,0,0,0.3),
+            }
 ,
             .zion-feedback-modal {,
                 position: fixed,
@@ -165,8 +165,8 @@ class ZionFeedback {,
                 max-width: 500px,
                 max-height: 90vh,
                 overflow-y: auto,
-                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-};
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3),
+            }
 ,
             .feedback-modal-header {,
                 padding: 20px,
@@ -276,8 +276,8 @@ class ZionFeedback {,
 ,
             .feedback-submit: hover {,
                 transform: translateY(-1px),
-                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-};
+                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4),
+            }
 ,
             .feedback-submit: disabled {,
                 opacity: 0.6,
@@ -311,40 +311,40 @@ class ZionFeedback {,
                     flex-direction: column}
             }
         `,
-        document.head.appendChild(styles);
-};
+        document.head.appendChild(styles),
+    }
 ,
     setupEventListeners() {,
         // Feedback button click,
         document.addEventListener('click', (e) => {,
             if (e.target.closest('.feedback-trigger')) {,
-                this.showFeedbackModal();
-};
+                this.showFeedbackModal(),
+            }
 ,
             if (e.target.closest('.feedback-close') || e.target.closest('.feedback-cancel')) {,
-                this.hideFeedbackModal();
-};
+                this.hideFeedbackModal(),
+            }
         }),
         // Form submission,
         document.addEventListener('submit', (e) => {,
             if (e.target.classList.contains('feedback-form')) {,
                 e.preventDefault(),
-                this.handleFeedbackSubmission(e.target);
-};
+                this.handleFeedbackSubmission(e.target),
+            }
         }),
         // Close modal on outside click,
         document.addEventListener('click', (e) => {,
             if (e.target.classList.contains('zion-feedback-modal')) {,
-                this.hideFeedbackModal();
-};
+                this.hideFeedbackModal(),
+            }
         }),
         // Close modal on escape key,
         document.addEventListener('keydown', (e) => {,
             if (e.key === 'Escape') {,
-                this.hideFeedbackModal();
-};
-        });
-};
+                this.hideFeedbackModal(),
+            }
+        }),
+    }
 ,
     showFeedbackModal() {,
         const modal = document.querySelector('.zion-feedback-modal'),
@@ -391,12 +391,12 @@ class ZionFeedback {,
                     window.zionAnalytics.trackEvent('feedback_submit', {,
                         feedback_type: feedbackData.feedback_type,
                         content_type: feedbackData.content_type,
-                        content_id: feedbackData.content_id});
-};
+                        content_id: feedbackData.content_id}),
+                }
             } else {,
                 const errorData = await response.json(),
-                this.showErrorMessage(form, errorData.error || 'Failed to submit feedback');
-};
+                this.showErrorMessage(form, errorData.error || 'Failed to submit feedback'),
+            }
         } catch (error) {,
             this.showErrorMessage(form, 'Network error. Please try again.'),
         } finally {,
@@ -426,14 +426,14 @@ class ZionFeedback {,
         const errorDiv = document.createElement('div'),
         errorDiv.className = 'feedback-error',
         errorDiv.textContent = message,
-        form.appendChild(errorDiv);
-};
+        form.appendChild(errorDiv),
+    }
 ,
     // Public methods,
     showFeedbackForContent(contentType, contentId, contentTitle) {,
         this.currentContent = { type: contentType, id: contentId, title: contentTitle },
-        this.showFeedbackModal();
-};
+        this.showFeedbackModal(),
+    }
 ,
     getFeedbackStats() {,
         return fetch(`${this.baseUrl}/list`),
@@ -441,8 +441,8 @@ class ZionFeedback {,
             .catch(error => {,
                 console.error('Failed to fetch feedback stats:', error),
                 return { feedbacks: [] },
-            });
-};
+            }),
+    }
 }
 ,
 // Initialize feedback when DOM is ready,
@@ -451,5 +451,5 @@ document.addEventListener('DOMContentLoaded', () => {,
 }),
 // Export for module systems,
 if (typeof module !== 'undefined' && module.exports) {,
-    module.exports = ZionFeedback;
-  }'
+    module.exports = ZionFeedback,
+}

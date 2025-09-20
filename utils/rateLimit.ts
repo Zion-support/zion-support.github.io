@@ -20,5 +20,5 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
     return false,
   }
 
-  return true;
-  }
+  return true,
+}

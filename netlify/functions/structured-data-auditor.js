@@ -6,8 +6,8 @@ exports.handler = async function () {
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
   const githubBranch = process.env.GIT_BRANCH || 'main',
 
-  function log(msg) { console.log(`[structured-data-auditor] ${msg}`);
-};
+  function log(msg) { console.log(`[structured-data-auditor] ${msg}`), }
+
   async function fetchText(url) {
     try {
       const r = await fetch(url, { redirect: 'follow' }),
@@ -41,8 +41,8 @@ exports.handler = async function () {
     let m,
     while ((m = regex.exec(html)) !== null) {
       const content = m[1].trim(),
-      scripts.push(content);
-};
+      scripts.push(content),
+    }
     return scripts,
   }
 
@@ -72,8 +72,7 @@ exports.handler = async function () {
     const status = putRes.status,
     let error,
     if (!ok) {
-      try { error = await putRes.text(), } catch (e) { error = String(e);
-};
+      try { error = await putRes.text(), } catch (e) { error = String(e), }
     }
     return { ok, status, error },
   }
@@ -102,8 +101,9 @@ exports.handler = async function () {
         }
       }
       if (parsed.length > 0) pagesWithJsonLd += 1,
-      results.push({ url, ok: true, status: res.status, jsonLdCount: parsed.length });
-};
+      results.push({ url, ok: true, status: res.status, jsonLdCount: parsed.length }),
+    }
+
     const summary = {
       auditedAt: new Date().toISOString(),
       baseUrl,
@@ -141,6 +141,6 @@ exports.handler = async function () {
     return { statusCode: 200, body: JSON.stringify({ ok: true, jsonRes, mdRes, totals: summary.totals }) },
   } catch (e) {
     log(String(e)),
-    return { statusCode: 500, body: JSON.stringify({ ok: false, error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ ok: false, error: String(e) }) },
   }
 },

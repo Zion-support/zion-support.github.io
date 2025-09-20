@@ -126,7 +126,7 @@ const QuantumComputingSolutions2026PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  );
-  },
+  ),
+},
 export default QuantumComputingSolutions2026PromotionBanner,
 </div></div></div></div></div></div>,

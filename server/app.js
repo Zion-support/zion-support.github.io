@@ -25,8 +25,8 @@ app.use('/api/talent', (req, res, next) => {
   // A more precise regex might be needed for strict matching if there are other /api/talent sub-routes not to be logged.
   if (req.originalUrl.startsWith('/api/talent')) {
     console.log('Talent API request:', req.method, req.originalUrl),
-    console.log('Body:', req.body);
-};
+    console.log('Body:', req.body),
+  }
   next(),
 }),
 
@@ -52,7 +52,7 @@ app.use((err, req, res, next) => {
   console.error(err),
   res
     .status(err.status || 500)
-    .json({ code: err.code, message: err.message });
-  }),
+    .json({ code: err.code, message: err.message }),
+}),
 
 module.exports = app,

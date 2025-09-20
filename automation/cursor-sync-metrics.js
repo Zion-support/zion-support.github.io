@@ -11,13 +11,13 @@ class CursorSyncMetrics {,
     this.metricsDir = path.join(__dirname, 'metrics'),
     this.logFile = path.join(__dirname, 'logscursor-sync-cron.log'),
     this.metricsFile = path.join(this.metricsDir, 'cursor-sync-metrics.json'),
-    this.ensureMetricsDirectory();
-};
+    this.ensureMetricsDirectory(),
+  }
 ,
   ensureMetricsDirectory() {,
     if (!fs.existsSync(this.metricsDir)) {,
-      fs.mkdirSync(this.metricsDir, { recursive: true });
-};
+      fs.mkdirSync(this.metricsDir, { recursive: true }),
+    }
   }
 ,
   loadMetrics() {,
@@ -25,8 +25,8 @@ class CursorSyncMetrics {,
       try {,
         return JSON.parse(fs.readFileSync(this.metricsFile, 'utf8')),
       } catch (error) {,
-        console.error('Error loading metrics:', error.message);
-};
+        console.error('Error loading metrics:', error.message),
+      }
     }
     return {,
       totalSyncs: 0,
@@ -43,8 +43,8 @@ class CursorSyncMetrics {,
     try {,
       fs.writeFileSync(this.metricsFile, JSON.stringify(metrics, null, 2)),
     } catch (error) {,
-      console.error('Error saving metrics:', error.message);
-};
+      console.error('Error saving metrics:', error.message),
+    }
   }
 ,
   analyzeLogFile() {,
@@ -112,8 +112,8 @@ class CursorSyncMetrics {,
     }),
     this.saveMetrics(metrics),
     console.log(`📊 Metrics updated: ${logAnalysis.syncs} syncs, ${logAnalysis.errors} errors`),
-    console.log(`📈 Success rate: ${metrics.successRate}%`);
-};
+    console.log(`📈 Success rate: ${metrics.successRate}%`),
+  }
 ,
   generateReport() {,
     const metrics = this.loadMetrics(),
@@ -129,24 +129,24 @@ class CursorSyncMetrics {,
       recommendations: this.generateRecommendations(metrics)},
     const reportFile = path.join(this.metricsDir, `cursor-sync-report-${new Date().toISOString().split('T')[0]}.json`),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
-    console.log(`📄 Report generated: ${reportFile}`);
-};
+    console.log(`📄 Report generated: ${reportFile}`),
+  }
 ,
   generateRecommendations(metrics) {,
     const recommendations = [],
     if (metrics.successRate < 90) {,
-      recommendations.push('Consider increasing retry attempts or adjusting sync interval');
-};
+      recommendations.push('Consider increasing retry attempts or adjusting sync interval'),
+    }
 ,
     if (metrics.failedSyncs > metrics.successfulSyncs * 0.1) {,
-      recommendations.push('High failure rate detected - check network connectivity and git configuration');
-};
+      recommendations.push('High failure rate detected - check network connectivity and git configuration'),
+    }
 ,
     if (!metrics.lastSync) {,
-      recommendations.push('No recent syncs detected - check if automation is running');
-};
+      recommendations.push('No recent syncs detected - check if automation is running'),
+    }
 ,
-    return recommendations;
+    return recommendations,
   }
 }
 ,

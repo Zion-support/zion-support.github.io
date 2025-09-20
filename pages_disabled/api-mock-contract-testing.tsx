@@ -5,13 +5,13 @@ import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
 
 
-export default function ApiMockContractTestingPage() : any {
+export default function ApiMockContractTestingPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   const adItems = [
     {
@@ -47,7 +47,7 @@ export default function ApiMockContractTestingPage() : any {
         <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
 
         <div className="max-w-5xl mx-auto mt-8">
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {tiers.map((t) => (
               <div key={t.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
                 <div className="flex items-center gap-2 mb-2">
@@ -78,5 +78,5 @@ export default function ApiMockContractTestingPage() : any {
       </div>
     </Layout>
   );
-  }
+}
 

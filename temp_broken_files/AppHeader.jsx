@@ -49,8 +49,8 @@ export function AppHeader() {,
     e.preventDefault(),
     if (searchQuery.trim()) {,
       // Implement search functionality,
-      console.log('Searching for:', searchQuery);
-};
+      console.log('Searching for:', searchQuery),
+    }
     return location.pathname.startsWith(path),
   },
   const toggleDarkMode = () => {,
@@ -282,5 +282,5 @@ const AppHeader= () => {,
       <div className="h-16 lg: h-20"></div>,
     </>,
   )},
-export default AppHeader;
-  }
+export default AppHeader,
+}

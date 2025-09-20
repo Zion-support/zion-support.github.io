@@ -207,5 +207,5 @@ const UltimateContentShowcase: React.FC = () => {
     </div>
   )
 },
-export default UltimateContentShowcase;
-  }
+export default UltimateContentShowcase,
+}

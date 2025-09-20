@@ -16,8 +16,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  );
-};
+  ),
+}
 ,
 /**,
  * Start All Automations Script,
@@ -60,8 +60,8 @@ class AutomationStarter {,
       this.keepAlive(),
     } catch (error) {,
       logger.error('❌ Failed to start automation systems:', error),
-      process.exit(1);
-};
+      process.exit(1),
+    }
   }
 ,
   async startCoreOrchestrator() {,
@@ -93,8 +93,8 @@ class AutomationStarter {,
       this.runningSystems.set('coreOrchestrator', orchestrator),
       logger.info('✅ Core Automation Orchestrator started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Core Orchestrator:', error.message);
-};
+      logger.error('❌ Failed to start Core Orchestrator:', error.message),
+    }
   }
 ,
   async startNetlifyAutomation() {,
@@ -106,8 +106,8 @@ class AutomationStarter {,
       this.runningSystems.set('netlifyMonitor', netlifyMonitor),
       logger.info('✅ Netlify Automation started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Netlify Automation:', error.message);
-};
+      logger.error('❌ Failed to start Netlify Automation:', error.message),
+    }
   }
 ,
   async startPerformanceMonitoring() {,
@@ -119,8 +119,8 @@ class AutomationStarter {,
       this.runningSystems.set('performanceMonitor', performanceMonitor),
       logger.info('✅ Performance Monitoring started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Performance Monitoring:', error.message);
-};
+      logger.error('❌ Failed to start Performance Monitoring:', error.message),
+    }
   }
 ,
   async startContinuousImprovement() {,
@@ -132,8 +132,8 @@ class AutomationStarter {,
       this.runningSystems.set('continuousImprovement', continuousImprovement),
       logger.info('✅ Continuous Improvement started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Continuous Improvement:', error.message);
-};
+      logger.error('❌ Failed to start Continuous Improvement:', error.message),
+    }
   }
 ,
   async startCursorAutomation() {,
@@ -147,8 +147,8 @@ class AutomationStarter {,
       this.runningSystems.set('cursorAutomation', cursorAutomation),
       logger.info('✅ Cursor Automation started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Cursor Automation:', error.message);
-};
+      logger.error('❌ Failed to start Cursor Automation:', error.message),
+    }
   }
 ,
   async startCursorIntegrationSystem() {,
@@ -179,8 +179,8 @@ class AutomationStarter {,
       this.runningSystems.set('taskAutomation', taskAutomation),
       logger.info('✅ Task Automation started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Task Automation:', error.message);
-};
+      logger.error('❌ Failed to start Task Automation:', error.message),
+    }
   }
 ,
   printStatus() {,
@@ -210,12 +210,12 @@ class AutomationStarter {,
       for (const [name, system] of this.runningSystems) {,
         try {,
           if (system.stop) {,
-            await system.stop();
-};
+            await system.stop(),
+          }
           logger.info(`✅ Stopped ${name}`),
         } catch (error) {,
-          logger.error(`❌ Error stopping ${name}:`, error.message);
-};
+          logger.error(`❌ Error stopping ${name}:`, error.message),
+        }
       }
 ,
       logger.info('👋 All automation systems stopped'),
@@ -226,16 +226,16 @@ class AutomationStarter {,
       for (const [name, system] of this.runningSystems) {,
         try {,
           if (system.stop) {,
-            await system.stop();
-};
+            await system.stop(),
+          }
         } catch (error) {,
-          logger.error(`Error stopping ${name}:`, error.message);
-};
+          logger.error(`Error stopping ${name}:`, error.message),
+        }
       }
 ,
       process.exit(0),
-    });
-};
+    }),
+  }
 }
 ,
 // Start all automation systems,
@@ -244,7 +244,7 @@ if (require.main === module) {,
   starter.startAllSystems().catch((error) => {,
     logger.error('Failed to start automation systems:', error),
     process.exit(1),
-  });
-};
+  }),
+}
 ,
 module.exports = AutomationStarter,

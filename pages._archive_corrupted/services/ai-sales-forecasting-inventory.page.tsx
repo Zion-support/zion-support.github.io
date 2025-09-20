@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function AISalesForecastingInventory() : any {,
+export default function AISalesForecastingInventory() {,
   return (,
     <>,
       <Head>,

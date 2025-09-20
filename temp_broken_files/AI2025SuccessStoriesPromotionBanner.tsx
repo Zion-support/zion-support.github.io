@@ -185,7 +185,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {,
         </div>,
       </div>,
     </section>,
-  );
-  },
+  ),
+},
 export default AI2025SuccessStoriesPromotionBanner,
-</div></div></div></div>,'
+</div></div></div></div>,

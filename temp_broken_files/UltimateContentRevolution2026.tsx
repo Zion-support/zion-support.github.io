@@ -239,4 +239,4 @@ const UltimateContentRevolution2026 = () => {,
       </div>,
     </div>,
   )},
-export default UltimateContentRevolution2026,'
+export default UltimateContentRevolution2026,

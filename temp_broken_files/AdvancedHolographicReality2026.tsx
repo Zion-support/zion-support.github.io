@@ -168,6 +168,6 @@ const AdvancedHolographicReality2026: React.FC = () => {,
         <div className="text-center">,
         </div>,
       </div>,
-    </div>);
-  },
+    </div>),
+},
 export default AdvancedHolographicReality2026,

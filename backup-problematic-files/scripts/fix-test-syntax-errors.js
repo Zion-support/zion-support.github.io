@@ -125,7 +125,7 @@ console.log('🔧 Test Syntax Error Fixer Started')',class TestSyntaxErrorFixer 
       console.log('🔍 Finding test files...')',      // Find all test files',      const testFiles = await glob('**/* */)'
       }),
       console.log(`📁 Found ${testFiles.length} test files`),
-      // Process each test file;
+      // Process each test file,
   }
   async fixTestFile(filePath) {,
     try {,
@@ -213,4 +213,4 @@ console.log('🔧 Test Syntax Error Fixer Started')',class TestSyntaxErrorFixer 
     console.log("\n✅ Test syntax fixing completed!")}
     console.log('\n✅ Test syntax fixing completed!')}
 
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))))]'
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))))]

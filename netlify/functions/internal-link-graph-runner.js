@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'internal-link-graph-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

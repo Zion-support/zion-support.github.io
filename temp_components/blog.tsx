@@ -10,7 +10,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 
-export default function BlogPage() : any {
+export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
 
@@ -142,13 +142,13 @@ export default function BlogPage() : any {
 
   const featuredPosts = blogPosts.filter(post => post.featured),
 
-  const formatDate = (dateString: string) : any => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    });
+    }),
   },
 
   return (
@@ -442,4 +442,3 @@ export default function BlogPage() : any {
     </div>
   )
 }
-'

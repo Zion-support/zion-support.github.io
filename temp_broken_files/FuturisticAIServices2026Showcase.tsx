@@ -56,7 +56,7 @@ const FuturisticAIServices2026Showcase = () => {,
     const interval = setInterval(() => {,
       setCurrentService((prev) => (prev + 1) % services.length),
     }4000),
-    return () => clearInterval(interval);
+    return () => clearInterval(interval),
   }[services.length]),
   const containerVariants = {,
     hidden: { opacity: 0, y: 50 },

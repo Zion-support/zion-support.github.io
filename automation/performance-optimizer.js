@@ -37,7 +37,7 @@ class PerformanceOptimizer {
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
         recommendations: this.generateRecommendations()
-      },
+      };
       
       this.saveReport(report);
       this.log('Performance optimization completed');
@@ -57,7 +57,7 @@ class PerformanceOptimizer {
         recommendations: ['Consider code splitting', 'Remove unused dependencies']
       };
     } catch (error) {
-      return { error: error.message },
+      return { error: error.message };
     }
   }
 
@@ -68,28 +68,27 @@ class PerformanceOptimizer {
         optimized: 0,
         totalImages: 0,
         savings: '0KB'
-      },
+      };
     } catch (error) {
       return { error: error.message };
-  }
+    }
   }
 
   analyzeDependencies() {
     try {
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
       const dependencies = Object.keys(packageJson.dependencies || {});
-
-  const devDependencies = Object.keys(packageJson.devDependencies || {});
+      const devDependencies = Object.keys(packageJson.devDependencies || {});
       
       return {
         totalDependencies: dependencies.length + devDependencies.length,
         productionDependencies: dependencies.length,
         devDependencies: devDependencies.length,
         potentialUnused: this.findUnusedDependencies()
-      },
+      };
     } catch (error) {
       return { error: error.message };
-  }
+    }
   }
 
   findUnusedDependencies() {

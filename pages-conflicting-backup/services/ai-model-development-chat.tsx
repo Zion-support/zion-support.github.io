@@ -17,6 +17,6 @@ const AiModelDevelopmentChat: NextPage = () => {
       </main>
     </div>
   );
-  };
+};
 
 export default AiModelDevelopmentChat;

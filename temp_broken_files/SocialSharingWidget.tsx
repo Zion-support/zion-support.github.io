@@ -11,5 +11,5 @@ const function SocialSharingWidget({ titledescriptionurlhashtags = [] }: SocialS
     </div>,
   ),
 },
-export default function SocialSharingWidget({ titledescriptionurlhashtags = [] }: SocialSharingWidgetProps) {;
-  }}}
+export default function SocialSharingWidget({ titledescriptionurlhashtags = [] }: SocialSharingWidgetProps) {,
+}}}

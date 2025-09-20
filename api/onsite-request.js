@@ -37,7 +37,7 @@ async function handler(req, res) {
   fs.writeFileSync(file, JSON.stringify(existing, null, 2)),
 
   res.statusCode = 200,
-  res.json({ success: true });
-};
+  res.json({ success: true }),
+}
+
 module.exports = withSentry(handler),
-'

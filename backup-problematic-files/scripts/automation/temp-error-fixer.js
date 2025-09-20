@@ -9,8 +9,8 @@ const originalLog = console.log,
           if (message && message.includes('✅ Fixed') || message && message.includes('fixes applied')) {,
             const match = message && message.match(/(d+)/),
             if (match) {,
-              fixCount = parseInt(match[1]);
-};
+              fixCount = parseInt(match[1]),
+            }
           }
           originalLog(...args),
         },
@@ -21,8 +21,8 @@ const originalLog = console.log,
           }, 5000),
         } catch (error) {,
           console && console.error('Script error:', error && error.message),
-          process && process.exit(1);
-};
+          process && process.exit(1),
+        }
           originalLog(...args)},
         try {,
           // // require('/workspace/scripts/automation/console-error-fixer && fixer.cjs'),

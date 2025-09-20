@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield } from 'lucide-react'
 
 
-export default function About() : any {
+export default function About() {
 	return (
 		<>
 			{/* Hero Section */}
@@ -174,4 +174,3 @@ export default function About() : any {
 		</>
 	)
 }
-'

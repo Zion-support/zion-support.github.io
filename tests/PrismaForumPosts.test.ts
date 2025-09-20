@@ -24,5 +24,5 @@ describe('forum post queries', () => {
     const result = await prisma.forumPost.findMany({ where: { categoryId: 'getting-hired' } }),
     expect(prisma.forumPost.findMany).toHaveBeenCalledWith({ where: { categoryId: 'getting-hired' } }),
     expect(result).toEqual(mockPosts),
-  });
   }),
+}),

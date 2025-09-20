@@ -75,5 +75,5 @@ describe('Signup form', () => {
     fireEvent.submit(screen.getByRole('button', { name: /create account/i })),
     expect(fetchSpy).toHaveBeenCalled(),
     expect(errorSpy).toHaveBeenCalledWith('Email already exists'),
-  });
   }),
+}),

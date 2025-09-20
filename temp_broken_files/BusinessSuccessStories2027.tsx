@@ -134,11 +134,11 @@ const BusinessSuccessStories2027 = () => {,
   useEffect(() => {,
     if (isPlaying) {,
       const interval = setInterval(nextStory5000),
-      return () => clearInterval(interval);
-};
+      return () => clearInterval(interval),
+    }
   }[isPlaying]),
-  const getStatusIcon = (status) : any => {,
-    return <CheckCircle className="w-4 h-4 text-green-400" />;
+  const getStatusIcon = (status) => {,
+    return <CheckCircle className="w-4 h-4 text-green-400" />,
   },
   return (,
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">,
@@ -344,4 +344,4 @@ const BusinessSuccessStories2027 = () => {,
       </div>,
     </div>,
   )},
-export default BusinessSuccessStories2027,'
+export default BusinessSuccessStories2027,

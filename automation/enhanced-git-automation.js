@@ -20,8 +20,8 @@ class EnhancedGitAutomation {,
     this.logFile = path.join(__dirname, 'logsenhanced-git-automation.log'),
     this.statusFile = path.join(__dirname, '.git-automation-status.json'),
     this.ensureDirectories(),
-    this.initializeStatus();
-};
+    this.initializeStatus(),
+  }
 ,
   loadConfig() {,
     const configPath = path.join(__dirname, 'config.json'),
@@ -60,8 +60,8 @@ class EnhancedGitAutomation {,
   ensureDirectories() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true });
-};
+      fs.mkdirSync(logDir, { recursive: true }),
+    }
   }
 ,
   initializeStatus() {,
@@ -76,8 +76,8 @@ class EnhancedGitAutomation {,
           averageCommitTime: 0,
           averagePushTime: 0}
       },
-      fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2));
-};
+      fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2)),
+    }
   }
 ,
   log(message, level = 'info') {,
@@ -87,8 +87,8 @@ class EnhancedGitAutomation {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message);
-};
+      console.error('Failed to write to log file:', error.message),
+    }
 ,
     if (level === 'error') {,
       console.error(`❌ ${message}`),
@@ -97,8 +97,8 @@ class EnhancedGitAutomation {,
     } else if (level === 'success') {,
       console.log(`✅ ${message}`),
     } else {,
-      console.log(`ℹ️ ${message}`);
-};
+      console.log(`ℹ️ ${message}`),
+    }
   }
 ,
   async executeCommand(command, options = {}) {,
@@ -127,8 +127,8 @@ class EnhancedGitAutomation {,
     return result.output,
       .trim(),
       .split('\n'),
-      .filter((line) => line.length > 0);
-};
+      .filter((line) => line.length > 0),
+  }
 ,
   async getCurrentBranch() {,
     const result = await this.executeCommand('git branch --show-current'),
@@ -136,8 +136,8 @@ class EnhancedGitAutomation {,
       this.log(`Error getting current branch: ${result.error}`, 'error'),
       return 'main',
     }
-    return result.output.trim();
-};
+    return result.output.trim(),
+  }
 ,
   async checkForConflicts() {,
     const result = await this.executeCommand('git status --porcelain'),
@@ -145,8 +145,8 @@ class EnhancedGitAutomation {,
     const hasConflicts =,
       result.output.includes('UU ') || result.output.includes('AA '),
     if (hasConflicts) {,
-      this.log('Merge conflicts detectedwarn');
-};
+      this.log('Merge conflicts detectedwarn'),
+    }
     return hasConflicts,
   }
 ,
@@ -182,11 +182,11 @@ class EnhancedGitAutomation {,
         if (result.success) {,
           this.log(`${fix.name} completed successfully`),
         } else {,
-          this.log(`${fix.name} failed: ${result.error}`, 'warn');
-};
+          this.log(`${fix.name} failed: ${result.error}`, 'warn'),
+        }
       } catch (error) {,
-        this.log(`${fix.name} failed: ${error.message}`, 'warn');
-};
+        this.log(`${fix.name} failed: ${error.message}`, 'warn'),
+      }
     }
 ,
     return true,
@@ -225,11 +225,11 @@ class EnhancedGitAutomation {,
       } else if (filename.includes('test') || filename.includes('spec')) {,
         groups.tests.push(file),
       } else {,
-        groups.other.push(file);
-};
+        groups.other.push(file),
+      }
     }),
-    return Object.values(groups).filter((group) => group.length > 0);
-};
+    return Object.values(groups).filter((group) => group.length > 0),
+  }
 ,
   generateSmartCommitMessage(files) {,
     const fileGroups = this.groupFilesByType(files),
@@ -256,8 +256,8 @@ class EnhancedGitAutomation {,
     }),
     const message = descriptions.join(),
     return this.config.git.commitMessageTemplate.replace('{description}',
-      message);
-};
+      message),
+  }
 ,
   async stageFiles(files) {,
     if (files.length === 0) return true,
@@ -328,8 +328,8 @@ class EnhancedGitAutomation {,
 ,
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2)),
     } catch (error) {,
-      this.log(`Error updating performance metrics: ${error.message}`, 'warn');
-};
+      this.log(`Error updating performance metrics: ${error.message}`, 'warn'),
+    }
   }
 ,
   async execute() {,
@@ -375,8 +375,8 @@ class EnhancedGitAutomation {,
 ,
     // Push if enabled and commits were successful,
     if (this.config.git.autoPush && successCount > 0) {,
-      await this.push();
-};
+      await this.push(),
+    }
 ,
     const totalTime = Date.now() - startTime,
     this.log(`✅ Enhanced git automation completed in ${totalTime}ms. ${successCount} commits made.`,
@@ -403,8 +403,8 @@ class EnhancedGitAutomation {,
       this.log(`File changed: ${filePath}`),
       // Clear existing timeout,
       if (commitTimeout) {,
-        clearTimeout(commitTimeout);
-};
+        clearTimeout(commitTimeout),
+      }
 ,
       // Set new timeout for commit,
       commitTimeout = setTimeout(async () => {,
@@ -414,8 +414,8 @@ class EnhancedGitAutomation {,
     watcher.on('error', (error) => {,
       this.log(`Watcher error: ${error.message}`, 'error'),
     }),
-    this.log('✅ Enhanced file watcher started. Changes will be auto-committed after 3 seconds of inactivity.');
-};
+    this.log('✅ Enhanced file watcher started. Changes will be auto-committed after 3 seconds of inactivity.'),
+  }
 ,
   async getStatus() {,
     try {,
@@ -453,8 +453,8 @@ switch (command) {,
   case 'fix':,
     gitAutomation.autoFix().catch((error) => {,
       console.error('Auto-fix failed:', error.message),
-      process.exit(1);
-  }),
+      process.exit(1),
+    }),
     break,
   default: console.log(`,
 🚀 Enhanced Git Automation System,

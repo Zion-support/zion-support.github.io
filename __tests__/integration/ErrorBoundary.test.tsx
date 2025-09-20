@@ -10,7 +10,7 @@ beforeAll(() => {,
   process.env = {,
     ...originalEnv,
     NEXT_PUBLIC_SENTRY_DSN: test-dsn', // Ensure Sentry is "active""  },""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
-  console.error = (..._args: unknown[]) : any => {,
+  console.error = (..._args: unknown[]) => {,
     const firstArg = args[0],
     if (typeof firstArg === string' && firstArg.includes('Test error from ErrorThrowingComponent')) {'      return
     }
@@ -25,7 +25,7 @@ afterAll(() => {,
   process.env = originalEnv, // Restore original env
 }),
 // This is the component that will throw an error,
-const ErrorThrowingComponent = (): ReactNode : any => {,
+const ErrorThrowingComponent = (): ReactNode => {,
   throw new Error('Test error from ErrorThrowingComponent')},
 // Mock a component that is used in App's routing, e.g., Home.'// When this mocked component is rendered, it will instead render ErrorThrowingComponent.,
 vi.mock('../../src/pages/Home', () => ({'  __esModule: true,

@@ -255,7 +255,7 @@ const UltimateContentShowcase2030 = () => {
     }
   ],
 
-  const getContentByCategory = (category) : any => {
+  const getContentByCategory = (category) => {
     switch (category) {
       case 'transcendent-ai':
         return transcendentAI,
@@ -280,5 +280,4 @@ const UltimateContentShowcase2030: React.FC = () => {
   )
 },
 
-export default UltimateContentShowcase2030;
-  }
+export default UltimateContentShowcase2030,

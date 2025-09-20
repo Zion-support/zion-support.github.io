@@ -363,7 +363,7 @@ export const allServices = [
   ...specializedIndustryServices
 ],
 
-export const getServicesByCategory = (category: Service['category']) : any => {
+export const getServicesByCategory = (category: Service['category']) => {
   return allServices.filter(service => service.category === category)
 },
 
@@ -372,14 +372,14 @@ export const getPopularServices = () => {
 },
 
 export const getNewServices = () => {
-  return allServices.filter(service => service.isNew);
-  },
+  return allServices.filter(service => service.isNew),
+},
 
-export const getServicesByIndustry = (industry: string) : any => {
+export const getServicesByIndustry = (industry: string) => {
   return specializedIndustryServices.filter(service => service.industry === industry)
 },
 
-export const getServicesByAudience = (audience: string) : any => {
+export const getServicesByAudience = (audience: string) => {
   return enhancedServices2025.filter(service => 
     service.targetAudience.includes(audience)
   )

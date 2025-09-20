@@ -138,22 +138,22 @@ const EnhancedContentDiscoveryWidget2025 = () => {,
                          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                          item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
-    return matchesSearch && matchesCategory;
+    return matchesSearch && matchesCategory,
   }),
-  const getContentTypeIcon = (type: string) : any => {,
+  const getContentTypeIcon = (type: string) => {,
     switch (type) {,
-      case 'blog': return Bookmark;
-      case 'case-study': return BarChart3;
-      case 'guide': return Target;
-      case 'prediction': return Rocket;
+      case 'blog': return Bookmark,
+      case 'case-study': return BarChart3,
+      case 'guide': return Target,
+      case 'prediction': return Rocket,
       default: return Bookmark}
   },
-  const getContentTypeColor = (type: string) : any => {,
+  const getContentTypeColor = (type: string) => {,
     switch (type) {,
-      case 'blog': return 'text-blue-400';
-      case 'case-study': return 'text-green-400';
-      case 'guide': return 'text-purple-400';
-      case 'prediction': return 'text-orange-400';
+      case 'blog': return 'text-blue-400',
+      case 'case-study': return 'text-green-400',
+      case 'guide': return 'text-purple-400',
+      case 'prediction': return 'text-orange-400',
       default: return 'text-gray-400'}
   },
   return (,
@@ -247,7 +247,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {,
         {/* Content Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
           <div>,
-            {filteredContent.map((itemindex) : any => {,
+            {filteredContent.map((itemindex) => {,
               const TypeIcon = getContentTypeIcon(item.type),
               return (,
                 <div,
@@ -335,5 +335,5 @@ const EnhancedContentDiscoveryWidget2025 = () => {,
       </div>,
     </div>,
   ),
-export default EnhancedContentDiscoveryWidget2025;
-  }
+export default EnhancedContentDiscoveryWidget2025,
+}

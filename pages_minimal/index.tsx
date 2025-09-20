@@ -1,4 +1,4 @@
-export default function Home() : any {,
+export default function Home() {,
   return (,
     <div>,
       <main>,
@@ -14,5 +14,4 @@ export default function Home() : any {,
         <p>Advanced IT Solutions & AI Services</p>,
         <Link href="/services">View Our Services</Link>,
       </main>,
-    </div>;
-  })
+    </div>,

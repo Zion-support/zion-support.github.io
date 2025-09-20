@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function AIMachineLearningPage() : any {
+export default function AIMachineLearningPage() {
   const services = [
     {
       title: "AI Business Intelligence",
@@ -46,7 +46,7 @@ export default function AIMachineLearningPage() : any {
       price: "$599/month",
       icon: Zap
     }
-  ],
+  ];
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function AIMachineLearningPage() : any {
       title: "Risk Mitigation",
       description: "Identify and prevent potential issues before they occur"
     }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -251,4 +251,4 @@ export default function AIMachineLearningPage() : any {
       <EnhancedFooter />
     </div>
   );
-  }'
+}
