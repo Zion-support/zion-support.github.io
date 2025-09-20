@@ -1,40 +1,47 @@
-
 /** @type {import('next').NextConfig} */
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
   
+<<<<<<< HEAD
+=======
   // Configure page directory
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 
+>>>>>>> dc79ced23effe90346a946358f8b0da8bc890c19
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
   
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },
-
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
-    formats: ['image/webp', 'image/avif'],
   },
+<<<<<<< HEAD
+  
+  // Ignore build errors to allow deployment
+  typescript: {
+    ignoreBuildErrors: true,
+=======
 
 
   // Ignore build errors to allow deployment with syntax issues
   typescript: {
     ignoreBuildErrors: true,
     tsconfigPath: './tsconfig.json',
+>>>>>>> dc79ced23effe90346a946358f8b0da8bc890c19
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
+<<<<<<< HEAD
+  
+  // Force static export
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
+  },
+=======
   
   // Force disable TypeScript checking
   webpack: (config, { dev, isServer }) => {
@@ -70,6 +77,7 @@ const nextConfig = {
     return config;
   },
   
+>>>>>>> dc79ced23effe90346a946358f8b0da8bc890c19
 };
 
 module.exports = nextConfig;
