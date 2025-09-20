@@ -1,7 +1,7 @@
 
 import React from 'react',
-import { Button,,  } from "
-import Link from "
+import React from "react";
+import React from "react";
 import { ArrowLeft,,  } from 'lucide-react'
 import { Button,,  } from "@/components/ui/button"
 import Link from "next/link"

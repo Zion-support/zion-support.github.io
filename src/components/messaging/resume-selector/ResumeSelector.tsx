@@ -6,7 +6,7 @@ import { Label,,  } from "@/components/ui/label",
 import { Plus,,, Loader2,,  } from 'lucide-react'
 import { useResume,,  } from "@/hooks/useResume",
 import { exportResumeToPDF,,  } from "@/utils/pdfExport",
-import { toast,,  } from "
+import React from "react";
 import import { ResumePreviewCard,,, ,,  } from './ResumePreviewCard';
 import import { UploadSection,,, ,,  } from './UploadSection';
 import import { SelectResumeSection,,, ,,  } from './SelectResumeSection';

@@ -1,8 +1,8 @@
-import { useState } from "
-import { TALENT_PROFILES } from "
-import { JOB_POSTS } from "
-import { PROJECTS } from "
-import { apiClient } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 export function useAISearch() {
     const [results, setResults] = useState([])
     const [loading, setLoading] = useState(false)

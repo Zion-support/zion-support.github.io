@@ -1,15 +1,15 @@
-import React from "
+import React from "react";
 
-import import { Card;, CardContent } from "
-import { Badge } from "
-import { ProfileProject } from "
-import { AspectRatio } from "
-import { FileText } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 
 import { Card,,, CardContent,,  } from "@/components/ui/card",
 import { Badge,,  } from "@/components/ui/badge",
-import { ProfileProject,,  } from "
-import { AspectRatio,,  } from "
+import React from "react";
+import React from "react";
 import { FileText,,  } from 'lucide-react'
 interface ProfileProjectsProps {
 projects: ProfileProject[],

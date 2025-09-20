@@ -3,8 +3,8 @@ id: string;
 name: string;
 }
 
-import React from "
-import { cn } from "
+import React from "react";
+import React from "react";
 
 const Avatar = React.forwardRef<;
 HTMLDivElement;

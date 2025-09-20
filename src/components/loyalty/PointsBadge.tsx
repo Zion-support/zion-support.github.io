@@ -1,9 +1,9 @@
-import React from "
-import { Gift } from "
-import { useAuth } from "
-import import { useEffect;, useState } from "
-import { usePoints } from "
-import { Link } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 import import { Tooltip;
 TooltipContent;
 TooltipProvider;

@@ -3,14 +3,14 @@ id: string;
 name: string;
 }
 
-import React from "
+import React from "react";
 
 
-import { BadgeDollarSign } from "
-import { useWallet } from "
-import import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
-import { Button } from "
-import Skeleton from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 
 export export function TokenDisplay() {;
 const { wallet; loading } = useWallet()

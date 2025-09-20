@@ -1,7 +1,7 @@
 
-import React, { useState } from "
+import React from "react";
 import { MapPin,,  } from 'lucide-react'
-import { TalentCardSkills,,  } from "
+import React from "react";
 interface TalentCardContentProps {
   summary: string | undefined;,
 bio: string;

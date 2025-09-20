@@ -1,8 +1,8 @@
 
 import { ApplicationStatus,,  } from "@/types/jobs",
-import { Progress,,  } from "
+import React from "react";
 import { CheckCircle2,,, Circle,,, CircleDot,,  } from 'lucide-react'
-import { cn,,  } from "
+import React from "react";
 interface ApplicationProgressProps {
 className?: string,
 }

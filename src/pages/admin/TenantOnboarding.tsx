@@ -12,7 +12,7 @@ import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from "@/components/
 import { Select,,, SelectContent,,, SelectItem,,, SelectTrigger,,, SelectValue,,  } from "@/components/ui/select",
 import { toast,,  } from "sonner",
 import { supabase,,  } from "@/integrations/supabase/client",
-import { Switch,,  } from "
+import React from "react";
 import import { logErrorToProduction,,  } from '@/utils/productionLogger';
 export default function TenantOnboarding() {
   const { user } = useAuth()

@@ -1,4 +1,4 @@
-import import { useState;, useEffect;, useCallback;, useRef } from "
+import React from "react";
 
 interface AnalyticsEvent {
 id: string;

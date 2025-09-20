@@ -35,8 +35,14 @@ const nextConfig = {
   
   // Force disable TypeScript checking
   webpack: (config, { dev, isServer }) => {
-    // Disable TypeScript checking in webpack
-    config.resolve.extensions = ['.js', '.jsx', '.json'];
+    // Configure webpack extensions
+    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
+    
+    // Add path alias resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': require('path').resolve(__dirname, 'src'),
+    };
     
     if (!dev && !isServer) {
       // Optimize bundle size

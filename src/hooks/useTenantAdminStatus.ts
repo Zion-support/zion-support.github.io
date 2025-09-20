@@ -1,4 +1,4 @@
-import import { useState;, useEffect } from "
+import React from "react";
 
 interface TenantAdminStatus {
 isAdmin: boolean; isLoading: boolean;

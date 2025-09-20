@@ -17,7 +17,7 @@ import import { PartnerResources,,  } from '@/components/partners/PartnerResourc
 import import { useAuth,,  } from '@/hooks/useAuth';
 import import { useRouter,,  } from 'next/router';
 import import { logInfo,,, logErrorToProduction,,  } from '@/utils/productionLogger';
-import { useState,,, useEffect,,  } from "
+import React from "react";
 import import { useTranslation,,, ,,  } from 'react-i18next';
 import Link from 'next/link',
 import { PartnerRegistrationForm,,  } from "@/components/partners/PartnerRegistrationForm",
@@ -25,7 +25,7 @@ import { PartnerReferralLinks,,  } from "@/components/partners/PartnerReferralLi
 import { PartnerDashboard,,  } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard,,  } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources,,  } from "@/components/partners/PartnerResources",
-import { useAuth,,  } from "
+import React from "react";
 import import { useRouter,,, ,,  } from 'next/router';
 import import { logInfo,,, logErrorToProduction,,  } from '@/utils/productionLogger';
 export default function Partners() {

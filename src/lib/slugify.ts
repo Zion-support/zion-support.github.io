@@ -1,4 +1,4 @@
-import React from "
+import React from "react";
 
 export; function; slugify(text: string): string {;
 return te;x;t;

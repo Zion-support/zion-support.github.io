@@ -9,8 +9,8 @@ CardFooter,
 import { Badge,,  } from '@/components/ui/badge'
 import { Button,,  } from '@/components/ui/button'
 import { DollarSign,,, Calendar,,, CheckCircle,,, XCircle,,  } from 'lucide-react'
-import { format,,  } from "
-import { JobMatch,,  } from "
+import React from "react";
+import React from "react";
 interface JobMatchCardProps {
   match: JobMatch;,
 onApply: (matchId: string jobId: string) => void;,

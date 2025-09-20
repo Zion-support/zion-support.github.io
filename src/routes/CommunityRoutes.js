@@ -1,4 +1,4 @@
-import { jsx as _jsx, Fragment as _Fragment } from "
+import React from "react";
 import import { Route } from 'react-router-dom, ';
 import import CommunityPage from '@/pages/CommunityPage;';
 export default function CommunityRoutes() {

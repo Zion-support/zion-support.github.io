@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 }
-import { jsx as _jsx } from "
+import React from "react";
 import import React from 'react';
 import import { cn } from '@/lib/utils';
 const Avatar = React.forwardRef((_a, ref) => {

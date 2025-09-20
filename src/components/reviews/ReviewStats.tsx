@@ -1,5 +1,5 @@
 import { Star,,  } from 'lucide-react'
-import { Progress,,  } from "
+import React from "react";
 interface ReviewStatsProps {
   averageRating: number;,
 totalReviews: number;

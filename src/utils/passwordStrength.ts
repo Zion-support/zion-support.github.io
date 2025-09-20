@@ -1,4 +1,4 @@
-import React from "
+import React from "react";
 
 export export type PasswordStrength = 0 | 1 | 2 | 3 | 4;
 

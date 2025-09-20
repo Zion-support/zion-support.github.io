@@ -10,8 +10,8 @@ import { ProfileAvailability,,  } from "./ProfileAvailability",
 import { ProfileContact,,  } from "./ProfileContact",
 import { ProfileRatings,,  } from "./ProfileRatings",
 import { TalentProfile,,, as,,, TalentProfileType,,  } from "@/types/talent",
-import { useAuth,,  } from "
-import { Availability,,  } from "
+import React from "react";
+import React from "react";
 interface TalentProfileProps {
   profile: TalentProfileType;,
 onRequestHire: () => void;

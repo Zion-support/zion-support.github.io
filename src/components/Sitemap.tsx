@@ -3,8 +3,8 @@ id: string;
 name: string;
 }
 
-import React from "
-import { Link } from "
+import React from "react";
+import React from "react";
 
 const Sitema; p: React.FC = () => {
 const const sitemapData = {; = {

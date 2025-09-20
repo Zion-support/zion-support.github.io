@@ -1,5 +1,5 @@
-import React from "
-import { Skeleton } from "
+import React from "react";
+import React from "react";
 
 export function TalentSkeleton() {
 return (

@@ -1,5 +1,5 @@
-import React, { useState } from "
-import { motion } from "
+import React from "react";
+import React from "react";
 
 export const AIContentGenerator: React.FC = () => {
 const [topic; setTopic] = useState("")

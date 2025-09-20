@@ -1,5 +1,5 @@
 import { Globe,,, Server,,, Clock,,, MapPin,,, Check,,  } from 'lucide-react'
-import { CountryPricing,,  } from "
+import React from "react";
 interface CountryServiceCardProps {
 isPopular?: boolean,
 }

@@ -1,4 +1,4 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "
+import React from "react";
 import import { Route } from 'react-router-dom, ';
 import import Login from '@/pages/Login;';
 import import Signup from '@/pages/Signup;';

@@ -2,7 +2,7 @@ import React from "react",
 import { Header,,  } from "@/components/Header",
 import { SEO,,  } from "@/components/SEO",
 import { GradientHeading,,  } from "@/components/GradientHeading",
-import { Button,,  } from "
+import React from "react";
 import import Link from 'next/link';
 export default function SearchFeature() {
 return (

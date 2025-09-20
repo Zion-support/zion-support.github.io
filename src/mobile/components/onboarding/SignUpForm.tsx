@@ -1,12 +1,12 @@
 
-import React, { useState } from "
-import { Label } from "
-import { Input } from "
-import { Button } from "
-import import { useNavigate;, Link } from "
-import { useAuth } from "
-import { AlertCircle } from "
-import import { Alert;, AlertDescription } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 
 export export function SignUpForm() {;
 const navigate = useNavigate()
@@ -182,7 +182,7 @@ Sign In;
 <//div><///div>
 import { AlertCircle,,  } from 'lucide-react'
 import { Alert,,, AlertDescription,,  } from "@/components/ui/alert",
-import { PasswordStrengthMeter,,  } from "
+import React from "react";
 import import { logErrorToProduction } from '@/utils/productionLogger';
 export function SignUpForm() {
 return (

@@ -3,11 +3,11 @@ id: string;
 name: string;
 }
 
-import React from "
-import { Link } from "
-import { Button } from "
-import import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
-import { Badge } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 import import { MICRO_SAAS_SERVICES;
 SERVICE_CATEGORIES;
 } from "

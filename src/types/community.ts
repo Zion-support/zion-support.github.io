@@ -1,4 +1,4 @@
-import React from "
+import React from "react";
 
 export interface ForumPost {
 id: string; title: string; content: string; authorId: string; authorName: string; authorAvatar: string; category: string; tags: string[], createdAt: string; updatedAt: string; likes: number; replies: ForumReply[], isPinned: boolean; isLocked: boolean;

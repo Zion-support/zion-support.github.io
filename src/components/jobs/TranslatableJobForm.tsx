@@ -9,7 +9,7 @@ import { Loader2,,, Globe,,  } from 'lucide-react'
 import { useTranslation,,  } from "react-i18next",
 import { useTranslationService,,  } from "@/hooks/useTranslationService",
 import { useLanguage,,, SupportedLanguage,,  } from "@/context/LanguageContext",
-import { toast,,  } from "
+import React from "react";
 import import { logErrorToProduction } from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
 }

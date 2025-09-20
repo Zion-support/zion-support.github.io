@@ -3,10 +3,10 @@ id: string;
 name: string;
 }
 
-import import React, { useState; useRef; useEffect } from "
-import { Link } from "
-import import { User;, Settings;, LogOut;, ChevronDown;, Bell;, ShoppingCart } from "
-import { useAuth } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 
 export const UserMenu: React.FC = () => {
 const [isOpen; setIsOpen] = useState(false)

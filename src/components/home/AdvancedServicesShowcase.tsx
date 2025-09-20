@@ -3,11 +3,11 @@ id: string;
 name: string;
 }
 
-import React from "
-import { Link } from "
-import { Button } from "
-import import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
-import { Badge } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 import import { Brain;
 Shield;
 Cloud;
@@ -19,7 +19,7 @@ CheckCircle;
 ArrowRight;
 Star;
 } from "
-import { ADVANCED_SERVICES } from "
+import React from "react";
 
 /
 const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0; 6)

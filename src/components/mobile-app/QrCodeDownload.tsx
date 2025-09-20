@@ -3,11 +3,11 @@ id: string;
 name: string;
 }
 
-import React from "
+import React from "react";
 
 
-import { QrCode } from "
-import { AppStoreButtons } from "
+import React from "react";
+import React from "react";
 
 export const QrCodeDownload: React.FC = () => {
 /

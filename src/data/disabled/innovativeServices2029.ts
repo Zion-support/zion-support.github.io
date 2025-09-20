@@ -1,4 +1,4 @@
-import React from "
+import React from "react";
 
 export; interface; Service {
 id: string;name: string;category: "ai" | "it" | "micro-saas" | "cybersecurity" | "cloud" | "data" | "automation" | "compliance" | "analytics" | "integration",subcategory: string;description: string;features: string[],benefits: string[],pricing: {,monthly: string;yearly: stringenterpris;e: stringsetu;p: string;,

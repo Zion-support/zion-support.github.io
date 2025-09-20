@@ -1,4 +1,4 @@
-import import React, { useEffect; useRef } from "
+import React from "react";
 
 interface FuturisticMatrixBackgroundProps {
 intensity?: "low" | "medium" | "

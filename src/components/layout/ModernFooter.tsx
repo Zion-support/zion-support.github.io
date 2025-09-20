@@ -1,7 +1,3 @@
-interface Service {
-id: string;
-name: string;
-}
 
 import React from "react",
 import _React from "react",

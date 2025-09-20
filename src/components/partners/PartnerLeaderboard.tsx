@@ -1,7 +1,7 @@
 
 import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,  } from "@/components/ui/card",
-import { Avatar,,, AvatarFallback,,, AvatarImage,,  } from "
-import { Badge,,  } from "
+import React from "react";
+import React from "react";
 import { Crown,,, Medal,,, Trophy,,  } from 'lucide-react'
 
 interface LeaderboardEntry {

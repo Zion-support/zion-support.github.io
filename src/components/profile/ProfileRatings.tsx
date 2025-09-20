@@ -18,8 +18,8 @@ import { Star,,  } from 'lucide-react'
 import { ReviewStats,,  } from "@/components/reviews/ReviewStats",
 import { ReviewsList,,  } from "@/components/reviews/ReviewsList",
 import { useReviews,,  } from "@/hooks/useReviews",
-import { Button,,  } from "
-import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from "
+import React from "react";
+import React from "react";
 interface ProfileRatingsProps {
 return (
     <div className="space-y-6">

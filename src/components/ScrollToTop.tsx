@@ -3,7 +3,7 @@ id: string;
 name: string;
 }
 
-import React from "
+import React from "react";
 
 export export function ScrollToTop() {;
 impor;  t; Reac; t, { useStat; e; useEffect } from "

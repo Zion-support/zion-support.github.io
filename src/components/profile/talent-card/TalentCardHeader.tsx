@@ -1,7 +1,7 @@
 import React from 'react'
 import { BadgeCheck,,  } from 'lucide-react'
-import { TalentCardAvatar,,  } from "
-import { TalentCardAvailability,,  } from "
+import React from "react";
+import React from "react";
 interface TalentCardHeaderProps {
   fullName: string;,
 professionalTitle: string;

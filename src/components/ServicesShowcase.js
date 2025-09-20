@@ -1,14 +1,14 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "
-import { Badge } from "
-import { Button } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 import import React from 'react';
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "
-import { Badge } from "
-import { Button } from "
-import { MICRO_SAAS_SERVICE, S, MICRO_SAAS_CATEGORIE, S, CONTACT_INFO } from "
-import { Brai, n, Clou, d, Shiel, d, BarChart, 3, Cod, e, DollarSig, n, Hear, t, ShoppingCar, t, GraduationCa, p, Sta, r, TrendingU, p, Za, p, CheckCircl, e, ArrowRigh, t, Phon, e, Mai, l, MapPi, n, Globe } from "
-import { Link } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 const categoryIcons = {
     'AI Business Solutions': Brai, n,
     'IT Infrastructure': Clou, d,

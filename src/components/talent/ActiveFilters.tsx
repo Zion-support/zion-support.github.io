@@ -1,7 +1,7 @@
 
 import React from "react",
-import { ClickableBadge,,  } from "
-import { Button,,  } from "
+import React from "react";
+import React from "react";
 import { X,,  } from 'lucide-react'
 interface ActiveFiltersProps {
 clearFilters: () => void,

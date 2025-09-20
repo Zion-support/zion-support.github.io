@@ -1,12 +1,12 @@
-import React from "
+import React from "react";
 
-import { useState } from "
-import import { Card;, CardContent;, CardFooter } from "
-import { Button } from "
-import { Badge } from "
-import import { AlertDialog;, AlertDialogAction;, AlertDialogCancel;, AlertDialogContent;, AlertDialogDescription;, AlertDialogFooter;, AlertDialogHeader;, AlertDialogTitle } from "
-import import { Edit;, Trash2;, Github;, Link;, FileText } from "
-import { PortfolioProject } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 
 interface ProjectCardProps {
 project: PortfolioProject;

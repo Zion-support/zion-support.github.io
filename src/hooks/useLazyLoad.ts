@@ -1,4 +1,4 @@
-import import { useEffect;, useRef;, useState;, useCallback } from "
+import React from "react";
 
 interface UseLazyLoadOptions {
 threshold?: number;

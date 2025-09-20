@@ -1,6 +1,6 @@
 
 import import React from 'react';
-import { Button,,  } from "
+import React from "react";
 import { Star,,  } from 'lucide-react'
 interface SaveTalentButtonProps {
   talentId: string;

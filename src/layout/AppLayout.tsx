@@ -1,7 +1,7 @@
-import React from "
+import React from "react";
 
-import { PrimaryNav } from "
-import { Footer } from "
+import React from "react";
+import React from "react";
 
 interface AppLayoutProps {
 children?: React.ReactNode;
