@@ -92,7 +92,7 @@ export default function Services() {
   ];
   const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -108,8 +108,9 @@ export default function Services() {
       case 'reviews':
         return b.reviewCount - a.reviewCount;
       case 'name':
-        return a.title.localeCompare(b.title);
-      default: return 0;
+        return a.name.localeCompare(b.name);
+      default: 
+        return 0;
     }
   });
   // Pagination logic
