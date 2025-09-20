@@ -1,15 +1,14 @@
-import { useState,  } from 'react'
-import { MatchResultItem,  } from '@/lib/ai-matchmaking'
-import { Card,, CardContent,  } from '@/components/ui/card'
-import { Badge,  } from '@/components/ui/badge'
-import { Avatar,, AvatarFallback,, AvatarImage,  } from '@/components/ui/avatar'
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from '@/components/ui/tabs'
-import { BarChart3,, BriefcaseIcon,, Monitor,, User,  } from 'lucide-react'
+import { useState } from 'react'
+import { MatchResultItem } from '@/lib/ai-matchmaking'
+import { CardCardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Avatar, AvatarFallbackAvatarImage } from '@/components/ui/avatar'
+import { Tabs, TabsContent, TabsListTabsTrigger } from '@/components/ui/tabs'
+import { BarChart3, BriefcaseIcon, MonitorUser } from 'lucide-react';
 import Skeleton from "@/components/ui/skeleton";
-import { cn,  } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
-serviceType?: string,
-}
+serviceType?: string}
 export function AIMatchingResults({
                             {match.image ? (
                               <AvatarImage,

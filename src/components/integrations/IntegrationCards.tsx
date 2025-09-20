@@ -65,8 +65,8 @@ title='Salesforce'
       <IntegrationCard,
 title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
-        icon = {<Briefcase className="h-5 w-5" />,}
-        onConnect = {() => logDebug('Connect Salesforce clicked'),}
+        icon = {<Briefcase className="h-5 w-5" />}
+        onConnect = {() => logDebug('Connect Salesforce clicked')}
       />
       <IntegrationCard,
 title='Microsoft Teams'
@@ -83,8 +83,8 @@ title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Teams clicked')}
-        icon = {<Users className="h-5 w-5" />,}
-        onConnect = {() => logDebug('Connect Teams clicked'),}
+        icon = {<Users className="h-5 w-5" />}
+        onConnect = {() => logDebug('Connect Teams clicked')}
       />
     </div>
   )

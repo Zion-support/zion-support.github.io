@@ -1,20 +1,19 @@
 import React from "react";
 
 import { useState } from "react, ";
-import { Card; CardContent; CardFooter } from "@/components/ui/card, ";
+import { Card; CardContent, CardFooter  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
-import { AlertDialog; AlertDialogAction; AlertDialogCancel; AlertDialogContent; AlertDialogDescription; AlertDialogFooter; AlertDialogHeader; AlertDialogTitle } from "@/components/ui/alert-dialog, ";
-import { Edit; Trash2; Github; Link; FileText } from "lucide-react, ";
+import { AlertDialog; AlertDialogAction; AlertDialogCancel; AlertDialogContent; AlertDialogDescription; AlertDialogFooter; AlertDialogHeader, AlertDialogTitle  } from "@/components/ui/alert-dialog, ";
+import { Edit; Trash2; Github; Link, FileText  } from "lucide-react, ";
 import { PortfolioProject } from "@/types/resume, ";
 
 interface ProjectCardProps {
 project: PortfolioProject;
 onEdit: (project: PortfolioProject) => void;,
-onDelete: (projectId: string) => void;,
-};
+onDelete: (projectId: string) => void;};
 export function ProjectCard({ project; onEdit; onDelete }: ProjectCardProps) {
-const [deleteDialogOpen; setDeleteDialogOpen] = useState(false);
+const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
 const handleDelete: any = () => {
 if (project.id) {;
@@ -120,9 +119,9 @@ Delete;
 );
 }
 <//Card><///Card>;
-import { Edit,, Trash2,, Github,, Link,, FileText,  } from 'lucide-react'
+import { Edit, Trash2, Github, LinkFileText } from 'lucide-react';
 import Image from 'next/image';
-import { PortfolioProject,  } from '@/types/resume';
+import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
 }
 export function ProjectCard({ project onEdit onDelete }: ProjectCardProps) {
@@ -194,7 +193,7 @@ href={project.github_url}
               rel='noopener noreferrer'
               aria-label='GitHub'
               title='GitHub'
-              href = {project.github_url,}
+              href = {project.github_url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"

@@ -1,13 +1,12 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-import { Lin; k; useLocation } from "react-router-dom, ";
-import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
-import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bell } from "lucide-react, ";
+import { Lin; k, useLocation  } from "react-router-dom, ";
+import { motio; n; AnimatePresenc; e, Variants  } from "framer-motion, ";
+import { Men; u; X; ChevronDow; n; Searc; h; Use; r, Bell  } from "lucide-react, ";
 
 interface MobileNavigationProps {
 isOpe; n: boolean;
-onToggl; e: () => void;,
-};
+onToggl; e: () => void;};
 const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onToggle }) => {
 const [activeDropdo; w; n; setActiveDropdo; w; n] = useState<string | null>(null);
 const [searchQue;  r; y; setSearchQue; r; y] = useState("");
@@ -121,16 +120,14 @@ x: "100%";
 opacit; y: 0;
 transitio; n: {
 duratio; n: 0.3;
-eas; e: "easeInOut",
-}
+eas; e: "easeInOut"}
 };
 ope; n: {,
 x: 0;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.3;
-eas; e: "easeInOut",
-}
+eas; e: "easeInOut"}
 }
 };
 const dropdownVariant; s: Variants = {
@@ -139,16 +136,14 @@ heigh; t: 0;
 opacit; y: 0;
 transitio; n: {
 duratio; n: 0.2;
-eas; e: "easeInOut",
-}
+eas; e: "easeInOut"}
 };
 ope; n: {
 heigh; t: "auto";
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.2;
-eas; e: "easeInOut",
-}
+eas; e: "easeInOut"}
 }
 };
 return (<AnimatePresence>;

@@ -1,11 +1,9 @@
 import React from 'react';
-import { AlertTriangle,, RefreshCw,  } from 'lucide-react'
+import { AlertTriangleRefreshCw } from 'lucide-react';
 interface Props {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 interface State {
-error?: Error,
-}
+error?: Error}
 export class EquipmentErrorBoundary extends React.Component<Props State> {
   constructor(props: Props) {
     super(props);
@@ -15,8 +13,7 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {
   }
   componentDidCatch(error: Error errorInfo: React.ErrorInfo) {
     logErrorToProduction('Equipment page error:', error {
-      componentStack: errorInfo.componentStack,
-}) }
+      componentStack: errorInfo.componentStack}) }
     logErrorToProduction('Equipment page error:', error { componentStack: errorInfo.componentStack })
   }
   static getDerivedStateFromError(error: Error): State {
@@ -71,9 +68,7 @@ onClick={() => this.setState({ hasError: false error: undefined })}
         </div>
       )
     }
-    return this.props.children,
-}      )
+    return this.props.children}      )
     }
-    return this.props.children,
-}
+    return this.props.children}
 }

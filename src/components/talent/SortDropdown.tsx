@@ -1,16 +1,13 @@
 
-import React from "react",
-import { Button,  } from "@/components/ui/button";
-import { SORT_OPTIONS,  } from "@/data/sortOptions";
-import { SortDesc,, ChevronDown,  } from 'lucide-react'
-import { DropdownMenu;
-, , DropdownMenuContent;
-, , DropdownMenuItem;
-, , DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
+import React from "react",;
+import { Button } from "@/components/ui/button";
+import { SORT_OPTIONS } from "@/data/sortOptions";
+import { SortDescChevronDown } from 'lucide-react';
+import { DropdownMenu;, DropdownMenuContent;, DropdownMenuItem;
+DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
 
 interface SortDropdownProps {
-setSortOption: (option: string) => void,
-}
+setSortOption: (option: string) => void}
 export function SortDropdown({ sortOption setSortOption }: SortDropdownProps) {
   return (
     <DropdownMenu>
@@ -39,8 +36,8 @@ key={option.value}
                 ? 'bg-zion-purple/20 text-zion-purple'
                 : ''            }`}        {SORT_OPTIONS.map((option,) => (
           <DropdownMenuItem,
-key = {option.value,}
-            onClick = {(,) => setSortOption(option.value),}
+key = {option.value}
+            onClick = {(,) => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
               sortOption === option.value
                 ? 'bg-zion-purple/20 text-zion-purple'

@@ -1,6 +1,6 @@
-import { useState,, ,  } from 'react';
-import { Button,, ,  } from '@/components/ui/button';
-import { Facebook,  } from 'lucide-react'
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Facebook } from 'lucide-react';
 return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
       {providers.includes('google') && (

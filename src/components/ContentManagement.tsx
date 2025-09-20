@@ -8,8 +8,7 @@ type: 'blog' | 'page' | 'product' | 'service';
 status: 'published' | 'draft' | 'scheduled';
 publishDate: string;
 views: number;,
-author: string;,
-};
+author: string;};
 export const ContentManagement: React.FC = () => {
 const [content, setContent] = useState<ContentItem[]>([
 {
@@ -19,8 +18,7 @@ type: 'blog',
 status: 'published',
 publishDate: '2024-01-15',
 views: 1234,
-author: 'John Doe',
-},
+author: 'John Doe'},
 {
 id: '2',
 title: 'Quantum Computing Solutions',
@@ -28,8 +26,7 @@ type: 'service',
 status: 'published',
 publishDate: '2024-01-14',
 views: 987,
-author: 'Jane Smith',
-},
+author: 'Jane Smith'},
 {
 id: '3',
 title: 'Digital Transformation Guide',
@@ -37,8 +34,7 @@ type: 'blog',
 status: 'draft',
 publishDate: '2024-01-16',
 views: 0,
-author: 'Mike Johnson',
-},
+author: 'Mike Johnson'},
 {
 id: '4',
 title: 'Cybersecurity Services',
@@ -64,8 +60,7 @@ switch (status) {;
 case 'published': return 'text-green-400 bg-green-900';
 case 'draft': return 'text-yellow-400 bg-yellow-900';
 case 'scheduled': return 'text-blue-400 bg-blue-900';,
-default: return 'text-gray-400 bg-gray-900';,
-}
+default: return 'text-gray-400 bg-gray-900';}
 };
 
 const getTypeIcon: any = (type: string) => {
@@ -74,8 +69,7 @@ case 'blog': return '📝';
 case 'page': return '📄';
 case 'product': return '🛍️';
 case 'service': return '⚙️';,
-default: return '📄';,
-}
+default: return '📄';}
 };
 
 return (

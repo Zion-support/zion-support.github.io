@@ -1,20 +1,18 @@
 
-import { ContractTemplate,  } from "@/types/contracts",
-import { Button,  } from "@/components/ui/button",
-import { Loader2,, Edit,, Trash,, Star,, StarOff,  } from 'lucide-react'
-import { useContractTemplates,  } from "@/hooks/useContractTemplates",
-import { Card,, CardContent,  } from "@/components/ui/card",
-import { Separator,  } from "@/components/ui/separator",
-import { Tooltip,, TooltipContent,, TooltipProvider,, TooltipTrigger,  } from "@/components/ui/tooltip",
-import { useAuth,  } from "@/hooks/useAuth";
-// useRouter replaces the old useLocation hook from react-router,
-}
+import { ContractTemplate } from "@/types/contracts",
+import { Button } from "@/components/ui/button",
+import { Loader2, Edit, Trash, StarStarOff } from 'lucide-react'
+import { useContractTemplates } from "@/hooks/useContractTemplates",
+import { CardCardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { Tooltip, TooltipContent, TooltipProviderTooltipTrigger } from "@/components/ui/tooltip",;
+import { useAuth } from "@/hooks/useAuth";
+// useRouter replaces the old useLocation hook from react-router}
 export function TemplateList({
   templates;
   isLoading;
   onSelect;
-  onEdit,
-}: TemplateListProps) {
+  onEdit}: TemplateListProps) {
 if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
@@ -51,7 +49,7 @@ if (isLoading) {
                 <Button,
 variant="ghost"
                   size="icon"
-                  onClick = {() => onEdit(template),}
+                  onClick = {() => onEdit(template)}
                   aria-label="Edit template"
                 >
                   <Edit className="h-4 w-4" />
@@ -63,7 +61,7 @@ variant="ghost"
                         <Button,
 variant="ghost"
                           size="icon"
-                          onClick = {(,) => handleSetDefault(template.id),}
+                          onClick = {(,) => handleSetDefault(template.id)}
                           aria-label="Set as default"
                         >
                           <Star className="h-4 w-4" />
@@ -84,7 +82,7 @@ variant="ghost"
                 <Button,
 variant="ghost"
                   size="icon"
-                  onClick = {() => handleDeleteClick(template.id),}
+                  onClick = {() => handleDeleteClick(template.id)}
                   aria-label="Delete template"
                 >
                   <Trash className="h-4 w-4 text-destructive" />
@@ -93,7 +91,7 @@ variant="ghost"
             </div>
             <Separator className="my-3" />
             <Button,
-onClick = {() => onSelect(template),}
+onClick = {() => onSelect(template)}
               variant="outline"
               className="w-full"
             >
@@ -114,7 +112,7 @@ onClick = {() => onSelect(template),}
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction,
 className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-              onClick = {handleDeleteConfirm,}
+              onClick = {handleDeleteConfirm}
             >
               Delete
             </AlertDialogAction>
@@ -130,12 +128,10 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
 }`)
-return,
-}await setDefaultTemplate.mutateAsync (templateId)
+return}await setDefaultTemplate.mutateAsync (templateId)
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
-  template.title,
-}</h3> {"
+  template.title}</h3> {"
   template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) "
 }</div> <p className="text-xs text-muted-foreground"> Last updated: {
   new Date (template.updated at) .toLocaleDateString () "
@@ -147,10 +143,8 @@ return,
 }</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) "
 }<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) )
 }<AlertDialog open= {
-  !!templateToDelete,
-}onOpenChange= {
+  !!templateToDelete}onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
-  handleDeleteConfirm,
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
+  handleDeleteConfirm}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
 }'"}

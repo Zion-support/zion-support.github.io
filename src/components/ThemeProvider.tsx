@@ -1,106 +1,73 @@
-import React from "react";
-"use client";
-
-import * as React from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 export type Theme = "dark" | "light" | "system";
-;
-type ThemeProviderProps = {;
-childre; n: React.ReactNode;,
-}
 
-export type ThemeProviderState = {;
-them; e: Theme;
-setThem; e: (them;  e: Theme) => void;,
-}
-
-const initialStat; e: ThemeProviderState = {
-them; e: "dark",
-setThem; e: () => nul;  l,
-}
-
-export const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
-;
-export function ThemeProvider({ children }: ThemeProviderProps) {;
-const [the;  m; e] = useState<Theme>("dark")
-
-useEffect(() => {
-const root = window.document.documentElement;
-root.classList.remove("light",  "dark")
-root.classList.add("dark")
-},  [])
-
-const value = {;
-them; e;
-setThem; e: () => {},
-}
-interface ThemeProviderProps {
-childre; n: React.ReactNode;
-defaultTheme?: string;
-storageKey?: string;
+type ThemeProviderProps = {
+  children: React.ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
 };
-export function ThemeProvider({ ;
-childre; n;
-defaultTheme = "system",
-storageKey = "vite-ui-theme";
+
+export type ThemeProviderState = {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+};
+
+const initialState: ThemeProviderState = {
+  theme: "system",
+  setTheme: () => null,
+};
+
+const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
+
+export function ThemeProvider({
+  children,
+  defaultTheme = "system",
+  storageKey = "vite-ui-theme",
+  ...props
 }: ThemeProviderProps) {
-const [the; m; e; setThe; m; e] = React.useState<string>(() => {
-if (typeof window !== "undefined") {
-return localStorage.getItem(storageKey) || defaultTheme;
+  const [theme, setTheme] = useState<Theme>(
+    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
+  );
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+
+    root.classList.remove("light", "dark");
+
+    if (theme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+
+      root.classList.add(systemTheme);
+      return;
+    }
+
+    root.classList.add(theme);
+  }, [theme]);
+
+  const value = {
+    theme,
+    setTheme: (theme: Theme) => {
+      localStorage.setItem(storageKey, theme);
+      setTheme(theme);
+    },
+  };
+
+  return (
+    <ThemeProviderContext.Provider {...props} value={value}>
+      {children}
+    </ThemeProviderContext.Provider>
+  );
 }
-return defaultTheme;
-});
 
-React.useEffect(() => {
-const root = window.document.documentElement;
-root.classList.remove("light",  "dark");
+export const useTheme = () => {
+  const context = useContext(ThemeProviderContext);
 
-if (theme === "system") {
-const systemTheme = window.matchMedia("(prefers-color-schem;  e: dark)").matches;
-? "dark";
-: "light";
-root.classList.add(systemTheme);
-return;
-}
+  if (context === undefined)
+    throw new Error("useTheme must be used within a ThemeProvider");
 
-root.classList.add(theme);
-},  [the; m; e]);
-
-const value = React.useMemo(() => ({;
-them;  e;
-setThem; e: (them; e: string) => {
-localStorage.setItem(storageKe;  y; theme);
-setTheme(theme);
-},
-}),
-[the; m; e; storageK; e; y];
-);
-
-return (<ThemeContext.Provider value={value}>;
-{children}
-</ThemeContext.Provider>;
-);
-}
-
-export const useTheme: any = (): ThemeProviderState => {
-const context = useContext(ThemeProviderContext)
-
-if (context === undefined);
-throw new Error("useTheme must be used within a ThemeProvider");
-;
-return context;
-}
-interface ThemeContextType {
-them;  e: string;
-setThem; e: (them; e: string) => void;,
+  return context;
 };
-const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
-
-export const useTheme: any = () => {;
-const context = React.useContext(ThemeContext);
-if (context === undefined) {
-throw new Error("useTheme must be used within a ThemeProvider");
-}
-return context;
-};
-</ThemeContextType | undefined><//ThemeContextType | undefined>}

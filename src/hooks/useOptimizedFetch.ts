@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback } from "react, ";
+import { useState; useEffect, useCallback  } from "react, ";
 
 interface UseFetchOptions {
 immediate?: boolean;
@@ -8,9 +8,9 @@ export const useOptimizedFetch = <T>(;
 url: string;,
 options: UseFetchOptions = {}
 ) => {
-const [data; setData] = useState<T | null>(null);
-const [loading; setLoading] = useState(false);
-const [error; setError] = useState<string | null>(null);
+const [data, setData] = useState<T | null>(null);
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState<string | null>(null);
 
 const fetchData = useCallback(async () => {;
 setLoading(true);

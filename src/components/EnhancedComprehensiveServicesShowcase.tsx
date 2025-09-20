@@ -7,8 +7,7 @@ interface ServiceContact {
 mobil; e: string;
 emai; l: string;
 addres; s: string;
-websit; e: string;,
-};
+websit; e: string;};
 const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
 const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
 const [searchTe; r; m; setSearchTe; r; m] = useState("");
@@ -17,15 +16,12 @@ const [selectedServi;  c; e; setSelectedServi; c; e] = useState<any>(null);
 const allServices = [;
 ...advancedInnovativeServicesExpansionV; 3.ma; p(servic;  e => ({
 ...servi; c; e;
-ty; p; e: "Advance; d A; I & Innovatio; n",
-};
-displayPri; c; e: servic; e.pric; e;,
-})),
+ty; p; e: "Advance; d A; I & Innovatio; n"};
+displayPri; c; e: servic; e.pric; e;})),
 ...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({
 ...servi; c; e;
 ty; p; e: "Specialize; d Enterpris; e",
-displayPri; c; e: servic; e.pric; e;,
-}))
+displayPri; c; e: servic; e.pric; e;}))
 ];
 
 const filteredServices = allServices.filter(service => {;
@@ -112,8 +108,7 @@ onClick={() => setActiveCategory(category.id)}
 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
 activeCategory === category.id;
 ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white";
-: "bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hove;  r: bg-white/2; 0",
-}`}
+: "bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hove;  r: bg-white/2; 0"}`}
 >;
 {category.name} ({category.count})
 </button>;

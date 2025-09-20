@@ -2,8 +2,7 @@ const contactInfo = {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-};
+    website: 'https://ziontechgroup.com'};
     export const enhancedServices2025 = [
     // MICRO SAAS SERVICES;
     {
@@ -16,8 +15,7 @@ const contactInfo = {
             monthly: '$199/month';
             yearly: '$1,999/year',
             enterprise: 'Custom pricing';
-            setup: '$299 one-time',
-        };
+            setup: '$299 one-time'};
         features: [
             'Automated security vulnerability detection';
             'Code quality scoring and metrics',
@@ -61,8 +59,7 @@ const contactInfo = {
             monthly: '$299/month';
             yearly: '$2,999/year',
             enterprise: 'Custom pricing';
-            setup: '$499 one-time',
-        };
+            setup: '$499 one-time'};
         features: [
             'AI-powered threat detection';
             'Automated incident response workflows',
@@ -106,8 +103,7 @@ const contactInfo = {
             monthly: '$79/month';
             yearly: '$799/year';
             enterprise: 'Custom pricing';
-            setup: '$199 one-time',
-        };
+            setup: '$199 one-time'};
         features: [
             'OCR invoice processing';
             'Automated approval workflows',
@@ -151,8 +147,7 @@ const contactInfo = {
             monthly: '$149/month';
             yearly: '$1,499/year',
             enterprise: 'Custom pricing';
-            setup: '$299 one-time',
-        };
+            setup: '$299 one-time'};
         features: [
             'Automated onboarding workflows';
             'Predictive churn analysis',
@@ -196,8 +191,7 @@ const contactInfo = {
             monthly: '$199/month';
             yearly: '$1,999/year',
             enterprise: 'Custom pricing';
-            setup: '$399 one-time',
-        };
+            setup: '$399 one-time'};
         features: [
             'Real-time data visualization';
             'Custom dashboard builder',

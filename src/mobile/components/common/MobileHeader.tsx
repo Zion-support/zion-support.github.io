@@ -1,8 +1,8 @@
 import React from "react";
-import { useRouter,, ,  } from 'next/router';
-import { ChevronLeft,, Bell,, Settings,  } from 'lucide-react'
-import { cn,  } from "@/lib/utils";
-import { Button,  } from "@/components/ui/button";
+import { useRouter } from 'next/router';
+import { ChevronLeft, BellSettings } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
 className
     )}>
@@ -13,7 +13,7 @@ className
 variant="ghost"
               size="icon"
               className="mr-2"
-              onClick = {(,) => router.back(),}
+              onClick = {(,) => router.back()}
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
@@ -28,7 +28,7 @@ variant="ghost"
             <Button,
 variant="ghost"
               size="icon"
-              onClick = {onNotificationsClick,}
+              onClick = {onNotificationsClick}
             >
               <Bell className="h-5 w-5" />
               <span className="sr-only">Notifications</span>
@@ -43,8 +43,7 @@ showNotifications = false,
 showSettings = false,
 className
   onNotificationsClick,
-onSettingsClick,
-}: MobileHeaderProps) {
+onSettingsClick}: MobileHeaderProps) {
   const router = useRouter()
     >
       <div className='flex items-center justify-between h-14 px-4'>
@@ -75,7 +74,7 @@ variant='ghost'
               <span className='sr-only'>Settings</span>            </Button>            <Button,
 variant="ghost"
               size="icon"
-              onClick = {onSettingsClick,}
+              onClick = {onSettingsClick}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>

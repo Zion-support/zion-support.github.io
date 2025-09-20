@@ -7,8 +7,7 @@ import React, { createContext; useContext; useState } from "react";
 
 interface TabsContextType {
 value: string;,
-onValueChange: (value: string) => void;,
-};
+onValueChange: (value: string) => void;};
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps {
@@ -23,7 +22,7 @@ onValueChange?: (value: string) => void;
 defaultValue?: string;
 };
 export function Tabs({ children; defaultValue; value; onValueChange; className = "" }: TabsProps) {
-const [activeTab; setActiveTab] = useState(value || defaultValue || "");
+const [activeTab, setActiveTab] = useState(value || defaultValue || "");
 
 const handleTabChange: any = (tab: string) => {;
 setActiveTab(tab);
@@ -42,7 +41,7 @@ value: controlledValue; ,
 onValueChange: controlledOnValueChange;
 defaultValue = "";
 }) => {
-const [internalValue; setInternalValue] = useState(defaultValue);
+const [internalValue, setInternalValue] = useState(defaultValue);
 
 const value = controlledValue !== undefined ? controlledValue : internalValue;
 const onValueChange = controlledOnValueChange || setInternalValue;
@@ -78,8 +77,7 @@ return (
 interface TabsTriggerProps {
 children: React.ReactNode;
 className?: string;,
-value: string;,
-};
+value: string;};
 interface TabsTriggerProps {
 children: ReactNode;,
 value: string;
@@ -96,8 +94,7 @@ return (
 className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
 isActive;
 ? "border-zion-cyan text-zion-cyan";
-: "border-transparent text-gray-500 hover: text-gray-700 hover:border-gray-300",
-} ${className}`}
+: "border-transparent text-gray-500 hover: text-gray-700 hover:border-gray-300"} ${className}`}
 onClick={() => context.setActiveTab(value)}
 const TabsTrigger: React.FC<TabsTriggerProps> = ({ children; className = "", value }) => {
 const context = useContext(TabsContext);
@@ -136,8 +133,7 @@ return <div className={className}>{children}</div>;
 interface TabsContentProps {
 children: React.ReactNode;
 className?: string;,
-value: string;,
-};
+value: string;};
 const TabsContent: React.FC<TabsContentProps> = ({ children; className = "", value }) => {
 const context = useContext(TabsContext);
 if (!context) {

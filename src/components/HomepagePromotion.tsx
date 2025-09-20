@@ -17,8 +17,7 @@ pri; c; e: "$39; 9/mont; h",
 catego; r; y: "A; I & Conten; t Marketin; g",
 featur; e; s: ["Mult; i-forma; t conten; t", "SE; O optimizatio; n", "Bran; d voic; e customizatio; n", "Plagiaris; m detectio; n"],
 benefit; s: ["8; 0% faste; r conten; t creatio; n", "4; 5% bette; r SE; O ranking; s", "6; 0% highe; r engagemen; t"],
-lin; k: "/comprehensive-services-showcase",
-};
+lin; k: "/comprehensive-services-showcase"};
 {
 i; d: "edge-computing-iot";
 titl; e: "Edge Computing & IoT Platform";
@@ -27,8 +26,7 @@ pric; e: "$799/month";
 categor; y: "IT Infrastructure";
 feature; s: ["Distribute; d edg; e node; s", "Rea; l-tim; e processin; g", "Io; T devic; e managemen; t", "Edg; e A; I capabilitie; s"],
 benefit; s: ["8; 0% lowe; r latenc; y", "6; 0% bandwidt; h cos; t reductio; n", "Enhance; d securit; y"],
-lin; k: "/comprehensive-services-showcase",
-};
+lin; k: "/comprehensive-services-showcase"};
 {
 i; d: "quantum-computing";
 titl; e: "Quantum Computing Applications";
@@ -37,8 +35,7 @@ pric; e: "$3;999/month",
 categor; y: "Emerging Technology";
 feature; s: ["Quantu; m algorithm; s", "Optimizatio; n solver; s", "Cryptograph; y tool; s", "Scientifi; c simulatio; n"],
 benefit; s: ["Exponentia; l speedu; p", "Futur; e-proo; f technolog; y", "Competitiv; e advantag; e"],
-lin; k: "/comprehensive-services-showcase",
-};
+lin; k: "/comprehensive-services-showcase"};
 {
 i; d: "zero-trust-security";
 titl; e: "Zero-Trust Security Architecture";
@@ -47,16 +44,14 @@ pric; e: "$1;499/month",
 categor; y: "IT Infrastructure";
 feature; s: ["Identit; y verificatio; n", "Devic; e trus; t scorin; g", "Networ; k segmentatio; n", "Continuou; s monitorin; g"],
 benefit; s: ["9; 0% fewe; r securit; y breache; s", "Enhance; d complianc; e", "Simplifie; d securit; y managemen; t"],
-lin; k: "/comprehensive-services-showcase",
-}
+lin; k: "/comprehensive-services-showcase"}
 ];
 const containerVariants = {;
 hidde; n: { opacit; y: 0 };
 visibl; e: {
 opacit; y: 1;
 transitio; n: {
-staggerChildre; n: 0.2;,
-}
+staggerChildre; n: 0.2;}
 }
 };
 const itemVariants = {;
@@ -66,8 +61,7 @@ visibl; e: {,
 y: 0;
 opacit; y: 1;
 transitio; n: {
-duratio; n: 0.6;,
-}
+duratio; n: 0.6;}
 }
 };
 return (

@@ -36,8 +36,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '2-3 business days';
         competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker', 'Domo'],
@@ -88,8 +87,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '1-2 weeks';
         competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance', 'Darktrace'],
@@ -140,8 +138,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '3-5 business days';
         competitors: ['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions', 'Azure DevOps'],
@@ -192,8 +189,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '2-4 weeks';
         competitors: ['IBM Food Trust', 'VeChain', 'Walmart Blockchain', 'Maersk TradeLens'],
@@ -244,8 +240,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 45;
         setupTime: '4-6 weeks';
         competitors: ['IBM Watson Health', 'Cerner HealtheIntent', 'Epic Healthy Planet', 'Optum Analytics'],
@@ -296,8 +291,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 60;
         setupTime: '6-8 weeks';
         competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
@@ -348,8 +342,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '2-3 weeks';
         competitors: ['Alpaca', 'QuantConnect', 'MetaTrader', 'TradingView Pro', 'Interactive Brokers'],
@@ -400,8 +393,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '1-2 weeks';
         competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'FogHorn', 'ClearBlade'],
@@ -452,8 +444,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '1-2 business days';
         competitors: ['LexisNexis', 'Westlaw', 'Fastcase', 'Casetext', 'Ravel Law'],
@@ -504,8 +495,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '2-3 business days';
         competitors: ['HubSpot', 'Mailchimp', 'ActiveCampaign', 'ConvertKit', 'Drip'],
@@ -559,8 +549,7 @@ export const specializedIndustryServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '2-4 weeks';
         competitors: ['GE Digital', 'Siemens Mindsphere', 'ABB Ability', 'Schneider Electric EcoStruxure'],
@@ -611,8 +600,7 @@ export const specializedIndustryServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '2-3 weeks';
         competitors: ['Manhattan Associates', 'JDA Software', 'Oracle Transportation', 'SAP Transportation'],

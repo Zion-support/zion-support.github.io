@@ -3,8 +3,7 @@ import React from 'react';
 
 interface StructuredDataProps {
 type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';,
-data: any;,
-};
+data: any;};
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
 const getStructuredData: any = () => {
 const baseStructure = {
@@ -38,14 +37,12 @@ streetAddress: '364 E Main St STE 1008',
 addressLocality: 'Middletown',
 addressRegion: 'DE',
 postalCode: '19709',
-addressCountry: 'US',
-},
+addressCountry: 'US'},
 contactPoint: {
 '@type': 'ContactPoint',
 telephone: '+1-302-464-0950',
 contactType: 'customer service',
-email: 'kleber@ziontechgroup.com',
-},
+email: 'kleber@ziontechgroup.com'},
 sameAs: [
 'https://twitter.com/ziontechgroup',
 'https://linkedin.com/company/ziontechgroup',;

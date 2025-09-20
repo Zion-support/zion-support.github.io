@@ -1,6 +1,6 @@
-import { Button,  } from '@/components/ui/button'
-import { Card,  } from '@/components/ui/card'
-import { Star,, MapPin,, Clock,, ArrowRight,, CheckCircle2,  } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card';
+import { Star, MapPin, Clock, ArrowRightCheckCircle2 } from 'lucide-react';
 isAuthenticated: boolean;
 }
 export function TalentCard({
@@ -50,7 +50,7 @@ variant='ghost'
                 onClick={handleToggleSave}                variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
-                onClick = {handleToggleSave,}
+                onClick = {handleToggleSave}
               >
                 <Star,
 className={`h-5 w-5 ${isSaved ? 'fill-yellow-400 text-yellow-400' : ''}`}
@@ -94,7 +94,7 @@ key={index}
             <div className="flex flex-wrap gap-2">
               {skills.map((skill index,) => (
                 <span,
-key = {index,}
+key = {index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                   {skill}
                 </span>

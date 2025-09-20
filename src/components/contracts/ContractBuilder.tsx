@@ -1,13 +1,13 @@
-import { useState,  } from "react",
-import { Dialog,, DialogContent,, DialogHeader,, DialogTitle,  } from "@/components/ui/dialog",
-import { Tabs,, TabsList,, TabsTrigger,, TabsContent,  } from "@/components/ui/tabs",
-import { Button,  } from "@/components/ui/button",
-import { Save,  } from 'lucide-react'
-import { TalentProfile,  } from "@/types/talent",
-import { ContractForm,, ContractFormValues,  } from "./components/ContractForm",
-import { ContractPreview,  } from "./components/ContractPreview",
-import { TemplateManager,  } from "./templates/TemplateManager";
-import { SmartContractBuilder,  } from "./SmartContractBuilder";
+import { useState } from "react",
+import { Dialog, DialogContent, DialogHeaderDialogTitle } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTriggerTabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from 'lucide-react'
+import { TalentProfile } from "@/types/talent",
+import { ContractFormContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",;
+import { TemplateManager } from "./templates/TemplateManager";
+import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
 }
 export function ContractBuilder({
@@ -15,8 +15,7 @@ export function ContractBuilder({
   onClose;
   talent;
   clientName;
-  onContractGenerated,
-}: ContractBuilderProps) {
+  onContractGenerated}: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form")
   const [generatedContract, setGeneratedContract] = useState<string | null>(null)
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
@@ -27,9 +26,9 @@ export function ContractBuilder({
   const handleLoadTemplate = null;
           onClose()
         }}
-        talent = {talent,}
-        clientName = {clientName,}
-        onContractGenerated = {onContractGenerated,}
+        talent = {talent}
+        clientName = {clientName}
+        onContractGenerated = {onContractGenerated}
       />
     )
   }
@@ -49,7 +48,7 @@ export function ContractBuilder({
               <Button,
 variant="outline"
                 size="sm"
-                onClick = {(,) => setTemplateManagerOpen(true),}
+                onClick = {(,) => setTemplateManagerOpen(true)}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -58,7 +57,7 @@ variant="outline"
               <Button,
 variant="secondary"
                 size="sm"
-                onClick = {() => setShowSmartContractBuilder(true),}
+                onClick = {() => setShowSmartContractBuilder(true)}
               >
                 Smart Contract Builder
               </Button>
@@ -66,29 +65,29 @@ variant="secondary"
           </div>
           <TabsContent value="form" className="pt-4">
             <ContractForm,
-talent = {talent,}
-              clientName = {clientName,}
-              initialValues = {formValues,}
-              onFormValuesChange = {setFormValues,}
-              onContractGenerated = {handleContractGenerated,}
+talent = {talent}
+              clientName = {clientName}
+              initialValues = {formValues}
+              onFormValuesChange = {setFormValues}
+              onContractGenerated = {handleContractGenerated}
             />
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <ContractPreview,
-contractContent = {generatedContract,}
-                talent = {talent,}
-                onClose = {onClose,}
+contractContent = {generatedContract}
+                talent = {talent}
+                onClose = {onClose}
                 status="ready"
               />
             )}
           </TabsContent>
         </Tabs>
         <TemplateManager,
-isOpen = {templateManagerOpen,}
-          onClose = {() => setTemplateManagerOpen(false),}
-          onSelectTemplate = {handleLoadTemplate,}
-          currentValues = {formValues,}
+isOpen = {templateManagerOpen}
+          onClose = {() => setTemplateManagerOpen(false)}
+          onSelectTemplate = {handleLoadTemplate}
+          currentValues = {formValues}
         />
       </DialogContent>
     </Dialog>
@@ -96,23 +95,15 @@ isOpen = {templateManagerOpen,}
 }
 }/>)
 }</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {
-  talent,
-}clientName= {
-  clientName,
-}initialValues= {
-  formValues,
-}onFormValuesChange= {
-  setFormValues,
-}onContractGenerated= {
-  handleContractGenerated,
-}/> </TabsContent> />)
+  talent}clientName= {
+  clientName}initialValues= {
+  formValues}onFormValuesChange= {
+  setFormValues}onContractGenerated= {
+  handleContractGenerated}/> </TabsContent> />)
 }</TabsContent> </Tabs> <TemplateManager isOpen= {
-  templateManagerOpen,
-}onClose= {
+  templateManagerOpen}onClose= {
   () => setTemplateManagerOpen (false)
 }onSelectTemplate= {
-  handleLoadTemplate,
-}currentValues= {
-  formValues,
-}/> </DialogContent> </Dialog>)
+  handleLoadTemplate}currentValues= {
+  formValues}/> </DialogContent> </Dialog>)
 }"}

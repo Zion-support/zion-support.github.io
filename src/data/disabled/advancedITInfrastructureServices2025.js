@@ -52,8 +52,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
     {
         id: "quantum-secure-cloud-infrastructure";
@@ -107,8 +106,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
     {
         id: "autonomous-infrastructure-management";
@@ -162,8 +160,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
     {
         id: "immersive-collaboration-infrastructure";
@@ -217,8 +214,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
     {
         id: "green-computing-optimization-platform";
@@ -272,8 +268,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
     {
         id: "blockchain-infrastructure-as-a-service";
@@ -327,8 +322,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
     {
         id: "hyper-converged-ai-infrastructure";
@@ -382,7 +376,6 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
 ];

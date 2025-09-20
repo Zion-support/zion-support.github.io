@@ -3,16 +3,14 @@ import { useAnalytics } from './useAnalytics, ';
 export const useRealTimeCollaboration = (options, wsConfig) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true;
-        enableUserBehaviorTracking: true,
-    });
+        enableUserBehaviorTracking: true});
     const [state, setState] = useState({
         users: new Map();
         messages: [];
         isConnected: false;
         connectionStatus: 'disconnected';
         lastActivity: new Date();
-        conflicts: [],
-    });
+        conflicts: []});
     const wsRef = useRef(null);
     const reconnectAttemptsRef = useRef(0);
     const heartbeatIntervalRef = useRef(null);
@@ -43,8 +41,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                     ...prev;
   };
                     isConnected: true;
-                    connectionStatus: 'connected',
-                }));
+                    connectionStatus: 'connected'}));
     // Send user join message;
                 sendMessage({
                     type: 'user_join';
@@ -53,8 +50,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                         name: options.userName;
                         avatar: options.userAvatar;
                         color: generateUserColor(options.userId);
-                        timestamp: new Date(),
-                    }
+                        timestamp: new Date()}
                 });
     // Start heartbeat;
                 startHeartbeat();
@@ -77,8 +73,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 setState(prev => ({
                     ...prev,
                     isConnected: false;
-                    connectionStatus: 'disconnected',
-                }));
+                    connectionStatus: 'disconnected'}));
     stopHeartbeat();
                 stopPresenceUpdates();
                 // Attempt reconnection;
@@ -87,8 +82,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 }
                 trackEvent('collaboration', 'connection_lost', 'websocket_disconnected', undefined, {
                     code: event.code;
-                    reason: event.reason,
-                });
+                    reason: event.reason});
      };
             wsRef.current.onerror = (error) => {
                 
@@ -98,8 +92,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         catch (error) {
             
             trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, {
-                error: error instanceof Error ? error.message : 'Unknown error',
-            });
+                error: error instanceof Error ? error.message : 'Unknown error'});
      }
     }, [options, wsConfig, generateUserColor, trackEvent]);
     // Send message through WebSocket;
@@ -107,8 +100,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         const fullMessage = {
             ...message,
             id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-            timestamp: new Date(),
-        };
+            timestamp: new Date()};
     if (wsRef.current?.readyState === WebSocket.OPEN) {
             wsRef.current.send(JSON.stringify(fullMessage));
             trackEvent('collaboration', 'message_sent', message.type, undefined, { messageId: fullMessage.id });
@@ -150,8 +142,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         });
         trackEvent('collaboration', 'message_received', message.type, undefined, {
             messageId: message.id;
-            userId: message.userId,
-        });
+            userId: message.userId});
      }, [options.messageRetention, trackEvent]);
     // Handle user join;
     const handleUserJoin = useCallback((message) => {
@@ -163,8 +154,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 avatar: message.payload.avatar;
                 color: message.payload.color;
                 isOnline: true;
-                lastSeen: new Date(),
-            });
+                lastSeen: new Date()});
     return { ...prev, users: newUsers };
      });
     }, []);
@@ -200,8 +190,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             if (user) {
                 newUsers.set(message.userId, {
                     ...user,
-                    cursor: message.payload,
-                });
+                    cursor: message.payload});
      }
             return { ...prev, users: newUsers };
      });
@@ -216,8 +205,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             if (user) {
                 newUsers.set(message.userId, {
                     ...user,
-                    selection: message.payload,
-                });
+                    selection: message.payload});
      }
             return { ...prev, users: newUsers };
      });
@@ -234,8 +222,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                         id: message.id;
                         type: 'text_change';
                         resolution: 'pending';
-                        timestamp: new Date(),
-                    }]
+                        timestamp: new Date()}]
             }));
      }
         // Emit text change event;
@@ -324,8 +311,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             metadata: {
                 sessionId: options.roomId;
                 version: Date.now();
-                conflictResolution: options.conflictResolution,
-            }
+                conflictResolution: options.conflictResolution}
         });
      }, [options.enableTextSync, options.userId, options.roomId, options.conflictResolution, sendMessage]);
     const resolveConflict = useCallback((conflictId, resolution) => {
@@ -356,8 +342,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         setState(prev => ({
             ...prev,
             isConnected: false;
-            connectionStatus: 'disconnected',
-        }));
+            connectionStatus: 'disconnected'}));
     trackEvent('collaboration', 'user_disconnected', 'manual_disconnect');
     }, [options.userId, sendMessage, stopHeartbeat, stopPresenceUpdates, trackEvent]);
     // Initialize connection on mount;
@@ -424,6 +409,5 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         // Utilities;
         isConnected: state.isConnected;
         connectionStatus: state.connectionStatus;
-        lastActivity: state.lastActivity,
-    };
+        lastActivity: state.lastActivity};
 };

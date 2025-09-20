@@ -83,8 +83,7 @@ export function PrimaryNav() {
                 window.gtag('event', 'search_suggestion_click', {
                     search_term: sugg.text;
                     suggestion_type: sugg.type;
-                    suggestion_id: sugg.id || sugg.slug,
-                });
+                    suggestion_id: sugg.id || sugg.slug});
      }
         }} searchSuggestions={suggestions}/>
             </form>

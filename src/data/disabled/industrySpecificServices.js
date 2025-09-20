@@ -49,8 +49,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/healthcare-ai-diagnostics";
         industryStandards: ["DICOM", "HL7 FHIR", "IHE", "SNOMED CT", "LOINC"],
         complianceFrameworks: ["HIPAA", "HITECH", "FDA", "SOC2", "ISO 27001"],
@@ -107,8 +106,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/financial-ai-risk-management";
         industryStandards: ["Basel III", "Solvency II", "IFRS 9", "CCAR", "Dodd-Frank"],
         complianceFrameworks: ["SOX", "GLBA", "PCI DSS", "SOC2", "ISO 27001"],
@@ -165,8 +163,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/manufacturing-ai-optimization";
         industryStandards: ["ISO 9001", "ISO 14001", "ISO 45001", "Six Sigma", "Lean Manufacturing"],
         complianceFrameworks: ["FDA", "EPA", "OSHA", "SOC2", "ISO 27001"],
@@ -223,8 +220,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/retail-ai-customer-intelligence";
         industryStandards: ["PCI DSS", "GDPR", "CCPA", "SOC2", "ISO 27001"],
         complianceFrameworks: ["Retail Security", "Data Privacy", "Payment Security", "Customer Protection"],
@@ -281,8 +277,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/education-ai-learning";
         industryStandards: ["SCORM", "xAPI", "LTI", "Common Core", "FERPA"],
         complianceFrameworks: ["FERPA", "COPPA", "GDPR", "SOC2", "ISO 27001"],
@@ -339,8 +334,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/transportation-ai-logistics";
         industryStandards: ["ISO 28000", "C-TPAT", "HACCP", "DOT", "FMCSA"],
         complianceFrameworks: ["Transportation Security", "Safety Standards", "Environmental Compliance", "SOC2"],
@@ -397,8 +391,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/energy-ai-grid-optimization";
         industryStandards: ["IEEE", "IEC", "NERC", "FERC", "ISO 50001"],
         complianceFrameworks: ["Grid Security", "Environmental Compliance", "Safety Standards", "SOC2"],
@@ -455,8 +448,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/real-estate-ai-market-intelligence";
         industryStandards: ["RICS", "CREA", "NAR", "REIT", "MLS"],
         complianceFrameworks: ["Real Estate Regulations", "Data Privacy", "Financial Compliance", "SOC2"],
@@ -513,8 +505,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/agriculture-ai-precision-farming";
         industryStandards: ["ISO 14001", "Global GAP", "Organic Certification", "Precision Agriculture", "Sustainable Farming"],
         complianceFrameworks: ["Environmental Compliance", "Food Safety", "Organic Standards", "SOC2"],

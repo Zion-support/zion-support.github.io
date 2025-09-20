@@ -25,9 +25,8 @@ Ato; m;
 Satellit; e;
 Dn; a;
 Shiel; d;
-Leaf;
-} from "lucide-react, ";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
+Leaf} from "lucide-react, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -43,8 +42,7 @@ adoptio; n: number;
 investmen; t: string;
 keyPlayer; s: string[];
 technologie; s: string[];
-statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";,
-};
+statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";};
 interface FutureRoadmap {
 i; d: string;
 titl; e: string;
@@ -54,8 +52,7 @@ milestone; s: string[];
 challenge; s: string[];
 opportunitie; s: string[];
 investmen; t: string;
-categor; y: string;,
-};
+categor; y: string;};
 const AdvancedServiceInnovationHu; b: React.FC = () => {
 const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
 const [selectedImpa; c; t; setSelectedImpa; c; t] = useState<string>("all");
@@ -77,8 +74,7 @@ investme; n; t: "$50; B+",
 keyPlaye; r; s: ["IB; M", "Googl; e", "Microsof; t", "Startup; s"],
 technologie; s: ["Quantu; m Computin; g", "Quantu; m Algorithm; s", "Quantu; m Softwar; e"];
 };
-statu; s: "Emerging",
-};
+statu; s: "Emerging"};
 {
 i; d: "ai-consciousness";
 titl; e: "AI Consciousness & General Intelligence";
@@ -90,8 +86,7 @@ adoptio; n: 4; 5;
 investmen; t: "$100B+";
 keyPlayer; s: ["OpenA; I", "Anthropi; c", "Researc; h Lab; s", "Universitie; s"],
 technologie; s: ["A; I Consciousnes; s", "Genera; l A; I", "Neura; l Network; s"],
-statu; s: "Emerging",
-};
+statu; s: "Emerging"};
 {
 i; d: "space-mining";
 titl; e: "Space Mining & Resource Extraction";
@@ -103,8 +98,7 @@ adoptio; n: 3; 0;
 investmen; t: "$200B+";
 keyPlayer; s: ["Space; X", "Blu; e Origi; n", "Asteroi; d Minin; g Companie; s"],
 technologie; s: ["Spac; e Robotic; s", "Resourc; e Processin; g", "Spac; e Logistic; s"],
-statu; s: "Emerging",
-};
+statu; s: "Emerging"};
 {
 i; d: "fusion-energy";
 titl; e: "Fusion Energy Commercialization";
@@ -116,8 +110,7 @@ adoptio; n: 6; 0;
 investmen; t: "$500B+";
 keyPlayer; s: ["ITE; R", "Privat; e Fusio; n Companie; s", "Governmen; t Lab; s"],
 technologie; s: ["Fusio; n Physic; s", "Plasm; a Confinemen; t", "Energ; y Conversio; n"],
-statu; s: "Growing",
-};
+statu; s: "Growing"};
 {
 i; d: "synthetic-biology";
 titl; e: "Synthetic Biology Revolution";
@@ -129,8 +122,7 @@ adoptio; n: 7; 0;
 investmen; t: "$150B+";
 keyPlayer; s: ["Ginkg; o Biowork; s", "Twis; t Bioscienc; e", "Researc; h Institution; s"],
 technologie; s: ["DN; A Programmin; g", "Geneti; c Engineerin; g", "Bi; o-Manufacturin; g"],
-statu; s: "Growing",
-};
+statu; s: "Growing"};
 {
 i; d: "brain-computer-interfaces";
 titl; e: "Brain-Computer Interface Revolution";
@@ -142,8 +134,7 @@ adoptio; n: 4; 0;
 investmen; t: "$80B+";
 keyPlayer; s: ["Neuralin; k", "Kerne; l", "Medica; l Devic; e Companie; s"],
 technologie; s: ["Neura; l Interface; s", "Signa; l Processin; g", "A; I/M; L"],
-statu; s: "Emerging",
-}
+statu; s: "Emerging"}
 ];
 const futureRoadma; p: FutureRoadmap[] = [
 {
@@ -170,8 +161,7 @@ opportunitie; s: [
 "Ne; w busines; s model; s";
 ],
 investmen; t: "$200B+";
-categor; y: "quantum",
-};
+categor; y: "quantum"};
 {
 i; d: "space-colonization";
 titl; e: "Space Colonization & Settlement";
@@ -196,8 +186,7 @@ opportunitie; s: [
 "Economi; c growt; h";
 ],
 investmen; t: "$1T+";
-categor; y: "space-tech",
-};
+categor; y: "space-tech"};
 {
 i; d: "ai-governance";
 titl; e: "AI Governance & Regulation";
@@ -222,8 +211,7 @@ opportunitie; s: [
 "Globa; l cooperatio; n";
 ],
 investmen; t: "$50B+";
-categor; y: "ai",
-}
+categor; y: "ai"}
 ];
 const filteredTrends = useMemo(() => {
 return innovationTrends.filter(trend => {;
@@ -242,8 +230,7 @@ switch (impact) {
 case "High": return "bg-red-100 text-red-800";
 case "Medium": return "bg-yellow-100 text-yellow-800";
 case "Low": return "bg-green-100 text-green-800";
-defaul;  t: return "bg-gray-100 text-gray-800";,
-}
+defaul;  t: return "bg-gray-100 text-gray-800";}
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -252,8 +239,7 @@ case "Emerging": return "bg-blue-100 text-blue-800";
 case "Growing": return "bg-green-100 text-green-800";
 case "Mature": return "bg-orange-100 text-orange-800";
 case "Disruptive": return "bg-purple-100 text-purple-800";
-defaul;  t: return "bg-gray-100 text-gray-800";,
-}
+defaul;  t: return "bg-gray-100 text-gray-800";}
 };
 
 const getCategoryIcon: any = (categor; y: string) => {
@@ -263,8 +249,7 @@ case "ai": return <Brain className="w-5 h-5" />;
 case "space-tech": return <Satellite className="w-5 h-5" />;
 case "green-tech": return <Leaf className="w-5 h-5" />;
 case "biotech-ai": return <Dna className="w-5 h-5" />;
-defaul;  t: return <Cpu className="w-5 h-5" />;,
-}
+defaul;  t: return <Cpu className="w-5 h-5" />;}
 };
 
 const categories = [;

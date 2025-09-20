@@ -2,14 +2,9 @@ interface Service {
 id: string;
 name: string;
 import React from 'react'
-import { Link,  } from 'react-router-dom'
-import { Home,
-Users
-, , Settings,
-DollarSign
-, , Phone,
-Menu,
- } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Home, Users, Settings, DollarSign
+Phone, Menu } from 'lucide-react'
 const Sidebar = () => {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
@@ -43,8 +38,8 @@ key={item.name}
     </aside>
   )
 }
-
-import React from "react",
+;
+import React from "react",;
 const Sidebar: React.FC = () => {
 ,
 return (,

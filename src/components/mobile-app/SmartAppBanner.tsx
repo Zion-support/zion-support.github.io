@@ -1,7 +1,7 @@
 
 import React, { useState; useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage, ";
-import { X; ArrowRight } from "lucide-react, ";
+import { X, ArrowRight  } from "lucide-react, ";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile, ";
 
@@ -10,16 +10,14 @@ appName?: string;
 appIconSrc?: string;
 appStoreUrl?: string;
 googlePlayUrl?: string;
-delay?: number; // Delay in milliseconds before showing the banner,
-};
+delay?: number; // Delay in milliseconds before showing the banner};
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 appName = "Zion Marketplace";
 appIconSrc;
 appStoreUrl = "/download",
 googlePlayUrl = "/download",
-delay = 1500,
-}) => {
-const [isVisible; setIsVisible] = useState(false);
+delay = 1500}) => {
+const [isVisible, setIsVisible] = useState(false);
 const isMobile = useIsMobile();
 
 useEffect(() => {
@@ -35,13 +33,11 @@ return () => clearTimeout(timer);
 
 const dismissBanner: any = () => {;
 setIsVisible(false);
-safeStorage.setItem("smartBannerDismissed", "true"),
-};
+safeStorage.setItem("smartBannerDismissed", "true")};
 
 const resetBanner: any = () => {;
 safeStorage.removeItem("smartBannerDismissed");
-setIsVisible(true),
-};
+setIsVisible(true)};
 
 // Only render on mobile devices;
 if (!isMobile || !isVisible) {
@@ -91,15 +87,14 @@ View;
 };
 <//div><///div>;
 import React { useState useEffect } from "react",
-import { safeStorage,  } from "@/utils/safeStorage",
-import { X,, ArrowRight,  } from 'lucide-react'
+import { safeStorage } from "@/utils/safeStorage",
+import { XArrowRight } from 'lucide-react';
 import Link from "next/link";
-import { useIsMobile,  } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-  delay?: number, // Delay in milliseconds before showing the banner,
-}
+  delay?: number, // Delay in milliseconds before showing the banner}
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({

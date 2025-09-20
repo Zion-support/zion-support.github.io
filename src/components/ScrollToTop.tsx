@@ -6,12 +6,12 @@ name: string;
 import React from "react";
 
 export function ScrollToTop() {;
-impor;  t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
 
 export function ScrollToTop() {;
-impor;  t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
 const [isVisib; l; e; setIsVisib; l; e] = useState(false);
@@ -34,8 +34,7 @@ window.scrollTo({;
 to;  p: 0;
 behavio; r: "smooth",
 behavio; r: "smooth",
-behavio; r: "smooth",
-});
+behavio; r: "smooth"});
 };
 
 className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
@@ -55,8 +54,7 @@ whileTap={{ scal; e: 0.95 }}
 transition={{
 typ; e: "spring",
 stiffnes; s: 40; 0;
-dampin; g: 17; ,
-}}
+dampin; g: 17; }}
 >;
 <svg;
 className="w-6 h-6"

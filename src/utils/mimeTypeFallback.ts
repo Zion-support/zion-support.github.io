@@ -23,8 +23,7 @@ private supportedTypes: Set<string> = new Set([
 * Check if a MIME type is supported;
 */;
 isSupported(type: string): boolean {
-return this.supportedTypes.has(type),
-}
+return this.supportedTypes.has(type)}
 
 /**;
 * Get fallback MIME type for unsupported types;
@@ -70,14 +69,12 @@ const script = document.createElement("script");
 script.src = url;
 script.async = true;
 script.type = "text/javascript";
-return script,
-} else {
+return script} else {
 const link = document.createElement("link");
 link.rel = "stylesheet";
 link.href = url;
 link.type = "text/css";
-return link,
-}
+return link}
 }
 
 /**;

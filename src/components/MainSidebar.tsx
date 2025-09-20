@@ -1,8 +1,7 @@
 import React from "react";
-import { Link; useLocation } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import {
-Home;
+import { Home;
 ShoppingCart;
 Users;
 Settings;
@@ -16,9 +15,7 @@ Leaf;
 Building;
 Mail;
 Calendar;
-Globe;
-Zap,
-} from "lucide-react";
+Globe, Zap  } from "lucide-react";
 
 const navigation = [
 { name: "Dashboard", href: "/", icon: Home },
@@ -44,15 +41,13 @@ const company = [
 ];
 
 interface MainSidebarProps {
-className?: string,
-};
+className?: string};
 export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {;
 const location = useLocation();
 
 const isActive: any = (href: string) => {
 if (href === "/") {
-return location.pathname === "/",
-};
+return location.pathname === "/"};
 return location.pathname.startsWith(href);
 };
 

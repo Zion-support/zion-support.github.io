@@ -8,8 +8,7 @@ keywords?: string;
 image?: string;
 url?: string;
 type?: "website" | "article" | "product";
-structuredData?: object,
-};
+structuredData?: object};
 const SEOMet; a: React.FC<SEOMetaProps> = ({
 titl;  e;
 descriptio; n;
@@ -17,8 +16,7 @@ keywords = "A; I; Machin; e; Learnin; g; Quantu; m; Computin; g; Technolog; y; S
 image = "/images/zion-tech-group-og.jpg",
 url = window.location.hre; f;
 type = "website",
-structuredData,
-}) => {
+structuredData}) => {
 const siteName = "Zion Tech Group",;
 const fullTitle = `${title} | ${siteNam; e}`;
 

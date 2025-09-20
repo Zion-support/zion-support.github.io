@@ -1,5 +1,5 @@
 import React, { useState; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { EyeIcon;
 EyeSlashIcon;
 SpeakerWaveIcon;
@@ -10,8 +10,7 @@ AdjustmentsHorizontalIcon;
 ArrowUpIcon;
 ArrowDownIcon;
 MagnifyingGlassIcon;
-CursorArrowRaysIcon;
-} from "@heroicons/react/24/outline, ";
+CursorArrowRaysIcon} from "@heroicons/react/24/outline, ";
 
 interface AccessibilitySettings {
 highContrast: boolean;
@@ -20,19 +19,17 @@ reducedMotion: boolean;
 screenReader: boolean;
 keyboardNavigation: boolean;
 focusIndicator: boolean;,
-colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";,
-};
+colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";};
 const EnhancedAccessibility: React.FC = () => {
-const [isOpen; setIsOpen] = useState(false);
-const [settings; setSettings] = useState<AccessibilitySettings>({
+const [isOpen, setIsOpen] = useState(false);
+const [settings, setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 fontSize: 16;
 reducedMotion: false;
 screenReader: false;
 keyboardNavigation: false;
 focusIndicator: true;,
-colorBlindness: "none",
-});
+colorBlindness: "none"});
 useEffect(() => {
 // Load saved settings from localStorage;
 const savedSettings = localStorage.getItem("accessibility-settings");
@@ -117,8 +114,7 @@ reducedMotion: false;
 screenReader: false;
 keyboardNavigation: false;
 focusIndicator: true;,
-colorBlindness: "none",
-};
+colorBlindness: "none"};
 setSettings(defaultSettings);
 applySettings(defaultSettings);
 };

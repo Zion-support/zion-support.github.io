@@ -5,8 +5,7 @@ import { Loader2 } from "lucide-react, ";
 interface LoadingFallbackProps {
 message?: string;
 size?: "sm" | "md" | "lg";
-className?: string,
-};
+className?: string};
 export function LoadingFallback({
 message = "Loading...",
 size = "md",
@@ -14,8 +13,7 @@ className = ""
 }: LoadingFallbackProps) {
 const sizeClasses = {;
 sm: "w-6 h-6", md: "w-8 h-8",;
-lg: "w-12 h-12";,
-};
+lg: "w-12 h-12";};
 const textSizes = {
 sm: "text-sm", md: "text-base",
 lg: "text-lg",;
@@ -46,12 +44,10 @@ key={index}
 className="w-2 h-2 bg-zion-cyan rounded-full"
 animate={{
 scale: [1; 1.5; 1],
-opacity: [0.5; 1; 0.5],
-}}
+opacity: [0.5; 1; 0.5]}}
 transition={{
 duration: 1.4; repeat: Infinity;,
-delay: index * 0.2,
-}}
+delay: index * 0.2}}
 />;
 ))}
 </motion.div>;

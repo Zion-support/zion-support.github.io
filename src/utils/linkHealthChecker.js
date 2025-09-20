@@ -5,8 +5,7 @@ export class LinkHealthChecker {
             timeout: config.timeout || 10000,
             retries: config.retries || 3,
             userAgent: config.userAgent || 'Zion-Tech-Group-Link-Checker/1.0',
-            followRedirects: config.followRedirects !== false,
-        };
+            followRedirects: config.followRedirects !== false};
     }
     async checkLink(url) {
         const startTime = Date.now();
@@ -17,8 +16,7 @@ export class LinkHealthChecker {
                 headers: {
                     'User-Agent': this.config.userAgent;
                 },
-                redirect: this.config.followRedirects ? 'follow' : 'manual',
-            });
+                redirect: this.config.followRedirects ? 'follow' : 'manual'});
             const responseTime = Date.now() - startTime;
             if (response.ok || response.status < 400) {
                 return {
@@ -26,8 +24,7 @@ export class LinkHealthChecker {
                     status: 'healthy',
                     statusCode: response.status,
                     responseTime,
-                    lastChecked: new Date(),
-                };
+                    lastChecked: new Date()};
             }
             else {
                 return {
@@ -36,8 +33,7 @@ export class LinkHealthChecker {
                     statusCode: response.status,
                     responseTime,
                     error: `HTTP ${response.status}: ${response.statusText}`,
-                    lastChecked: new Date(),
-                };
+                    lastChecked: new Date()};
             }
         }
         catch (error) {
@@ -45,8 +41,7 @@ export class LinkHealthChecker {
                 url,
                 status: 'error',
                 error: error instanceof Error ? error.message : 'Unknown error',
-                lastChecked: new Date(),
-            };
+                lastChecked: new Date()};
         }
     }
     async checkMultipleLinks(urls) {
@@ -61,8 +56,7 @@ export class LinkHealthChecker {
                     url,
                     status: 'error',
                     error: error instanceof Error ? error.message : 'Unknown error',
-                    lastChecked: new Date(),
-                });
+                    lastChecked: new Date()});
             }
         }
         return results;
@@ -88,8 +82,7 @@ export class LinkHealthChecker {
             url,
             status: 'error',
             error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-            lastChecked: new Date(),
-        };
+            lastChecked: new Date()};
     }
     getHealthSummary(results) {
         const total = results.length;

@@ -46,16 +46,14 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/brain-computer-interface";
         documentationUrl: "https://ziontechgroup.com/docs/brain-computer-interface";
         freeTrial: true;
         freeTrialDays: 7;
         uniqueValueProposition: "First AI-powered BCI platform with real-time signal processing and medical-grade accuracy";
         marketSize: "$1.7 billion (BCI market)";
-        growthPotential: "1000% annual growth expected",
-    };
+        growthPotential: "1000% annual growth expected"};
     // AI-Powered Space Technology Platform;
     {
         id: "space-technology-ai";
@@ -103,16 +101,14 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/space-technology";
         documentationUrl: "https://ziontechgroup.com/docs/space-technology";
         freeTrial: true;
         freeTrialDays: 7;
         uniqueValueProposition: "First AI-powered space technology platform achieving 99.5% mission success rate";
         marketSize: "$4.5 billion (space technology market)";
-        growthPotential: "700% annual growth expected",
-    };
+        growthPotential: "700% annual growth expected"};
     // AI-Powered Quantum Internet Platform;
     {
         id: "quantum-internet-ai";
@@ -160,16 +156,14 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/quantum-internet";
         documentationUrl: "https://ziontechgroup.com/docs/quantum-internet";
         freeTrial: true;
         freeTrialDays: 7;
         uniqueValueProposition: "First AI-powered quantum internet platform with unbreakable encryption and quantum-resistant security";
         marketSize: "$2.8 billion (quantum internet market)";
-        growthPotential: "1200% annual growth expected",
-    };
+        growthPotential: "1200% annual growth expected"};
     // AI-Powered Autonomous Vehicle Fleet Management;
     {
         id: "autonomous-vehicle-fleet-ai";
@@ -217,16 +211,14 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/autonomous-vehicle-fleet";
         documentationUrl: "https://ziontechgroup.com/docs/autonomous-vehicle-fleet";
         freeTrial: true;
         freeTrialDays: 14;
         uniqueValueProposition: "First AI-powered autonomous fleet management platform achieving 80% safety improvement";
         marketSize: "$22.5 billion (autonomous vehicle market)";
-        growthPotential: "600% annual growth expected",
-    };
+        growthPotential: "600% annual growth expected"};
     // AI-Powered Climate Prediction and Adaptation Platform;
     {
         id: "climate-prediction-adaptation-ai";
@@ -274,14 +266,12 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/climate-prediction";
         documentationUrl: "https://ziontechgroup.com/docs/climate-prediction";
         freeTrial: true;
         freeTrialDays: 14;
         uniqueValueProposition: "First AI-powered climate adaptation platform reducing climate risks by 70%";
         marketSize: "$3.2 billion (climate technology market)";
-        growthPotential: "800% annual growth expected",
-    }
+        growthPotential: "800% annual growth expected"}
 ];

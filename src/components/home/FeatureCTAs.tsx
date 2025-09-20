@@ -84,7 +84,7 @@ className
               <CardFooter>
                 <Button asChild className='w-full gap-1'>
                   <Link,
-href = {feature.link,}
+href = {feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
                     className='cursor-pointer'
                     {...(feature.key === 'ai_talent_matching' && {

@@ -41,10 +41,10 @@ return (
 ),;
 };<//div><///div>;
 
-import React from "react",
-import { Card,, CardContent,  } from "@/components/ui/card";
-import { Check,  } from 'lucide-react'
-import { cn,  } from "@/lib/utils";
+import React from "react",;
+import { CardCardContent } from "@/components/ui/card";
+import { Check } from 'lucide-react';
+import { cn } from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string;
   style?: React.CSSProperties,
@@ -92,7 +92,7 @@ key={index}
     </section>
   )
 }
-import { motion,, ,  } from 'framer-motion'
+import { motion } from 'framer-motion';
   {
     icon: "⚡",
 title: "Lightning Fast Performance"
@@ -124,8 +124,7 @@ title: "Real-Time Analytics"
 }
   const itemVariants = {
   hidden: { opacity: 0 y: 30,
-scale: 0.95,
-}
+scale: 0.95}
     visible: {,
 opacity: 1,
 y: 0,
@@ -138,8 +137,7 @@ ease: "easeOut"
 }
   const achievementVariants = {
   hidden: { opacity: 0,
-scale: 0.8,
-}
+scale: 0.8}
     visible: {,
 opacity: 1,
 scale: 1,
@@ -148,8 +146,7 @@ transition: { duration: 0.5 }
 }
   const techVariants = {
   hidden: { opacity: 0,
-x: -20,
-}
+x: -20}
     visible: {,
 opacity: 1,
 x: 0,
@@ -225,8 +222,7 @@ transition: { duration: 0.3 }
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-delay: 0.4,
-}}
+delay: 0.4}}
         >"
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Experience the difference</span>"

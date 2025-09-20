@@ -1,23 +1,19 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect  } from "react, ";
 
 interface Tenant {
-id: string; name: string; domain: string,
-}
+id: string; name: string; domain: string}
 
 interface WhitelabelConfig {
-companyName: string; logo: string; primaryColor: string; secondaryColor: string; theme: "light" | "dark",
-}
+companyName: string; logo: string; primaryColor: string; secondaryColor: string; theme: "light" | "dark"}
 
 interface WhitelabelState {
 config: WhitelabelConfig | null; tenant: Tenant | null;,
-isLoading: boolean,
-}
+isLoading: boolean}
 
 export const useWhitelabel: any = (): WhitelabelState => {;
-const [state; setState] = useState<WhitelabelState>({
+const [state, setState] = useState<WhitelabelState>({
 config: null; tenant: null;,
-isLoading: true,
-});
+isLoading: true});
 
 useEffect(() => {
 // In a real app; you would fetch whitelabel configuration;
@@ -30,19 +26,15 @@ setState({
 config: {,
 companyName: "Zion Tech Group", logo: "/logo.png";,
 primaryColor: "#3B82F6", secondaryColor: "#1F2937";,
-theme: "dark",
-},
+theme: "dark"},
 tenant: {,
 id: "1", name: "Zion Tech Group";,
-domain: "ziontechgroup.com",
-},
-isLoading: false,
-});
+domain: "ziontechgroup.com"},
+isLoading: false});
 } catch {
 setState({
 config: null; tenant: null;,
-isLoading: false,
-});
+isLoading: false});
 }
 };
 

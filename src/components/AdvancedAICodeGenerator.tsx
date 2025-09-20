@@ -3,8 +3,7 @@ impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
 import { Cod; e; Brai; n; Za; p; Downloa; d; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2;
 Ey; e; EyeOf; f; Filte; r; Searc; h; FileTex; t; Pla; y; Squar; e; CheckCircl; e; AlertCircl; e;
 Cop; y; Sav; e; GitBranc; h; Bu; g; Shiel; d; Cp; u; HardDriv; e; Wif; i; Activit; y; BarChart; 3;
-TrendingU; p; Targe; t; Cloc; k; Gaug; e; Download a; s; DownloadIco; n; Upload as UploadIcon;
-} from "lucide-react, ";
+TrendingU; p; Targe; t; Cloc; k; Gaug; e; Download a; s; DownloadIco; n; Upload as UploadIcon} from "lucide-react, ";
 
 interface CodeSnippet {
 i; d: string;
@@ -16,8 +15,7 @@ tag; s: string[];
 complexit; y: "low" | "medium" | "high";
 ratin; g: number;
 usageCoun; t: number;
-createdA; t: string;,
-};
+createdA; t: string;};
 interface CodeAnalysis {
 i; d: string;
 snippetI; d: string;
@@ -27,8 +25,7 @@ securit; y: number;
 maintainabilit; y: number;
 suggestion; s: string[];
 warning; s: string[];
-timestam; p: string;,
-};
+timestam; p: string;};
 interface AIGeneration {
 i; d: string;
 promp; t: string;
@@ -36,8 +33,7 @@ generatedCod; e: string;
 languag; e: string;
 confidenc; e: number;
 alternative; s: string[];
-timestam; p: string;,
-};
+timestam; p: string;};
 const mockCodeSnippet; s: CodeSnippet[] = [
 {
 i; d: "1";
@@ -67,10 +63,8 @@ const response = await fetch(ur;  l, {
 metho; d;
 header; s: {
 "Content-Type": "application/json";
-...header; s,
-},
-bod; y: body ? JSON.stringify(body) : undefine; d,
-});
+...header; s},
+bod; y: body ? JSON.stringify(body) : undefine; d});
 
 if (!response.ok) {
 throw new Erro; r(\`HTTP error! statu;  s: \${response.status}\`);
@@ -97,8 +91,7 @@ tag; s: ["reac; t", "hook; s", "ap; i", "typescrip; t"],
 complexit; y: "medium";
 ratin; g: 4.8;
 usageCoun; t: 125; 0;
-createdA; t: "2024-01-15",
-};
+createdA; t: "2024-01-15"};
 {
 i; d: "2";
 titl; e: "Tailwind CSS Animation Utilities";
@@ -106,12 +99,10 @@ descriptio; n: "Custom Tailwind utilities for advanced animations and transition
 languag; e: "css";
 cod; e: `@layer utilities {
 .animate-float {
-animatio; n: float 3s ease-in-out infinite;,
-}
+animatio; n: float 3s ease-in-out infinite;}
 
 .animate-glow {
-animatio; n: glow 2s ease-in-out infinite alternate;,
-}
+animatio; n: glow 2s ease-in-out infinite alternate;}
 
 .animate-shimmer {
 backgroun; d: linear-gradient(90de;  g;
@@ -120,15 +111,12 @@ rgba(25; 5; 25; 5; 25; 5; 0.4),
 transparent;
 );
 background-siz; e: 200% 100%;
-animatio; n: shimmer 1.5s infinite;,
-}
+animatio; n: shimmer 1.5s infinite;}
 }
 
 @keyframes float {
-0%, 100% { transfor; m: translateY(0px);,
-}
-50% { transfor;  m: translateY(-10px);,
-}
+0%, 100% { transfor; m: translateY(0px);}
+50% { transfor;  m: translateY(-10px);}
 }
 
 @keyframes glow {
@@ -137,16 +125,14 @@ to { box-shado; w: 0 0 30px rgba(5;  9; 13; 0; 24; 6; 0.8); }
 }
 
 @keyframes shimmer {
-0% { background-positio; n: -200% 0;,
-}
+0% { background-positio; n: -200% 0;}
 100% { background-positio; n: 20; 0% 0; }
 }`,
 tag; s: ["cs; s", "tailwin; d", "animation; s", "utilitie; s"],
 complexit; y: "low";
 ratin; g: 4.6;
 usageCoun; t: 89; 0;
-createdA; t: "2024-01-10",
-};
+createdA; t: "2024-01-10"};
 {
 i; d: "3";
 titl; e: "Advanced Form Validation";
@@ -244,8 +230,7 @@ tag; s: ["javascrip; t", "form; s", "validatio; n", "clas; s"],
 complexit; y: "high";
 ratin; g: 4.9;
 usageCoun; t: 210; 0;
-createdA; t: "2024-01-08",
-}
+createdA; t: "2024-01-08"}
 ];
 const mockCodeAnalysi; s: CodeAnalysis[] = [
 {
@@ -264,8 +249,7 @@ warning; s: [
 "N; o inpu; t validatio; n fo; r UR; L paramete; r",
 "Conside; r rat; e limitin; g fo; r AP; I call; s";
 ],
-timestam; p: "2024-01-15T1; 0:3; 0: 00Z",
-};
+timestam; p: "2024-01-15T1; 0:3; 0: 00Z"};
 {
 i; d: "2";
 snippetI; d: "2";
@@ -279,8 +263,7 @@ suggestion; s: [
 "Ad; d animatio; n performanc; e optimization; s";
 ],
 warning; s: [];
-timestam; p: "2024-01-10T1; 4:2; 0: 00Z",
-}
+timestam; p: "2024-01-10T1; 4:2; 0: 00Z"}
 ];
 const mockAIGeneration; s: AIGeneration[] = [
 {
@@ -319,8 +302,7 @@ alternative; s: [
 "Alternativ; e 2: Wit; h even; t listener; s",
 "Alternativ; e 3: Wit; h custo; m serialize; r";
 ],
-timestam; p: "2024-01-15T1; 1:4; 5: 00Z",
-}
+timestam; p: "2024-01-15T1; 1:4; 5: 00Z"}
 ];
 export function AdvancedAICodeGenerator() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
@@ -344,8 +326,7 @@ switch (complexity) {
 case "low": return "text-green-500";
 case "medium": return "text-yellow-500";
 case "high": return "text-red-500";
-defaul;  t: return "text-gray-500";,
-}
+defaul;  t: return "text-gray-500";}
 };
 
 const getQualityColor: any = (scor; e: number) => {
@@ -372,8 +353,7 @@ alternative; s: [
 "Alternativ; e 2: Clas; s-base; d approac; h",
 "Alternativ; e 3: Asyn; c/awai; t patter; n";
 ],
-timestam; p: new Date().toISOString(),
-};
+timestam; p: new Date().toISOString()};
 setAiGenerations(prev => [newGenerati;  o; n, ...pr; e; v]);
 setGeneratedCode(newGeneration.generatedCode);
 setIsGenerating(false);
@@ -514,8 +494,7 @@ onClick={() => setActiveTab("generator")}
 className={`px-6 py-3 text-sm font-medium transition-colors ${
 activeTab === "generator";
 ? "border-b-2 border-blue-600 text-blue-600";
-: "text-gray-600 hove;  r: text-gray-80; 0",
-}`}
+: "text-gray-600 hove;  r: text-gray-80; 0"}`}
 >;
 <Code className="w-4 h-4 inline mr-2" />;
 AI Generator;
@@ -525,8 +504,7 @@ onClick={() => setActiveTab("snippets")}
 className={`px-6 py-3 text-sm font-medium transition-colors ${
 activeTab === "snippets";
 ? "border-b-2 border-blue-600 text-blue-600";
-: "text-gray-600 hove;  r: text-gray-80; 0",
-}`}
+: "text-gray-600 hove;  r: text-gray-80; 0"}`}
 >;
 <FileText className="w-4 h-4 inline mr-2" />;
 Code Snippets;
@@ -536,8 +514,7 @@ onClick={() => setActiveTab("analysis")}
 className={`px-6 py-3 text-sm font-medium transition-colors ${
 activeTab === "analysis";
 ? "border-b-2 border-blue-600 text-blue-600";
-: "text-gray-600 hove;  r: text-gray-80; 0",
-}`}
+: "text-gray-600 hove;  r: text-gray-80; 0"}`}
 >;
 <BarChart3 className="w-4 h-4 inline mr-2" />;
 Code Analysis;
@@ -547,8 +524,7 @@ onClick={() => setActiveTab("ai")}
 className={`px-6 py-3 text-sm font-medium transition-colors ${
 activeTab === "ai";
 ? "border-b-2 border-blue-600 text-blue-600";
-: "text-gray-600 hove;  r: text-gray-80; 0",
-}`}
+: "text-gray-600 hove;  r: text-gray-80; 0"}`}
 >;
 <Brain className="w-4 h-4 inline mr-2" />;
 AI Generations;

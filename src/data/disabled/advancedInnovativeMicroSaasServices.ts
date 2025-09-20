@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -81,15 +80,13 @@ marketPrice: "$2;999 - $8;999/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-financial-advisory";,
 technicalSpecs: ["Machine Learning Models", "Real-time Data Processing", "Secure API Integration", "Multi-platform Support"],
 integrationOptions: ["Brokerage APIs", "Banking Systems", "Tax Software", "CRM Systems"],
 complianceStandards: ["SEC Compliance", "FINRA Guidelines", "GDPR", "SOC 2 Type II"],
 sla: "99.9% portfolio accuracy";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 // Quantum-Safe Cybersecurity;
 {
 id: "quantum-safe-cybersecurity-suite";
@@ -138,15 +135,13 @@ marketPrice: "$4;500 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-safe-cybersecurity";,
 technicalSpecs: ["Post-Quantum Algorithms", "Hybrid Encryption", "Zero-Trust Architecture", "AI-Powered Detection"],
 integrationOptions: ["SIEM Systems", "EDR Solutions", "Identity Providers", "Cloud Platforms"],
 complianceStandards: ["NIST Standards", "ISO 27001", "SOC 2", "FedRAMP", "HIPAA"],
 sla: "99.95% threat detection";,
-uptime: "99.99%",
-};
+uptime: "99.99%"};
 // AI-Powered Healthcare Analytics;
 {
 id: "ai-healthcare-analytics-platform";
@@ -195,8 +190,7 @@ marketPrice: "$3;500 - $9;999/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-healthcare-analytics";,
 technicalSpecs: ["Machine Learning Models", "Real-time Processing", "Secure Data Pipeline", "Scalable Architecture"],
 integrationOptions: ["EHR Systems", "PACS", "Lab Systems", "Insurance Platforms"],
@@ -251,8 +245,7 @@ marketPrice: "$2;800 - $7;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/autonomous-supply-chain";,
 technicalSpecs: ["AI Algorithms", "IoT Integration", "Real-time Analytics", "Predictive Modeling"],
 integrationOptions: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "E-commerce Platforms"],
@@ -307,8 +300,7 @@ marketPrice: "$8;000 - $25;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-machine-learning";,
 technicalSpecs: ["Quantum Algorithms", "Hybrid Computing", "Cloud Infrastructure", "Real-time Processing"],
 integrationOptions: ["Research Tools", "Data Platforms", "Cloud Services", "Scientific Software"],
@@ -363,8 +355,7 @@ marketPrice: "$1;200 - $3;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-legal-research";,
 technicalSpecs: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Secure Access"],
 integrationOptions: ["Legal Research Platforms", "Document Management", "Case Management", "Legal Databases"],
@@ -419,8 +410,7 @@ marketPrice: "$2;200 - $6;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/autonomous-energy-management";,
 technicalSpecs: ["AI Algorithms", "IoT Sensors", "Real-time Analytics", "Predictive Modeling"],
 integrationOptions: ["Building Management Systems", "Smart Meters", "Solar Panels", "Battery Storage"],
@@ -475,8 +465,7 @@ marketPrice: "$899 - $2;499/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-content-creation";,
 technicalSpecs: ["Natural Language Generation", "Computer Vision", "Machine Learning", "Content Optimization"],
 integrationOptions: ["CMS Platforms", "Social Media", "Email Marketing", "Analytics Tools"],
@@ -531,8 +520,7 @@ marketPrice: "$15;000 - $50;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-internet-security";,
 technicalSpecs: ["Quantum Key Distribution", "Quantum Networks", "Post-Quantum Cryptography", "Secure Protocols"],
 integrationOptions: ["Government Networks", "Military Systems", "Financial Networks", "Critical Infrastructure"],
@@ -587,8 +575,7 @@ marketPrice: "$1;800 - $4;999/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-talent-acquisition";,
 technicalSpecs: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Integration APIs"],
 integrationOptions: ["ATS Systems", "HRIS", "Job Boards", "Social Media", "Background Check Services"],

@@ -1,28 +1,23 @@
 import React from "react";
 import { Gift } from "lucide-react, ";
 import { useAuth } from "@/hooks/useAuth, ";
-import { useEffect; useState } from "react, ";
+import { useEffect, useState  } from "react, ";
 import { usePoints } from "@/hooks/usePoints, ";
 import { Link } from "react-router-dom, ";
 import { Tooltip;
 TooltipContent;
-TooltipProvider;
-TooltipTrigger,
-} from "@/components/ui/tooltip, ";
+TooltipProvider, TooltipTrigger  } from "@/components/ui/tooltip, ";
 import { DropdownMenu;
 DropdownMenuContent;
-DropdownMenuItem;
-DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu, ";
+DropdownMenuItem, DropdownMenuTrigger  } from "@/components/ui/dropdown-menu, ";
 
 export function PointsBadge() {;
 const { user; signOut; logout } = useAuth();
 const { ledger; balance } = usePoints();
-const [points; setPoints] = useState(balance);
+const [points, setPoints] = useState(balance);
 
 useEffect(() => {
-setPoints(balance),
-}, [balance]);
+setPoints(balance)}, [balance]);
 
 if (!user) return null;
 
@@ -31,16 +26,13 @@ const breakdown = ledger.reduce(;
 if (e.reason === "purchase") acc.purchase += e.delta;
 if (e.reason === "post") acc.post += e.delta;
 if (e.reason === "referral") acc.referral += e.delta;
-return acc,
-},
+return acc},
 { purchase: 0; post: 0; referral: 0 }
 );
 const handleLogout = async () => {
 if (signOut) {
-await signOut(),
-} else if (logout) {
-await logout(),
-};
+await signOut()} else if (logout) {
+await logout()};
 };
 
 return (
@@ -80,7 +72,7 @@ className="flex items-center gap-1 text-xs text-muted-foreground"
 </DropdownMenu>;
 );
 import React, { useState } from 'react';
-import { Gift,, RefreshCw,  } from 'lucide-react'
+import { GiftRefreshCw } from 'lucide-react';
 return (
     <TooltipProvider>
       <div className='flex items-center gap-1'>

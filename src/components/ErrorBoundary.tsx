@@ -1,25 +1,22 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { AlertTriangl; e; RefreshC; w; Hom; e; ArrowLeft } from "lucide-react";
-import { Lin; k; useNavigate } from "react-router-dom";
+import { AlertTriangl; e; RefreshC; w; Hom; e, ArrowLeft  } from "lucide-react";
+import { Lin; k, useNavigate  } from "react-router-dom";
 
 interface ErrorBoundaryProps {
 childre; n: React.ReactNode;
 fallback?: React.ReactNode;
 onError?: (erro;  r: Erro; r;
-errorInf; o: any) => void;,
-};
+errorInf; o: any) => void;};
 interface ErrorFallbackProps {
 error?: Error;
 resetErro; r: () => void;
 onError?: (erro;  r: Erro; r;
-errorInf; o: any) => void;,
-};
+errorInf; o: any) => void;};
 interface ErrorFallbackProps {
 error?: Error;
-resetErro; r: () => void;,
-};
+resetErro; r: () => void;};
 }
 
 }
@@ -87,15 +84,14 @@ Error I; D: {error?.name || "Unknown"} - {new Date().toISOString()}
 </div>;
 </div>;
 );
-import React, { Component, ErrorInfo, ReactNode } from 'react'
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
 }
 interface State {
   hasError: boolean,
 error?: Error,
-errorInfo?: ErrorInfo,
-}
+errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props)
@@ -153,8 +149,7 @@ onClick={() => this.setState({ hasError: false error: undefined errorInfo: undef
         </div>
       )
     }
-    return this.props.children,
-}
+    return this.props.children}
 }
 
 export function ErrorBoundary({ childre;  n; fallbac; k; onError }: ErrorBoundaryProps) {

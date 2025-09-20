@@ -1,4 +1,4 @@
-import React { memo useMemo useCallback } from 'react'
+import React { memo useMemo useCallback } from 'react';
 // Higher-order component for performance optimization,
 export const withPerformanceOptimization = <P extends object>(; Component: React.ComponentType<P>, options: {, memo?: boolean; memoDeps?: (props: P) = > any[]; displayName?: string} = {}
 ) = > {const { memo: useMemo = true memoDeps displayName } = options; let OptimizedComponent = Component; if (useMemo) {OptimizedComponent = memo(Component, (prevProps nextProps) = > {if (memoDeps) {; const prevDeps = memoDeps(prevProps); const nextDeps = memoDeps(nextProps); return prevDeps.every((dep index) = > dep = = = nextDeps[index])}; return false, // Always re-render if no custom comparison})}; if (displayName) {OptimizedComponent.displayName = displayName}; return OptimizedComponent}
@@ -31,8 +31,7 @@ export const useDebouncedSearch = (value: string delay: number = 300) => {
       clearTimeout(handler)
 }
   }, [value delay])
-  return debouncedValue,
-}
+  return debouncedValue}
 // Performance metrics collection,
 export const usePerformanceMetrics = () => {
   const [metrics, setMetrics] = React.useState({

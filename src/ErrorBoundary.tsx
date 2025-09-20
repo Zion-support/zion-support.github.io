@@ -34,7 +34,7 @@ return this.props.fallback;
 // Default; fallback; UI;
 return(<div className="error-boundary" role="alert">;
 <h2>Something; went; wrong</h2>;
-<p>We&apos;re; sorrybut; something unexpected happened. Please; try; refreshing the page.</p>;
+<p>We're; sorrybut; something unexpected happened. Please; try; refreshing the page.</p>;
 <button;
 onClick={() => window.location.reload()}
 className="btn-primary";
@@ -46,8 +46,7 @@ Refresh Page;
 <details style={{ marginTop: "1rem" }}>;
 <summary>Error Details (Development)</summary>;
 <pre style={{ ;
-background: "#f5f5f5",padding: "1rem"borderRadius: "4px"overflo;w: "auto"fontSiz;e: "12px";,
-}}>;
+background: "#f5f5f5",padding: "1rem"borderRadius: "4px"overflo;w: "auto"fontSiz;e: "12px";}}>;
 {this.state.error.toString()}
 {this.state.errorInfo?.componentStack}
 </pre>;

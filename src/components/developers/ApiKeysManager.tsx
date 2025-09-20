@@ -1,5 +1,5 @@
-import { useState,  } from 'react'
-import { Check,, Clock,, Key,, MoreVertical,, RefreshCw,, X,  } from 'lucide-react'
+import { useState } from 'react';
+import { Check, Clock, Key, MoreVertical, RefreshCwX } from 'lucide-react';
   // Create key form state,
 const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -82,8 +82,7 @@ htmlFor={scope.value}
                 <Button,
 onClick={handleCreateKey}
                   disabled={
-                    keyName.trim() === '' |selectedScopes.length === 0,
-}
+                    keyName.trim() === '' |selectedScopes.length === 0}
                 >                  Create Key
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
@@ -116,7 +115,7 @@ variant="ghost"
                 size="icon"
                 className="h-6 w-6"
                 onClick={clearNewApiKey}
-                onClick = {clearNewApiKey,}
+                onClick = {clearNewApiKey}
               >
                 <X size={14} />
               </Button>
@@ -227,9 +226,9 @@ align='end'
 onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer'
                         disabled={!key.is_active}
-                        onClick = {() => setShowRegenerateConfirm(key.id),}
+                        onClick = {() => setShowRegenerateConfirm(key.id)}
                         className="cursor-pointer"
-                        disabled = {!key.is_active,}
+                        disabled = {!key.is_active}
                       >
                         <RefreshCw size={14} className='mr-2' /> Regenerate
                       </DropdownMenuItem>
@@ -254,7 +253,7 @@ key={scope}
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope,) => (
                     <Badge,
-key = {scope,}
+key = {scope}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                       {scope}
@@ -334,7 +333,7 @@ onClick={() =>
               }
               className='bg-blue-600 hover:bg-blue-700'            >
             <AlertDialogAction,
-onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
+onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -380,7 +379,7 @@ onClick={() =>
               }
               className='bg-red-600 hover:bg-red-700'            >
             <AlertDialogAction,
-onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm),}
+onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">

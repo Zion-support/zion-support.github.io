@@ -6,8 +6,7 @@ benefits: string[], useCases: string[];,
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 contactInfo: {,
-phone: string; email: string; website: string,
-};
+phone: string; email: string; website: string};
 }
 
 export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
@@ -51,8 +50,7 @@ estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";,
 marketPrice: "$4; 500 - $25; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Financial Services Platform;
 {
@@ -94,8 +92,7 @@ estimatedDelivery: "5-7 weeks", supportLevel: "enterprise";,
 marketPrice: "$3; 800 - $20; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Manufacturing IoT Platform;
 {
@@ -137,8 +134,7 @@ estimatedDelivery: "5-7 weeks", supportLevel: "enterprise";,
 marketPrice: "$3; 200 - $18; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Retail Analytics Platform;
 {
@@ -180,8 +176,7 @@ estimatedDelivery: "4-6 weeks", supportLevel: "premium";,
 marketPrice: "$2; 400 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Education Technology Platform;
 {
@@ -223,7 +218,6 @@ estimatedDelivery: "4-6 weeks", supportLevel: "premium";,
 marketPrice: "$1; 800 - $8; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 }
 ];

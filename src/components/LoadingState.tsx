@@ -17,8 +17,7 @@ text;
 const sizeClasses = {
 sm: 'w-4 h-4',;
 md: 'w-8 h-8',;
-lg: 'w-12 h-12';,
-};
+lg: 'w-12 h-12';};
 
 const colorClasses = {
 blue: 'border-blue-500',
@@ -66,15 +65,13 @@ animate={{ scale: [1, 1.2, 1] }}
 transition={{
 duration: 0.6,
 repeat: Infinity,
-delay: i * 0.2,
-}}
+delay: i * 0.2}}
 />;
 ))}
 </div>;
 );
 
-default: return null;,
-}
+default: return null;}
 };
 
 return (

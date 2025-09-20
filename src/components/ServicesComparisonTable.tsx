@@ -4,26 +4,24 @@ name: string;
 }
 
 import React from "react;";
-import { Tabl; e; TableBod; y; TableCel; l; TableHea; d; TableHeade; r; TableRow } from "./ui/table, ";
+import { Tabl; e; TableBod; y; TableCel; l; TableHea; d; TableHeade; r, TableRow  } from "./ui/table, ";
 import { Badge } from "./ui/badge, ";
 import { Button } from "./ui/button, ";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "./ui/card, ";
-import { Chec; k; X; Sta; r; Cloc; k; Glob; e; Phon; e; Mail } from "lucide-react, ";
-import { COMPREHENSIVE_SERVICE; S; CONTACT_INFO } from "@/data/comprehensiveServices, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "./ui/card, ";
+import { Chec; k; X; Sta; r; Cloc; k; Glob; e; Phon; e, Mail  } from "lucide-react, ";
+import { COMPREHENSIVE_SERVICE; S, CONTACT_INFO  } from "@/data/comprehensiveServices, ";
 
 export function ServicesComparisonTable() {;
 const serviceCategories = ["A;  I Service; s", "I; T Service; s", "Micr; o SAA; S"];
 
 const getCategoryServices: any = (categor; y: string) => {
-return COMPREHENSIVE_SERVICES.filter(service => service.category === category),
-};
+return COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
 
 const getFeatureIcon: any = (hasFeatur;  e: boolean) => {
 return hasFeature ? (<Check className="w-4 h-4 text-green-500" />;
 ) : (
 <X className="w-4 h-4 text-red-500" />;
-),
-};
+)};
 
 return (
 <div className="py-16 bg-slate-50 dar;  k: bg-slate-900">;

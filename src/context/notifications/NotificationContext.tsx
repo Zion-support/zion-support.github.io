@@ -10,7 +10,7 @@ const context = useContext(NotificationContext);
 if (!context) {
 throw; new; Error("useNotifications; must; be used; within; a NotificationProvider");
 };
-return context,},interface NotificationProviderProps {;
+return context},interface NotificationProviderProps {;
 children: ReactNode;
 export; const; NotificationProvide;r: React.FC<NotificationProviderProps>  = ({ children }) => {;
 const [ notificationssetNotifications] = useState<Notification[]>([]),

@@ -47,8 +47,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB"],
         integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Hootsuite"],
         compliance: ["GDPR", "CCPA", "SOC 2"],
@@ -56,8 +55,7 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
         aiCapabilities: ["Natural Language Generation", "Sentiment Analysis", "SEO Optimization", "Content Personalization"],
         trainingData: "10M+ high-quality content samples";
-        accuracy: "95% human-like quality",
-    };
+        accuracy: "95% human-like quality"};
     // AI-Powered Video Analytics;
     {
         id: "ai-video-analytics-platform";
@@ -106,8 +104,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["TensorFlow", "OpenCV", "Python", "React", "PostgreSQL"],
         integrations: ["CCTV systems", "IP cameras", "Cloud storage", "Analytics platforms"],
         compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
@@ -115,8 +112,7 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["Vintra", "BriefCam", "Avigilon", "Milestone"],
         aiCapabilities: ["Object Detection", "Behavior Analysis", "Pattern Recognition", "Real-time Processing"],
         trainingData: "5M+ video frames";
-        accuracy: "98% detection accuracy",
-    };
+        accuracy: "98% detection accuracy"};
     // AI-Powered Financial Trading Assistant;
     {
         id: "ai-financial-trading-assistant";
@@ -165,8 +161,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["TensorFlow", "Python", "React", "PostgreSQL", "Redis"],
         integrations: ["Bloomberg", "Reuters", "Trading platforms", "Broker APIs"],
         compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
@@ -174,8 +169,7 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["Alpaca", "QuantConnect", "Zerodha", "Interactive Brokers"],
         aiCapabilities: ["Price Prediction", "Risk Assessment", "Portfolio Optimization", "Market Sentiment Analysis"],
         trainingData: "20+ years of market data";
-        accuracy: "78% prediction accuracy",
-    };
+        accuracy: "78% prediction accuracy"};
     // AI-Powered Healthcare Diagnostics;
     {
         id: "ai-healthcare-diagnostics";
@@ -224,8 +218,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["TensorFlow", "PyTorch", "Python", "React", "PostgreSQL"],
         integrations: ["PACS systems", "EHR platforms", "DICOM viewers", "Hospital systems"],
         compliance: ["HIPAA", "FDA", "SOC 2", "ISO 13485"],
@@ -233,8 +226,7 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["Aidoc", "Zebra Medical", "Butterfly Network", "GE Healthcare"],
         aiCapabilities: ["Image Recognition", "Disease Detection", "Pattern Analysis", "Clinical Decision Support"],
         trainingData: "1M+ medical images";
-        accuracy: "94% diagnostic accuracy",
-    };
+        accuracy: "94% diagnostic accuracy"};
     // AI-Powered Supply Chain Optimization;
     {
         id: "ai-supply-chain-optimization";
@@ -283,8 +275,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "React", "PostgreSQL", "Redis"],
         integrations: ["ERP systems", "WMS platforms", "Shipping carriers", "Supplier portals"],
         compliance: ["ISO 9001", "SOC 2", "GDPR"],
@@ -292,6 +283,5 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
         aiCapabilities: ["Demand Forecasting", "Route Optimization", "Inventory Planning", "Risk Assessment"],
         trainingData: "10+ years of supply chain data";
-        accuracy: "92% forecast accuracy",
-    }
+        accuracy: "92% forecast accuracy"}
 ];

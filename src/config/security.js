@@ -1,7 +1,6 @@
 export, const, securityConfig = {
   csp: {,directives: {
-      defaultSr,c: ["'self'"],styleSrc: ["'self'", "'unsafe-inline'""https:, //fonts.googleapis.com"],fontSrc: ["'self'""http,s:, //fonts.gstatic.com"],imgSrc: ["'self'", "data: ""http,s:, "],scriptSrc: ["'self'"],connectSrc: ["'self'"],frameSrc: ["'none'"],objectSrc: ["'none'"],baseUri: ["'self'"]formActio,n: ["'self'"]upgradeInsecureRequest,s: [];,
-     };
+      defaultSr,c: ["'self'"],styleSrc: ["'self'", "'unsafe-inline'""https:, //fonts.googleapis.com"],fontSrc: ["'self'""http,s:, //fonts.gstatic.com"],imgSrc: ["'self'", "data: ""http,s:, "],scriptSrc: ["'self'"],connectSrc: ["'self'"],frameSrc: ["'none'"],objectSrc: ["'none'"],baseUri: ["'self'"]formActio,n: ["'self'"]upgradeInsecureRequest,s: [];};
   };
   // Security Headers;
   headers: {;
@@ -40,7 +39,6 @@ headers: {
   // Rate Limiting,
 rateLimit: {,
 windowMs: 15 * 60 * 1000, // 15 minutes,
-max: 100 // limit each IP to 100 requests per windowMs,
-}
+max: 100 // limit each IP to 100 requests per windowMs}
 }
 export default securityConfig

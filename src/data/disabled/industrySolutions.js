@@ -45,8 +45,7 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Financial Services Platform;
     {
@@ -94,8 +93,7 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Manufacturing IoT Platform;
     {
@@ -143,8 +141,7 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Retail Analytics Platform;
     {
@@ -192,8 +189,7 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Education Technology Platform;
     {
@@ -241,7 +237,6 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];

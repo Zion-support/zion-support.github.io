@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 rating: number;
 reviewCount: number;
 featured: boolean;
@@ -35,8 +34,7 @@ compliance: string[];
 roi: string;
 competitors: string[];
 onsiteSupport: boolean;,
-globalCoverage: boolean;,
-}
+globalCoverage: boolean;}
 
 export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
 {
@@ -91,8 +89,7 @@ marketPrice: "$15;000 - $100;000+",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 rating: 4.9;
 reviewCount: 89;
 featured: true;
@@ -106,8 +103,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "SOX", "PCI DSS"],
 roi: "200% within 18 months";,
 competitors: ["Accenture", "Deloitte", "IBM", "AWS Professional Services", "Microsoft Consulting"],
 onsiteSupport: true;,
-globalCoverage: true;,
-};
+globalCoverage: true;};
 {
 id: "cybersecurity-managed-services";
 title: "Managed Cybersecurity Services";,
@@ -160,8 +156,7 @@ marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 rating: 4.8;
 reviewCount: 156;
 featured: true;
@@ -175,8 +170,7 @@ compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
 roi: "300% within 12 months";,
 competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "FireEye", "Secureworks"],
 onsiteSupport: true;,
-globalCoverage: true;,
-};
+globalCoverage: true;};
 {
 id: "devops-automation-platform";
 title: "DevOps Automation & CI/CD Platform";,
@@ -229,8 +223,7 @@ marketPrice: "$1;800 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 rating: 4.7;
 reviewCount: 234;
 featured: false;
@@ -244,8 +237,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"],
 roi: "250% within 10 months";,
 competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "Azure DevOps"],
 onsiteSupport: true;,
-globalCoverage: true;,
-};
+globalCoverage: true;};
 {
 id: "data-center-optimization";
 title: "Data Center Optimization & Modernization";,
@@ -298,8 +290,7 @@ marketPrice: "$8;000 - $50;000+",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 rating: 4.8;
 reviewCount: 67;
 featured: false;
@@ -313,8 +304,7 @@ compliance: ["Uptime Institute", "TIA-942", "ISO 27001", "SOC 2"],
 roi: "180% within 24 months";,
 competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell EMC"],
 onsiteSupport: true;,
-globalCoverage: true;,
-};
+globalCoverage: true;};
 {
 id: "network-security-architecture";
 title: "Network Security Architecture & Design";,
@@ -367,8 +357,7 @@ marketPrice: "$12;000 - $75;000+",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 rating: 4.9;
 reviewCount: 89;
 featured: true;
@@ -382,8 +371,7 @@ compliance: ["NIST", "ISO 27001", "SOC 2", "PCI DSS", "HIPAA"],
 roi: "220% within 15 months";,
 competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"],
 onsiteSupport: true;,
-globalCoverage: true;,
-};
+globalCoverage: true;};
 {
 id: "disaster-recovery-solutions";
 title: "Disaster Recovery & Business Continuity";,
@@ -436,8 +424,7 @@ marketPrice: "$3;000 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 rating: 4.8;
 reviewCount: 123;
 featured: false;
@@ -451,6 +438,5 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "SOX"],
 roi: "400% within 12 months";,
 competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Zerto"],
 onsiteSupport: true;,
-globalCoverage: true;,
-}
+globalCoverage: true;}
 ];

@@ -22,8 +22,7 @@ func: T; wait: number,
 let timeout: globalThis.Timeout;
 return (...args: Parameters<T>) => {
 clearTimeout(timeout);
-timeout = setTimeout(() => func(...args), wait),
-};
+timeout = setTimeout(() => func(...args), wait)};
 };
 
 export const throttle = <T extends (...args: any[]) => any>(;,
@@ -34,8 +33,7 @@ return (...args: Parameters<T>) => {
 if (!inThrottle) {
 func(...args);
 inThrottle = true;
-setTimeout(() => (inThrottle = false), limit),
-}
+setTimeout(() => (inThrottle = false), limit)}
 };
 };
 
@@ -44,13 +42,11 @@ const navigation = performance.getEntriesByType("navigation")[0] as PerformanceN
 const paint = performance.getEntriesByType("paint");
 return {
 loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
-firstPaint: paint.find(entry => entry.name === "first-paint")?.startTime || 0; firstContentfulPaint: paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0,
-};
+firstPaint: paint.find(entry => entry.name === "first-paint")?.startTime || 0; firstContentfulPaint: paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0};
 };
 
 export const logPerformanceMetrics: any = () => {;
 const metrics = getPerformanceMetrics();
-console.log("Performance Metrics:", metrics),
-};
+console.log("Performance Metrics:", metrics)};
 // TypeScript file,
 export const placeholder = 'placeholder';

@@ -47,16 +47,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["AI/ML", "Cloud Native", "Microservices", "Kubernetes", "TensorFlow"],
         integrations: ["SAP", "Oracle", "Salesforce", "Microsoft", "AWS"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"],
         roi: "400% within 12 months";
         competitors: ["Microsoft", "Oracle", "SAP", "IBM"],
         innovationLevel: "Breakthrough";
-        marketTrend: "Rapidly Growing",
-    };
+        marketTrend: "Rapidly Growing"};
     // Quantum Enterprise Solutions;
     {
         id: "quantum-enterprise-computing";
@@ -105,16 +103,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Quantum Algorithms", "Qiskit", "Cirq", "Hybrid Systems"],
         integrations: ["AWS Braket", "Azure Quantum", "IBM Quantum", "Google Quantum"],
         compliance: ["NIST", "ISO", "Enterprise Security"],
         roi: "500% within 18 months";
         competitors: ["IBM", "Google", "Microsoft", "Amazon"],
         innovationLevel: "Revolutionary";
-        marketTrend: "Emerging",
-    };
+        marketTrend: "Emerging"};
     // Autonomous Business Intelligence;
     {
         id: "autonomous-business-intelligence";
@@ -163,16 +159,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "NLP", "Deep Learning", "AutoML"],
         integrations: ["Tableau", "Power BI", "Salesforce", "SAP", "Oracle"],
         compliance: ["GDPR", "SOC 2", "ISO 27001"],
         roi: "350% within 8 months";
         competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
         innovationLevel: "Advanced";
-        marketTrend: "Growing",
-    };
+        marketTrend: "Growing"};
     // Next-Gen Cybersecurity Platform;
     {
         id: "next-gen-cybersecurity";
@@ -221,16 +215,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["AI/ML", "Behavioral Analytics", "Threat Intelligence", "SOAR"],
         integrations: ["SIEM", "EDR", "Firewall", "Identity Management"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         roi: "450% within 10 months";
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto", "Cisco"],
         innovationLevel: "Advanced";
-        marketTrend: "High Growth",
-    };
+        marketTrend: "High Growth"};
     // Digital Twin Enterprise Platform;
     {
         id: "digital-twin-enterprise";
@@ -279,14 +271,12 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["IoT", "3D Modeling", "Real-time Analytics", "AI/ML"],
         integrations: ["Siemens", "GE", "SAP", "Azure", "AWS"],
         compliance: ["ISO 27001", "Industry Standards"],
         roi: "380% within 12 months";
         competitors: ["Siemens", "GE", "PTC", "Dassault"],
         innovationLevel: "Advanced";
-        marketTrend: "Emerging",
-    }
+        marketTrend: "Emerging"}
 ];

@@ -1,8 +1,7 @@
 import React, { useState } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Brain; Zap; Shield; Globe; Rocket; Star;
-ArrowRight; CheckCircle; TrendingUp; Users; Award;
-} from "lucide-react, ";
+ArrowRight; CheckCircle; TrendingUp; Users; Award} from "lucide-react, ";
 
 interface Service {
 id: string;
@@ -23,8 +22,7 @@ icon: <Brain className="w-8 h-8" />;
 color: "from-purple-500 to-pink-500";
 price: "$199/month";,
 features: ["AI Code Review", "Testing Automation", "DevOps Intelligence", "Security Automation"],
-popular: true;,
-};
+popular: true;};
 {
 id: "micro-saas";
 name: "Micro SaaS Solutions";,
@@ -73,8 +71,8 @@ features: ["Smart Contracts", "DeFi Platforms", "NFT Marketplaces", "DAO Governa
 ];
 
 export default function FuturisticServicesShowcase() {;
-const [hoveredService; setHoveredService] = useState<string | null>(null);
-const [selectedCategory; setSelectedCategory] = useState<string>("all");
+const [hoveredService, setHoveredService] = useState<string | null>(null);
+const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
 const categories = [;
 { id: "all", name: "All Services", icon: <Star className="w-4 h-4" /> };
@@ -134,8 +132,7 @@ onClick={() => setSelectedCategory(category.id)}
 className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
 selectedCategory === category.id;
 ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25";
-: "bg-white/5 border border-cyan-500/20 text-gray-300 hover: bg-cyan-500/10 hover:border-cyan-500/40",
-}`}
+: "bg-white/5 border border-cyan-500/20 text-gray-300 hover: bg-cyan-500/10 hover:border-cyan-500/40"}`}
 >;
 {category.icon}
 <span>{category.name}</span>;

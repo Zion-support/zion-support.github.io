@@ -48,8 +48,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "Stable Video Diffusion", "ElevenLabs", "React", "Node.js", "PostgreSQL"],
         integrations: ["YouTube", "TikTok", "Instagram", "LinkedIn", "Facebook", "Twitter"],
         compliance: ["GDPR", "Content guidelines", "Copyright compliance"],
@@ -57,8 +56,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Lumen5", "InVideo", "Synthesia", "Runway ML", "Pictory"],
         marketSize: "$14.2 billion";
         growthRate: "34.8% annually";
-        fundingTrends: "High investor interest in AI video tools",
-    };
+        fundingTrends: "High investor interest in AI video tools"};
     // AI-Powered Customer Success Platform;
     {
         id: "ai-customer-success-platform";
@@ -107,8 +105,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Python", "React", "PostgreSQL", "Redis", "Analytics"],
         integrations: ["Salesforce", "HubSpot", "Intercom", "Zendesk", "Slack", "Email platforms"],
         compliance: ["GDPR", "SOC 2", "Data privacy"],
@@ -116,8 +113,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Gainsight", "Totango", "ClientSuccess", "ChurnZero", "Vitally"],
         marketSize: "$2.8 billion";
         growthRate: "28.9% annually";
-        fundingTrends: "Growing focus on customer retention tools",
-    };
+        fundingTrends: "Growing focus on customer retention tools"};
     // AI-Powered Email Marketing Automation;
     {
         id: "ai-email-marketing-automation";
@@ -167,8 +163,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Python", "React", "PostgreSQL", "Redis", "Email APIs"],
         integrations: ["Shopify", "WooCommerce", "Salesforce", "HubSpot", "Zapier", "Webhooks"],
         compliance: ["GDPR", "CAN-SPAM", "Email compliance"],
@@ -176,8 +171,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Mailchimp", "ConvertKit", "ActiveCampaign", "Drip", "Klaviyo"],
         marketSize: "$7.5 billion";
         growthRate: "22.4% annually";
-        fundingTrends: "AI-powered marketing tools gaining traction",
-    };
+        fundingTrends: "AI-powered marketing tools gaining traction"};
     // AI-Powered Social Media Management;
     {
         id: "ai-social-media-management";
@@ -227,8 +221,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "Machine Learning", "React", "Node.js", "PostgreSQL", "Social APIs"],
         integrations: ["Instagram", "Facebook", "Twitter", "LinkedIn", "TikTok", "YouTube"],
         compliance: ["GDPR", "Social media policies", "Content guidelines"],
@@ -236,8 +229,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Hootsuite", "Buffer", "Sprout Social", "Later", "Planoly"],
         marketSize: "$23.4 billion";
         growthRate: "26.8% annually";
-        fundingTrends: "High demand for AI-powered social tools",
-    };
+        fundingTrends: "High demand for AI-powered social tools"};
     // AI-Powered SEO Optimization;
     {
         id: "ai-seo-optimization";
@@ -287,8 +279,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "SEO APIs"],
         integrations: ["Google Analytics", "Google Search Console", "WordPress", "Shopify", "WooCommerce"],
         compliance: ["GDPR", "SEO best practices", "Search guidelines"],
@@ -296,8 +287,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Ahrefs", "SEMrush", "Moz", "Ubersuggest", "Clearscope"],
         marketSize: "$8.9 billion";
         growthRate: "19.7% annually";
-        fundingTrends: "AI SEO tools in high demand",
-    };
+        fundingTrends: "AI SEO tools in high demand"};
     // AI-Powered Customer Support Chatbot;
     {
         id: "ai-customer-support-chatbot";
@@ -347,8 +337,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "NLP", "React", "Node.js", "PostgreSQL", "WebSocket"],
         integrations: ["Zendesk", "Intercom", "Freshdesk", "Shopify", "WooCommerce", "Slack"],
         compliance: ["GDPR", "Data privacy", "Support standards"],
@@ -356,8 +345,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Intercom", "Zendesk", "Freshdesk", "Drift", "Tawk.to"],
         marketSize: "$15.7 billion";
         growthRate: "31.2% annually";
-        fundingTrends: "AI chatbots gaining significant investment",
-    };
+        fundingTrends: "AI chatbots gaining significant investment"};
     // AI-Powered Project Management;
     {
         id: "ai-project-management";
@@ -407,8 +395,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Analytics"],
         integrations: ["Slack", "Microsoft Teams", "Google Workspace", "GitHub", "Jira", "Trello"],
         compliance: ["GDPR", "Project standards", "Data security"],
@@ -416,8 +403,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Asana", "Monday.com", "ClickUp", "Notion", "Basecamp"],
         marketSize: "$5.7 billion";
         growthRate: "24.6% annually";
-        fundingTrends: "AI project management tools attracting investors",
-    };
+        fundingTrends: "AI project management tools attracting investors"};
     // AI-Powered Financial Planning;
     {
         id: "ai-financial-planning";
@@ -467,8 +453,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Financial APIs"],
         integrations: ["Bank accounts", "Credit cards", "Investment platforms", "Tax software", "Budgeting apps"],
         compliance: ["FINRA", "SEC", "Financial regulations", "Data security"],
@@ -476,6 +461,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Mint", "YNAB", "Personal Capital", "Acorns", "Robinhood"],
         marketSize: "$4.2 billion";
         growthRate: "18.9% annually";
-        fundingTrends: "Fintech AI tools receiving significant funding",
-    }
+        fundingTrends: "Fintech AI tools receiving significant funding"}
 ];

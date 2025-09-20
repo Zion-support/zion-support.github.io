@@ -10,13 +10,11 @@ export; class; ErrorBoundary extends Component<PropsState> {
 constructor(props: Props) {;
 super(props);
 this.state = {,
-hasError: falseerro;r: nullerrorInf;o: null;,
-};
+hasError: falseerro;r: nullerrorInf;o: null;};
 };static getDerivedStateFromError(error: Error): State {
 return {;
 hasErro;r: true;
-errorerrorInf;o: null;,
-};
+errorerrorInf;o: null;};
 };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
 this.setState({;
 errorerrorInfo;
@@ -30,8 +28,7 @@ if() {
 };
 };handleRetry = () => {
 this.setState({
-hasError: falseerro;r: nullerrorInf;o: null;,
-});
+hasError: falseerro;r: nullerrorInf;o: null;});
 },render() {
 if (this.state.hasError) {
 // Use; custom; fallback if provided;

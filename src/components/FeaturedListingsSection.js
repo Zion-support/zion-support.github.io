@@ -179,8 +179,7 @@ export function FeaturedListingsSection() {
             opacit, y: 1,
     transitio, n: {
                 staggerChildre, n: 0.1, 5,
-    delayChildre, n: 0.1,
-            }
+    delayChildre, n: 0.1}
         }
     };
     ;
@@ -194,8 +193,7 @@ export function FeaturedListingsSection() {
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
             backgroundImag,  e: `radial-gradient(circle at 75% 25%, currentColo, r, 1p, x, transparent 1p, x)`,
-            backgroundSiz, e: '60px 60px',
-        }}/>
+            backgroundSiz, e: '60px 60px'}}/>
       </div>
 
       {/* Floating decorative elements */}

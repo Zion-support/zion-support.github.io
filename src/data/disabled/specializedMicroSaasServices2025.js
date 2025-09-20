@@ -47,8 +47,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-content-generation-suite-2025";
         technologyStack: ["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],
         complianceStandards: ["GDPR", "Data Privacy"],
@@ -106,8 +105,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/smart-invoice-management-system";
         technologyStack: ["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],
         complianceStandards: ["GDPR", "Financial Regulations", "Data Security"],
@@ -165,8 +163,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-customer-support-platform";
         technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "WebSocket"],
         complianceStandards: ["GDPR", "Data Privacy", "Security Standards"],
@@ -224,8 +221,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/smart-project-management-tool";
         technologyStack: ["AI/ML", "React", "Node.js", "Real-time Analytics", "Cloud Computing"],
         complianceStandards: ["GDPR", "Data Security"],
@@ -283,8 +279,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-email-marketing-platform";
         technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Email APIs"],
         complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
@@ -342,8 +337,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/smart-inventory-management-system";
         technologyStack: ["Machine Learning", "Predictive Analytics", "React", "Node.js", "IoT Integration"],
         complianceStandards: ["GDPR", "Data Security", "Industry Standards"],
@@ -401,8 +395,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-social-media-manager";
         technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "Social Media APIs"],
         complianceStandards: ["GDPR", "Data Privacy", "Platform Policies"],
@@ -460,8 +453,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/smart-time-tracking-solution";
         technologyStack: ["Machine Learning", "Computer Vision", "React", "Node.js", "Mobile Apps"],
         complianceStandards: ["GDPR", "Data Privacy"],
@@ -519,8 +511,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-lead-generation-platform";
         technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Data Analytics"],
         complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
@@ -578,8 +569,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/smart-document-management-system";
         technologyStack: ["OCR", "Machine Learning", "React", "Node.js", "Cloud Storage"],
         complianceStandards: ["GDPR", "SOC2", "Data Security", "Industry Standards"],

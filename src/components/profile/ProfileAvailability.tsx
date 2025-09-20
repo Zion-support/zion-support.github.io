@@ -1,8 +1,8 @@
 
-import { Availability,  } from "@/types/profile";
-import { Badge,  } from "@/components/ui/badge";
-import { Calendar,, Clock,, Check,  } from 'lucide-react'
-import { Calendar,  } from 'lucide-react'
+import { Availability } from "@/types/profile";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, ClockCheck } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 interface ProfileAvailabilityProps {
   availability: Availability,
 return (

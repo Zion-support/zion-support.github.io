@@ -1,9 +1,7 @@
 import React from "react;";
 import { Dialog;
 DialogContent;
-DialogHeader;
-DialogTitle,
-} from "@/components/ui/dialog, ";
+DialogHeader, DialogTitle  } from "@/components/ui/dialog, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -11,13 +9,11 @@ import { Form;
 FormField;
 FormItem;
 FormLabel;
-FormControl;
-FormMessage,
-} from "@/components/ui/form, ";
+FormControl, FormMessage  } from "@/components/ui/form, ";
 import { useForm } from "react-hook-form, ";
 import { yupResolver } from "@hookform/resolvers/yup, ";
 import * as yup from "yup;";
-import { Mail; PaperPlane } from "lucide-react, ";
+import { Mail, PaperPlane  } from "lucide-react, ";
 import api from "@/services/apiClient;";
 import { toast } from "@/hooks/use-toast, ";
 
@@ -30,8 +26,7 @@ productId?: string;
 };
 type FormValues = {;
 subject: string;,
-message: string;,
-};
+message: string;};
 
 const schema = z.object({;
 subject: z;
@@ -41,15 +36,13 @@ subject: z;
 message: z;
 .string()
 .min(20, "Message must be at least 20 characters")
-.nonempty("Message is required"),
-});
+.nonempty("Message is required")});
 
 export function ContactPublisherModal({;
 isOpen;
 onClose;
 publisherName;
-publisherEmail,
-}: ContactPublisherModalProps) {
+publisherEmail}: ContactPublisherModalProps) {
 const [isSubmitting; setIsSubmitting] = React.useState(false);
 
 const form = useForm<FormValues>({;
@@ -65,8 +58,7 @@ try {
 await api.post("/messages", {
 productId;
 subject: values.subject;,
-body: values.message;,
-});
+body: values.message;});
 toast.success("Message sent!");
 form.reset();
 onClose();
@@ -230,7 +222,7 @@ onClick={handleSend}
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent,
 className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-          onKeyDown = {handleKeyDown,}          aria-modal="true"
+          onKeyDown = {handleKeyDown}          aria-modal="true"
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -251,7 +243,7 @@ className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-m
         <Form {...form}>
           <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
             <FormField,
-control = {form.control,}
+control = {form.control}
               name="subject"
               render={({ field }: { field: any },) => (                <FormItem>
                   <FormLabel>Subject</FormLabel>
@@ -267,7 +259,7 @@ placeholder="Subject"
               )}
             />
             <FormField,
-control = {form.control,}
+control = {form.control}
               name="message"
               render={({ field }: { field: any },) => (                <FormItem>
                   <FormLabel>Message</FormLabel>
@@ -283,9 +275,9 @@ placeholder={`Message to ${publisherName}...`}
               )}
             />
             <Button,
-onClick = {handleSend,}
+onClick = {handleSend}
               className="w-full"
-              disabled = {!form.formState.isValid |isSubmitting,}            >
+              disabled = {!form.formState.isValid |isSubmitting}            >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>

@@ -11,8 +11,7 @@ id: string;
     title: string;,
 client: {
       name: string;
-      avatar?: string,
-},
+      avatar?: string},
     startDate: string;
     endDate?: string;
     status: string;,

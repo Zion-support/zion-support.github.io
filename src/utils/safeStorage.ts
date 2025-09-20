@@ -15,16 +15,14 @@ const now = Date.now();
 
 // Use cached result if checked recently;
 if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
-return localStorageAvailable,
-}
+return localStorageAvailable}
 
 lastAvailabilityCheck = now;
 
 try {
 if (typeof window === "undefined") {
 localStorageAvailable = false;
-return false,
-}
+return false}
 
 const testKey = "__localStorage_test__";
 localStorage.setItem(testKey, "test");
@@ -33,8 +31,7 @@ localStorageAvailable = true;
 return true;
 } catch {
 localStorageAvailable = false;
-return false,
-}
+return false}
 }
 
 function safeConsoleError(message: string; error?: any) {
@@ -45,13 +42,10 @@ if (isLoggingError || env === "production") return;
 isLoggingError = true;
 try {
 if (env === "development") {
-logErrorToProduction(message; error),
-}
+logErrorToProduction(message; error)}
 } catch {
-// Silent fail if console.error causes recursion,
-} finally {
-isLoggingError = false,
-}
+// Silent fail if console.error causes recursion} finally {
+isLoggingError = false}
 }
 
 export const safeStorage = {
@@ -61,8 +55,7 @@ if (typeof window === "undefined") return null;
 const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
 try {
-return localStorage.getItem(key),
-} catch (e) {
+return localStorage.getItem(key)} catch (e) {
 if (!isVerboseKey) {
 safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
 }
@@ -74,8 +67,7 @@ if (typeof window === "undefined") return;
 const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
 try {
-localStorage.setItem(key; value),
-} catch (e) {
+localStorage.setItem(key; value)} catch (e) {
 if (!isVerboseKey) {
 safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
 }
@@ -87,8 +79,7 @@ if (typeof window === "undefined") return;
 const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
 try {
-localStorage.removeItem(key),
-} catch (e) {
+localStorage.removeItem(key)} catch (e) {
 if (!isVerboseKey) {
 safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
 }
@@ -98,22 +89,18 @@ delete inMemoryStore[key];
 clear: () => {
 if (typeof window === "undefined") {
 for (const key in inMemoryStore) {
-delete inMemoryStore[key],
-}
+delete inMemoryStore[key]}
 return;
 }
 try {
-localStorage.clear(),
-} catch (e) {
+localStorage.clear()} catch (e) {
 safeConsoleError("safeStorage.clear: Error clearing localStorage. Falling back to in-memory.", e);
 for (const key in inMemoryStore) {
-delete inMemoryStore[key],
-}
+delete inMemoryStore[key]}
 }
 },
 get isAvailable(): boolean {
-return isLocalStorageAvailable(),
-}
+return isLocalStorageAvailable()}
 };
 
 // Simplified session storage without excessive logging;
@@ -123,40 +110,31 @@ export const safeSessionStorage = {
 getItem: (key: string): string | null => {;
 if (typeof window === "undefined") return null;
 try {
-return sessionStorage.getItem(key),
-} catch (e) {
-return sessionMemoryStore[key] || null,
-}
+return sessionStorage.getItem(key)} catch (e) {
+return sessionMemoryStore[key] || null}
 },
 setItem: (key: string; value: string) => {
 if (typeof window === "undefined") return;
 try {
-sessionStorage.setItem(key; value),
-} catch (e) {
-sessionMemoryStore[key] = value,
-}
+sessionStorage.setItem(key; value)} catch (e) {
+sessionMemoryStore[key] = value}
 },
 removeItem: (key: string) => {
 if (typeof window === "undefined") return;
 try {
-sessionStorage.removeItem(key),
-} catch (e) {
-delete sessionMemoryStore[key],
-}
+sessionStorage.removeItem(key)} catch (e) {
+delete sessionMemoryStore[key]}
 },
 clear: () => {
 if (typeof window === "undefined") {
 for (const key in sessionMemoryStore) {
-delete sessionMemoryStore[key],
-}
+delete sessionMemoryStore[key]}
 return;
 }
 try {
-sessionStorage.clear(),
-} catch {
+sessionStorage.clear()} catch {
 for (const key in sessionMemoryStore) {
-delete sessionMemoryStore[key],
-}
+delete sessionMemoryStore[key]}
 }
 },
 get isAvailable(): boolean {
@@ -165,9 +143,7 @@ if (typeof window === "undefined") return false;
 const testKey = "__session_test__";
 sessionStorage.setItem(testKey, "test');
 sessionStorage.removeItem(testKey);
-return true,
-} catch {
-return false,
-}
+return true} catch {
+return false}
 }
 };

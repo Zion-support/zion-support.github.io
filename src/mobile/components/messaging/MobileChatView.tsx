@@ -11,8 +11,7 @@ interface MobileChatViewProps {
 id: string;
     name: string;
     avatar?: string;
-    status?: string,
-},
+    status?: string},
   messages: Message[];,
 onBack: () => void;
   onSendMessage: (content: string) => void

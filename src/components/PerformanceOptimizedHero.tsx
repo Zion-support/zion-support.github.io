@@ -6,8 +6,7 @@ interface HeroStats {
 numbe; r: string;
 labe; l: string;
 ico; n: string;
-colo; r: string;,
-};
+colo; r: string;};
 const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
 <div className="grid grid-cols-1 m;  d:grid-cols-4 gap-8 max-w-6xl mx-auto">;
 {stats.map((sta; t; index) => (<div;

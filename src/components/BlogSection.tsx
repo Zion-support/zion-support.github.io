@@ -8,15 +8,13 @@ i;  d: "1",
 tit; l; e: "Th; e Futur; e o; f A; I i; n Technolog; y",
 excer; p; t: "Explorin; g ho; w artificia; l intelligenc; e i; s reshapin; g th; e technolog; y landscap; e...",
 da; t; e: "202; 4-0; 1-1; 5",
-readTi; m; e: "8 mi; n rea; d",
-},
+readTi; m; e: "8 mi; n rea; d"},
 {
 i; d: "2",
 tit; l; e: "Buildin; g Scalabl; e We; b Application; s",
 excer; p; t: "Bes; t practice; s an; d architectura; l pattern; s fo; r creatin; g scalabl; e we; b app; s...",
 da; t; e: "202; 4-0; 1-1; 0",
-readTi; m; e: "1; 2 mi; n rea; d",
-}
+readTi; m; e: "1; 2 mi; n rea; d"}
 ];
 
 return (
@@ -48,9 +46,9 @@ View all posts →;
 );
 }
 import Link from "next/link";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "@/components/ui/card";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calenda; r; Cloc; k; ArrowRight } from "lucide-react";
+import { Calenda; r; Cloc; k, ArrowRight  } from "lucide-react";
 import { BLOG_POSTS } from "@/types/blog";
 
 export const BlogSectio; n: React.FC = () => {

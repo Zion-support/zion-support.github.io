@@ -52,8 +52,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/autonomous-digital-transformation-platform-2025";
         technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Analytics", "Integration Platforms"],
         complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry-specific regulations"],
@@ -115,8 +114,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/quantum-enhanced-data-analytics-2025";
         technologyStack: ["Quantum Computing", "Advanced Analytics", "Machine Learning", "Big Data", "Cloud Computing"],
         complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry-specific data regulations"],
@@ -178,8 +176,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-it-infrastructure-management-2025";
         technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Monitoring Tools", "Integration Platforms"],
         complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry-specific regulations"],
@@ -241,8 +238,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/blockchain-digital-identity-management-2025";
         technologyStack: ["Blockchain", "Cryptography", "Zero-Knowledge Proofs", "Mobile Apps", "Web Applications"],
         complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Identity regulations"],
@@ -304,8 +300,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-research-development-platform-2025";
         technologyStack: ["AI/ML", "Research Tools", "Data Analytics", "Cloud Computing", "Collaboration Platforms"],
         complianceStandards: ["Research ethics", "Data protection", "Intellectual property", "Industry-specific regulations"],
@@ -367,8 +362,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/quantum-enhanced-machine-learning-2025";
         technologyStack: ["Quantum Computing", "Machine Learning", "AI Frameworks", "Cloud Computing", "Advanced Algorithms"],
         complianceStandards: ["Data protection", "AI ethics", "Industry-specific regulations", "Intellectual property"],
@@ -430,8 +424,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/autonomous-edge-computing-platform-2025";
         technologyStack: ["Edge Computing", "IoT", "AI/ML", "Cloud Computing", "Distributed Systems"],
         complianceStandards: ["Data protection", "Security standards", "Industry-specific regulations"],
@@ -493,8 +486,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-compliance-management-2025";
         technologyStack: ["AI/ML", "Compliance Tools", "Analytics", "Cloud Computing", "Integration Platforms"],
         complianceStandards: ["Industry-specific regulations", "Data protection", "Security standards", "Quality standards"],

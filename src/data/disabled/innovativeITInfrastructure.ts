@@ -20,14 +20,12 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
 roi: string;,
-competitors: string[];,
-}
+competitors: string[];}
 
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureService[] = [
 // Green Computing Infrastructure;
@@ -78,8 +76,7 @@ marketPrice: "$2;500 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Intel Xeon", "AMD EPYC", "NVIDIA GPUs", "Smart cooling", "Renewable energy systems"],
 integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
 compliance: ["ISO 14001", "LEED", "Energy Star", "Green Building Standards"],
@@ -135,8 +132,7 @@ marketPrice: "$1;800 - $7;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Node.js", "Redis", "MQTT", "5G networks"],
 integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific standards"],
@@ -192,8 +188,7 @@ marketPrice: "$3;500 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Qiskit", "PennyLane", "Cirq", "Classical infrastructure", "Quantum simulators"],
 integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
 compliance: ["SOC 2", "ISO 27001", "FedRAMP", "NIST", "Quantum-safe standards"],
@@ -249,8 +244,7 @@ marketPrice: "$2;200 - $8;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Okta", "Palo Alto", "CrowdStrike", "Splunk", "Microsoft Defender"],
 integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "FedRAMP", "Industry-specific"],
@@ -306,8 +300,7 @@ marketPrice: "$2;800 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "Prometheus", "Grafana"],
 integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack", "Ansible"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific standards"],

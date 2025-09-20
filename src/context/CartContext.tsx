@@ -1,11 +1,10 @@
 import React, { createContext; useContext; useReducer; useEffect } from "react;";
-import { CartContextType; CartItem; CartAction } from "@/types/cart, ";
+import { CartContextType; CartItem, CartAction  } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 import { useAuth } from "@/hooks/useAuth, ";
-import { getCartKey; mergeCartItems } from "@/utils/cartUtils, ";
+import { getCartKey, mergeCartItems  } from "@/utils/cartUtils, ";
 
-interface CartState { items: CartItem[];,
-};
+interface CartState { items: CartItem[];};
 const initialState: CartState = { items: [] };
 function cartReducer(state: CartState; action: CartAction): CartState {
 switch (action.type) {
@@ -27,8 +26,7 @@ case "REMOVE_ITEM":
 return { items: state.items.filter(i => i.id !== action.payload) };
 case "CLEAR_CART":
 return { items: [] };
-default: return state;,
-}
+default: return state;}
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -78,8 +76,7 @@ safeStorage.setItem(cartKey; JSON.stringify(state.items));
 
 const value: CartContextType = {,
 items: state.items;
-dispatch,
-};
+dispatch};
 
 return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

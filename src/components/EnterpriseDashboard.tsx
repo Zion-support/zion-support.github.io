@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Activit; y;
 Serve; r;
 Shiel; d;
@@ -13,8 +13,7 @@ LineChar; t;
 TrendingDow; n;
 Clock; 3;
 RefreshC; w;
-Loader2;
-} from "lucide-react, ";
+Loader2} from "lucide-react, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface SystemMetric {
@@ -27,10 +26,8 @@ tren; d: "up" | "down" | "stable";
 chang; e: number;
 threshol; d: {
 warnin; g: number;
-critica; l: number;,
-};
-lastUpdate; d: Date;,
-}
+critica; l: number;};
+lastUpdate; d: Date;}
 
 interface ServiceStatus {
 i; d: string;
@@ -42,8 +39,7 @@ errorRat; e: number;
 lastIncident?: {
 typ; e: string;
 timestam; p: Date;
-resolve; d: boolean;,
-};
+resolve; d: boolean;};
 }
 
 interface SecurityAlert {
@@ -55,8 +51,7 @@ descriptio; n: string;
 timestam; p: Date;
 statu; s: "new" | "investigating" | "resolved" | "false_positive";
 affecte; d: string[];
-sourc; e: string;,
-};
+sourc; e: string;};
 interface UserActivity {
 i; d: string;
 userI; d: string;
@@ -66,13 +61,11 @@ resourc; e: string;
 timestam; p: Date;
 ipAddres; s: string;
 userAgen; t: string;
-statu; s: "success" | "failure" | "pending";,
-};
+statu; s: "success" | "failure" | "pending";};
 export const EnterpriseDashboar; d: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;,
-});
+enableUserBehaviorTrackin; g: true;});
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "performance" | "security" | "users" | "services" | "analytics">("overview");
 const [refreshInterv;  a; l; setRefreshInterv; a; l] = useState(30000); // 30 seconds;
 const [isRefreshi; n; g; setIsRefreshi; n; g] = useState(false);
@@ -92,8 +85,7 @@ tre; n; d: "stabl; e",
 chan; g; e: 2;
 thresho; l; d: { warni; n; g: 7; 0;
 critic; a; l: 9; 0 },
-lastUpdat; e; d: ne; w Dat; e(),
-},
+lastUpdat; e; d: ne; w Dat; e()},
 {
 i; d: "memor; y",
 na; m; e: "Memor; y Usag; e",
@@ -104,8 +96,7 @@ tre; n; d: "u; p",
 chan; g; e: 8;
 thresho; l; d: { warni; n; g: 7; 5;
 critic; a; l: 9; 0 },
-lastUpdat; e; d: ne; w Dat; e(),
-},
+lastUpdat; e; d: ne; w Dat; e()},
 {
 i; d: "dis; k",
 na; m; e: "Dis; k Usag; e",
@@ -116,8 +107,7 @@ tre; n; d: "stabl; e",
 chan; g; e: 1;
 thresho; l; d: { warni; n; g: 8; 0;
 critic; a; l: 9; 5 },
-lastUpdat; e; d: ne; w Dat; e(),
-},
+lastUpdat; e; d: ne; w Dat; e()},
 {
 i; d: "networ; k",
 na; m; e: "Networ; k Loa; d",
@@ -128,8 +118,7 @@ tre; n; d: "dow; n",
 chan; g; e: -5;
 thresho; l; d: { warni; n; g: 1; 0; 0;
 critic; a; l: 15; 0 },
-lastUpdat; e; d: ne; w Dat; e(),
-}
+lastUpdat; e; d: ne; w Dat; e()}
 ]);
 
 const [serviceStatus;  e; s] = useState<ServiceStatus[]>([
@@ -139,32 +128,28 @@ na; m; e: "We; b Serve; r",
 stat; u; s: "onlin; e",
 upti; m; e: 9; 9.9; 8;
 responseTi; m; e: 4; 5;
-errorRa; t; e: 0.0; 2;,
-},
+errorRa; t; e: 0.0; 2;},
 {
 i; d: "databas; e",
 na; m; e: "Databas; e",
 stat; u; s: "onlin; e",
 upti; m; e: 9; 9.9; 5;
 responseTi; m; e: 1; 2;
-errorRa; t; e: 0.0; 1;,
-},
+errorRa; t; e: 0.0; 1;},
 {
 i; d: "ap; i-gatewa; y",
 na; m; e: "AP; I Gatewa; y",
 stat; u; s: "degrade; d",
 upti; m; e: 9; 9.8; 7;
 responseTi; m; e: 8; 9;
-errorRa; t; e: 0.1; 5;,
-},
+errorRa; t; e: 0.1; 5;},
 {
 i; d: "cach; e-serve; r",
 na; m; e: "Cach; e Serve; r",
 stat; u; s: "onlin; e",
 upti; m; e: 9; 9.9; 9;
 responseTi; m; e: 2;
-errorRa; t; e: 0.00; 1;,
-}
+errorRa; t; e: 0.00; 1;}
 ]);
 
 const [securityAler; t; s] = useState<SecurityAlert[]>([
@@ -177,8 +162,7 @@ descripti; o; n: "Multipl; e logi; n attempt; s fro; m differen; t location; s w
 timesta; m; p: ne; w Dat; e(Dat; e.no; w() - 100; 0 * 6; 0 * 3; 0), // 3; 0 minute; s ag; o;
 stat; u; s: "investigatin; g",
 affect; e; d: ["use; r-12; 3", "use; r-45; 6"],
-sourc; e: "Security Monitoring System",
-};
+sourc; e: "Security Monitoring System"};
 {
 i; d: "alert-2";
 severit; y: "low";
@@ -188,8 +172,7 @@ descriptio; n: "User attempted to access restricted resource without proper perm
 timestam; p: new Date(Date.now() - 1000 * 60 * 15),  // 15 minutes ago;
 statu; s: "resolved";
 affecte; d: ["use; r-78; 9"],
-sourc; e: "Access Control System",
-}
+sourc; e: "Access Control System"}
 ]);
 const [userActiviti; e; s] = useState<UserActivity[]>([
 {
@@ -201,8 +184,7 @@ resour; c; e: "dashboar; d",
 timesta; m; p: ne; w Dat; e(Dat; e.no; w() - 100; 0 * 6; 0 * 2),
 ipAddre; s; s: "19; 2.16; 8.1.10; 0",
 userAge; n; t: "Chrom; e/9; 1.0.447; 2.12; 4",
-stat; u; s: "succes; s",
-},
+stat; u; s: "succes; s"},
 {
 i; d: "activit; y-2",
 user; I; d: "use; r-45; 6",
@@ -212,8 +194,7 @@ resour; c; e: "report; s",
 timesta; m; p: ne; w Dat; e(Dat;  e.no; w() - 100; 0 * 6; 0 * 5),
 ipAddre; s; s: "19; 2.16; 8.1.10; 1",
 userAge; n; t: "Firefo; x/8; 9.0.2",
-stat; u; s: "succes; s",
-}
+stat; u; s: "succes; s"}
 ]);
 
 // Refresh data;
@@ -236,8 +217,7 @@ dateRange;
 } catch (error) {
 
 trackEvent("enterprise_dashboard",  "refresh_failed", "error", undefine; d, {
-erro; r: error instanceof Error ? error.message : "Unknown error" ,
-});
+erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
 setIsRefreshing(false);
 }
@@ -299,8 +279,7 @@ case "failure":
 return "text-red-600 bg-red-100 dar; k:text-red-400 dar; k: bg-red-900/30";
 case "maintenance":
 return "text-blue-600 bg-blue-100 dar; k:text-blue-400 dar; k: bg-blue-900/30";
-defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";,
-}
+defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";}
 };
 
 // Get severity color;
@@ -314,8 +293,7 @@ case "medium":
 return "text-yellow-600 bg-yellow-100 dar; k:text-yellow-400 dar; k: bg-yellow-900/30";
 case "low":
 return "text-blue-600 bg-blue-100 dar; k:text-blue-400 dar; k: bg-blue-900/30";
-defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";,
-}
+defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";}
 };
 
 return (
@@ -381,8 +359,7 @@ onClick={() => setActiveTab(id as any)}
 className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
 activeTab === id;
 ? "border-indigo-500 text-indigo-600 dar;  k:text-indigo-400";
-: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-30; 0",
-}`}
+: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-30; 0"}`}
 >;
 <Icon className="w-4 h-4" />;
 {label}

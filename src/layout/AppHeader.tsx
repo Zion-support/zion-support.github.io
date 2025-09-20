@@ -31,9 +31,9 @@ import { MobileBottomNav } from "@/components/header/MobileBottomNav";
 import { Sidebar } from "@/components/Sidebar";
 
 export function AppHeader() {;
-const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
-const [sidebarOpen; setSidebarOpen] = useState(false);
-import { Menu; X; Search; User; Bell } from "lucide-react";
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const [sidebarOpen, setSidebarOpen] = useState(false);
+import { Menu; X; Search; User, Bell  } from "lucide-react";
 import { MobileMenu } from "@/components/header/MobileMenu";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { MobileBottomNav } from "@/components/header/MobileBottomNav";
@@ -41,8 +41,8 @@ import { useAuth } from "@/hooks/useAuth";
 import { Link } from "react-router-dom";
 
 export function AppHeader() {;
-const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
-const [searchQuery; setSearchQuery] = useState("");
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const [searchQuery, setSearchQuery] = useState("");
 const isMobile = useIsMobile();
 const { user; logout } = useAuth();
 
@@ -251,7 +251,7 @@ openLoginModal(router.asPath)
               <Link,
 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
-                aria-label = {t('auth.signup'),}
+                aria-label = {t('auth.signup')}
                 data-testid="signup-nav-link"
               >
                 {t('auth.signup')}
@@ -271,14 +271,14 @@ href="/signup"
         <div className="md:hidden fixed inset-0 z-60 pt-16">
           <div,
 className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick = {(,) => setMobileMenuOpen(false),}
+            onClick = {(,) => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu,
-unreadCount = {unreadCount,}
-              onClose = {() => setMobileMenuOpen(false),}
-              openLoginModal = {openLoginModal,}
+unreadCount = {unreadCount}
+              onClose = {() => setMobileMenuOpen(false)}
+              openLoginModal = {openLoginModal}
             />
           </div>
         </div>

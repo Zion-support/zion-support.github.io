@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback } from "react, ";
+import { useState; useEffect, useCallback  } from "react, ";
 
 interface AccessibilityPreferences {
 highContrast: boolean;
@@ -6,31 +6,27 @@ largeText: boolean;
 reducedMotion: boolean;
 focusIndicator: boolean;
 screenReader: boolean;,
-keyboardNavigation: boolean;,
-}
+keyboardNavigation: boolean;}
 
 interface AccessibilitySettings {
 fontSize: "small" | "medium" | "large" | "xlarge";
 colorScheme: "default" | "high-contrast" | "dark" | "light";
 motionPreference: "reduce" | "no-preference";,
-focusStyle: "default" | "high-visibility" | "minimal";,
-}
+focusStyle: "default" | "high-visibility" | "minimal";}
 
 export const useAccessibility: any = () => {;
-const [preferences; setPreferences] = useState<AccessibilityPreferences>({
+const [preferences, setPreferences] = useState<AccessibilityPreferences>({
 highContrast: false;
 largeText: false;
 reducedMotion: false;
 focusIndicator: true;
 screenReader: false;,
-keyboardNavigation: true;,
-});
-const [settings; setSettings] = useState<AccessibilitySettings>({
+keyboardNavigation: true;});
+const [settings, setSettings] = useState<AccessibilitySettings>({
 fontSize: "medium";
 colorScheme: "default";
 motionPreference: "no-preference";,
-focusStyle: "default",
-});
+focusStyle: "default"});
 // Load preferences from localStorage;
 useEffect(() => {
 const savedPreferences = localStorage.getItem("zion-accessibility-preferences");

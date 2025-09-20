@@ -1,16 +1,14 @@
 import Image from "next/image";
-import { Twitter,, Linkedin,  } from 'lucide-react'
+import { TwitterLinkedin } from 'lucide-react';
 interface Speaker {
   name: string,
 title: string,
 avatar: string,
 twitter?: string,
 linkedin?: string,
-linkedin?: string,
-}
+linkedin?: string}
 interface Speaker {
-linkedin?: string,
-}
+linkedin?: string}
 const speakers: Speaker[] = [
   {
 export function SpeakersSection() {
@@ -42,7 +40,7 @@ href={sp.twitter}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex items-center'
-                    href = {sp.twitter,}
+                    href = {sp.twitter}
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"

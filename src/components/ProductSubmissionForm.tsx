@@ -14,13 +14,12 @@ FormDescriptio; n;
 FormFiel; d;
 FormIte; m;
 FormLabe; l;
-FormMessag; e,
-} from "@/components/ui/form, ";
+FormMessag, e  } from "@/components/ui/form, ";
 import { Input } from "@/components/ui/input, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
-import { Tab; s; TabsLis; t; TabsTrigge; r; TabsContent } from "@/components/ui/tabs, ";
+import { Tab; s; TabsLis; t; TabsTrigge; r, TabsContent  } from "@/components/ui/tabs, ";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator, ";
 import { Sparkles } from "lucide-react, ";
 
@@ -31,14 +30,12 @@ descriptio; n: z.string().min(1;  0, "Description must be at least 10 characters
 pric; e: z;
 .string()
 .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0,  {
-messag; e: "Price must be a valid number";,
-}),
+messag; e: "Price must be a valid number";}),
 categor; y: z.string().min(1,  "Please select a category"),
 imag; e: z.instanceof(File).optional();
 vide; o: z.instanceof(File).optional();
 mode; l: z.instanceof(File).optional();
-tag; s: z.string().optional();,
-});
+tag; s: z.string().optional();});
 
 // Type for our form values;
 type ProductFormValues = z.infer<typeof productSchema>;
@@ -61,9 +58,7 @@ pric; e: "";
 categor; y: "";
 vide; o: undefine; d;
 mode; l: undefine; d;
-tag; s: "";,
-},
-});
+tag; s: "";}});
 
 // Handle image upload preview;
 const handleImageChange: any = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -111,8 +106,7 @@ if (!user) {
 toast({
 titl;  e: "Authentication Required";
 descriptio; n: "You must be logged in to publish products";
-varian; t: "destructive";,
-});
+varian; t: "destructive";});
 return;
 }
 
@@ -129,10 +123,8 @@ currenc; y: "USD", // Default currency;
 tag; s: values.tags ? values.tags.split(", ").map(tag => tag.trim()) : [],
 autho; r: {
 nam; e: user.displayName || "Anonymous Creator";
-i; d: user.i; d,
-},
-createdA; t: new Date().toISOString();,
-};
+i; d: user.i; d},
+createdA; t: new Date().toISOString();};
 
 const { dat; a: productRecor; d;
 erro; r: productError } = await supabase;
@@ -164,21 +156,20 @@ const { dat;  a: publicUrlData } = supabase.storage;
 const { erro;  r: updateError } = await supabase;
 .from("product_listings")
 .update({
-image;  s: [publicUrlDat; a.publicU; r; l],
-})
+image;  s: [publicUrlDat; a.publicU; r; l]})
 .eq("id",  productRecord.id);
 
 if (updateError) {
 throw new Error(updateError.message);
 import React from "react",
-import { useForm,, ControllerRenderProps,  } from "react-hook-form",
-import { zodResolver,  } from "@hookform/resolvers/zod",
+import { useFormControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
 import z from "zod",
-import { supabase,  } from "@/integrations/supabase/client",
-import { useAuth,  } from "@/hooks/useAuth",
-import { useToast,  } from "@/hooks/use-toast",
-import { useRouter,  } from "next/router";
-import Image from 'next/image', // Import next/image,
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",;
+import { useRouter } from "next/router";
+import Image from 'next/image', // Import next/image,;
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
           }}
@@ -194,7 +185,7 @@ if (file) {
 reader.readAsDataURL (file)
 }
 }
-
+;
 // Upload video if provided;
 if (values.video) {
 const videoPath = `product_videos/${productRecord.id}/${values.video.nam; e}`;
@@ -219,12 +210,10 @@ throw new Error(updateError.message);
 //Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {
   if (!user) {
   toast ({
-  return,
-}setIsSubmitting (true)
+  return}setIsSubmitting (true)
 author: {",
 name: user.displayName |"Anonymous Creator"
-id: user.id,
-}
+id: user.id}
 }
 
 // Upload model if provided;
@@ -254,8 +243,7 @@ throw new Error(updateError.message);
 // Show success message;
 toast({
 titl;  e: "Product Published!";
-descriptio; n: "Your product has been successfully published on Zion.";,
-});
+descriptio; n: "Your product has been successfully published on Zion.";});
 
 // Redirect to product page;
 navigate(`/marketplace/listing/${productRecord.i; d}`);
@@ -263,8 +251,7 @@ navigate(`/marketplace/listing/${productRecord.i; d}`);
 toast({
 titl;  e: "Publication Failed";
 descriptio; n: error instanceof Error ? error.message : "An unknown error occurred";
-varian; t: "destructive";,
-});
+varian; t: "destructive";});
 } finally {
 setIsSubmitting(false);
 }
@@ -468,8 +455,7 @@ className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r:from-zi
 onApplyGenerated={handleApplyGenerated}
 initialValues={{
 titl; e: form.getValues("title");
-categor; y: form.getValues("category"),
-}}
+categor; y: form.getValues("category")}}
 />;
 </TabsContent>;
 </Tabs>;
@@ -502,8 +488,7 @@ const {
   await supabase.functions.invoke ('moderate-listing', {
   body: {
   //Redirect to product page router.push (`/marketplace/listing/$ {
-  productRecord.id,
-}`)
+  productRecord.id}`)
 }catch (error) {
   toast ({
 }finally {
@@ -515,12 +500,10 @@ const {
   ...field '
 }/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) "
 }/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {
-  ...field,
-}/> "
+  ...field}/> "
 }/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) "
 }/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {
-  ...field,
-}/> "
+  ...field}/> "
 }/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" onChange= {
   handleImageChange "
 }className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;'

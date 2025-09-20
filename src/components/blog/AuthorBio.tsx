@@ -18,12 +18,9 @@ export function AuthorBio({ author }: AuthorBioProps) {
     </div>
   )
 }/> <div> <p className="font-medium text-lg" > {
-  author.name,
-}</p> {"
+  author.name}</p> {"
   author.title && <p className="text-sm text-muted-foreground mb-2" > {
-  author.title,
-}</p>
+  author.title}</p>
 }<p> {
-  author.bio,
-}</p>
+  author.bio}</p>
 }'"}

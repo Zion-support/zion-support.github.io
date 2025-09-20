@@ -1,5 +1,5 @@
 import React from "react;";
-import { Link; NavLink } from "react-router-dom, ";
+import { Link, NavLink  } from "react-router-dom, ";
 
 export function PrimaryNav() {
 return (
@@ -20,28 +20,28 @@ return (
 </header>;
 );
 }<//header><///header>;
-import { useState,, ,  } from 'react';
-import { logDebug,, logErrorToProduction,, ,  } from '@/utils/productionLogger';
+import { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import Link from 'next/link';
-import { useRouter,, ,  } from 'next/router';
-import { Logo,, ,  } from '@/components/header/Logo';
-import { PointsBadge,, ,  } from '@/components/loyalty/PointsBadge';
-import { UserMenu,, ,  } from '@/components/header/UserMenu';
-import { LanguageSelector,, ,  } from '@/components/header/LanguageSelector';
-import { ModeToggle,, ,  } from '@/components/ModeToggle';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { useIsMobile,, ,  } from '@/hooks/use-mobile';
-import { useMessaging,, ,  } from '@/context/MessagingContext';
-import { EnhancedSearchInput,, ,  } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions,, ,  } from '@/data/marketplaceData';
-import { slugify,, ,  } from '@/lib/slugify';
-import { ResponsiveNavigation,, ,  } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu,, ,  } from '@/components/header/MobileMenu';
-import { MobileBottomNav,, ,  } from '@/components/header/MobileBottomNav';
-import { Menu,, X,  } from 'lucide-react'
-import { useTranslation,, ,  } from 'react-i18next';
-import { CartDrawer,, ,  } from '@/components/cart/CartDrawer';
-import { LoginModal,  } from '@/components/auth/LoginModal';
+import { useRouter } from 'next/router';
+import { Logo } from '@/components/header/Logo';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import { UserMenu } from '@/components/header/UserMenu';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { ModeToggle } from '@/components/ModeToggle';
+import { useAuth } from '@/hooks/useAuth';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { useMessaging } from '@/context/MessagingContext';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { slugify } from '@/lib/slugify';
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { MenuX } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { CartDrawer } from '@/components/cart/CartDrawer';
+import { LoginModal } from '@/components/auth/LoginModal';
 export function PrimaryNav() {
               >
                 {t('auth.login')}
@@ -87,10 +87,8 @@ unreadCount={unreadCount}
 }
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
-//Track analytics event,
-}searchSuggestions= {
-  suggestions,
-}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
+//Track analytics event}searchSuggestions= {
+  suggestions}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
   (e) => {
   > {'
   t ('auth.login') "
@@ -115,21 +113,17 @@ setLoginOpen (true)
 }</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
   () => setMobileMenuOpen (false) "
 }aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
-  unreadCount,
-}onClose= {
+  unreadCount}onClose= {
   () => setMobileMenuOpen (false)
 }openLoginModal= {
   (returnToPath) => setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
-  unreadCount,
-}/>
+  unreadCount}/>
 }<LoginModal isOpen= {
-  loginOpen,
-}onOpenChange= {
-  setLoginOpen,
-}/> </>)
+  loginOpen}onOpenChange= {
+  setLoginOpen}/> </>)
 }'"  { opacity: 0,
 height: 0;
 }}

@@ -18,8 +18,7 @@ export function RolePicker({ onSelect }) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent' 
               ? "border-primary bg-primary/5" 
-              : "border-gray-200 hover: border-primary/40",
-          }`}
+              : "border-gray-200 hover: border-primary/40"}`}
           onClick={() => handleSelect('talent')}
         >
           <CardContent className="p-5">
@@ -40,8 +39,7 @@ export function RolePicker({ onSelect }) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
-              : "border-gray-200 hover: border-primary/40",
-          }`}
+              : "border-gray-200 hover: border-primary/40"}`}
           onClick={() => handleSelect('client')}
         >
           <CardContent className="p-5">

@@ -3,8 +3,7 @@ import { useAnalytics } from './useAnalytics, ';
 export const useMachineLearning = (_initialConfig) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true;
-        enableUserBehaviorTracking: true,
-    });
+        enableUserBehaviorTracking: true});
     const [models, setModels] = useState([]);
     const [trainingJobs, setTrainingJobs] = useState([]);
     const [predictions, setPredictions] = useState([]);
@@ -19,8 +18,7 @@ export const useMachineLearning = (_initialConfig) => {
             total: 0;
             running: 0;
             completed: 0;
-            failed: 0,
-        }
+            failed: 0}
     });
     const [isTraining, setIsTraining] = useState(false);
     const [isPredicting, setIsPredicting] = useState(false);
@@ -40,8 +38,7 @@ export const useMachineLearning = (_initialConfig) => {
             f1Score: 0.89;
             trainingDataSize: 10000;
             lastTrained: new Date();
-            status: 'ready',
-        };
+            status: 'ready'};
         {
             id: 'customer-segmentation-001';
             name: 'Customer Segmentation Model';
@@ -54,8 +51,7 @@ export const useMachineLearning = (_initialConfig) => {
             f1Score: 0.92;
             trainingDataSize: 50000;
             lastTrained: new Date();
-            status: 'deployed',
-        };
+            status: 'deployed'};
         {
             id: 'demand-forecasting-001';
             name: 'Demand Forecasting Model';
@@ -68,8 +64,7 @@ export const useMachineLearning = (_initialConfig) => {
             f1Score: 0.85;
             trainingDataSize: 25000;
             lastTrained: new Date();
-            status: 'ready',
-        }
+            status: 'ready'}
     ];
     // Initialize with default models;
     useEffect(() => {
@@ -105,8 +100,7 @@ export const useMachineLearning = (_initialConfig) => {
                 total: trainingJobsTotal;
                 running: trainingJobsRunning;
                 completed: trainingJobsCompleted;
-                failed: trainingJobsFailed,
-            }
+                failed: trainingJobsFailed}
         });
      }, [models, predictions, trainingJobs]);
     // Update metrics when dependencies change;
@@ -125,8 +119,7 @@ export const useMachineLearning = (_initialConfig) => {
             f1Score: 0;
             trainingDataSize: 0;
             lastTrained: new Date();
-            status: 'ready',
-        };
+            status: 'ready'};
     setModels(prev => [...prev, newModel]);
         trackEvent('ml', 'model', 'created', undefined, { modelType: model.type, framework: model.framework });
      }, [trackEvent]);
@@ -152,8 +145,7 @@ export const useMachineLearning = (_initialConfig) => {
                 loss: [];
                 accuracy: [];
                 validationLoss: [];
-                validationAccuracy: [],
-            }
+                validationAccuracy: []}
         };
     setTrainingJobs(prev => [...prev, trainingJob]);
         setIsTraining(true);
@@ -181,8 +173,7 @@ export const useMachineLearning = (_initialConfig) => {
                             f1Score: finalF1Score;
                             trainingDataSize: Math.floor(Math.random() * 100000) + 10000;
                             lastTrained: new Date();
-                            status: 'ready',
-                        });
+                            status: 'ready'});
     return {
                             ...job,
                             status: 'completed';
@@ -251,8 +242,7 @@ export const useMachineLearning = (_initialConfig) => {
             modelId,
             input,
             timestamp: new Date();
-            status: 'pending',
-        };
+            status: 'pending'};
     setPredictions(prev => [predictionRequest, ...prev]);
         setIsPredicting(true);
         trackEvent('ml', 'prediction', 'started', undefined, { modelId, modelType: model.type });
@@ -268,8 +258,7 @@ export const useMachineLearning = (_initialConfig) => {
                     status: 'completed';
                     result,
                     confidence,
-                    processingTime: Date.now() - startTime,
-                };
+                    processingTime: Date.now() - startTime};
     setPredictions(prev => prev.map(p => p.id === predictionRequest.id ? completedRequest : p));
                 predictionTimeoutsRef.current.delete(predictionRequest.id);
                 setIsPredicting(false);
@@ -285,8 +274,7 @@ export const useMachineLearning = (_initialConfig) => {
             case 'classification':
                 return {
                     class: Math.random() > 0.5 ? 'positive' : 'negative';
-                    probability: Math.random(),
-                };
+                    probability: Math.random()};
     case 'regression':
                 return {
                     value: Math.random() * 100;
@@ -295,8 +283,7 @@ export const useMachineLearning = (_initialConfig) => {
             case 'clustering':
                 return {
                     cluster: Math.floor(Math.random() * 5);
-                    distance: Math.random(),
-                };
+                    distance: Math.random()};
     case 'nlp':
                 return {
                     sentiment: Math.random() > 0.5 ? 'positive' : 'negative';
@@ -305,8 +292,7 @@ export const useMachineLearning = (_initialConfig) => {
             case 'computer_vision':
                 return {
                     objects: ['object1', 'object2'].slice(0, Math.floor(Math.random() * 2) + 1),
-                    confidence: Math.random(),
-                };
+                    confidence: Math.random()};
     case 'recommendation':
                 return {
                     items: ['item1', 'item2', 'item3'].slice(0, Math.floor(Math.random() * 3) + 1),
@@ -328,8 +314,7 @@ export const useMachineLearning = (_initialConfig) => {
         const exportData = {
             model,
             exportTimestamp: new Date().toISOString();
-            version: '1.0',
-        };
+            version: '1.0'};
     trackEvent('ml', 'model', 'exported', undefined, { modelId });
         return JSON.stringify(exportData, null, 2);
     }, [models, trackEvent]);
@@ -341,8 +326,7 @@ export const useMachineLearning = (_initialConfig) => {
                 const importedModel = {
                     ...importData.model,
                     id: `imported-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-                    status: 'ready',
-                };
+                    status: 'ready'};
     setModels(prev => [...prev, importedModel]);
                 trackEvent('ml', 'model', 'imported', undefined, { modelType: importedModel.type });
      }

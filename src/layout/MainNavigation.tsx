@@ -1,37 +1,34 @@
 import React from "react";
 
-import { Link; useLocation } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare; ChevronDown; Users; Briefcase; Settings; BarChart3 } from "lucide-react";
-import { MessageSquare; ChevronDown; Brain; Shield; Cloud; Zap } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Briefcase; Settings, BarChart3  } from "lucide-react";
+import { MessageSquare; ChevronDown; Brain; Shield; Cloud, Zap  } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState; useRef; useEffect } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { MessageSquare; ChevronDown; Users; Settings; HelpCircle; FileText } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useRef; useEffect } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useEffect; useRef } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
+import { useState; useRef, useEffect  } from "react";
+import { MessageSquare, ChevronDown  } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Settings; HelpCircle, FileText  } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState; useRef, useEffect  } from "react";
+import { MessageSquare, ChevronDown  } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState; useEffect, useRef  } from "react";
+import { MessageSquare, ChevronDown  } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
+import { MessageSquare, ChevronDown  } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { MessageSquare, ChevronDown  } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-DropdownMenu;
+import { DropdownMenu;
 DropdownMenuContent;
-DropdownMenuItem;
-DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+DropdownMenuItem, DropdownMenuTrigger  } from "@/components/ui/dropdown-menu";
 
 interface MainNavigationProps {
 isAdmin?: boolean;
@@ -51,16 +48,16 @@ const { user } = useAuth();
 const isAuthenticated = !!user;
 const location = useLocation();
 const { t } = useTranslation();
-const [dropdownOpen; setDropdownOpen] = useState(false);
+const [dropdownOpen, setDropdownOpen] = useState(false);
 const dropdownRef = useRef<HTMLDivElement>(null);
 
 // Close dropdown when clicking outside;
 useEffect(() => {
 const handleClickOutside: any = (event: MouseEvent) => {
 if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {;
-const [dropdownOpen; setDropdownOpen] = useState(false);
+const [dropdownOpen, setDropdownOpen] = useState(false);
 const dropdownRef = useRef<HTMLDivElement>(null);
-const [dropdownOpen; setDropdownOpen] = useState(false);
+const [dropdownOpen, setDropdownOpen] = useState(false);
 const dropdownRef = useRef<HTMLDivElement>(null);
 
 // Close dropdown when clicking outside;
@@ -74,13 +71,13 @@ setDropdownOpen(false);
 document.addEventListener("mousedown", handleClickOutside);
 return () => document.removeEventListener("mousedown", handleClickOutside);
 }, []);
-const [isServicesOpen; setIsServicesOpen] = useState(false);
-const [isCompanyOpen; setIsCompanyOpen] = useState(false);
-const [isServicesOpen; setIsServicesOpen] = useState(false);
+const [isServicesOpen, setIsServicesOpen] = useState(false);
+const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+const [isServicesOpen, setIsServicesOpen] = useState(false);
 const dropdownRef = useRef<HTMLDivElement>(null);
-const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
-const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
-const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
 const serviceLinks = [
 { key: "ai-analytics", href: "/ai-analytics-dashboard", name: "AI Analytics" },
@@ -92,8 +89,7 @@ const serviceLinks = [
 
 let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
 matches: (path: string) => path.startsWith("/blog"),
-name: t("nav.blog"),
-}
+name: t("nav.blog")}
 ];
 
 let links = baseLinks;
@@ -115,54 +111,45 @@ href: "/about",
 matches: (path: string) => path.startsWith("/about"),
 key: "about",
 href: "/about",
-matches: (path: string) => path === "/about",
-},
+matches: (path: string) => path === "/about"},
 {
 key: "services",
 href: "/services",
 matches: (path: string) => path.startsWith("/services"),
 key: "services",
 href: "/services",
-matches: (path: string) => path.startsWith("/services"),
-},
+matches: (path: string) => path.startsWith("/services")},
 {
 key: "ai-services",
 href: "/ai-services",
-matches: (path: string) => path.startsWith("/ai-services"),
-},
+matches: (path: string) => path.startsWith("/ai-services")},
 {
 key: "it-services",
 href: "/it-services",
-matches: (path: string) => path.startsWith("/it-services"),
-},
+matches: (path: string) => path.startsWith("/it-services")},
 {
 key: "micro-saas",
 href: "/micro-saas",
-matches: (path: string) => path.startsWith("/micro-saas"),
-},
+matches: (path: string) => path.startsWith("/micro-saas")},
 {
 key: "about",
 href: "/about",
-matches: (path: string) => path.startsWith("/about"),
-},
+matches: (path: string) => path.startsWith("/about")},
 {
 key: "services",
 href: "/services",
 matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services"),
 name: "Home",
-matches: (path: string) => path === "/",
-},
+matches: (path: string) => path === "/"},
 {
 key: "services",
 href: "/services",
 name: "Services",
-matches: (path: string) => path.startsWith("/services"),
-},
+matches: (path: string) => path.startsWith("/services")},
 {
 key: "services",
 href: "/comprehensive-services",
-matches: (path: string) => path.startsWith("/comprehensive-services") || path.startsWith("/services"),
-},
+matches: (path: string) => path.startsWith("/comprehensive-services") || path.startsWith("/services")},
 {
 key: "marketplace",
 href: "/marketplace",
@@ -174,24 +161,20 @@ href: "/services",
 matches: (path: string) => path.startsWith("/services"),
 key: "services",
 href: "/services",
-matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services"),
-},
+matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services")},
 {
 key: "micro-saas",
 href: "/micro-saas-services",
 matches: (path: string) => path.startsWith("/micro-saas-services"),
-matches: (path: string) => path === "/",
-},
+matches: (path: string) => path === "/"},
 {
 key: "marketplace",
 href: "/marketplace",
-matches: (path: string) => path.startsWith("/marketplace"),
-},
+matches: (path: string) => path.startsWith("/marketplace")},
 {
 key: "services",
 href: "/services",
-matches: (path: string) => path.startsWith("/services"),
-},
+matches: (path: string) => path.startsWith("/services")},
 {
 key: "services",
 href: "/services",
@@ -226,15 +209,13 @@ key: "talent",
 href: "/talent",
 key: "ai-hiring",
 href: "/zion-hire-ai",
-matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai"),
-}
+matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai")}
 ];
 
 const moreLinks = [
 {
 matches: (path: string) => path.startsWith("/equipment"),
-name: t("nav.equipment"),
-},
+name: t("nav.equipment")},
 {
 key: "partners",
 href: "/partners",
@@ -260,8 +241,7 @@ dropdown: [
 ];
 key: "equipment",
 href: "/equipment",
-matches: (path: string) => path.startsWith("/equipment"),
-},
+matches: (path: string) => path.startsWith("/equipment")},
 {
 key: "community",
 href: "/community",
@@ -276,8 +256,7 @@ name: t("nav.community"),
 key: "about",
 href: "/about",
 matches: (path: string) => path === "/about",
-matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
-},
+matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")},
 {
 key: "blog",
 href: "/blog",
@@ -285,14 +264,12 @@ key: "contact",
 href: "/contact",
 matches: (path: string) => path === "/contact",
 icon: <Users className="w-4 h-4" />,
-description: "Join our community",
-},
+description: "Join our community"},
 {
 key: "help",
 href: "/help-center",
 icon: <HelpCircle className="w-4 h-4" />,
-description: "Get help and support",
-},
+description: "Get help and support"},
 {
 key: "faq",
 href: "/faq",
@@ -312,8 +289,7 @@ href: "/about",
 key: "blog",
 href: "/blog",
 matches: (path: string) => path.startsWith("/blog"),
-matches: (path: string) => path.startsWith("/blog"),
-};
+matches: (path: string) => path.startsWith("/blog")};
 ];
 
 const serviceDropdowns = [
@@ -379,8 +355,7 @@ const serviceLinks = [
 
 let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
 matches: (path: string) => path.startsWith("/blog"),
-name: t("nav.blog"),
-}
+name: t("nav.blog")}
 ];
 
 let links = baseLinks;
@@ -402,7 +377,7 @@ name: "About",
 matches: (path: string) => path.startsWith("/about") || path === "/careers" || path === "/contact",
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
-                    ),}
+                    )}
                   >
                     <ShoppingCart className='w-4 h-4 mr-1' />
                     {t('nav.cart', 'Cart')}
@@ -410,7 +385,7 @@ matches: (path: string) => path.startsWith("/about") || path === "/careers" || p
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
                         {cartCount}
                       </span>
-import { ChevronDown,, Menu,, X,, Home,, Settings,, Users,, Building,, Globe,, Zap,, Brain,, Shield,, Cloud,, Code,, BarChart3',, ,  } from 'lucide-react'
+import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3' } from 'lucide-react';
 export default function Page() { [])
   const baseLinks: NavigationLink[] = [{,
 key: 'home'
@@ -509,8 +484,7 @@ links.push({,
 key: "dashboard",
 name: "Dashboard",
 href: "/dashboard",
-matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard",
-});
+matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard"});
 }
 
 // Add admin-only links;
@@ -519,8 +493,7 @@ links.push({
 key: "analytics",
 name: "Analytics",
 href: "/analytics",
-matches: (path: string) => path.startsWith("/analytics"),
-});
+matches: (path: string) => path.startsWith("/analytics")});
 }
 
 const handleDropdownToggle: any = (key: string) => {;

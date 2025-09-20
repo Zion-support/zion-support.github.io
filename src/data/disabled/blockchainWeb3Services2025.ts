@@ -4,8 +4,7 @@ export interface ServiceContact {
 phone: string;
 email: string;
 website: string;,
-address: string;,
-}
+address: string;}
 
 export interface BlockchainWeb3Service {
 id: number;
@@ -40,8 +39,7 @@ multilingualSupport: boolean;
 industrySpecific: boolean;
 web3Native: boolean;
 smartContractSupport: boolean;,
-crossChainCompatibility: boolean;,
-}
+crossChainCompatibility: boolean;}
 
 // Blockchain & Web3 Services for 2025;
 export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
@@ -77,8 +75,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/defi-pro-suite";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;200-5;000/month",
 competitors: ["Aave", "Compound", "Yearn Finance", "Curve Finance"],
 blockchainScore: 98;,
@@ -99,8 +96,7 @@ multilingualSupport: true;
 industrySpecific: true;
 web3Native: true;
 smartContractSupport: true;,
-crossChainCompatibility: true;,
-};
+crossChainCompatibility: true;};
 {
 id: 2;
 name: "NFT Studio Pro";
@@ -133,8 +129,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/nft-studio-pro";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$800-3;000/month",
 competitors: ["OpenSea", "Rarible", "Foundation", "SuperRare"],
 blockchainScore: 97;,
@@ -155,8 +150,7 @@ multilingualSupport: true;
 industrySpecific: true;
 web3Native: true;
 smartContractSupport: true;,
-crossChainCompatibility: true;,
-};
+crossChainCompatibility: true;};
 {
 id: 3;
 name: "Smart Contract Factory";
@@ -189,8 +183,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/smart-contract-factory";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;500-6;000/month",
 competitors: ["OpenZeppelin", "Truffle", "Hardhat", "Remix"],
 blockchainScore: 96;,
@@ -211,8 +204,7 @@ multilingualSupport: true;
 industrySpecific: true;
 web3Native: true;
 smartContractSupport: true;,
-crossChainCompatibility: true;,
-};
+crossChainCompatibility: true;};
 {
 id: 4;
 name: "DAO Governance Platform";
@@ -245,8 +237,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/dao-governance-platform";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;000-4;000/month",
 competitors: ["Snapshot", "Aragon", "Moloch", "Compound Governance"],
 blockchainScore: 95;,
@@ -267,8 +258,7 @@ multilingualSupport: true;
 industrySpecific: true;
 web3Native: true;
 smartContractSupport: true;,
-crossChainCompatibility: true;,
-};
+crossChainCompatibility: true;};
 {
 id: 5;
 name: "Cross-Chain Bridge Pro";
@@ -301,8 +291,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/cross-chain-bridge-pro";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;000-8;000/month",
 competitors: ["Multichain", "Stargate", "Hop Protocol", "Celer Network"],
 blockchainScore: 97;,
@@ -323,8 +312,7 @@ multilingualSupport: true;
 industrySpecific: true;
 web3Native: true;
 smartContractSupport: true;,
-crossChainCompatibility: true;,
-};
+crossChainCompatibility: true;};
 {
 id: 6;
 name: "Web3 Identity Manager";
@@ -357,8 +345,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/web3-identity-manager";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$600-2;500/month",
 competitors: ["Microsoft Entra", "Okta", "Auth0", "ForgeRock"],
 blockchainScore: 94;,
@@ -379,7 +366,6 @@ multilingualSupport: true;
 industrySpecific: true;
 web3Native: true;
 smartContractSupport: true;,
-crossChainCompatibility: true;,
-}
+crossChainCompatibility: true;}
 ];
 export default blockchainWeb3Services2025;

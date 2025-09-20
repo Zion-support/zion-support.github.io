@@ -1,9 +1,9 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { usePerformance } from "@/hooks/usePerformance, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "@/components/ui/card, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import Activity from "lucide-react/dist/esm/icons/activity;";
 import Zap from "lucide-react/dist/esm/icons/zap;";
@@ -50,8 +50,7 @@ FI; D: <MousePointer className="w-4 h-4" />;
 CL; S: <BarChart3 className="w-4 h-4" />;
 TTF; B: <Clock className="w-4 h-4" />;
 DOMLOA; D: <Activity className="w-4 h-4" />;
-WINDOWLOA; D: <Activity className="w-4 h-4" />,
-};
+WINDOWLOA; D: <Activity className="w-4 h-4" />};
 return icons[metricNa; m; e] || <Activity className="w-4 h-4" />;
 };
 
@@ -63,8 +62,7 @@ FI; D: "First Input Delay - Time to first interaction";
 CL; S: "Cumulative Layout Shift - Visual stability";
 TTF; B: "Time to First Byte - Server response time";
 DOMLOA; D: "DOM Content Loaded - DOM ready time";
-WINDOWLOA; D: "Window Load - Full page load time",
-};
+WINDOWLOA; D: "Window Load - Full page load time"};
 return descriptions[metricNa; m; e] || "Performance metric";
 };
 

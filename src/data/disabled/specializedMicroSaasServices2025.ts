@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -30,8 +29,7 @@ complianceStandards: string[];
 integrationCapabilities: string[];
 freeTier?: {
 features: string[];,
-limitations: string[];,
-};
+limitations: string[];};
 }
 
 export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService2025[] = [
@@ -83,8 +81,7 @@ marketPrice: "$299 - $999/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-content-generation-suite-2025";,
 technologyStack: ["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],
 complianceStandards: ["GDPR", "Data Privacy"],
@@ -143,8 +140,7 @@ marketPrice: "$199 - $599/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-invoice-management-system";,
 technologyStack: ["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],
 complianceStandards: ["GDPR", "Financial Regulations", "Data Security"],
@@ -203,8 +199,7 @@ marketPrice: "$399 - $1;299/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-customer-support-platform";,
 technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "WebSocket"],
 complianceStandards: ["GDPR", "Data Privacy", "Security Standards"],
@@ -263,8 +258,7 @@ marketPrice: "$249 - $799/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-project-management-tool";,
 technologyStack: ["AI/ML", "React", "Node.js", "Real-time Analytics", "Cloud Computing"],
 complianceStandards: ["GDPR", "Data Security"],
@@ -323,8 +317,7 @@ marketPrice: "$179 - $599/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-email-marketing-platform";,
 technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Email APIs"],
 complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
@@ -383,8 +376,7 @@ marketPrice: "$349 - $1;199/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-inventory-management-system";,
 technologyStack: ["Machine Learning", "Predictive Analytics", "React", "Node.js", "IoT Integration"],
 complianceStandards: ["GDPR", "Data Security", "Industry Standards"],
@@ -443,8 +435,7 @@ marketPrice: "$199 - $699/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-social-media-manager";,
 technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "Social Media APIs"],
 complianceStandards: ["GDPR", "Data Privacy", "Platform Policies"],
@@ -503,8 +494,7 @@ marketPrice: "$129 - $399/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-time-tracking-solution";,
 technologyStack: ["Machine Learning", "Computer Vision", "React", "Node.js", "Mobile Apps"],
 complianceStandards: ["GDPR", "Data Privacy"],
@@ -563,8 +553,7 @@ marketPrice: "$449 - $1;499/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-lead-generation-platform";,
 technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Data Analytics"],
 complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
@@ -623,8 +612,7 @@ marketPrice: "$279 - $899/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-document-management-system";,
 technologyStack: ["OCR", "Machine Learning", "React", "Node.js", "Cloud Storage"],
 complianceStandards: ["GDPR", "SOC2", "Data Security", "Industry Standards"],

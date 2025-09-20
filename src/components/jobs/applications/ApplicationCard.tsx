@@ -151,11 +151,9 @@ variant="secondary"
     </Card>
   )
 default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {
-  application.status,
-}/> </div> </CardHeader> {"
+  application.status}/> </div> </CardHeader> {"
   application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {
-  application.cover letter,
-}</p> </div>)
+  application.cover letter}</p> </div>)
 }</Button> </div> </div>)
 }{"
   application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {

@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion, ";
 import { FileTex; t;
 AlertTriangl; e;
@@ -10,8 +10,7 @@ Edit; 3;
 Ey; e;
 BarChart; 3;
 TrendingU; p;
-Zap;
-} from "lucide-react, ";
+Zap} from "lucide-react, ";
 
 interface ContentIssue {
 i; d: string;
@@ -21,8 +20,7 @@ issueTyp; e: "missing_title" | "missing_meta" | "no_headings" | "minimal_content
 severit; y: "low" | "medium" | "high";
 descriptio; n: string;
 recommendatio; n: string;
-statu; s: "open" | "in_progress" | "resolved";,
-};
+statu; s: "open" | "in_progress" | "resolved";};
 interface ContentQualityReport {
 totalPage; s: number;
 pagesWithIssue; s: number;
@@ -32,8 +30,7 @@ lowIssue; s: number;
 averageContentLengt; h: number;
 pagesWithImage; s: number;
 pagesWithMetaDescription; s: number;
-lastUpdate; d: Date;,
-};
+lastUpdate; d: Date;};
 const ContentQualityAnalyze; r: React.FC = () => {
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [isAnalyzi; n; g; setIsAnalyzi; n; g] = useState(false);
@@ -51,10 +48,8 @@ pageTit; l; e: "Missin; g",
 issueTy; p; e: "missing_titl; e",
 severi; t; y: "hig; h",
 descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
-recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
-};
-stat; u; s: "ope; n",
-},
+recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O"};
+stat; u; s: "ope; n"},
 {
 i; d: "2";
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/_nex; t/stati; c/chunk; s/webpac; k-e219339f62a4a96; e.j; s",
@@ -63,8 +58,7 @@ issueTy; p; e: "missing_met; a",
 severi; t; y: "hig; h",
 descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
 recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
-stat; u; s: "ope; n",
-},
+stat; u; s: "ope; n"},
 {
 i; d: "3";
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/abou; t/",
@@ -73,8 +67,7 @@ issueTy; p; e: "minimal_conten; t",
 severi; t; y: "mediu; m",
 descripti; o; n: "Suspiciousl; y smal; l HTM; L conten; t",
 recommendati; o; n: "Ad; d mor; e meaningf; u; l; conte; n; t; headin; g; s; an; d image; s t; o improv; e use; r experienc; e",
-stat; u; s: "ope; n",
-},
+stat; u; s: "ope; n"},
 {
 i; d: "4";
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/service; s/",
@@ -83,8 +76,7 @@ issueTy; p; e: "no_heading; s",
 severi; t; y: "mediu; m",
 descripti; o; n: "N; o heading; s foun; d",
 recommendati; o; n: "Ad; d prope; r headin; g structur; e (H; 1; H; 2; H; 3) fo; r bette; r conten; t organizatio; n an; d SE; O",
-stat; u; s: "ope; n",
-}
+stat; u; s: "ope; n"}
 ];
 
 useEffect(() => {
@@ -109,8 +101,7 @@ lowIssue; s;
 averageContentLengt; h: 500; 0, // Sample data;
 pagesWithImage; s: 4; 5, // Sample data;
 pagesWithMetaDescription; s: 3; 2, // Sample data;
-lastUpdate; d: new Date(),
-});
+lastUpdate; d: new Date()});
 };
 
 const startAnalysis = async () => {;
@@ -128,8 +119,7 @@ case "medium":
 return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
 case "low":
 return <Info className="w-4 h-4 text-blue-400" />;
-defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;,
-}
+defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;}
 };
 
 const getSeverityColor: any = (severit; y: string) => {
@@ -140,8 +130,7 @@ case "medium":
 return "text-yellow-400";
 case "low":
 return "text-blue-400";
-defaul;  t: return "text-gray-400";,
-}
+defaul;  t: return "text-gray-400";}
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -152,8 +141,7 @@ case "in_progress":
 return "text-yellow-400";
 case "open":
 return "text-red-400";
-defaul;  t: return "text-gray-400";,
-}
+defaul;  t: return "text-gray-400";}
 };
 
 const filteredIssues = contentIssues.filter(issue => {;
@@ -175,8 +163,7 @@ case "minimal_content":
 return "Minimal Content";
 case "no_images":
 return "No Images";
-defaul;  t: return type;,
-}
+defaul;  t: return type;}
 };
 
 return (
@@ -261,8 +248,7 @@ onClick={() => setSelectedFilter("all")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
 selectedFilter === "all";
 ? "bg-purple-500 text-white";
-: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
-}`}
+: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 All Issues;
 </button>;
@@ -271,8 +257,7 @@ onClick={() => setSelectedFilter("critical")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
 selectedFilter === "critical";
 ? "bg-red-500 text-white";
-: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
-}`}
+: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 Critical;
 </button>;
@@ -281,8 +266,7 @@ onClick={() => setSelectedFilter("medium")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
 selectedFilter === "medium";
 ? "bg-yellow-500 text-white";
-: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
-}`}
+: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 Medium;
 </button>;
@@ -291,8 +275,7 @@ onClick={() => setSelectedFilter("low")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
 selectedFilter === "low";
 ? "bg-blue-500 text-white";
-: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
-}`}
+: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 Low;
 </button>;

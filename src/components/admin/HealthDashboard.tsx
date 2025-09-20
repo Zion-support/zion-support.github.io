@@ -29,7 +29,6 @@ patternId: string;
       description: string;,
 occurrences: number;
       severity: string;
-      solution?: string,
-}>
+      solution?: string}>
     byCategory: { [category: string]: number }
   }

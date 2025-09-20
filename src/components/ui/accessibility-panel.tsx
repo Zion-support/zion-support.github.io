@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState; useCallback; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Eye;
 Type;
 Volume2;
@@ -9,8 +9,7 @@ Settings;
 X;
 Check;
 AlertTriangle;
-Info;
-} from "lucide-react, ";
+Info} from "lucide-react, ";
 
 export interface AccessibilitySettings {;
 highContrast: boolean;
@@ -20,8 +19,7 @@ colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 reducedMotion: boolean;
 screenReader: boolean;
 focusIndicator: boolean;,
-keyboardNavigation: boolean;,
-};
+keyboardNavigation: boolean;};
 interface AccessibilityPanelProps {
 enabled?: boolean;
 defaultSettings?: Partial<AccessibilitySettings>;
@@ -34,8 +32,8 @@ defaultSettings = {},
 onSettingsChange;
 className = ""
 }) => {
-const [isOpen; setIsOpen] = useState(false);
-const [settings; setSettings] = useState<AccessibilitySettings>({
+const [isOpen, setIsOpen] = useState(false);
+const [settings, setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 largeText: false;
 fontSize: 16;
@@ -47,12 +45,11 @@ keyboardNavigation: true;
 ...defaultSettings;
 });
 
-const [notifications; setNotifications] = useState<Array<{
+const [notifications, setNotifications] = useState<Array<{
 id: string;
 message: string;
 type: "success" | "info" | "warning";,
-timestamp: number;,
-}>>([]);
+timestamp: number;}>>([]);
 
 // Apply accessibility settings to the document;
 useEffect(() => {
@@ -154,8 +151,7 @@ const notification = {;
 id: Date.now().toString();,
 message: `${key.replace(/([A-Z])/g, " $1").toLowerCase()} ${value ? "enabled" : "disabled"}`,
 type: "success" as const;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
 
 return newSettings;
@@ -171,16 +167,14 @@ colorBlindMode: "none";
 reducedMotion: false;
 screenReader: false;
 focusIndicator: true;,
-keyboardNavigation: true;,
-};
+keyboardNavigation: true;};
 setSettings(defaultSettings);
 
 const notification = {;
 id: Date.now().toString();
 message: "Accessibility settings reset to defaults";
 type: "info" as const;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
 }, []);
 
@@ -472,31 +466,26 @@ __html: `;
 --bg-secondary: #1a1a1a;
 --text-primary: #ffffff;
 --text-secondary: #e0e0e0;
---border-color: #ffffff;,
-}
+--border-color: #ffffff;}
 
 .large-text {
 --font-size-base: 18px;
 --font-size-lg: 22px;
 --font-size-xl: 26px;
---font-size-2xl: 32px;,
-}
+--font-size-2xl: 32px;}
 
 .reduced-motion * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
-transition-duration: 0.01ms !important;,
-}
+transition-duration: 0.01ms !important;}
 
 .focus-indicator *:focus {
 outline: 3px solid #00d4ff !important;
-outline-offset: 2px !important;,
-}
+outline-offset: 2px !important;}
 
 .keyboard-navigation *:focus-visible {
 outline: 3px solid #00d4ff !important;
-outline-offset: 2px !important;,
-}
+outline-offset: 2px !important;}
 
 .sr-only {
 position: absolute;
@@ -507,24 +496,20 @@ margin: -1px;
 overflow: hidden;
 clip: rect(0; 0; 0; 0);
 white-space: nowrap;,
-border: 0;,
-}
+border: 0;}
 
 /* Color blind mode filters */;
 [style*="--color-blind-mode: protanopia"] {,
 filter: url("data:image/svg+xml;
-utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567;0.433;0;0;0 0.558;0.442;0;0;0 0;0.242;0.758;0;0 0;0;0;1;0"/></filter></svg>#protanopia");,
-}
+utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567;0.433;0;0;0 0.558;0.442;0;0;0 0;0.242;0.758;0;0 0;0;0;1;0"/></filter></svg>#protanopia");}
 
 [style*="--color-blind-mode: deuteranopia"] {,
 filter: url("data:image/svg+xml;
-utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625;0.375;0;0;0 0.7;0.3;0;0;0 0;0.3;0.7;0;0 0;0;0;1;0"/></filter></svg>#deuteranopia");,
-}
+utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625;0.375;0;0;0 0.7;0.3;0;0;0 0;0.3;0.7;0;0 0;0;0;1;0"/></filter></svg>#deuteranopia");}
 
 [style*="--color-blind-mode: tritanopia"] {,
 filter: url("data:image/svg+xml;
-utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95;0.05;0;0;0 0;0.433;0.567;0;0 0;0.475;0.525;0;0 0;0;0;1;0"/></filter></svg>#tritanopia");,
-}
+utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95;0.05;0;0;0 0;0.433;0.567;0;0 0;0.475;0.525;0;0 0;0;0;1;0"/></filter></svg>#tritanopia");}
 `;
 }} />;
 </>;

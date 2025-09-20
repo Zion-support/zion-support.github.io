@@ -1,7 +1,7 @@
 
 import React from "react";
-import { Button,  } from "@/components/ui/button";
-import { Check,, X,  } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { CheckX } from 'lucide-react';
 return (
     <section id='pricing' className='py-20 px-4 md:px-6'>
       <div className='container mx-auto max-w-7xl'>
@@ -55,7 +55,7 @@ className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90
                           : 'Get Started'}                      </Button>                      <p className="text-sm font-medium mt-2">{plan.users}</p>
                       <Button,
 className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
-                        variant = {plan.popular ? 'default' : 'outline',}
+                        variant = {plan.popular ? 'default' : 'outline'}
                       >
                         {plan.name === 'Enterprise'
                           ? 'Request Quote'

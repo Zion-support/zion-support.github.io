@@ -6,15 +6,13 @@ children: React.ReactNode;
 className?: string;
 size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl";
 gradient?: "zion" | "cyber" | "quantum" | "custom";
-customColors?: string[],
-};
+customColors?: string[]};
 export function GradientHeading({ ;
 children;
 className = "",
 size = "4xl",
 gradient = "zion",
-customColors,
-}: GradientHeadingProps) {
+customColors}: GradientHeadingProps) {
 const sizeClasses = {;
 sm: "text-sm", md: "text-base";,
 lg: "text-lg", xl: "text-xl",

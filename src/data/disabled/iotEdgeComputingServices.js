@@ -47,10 +47,8 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/industrial-iot",
-    };
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/industrial-iot"};
     // Smart City IoT Solution;
     {
         id: "smart-city-iot-solution";
@@ -99,10 +97,8 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/smart-city-iot",
-    };
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/smart-city-iot"};
     // Healthcare IoT Monitoring;
     {
         id: "healthcare-iot-monitoring";
@@ -151,10 +147,8 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/healthcare-iot",
-    };
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/healthcare-iot"};
     // Retail IoT Analytics Platform;
     {
         id: "retail-iot-analytics";
@@ -203,10 +197,8 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/retail-iot",
-    };
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/retail-iot"};
     // Edge AI Computing Platform;
     {
         id: "edge-ai-computing";
@@ -255,8 +247,6 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/edge-ai",
-    }
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/edge-ai"}
 ];

@@ -1,7 +1,7 @@
 import React from "react;";
-import { ENHANCED_SERVICE; S; ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
+import { ENHANCED_SERVICE; S, ENHANCED_SERVICE_CATEGORIES  } from "@/data/enhancedServices, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brai; n;
 Shiel; d;
@@ -28,14 +28,12 @@ Cloc; k;
 Mai; l;
 Phon; e;
 MapPi; n;
-ExternalLink;
-} from "lucide-react, ";
+ExternalLink} from "lucide-react, ";
 import { Link } from "react-router-dom, ";
 
 interface ServiceCategoryProps {
 categor; y: string;
-service; s: typeof ENHANCED_SERVICES;,
-};
+service; s: typeof ENHANCED_SERVICES;};
 const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
 const categoryServices = services.filter(service =>
 service.category.toLowerCase().includes(category.toLowerCase());
@@ -55,8 +53,7 @@ const iconMa; p: { [k; e; y: stri; n; g]: React.ReactNode } = {
 "Education & Training": <GraduationCap className="w-6 h-6" />,
 "Supply Chain & Logistics": <Truck className="w-6 h-6" />,
 "Real Estate & Property": <Home className="w-6 h-6" />,
-"Legal & Compliance": <Lock className="w-6 h-6" />,
-};
+"Legal & Compliance": <Lock className="w-6 h-6" />};
 return iconMap[categoryNa; m; e] || <Briefcase className="w-6 h-6" />;
 };
 
@@ -72,8 +69,7 @@ const colorMa; p: { [k; e; y: stri; n; g]: string } = {
 "Education & Training": "from-indigo-500 to-purple-600",
 "Supply Chain & Logistics": "from-teal-500 to-green-600",
 "Real Estate & Property": "from-amber-500 to-yellow-600",
-"Legal & Compliance": "from-slate-500 to-gray-600",
-};
+"Legal & Compliance": "from-slate-500 to-gray-600"};
 return colorMap[categoryNa; m; e] || "from-zion-purple to-zion-purple-dark";
 };
 

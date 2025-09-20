@@ -14,12 +14,10 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 technology: string[];
 estimatedDelivery: string;,
-supportLevel: "basic" | "standard" | "premium" | "enterprise";,
-}
+supportLevel: "basic" | "standard" | "premium" | "enterprise";}
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
 {
@@ -49,12 +47,10 @@ marketPrice: "$2;500 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "Machine Learning", "RPA", "Business Intelligence"],
 estimatedDelivery: "2-4 weeks";,
-supportLevel: "premium",
-};
+supportLevel: "premium"};
 {
 id: "quantum-neural-network-platform";
 title: "Quantum Neural Network Platform";
@@ -82,12 +78,10 @@ marketPrice: "$15;000 - $25;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Quantum Computing", "Neural Networks", "Quantum Algorithms", "AI"],
 estimatedDelivery: "6-8 weeks";,
-supportLevel: "enterprise",
-};
+supportLevel: "enterprise"};
 {
 id: "blockchain-defi-solutions";
 title: "Blockchain DeFi Solutions";,
@@ -115,12 +109,10 @@ marketPrice: "$8;000 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Ethereum", "Solana", "Smart Contracts", "DeFi Protocols"],
 estimatedDelivery: "4-6 weeks";,
-supportLevel: "premium",
-};
+supportLevel: "premium"};
 {
 id: "iot-data-analytics-platform";
 title: "IoT Data Analytics Platform";,
@@ -148,12 +140,10 @@ marketPrice: "$5;000 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["IoT", "Machine Learning", "Big Data", "Cloud Computing"],
 estimatedDelivery: "3-5 weeks";,
-supportLevel: "standard",
-};
+supportLevel: "standard"};
 {
 id: "ai-cybersecurity-automation";
 title: "AI Cybersecurity Automation";,
@@ -181,12 +171,10 @@ marketPrice: "$12;000 - $20;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["AI", "Machine Learning", "Cybersecurity", "Automation"],
 estimatedDelivery: "4-6 weeks";,
-supportLevel: "premium",
-}
+supportLevel: "premium"}
 ];
 export const INNOVATIVE_SERVICE_CATEGORIES = [
 "AI & Automation",

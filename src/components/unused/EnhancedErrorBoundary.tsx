@@ -4,8 +4,7 @@ import { ExclamationTriangleIcon;
 ArrowPathIcon;
 HomeIcon;
 DocumentTextIcon;
-BugAntIcon;
-} from "@heroicons/react/24/outline, ";
+BugAntIcon} from "@heroicons/react/24/outline, ";
 
 interface Props {
 children: ReactNode;
@@ -18,8 +17,7 @@ hasError: boolean;
 error: Error | null;
 errorInfo: ErrorInfo | null;
 errorId: string | null;,
-showStackTrace: boolean;,
-};
+showStackTrace: boolean;};
 class EnhancedErrorBoundary extends Component<Props; State> {
 constructor(props: Props) {
 super(props);
@@ -28,16 +26,14 @@ hasError: false;
 error: null;
 errorInfo: null;
 errorId: null;,
-showStackTrace: false;,
-};
+showStackTrace: false;};
 }
 
 static getDerivedStateFromError(error: Error): Partial<State> {
 return {
 hasError: true;
 error;,
-errorId: this.generateErrorId(),
-};
+errorId: this.generateErrorId()};
 }
 
 componentDidCatch(error: Error; errorInfo: ErrorInfo) {
@@ -68,17 +64,14 @@ timestamp: new Date().toISOString();
 error: {
 name: error.name;
 message: error.message;,
-stack: error.stack;,
-};
+stack: error.stack;};
 errorInfo: {,
-componentStack: errorInfo.componentStack;,
-};
+componentStack: errorInfo.componentStack;};
 userAgent: navigator.userAgent;
 url: window.location.href;
 viewport: {
 width: window.innerWidth;,
-height: window.innerHeight;,
-}
+height: window.innerHeight;}
 };
 // Log to console for development;
 if (process.env.NODE_ENV === "development") {
@@ -98,8 +91,7 @@ hasError: false;
 error: null;
 errorInfo: null;
 errorId: null;,
-showStackTrace: false;,
-});
+showStackTrace: false;});
 };
 
 private handleGoHome = () => {

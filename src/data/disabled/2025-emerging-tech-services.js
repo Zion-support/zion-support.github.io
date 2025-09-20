@@ -37,8 +37,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 60;
         setupTime: '2-4 weeks';
         competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
@@ -90,8 +89,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 45;
         setupTime: '4-6 weeks';
         competitors: ['Intel', 'IBM', 'BrainChip', 'General Vision'],
@@ -143,8 +141,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 90;
         setupTime: '8-12 weeks';
         competitors: ['Microsoft Research', 'Illumina', 'Oxford Nanopore', 'Twist Bioscience'],
@@ -196,8 +193,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 60;
         setupTime: '6-10 weeks';
         competitors: ['Intel', 'IBM', 'Hewlett Packard', 'Cisco'],
@@ -249,8 +245,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 75;
         setupTime: '10-16 weeks';
         competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics', 'Zymergen'],
@@ -302,8 +297,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 45;
         setupTime: '6-8 weeks';
         competitors: ['Boston Dynamics', 'ABB Robotics', 'KUKA', 'FANUC'],
@@ -355,8 +349,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 120;
         setupTime: '12-20 weeks';
         competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'Emotiv'],
@@ -408,8 +401,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 60;
         setupTime: '8-12 weeks';
         competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics', 'Zymergen'],

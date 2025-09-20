@@ -25,7 +25,7 @@ zion-tech-group"email: ",
 kleber@ziontechgroup.com"avatarUr;l: ",
 http;s://ziontechgroup.com/logo.png" },
 images: [",
-http,, s://ziontechgroup.com/images/ai-content-studio.jpg"],
+http, s://ziontechgroup.com/images/ai-content-studio.jpg"],
 createdAt: ",
 20;
 o24-0;
@@ -48,13 +48,12 @@ kleber@ziontechgroup.com"website: ",
 http;s: //ziontechgroup.com/ai-content-studio"addres; s: ",
 36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
-o9",
-},
+o9"},
 marketPrice: "$20;
 o0-50;
 o0/month",
 competitors: [",
-Jasper",, ",
+Jasper", ",
 Copy.ai"",
 Writesonic"],
 roi: ",
@@ -66,7 +65,7 @@ WordPress", ",
 Shopify", ",
 HubSpot", ",
 Mailchimp"",
-Social; Media,, Platforms"],},
+Social; Media, Platforms"]},
 {
 id: ",
 ai-customer-support-automation-suite",
@@ -90,7 +89,7 @@ zion-tech-group"email: ",
 kleber@ziontechgroup.com"avatarUr;l: ",
 http;s://ziontechgroup.com/logo.png" },
 images: [",
-http,, s://ziontechgroup.com/images/ai-support-suite.jpg"],
+http, s://ziontechgroup.com/images/ai-support-suite.jpg"],
 createdAt: ",
 20;
 o24-0;
@@ -113,12 +112,11 @@ kleber@ziontechgroup.com"website: ",
 http;s: //ziontechgroup.com/ai-support-suite"addres; s: ",
 36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
-o9",
-},
+o9"},
 marketPrice: "$15; 0-40;
 o0/month",
 competitors: [",
-Intercom",, ",
+Intercom", ",
 Zendesk"",
 Freshworks"],
 roi: ",
@@ -155,7 +153,7 @@ zion-tech-group"email: ",
 kleber@ziontechgroup.com"avatarUr;l: ",
 http;s://ziontechgroup.com/logo.png" },
 images: [",
-http,, s://ziontechgroup.com/images/ai-marketing-platform.jpg"],
+http, s://ziontechgroup.com/images/ai-marketing-platform.jpg"],
 createdAt: ",
 20;
 o24-0;
@@ -178,13 +176,12 @@ kleber@ziontechgroup.com"website: ",
 http;s: //ziontechgroup.com/ai-marketing-platform"addres; s: ",
 36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
-o9",
-},
+o9"},
 marketPrice: "$30;
 o0-80;
 o0/month",
 competitors: [",
-HubSpot",, ",
+HubSpot", ",
 Marketo"",
 Pardot"],
 roi: ",
@@ -197,5 +194,5 @@ Shopify", ",
 WooCommerce", ",
 Google Analytics", ",
 Facebook Ads"",
-Google; Ads"],};
+Google; Ads"]};
 ];

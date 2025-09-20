@@ -1,10 +1,10 @@
 
 import React, { useState } from "react",
-import { useToast,  } from "@/hooks/use-toast",
-import { Button,  } from "@/components/ui/button",
-import { Input,  } from "@/components/ui/input";
-import { Textarea,  } from "@/components/ui/textarea";
-import { Sparkles,  } from 'lucide-react'
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles } from 'lucide-react';
 interface AIListingFormProps {
   onSubmit: (formData: {,
 title: string;
@@ -138,8 +138,7 @@ onClick={handleSubmit}
 }: AIListingFormProps) {
   if (!title |!category) {
   toast ({
-  return,
-}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
+  return}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)
 }</Button> </div>)
 }'"

@@ -44,8 +44,7 @@ export const SPECIALIZED_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/5g-enterprise-network-solutions";
         technologyStack: ["5G Core", "Network Slicing", "SDN", "NFV", "OpenStack", "Kubernetes"],
         roiMetrics: ["90% reduction in network latency", "40% infrastructure cost savings", "99.9% network reliability"]
@@ -95,8 +94,7 @@ export const SPECIALIZED_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/edge-ai-computing-platform";
         technologyStack: ["TensorRT", "ONNX", "Docker", "Kubernetes", "Edge Devices", "5G Networks"],
         roiMetrics: ["95% latency reduction", "80% bandwidth cost savings", "Millions of edge devices supported"]

@@ -1,13 +1,12 @@
 import React from "react",
 import Head from "next/head",
-import Header from "./Header",
-import Footer from "./Footer",
+import Header from "./Header",;
+import Footer from "./Footer",;
 interface LayoutProps {,
 children: React.ReactNode;
 title?: string;
 description?: string;
-keywords?: string,
-};
+keywords?: string};
 export default function Layout({,;
 children;
 title = "Zion Tech Group - Leading AI & Technology Solutions",
@@ -37,6 +36,5 @@ return (,
 </main>,
 <Footer />,
 </div>,
-</>),
-}
+</>)}
 ,<//><///>;

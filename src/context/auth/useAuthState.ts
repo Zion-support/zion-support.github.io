@@ -1,4 +1,4 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect  } from "react, ";
 
 interface User {
 id: string;,
@@ -13,17 +13,15 @@ updatedAt?: string;
 
 interface AuthTokens {
 accessToken: string | null;,
-refreshToken: string | null;,
-}
+refreshToken: string | null;}
 
 export const useAuthState: any = () => {;
-const [user; setUser] = useState<User | null>(null);
-const [isLoading; setIsLoading] = useState(true);
-const [onboardingStep; setOnboardingStep] = useState(0);
-const [tokens; setTokens] = useState<AuthTokens>({
+const [user, setUser] = useState<User | null>(null);
+const [isLoading, setIsLoading] = useState(true);
+const [onboardingStep, setOnboardingStep] = useState(0);
+const [tokens, setTokens] = useState<AuthTokens>({
 accessToken: null;,
-refreshToken: null;,
-});
+refreshToken: null;});
 
 useEffect(() => {
 // Check for existing auth state on mount;
@@ -37,8 +35,7 @@ if (parsed.user && parsed.token) {
 setUser(parsed.user);
 setTokens({
 accessToken: parsed.token;,
-refreshToken: parsed.refreshToken || null;,
-});
+refreshToken: parsed.refreshToken || null;});
 }
 }
 }
@@ -60,6 +57,5 @@ setIsLoading;
 onboardingStep;
 setOnboardingStep;
 tokens;
-setTokens,
-};
+setTokens};
 };

@@ -1,5 +1,4 @@
-action?: string,
-}
+action?: string}
 interface OnboardingTrackerProps {
 return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
@@ -54,8 +53,7 @@ asChild
   step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
 }</div> </div> {"
   !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
-  step.link,
-}> </Link> </Button>)
+  step.link}> </Link> </Button>)
 }</div>) )
 }</div> </div>)
 }"}

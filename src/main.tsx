@@ -19,5 +19,4 @@ root.render(
 <App />;
 </Router>;
 </React.StrictMode>;
-),
-}<//React.StrictMode><///React.StrictMode>;
+)}<//React.StrictMode><///React.StrictMode>;

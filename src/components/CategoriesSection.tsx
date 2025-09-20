@@ -50,29 +50,25 @@ const categories = [{
 description: "Cutting - edge AI solutions chatbots and machine learning"
     icon: "🤖",
 link: "/ai - services"
-    color: "from - purple - 500 to - indigo - 600",
-}
+    color: "from - purple - 500 to - indigo - 600"}
   {
     title: "Micro SAAS",
 description: "Cloud - based software solutions for modern businesses"
     icon: "☁️",
 link: "/micro - saas"
-    color: "from - cyan - 500 to - blue - 600",
-}
+    color: "from - cyan - 500 to - blue - 600"}
   {
     title: "IT Services",
 description: "Infrastructure security and technical consulting"
     icon: "⚡",
 link: "/all - services"
-    color: "from - amber - 500 to - orange - 600",
-}
+    color: "from - amber - 500 to - orange - 600"}
   {
     title: "Digital Transformation",
 description: "Business modernization and digital strategy"
     icon: "📈",
 link: "/all - services"
-    color: "from - emerald - 500 to - green - 600",
-}
+    color: "from - emerald - 500 to - green - 600"}
 ]
 const specialServices = [{
     title: "IT Onsite Services",
@@ -117,8 +113,8 @@ link: "/services - comparison"
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category,) => (
             <Link,
-key = {category.id,}
-              href = {category.link |'#',}
+key = {category.id}
+              href = {category.link |'#'}
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
@@ -139,8 +135,8 @@ key = {category.id,}
           <div className="flex flex-wrap justify-center gap-4">
             {getSpecialServices(t).map((service,) => (
               <Link,
-key = {service.title,}
-                href = {service.link,}
+key = {service.title}
+                href = {service.link}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
@@ -168,16 +164,13 @@ interface CategoriesSectionProps {
   showTitle?: boolean,
 className?: string,
 style?: React.CSSProperties,
-categories?: CategoryType[], //Accept categories as a prop,
-}export function CategoriesSection ({
+categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({
   showTitle = true,
 className
 style,
-categories: fetchedCategories; //Rename prop for clarity,
-}: CategoriesSectionProps) {
+categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {
   const {
-  t,
-}= useTranslation ()
+  t}= useTranslation ()
 const defaultCategories = getDefaultCategories (t)
 //Use fetchedCategories if provided otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
   id: cat.id;",
@@ -200,8 +193,7 @@ icon: getIcon (cat.iconName)
 }return (</p> </div>)
 }</div> </Link>) )
 }</div> > {
-  service.title,
-}</Link>) ) "
+  service.title}</Link>) ) "
 }</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {'
   t ('home.view all categories')
 }</Link> </div> </div> </section>)

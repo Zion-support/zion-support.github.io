@@ -3,7 +3,7 @@ id: string;
 name: string;
 }
 
-import React from "react",
+import React from "react",;
 const ProjectDetailsFields: React.FC = () => {
 ,
 return (,
@@ -14,8 +14,8 @@ return (,
 </div>)},
 export default ProjectDetailsFields,;<//div><///div>
 
-import { format,  } from "date-fns";
-import { CalendarIcon,  } from 'lucide-react'
+import { format } from "date-fns";
+import { CalendarIcon } from 'lucide-react';
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
@@ -26,8 +26,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 control={form.control}
         name='projectName'
         render={({
-          field,
-}: {
+          field}: {
           field: ControllerRenderProps<ContractFormValues 'projectName'>
         }) => (
           <FormItem>
@@ -49,8 +48,7 @@ control={form.control}
 control={form.control}
         name='scopeSummary'
         render={({
-          field,
-}: {
+          field}: {
           field: ControllerRenderProps<ContractFormValues 'scopeSummary'>
         }) => (          <FormItem>
             <FormLabel>Scope Summary</FormLabel>
@@ -84,14 +82,13 @@ placeholder='Describe the project scope deliverables and expectations...'
 control={form.control}
           name='startDate'
           render={({
-            field,
-}: {
+            field}: {
             field: ControllerRenderProps<ContractFormValues 'startDate'>
           }) => (
             <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField,
-control = {form.control,}
+control = {form.control}
           name="startDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> },) => (
             <FormItem className="flex flex-col">
@@ -116,9 +113,9 @@ mode='single'
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={date => date < new Date()}                    initialFocus                    mode="single"
-                    selected = {field.value,}
-                    onSelect = {field.onChange,}
-                    disabled = {(date,) => date < new Date(),}
+                    selected = {field.value}
+                    onSelect = {field.onChange}
+                    disabled = {(date,) => date < new Date()}
                     >
                       {field.value ? (
                         format(field.value, "PPP")
@@ -147,13 +144,12 @@ mode="single"
 control={form.control}
           name='endDate'
           render={({
-            field,
-}: {
+            field}: {
             field: ControllerRenderProps<ContractFormValues 'endDate'>
           }) => (
             <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
         <FormField,
-control = {form.control,}
+control = {form.control}
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> },) => (
             <FormItem className="flex flex-col">
@@ -178,9 +174,9 @@ mode='single'
                     selected={field.value |undefined}
                     onSelect={field.onChange}
                     disabled={date => date < form.getValues('startDate')}                    initialFocus                    mode="single"
-                    selected = {field.value |undefined,}
-                    onSelect = {field.onChange,}
-                    disabled = {(date,) => date < form.getValues("startDate"),}
+                    selected = {field.value |undefined}
+                    onSelect = {field.onChange}
+                    disabled = {(date,) => date < form.getValues("startDate")}
                     >
                       {field.value ? (
                         format(field.value, "PPP")

@@ -6,7 +6,7 @@ name: string;
 import React from "react";
 
 import { Fragment } from "react, ";
-import { Route; Routes } from "react-router-dom, ";
+import { Route, Routes  } from "react-router-dom, ";
 import { ProtectedRoute } from "@/components/ProtectedRoute, ";
 import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";

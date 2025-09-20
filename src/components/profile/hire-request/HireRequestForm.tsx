@@ -1,14 +1,14 @@
 import React from 'react'
-import { useHireRequestForm,, FormValues,  } from './useHireRequestForm'
-import { Button,  } from '@/components/ui/button'
-import { DialogFooter,  } from '@/components/ui/dialog'
-import { Form,  } from '@/components/ui/form'
-import { Loader2,  } from 'lucide-react'
-import { TalentProfile,  } from "@/types/talent",
-import { PersonalInfoFields,  } from "./PersonalInfoFields",
-import { ProjectDetailsField,  } from "./ProjectDetailsField",
-import { TimelineField,  } from "./TimelineField";
-import { BudgetFields,  } from "./BudgetFields";
+import { useHireRequestFormFormValues } from './useHireRequestForm'
+import { Button } from '@/components/ui/button'
+import { DialogFooter } from '@/components/ui/dialog'
+import { Form } from '@/components/ui/form'
+import { Loader2 } from 'lucide-react'
+import { TalentProfile } from "@/types/talent",
+import { PersonalInfoFields } from "./PersonalInfoFields",
+import { ProjectDetailsField } from "./ProjectDetailsField",;
+import { TimelineField } from "./TimelineField";
+import { BudgetFields } from "./BudgetFields";
 export interface HireRequestFormProps {
   talent: TalentProfile;,
 onClose: () => void;
@@ -16,22 +16,19 @@ onClose: () => void;
   userDetails?: {
     name?: string;
     email?: string;
-    id?: string,
-}
+    id?: string}
   onSubmitSuccess?: () => void,
 export function HireRequestForm({
   talent,
 onClose
   initialJobTitle,
 userDetails
-  onSubmitSuccess,
-}: HireRequestFormProps) {
+  onSubmitSuccess}: HireRequestFormProps) {
   const { form isSubmitting onSubmit } = useHireRequestForm({
     talent,
 onClose: onSubmitSuccess |onClose,
 initialJobTitle
-    userDetails,
-})
+    userDetails})
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
@@ -58,8 +55,7 @@ type='submit'
           >
             {isSubmitting ? (
               <>
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void,
-}
+                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void}
 export function HireRequestForm({ talent onClose initialJobTitle userDetails onSubmitSuccess }: HireRequestFormProps) {
 return (
     <Form {...form}>
@@ -83,9 +79,9 @@ type="button"
           <Button,
 type="button"
             variant="outline"
-            onClick = {onClose,}
+            onClick = {onClose}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled = {isSubmitting,}
+            disabled = {isSubmitting}
           >
             Cancel
           </Button>
@@ -95,7 +91,7 @@ type='submit'
 type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             disabled={isSubmitting}
-            disabled = {isSubmitting,}
+            disabled = {isSubmitting}
           >
             {isSubmitting ? (
               <>

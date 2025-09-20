@@ -199,8 +199,7 @@ export const PerformanceOptimizer = ({ children }) => {
                 });
             },  {
                 rootMargi, n: '50px',
-    threshol, d: 0.1,
-            });
+    threshol, d: 0.1});
             // Observe all images with data-src;
             const lazyImages = document.querySelectorAll('img[dat,  a-s, r, c]');
             lazyImages.forEach((img) => observer.observe(img));

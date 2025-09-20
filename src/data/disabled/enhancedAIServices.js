@@ -9,8 +9,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 2990;
             custom: "Enterprise pricing available";
             currency: "$";
-            pricingModel: "Monthly subscription with usage-based pricing",
-        };
+            pricingModel: "Monthly subscription with usage-based pricing"};
         features: [
             "Natural language processing";
             "Multi-language support",
@@ -50,8 +49,7 @@ export const ENHANCED_AI_SERVICES = [
         link: "https://ziontechgroup.com/ai-chatbot-platform";
         badge: "Popular";
         icon: "💬";
-        image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500",
-    };
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500"};
     {
         id: "ai-content-generation-suite";
         title: "AI Content Generation Suite";
@@ -62,8 +60,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1990;
             custom: "Agency and enterprise plans";
             currency: "$";
-            pricingModel: "Monthly subscription with content volume tiers",
-        };
+            pricingModel: "Monthly subscription with content volume tiers"};
         features: [
             "Blog post generation";
             "Social media content",
@@ -102,8 +99,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-content-generation-suite";
         icon: "✍️";
-        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500",
-    };
+        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500"};
     {
         id: "ai-image-generation-platform";
         title: "AI Image Generation Platform";
@@ -114,8 +110,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1490;
             custom: "Custom enterprise solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with image generation credits",
-        };
+            pricingModel: "Monthly subscription with image generation credits"};
         features: [
             "Text-to-image generation";
             "Image editing and manipulation",
@@ -154,8 +149,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-image-generation-platform";
         icon: "🎨";
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-    };
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
     {
         id: "ai-predictive-analytics";
         title: "AI Predictive Analytics Platform";
@@ -166,8 +160,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 3990;
             custom: "Enterprise and custom solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with data volume tiers",
-        };
+            pricingModel: "Monthly subscription with data volume tiers"};
         features: [
             "Time series forecasting";
             "Predictive modeling",
@@ -207,8 +200,7 @@ export const ENHANCED_AI_SERVICES = [
         link: "https://ziontechgroup.com/ai-predictive-analytics";
         badge: "Featured";
         icon: "🔮";
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
-    };
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"};
     {
         id: "ai-process-automation";
         title: "AI Process Automation Platform";
@@ -219,8 +211,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 2490;
             custom: "Enterprise automation solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with process complexity tiers",
-        };
+            pricingModel: "Monthly subscription with process complexity tiers"};
         features: [
             "Intelligent document processing";
             "Workflow automation",
@@ -259,8 +250,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-process-automation";
         icon: "⚙️";
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-    };
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
     {
         id: "ai-customer-insights-platform";
         title: "AI Customer Insights Platform";
@@ -271,8 +261,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 2990;
             custom: "Enterprise customer intelligence";
             currency: "$";
-            pricingModel: "Monthly subscription with customer data volume tiers",
-        };
+            pricingModel: "Monthly subscription with customer data volume tiers"};
         features: [
             "Customer segmentation";
             "Behavioral analysis",
@@ -311,8 +300,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-customer-insights-platform";
         icon: "👥";
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
-    };
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"};
     {
         id: "ai-voice-assistant-platform";
         title: "AI Voice Assistant Platform";
@@ -323,8 +311,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1990;
             custom: "Custom voice solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with usage-based pricing",
-        };
+            pricingModel: "Monthly subscription with usage-based pricing"};
         features: [
             "Natural language understanding";
             "Multi-language support",
@@ -363,8 +350,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-voice-assistant-platform";
         icon: "🎤";
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-    };
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
     {
         id: "ai-data-quality-platform";
         title: "AI Data Quality Platform";
@@ -375,8 +361,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1790;
             custom: "Enterprise data solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with data volume tiers",
-        };
+            pricingModel: "Monthly subscription with data volume tiers"};
         features: [
             "Automated data cleaning";
             "Quality scoring",
@@ -415,8 +400,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-data-quality-platform";
         icon: "🧹";
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
-    };
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"};
     {
         id: "ai-translation-platform";
         title: "AI Translation Platform";
@@ -427,8 +411,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1290;
             custom: "Enterprise translation solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with translation volume tiers",
-        };
+            pricingModel: "Monthly subscription with translation volume tiers"};
         features: [
             "100+ language support";
             "Industry-specific terminology",
@@ -467,8 +450,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-translation-platform";
         icon: "🌍";
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-    };
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
     {
         id: "ai-recommendation-engine";
         title: "AI Recommendation Engine";
@@ -479,8 +461,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 3490;
             custom: "Custom recommendation solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with recommendation volume tiers",
-        };
+            pricingModel: "Monthly subscription with recommendation volume tiers"};
         features: [
             "Collaborative filtering";
             "Content-based filtering",
@@ -520,8 +501,7 @@ export const ENHANCED_AI_SERVICES = [
         link: "https://ziontechgroup.com/ai-recommendation-engine";
         badge: "Premium";
         icon: "🎯";
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
-    }
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"}
 ];
     export const getAIServiceById = (id) => {
     return ENHANCED_AI_SERVICES.find(service => service.id === id);

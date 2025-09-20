@@ -9,16 +9,14 @@ color?: "primary" | "secondary" | "white" | "custom";
 customColor?: string;
 className?: string;
 text?: string;
-showText?: boolean,
-};
+showText?: boolean};
 export function LoadingSpinner({
 size = "md",;
 color = "primary",;
 customColor;
 className;
 text = "Loading...",
-showText = false,
-}: LoadingSpinnerProps) {
+showText = false}: LoadingSpinnerProps) {
 const sizeClasses = {
 sm: "w-4 h-4",
 md: "w-6 h-6",
@@ -46,8 +44,7 @@ borderColor,
 animate={{ rotate: 360 }}
 transition={{
 duration: 1; repeat: Infinity;,
-ease: "linear",
-}}
+ease: "linear"}}
 role="status";
 aria-label="Loading";
 export function LoadingSpinner({
@@ -56,8 +53,7 @@ color = "primary", ;
 customColor;
 className = "",
 text = "Loading...",
-showText = false,
-}: LoadingSpinnerProps) {
+showText = false}: LoadingSpinnerProps) {
 const sizeClasses = {
 sm: "w-4 h-4",
 md: "w-8 h-8",
@@ -86,8 +82,7 @@ className={`${sizeClasses[size]} ${colorClasses[color]} border-2 rounded-full an
 animate={{ rotate: 360 }}
 transition={{ duration: 1; repeat: Infinity; ease: "linear" }}
 style={{
-borderTopColor: customColor && color === "custom" ? customColor : undefined,
-}}
+borderTopColor: customColor && color === "custom" ? customColor : undefined}}
 />;
 
 {showText && (
@@ -116,8 +111,7 @@ height = "h-4";
 }: {
 className?: string;
 lines?: number;
-height?: string,
-}) {
+height?: string}) {
 return (
 <div className={cn("space-y-3", className)}>;
 {Array.from({ length: lines }).map((_; index) => (
@@ -138,8 +132,7 @@ height = "h-4";
 }: {
 className?: string;
 lines?: number;
-height?: string,
-}) {
+height?: string}) {
 return (
 <div className={`space-y-3 ${className}`}>;
 {Array.from({ length: lines }).map((_; index) => (
@@ -161,8 +154,7 @@ text = "Loading page...",
 className,;
 }: {;
 text?: string;
-className?: string,
-}) {
+className?: string}) {
 return (
 <div className={cn("min-h-screen flex items-center justify-center", className)}>;
 <div className="text-center">;
@@ -175,11 +167,9 @@ return (
 // Button loading state;
 export function ButtonLoader({
 size = "sm",
-className,
-}: {
+className}: {
 size?: "sm" | "md" | "lg",
-className?: string,
-}) {
+className?: string}) {
 return (
 <div className={cn("inline-flex items-center", className)}>;
 <LoadingSpinner size={size} color="white" />;
@@ -190,8 +180,7 @@ text = "Loading page...",
 showSpinner = true, ;
 }: { ;
 text?: string;
-showSpinner?: boolean,
-}) {
+showSpinner?: boolean}) {
 return (
 <motion.div;
 initial={{ opacity: 0 }}
@@ -220,8 +209,7 @@ className = "",
 variant = "default";
 }: { ;
 className?: string;
-variant?: "default" | "card" | "list" | "grid",
-}) {
+variant?: "default" | "card" | "list" | "grid"}) {
 const variants = {
 default: "space-y-4",
 card: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",

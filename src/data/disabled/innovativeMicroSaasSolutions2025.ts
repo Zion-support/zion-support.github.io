@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -76,10 +75,8 @@ marketPrice: "$199 - $799/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
-websiteUrl: "https://ziontechgroup.com/ai-content-generation",
-};
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-content-generation"};
 // Blockchain DeFi Analytics Platform;
 {
 id: "blockchain-defi-analytics-platform";
@@ -128,10 +125,8 @@ marketPrice: "$299 - $1;299/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
-websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics",
-};
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"};
 // IoT Smart Home Management Platform;
 {
 id: "iot-smart-home-management";
@@ -180,10 +175,8 @@ marketPrice: "$149 - $599/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
-websiteUrl: "https://ziontechgroup.com/iot-smart-home",
-};
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/iot-smart-home"};
 // AI-Powered Customer Service Automation;
 {
 id: "ai-customer-service-automation";
@@ -232,10 +225,8 @@ marketPrice: "$249 - $999/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
-websiteUrl: "https://ziontechgroup.com/ai-customer-service",
-};
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-customer-service"};
 // Quantum-Ready Cybersecurity Suite;
 {
 id: "quantum-ready-cybersecurity-suite";
@@ -284,8 +275,6 @@ marketPrice: "$399 - $1;999/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
-websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity",
-}
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"}
 ];

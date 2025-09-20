@@ -1,11 +1,11 @@
 import React from "react";
 
 import * as React from "react"
-import type { CSSProperties } from "react"
+import type { CSSProperties } from "react";
 import { Sheet; SheetContent  } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
-import { useSidebar } from "./sidebar-context"
-import type { SafeRef } from "../sidebar.types"
+import { useSidebar } from "./sidebar-context";
+import type { SafeRef } from "../sidebar.types";
 
 export interface SidebarProps extends React.ComponentProps<"div"> {
 side?: "left" | "right";
@@ -40,9 +40,7 @@ data-mobile="true";
 className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
 style={
 {
-"--sidebar-width": "18rem",
-} as CSSProperties,
-}
+"--sidebar-width": "18rem"} as CSSProperties}
 side={props.side}
 >;
 <div className="flex h-full w-full flex-col">{props.children}</div>;

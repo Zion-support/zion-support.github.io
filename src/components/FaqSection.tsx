@@ -48,7 +48,7 @@ while complex enterprise solutions can take 3-6 months or more.;
 </div>;
 );
 }<//div><///div>;
-import { FileText,  } from 'lucide-react'
+import { FileText } from 'lucide-react';
 const faqs = [
   {
     question: 'How do I publish my AI product or service?',

@@ -1,5 +1,5 @@
-import { useState,, useEffect,, ,  } from 'react';
-import { Search,  } from 'lucide-react'
+import { useState, useEffect } from 'react';
+import { Search } from 'lucide-react';
 interface CountryTabsProps {
   popularCountries: string[];,
 filteredCountries: CountryPricing[];

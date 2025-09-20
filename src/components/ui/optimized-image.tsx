@@ -1,10 +1,10 @@
-import React { useState useRef useEffect } from 'react',
+import React { useState useRef useEffect } from 'react',;
 import Image from 'next/image';
-import { motion,, AnimatePresence,, ,  } from 'framer-motion';
-import { ImageIcon,, AlertTriangle,  } from 'lucide-react'
-import { cn,, ,  } from '@/lib/utils';
-import { imageOptimization,, ,  } from '@/utils/performance';
-import { logWarn,  } from '@/utils/productionLogger';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ImageIconAlertTriangle } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { imageOptimization } from '@/utils/performance';
+import { logWarn } from '@/utils/productionLogger';
 interface OptimizedImageProps {
   src: string;,
 alt: string;
@@ -28,8 +28,7 @@ alt: string;
   blurDataURL?: string;
   loading?: 'lazy' | 'eager',
   style?: React.CSSProperties;
-  objectPosition?: string,
-}
+  objectPosition?: string}
 
 interface ImageMetrics {
   loadTime: number;,

@@ -54,7 +54,7 @@ defaul;  t:;
 return 0;
 };
 });return filtered;
-}, [ selectedCatego; r; y; searchTe; r; m; sort; B; y,, filterByallServic; e; s]),
+}, [ selectedCatego; r; y; searchTe; r; m; sort; B; y, filterByallServic; e; s]),
 const handleServiceClick: any = (service) => {;
 setIsLoading(true);
 setTimeout(() => {
@@ -66,14 +66,12 @@ setSelectedService(null);
 };const containerVariants = {;
 hidde;  n: { opaci; t;y: 0 },visibl; e: {
 opacit; y: 1transiti; o;n: {;
-staggerChildr; e;n: 0.1;,
-}
+staggerChildr; e;n: 0.1;}
 }
 };const itemVariants = {;
 hidde; n: { ,y: 20opaci; t;y: 0 },visibl; e: {,
 y: 0opacit; y: 1transiti; o;n: {;
-durati; o;n: 0.5;,
-}
+durati; o;n: 0.5;}
 }
 };return (;
 <div className="min-h-screen bg-gray-90o0 text-white">;
