@@ -101,19 +101,16 @@ excerpt: `${contentSnippet} This comprehensive guide explores the latest develop
 content: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}. We"ll dive deep into the fundamentals; examine real-world applications; and provide actionable insights for implementation.`,
 author: {,
 name: "Zion Tech Group",
-avatar: "/images/zion-tech-group-logo.png",
-},
+avatar: "/images/zion-tech-group-logo.png"},
 publishedAt: new Date().toISOString(),
 tags: [topic, "Technology", "Innovation", "Guide"],
 image: "/images/blog-placeholder.jpg",
-readTime: Math.floor(Math.random() * 10) + 5,
-};
+readTime: Math.floor(Math.random() * 10) + 5};
 }
 
 export function generateMultipleBlogPosts(count: number): BlogPost[] {
 const posts: BlogPost[] = [];
 for (let i = 0; i < count; i++) {
-posts.push(generateRandomBlogPost()),
-}
+posts.push(generateRandomBlogPost())}
 return posts;
 }

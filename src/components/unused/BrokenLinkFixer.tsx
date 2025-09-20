@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { LinkIcon;
 ExclamationTriangleIcon;
 CheckCircleIcon;
@@ -9,8 +9,7 @@ WrenchScrewdriverIcon;
 InformationCircleIcon;
 MagnifyingGlassIcon;
 GlobeAltIcon;
-DocumentTextIcon;
-} from "@heroicons/react/24/outline, ";
+DocumentTextIcon} from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {
 url: string;,
@@ -21,8 +20,7 @@ lastChecked: Date;
 parentPage?: string;
 element?: HTMLElement;
 suggestedFix?: string;,
-fixable: boolean;,
-};
+fixable: boolean;};
 interface BrokenLinkFixerProps {
 className?: string;
 autoCheck?: boolean;
@@ -35,17 +33,16 @@ autoCheck = true;
 showDetails = true;
 fixBrokenLinks = true;
 }) => {
-const [isOpen; setIsOpen] = useState(false);
-const [links; setLinks] = useState<LinkStatus[]>([]);
-const [isChecking; setIsChecking] = useState(false);
-const [activeTab; setActiveTab] = useState<"overview" | "broken" | "healthy" | "actions">("overview");
-const [stats; setStats] = useState({
+const [isOpen, setIsOpen] = useState(false);
+const [links, setLinks] = useState<LinkStatus[]>([]);
+const [isChecking, setIsChecking] = useState(false);
+const [activeTab, setActiveTab] = useState<"overview" | "broken" | "healthy" | "actions">("overview");
+const [stats, setStats] = useState({
 total: 0;
 healthy: 0;,
 broken: 0;,
 checking: 0;,
-unknown: 0;,
-});
+unknown: 0;});
 // Find all links on the page;
 const findAllLinks = useCallback(() => {;
 const linkElements = document.querySelectorAll("a[href]");
@@ -60,8 +57,7 @@ lastChecked: new Date();
 parentPage: window.location.pathname;,
 element: element as HTMLElement;,
 fixable: false;,
-suggestedFix: "",
-};
+suggestedFix: ""};
 // Determine if link is fixable;
 if (href.startsWith("#")) {
 // Internal anchor links;
@@ -145,8 +141,7 @@ return {
 ...link;
 status: "broken";,
 error: error instanceof Error ? error.message : "Unknown error";,
-lastChecked: new Date() ,
-};
+lastChecked: new Date() };
 }
 }, []);
 
@@ -162,8 +157,7 @@ total: allLinks.length;
 healthy: 0;,
 broken: 0;,
 checking: 0;,
-unknown: allLinks.length;,
-});
+unknown: allLinks.length;});
 // Check links in batches to avoid overwhelming the system;
 const batchSize = 5;
 for (let i = 0; i < allLinks.length; i += batchSize) {
@@ -288,8 +282,7 @@ switch (status) {;
 case "healthy": return "text-green-600 bg-green-100 dark:bg-green-900/30";
 case "broken": return "text-red-600 bg-red-100 dark: bg-red-900/30";
 case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";,
-default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";,
-}
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}
 };
 
 // Get status icon;
@@ -298,8 +291,7 @@ switch (status) {;
 case "healthy": return <CheckCircleIcon className="w-4 h-4 text-green-600" />;
 case "broken": return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />;
 case "checking": return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />;,
-default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;,
-}
+default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;}
 };
 
 return (
@@ -349,8 +341,7 @@ onClick={() => setActiveTab(tab as any)}
 className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${
 activeTab === tab;
 ? "text-orange-600 border-b-2 border-orange-600";
-: "text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300",
-}`}
+: "text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}`}
 >;
 {tab.charAt(0).toUpperCase() + tab.slice(1)}
 </button>;
@@ -561,8 +552,7 @@ url: link.url;
 status: link.status;,
 error: link.error;,
 lastChecked: link.lastChecked.toISOString();,
-fixable: link.fixable;,
-}))
+fixable: link.fixable;}))
 };
 const blob = new Blob([JSON.stringify(report; null; 2)], { type: "application/json" });
 const url = URL.createObjectURL(blob);
@@ -590,18 +580,14 @@ Export Report;
 outline: 3px solid #f97316 !important;
 outline-offset: 2px !important;
 background-color: rgba(249; 115; 22; 0.1) !important;,
-transition: all 0.3s ease !important;,
-}
+transition: all 0.3s ease !important;}
 
 .link-target-placeholder {
-animation: pulse 2s infinite;,
-}
+animation: pulse 2s infinite;}
 
 @keyframes pulse {
-0%, 100% { opacity: 1;,
-}
-50% { opacity: 0.7;,
-}
+0%, 100% { opacity: 1;}
+50% { opacity: 0.7;}
 }
 `}</style>;
 </>;

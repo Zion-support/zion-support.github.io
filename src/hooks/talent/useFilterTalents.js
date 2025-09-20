@@ -99,6 +99,5 @@ export function useFilterTalents(talents = []) {
         toggleSkill,
         toggleAvailability,
         toggleRegion,
-        clearFilters,
-    };
+        clearFilters};
 }

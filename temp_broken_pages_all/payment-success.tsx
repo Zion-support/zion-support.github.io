@@ -19,13 +19,13 @@ export default function PaymentSuccess() {
           {t('errors.payment_success_message')}
         </p>
         <div className='flex flex-col space-y-3'>
-          <Button,
+          <Button
 onClick={() => router.push('/dashboard')} // Changed to router.push,
 className='bg-zion-purple hover:bg-zion-purple-dark text-white'
           >
             {t('errors.go_to_dashboard')}
           </Button>
-          <Button,
+          <Button
 variant='outline'
             onClick={() => router.push('/')} // Changed to router.push,
 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >  return (
@@ -39,13 +39,13 @@ className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light
           {t('errors.payment_success_message')}
         </p>
         <div className="flex flex-col space-y-3">
-          <Button,
+          <Button
 onClick={() => router.push('/dashboard')} // Changed to router.push,
 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {t('errors.go_to_dashboard')}
           </Button>
-          <Button,
+          <Button
 variant="outline"
             onClick={() => router.push('/')} // Changed to router.push,
 className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"

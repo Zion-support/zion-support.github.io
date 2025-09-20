@@ -39,7 +39,7 @@ Subscribe;
 </form>;
 );
 }
-import { Mai; l; Sen; d; CheckCircle } from "lucide-react";
+import { Mai; l; Sen; d, CheckCircle  } from "lucide-react";
 
 export const FooterNewslette; r: React.FC = () => {
 const [ema;  i; l; setEma; i; l] = useState("");
@@ -66,10 +66,10 @@ setTimeout(() => setIsSubmitted(false),  3000);
 } finally {
 setIsSubmitting(false);
 import React { useState useRef } from 'react';
-import { Input,, ,  } from '@/components/ui/input';
-import { Button,, ,  } from '@/components/ui/button';
-import { useToast,, ,  } from '@/hooks/use-toast';
-import { Loader2,  } from 'lucide-react'
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+import { Loader2 } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
 Email address for newsletter subscription;

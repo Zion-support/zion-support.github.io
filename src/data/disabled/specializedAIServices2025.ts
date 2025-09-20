@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {,
 phone: string;,
 email: string;,
-website: string;,
-};
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -30,8 +29,7 @@ competitors: string[];
 innovationLevel: string;,
 marketTrend: string;,
 aiModel: string;,
-trainingData: string;,
-}
+trainingData: string;}
 
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
 // Multimodal AI Platform;
@@ -82,8 +80,7 @@ marketPrice: "$1;500 - $6;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["GPT-5", "CLIP", "Whisper", "DALL-E", "PyTorch"],
 integrations: ["AWS", "Azure", "Google Cloud", "OpenAI", "Hugging Face"],
 compliance: ["SOC 2", "ISO 27001", "GDPR"],
@@ -92,8 +89,7 @@ competitors: ["OpenAI", "Google AI", "Microsoft AI", "Anthropic"],
 innovationLevel: "Breakthrough",
 marketTrend: "Explosive Growth",
 aiModel: "GPT-5 + Multimodal Models",
-trainingData: "Proprietary + Public Datasets",
-},
+trainingData: "Proprietary + Public Datasets"},
 
 // AI-Powered Predictive Healthcare Analytics;
 // AI-Powered Drug Discovery Platform;
@@ -144,8 +140,7 @@ marketPrice: "$25;000 - $100;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Deep Learning", "Molecular Dynamics", "Quantum Chemistry", "Bioinformatics"],
 integrations: ["Lab Management Systems", "Clinical Trial Platforms", "Research Databases"],
 compliance: ["FDA", "EMA", "HIPAA", "GxP"],
@@ -154,8 +149,7 @@ competitors: ["Insilico Medicine", "Atomwise", "BenevolentAI", "Exscientia"],
 innovationLevel: "Revolutionary",
 marketTrend: "High Growth",
 aiModel: "Custom Drug Discovery Models",
-trainingData: "Proprietary Pharmaceutical Data",
-},
+trainingData: "Proprietary Pharmaceutical Data"},
 
 // Autonomous Financial Trading AI;
 // AI-Powered Financial Trading Platform;
@@ -206,8 +200,7 @@ marketPrice: "$10;000 - $50;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Deep Learning", "Reinforcement Learning", "Time Series Analysis", "NLP"],
 integrations: ["Bloomberg", "Reuters", "Trading Platforms", "Risk Systems"],
 compliance: ["SEC", "FINRA", "SOX", "Basel III"],
@@ -216,8 +209,7 @@ competitors: ["Quantopian", "Alpaca", "Interactive Brokers", "TD Ameritrade"],
 innovationLevel: "Advanced",
 marketTrend: "High Growth",
 aiModel: "Custom Financial AI Models",
-trainingData: "Market Data + Historical Trading Data",
-},
+trainingData: "Market Data + Historical Trading Data"},
 
 // AI-Powered Supply Chain Optimization;
 // AI-Powered Climate Prediction Engine;
@@ -268,8 +260,7 @@ marketPrice: "$5;000 - $25;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Deep Learning", "Computer Vision", "Time Series Analysis", "Geospatial AI"],
 integrations: ["Satellite Data", "Weather APIs", "GIS Systems", "Environmental Databases"],
 compliance: ["Environmental Standards", "Data Privacy", "Government Regulations"],
@@ -278,8 +269,7 @@ competitors: ["IBM Weather", "AccuWeather", "The Weather Company", "Climate AI"]
 innovationLevel: "Advanced",
 marketTrend: "Growing",
 aiModel: "Custom Climate Prediction Models",
-trainingData: "Satellite + Historical Climate Data",
-},
+trainingData: "Satellite + Historical Climate Data"},
 
 // AI-Powered Legal Research Assistant;
 {
@@ -329,8 +319,7 @@ marketPrice: "$800 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["NLP", "Document Analysis", "Machine Learning", "Legal AI"],
 integrations: ["Legal Databases", "Document Management", "Case Management", "Compliance Systems"],
 compliance: ["Legal Standards", "Data Privacy", "Bar Association Rules"],
@@ -339,8 +328,7 @@ competitors: ["LexisNexis", "Westlaw", "Casetext", "Ravel Law"],
 innovationLevel: "Advanced",
 marketTrend: "Growing",
 aiModel: "Custom Legal AI Models",
-trainingData: "Legal Documents + Case Law",
-},
+trainingData: "Legal Documents + Case Law"},
 
 // AI-Powered Educational Personalization;
 // AI-Powered Creative Design Platform;
@@ -391,8 +379,7 @@ marketPrice: "$400 - $1;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["DALL-E", "Midjourney", "Stable Diffusion", "Computer Vision"],
 integrations: ["Adobe Creative Suite", "Canva", "Figma", "Social Media Platforms"],
 compliance: ["Copyright", "Intellectual Property", "Data Privacy"],
@@ -401,6 +388,5 @@ competitors: ["Canva", "Adobe", "Figma", "Midjourney"],
 innovationLevel: "Breakthrough",
 marketTrend: "Explosive Growth",
 aiModel: "DALL-E + Custom Design Models",
-trainingData: "Creative Design Datasets",
-}
+trainingData: "Creative Design Datasets"}
 ];

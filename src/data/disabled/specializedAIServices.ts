@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface SpecializedAIService {
 id: string;
 title: string;
@@ -19,8 +19,7 @@ marketPrice: string;
 contactInfo: {,
 phone: string;,
 email: string;,
-website: string;,
-};
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -29,8 +28,7 @@ competitors: string[];
 marketTrend: string;,
 implementationComplexity: string;,
 aiModel: string[];,
-trainingData: string;,
-}
+trainingData: string;}
 
 export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
 // Large Language Model (LLM) Services;
@@ -81,8 +79,7 @@ marketPrice: "$15;000 - $50;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["PyTorch", "TensorFlow", "Hugging Face", "Transformers", "CUDA", "Distributed Training"],
 integrations: ["Data Lakes", "MLOps Platforms", "API Gateways", "Monitoring Tools", "Security Systems"],
 compliance: ["GDPR", "HIPAA", "SOC 2", "Industry-specific Standards", "Data Privacy"],
@@ -91,8 +88,7 @@ competitors: ["OpenAI", "Anthropic", "Cohere", "AI21 Labs", "Hugging Face"],
 marketTrend: "Explosive growth market with $100B+ by 2030";,
 implementationComplexity: "Very High - Requires AI/ML expertise and significant computational resources";,
 aiModel: ["GPT-4", "Claude", "LLaMA", "Custom Models", "Fine-tuned Models"],
-trainingData: "Enterprise data; industry-specific datasets; custom training data",
-},
+trainingData: "Enterprise data; industry-specific datasets; custom training data"},
 
 // Computer Vision AI Platform;
 {
@@ -142,8 +138,7 @@ marketPrice: "$4;200 - $15;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["OpenCV", "TensorFlow", "PyTorch", "CUDA", "Edge TPU", "Computer Vision Models"],
 integrations: ["Cameras", "IoT Devices", "Cloud Platforms", "Analytics Tools", "Security Systems"],
 compliance: ["GDPR", "Privacy Laws", "Industry Standards", "Security Standards"],
@@ -152,8 +147,7 @@ competitors: ["Google Cloud Vision", "AWS Rekognition", "Azure Computer Vision",
 marketTrend: "High-growth market with $50B+ by 2027";,
 implementationComplexity: "High - Requires computer vision and AI expertise";,
 aiModel: ["YOLO", "ResNet", "EfficientNet", "Custom Models", "Pre-trained Models"],
-trainingData: "Image datasets; industry-specific images; custom training data",
-},
+trainingData: "Image datasets; industry-specific images; custom training data"},
 
 // AI-Powered Cybersecurity;
 {
@@ -203,8 +197,7 @@ marketPrice: "$6;800 - $20;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "PyTorch", "Scikit-learn", "Deep Learning", "NLP", "Graph Analytics"],
 integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Providers", "Monitoring Tools"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
@@ -213,8 +206,7 @@ competitors: ["Darktrace", "CrowdStrike", "SentinelOne", "Cylance", "FireEye"],
 marketTrend: "High-growth market with $60B+ by 2027";,
 implementationComplexity: "High - Requires cybersecurity and AI expertise";,
 aiModel: ["Neural Networks", "Random Forests", "Gradient Boosting", "Custom Models", "Ensemble Methods"],
-trainingData: "Threat data; network logs; security incidents; malware samples",
-},
+trainingData: "Threat data; network logs; security incidents; malware samples"},
 
 // AI-Powered Predictive Analytics;
 {
@@ -264,8 +256,7 @@ marketPrice: "$3;500 - $12;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "R", "TensorFlow", "Scikit-learn", "Prophet", "Time Series Models"],
 integrations: ["Data Warehouses", "BI Tools", "ERP Systems", "CRM Systems", "Analytics Platforms"],
 compliance: ["GDPR", "Data Privacy", "Industry Standards", "Security Standards"],
@@ -274,8 +265,7 @@ competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx", "DataRobot"],
 marketTrend: "Growing market with $30B+ by 2027";,
 implementationComplexity: "Medium - Requires data science and AI expertise";,
 aiModel: ["LSTM", "Random Forests", "Gradient Boosting", "ARIMA", "Prophet Models"],
-trainingData: "Historical data; time series data; business metrics; external datasets",
-},
+trainingData: "Historical data; time series data; business metrics; external datasets"},
 
 // AI-Powered Process Automation;
 {
@@ -325,8 +315,7 @@ marketPrice: "$2;800 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "UiPath", "Automation Anywhere", "Blue Prism", "Machine Learning", "NLP"],
 integrations: ["ERP Systems", "CRM Systems", "Document Management", "Email Systems", "Databases"],
 compliance: ["GDPR", "Industry Standards", "Security Standards", "Process Standards"],
@@ -335,8 +324,7 @@ competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Au
 marketTrend: "High-growth market with $25B+ by 2027";,
 implementationComplexity: "Medium - Requires automation and AI expertise";,
 aiModel: ["Decision Trees", "Neural Networks", "NLP Models", "Computer Vision", "Custom Models"],
-trainingData: "Process data; workflow logs; business rules; historical processes",
-},
+trainingData: "Process data; workflow logs; business rules; historical processes"},
 
 // AI-Powered Customer Intelligence;
 {
@@ -386,8 +374,7 @@ marketPrice: "$3;800 - $12;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "Scikit-learn", "NLP", "Recommendation Systems", "Deep Learning"],
 integrations: ["CRM Systems", "Marketing Platforms", "E-commerce Platforms", "Analytics Tools", "Data Sources"],
 compliance: ["GDPR", "CCPA", "Privacy Laws", "Industry Standards"],
@@ -396,8 +383,7 @@ competitors: ["Salesforce Einstein", "Adobe Sensei", "Google Analytics", "Mixpan
 marketTrend: "High-growth market with $40B+ by 2027";,
 implementationComplexity: "Medium - Requires AI and customer analytics expertise";,
 aiModel: ["Collaborative Filtering", "Content-based Filtering", "Neural Networks", "Gradient Boosting", "Custom Models"],
-trainingData: "Customer data; transaction history; behavioral data; demographic information",
-},
+trainingData: "Customer data; transaction history; behavioral data; demographic information"},
 
 // AI-Powered Supply Chain Optimization;
 {
@@ -447,8 +433,7 @@ marketPrice: "$5;200 - $18;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "Scikit-learn", "Optimization Algorithms", "Time Series Models", "Graph Analytics"],
 integrations: ["ERP Systems", "WMS", "TMS", "Supplier Systems", "Analytics Platforms"],
 compliance: ["Industry Standards", "Quality Standards", "Safety Standards", "Regulatory Compliance"],
@@ -457,8 +442,7 @@ competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software", "Blue Yon
 marketTrend: "Growing market with $35B+ by 2027";,
 implementationComplexity: "High - Requires supply chain and AI expertise";,
 aiModel: ["LSTM", "Random Forests", "Linear Programming", "Genetic Algorithms", "Custom Models"],
-trainingData: "Historical demand; inventory levels; supplier data; logistics information",
-},
+trainingData: "Historical demand; inventory levels; supplier data; logistics information"},
 
 // AI-Powered Quality Assurance;
 {
@@ -508,8 +492,7 @@ marketPrice: "$3;200 - $10;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Selenium", "Appium", "JUnit", "TestNG", "Machine Learning", "NLP", "Computer Vision"],
 integrations: ["CI/CD Pipelines", "Test Management Tools", "Bug Tracking Systems", "Monitoring Tools", "Reporting Tools"],
 compliance: ["Quality Standards", "Testing Standards", "Industry Standards", "Security Standards"],
@@ -518,6 +501,5 @@ competitors: ["Testim", "Applitools", "Mabl", "Functionize", "TestCraft"],
 marketTrend: "Growing market with $20B+ by 2027";,
 implementationComplexity: "Medium - Requires QA and AI expertise";,
 aiModel: ["Neural Networks", "Decision Trees", "Computer Vision", "NLP Models", "Custom Models"],
-trainingData: "Test cases; defect reports; application logs; performance metrics",
-}
+trainingData: "Test cases; defect reports; application logs; performance metrics"}
 ];

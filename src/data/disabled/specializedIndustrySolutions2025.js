@@ -51,8 +51,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technicalSpecs: {
             technology: ["Deep Learning", "Computer Vision", "Python", "React", "PostgreSQL", "DICOM"],
             integrations: ["Epic", "Cerner", "PACS systems", "Lab systems", "Patient portals"],
@@ -117,8 +116,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technicalSpecs: {
             technology: ["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "Redis"],
             integrations: ["Core banking systems", "Payment gateways", "CRM platforms", "Analytics tools"],
@@ -128,8 +126,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             compliance: ["PCI DSS", "SOC 2", "ISO 27001", "Financial regulations"]
         },
         competitors: ["FICO", "LexisNexis", "Experian", "TransUnion"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection",
-    };
+        demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection"};
     // Manufacturing & Industry 4.0;
     {
         id: "smart-manufacturing-platform";
@@ -182,8 +179,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technicalSpecs: {
             technology: ["IoT platforms", "Machine Learning", "Python", "React", "PostgreSQL", "MQTT"],
             integrations: ["SCADA systems", "ERP platforms", "MES systems", "PLC controllers"],
@@ -193,8 +189,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             compliance: ["ISO 27001", "NIST", "Industry standards"]
         },
         competitors: ["Siemens", "GE Digital", "Rockwell Automation", "ABB"],
-        demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing",
-    };
+        demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing"};
     // Retail & E-commerce;
     {
         id: "ai-retail-optimization-platform";
@@ -247,8 +242,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technicalSpecs: {
             technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations: ["POS systems", "E-commerce platforms", "CRM systems", "Analytics tools"],
@@ -258,8 +252,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"]
         },
         competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization",
-    };
+        demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization"};
     // Transportation & Logistics;
     {
         id: "autonomous-logistics-platform";
@@ -312,8 +305,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technicalSpecs: {
             technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations: ["GPS systems", "Fleet management", "WMS systems", "Analytics platforms"],
@@ -323,8 +315,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             compliance: ["Industry standards", "Data privacy", "Security protocols"]
         },
         competitors: ["Manhattan Associates", "Oracle Transportation", "SAP Transportation", "JDA Software"],
-        demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics",
-    };
+        demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics"};
     // Energy & Utilities;
     {
         id: "smart-energy-management-platform";
@@ -377,8 +368,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technicalSpecs: {
             technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
             integrations: ["SCADA systems", "Smart meters", "Building management", "Analytics platforms"],
@@ -388,8 +378,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             compliance: ["NERC CIP", "ISO 27001", "Industry standards"]
         },
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-        demoUrl: "https://ziontechgroup.com/demo/smart-energy-management",
-    };
+        demoUrl: "https://ziontechgroup.com/demo/smart-energy-management"};
     // Education & EdTech;
     {
         id: "ai-education-platform";
@@ -442,8 +431,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technicalSpecs: {
             technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations: ["LMS platforms", "Student information systems", "Content management", "Analytics tools"],
@@ -453,8 +441,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             compliance: ["FERPA", "COPPA", "GDPR", "Data privacy"]
         },
         competitors: ["Blackboard", "Canvas", "Moodle", "Google Classroom"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-education-platform",
-    };
+        demoUrl: "https://ziontechgroup.com/demo/ai-education-platform"};
     // Real Estate & Property Management;
     {
         id: "smart-property-management-platform";
@@ -507,8 +494,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technicalSpecs: {
             technology: ["IoT sensors", "Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
             integrations: ["Building management systems", "IoT platforms", "Payment systems", "Analytics tools"],
@@ -518,8 +504,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             compliance: ["Data privacy", "Industry standards", "Security protocols"]
         },
         competitors: ["Yardi", "RealPage", "AppFolio", "Buildium"],
-        demoUrl: "https://ziontechgroup.com/demo/smart-property-management",
-    };
+        demoUrl: "https://ziontechgroup.com/demo/smart-property-management"};
     // Legal & Compliance;
     {
         id: "ai-legal-compliance-platform";
@@ -572,8 +557,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technicalSpecs: {
             technology: ["Machine Learning", "NLP", "Python", "React", "Node.js", "PostgreSQL"],
             integrations: ["Legal databases", "Document management", "CRM systems", "Analytics tools"],
@@ -583,6 +567,5 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             compliance: ["SOC 2", "ISO 27001", "Legal industry standards"]
         },
         competitors: ["Thomson Reuters", "LexisNexis", "Westlaw", "Bloomberg Law"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance"}
 ];

@@ -6,8 +6,7 @@ status: "healthy" | "unhealthy" | "error";
 statusCode?: number;
 responseTime?: number;
 error?: string;,
-lastChecked: Date;,
-}
+lastChecked: Date;}
 
 export interface LinkHealthConfig {
 timeout?: number;
@@ -24,8 +23,7 @@ this.config = {
 timeout: config.timeout || 10000;,
 retries: config.retries || 3;,
 userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0",
-followRedirects: config.followRedirects !== false;,
-};
+followRedirects: config.followRedirects !== false;};
 }
 
 async checkLink(url: string): Promise<LinkHealthResult> {
@@ -38,8 +36,7 @@ signal: AbortSignal.timeout(this.config.timeout),;
 headers: {;
 "User-Agent": this.config.userAgent;
 },
-redirect: this.config.followRedirects ? "follow" : "manual",
-});
+redirect: this.config.followRedirects ? "follow" : "manual"});
 
 const responseTime = Date.now() - startTime;
 
@@ -49,8 +46,7 @@ url;
 status: "healthy",
 statusCode: response.status;
 responseTime;,
-lastChecked: new Date(),
-};
+lastChecked: new Date()};
 } else {
 return {
 url;
@@ -58,16 +54,14 @@ status: "unhealthy",
 statusCode: response.status;
 responseTime;,
 error: `HTTP ${response.status}: ${response.statusText}`,
-lastChecked: new Date(),
-};
+lastChecked: new Date()};
 }
 } catch (error) {
 return {
 url;
 status: "error",
 error: error instanceof Error ? error.message : "Unknown error",
-lastChecked: new Date(),
-};
+lastChecked: new Date()};
 }
 }
 
@@ -83,8 +77,7 @@ results.push({
 url;
 status: "error",
 error: error instanceof Error ? error.message : "Unknown error",
-lastChecked: new Date(),
-});
+lastChecked: new Date()});
 }
 }
 
@@ -114,8 +107,7 @@ return {
 url;
 status: "error",
 error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-lastChecked: new Date(),
-};
+lastChecked: new Date()};
 }
 
 getHealthSummary(results: LinkHealthResult[]): {
@@ -123,8 +115,7 @@ total: number;
 healthy: number;,
 unhealthy: number;,
 errors: number;,
-averageResponseTime: number;,
-} {
+averageResponseTime: number;} {
 const total = results.length;
 const healthy = results.filter(r => r.status === "healthy").length;
 const unhealthy = results.filter(r => r.status === "unhealthy").length;

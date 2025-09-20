@@ -12,7 +12,7 @@ import { format,, isAfter,, parseISO,, startOfDay,  } from "date-fns";
 function InterviewsContent() {
 return (
     <>
-      <SEO,
+      <SEO
 title='Interviews | Zion AI Marketplace'
         description='Manage your scheduled interviews with clients and talent'
       />
@@ -25,7 +25,7 @@ title='Interviews | Zion AI Marketplace'
             </p>
           </div>
         </div>
-        <Tabs,
+        <Tabs
 defaultValue={activeTab}
           onValueChange={setActiveTab}
           className='space-y-8'

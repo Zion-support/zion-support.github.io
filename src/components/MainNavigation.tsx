@@ -4,9 +4,9 @@ name: string;
 }
 
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { Lin; k; useLocation } from "react-router-dom, ";
-import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bel; l; Settings } from "lucide-react, ";
+import React, { useState, useEffect } from "react";
+import { Lin; k, useLocation  } from "react-router-dom, ";
+import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bel; l, Settings  } from "lucide-react, ";
 import ThemeToggle from "./ThemeToggle;";
 
 export function MainNavigation() {;
@@ -142,8 +142,7 @@ isActive(item.href)
 ? "text-zion-cyan bg-zion-cyan/10";
 : isScrolled;
 ? "text-zion-slate-dark hove;  r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}
 >;
 <span>{item.name}</span>;
 <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hove; r:rotate-180" />;
@@ -173,8 +172,7 @@ onClick={() => setActiveDropdown(null)}
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}>;
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
 <Search className="w-5 h-5" />;
 </button>;
 
@@ -182,8 +180,7 @@ isScrolled;
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}>;
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
 <Bell className="w-5 h-5" />;
 </button>;
 
@@ -195,8 +192,7 @@ isScrolled;
 <button className={`flex items-center space-x-2 p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}>;
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
 <User className="w-5 h-5" />;
 </button>;
 
@@ -229,8 +225,7 @@ onClick={() => setIsOpen(!isOpen)}
 className={`l;  g:hidden p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}
 >;
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 </button>;
@@ -246,8 +241,7 @@ onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name
 className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
 isActive(item.href)
 ? "text-zion-cyan bg-zion-cyan/10";
-: "text-zion-slate-dark hove;  r: text-zion-cyan hove; r:bg-zion-cyan/1; 0",
-}`}
+: "text-zion-slate-dark hove;  r: text-zion-cyan hove; r:bg-zion-cyan/1; 0"}`}
 >;
 <div className="flex items-center justify-between">;
 <span>{item.name}</span>;

@@ -4,7 +4,7 @@ name: string;
 }
 
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function ExpensiveComponent() {;
 const [da;  t; a; setDa; t; a] = useState<number[]>([]);

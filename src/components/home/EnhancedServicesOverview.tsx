@@ -6,7 +6,7 @@ name: string;
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "../ui/button, ";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "../ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "../ui/card, ";
 import { Badge } from "../ui/badge, ";
 import { Brain;
 Shield;
@@ -19,8 +19,7 @@ DollarSign;
 ArrowRight;
 Star;
 Clock;
-Globe;
-} from "lucide-react, ";
+Globe} from "lucide-react, ";
 
 // Mock data for enhanced services;
 const ENHANCED_SERVICES = [;
@@ -36,8 +35,7 @@ price: 2999;,
 features: ["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
 benefits: ["Increased efficiency", "Better decision making", "Cost reduction"],
 tags: ["AI", "Analytics", "Business Intelligence"],
-location: "Global",
-};
+location: "Global"};
 {
 id: "security-1";
 title: "Enterprise Cybersecurity Suite";
@@ -50,8 +48,7 @@ price: 1999;,
 features: ["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
 benefits: ["Enhanced security", "Compliance assurance", "Risk mitigation"],
 tags: ["Security", "Compliance", "Enterprise"],
-location: "Global",
-};
+location: "Global"};
 {
 id: "cloud-1";
 title: "Cloud Infrastructure Optimization";
@@ -64,8 +61,7 @@ price: 1499;,
 features: ["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
 benefits: ["Cost savings", "Improved performance", "Scalability"],
 tags: ["Cloud", "DevOps", "Optimization"],
-location: "Global",
-}
+location: "Global"}
 ];
 const EnhancedServicesOverview: React.FC = () => {
 // Get featured services (first 6)
@@ -83,8 +79,7 @@ case "Quantum Computing": return <Brain className="w-6 h-6" />;
 case "AR/VR & Metaverse": return <Eye className="w-6 h-6" />;
 case "Green Tech & Sustainability": return <Leaf className="w-6 h-6" />;
 case "FinTech & Digital Banking": return <DollarSign className="w-6 h-6" />;,
-default: return <Zap className="w-6 h-6" />;,
-}
+default: return <Zap className="w-6 h-6" />;}
 };
 
 const getAvailabilityColor: any = (availability: string) => {
@@ -92,8 +87,7 @@ switch (availability) {;
 case "immediate": return "text-green-400";
 case "within-week": return "text-yellow-400";
 case "within-month": return "text-orange-400";,
-default: return "text-gray-400";,
-}
+default: return "text-gray-400";}
 };
 
 return (
@@ -223,8 +217,7 @@ if (!acc.find(cat => cat.category === service.category)) {
 acc.push({,
 category: service.category;,
 count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;,
-icon: getCategoryIcon(service.category),
-});
+icon: getCategoryIcon(service.category)});
 }
 return acc;
 }, [] as Array<{category: string; count: number; icon: React.ReactNode}>).map((cat; index) => (

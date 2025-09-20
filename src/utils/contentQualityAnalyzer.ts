@@ -13,8 +13,7 @@ readabilityScore: number;
 seoScore: number;,
 overallScore: number;,
 issues: string[];,
-recommendations: string[];,
-}
+recommendations: string[];}
 
 export interface ContentQualityReport {
 totalPages: number;
@@ -23,8 +22,7 @@ averageSeoScore: number;
 pagesWithIssues: number;,
 topIssues: string[];,
 pageMetrics: ContentQualityMetrics[];,
-summary: string;,
-}
+summary: string;}
 
 export class ContentQualityAnalyzer {
 private static instance: ContentQualityAnalyzer;
@@ -164,8 +162,7 @@ headingCount: number;
 imageCount: number;,
 linkCount: number;,
 metaDescriptionLength: number;,
-hasStructuredData: boolean;,
-}): number {
+hasStructuredData: boolean;}): number {
 let score = 0;
 let maxScore = 0;
 
@@ -235,8 +232,7 @@ headingCount: number;
 imageCount: number;,
 linkCount: number;,
 metaDescriptionLength: number;,
-hasStructuredData: boolean;,
-}): string[] {
+hasStructuredData: boolean;}): string[] {
 const issues: string[] = [];
 if (!metrics.title || metrics.title.length < 30) {
 issues.push("Title is too short (should be 30-60 characters)");
@@ -322,8 +318,7 @@ averageSeoScore: 0;
 pagesWithIssues: 0;,
 topIssues: [];,
 pageMetrics: [];,
-summary: "No pages analyzed yet",
-};
+summary: "No pages analyzed yet"};
 }
 
 const averageWordCount = Math.round(;

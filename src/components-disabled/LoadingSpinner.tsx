@@ -2,8 +2,7 @@ import React from "react";
 interface LoadingSpinnerProps {
 size?: "sm" | "md" | "lg",
 text?: string;
-className?: string,
-};
+className?: string};
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 size = "md",

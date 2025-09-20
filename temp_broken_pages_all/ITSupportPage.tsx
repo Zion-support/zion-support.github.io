@@ -7,7 +7,7 @@ export default function ITSupportPage() {
 import { ServiceLandingTemplate,  } from "@/components/services/ServiceLandingTemplate"
 import React from "react"
 export default function ITSupportPage() {
-    <ServiceLandingTemplate,
+    <ServiceLandingTemplate
 title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"

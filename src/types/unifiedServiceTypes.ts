@@ -11,8 +11,7 @@ price?: number | {
 monthly?: number;
 yearly?: number;
 oneTime?: number;,
-currency: string; pricingModel: string,
-};
+currency: string; pricingModel: string};
 currency?: string;
 pricingModel?: string;
 features: string[];
@@ -27,8 +26,7 @@ roi?: string;
 innovationLevel?: string;,
 contactInfo: {,
 phone: string; email: string; website: string;
-address?: string,
-};
+address?: string};
 }
 
 // Union type for all service variants;
@@ -38,8 +36,7 @@ export type UnifiedService = BaseService;
 export const hasProperty = <T; K extends string>(
 obj: T; prop: K,
 ): obj is T & Record<K; any> => {
-return obj && typeof obj === "object" && prop in obj,
-};
+return obj && typeof obj === "object" && prop in obj};
 
 export const hasTags: any = (service: UnifiedService): service is UnifiedService & { tags: string[] } => {
 return hasProperty(service, "tags") && Array.isArray(service.tags),;

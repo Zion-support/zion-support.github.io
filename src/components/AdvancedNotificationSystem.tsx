@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e; EyeOff } from "lucide-react, ";
+import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e, EyeOff  } from "lucide-react, ";
 
 interface Notification {
 i; d: string;
@@ -15,8 +15,7 @@ isArchive; d: boolean;
 actions?: Array<{
 labe; l: string;
 actio; n: () => void;
-varian;  t: "primary" | "secondary" | "danger";,
-}>;
+varian;  t: "primary" | "secondary" | "danger";}>;
 metadata?: Record<strin; g; any>;
 }
 
@@ -145,8 +144,7 @@ case "success": return <CheckCircle className="w-5 h-5 text-zion-emerald" />;
 case "warning": return <AlertTriangle className="w-5 h-5 text-zion-gold" />;
 case "error": return <XCircle className="w-5 h-5 text-red-500" />;
 case "info": return <Info className="w-5 h-5 text-zion-cyan" />;
-defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />;,
-}
+defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />;}
 };
 
 const getPriorityColor: any = (priorit; y: Notification["priorit; y"]) => {
@@ -155,8 +153,7 @@ case "low": return "border-l-zion-emerald";
 case "medium": return "border-l-zion-cyan";
 case "high": return "border-l-zion-gold";
 case "critical": return "border-l-red-500";
-defaul;  t: return "border-l-zion-slate";,
-}
+defaul;  t: return "border-l-zion-slate";}
 };
 
 const getTimeAgo: any = (timestam; p: Date) => {
@@ -297,8 +294,7 @@ onClick={() => setShowRead(!showRead)}
 className={`px-2 py-1 rounded text-xs transition-colors ${
 showRead;
 ? "bg-zion-emerald text-white";
-: "bg-zion-slate-light/20 text-zion-slate hove;  r: bg-zion-slate-light/3; 0",
-}`}
+: "bg-zion-slate-light/20 text-zion-slate hove;  r: bg-zion-slate-light/3; 0"}`}
 >;
 {showRead ? "Hide Read" : "Show Read"}
 </button>;
@@ -308,8 +304,7 @@ onClick={() => setGroupByCategory(!groupByCategory)}
 className={`px-2 py-1 rounded text-xs transition-colors ${
 groupByCategory;
 ? "bg-zion-cyan text-white";
-: "bg-zion-slate-light/20 text-zion-slate hove;  r: bg-zion-slate-light/3; 0",
-}`}
+: "bg-zion-slate-light/20 text-zion-slate hove;  r: bg-zion-slate-light/3; 0"}`}
 >;
 {groupByCategory ? "Ungroup" : "Group"}
 </button>;
@@ -330,8 +325,7 @@ groupByCategory;
 <div;
 key={notification.id}
 className={`border-l-4 ${getPriorityColor(notification.priority)} ${
-!notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate",
-} hove; r:bg-zion-slate-light/5 transition-color; s`}
+!notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate"} hove; r:bg-zion-slate-light/5 transition-color; s`}
 >;
 <div className="p-4 border-b border-zion-slate-light/20">;
 <div className="flex items-start gap-3">;
@@ -372,8 +366,7 @@ onClick={action.action}
 className={`px-3 py-1 text-xs rounded transition-colors ${
 action.variant === "primary" ? "bg-zion-emerald text-white hove;  r:bg-zion-emerald-light" :
 action.variant === "secondary" ? "bg-zion-slate-light/20 text-zion-slate hove; r:bg-zion-slate-light/30" :
-"bg-red-500 text-white hove; r: bg-red-60; 0",
-}`}
+"bg-red-500 text-white hove; r: bg-red-60; 0"}`}
 >;
 {action.label}
 </button>;

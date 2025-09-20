@@ -6,16 +6,14 @@ impor; t; Reac; t, { useState } from "react";
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
 import { useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b; Youtube } from "lucide-react";
-import { Lin; k; useLocation } from "react-router-dom";
+import { motio; n, AnimatePresence  } from "framer-motion";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b, Youtube  } from "lucide-react";
+import { Lin; k, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import {
-Hom; e;
-impor; t; Reac; t, { useState } from "react";
-import { Lin; k; useLocation } from "react-router-dom";
-import {
-Hom; e;
+import { Hom; e;
+impor; t; Reac, t, { useState  } from "react";
+import { Lin; k, useLocation  } from "react-router-dom";
+import { Hom; e;
 Briefcas; e;
 User; s;
 Setting; s;
@@ -67,37 +65,36 @@ Ma; p;
 Calenda; r;
 Cloc; k;
 Mai; l;
-MapPin;
-} from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Databas; e; Networ; k; Za; p; Targe; t; Rocke; t; Clou; d; Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Za; p; ChevronRigh; t; ChevronDown } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Databas; e; Cod; e; BarChart; 3; Targe; t; Hear; t; Buildin; g; Rocke; t; Loc; k; Networ; k; Ey; e; Workflo; w; Palett; e; Serve; r; Cloc; k; Za; p; Sta; r; TrendingU; p; ShoppingCar; t; Calenda; r; Vide; o; FileText } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Clou; d; Loc; k; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; Sta; r; TrendingU; p; Rocke; t; Cp; u; Networ; k; Serve; r; Cod; e; Palett; e; Targe; t; Lightbul; b; Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; ShoppingCar; t; Cod; e; DollarSign } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Cp; u; Loc; k; Rocke; t; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; BarChart; 3; Targe; t; Building; 2; Hear; t; Ca; r; Factor; y; ShoppingCar; t; GraduationCa; p; Microscop; e; Truc; k; Plan; e; Satellit; e; Ato; m; Clou; d; Signa; l; Githu; b; Link as LinkIcon } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b; Youtube } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Za; p; FileTex; t; HelpCircl; e; Setting; s; Rocke; t; Brai; n; Databas; e; Loc; k; Clou; d; Cod; e; BarChart; 3; Palett; e; Targe; t; Lightbul; b; BookOpe; n; Calenda; r; MessageSquar; e; Sta; r; Awar; d; TrendingU; p; Cp; u; Networ; k; Serve; r; ShieldChec; k; Globe; 2; Smartphon; e; Wif; i; Satellit; e; Ato; m; TestTub; e; Microscop; e; Ca; r; Plan; e; Shi; p; Truc; k; Building; 2; Hear; t; Pil; l; Stethoscop; e; Gave; l; Scal; e; Factor; y; Co; g; Bo; t; Ey; e; Ke; y; QrCod; e; Walle; t; Coin; s; Lea; f; Su; n; Win; d; Stor; e; Cooki; e; Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Clou; d; Databas; e; Networ; k; Setting; s; BookOpe; n; MessageCircl; e; FileTex; t; Sta; r; Rocke; t; Targe; t; Lightbul; b; CheckCircl; e; Eye } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Githu; b; Youtub; e; Shiel; d; Handshake } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Eye } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Loc; k; Cod; e; Rocke; t; Targe; t; Lightbul; b; Sparkles } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Target } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; HelpCircl; e; Setting; s; Sta; r; Clou; d; Code } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; FileTex; t; TrendingU; p; ArrowRigh; t; Clou; d; Calendar } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Networ; k; Brai; n; BarChart; 3; Za; p; Databas; e; Command } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; FileText } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Shiel; d; Handshak; e; Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Ato; m; Serve; r; Databas; e; Packag; e; Buildin; g; Rocket } from "lucide-react";
-import { Lin; k; useLocation } from "react-router-dom";
+MapPin} from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Databas; e; Networ; k; Za; p; Targe; t; Rocke; t; Clou; d, Github  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Za; p; ChevronRigh; t, ChevronDown  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Databas; e; Cod; e; BarChart; 3; Targe; t; Hear; t; Buildin; g; Rocke; t; Loc; k; Networ; k; Ey; e; Workflo; w; Palett; e; Serve; r; Cloc; k; Za; p; Sta; r; TrendingU; p; ShoppingCar; t; Calenda; r; Vide; o, FileText  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Clou; d; Loc; k; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; Sta; r; TrendingU; p; Rocke; t; Cp; u; Networ; k; Serve; r; Cod; e; Palett; e; Targe; t; Lightbul; b, Github  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; ShoppingCar; t; Cod; e, DollarSign  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Cp; u; Loc; k; Rocke; t; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; BarChart; 3; Targe; t; Building; 2; Hear; t; Ca; r; Factor; y; ShoppingCar; t; GraduationCa; p; Microscop; e; Truc; k; Plan; e; Satellit; e; Ato; m; Clou; d; Signa; l; Githu; b, Link as LinkIcon  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b, Youtube  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Za; p; FileTex; t; HelpCircl; e; Setting; s; Rocke; t; Brai; n; Databas; e; Loc; k; Clou; d; Cod; e; BarChart; 3; Palett; e; Targe; t; Lightbul; b; BookOpe; n; Calenda; r; MessageSquar; e; Sta; r; Awar; d; TrendingU; p; Cp; u; Networ; k; Serve; r; ShieldChec; k; Globe; 2; Smartphon; e; Wif; i; Satellit; e; Ato; m; TestTub; e; Microscop; e; Ca; r; Plan; e; Shi; p; Truc; k; Building; 2; Hear; t; Pil; l; Stethoscop; e; Gave; l; Scal; e; Factor; y; Co; g; Bo; t; Ey; e; Ke; y; QrCod; e; Walle; t; Coin; s; Lea; f; Su; n; Win; d; Stor; e; Cooki; e, Github  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Clou; d; Databas; e; Networ; k; Setting; s; BookOpe; n; MessageCircl; e; FileTex; t; Sta; r; Rocke; t; Targe; t; Lightbul; b; CheckCircl; e, Eye  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Githu; b; Youtub; e; Shiel; d, Handshake  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e, Eye  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Loc; k; Cod; e; Rocke; t; Targe; t; Lightbul; b, Sparkles  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t, Target  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; HelpCircl; e; Setting; s; Sta; r; Clou; d, Code  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; FileTex; t; TrendingU; p; ArrowRigh; t; Clou; d, Calendar  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Networ; k; Brai; n; BarChart; 3; Za; p; Databas; e, Command  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e, FileText  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Shiel; d; Handshak; e, Github  } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Ato; m; Serve; r; Databas; e; Packag; e; Buildin; g, Rocket  } from "lucide-react";
+import { Lin; k, useLocation  } from "react-router-dom";
 import { useSidebar } from "../context/SidebarContext";
 
 export default function Sidebar() {;
 const { isSidebarOpe;  n; setIsSidebarOpen } = useSidebar();
 import { useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shield } from "lucide-react";
-import { Lin; k; useLocation } from "react-router-dom";
-import { Lin; k; useLocation } from "react-router-dom";
+import { motio; n, AnimatePresence  } from "framer-motion";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m, Shield  } from "lucide-react";
+import { Lin; k, useLocation  } from "react-router-dom";
+import { Lin; k, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
 ShoppingCar; t;
 User; s;
@@ -2514,16 +2511,14 @@ x: "-100%",
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;,
-}
+dampin; g: 30;}
 },
 ope; n: {,
 x: 0;
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;,
-}
+dampin; g: 30;}
 }
 };
 
@@ -2669,16 +2664,14 @@ x: "-100%",
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;,
-}
+dampin; g: 30;}
 },
 ope; n: {,
 x: 0;
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;,
-}
+dampin; g: 30;}
 }
 };
 
@@ -2699,14 +2692,12 @@ const overlayVariants = {;
 close; d: {
 opacit; y: 0;
 transitio; n: {
-duratio; n: 0.2;,
-}
+duratio; n: 0.2;}
 },
 ope; n: {
 opacit; y: 1;
 transitio; n: {
-duratio; n: 0.2;,
-}
+duratio; n: 0.2;}
 }
 };
 
@@ -2953,12 +2944,10 @@ to={item.path}
 className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
 isActive;
 ? "quantum-button shadow-lg shadow-zion-cyan/30";
-: "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-tex; t",
-}`}
+: "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-tex; t"}`}
 >;
 <Icon className={`w-4 h-4 ${
-isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t",
-}`} />;
+isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />;
 <span className="flex-1 text-sm">{item.name}</span>;
 {isActive && (
 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>;
@@ -2984,8 +2973,7 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
 location.pathname === item.path;
 ? "text-zion-cyan bg-zion-cyan/10";
-: "text-muted-foreground hove;  r: text-foreground hove; r:bg-mute; d",
-}`}
+: "text-muted-foreground hove;  r: text-foreground hove; r:bg-mute; d"}`}
 onClick={onClose}
 >;
 <item.icon className="h-4 w-4 flex-shrink-0" />;
@@ -3029,8 +3017,7 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
 isActive;
 ? "bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30";
-: "text-zion-slate-light hove;  r: text-white hove; r:bg-zion-blue-light/1; 0",
-}`}
+: "text-zion-slate-light hove;  r: text-white hove; r:bg-zion-blue-light/1; 0"}`}
 onClick={onClose}
 >;
 <Icon className={`w-5 h-5 ${isActive ? "text-zion-cyan" : "text-zion-slate-light group-hove; r:text-whit; e"}`} />;
@@ -3073,8 +3060,7 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 group ${
 location.pathname === item.path;
 ? "text-cyan-400 bg-cyan-500/20 border border-cyan-400/50";
-: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0",
-}`}
+: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0"}`}
 >;
 <item.icon className="w-4 h-4 flex-shrink-0" />;
 <span className="flex-1">{item.name}</span>;
@@ -3143,8 +3129,7 @@ onClick={onClose}
 className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${
 location.pathname === item.path;
 ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30";
-: "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
-}`}
+: "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0"}`}
 >;
 <item.icon className="w-5 h-5" />;
 <span className="font-medium">{item.name}</span>;
@@ -3173,8 +3158,7 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 ${
 location.pathname === item.path;
 ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30";
-: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0",
-}`}
+: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0"}`}
 >;
 <item.icon className="w-4 h-4" />;
 <span>{item.name}</span>;
@@ -3260,15 +3244,13 @@ to={item.path}
 className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group relative ${
 isActive;
 ? "quantum-button shadow-lg shadow-zion-cyan/30";
-: "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-text",
-} ${isFeatured ? "border-l-2 border-zion-cyan/5; 0" : ""}`}
+: "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-text"} ${isFeatured ? "border-l-2 border-zion-cyan/5; 0" : ""}`}
 >;
 {isFeatured && (
 <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>;
 )}
 <Icon className={`w-4 h-4 ${
-isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t",
-}`} />;
+isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />;
 <span className="flex-1">{item.name}</span>;
 {isActive && (<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>;
 )}
@@ -3350,8 +3332,7 @@ to={item.path}
 className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
 isActive;
 ? "bg-cyan-500/20 border border-cyan-500/30 text-cyan-400";
-: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0",
-}`}
+: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0"}`}
 onClick={onClose}
 >;
 <ItemIcon className="w-4 h-4" />;
@@ -3642,13 +3623,11 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
 location.pathname === item.path;
 ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30";
-: "text-gray-300 hove;  r: text-cyan-400 hove; r:bg-gray-800/5; 0",
-}`}
+: "text-gray-300 hove;  r: text-cyan-400 hove; r:bg-gray-800/5; 0"}`}
 onClick={onClose}
 >;
 <item.icon className={`w-4 h-4 flex-shrink-0 ${
-location.pathname === item.path ? "text-cyan-400" : "text-gray-400 group-hove; r: text-cyan-40; 0",
-}`} />;
+location.pathname === item.path ? "text-cyan-400" : "text-gray-400 group-hove; r: text-cyan-40; 0"}`} />;
 <span className="font-medium">{item.name}</span>;
 </Link>;
 </li>;
@@ -3932,8 +3911,7 @@ visibl; e: {
 opacit; y: 1;,
 x: 0;
 transitio; n: {
-staggerChildre; n: 0.1;,
-}
+staggerChildre; n: 0.1;}
 }
 };
 
@@ -4018,8 +3996,7 @@ ChevronDown;
 
 interface SidebarProps {
 isOpe; n: boolean;
-onClos; e: () => void;,
-};
+onClos; e: () => void;};
 export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
 const location = useLocation();
 const [expandedSectio;  n; s; setExpandedSectio; n; s] = useState<string[]>([]);
@@ -4324,8 +4301,7 @@ ic; o; n: Instagra; m }
 const contactInfo = {;
 phon; e: "+1 302 464 0950",
 emai; l: "kleber@ziontechgroup.com",
-addres; s: "364 E Main St STE 1008 Middletown DE 19709",
-};
+addres; s: "364 E Main St STE 1008 Middletown DE 19709"};
 
 return (<AnimatePresence>;
 {isOpen && (

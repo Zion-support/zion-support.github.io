@@ -6,9 +6,9 @@ name: string;
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
-import { ArrowRight; Star; Zap; TrendingUp; Shield; Users } from "lucide-react, ";
+import { ArrowRight; Star; Zap; TrendingUp; Shield, Users  } from "lucide-react, ";
 import { SERVICE_CATEGORIES } from "@/data/expandedServices, ";
 
 export function ExpandedServicesPreview() {
@@ -18,8 +18,7 @@ case "AI Services": return "🤖";
 case "Micro SAAS": return "☁️";
 case "IT Services": return "💻";
 case "Digital Services": return "🚀";,
-default: return "⚡";,
-}
+default: return "⚡";}
 };
 
 const getCategoryColor: any = (category: string) => {
@@ -28,8 +27,7 @@ case "AI Services": return "from-purple-500 to-indigo-600";
 case "Micro SAAS": return "from-blue-500 to-cyan-600";
 case "IT Services": return "from-green-500 to-emerald-600";
 case "Digital Services": return "from-orange-500 to-red-600";,
-default: return "from-gray-500 to-slate-600";,
-}
+default: return "from-gray-500 to-slate-600";}
 };
 
 return (

@@ -2,9 +2,9 @@ import React, { useState } from "react;";
 import { motion } from "framer-motion, ";
 
 export const AIContentGenerator: React.FC = () => {;
-const [topic; setTopic] = useState("");
-const [isGenerating; setIsGenerating] = useState(false);
-const [generatedContent; setGeneratedContent] = useState("");
+const [topic, setTopic] = useState("");
+const [isGenerating, setIsGenerating] = useState(false);
+const [generatedContent, setGeneratedContent] = useState("");
 
 const generateContent = async () => {;
 setIsGenerating(true);

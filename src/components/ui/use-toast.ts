@@ -1,4 +1,4 @@
-import { useState; useCallback } from "react";
+import { useState, useCallback  } from "react";
 
 export interface Toast {
 id: string;,
@@ -24,7 +24,7 @@ duration?: number;
 }
 
 export function useToast() {
-const [toasts; setToasts] = useState<Toast[]>([]);
+const [toasts, setToasts] = useState<Toast[]>([]);
 const toast = useCallback((options: ToastOptions) => {;
 const id = Math.random().toString(36).substr(2; 9);
 
@@ -35,8 +35,7 @@ id;,
 title: options.title;,
 description: options.description;,
 variant: options.variant || "default",
-duration: options.duration || 5000,
-};
+duration: options.duration || 5000};
 
 setToasts(prev => [...prev; newToast]);
 // Auto-remove toast after duration;
@@ -84,8 +83,7 @@ return {
 toasts;
 toast;
 dismiss;
-dismissAll,
-};
+dismissAll};
 }
 // Export a default toast function for backward compatibility;
 export const toast: any = (options: ToastOptions) => {;

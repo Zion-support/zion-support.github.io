@@ -1,4 +1,4 @@
-import { RefreshCw,, AlertTriangle,, Wifi,, WifiOff,, Shield,  } from 'lucide-react'
+import { RefreshCw, AlertTriangle, Wifi, WifiOffShield } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ErrorContextType {

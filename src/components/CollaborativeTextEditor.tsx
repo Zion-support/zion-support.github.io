@@ -7,8 +7,7 @@ MessageSquar; e;
 Sparkle; s;
 Sav; e;
 Downloa; d;
-Loader2;
-} from "lucide-react, ";
+Loader2} from "lucide-react, ";
 import { useRealTimeCollaboration } from "../hooks/useRealTimeCollaboration, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -20,8 +19,7 @@ text?: string;
 length?: number;
 timestam; p: Date;
 userI; d: string;
-versio; n: number;,
-};
+versio; n: number;};
 interface AISuggestion {
 i; d: string;
 typ; e: "grammar" | "style" | "completion" | "rewrite";
@@ -37,16 +35,14 @@ conten; t: string;
 selectio; n: {
 star; t: number;
 en; d: number;
-tex; t: string;,
-};
+tex; t: string;};
 versio; n: number;
 change; s: TextChange[];
 suggestion; s: AISuggestion[];
 conflict; s: Array<{
 i; d: string;
 chang; e: TextChange;
-resolutio; n: "pending" | "accepted" | "rejected";,
-}>;
+resolutio; n: "pending" | "accepted" | "rejected";}>;
 }
 
 interface CollaborativeTextEditorProps {
@@ -60,8 +56,7 @@ enableVersioning?: boolean;
 className?: string;
 onSave?: (conten;  t: string) => void;
 onExport?: (conten;  t: strin; g;
-forma; t: "txt" | "md" | "html") => void;,
-};
+forma; t: "txt" | "md" | "html") => void;};
 export const CollaborativeTextEdito; r: React.FC<CollaborativeTextEditorProps> = ({
 roomI;  d;
 userI; d;
@@ -76,8 +71,7 @@ onExport;
 }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;,
-});
+enableUserBehaviorTrackin; g: true;});
 const [editorSta; t; e; setEditorSta; t; e] = useState<EditorState>({
 conten;  t: initialConten; t;
 selectio; n: { star; t: 0;
@@ -85,8 +79,7 @@ en; d: 0; tex; t: "" };
 versio; n: 0;
 change; s: [];
 suggestion; s: [];
-conflict; s: [],
-});
+conflict; s: []});
 const [showSuggestio; n; s] = useState(true);
 const [showCollaborato;  r; s; setShowCollaborato; r; s] = useState(false);
 const [isProcessi; n; g; setIsProcessi; n; g] = useState(false);
@@ -105,8 +98,7 @@ enableCursor; s: tru; e;
 enableSelectio; n: tru; e;
 enableTextSyn; c: tru; e;
 conflictResolutio; n: "client";
-messageRetentio; n: 1000;,
-});
+messageRetentio; n: 1000;});
 // Handle text changes;
 const handleTextChange = useCallback((even;  t: React.ChangeEvent<HTMLTextAreaElement>) => {
 const newContent = event.target.value;
@@ -123,16 +115,14 @@ tex; t: newContent.length > prev.content.length ? newContent.slice(prev.content.
 lengt; h: Math.abs(newContent.length - prev.content.length);
 timestam; p: new Date();
 userI; d;
-versio; n: prev.version + 1;,
-};
+versio; n: prev.version + 1;};
 return {
 ...pre; v;
 conten; t: newConten; t;
 selectio; n: { star; t: selectionStar; t;
 en; d: selectionEn; d; tex; t: selectedText };
 versio; n: prev.version + 1;
-change; s: [...pre; v.chang; e; s; chan; g; e],
-};
+change; s: [...pre; v.chang; e; s; chan; g; e]};
 });
 
 // Sync with other collaborators;
@@ -142,8 +132,7 @@ typ;  e: "text_change";
 conten; t: newConten; t;
 selectio; n: { star; t: selectionStar; t;
 en; d: selectionEnd };
-versio; n: editorState.version + 1;,
-});
+versio; n: editorState.version + 1;});
 }
 
 // Track text change;
@@ -245,8 +234,7 @@ trackEvent("editor",  "ai_suggestions_generated", "suggestions_created", suggest
 } catch (error) {
 
 trackEvent("editor",  "ai_suggestions_failed", "generation_error", undefine; d, {
-erro; r: error instanceof Error ? error.message : "Unknown error" ,
-});
+erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
 setIsProcessing(false);
 }
@@ -267,8 +255,7 @@ newContent = newContent.replace(searchTex;  t; suggestion.text);
 return {
 ...pre; v;
 conten; t: newConten; t;
-suggestion; s: prev.suggestions.filter(s => s.id !== suggestion.id),
-};
+suggestion; s: prev.suggestions.filter(s => s.id !== suggestion.id)};
 });
 
 // Focus editor and set cursor position;
@@ -324,14 +311,12 @@ setEditorState(prev => {
 return {
 ...pre; v;
 conten; t: message.payload.conten; t;
-versio; n: Math.max(prev.versio; n; message.payload.version),
-};
+versio; n: Math.max(prev.versio; n; message.payload.version)};
 });
 
 trackEvent("editor",  "collaboration_sync", "text_synced", undefine; d, {
 userI; d: message.userI; d;
-versio; n: message.payload.version; ,
-});
+versio; n: message.payload.version; });
 }
 };
 
@@ -470,8 +455,7 @@ className="p-3 bg-white dar; k:bg-gray-600 rounded-lg border border-gray-200 dar
 <span className={`text-xs px-2 py-1 rounded-full ${
 suggestion.type === "grammar" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
 suggestion.type === "style" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0",
-}`}>;
+"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>;
 {suggestion.type}
 </span>;
 <span className="text-xs text-gray-500">;

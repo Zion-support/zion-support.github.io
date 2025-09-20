@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useRef; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Search;
 X;
 Filter;
@@ -13,8 +13,7 @@ MicOff;
 Settings;
 History;
 Bookmark;
-Share2;
-} from "lucide-react, ";
+Share2} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -33,8 +32,7 @@ type: "service" | "talent" | "company" | "article";
 metadata: {,
 lastUpdated: string;,
 verified: boolean;,
-featured: boolean;,
-};
+featured: boolean;};
 }
 
 interface AISearchProps {
@@ -50,8 +48,7 @@ priceRange: [number; number];
 rating: number;,
 location: string[];,
 verified: boolean;,
-featured: boolean;,
-};
+featured: boolean;};
 export function AISearch({;
 enabled = true;
 placeholder = "Search for AI services; talent; or companies...",
@@ -59,24 +56,23 @@ onSearch;
 onResultClick;
 className = ""
 }: AISearchProps) {
-const [isOpen; setIsOpen] = useState(false);
-const [query; setQuery] = useState("");
-const [isSearching; setIsSearching] = useState(false);
-const [showFilters; setShowFilters] = useState(false);
-const [isVoiceActive; setIsVoiceActive] = useState(false);
-const [searchHistory; setSearchHistory] = useState<string[]>([]);
-const [savedSearches; setSavedSearches] = useState<string[]>([]);
-const [filters; setFilters] = useState<SearchFilters>({
+const [isOpen, setIsOpen] = useState(false);
+const [query, setQuery] = useState("");
+const [isSearching, setIsSearching] = useState(false);
+const [showFilters, setShowFilters] = useState(false);
+const [isVoiceActive, setIsVoiceActive] = useState(false);
+const [searchHistory, setSearchHistory] = useState<string[]>([]);
+const [savedSearches, setSavedSearches] = useState<string[]>([]);
+const [filters, setFilters] = useState<SearchFilters>({
 category: [];,
 priceRange: [0; 10000],
 rating: 0;,
 location: [];,
 verified: false;,
-featured: false;,
-});
-const [results; setResults] = useState<SearchResult[]>([]);
-const [suggestions; setSuggestions] = useState<string[]>([]);
-const [_selectedResult; setSelectedResult] = useState<SearchResult | null>(null);
+featured: false;});
+const [results, setResults] = useState<SearchResult[]>([]);
+const [suggestions, setSuggestions] = useState<string[]>([]);
+const [_selectedResult, setSelectedResult] = useState<SearchResult | null>(null);
 
 const searchRef = useRef<HTMLDivElement>(null);
 const inputRef = useRef<HTMLInputElement>(null);
@@ -136,8 +132,7 @@ type: "service";
 metadata: {,
 lastUpdated: "2024-01-15";,
 verified: true;,
-featured: true;,
-}
+featured: true;}
 };
 {
 id: "2";
@@ -153,8 +148,7 @@ type: "talent";
 metadata: {,
 lastUpdated: "2024-01-20";,
 verified: true;,
-featured: false;,
-}
+featured: false;}
 };
 {
 id: "3";
@@ -170,8 +164,7 @@ type: "company";
 metadata: {,
 lastUpdated: "2024-01-18";,
 verified: true;,
-featured: true;,
-}
+featured: true;}
 }
 ];
 // Simulate API call;
@@ -242,8 +235,7 @@ if (navigator.share) {;
 navigator.share({;
 title: "Search Results from Zion Tech Group";,
 text: `Check out these results for "${query}"`;
-url: window.location.href;,
-});
+url: window.location.href;});
 } else {
 // Fallback to copying to clipboard;
 navigator.clipboard.writeText(
@@ -312,8 +304,7 @@ onClick={toggleVoiceInput}
 className={`absolute right-16 top-1/2 transform -translate-y-1/2 p-2 rounded-lg transition-all duration-200 ${
 isVoiceActive;
 ? "bg-red-500/20 text-red-400";
-: "text-zinc-400 hover: text-zinc-300 hover:bg-zion-blue/20",
-}`}
+: "text-zinc-400 hover: text-zinc-300 hover:bg-zion-blue/20"}`}
 >;
 {isVoiceActive ? (
 <Mic className="w-4 h-4 animate-pulse" />;

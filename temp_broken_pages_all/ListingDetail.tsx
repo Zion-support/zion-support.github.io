@@ -57,7 +57,7 @@ target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.a
           </div>
         </div>
       </div>
-      <ChatWidget,
+      <ChatWidget
 roomId = {listing.id,}
         recipientId = {listing.author.id,}
         isOpen = {isChatOpen,}
@@ -71,14 +71,14 @@ roomId = {listing.id,}
               Contact Publisher
             </DialogTitle>
           </DialogHeader>
-          <ProfileContact,
+          <ProfileContact
 email={listing.author.email} // TypeScript now knows this might be undefined,
 profileName={listing.author.name}
             profileType='service'          />            profileType="service"
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact,
+          <ProfileContact
 email={listing.author.email} // TypeScript now knows this might be undefined,
 profileName={listing.author.name}
             profileType="service"

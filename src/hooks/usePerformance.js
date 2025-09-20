@@ -7,8 +7,7 @@ export function usePerformance() {
         cls: null;
         ttfb: null;
         domLoad: null;
-        windowLoad: null,
-    });
+        windowLoad: null});
     const [observers, setObservers] = useState([]);
     const observerRef = useRef(null);
     useEffect(() => {
@@ -69,8 +68,7 @@ export function usePerformance() {
                 ...prev,
                 ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
                 domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
-                windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            }));
+                windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart}));
      }
         // Cleanup;
         return () => {
@@ -133,8 +131,7 @@ export function usePerformance() {
                 case 'good': return 100;
                 case 'needs-improvement': return 65;
                 case 'poor': return 0;
-                default: return 0;,
-     }
+                default: return 0;}
         });
         return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
     };
@@ -149,8 +146,7 @@ export function usePerformance() {
                     console.warn('Long task detected:', {
                         duration: entry.duration;
                         startTime: entry.startTime;
-                        name: entry.name,
-                    });
+                        name: entry.name});
      }
             });
         });

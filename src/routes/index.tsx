@@ -3,7 +3,7 @@ id: string;,
 name: string;
 }
 
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 import React from "react;";
 
 // Placeholder route components;

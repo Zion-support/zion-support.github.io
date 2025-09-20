@@ -4,13 +4,13 @@ export default function ZionHireAI() {
   return (
     <>
             </p>
-            <Button,
+            <Button
 size='lg'
               className='bg-zion-purple hover:bg-zion-purple-light text-white'
               asChild
             >
               <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>            </p>
-            <Button,
+            <Button
 size="lg"
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild

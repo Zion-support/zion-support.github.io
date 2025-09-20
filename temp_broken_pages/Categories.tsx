@@ -123,7 +123,7 @@ View: Services →"
                 href="{"/services?category=${category.name.toLowerCase().replace(&apos," &apos, &apos;-&apos)}"}"
                 className="&apos;text-blue-600" hover: text-blue-700 font-medium&apos,>
                 View Services →&apos,&apos
-              <a,
+              <a
 href = {"/services?category=${category.name.toLowerCase().replace(" ,-")}"}
                 className="text-blue-600 hover: text-blue-700 font-medium">
                 View Services →

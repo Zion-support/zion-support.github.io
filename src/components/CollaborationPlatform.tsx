@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-import { Vide; o; VideoOf; f; Mi; c; MicOf; f; Monito; r; Share; 2; User; s; MessageSquar; e; Setting; s; X; Maximize; 2; Minimize; 2; Phon; e; PhoneOff } from "lucide-react, ";
+import { Vide; o; VideoOf; f; Mi; c; MicOf; f; Monito; r; Share; 2; User; s; MessageSquar; e; Setting; s; X; Maximize; 2; Minimize; 2; Phon; e, PhoneOff  } from "lucide-react, ";
 
 interface Participant {
 i; d: string;
@@ -9,8 +9,7 @@ isVideoO; n: boolean;
 isAudioO; n: boolean;
 isScreenSharin; g: boolean;
 isSpeakin; g: boolean;
-avata; r: string;,
-};
+avata; r: string;};
 const mockParticipant; s: Participant[] = [
 { i; d: "1";
 na; m; e: "Joh; n Smit; h", isVideo; O; n: tr; u; e;
@@ -38,8 +37,7 @@ const [localUs;  e; r; setLocalUs; e; r] = useState({
 isVideoO; n: tru; e;
 isAudioO; n: tru; e;
 isScreenSharin; g: fals; e;
-isMute; d: false;,
-});
+isMute; d: false;});
 const [activeCh; a; t; setActiveCh; a; t] = useState(false);
 const [chatMessag;  e; s; setChatMessag; e; s] = useState([
 { i; d: "1";
@@ -87,10 +85,8 @@ if (newMessage.trim()) {
 const message = {;
 i;  d: Date.now().toString();
 use; r: "You";
-messag; e: newMessag; e;,
-};
-timestam; p: new Date(),
-};
+messag; e: newMessag; e;};
+timestam; p: new Date()};
 setChatMessages(prev => [...pr;  e; v; messa; g; e]);
 setNewMessage("");
 }
@@ -159,8 +155,7 @@ onClick={toggleRecording}
 className={`p-2 rounded-lg transition-all duration-200 ${
 isRecording;
 ? "bg-red-500 text-white animate-pulse";
-: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0",
-}`}
+: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0"}`}
 title={isRecording ? "Stop Recording" : "Start Recording"}
 >;
 <div className="w-4 h-4 rounded-full border-2 border-current"></div>;
@@ -274,8 +269,7 @@ onClick={toggleScreenShare}
 className={`p-3 rounded-full transition-all duration-200 ${
 localUser.isScreenSharing;
 ? "bg-zion-cyan text-white";
-: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0",
-}`}
+: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0"}`}
 title={localUser.isScreenSharing ? "Stop Sharing" : "Share Screen"}
 >;
 <Monitor className="w-5 h-5" />;
@@ -286,8 +280,7 @@ onClick={toggleChat}
 className={`p-3 rounded-full transition-all duration-200 ${
 activeChat;
 ? "bg-zion-purple text-white";
-: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0",
-}`}
+: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0"}`}
 title="Toggle Chat";
 >;
 <MessageSquare className="w-5 h-5" />;

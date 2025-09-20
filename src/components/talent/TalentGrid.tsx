@@ -13,8 +13,7 @@ viewProfile?: (id: string) => void;
 // unused but kept for backward compatibility;
 clearFilters?: () => void;
 handleBook?: (talent: TalentProfile) => void;
-handleMessage?: (talent: TalentProfile) => void;,
-};
+handleMessage?: (talent: TalentProfile) => void;};
 export function TalentGrid({ ;
 talents;
 isLoading;

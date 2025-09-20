@@ -51,8 +51,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Customer Experience Platform;
     {
@@ -106,8 +105,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Supply Chain Optimization;
     {
@@ -161,8 +159,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Financial Technology Platform;
     {
@@ -216,8 +213,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Healthcare Technology Platform;
     {
@@ -271,8 +267,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Education Technology Platform;
     {
@@ -326,8 +321,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Marketing Automation Platform;
     {
@@ -381,8 +375,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Human Resources Platform;
     {
@@ -436,8 +429,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Legal Technology Platform;
     {
@@ -491,8 +483,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Real Estate Technology Platform;
     {
@@ -546,8 +537,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Manufacturing Technology Platform;
     {
@@ -601,8 +591,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Energy Management Platform;
     {
@@ -656,8 +645,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Transportation & Logistics Platform;
     {
@@ -711,8 +699,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Agriculture Technology Platform;
     {
@@ -766,8 +753,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Environmental Monitoring Platform;
     {
@@ -821,7 +807,6 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];

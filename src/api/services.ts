@@ -5,8 +5,7 @@ id: string; title: string;
 category?: string;
 price?: number;
 rating?: number;
-image?: string,
-}
+image?: string}
 
 export async function fetchServices(category?: string; q?: string): Promise<ServiceItem[]> {
 const params = new URLSearchParams();
@@ -18,7 +17,6 @@ mode: "cors",;
 headers: { "Content-Type": "application/json" },;
 });
 if (!res.ok) {
-throw new Error("Failed to fetch services"),
-}
+throw new Error("Failed to fetch services")}
 return res.json();
 }

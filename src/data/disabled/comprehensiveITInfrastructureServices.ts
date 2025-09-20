@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {,
 phone: string;,
 email: string;,
-website: string;,
-};
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -29,8 +28,7 @@ roi: string;
 competitors: string[];,
 uniqueValue: string;,
 sla: string;,
-uptime: string;,
-}
+uptime: string;}
 
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastructureService[] = [
 // Cloud-Native Infrastructure;
@@ -81,8 +79,7 @@ marketPrice: "$1;200 - $5;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Terraform", "AWS", "Azure", "GCP"],
 integrations: ["CI/CD pipelines", "Monitoring tools", "Security platforms", "Backup systems"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
@@ -90,8 +87,7 @@ roi: "300% within 8 months";,
 competitors: ["AWS EKS", "Azure AKS", "Google GKE", "Red Hat OpenShift"],
 uniqueValue: "Unified multi-cloud management with automated optimization and cost control";,
 sla: "99.99% uptime with 4-hour response time";,
-uptime: "99.99%",
-};
+uptime: "99.99%"};
 // Edge Computing Infrastructure;
 {
 id: "edge-computing-infrastructure";
@@ -140,8 +136,7 @@ marketPrice: "$899 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Kubernetes Edge", "5G Core", "Edge AI", "MQTT", "WebRTC"],
 integrations: ["IoT platforms", "Cloud services", "5G networks", "Enterprise systems"],
 compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -149,8 +144,7 @@ roi: "250% within 10 months";,
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
 uniqueValue: "Comprehensive edge infrastructure with 5G optimization and AI deployment";,
 sla: "99.9% uptime with 2-hour response time";,
-uptime: "99.9%",
-};
+uptime: "99.9%"};
 // Hybrid Cloud Management;
 {
 id: "hybrid-cloud-management-platform";,
@@ -199,8 +193,7 @@ marketPrice: "$1;500 - $6;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Terraform", "Ansible", "Kubernetes", "VMware", "OpenStack"],
 integrations: ["AWS", "Azure", "GCP", "On-premises systems", "Monitoring tools"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
@@ -208,8 +201,7 @@ roi: "280% within 12 months";,
 competitors: ["VMware vCloud", "Microsoft Azure Stack", "AWS Outposts", "Google Anthos"],
 uniqueValue: "Unified hybrid cloud management with automated optimization and compliance";,
 sla: "99.95% uptime with 6-hour response time";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 // Network Security Infrastructure;
 {
 id: "network-security-infrastructure";,
@@ -258,8 +250,7 @@ marketPrice: "$1;800 - $7;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "Custom solutions"],
 integrations: ["SIEM systems", "Identity providers", "Cloud platforms", "Monitoring tools"],
 compliance: ["NIST", "FIPS", "SOC 2", "ISO 27001", "GDPR"],
@@ -267,8 +258,7 @@ roi: "200% within 8 months";,
 competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
 uniqueValue: "Comprehensive network security with AI-powered threat detection and response";,
 sla: "99.99% uptime with 1-hour response time";,
-uptime: "99.99%",
-};
+uptime: "99.99%"};
 // Data Center Infrastructure;
 {
 id: "data-center-infrastructure";,
@@ -317,8 +307,7 @@ marketPrice: "$2;500 - $10;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["VMware", "Hyper-V", "Storage arrays", "Network switches", "UPS systems"],
 integrations: ["Monitoring tools", "Backup systems", "Cloud platforms", "Management tools"],
 compliance: ["SOC 2", "ISO 27001", "Uptime Institute", "Industry-specific"],
@@ -326,8 +315,7 @@ roi: "180% within 15 months";,
 competitors: ["Equinix", "Digital Realty", "CoreSite", "Cyxtera"],
 uniqueValue: "Modern data center infrastructure with energy efficiency and automation";,
 sla: "99.999% uptime with 4-hour response time";,
-uptime: "99.999%",
-};
+uptime: "99.999%"};
 // Storage Infrastructure;
 {
 id: "storage-infrastructure-platform";,
@@ -376,8 +364,7 @@ marketPrice: "$999 - $4;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["NetApp", "EMC", "Pure Storage", "HPE", "Custom solutions"],
 integrations: ["Backup systems", "Monitoring tools", "Cloud platforms", "Management tools"],
 compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -385,8 +372,7 @@ roi: "250% within 10 months";,
 competitors: ["NetApp", "EMC", "Pure Storage", "HPE", "Dell"],
 uniqueValue: "Intelligent storage infrastructure with automated optimization and management";,
 sla: "99.9% uptime with 4-hour response time";,
-uptime: "99.9%",
-};
+uptime: "99.9%"};
 // Backup and Disaster Recovery;
 {
 id: "backup-disaster-recovery-platform";,
@@ -435,8 +421,7 @@ marketPrice: "$699 - $2;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Custom solutions"],
 integrations: ["Storage systems", "Cloud platforms", "Monitoring tools", "Management tools"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
@@ -444,8 +429,7 @@ roi: "300% within 6 months";,
 competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Dell EMC"],
 uniqueValue: "Comprehensive backup and recovery with automated testing and compliance";,
 sla: "99.9% uptime with 2-hour response time";,
-uptime: "99.9%",
-};
+uptime: "99.9%"};
 // Network Monitoring Infrastructure;
 {
 id: "network-monitoring-infrastructure";,
@@ -494,8 +478,7 @@ marketPrice: "$599 - $2;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Custom solutions"],
 integrations: ["Network devices", "Cloud platforms", "Management tools", "Alerting systems"],
 compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -503,8 +486,7 @@ roi: "280% within 8 months";,
 competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"],
 uniqueValue: "Intelligent network monitoring with AI-powered analytics and automation";,
 sla: "99.9% uptime with 4-hour response time";,
-uptime: "99.9%",
-};
+uptime: "99.9%"};
 // Virtualization Infrastructure;
 {
 id: "virtualization-infrastructure-platform";,
@@ -553,8 +535,7 @@ marketPrice: "$799 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["VMware", "Hyper-V", "KVM", "Xen", "Custom solutions"],
 integrations: ["Storage systems", "Network infrastructure", "Management tools", "Monitoring tools"],
 compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -562,6 +543,5 @@ roi: "250% within 10 months";,
 competitors: ["VMware", "Microsoft Hyper-V", "Red Hat", "Citrix", "Oracle"],
 uniqueValue: "Comprehensive virtualization platform with automated optimization and management";,
 sla: "99.9% uptime with 4-hour response time";,
-uptime: "99.9%",
-}
+uptime: "99.9%"}
 ];

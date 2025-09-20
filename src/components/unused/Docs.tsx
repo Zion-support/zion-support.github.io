@@ -43,24 +43,20 @@ const popularDocs = [;
 {;
 title: "Building Your First AI Model", category: "AI & Machine Learning";,
 readTime: "15 min", views: "2.1k",
-lastUpdated: "2 days ago",
-};
+lastUpdated: "2 days ago"};
 {
 title: "API Integration Best Practices", category: "API Reference";,
 readTime: "12 min", views: "1.8k",
-lastUpdated: "1 week ago",
-};
+lastUpdated: "1 week ago"};
 {
 title: "Security Configuration Guide", category: "Security & Compliance";,
 readTime: "18 min", views: "1.5k",
-lastUpdated: "3 days ago",
-};
+lastUpdated: "3 days ago"};
 {
 title: "Performance Optimization Tips", category: "AI & Machine Learning";,
 readTime: "22 min",
 views: "1.3k",
-lastUpdated: "5 days ago",
-}
+lastUpdated: "5 days ago"}
 ];
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;

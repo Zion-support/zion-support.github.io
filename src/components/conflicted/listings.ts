@@ -21,8 +21,7 @@ company?: string;
 author?: {,
 name: string; id: string;
 avatarUrl?: string;
-email?: string,
-};
+email?: string};
 createdAt: string; updatedAt: string;
 featured?: boolean;
 popular?: boolean;

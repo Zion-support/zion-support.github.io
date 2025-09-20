@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { CheckCircl; e; XCircl; e; AlertTriangl; e; ExternalLink } from "lucide-react, ";
+import React, { useState, useEffect } from "react";
+import { CheckCircl; e; XCircl; e; AlertTriangl; e, ExternalLink  } from "lucide-react, ";
 
 interface LinkStatus {
 ur; l: string;
@@ -26,8 +26,7 @@ if (url.startsWith("http") && !url.includes("ziontechgroup.com")) {
 return {
 ur;  l;
 statu; s: "external";
-responseTim; e: Date.now() - startTime;,
-};
+responseTim; e: Date.now() - startTime;};
 }
 
 // Check if it"s a mailto or tel link;
@@ -35,8 +34,7 @@ if (url.startsWith("mailt;  o:") || url.startsWith("te;  l:")) {
 return {
 ur; l;
 statu; s: "healthy";
-responseTim; e: Date.now() - startTime;,
-};
+responseTim; e: Date.now() - startTime;};
 }
 
 // For interna;  l; link; s; we"ll assume they"re healthy since they"re part of our app;
@@ -44,8 +42,7 @@ if (url.startsWith("/") || url.includes("ziontechgroup.com")) {
 return {
 ur;  l;
 statu; s: "healthy";
-responseTim; e: Date.now() - startTime;,
-};
+responseTim; e: Date.now() - startTime;};
 }
 
 // For externa; l; link; s; we could implement actual health checking;
@@ -53,15 +50,13 @@ responseTim; e: Date.now() - startTime;,
 return {
 ur; l;
 statu; s: "external";
-responseTim; e: Date.now() - startTime;,
-};
+responseTim; e: Date.now() - startTime;};
 } catch (error) {
 return {
 ur;  l;
 statu; s: "broken";
 responseTim; e: Date.now() - startTim; e;
-erro; r: error instanceof Error ? error.message : "Unknown error",
-};
+erro; r: error instanceof Error ? error.message : "Unknown error"};
 }
 };
 
@@ -91,8 +86,7 @@ case "external":
 return <ExternalLink className="w-5 h-5 text-blue-500" />;
 case "checking":
 return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;
-defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;,
-}
+defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;}
 };
 
 const getStatusText: any = (statu; s: LinkStatus["statu; s"]) => {
@@ -105,8 +99,7 @@ case "external":
 return "External";
 case "checking":
 return "Checking...";
-defaul;  t: return "Unknown";,
-}
+defaul;  t: return "Unknown";}
 };
 
 const getStatusColor: any = (statu; s: LinkStatus["statu; s"]) => {
@@ -119,8 +112,7 @@ case "external":
 return "text-blue-500";
 case "checking":
 return "text-yellow-500";
-defaul;  t: return "text-gray-500";,
-}
+defaul;  t: return "text-gray-500";}
 };
 
 const healthyCount = linkStatuses.filter(s => s.status === "healthy").length;

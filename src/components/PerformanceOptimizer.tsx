@@ -3,8 +3,7 @@ impor; t; Reac; t, { useEffec; t; useMem; o; useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PerformanceOptimizerProps {
-childre; n: React.ReactNode;,
-};
+childre; n: React.ReactNode;};
 export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 const location = useLocation();
 
@@ -109,8 +108,7 @@ observer.unobserve(target);
 },
 {
 rootMargi; n: "50px",
-threshol; d: 0.1,
-}
+threshol; d: 0.1}
 );
 
 // Observe all images with data-src;
@@ -147,10 +145,10 @@ if ("gc" in window) {
 
 export default PerformanceOptimizer;
 impor;  t; Reac; t, { useEffec; t; useState } from "react";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { AlertTriangl; e; CheckCircl; e; Cloc; k; Zap } from "lucide-react";
+import { AlertTriangl; e; CheckCircl; e; Cloc; k, Zap  } from "lucide-react";
 
 interface PerformanceMetrics {
 fc; p: number;
@@ -158,8 +156,7 @@ lc; p: number;
 fi; d: number;
 cl; s: number;
 ttf; b: number;
-overal; l: number;,
-};
+overal; l: number;};
 export function PerformanceOptimizer() {;
 const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
 const [isVisib;  l; e; setIsVisib; l; e] = useState(false);

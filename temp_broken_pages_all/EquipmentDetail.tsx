@@ -25,7 +25,7 @@ className='flex mb-8'
             initial={{ opacity: 0 y: -20 }}
             animate={{ opacity: 1 y: 0 }}
           >
-            <button,
+            <button
 onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
               Equipment
@@ -41,11 +41,11 @@ className='space-y-4'
               animate={{ opacity: 1 x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <AspectRatio,
+              <AspectRatio
 ratio={1}
                 className='bg-zion-blue-light rounded-lg overflow-hidden'
               >
-                <ImageWithRetry,
+                <ImageWithRetry
 src={
                     equipment.images[selectedImageIndex] |
                     equipment.images[0] |
@@ -56,7 +56,7 @@ src={
               </AspectRatio>
               {equipment.images.length > 1 && (
                 <div className='grid grid-cols-4 gap-2'>
-                  {equipment.images.map((image index) => (                    <button,
+                  {equipment.images.map((image index) => (                    <button
 key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
@@ -65,7 +65,7 @@ key = {index,}
                           : 'border-transparent hover:border-zion-slate-light'
                       }`}
                     >
-                      <ImageWithRetry,
+                      <ImageWithRetry
 src = {image,}
                         alt={`${equipment.name} view ${index + 1}`}
                         className='object-cover'
@@ -85,13 +85,13 @@ className='space-y-6'
               {/* Header */}
               <div className='space-y-2'>
                 <div className='flex items-center gap-2 mb-2'>
-                  <Badge,
+                  <Badge
 variant='secondary'
                     className='bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20'
                   >
                     {equipment.category}
                   </Badge>
-                  <Badge,
+                  <Badge
 variant='outline'
                     className='border-zion-slate-light text-zion-slate-light'
                   >
@@ -104,7 +104,7 @@ variant='outline'
                 {equipment.rating && (
                   <div className='flex items-center gap-2'>
                     <div className='flex items-center'>
-                      {[...Array(5)].map((_ i) => (                        <Star,
+                      {[...Array(5)].map((_ i) => (                        <Star
 key = {i,}
                           className={`h-4 w-4 ${
                             i < Math.floor(equipment.rating!)
@@ -128,7 +128,7 @@ key = {i,}
                 </div>
                 <div className='flex items-center gap-2 text-sm'>
                   <Clock className='h-4 w-4 text-zion-cyan' />
-                  <span,
+                  <span
 className={
                       equipment.inStock ? 'text-green-400' : 'text-yellow-400'
                     }
@@ -154,7 +154,7 @@ className={
                   </h3>
                   <div className='grid gap-2'>
                     {equipment.specifications.map((spec index) => (
-                      <div,
+                      <div
 key={index}
                         className='flex justify-between py-2 border-b border-zion-blue-light'
                       >
@@ -173,7 +173,7 @@ key={index}
                 <div className='flex items-center gap-4'>
                   <label className='text-white font-medium'>Quantity:</label>
                   <div className='flex items-center gap-2'>
-                    <Button,
+                    <Button
 variant='outline'
                       size='sm'
                       onClick={() => setQuantity(Math.max(1 quantity - 1))}
@@ -183,7 +183,7 @@ variant='outline'
                     <span className='text-white w-8 text-center'>
                       {quantity}
                     </span>
-                    <Button,
+                    <Button
 variant='outline'
                       size='sm'
                       onClick={() => setQuantity(quantity + 1)}
@@ -192,7 +192,7 @@ variant='outline'
                     </Button>
                   </div>
                 </div>
-                <Button,
+                <Button
 onClick={handleAddToCart}
                   disabled={isAdding |!equipment.inStock}
                   size='lg'

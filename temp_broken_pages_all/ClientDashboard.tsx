@@ -23,7 +23,7 @@ function ClientDashboardContent() {
   const isMobile = null;
   return (
     <>
-      <SEO,
+      <SEO
 title="Client Dashboard | Zion AI Marketplace"
         description="Manage your jobs and talent requests in the Zion AI Marketplace."
       />

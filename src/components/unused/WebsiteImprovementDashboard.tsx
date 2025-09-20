@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { ChartBarIcon;
 CogIcon;
 ExclamationTriangleIcon;
@@ -13,8 +13,7 @@ EyeIcon;
 ClockIcon;
 GlobeAltIcon;
 DevicePhoneMobileIcon;
-ComputerDesktopIcon;
-} from "@heroicons/react/24/outline, ";
+ComputerDesktopIcon} from "@heroicons/react/24/outline, ";
 
 interface PerformanceMetrics {
 loadTime: number;
@@ -22,8 +21,7 @@ firstContentfulPaint: number;
 largestContentfulPaint: number;,
 cumulativeLayoutShift: number;,
 firstInputDelay: number;,
-timeToInteractive: number;,
-};
+timeToInteractive: number;};
 interface SEOAnalysis {
 score: number;
 issues: string[];
@@ -34,8 +32,7 @@ description: boolean;
 keywords: boolean;,
 canonical: boolean;,
 ogTags: boolean;,
-twitterTags: boolean;,
-};
+twitterTags: boolean;};
 }
 
 interface AccessibilityReport {
@@ -43,8 +40,7 @@ score: number;
 issues: string[];,
 wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant";,
 criticalIssues: number;,
-warnings: number;,
-};
+warnings: number;};
 interface WebsiteImprovementDashboardProps {
 className?: string;
 showOnLoad?: boolean;
@@ -53,17 +49,16 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
 className = "";
 showOnLoad = false;
 }) => {
-const [isOpen; setIsOpen] = useState(showOnLoad);
-const [activeTab; setActiveTab] = useState<"overview" | "performance" | "seo" | "accessibility" | "recommendations">("overview");
-const [metrics; setMetrics] = useState<PerformanceMetrics>({
+const [isOpen, setIsOpen] = useState(showOnLoad);
+const [activeTab, setActiveTab] = useState<"overview" | "performance" | "seo" | "accessibility" | "recommendations">("overview");
+const [metrics, setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0;
 firstContentfulPaint: 0;
 largestContentfulPaint: 0;,
 cumulativeLayoutShift: 0;,
 firstInputDelay: 0;,
-timeToInteractive: 0;,
-});
-const [seoAnalysis; setSeoAnalysis] = useState<SEOAnalysis>({
+timeToInteractive: 0;});
+const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis>({
 score: 0;
 issues: [];
 suggestions: [];
@@ -73,17 +68,15 @@ description: false;
 keywords: false;,
 canonical: false;,
 ogTags: false;,
-twitterTags: false;,
-}
+twitterTags: false;}
 });
-const [accessibilityReport; setAccessibilityReport] = useState<AccessibilityReport>({
+const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport>({
 score: 0;
 issues: [];,
 wcagCompliance: "Non-Compliant";,
 criticalIssues: 0;,
-warnings: 0;,
-});
-const [isAnalyzing; setIsAnalyzing] = useState(false);
+warnings: 0;});
+const [isAnalyzing, setIsAnalyzing] = useState(false);
 
 // Analyze website performance;
 const analyzePerformance = useCallback(async () => {;
@@ -99,8 +92,7 @@ firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds;
 largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds;
 cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1;
 firstInputDelay: Math.random() * 100 + 50, // 50-150ms;
-timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;,
-};
+timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;};
 setMetrics(mockMetrics);
 setIsAnalyzing(false);
 }, []);
@@ -130,8 +122,7 @@ description: Math.random() > 0.3;
 keywords: Math.random() > 0.5;,
 canonical: true;,
 ogTags: Math.random() > 0.2;,
-twitterTags: Math.random() > 0.4;,
-}
+twitterTags: Math.random() > 0.4;}
 };
 setSeoAnalysis(mockSEO);
 setIsAnalyzing(false);
@@ -153,8 +144,7 @@ issues: [
 ],
 wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant";,
 criticalIssues: Math.floor(Math.random() * 3);,
-warnings: Math.floor(Math.random() * 5) + 1;,
-};
+warnings: Math.floor(Math.random() * 5) + 1;};
 setAccessibilityReport(mockAccessibility);
 setIsAnalyzing(false);
 }, []);
@@ -244,8 +234,7 @@ onClick={() => setActiveTab(tab.id as any)}
 className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium transition-colors ${
 activeTab === tab.id;
 ? "text-indigo-600 bg-white dark:bg-gray-900 border-b-2 border-indigo-600";
-: "text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300",
-}`}
+: "text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}`}
 >;
 <tab.icon className="w-4 h-4" />;
 {tab.label}
@@ -526,37 +515,32 @@ priority: "High";
 title: "Fix Critical Accessibility Issues";,
 description: "Address WCAG compliance violations";,
 impact: "High";,
-effort: "Medium",
-};
+effort: "Medium"};
 {
 priority: "High";
 title: "Optimize Core Web Vitals";,
 description: "Improve page load performance";,
 impact: "High";,
-effort: "High",
-};
+effort: "High"};
 {
 priority: "Medium";
 title: "Enhance SEO Meta Tags";,
 description: "Add missing meta descriptions and titles";,
 impact: "Medium";,
-effort: "Low",
-};
+effort: "Low"};
 {
 priority: "Medium";
 title: "Improve Image Optimization";,
 description: "Add alt text and compress images";,
 impact: "Medium";,
-effort: "Low",
-}
+effort: "Low"}
 ].map((action; index) => (
 <div key={index} className="p-3 border border-gray-200 dark: border-gray-700 rounded-lg">;
 <div className="flex items-start justify-between mb-2">;
 <span className={`text-xs px-2 py-1 rounded font-medium ${
 action.priority === "High";
 ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300";
-: "bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30 dark:text-yellow-300',
-}`}>;
+: "bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30 dark:text-yellow-300'}`}>;
 {action.priority}
 </span>;
 <div className="text-right text-xs">;

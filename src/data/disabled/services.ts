@@ -27,8 +27,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/ai-lead-scoring-api";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "invoice-ocr-api";
@@ -52,8 +51,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/invoice-ocr-api";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "uptime-ssl-monitor";,
@@ -72,8 +70,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/uptime-monitor";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "ai-doc-qa-widget";,
@@ -92,8 +89,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/ai-doc-qa-widget";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "seo-content-studio";,
@@ -112,8 +108,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/ai-seo-content-studio";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "cloud-migration-accelerator";,
@@ -132,8 +127,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/cloud-migration-accelerator";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "managed-kubernetes";,
@@ -152,8 +146,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/managed-kubernetes";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "soc2-readiness";,
@@ -172,8 +165,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/soc2-readiness";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "mlops-foundation";,
@@ -192,8 +184,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/mlops-foundation";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "custom-llm-fine-tuning";,
@@ -212,8 +203,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/custom-llm-fine-tuning";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "ai-support-chatbot";,
@@ -232,8 +222,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/ai-support-chatbot";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
 id: "computer-vision-inspection";
@@ -252,8 +241,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/services/computer-vision-inspection";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-}
+address: "364 E Main St STE 1008 Middletown DE 19709"}
 }
 ];
 export default ZION_SERVICES;

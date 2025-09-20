@@ -25,11 +25,10 @@ Code;
 Server;
 Wifi;
 FileText;
-Briefcase;
-} from "lucide-react, ";
+Briefcase} from "lucide-react, ";
 
 export default function RequestQuote() {;
-const [formData; setFormData] = useState({
+const [formData, setFormData] = useState({
 firstName: "";
 lastName: "";
 email: "";
@@ -39,9 +38,8 @@ projectType: "";
 budget: "";,
 timeline: "";,
 description: "";,
-urgency: "medium",
-});
-const [submissionStatus; setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+urgency: "medium"});
+const [submissionStatus, setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
 const projectTypes = [;
 { value: "web-development", label: "Web Development", icon: Globe; description: "Custom websites and web applications" };
@@ -106,8 +104,7 @@ projectType: "";
 budget: "";,
 timeline: "";,
 description: "";,
-urgency: "medium",
-});
+urgency: "medium"});
 setSubmissionStatus("idle");
 }, 3000);
 }, 2000);
@@ -262,8 +259,7 @@ key={type.value}
 className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
 formData.projectType === type.value;
 ? "border-cyan-400 bg-cyan-400/20";
-: "border-white/20 hover: border-cyan-400/50",
-}`}
+: "border-white/20 hover: border-cyan-400/50"}`}
 >;
 <input;
 type="radio"
@@ -333,8 +329,7 @@ key={level.value}
 className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
 formData.urgency === level.value;
 ? "border-cyan-400 bg-cyan-400/20";
-: "border-white/20 hover: border-cyan-400/50",
-}`}
+: "border-white/20 hover: border-cyan-400/50"}`}
 >;
 <input;
 type="radio"
@@ -374,8 +369,7 @@ disabled={!isFormValid || submissionStatus === "submitting"}
 className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${
 !isFormValid || submissionStatus === "submitting";
 ? "bg-gray-600 text-gray-400 cursor-not-allowed";
-: "bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover: from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25",
-}`}
+: "bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover: from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25"}`}
 >;
 {submissionStatus === "submitting" ? (
 <>;

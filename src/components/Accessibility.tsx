@@ -1,8 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; createContex; t; useContext } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-import {
-Ey; e;
+import { motio; n, AnimatePresence  } from "framer-motion";
+import { Ey; e;
 EyeOf; f;
 Volume; 2;
 Volume; X;
@@ -12,8 +11,7 @@ Moo; n;
 Monito; r;
 Accessibilit; y;
 Setting; s;
-X;
-} from "lucide-react";
+X} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Button } from "../ui/button";
 
@@ -26,8 +24,7 @@ colorBlindMod; e: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 toggleHighContras; t: () => void;
 toggleReducedMotio;  n: () => void;
 setFontSiz; e: (siz;  e: "small" | "medium" | "large") => void;
-setColorBlindMod; e: (mod;  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void;,
-};
+setColorBlindMod; e: (mod;  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void;};
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility: any = () => {;

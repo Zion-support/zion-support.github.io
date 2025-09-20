@@ -1,10 +1,10 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect  } from "react, ";
 import { ContractTemplate } from "@/types/contracts, ";
 
 export const useContractTemplates: any = () => {;
-const [templates; setTemplates] = useState<ContractTemplate[]>([]);
-const [loading; setLoading] = useState(true);
-const [error; setError] = useState<string | null>(null);
+const [templates, setTemplates] = useState<ContractTemplate[]>([]);
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState<string | null>(null);
 
 useEffect(() => {
 const fetchTemplates = async () => {;
@@ -26,20 +26,17 @@ variables: [
 name: "clientName";,
 type: "string";,
 description: "Name of the client";,
-required: true;,
-},
+required: true;},
 {
 name: "serviceDescription";,
 type: "string";,
 description: "Description of services to be provided";,
-required: true;,
-},
+required: true;},
 {
 name: "rate";,
 type: "number";,
 description: "Hourly rate for services";,
-required: true;,
-},
+required: true;},
 ],
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
@@ -48,8 +45,7 @@ authorId: "admin";
 authorName: "Admin";,
 usageCount: 1250;,
 rating: 4.8;,
-tags: ["freelance", "agreement", "services"],
-},
+tags: ["freelance", "agreement", "services"]},
 {
 id: "2";
 name: "Non-Disclosure Agreement";
@@ -61,15 +57,13 @@ variables: [
 name: "companyName";,
 type: "string";,
 description: "Name of the company";,
-required: true;,
-},
+required: true;},
 {
 name: "confidentialityPeriod";
 type: "number";,
 description: "Period of confidentiality in years";,
 required: true;,
-defaultValue: 2;,
-},
+defaultValue: 2;},
 ],
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
@@ -78,8 +72,7 @@ authorId: "admin";
 authorName: "Admin";,
 usageCount: 890;,
 rating: 4.6;,
-tags: ["nda", "confidentiality", "legal"],
-},
+tags: ["nda", "confidentiality", "legal"]},
 ];
 
 setTemplates(mockTemplates);
@@ -117,6 +110,5 @@ loading;
 error;
 getTemplateById;
 getTemplatesByCategory;
-searchTemplates,
-};
+searchTemplates};
 };

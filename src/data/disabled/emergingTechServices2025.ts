@@ -17,8 +17,7 @@ contactInfo: {
 phone: string;,
 email: string;,
 website: string;,
-address: string;,
-};
+address: string;};
 marketPrice: string;
 competitors: string[];
 roi: string;
@@ -31,8 +30,7 @@ useCases: string[];
 compliance: string[];,
 scalability: string;,
 support: string;,
-futurePotential: string;,
-}
+futurePotential: string;}
 
 export const emergingTechServices2025: EmergingTechService[] = [
 {
@@ -75,8 +73,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$50;000/month (Industry average: $100;000/month)",
 competitors: ["SpaceX Starlink", "OneWeb", "Amazon Project Kuiper", "Telesat"],
 roi: "800% ROI within 18 months";,
@@ -96,8 +93,7 @@ useCases: [
 compliance: ["ITAR", "FCC", "NOAA", "Space Force", "International Space Law"],
 scalability: "Global satellite network";,
 support: "24/7 space operations support";,
-futurePotential: "Mars colonization support; deep space exploration",
-},
+futurePotential: "Mars colonization support; deep space exploration"},
 {
 id: 2;
 name: "Biotechnology AI Platform";,
@@ -138,8 +134,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$35;000/month (Industry average: $70;000/month)",
 competitors: ["Insitro", "Atomwise", "BenevolentAI", "Recursion Pharmaceuticals"],
 roi: "600% ROI within 15 months";,
@@ -159,8 +154,7 @@ useCases: [
 compliance: ["FDA", "EMA", "GMP", "ISO 13485", "HIPAA", "CLIA"],
 scalability: "Unlimited biological data";,
 support: "Biotechnology expert support";,
-futurePotential: "Human augmentation; synthetic life forms; bio-computing",
-},
+futurePotential: "Human augmentation; synthetic life forms; bio-computing"},
 {
 id: 3;
 name: "Nanotechnology Manufacturing Platform";,
@@ -201,8 +195,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$40;000/month (Industry average: $80;000/month)",
 competitors: ["Nano Dimension", "Nanofabrica", "Carbon", "Desktop Metal"],
 roi: "700% ROI within 16 months";,
@@ -222,8 +215,7 @@ useCases: [
 compliance: ["ISO 9001", "AS9100", "FDA", "CE", "RoHS", "REACH"],
 scalability: "Atomic-scale precision";,
 support: "Nanotechnology expert support";,
-futurePotential: "Molecular machines; quantum computers; space elevators",
-},
+futurePotential: "Molecular machines; quantum computers; space elevators"},
 {
 id: 4;
 name: "Quantum Internet Platform";
@@ -264,8 +256,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$30;000/month (Industry average: $60;000/month)",
 competitors: ["Quantum Xchange", "ID Quantique", "Toshiba Quantum", "NTT Quantum"],
 roi: "500% ROI within 14 months";,
@@ -285,8 +276,7 @@ useCases: [
 compliance: ["NIST", "FIPS", "FedRAMP", "SOC 2", "ISO 27001"],
 scalability: "Global quantum network";,
 support: "Quantum internet expert support";,
-futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication",
-},
+futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication"},
 {
 id: 5;
 name: "Brain-Computer Interface Platform";
@@ -327,8 +317,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
 competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
 roi: "400% ROI within 12 months";,
@@ -348,8 +337,7 @@ useCases: [
 compliance: ["FDA", "CE", "ISO 13485", "HIPAA", "GDPR"],
 scalability: "Unlimited neural interfaces";,
 support: "Neuroscience expert support";,
-futurePotential: "Human consciousness upload; collective intelligence; telepathic communication",
-},
+futurePotential: "Human consciousness upload; collective intelligence; telepathic communication"},
 {
 id: 6;
 name: "Fusion Energy Platform";,
@@ -390,8 +378,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$100;000/month (Industry average: $200;000/month)",
 competitors: ["ITER", "Commonwealth Fusion", "General Fusion", "Helion Energy"],
 roi: "1000% ROI within 24 months";,
@@ -411,8 +398,7 @@ useCases: [
 compliance: ["Nuclear regulations", "Environmental standards", "Safety protocols", "International treaties"],
 scalability: "Global energy grid";,
 support: "Fusion physics expert support";,
-futurePotential: "Interstellar travel; space colonization; unlimited energy civilization",
-},
+futurePotential: "Interstellar travel; space colonization; unlimited energy civilization"},
 {
 id: 7;
 name: "Digital Twin Platform";,
@@ -453,8 +439,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000/month (Industry average: $30;000/month)",
 competitors: ["Siemens Digital Twin", "GE Digital Twin", "Microsoft Azure Digital Twins", "IBM Digital Twin"],
 roi: "350% ROI within 8 months";,
@@ -474,8 +459,7 @@ useCases: [
 compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
 scalability: "Unlimited digital twins";,
 support: "Digital twin expert support";,
-futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling",
-},
+futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling"},
 {
 id: 8;
 name: "Holographic Display Platform";,
@@ -516,8 +500,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$20;000/month (Industry average: $40;000/month)",
 competitors: ["Looking Glass", "Light Field Lab", "RealView Imaging", "Leia Inc"],
 roi: "450% ROI within 10 months";,
@@ -537,8 +520,7 @@ useCases: [
 compliance: ["Display standards", "Safety regulations", "Accessibility guidelines"],
 scalability: "Unlimited holographic displays";,
 support: "Holographic technology expert support";,
-futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet",
-},
+futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet"},
 {
 id: 9;
 name: "Quantum Sensing Platform";
@@ -579,8 +561,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$18;000/month (Industry average: $35;000/month)",
 competitors: ["Q-CTRL", "Quantum Machines", "Rigetti", "D-Wave"],
 roi: "500% ROI within 12 months";,
@@ -600,8 +581,7 @@ useCases: [
 compliance: ["Research standards", "Safety protocols", "International standards"],
 scalability: "Unlimited quantum sensors";,
 support: "Quantum physics expert support";,
-futurePotential: "Quantum internet; quantum computers; quantum communication networks",
-},
+futurePotential: "Quantum internet; quantum computers; quantum communication networks"},
 {
 id: 10;
 name: "Autonomous Systems Platform";,
@@ -642,8 +622,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
 competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC"],
 roi: "400% ROI within 10 months";,
@@ -663,8 +642,7 @@ useCases: [
 compliance: ["Safety standards", "Industry regulations", "Quality standards"],
 scalability: "Unlimited autonomous systems";,
 support: "Robotics expert support";,
-futurePotential: "General purpose robots; humanoid robots; swarm intelligence",
-}
+futurePotential: "General purpose robots; humanoid robots; swarm intelligence"}
 ];
 
 export default emergingTechServices2025;

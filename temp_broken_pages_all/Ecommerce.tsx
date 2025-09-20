@@ -7,14 +7,14 @@ import Link from 'next/link';
 export default function Ecommerce() {
 return (
     <>
-      <SEO,
+      <SEO
 title='E-commerce Platform'
         description='Buy and sell hardware software and services in the Zion marketplace.'
         keywords='tech marketplace buy IT hardware sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -29,7 +29,7 @@ type='application/ld+json'
 with Stripe-powered checkout.
           </p>
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>
-            <img,
+            <img
 src='https://placehold.co/800x400'
               alt='Screenshot of marketplace interface'
               className='object-cover'
@@ -70,7 +70,7 @@ real-time rates.
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -82,7 +82,7 @@ type="application/ld+json"
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img,
+            <img
 src="https://placehold.co/800x400"
               alt="Screenshot of marketplace interface"
               className="object-cover"

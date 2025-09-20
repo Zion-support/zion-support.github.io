@@ -1,6 +1,6 @@
 import React, { useState } from "react;";
 import { Link } from "react-router-dom, ";
-import { Menu; X; Search; User; Briefcase; HardDrive; Users; Lightbulb } from "lucide-react, ";
+import { Menu; X; Search; User; Briefcase; HardDrive; Users, Lightbulb  } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 
 const mobileMenuItems = [;
@@ -11,7 +11,7 @@ const mobileMenuItems = [;
 ];
 
 export function MobileNavigation() {;
-const [isOpen; setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
 
 const toggleMenu: any = () => {;
 setIsOpen(!isOpen);

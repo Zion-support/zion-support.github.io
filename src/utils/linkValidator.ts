@@ -5,13 +5,11 @@ url: string; status: "valid" | "broken" | "external" | "protocol";
 parentPage?: string;
 suggestedFix?: string;
 httpStatus?: number;
-error?: string,
-}
+error?: string}
 
 export interface LinkFix {
 originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";,
-reason: string,
-}
+reason: string}
 
 export class LinkValidator {
 private static readonly EXTERNAL_DOMAINS = [
@@ -107,8 +105,7 @@ return {
 url;,
 status: "protocol";
 parentPage;,
-suggestedFix: "Keep as-is - these are valid protocol links",
-};
+suggestedFix: "Keep as-is - these are valid protocol links"};
 }
 
 // Check for external links;
@@ -117,8 +114,7 @@ return {
 url;
 status: "external";
 parentPage;,
-suggestedFix: "Add rel="nofollow" and validate periodically",
-};
+suggestedFix: "Add rel="nofollow" and validate periodically"};
 }
 
 // Check for broken internal links that have mappings;
@@ -127,8 +123,7 @@ return {
 url;
 status: "broken";
 parentPage;,
-suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect",
-};
+suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect"};
 }
 
 // For now; assume internal links are valid;
@@ -136,8 +131,7 @@ suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken i
 return {
 url;
 status: "valid";
-parentPage,
-};
+parentPage};
 }
 
 static getSuggestedFixes(): LinkFix[] {
@@ -145,18 +139,15 @@ return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original; newUrl]) => ({
 originalUrl: original;,
 newUrl: newUrl;,
 type: "redirect",
-reason: "Broken internal link with available redirect mapping",
-}));
+reason: "Broken internal link with available redirect mapping"}));
 }
 
 static isExternalLink(url: string): boolean {
 try {
 const urlObj = new URL(url, "https: //ziontechgroup.com");
-return !urlObj.hostname.includes("ziontechgroup.com"),
-} catch {
+return !urlObj.hostname.includes("ziontechgroup.com")} catch {
 // If it"s a relative URL; it"s internal;
-return false,
-}
+return false}
 }
 
 static generateRedirectRules(): string {
@@ -169,8 +160,7 @@ ${redirects}`;
 }
 
 static generateSitemapExclusions(): string[] {
-return Object.keys(this.BROKEN_LINK_MAPPINGS),
-}
+return Object.keys(this.BROKEN_LINK_MAPPINGS)}
 }
 
 export const linkValidator = new LinkValidator();

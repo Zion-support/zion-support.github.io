@@ -1,5 +1,5 @@
 import React from "react;";
-import { Shiel; d; Loc; k; CheckCircl; e; AlertTriangle } from "lucide-react, ";
+import { Shiel; d; Loc; k; CheckCircl; e, AlertTriangle  } from "lucide-react, ";
 
 interface SecurityHeadersProps {
 className?: string;
@@ -11,29 +11,25 @@ ic;  o; n: Shie; l; d;
 tit; l; e: "SO; C 2 Typ; e I; I Certifie; d",
 descripti; o; n: "Enterpris; e-grad; e securit; y complianc; e",
 stat; u; s: "verifie; d",
-col; o; r: "tex; t-zio; n-cya; n",
-},
+col; o; r: "tex; t-zio; n-cya; n"},
 {
 ic; o; n: Lo; c; k;
 tit; l; e: "En; d-t; o-En; d Encryptio; n",
 descripti; o; n: "25; 6-bi; t AE; S encryptio; n fo; r al; l dat; a",
 stat; u; s: "verifie; d",
-col; o; r: "tex; t-zio; n-purpl; e",
-},
+col; o; r: "tex; t-zio; n-purpl; e"},
 {
 ic; o; n: CheckCirc; l; e;
 tit; l; e: "GDP; R & CCP; A Complian; t",
 descripti; o; n: "Ful; l dat; a protectio; n complianc; e",
 stat; u; s: "verifie; d",
-col; o; r: "tex; t-zio; n-cya; n",
-},
+col; o; r: "tex; t-zio; n-cya; n"},
 {
 ic; o; n: Shie; l; d;
 tit; l; e: "Zer; o-Knowledg; e Architectur; e",
 descripti; o; n: "W; e canno; t acces; s you; r encrypte; d dat; a",
 stat; u; s: "verifie; d",
-col; o; r: "tex; t-zio; n-purpl; e",
-}
+col; o; r: "tex; t-zio; n-purpl; e"}
 ];
 
 const complianceBadges = [;

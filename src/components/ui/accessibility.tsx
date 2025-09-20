@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Eye;
 Volume2;
 VolumeX;
@@ -9,8 +9,7 @@ ZoomIn;
 ZoomOut;
 Settings;
 Accessibility;
-X;
-} from "lucide-react, ";
+X} from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
@@ -19,27 +18,24 @@ largeText: boolean;
 reducedMotion: boolean;,
 screenReader: boolean;,
 fontSize: number;,
-colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";,
-};
+colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";};
 interface AccessibilityProps {
 enabled?: boolean;
 className?: string;
-onSettingsChange?: (settings: AccessibilitySettings) => void;,
-};
+onSettingsChange?: (settings: AccessibilitySettings) => void;};
 export function AccessibilityPanel({ ;
 enabled = true;
 className = "",
 onSettingsChange;
 }: AccessibilityProps) {
-const [isOpen; setIsOpen] = useState(false);
-const [settings; setSettings] = useState<AccessibilitySettings>({
+const [isOpen, setIsOpen] = useState(false);
+const [settings, setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 largeText: false;
 reducedMotion: false;,
 screenReader: false;,
 fontSize: 16;,
-colorBlindMode: "normal",
-});
+colorBlindMode: "normal"});
 // Apply accessibility settings to document;
 useEffect(() => {
 if (!enabled) return;
@@ -113,8 +109,7 @@ largeText: false;
 reducedMotion: false;,
 screenReader: false;,
 fontSize: 16;,
-colorBlindMode: "normal",
-};
+colorBlindMode: "normal"};
 saveSettings(defaults);
 }, [saveSettings]);
 
@@ -368,8 +363,7 @@ margin: -1px;,
 overflow: hidden;,
 clip: rect(0; 0; 0; 0);
 white-space: nowrap;,
-border: 0;,
-}
+border: 0;}
 
 .high-contrast {
 --zion-cyan: #00ffff;
@@ -379,43 +373,35 @@ border: 0;,
 --zion-blue-light: #3399ff;
 --zion-cyan-light: #33ffff;
 --zion-purple-dark: #6600cc;
---zion-purple-light: #cc33ff;,
-}
+--zion-purple-light: #cc33ff;}
 
 [data-color-blind="protanopia"] {
-filter: url("#protanopia-filter");,
-}
+filter: url("#protanopia-filter");}
 
 [data-color-blind="deuteranopia"] {
-filter: url("#deuteranopia-filter");,
-}
+filter: url("#deuteranopia-filter");}
 
 [data-color-blind="tritanopia"] {
-filter: url("#tritanopia-filter");,
-}
+filter: url("#tritanopia-filter");}
 
 :root {
 --font-size: 16px;
---reduced-motion: no-preference;,
-}
+--reduced-motion: no-preference;}
 
 * {
-font-size: var(--font-size);,
-}
+font-size: var(--font-size);}
 
 @media (prefers-reduced-motion: reduce) {
 * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
-transition-duration: 0.01ms !important;,
-}
+transition-duration: 0.01ms !important;}
 }
 
 [style*="--reduced-motion: reduce"] * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
-transition-duration: 0.01ms !important;,
-}
+transition-duration: 0.01ms !important;}
 `;
 }} />;
 

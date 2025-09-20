@@ -52,8 +52,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         aiScore: 98;
         rating: 4.9;
         reviewCount: 156;
@@ -117,8 +116,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         aiScore: 97;
         rating: 4.8;
         reviewCount: 89;
@@ -182,8 +180,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         aiScore: 95;
         rating: 4.7;
         reviewCount: 134;
@@ -247,8 +244,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         aiScore: 93;
         rating: 4.6;
         reviewCount: 78;
@@ -312,8 +308,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         aiScore: 96;
         rating: 4.8;
         reviewCount: 167;
@@ -377,8 +372,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         aiScore: 99;
         rating: 4.9;
         reviewCount: 45;
@@ -442,8 +436,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         aiScore: 94;
         rating: 4.7;
         reviewCount: 112;
@@ -507,8 +500,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         aiScore: 95;
         rating: 4.8;
         reviewCount: 203;
@@ -572,8 +564,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         aiScore: 96;
         rating: 4.8;
         reviewCount: 178;

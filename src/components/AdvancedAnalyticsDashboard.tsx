@@ -20,8 +20,7 @@ conversionRate: 0,
 bounceRate: 0,
 avgSessionDuration: 0,
 topPages: [],;
-trafficSources: [];,
-});
+trafficSources: [];});
 
 useEffect(() => {
 // Simulate data loading;

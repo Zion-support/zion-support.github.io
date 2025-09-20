@@ -32,8 +32,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-vision-pro";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$0.05-0.15 per API call";
         competitors: ["Google Vision AI", "AWS Rekognition", "Azure Computer Vision"],
         aiModels: ["YOLO v8", "ResNet", "EfficientNet", "Custom trained models"],
@@ -54,8 +53,7 @@ export const enhancedAIServices2025 = [
         scalability: "Millions of requests/day";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {
         id: 2;
         name: "NLP Genius";
@@ -88,8 +86,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/nlp-genius";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$199-599/month";
         competitors: ["OpenAI GPT", "Google Cloud NLP", "AWS Comprehend"],
         aiModels: ["BERT", "GPT-4", "T5", "Custom trained models"],
@@ -110,8 +107,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {
         id: 3;
         name: "Predictive Analytics Pro";
@@ -144,8 +140,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/predictive-analytics-pro";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$999-2999/month";
         competitors: ["SAS", "IBM SPSS", "RapidMiner"],
         aiModels: ["Random Forest", "XGBoost", "Neural Networks", "Custom algorithms"],
@@ -166,8 +161,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {
         id: 4;
         name: "AI Chatbot Studio";
@@ -200,8 +194,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-chatbot-studio";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$49-199/month";
         competitors: ["Dialogflow", "IBM Watson", "Microsoft Bot Framework"],
         aiModels: ["GPT-4", "BERT", "Custom trained models"],
@@ -222,8 +215,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited conversations";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {
         id: 5;
         name: "AI Content Creator";
@@ -256,8 +248,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-content-creator";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$0.10-0.25 per word";
         competitors: ["Jasper", "Copy.ai", "Writesonic"],
         aiModels: ["GPT-4", "Claude", "Custom trained models"],
@@ -278,8 +269,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited words";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {
         id: 6;
         name: "AI Data Scientist";
@@ -312,8 +302,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-data-scientist";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1499-4999/month";
         competitors: ["DataRobot", "H2O.ai", "Google AutoML"],
         aiModels: ["AutoML", "Custom algorithms", "Pre-trained models"],
@@ -334,8 +323,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {
         id: 7;
         name: "AI Voice Assistant";
@@ -368,8 +356,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-voice-assistant";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$299-899/month";
         competitors: ["Google Speech-to-Text", "AWS Polly", "Azure Speech"],
         aiModels: ["Whisper", "Tacotron", "Custom trained models"],
@@ -390,8 +377,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {
         id: 8;
         name: "AI Recommendation Engine";
@@ -424,8 +410,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-recommendation-engine";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$0.001-0.005 per recommendation";
         competitors: ["Amazon Personalize", "Google Recommendations", "Azure Personalizer"],
         aiModels: ["Collaborative filtering", "Content-based", "Deep learning", "Custom algorithms"],
@@ -446,8 +431,7 @@ export const enhancedAIServices2025 = [
         scalability: "Millions of recommendations";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {
         id: 9;
         name: "AI Fraud Detection";
@@ -480,8 +464,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-fraud-detection";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$799-2499/month";
         competitors: ["Sift", "Signifyd", "Forter"],
         aiModels: ["Neural networks", "Random forest", "Custom algorithms"],
@@ -502,8 +485,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {
         id: 10;
         name: "AI Process Automation";
@@ -536,8 +518,7 @@ export const enhancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-process-automation";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$399-1299/month";
         competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
         aiModels: ["Decision trees", "Neural networks", "Custom algorithms"],
@@ -558,7 +539,6 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    }
+        industrySpecific: true}
 ];
     export default enhancedAIServices2025;

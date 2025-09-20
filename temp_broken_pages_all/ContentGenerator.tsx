@@ -65,7 +65,7 @@ if (isLoading) {
 
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Main Topic / User Prompt</Label>
-                    <Input,
+                    <Input
 id="topic"
                       placeholder={
                         contentType === 'blog' ? "e.g., Benefits of AI in Marketing" :
@@ -81,7 +81,7 @@ id="topic"
 
                   <div className="space-y-2">
                     <Label htmlFor="keywords" className="text-white">Keywords (Optional comma-separated)</Label>
-                    <Input,
+                    <Input
 id="keywords"
                       placeholder="e.g., AI machine learning SEO"
                       className="bg-zion-blue border border-zion-blue-light text-white"
@@ -92,7 +92,7 @@ id="keywords"
                   
                   <div className="space-y-2">
                     <Label htmlFor="customPrompt" className="text-white">Detailed Instructions / Custom Prompt (Optional)</Label>
-                    <Textarea,
+                    <Textarea
 id="customPrompt"
                       placeholder="Optionally provide more detailed instructions or a full custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
@@ -105,7 +105,7 @@ id="customPrompt"
                     <>
                       <div className="flex items-center justify-between">
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>
-                        <Switch,
+                        <Switch
 id="autoPublish"
                           checked={autoPublish}
                           onCheckedChange={setAutoPublish}
@@ -114,7 +114,7 @@ id="autoPublish"
                       
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
-                        <Switch,
+                        <Switch
 id="includeImage"
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
@@ -126,7 +126,7 @@ id="includeImage"
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
-                      <Input,
+                      <Input
 id="testEmail"
                         type="email"
                         placeholder="your@email.com"
@@ -138,7 +138,7 @@ id="testEmail"
                   )}
                 </CardContent>
                 <CardFooter>
-                  <Button,
+                  <Button
 onClick={generateContent}
                     disabled={isGenerating}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
@@ -180,7 +180,7 @@ onClick={generateContent}
                       {/* Specific handling for newsletter test send can be re-added if needed */}
                       {contentType === 'newsletter' && previewContent.subject && ( // Assuming generatedContent might be the body for newsletter
                         <div className="mt-4 flex justify-end">
-                          <Button,
+                          <Button
 onClick={sendTestNewsletter} // sendTestNewsletter would need to be adapted if previewContent structure changed significantly,
 disabled={!testEmail}
                             className="bg-zion-blue-light hover:bg-zion-blue text-white"
@@ -193,7 +193,7 @@ disabled={!testEmail}
                   ) : (
                     <div className="flex flex-col items-center justify-center py-12 text-center">
                       <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">
-                        <svg,
+                        <svg
 xmlns="http://www.w3.org/2000/svg"
                           width="24"
                           height="24"

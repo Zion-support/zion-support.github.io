@@ -133,7 +133,7 @@ return (
       ) : (
         <div className="space-y-4">
           {notifications.map((notification) => (
-            <Card,
+            <Card
 key={notification.id}
               className={`transition-all hover:shadow-md ${
                 !notification.read ? 'border-l-4 border-l-blue-500 bg-blue-50' : ''
@@ -163,7 +163,7 @@ key={notification.id}
                   </div>
                   <div className="flex items-center space-x-2 ml-4">
                     {!notification.read && (
-                      <Button,
+                      <Button
 size="sm"
                         variant="ghost"
                         onClick={() => markAsRead(notification.id)}
@@ -171,7 +171,7 @@ size="sm"
                         <Check className="h-4 w-4" />
                       </Button>
                     )}
-                    <Button,
+                    <Button
 size="sm"
                       variant="ghost"
                       onClick={() => deleteNotification(notification.id)}

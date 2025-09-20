@@ -3,7 +3,7 @@ id: string;,
 name: string;
 }
 
-import React from "react",
+import React from "react",;
 const QuoteWizard: React.FC = () => {
 ,
 return (,

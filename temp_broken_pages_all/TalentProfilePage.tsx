@@ -18,13 +18,13 @@ import { SEO,  } from "@/components/SEO";
 export default function TalentProfilePage() {
 return (
     <>
-      <SEO,
+      <SEO
 title = {profile.full_name,}
         description = {profile.bio |'Talent profile',}
         ogImage = {profile.profile_picture_url,}
       />
       <div className='min-h-screen bg-zion-blue pb-12'>
-        <TalentProfile,
+        <TalentProfile
 profile={profile}
           onRequestHire={handleRequestHire}
           onMessageTalent={handleMessageTalent}
@@ -33,7 +33,7 @@ profile={profile}
         {/* Sticky action buttons that appear when scrolling */}
         <StickyAction>
           <div className='p-2 flex gap-2'>
-            <Button,
+            <Button
 size='sm'
               className='bg-zion-purple text-white hover:bg-zion-purple-dark'
               onClick={handleRequestHire}
@@ -41,7 +41,7 @@ size='sm'
               <Handshake className='mr-2 h-4 w-4' />
               Hire Now
             </Button>
-            <Button,
+            <Button
 size='sm'
               variant='outline'
               className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
@@ -53,14 +53,14 @@ size='sm'
           </div>
         </StickyAction>
         {/* Request to Hire Modal */}
-        <HireRequestModal,
+        <HireRequestModal
 talent={profile}
           isOpen={isHireModalOpen}
           onClose={() => setIsHireModalOpen(false)}
           userDetails={userProfile}
         />
         {/* Message Talent Modal */}
-        <MessageTalentModal,
+        <MessageTalentModal
 talent={profile}
           isOpen={isMessageModalOpen}
           onClose={() => setIsMessageModalOpen(false)}
@@ -112,7 +112,7 @@ return (<> <SEO title= {
   () => setIsMessageModalOpen (false)
 }/> </div> </>)
 }'"      <div className="min-h-screen bg-zion-blue pb-12">
-      <TalentProfile,
+      <TalentProfile
 profile = {profile,}
         onRequestHire = {handleRequestHire,}
         onMessageTalent = {handleMessageTalent,}
@@ -121,7 +121,7 @@ profile = {profile,}
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>
         <div className="p-2 flex gap-2">
-          <Button,
+          <Button
 size="sm"
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
             onClick = {handleRequestHire,}
@@ -129,7 +129,7 @@ size="sm"
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
-          <Button,
+          <Button
 size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -141,14 +141,14 @@ size="sm"
         </div>
       </StickyAction>
       {/* Request to Hire Modal */}
-      <HireRequestModal,
+      <HireRequestModal
 talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
       />
       {/* Message Talent Modal */}
-      <MessageTalentModal,
+      <MessageTalentModal
 talent = {profile,}
         isOpen = {isMessageModalOpen,}
         onClose = {() => setIsMessageModalOpen(false),}      />

@@ -10,7 +10,7 @@ import { Briefcase,  } from 'lucide-react'
 function HiringTrackerContent() {
 return (
     <>
-      <SEO,
+      <SEO
 title="Hiring Tracker | Zion AI Marketplace"
         description="Manage your candidate pipeline in the Zion AI Marketplace."
       />
@@ -26,7 +26,7 @@ title="Hiring Tracker | Zion AI Marketplace"
             </p>
           </div>
         </div>
-        <Tabs,
+        <Tabs
 defaultValue='kanban'
           onValueChange={setActiveTab}
           className='mb-8'

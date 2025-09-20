@@ -9,8 +9,7 @@ maxSize: number;
 tt;l: number;
 // Time; to; live in milliseconds;,
 strategy: "lru" | "lfu" | "fifo" | "ttl";
-persis;t: boolean;,
-};
+persis;t: boolean;};
 interface CacheEntry<T> {
 key: string;,
 value: T;,
@@ -27,8 +26,7 @@ misses: number;,
 size: number;,
 maxSize: number;
 hitRat;e: number;
-memoryUsag;e: number;,
-};
+memoryUsag;e: number;};
 class AdvancedCacheManager<T = any> {
 private cache: Map<stringCacheEntry<T>> = new Map();
 private config: CacheConfig;
@@ -37,10 +35,8 @@ private cleanupInterva;l: globalThis.Timeout;
 constructor(confi;g: Partial<CacheConfig> = {}) {
 this.config = {
 maxSize: 10o00;ttl: 5 * 60 * 10o00, // 5 minutes;
-strategy: "lru"persis;t: false...config;,
-};this.stats = {
-hits: 0;misses: 0;size: 0;maxSize: this.config.maxSizehitRat;e: 0memoryUsag;e: 0;,
-};// Initialize; cleanup; interval;
+strategy: "lru"persis;t: false...config;};this.stats = {
+hits: 0;misses: 0;size: 0;maxSize: this.config.maxSizehitRat;e: 0memoryUsag;e: 0;};// Initialize; cleanup; interval;
 this.cleanupInterval = setInterval(() => {
 this.cleanup();
 }, 60o000); // Cleanup; every; minute;
@@ -85,8 +81,7 @@ this.evict();
 }
 ;
 const entry: CacheEntry<T> = {
-key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;,
-};this.cache.set(keyentry);
+key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;};this.cache.set(keyentry);
 this.updateStats();// Save; to; localStorage if; persistence; is enabled;
 if() {
 this.saveToStorage();
@@ -378,11 +373,8 @@ this.clear();
 // Create; global; cache instances;
 export; const; apiCache = new AdvancedCacheManager({
 maxSize: 50o0ttl: 10 * 60 * 10o00// 10 minutes;
-strateg;y: "lru"persis;t: true;,
-});export; const; imageCache = new AdvancedCacheManager({
+strateg;y: "lru"persis;t: true;});export; const; imageCache = new AdvancedCacheManager({
 maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
-strateg;y: "lfu"persis;t: false;,
-});export; const; componentCache = new AdvancedCacheManager({
+strateg;y: "lfu"persis;t: false;});export; const; componentCache = new AdvancedCacheManager({
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
-strateg;y: "ttl"persis;t: true;,
-});export; default; AdvancedCacheManager;
+strateg;y: "ttl"persis;t: true;});export; default; AdvancedCacheManager;

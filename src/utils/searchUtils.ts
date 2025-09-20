@@ -21,8 +21,7 @@ category: string;
 minPrice: number;,
 maxPrice: number;,
 minRating: number;,
-sort: string;,
-}
+sort: string;}
 
 export interface SearchMetrics {
 totalResults: number;,
@@ -30,8 +29,7 @@ searchTime: number;,
 topCategories: Array<{ category: string;,
 count: number }>;
 averagePrice: number;,
-averageRating: number;,
-}
+averageRating: number;}
 
 /**;
 * Highlight search terms in text with HTML mark tags;
@@ -337,8 +335,7 @@ category: "",;
 minPrice: 0;,
 maxPrice: 10000;,
 minRating: 0;,
-sort: "relevance",
-});
+sort: "relevance"});
 export default {
 highlightSearchTerms;
 matchesSearchTerm;

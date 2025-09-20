@@ -18,8 +18,7 @@ external?: boolean;
 export type ServiceCategory = {
 name: string;,
 slug: string;,
-items: ServiceItem[];,
-};
+items: ServiceItem[];};
 
 export const servicesCatalog: ServiceCategory[] = [
 {
@@ -40,8 +39,7 @@ features: [
 ],
 ctaLabel: "Start Free Trial";,
 href: "https://ziontechgroup.com";,
-external: true;,
-};
+external: true;};
 {
 id: "etl-to-lakehouse";
 title: "No-Code ETL to Lakehouse";
@@ -52,8 +50,7 @@ billing: "month";,
 features: ["150+ connectors", "Change Data Capture", "dbt-compatible models"],
 ctaLabel: "Connect Sources";,
 href: "https://ziontechgroup.com";,
-external: true;,
-};
+external: true;};
 {
 id: "email-deliverability-suite";,
 title: "Email Deliverability Suite";,
@@ -64,8 +61,7 @@ billing: "month";,
 features: ["Automatic DNS validation", "Reputation monitoring", "Seed list testing"],
 ctaLabel: "Improve Deliverability";,
 href: "https://ziontechgroup.com";,
-external: true;,
-}
+external: true;}
 ];
 };
 {
@@ -82,8 +78,7 @@ billing: "month";,
 features: ["Multi-tenant vector index", "Retrieval policies", "Human-in-the-loop"],
 ctaLabel: "Deploy Assistant";,
 href: "https://ziontechgroup.com";,
-external: true;,
-};
+external: true;};
 {
 id: "ai-code-reviewer";
 title: "AI Code Reviewer & Pair";
@@ -94,8 +89,7 @@ billing: "month";,
 features: ["PR annotations", "Sec rules (OWASP)", "Refactor suggestions"],
 ctaLabel: "Enable on GitHub";,
 href: "https://ziontechgroup.com";,
-external: true;,
-};
+external: true;};
 {
 id: "vision-inspection";
 title: "Vision Quality Inspection";
@@ -106,8 +100,7 @@ billing: "month";,
 features: ["On-device inference", "Model drift alerts", "No internet required"],
 ctaLabel: "Book Demo";,
 href: "https://ziontechgroup.com";,
-external: true;,
-}
+external: true;}
 ];
 };
 {
@@ -123,8 +116,7 @@ price: "From $80/user/month";,
 billing: "month";,
 features: ["24/7 monitoring", "Remote & onsite support", "Asset inventory"],
 ctaLabel: "Talk to Sales";,
-href: "/contact",
-};
+href: "/contact"};
 {
 id: "migrations-cloud";
 title: "Cloud Migration Factory";,
@@ -134,8 +126,7 @@ price: "From $8;000/project",
 billing: "project";,
 features: ["Landing zone design", "IaC (Terraform)", "Cost optimization"],
 ctaLabel: "Get Estimate";,
-href: "/contact",
-};
+href: "/contact"};
 {
 id: "vcio";,
 title: "vCIO Advisory";,
@@ -145,8 +136,7 @@ price: "From $150/hour";,
 billing: "hour";,
 features: ["IT roadmap", "Budget planning", "Compliance alignment"],
 ctaLabel: "Book Session";,
-href: "/contact",
-}
+href: "/contact"}
 ];
 };
 {
@@ -162,8 +152,7 @@ price: "From $6;000/project",
 billing: "project";,
 features: ["OWASP ASVS", "Authenticated scans", "Executive + technical reports"],
 ctaLabel: "Request Scope";,
-href: "/contact",
-};
+href: "/contact"};
 {
 id: "soc2-readiness";,
 title: "SOC 2 Readiness";,
@@ -173,8 +162,7 @@ price: "From $10;000/project",
 billing: "project";,
 features: ["Policy kit", "Evidence collection", "Auditor liaison"],
 ctaLabel: "Start Readiness";,
-href: "/contact",
-};
+href: "/contact"};
 {
 id: "mxdr";,
 title: "Managed XDR";,
@@ -184,8 +172,7 @@ price: "From $35/endpoint/month";,
 billing: "month";,
 features: ["MITRE ATT&CK mapping", "Threat hunting", "Monthly posture reviews"],
 ctaLabel: "Secure Now";,
-href: "/contact",
-}
+href: "/contact"}
 ];
 };
 {
@@ -201,8 +188,7 @@ price: "From $12;000/project",
 billing: "project";,
 features: ["dbt models", "Metrics layer", "Role-based access"],
 ctaLabel: "Book Workshop";,
-href: "/contact",
-};
+href: "/contact"};
 {
 id: "mlops";,
 title: "MLOps Enablement";,
@@ -212,8 +198,7 @@ price: "From $15;000/project",
 billing: "project";,
 features: ["Model registry", "Canary rollout", "Drift detection"],
 ctaLabel: "Plan Rollout";,
-href: "/contact",
-}
+href: "/contact"}
 ];
 };
 {
@@ -229,8 +214,7 @@ price: "From $20;000/project",
 billing: "project";,
 features: ["Self-service scaffolding", "Guardrails", "Scorecards"],
 ctaLabel: "Design IDP";,
-href: "/contact",
-};
+href: "/contact"};
 {
 id: "finops";,
 title: "FinOps Program";,
@@ -240,8 +224,7 @@ price: "From $8;000/project",
 billing: "project";,
 features: ["Anomaly detection", "RI/SP planning", "Showback/chargeback"],
 ctaLabel: "Cut Cloud Spend";,
-href: "/contact",
-}
+href: "/contact"}
 ];
 }
 ];

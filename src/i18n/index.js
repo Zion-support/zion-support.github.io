@@ -6,8 +6,7 @@ import enTranslation from '../../public/locales/en-US/common.json;';
 import esTranslation from '../../public/locales/es-ES/common.json;';
 const storedLang = safeStorage.getItem('i18n_lang') || undefined;
 if (!i18n) {
-    console.error("CRITICAL: i18next failed to import. Internationalization will not work.");,
-}
+    console.error("CRITICAL: i18next failed to import. Internationalization will not work.");}
 else {
     // Initialize i18next;
     i18n;
@@ -16,14 +15,11 @@ else {
         .init({
         resources: {
             en: {
-                translation: enTranslation,
-            };
+                translation: enTranslation};
             'en-US': {
-                translation: enTranslation,
-            };
+                translation: enTranslation};
             es: {
-                translation: esTranslation,
-            }
+                translation: esTranslation}
         };
         lng: storedLang;
         fallbackLng: 'en', // Default language;
@@ -36,8 +32,7 @@ else {
         detection: {
             // Avoid using localStorage directly to prevent cross-context errors;
             order: ['navigator'];
-            caches: [],
-        };
+            caches: []};
     })
         .catch(error => {
         console.error('Error initializing i18next or its detector:', { data: error });

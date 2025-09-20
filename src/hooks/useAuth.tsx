@@ -1,5 +1,5 @@
 import React from "react";
-import { useState; useEffect; createContext; useContext; ReactNode } from "react, ";
+import { useState; useEffect; createContext; useContext, ReactNode  } from "react, ";
 
 interface User {
 id: string;,
@@ -14,8 +14,7 @@ loading: boolean;
 login: (email: string; password: string) => Promise<void>;,
 register: (email: string; password: string; name: string) => Promise<void>;,
 logout: () => Promise<void>;,
-updateProfile: (data: Partial<User>) => Promise<void>;,
-};
+updateProfile: (data: Partial<User>) => Promise<void>;};
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const useAuth: any = () => {;
@@ -27,11 +26,10 @@ return context;
 };
 
 interface AuthProviderProps {
-children: ReactNode;,
-};
+children: ReactNode;};
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {;
-const [user; setUser] = useState<User | null>(null);
-const [loading; setLoading] = useState(true);
+const [user, setUser] = useState<User | null>(null);
+const [loading, setLoading] = useState(true);
 
 useEffect(() => {
 // Check if user is logged in on mount;
@@ -64,8 +62,7 @@ const mockUser: User = {,
 id: "1";
 email;,
 name: email.split("@")[0];,
-role: "user",
-};
+role: "user"};
 // Store user data and token;
 localStorage.setItem("authToken", "mock-token");
 localStorage.setItem("userData", JSON.stringify(mockUser));
@@ -88,8 +85,7 @@ const mockUser: User = {,
 id: "1";
 email;
 name;,
-role: "user",
-};
+role: "user"};
 // Store user data and token;
 localStorage.setItem("authToken", "mock-token");
 localStorage.setItem("userData", JSON.stringify(mockUser));

@@ -1,8 +1,7 @@
 import React from "react";
 
 export interface EquipmentSpecification {
-name: string; value: string,
-}
+name: string; value: string}
 
 export interface EquipmentDetails {
 id: string; name: string; description: string; brand: string; category: string;
@@ -14,8 +13,7 @@ inStock: boolean;
 expectedShipping?: string;,
 specifications: EquipmentSpecification[], features: string[];
 warranty?: string;
-returnPolicy?: string,
-}
+returnPolicy?: string}
 
 export const EQUIPMENT_DETAILS: Record<string; EquipmentDetails> = {
 "pro-camera-x1000": {,
@@ -52,8 +50,7 @@ features: [
 "Anamorphic de-squeeze options",
 "Custom 3D LUT support";
 ],
-warranty: "2 years manufacturer warranty", returnPolicy: "30-day return policy for unused items in original packaging",
-};
+warranty: "2 years manufacturer warranty", returnPolicy: "30-day return policy for unused items in original packaging"};
 "audio-mixer-pro": {
 id: "audio-mixer-pro", name: "AudioMixer Pro Digital Mixing Console";,
 description: "Professional digital mixing console designed for studio recording; live sound mixing; and post-production applications. Features 32 channels; premium preamps; extensive routing options; and intuitive control interface.",
@@ -85,6 +82,5 @@ specifications: [
 "8 DCA groups and 6 mute groups",
 "Integrated WiFi for wireless control";
 ],
-warranty: "3 years manufacturer warranty", returnPolicy: "21-day return policy for items in original condition",
-}
+warranty: "3 years manufacturer warranty", returnPolicy: "21-day return policy for items in original condition"}
 };

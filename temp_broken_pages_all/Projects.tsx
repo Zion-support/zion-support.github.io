@@ -3,7 +3,7 @@ function ProjectsContent() { const { projects, isLoading } = useProjects()
 function ProjectsContent() {
 return (
     <>
-      <SEO,
+      <SEO
 title='My Projects | Zion AI Marketplace'
         description='View and manage your projects.'
       />

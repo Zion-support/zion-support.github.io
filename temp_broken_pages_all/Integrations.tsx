@@ -8,14 +8,14 @@ import { useAdvancedOnboardingStatus,  } from "@/hooks/useAdvancedOnboardingStat
 export default function IntegrationsFeature() {
 return (
     <>
-      <SEO,
+      <SEO
 title='API & Integrations'
         description='Extend Zion by embedding widgets or using our REST API for custom workflows.'
         keywords='Zion API Slack integration embed widget'
         canonical='https://app.ziontechgroup.com/features/integrations'
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -30,7 +30,7 @@ type='application/ld+json'
 already use.
           </p>
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>
-            <img,
+            <img
 src='https://placehold.co/800x400'
               alt='Screenshot showing integrations'
               className='object-cover'

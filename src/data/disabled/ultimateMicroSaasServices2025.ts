@@ -1,16 +1,14 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface UltimateMicroSaasService {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
 targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string;,
 contactInfo: {,
-phone: string; email: string; website: string,
-};
+phone: string; email: string; website: string};
 technicalSpecs?: {
 technology: string[], integrations: string[];,
-apiEndpoints: number; uptime: string; security: string[],
-};
+apiEndpoints: number; uptime: string; security: string[]};
 }
 
 export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
@@ -59,8 +57,7 @@ marketPrice: "$2; 999 - $8; 999/month",
 roi: "250-400%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Customer Experience Platform;
 {
@@ -107,8 +104,7 @@ marketPrice: "$1; 999 - $6; 999/month",
 roi: "200-350%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Supply Chain Optimization;
 {
@@ -155,8 +151,7 @@ marketPrice: "$3; 499 - $9; 999/month",
 roi: "300-500%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Financial Technology Platform;
 {
@@ -203,8 +198,7 @@ marketPrice: "$3; 999 - $12; 999/month",
 roi: "400-600%", innovationLevel: "Revolutionary";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Healthcare Technology Platform;
 {
@@ -251,8 +245,7 @@ marketPrice: "$4; 999 - $15; 999/month",
 roi: "500-800%", innovationLevel: "Revolutionary";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Education Technology Platform;
 {
@@ -299,8 +292,7 @@ marketPrice: "$1; 499 - $4; 999/month",
 roi: "200-400%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Marketing Automation Platform;
 {
@@ -347,8 +339,7 @@ marketPrice: "$2; 499 - $7; 999/month",
 roi: "250-450%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Human Resources Platform;
 {
@@ -395,8 +386,7 @@ marketPrice: "$1; 999 - $6; 999/month",
 roi: "200-400%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Legal Technology Platform;
 {
@@ -443,8 +433,7 @@ marketPrice: "$2; 999 - $8; 999/month",
 roi: "300-500%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Real Estate Technology Platform;
 {
@@ -491,8 +480,7 @@ marketPrice: "$1; 999 - $6; 999/month",
 roi: "200-400%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Manufacturing Technology Platform;
 {
@@ -539,8 +527,7 @@ marketPrice: "$3; 999 - $11; 999/month",
 roi: "400-600%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Energy Management Platform;
 {
@@ -587,8 +574,7 @@ marketPrice: "$2; 499 - $7; 999/month",
 roi: "250-450%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Transportation & Logistics Platform;
 {
@@ -635,8 +621,7 @@ marketPrice: "$2; 999 - $8; 999/month",
 roi: "300-500%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Agriculture Technology Platform;
 {
@@ -683,8 +668,7 @@ marketPrice: "$1; 999 - $5; 999/month",
 roi: "200-400%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // AI-Powered Environmental Monitoring Platform;
 {
@@ -731,7 +715,6 @@ marketPrice: "$2; 499 - $6; 999/month",
 roi: "250-400%", innovationLevel: "Advanced";,
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 }
 ];

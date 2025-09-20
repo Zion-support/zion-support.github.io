@@ -4,26 +4,23 @@ interface Message {
 id: string;,
 content: string;,
 timestamp: Date;,
-isRead: boolean;,
-};
+isRead: boolean;};
 interface MessagingContextType {
 messages: Message[];,
 unreadCount: number;,
 sendMessage: (content: string) => void;,
-markAsRead: (id: string) => void;,
-};
+markAsRead: (id: string) => void;};
 const MessagingContext = createContext<MessagingContextType | undefined>(undefined);
 
 export function MessagingProvider({ children }: { children: ReactNode }) {;
-const [messages; setMessages] = useState<Message[]>([]);
+const [messages, setMessages] = useState<Message[]>([]);
 
 const sendMessage: any = (content: string) => {
 const newMessage: Message = {;,
 id: Date.now().toString();
 content;,
 timestamp: new Date();,
-isRead: false;,
-};
+isRead: false;};
 setMessages(prev => [...prev; newMessage]);
 };
 
@@ -42,8 +39,7 @@ return (
 messages;
 unreadCount;
 sendMessage;
-markAsRead,
-}}>;
+markAsRead}}>;
 {children}
 </MessagingContext.Provider>;
 );

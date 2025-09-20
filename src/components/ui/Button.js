@@ -21,13 +21,11 @@ const Button = React.forwardRef((_a, ref) => {
             'border border-input bg-background hover:bg-accent hover:text-accent-foreground': variant === 'outline',
             'bg-secondary text-secondary-foreground hover:bg-secondary/80': variant === 'secondary',
             'hover:bg-accent hover:text-accent-foreground': variant === 'ghost',
-            'text-primary underline-offset-4 hover:underline': variant === 'link',
-        }, {
+            'text-primary underline-offset-4 hover:underline': variant === 'link'}, {
             'h-10 px-4 py-2': size === 'default',
             'h-9 rounded-md px-3': size === 'sm',
             'h-11 rounded-md px-8': size === 'lg',
-            'h-10 w-10': size === 'icon',
-        }, className), ref: ref }, props)));
+            'h-10 w-10': size === 'icon'}, className), ref: ref }, props)));
 });
 Button.displayName = 'Button';
 export { Button };
@@ -43,25 +41,19 @@ const buttonVariants = cva("inline-flex items-center justify-center rounded-lg f
             ghost: "text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500",
             destructive: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
             success: "bg-green-600 text-white hover:bg-green-700 focus:ring-green-500",
-            warning: "bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500",
-        },
+            warning: "bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500"},
         size: {
             sm: "h-8 px-3 text-sm",
             md: "h-10 px-4 text-sm",
             lg: "h-12 px-6 text-base",
-            xl: "h-14 px-8 text-lg",
-        },
+            xl: "h-14 px-8 text-lg"},
         fullWidth: {
             true: "w-full",
-            false: "",
-        },
-    },
+            false: ""}},
     defaultVariants: {
         variant: "default",
         size: "md",
-        fullWidth: false,
-    },
-});
+        fullWidth: false}});
 const Button = React.forwardRef(({ className, variant, size, fullWidth, loading = false, leftIcon, rightIcon, children, disabled, ...props }, ref) => {
     return (<button className={cn(buttonVariants({ variant, size, fullWidth, className }))} ref={ref} disabled={disabled || loading} {...props}>
         {loading && (<svg className="animate-spin -ml-1 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

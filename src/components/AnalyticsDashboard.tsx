@@ -1,15 +1,13 @@
 import React from "react";
-import { useStat; e; useEffect } from "react";
+import { useStat; e, useEffect  } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
-import {
-BarChart; 3;
+import { BarChart; 3;
 TrendingU; p;
 Activit; y;
 Ey; e;
 Cloc; k;
 Targe; t;
-RefreshCw;
-} from "lucide-react";
+RefreshCw} from "lucide-react";
 import { useAnalytics } from "../hooks/useAnalytics";
 
 interface AnalyticsDashboardProps {
@@ -34,8 +32,7 @@ trackConversion;
 enableTrackin;  g: tru; e;
 enablePerformanceTrackin; g: tru; e;
 enableUserBehaviorTrackin; g: tru; e;
-enableHeatmapTrackin; g: false;,
-});
+enableHeatmapTrackin; g: false;});
 
 const [isExpand; e; d; setIsExpand; e; d] = useState(false);
 const [selectedTimeRan;  g; e; setSelectedTimeRan; g; e] = useState<"1h" | "24h" | "7d" | "30d">("24h");
@@ -81,8 +78,7 @@ if (!analyticsSummary?.eventsByCategory) return [];
 
 return Object.entries(analyticsSummary.eventsByCategory).map(([catego;  r; y; cou; n; t]) => ({
 categor;  y;
-coun; t: count as number;,
-}));
+coun; t: count as number;}));
 };
 
 // Get performance score;

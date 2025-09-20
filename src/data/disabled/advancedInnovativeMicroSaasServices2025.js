@@ -52,8 +52,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-business-operations";
         technologyStack: ["Python", "TensorFlow", "Kubernetes", "AWS", "PostgreSQL", "Redis", "Apache Kafka"],
         integrationCapabilities: ["ERP Systems", "CRM Platforms", "Payment Gateways", "Analytics Tools", "Communication Platforms"],
@@ -113,8 +112,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/quantum-enhanced-ai";
         technologyStack: ["Qiskit", "Cirq", "PennyLane", "Python", "C++", "CUDA", "TensorFlow"],
         integrationCapabilities: ["Cloud Quantum Services", "HPC Clusters", "AI Frameworks", "Research Tools", "Simulation Software"],
@@ -174,8 +172,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/advanced-cybersecurity-ai";
         technologyStack: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Redis", "Docker", "Kubernetes"],
         integrationCapabilities: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Providers", "Cloud Platforms"],
@@ -235,8 +232,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/iot-edge-ai";
         technologyStack: ["Python", "TensorFlow Lite", "MQTT", "Node.js", "Docker", "Kubernetes", "Redis"],
         integrationCapabilities: ["IoT Devices", "Cloud Platforms", "Analytics Tools", "Business Systems", "Mobile Apps"],
@@ -296,8 +292,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/blockchain-defi";
         technologyStack: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL", "Redis", "Ethereum"],
         integrationCapabilities: ["Multiple Blockchains", "DEX Protocols", "Wallet Providers", "Oracle Services", "Analytics Tools"],
@@ -357,8 +352,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-content-creation";
         technologyStack: ["OpenAI GPT", "Claude", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
         integrationCapabilities: ["CMS Platforms", "Social Media APIs", "Email Marketing Tools", "Analytics Platforms", "SEO Tools"],
@@ -418,8 +412,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/autonomous-data-management";
         technologyStack: ["Python", "Apache Airflow", "Apache Kafka", "PostgreSQL", "Redis", "Docker", "Kubernetes"],
         integrationCapabilities: ["Data Sources", "Analytics Tools", "Business Systems", "Cloud Platforms", "Compliance Tools"],
@@ -479,8 +472,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/advanced-it-automation";
         technologyStack: ["Terraform", "Ansible", "Kubernetes", "Docker", "Python", "Go", "AWS/Azure/GCP"],
         integrationCapabilities: ["Cloud Providers", "Monitoring Tools", "Security Tools", "CI/CD Platforms", "Business Systems"],
@@ -540,8 +532,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-customer-experience";
         technologyStack: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "Kafka"],
         integrationCapabilities: ["CRM Systems", "E-commerce Platforms", "Communication Tools", "Analytics Platforms", "Marketing Tools"],

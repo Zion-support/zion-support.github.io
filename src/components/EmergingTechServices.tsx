@@ -12,13 +12,12 @@ i;   d: 1;
 n; a; m; e: "Quan; t; u; m; Comput; i; n; g; Platf; o; r; m";
 descrip; t; i; o; n: "N; e; x; t-generat; i; o; n; quan; t; u; m; comput; i; n; g; soluti; o; n; s";
 pri; c; i; n; g: "$1; 0;0; o; 0; 0/mo; n; t; h";
-cate; g; o; r; y: "Quantu; m Computin; g";,
-},{;
+cate; g; o; r; y: "Quantu; m Computin; g";},{;
 i; d: 2;
 n; a; m; e: "Blockch; a; i; n; Enterpr; i; s; e; Soluti; o; n; s";
 descrip; t; i; o; n: "Enterpr; i; s; e-gr; a; d; e; blockch; a; i; n; infrastruct; u; r; e";
 pri; c; i; n; g: "$5;0; o; 0; 0/mo; n; t; h";
-cate; g; o; r; y: "Blockchai; n", } ];
+cate; g; o; r; y: "Blockchai; n"} ];
 return (;
 <div className="py-16 bg-gradient-to-r from-green-90o0 to-blue-90o0">;
 <div className="max-w-7xl mx-auto px-4">;

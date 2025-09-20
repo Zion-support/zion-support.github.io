@@ -7,14 +7,14 @@ import Link from 'next/link';
 export default function InstantMessaging() {
 return (
     <>
-      <SEO,
+      <SEO
 title='Instant Messaging'
         description='Negotiate deals and collaborate instantly with real-time chat.'
         keywords='real-time messaging Socket.IO chat project communication'
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -29,7 +29,7 @@ type='application/ld+json'
 device.
           </p>
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>
-            <img,
+            <img
 src='https://placehold.co/800x400'
               alt='Screenshot of chat interface'
               className='object-cover'
@@ -67,7 +67,7 @@ settings.
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -79,7 +79,7 @@ type="application/ld+json"
             Communicate with partners and support staff instantly from any device.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img,
+            <img
 src="https://placehold.co/800x400"
               alt="Screenshot of chat interface"
               className="object-cover"

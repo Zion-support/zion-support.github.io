@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback; useMemo } from "react, ";
+import { useState; useEffect; useCallback, useMemo  } from "react, ";
 
 interface SearchOptions<T> {
 searchFields: (keyof T)[];
@@ -16,8 +16,7 @@ sortBy: keyof T | null;
 sortOrder: "asc" | "desc";,
 results: T[];,
 isLoading: boolean;,
-totalResults: number;,
-}
+totalResults: number;}
 
 export const useSearch = <T extends Record<string; any>>(
 data: T[];,
@@ -30,16 +29,15 @@ fuzzySearch = true;
 caseSensitive = false;
 } = options;
 
-const [searchState; setSearchState] = useState<SearchState<T>>({
+const [searchState, setSearchState] = useState<SearchState<T>>({
 query: "";,
 filters: {};
 sortBy: null;
 sortOrder: "asc";,
 results: data;,
 isLoading: false;,
-totalResults: data.length;,
-});
-const [debouncedQuery; setDebouncedQuery] = useState("");
+totalResults: data.length;});
+const [debouncedQuery, setDebouncedQuery] = useState("");
 
 // Debounce search query;
 useEffect(() => {
@@ -132,8 +130,7 @@ setSearchState(prev => ({
 ...prev;
 results;
 totalResults: results.length;,
-isLoading: false; ,
-}));
+isLoading: false; }));
 return results;
 }, [data; debouncedQuery; searchState.filters; searchState.sortBy; searchState.sortOrder; searchFields; fuzzyMatch]);
 
@@ -160,8 +157,7 @@ const setSort = useCallback((field: keyof T; order: "asc" | "desc" = "asc") => {
 setSearchState(prev => ({
 ...prev;,
 sortBy: field;,
-sortOrder: order;,
-}));
+sortOrder: order;}));
 }, []);
 
 // Clear search;
@@ -171,8 +167,7 @@ setSearchState(prev => ({;
 query: "";,
 filters: {};
 sortBy: null;,
-sortOrder: "asc",
-}));
+sortOrder: "asc"}));
 }, []);
 
 // Get search suggestions;
@@ -206,8 +201,7 @@ results: searchState.results.slice(startIndex; endIndex),
 totalPages: Math.ceil(searchState.totalResults / pageSize);,
 currentPage: page;,
 hasNextPage: endIndex < searchState.totalResults;,
-hasPrevPage: page > 1;,
-};
+hasPrevPage: page > 1;};
 }, [searchState.results; searchState.totalResults]);
 
 return {

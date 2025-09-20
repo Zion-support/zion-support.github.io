@@ -13,8 +13,7 @@ response => response,
 (error) => {
 const message = error?.response?.data?.error || "Network error";
 showApiError(message);
-return Promise.reject(error),
-}
+return Promise.reject(error)}
 );
 
 export { api };

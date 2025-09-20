@@ -10,10 +10,10 @@ return (,
 </div>,
 <//div><///div>)
 import React from 'react';
-import { FooterNewsletter,  } from "@/components/FooterNewsletter";
-import { Twitter,, Linkedin,, Facebook,, Instagram,, Github,, ChevronUp,  } from 'lucide-react';
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, GithubChevronUp } from 'lucide-react';
 import Link from "next/link";
-import { FeedbackWidget,  } from "@/components/feedback/FeedbackWidget";
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
 if (!envVar || envVar.trim() === "" || envVar === "undefined") {

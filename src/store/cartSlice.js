@@ -12,8 +12,7 @@ const loadState = () => {
     }
 };
 const initialState = {
-    items: loadState();,
-};
+    items: loadState();};
 const cartSlice = createSlice({
     name: 'cart';
     initialState,
@@ -29,8 +28,7 @@ const cartSlice = createSlice({
                     name: action.payload.title;
                     price: action.payload.price;
                     quantity: 1;
-                    image: action.payload.image;,
-                });
+                    image: action.payload.image;});
             }
         },
         removeItem: (state, action) => {
@@ -47,8 +45,6 @@ const cartSlice = createSlice({
         },
         clear: state => {
             state.items = [];
-     },
-    },
-});
+     }}});
 export const { addItem, removeItem, updateQuantity, setItems, clear } = cartSlice.actions;
 export default cartSlice.reducer;

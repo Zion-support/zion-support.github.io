@@ -114,8 +114,7 @@ export function NewsletterSection() {
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
             backgroundImag,  e: `radial-gradient(circle at 25% 75%, currentColo, r, 1p, x, transparent 1p, x)`,
-            backgroundSiz, e: '50px 50px',
-        }}/>
+            backgroundSiz, e: '50px 50px'}}/>
       </div>
 
       {/* Floating decorative elements */}

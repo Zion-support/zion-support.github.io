@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {,
 phone: string;,
 email: string;,
-website: string;,
-};
+website: string;};
 }
 
 export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
@@ -71,8 +70,7 @@ marketPrice: "$3;200 - $18;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Predictive Analytics Platform;
 {
@@ -120,8 +118,7 @@ marketPrice: "$2;800 - $15;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Data Governance Platform;
 {
@@ -169,8 +166,7 @@ marketPrice: "$2;500 - $12;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Customer Analytics Platform;
 {
@@ -218,8 +214,7 @@ marketPrice: "$2;100 - $10;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Business Intelligence Dashboard;
 {
@@ -267,7 +262,6 @@ marketPrice: "$1;900 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 }
 ];

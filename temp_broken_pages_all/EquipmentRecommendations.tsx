@@ -24,7 +24,7 @@ useEffect((,) => {
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
-          <Button,
+          <Button
 asChild
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'
           >

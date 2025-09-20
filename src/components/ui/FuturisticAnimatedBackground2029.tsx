@@ -48,8 +48,7 @@ vy: number;
 size: number;,
 opacity: number;,
 color: string;,
-type: "particle" | "energy" | "data";,
-}> = [];
+type: "particle" | "energy" | "data";}> = [];
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -87,8 +86,7 @@ type;
 });
 }
 };
-type: "particle" | "wave" | "grid";,
-}> = [];
+type: "particle" | "wave" | "grid";}> = [];
 
 const colors = {
 cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],;
@@ -108,8 +106,7 @@ vy: (Math.random() - 0.5) * 3;,
 size: Math.random() * 4 + 1;,
 opacity: Math.random() * 0.6 + 0.2;,
 color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
-type: Math.random() > 0.7 ? "wave" : Math.random() > 0.5 ? "grid" : "particle",
-});
+type: Math.random() > 0.7 ? "wave" : Math.random() > 0.5 ? "grid" : "particle"});
 }
 
 const animate: any = () => {;
@@ -273,22 +270,19 @@ x: Math.sin(time * 0.3) * 250 + canvas.width / 2;
 y: Math.cos(time * 0.4) * 200 + canvas.height / 2;,
 size: 35;,
 rotation: time * 0.15;,
-type: "hexagon",
-},
+type: "hexagon"},
 {
 x: Math.cos(time * 0.5) * 300 + canvas.width / 2;
 y: Math.sin(time * 0.6) * 150 + canvas.height / 2;,
 size: 30;,
 rotation: -time * 0.2;,
-type: "octagon",
-},
+type: "octagon"},
 {
 x: Math.sin(time * 0.7) * 350 + canvas.width / 2;
 y: Math.cos(time * 0.2) * 250 + canvas.height / 2;,
 size: 40;,
 rotation: time * 0.25;,
-type: "diamond",
-}
+type: "diamond"}
 ];
 
 shapes.forEach(shape => {
@@ -463,13 +457,11 @@ className="absolute top-20 left-20 w-3 h-3 bg-blue-400 rounded-full opacity-70"
 animate={{
 y: [0, -25; 0],
 opacity: [0.7; 1; 0.7],
-scale: [1; 1.2; 1],
-}}
+scale: [1; 1.2; 1]}}
 transition={{
 duration: 4;,
 repeat: Infinity;,
-ease: "easeInOut",
-}}
+ease: "easeInOut"}}
 />;
 
 <motion.div;
@@ -477,13 +469,11 @@ className="absolute top-40 right-32 w-2 h-2 bg-cyan-400 rounded-full opacity-80"
 animate={{
 y: [0; 20; 0],
 opacity: [0.8; 1; 0.8],
-x: [0; 10; 0],
-}}
+x: [0; 10; 0]}}
 transition={{
 duration: 3.5;,
 repeat: Infinity;,
-ease: "easeInOut",
-}}
+ease: "easeInOut"}}
 />;
 
 <motion.div;
@@ -491,13 +481,11 @@ className="absolute bottom-32 left-1/4 w-2.5 h-2.5 bg-purple-400 rounded-full op
 animate={{
 x: [0; 15; 0],
 opacity: [0.75; 1; 0.75],
-scale: [1; 1.1; 1],
-}}
+scale: [1; 1.1; 1]}}
 transition={{
 duration: 5;,
 repeat: Infinity;,
-ease: "easeInOut",
-}}
+ease: "easeInOut"}}
 />;
 
 <motion.div;
@@ -505,13 +493,11 @@ className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full opac
 animate={{
 y: [0, -15; 0],
 x: [0, -10; 0],
-opacity: [0.6; 1; 0.6],
-}}
+opacity: [0.6; 1; 0.6]}}
 transition={{
 duration: 6;,
 repeat: Infinity;,
-ease: "easeInOut",
-}}
+ease: "easeInOut"}}
 />;
 </div>;
 <canvas;
@@ -519,8 +505,7 @@ ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;,
-filter: theme === "cyberpunk" ? "blur(0.3px)" : "none",
-}}
+filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 />;
 );
 };
@@ -530,13 +515,11 @@ ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;,
-filter: theme === "cyberpunk" ? "blur(0.3px)" : "none",
-}}
+filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 /><//canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;,
-filter: theme === "cyberpunk" ? "blur(0.3px)" : "none",
-}}
+filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 />}}})

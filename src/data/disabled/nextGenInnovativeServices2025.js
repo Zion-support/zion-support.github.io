@@ -47,16 +47,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Qiskit", "TensorFlow", "Python", "Rust", "Quantum Hardware"],
         integrations: ["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
         roi: "500% within 12 months";
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
         launchDate: "Q1 2025";
-        betaAccess: true,
-    };
+        betaAccess: true};
     // Autonomous AI Business Operations Suite;
     {
         id: "autonomous-ai-business-operations-suite";
@@ -105,16 +103,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
         integrations: ["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft 365"],
         compliance: ["SOC 2", "GDPR", "ISO 27001"],
         roi: "400% within 8 months";
         competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
         launchDate: "Q2 2025";
-        betaAccess: true,
-    };
+        betaAccess: true};
     // Neural Interface Development Platform;
     {
         id: "neural-interface-development-platform";
@@ -163,16 +159,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "PyTorch", "C++", "CUDA"],
         integrations: ["Medical devices", "Research platforms", "Gaming engines"],
         compliance: ["FDA", "HIPAA", "ISO 13485", "CE Mark"],
         roi: "300% within 18 months";
         competitors: ["Neuralink", "Kernel", "CTRL-labs"],
         launchDate: "Q3 2025";
-        betaAccess: false,
-    };
+        betaAccess: false};
     // Holographic Collaboration Workspace;
     {
         id: "holographic-collaboration-workspace";
@@ -221,16 +215,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Unity", "Unreal Engine", "WebGL", "WebXR", "Three.js"],
         integrations: ["Slack", "Microsoft Teams", "Zoom", "Figma", "Autodesk"],
         compliance: ["GDPR", "SOC 2", "ISO 27001"],
         roi: "250% within 6 months";
         competitors: ["Microsoft Mesh", "Meta Horizon", "Spatial"],
         launchDate: "Q2 2025";
-        betaAccess: true,
-    };
+        betaAccess: true};
     // AI-Powered Cybersecurity Mesh;
     {
         id: "ai-powered-cybersecurity-mesh";
@@ -279,16 +271,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "Kubernetes", "Docker", "Elasticsearch"],
         integrations: ["SIEM systems", "EDR solutions", "Cloud platforms", "Identity providers"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         roi: "350% within 12 months";
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
         launchDate: "Q1 2025";
-        betaAccess: true,
-    };
+        betaAccess: true};
     // Sustainable Tech Innovation Hub;
     {
         id: "sustainable-tech-innovation-hub";
@@ -337,15 +327,13 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "IoT platforms", "Blockchain", "Machine Learning", "Cloud Computing"],
         integrations: ["Energy management systems", "IoT sensors", "Sustainability platforms"],
         compliance: ["ISO 14001", "LEED", "BREEAM", "Green Building Standards"],
         roi: "200% within 12 months";
         competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
         launchDate: "Q2 2025";
-        betaAccess: true,
-    }
+        betaAccess: true}
 ];
     export default nextGenInnovativeServices2025;

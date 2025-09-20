@@ -7,14 +7,14 @@ import Link from 'next/link';
 export default function AdminDashboard() {
 return (
     <>
-      <SEO,
+      <SEO
 title='Admin Dashboard'
         description='Gain insight into your marketplace with powerful administration tools.'
         keywords='admin dashboard analytics manage listings'
         canonical='https://app.ziontechgroup.com/features/admin-dashboard'
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -29,7 +29,7 @@ type='application/ld+json'
 running smoothly.
           </p>
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>
-            <img,
+            <img
 src='https://placehold.co/800x400'
               alt='Screenshot of admin dashboard'
               className='object-cover'
@@ -41,7 +41,7 @@ src='https://placehold.co/800x400'
             <li>Assign roles and permissions to your team.</li>
           </ul>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -53,7 +53,7 @@ type="application/ld+json"
             Visualize user activity manage orders and keep your marketplace running smoothly.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img,
+            <img
 src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
               className="object-cover"

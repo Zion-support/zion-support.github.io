@@ -3,7 +3,7 @@ id: string;,
 name: string;
 }
 
-import React from "react",
+import React from "react",;
 const InnovativeServicesShowcase2027: React.FC = () => {
 ,
 return (,

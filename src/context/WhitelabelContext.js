@@ -13,8 +13,7 @@ export function WhitelabelProvider({ children }) {
         brandName,
         setBrandName,
         logo,
-        setLogo,
-    };
+        setLogo};
     return (_jsx(WhitelabelContext.Provider, { value: value, children: children }));
 }
 export function useWhitelabel() {
@@ -35,8 +34,7 @@ const defaultConfig = {
     contactInfo: {
         phone: '+1 302 464 0950';
         email: 'kleber@ziontechgroup.com';
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+        address: '364 E Main St STE 1008 Middletown DE 19709'}
 };
     const WhitelabelContext = createContext(defaultConfig);
 export const useWhitelabel = () => useContext(WhitelabelContext);

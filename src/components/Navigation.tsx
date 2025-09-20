@@ -5,8 +5,8 @@ name: string;
 
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { Lin; k; useLocation } from "react-router-dom, ";
-import { Men; u; X; Phon; e; Mai; l; MapPi; n; Glob; e; Brai; n; Za; p; Shiel; d; Buildin; g; ChevronDown } from "lucide-react, ";
+import { Lin; k, useLocation  } from "react-router-dom, ";
+import { Men; u; X; Phon; e; Mai; l; MapPi; n; Glob; e; Brai; n; Za; p; Shiel; d; Buildin; g, ChevronDown  } from "lucide-react, ";
 
 const Navigatio; n: React.FC = () => {
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
@@ -14,8 +14,7 @@ const [isServicesOp; e; n; setIsServicesOp; e; n] = useState(false);
 const location = useLocation();
 
 const navigationItems = [;
-{ na;  m; e: "Hom; e",
-};
+{ na;  m; e: "Hom; e"};
 hr; e; f: "/", ic; o; n: Glob; e },
 { na; m; e: "Micr; o SAA; S Service; s",
 hr; e; f: "/micr; o-saa; s-service; s", ic; o; n: Za; p },
@@ -92,8 +91,7 @@ to={item.href}
 className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
 isActive(item.href)
 ? "text-zion-cyan bg-zion-cyan/10";
-: "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0",
-}`}
+: "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0"}`}
 >;
 <Icon className="w-4 h-4" />;
 <span>{item.name}</span>;
@@ -172,8 +170,7 @@ to={item.href}
 className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${
 isActive(item.href)
 ? "text-zion-cyan bg-zion-cyan/10";
-: "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0",
-}`}
+: "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0"}`}
 onClick={() => setIsOpen(false)}
 >;
 <Icon className="w-5 h-5" />;

@@ -10,7 +10,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 export default function ProductPage() {
 return (
     <>
-      <SEO,
+      <SEO
 title = {product.title,}
         description = {product.description,}
         ogImage = {product.images?.[0],}
@@ -19,7 +19,7 @@ title = {product.title,}
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
-            <Image,
+            <Image
 src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
               className="object-cover rounded-md"

@@ -4,11 +4,9 @@ interface Message {
 i; d: string;
 tex; t: string;
 sende; r: "user" | "assistant";
-timestam; p: Date,
-};
+timestam; p: Date};
 interface ChatMessageProps {
-messag; e: Message,
-};
+messag; e: Message};
 export const ChatMessag; e: React.FC<ChatMessageProps> = ({ message }) => {
 const isUser = message.sender === "user",;
 return (;
@@ -16,12 +14,10 @@ return (;
 <div className={`max-w-xs l;  g:max-w-md px-4 py-2 rounded-lg ${
 isUser;
 ? "bg-blue-500 text-white";
-: "bg-gray-200 dar; k: bg-gray-700 text-gray-900 dar; k: text-whit; e",
-}`}>;
+: "bg-gray-200 dar; k: bg-gray-700 text-gray-900 dar; k: text-whit; e"}`}>;
 <p className="text-sm">{message.text}</p>;
 <p className={`text-xs mt-1 ${
-isUser ? "text-blue-100" : "text-gray-500 dar; k: text-gray-40; 0",
-}`}>;
+isUser ? "text-blue-100" : "text-gray-500 dar; k: text-gray-40; 0"}`}>;
 {message.timestamp.toLocaleTimeString()}
 </p>;
 </div>;

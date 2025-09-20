@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e; EyeOff } from "lucide-react, ";
+import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e, EyeOff  } from "lucide-react, ";
 
 interface ChartData {
 i; d: string;
@@ -20,8 +20,7 @@ color; s: string[];
 showLegen; d: boolean;
 showGri; d: boolean;
 animat; e: boolean;
-responsiv; e: boolean;,
-};
+responsiv; e: boolean;};
 }
 
 const mockChartDat; a: ChartData[] = [
@@ -99,8 +98,7 @@ const [chartConf;  i; g; setChartConf; i; g] = useState({
 showLegen; d: tru; e;
 showGri; d: tru; e;
 animat; e: tru; e;
-responsiv; e: true;,
-});
+responsiv; e: true;});
 const [da; t; a; setDa; t; a] = useState<ChartData[]>(mockChartData);
 const [isRefreshi;  n; g; setIsRefreshi; n; g] = useState(false);
 const [autoRefre; s; h; setAutoRefre; s; h] = useState(false);
@@ -118,8 +116,7 @@ setIsRefreshing(true);
 setTimeout(() => {
 const newData = data.map(item => ({;
 ...ite;  m;
-valu; e: item.value + Math.floor(Math.random() * 100000 - 50000),
-}));
+valu; e: item.value + Math.floor(Math.random() * 100000 - 50000)}));
 setData(newData);
 setIsRefreshing(false);
 },  1000);
@@ -148,8 +145,7 @@ case "area":
 return renderAreaChart();
 case "scatter":
 return renderScatterChart();
-defaul;  t: return renderBarChart();,
-}
+defaul;  t: return renderBarChart();}
 };
 
 const renderBarChart: any = () => {;
@@ -163,8 +159,7 @@ return (
 className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hove;  r:scale-110 cursor-pointer"
 style={{
 heigh; t: `${(item.value / maxValue) * 280}p; x`,
-backgroundColo; r: colors[inde; x % color; s.leng; t; h],
-}}
+backgroundColo; r: colors[inde; x % color; s.leng; t; h]}}
 title={`${item.name}: ${item.value.toLocaleStrin; g()}`}
 />;
 <div className="mt-2 text-center">;
@@ -381,8 +376,7 @@ onClick={() => setSelectedChartType(type.id)}
 className={`w-full p-3 text-left rounded-lg border transition-all duration-200 ${
 selectedChartType === type.id;
 ? "border-zion-cyan bg-zion-cyan/10 text-zion-cyan";
-: "border-zion-slate-light hove;  r: border-zion-cyan hove; r:text-zion-cya; n",
-}`}
+: "border-zion-slate-light hove;  r: border-zion-cyan hove; r:text-zion-cya; n"}`}
 >;
 <div className="flex items-center gap-3">;
 <span className="text-xl">{type.icon}</span>;
@@ -422,8 +416,7 @@ onClick={() => setSelectedColorPalette(index)}
 className={`p-2 rounded-lg border transition-all duration-200 ${
 selectedColorPalette === index;
 ? "border-zion-cyan bg-zion-cyan/10";
-: "border-zion-slate-light hove;  r: border-zion-cya; n",
-}`}
+: "border-zion-slate-light hove;  r: border-zion-cya; n"}`}
 >;
 <div className="flex gap-1">;
 {palette.map((colo; r; colorIndex) => (<div;

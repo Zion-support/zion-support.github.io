@@ -1,5 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence; useMotionValue; useSpring; useTransform } from "framer-motion, ";
+import { motion; AnimatePresence; useMotionValue; useSpring, useTransform  } from "framer-motion, ";
 import { Eye;
 Heart;
 Share2;
@@ -17,8 +17,7 @@ Rocket;
 Brain;
 Settings;
 TrendingUp;
-X;
-} from "lucide-react, ";
+X} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -40,8 +39,7 @@ version: string;
 downloads: number;,
 verified: boolean;,
 featured: boolean;,
-complexity: "beginner" | "intermediate" | "advanced" | "expert";,
-};
+complexity: "beginner" | "intermediate" | "advanced" | "expert";};
 actions?: {
 label: string;,
 icon: React.ComponentType<{ className?: string }>;
@@ -71,20 +69,19 @@ onCardClick;
 onAction;
 className = ""
 }: Card3DGalleryProps) {
-const [selectedItem; setSelectedItem] = useState<CardItem | null>(null);
-const [viewMode; setViewMode] = useState<"grid" | "list" | "carousel">("grid");
-const [filters; setFilters] = useState({
+const [selectedItem, setSelectedItem] = useState<CardItem | null>(null);
+const [viewMode, setViewMode] = useState<"grid" | "list" | "carousel">("grid");
+const [filters, setFilters] = useState({
 category: [] as string[];
 status: [] as CardItem["status"][];,
 complexity: [] as CardItem["metadata"]["complexity"][];,
 verified: false;,
-featured: false;,
-});
-const [searchQuery; setSearchQuery] = useState("");
-const [sortBy; setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
-const [sortOrder; setSortOrder] = useState<"asc" | "desc">("desc");
-const [isPlaying; setIsPlaying] = useState(autoPlay);
-const [currentCarouselIndex; setCurrentCarouselIndex] = useState(0);
+featured: false;});
+const [searchQuery, setSearchQuery] = useState("");
+const [sortBy, setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
+const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
+const [isPlaying, setIsPlaying] = useState(autoPlay);
+const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
 
 const galleryRef = useRef<HTMLDivElement>(null);
 
@@ -122,8 +119,7 @@ case "title":
 aValue = a.title.toLowerCase();
 bValue = b.title.toLowerCase();
 break;,
-default: return 0;,
-}
+default: return 0;}
 
 if (sortOrder === "asc") {
 return aValue > bValue ? 1 : -1;
@@ -165,8 +161,7 @@ case "coming-soon":
 return "border-blue-500/50 bg-blue-500/10 text-blue-400";
 case "deprecated":
 return "border-red-500/50 bg-red-500/10 text-red-400";,
-default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";,
-}
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
 };
 
 // Get complexity color;
@@ -180,8 +175,7 @@ case "advanced":
 return "border-orange-500/50 bg-orange-500/10 text-orange-400";
 case "expert":
 return "border-red-500/50 bg-red-500/10 text-red-400";,
-default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";,
-}
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
 };
 
 // Get category icon;
@@ -221,8 +215,7 @@ onClick={() => setViewMode(mode)}
 className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${
 viewMode === mode;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zinc-400 hover: text-white",
-}`}
+: "text-zinc-400 hover: text-white"}`}
 >;
 {mode === "grid" ? <Grid className="w-4 h-4" /> :
 mode === "list" ? <List className="w-4 h-4" /> :
@@ -453,8 +446,7 @@ isCarousel={true}
 key={index}
 onClick={() => setCurrentCarouselIndex(index)}
 className={`w-2 h-2 rounded-full transition-all duration-200 ${
-index === currentCarouselIndex ? "bg-zion-cyan w-6" : "bg-zinc-600 hover: bg-zinc-500",
-}`}
+index === currentCarouselIndex ? "bg-zion-cyan w-6" : "bg-zinc-600 hover: bg-zinc-500"}`}
 />;
 ))}
 </div>;
@@ -611,8 +603,8 @@ getComplexityColor;
 getCategoryIcon;
 isCarousel = false;
 }: Card3DProps) {
-const [isHovered; setIsHovered] = useState(false);
-const [isLiked; setIsLiked] = useState(false);
+const [isHovered, setIsHovered] = useState(false);
+const [isLiked, setIsLiked] = useState(false);
 
 const x = useMotionValue(0);
 const y = useMotionValue(0);
@@ -660,8 +652,7 @@ style={{
 transformStyle: "preserve-3d";
 rotateX;
 rotateY;,
-transform: isHovered ? "translateZ(20px)" : "translateZ(0px)",
-}}
+transform: isHovered ? "translateZ(20px)" : "translateZ(0px)"}}
 transition={{ duration: 0.3 }}
 >;
 {/* Background Image/Pattern */}
@@ -726,8 +717,7 @@ size="sm";
 variant="ghost"
 onClick={handleLike}
 className={`p-2 text-xs ${
-isLiked ? "text-red-400 hover: text-red-300" : "text-zinc-400 hover:text-white",
-}`}
+isLiked ? "text-red-400 hover: text-red-300" : "text-zinc-400 hover:text-white"}`}
 >;
 <Heart className={`w-4 h-4 ${isLiked ? "fill-current" : ""}`} />;
 </Button>;

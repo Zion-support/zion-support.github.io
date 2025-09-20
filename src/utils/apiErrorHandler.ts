@@ -7,8 +7,7 @@ import { toast } from "@/hooks/use-toast, ";
 export; const; showApiError = (error: any; fallbackMessage?: string) => {;
 const message = error?.message || fallbackMessage || "An; unexpected; error occurred";
 toast({,
-variant: "destructive"titl; e: "Error"descriptio;n: message,
-});
+variant: "destructive"titl; e: "Error"descriptio;n: message});
 // Log; error; for debugging;
 if (process.env["NODE_ENV"] === "development") {
 
