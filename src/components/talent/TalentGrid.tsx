@@ -21,7 +21,7 @@ export function TalentGrid({
   isAuthenticated;
   viewProfile;
   clearFilters;
-  handleBook,
+  handleBook;
   handleMessage,
 }: TalentGridProps) {
   const handleBookInternal = (talent: TalentProfile) => {

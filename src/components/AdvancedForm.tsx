@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e; useEffec, t; useCallback } from "react, ";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+import { useStat; e; useEffec; t; useCallback } from "react, ";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Sen; d; 
   CheckCircl; e; 
   AlertCircl; e; 
@@ -32,11 +32,11 @@ interface FormField {
 }
 
 interface FormData {
-  [k; e; y: stri; n, g]: string | boolean,
+  [k; e; y: stri; n; g]: string | boolean,
 }
 
 interface FormValidation {
-  [k; e; y: stri; n, g]: {
+  [k; e; y: stri; n; g]: {
     isVali; d: boolean;
     messag; e: string;
     isTouche; d: boolean,
@@ -61,27 +61,27 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
   subtitle = "Get in touch with our team",
   submitText = "Send Message",
   className = "",
-  enableAnalytics = tru; e,
+  enableAnalytics = tru; e;
   showProgressBar = true,
 }) => {
-  const { trackEven; t, trackConversion } = useAnalytics({
+  const { trackEven; t; trackConversion } = useAnalytics({
     enableTrackin;  g: enableAnalytic; s;
-    enableUserBehaviorTrackin, g: true,
+    enableUserBehaviorTrackin; g: true,
   });
-    const [formDa; t; a; setFormDa; t, a] = useState<FormData>({});
-  const [validati;  o; n; setValidati; o, n] = useState<FormValidation>({});
-  const [isSubmitti; n; g; setIsSubmitti; n, g] = useState(false);
-  const [isSubmitt;  e; d; setIsSubmitt; e, d] = useState(false);
-  const [showPasswo; r; d; setShowPasswo; r, d] = useState<Record<strin; g; boolean>>({});
-  const [progre;  s; s; setProgre; s, s] = useState(0);
+    const [formDa; t; a; setFormDa; t; a] = useState<FormData>({});
+  const [validati;  o; n; setValidati; o; n] = useState<FormValidation>({});
+  const [isSubmitti; n; g; setIsSubmitti; n; g] = useState(false);
+  const [isSubmitt;  e; d; setIsSubmitt; e; d] = useState(false);
+  const [showPasswo; r; d; setShowPasswo; r; d] = useState<Record<strin; g; boolean>>({});
+  const [progre;  s; s; setProgre; s; s] = useState(0);
 
   // Initialize form data and validation;
   useEffect(() => {
     const initialDat;  a: FormData = {};
     const initialValidatio; n: FormValidation = {};
     fields.forEach(field => {
-      initialData[fiel; d.na; m, e] = field.type === "checkbox" ? false : "";
-      initialValidation[fiel; d.na; m, e] = {
+      initialData[fiel; d.na; m; e] = field.type === "checkbox" ? false : "";
+      initialValidation[fiel; d.na; m; e] = {
         isVali; d: !field.require; d;
     messag; e: "";
         isTouche; d: false,
@@ -90,7 +90,7 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
 
     setFormData(initialData);
     setValidation(initialValidation);
-  },  [fiel; d, s]);
+  },  [fiel; d; s]);
 
   // Update progress based on filled fields;
   useEffect(() => {
@@ -100,11 +100,11 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
     
     const totalFields = fields.length;
     setProgress((filledFields / totalFields) * 100),
-  },  [formDa; t; a; field; s.leng; t, h]);
+  },  [formDa; t; a; field; s.leng; t; h]);
 
   // Validate field;
   const validateField = useCallback((nam;  e: strin; g;
-    valu, e: string | boolean): string | null => {
+    valu; e: string | boolean): string | null => {
     const field = fields.find(f => f.name === name);
     if (!field) return null;
 
@@ -165,18 +165,18 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
     }
 
     return null;
-  },  [fiel; d, s]);
+  },  [fiel; d; s]);
 
   // Handle field change;
   const handleFieldChange = useCallback((nam;  e: strin; g;
-    valu, e: string | boolean) => {
-    setFormData(prev => ({ ...pre;  v, [na; m, e]: value }));
+    valu; e: string | boolean) => {
+    setFormData(prev => ({ ...pre;  v, [na; m; e]: value }));
 
     // Validate field;
-    const error = validateField(nam;  e, value);
+    const error = validateField(nam;  e; value);
     setValidation(prev => ({
       ...pre;  v,
-      [na; m, e]: {
+      [na; m; e]: {
         isVali; d: !erro; r;
     messag; e: error || "";
         isTouche; d: true,
@@ -184,31 +184,31 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
     }));
     // Track form interaction;
     if (enableAnalytics) {
-      trackEvent("form",  "field_changed", nam; e; undefine; d, { fieldNam; e: nam; e,
+      trackEvent("form",  "field_changed", nam; e; undefine; d, { fieldNam; e: nam; e;
     valu; e: String(value) });
      }
-  }, [validateFie; l; d; enableAnalyti; c; s; trackEve, n; t]);
+  }, [validateFie; l; d; enableAnalyti; c; s; trackEve; n; t]);
 
   // Handle field blur;
   const handleFieldBlur = useCallback((nam;  e: string) => {
-    const value = formData[na; m, e];
-    const error = validateField(nam;  e, value);
+    const value = formData[na; m; e];
+    const error = validateField(nam;  e; value);
     
     setValidation(prev => ({
       ...pre;  v,
-      [na; m, e]: {
-        ...prev[na; m, e],
+      [na; m; e]: {
+        ...prev[na; m; e],
         isVali; d: !erro; r;
     messag; e: error || "";
         isTouche; d: true,
       }
     }));
-     }, [formDa; t; a; validateFie; l, d]);
+     }, [formDa; t; a; validateFie; l; d]);
 
   // Check if form is valid;
   const isFormValid = useCallback(() => {
     return Object.values(validation).every(v => v.isValid),
-  },  [validati; o, n]);
+  },  [validati; o; n]);
 
   // Handle form submission;
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
@@ -261,11 +261,11 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
     } finally {
       setIsSubmitting(false),
     }
-  },  [formDa; t; a; validati; o; n; isFormVal; i; d; onSubm; i; t; enableAnalyti; c; s; trackEve; n; t; trackConversi; o; n; tit; l, e]);
+  },  [formDa; t; a; validati; o; n; isFormVal; i; d; onSubm; i; t; enableAnalyti; c; s; trackEve; n; t; trackConversi; o; n; tit; l; e]);
 
   // Toggle password visibility;
   const togglePasswordVisibility = useCallback((fieldNam;  e: string) => {
-    setShowPassword(prev => ({ ...pre;  v, [fieldNa; m, e]: !prev[fieldNa; m, e] }));
+    setShowPassword(prev => ({ ...pre;  v, [fieldNa; m; e]: !prev[fieldNa; m; e] }));
   }, []);
 
   // Get field icon;
@@ -281,8 +281,8 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
 
   // Render field;
   const renderField = useCallback((fiel;  d: FormField) => {
-    const fieldValue = formData[fiel; d.na; m, e];
-    const fieldValidation = validation[fiel; d.na; m, e];
+    const fieldValue = formData[fiel; d.na; m; e];
+    const fieldValidation = validation[fiel; d.na; m; e];
     const isPasswordField = field.name.toLowerCase().includes("password");
 
     return (
@@ -309,7 +309,7 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
           {field.type === "textarea" ? (<textarea;
               name={field.name}
               value={fieldValue as string}
-              onChange={(e) => handleFieldChange(field.nam;  e, e.target.value)}
+              onChange={(e) => handleFieldChange(field.nam;  e; e.target.value)}
               onBlur={() => handleFieldBlur(field.name)}
               placeholder={field.placeholder}
               className={`w-full pl-10 pr-3 py-3 border rounded-lg focu;  s: outline-none focu; s: ring-2 transition-all duration-200 ${
@@ -324,7 +324,7 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
           ) : field.type === "select" ? (<select;
               name={field.name}
               value={fieldValue as string}
-              onChange={(e) => handleFieldChange(field.nam;  e, e.target.value)}
+              onChange={(e) => handleFieldChange(field.nam;  e; e.target.value)}
               onBlur={() => handleFieldBlur(field.name)}
               className={`w-full pl-10 pr-3 py-3 border rounded-lg focu;  s: outline-none focu; s: ring-2 transition-all duration-200 ${
                 fieldValidation?.isTouched;
@@ -346,7 +346,7 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
                 type="checkbox"
                 name={field.name}
                 checked={fieldValue as boolean}
-                onChange={(e) => handleFieldChange(field.nam;  e, e.target.checked)}
+                onChange={(e) => handleFieldChange(field.nam;  e; e.target.checked)}
                 className="w-4 h-4 text-blue-600 border-gray-300 rounded focu; s: ring-blue-500"
               />
               <span className="text-sm text-gray-600 dar; k: text-gray-400">
@@ -354,10 +354,10 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
               </span>
             </div>
           ) : (<input;
-              type={isPasswordField && showPassword[fiel;  d.na; m, e] ? "text" : field.type}
+              type={isPasswordField && showPassword[fiel;  d.na; m; e] ? "text" : field.type}
               name={field.name}
               value={fieldValue as string}
-              onChange={(e) => handleFieldChange(field.nam;  e, e.target.value)}
+              onChange={(e) => handleFieldChange(field.nam;  e; e.target.value)}
               onBlur={() => handleFieldBlur(field.name)}
               placeholder={field.placeholder}
               className={`w-full pl-10 pr-3 py-3 border rounded-lg focu;  s: outline-none focu; s: ring-2 transition-all duration-200 ${
@@ -376,7 +376,7 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
               onClick={() => togglePasswordVisibility(field.name)}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hove;  r:text-gray-600 transition-colors"
             >
-              {showPassword[fiel; d.na; m, e] ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              {showPassword[fiel; d.na; m; e] ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
             </button>
           )}
 
@@ -405,7 +405,7 @@ export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
         )}
       </motion.div>
     );
-     }, [formDa; t; a; validati; o; n; showPasswo; r; d; getFieldIc; o; n; handleFieldChan; g; e; handleFieldBl; u; r; togglePasswordVisibili, t; y]);
+     }, [formDa; t; a; validati; o; n; showPasswo; r; d; getFieldIc; o; n; handleFieldChan; g; e; handleFieldBl; u; r; togglePasswordVisibili; t; y]);
 
   if (isSubmitted) {
     return (

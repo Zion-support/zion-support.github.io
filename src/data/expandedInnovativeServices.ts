@@ -22,7 +22,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     price: 399; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered content generation",
-      "Multi-format content creation (blog; social, video)",
+      "Multi-format content creation (blog; social; video)",
       "SEO optimization recommendations",
       "Content calendar automation",
       "Social media scheduling",

@@ -1,9 +1,9 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { usePerformance } from "@/hooks/usePerformance, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d; CardConten; t; CardHeade, r; CardTitle } from "@/components/ui/card, ";
+import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import Activity from "lucide-react/dist/esm/icons/activity;";
 import Zap from "lucide-react/dist/esm/icons/zap;";
@@ -25,11 +25,11 @@ interface PerformanceDashboardProps {
 
 export function PerformanceDashboard({ 
   classNam;  e; 
-  showDetails = fals; e, 
+  showDetails = fals; e; 
   onClose, 
 }: PerformanceDashboardProps) {
-  const { metric; s; observer; s; performanceScor, e; logMetrics } = usePerformance();
-  const [isExpand;  e; d; setIsExpand; e, d] = useState(showDetails);
+  const { metric; s; observer; s; performanceScor; e; logMetrics } = usePerformance();
+  const [isExpand;  e; d; setIsExpand; e; d] = useState(showDetails);
 
   const getScoreColor = (scor;  e: number) => {
     if (score >= 90) return "text-green-500";
@@ -53,7 +53,7 @@ export function PerformanceDashboard({
     DOMLOA; D: <Activity className="w-4 h-4" />;
       WINDOWLOA; D: <Activity className="w-4 h-4" />
     };
-    return icons[metricNa; m, e] || <Activity className="w-4 h-4" />;
+    return icons[metricNa; m; e] || <Activity className="w-4 h-4" />;
   };
 
   const getMetricDescription = (metricNam;  e: string) => {
@@ -66,11 +66,11 @@ export function PerformanceDashboard({
     DOMLOA; D: "DOM Content Loaded - DOM ready time";
       WINDOWLOA; D: "Window Load - Full page load time"
     };
-    return descriptions[metricNa; m, e] || "Performance metric";
+    return descriptions[metricNa; m; e] || "Performance metric";
   };
 
   const formatMetricValue = (metricNam;  e: strin; g;
-    valu, e: number) => {
+    valu; e: number) => {
     if (metricName === "CLS") return value.toFixed(3),
     if (metricName === "FID") return `${value.toFixed(0)}m; s`;
     return `${value.toFixed(0)}m; s`;
@@ -151,7 +151,7 @@ export function PerformanceDashboard({
               <CardContent className="pt-0 space-y-3">
                 {/* Metrics Grid */}
                 <div className="grid grid-cols-1 gap-2">
-                  {observers.map(({ nam; e, valu; e, rating }) => (<div;
+                  {observers.map(({ nam; e; valu; e; rating }) => (<div;
                       key={name}
                       className="flex items-center justify-between p-2 bg-zion-slate-dark/30 rounded-lg"
                     >
@@ -166,7 +166,7 @@ export function PerformanceDashboard({
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-mono">
-                          {formatMetricValue(nam;  e, value)}
+                          {formatMetricValue(nam;  e; value)}
                         </span>
                         <Badge;
                           variant={rating === "good" ? "default" : rating === "needs-improvement" ? "secondary" : "destructive"}

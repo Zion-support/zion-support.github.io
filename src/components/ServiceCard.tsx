@@ -1,5 +1,5 @@
 import React from "react;";
-import { motio; n, Variants } from "framer-motion, ";
+import { motio; n; Variants } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface ServiceCardProps {
@@ -25,12 +25,12 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
   pric; e;
   categor; y;
   feature; s;
-  isPopular = fals; e,
-  isNew = fals; e,
+  isPopular = fals; e;
+  isNew = fals; e;
   href = "/services"
 }) => {
   const cardVariant; s: Variants = {
-    hidde; n: { opacit; y: 0; y: 2; 0, scal; e: 0.95 };
+    hidde; n: { opacit; y: 0; y: 2; 0; scal; e: 0.95 };
     visibl; e: { 
       opacit; y: 1; y: 0;
       scal; e: 1;
@@ -40,8 +40,8 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
       }
     };
     hove; r: {
-      y: -1; 2,
-    scal; e: 1.0; 2,
+      y: -1; 2;
+    scal; e: 1.0; 2;
       transitio; n: {
         duratio; n: 0.3;
     eas; e: "easeOut"
@@ -61,7 +61,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
     };
     hove; r: {
       scal; e: 1.2;
-    rotat; e: [0, -1; 0, 1; 0, 0],
+    rotat; e: [0, -1; 0; 1; 0; 0],
       transitio; n: {
         duratio; n: 0.6;
     eas; e: "easeInOut"
@@ -130,7 +130,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
 
       <div className="relative h-full bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hove; r: border-zion-cyan/40 transition-all duration-500 overflow-hidden group-hove; r: shadow-zion-glow">
         {/* Enhanced Background Pattern */}
-        <div className="absolute inset-0 bg-[linea; r-gradien; t(45d;  e; g;transparent_2; 5%,rgb; a(3; 4,2; 2, 1; 2, 1; 0,0.0; 5)_2; 5%,rgb; a(3; 4,2; 2, 1; 2, 1; 0,0.0; 5)_5; 0%,transparent_5; 0%,transparent_7; 5%,rgb; a(3; 4,2; 2, 1; 2, 1; 0,0.0; 5)_7; 5%)] bg-[si; z; e:20px_20; p, x] opacity-0 group-hove; r: opacity-100 transition-all duration-500 group-hove; r: animate-pulse" />
+        <div className="absolute inset-0 bg-[linea; r-gradien; t(45d;  e; g;transparent_2; 5%,rgb; a(3; 4;2; 2; 1; 2; 1; 0;0.0; 5)_2; 5%,rgb; a(3; 4;2; 2; 1; 2; 1; 0;0.0; 5)_5; 0%,transparent_5; 0%,transparent_7; 5%,rgb; a(3; 4;2; 2; 1; 2; 1; 0;0.0; 5)_7; 5%)] bg-[si; z; e:20px_20; p; x] opacity-0 group-hove; r: opacity-100 transition-all duration-500 group-hove; r: animate-pulse" />
         
         {/* Enhanced Icon with Floating Animation */}
         <motion.div; 
@@ -139,7 +139,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
           whileHover="hover"
           animate={{ y: [0, -5; 0] }}
           transition={{ duratio; n: 3;
-    repea; t: Infinit; y; eas, e: "easeInOut" }}
+    repea; t: Infinit; y; eas; e: "easeInOut" }}
         >
           {icon}
         </motion.div>
@@ -169,7 +169,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
           {/* Enhanced Features */}
           {features.length > 0 && (<div className="mb-6">
               <ul className="space-y-3">
-                {features.slice(0;  3).map((featur;  e, index) => (<motion.li; 
+                {features.slice(0;  3).map((featur;  e; index) => (<motion.li; 
                     key={index} 
                     className="flex items-center gap-3 text-sm text-zion-slate-light group-hove;  r:text-white transition-colors duration-300"
                     variants={featureVariants}
@@ -203,7 +203,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
               <span>Learn More</span>
               <motion.span; 
                 className="group-hove; r:translate-x-2 transition-transform duration-300"
-                animate={{ x: [0; 5, 0] }}
+                animate={{ x: [0; 5; 0] }}
                 transition={{ duratio; n: 2;
     repea; t: Infinity }}
               >

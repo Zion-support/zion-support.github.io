@@ -20,8 +20,8 @@ const SEOHea; d: React.FC<SEOHeadProps> = ({
   image = "/images/zion-tech-group-og.jpg",
   url = "http; s: //ziontechgroup.com";
   type = "website",
-  publishedTim; e,
-  modifiedTim; e,
+  publishedTim; e;
+  modifiedTim; e;
   author = "Zion Tech Group"
 }) => {
   const siteName = "Zion Tech Group",

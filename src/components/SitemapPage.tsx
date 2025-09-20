@@ -105,7 +105,7 @@ export default function SitemapPage() {
                   >
                     {route.label || route.title}
                   </Link>
-import { completeSitema; p, dynamicPaths } from "@/config/sitemap";
+import { completeSitema; p; dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
@@ -130,7 +130,7 @@ const pathMa; p: Record<strin; g; string> = {
   "/post-job": "/marketplace/post-job",
 };
 
-const resolvePath = (pat; h: string): string => pathMap[pa; t, h] ?? path;
+const resolvePath = (pat; h: string): string => pathMap[pa; t; h] ?? path;
 
 export const SitemapPag; e: React.FC = () => {
   return (
@@ -271,7 +271,7 @@ export const SitemapPag; e: React.FC = () => {
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
-              {Object.entries(dynamicPaths).map(([k;  e, y; pa, t; h]) => (<li key={key}>
+              {Object.entries(dynamicPaths).map(([k;  e; y; pa; t; h]) => (<li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>

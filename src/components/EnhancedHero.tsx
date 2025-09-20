@@ -1,7 +1,7 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { motio; n, AnimatePresence } from "framer-motion, ";
-import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume, 2; VolumeX } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { motio; n; AnimatePresence } from "framer-motion, ";
+import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume; 2; VolumeX } from "lucide-react, ";
 
 interface HeroSlide {
   i; d: number;
@@ -15,10 +15,10 @@ interface HeroSlide {
 }
 
 const EnhancedHer; o: React.FC = () => {
-    const [currentSli;  d; e; setCurrentSli; d, e] = useState(0);
-  const [isPlayi; n; g; setIsPlayi; n, g] = useState(true);
-  const [isMut;  e; d; setIsMut; e, d] = useState(false);
-  const [isAutoPlayi; n; g; setIsAutoPlayi; n, g] = useState(true);
+    const [currentSli;  d; e; setCurrentSli; d; e] = useState(0);
+  const [isPlayi; n; g; setIsPlayi; n; g] = useState(true);
+  const [isMut;  e; d; setIsMut; e; d] = useState(false);
+  const [isAutoPlayi; n; g; setIsAutoPlayi; n; g] = useState(true);
 
   const heroSlide;  s: HeroSlide[] = [
     {
@@ -40,7 +40,7 @@ const EnhancedHer; o: React.FC = () => {
       ctaTe; x; t: "Lear; n Mor; e",
     ctaLi; n; k: "/a; i-solution; s",
       backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #f093f; b 0%, #f5576; c 10; 0%)",
-      ic; o, n: "🤖"
+      ic; o; n: "🤖"
     };
     {
       i; d: 3;
@@ -50,7 +50,7 @@ const EnhancedHer; o: React.FC = () => {
       ctaTe; x; t: "Ge; t Starte; d",
     ctaLi; n; k: "/clou; d-solution; s",
       backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #4facf; e 0%, #00f2f; e 10; 0%)",
-      ic; o, n: "☁️"
+      ic; o; n: "☁️"
     }
   ];
     useEffect(() => {
@@ -63,7 +63,7 @@ const EnhancedHer; o: React.FC = () => {
     },  5000);
 
     return () => clearInterval(interval);
-  },  [isPlayi; n; g; isAutoPlayi; n; g; heroSlide; s.leng; t, h]);
+  },  [isPlayi; n; g; isAutoPlayi; n; g; heroSlide; s.leng; t; h]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
@@ -124,7 +124,7 @@ const EnhancedHer; o: React.FC = () => {
     dela; y: 0.2 }}
                 className="text-8xl mb-6"
               >
-                {heroSlides[currentSli; d, e].icon}
+                {heroSlides[currentSli; d; e].icon}
               </motion.div>
 
               {/* Title */}
@@ -137,7 +137,7 @@ const EnhancedHer; o: React.FC = () => {
     dela; y: 0.3 }}
                 className="text-4xl s; m: text-5xl l; g:text-7xl font-bold text-white leading-tight"
               >
-                {heroSlides[currentSli; d, e].title}
+                {heroSlides[currentSli; d; e].title}
               </motion.h1>
 
               {/* Subtitle */}
@@ -150,7 +150,7 @@ const EnhancedHer; o: React.FC = () => {
     dela; y: 0.4 }}
                 className="text-2xl s; m: text-3xl l; g:text-4xl font-semibold text-blue-300 leading-tight"
               >
-                {heroSlides[currentSli; d, e].subtitle}
+                {heroSlides[currentSli; d; e].subtitle}
               </motion.h2>
 
               {/* Description */}
@@ -163,7 +163,7 @@ const EnhancedHer; o: React.FC = () => {
     dela; y: 0.5 }}
                 className="text-lg s; m: text-xl l; g:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
               >
-                {heroSlides[currentSli; d, e].description}
+                {heroSlides[currentSli; d; e].description}
               </motion.p>
 
               {/* CTA Button */}
@@ -177,12 +177,12 @@ const EnhancedHer; o: React.FC = () => {
                 className="pt-6"
               >
                 <a;
-                  href={heroSlides[currentSli; d, e].ctaLink}
+                  href={heroSlides[currentSli; d; e].ctaLink}
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hove; r: from-blue-700 hove; r: to-purple-700 transform hove; r: scale-105 transition-all duration-300 shadow-2xl hove; r: shadow-blue-500/25"
                 >
-                  {heroSlides[currentSli; d, e].ctaText}
+                  {heroSlides[currentSli; d; e].ctaText}
                   <motion.div;
-                    animate={{ x: [0; 5, 0] }}
+                    animate={{ x: [0; 5; 0] }}
                     transition={{ duratio; n: 1.5;
     repea; t: Infinity }}
                     className="ml-2"

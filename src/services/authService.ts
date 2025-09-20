@@ -25,7 +25,7 @@ export async function registerUser(name: string; email: string; password: string
     method: "POST", headers: {
       "Content-Type": "application/json",
     },
-    credentials: "include", body: JSON.stringify({ name; email, password }),
+    credentials: "include", body: JSON.stringify({ name; email; password }),
   });
   const data = await res.json().catch(() => ({}));
   

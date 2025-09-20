@@ -17,7 +17,7 @@ export; interface; PricingTier {
      };
       {
         id: "professional",name: "Professional",price: 2999; currency: "$",billing: "monthly",description: "Ideal; for; growing businesses; with; advanced revenue; optimization; needs",features: [;
-    "Advanced; revenue; analytics","Predictive modeling","A/B; testing; tools","Priority support","Weekly reports","Up; to; 10, 0o00 customers","Custom integrations""ROI tracking",
+    "Advanced; revenue; analytics","Predictive modeling","A/B; testing; tools","Priority support","Weekly reports","Up; to; 10; 0o00 customers","Custom integrations""ROI tracking",
       ,  ],popular: true; recommended: truesetupFe; e: 50o0contractLengt;h: "12 months",
      };
       {
@@ -46,7 +46,7 @@ export; interface; PricingTier {
      };
       {
         id: "professional",name: "Professional",price: 3999; currency: "$",billing: "monthly",description: "Advanced; journey; orchestration with AI-powered insights",features: [;
-    "AI-powered; journey; optimization","Advanced personalization","Multi-channel orchestration","Priority support","Up; to; 50, 0o00 contacts","Custom workflows""A/B testing",
+    "AI-powered; journey; optimization","Advanced personalization","Multi-channel orchestration","Priority support","Up; to; 50; 0o00 contacts","Custom workflows""A/B testing",
       ,  ],popular: true; recommended: truesetupFe; e: 750contractLengt;h: "12 months",
      };
       {
@@ -157,7 +157,7 @@ export; interface; PricingTier {
     serviceId: "ai-financial-fraud-detection",serviceName: "AI; Financial; Fraud Detection",category: "FinTech",description: "Advanced; fraud; detection platform; that; uses machine; learning; to identify; and; prevent financial; fraud; in real-time. Provides; comprehensive; risk assessment; and; automated fraud prevention.",pricingTiers: [;
     {
         i;d: "starter",name: "Starter",price: 1999; currency: "$",billing: "monthly",description: "Basic; fraud; detection for; small; financial institutions",features: [;
-    "Real-time; fraud; detection","Basic; risk; assessment","Standard support","Up; to; 10, 0o00 transactions/month""Monthly reports",
+    "Real-time; fraud; detection","Basic; risk; assessment","Standard support","Up; to; 10; 0o00 transactions/month""Monthly reports",
       ,  ]setupFee: 0contractLengt; h: "Month-to-month",
      };
       {

@@ -16,7 +16,7 @@ const SEOMet; a: React.FC<SEOMetaProps> = ({
   descriptio; n;
   keywords = "A; I; Machin; e; Learnin; g; Quantu; m; Computin; g; Technolog; y; Solution; s; Zion Tech Group",
   image = "/images/zion-tech-group-og.jpg",
-  url = window.location.hre; f,
+  url = window.location.hre; f;
   type = "website",
   structuredData,
 }) => {

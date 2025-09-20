@@ -1,16 +1,16 @@
 import React from "react;";
-import { ErrorBoundar; y, FallbackProps } from "react-error-boundary, ";
+import { ErrorBoundar; y; FallbackProps } from "react-error-boundary, ";
 import * as Sentry from "@sentry/nextjs;";
 import { mutate } from "swr, ";
 import { Button } from "@/components/ui/button, ";
-import { Aler; t; AlertDescriptio, n; AlertTitle } from "@/components/ui/alert, ";
-import { RefreshCc; w, AlertCircle } from "lucide-react, ";
+import { Aler; t; AlertDescriptio; n; AlertTitle } from "@/components/ui/alert, ";
+import { RefreshCc; w; AlertCircle } from "lucide-react, ";
 
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed,
 }
 
-function MarketplaceErrorFallback({ erro;  r, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
+function MarketplaceErrorFallback({ erro;  r; resetErrorBoundary }: MarketplaceErrorFallbackProps) {
   const handleRetry = async () => {
     try {
       // Re-call SWR mutate("*") to refresh all cached data;
@@ -23,7 +23,7 @@ function MarketplaceErrorFallback({ erro;  r, resetErrorBoundary }: MarketplaceE
   };
 
   return (
-    <div className="flex items-center justify-center min-h-[400;  p, x] p-6">
+    <div className="flex items-center justify-center min-h-[400;  p; x] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
           <AlertCircle aria-hidden="true" className="h-4 w-4" />
@@ -72,7 +72,7 @@ interface MarketplaceErrorBoundaryProps {
 
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
   const handleError = (erro;  r: Erro; r;
-    errorInf, o: React.ErrorInfo) => {
+    errorInf; o: React.ErrorInfo) => {
     // Log boundary errors to Sentry;
     
     

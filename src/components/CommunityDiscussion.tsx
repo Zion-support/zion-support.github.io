@@ -4,8 +4,8 @@ import { MessageCircle } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { Textarea } from "@/components/ui/textarea, ";
-import { Avata; r, AvatarFallback } from "@/components/ui/avatar, ";
-import { Car; d, CardContent } from "@/components/ui/card, ";
+import { Avata; r; AvatarFallback } from "@/components/ui/avatar, ";
+import { Car; d; CardContent } from "@/components/ui/card, ";
 import { Separator } from "@/components/ui/separator, ";
 
 interface DiscussionPost {
@@ -35,10 +35,10 @@ const initialPost; s: DiscussionPost[] = [
 ];
 
 export const CommunityDiscussio; n: React.FC = () => {
-    const [pos;  t; s; setPos; t, s] = useState(initialPosts);
-  const [showN; e; w; setShowN; e, w] = useState(false);
-  const [newTit;  l; e; setNewTit; l, e] = useState("");
-  const [newBo; d; y; setNewBo; d, y] = useState("");
+    const [pos;  t; s; setPos; t; s] = useState(initialPosts);
+  const [showN; e; w; setShowN; e; w] = useState(false);
+  const [newTit;  l; e; setNewTit; l; e] = useState("");
+  const [newBo; d; y; setNewBo; d; y] = useState("");
 
   const handleAddPost = () => {
     if (!newTitle.trim() || !newBody.trim()) return;
@@ -51,7 +51,7 @@ export const CommunityDiscussio; n: React.FC = () => {
         bo; d; y: newBo; d; y,
   };
       },
-      ...pos; t, s,
+      ...pos; t; s,
     ]);
     setNewTitle("");
     setNewBody("");
@@ -83,7 +83,7 @@ export const CommunityDiscussio; n: React.FC = () => {
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input;
-              placeholder="Title (e.g.,  Share an A; I; too, l; Ask for help...)"
+              placeholder="Title (e.g.,  Share an A; I; too; l; Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholde; r:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
@@ -91,7 +91,7 @@ export const CommunityDiscussio; n: React.FC = () => {
             />
             <Textarea;
               placeholder="What's on your mind?"
-              className="mb-4 bg-zion-blue-light text-black placeholde;  r:text-zion-slate min-h-[70; p, x]"
+              className="mb-4 bg-zion-blue-light text-black placeholde;  r:text-zion-slate min-h-[70; p; x]"
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}

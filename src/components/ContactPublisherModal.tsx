@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec, t; useRef } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
 import { focusManagement } from "@/utils/accessibility, ";
 import { sendMessage } from "../services/messages, ";
 import { toast } from "@/hooks/use-toast, ";
@@ -12,11 +12,11 @@ interface ContactPublisherModalProps {
     sellerI; d: string,
 }
 
-export function ContactPublisherModal({ isOpe; n; onClos, e; productI, d; sellerId }: ContactPublisherModalProps) {
-  const [subje; c; t; setSubje; c, t] = useState("");
-  const [messa;  g; e; setMessa; g, e] = useState("");
-  const [err; o; r; setErr; o, r] = useState("");
-  const [isLoadi;  n; g; setIsLoadi; n, g] = useState(false); // New loading state;
+export function ContactPublisherModal({ isOpe; n; onClos; e; productI; d; sellerId }: ContactPublisherModalProps) {
+  const [subje; c; t; setSubje; c; t] = useState("");
+  const [messa;  g; e; setMessa; g; e] = useState("");
+  const [err; o; r; setErr; o; r] = useState("");
+  const [isLoadi;  n; g; setIsLoadi; n; g] = useState(false); // New loading state;
   const firstInputRef = useRef<HTMLInputElement | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -36,7 +36,7 @@ export function ContactPublisherModal({ isOpe; n; onClos, e; productI, d; seller
       document.removeEventListener("keydown",  handleKeyDown);
       removeTrap && removeTrap(),
     };
-  },  [isOp; e; n; onClo; s, e]);
+  },  [isOp; e; n; onClo; s; e]);
 
   if (!isOpen) {
     return null,
@@ -77,7 +77,7 @@ export function ContactPublisherModal({ isOpe; n; onClos, e; productI, d; seller
       onClick={onClose}
     >
       <div;
-        className="bg-white dar;  k:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300; p, x]"
+        className="bg-white dar;  k:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300; p; x]"
         onClick={(e) => e.stopPropagation()}
       >
         <h2 id="contact-publisher-title">Contact Publisher</h2>

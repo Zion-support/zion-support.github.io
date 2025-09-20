@@ -1,10 +1,10 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { ChevronUpIcon } from "@heroicons/react/24/outline, ";
 
 const EnhancedScrollToTo; p: React.FC = () => {
-  const [isVisib;  l; e; setIsVisib; l, e] = useState(false);
+  const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -22,7 +22,7 @@ const EnhancedScrollToTo; p: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({
       to;  p: 0;
-    behavio, r: "smooth"
+    behavio; r: "smooth"
     });
      };
 

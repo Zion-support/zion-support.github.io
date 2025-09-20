@@ -30,7 +30,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 		price: { monthly: 49; yearly: 490; currency: "USD", pricingModel: "usage + subscription" }, features: [
 			"95%+ field extraction accuracy", "Line-item table parsing",
 			"Duplicate detection and fraud checks",
-			"Exports to QuickBooks; Netsuite, Xero"
+			"Exports to QuickBooks; Netsuite; Xero"
 		],
 		benefits: ["Reduce AP processing time by 70%", "Lower manual errors", "Automated approvals"],
 		useCases: ["Finance teams", "Bookkeepers", "Marketplaces"],

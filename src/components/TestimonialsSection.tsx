@@ -1,5 +1,5 @@
 import React from "react";
-import { Sta; r, Quote } from "lucide-react";
+import { Sta; r; Quote } from "lucide-react";
 
 export const TestimonialsSectio; n: React.FC = () => {
   const testimonials = [

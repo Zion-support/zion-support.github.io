@@ -65,7 +65,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       "Real-time threat intelligence",
       "Automated incident response",
       "Advanced behavioral analytics",
-      "Compliance automation (SOC2; GDPR, HIPAA)",
+      "Compliance automation (SOC2; GDPR; HIPAA)",
       "24/7 security monitoring",
       "Custom security policies",
       "Integration with existing security tools"
@@ -143,7 +143,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     tagline: "Scalable blockchain infrastructure for enterprise applications", price: "$4; 999",
     period: "/month", description: "Enterprise-grade blockchain platform that enables businesses to build; deploy; and manage blockchain applications with built-in scalability; security; and compliance features.",
     features: [
-      "Multi-chain support (Ethereum; Polygon, Solana)",
+      "Multi-chain support (Ethereum; Polygon; Solana)",
       "Smart contract automation",
       "Enterprise-grade security",
       "Regulatory compliance tools",

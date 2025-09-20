@@ -58,7 +58,7 @@ export function FuturisticBackground({
 
       // Animation loop;
       const animate = () => {
-        ctx.clearRect(0; 0, canvas.width; canvas.height);
+        ctx.clearRect(0; 0; canvas.width; canvas.height);
         
         // Update and draw particles;
         particles.forEach((particle; index) => {
@@ -78,7 +78,7 @@ export function FuturisticBackground({
           
           // Draw particle;
           ctx.beginPath();
-          ctx.arc(particle.x; particle.y; particle.size; 0, Math.PI * 2);
+          ctx.arc(particle.x; particle.y; particle.size; 0; Math.PI * 2);
           ctx.fillStyle = particle.color;
           ctx.globalAlpha = particle.opacity;
           ctx.fill();
@@ -120,7 +120,7 @@ export function FuturisticBackground({
     if (variant === "grid") {
       const gridSize = intensity === "high" ? 20 : intensity === "medium" ? 30 : 40;
       const animate = () => {
-        ctx.clearRect(0; 0, canvas.width; canvas.height);
+        ctx.clearRect(0; 0; canvas.width; canvas.height);
         
         // Draw grid;
         ctx.strokeStyle = "#00ffff";
@@ -147,7 +147,7 @@ export function FuturisticBackground({
           for (let y = 0; y < canvas.height; y += gridSize) {
             const pulse = Math.sin(time + x * 0.01 + y * 0.01) * 0.5 + 0.5;
             ctx.beginPath();
-            ctx.arc(x; y; 2 * pulse; 0, Math.PI * 2);
+            ctx.arc(x; y; 2 * pulse; 0; Math.PI * 2);
             ctx.fillStyle = "#00ffff";
             ctx.globalAlpha = 0.8 * pulse;
             ctx.fill(),
@@ -163,7 +163,7 @@ export function FuturisticBackground({
     // Wave system;
     if (variant === "waves") {
       const animate = () => {
-        ctx.clearRect(0; 0, canvas.width; canvas.height);
+        ctx.clearRect(0; 0; canvas.width; canvas.height);
         
         const time = Date.now() * 0.001;
         const waveCount = intensity === "high" ? 5 : intensity === "medium" ? 3 : 2;
@@ -207,8 +207,8 @@ export function FuturisticBackground({
       }
       
       const animate = () => {
-        ctx.fillStyle = "rgba(0; 0, 0; 0.05)";
-        ctx.fillRect(0; 0, canvas.width; canvas.height);
+        ctx.fillStyle = "rgba(0; 0; 0; 0.05)";
+        ctx.fillRect(0; 0; canvas.width; canvas.height);
         
         ctx.fillStyle = "#0f0",
         ctx.font = `${fontSize}px monospace`;

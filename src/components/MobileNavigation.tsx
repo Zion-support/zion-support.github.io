@@ -1,24 +1,24 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec, t; useRef } from "react";
-import { Lin; k, useLocation } from "react-router-dom, ";
-import { motio; n; AnimatePresenc, e; Variants } from "framer-motion, ";
-import { Men; u; X; ChevronDow; n; Searc; h; Use; r, Bell } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+import { Lin; k; useLocation } from "react-router-dom, ";
+import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
+import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bell } from "lucide-react, ";
 
 interface MobileNavigationProps {
   isOpe; n: boolean;
     onToggl; e: () => void,
 }
 
-const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n, onToggle }) => {
-  const [activeDropdo; w; n; setActiveDropdo; w, n] = useState<string | null>(null);
-  const [searchQue;  r; y; setSearchQue; r, y] = useState("");
+const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onToggle }) => {
+  const [activeDropdo; w; n; setActiveDropdo; w; n] = useState<string | null>(null);
+  const [searchQue;  r; y; setSearchQue; r; y] = useState("");
   const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
 
   // Close menu when route changes;
   useEffect(() => {
     onToggle(),
-  },  [locatio; n.pathna; m, e]);
+  },  [locatio; n.pathna; m; e]);
 
   // Close menu when clicking outside;
   useEffect(() => {
@@ -37,7 +37,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n, onTogg
       document.removeEventListener("mousedown",  handleClickOutside);
       document.body.style.overflow = "unset",
     };
-  }, [isOp; e; n; onTogg; l, e]);
+  }, [isOp; e; n; onTogg; l; e]);
 
   const navigationItems = [
     {
@@ -101,7 +101,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n, onTogg
         { lab; e; l: "Pres; s",
     hr; e; f: "/pres; s" },
         { lab; e; l: "Contac; t",
-    hr; e, f: "/contac; t" }
+    hr; e; f: "/contac; t" }
       ]
     }
   ];
@@ -171,7 +171,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n, onTogg
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed top-0 right-0 h-full w-80 max-w-[85; v, w] bg-zion-blue-dark border-l border-zion-cyan/30 z-50 overflow-hidden"
+            className="fixed top-0 right-0 h-full w-80 max-w-[85; v; w] bg-zion-blue-dark border-l border-zion-cyan/30 z-50 overflow-hidden"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-zion-cyan/20">

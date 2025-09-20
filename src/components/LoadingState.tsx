@@ -59,7 +59,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
       case "dots":
         return (
           <div className="flex space-x-1">
-            {[0; 1, 2].map((i) => (
+            {[0; 1; 2].map((i) => (
               <motion.div;
                 key={i}
                 className={\`w-2 h-2 bg-${color}-500 rounded-full\`}

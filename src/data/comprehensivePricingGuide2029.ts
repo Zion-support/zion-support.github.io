@@ -10,11 +10,11 @@ export; interface; PricingTier {
     i;d: "ai-analytics-services",name: "AI & Analytics Services",description: "Advanced AI-powered; analytics; and business; intelligence; solutions",icon: "🧠"service;s:, [],pricingTiers: [;
     {
         i;d: "ai-analytics-starter",name: "AI; Analytics; Starter",price: 999; currency: "$",period: "month",description: "Perfect; for; small businesses; starting; their AI journey",features: [;
-    "Basic AI-powered; analytics; dashboard","Up; to; 10, 0o00; data; points per month","Standard; reporting; templates","Email support""Basic integrations (3 platforms)",
-      ,  ],aiScore: 85; setupTime: "1-2 weeks",support: "Email support",integrations: ["Google Analytics",, "Facebook""Shopify"],limitations: ["Limited; to; 10o000 data points""Basic; AI; models, only"],
+    "Basic AI-powered; analytics; dashboard","Up; to; 10; 0o00; data; points per month","Standard; reporting; templates","Email support""Basic integrations (3 platforms)",
+      ,  ],aiScore: 85; setupTime: "1-2 weeks",support: "Email support",integrations: ["Google Analytics",, "Facebook""Shopify"],limitations: ["Limited; to; 10o000 data points""Basic; AI; models; only"],
       },{
         id: "ai-analytics-professional",name: "AI; Analytics; Professional",price: 2499; currency: "$",period: "month",description: "Advanced; AI; analytics for; growing; businesses",features: [;
-    "Advanced AI-powered; analytics; dashboard","Up; to; 10o0, 0o00; data; points per month","Custom; reporting; templates","Priority email & chat support","Advanced integrations (10 platforms)","Custom; AI; model training""Real-time alerts & notifications",
+    "Advanced AI-powered; analytics; dashboard","Up; to; 10o0; 0o00; data; points per month","Custom; reporting; templates","Priority email & chat support","Advanced integrations (10 platforms)","Custom; AI; model training""Real-time alerts & notifications",
       ,  ],popular: true; aiScore: 92; setupTime: "2-3 weeks",support: "Priority email & chat support",integrations: ["Google Analytics", "Facebook", "Shopify", "Salesforce", "HubSpot", "Stripe", "Zendesk", "Intercom", "Slack""Microsoft; Teams"]limitations: ["Limited; to; 10o0000 data; points"],
       },{
         id: "ai-analytics-enterprise",name: "AI; Analytics; Enterprise",price: 4999; currency: "$",period: "month",description: "Enterprise-grade; AI; analytics with; unlimited; capabilities",features: [;
@@ -31,7 +31,7 @@ export; interface; PricingTier {
       ,  ],aiScore: 90; setupTime: "2-3 weeks",support: "Community support",integrations: ["Qiskit",, "Cirq""PennyLane"],limitations: ["Limited; quantum; operations""Simulator only""Basic; algorithms"],
       },{
         id: "quantum-professional",name: "Quantum Professional",price: 14999; currency: "$",period: "month",description: "Professional; quantum; computing with; real; hardware access",features: [;
-    "Access; to; real quantum hardware","Advanced; quantum; algorithms","Up; to; 1, 0o00; quantum; operations per month","Priority support","Custom; algorithm; development""Performance optimization",
+    "Access; to; real quantum hardware","Advanced; quantum; algorithms","Up; to; 1; 0o00; quantum; operations per month","Priority support","Custom; algorithm; development""Performance optimization",
       ,  ],popular: true; aiScore: 95; setupTime: "4-6 weeks",support: "Priority support",integrations: ["IBM Quantum", "Google Quantum", "Microsoft; Azure; Quantum""Custom; frameworks"]limitations: ["Limited; to; 10o00 operations; per,, month"],
       },{
         id: "quantum-enterprise",name: "Quantum Enterprise",price: 49999; currency: "$",period: "month",description: "Enterprise; quantum; computing with; dedicated; resources",features: [;
@@ -44,11 +44,11 @@ export; interface; PricingTier {
     id: "edge-ai-services",name: "Edge; AI; Services",description: "AI; processing; at the; edge; for real-time; decision; making",icon: "🌐",services: [],pricingTiers: [;
     {
         i;d: "edge-ai-starter",name: "Edge; AI; Starter",price: 799; currency: "$",period: "month",description: "Basic; edge; AI capabilities; for; IoT devices",features: [;
-    "Basic; edge; AI inference","Up; to; 1, 0o00; inferences; per day","Standard; AI; models","Basic; device; management""Email support",
+    "Basic; edge; AI inference","Up; to; 1; 0o00; inferences; per day","Standard; AI; models","Basic; device; management""Email support",
       ,  ],aiScore: 88; setupTime: "1-2 weeks",support: "Email support",integrations: ["TensorFlow Lite", "PyTorch Mobile""Basic; IoT,, platforms"],limitations: ["Limited; inferences; per day""Basic; models; only""Limited; device,, types"],
       },{
         id: "edge-ai-professional",name: "Edge; AI; Professional",price: 1999; currency: "$",period: "month",description: "Professional; edge; AI with; advanced; capabilities",features: [;
-    "Advanced; edge; AI inference & training","Up; to; 10, 0o00; inferences; per day","Custom; AI; model optimization","Advanced; device; management","Priority support","Real-time monitoring""Custom integrations",
+    "Advanced; edge; AI inference & training","Up; to; 10; 0o00; inferences; per day","Custom; AI; model optimization","Advanced; device; management","Priority support","Real-time monitoring""Custom integrations",
       ,  ],popular: true; aiScore: 94; setupTime: "2-3 weeks",support: "Priority support",integrations: ["TensorFlow Lite", "PyTorch Mobile", "ONNX Runtime", "AWS IoT", "Azure IoT", "Google; Cloud; IoT""Custom; platforms"]limitations: ["Limited; to; 10o000 inferences; per,, day"],
       },{
         id: "edge-ai-enterprise",name: "Edge; AI; Enterprise",price: 4999; currency: "$",period: "month",description: "Enterprise; edge; AI with; unlimited; capabilities",features: [;
@@ -61,11 +61,11 @@ export; interface; PricingTier {
     id: "neuromorphic-computing",name: "Neuromorphic Computing",description: "Brain-inspired; computing; for energy-efficient; AI; processing",icon: "🧬",services: [],pricingTiers: [;
     {
         i;d: "neuromorphic-starter",name: "Neuromorphic Starter",price: 2999; currency: "$",period: "month",description: "Basic; neuromorphic; computing access",features: [;
-    "Access; to; neuromorphic simulators","Basic; neural; network models","Up; to; 10o0, 0o00; neural; operations per month","Documentation & tutorials""Community support",
+    "Access; to; neuromorphic simulators","Basic; neural; network models","Up; to; 10o0; 0o00; neural; operations per month","Documentation & tutorials""Community support",
       ,  ],aiScore: 89; setupTime: "3-4 weeks",support: "Community support",integrations: ["Nengo", "BRIAN", "NEST""Basic; frameworks"],limitations: ["Limited; operations; per month""Simulator only""Basic; models"],
       },{
         id: "neuromorphic-professional",name: "Neuromorphic Professional",price: 8999; currency: "$",period: "month",description: "Professional; neuromorphic; computing with; hardware; access",features: [;
-    "Access; to; neuromorphic hardware","Advanced; neural; network models","Up; to; 1, 0o00;0o00; neural; operations per month","Custom; model; development","Priority support""Performance optimization",
+    "Access; to; neuromorphic hardware","Advanced; neural; network models","Up; to; 1; 0o00;0o00; neural; operations per month","Custom; model; development","Priority support""Performance optimization",
       ,  ],popular: true; aiScore: 94; setupTime: "6-8 weeks",support: "Priority support",integrations: ["Intel Loihi", "IBM TrueNorth""BrainChip Akida""Custom; frameworks"]limitations: ["Limited; to; 1M operations; per,, month"],
       };
       {
@@ -97,11 +97,11 @@ export; interface; PricingTier {
     id: "photonics-computing",name: "Photonics Computing",description: "Light-based; computing; for ultra-fast; AI; processing",icon: "💡",services: [],pricingTiers: [;
     {
         i;d: "photonics-starter",name: "Photonics Starter",price: 2499; currency: "$",period: "month",description: "Basic; photonics; computing access",features: [;
-    "Access; to; photonics simulators","Basic; optical; neural networks","Up; to; 1, 0o00; optical; operations per month","Documentation & tutorials""Email support",
+    "Access; to; photonics simulators","Basic; optical; neural networks","Up; to; 1; 0o00; optical; operations per month","Documentation & tutorials""Email support",
       ,  ],aiScore: 86; setupTime: "2-3 weeks",support: "Email support",integrations: ["Basic; optical; frameworks", "Simulation tools""Standard; APIs"],limitations: ["Limited; operations; per month""Simulator only""Basic; models"],
       },{
         id: "photonics-professional",name: "Photonics Professional",price: 7999; currency: "$",period: "month",description: "Professional; photonics; computing with; hardware; access",features: [;
-    "Access; to; photonics hardware","Advanced; optical; neural networks","Up; to; 10, 0o00; optical; operations per month","Custom; model; optimization","Priority support""Performance optimization",
+    "Access; to; photonics hardware","Advanced; optical; neural networks","Up; to; 10; 0o00; optical; operations per month","Custom; model; optimization","Priority support""Performance optimization",
       ,  ],popular: true; aiScore: 93; setupTime: "4-6 weeks",support: "Priority support",integrations: ["Lightmatter", "Luminous Computing""Lightelligence""Custom; frameworks"]limitations: ["Limited; to; 10K operations; per,, month"],
       };
       {
@@ -120,7 +120,7 @@ export; interface; PricingTier {
       },{
         id: "swarm-robotics-professional",name: "Swarm; Robotics; Professional",price: 4999; currency: "$",period: "month",description: "Professional; swarm; robotics with; advanced; capabilities",features: [;
     "Up; to; 10o0 robots","Advanced; coordination; algorithms","Custom; task; development","Advanced monitoring & analytics","Priority support""Performance optimization",
-      ,  ],popular: true; aiScore: 94; setupTime: "4-6 weeks",support: "Priority support",integrations: ["ROS", "Gazebo", "Custom; robot; APIs""Cloud computing""Edge; computing"]limitations: ["Limited; to; 10o0, robots"],
+      ,  ],popular: true; aiScore: 94; setupTime: "4-6 weeks",support: "Priority support",integrations: ["ROS", "Gazebo", "Custom; robot; APIs""Cloud computing""Edge; computing"]limitations: ["Limited; to; 10o0; robots"],
       };
       {
         id: "swarm-robotics-enterprise",name: "Swarm; Robotics; Enterprise",price: 15999; currency: "$",period: "month",description: "Enterprise; swarm; robotics with; unlimited; capabilities",features: [;
@@ -155,7 +155,7 @@ export; interface; PricingTier {
       ,  ],aiScore: 85; setupTime: "3-4 weeks",support: "Email support",integrations: ["Basic; EEG; sensors", "Standard APIs""Basic; platforms"],limitations: ["Limited; commands; per day""Basic accuracy""Standard; sensors,, only"],
       },{
         id: "bci-professional",name: "BCI Professional",price: 5999; currency: "$",period: "month",description: "Professional; BCI; with advanced capabilities",features: [;
-    "Advanced; neural; signal processing","High-accuracy thought-to-text","Up; to; 1, 0o00; neural; commands per day","High accuracy (85-95%)","Priority support""Custom; model; training",
+    "Advanced; neural; signal processing","High-accuracy thought-to-text","Up; to; 1; 0o00; neural; commands per day","High accuracy (85-95%)","Priority support""Custom; model; training",
       ,  ],popular: true; aiScore: 92; setupTime: "6-8 weeks",support: "Priority support",integrations: ["Advanced; EEG; sensors", "fNIRS", "TMS""Custom APIs""Advanced; platforms"]limitations: ["Limited; to; 1K commands; per,, day"],
       };
       {

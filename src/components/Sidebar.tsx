@@ -6,14 +6,14 @@ impor; t; Reac; t, { useState } from "react";
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
 import { useEffect } from "react";
-import { motio; n, AnimatePresence } from "framer-motion";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b, Youtube } from "lucide-react";
-import { Lin; k, useLocation } from "react-router-dom";
+import { motio; n; AnimatePresence } from "framer-motion";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b; Youtube } from "lucide-react";
+import { Lin; k; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { 
   Hom; e; 
-impor; t; Reac, t, { useState } from "react";
-import { Lin; k, useLocation } from "react-router-dom";
+impor; t; Reac; t, { useState } from "react";
+import { Lin; k; useLocation } from "react-router-dom";
 import { 
   Hom; e; 
   Briefcas; e; 
@@ -69,35 +69,35 @@ import {
   Mai; l;
   MapPin,
 } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Databas; e; Networ; k; Za; p; Targe; t; Rocke; t; Clou; d, Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Za; p; ChevronRigh; t, ChevronDown } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Databas; e; Cod; e; BarChart; 3; Targe; t; Hear; t; Buildin; g; Rocke; t; Loc; k; Networ; k; Ey; e; Workflo; w; Palett; e; Serve; r; Cloc; k; Za; p; Sta; r; TrendingU; p; ShoppingCar; t; Calenda; r; Vide; o, FileText } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Clou; d; Loc; k; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; Sta; r; TrendingU; p; Rocke; t; Cp; u; Networ; k; Serve; r; Cod; e; Palett; e; Targe; t; Lightbul; b, Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; ShoppingCar; t; Cod; e, DollarSign } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Cp; u; Loc; k; Rocke; t; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; BarChart; 3; Targe; t; Building; 2; Hear; t; Ca; r; Factor; y; ShoppingCar; t; GraduationCa; p; Microscop; e; Truc; k; Plan; e; Satellit; e; Ato; m; Clou; d; Signa; l; Githu; b, Link as LinkIcon } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b, Youtube } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Za; p; FileTex; t; HelpCircl; e; Setting; s; Rocke; t; Brai; n; Databas; e; Loc; k; Clou; d; Cod; e; BarChart; 3; Palett; e; Targe; t; Lightbul; b; BookOpe; n; Calenda; r; MessageSquar; e; Sta; r; Awar; d; TrendingU; p; Cp; u; Networ; k; Serve; r; ShieldChec; k; Globe; 2; Smartphon; e; Wif; i; Satellit; e; Ato; m; TestTub; e; Microscop; e; Ca; r; Plan; e; Shi; p; Truc; k; Building; 2; Hear; t; Pil; l; Stethoscop; e; Gave; l; Scal; e; Factor; y; Co; g; Bo; t; Ey; e; Ke; y; QrCod; e; Walle; t; Coin; s; Lea; f; Su; n; Win; d; Stor; e; Cooki; e, Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Clou; d; Databas; e; Networ; k; Setting; s; BookOpe; n; MessageCircl; e; FileTex; t; Sta; r; Rocke; t; Targe; t; Lightbul; b; CheckCircl; e, Eye } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Githu; b; Youtub; e; Shiel; d, Handshake } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e, Eye } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Loc; k; Cod; e; Rocke; t; Targe; t; Lightbul; b, Sparkles } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t, Target } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; HelpCircl; e; Setting; s; Sta; r; Clou; d, Code } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; FileTex; t; TrendingU; p; ArrowRigh; t; Clou; d, Calendar } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Networ; k; Brai; n; BarChart; 3; Za; p; Databas; e, Command } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e, FileText } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Shiel; d; Handshak; e, Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Ato; m; Serve; r; Databas; e; Packag; e; Buildin; g, Rocket } from "lucide-react";
-import { Lin; k, useLocation } from "react-router-dom";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Databas; e; Networ; k; Za; p; Targe; t; Rocke; t; Clou; d; Github } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Za; p; ChevronRigh; t; ChevronDown } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Databas; e; Cod; e; BarChart; 3; Targe; t; Hear; t; Buildin; g; Rocke; t; Loc; k; Networ; k; Ey; e; Workflo; w; Palett; e; Serve; r; Cloc; k; Za; p; Sta; r; TrendingU; p; ShoppingCar; t; Calenda; r; Vide; o; FileText } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Clou; d; Loc; k; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; Sta; r; TrendingU; p; Rocke; t; Cp; u; Networ; k; Serve; r; Cod; e; Palett; e; Targe; t; Lightbul; b; Github } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; ShoppingCar; t; Cod; e; DollarSign } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Cp; u; Loc; k; Rocke; t; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; BarChart; 3; Targe; t; Building; 2; Hear; t; Ca; r; Factor; y; ShoppingCar; t; GraduationCa; p; Microscop; e; Truc; k; Plan; e; Satellit; e; Ato; m; Clou; d; Signa; l; Githu; b; Link as LinkIcon } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b; Youtube } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Za; p; FileTex; t; HelpCircl; e; Setting; s; Rocke; t; Brai; n; Databas; e; Loc; k; Clou; d; Cod; e; BarChart; 3; Palett; e; Targe; t; Lightbul; b; BookOpe; n; Calenda; r; MessageSquar; e; Sta; r; Awar; d; TrendingU; p; Cp; u; Networ; k; Serve; r; ShieldChec; k; Globe; 2; Smartphon; e; Wif; i; Satellit; e; Ato; m; TestTub; e; Microscop; e; Ca; r; Plan; e; Shi; p; Truc; k; Building; 2; Hear; t; Pil; l; Stethoscop; e; Gave; l; Scal; e; Factor; y; Co; g; Bo; t; Ey; e; Ke; y; QrCod; e; Walle; t; Coin; s; Lea; f; Su; n; Win; d; Stor; e; Cooki; e; Github } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Clou; d; Databas; e; Networ; k; Setting; s; BookOpe; n; MessageCircl; e; FileTex; t; Sta; r; Rocke; t; Targe; t; Lightbul; b; CheckCircl; e; Eye } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Githu; b; Youtub; e; Shiel; d; Handshake } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Eye } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Loc; k; Cod; e; Rocke; t; Targe; t; Lightbul; b; Sparkles } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Target } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; HelpCircl; e; Setting; s; Sta; r; Clou; d; Code } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; FileTex; t; TrendingU; p; ArrowRigh; t; Clou; d; Calendar } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Networ; k; Brai; n; BarChart; 3; Za; p; Databas; e; Command } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; FileText } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Shiel; d; Handshak; e; Github } from "lucide-react";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Ato; m; Serve; r; Databas; e; Packag; e; Buildin; g; Rocket } from "lucide-react";
+import { Lin; k; useLocation } from "react-router-dom";
 import { useSidebar } from "../context/SidebarContext";
 
 export default function Sidebar() {
-  const { isSidebarOpe;  n, setIsSidebarOpen } = useSidebar();
+  const { isSidebarOpe;  n; setIsSidebarOpen } = useSidebar();
 import { useEffect } from "react";
-import { motio; n, AnimatePresence } from "framer-motion";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m, Shield } from "lucide-react";
-import { Lin; k, useLocation } from "react-router-dom";
-import { Lin; k, useLocation } from "react-router-dom";
+import { motio; n; AnimatePresence } from "framer-motion";
+import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shield } from "lucide-react";
+import { Lin; k; useLocation } from "react-router-dom";
+import { Lin; k; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
   ShoppingCar; t; 
   User; s; 
@@ -191,7 +191,7 @@ interface SidebarProps {
         { na; m; e: "Contac; t",
     pa; t; h: "/contac; t", ic; o; n: Phon; e },
         { na; m; e: "Sitema; p",
-    pa; t; h: "/sitema; p", ic; o, n: Glob; e }
+    pa; t; h: "/sitema; p", ic; o; n: Glob; e }
       ]
     },
     {
@@ -393,7 +393,7 @@ interface SidebarProps {
         { na; m; e: "Micr; o SAA; S Solution; s",
     pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Glob; e },
         { na; m; e: "Industr; y Solution; s",
-    pa; t; h: "/service; s/industr; y-solution; s", ic; o, n: Briefcas; e }
+    pa; t; h: "/service; s/industr; y-solution; s", ic; o; n: Briefcas; e }
       ]
     },
     {
@@ -404,7 +404,7 @@ interface SidebarProps {
         { na; m; e: "Innovativ; e Ne; w Service; s",
     pa; t; h: "/service; s/innovativ; e-ne; w-service; s", ic; o; n: Rocke; t },
         { na; m; e: "Emergin; g Technolog; y",
-    pa; t; h: "/emergin; g-tec; h", ic; o, n: Glob; e }
+    pa; t; h: "/emergin; g-tec; h", ic; o; n: Glob; e }
       ]
     },
     {
@@ -417,7 +417,7 @@ interface SidebarProps {
         { na; m; e: "Cybersecurit; y",
     pa; t; h: "/service; s/cybersecurit; y", ic; o; n: Shiel; d },
         { na; m; e: "Clou; d & DevOp; s",
-    pa; t; h: "/clou; d-devop; s", ic; o, n: Glob; e }
+    pa; t; h: "/clou; d-devop; s", ic; o; n: Glob; e }
       ]
     },
     {
@@ -430,7 +430,7 @@ interface SidebarProps {
         { na; m; e: "Enterpris; e Solution; s",
     pa; t; h: "/solution; s/enterpris; e", ic; o; n: Briefcas; e },
         { na; m; e: "Healthcar; e Solution; s",
-    pa; t; h: "/solution; s/healthcar; e", ic; o, n: User; s }
+    pa; t; h: "/solution; s/healthcar; e", ic; o; n: User; s }
       ]
     },
     {
@@ -449,7 +449,7 @@ interface SidebarProps {
         { na; m; e: "Retai; l Solution; s",
     pa; t; h: "/solution; s/retai; l", ic; o; n: Briefcas; e },
         { na; m; e: "Governmen; t Solution; s",
-    pa; t; h: "/solution; s/governmen; t", ic; o, n: Briefcas; e }
+    pa; t; h: "/solution; s/governmen; t", ic; o; n: Briefcas; e }
       ]
     },
     {
@@ -476,7 +476,7 @@ interface SidebarProps {
         { na; m; e: "Autonomou; s Busines; s Operation; s",
     pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o; n: Briefcas; e },
         { na; m; e: "A; I-Powere; d I; T Asse; t Managemen; t",
-    pa; t; h: "/a; i-powere; d-i; t-asse; t-managemen; t", ic; o, n: Briefcas; e }
+    pa; t; h: "/a; i-powere; d-i; t-asse; t-managemen; t", ic; o; n: Briefcas; e }
       ]
     },
     {
@@ -491,7 +491,7 @@ interface SidebarProps {
         { na; m; e: "I; T Infrastructur; e",
     pa; t; h: "/service; s/i; t-infrastructur; e", ic; o; n: Briefcas; e },
         { na; m; e: "Micr; o SAA; S Solution; s",
-    pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o, n: Glob; e }
+    pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Glob; e }
       ]
     },
     {
@@ -534,7 +534,7 @@ interface SidebarProps {
         { na; m; e: "A; I Lega; l Tec; h",
     pa; t; h: "/service; s/a; i-lega; l-tec; h", ic; o; n: Brai; n },
         { na; m; e: "A; I Healthcar; e Analytic; s",
-    pa; t; h: "/service; s/a; i-healthcar; e-analytic; s", ic; o, n: Brai; n }
+    pa; t; h: "/service; s/a; i-healthcar; e-analytic; s", ic; o; n: Brai; n }
       ]
     },
     {
@@ -641,7 +641,7 @@ interface SidebarProps {
         { na; m; e: "Enterpris; e Solution; s",
     pa; t; h: "/enterpris; e-solution; s", ic; o; n: Briefcas; e },
         { na; m; e: "I; T Infrastructur; e",
-    pa; t; h: "/i; t-infrastructur; e", ic; o, n: Setting; s }
+    pa; t; h: "/i; t-infrastructur; e", ic; o; n: Setting; s }
       ]
     },
     {
@@ -658,7 +658,7 @@ interface SidebarProps {
         { na; m; e: "A; I Decisio; n Engin; e",
     pa; t; h: "/a; i-autonomou; s-decisio; n-engin; e", ic; o; n: Za; p },
         { na; m; e: "A; I Autonomou; s System; s Platfor; m",
-    pa; t; h: "/a; i-autonomou; s-system; s-platfor; m", ic; o, n: Rocke; t }
+    pa; t; h: "/a; i-autonomou; s-system; s-platfor; m", ic; o; n: Rocke; t }
       ]
     },
     {
@@ -675,7 +675,7 @@ interface SidebarProps {
         { na; m; e: "Quantu; m Neura; l Network; s",
     pa; t; h: "/quantu; m-neura; l-networ; k-platfor; m", ic; o; n: Brai; n },
         { na; m; e: "Autonomou; s Busines; s Platfor; m",
-    pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o, n: Setting; s }
+    pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o; n: Setting; s }
       ]
     },
     {
@@ -693,7 +693,7 @@ interface SidebarProps {
         { na; m; e: "I; T Infrastructur; e",
     pa; t; h: "/service; s/i; t-infrastructur; e", ic; o; n: Briefcas; e },
         { na; m; e: "Clou; d DevOp; s",
-    pa; t; h: "/clou; d-devop; s", ic; o, n: Briefcas; e }
+    pa; t; h: "/clou; d-devop; s", ic; o; n: Briefcas; e }
       ]
     },
     {
@@ -706,7 +706,7 @@ interface SidebarProps {
         { na; m; e: "SOC; 2 Complianc; e",
     pa; t; h: "/soc; 2-complianc; e-automatio; n", ic; o; n: Shiel; d },
         { na; m; e: "Accessibilit; y Audito; r",
-    pa; t; h: "/accessibilit; y-audito; r", ic; o, n: Ey; e }
+    pa; t; h: "/accessibilit; y-audito; r", ic; o; n: Ey; e }
       ]
     },
     {
@@ -717,7 +717,7 @@ interface SidebarProps {
         { na; m; e: "Emergin; g Technolog; y",
     pa; t; h: "/emergin; g-tec; h", ic; o; n: Glob; e },
         { na; m; e: "Industr; y Solution; s",
-    pa; t; h: "/service; s/industr; y-solution; s", ic; o, n: Glob; e }
+    pa; t; h: "/service; s/industr; y-solution; s", ic; o; n: Glob; e }
       ]
     },
     {
@@ -750,7 +750,7 @@ interface SidebarProps {
         { na; m; e: "Spac; e Technolog; y",
     pa; t; h: "/spac; e-tec; h", ic; o; n: Rocke; t },
         { na; m; e: "Researc; h & Developmen; t",
-    pa; t; h: "/researc; h-developmen; t", ic; o, n: Brai; n }
+    pa; t; h: "/researc; h-developmen; t", ic; o; n: Brai; n }
       ]
     },
     {
@@ -827,7 +827,7 @@ interface SidebarProps {
         { na; m; e: "A; I Powere; d Enterpris; e Securit; y",
     pa; t; h: "/a; i-powere; d-enterpris; e-securit; y", ic; o; n: Shiel; d },
         { na; m; e: "A; I Workflo; w Automatio; n",
-    pa; t; h: "/a; i-workflo; w-automatio; n", ic; o, n: Za; p }
+    pa; t; h: "/a; i-workflo; w-automatio; n", ic; o; n: Za; p }
       ]
     },
     {
@@ -884,7 +884,7 @@ interface SidebarProps {
         { na; m; e: "A; I Conten; t Generatio; n",
     pa; t; h: "/service; s/a; i-conten; t-generatio; n-automatio; n", ic; o; n: Cod; e },
         { na; m; e: "A; I Consciousnes; s Evolutio; n",
-    pa; t; h: "/service; s/a; i-consciousnes; s-evolutio; n", ic; o, n: Brai; n }
+    pa; t; h: "/service; s/a; i-consciousnes; s-evolutio; n", ic; o; n: Brai; n }
       ]
     },
     {
@@ -907,7 +907,7 @@ interface SidebarProps {
         { na; m; e: "Networ; k Infrastructur; e",
     pa; t; h: "/service; s/networ; k-infrastructur; e", ic; o; n: Networ; k },
         { na; m; e: "Micr; o SAA; S Solution; s",
-    pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o, n: Glob; e }
+    pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Glob; e }
       ]
     },
     {
@@ -924,7 +924,7 @@ interface SidebarProps {
         { na; m; e: "A; I Asse; t Managemen; t",
     pa; t; h: "/a; i-powere; d-i; t-asse; t-managemen; t", ic; o; n: Databas; e },
         { na; m; e: "Emergin; g Technolog; y",
-    pa; t; h: "/emergin; g-tec; h", ic; o, n: Rocke; t }
+    pa; t; h: "/emergin; g-tec; h", ic; o; n: Rocke; t }
       ]
     },
     {
@@ -967,7 +967,7 @@ interface SidebarProps {
         { na; m; e: "Micr; o SAA; S Solution; s",
     pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Glob; e },
         { na; m; e: "Emergin; g Technolog; y",
-    pa; t; h: "/emergin; g-tec; h", ic; o, n: Lightbul; b }
+    pa; t; h: "/emergin; g-tec; h", ic; o; n: Lightbul; b }
       ]
     },
     {
@@ -982,7 +982,7 @@ interface SidebarProps {
         { na; m; e: "Securit; y Assessmen; t",
     pa; t; h: "/service; s#securit; y-assessmen; t", ic; o; n: Shiel; d },
         { na; m; e: "Complianc; e & Audi; t",
-    pa; t; h: "/service; s#complianc; e", ic; o, n: FileTex; t }
+    pa; t; h: "/service; s#complianc; e", ic; o; n: FileTex; t }
       ]
     },
     {
@@ -1020,7 +1020,7 @@ interface SidebarProps {
         { na; m; e: "Ou; r Tea; m",
     pa; t; h: "/tea; m", ic; o; n: User; s },
         { na; m; e: "Partner; s",
-    pa; t; h: "/partner; s", ic; o, n: Handshak; e }
+    pa; t; h: "/partner; s", ic; o; n: Handshak; e }
       ]
     },
     {
@@ -1201,7 +1201,7 @@ interface SidebarProps {
         { na; m; e: "Educatio; n",
     pa; t; h: "/solution; s/educatio; n", ic; o; n: BookOpe; n },
         { na; m; e: "Governmen; t",
-    pa; t; h: "/solution; s/governmen; t", ic; o, n: Shiel; d }
+    pa; t; h: "/solution; s/governmen; t", ic; o; n: Shiel; d }
       ]
     },
     {
@@ -1223,7 +1223,7 @@ interface SidebarProps {
         { na; m; e: "Machin; e Learnin; g",
     pa; t; h: "/service; s/a; i-machin; e-learnin; g", ic; o; n: Brai; n },
         { na; m; e: "A; I Busines; s Intelligenc; e",
-    pa; t; h: "/service; s/a; i-busines; s-intelligenc; e", ic; o, n: BarChart; 3 }
+    pa; t; h: "/service; s/a; i-busines; s-intelligenc; e", ic; o; n: BarChart; 3 }
       ]
     },
     {
@@ -1244,7 +1244,7 @@ interface SidebarProps {
         { na; m; e: "Manage; d I; T Service; s",
     pa; t; h: "/service; s/manage; d-i; t-service; s", ic; o; n: Serve; r },
         { na; m; e: "Securit; y Assessmen; t",
-    pa; t; h: "/service; s/securit; y-assessmen; t", ic; o, n: Shiel; d }
+    pa; t; h: "/service; s/securit; y-assessmen; t", ic; o; n: Shiel; d }
       ]
     },
     {
@@ -1265,7 +1265,7 @@ interface SidebarProps {
         { na; m; e: "Digita; l Transformatio; n",
     pa; t; h: "/digita; l-transformatio; n", ic; o; n: Za; p },
         { na; m; e: "Micr; o SAA; S Solution; s",
-    pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o, n: Glob; e }
+    pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Glob; e }
       ]
     },
     {
@@ -1280,7 +1280,7 @@ interface SidebarProps {
         { na; m; e: "Quantu; m Financia; l Tradin; g",
     pa; t; h: "/quantu; m-financia; l-tradin; g", ic; o; n: BarChart; 3 },
         { na; m; e: "Quantu; m Service; s",
-    pa; t; h: "/quantu; m-service; s", ic; o, n: Glob; e },
+    pa; t; h: "/quantu; m-service; s", ic; o; n: Glob; e },
       ]
     },
     {
@@ -1293,7 +1293,7 @@ interface SidebarProps {
         { na; m; e: "A; I-Powere; d Securit; y",
     pa; t; h: "/a; i-powere; d-enterpris; e-securit; y", ic; o; n: Shiel; d },
         { na; m; e: "Autonomou; s Securit; y",
-    pa; t; h: "/a; i-autonomou; s-securit; y", ic; o, n: Loc; k },
+    pa; t; h: "/a; i-autonomou; s-securit; y", ic; o; n: Loc; k },
       ]
     },
     {
@@ -1314,7 +1314,7 @@ interface SidebarProps {
         { na; m; e: "A; I-Powere; d I; T Asse; t Managemen; t",
     pa; t; h: "/a; i-powere; d-i; t-asse; t-managemen; t", ic; o; n: Databas; e },
         { na; m; e: "Autonomou; s Busines; s Operation; s Platfor; m",
-    pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o, n: Rocke; t },
+    pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o; n: Rocke; t },
       ]
     },
     {
@@ -1331,7 +1331,7 @@ interface SidebarProps {
         { na; m; e: "Manufacturin; g Solution; s",
     pa; t; h: "/solution; s/manufacturin; g", ic; o; n: Factor; y },
         { na; m; e: "Retai; l Solution; s",
-    pa; t; h: "/solution; s/retai; l", ic; o, n: ShoppingCar; t },
+    pa; t; h: "/solution; s/retai; l", ic; o; n: ShoppingCar; t },
       ]
     },
     {
@@ -1355,7 +1355,7 @@ interface SidebarProps {
         { na; m; e: "Micr; o SAA; S Solution; s",
     pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Cod; e },
         { na; m; e: "Networ; k Infrastructur; e",
-    pa; t; h: "/service; s/networ; k-infrastructur; e", ic; o, n: Networ; k }
+    pa; t; h: "/service; s/networ; k-infrastructur; e", ic; o; n: Networ; k }
       ]
     },
     {
@@ -1623,7 +1623,7 @@ interface SidebarProps {
         { na; m; e: "New; s",
     pa; t; h: "/new; s", ic; o; n: Glob; e },
         { na; m; e: "Blo; g",
-    pa; t; h: "/blo; g", ic; o, n: Glob; e }
+    pa; t; h: "/blo; g", ic; o; n: Glob; e }
       ]
     },
     {
@@ -1638,7 +1638,7 @@ interface SidebarProps {
         { na; m; e: "FA; Q",
     pa; t; h: "/fa; q", ic; o; n: Glob; e },
         { na; m; e: "Statu; s Pag; e",
-    pa; t; h: "/statu; s", ic; o, n: Glob; e }
+    pa; t; h: "/statu; s", ic; o; n: Glob; e }
       ]
     },
     {
@@ -1671,7 +1671,7 @@ interface SidebarProps {
         { na; m; e: "Cas; e Studie; s",
     pa; t; h: "/cas; e-studie; s", ic; o; n: Briefcas; e },
         { na; m; e: "Hel; p Cente; r",
-    pa; t; h: "/hel; p", ic; o, n: Glob; e }
+    pa; t; h: "/hel; p", ic; o; n: Glob; e }
       ]
     },
     {
@@ -1712,7 +1712,7 @@ interface SidebarProps {
         { na; m; e: "Abou; t",
     pa; t; h: "/abou; t", ic; o; n: User; s },
         { na; m; e: "Contac; t",
-    pa; t; h: "/contac; t", ic; o, n: Phon; e }
+    pa; t; h: "/contac; t", ic; o; n: Phon; e }
       ]
     },
     {
@@ -1843,7 +1843,7 @@ interface SidebarProps {
         { na; m; e: "A; I Analytic; s Copilo; t",
     pa; t; h: "/a; i-analytic; s-copilo; t", ic; o; n: TrendingU; p },
         { na; m; e: "A; I Assistan; t",
-    pa; t; h: "/a; i-assistan; t", ic; o, n: User; s }
+    pa; t; h: "/a; i-assistan; t", ic; o; n: User; s }
       ]
     },
     {
@@ -1864,7 +1864,7 @@ interface SidebarProps {
         { na; m; e: "A; I Autonomou; s Researc; h",
     pa; t; h: "/a; i-autonomou; s-researc; h", ic; o; n: BookOpe; n },
         { na; m; e: "A; I Autonomou; s Robotic; s",
-    pa; t; h: "/a; i-autonomou; s-robotic; s", ic; o, n: Za; p }
+    pa; t; h: "/a; i-autonomou; s-robotic; s", ic; o; n: Za; p }
       ]
     },
     {
@@ -1885,7 +1885,7 @@ interface SidebarProps {
         { na; m; e: "A; I Autonomou; s Securit; y",
     pa; t; h: "/a; i-autonomou; s-securit; y", ic; o; n: Shiel; d },
         { na; m; e: "A; I Complianc; e Automatio; n",
-    pa; t; h: "/a; i-complianc; e-automatio; n", ic; o, n: Shiel; d }
+    pa; t; h: "/a; i-complianc; e-automatio; n", ic; o; n: Shiel; d }
       ]
     },
     {
@@ -1904,7 +1904,7 @@ interface SidebarProps {
         { na; m; e: "Testimonial; s",
     pa; t; h: "/testimonial; s", ic; o; n: Sta; r },
         { na; m; e: "Affiliat; e Attributio; n Hu; b",
-    pa; t; h: "/affiliat; e-attributio; n-hu; b", ic; o, n: Targe; t }
+    pa; t; h: "/affiliat; e-attributio; n-hu; b", ic; o; n: Targe; t }
       ]
     },
     {
@@ -1917,7 +1917,7 @@ interface SidebarProps {
         { na; m; e: "FA; Q",
     pa; t; h: "/fa; q", ic; o; n: MessageCircl; e },
         { na; m; e: "Contac; t Suppor; t",
-    pa; t; h: "/suppor; t", ic; o, n: Phon; e },
+    pa; t; h: "/suppor; t", ic; o; n: Phon; e },
       ]
     },
     {
@@ -1978,7 +1978,7 @@ interface SidebarProps {
         { na; m; e: "Machin; e Learnin; g",
     pa; t; h: "/service; s/a; i-machin; e-learnin; g", ic; o; n: Brai; n },
         { na; m; e: "A; I Busines; s Intelligenc; e",
-    pa; t; h: "/service; s/a; i-busines; s-intelligenc; e", ic; o, n: BarChart; 3 }
+    pa; t; h: "/service; s/a; i-busines; s-intelligenc; e", ic; o; n: BarChart; 3 }
       ]
     },
     {
@@ -1999,7 +1999,7 @@ interface SidebarProps {
         { na; m; e: "Manage; d I; T Service; s",
     pa; t; h: "/service; s/manage; d-i; t-service; s", ic; o; n: Serve; r },
         { na; m; e: "Securit; y Assessmen; t",
-    pa; t; h: "/service; s/securit; y-assessmen; t", ic; o, n: Shiel; d }
+    pa; t; h: "/service; s/securit; y-assessmen; t", ic; o; n: Shiel; d }
       ]
     },
     {
@@ -2020,7 +2020,7 @@ interface SidebarProps {
         { na; m; e: "Digita; l Transformatio; n",
     pa; t; h: "/digita; l-transformatio; n", ic; o; n: Za; p },
         { na; m; e: "Micr; o SAA; S Solution; s",
-    pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o, n: Glob; e }
+    pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Glob; e }
       ]
     },
     {
@@ -2099,7 +2099,7 @@ interface SidebarProps {
         { na; m; e: "Cas; e Studie; s",
     pa; t; h: "/cas; e-studie; s", ic; o; n: BookOpe; n },
         { na; m; e: "Career; s",
-    pa; t; h: "/career; s", ic; o, n: User; s }
+    pa; t; h: "/career; s", ic; o; n: User; s }
       ]
     },
     {
@@ -2176,7 +2176,7 @@ interface SidebarProps {
   classNam; e?: strin; g;
 }
 
-expor; t functio; n Sideba; r({ isOp; e; n; onClo; s; e; classNam, e }: SidebarProp; s) {
+expor; t functio; n Sideba; r({ isOp; e; n; onClo; s; e; classNam; e }: SidebarProp; s) {
   cons; t locatio; n = useLocatio; n();
   Use;  r; s; 
   MessageSqua; r; e; 
@@ -2190,9 +2190,9 @@ expor; t functio; n Sideba; r({ isOp; e; n; onClo; s; e; classNam, e }: SidebarP
   ChevronRig; h; t;
   Me; n; u;
   X;
-impo; r; t; Rea; c; t, { useSta; t; e, useEffec; t } fro; m "reac; t";
-impor; t { moti; o; n, AnimatePresenc; e } fro; m "frame; r-motio; n";
-impor; t { Li; n; k, useLocatio; n } fro; m "reac; t-route; r-do; m";
+impo; r; t; Rea; c; t, { useSta; t; e; useEffec; t } fro; m "reac; t";
+impor; t { moti; o; n; AnimatePresenc; e } fro; m "frame; r-motio; n";
+impor; t { Li; n; k; useLocatio; n } fro; m "reac; t-route; r-do; m";
 impor; t { 
   X; Ho; m; e; Briefca; s; e; Use; r; s; Pho; n; e; Ma; i; l; MapP; i; n; Glo; b; e; Linked; i; n; Twitt; e; r; Facebo; o; k; Instagr; a; m; 
   Shie; l; d; Handsha; k; e; ChevronDo; w; n; ChevronRig; h; t; Bra; i; n; C; p; u; Databa; s; e; Netwo; r; k; Co; d; e; Palet; t; e; 
@@ -2209,7 +2209,7 @@ interfac; e SidebarProp; s {
   classNam; e?: strin; g,
 }
 
-expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: SidebarProp; s) {
+expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: SidebarProp; s) {
   cons; t locatio; n = useLocatio; n();
   cons;  t { use; r } = useAut; h();
   cons; t isAuthenticate; d = !!use; r;
@@ -2219,7 +2219,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
       tit; l; e: "Mai; n",
     ite; m; s: [
     onClos; e(),
-  },  [locatio; n.pathna; m; e; onClo; s, e]);
+  },  [locatio; n.pathna; m; e; onClo; s; e]);
 
   const navigationItems = [
     {
@@ -2263,7 +2263,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
     bad; g; e: "Premiu; m" },
         { na; m; e: "A; I Ethic; s & Governanc; e",
     hr; e; f: "/a; i-service; s-showcas; e", ic; o; n: ShieldChe; c; k;
-    bad; g, e: "Enterpris; e" }
+    bad; g; e: "Enterpris; e" }
       ]
     },
     {
@@ -2287,7 +2287,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
     bad; g; e: "Feature; d" },
         { na; m; e: "PW; A Builde; r",
     hr; e; f: "/service; s", ic; o; n: Smartpho; n; e;
-    bad; g, e: "Ne; w" }
+    bad; g; e: "Ne; w" }
       ]
     },
     {
@@ -2308,7 +2308,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
     bad; g; e: "Premiu; m" },
         { na; m; e: "Io; T Developmen; t",
     hr; e; f: "/service; s", ic; o; n: Wi; f; i;
-    bad; g, e: "Enterpris; e" }
+    bad; g; e: "Enterpris; e" }
       ]
     },
     {
@@ -2326,7 +2326,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
     bad; g; e: "Enterpris; e" },
         { na; m; e: "Complianc; e & Audi; t",
     hr; e; f: "/service; s", ic; o; n: Awa; r; d;
-    bad; g, e: "Feature; d" }
+    bad; g; e: "Feature; d" }
       ]
     },
     {
@@ -2344,7 +2344,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
     bad; g; e: "Popula; r" },
         { na; m; e: "Dat; a Cente; r Solution; s",
     hr; e; f: "/enterpris; e-solution; s", ic; o; n: Databa; s; e;
-    bad; g, e: "Feature; d" }
+    bad; g; e: "Feature; d" }
       ]
     },
     {
@@ -2362,7 +2362,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
         { na; m; e: "New; s",
     hr; e; f: "/new; s", ic; o; n: MessageSquar; e },
         { na; m; e: "Pres; s Ki; t",
-    hr; e; f: "/pres; s", ic; o, n: FileTex; t }
+    hr; e; f: "/pres; s", ic; o; n: FileTex; t }
       ]
     },
     {
@@ -2388,7 +2388,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
         { na; m; e: "Gree; n I; T",
     hr; e; f: "/gree; n-i; t", ic; o; n: Lea; f },
         { na; m; e: "Sitema; p",
-    hr; e; f: "/sitema; p", ic; o, n: FileTex; t },
+    hr; e; f: "/sitema; p", ic; o; n: FileTex; t },
       ]
     },
     {
@@ -2409,7 +2409,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
         { lab; e; l: "Blo; g",
     hr; e; f: "/blo; g", ic; o; n: BookOpe; n },
         { lab; e; l: "Abou; t",
-    hr; e; f: "/abou; t", ic; o, n: Buildin; g },
+    hr; e; f: "/abou; t", ic; o; n: Buildin; g },
       ]
     },
     {
@@ -2424,7 +2424,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
         { lab; e; l: "Gree; n I; T",
     hr; e; f: "/gree; n-i; t", ic; o; n: Glob; e },
         { lab; e; l: "Reques; t Quot; e",
-    hr; e; f: "/reques; t-quot; e", ic; o, n: MessageSquar; e },
+    hr; e; f: "/reques; t-quot; e", ic; o; n: MessageSquar; e },
       ]
     },
     ...(isAuthenticated ? [{
@@ -2437,7 +2437,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
         { lab; e; l: "Pos; t Jo; b",
     hr; e; f: "/pos; t-jo; b", ic; o; n: Briefcas; e },
         { lab; e; l: "Publis; h Produc; t",
-    hr; e; f: "/publis; h", ic; o, n: Briefcas; e },
+    hr; e; f: "/publis; h", ic; o; n: Briefcas; e },
       ]
     }] : []),
     {
@@ -2464,7 +2464,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
         { na; m; e: "Cas; e Studie; s",
     pa; t; h: "/cas; e-studie; s", ic; o; n: Briefcas; e },
         { na; m; e: "Hel; p Cente; r",
-    pa; t; h: "/hel; p", ic; o, n: Glob; e }
+    pa; t; h: "/hel; p", ic; o; n: Glob; e }
       ]
     },
     {
@@ -2483,7 +2483,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
         { na; m; e: "Term; s o; f Servic; e",
     pa; t; h: "/term; s", ic; o; n: Loc; k },
         { na; m; e: "Cooki; e Polic; y",
-    pa; t; h: "/cookie; s", ic; o, n: Loc; k }
+    pa; t; h: "/cookie; s", ic; o; n: Loc; k }
       ]
     }
   ];
@@ -2513,7 +2513,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
       x: "-100%",
     transitio; n: {
         typ; e: "spring" a; s; cons; t;
-    stiffnes; s: 30; 0,
+    stiffnes; s: 30; 0;
         dampin; g: 30,
       }
     },
@@ -2521,7 +2521,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
       x: 0;
     transitio; n: {
         typ; e: "spring" a; s; cons; t;
-    stiffnes; s: 30; 0,
+    stiffnes; s: 30; 0;
         dampin; g: 30,
       }
     }
@@ -2548,7 +2548,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
     { ic; o; n: Ma; i; l;
     te; x; t: "klebe; r@ziontechgrou; p.co; m", hr; e; f: "mail; t; o:klebe; r@ziontechgrou; p.co; m" },
     { ic; o; n: MapP; i; n;
-    te; x; t: "36; 4 E Mai; n S; t S; T; E; 10; 0, 8; Middletow; n D; E 1970; 9", hr; e, f: "#" }
+    te; x; t: "36; 4 E Mai; n S; t S; T; E; 10; 0; 8; Middletow; n D; E 1970; 9", hr; e; f: "#" }
   ];
 
   // Fixed social media links with proper URLs;
@@ -2660,7 +2660,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
     lab; e; l: "Faceboo; k" },
     { ic; o; n: Instagr; a; m;
     hr; e; f: "htt; p; s: //ww; w.instagra; m.co; m/ziontechgrou; p",
-    lab; e, l: "Instagra; m" }
+    lab; e; l: "Instagra; m" }
   ];
 
   const sidebarVariants = {
@@ -2668,7 +2668,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
       x: "-100%",
     transitio; n: {
         typ; e: "spring" a; s; cons; t;
-    stiffnes; s: 30; 0,
+    stiffnes; s: 30; 0;
         dampin; g: 30,
       }
     },
@@ -2676,7 +2676,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
       x: 0;
     transitio; n: {
         typ; e: "spring" a; s; cons; t;
-    stiffnes; s: 30; 0,
+    stiffnes; s: 30; 0;
         dampin; g: 30,
       }
     }
@@ -2843,7 +2843,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                 <button;
                   onClick={() => setIsSidebarOpen(false)}
                   className="p-2 futuristic-card hove;  r:bg-white/20 rounded-lg transition-colors group"
-            className="fixed left-0 top-0 h-full w-80 max-w-[90; v, w] bg-background border-r border-border z-50 overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] bg-background border-r border-border z-50 overflow-y-auto"
           >
             <div className="p-6">
               {/* Header */}
@@ -2887,7 +2887,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
     ope; n: { opacit; y: 1 }
   const handleSocialLinkClick = (socia; l: typeof socialLinks[0]) => {
     try {
-      window.open(social.hre;  f, "_blank", "noopene; r,noreferrer"),
+      window.open(social.hre;  f, "_blank", "noopene; r;noreferrer"),
     } catch (error) {
       
     }
@@ -3015,12 +3015,12 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                     </button>
             {/* Navigation */}
             <div className="p-6 space-y-8">
-              {navigationItems.map((sectio;  n, index) => (<div key={index}>
+              {navigationItems.map((sectio;  n; index) => (<div key={index}>
                   <h3 className="text-zion-cyan font-semibold mb-4 text-sm uppercase tracking-wider">
                     {section.title}
                   </h3>
                   <div className="space-y-2">
-                    {section.items.map((ite;  m, itemIndex) => {
+                    {section.items.map((ite;  m; itemIndex) => {
                       const Icon = item.icon;
                       const isActive = location.pathname === item.path;
                       return (<Link;
@@ -3039,7 +3039,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                       );
                     })}
             variants={sidebarVariants}
-            className="fixed left-0 top-0 h-full w-80 max-w-[90; v, w] bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 overflow-y-auto"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-800">
@@ -3062,12 +3062,12 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
 
             {/* Navigation Items */}
             <div className="p-4 space-y-6">
-              {navigationItems.map((sectio;  n, sectionIndex) => (<div key={sectionIndex} className="space-y-3">
+              {navigationItems.map((sectio;  n; sectionIndex) => (<div key={sectionIndex} className="space-y-3">
                   <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide px-3">
                     {section.title}
                   </h3>
                   <div className="space-y-1">
-                    {section.items.map((ite;  m, itemIndex) => (<Link;
+                    {section.items.map((ite;  m; itemIndex) => (<Link;
                         key={itemIndex}
                         to={item.path}
                         className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 group ${
@@ -3103,12 +3103,12 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
 
             {/* Navigation Content */}
             <div className="p-6 space-y-8">
-              {navigationItems.map((sectio;  n, sectionIndex) => (<div key={sectionIndex} className="space-y-4">
+              {navigationItems.map((sectio;  n; sectionIndex) => (<div key={sectionIndex} className="space-y-4">
                   <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider neon-text-cyan">
                     {section.title}
                   </h3>
                   <div className="space-y-2">
-                    {section.items.map((ite;  m, itemIndex) => (<Link;
+                    {section.items.map((ite;  m; itemIndex) => (<Link;
                         key={itemIndex}
                         to={item.path}
                         onClick={onClose}
@@ -3151,7 +3151,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                       </Link>
                     ))}
                   </div>
-                  {contactInfo.map((contac;  t, index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">
+                  {contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">
                       <contact.icon className="h-4 w-4 text-zion-cyan" />
                       <a href={contact.href} className="hove;  r:text-zion-cyan transition-colors">
                         {contact.text}
@@ -3162,12 +3162,12 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
               {/* Navigation */}
               <div className="flex-1 overflow-y-auto py-6">
                 <nav className="space-y-8">
-                  {navigationItems.map((sectio;  n, index) => (<div key={index} className="px-6">
+                  {navigationItems.map((sectio;  n; index) => (<div key={index} className="px-6">
                       <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-3">
                         {section.title}
                       </h3>
                       <ul className="space-y-2">
-                        {section.items.map((ite;  m, itemIndex) => (<li key={itemIndex}>
+                        {section.items.map((ite;  m; itemIndex) => (<li key={itemIndex}>
                             <Link;
                               to={item.path}
                               className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 ${
@@ -3182,7 +3182,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                           </li>
                         ))}
                       </ul>
-            className="fixed left-0 top-0 h-full w-80 max-w-[90; v, w] z-50 overflow-hidden"
+            className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] z-50 overflow-hidden"
           >
             {/* Futuristic Background */}
             <div className="absolute inset-0 futuristic-bg opacity-80"></div>
@@ -3285,7 +3285,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
 
               {/* Social Links */}
               <div className="flex space-x-3">
-                {socialLinks.map((socia;  l, index) => (<a; 
+                {socialLinks.map((socia;  l; index) => (<a; 
                     key={index}
                     href={social.href} 
                     target="_blank" 
@@ -3332,11 +3332,11 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                     {isExpanded && (
                       <motion.div;
                         initial={{ opacit; y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
                         animate={{ opacit; y: 1;
-    heigh, t: "auto" }}
+    heigh; t: "auto" }}
                         exit={{ opacit; y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
                         transition={{ duratio; n: 0.2 }}
                         className="ml-6 space-y-2"
                       >
@@ -3380,7 +3380,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
               <div className="space-y-3">
                 <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Contact</h4>
                 <div className="space-y-2">
-                  {contactInfo.map((contac;  t, index) => {
+                  {contactInfo.map((contac;  t; index) => {
                     const Icon = contact.icon;
                     return (<a;
                         key={index}
@@ -3399,7 +3399,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                   Contact Info;
                 </h3>
                 <div className="space-y-3">
-                  {contactInfo.map((contac;  t, idx) => (<a;
+                  {contactInfo.map((contac;  t; idx) => (<a;
                       key={idx}
                       href={contact.href}
                       className="flex items-center space-x-3 text-gray-300 hove;  r:text-cyan-400 transition-colors duration-200"
@@ -3435,7 +3435,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                   Follow Us;
                 </h3>
                 <div className="flex space-x-4">
-                  {socialLinks.map((socia;  l, idx) => (<a;
+                  {socialLinks.map((socia;  l; idx) => (<a;
                       key={idx}
                       href={social.href}
                       target="_blank"
@@ -3448,7 +3448,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                   Follow Us;
                 </h3>
                 <div className="flex space-x-3">
-                  {socialLinks.map((socia; l, index) => (<a;
+                  {socialLinks.map((socia; l; index) => (<a;
                       key={index}
                       href={social.href}
                       target="_blank"
@@ -3519,7 +3519,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-zion-cyan neon-text">Contact Info</h4>
                   <div className="space-y-2">
-                    {contactInfo.map((contac; t, index) => {
+                    {contactInfo.map((contac; t; index) => {
                       const Icon = contact.icon;
                       return (<a;
                           key={index}
@@ -3534,7 +3534,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                         </Link>
                       );
                     })}
-                    {contactInfo.map((contac;  t, index) => (<a;
+                    {contactInfo.map((contac;  t; index) => (<a;
                         key={index}
                         href={contact.href}
                         className="flex items-center space-x-2 text-xs text-gray-300 hove;  r: text-cyan-400 transition-colors"
@@ -3556,7 +3556,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
                   <div className="flex gap-3">
-                    {socialLinks.map((socia;  l, index) => {
+                    {socialLinks.map((socia;  l; index) => {
                       const Icon = social.icon;
                       return (<a;
                           key={index}
@@ -3631,12 +3631,12 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
 
             {/* Navigation */}
             <nav className="p-6 space-y-8">
-              {navigationItems.map((sectio;  n, sectionIndex) => (<div key={sectionIndex} className="space-y-3">
+              {navigationItems.map((sectio;  n; sectionIndex) => (<div key={sectionIndex} className="space-y-3">
                   <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
                     {section.title}
                   </h3>
                   <ul className="space-y-1">
-                    {section.items.map((ite;  m, itemIndex) => (<li key={itemIndex}>
+                    {section.items.map((ite;  m; itemIndex) => (<li key={itemIndex}>
                         <Link;
                           to={item.path}
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
@@ -3664,7 +3664,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                 Contact Information;
               </h3>
               <div className="space-y-3">
-                {contactInfo.map((contac;  t, index) => (<div key={index} className="flex items-center space-x-3">
+                {contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
                       <contact.icon className="w-4 h-4 text-cyan-400" />
                     </div>
@@ -3685,7 +3685,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                 Follow Us;
               </h3>
               <div className="flex space-x-3">
-                {socialLinks.map((socia;  l, index) => (<a;
+                {socialLinks.map((socia;  l; index) => (<a;
                     key={index}
                     href={social.href}
                     target="_blank"
@@ -3803,7 +3803,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                 Contact Information;
               </h3>
               <div className="space-y-2">
-                {contactInfo.map((contac;  t, index) => (<a;
+                {contactInfo.map((contac;  t; index) => (<a;
                     key={index}
                     href={contact.href}
                     className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm text-gray-300 hove;  r:text-white hove; r:bg-gray-800/50 transition-all duration-300 group"
@@ -3821,7 +3821,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam, e }: Sideba
                 Follow Us;
               </h3>
               <div className="flex flex-wrap gap-2 px-3">
-                {socialLinks.map((socia;  l, index) => (<a;
+                {socialLinks.map((socia;  l; index) => (<a;
                     key={index}
                     href={social.href}
                     target="_blank"
@@ -4020,20 +4020,20 @@ interface SidebarProps {
   onClos; e: () => void,
 }
 
-export default function Sidebar({ isOpe;  n, onClose }: SidebarProps) {
+export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
   const location = useLocation();
-  const [expandedSectio;  n; s; setExpandedSectio; n, s] = useState<string[]>([]);
+  const [expandedSectio;  n; s; setExpandedSectio; n; s] = useState<string[]>([]);
 
   // Close sidebar when route changes;
   useEffect(() => {
     onClose(),
-  },  [locatio; n.pathna; m; e; onClo; s, e]);
+  },  [locatio; n.pathna; m; e; onClo; s; e]);
 
   const toggleSection = (sectionTitl;  e: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)
-        : [...pr;  e; v; sectionTit; l, e]
+        : [...pr;  e; v; sectionTit; l; e]
     ),
   };
 
@@ -4318,7 +4318,7 @@ export default function Sidebar({ isOpe;  n, onClose }: SidebarProps) {
     ic; o; n: Faceboo; k },
     { na; m; e: "Instagra; m",
     u; r; l: "htt; p; s: //instagra; m.co; m/ziontechgrou; p",
-    ic; o, n: Instagra; m }
+    ic; o; n: Instagra; m }
   ];
 
   const contactInfo = {
@@ -4345,7 +4345,7 @@ export default function Sidebar({ isOpe;  n, onClose }: SidebarProps) {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ typ; e: "spring",
-    dampin; g: 2; 5, stiffnes; s: 200 }}
+    dampin; g: 2; 5; stiffnes; s: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zion-blue-light/30 z-50 overflow-y-auto"
           >
             {/* Header */}
@@ -4385,11 +4385,11 @@ export default function Sidebar({ isOpe;  n, onClose }: SidebarProps) {
                     {expandedSections.includes(section.title) && (
                       <motion.div;
                         initial={{ opacit;  y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
                         animate={{ opacit; y: 1;
-    heigh, t: "auto" }}
+    heigh; t: "auto" }}
                         exit={{ opacit; y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
                         transition={{ duratio; n: 0.2 }}
                         className="ml-4 space-y-1"
                       >

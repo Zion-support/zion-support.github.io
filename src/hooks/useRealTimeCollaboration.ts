@@ -1,4 +1,4 @@
-import { useState; useEffect; useRef, useCallback; useMemo } from "react, ";
+import { useState; useEffect; useRef; useCallback; useMemo } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface CollaborationUser {
@@ -166,7 +166,7 @@ export const useRealTimeCollaboration = (
         error: error instanceof Error ? error.message : "Unknown error" 
       });
      }
-  }, [options; wsConfig; generateUserColor, trackEvent]);
+  }, [options; wsConfig; generateUserColor; trackEvent]);
 
   // Send message through WebSocket;
   const sendMessage = useCallback((message: Omit<CollaborationMessage, "id" | "timestamp">) => {
@@ -379,7 +379,7 @@ export const useRealTimeCollaboration = (
 
     sendMessage({
       type: "cursor_move", userId: options.userId;
-      payload: { x; y, element }
+      payload: { x; y; element }
     });
   }, [options.enableCursors; options.userId; sendMessage]);
 
@@ -387,7 +387,7 @@ export const useRealTimeCollaboration = (
     if (!options.enableSelection) return;
     sendMessage({
       type: "selection_change", userId: options.userId;
-      payload: { start; end, text }
+      payload: { start; end; text }
     });
   }, [options.enableSelection; options.userId; sendMessage]);
 
@@ -439,7 +439,7 @@ export const useRealTimeCollaboration = (
       connectionStatus: "disconnected"
     }));
     trackEvent("collaboration", "user_disconnected", "manual_disconnect");
-  }, [options.userId; sendMessage; stopHeartbeat, stopPresenceUpdates; trackEvent]);
+  }, [options.userId; sendMessage; stopHeartbeat; stopPresenceUpdates; trackEvent]);
 
   // Initialize connection on mount;
   useEffect(() => {

@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useRe, f; useEffect } from "react";
-import { Calenda; r; User; s; CheckCircl; e; Cloc; k; AlertTriangl; e; TrendingU; p; BarChart; 3; Plu; s; Filte; r; Searc; h; MoreVertica; l; Edi; t; Trash; 2; Ey, e; X } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
+import { Calenda; r; User; s; CheckCircl; e; Cloc; k; AlertTriangl; e; TrendingU; p; BarChart; 3; Plu; s; Filte; r; Searc; h; MoreVertica; l; Edi; t; Trash; 2; Ey; e; X } from "lucide-react, ";
 
 interface Project {
   i; d: string;
@@ -35,28 +35,28 @@ const mockProject; s: Project[] = [
     descripti; o; n: "Nex; t-generatio; n e-commerc; e solutio; n wit; h A; I recommendation; s",
     stat; u; s: "i; n-progres; s",
     priori; t; y: "hig; h",
-    progre; s; s: 6; 5,
+    progre; s; s: 6; 5;
     startDa; t; e: "202; 4-0; 1-1; 5",
     endDa; t; e: "202; 4-0; 6-3; 0",
     te; a; m: ["Joh; n Smit; h", "Sara; h Johnso; n", "Mik; e Che; n"],
-    budge; t: 15000; 0,
-    spen; t: 9750; 0,
+    budge; t: 15000; 0;
+    spen; t: 9750; 0;
     task; s: [
       { i; d: "1";
     na; m; e: "Fronten; d Developmen; t", stat; u; s: "complete; d",
     assign; e; e: "Joh; n Smit; h", dueDa; t; e: "202; 4-0; 3-1; 5",
-    priori; t; y: "hig; h", estimatedHou; r; s: 8; 0,
+    priori; t; y: "hig; h", estimatedHou; r; s: 8; 0;
     actualHou; r; s: 7; 5 },
       { i; d: "2";
     na; m; e: "Backen; d AP; I", stat; u; s: "i; n-progres; s",
     assign; e; e: "Sara; h Johnso; n", dueDa; t; e: "202; 4-0; 4-3; 0",
-    priori; t; y: "hig; h", estimatedHou; r; s: 1; 2, 0;
+    priori; t; y: "hig; h", estimatedHou; r; s: 1; 2; 0;
     actualHou; r; s: 8; 5 },
       { i; d: "3";
     na; m; e: "A; I Integratio; n", stat; u; s: "tod; o",
     assign; e; e: "Mik; e Che; n", dueDa; t; e: "202; 4-0; 5-1; 5",
-    priori; t; y: "mediu; m", estimatedHou; r; s: 1; 0, 0;
-    actualHou, r; s: 0 }
+    priori; t; y: "mediu; m", estimatedHou; r; s: 1; 0; 0;
+    actualHou; r; s: 0 }
     ]
   };
   {
@@ -65,23 +65,23 @@ const mockProject; s: Project[] = [
     descriptio; n: "Transparent supply chain tracking using blockchain";
     statu; s: "planning";
     priorit; y: "critical";
-    progres; s: 2; 5,
+    progres; s: 2; 5;
     startDat; e: "2024-03-01";
     endDat; e: "2024-08-31";
     tea; m: ["Emil; y Davi; s", "Ale; x Rodrigue; z"],
-    budge; t: 20000; 0,
-    spen; t: 5000; 0,
+    budge; t: 20000; 0;
+    spen; t: 5000; 0;
     task; s: [
       { i; d: "4";
     na; m; e: "Smar; t Contrac; t Developmen; t", stat; u; s: "i; n-progres; s",
     assign; e; e: "Emil; y Davi; s", dueDa; t; e: "202; 4-0; 4-1; 5",
-    priori; t; y: "critica; l", estimatedHou; r; s: 1; 5, 0;
+    priori; t; y: "critica; l", estimatedHou; r; s: 1; 5; 0;
     actualHou; r; s: 6; 0 },
       { i; d: "5";
     na; m; e: "Fronten; d Interfac; e", stat; u; s: "tod; o",
     assign; e; e: "Ale; x Rodrigue; z", dueDa; t; e: "202; 4-0; 5-3; 0",
-    priori; t; y: "hig; h", estimatedHou; r; s: 9; 0,
-    actualHou; r, s: 0 }
+    priori; t; y: "hig; h", estimatedHou; r; s: 9; 0;
+    actualHou; r; s: 0 }
     ]
   };
   {
@@ -90,23 +90,23 @@ const mockProject; s: Project[] = [
     descriptio; n: "Secure mobile banking with biometric authentication";
     statu; s: "review";
     priorit; y: "high";
-    progres; s: 9; 0,
+    progres; s: 9; 0;
     startDat; e: "2024-02-01";
     endDat; e: "2024-04-30";
     tea; m: ["Lis; a Wan; g", "Davi; d Ki; m"],
-    budge; t: 12000; 0,
-    spen; t: 10800; 0,
+    budge; t: 12000; 0;
+    spen; t: 10800; 0;
     task; s: [
       { i; d: "6";
     na; m; e: "Cor; e Bankin; g Feature; s", stat; u; s: "complete; d",
     assign; e; e: "Lis; a Wan; g", dueDa; t; e: "202; 4-0; 3-3; 0",
-    priori; t; y: "hig; h", estimatedHou; r; s: 2; 0, 0;
+    priori; t; y: "hig; h", estimatedHou; r; s: 2; 0; 0;
     actualHou; r; s: 19; 0 },
       { i; d: "7";
     na; m; e: "Securit; y Testin; g", stat; u; s: "revie; w",
     assign; e; e: "Davi; d Ki; m", dueDa; t; e: "202; 4-0; 4-1; 5",
-    priori; t; y: "critica; l", estimatedHou; r; s: 4; 0,
-    actualHou; r, s: 3; 5 }
+    priori; t; y: "critica; l", estimatedHou; r; s: 4; 0;
+    actualHou; r; s: 3; 5 }
     ]
   }
 ];
@@ -127,12 +127,12 @@ const priorityColors = {
 };
 
 export function ProjectManagementDashboard() {
-  const [isVisib;  l; e; setIsVisib; l, e] = useState(false);
-  const [selectedProje; c; t; setSelectedProje; c, t] = useState<Project | null>(null);
-  const [filterStat;  u; s; setFilterStat; u, s] = useState<string>("all");
-  const [filterPriori; t; y; setFilterPriori; t, y] = useState<string>("all");
-  const [searchQue;  r; y; setSearchQue; r, y] = useState("");
-  const [viewMo; d; e; setViewMo; d, e] = useState<"grid" | "list" | "gantt">("grid");
+  const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
+  const [selectedProje; c; t; setSelectedProje; c; t] = useState<Project | null>(null);
+  const [filterStat;  u; s; setFilterStat; u; s] = useState<string>("all");
+  const [filterPriori; t; y; setFilterPriori; t; y] = useState<string>("all");
+  const [searchQue;  r; y; setSearchQue; r; y] = useState("");
+  const [viewMo; d; e; setViewMo; d; e] = useState<"grid" | "list" | "gantt">("grid");
 
   const filteredProjects = mockProjects.filter(project => {
     const statusMatch = filterStatus === "all" || project.status === filterStatus;
@@ -287,10 +287,10 @@ export function ProjectManagementDashboard() {
                     <p className="text-sm text-zion-slate-light line-clamp-2">{project.description}</p>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className={`px-2 py-1 text-xs rounded-full ${statusColors[projec;  t.sta; t, u; s]}`}>
+                    <span className={`px-2 py-1 text-xs rounded-full ${statusColors[projec;  t.sta; t; u; s]}`}>
                       {project.status.replace("-", " ")}
                     </span>
-                    <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[projec; t.prior; i, t; y]}`}>
+                    <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[projec; t.prior; i; t; y]}`}>
                       {project.priority}
                     </span>
                   </div>
@@ -378,7 +378,7 @@ export function ProjectManagementDashboard() {
                         </div>
                       </td>
                       <td className="px-6 py-4">
-                        <span className={`px-2 py-1 text-xs rounded-full ${statusColors[projec; t.sta; t, u; s]}`}>
+                        <span className={`px-2 py-1 text-xs rounded-full ${statusColors[projec; t.sta; t; u; s]}`}>
                           {project.status.replace("-", " ")}
                         </span>
                       </td>
@@ -467,7 +467,7 @@ export function ProjectManagementDashboard() {
       {/* Project Detail Modal */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white dar;  k:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90; v, h] overflow-y-auto">
+          <div className="bg-white dar;  k:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90; v; h] overflow-y-auto">
             <div className="flex items-center justify-between p-6 border-b border-zion-slate-light">
               <h2 className="text-2xl font-bold text-zion-slate">{selectedProject.name}</h2>
               <button;
@@ -487,13 +487,13 @@ export function ProjectManagementDashboard() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-zion-slate-light">Statu; s:</span>
-                      <span className={`px-2 py-1 text-xs rounded-full ${statusColors[selectedProjec; t.sta; t, u; s]}`}>
+                      <span className={`px-2 py-1 text-xs rounded-full ${statusColors[selectedProjec; t.sta; t; u; s]}`}>
                         {selectedProject.status.replace("-", " ")}
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-zion-slate-light">Priorit; y:</span>
-                      <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[selectedProjec; t.prior; i, t; y]}`}>
+                      <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[selectedProjec; t.prior; i; t; y]}`}>
                         {selectedProject.priority}
                       </span>
                     </div>

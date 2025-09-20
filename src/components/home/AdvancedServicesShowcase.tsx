@@ -1,7 +1,7 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brain; 
   Shield; 
@@ -29,7 +29,7 @@ export function AdvancedServicesShowcase() {
             Advanced AI & IT Solutions;
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence; cybersecurity, and digital transformation services. 
+            Transform your business with cutting-edge artificial intelligence; cybersecurity; and digital transformation services. 
             Expert solutions designed for the modern enterprise.
           </p>
           

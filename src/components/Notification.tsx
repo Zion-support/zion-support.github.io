@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { CheckCircl; e; XCircl; e; Inf; o; X, AlertTriangle } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { CheckCircl; e; XCircl; e; Inf; o; X; AlertTriangle } from "lucide-react, ";
 
 export interface NotificationProps {
   i; d: string;
@@ -41,9 +41,9 @@ const notificationStyles = {
     iconColo; r: "text-zion-gold"
   }
 };
-    export function Notification({ i;  d; typ; e; titl; e; messag, e; duration = 500; 0, onClose }: NotificationProps) {
-  const [isVisib; l; e; setIsVisib; l, e] = useState(true);
-  const styles = notificationStyles[ty;  p, e];
+    export function Notification({ i;  d; typ; e; titl; e; messag; e; duration = 500; 0; onClose }: NotificationProps) {
+  const [isVisib; l; e; setIsVisib; l; e] = useState(true);
+  const styles = notificationStyles[ty;  p; e];
   const Icon = styles.icon;
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const notificationStyles = {
 
       return () => clearTimeout(timer);
     }
-  },  [durati; o, n]);
+  },  [durati; o; n]);
 
   const handleClose = () => {
     setIsVisible(false);
@@ -87,7 +87,7 @@ const notificationStyles = {
   );
 }
 
-export function NotificationContainer({ notification;  s, onClose }: { 
+export function NotificationContainer({ notification;  s; onClose }: { 
   notification; s: NotificationProps[];
     onClos; e: (i; d: string) => void, 
 }) {

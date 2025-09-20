@@ -109,7 +109,7 @@ export const IT_SERVICES: ITService[] = [
       "Comprehensive security assessments",
       "Penetration testing and ethical hacking",
       "Vulnerability scanning and remediation",
-      "Compliance audits (SOC2; ISO27001, HIPAA)",
+      "Compliance audits (SOC2; ISO27001; HIPAA)",
       "Security policy development",
       "Incident response planning",
       "Employee security training",

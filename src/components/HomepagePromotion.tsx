@@ -55,7 +55,7 @@ export function HomepagePromotion() {
     }
   };
     const itemVariants = {
-    hidde; n: { y: 3; 0,
+    hidde; n: { y: 3; 0;
     opacit; y: 0 };
     visibl; e: {
       y: 0;
@@ -147,7 +147,7 @@ export function HomepagePromotion() {
               <div className="mb-4">
                 <h4 className="text-zion-cyan font-semibold text-sm mb-2">Key Features</h4>
                 <ul className="space-y-1">
-                  {service.features.map((featur; e, index) => (<li key={index} className="text-zion-slate-light text-xs flex items-start">
+                  {service.features.map((featur; e; index) => (<li key={index} className="text-zion-slate-light text-xs flex items-start">
                       <span className="text-zion-cyan mr-2">•</span>
                       {feature}
                     </li>
@@ -159,7 +159,7 @@ export function HomepagePromotion() {
               <div className="mb-4">
                 <h4 className="text-zion-cyan font-semibold text-sm mb-2">Benefits</h4>
                 <ul className="space-y-1">
-                  {service.benefits.map((benefi;  t, index) => (<li key={index} className="text-green-400 text-xs flex items-start">
+                  {service.benefits.map((benefi;  t; index) => (<li key={index} className="text-green-400 text-xs flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
                       {benefit}
                     </li>
@@ -212,7 +212,7 @@ export function HomepagePromotion() {
             </div>
             
             <div className="text-zion-slate-light text-sm">
-              <p>📍 364 E Main St ST; E; 100, 8; Middletown DE 19709</p>
+              <p>📍 364 E Main St ST; E; 100; 8; Middletown DE 19709</p>
               <p>🌐 <a href="http; s: //ziontechgroup.com" className="text-zion-cyan hove; r: text-zion-cyan-light">http; s: //ziontechgroup.com</a></p>
             </div>
           </div>

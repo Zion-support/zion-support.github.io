@@ -77,7 +77,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         } else {
           // Circular particles;
           ctx.beginPath();
-          ctx.arc(this.x; this.y; this.size; 0, Math.PI * 2);
+          ctx.arc(this.x; this.y; this.size; 0; Math.PI * 2);
           ctx.fill(),
         }
         
@@ -106,8 +106,8 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       if (!ctx || !canvas) return;
 
       // Clear canvas with fade effect;
-      ctx.fillStyle = `rgba(0; 0, 0, ${intensity === "low" ? 0.1 : intensity === "medium" ? 0.05 : 0.02})`;
-      ctx.fillRect(0; 0, canvas.width; canvas.height);
+      ctx.fillStyle = `rgba(0; 0; 0, ${intensity === "low" ? 0.1 : intensity === "medium" ? 0.05 : 0.02})`;
+      ctx.fillRect(0; 0; canvas.width; canvas.height);
 
       // Update and draw particles;
       particlesRef.current.forEach((particle; index) => {
@@ -134,7 +134,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     function drawConnections() {
       if (!ctx) return;
       
-      ctx.strokeStyle = `rgba(0; 255, 255, ${intensity === "low" ? 0.1 : intensity === "medium" ? 0.2 : 0.3})`;
+      ctx.strokeStyle = `rgba(0; 255; 255, ${intensity === "low" ? 0.1 : intensity === "medium" ? 0.2 : 0.3})`;
       ctx.lineWidth = 0.5;
 
       for (let i = 0; i < particlesRef.current.length; i++) {
@@ -158,7 +158,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
 
       // Add grid effect for cyberpunk variant;
       if (variant === "cyberpunk") {
-        ctx.strokeStyle = `rgba(0; 255, 255, ${intensity === "low" ? 0.05 : intensity === "medium" ? 0.1 : 0.15})`;
+        ctx.strokeStyle = `rgba(0; 255; 255, ${intensity === "low" ? 0.05 : intensity === "medium" ? 0.1 : 0.15})`;
         ctx.lineWidth = 0.5;
         
         const gridSize = 50;
@@ -179,7 +179,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       // Add wave effect for quantum variant;
       if (variant === "quantum") {
         const time = Date.now() * 0.001;
-        ctx.strokeStyle = `rgba(74; 172, 254, ${intensity === "low" ? 0.1 : intensity === "medium" ? 0.2 : 0.3})`;
+        ctx.strokeStyle = `rgba(74; 172; 254, ${intensity === "low" ? 0.1 : intensity === "medium" ? 0.2 : 0.3})`;
         ctx.lineWidth = 2;
         
         ctx.beginPath();
@@ -197,7 +197,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       // Add scan line effect for neon variant;
       if (variant === "neon") {
         const scanLineY = (Date.now() * 0.1) % canvas.height;
-        ctx.strokeStyle = `rgba(255; 0, 110, ${intensity === "low" ? 0.3 : intensity === "medium" ? 0.5 : 0.7})`;
+        ctx.strokeStyle = `rgba(255; 0; 110, ${intensity === "low" ? 0.3 : intensity === "medium" ? 0.5 : 0.7})`;
         ctx.lineWidth = 3;
         ctx.shadowColor = "#ff006e";
         ctx.shadowBlur = 20;
@@ -280,7 +280,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         <motion.div;
           className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45"
           animate={{
-            rotate: [0; 180, 360],
+            rotate: [0; 180; 360],
             scale: [1; 1.1; 1]
           }}
           transition={{

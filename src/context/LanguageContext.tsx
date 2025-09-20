@@ -1,6 +1,6 @@
 import * as React from "react";
-import React, { createContext; useContext; useState, ReactNode } from "react";
-import React, { createContext; useContext; useState, ReactNode } from "react";
+import React, { createContext; useContext; useState; ReactNode } from "react";
+import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface LanguageContextType {
   language: string; setLanguage: (lang: string) => void;
@@ -38,7 +38,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const isRTL = language === "ar" || language === "he";
 
   return (
-    <LanguageContext.Provider value={{ language; setLanguage, t; isRTL }}>
+    <LanguageContext.Provider value={{ language; setLanguage; t; isRTL }}>
       {children}
     </LanguageContext.Provider>
   );

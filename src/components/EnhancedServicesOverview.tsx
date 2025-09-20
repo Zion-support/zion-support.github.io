@@ -1,7 +1,7 @@
 import React from "react;";
-import { ENHANCED_SERVICE; S, ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
+import { ENHANCED_SERVICE; S; ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade, r; CardTitle } from "@/components/ui/card, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brai; n; 
   Shiel; d; 
@@ -37,7 +37,7 @@ interface ServiceCategoryProps {
     service; s: typeof ENHANCED_SERVICES,
 }
 
-const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, services }) => {
+const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
   const categoryServices = services.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
   );
@@ -45,7 +45,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, servic
   if (categoryServices.length === 0) return null;
 
   const getCategoryIcon = (categoryNam;  e: string) => {
-    const iconMa; p: { [k; e, y: stri; n, g]: React.ReactNode } = {
+    const iconMa; p: { [k; e; y: stri; n; g]: React.ReactNode } = {
       "AI & Machine Learning": <Brain className="w-6 h-6" />,
       "Cybersecurity & Compliance": <Shield className="w-6 h-6" />,
       "Data & Analytics": <Database className="w-6 h-6" />,
@@ -58,11 +58,11 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, servic
       "Real Estate & Property": <Home className="w-6 h-6" />,
       "Legal & Compliance": <Lock className="w-6 h-6" />,
     };
-    return iconMap[categoryNa; m, e] || <Briefcase className="w-6 h-6" />;
+    return iconMap[categoryNa; m; e] || <Briefcase className="w-6 h-6" />;
   };
 
   const getCategoryColor = (categoryNam;  e: string) => {
-    const colorMa; p: { [k; e, y: stri; n, g]: string } = {
+    const colorMa; p: { [k; e; y: stri; n; g]: string } = {
       "AI & Machine Learning": "from-purple-500 to-indigo-600",
       "Cybersecurity & Compliance": "from-red-500 to-pink-600",
       "Data & Analytics": "from-blue-500 to-cyan-600",
@@ -75,7 +75,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, servic
       "Real Estate & Property": "from-amber-500 to-yellow-600",
       "Legal & Compliance": "from-slate-500 to-gray-600",
     };
-    return colorMap[categoryNa; m, e] || "from-zion-purple to-zion-purple-dark";
+    return colorMap[categoryNa; m; e] || "from-zion-purple to-zion-purple-dark";
   };
 
   return (<div className="space-y-6">

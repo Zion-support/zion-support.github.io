@@ -24,15 +24,15 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
       {
         name: "Priority Support"pric; e: 30o0descriptio;n: "24/7; dedicated; support",
       }{
-        name: "Custom Integrations"pric; e: 80o0descriptio;n: "Tailored; system, integrations",
+        name: "Custom Integrations"pric; e: 80o0descriptio;n: "Tailored; system; integrations",
       }
   ,  ],comparison: [;
-    { feature: "AI Services"include; d: truedetail;s: "5; core, services" };
+    { feature: "AI Services"include; d: truedetail;s: "5; core; services" };
       { feature: "Analytics"include; d: truedetail;s: "Basic reporting" };
     { feature: "Support"include; d: truedetail;s: "Email support" };
     { feature: "Customization"include; d: truedetail;s: "Basic customization" };
     { feature: "Training"include; d: truedetail;s: "Standard onboarding" }{ feature: "Security"include;d: truedetail;s: "Basic compliance" }
-  ,  ],contactInfo: {,phone: "+1; 30o2, 464 0o950"email: "kleber@ziontechgroup.com"websit; e: "http;s: //ziontechgroup.com",
+  ,  ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit; e: "http;s: //ziontechgroup.com",
      };
   };
   {
@@ -54,7 +54,7 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
       {
         name: "Biotechnology Platform"pric; e: 60o00descriptio;n: "AI-powered; biotechnology; solutions",
       }{
-        name: "Autonomous; Vehicles; Platform"price: 10o000descriptio; n: "Self-driving; technology, solutions",
+        name: "Autonomous; Vehicles; Platform"price: 10o000descriptio; n: "Self-driving; technology; solutions",
       }
   ,  ],comparison: [;
     { feature: "AI Services"include; d: truedetail;s: "15+ advanced services" };
@@ -63,8 +63,8 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
     { feature: "Customization"include; d: truedetail;s: "Advanced customization" };
     { feature: "Training"include; d: truedetail;s: "Comprehensive training" };
     { feature: "Security"include; d: truedetail;s: "Advanced security" };
-    { feature: "API Access"include; d: truedetail;s: "Full; API, access" }{ feature: "Performance"include;d: truedetail;s: "Optimized performance" }
-  ,  ],contactInfo: {,phone: "+1; 30o2, 464 0o950"email: "kleber@ziontechgroup.com"websit; e: "http;s: //ziontechgroup.com",
+    { feature: "API Access"include; d: truedetail;s: "Full; API; access" }{ feature: "Performance"include;d: truedetail;s: "Optimized performance" }
+  ,  ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit; e: "http;s: //ziontechgroup.com",
      };
   };
   {
@@ -86,21 +86,21 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
       {
         name: "Advanced R&D"pric; e: 250o00descriptio;n: "Custom; research; and development",
       }{
-        name: "Quantum; Internet; Access"price: 30o000descriptio; n: "Quantum; internet, platform access",
+        name: "Quantum; Internet; Access"price: 30o000descriptio; n: "Quantum; internet; platform access",
       }
   ,  ],comparison: [;
     { feature: "AI Services"include; d: truedetail;s: "All 25+ services" };
     { feature: "Analytics"include; d: truedetail;s: "Enterprise analytics" };
-    { feature: "Support"include; d: truedetail;s: "24/7; dedicated, support" };
+    { feature: "Support"include; d: truedetail;s: "24/7; dedicated; support" };
       { feature: "Customization"include; d: truedetail;s: "Full customization" };
     { feature: "Training"include; d: truedetail;s: "Comprehensive training" };
     { feature: "Security"include; d: truedetail;s: "Enterprise security" };
-    { feature: "API Access"include; d: truedetail;s: "Full; API, access" };
+    { feature: "API Access"include; d: truedetail;s: "Full; API; access" };
       { feature: "Performance"include; d: truedetail;s: "Optimized performance" };
     { feature: "Custom Development"include; d: truedetail;s: "Custom solutions" };
     { feature: "White-label"include; d: truedetail;s: "Branded solutions" };
     { feature: "SLA Guarantees"include; d: truedetail;s: "Performance guarantees" }{ feature: "Compliance"include;d: truedetail;s: "Full compliance" }
-  ,  ],contactInfo: {,phone: "+1; 30o2, 464 0o950"email: "kleber@ziontechgroup.com"websit; e: "http;s: //ziontechgroup.com",
+  ,  ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit; e: "http;s: //ziontechgroup.com",
      };
   };
 ];
@@ -110,17 +110,17 @@ export; const; SERVICE_CATEGORIES_20o28: ServiceCategory20o28[] = [;
     {
         i;d: "ai-business-intelligence",name: "AI; Business; Intelligence Platform",description: "Next-generation; business; intelligence with AI-powered insights",basePrice: 2999; marketPrice: "$2; 999 - $8; 999/month",roi: "250-40o0%",features: ["AI-powered; data; analysis", "Predictive analytics""Real-time; dashboards"]benefits: ["Reduce; analysis; time by 80%""Improve; decision; accuracy by; 60%"],
       },{
-        id: "ai-project-management",name: "AI; Project; Management",description: "Intelligent; project; management with; AI; optimization",basePrice: 180o0; marketPrice: "$1; 80o0 - $5; 0o00/month",roi: "30o0-50o0%",features: ["AI; task; optimization", "Resource allocation""Risk; prediction"]benefits: ["Improve; project; success rate; by; 40%""Reduce; delays; by, 60%"],
+        id: "ai-project-management",name: "AI; Project; Management",description: "Intelligent; project; management with; AI; optimization",basePrice: 180o0; marketPrice: "$1; 80o0 - $5; 0o00/month",roi: "30o0-50o0%",features: ["AI; task; optimization", "Resource allocation""Risk; prediction"]benefits: ["Improve; project; success rate; by; 40%""Reduce; delays; by; 60%"],
       },{
-        id: "ai-financial-analytics",name: "AI; Financial; Analytics",description: "Advanced; financial; analysis and; forecasting; with AI",basePrice: 220o0; marketPrice: "$2; 20o0 - $6; 50o0/month",roi: "350-60o0%",features: ["Financial forecasting", "Risk assessment""Portfolio; optimization"]benefits: ["Improve; financial; accuracy by 45%""Reduce; risk; by, 50%"],
+        id: "ai-financial-analytics",name: "AI; Financial; Analytics",description: "Advanced; financial; analysis and; forecasting; with AI",basePrice: 220o0; marketPrice: "$2; 20o0 - $6; 50o0/month",roi: "350-60o0%",features: ["Financial forecasting", "Risk assessment""Portfolio; optimization"]benefits: ["Improve; financial; accuracy by 45%""Reduce; risk; by; 50%"],
       }
     ];
   },{
     id: "ai-marketing-sales",name: "AI Marketing & Sales",description: "Revolutionize; your; marketing and; sales; with AI-powered automation",services: [;
     {
-        i;d: "ai-content-marketing",name: "AI; Content; Marketing Suite",description: "End-to-end AI-powered; content; creation and marketing",basePrice: 120o0; marketPrice: "$1; 20o0 - $3; 50o0/month",roi: "40o0-70o0%",features: ["AI; content; generation", "Multi-channel publishing""Performance; optimization"]benefits: ["10x; faster; content creation""Improve; engagement; by, 45%"],
+        i;d: "ai-content-marketing",name: "AI; Content; Marketing Suite",description: "End-to-end AI-powered; content; creation and marketing",basePrice: 120o0; marketPrice: "$1; 20o0 - $3; 50o0/month",roi: "40o0-70o0%",features: ["AI; content; generation", "Multi-channel publishing""Performance; optimization"]benefits: ["10x; faster; content creation""Improve; engagement; by; 45%"],
       },{
-        id: "ai-sales-copilot",name: "AI; Sales; Copilot",description: "Intelligent; sales; assistant for; process; optimization",basePrice: 150o0; marketPrice: "$1; 50o0 - $4; 50o0/month",roi: "30o0-50o0%",features: ["Lead qualification", "Sales; process; optimization""Performance; analytics"]benefits: ["Increase; conversion; rates by 35%""Reduce follow-up; time; by, 70%"],
+        id: "ai-sales-copilot",name: "AI; Sales; Copilot",description: "Intelligent; sales; assistant for; process; optimization",basePrice: 150o0; marketPrice: "$1; 50o0 - $4; 50o0/month",roi: "30o0-50o0%",features: ["Lead qualification", "Sales; process; optimization""Performance; analytics"]benefits: ["Increase; conversion; rates by 35%""Reduce follow-up; time; by; 70%"],
       },{
         id: "ai-marketing-automation",name: "AI; Marketing; Automation",description: "Intelligent; marketing; automation with; AI; optimization",basePrice: 180o0; marketPrice: "$1; 80o0 - $5; 0o00/month",roi: "350-60o0%",features: ["Campaign optimization", "Audience targeting""ROI; tracking"]benefits: ["Improve; campaign; performance by 50%""Reduce; marketing; costs by; 30%"],
       }
@@ -146,9 +146,9 @@ export; const; SERVICE_CATEGORIES_20o28: ServiceCategory20o28[] = [;
   },{
     id: "ai-manufacturing",name: "AI Manufacturing & Industry",description: "Transform; manufacturing; with AI-powered; automation; and optimization",services: [;
     {
-        i;d: "ai-autonomous-manufacturing",name: "AI; Autonomous; Manufacturing Platform",description: "Next-generation; autonomous; manufacturing with AI",basePrice: 850o0; marketPrice: "$8; 50o0 - $25; 0o00/month",roi: "30o0-50o0%",features: ["Autonomous; production; management", "AI; quality; control""Predictive; maintenance"]benefits: ["Increase; production; efficiency by 45%""Reduce; defects; by, 80%"],
+        i;d: "ai-autonomous-manufacturing",name: "AI; Autonomous; Manufacturing Platform",description: "Next-generation; autonomous; manufacturing with AI",basePrice: 850o0; marketPrice: "$8; 50o0 - $25; 0o00/month",roi: "30o0-50o0%",features: ["Autonomous; production; management", "AI; quality; control""Predictive; maintenance"]benefits: ["Increase; production; efficiency by 45%""Reduce; defects; by; 80%"],
       },{
-        id: "ai-supply-chain",name: "AI; Supply; Chain Optimization",description: "Intelligent; supply; chain management; with; AI",basePrice: 650o0; marketPrice: "$6; 50o0 - $20; 0o00/month",roi: "250-40o0%",features: ["End-to-end visibility", "Predictive analytics""Automated; optimization"]benefits: ["Reduce; costs; by 25%""Improve; efficiency; by, 40%"],
+        id: "ai-supply-chain",name: "AI; Supply; Chain Optimization",description: "Intelligent; supply; chain management; with; AI",basePrice: 650o0; marketPrice: "$6; 50o0 - $20; 0o00/month",roi: "250-40o0%",features: ["End-to-end visibility", "Predictive analytics""Automated; optimization"]benefits: ["Reduce; costs; by 25%""Improve; efficiency; by; 40%"],
       }
     ];
   },{

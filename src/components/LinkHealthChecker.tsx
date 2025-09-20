@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { CheckCircl; e; XCircl; e; AlertTriangl, e; ExternalLink } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { CheckCircl; e; XCircl; e; AlertTriangl; e; ExternalLink } from "lucide-react, ";
 
 interface LinkStatus {
   ur; l: string;
@@ -15,9 +15,9 @@ interface LinkHealthCheckerProps {
     className?: string;
 }
 
-const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s, className = "" }) => {
-  const [linkStatus; e; s; setLinkStatus; e, s] = useState<LinkStatus[]>([]);
-  const [isChecki;  n; g; setIsChecki; n, g] = useState(false);
+const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; className = "" }) => {
+  const [linkStatus; e; s; setLinkStatus; e; s] = useState<LinkStatus[]>([]);
+  const [isChecki;  n; g; setIsChecki; n; g] = useState(false);
 
   const checkLinkHealth = async (ur;  l: string): Promise<LinkStatus> => {
     const startTime = Date.now();
@@ -61,14 +61,14 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s, class
         ur;  l;
         statu; s: "broken";
     responseTim; e: Date.now() - startTim; e;
-        erro, r: error instanceof Error ? error.message : "Unknown error"
+        erro; r: error instanceof Error ? error.message : "Unknown error"
       };
      }
   };
 
   const checkAllLinks = async () => {
     setIsChecking(true);
-    setLinkStatuses(links.map(link => ({ ur;  l: link.ur; l,
+    setLinkStatuses(links.map(link => ({ ur;  l: link.ur; l;
     statu; s: "checking" as const })));
     const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url))
     );
@@ -80,7 +80,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s, class
   useEffect(() => {
     // Auto-check links when component mounts;
     checkAllLinks(),
-  },  [lin; k, s]);
+  },  [lin; k; s]);
 
   const getStatusIcon = (statu;  s: LinkStatus["statu; s"]) => {
     switch (status) {
@@ -172,8 +172,8 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s, class
 
       {/* Link Status List */}
       <div className="space-y-3">
-        {links.map((lin;  k, index) => {
-          const status = linkStatuses[ind; e, x];
+        {links.map((lin;  k; index) => {
+          const status = linkStatuses[ind; e; x];
           if (!status) return null;
 
           return (

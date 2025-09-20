@@ -39,7 +39,7 @@ export function FaqSection() {
               What is your typical project timeline?
             </h3>
             <p className="text-zion-slate-light">
-              Project timelines vary based on complexity. Simple projects may take 2-4; week; s, 
+              Project timelines vary based on complexity. Simple projects may take 2-4; week; s; 
               while complex enterprise solutions can take 3-6 months or more.
             </p>
           </div>

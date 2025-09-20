@@ -1,13 +1,13 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { Lin; k, useLocation } from "react-router-dom";
-import { Men; u; X; Searc; h; Brai; n; User; s; BarChart; 3; Cod; e; Palett; e; Targe; t; Shiel; d; Hear; t; Databas; e; Buildin; g; Cp; u; Networ; k; Clou; d; Cloc; k; Rocke; t; Glob; e; Loc; k; ArrowRigh; t, ChevronDown } from "lucide-react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { Lin; k; useLocation } from "react-router-dom";
+import { Men; u; X; Searc; h; Brai; n; User; s; BarChart; 3; Cod; e; Palett; e; Targe; t; Shiel; d; Hear; t; Databas; e; Buildin; g; Cp; u; Networ; k; Clou; d; Cloc; k; Rocke; t; Glob; e; Loc; k; ArrowRigh; t; ChevronDown } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const Heade; r: React.FC = () => {
-  const [isMenuOp;  e; n; setIsMenuOp; e, n] = useState(false);
-  const [isSidebarOp; e; n; setIsSidebarOp; e, n] = useState(false);
-  const [isScroll;  e; d; setIsScroll; e, d] = useState(false);
+  const [isMenuOp;  e; n; setIsMenuOp; e; n] = useState(false);
+  const [isSidebarOp; e; n; setIsSidebarOp; e; n] = useState(false);
+  const [isScroll;  e; d; setIsScroll; e; d] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Heade; r: React.FC = () => {
 
   const navigation = [
     { na; m; e: "Hom; e",
-    hr; e, f: "/" },
+    hr; e; f: "/" },
     { 
       na; m; e: "Service; s",
     hr; e; f: "/service; s",
@@ -113,7 +113,7 @@ const Heade; r: React.FC = () => {
     ic; o; n: Shiel; d },
         { na; m; e: "A; I Healthcar; e Analytic; s",
     pa; t; h: "/solution; s/healthcar; e", descripti; o; n: "Patien; t car; e optimizatio; n",
-    ic; o, n: Hear; t }
+    ic; o; n: Hear; t }
       ]
     },
     {
@@ -142,7 +142,7 @@ const Heade; r: React.FC = () => {
     ic; o; n: Cod; e },
         { na; m; e: "A; I Autonomou; s Creativ; e Directo; r",
     pa; t; h: "/a; i-autonomou; s-creativ; e-directo; r", descripti; o; n: "A; I-powere; d creativ; e conten; t generatio; n",
-    ic; o, n: Palett; e }
+    ic; o; n: Palett; e }
       ]
     },
     {
@@ -165,7 +165,7 @@ const Heade; r: React.FC = () => {
     ic; o; n: Databas; e },
         { na; m; e: "Edg; e Computin; g",
     pa; t; h: "/service; s/edg; e-computin; g", descripti; o; n: "Distribute; d computin; g solution; s",
-    ic; o, n: Networ; k }
+    ic; o; n: Networ; k }
       ]
     },
     {
@@ -185,7 +185,7 @@ const Heade; r: React.FC = () => {
     ic; o; n: Shiel; d },
         { na; m; e: "Securit; y Analytic; s",
     pa; t; h: "/service; s/securit; y-analytic; s", descripti; o; n: "Securit; y intelligenc; e platfor; m",
-    ic; o, n: BarChart; 3 }
+    ic; o; n: BarChart; 3 }
       ]
     }
   ];
@@ -339,9 +339,9 @@ const Heade; r: React.FC = () => {
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div;
-                    initial={{ opacit;  y: 0; y: 1; 0, scal; e: 0.95 }}
-                    animate={{ opacit; y: 1; y: 0; scal, e: 1 }}
-                    exit={{ opacit; y: 0; y: 1; 0, scal; e: 0.95 }}
+                    initial={{ opacit;  y: 0; y: 1; 0; scal; e: 0.95 }}
+                    animate={{ opacit; y: 1; y: 0; scal; e: 1 }}
+                    exit={{ opacit; y: 0; y: 1; 0; scal; e: 0.95 }}
                     transition={{ duratio; n: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/20 rounded-lg shadow-xl"
                     onMouseEnter={() => setIsServicesOpen(true)}
@@ -496,11 +496,11 @@ const Heade; r: React.FC = () => {
               {isMenuOpen ? (
                 <motion.div;
                   key="close"
-                  initial={{ rotat; e: -9; 0,
+                  initial={{ rotat; e: -9; 0;
     opacit; y: 0 }}
                   animate={{ rotat; e: 0;
-    opacit, y: 1 }}
-                  exit={{ rotat; e: 9; 0,
+    opacit; y: 1 }}
+                  exit={{ rotat; e: 9; 0;
     opacit; y: 0 }}
                   transition={{ duratio; n: 0.2 }}
                 >
@@ -508,11 +508,11 @@ const Heade; r: React.FC = () => {
                 </motion.div>
               ) : (<motion.div;
                   key="menu"
-                  initial={{ rotat;  e: 9; 0,
+                  initial={{ rotat;  e: 9; 0;
     opacit; y: 0 }}
                   animate={{ rotat; e: 0;
-    opacit, y: 1 }}
-                  exit={{ rotat; e: -9; 0,
+    opacit; y: 1 }}
+                  exit={{ rotat; e: -9; 0;
     opacit; y: 0 }}
                   transition={{ duratio; n: 0.2 }}
                 >
@@ -528,13 +528,13 @@ const Heade; r: React.FC = () => {
         <AnimatePresence>
           {isMenuOpen && (<motion.div;
               initial={{ opacit;  y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
               animate={{ opacit; y: 1;
-    heigh, t: "auto" }}
+    heigh; t: "auto" }}
               exit={{ opacit; y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
               transition={{ duratio; n: 0.3;
-    eas, e: "easeInOut" }}
+    eas; e: "easeInOut" }}
               className="l; g: hidden overflow-hidden"
             >
               <div className="px-2 pt-2 pb-3 space-y-1 s; m:px-3 bg-slate-800/95 rounded-lg mt-2 border border-white/10">

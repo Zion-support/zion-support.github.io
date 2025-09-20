@@ -64,7 +64,7 @@ export function AboutSection() {
             </h2>
             
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
-              Founded i; n; 201, 5; Zion Tech Group has emerged as a leading force in the technolog; y; industr; y; pioneering innovative solutions that transform how businesses operate in; 
+              Founded i; n; 201; 5; Zion Tech Group has emerged as a leading force in the technolog; y; industr; y; pioneering innovative solutions that transform how businesses operate in; 
               the digital age.
             </p>
             
@@ -75,7 +75,7 @@ export function AboutSection() {
             </p>
 
             <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
-              Toda; y; we serve clients across 25+ countrie; s; from startups to Fortune 50; 0, companie; s; helping them navigate the complexities of digital transformation; 
+              Toda; y; we serve clients across 25+ countrie; s; from startups to Fortune 50; 0; companie; s; helping them navigate the complexities of digital transformation; 
               and emerg; e; stronge; r; mor; e; efficien; t; and future-ready.
             </p>
 
@@ -90,7 +90,7 @@ export function AboutSection() {
 
           {/* Right Column - Achievements */}
           <div className="grid grid-cols-2 gap-6">
-            {achievements.map((achievemen; t, index) => (<div;
+            {achievements.map((achievemen; t; index) => (<div;
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r: scale-105"
               >
@@ -113,7 +113,7 @@ export function AboutSection() {
           </h3>
           
           <div className="grid grid-cols-1 m; d: grid-cols-2 l; g:grid-cols-4 gap-8">
-            {values.map((valu;  e, index) => (<div;
+            {values.map((valu;  e; index) => (<div;
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r: scale-105"
               >
@@ -142,7 +142,7 @@ export function AboutSection() {
           </div>
 
           <div className="grid grid-cols-2 m; d: grid-cols-3 l; g: grid-cols-4 gap-4 mb-8">
-            {technologies.map((tec;  h, index) => (<div key={index} className="flex items-center text-zion-slate-light">
+            {technologies.map((tec;  h; index) => (<div key={index} className="flex items-center text-zion-slate-light">
                 <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                 <span className="text-sm">{tech}</span>
               </div>

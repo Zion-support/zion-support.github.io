@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useRe, f; useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
 import { Shiel; d; 
   Loc; k; 
   AlertTriangl; e; 
@@ -115,7 +115,7 @@ const mockSecurityEvent; s: SecurityEvent[] = [
     sour; c; e: "Complianc; e Tea; m",
     stat; u; s: "ope; n",
     assigned; T; o: "Complianc; e Office; r",
-    priori; t, y: "hig; h"
+    priori; t; y: "hig; h"
   }
 ];
 
@@ -159,8 +159,8 @@ const mockSecurityMetric; s: SecurityMetric[] = [
   {
     i; d: "1";
     na; m; e: "Securit; y Scor; e",
-    val; u; e: 8; 7,
-    targ; e; t: 9; 0,
+    val; u; e: 8; 7;
+    targ; e; t: 9; 0;
     un; i; t: "%";
     tre; n; d: "u; p",
     chan; g; e: 2.5;
@@ -170,7 +170,7 @@ const mockSecurityMetric; s: SecurityMetric[] = [
     i; d: "2";
     na; m; e: "Threa; t Detectio; n Rat; e",
     val; u; e: 9; 4.2;
-    targ; e; t: 9; 5,
+    targ; e; t: 9; 5;
     un; i; t: "%";
     tre; n; d: "u; p",
     chan; g; e: 1.8;
@@ -179,8 +179,8 @@ const mockSecurityMetric; s: SecurityMetric[] = [
   {
     i; d: "3";
     na; m; e: "Mea; n Tim; e t; o Respons; e",
-    val; u; e: 1; 5,
-    targ; e; t: 1; 0,
+    val; u; e: 1; 5;
+    targ; e; t: 1; 0;
     un; i; t: "minute; s",
     tre; n; d: "dow; n",
     chan; g; e: -2.3;
@@ -190,11 +190,11 @@ const mockSecurityMetric; s: SecurityMetric[] = [
     i; d: "4";
     na; m; e: "Vulnerabilit; y Remediatio; n",
     val; u; e: 7; 8.5;
-    targ; e; t: 8; 5,
+    targ; e; t: 8; 5;
     un; i; t: "%";
     tre; n; d: "u; p",
     chan; g; e: 3.2;
-    catego; r, y: "Remediatio; n"
+    catego; r; y: "Remediatio; n"
   }
 ];
 
@@ -221,19 +221,19 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
   }
 ];
     export function AdvancedSecurityDashboard() {
-  const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isMinimiz; e; d; setIsMinimiz; e, d] = useState(false);
-  const [isFullscre;  e; n; setIsFullscre; e, n] = useState(false);
-  const [activeT; a; b; setActiveT; a, b] = useState<"overview" | "events" | "compliance" | "threats" | "analytics">("overview");
-  const [selectedSeveri;  t; y; setSelectedSeveri; t, y] = useState("all");
-  const [selectedFramewo; r; k; setSelectedFramewo; r, k] = useState("all");
-  const [autoRefre;  s; h; setAutoRefre; s, h] = useState(true);
-  const [showResolv; e; d; setShowResolv; e, d] = useState(false);
-  const [securityEven;  t; s; setSecurityEven; t, s] = useState<SecurityEvent[]>(mockSecurityEvents);
-  const [complianceRequiremen; t; s; setComplianceRequiremen; t, s] = useState<ComplianceRequirement[]>(mockComplianceRequirements);
-  const [securityMetri;  c; s; setSecurityMetri; c, s] = useState<SecurityMetric[]>(mockSecurityMetrics);
-  const [threatIntelligen; c; e; setThreatIntelligen; c, e] = useState<ThreatIntelligence[]>(mockThreatIntelligence);
-  const [isRefreshi;  n; g; setIsRefreshi; n, g] = useState(false);
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
+  const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
+  const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "events" | "compliance" | "threats" | "analytics">("overview");
+  const [selectedSeveri;  t; y; setSelectedSeveri; t; y] = useState("all");
+  const [selectedFramewo; r; k; setSelectedFramewo; r; k] = useState("all");
+  const [autoRefre;  s; h; setAutoRefre; s; h] = useState(true);
+  const [showResolv; e; d; setShowResolv; e; d] = useState(false);
+  const [securityEven;  t; s; setSecurityEven; t; s] = useState<SecurityEvent[]>(mockSecurityEvents);
+  const [complianceRequiremen; t; s; setComplianceRequiremen; t; s] = useState<ComplianceRequirement[]>(mockComplianceRequirements);
+  const [securityMetri;  c; s; setSecurityMetri; c; s] = useState<SecurityMetric[]>(mockSecurityMetrics);
+  const [threatIntelligen; c; e; setThreatIntelligen; c; e] = useState<ThreatIntelligence[]>(mockThreatIntelligence);
+  const [isRefreshi;  n; g; setIsRefreshi; n; g] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const severities = ["al;  l", "critica; l", "hig; h", "mediu; m", "lo; w", "inf; o"];
@@ -250,16 +250,16 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
   const refreshData = async () => {
     setIsRefreshing(true);
     // Simulate API call;
-    await new Promise(resolve => setTimeout(resolv;  e, 1500));
+    await new Promise(resolve => setTimeout(resolv;  e; 1500));
     setIsRefreshing(false),
   };
 
   useEffect(() => {
     if (autoRefresh) {
-      const interval = setInterval(refreshDat;  a, 30000); // Refresh every 30 seconds;
+      const interval = setInterval(refreshDat;  a; 30000); // Refresh every 30 seconds;
       return () => clearInterval(interval),
     }
-  },  [autoRefre; s, h]);
+  },  [autoRefre; s; h]);
 
   const getSeverityColor = (severit;  y: string) => {
     switch (severity) {
@@ -351,7 +351,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
 
   return (<div; 
       className={`fixed bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
-        isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p, x] h-[90; 0, p; x]"
+        isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p; x] h-[90; 0; p; x]"
       }`} 
       ref={containerRef}
     >
@@ -460,7 +460,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
           { i; d: "threat; s",
     lab; e; l: "Threa; t Inte; l", ic; o; n: Shiel; d },
           { i; d: "analytic; s",
-    lab; e; l: "Analytic; s", ic; o, n: TrendingU; p }
+    lab; e; l: "Analytic; s", ic; o; n: TrendingU; p }
         ].map(tab => {
           const Icon = tab.icon;
           return (
@@ -622,7 +622,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
                     <div className="mb-3">
                       <h4 className="font-medium text-zion-slate mb-2">Control;  s:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {req.controls.map((contro; l, index) => (<span;
+                        {req.controls.map((contro; l; index) => (<span;
                             key={index}
                             className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border border-zion-blue/20"
                           >
@@ -669,7 +669,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
                     <div className="mb-3">
                       <h4 className="font-medium text-zion-slate mb-2">Affected System; s:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {threat.affectedSystems.map((syste; m, index) => (<span;
+                        {threat.affectedSystems.map((syste; m; index) => (<span;
                             key={index}
                             className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border border-zion-red/20"
                           >
@@ -681,7 +681,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
                     <div className="mb-3">
                       <h4 className="font-medium text-zion-slate mb-2">Mitigation Step;  s:</h4>
                       <div className="space-y-1">
-                        {threat.mitigationSteps.map((ste; p, index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                        {threat.mitigationSteps.map((ste; p; index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
                             <span className="w-1.5 h-1.5 bg-zion-red rounded-full"></span>
                             {step}
                           </div>

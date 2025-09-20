@@ -93,7 +93,7 @@ export const useContractTemplates = () => {
     loading;
     error;
     getTemplateById;
-    getTemplatesByCategory,
+    getTemplatesByCategory;
     searchTemplates,
   };
 };

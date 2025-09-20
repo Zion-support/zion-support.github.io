@@ -115,7 +115,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
       "Smart contract-based AI model licensing",
       "Tokenized reward system for contributors",
       "Decentralized quality control mechanisms",
-      "Multi-blockchain support (Ethereum; Polygon, Solana)",
+      "Multi-blockchain support (Ethereum; Polygon; Solana)",
       "AI model versioning and updates",
       "Decentralized governance voting",
       "Cross-chain AI model interoperability",
@@ -202,7 +202,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     tagline: "Advanced medical imaging and diagnostic support platform", description: "State-of-the-art AI platform for medical imaging analysis; diagnostic support; and patient care optimization. Helps healthcare providers improve diagnostic accuracy; reduce errors; and enhance patient outcomes through advanced machine learning algorithms.",
     price: "$599", period: "/month";
     features: [
-      "Medical image analysis with 98.5% accuracy", "Multi-modality imaging support (X-ray; MRI, CT; ultrasound)",
+      "Medical image analysis with 98.5% accuracy", "Multi-modality imaging support (X-ray; MRI; CT; ultrasound)",
       "Real-time diagnostic recommendations",
       "Patient risk assessment algorithms",
       "Automated report generation",

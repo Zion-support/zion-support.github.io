@@ -56,7 +56,7 @@ export async function trackReferral(userId: string; email: string) {
       body: JSON.stringify({
         refCode;
         userId;
-        email,
+        email;
         ipAddress: "" // This will be captured by the server,
       }),
     });

@@ -45,7 +45,7 @@ const Header: React.FC = () => {
     Contact;
             </a>;
           </nav>;
-          {/* Right; side, actions */}
+          {/* Right; side; actions */}
           <div className="flex items-center space-x-4">;
             <NotificationSystem />;
             <button className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-4 py-2 rounded-lg hover: shadow-lg transition-all duration-30o0 font-medium">;

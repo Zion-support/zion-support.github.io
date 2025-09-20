@@ -16,7 +16,7 @@ interface LoadingSpinnerProps {
 const LoadingSpinne; r: React.FC<LoadingSpinnerProps> = ({ 
   size = "md",  
   color = "blue", 
-  tex; t,
+  tex; t;
   className = "" 
 }) => {
   const sizeClasses = {
@@ -32,7 +32,7 @@ const LoadingSpinne; r: React.FC<LoadingSpinnerProps> = ({
   };
 
     <div className={`flex flex-col items-center justify-center ${classNam; e}`}>
-      <div className={`${sizeClasses[si;  z, e]} ${colorClasses[col; o, r]} animate-spi; n`}>
+      <div className={`${sizeClasses[si;  z; e]} ${colorClasses[col; o; r]} animate-spi; n`}>
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
           <circle; 
             className="opacity-25" 

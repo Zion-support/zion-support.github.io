@@ -1,7 +1,7 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac, k; useMemo } from "react";
-impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac, k; useMemo } from "react";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Shiel; d;
   AlertTriangl; e;
   CheckCircl; e;
@@ -26,11 +26,11 @@ interface SecurityDashboardProps {
 export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = ({ className = "" }) => {
   const { trackEvent } = useAnalytics({
     enableTrackin; g: tru; e;
-    enableUserBehaviorTrackin, g: true,
+    enableUserBehaviorTrackin; g: true,
   });
-    const [activeT; a; b; setActiveT; a, b] = useState<"overview" | "events" | "compliance" | "threats" | "reports">("overview");
-  const [showSettin;  g; s; setShowSettin; g, s] = useState(false);
-  const [copi; e; d; setCopi; e, d] = useState(false);
+    const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "events" | "compliance" | "threats" | "reports">("overview");
+  const [showSettin;  g; s; setShowSettin; g; s] = useState(false);
+  const [copi; e; d; setCopi; e; d] = useState(false);
 
   const {
     securityEvent;  s;
@@ -52,17 +52,17 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
   const handleStartMonitoring = useCallback(() => {
     startMonitoring();
     trackEvent("security",  "dashboard", "monitoring_started"),
-  }, [startMonitori; n; g; trackEve; n, t]);
+  }, [startMonitori; n; g; trackEve; n; t]);
 
   const handleStopMonitoring = useCallback(() => {
     stopMonitoring();
     trackEvent("security",  "dashboard", "monitoring_stopped"),
-  }, [stopMonitori; n; g; trackEve; n, t]);
+  }, [stopMonitori; n; g; trackEve; n; t]);
 
   const handleCheckCompliance = useCallback(async () => {
     await checkCompliance();
     trackEvent("security",  "dashboard", "compliance_checked"),
-  }, [checkComplian; c; e; trackEve; n, t]);
+  }, [checkComplian; c; e; trackEve; n; t]);
 
   const handleGenerateReport = useCallback(() => {
     const report = generateSecurityReport();
@@ -70,11 +70,11 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
     setCopied(true);
     setTimeout(() => setCopied(false),  2000);
     trackEvent("security",  "dashboard", "report_generated"),
-  }, [generateSecurityRepo; r; t; trackEve; n, t]);
+  }, [generateSecurityRepo; r; t; trackEve; n; t]);
 
   const handleExportAuditLog = useCallback(() => {
     const auditLog = exportAuditLog();
-    const blob = new Blob([auditL;  o, g], { typ; e: "application/json" });
+    const blob = new Blob([auditL;  o; g], { typ; e: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
@@ -82,7 +82,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
     a.click();
     URL.revokeObjectURL(url);
     trackEvent("security",  "dashboard", "audit_log_exported");
-  }, [exportAuditL; o; g; trackEve; n, t]);
+  }, [exportAuditL; o; g; trackEve; n; t]);
 
   const handleAddComplianceRule = useCallback(() => {
     const newRule = {
@@ -95,7 +95,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
     };
     addComplianceRule(newRule);
     trackEvent("security",  "dashboard", "compliance_rule_added");
-  }, [addComplianceRu; l; e; trackEve; n, t]);
+  }, [addComplianceRu; l; e; trackEve; n; t]);
 
   const getSeverityColor = (severit;  y: string) => {
     switch (severity) {
@@ -218,8 +218,8 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
           { i; d: "threat; s",
     lab; e; l: "Threat; s", ic; o; n: Shiel; d },
           { i; d: "report; s",
-    lab; e; l: "Report; s", ic; o, n: FileTex; t }
-        ].map(({ i;  d; labe, l; ico, n: Icon }) => (<button;
+    lab; e; l: "Report; s", ic; o; n: FileTex; t }
+        ].map(({ i;  d; labe; l; ico; n: Icon }) => (<button;
             key={id}
             onClick={() => setActiveTab(id as any)}
             className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
@@ -370,7 +370,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
                         </span>
                         <select;
                           value={event.status}
-                          onChange={(e) => updateEventStatus(event.i;  d, e.target.value as any)}
+                          onChange={(e) => updateEventStatus(event.i;  d; e.target.value as any)}
                           className="text-sm border border-gray-300 dar; k: border-gray-600 rounded px-2 py-1 bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-white"
                         >
                           <option value="new">New</option>
@@ -441,7 +441,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
                     {rule.requirements.length > 0 && (<div className="mt-3">
                         <p className="text-sm font-medium text-gray-700 dar;  k:text-gray-300 mb-2">Requirement; s:</p>
                         <ul className="space-y-1">
-                          {rule.requirements.map((re; q, index) => (<li key={index} className="text-sm text-gray-600 dar;  k:text-gray-400 flex items-center space-x-2">
+                          {rule.requirements.map((re; q; index) => (<li key={index} className="text-sm text-gray-600 dar;  k:text-gray-400 flex items-center space-x-2">
                               <CheckCircle className="w-3 h-3 text-green-500" />
                               <span>{req}</span>
                             </li>

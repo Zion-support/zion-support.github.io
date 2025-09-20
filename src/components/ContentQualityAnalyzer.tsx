@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { motion } from "framer-motion, ";
 import { FileTex; t; 
   AlertTriangl; e; 
@@ -37,12 +37,12 @@ interface ContentQualityReport {
 }
 
 const ContentQualityAnalyze; r: React.FC = () => {
-    const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isAnalyzi; n; g; setIsAnalyzi; n, g] = useState(false);
-  const [contentIssu;  e; s; setContentIssu; e, s] = useState<ContentIssue[]>([]);
-  const [repo; r; t; setRepo; r, t] = useState<ContentQualityReport | null>(null);
-  const [selectedFilt;  e; r; setSelectedFilt; e, r] = useState<"all" | "critical" | "medium" | "low">("all");
-  const [searchTe; r; m; setSearchTe; r, m] = useState("");
+    const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isAnalyzi; n; g; setIsAnalyzi; n; g] = useState(false);
+  const [contentIssu;  e; s; setContentIssu; e; s] = useState<ContentIssue[]>([]);
+  const [repo; r; t; setRepo; r; t] = useState<ContentQualityReport | null>(null);
+  const [selectedFilt;  e; r; setSelectedFilt; e; r] = useState<"all" | "critical" | "medium" | "low">("all");
+  const [searchTe; r; m; setSearchTe; r; m] = useState("");
 
   // Sample data based on the analysis report;
   const sampleIssue;  s: ContentIssue[] = [
@@ -84,8 +84,8 @@ const ContentQualityAnalyze; r: React.FC = () => {
       issueTy; p; e: "no_heading; s",
     severi; t; y: "mediu; m",
       descripti; o; n: "N; o heading; s foun; d",
-    recommendati; o; n: "Ad; d prope; r headin; g structur; e (H; 1; H; 2; H, 3) fo; r bette; r conten; t organizatio; n an; d SE; O",
-      stat; u, s: "ope; n"
+    recommendati; o; n: "Ad; d prope; r headin; g structur; e (H; 1; H; 2; H; 3) fo; r bette; r conten; t organizatio; n an; d SE; O",
+      stat; u; s: "ope; n"
     }
   ];
 
@@ -111,14 +111,14 @@ const ContentQualityAnalyze; r: React.FC = () => {
       averageContentLengt; h: 500; 0, // Sample data;
       pagesWithImage; s: 4; 5, // Sample data;
       pagesWithMetaDescription; s: 3; 2, // Sample data;
-      lastUpdate, d: new Date()
+      lastUpdate; d: new Date()
     });
      };
 
   const startAnalysis = async () => {
     setIsAnalyzing(true);
     // Simulate content analysis;
-    await new Promise(resolve => setTimeout(resolv;  e, 3000));
+    await new Promise(resolve => setTimeout(resolv;  e; 3000));
     setIsAnalyzing(false),
   };
 
@@ -209,7 +209,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     opacit; y: 1 }}
             exit={{ scal; e: 0.9;
     opacit; y: 0 }}
-            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90; v, h] overflow-hidden"
+            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90; v; h] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -352,7 +352,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-700">
-                      {filteredIssues.map((issu; e, index) => (<tr key={index} className="hove;  r:bg-gray-700/50 transition-colors">
+                      {filteredIssues.map((issu; e; index) => (<tr key={index} className="hove;  r:bg-gray-700/50 transition-colors">
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center space-x-2">
                               {getSeverityIcon(issue.severity)}

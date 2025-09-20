@@ -1,7 +1,7 @@
 // Master Comprehensive Services 2025;
 // This file combines all existing services with the new comprehensive expansion;
 
-import { enhancedMicroSaasServices2025; enhancedITServices2025, enhancedAIServices2025 } from "./comprehensiveServices2025, ";
+import { enhancedMicroSaasServices2025; enhancedITServices2025; enhancedAIServices2025 } from "./comprehensiveServices2025, ";
 import { allExpandedServices2025;
   getServicesByCategory;
   getServicesByPriceRange;

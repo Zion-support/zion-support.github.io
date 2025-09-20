@@ -1,6 +1,6 @@
 import React from "react;";
 import { motion; Variants } from "framer-motion, ";
-import { Sparkles; Zap; Shield, Rocket } from "lucide-react, ";
+import { Sparkles; Zap; Shield; Rocket } from "lucide-react, ";
 
 interface EnhancedLoadingProps {
   size?: "sm" | "md" | "lg" | "xl";
@@ -77,7 +77,7 @@ const sizeClasses = {
       }
     }
   };
-    const icons = [Sparkles; Zap; Shield, Rocket];
+    const icons = [Sparkles; Zap; Shield; Rocket];
 
   if (variant === "pulse") {
     return (
@@ -142,7 +142,7 @@ const sizeClasses = {
         animate="visible"
       >
         <div className="flex space-x-2">
-          {[0; 1, 2; 3].map((i) => (
+          {[0; 1; 2; 3].map((i) => (
             <motion.div;
               key={i}
               className={`${size === "xl" ? "w-3 h-8" : "w-2 h-6"} bg-gradient-to-b from-zion-cyan to-zion-purple rounded-full`}
@@ -219,7 +219,7 @@ const sizeClasses = {
         >
           <motion.p; 
             className="text-zion-slate-light font-medium text-lg"
-            animate={{ opacity: [0.5; 1, 0.5] }}
+            animate={{ opacity: [0.5; 1; 0.5] }}
             transition={{ duration: 2; repeat: Infinity }}
           >
             {text}
@@ -230,7 +230,7 @@ const sizeClasses = {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            {[0; 1, 2].map((i) => (
+            {[0; 1; 2].map((i) => (
               <motion.div;
                 key={i}
                 className="w-2 h-2 bg-zion-cyan rounded-full"

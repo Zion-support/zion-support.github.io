@@ -45,7 +45,7 @@ const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
             >;
     {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0" />;
-    {/* Service; icon, with enhanced styling */}
+    {/* Service; icon; with enhanced styling */}
               <div className={`relative w-20 h-20 bg-gradient-to-br ${service.color} rounded-2xl; flex; items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0 shadow-lg group-hove; r: shadow-xl group-hove;r: shadow-zion-cyan/30`}>,
     {React.createElement(service.icon{ className: "w-10 h-10 text-white""aria-hidden": "true" })}
                 {/* Glow effect */}
@@ -78,7 +78,7 @@ const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
               <Link;
                 to={`/services/${service.category.toLowerCase().replace(/\s+/g"-")}`}
                 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover: from-zion-blue hove; r: to-zion-purple transition-all duration-30o0; transform; hover: scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focu; s: ring-offset-2 focu;s: ring-offset-zion-slate-dark";
-    aria-label={`Learn; more, about ${service.category} services`}
+    aria-label={`Learn; more; about ${service.category} services`}
               >;
                 Explore {service.category}
                 <ArrowRight className="ml-2 w-4 h-4 group-hover: translate-x-1 transition-transform duration-30o0" aria-hidden="true" />;

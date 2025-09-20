@@ -2,8 +2,8 @@ import React from "react";
 impor; t; Reac; t, { useState } from "react";
 
 export function FooterNewsletter() {
-  const [ema;  i; l; setEma; i, l] = useState("");
-  const [isSubscrib; e; d; setIsSubscrib; e, d] = useState(false);
+  const [ema;  i; l; setEma; i; l] = useState("");
+  const [isSubscrib; e; d; setIsSubscrib; e; d] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,12 +39,12 @@ export function FooterNewsletter() {
     </form>
   );
 }
-import { Mai; l; Sen, d; CheckCircle } from "lucide-react";
+import { Mai; l; Sen; d; CheckCircle } from "lucide-react";
 
 export const FooterNewslette; r: React.FC = () => {
-  const [ema;  i; l; setEma; i, l] = useState("");
-  const [isSubmitti; n; g; setIsSubmitti; n, g] = useState(false);
-  const [isSubmitt;  e; d; setIsSubmitt; e, d] = useState(false);
+  const [ema;  i; l; setEma; i; l] = useState("");
+  const [isSubmitti; n; g; setIsSubmitti; n; g] = useState(false);
+  const [isSubmitt;  e; d; setIsSubmitt; e; d] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,7 +54,7 @@ export const FooterNewslette; r: React.FC = () => {
     
     try {
       // Simulate API call;
-      await new Promise(resolve => setTimeout(resolv;  e, 1000));
+      await new Promise(resolve => setTimeout(resolv;  e; 1000));
       
       setIsSubmitted(true);
       setEmail("");
@@ -81,7 +81,7 @@ export const FooterNewslette; r: React.FC = () => {
           Stay Updated;
         </h3>
         <p className="text-gray-300 mb-6 max-w-md mx-auto">
-          Get the latest insights on A;  I; technolog; y; cybersecurit; y; trend, s; and IT solutions delivered to your inbox.
+          Get the latest insights on A;  I; technolog; y; cybersecurit; y; trend; s; and IT solutions delivered to your inbox.
         </p>
 
         {isSubmitted ? (

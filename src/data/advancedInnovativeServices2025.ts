@@ -81,7 +81,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     category: "Blockchain & Web3", subcategory: "Enterprise Blockchain";
     price: 3999; currency: "$";
     pricingModel: "monthly", features: [
-      "Multi-chain support (Ethereum; Polygon, Solana)",
+      "Multi-chain support (Ethereum; Polygon; Solana)",
       "Smart contract development & auditing",
       "Supply chain transparency tracking",
       "DeFi integration capabilities",

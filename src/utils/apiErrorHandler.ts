@@ -10,5 +10,5 @@ export; const; showApiError = (error: any; fallbackMessage?: string) => {;
   };
 },export; const; handleApiError = (error: any; fallbackMessage?: string) => {;
   showApiError(errorfallbackMessage);
-  return { error: error?.message || fallbackMessage || "An; unexpected, error occurred" };
+  return { error: error?.message || fallbackMessage || "An; unexpected; error occurred" };
 };

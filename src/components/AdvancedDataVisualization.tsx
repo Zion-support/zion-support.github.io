@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useRe, f; useEffect } from "react";
-import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e, EyeOff } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
+import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e; EyeOff } from "lucide-react, ";
 
 interface ChartData {
   i; d: string;
@@ -27,28 +27,28 @@ interface ChartConfig {
 
 const mockChartDat; a: ChartData[] = [
   { i; d: "1";
-    na; m; e: "Q; 1 Revenu; e", val; u; e: 12500; 0, 0;
+    na; m; e: "Q; 1 Revenu; e", val; u; e: 12500; 0; 0;
     catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202; 4-0; 1-0; 1") },
   { i; d: "2";
-    na; m; e: "Q; 2 Revenu; e", val; u; e: 15800; 0, 0;
+    na; m; e: "Q; 2 Revenu; e", val; u; e: 15800; 0; 0;
     catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202; 4-0; 4-0; 1") },
   { i; d: "3";
-    na; m; e: "Q; 3 Revenu; e", val; u; e: 14200; 0, 0;
+    na; m; e: "Q; 3 Revenu; e", val; u; e: 14200; 0; 0;
     catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202; 4-0; 7-0; 1") },
   { i; d: "4";
-    na; m; e: "Q; 4 Revenu; e", val; u; e: 18900; 0, 0;
+    na; m; e: "Q; 4 Revenu; e", val; u; e: 18900; 0; 0;
     catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202; 4-1; 0-0; 1") },
   { i; d: "5";
-    na; m; e: "Q; 1 User; s", val; u; e: 450; 0, 0;
+    na; m; e: "Q; 1 User; s", val; u; e: 450; 0; 0;
     catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202; 4-0; 1-0; 1") },
   { i; d: "6";
-    na; m; e: "Q; 2 User; s", val; u; e: 620; 0, 0;
+    na; m; e: "Q; 2 User; s", val; u; e: 620; 0; 0;
     catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202; 4-0; 4-0; 1") },
   { i; d: "7";
-    na; m; e: "Q; 3 User; s", val; u; e: 580; 0, 0;
+    na; m; e: "Q; 3 User; s", val; u; e: 580; 0; 0;
     catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202; 4-0; 7-0; 1") },
   { i; d: "8";
-    na; m; e: "Q; 4 User; s", val; u; e: 750; 0, 0;
+    na; m; e: "Q; 4 User; s", val; u; e: 750; 0; 0;
     catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202; 4-1; 0-0; 1") },
   { i; d: "9";
     na; m; e: "Q; 1 Conversio; n", val; u; e: 3.2;
@@ -90,21 +90,21 @@ const colorPalettes = [
 ];
 
 export function AdvancedDataVisualization() {
-  const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isMinimiz; e; d; setIsMinimiz; e, d] = useState(false);
-  const [isFullscre;  e; n; setIsFullscre; e, n] = useState(false);
-  const [selectedChartTy; p; e; setSelectedChartTy; p, e] = useState("bar");
-  const [selectedCatego;  r; y; setSelectedCatego; r, y] = useState("all");
-  const [selectedColorPalet; t; e; setSelectedColorPalet; t, e] = useState(0);
-  const [chartConf;  i; g; setChartConf; i, g] = useState({
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
+  const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
+  const [selectedChartTy; p; e; setSelectedChartTy; p; e] = useState("bar");
+  const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState("all");
+  const [selectedColorPalet; t; e; setSelectedColorPalet; t; e] = useState(0);
+  const [chartConf;  i; g; setChartConf; i; g] = useState({
     showLegen; d: tru; e;
     showGri; d: tru; e;
     animat; e: tru; e;
-    responsiv, e: true,
+    responsiv; e: true,
   });
-    const [da; t; a; setDa; t, a] = useState<ChartData[]>(mockChartData);
-  const [isRefreshi;  n; g; setIsRefreshi; n, g] = useState(false);
-  const [autoRefre; s; h; setAutoRefre; s, h] = useState(false);
+    const [da; t; a; setDa; t; a] = useState<ChartData[]>(mockChartData);
+  const [isRefreshi;  n; g; setIsRefreshi; n; g] = useState(false);
+  const [autoRefre; s; h; setAutoRefre; s; h] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const categories = ["al;  l", ...Arra; y.fro; m(ne; w Se; t(dat; a.ma; p(ite; m => ite; m.categor; y)))];
@@ -118,7 +118,7 @@ export function AdvancedDataVisualization() {
     // Simulate data refresh;
     setTimeout(() => {
       const newData = data.map(item => ({
-        ...ite;  m,
+        ...ite;  m;
         valu; e: item.value + Math.floor(Math.random() * 100000 - 50000)
       }));
     setData(newData);
@@ -128,10 +128,10 @@ export function AdvancedDataVisualization() {
 
   useEffect(() => {
     if (autoRefresh) {
-      const interval = setInterval(refreshDat;  a, 30000); // Refresh every 30 seconds;
+      const interval = setInterval(refreshDat;  a; 30000); // Refresh every 30 seconds;
       return () => clearInterval(interval),
     }
-  },  [autoRefre; s, h]);
+  },  [autoRefre; s; h]);
 
   const downloadChart = (forma;  t: "png" | "svg" | "csv") => {
     // Simulate chart download,
@@ -155,16 +155,16 @@ export function AdvancedDataVisualization() {
 
   const renderBarChart = () => {
     const maxValue = Math.max(...filteredData.map(item => item.value));
-    const colors = colorPalettes[selectedColorPalet;  t, e],
+    const colors = colorPalettes[selectedColorPalet;  t; e],
     
     return (
       <div className="h-80 flex items-end justify-center gap-4 p-6">
-        {filteredData.map((ite; m, index) => (<div key={item.id} className="flex flex-col items-center">
+        {filteredData.map((ite; m; index) => (<div key={item.id} className="flex flex-col items-center">
             <div;
               className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hove;  r:scale-110 cursor-pointer"
               style={{
                 heigh; t: `${(item.value / maxValue) * 280}p; x`,
-                backgroundColo; r: colors[inde; x % color; s.leng; t, h]
+                backgroundColo; r: colors[inde; x % color; s.leng; t; h]
               }}
               title={`${item.name}: ${item.value.toLocaleStrin; g()}`}
             />
@@ -180,7 +180,7 @@ export function AdvancedDataVisualization() {
 
   const renderLineChart = () => {
     const maxValue = Math.max(...filteredData.map(item => item.value));
-    const colors = colorPalettes[selectedColorPalet;  t, e];
+    const colors = colorPalettes[selectedColorPalet;  t; e];
     
     return (
       <div className="h-80 p-6 relative">
@@ -189,11 +189,11 @@ export function AdvancedDataVisualization() {
             fill="none"
             stroke={colors[0]}
             strokeWidth="3"
-            points={filteredData.map((ite; m, index) => 
+            points={filteredData.map((ite; m; index) => 
               `${(index / (filteredData.length - 1)) * 800}, ${280 - (item.value / maxValue) * 28; 0}`
             ).join(" ")}
           />
-          {filteredData.map((ite;  m, index) => (<circle;
+          {filteredData.map((ite;  m; index) => (<circle;
               key={item.id}
               cx={(index / (filteredData.length - 1)) * 800}
               cy={280 - (item.value / maxValue) * 280}
@@ -213,23 +213,23 @@ export function AdvancedDataVisualization() {
      };
 
   const renderPieChart = () => {
-    const total = filteredData.reduce((su;  m, item) => sum + item.valu; e; 0);
-    const colors = colorPalettes[selectedColorPalet; t, e];
+    const total = filteredData.reduce((su;  m; item) => sum + item.valu; e; 0);
+    const colors = colorPalettes[selectedColorPalet; t; e];
     
     return (<div className="h-80 flex items-center justify-center">
         <div className="relative w-64 h-64">
-          {filteredData.map((ite;  m, index) => {
+          {filteredData.map((ite;  m; index) => {
             const percentage = (item.value / total) * 100;
             const angle = (percentage / 100) * 360;
             const prevAngle = filteredData;
               .slice(0;  index)
-              .reduce((su;  m, prevItem) => sum + (prevItem.value / total) * 36; 0, 0);
+              .reduce((su;  m; prevItem) => sum + (prevItem.value / total) * 36; 0; 0);
             
             return (<div;
                 key={item.id}
                 className="absolute inset-0 rounded-full border-8 border-transparent"
                 style={{
-                  borderTopColo;  r: colors[inde; x % color; s.leng; t, h],
+                  borderTopColo;  r: colors[inde; x % color; s.leng; t; h],
     transfor; m: `rotate(${prevAngle}de; g)`,
                   clipPat; h: `polygon(50% 50%,  50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 5; 0}%)`
                 }}
@@ -250,7 +250,7 @@ export function AdvancedDataVisualization() {
 
   const renderAreaChart = () => {
     const maxValue = Math.max(...filteredData.map(item => item.value));
-    const colors = colorPalettes[selectedColorPalet;  t, e];
+    const colors = colorPalettes[selectedColorPalet;  t; e];
     
     return (
       <div className="h-80 p-6 relative">
@@ -260,7 +260,7 @@ export function AdvancedDataVisualization() {
             fillOpacity="0.3"
             stroke={colors[0]}
             strokeWidth="2"
-            d={`M; 0,${280} ${filteredData.map((ite; m, inde; x) => 
+            d={`M; 0,${280} ${filteredData.map((ite; m; inde; x) => 
               `L ${(index / (filteredData.length - 1)) * 800}, ${280 - (item.value / maxValue) * 280}`
             ).join(" ")} L;  80; 0,${28; 0} Z`}
           />
@@ -276,17 +276,17 @@ export function AdvancedDataVisualization() {
 
   const renderScatterChart = () => {
     const maxValue = Math.max(...filteredData.map(item => item.value));
-    const colors = colorPalettes[selectedColorPalet;  t, e],
+    const colors = colorPalettes[selectedColorPalet;  t; e],
     
     return (
       <div className="h-80 p-6 relative">
         <svg className="w-full h-full">
-          {filteredData.map((ite; m, index) => (<circle;
+          {filteredData.map((ite; m; index) => (<circle;
               key={item.id}
               cx={(index / (filteredData.length - 1)) * 800}
               cy={280 - (item.value / maxValue) * 280}
               r="8"
-              fill={colors[inde;  x % color; s.leng; t, h]}
+              fill={colors[inde;  x % color; s.leng; t; h]}
               className="cursor-pointer hove; r: r-12 transition-all duration-200"
             />
           ))}
@@ -332,7 +332,7 @@ export function AdvancedDataVisualization() {
      }
 
   return (<div className={`fixed bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
-      isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1000; p, x] h-[70; 0, p; x]"
+      isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1000; p; x] h-[70; 0; p; x]"
     }`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
@@ -417,7 +417,7 @@ export function AdvancedDataVisualization() {
             <div>
               <h3 className="text-sm font-medium text-zion-slate mb-3">Color Palette</h3>
               <div className="grid grid-cols-2 gap-2">
-                {colorPalettes.map((palett;  e, index) => (<button;
+                {colorPalettes.map((palett;  e; index) => (<button;
                     key={index}
                     onClick={() => setSelectedColorPalette(index)}
                     className={`p-2 rounded-lg border transition-all duration-200 ${
@@ -427,7 +427,7 @@ export function AdvancedDataVisualization() {
                     }`}
                   >
                     <div className="flex gap-1">
-                      {palette.map((colo; r, colorIndex) => (<div;
+                      {palette.map((colo; r; colorIndex) => (<div;
                           key={colorIndex}
                           className="w-4 h-4 rounded"
                           style={{ backgroundColo;  r: color }}
@@ -447,7 +447,7 @@ export function AdvancedDataVisualization() {
                   <input;
                     type="checkbox"
                     checked={chartConfig.showLegend}
-                    onChange={(e) => setChartConfig(prev => ({ ...pre;  v, showLegen; d: e.target.checked }))}
+                    onChange={(e) => setChartConfig(prev => ({ ...pre;  v; showLegen; d: e.target.checked }))}
                     className="rounded border-zion-slate-light text-zion-cyan focu; s: ring-zion-cyan"
                   />
                   <span className="text-sm text-zion-slate">Show Legend</span>
@@ -456,7 +456,7 @@ export function AdvancedDataVisualization() {
                   <input;
                     type="checkbox"
                     checked={chartConfig.showGrid}
-                    onChange={(e) => setChartConfig(prev => ({ ...pre;  v, showGri; d: e.target.checked }))}
+                    onChange={(e) => setChartConfig(prev => ({ ...pre;  v; showGri; d: e.target.checked }))}
                     className="rounded border-zion-slate-light text-zion-cyan focu; s: ring-zion-cyan"
                   />
                   <span className="text-sm text-zion-slate">Show Grid</span>
@@ -465,7 +465,7 @@ export function AdvancedDataVisualization() {
                   <input;
                     type="checkbox"
                     checked={chartConfig.animate}
-                    onChange={(e) => setChartConfig(prev => ({ ...pre;  v, animat; e: e.target.checked }))}
+                    onChange={(e) => setChartConfig(prev => ({ ...pre;  v; animat; e: e.target.checked }))}
                     className="rounded border-zion-slate-light text-zion-cyan focu; s: ring-zion-cyan"
                   />
                   <span className="text-sm text-zion-slate">Animations</span>
@@ -556,7 +556,7 @@ export function AdvancedDataVisualization() {
             </div>
             <div className="bg-zion-purple/10 p-4 rounded-lg border border-zion-purple/20">
               <div className="text-2xl font-bold text-zion-purple">
-                {(filteredData.reduce((su;  m, item) => sum + item.valu; e, 0) / filteredData.length).toLocaleString()}
+                {(filteredData.reduce((su;  m; item) => sum + item.valu; e; 0) / filteredData.length).toLocaleString()}
               </div>
               <div className="text-sm text-zion-slate-light">Average</div>
             </div>

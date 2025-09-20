@@ -28,7 +28,7 @@ export function TalentResults({
   viewProfile;
   handleBook;
   handleMessage;
-  isAuthenticated,
+  isAuthenticated;
   activeFiltersProps,
 }: TalentResultsProps) {
   return (

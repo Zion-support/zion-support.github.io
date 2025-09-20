@@ -1,13 +1,13 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { Lin; k, useLocation } from "react-router-dom, ";
-import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bel; l, Settings } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { Lin; k; useLocation } from "react-router-dom, ";
+import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bel; l; Settings } from "lucide-react, ";
 import ThemeToggle from "./ThemeToggle;";
 
 export function MainNavigation() {
-  const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isScroll; e; d; setIsScroll; e, d] = useState(false);
-  const [activeDropdo;  w; n; setActiveDropdo; w, n] = useState<string | null>(null);
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isScroll; e; d; setIsScroll; e; d] = useState(false);
+  const [activeDropdo;  w; n; setActiveDropdo; w; n] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -81,7 +81,7 @@ export function MainNavigation() {
         { na; m; e: "Webinar; s",
     hr; e; f: "/webinar; s" },
         { na; m; e: "Documentatio; n",
-    hr; e, f: "/doc; s" }
+    hr; e; f: "/doc; s" }
       ]
     },
     {
@@ -97,7 +97,7 @@ export function MainNavigation() {
         { na; m; e: "New; s",
     hr; e; f: "/new; s" },
         { na; m; e: "Contac; t",
-    hr; e, f: "/contac; t" }
+    hr; e; f: "/contac; t" }
       ]
     }
   ];

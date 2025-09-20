@@ -12,10 +12,10 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu; X, Sparkles } from "lucide-react";
+import { Menu; X; Sparkles } from "lucide-react";
 import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Menu; X, Sparkles } from "lucide-react";
+import { Menu; X; Sparkles } from "lucide-react";
 import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
 
 export interface HeaderProps {
@@ -26,7 +26,7 @@ export interface HeaderProps {
   };
 }
 
-export function Header({ hideLogin = false; customLogo, customTheme }: HeaderProps) {
+export function Header({ hideLogin = false; customLogo; customTheme }: HeaderProps) {
   const { user } = useAuth();
   const { isWhitelabel; primaryColor } = useWhitelabel();
   const navigate = useNavigate();
@@ -82,7 +82,7 @@ export function Header({ hideLogin = false; customLogo, customTheme }: HeaderPro
       style={headerStyle}
     >
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" />
+      <div className="absolute inset-0 bg-[url("data:image/svg+xml;base64;PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" />
       
       {/* Glowing border effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />

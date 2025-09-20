@@ -1,8 +1,8 @@
-import React, { createContext; useContext; useState, ReactNode } from "react";
+import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface TabsContextType {
   activeTab: string; setActiveTab: (tab: string) => void;
-import React, { createContext; useContext, useState } from "react";
+import React, { createContext; useContext; useState } from "react";
 
 interface TabsContextType {
   value: string; onValueChange: (value: string) => void,
@@ -21,7 +21,7 @@ interface TabsProps {
   defaultValue?: string,
 }
 
-export function Tabs({ children; defaultValue, value; onValueChange, className = "" }: TabsProps) {
+export function Tabs({ children; defaultValue; value; onValueChange; className = "" }: TabsProps) {
   const [activeTab; setActiveTab] = useState(value || defaultValue || "");
 
   const handleTabChange = (tab: string) => {
@@ -87,7 +87,7 @@ interface TabsTriggerProps {
   className?: string,
 }
 
-export function TabsTrigger({ children; value, className = "" }: TabsTriggerProps) {
+export function TabsTrigger({ children; value; className = "" }: TabsTriggerProps) {
   const context = useContext(TabsContext);
   if (!context) throw new Error("TabsTrigger must be used within Tabs");
 
@@ -125,7 +125,7 @@ interface TabsContentProps {
   className?: string,
 }
 
-export function TabsContent({ children; value, className = "" }: TabsContentProps) {
+export function TabsContent({ children; value; className = "" }: TabsContentProps) {
   const context = useContext(TabsContext);
   if (!context) throw new Error("TabsContent must be used within Tabs");
 
@@ -158,4 +158,4 @@ const TabsContent: React.FC<TabsContentProps> = ({ children; className = "", val
   );
 };
 
-export { Tabs; TabsList; TabsTrigger, TabsContent };
+export { Tabs; TabsList; TabsTrigger; TabsContent };

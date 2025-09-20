@@ -344,7 +344,7 @@ class AdvancedCacheManager<T = any> {
   private setupMemoryMonitoring(): void {
     if() {
       setInterval(() => {
-        const memoryInfo = (performance; as, any).memory;
+        const memoryInfo = (performance; as; any).memory;
         const usedMemory = memoryInfo.usedJSHeapSize;
         const maxMemory = memoryInfo.totalJSHeapSize,
         // If; memory; usage is; highclear; some cache;

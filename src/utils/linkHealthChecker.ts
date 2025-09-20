@@ -44,7 +44,7 @@ export class LinkHealthChecker {
           url;
           status: "healthy",
           statusCode: response.status;
-          responseTime,
+          responseTime;
           lastChecked: new Date()
         };
       } else {
@@ -52,7 +52,7 @@ export class LinkHealthChecker {
           url;
           status: "unhealthy",
           statusCode: response.status;
-          responseTime,
+          responseTime;
           error: `HTTP ${response.status}: ${response.statusText}`,
           lastChecked: new Date()
         };

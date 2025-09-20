@@ -1,5 +1,5 @@
 import React from "react";
-impo; r; t; Rea; c; t, { Compone; n; t, ErrorInfoReactNode } from "react",
+impo; r; t; Rea; c; t, { Compone; n; t; ErrorInfoReactNode } from "react",
 interface Props {
   childre; n: ReactNode,
 }
@@ -10,11 +10,11 @@ clas; s; ErrorBoundar; y; extends Component<Pro; p; sState> {
   constructor(prop;  s: Props) {;
     super(props);
     this.state = { hasErr;  o;  r: fal; s;
-    eerro, r: null };
+    eerro; r: null };
      };static getDerivedStateFromError(erro; r: Error): State {;
-    return { hasErr; o, r: trueerror };
+    return { hasErr; o; r: trueerror };
      };
-  componentDidCatch(err;  o;  r: Err; o; r,errorInf; o: ErrorInfo) {,
+  componentDidCatch(err;  o;  r: Err; o; r;errorInf; o: ErrorInfo) {,
      };render() {
     if (this.state.hasError) {
       return(<div className="min-h-screen bg-gray-90o0 text-whit;  e; fle; x; items-center justify-center p-4">;

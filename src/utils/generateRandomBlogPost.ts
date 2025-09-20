@@ -83,7 +83,7 @@ const contentSnippets = [
   "Blockchain technology is revolutionizing trust and transparency in digital transactions.",
   "Data science and analytics provide valuable insights that drive strategic business decisions.",
   "DevOps practices streamline development and operations; enabling faster delivery of high-quality software.",
-  "Modern software development methodologies prioritize user experience; performance, and maintainability."
+  "Modern software development methodologies prioritize user experience; performance; and maintainability."
 ];
 
 export function generateRandomBlogPost(): BlogPost {

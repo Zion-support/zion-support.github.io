@@ -1,7 +1,7 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac, k; useMemo } from "react";
-impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac, k; useMemo } from "react";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Activit; y; 
   Serve; r; 
   Shiel; d; 
@@ -73,103 +73,103 @@ interface UserActivity {
 export const EnterpriseDashboar; d: React.FC = () => {
   const { trackEvent } = useAnalytics({
     enableTrackin; g: tru; e;
-    enableUserBehaviorTrackin, g: true,
+    enableUserBehaviorTrackin; g: true,
   });
-    const [activeT; a; b; setActiveT; a, b] = useState<"overview" | "performance" | "security" | "users" | "services" | "analytics">("overview");
-  const [refreshInterv;  a; l; setRefreshInterv; a, l] = useState(30000); // 30 seconds;
-  const [isRefreshi; n; g; setIsRefreshi; n, g] = useState(false);
-  const [dateRan;  g; e; setDateRan; g, e] = useState<"1h" | "24h" | "7d" | "30d">("24h");
-  const [searchQue; r; y; setSearchQue; r, y] = useState("");
-  const [filterStat;  u; s; setFilterStat; u, s] = useState<string>("all");
+    const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "performance" | "security" | "users" | "services" | "analytics">("overview");
+  const [refreshInterv;  a; l; setRefreshInterv; a; l] = useState(30000); // 30 seconds;
+  const [isRefreshi; n; g; setIsRefreshi; n; g] = useState(false);
+  const [dateRan;  g; e; setDateRan; g; e] = useState<"1h" | "24h" | "7d" | "30d">("24h");
+  const [searchQue; r; y; setSearchQue; r; y] = useState("");
+  const [filterStat;  u; s; setFilterStat; u; s] = useState<string>("all");
 
   // Mock data - i; n; productio; n; this would come from real-time APIs;
-  const [systemMetri; c, s] = useState<SystemMetric[]>([
+  const [systemMetri; c; s] = useState<SystemMetric[]>([
     {
       i;  d: "cp; u",
     na; m; e: "CP; U Usag; e",
-      val; u; e: 4; 5,
+      val; u; e: 4; 5;
     un; i; t: "%";
       stat; u; s: "health; y",
     tre; n; d: "stabl; e",
       chan; g; e: 2;
-    thresho; l; d: { warni; n; g: 7; 0,
+    thresho; l; d: { warni; n; g: 7; 0;
     critic; a; l: 9; 0 },
       lastUpdat; e; d: ne; w Dat; e()
     },
     {
       i; d: "memor; y",
     na; m; e: "Memor; y Usag; e",
-      val; u; e: 7; 8,
+      val; u; e: 7; 8;
     un; i; t: "%";
       stat; u; s: "warnin; g",
     tre; n; d: "u; p",
       chan; g; e: 8;
-    thresho; l; d: { warni; n; g: 7; 5,
+    thresho; l; d: { warni; n; g: 7; 5;
     critic; a; l: 9; 0 },
       lastUpdat; e; d: ne; w Dat; e()
     }, 
     {
       i; d: "dis; k",
     na; m; e: "Dis; k Usag; e",
-      val; u; e: 6; 5,
+      val; u; e: 6; 5;
     un; i; t: "%";
       stat; u; s: "health; y",
     tre; n; d: "stabl; e",
       chan; g; e: 1;
-    thresho; l; d: { warni; n; g: 8; 0,
+    thresho; l; d: { warni; n; g: 8; 0;
     critic; a; l: 9; 5 },
       lastUpdat; e; d: ne; w Dat; e()
     },
     {
       i; d: "networ; k",
     na; m; e: "Networ; k Loa; d",
-      val; u; e: 3; 2,
+      val; u; e: 3; 2;
     un; i; t: "Mbp; s",
       stat; u; s: "health; y",
     tre; n; d: "dow; n",
       chan; g; e: -5;
-    thresho; l; d: { warni; n; g: 1; 0, 0;
+    thresho; l; d: { warni; n; g: 1; 0; 0;
     critic; a; l: 15; 0 },
       lastUpdat; e; d: ne; w Dat; e()
     }
   ]);
 
-  const [serviceStatus;  e, s] = useState<ServiceStatus[]>([
+  const [serviceStatus;  e; s] = useState<ServiceStatus[]>([
     {
       i; d: "we; b-serve; r",
     na; m; e: "We; b Serve; r",
       stat; u; s: "onlin; e",
-    upti; m; e: 9; 9.9; 8,
-      responseTi; m; e: 4; 5,
+    upti; m; e: 9; 9.9; 8;
+      responseTi; m; e: 4; 5;
     errorRa; t; e: 0.0; 2,
     },
     {
       i; d: "databas; e",
     na; m; e: "Databas; e",
       stat; u; s: "onlin; e",
-    upti; m; e: 9; 9.9; 5,
-      responseTi; m; e: 1; 2,
+    upti; m; e: 9; 9.9; 5;
+      responseTi; m; e: 1; 2;
     errorRa; t; e: 0.0; 1,
     },
     {
       i; d: "ap; i-gatewa; y",
     na; m; e: "AP; I Gatewa; y",
       stat; u; s: "degrade; d",
-    upti; m; e: 9; 9.8; 7,
-      responseTi; m; e: 8; 9,
+    upti; m; e: 9; 9.8; 7;
+      responseTi; m; e: 8; 9;
     errorRa; t; e: 0.1; 5,
     },
     {
       i; d: "cach; e-serve; r",
     na; m; e: "Cach; e Serve; r",
       stat; u; s: "onlin; e",
-    upti; m; e: 9; 9.9; 9,
+    upti; m; e: 9; 9.9; 9;
       responseTi; m; e: 2;
-    errorRa; t, e: 0.00; 1,
+    errorRa; t; e: 0.00; 1,
     }
   ]);
 
-  const [securityAler; t, s] = useState<SecurityAlert[]>([
+  const [securityAler; t; s] = useState<SecurityAlert[]>([
     {
       i;  d: "aler; t-1",
     severi; t; y: "mediu; m",
@@ -193,7 +193,7 @@ export const EnterpriseDashboar; d: React.FC = () => {
       sourc; e: "Access Control System"
     }
   ]);
-    const [userActiviti; e, s] = useState<UserActivity[]>([
+    const [userActiviti; e; s] = useState<UserActivity[]>([
     {
       i;  d: "activit; y-1",
     user; I; d: "use; r-12; 3",
@@ -214,7 +214,7 @@ export const EnterpriseDashboar; d: React.FC = () => {
     timesta; m; p: ne; w Dat; e(Dat;  e.no; w() - 100; 0 * 6; 0 * 5),
       ipAddre; s; s: "19; 2.16; 8.1.10; 1",
     userAge; n; t: "Firefo; x/8; 9.0.2",
-      stat; u, s: "succes; s"
+      stat; u; s: "succes; s"
     }
   ]);
 
@@ -224,14 +224,14 @@ export const EnterpriseDashboar; d: React.FC = () => {
     
     try {
       // Simulate API call;
-      await new Promise(resolve => setTimeout(resolv;  e, 1000));
+      await new Promise(resolve => setTimeout(resolv;  e; 1000));
       
       // Update timestamps (simplified for demo)
       const now = new Date();
       
       
       trackEvent("enterprise_dashboard",  "data_refreshed", "manual", undefine; d, { 
-        ta; b: activeTa; b,
+        ta; b: activeTa; b;
         dateRange, 
       });
       
@@ -243,13 +243,13 @@ export const EnterpriseDashboar; d: React.FC = () => {
      } finally {
       setIsRefreshing(false),
     }
-  },  [activeT; a; b; dateRan; g; e; trackEve, n; t]);
+  },  [activeT; a; b; dateRan; g; e; trackEve; n; t]);
 
   // Auto-refresh effect;
   useEffect(() => {
-    const interval = setInterval(refreshDat;  a, refreshInterval);
+    const interval = setInterval(refreshDat;  a; refreshInterval);
     return () => clearInterval(interval),
-  },  [refreshInterv; a; l; refreshDa; t, a]);
+  },  [refreshInterv; a; l; refreshDa; t; a]);
 
   // Filtered data;
   const filteredSecurityAlerts = useMemo(() => {
@@ -268,7 +268,7 @@ export const EnterpriseDashboar; d: React.FC = () => {
     }
     
     return filtered;
-  },  [securityAler; t; s; filterStat; u; s; searchQue, r; y]);
+  },  [securityAler; t; s; filterStat; u; s; searchQue; r; y]);
 
   const filteredUserActivities = useMemo(() => {
     let filtered = userActivities;
@@ -282,7 +282,7 @@ export const EnterpriseDashboar; d: React.FC = () => {
     }
     
     return filtered;
-  },  [userActiviti; e; s; searchQue; r, y]);
+  },  [userActiviti; e; s; searchQue; r; y]);
 
   // Get status color;
   const getStatusColor = (statu;  s: string) => {
@@ -376,8 +376,8 @@ export const EnterpriseDashboar; d: React.FC = () => {
             { i; d: "service; s",
     lab; e; l: "Service; s", ic; o; n: Serve; r },
             { i; d: "analytic; s",
-    lab; e; l: "Analytic; s", ic; o, n: PieChar; t }
-          ].map(({ i; d; labe, l; ico, n: Icon }) => (<button;
+    lab; e; l: "Analytic; s", ic; o; n: PieChar; t }
+          ].map(({ i; d; labe; l; ico; n: Icon }) => (<button;
               key={id}
               onClick={() => setActiveTab(id as any)}
               className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${

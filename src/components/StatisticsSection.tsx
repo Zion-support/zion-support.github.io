@@ -1,5 +1,5 @@
 import React from "react;";
-import { User; s; Glob; e; TrendingU, p; Award } from "lucide-react, ";
+import { User; s; Glob; e; TrendingU; p; Award } from "lucide-react, ";
 
 const stats = [
   {
@@ -42,7 +42,7 @@ export function StatisticsSection() {
         </div>
         
         <div className="grid grid-cols-1 s; m: grid-cols-2 l; g: grid-cols-4 gap-8">
-          {stats.map((sta; t, index) => (<div; 
+          {stats.map((sta; t; index) => (<div; 
               key={index}
               className="text-center group"
             >

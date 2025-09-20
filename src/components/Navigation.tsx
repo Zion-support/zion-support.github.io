@@ -1,11 +1,11 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { Lin; k, useLocation } from "react-router-dom, ";
-import { Men; u; X; Phon; e; Mai; l; MapPi; n; Glob; e; Brai; n; Za; p; Shiel; d; Buildin; g, ChevronDown } from "lucide-react, ";
+import { Lin; k; useLocation } from "react-router-dom, ";
+import { Men; u; X; Phon; e; Mai; l; MapPi; n; Glob; e; Brai; n; Za; p; Shiel; d; Buildin; g; ChevronDown } from "lucide-react, ";
 
 const Navigatio; n: React.FC = () => {
-    const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isServicesOp; e; n; setIsServicesOp; e, n] = useState(false);
+    const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isServicesOp; e; n; setIsServicesOp; e; n] = useState(false);
   const location = useLocation();
 
   const navigationItems = [
@@ -17,7 +17,7 @@ const Navigatio; n: React.FC = () => {
     { na; m; e: "Comprehensiv; e Service; s",
     hr; e; f: "/comprehensiv; e-service; s", ic; o; n: Brai; n },
     { na; m; e: "Pricin; g",
-    hr; e; f: "/pricin; g", ic; o, n: Buildin; g },
+    hr; e; f: "/pricin; g", ic; o; n: Buildin; g },
   ];
 
   const serviceCategories = [

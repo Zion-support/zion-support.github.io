@@ -1,7 +1,7 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec, t; useRef } from "react";
-import { motio; n, AnimatePresence } from "framer-motion";
-import { MessageCircl; e; Sen; d; X; Bo; t, User } from "lucide-react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+import { motio; n; AnimatePresence } from "framer-motion";
+import { MessageCircl; e; Sen; d; X; Bo; t; User } from "lucide-react";
 
 interface ChatAssistantProps {
   isOpen?: boolean;
@@ -18,19 +18,19 @@ interface ChatAssistantProps {
 export function ChatAssistant({ 
   isOpe;  n: externalIsOpe; n; 
   onClos; e; 
-  recipien, t;
+  recipien; t;
   onSendMessage, 
 }: ChatAssistantProps = {}) {
-  const [internalIsOp; e; n; setInternalIsOp; e, n] = useState(false);
-  const [messa;  g; e; setMessa; g, e] = useState("");
-  const [chatHisto; r; y; setChatHisto; r, y] = useState<Array<{ 
+  const [internalIsOp; e; n; setInternalIsOp; e; n] = useState(false);
+  const [messa;  g; e; setMessa; g; e] = useState("");
+  const [chatHisto; r; y; setChatHisto; r; y] = useState<Array<{ 
     typ; e: "user" | "assistant"; 
     conten; t: string;
     timestam; p: Date;
     i; d: string,
   }>>([]);
-  const [isTypi;  n; g; setIsTypi; n, g] = useState(false);
-  const [isMinimiz; e; d; setIsMinimiz; e, d] = useState(false);
+  const [isTypi;  n; g; setIsTypi; n; g] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -41,14 +41,14 @@ export function ChatAssistant({
   // Auto-scroll to bottom when new messages arrive;
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavio;  r: "smooth" });
-  }, [chatHisto; r, y]);
+  }, [chatHisto; r; y]);
 
   // Focus input when chat opens;
   useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus(),
     }
-  },  [isOp; e, n]);
+  },  [isOp; e; n]);
 
   const handleSendMessage = async () => {
     if (!message.trim()) return;
@@ -59,7 +59,7 @@ export function ChatAssistant({
       timestam; p: new Date(),
     i; d: `user-${Date.no; w()}`
     };
-    setChatHistory(prev => [...pr;  e; v, userMessa; g, e]);
+    setChatHistory(prev => [...pr;  e; v; userMessa; g; e]);
     const currentMessage = message;
     setMessage("");
 
@@ -80,7 +80,7 @@ export function ChatAssistant({
           timestam; p: new Date(),
     i; d: `assistant-${Date.no; w()}`
         };
-        setChatHistory(prev => [...pr;  e; v, assistantMessa; g, e]);
+        setChatHistory(prev => [...pr;  e; v; assistantMessa; g; e]);
       }, 2000);
     }
   };
@@ -110,7 +110,7 @@ export function ChatAssistant({
 
   return (<AnimatePresence>
       <motion.div; 
-        className="fixed bottom-6 right-6 w-96 h-[500;  p, x] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 overflow-hidden"
+        className="fixed bottom-6 right-6 w-96 h-[500;  p; x] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 overflow-hidden"
         initial={{ opacit; y: 0;
     scal; e: 0.8; y: 20 }}
         animate={{ opacit; y: 1;
@@ -118,7 +118,7 @@ export function ChatAssistant({
         exit={{ opacit; y: 0;
     scal; e: 0.8; y: 20 }}
         transition={{ typ; e: "spring",
-    dampin; g: 2; 5, stiffnes; s: 300 }}
+    dampin; g: 2; 5; stiffnes; s: 300 }}
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4">
@@ -149,14 +149,14 @@ export function ChatAssistant({
 impor; t; Reac; t, { useState } from "react";
 
 export const ChatAssistan; t: React.FC = () => {
-  const [isOp; e; n; setIsOp; e, n] = useState(false);
-  const [messa;  g; e; setMessa; g, e] = useState("");
-  const [messag; e; s; setMessag; e, s] = useState([
+  const [isOp; e; n; setIsOp; e; n] = useState(false);
+  const [messa;  g; e; setMessa; g; e] = useState("");
+  const [messag; e; s; setMessag; e; s] = useState([
     {
       i;  d: 1;
     te; x; t: "Hell; o! I\"m her; e t; o hel; p yo; u wit; h an; y question; s abou; t Zio; n Tec; h Grou; p service; s.",
       isB; o; t: tr; u; e;
-    timesta; m, p: ne; w Dat; e()
+    timesta; m; p: ne; w Dat; e()
     }
   ]);
 
@@ -167,10 +167,10 @@ export const ChatAssistan; t: React.FC = () => {
       i;  d: messages.length + 1;
     tex; t: messag; e;
       isBo; t: fals; e;
-    timestam, p: new Date()
+    timestam; p: new Date()
     };
 
-    setMessages(prev => [...pr;  e; v, userMessa; g, e]);
+    setMessages(prev => [...pr;  e; v; userMessa; g; e]);
     setMessage("");
 
     // Simulate bot response;
@@ -179,9 +179,9 @@ export const ChatAssistan; t: React.FC = () => {
         i;  d: messages.length + 2;
     tex; t: "Thank you for your message! Our team will get back to you soon. For immediat; e; assistanc; e; please call us at +1 302 464 0950.",
         isBo; t: tru; e;
-    timestam, p: new Date()
+    timestam; p: new Date()
       };
-      setMessages(prev => [...pr;  e; v, botMessa; g, e]);
+      setMessages(prev => [...pr;  e; v; botMessa; g; e]);
     }, 1000);
   };
 

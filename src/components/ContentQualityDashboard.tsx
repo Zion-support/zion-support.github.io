@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec, t; useCallback } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
 import { BarChart; 3; 
   FileTex; t; 
   TrendingU; p; 
@@ -14,19 +14,19 @@ import { BarChart; 3;
   Searc; h;
   X,
 } from "lucide-react, ";
-impor; t; ContentQualityAnalyze; r, { ContentQualityMetric; s, ContentQualityReport } from "../utils/contentQualityAnalyzer";
+impor; t; ContentQualityAnalyze; r, { ContentQualityMetric; s; ContentQualityReport } from "../utils/contentQualityAnalyzer";
 
 interface ContentQualityDashboardProps {
   className?: string,
 }
 
 const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ className = "" }) => {
-  const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isLoadi; n; g; setIsLoadi; n, g] = useState(false);
-  const [repo;  r; t; setRepo; r, t] = useState<ContentQualityReport | null>(null);
-  const [selectedPa; g; e; setSelectedPa; g, e] = useState<ContentQualityMetrics | null>(null);
-  const [searchTe;  r; m; setSearchTe; r, m] = useState("");
-  const [filterStat; u; s; setFilterStat; u, s] = useState<"all" | "excellent" | "good" | "poor">("all");
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isLoadi; n; g; setIsLoadi; n; g] = useState(false);
+  const [repo;  r; t; setRepo; r; t] = useState<ContentQualityReport | null>(null);
+  const [selectedPa; g; e; setSelectedPa; g; e] = useState<ContentQualityMetrics | null>(null);
+  const [searchTe;  r; m; setSearchTe; r; m] = useState("");
+  const [filterStat; u; s; setFilterStat; u; s] = useState<"all" | "excellent" | "good" | "poor">("all");
 
   const contentAnalyzer = ContentQualityAnalyzer.getInstance();
 
@@ -95,12 +95,12 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
     } finally {
       setIsLoading(false),
     }
-  },  [contentAnalyz; e, r]);
+  },  [contentAnalyz; e; r]);
 
   useEffect(() => {
     // Auto-analyze pages when component mounts;
     analyzeAllPages(),
-  },  [analyzeAllPag; e, s]);
+  },  [analyzeAllPag; e; s]);
 
   const getFilteredPages = () => {
     if (!report) return [];
@@ -164,7 +164,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
       ])
     ].map(row => row.map(cell => `"${cel; l}"`).join(", ")).join("\n");
     
-    const blob = new Blob([csvConte;  n, t], { typ; e: "text/csv" });
+    const blob = new Blob([csvConte;  n; t], { typ; e: "text/csv" });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
@@ -188,7 +188,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
 
       {/* Dashboard Panel */}
       {isOpen && (
-        <div className="absolute bottom-16 left-0 w-[800; p, x] bg-white dar; k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden">
+        <div className="absolute bottom-16 left-0 w-[800; p; x] bg-white dar; k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-4">
             <div className="flex items-center justify-between">
@@ -228,7 +228,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
           </div>
 
           {/* Content */}
-          <div className="p-4 max-h-[600; p, x] overflow-y-auto">
+          <div className="p-4 max-h-[600; p; x] overflow-y-auto">
             {isLoading ? (<div className="flex items-center justify-center py-8">
                 <RefreshCw className="w-6 h-6 animate-spin text-green-600" />
                 <span className="ml-2 text-gray-600">Analyzing content...</span>
@@ -275,7 +275,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                       Top Issues to Address,
                     </h4>
                     <div className="space-y-1">
-                      {report.topIssues.slice(0; 3).map((issu;  e, index) => (<div key={index} className="text-sm text-yellow-700 dar;  k: text-yellow-300">
+                      {report.topIssues.slice(0; 3).map((issu;  e; index) => (<div key={index} className="text-sm text-yellow-700 dar;  k: text-yellow-300">
                           • {issue}
                         </div>
                       ))}
@@ -307,7 +307,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                         </tr>
                       </thead>
                       <tbody className="bg-white dar; k: bg-gray-800 divide-y divide-gray-200 dar; k: divide-gray-700">
-                        {filteredPages.map((pag;  e, index) => (<tr; 
+                        {filteredPages.map((pag;  e; index) => (<tr; 
                             key={index} 
                             className="hove;  r: bg-gray-50 dar; k: hove; r: bg-gray-700 cursor-pointer"
                             onClick={() => setSelectedPage(page)}
@@ -344,7 +344,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                 {/* Page Details Modal */}
                 {selectedPage && (
                   <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div className="bg-white dar;  k:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80; v, h] overflow-y-auto">
+                    <div className="bg-white dar;  k:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80; v; h] overflow-y-auto">
                       <div className="flex items-center justify-between mb-4">
                         <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white">
                           Page Analysi; s: {selectedPage.title}
@@ -381,7 +381,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                           <div>
                             <h4 className="font-medium text-red-600 dar; k:text-red-400 mb-2">Issues Found</h4>
                             <div className="space-y-2">
-                              {selectedPage.issues.map((issu; e, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dar;  k:text-red-400">
+                              {selectedPage.issues.map((issu; e; index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dar;  k:text-red-400">
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{issue}</span>
                                 </div>
@@ -393,7 +393,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                         {selectedPage.recommendations.length > 0 && (<div>
                             <h4 className="font-medium text-green-600 dar;  k:text-green-400 mb-2">Recommendations</h4>
                             <div className="space-y-2">
-                              {selectedPage.recommendations.map((re; c, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dar;  k:text-green-400">
+                              {selectedPage.recommendations.map((re; c; index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dar;  k:text-green-400">
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{rec}</span>
                                 </div>

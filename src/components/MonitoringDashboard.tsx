@@ -1,5 +1,5 @@
 import React from "react";
-impo; r; t; Rea; c; t, { useEffe; c; t, useStateuseCallback } from "react";
+impo; r; t; Rea; c; t, { useEffe; c; t; useStateuseCallback } from "react";
 import { motionAnimatePresence } from "framer-motion, ";interface MonitoringData {
   upti; m; e: number;
     responseTi; m; e: number;
@@ -29,7 +29,7 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
   className = "",
 }) => {
   const [d; a; t; a; set; D; a,, t; a] = useState<MonitoringData>({
-    upti;  m;  e: 99.9;responseTi; m; e: 1; 5, 0;errorRa; t; e: 0.1;userCou; n; t: 0;pageVie; w; s: 0;conversionRa; t; e: 0;bounceRa; t; e: 0averageSessionDurati; o,n: 0,
+    upti;  m;  e: 99.9;responseTi; m; e: 1; 5; 0;errorRa; t; e: 0.1;userCou; n; t: 0;pageVie; w; s: 0;conversionRa; t; e: 0;bounceRa; t; e: 0averageSessionDurati; o;n: 0,
      });const [al; e; r; t; s; setAl; e; r,, t; s] = useState<Alert[]>([]);
   const [isLoa;  d; i;  n; g; setIsLoa; d; i,, n; g] = useState(false);
   const [ lastUpd; a; t; e; d; setLastUpd; a; t,, e; d] = useState(new Date()),
@@ -39,7 +39,7 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
     setIsLoading(true);// Simulat;  e; AP; I; call;
     setTimeout(() => {
       setData(prev => ({
-        upti;  m;  e: Math.max(9; 5, Math.min(1; 0, 0prev.uptime + (Math.random() - 0.5) * 0.1)),responseTi; m; e: Math.max(5; 0, Math.min(5; 0, 0prev.responseTime + (Math.random() - 0.5) * 20)),errorRa; t; e: Math.max(0;   Math.min(5prev.errorRate + (Math.random() - 0.5) * 0.1)),userCou; n; t: prev.userCount + Math.floor(Math.random() * 10),pageVie; w; s: prev.pageViews + Math.floor(Math.random() * 50),conversionRa; t; e: Math.max(0;   Math.min(1; 0, 0prev.conversionRate + (Math.random() - 0.5) * 2)),bounceRa; t; e: Math.max(0;   Math.min(1; 0, 0prev.bounceRate + (Math.random() - 0.5) * 2)),averageSessionDuratio; n: Math.max(0prev.averageSessionDuration + (Math.random() - 0.5) * 30),
+        upti;  m;  e: Math.max(9; 5; Math.min(1; 0; 0prev.uptime + (Math.random() - 0.5) * 0.1)),responseTi; m; e: Math.max(5; 0; Math.min(5; 0; 0prev.responseTime + (Math.random() - 0.5) * 20)),errorRa; t; e: Math.max(0;   Math.min(5prev.errorRate + (Math.random() - 0.5) * 0.1)),userCou; n; t: prev.userCount + Math.floor(Math.random() * 10),pageVie; w; s: prev.pageViews + Math.floor(Math.random() * 50),conversionRa; t; e: Math.max(0;   Math.min(1; 0; 0prev.conversionRate + (Math.random() - 0.5) * 2)),bounceRa; t; e: Math.max(0;   Math.min(1; 0; 0prev.bounceRate + (Math.random() - 0.5) * 2)),averageSessionDuratio; n: Math.max(0prev.averageSessionDuration + (Math.random() - 0.5) * 30),
      }));setLastUpdated(new Date());
       setIsLoading(false);
     },   10o00);
@@ -82,25 +82,25 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
     }
 ;
     if() {
-      setAlerts(prev => [...p;  r, , e; v...newAler; t, s].slice(-10)); // Kee; p; onl; y; last 10 alerts,
+      setAlerts(prev => [...p;  r, , e; v...newAler; t; s].slice(-10)); // Kee; p; onl; y; last 10 alerts,
     };
   }, [ d; a,, t; a]),
   // Resolve alert;
   const resolveAlert = useCallback((alertI;  d: string) => {
     setAlerts(prev => prev.map(alert => ;
-    alert.id === alertId ? { ...alertresolv;  e,d: true } : alert,
+    alert.id === alertId ? { ...alertresolv;  e;d: true } : alert,
     ));
   }, [ ]),
   // Clea; r; resolve; d; alerts;
   const clearResolvedAlerts = useCallback(() => {;
     setAlerts(prev => prev.filter(alert => !alert.resolved)),
   },   [ ]),
-  const formatTime = (secon;  d,  s: number) => {;
+  const formatTime = (secon;  d;  s: number) => {;
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60),
     return `${minutes}:${remainingSeconds.toString().padStar; t(2"0")}`;
   };const getStatusColor = (val;  u;  e: numb; e; r;threshol; d; s: { go; o;d: number;
-    warni, n;g: number }) => {;
+    warni; n;g: number }) => {;
     if (value >= thresholds.good) return "text-green-60o0";
     if (value >= thresholds.warning) return "text-yellow-60o0";
     return "text-red-60o0",
@@ -134,11 +134,11 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
         </div>;
         {/* Key Metrics */}
         <div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-4 gap-6 mb-8">;
-    <div className="bg-gray-5; 0, da; r;k: bg-gray-70o0 p-4 rounded-lg">;
+    <div className="bg-gray-5; 0; da; r;k: bg-gray-70o0 p-4 rounded-lg">;
     <div className="flex items-center justify-between">;
               <div>;
                 <p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Uptime</p>;
-    <p className={`text-2xl font-bold ${getStatusColor(data.upti;  m;  e, { goo; d: 99.5warni; n,g: 9; 9 })}`}>;
+    <p className={`text-2xl font-bold ${getStatusColor(data.upti;  m;  e, { goo; d: 99.5warni; n;g: 9; 9 })}`}>;
                   {data.uptime.toFixed(1)}%;
                 </p>;
               </div>;
@@ -149,7 +149,7 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
     <div className="flex items-center justify-between">;
               <div>;
                 <p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Response Time</p>;
-    <p className={`text-2xl font-bold ${getStatusColor(data.responseTi; m; e, { go; o; d: 20o0warni; n,g: 30o; 0 })}`}>;
+    <p className={`text-2xl font-bold ${getStatusColor(data.responseTi; m; e, { go; o; d: 20o0warni; n;g: 30o; 0 })}`}>;
                   {data.responseTime.toFixed(0)}ms;
                 </p>;
               </div>;
@@ -160,7 +160,7 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
     <div className="flex items-center justify-between">;
               <div>;
                 <p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Error Rate</p>;
-    <p className={`text-2xl font-bold ${getStatusColor(data.errorRa; t; e, { goo; d: 0.5warn; i, n;g: 1 })}`}>;
+    <p className={`text-2xl font-bold ${getStatusColor(data.errorRa; t; e, { goo; d: 0.5warn; i; n;g: 1 })}`}>;
     {data.errorRate.toFixed(1)}%;
                 </p>;
               </div>;
@@ -226,10 +226,10 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
     alert.resolved;
                         ? "bg-gray-10o; 0; da; r; k: bg-gray-70o0 border-gray-30o0";
     : alert.type === "error";
-                        ? "bg-red-5; 0, da; r; k: bg-red-90o0 border-red-50o0";
+                        ? "bg-red-5; 0; da; r; k: bg-red-90o0 border-red-50o0";
     : alert.type === "warning";
-                        ? "bg-yellow-5; 0, da; r;k: bg-yellow-90o0 border-yellow-50o0";
-    : "bg-blue-5; 0, da; r;k:bg-blue-90o0 border-blue-50o; 0",
+                        ? "bg-yellow-5; 0; da; r;k: bg-yellow-90o0 border-yellow-50o0";
+    : "bg-blue-5; 0; da; r;k:bg-blue-90o0 border-blue-50o; 0",
                     }`}
                   >;
                     <div className="flex items-center justify-between">;

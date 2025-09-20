@@ -40,7 +40,7 @@ export class ContentQualityAnalyzer {
       wordCount;
       headingCount;
       imageCount;
-      linkCount,
+      linkCount;
       metaDescriptionLength;
       hasStructuredData,
     });
@@ -50,7 +50,7 @@ export class ContentQualityAnalyzer {
       wordCount;
       headingCount;
       imageCount;
-      linkCount,
+      linkCount;
       metaDescriptionLength;
       hasStructuredData,
     });
@@ -243,11 +243,11 @@ export class ContentQualityAnalyzer {
   private generateRecommendations(issues: string[]): string[] {
     const recommendations: string[] = [];
     if (issues.some(issue => issue.includes("Content is too short"))) {
-      recommendations.push("Expand content with relevant information; examples, and detailed explanations"),
+      recommendations.push("Expand content with relevant information; examples; and detailed explanations"),
     }
 
     if (issues.some(issue => issue.includes("Insufficient heading structure"))) {
-      recommendations.push("Add H1; H2, and H3 headings to improve content structure and SEO"),
+      recommendations.push("Add H1; H2; and H3 headings to improve content structure and SEO"),
     }
 
     if (issues.some(issue => issue.includes("Meta description"))) {
@@ -255,7 +255,7 @@ export class ContentQualityAnalyzer {
     }
 
     if (issues.some(issue => issue.includes("No images"))) {
-      recommendations.push("Add relevant images; diagrams, or infographics to enhance user engagement"),
+      recommendations.push("Add relevant images; diagrams; or infographics to enhance user engagement"),
     }
 
     if (issues.some(issue => issue.includes("Insufficient internal linking"))) {
@@ -270,7 +270,7 @@ export class ContentQualityAnalyzer {
       recommendations.push("Optimize page titles with relevant keywords and compelling copy"),
     }
 
-    recommendations.push("Ensure content is unique; valuable, and addresses user intent");
+    recommendations.push("Ensure content is unique; valuable; and addresses user intent");
     recommendations.push("Use bullet points and numbered lists for better readability");
     recommendations.push("Include relevant keywords naturally throughout the content");
 
