@@ -1,6 +1,6 @@
-import React from 'react'
-import { Metadata } from 'next'
-import Link from 'next/link'
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 // import './globals.css'
 
 export const metadata: Metadata = {
