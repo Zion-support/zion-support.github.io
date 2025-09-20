@@ -128,13 +128,11 @@ value='operations'
                   Operations
                 </TabsTrigger>
               </TabsList>
-              {Object.entries(jobs).map(([department, jobList]) => (
-                <TabsContent
-key={department}
-                  value={department}
-                  className='space-y-6'
-                >
-                  {jobList.map((job, index) => (
+              <TabsContent
+                value='engineering'
+                className='space-y-6'
+              >
+                {jobs.map((job, index) => (
                     <Card
 key={index}
                       className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
@@ -170,9 +168,8 @@ asChild
                         </div>
                       </CardContent>
                     </Card>
-                  ))}
-                </TabsContent>
-              ))}
+                ))}
+              </TabsContent>
             </Tabs>
           </div>
           <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
