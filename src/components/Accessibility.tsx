@@ -40,27 +40,27 @@ export function Accessibility() {
           case '+':
             e.preventDefault();
             increaseFontSize();
-            break,
+            break;
           case '-':
             e.preventDefault();
             decreaseFontSize();
-            break,
+            break;
           case '0':
             e.preventDefault();
             resetSettings();
-            break
+            break;
         }
       }
-    },
+    };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []),
+  }, []);
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     // Apply font size
-    root.style.fontSize = `${newSettings.fontSize}px`,
+    root.style.fontSize = `${newSettings.fontSize}px`;
     
     // Apply high contrast
     if (newSettings.highContrast) {
