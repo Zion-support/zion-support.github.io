@@ -24,8 +24,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const path = require('path'),
 const fs = require('fs'),
@@ -96,8 +96,8 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
     } else {,
       results.tests.push({ name: TaskScheduler Recording', status: 'FAIL' }),
       results.failed++,
-      logger.info('❌ Task scheduler recording failed');
-};
+      logger.info('❌ Task scheduler recording failed'),
+    }
 ,
     // Test 4: Anomaly Detection,
     logger.info('\n4️⃣ Testing anomaly detection...'),
@@ -111,8 +111,8 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
     } else {,
       results.tests.push({ name: Anomaly Detection', status: 'FAIL' }),
       results.failed++,
-      logger.info('❌ Anomaly detection failed');
-};
+      logger.info('❌ Anomaly detection failed'),
+    }
 ,
     // Test 5: Notification System,
     logger.info('\n5️⃣ Testing notification system...'),
@@ -127,8 +127,8 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
     } catch (error) {,
       results.tests.push({ name: Notification System', status: 'FAIL' }),
       results.failed++,
-      logger.info('❌ Notification system failed:', error.message);
-};
+      logger.info('❌ Notification system failed:', error.message),
+    }
 ,
     // Test 6: Report Generation,
     logger.info('\n6️⃣ Testing report generation...'),
@@ -147,13 +147,13 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
       } else {,
         results.tests.push({ name: Report Generation', status: 'FAIL' }),
         results.failed++,
-        logger.info('❌ Report generation failed');
-};
+        logger.info('❌ Report generation failed'),
+      }
     } catch (error) {,
       results.tests.push({ name: Report Generation', status: 'FAIL' }),
       results.failed++,
-      logger.info('❌ Report generation failed:', error.message);
-};
+      logger.info('❌ Report generation failed:', error.message),
+    }
 ,
     // Test 7: Orchestrator Integration,
     logger.info('\n7️⃣ Testing orchestrator integration...'),
@@ -179,8 +179,8 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
     } catch (error) {,
       results.tests.push({ name: Orchestrator Integration', status: 'FAIL' }),
       results.failed++,
-      logger.info('❌ Orchestrator integration failed:', error.message);
-};
+      logger.info('❌ Orchestrator integration failed:', error.message),
+    }
 ,
     // Test 8: Configuration Loading,
     logger.info('\n8️⃣ Testing configuration loading...'),
@@ -195,18 +195,19 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
         } else {,
           results.tests.push({ name: Configuration Loading', status: 'FAIL' }),
           results.failed++,
-          logger.info('❌ Configuration loading failed - invalid structure');
-};
+          logger.info('❌ Configuration loading failed - invalid structure'),
+        }
       } catch (error) {,
         results.tests.push({ name: Configuration Loading', status: 'FAIL' }),
         results.failed++,
-        logger.info('❌ Configuration loading failed:', error.message);
-};
+        logger.info('❌ Configuration loading failed:', error.message),
+      }
     } else {,
       results.tests.push({ name: Configuration Loading', status: 'FAIL' }),
       results.failed++,
-      logger.info('❌ Configuration file not found');
-};
+      logger.info('❌ Configuration file not found'),
+    }
+
   } catch (error) {,
     logger.error('❌ Test suite failed:', error),
     results.failed++,
@@ -229,8 +230,8 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
     process.exit(0),
   } else {,
     logger.info('\n⚠️ Some tests failed. Please check the errors above.'),
-    process.exit(1);
-};
+    process.exit(1),
+  }
 }
 ,
 // Run tests if this is the main module,
@@ -238,8 +239,8 @@ if (require.main === module) {,
   testComponents().catch(error => {,
     logger.error('❌ Test suite failed:', error),
     process.exit(1),
-  });
-};
+  }),
+}
 ,
 module.exports = { testComponents },
 // Graceful shutdown handling,
@@ -261,8 +262,8 @@ process.on('SIGTERM', () => {,
 ,
   stop() {,
     this.isRunning = false,
-    console.log('Stopping ...');
-};
+    console.log('Stopping ...'),
+  }
 }
 ,
 // Start the script,
@@ -271,6 +272,6 @@ if (require.main === module) {,
   script.start().catch(error => {,
     console.error('Failed to start :', error),
     process.exit(1),
-  });
-};
+  }),
+}
 ,

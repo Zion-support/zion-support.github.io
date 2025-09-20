@@ -30,8 +30,8 @@
     setInterval(async () => {,
       await this.optimizeBuild()
     }, 24 * 60 * 60 * 1000), // Every 24 hours
-  };
   },
+},
 ,
 // Start the service,
 const buildOptimizer = new BuildOptimizer(),

@@ -5,7 +5,7 @@ import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart
 import { additionalEnhancedServices } from '../data/additional-real-services'
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
 
-export default function Services() : any {
+export default function Services() {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [selectedCategory, setSelectedCategory] = useState('all')
 	const [sortBy, setSortBy] = useState('popularity')
@@ -29,7 +29,7 @@ export default function Services() : any {
 			 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			 (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())))
 		)
-		.sort((a, b) : any => {
+		.sort((a, b) => {
 			switch (sortBy) {
 				case 'popularity':
 					return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
@@ -56,7 +56,7 @@ export default function Services() : any {
 	}, [searchTerm, selectedCategory, sortBy])
 
 	// Pagination controls
-	const goToPage = (page: number) : any => {
+	const goToPage = (page: number) => {
 		setCurrentPage(page)
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
@@ -435,4 +435,3 @@ export default function Services() : any {
 		</>
 	)
 }
-'

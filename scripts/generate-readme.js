@@ -106,9 +106,11 @@ function generateReadme() {
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
-  console.log(`✅ README generated at: ${outputPath}`);
-};
+  console.log(`✅ README generated at: ${outputPath}`),
+}
+
 if (require.main === module) {
-  generateReadme();
-};
+  generateReadme(),
+}
+
 module.exports = { generateReadme },

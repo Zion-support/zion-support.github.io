@@ -35,8 +35,8 @@ async function startAutomation() {,
     console.log('🛑 Use "pm2 stop all" to stop all processes'),
   } catch (error) {,
     console.error('❌ Failed to start PM2 processes:', error.message),
-    process.exit(1);
-};
+    process.exit(1),
+  }
 }
 ,
 // Handle graceful shutdown,

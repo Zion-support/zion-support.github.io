@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString();
-};
+  return new Date().toISOString(),
+}
 ,
 function log(message) {,
   const line = `[${nowIso()}] [UNIFIED-REDUNDANCY] ${message}`,
-  console.log(line);
-};
+  console.log(line),
+}
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,14 +26,14 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr);
-};
+    if (stderr) console.error(stderr),
+  }
   return { status, stdout, stderr },
 }
 ,
 function runGit(args, options = {}) {,
-  return run("git", args, options);
-};
+  return run("git", args, options),
+}
 ,
 // Redundancy system configuration,
 const REDUNDANCY_SYSTEMS = {,
@@ -159,8 +159,8 @@ function startPM2Redundancy() {,
     // Create logs directory,
     const logsDir = path.join(process.cwd(), "automation", "logs"),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true });
-};
+      fs.mkdirSync(logsDir, { recursive: true }),
+    }
 ,
     // Start PM2 processes,
     const startResult = run("pm2", ["start", ecosystemFile, "--update-env"]),
@@ -339,36 +339,36 @@ function main() {,
           log(`Overall Status: ${status.overallStatus}`),
           log(`Healthy Systems: ${status.healthySystems}/${status.totalSystems}`),
         } else {,
-          log(`Status check failed: ${status.error}`);
-};
+          log(`Status check failed: ${status.error}`),
+        }
         break,
       case "start": const startResult = startPM2Redundancy(),
         if (startResult.success) {,
           log(startResult.message)
         } else {,
-          log(`Start failed: ${startResult.error}`);
-};
+          log(`Start failed: ${startResult.error}`),
+        }
         break,
       case "stop": const stopResult = stopPM2Redundancy(),
         if (stopResult.success) {,
           log(stopResult.message)
         } else {,
-          log(`Stop failed: ${stopResult.error}`);
-};
+          log(`Stop failed: ${stopResult.error}`),
+        }
         break,
       case "restart": const restartResult = restartPM2Redundancy(),
         if (restartResult.success) {,
           log(restartResult.message)
         } else {,
-          log(`Restart failed: ${restartResult.error}`);
-};
+          log(`Restart failed: ${restartResult.error}`),
+        }
         break,
       case "test": const testResult = runRedundancyTests(),
         if (testResult.success) {,
           log(`Test completed. Overall Status: ${testResult.overallStatus}`),
         } else {,
-          log(`Test failed: ${testResult.error}`);
-};
+          log(`Test failed: ${testResult.error}`),
+        }
         break,
       case "report": const report = generateUnifiedReport(),
         log(`Report generated: ${report.summary}`),
@@ -378,19 +378,19 @@ function main() {,
       default:  ,
         log(`Unknown command: ${command}`),
         showHelp(),
-        process.exit(1);
-};
+        process.exit(1),
+    }
 ,
     process.exit(0),
   } catch (error) {,
     log(`Command execution failed: ${String(error)}`),
-    process.exit(1);
-};
+    process.exit(1),
+  }
 }
 ,
 if (require.main === module) {,
-  main();
-  }
+  main(),
+}
 ,
 module.exports = {,
   checkPM2Redundancy,

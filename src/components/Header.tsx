@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function Header() {
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -14,21 +14,35 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-      isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      isScrolled ? "bg-white shadow-md" : "bg-transparent"
     }`}>
-      <div className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-600">
-            Zion
+          <div className="flex items-center space-x-8">
+            <a href="/" className="text-2xl font-bold text-gray-900">
+              Zion
+            </a>
+            <div className="hidden md:flex space-x-6">
+              <a href="/" className="text-gray-600 hover:text-gray-900">
+                Home
+              </a>
+              <a href="/blog" className="text-gray-600 hover:text-gray-900">
+                Blog
+              </a>
+              <a href="/contact" className="text-gray-600 hover:text-gray-900">
+                Contact
+              </a>
+            </div>
           </div>
-          <nav className="hidden md:flex space-x-6">
-            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
-            <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
-            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
-          </nav>
+          <div className="flex items-center space-x-4">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+              Get Started
+            </button>
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
   );
 }
+
+export default Header;

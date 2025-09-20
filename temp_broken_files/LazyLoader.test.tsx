@@ -8,6 +8,6 @@ const LazyLoader.test = () => {,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>);
-  },
+    </div>),
+},
 export default LazyLoader.test,

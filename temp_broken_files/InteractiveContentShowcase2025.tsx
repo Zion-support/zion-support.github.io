@@ -36,8 +36,8 @@
         link: '/pages/AdvancedBiotechRevolution2026',
           </p>,
         </div>,
-  const [activeTab, setActiveTab] = useState('breakthrough');
-};
+  const [activeTab, setActiveTab] = useState('breakthrough'),
+    }
   },
   const activeContent = contentTabs[activeTab as keyof typeof contentTabs],
   return (,
@@ -46,8 +46,8 @@
         </div>,
       </div>,
     </div>,
-  );
-  },
+  ),
+},
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">,
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">,

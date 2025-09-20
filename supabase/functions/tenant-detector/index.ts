@@ -21,18 +21,20 @@ const supabaseUrl = Deno.env.get('SUPABASE_URL'),
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'),
 
 if (!supabaseUrl || !supabaseServiceKey) {
-  throw new Error('Required environment variables are not set');
-};
+  throw new Error('Required environment variables are not set'),
+}
+
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
-serve(async (req) : any => {
+serve(async (req) => {
   // Enhanced CORS preflight handling
   if (req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204,
       headers: corsHeaders
-    });
-};
+    }),
+  }
+
   try {
     const url = new URL(req.url),
     const hostnameParam = url.searchParams.get('host'),
@@ -45,8 +47,9 @@ serve(async (req) : any => {
       url.hostname,
 
     if (!hostname && !subdomainParam) {
-      throw new Error('No hostname or subdomain provided');
-};
+      throw new Error('No hostname or subdomain provided'),
+    }
+
     // Extract tenant info
     let tenantInfo: TenantInfo | null = null,
 
@@ -61,8 +64,9 @@ serve(async (req) : any => {
 
       if (error) {
         console.error('Database error:', error),
-        throw new Error(`Database error: ${error.message}`);
-};
+        throw new Error(`Database error: ${error.message}`),
+      }
+
       tenantInfo = data as TenantInfo,
     } else {
       // Try matching custom domain first
@@ -124,6 +128,6 @@ serve(async (req) : any => {
           ...corsHeaders
         }
       },
-    );
+    ),
   }
 }),

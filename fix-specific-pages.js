@@ -8,7 +8,7 @@ backupContent = parts[1].split('>>>>>>>')[0]
 if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
-    // Create a backup of the current corrupted file,
+    // Create a backup of the current corrupted file
 corruptedBackup: corruptedBackupPath,
 }
   } catch (error) {
@@ -29,7 +29,7 @@ console.log(`   Reason: ${result.reason}`)
       ...result,
 })
   }
-  // Generate summary,
+  // Generate summary
 return results,
 }
 // Run the restoration if this script is executed directly,

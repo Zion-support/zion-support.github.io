@@ -333,4 +333,4 @@ const ReportsPage: React.FC = () => {,
   )},
 export default ReportsPage,
 </div></div>
-}))'
+}))

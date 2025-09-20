@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-export default function ContactPage() : any {
+export default function ContactPage() {
 	return (
 		<>
 			<Head>
@@ -18,13 +18,8 @@ export default function ContactPage() : any {
 		</>
 	)
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-export default function Page(): any {return null}
-=======
-=======
+export default function Page(){return null}
 import React from 'react'
-=======
 import React, { useState } from 'react'
 import Head from 'next/head'
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Send, User, Building2, MessageCircle, Clock as ClockIcon, Globe as GlobeIcon2, Shield as ShieldIcon2, Zap as ZapIcon4, Users as UsersIcon2, Rocket as RocketIcon2, Award as AwardIcon2, TrendingUp as TrendingUpIcon2, CheckCircle, AlertCircle, Info } from 'lucide-react'
@@ -33,7 +28,7 @@ import Card from '../components/ui/Card'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard'
 
-export default function ContactPage() : any {
+export default function ContactPage() {
   const contactInfo = [
     {
       icon: Mail
@@ -98,7 +93,7 @@ const Contact: NextPage = () => {
     message: ''
     preferredContact: 'email'
     newsletter: false
-  });
+  })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
@@ -145,7 +140,7 @@ const Contact: NextPage = () => {
     'Flexible'
   ]
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) : any => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target
     setFormData(prev => ({
       ...prev
@@ -153,7 +148,7 @@ const Contact: NextPage = () => {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) : any => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     
@@ -234,8 +229,8 @@ const Contact: NextPage = () => {
       <main className="container mx-auto px-4 py-16 pt-32">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
-            Let&apos,s Build Something Amazing Together
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Let&apos;s Build Something Amazing Together
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
             Ready to transform your business with cutting-edge technology? 
@@ -567,8 +562,7 @@ const Contact: NextPage = () => {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover: bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
-=======
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
         {/* Call to Action */}
         <section className="text-center">
           <div className="bg-white rounded-2xl shadow-lg p-12">
@@ -576,7 +570,7 @@ const Contact: NextPage = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Don&apos,t wait to transform your business. Contact us today and let&apos;s discuss 
+              Don&apos;t wait to transform your business. Contact us today and let&apos;s discuss 
               how we can help you achieve your technology goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -647,7 +641,6 @@ const Contact: NextPage = () => {
 }
 
 export default Contact
-=======
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4">
@@ -665,7 +658,7 @@ export default Contact
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Ready to transform your business with cutting-edge AI technology?
-                Let&apos,s discuss how we can help you achieve your goals.
+                Let&apos;s discuss how we can help you achieve your goals.
               </p>
             </motion.div>
           </div>
@@ -713,7 +706,7 @@ export default Contact
                   Send Us a Message
                 </h2>
                 <p className="text-xl text-gray-300">
-                  Fill out the form below and we&apos,ll get back to you within 24 hours
+                  Fill out the form below and we&apos;ll get back to you within 24 hours
                 </p>
               </div>
               <EnhancedContactForm />
@@ -733,7 +726,7 @@ export default Contact
               Contact us today and get your free consultation.
             </p>
             
-            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button
                 href="tel:+13024640950"
                 variant="primary"
@@ -755,7 +748,7 @@ export default Contact
             </div>
             
             <div className="text-sm text-gray-400">
-              <p>✓ Free Consultation • ✓ 24/7 Support • ✓ &lt, 2 Hour Response • ✓ Expert Engineers</p>
+              <p>✓ Free Consultation • ✓ 24/7 Support • ✓ &lt; 2 Hour Response • ✓ Expert Engineers</p>
               <p className="mt-2">✓ Global Infrastructure • ✓ Enterprise Security • ✓ Custom Solutions • ✓ Ongoing Support</p>
             </div>
           </UltraFuturisticCard>
@@ -764,5 +757,3 @@ export default Contact
     </UltraAdvancedFuturisticBackground>
   )
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-'

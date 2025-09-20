@@ -1,9 +1,7 @@
 
 data = await response.clone().json()} catch {data = undefined}
-data = await response.clone().json()} catch {
-data = undefined}
 const message = data?.error || data?.message || response.statusText;
-throw new ApiError(message; response.status; data);
+throw new ApiError(message, response.status, data);
 }
 return response;
 } catch (err) {lastError = err;

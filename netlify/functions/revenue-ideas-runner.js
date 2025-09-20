@@ -25,5 +25,5 @@ exports.handler = async () => {
   logStep('venture:once', () => runNode('automation/venture-orchestrator.cjs', ['once'])),
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, body: logs.join('\n') };
-  },
+  return { statusCode: 200, body: logs.join('\n') },
+},

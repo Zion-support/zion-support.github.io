@@ -10,7 +10,7 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025';
 
-export default function Comprehensive2025ServicesShowcase() : any {
+export default function Comprehensive2025ServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -31,7 +31,7 @@ export default function Comprehensive2025ServicesShowcase() : any {
     { id: 'Climate Technology', name: 'Climate Tech', icon: '🌍', count: enhancedMicroSaasServices.filter(s => s.category === 'Climate Technology').length },
     { id: 'Education Technology', name: 'EdTech', icon: '🎓', count: enhancedMicroSaasServices.filter(s => s.category === 'Education Technology').length },
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: enhancedMicroSaasServices.filter(s => s.category === 'Manufacturing Technology').length }
-  ],
+  ];
 
   const filteredServices = enhancedMicroSaasServices
     .filter(service => 
@@ -41,7 +41,7 @@ export default function Comprehensive2025ServicesShowcase() : any {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
     )
-    .sort((a, b) : any => {
+    .sort((a, b) => {
       switch (sortBy) {
         case 'name':
           return a.name.localeCompare(b.name);
@@ -51,16 +51,17 @@ export default function Comprehensive2025ServicesShowcase() : any {
           return b.rating - a.rating;
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-        default: return 0;
-  }
+        default:
+          return 0;
+      }
     });
 
-  const getCategoryIcon = (category: string) : any => {
-    const categoryData = categories.find(cat => cat.id === category),
+  const getCategoryIcon = (category: string) => {
+    const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || '🚀';
   };
 
-  const getAnnualPrice = (monthlyPrice: string) : any => {
+  const getAnnualPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', ''));
     const annualPrice = price * 12 * 0.8; // 20% discount for annual
     return `$${Math.round(annualPrice)}`;
@@ -252,7 +253,7 @@ export default function Comprehensive2025ServicesShowcase() : any {
 
                     {/* ROI and Benefits */}
                     <div className="bg-white/5 rounded-lg p-4 mb-6">
-                      <div className="text-sm text-white/60 mb-2">Expected ROI: </div>
+                      <div className="text-sm text-white/60 mb-2">Expected ROI:</div>
                       <div className="text-sm text-white/90 font-medium">{service.roi}</div>
                     </div>
 
@@ -291,7 +292,7 @@ export default function Comprehensive2025ServicesShowcase() : any {
               <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>
               <button
                 onClick={() => {
-                  setSearchTerm(''),
+                  setSearchTerm('');
                   setSelectedCategory('all');
                 }}
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300"
@@ -342,4 +343,4 @@ export default function Comprehensive2025ServicesShowcase() : any {
       <EnhancedFooter />
     </div>
   );
-};
+}

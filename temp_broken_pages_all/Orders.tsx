@@ -1,5 +1,5 @@
-<<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
 } from '@/components/ui/table';
+<<<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
 import { Badge } from "@/components/ui/badge";
 import { FileText, CheckCircle2, Clock, ShieldAlert } from "lucide-react";
 import Link from 'next/link', // Changed from react-router-dom;
@@ -12,6 +12,19 @@ import { Table;
 , TableHeader;
 , TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+import { Badge,  } from '@/components/ui/badge';
+import { FileText,, CheckCircle2,, Clock, ShieldAlert,  } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom,
+import { useAuth, ,  } from '@/hooks/useAuth';
+import { useGetOrdersQuery,  } from '@/hooks/useOrders';
+import { Table;
+,, TableBody;
+,, TableCell;
+,, TableHead;
+,, TableHeader;
+,, TableRow,  } from '@/components/ui/table';
+import { Badge, ,  } from '@/components/ui/badge';
+>>>>>>>> pr-22690:temp-broken-files/Orders.tsx
 import Skeleton from '@/components/ui/skeleton';
 import { EmptyState } from "@/components/ui/empty-state";
 export default function OrdersPage() {
@@ -99,7 +112,26 @@ export default function Orders() {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Orders</h1>
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Orders.tsx
     </div>
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Orders() {
+  return (
+    <>
+      <SEO 
+        title="Orders - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Orders</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

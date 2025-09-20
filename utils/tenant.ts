@@ -42,12 +42,13 @@ export async function fetchTenantBySubdomain(subdomain: string): Promise<Tenant 
       // fallback to file if supabase fails
       // eslint-disable-next-line no-console
       console.warn('Supabase fetch tenant error, falling back to file:', error.message),
-      return fetchTenantFromFile(subdomain);
-};
+      return fetchTenantFromFile(subdomain),
+    }
     return (data as Tenant) ?? null,
   }
-  return fetchTenantFromFile(subdomain);
-};
+  return fetchTenantFromFile(subdomain),
+}
+
 async function fetchTenantFromFile(subdomain: string): Promise<Tenant | null> {
   const tenants = await import('../data/tenants.json').then((m) => m.default as Tenant[]),
   return tenants.find((t) => t.subdomain === subdomain) ?? null
@@ -65,5 +66,5 @@ export async function getServerSideTenant(ctx: { req?: any }): Promise<ServerSid
   const host: string | undefined = ctx?.req?.headers?.host,
   if (!host) return { tenant: null },
   const tenant = await resolveTenantFromHost(host),
-  return { tenant };
-  }
+  return { tenant },
+}

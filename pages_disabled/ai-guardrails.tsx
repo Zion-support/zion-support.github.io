@@ -4,13 +4,13 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 
 import { Shield, Lock, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
-export default function AIGuardrailsPage() : any {
+export default function AIGuardrailsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	},
+	};
 
 	const plans = [
 		{ name: 'Starter', price: '$99/month', items: ['PII redaction', 'Toxicity checks', 'Policy-based blocking', 'REST API'] },
@@ -23,7 +23,7 @@ export default function AIGuardrailsPage() : any {
 			<Head>
 				<title>AI Guardrails Platform | Zion Tech Group</title>
 				<meta name="description" content="Safety and compliance for AI. PII redaction, toxicity and jailbreak detection, policy enforcement with audit logs." />
-				<link rel="canonical" href="https: //ziontechgroup.com/ai-guardrails" />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
 			</Head>
 
 			<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
@@ -63,4 +63,4 @@ export default function AIGuardrailsPage() : any {
 			</div>
 		</UltraFuturisticBackground>
 	);
-  }
+}

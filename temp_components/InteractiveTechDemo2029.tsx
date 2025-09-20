@@ -153,8 +153,8 @@ const InteractiveTechDemo2029 = () => {
           }
           return prev + 2,
         }),
-      }100);
-};
+      }100),
+    }
     return () => clearInterval(interval),
   }[isRunning]),
 
@@ -185,5 +185,4 @@ const InteractiveTechDemo2029: React.FC = () => {
   )
 },
 
-export default InteractiveTechDemo2029;
-  }
+export default InteractiveTechDemo2029,

@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString();
-};
+  return new Date().toISOString(),
+}
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-HEALTH-MONITOR] ${message}`,
-  console.log(line);
-};
+  console.log(line),
+}
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,20 +26,20 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr);
-};
+    if (stderr) console.error(stderr),
+  }
   return { status, stdout, stderr },
 }
 ,
 function runGit(args, options = {}) {,
-  return run("git", args, options);
-};
+  return run("git", args, options),
+}
 ,
 function ensureRepoRoot() {,
   const gitDir = path.join(process.cwd(), ".git"),
   if (!fs.existsSync(gitDir)) {,
-    throw new Error(`No .git directory found in ${process.cwd()}`);
-};
+    throw new Error(`No .git directory found in ${process.cwd()}`),
+  }
 }
 ,
 function checkPm2Status() {,
@@ -110,8 +110,8 @@ function checkRedundancyLogs() {,
           lastModified: null,
           isRecent: false,
           healthy: false,
-          error: String(err)});
-};
+          error: String(err)}),
+      }
     }
 ,
     const healthy = logResults.filter(r => r.healthy).length,
@@ -162,8 +162,8 @@ function checkRedundancyReports() {,
           size: 0,
           lastModified: null,
           isRecent: false,
-          healthy: false});
-};
+          healthy: false}),
+      }
     }
 ,
     const healthy = reportResults.filter(r => r.healthy).length,
@@ -220,8 +220,8 @@ function checkRedundancyScripts() {,
           file: scriptFile,
           exists: false,
           size: 0,
-          healthy: false});
-};
+          healthy: false}),
+      }
     }
 ,
     const healthy = scriptResults.filter(r => r.healthy).length,
@@ -398,12 +398,13 @@ async function main() {,
     if (pm2Status.healthy && logCheck.healthy === logCheck.total && scriptCheck.healthy === scriptCheck.total) {,
       process.exit(0),
     } else {,
-      process.exit(1);
-};
+      process.exit(1),
+    }
+
   } catch (error) {,
     log(`Fatal error: ${String(error)}`),
-    process.exit(1);
-};
+    process.exit(1),
+  }
 }
 ,
 // Run if called directly,
@@ -411,8 +412,8 @@ if (require.main === module) {,
   main().catch(error => {,
     log(`Unhandled error: ${String(error)}`),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
 module.exports = {,
   main,

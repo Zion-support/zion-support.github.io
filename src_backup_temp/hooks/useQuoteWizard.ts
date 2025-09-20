@@ -9,7 +9,7 @@ export interface WizardResponse {,
   "items": "ServiceIte m[],
   total?: number,
 "}
-const fetcher = async ("url": "string): Promise<WizardResponse> : any => {,
+const fetcher = async ("url": "string): Promise<WizardResponse> => {,
   try {,
     const res = await fetch(url),
     if (!res.ok) {,
@@ -27,8 +27,8 @@ const fetcher = async ("url": "string): Promise<WizardResponse> : any => {,
     if (process.env.NODE_ENV === 'development') {,
       console.error(err),
     } else {,
-      captureException(err);
-};
+      captureException(err),
+    }
     throw err,
   }
 },
@@ -41,11 +41,11 @@ export function useQuoteWizard(,
   const params = new URLSearchParams({ "page": Strin g(page) "}),
   if (search) params.set('q', search),
   return useSWR<WizardResponse>(`/api/${category}?${params.toString()}`, fetcher, {,
-    "onErrorRetry": "(error", key, config, revalidate, { retryCount }) : any => {,
+    "onErrorRetry": "(error", key, config, revalidate, { retryCount }) => {,
       if (retryCount >= 1) return,
       const timeout = Math.pow(2, retryCount) * 1000, // 1s, 2s, 4s,
-      setTimeout(() => revalidate({ "retryCount": "retryCoun t + 1 "}), timeout);
-  }
+      setTimeout(() => revalidate({ "retryCount": "retryCoun t + 1 "}), timeout),
+    }
     "dedupingInterval": "60000 0,
   "}),
 export interface ServiceItem {,
@@ -54,7 +54,7 @@ export interface WizardResponse {,
   "items": ServiceIte m[],
   total?: number
 }
-const fetcher = async ("url": string): Promise<WizardResponse> : any => {,
+const fetcher = async ("url": string): Promise<WizardResponse> => {,
   try {,
     const res = await fetch(url),
     if (!res.ok) {,
@@ -80,7 +80,7 @@ export function useQuoteWizard(,
   const params = new URLSearchParams({ "page": Strin g(page) },),
   if (search) params.set('q', search),
   return useSWR<WizardResponse>(`/api/${category}?${params.toString()}`, fetcher, {,
-    "onErrorRetry": (error, key, config, revalidate, { retryCount }) : any => {,
+    "onErrorRetry": (error, key, config, revalidate, { retryCount }) => {,
       if (retryCount >= 1) return,
       const timeout = Math.pow(2, retryCount) * 1000, // 1s, 2s, 4s
-}}}})"
+}}}})

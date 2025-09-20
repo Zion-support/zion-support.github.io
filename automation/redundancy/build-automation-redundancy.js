@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString();
-};
+  return new Date().toISOString(),
+}
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-BUILD-AUTOMATION] ${message}`,
-  console.log(line);
-};
+  console.log(line),
+}
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,20 +26,20 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr);
-};
+    if (stderr) console.error(stderr),
+  }
   return { status, stdout, stderr },
 }
 ,
 function runGit(args, options = {}) {,
-  return run("git", args, options);
-};
+  return run("git", args, options),
+}
 ,
 function ensureRepoRoot() {,
   const gitDir = path.join(process.cwd(), ".git"),
   if (!fs.existsSync(gitDir)) {,
-    throw new Error(`No .git directory found in ${process.cwd()}`);
-};
+    throw new Error(`No .git directory found in ${process.cwd()}`),
+  }
 }
 ,
 function checkDependencies() {,
@@ -68,8 +68,8 @@ function checkDependencies() {,
         log(`npm install failed: ${installResult.stderr}`),
         return { healthy: false, error: "npm-install-failed", details: installResult.stderr },
       }
-      log("npm install completed successfully");
-};
+      log("npm install completed successfully"),
+    }
 ,
     // Validate package.json syntax,
     try {,
@@ -186,16 +186,16 @@ function validateBuildOutput() {,
             exists: true,
             type: "file",
             itemCount: 1,
-            healthy: true});
-};
+            healthy: true}),
+        }
       } else {,
         validationResults.push({,
           output: output,
           exists: false,
           type: "missing",
           itemCount: 0,
-          healthy: false});
-};
+          healthy: false}),
+      }
     }
 ,
     const healthy = validationResults.filter(r => r.healthy).length,
@@ -330,12 +330,13 @@ async function main() {,
     if (depsCheck.healthy && buildResult.success && outputValidation.healthy === outputValidation.total) {,
       process.exit(0),
     } else {,
-      process.exit(1);
-};
+      process.exit(1),
+    }
+
   } catch (error) {,
     log(`Fatal error: ${String(error)}`),
-    process.exit(1);
-};
+    process.exit(1),
+  }
 }
 ,
 // Run if called directly,
@@ -343,8 +344,8 @@ if (require.main === module) {,
   main().catch(error => {,
     log(`Unhandled error: ${String(error)}`),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
 module.exports = {,
   main,

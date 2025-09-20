@@ -19,13 +19,14 @@ interface RequestBody {
   messages: Message[]
 }
 
-serve(async (req) : any => {
+serve(async (req) => {
   initSentry(), // Initialize Sentry at the start of the function invocation
 
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders });
-};
+    return new Response(null, { headers: corsHeaders }),
+  }
+
   const requestBody = await req.json() as RequestBody,
   const userMessages = requestBody.messages,
   const lastUserMessage = userMessages.length > 0 ? userMessages[userMessages.length - 1].content : "N/A",
@@ -61,8 +62,9 @@ serve(async (req) : any => {
     const data = await response.json(),
     
     if (data.error) {
-      throw new Error(data.error.message);
-};
+      throw new Error(data.error.message),
+    }
+
     const assistantMessage = data.choices[0].message.content,
 
     logStructured("INFO", "AI chat interaction successful", {
@@ -88,6 +90,6 @@ serve(async (req) : any => {
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }
-    });
+    }),
   }
 }),

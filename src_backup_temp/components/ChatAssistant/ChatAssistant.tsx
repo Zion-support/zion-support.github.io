@@ -12,4 +12,4 @@ export default function ChatAssistant(props: any) {return (,
       </div>',
     </div>,
   ),,',
-"}",'
+"}",

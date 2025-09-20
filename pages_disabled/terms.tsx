@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function TermsPage() : any {
+export default function TermsPage() {
   const lastUpdated = 'January 15, 2025';
 
   const sections = [
@@ -128,8 +128,8 @@ export default function TermsPage() : any {
           >
             <h2 className="text-3xl font-bold text-white mb-6">Agreement to Terms</h2>
             <p className="text-gray-300 leading-relaxed mb-6">
-              These Terms of Service (&quot,Terms&quot,) govern your use of Zion Tech Group&apos;s services, including our website, 
-              applications, and any related services (collectively, the &quot,Services&quot,).
+              These Terms of Service (&quot;Terms&quot;) govern your use of Zion Tech Group&apos;s services, including our website, 
+              applications, and any related services (collectively, the &quot;Services&quot;).
             </p>
             <p className="text-gray-300 leading-relaxed">
               By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part 
@@ -279,7 +279,7 @@ export default function TermsPage() : any {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About These Terms?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              We&apos,re here to help clarify any questions you may have about our terms of service.
+              We&apos;re here to help clarify any questions you may have about our terms of service.
             </p>
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -310,4 +310,4 @@ export default function TermsPage() : any {
       <EnhancedFooter />
     </div>
   );
-}'
+}

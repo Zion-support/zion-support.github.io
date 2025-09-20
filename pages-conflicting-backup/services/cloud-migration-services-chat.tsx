@@ -17,6 +17,6 @@ const CloudMigrationServicesChat: NextPage = () => {
       </main>
     </div>
   );
-  };
+};
 
 export default CloudMigrationServicesChat;

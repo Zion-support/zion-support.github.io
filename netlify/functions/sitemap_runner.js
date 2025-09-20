@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'sitemap_runner',
         status: 'error'
       })
-    };
+    },
   }
 },

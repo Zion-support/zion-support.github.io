@@ -9,7 +9,7 @@ const NewsletterSignupPromotion2025 = () => {,
   useEffect(() => {,
     setIsVisible(true),
   }[]),
-  const handleSubmit = (e: React.FormEvent) : any => {,
+  const handleSubmit = (e: React.FormEvent) => {,
     e.preventDefault(),
     if (email) {,
       setIsSubscribed(true),
@@ -169,5 +169,5 @@ const NewsletterSignupPromotion2025: React.FC = () => {,
       </div>,
     </div>,
   ),
-export default NewsletterSignupPromotion2025;
-  }}'"
+export default NewsletterSignupPromotion2025,
+}}

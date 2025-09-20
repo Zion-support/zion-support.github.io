@@ -8,8 +8,8 @@ function resolveConflicts() {
   try {
     // Get list of conflicted files,
 const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-    console.log(`Found ${conflictedFiles.length} conflicted files: `)
-    conflictedFiles.forEach(file => console.log(`  - ${file}`));
+    console.log(`Found ${conflictedFiles.length} conflicted files: `),
+  conflictedFiles.forEach(file => console.log(`  - ${file}`));
     // For each conflicted file, accept the incoming changes (from the PR)
     conflictedFiles.forEach(file => {
       if (fs.existsSync(file)) {
@@ -96,7 +96,8 @@ const success = mergePR(branch);
 try {
           execSync('git merge --abort', { stdio: 'pipe' });
         } catch (abortError) {
-          // Ignore abort errors}
+          // Ignore abort errors,
+}
       }
     } catch (error) {
       console.error(`❌ Error processing ${branch}:`, error.message);
@@ -105,8 +106,8 @@ try {
   console.log('\n🎉 PR merge process completed!');
   // Show final status,
 try {
-    console.log('\n📊 Final git status: ')
-    execSync('git status --short', { stdio: 'inherit' });
+    console.log('\n📊 Final git status: '),
+  execSync('git status --short', { stdio: 'inherit' });
   } catch (error) {
     console.error('Error getting git status:', error.message);
   }

@@ -13,12 +13,12 @@ function renderRoute(path: string) {,
     <MemoryRouter initialEntries={[path]}>,
       <Routes>,
         <Route path="*" element={<AppLayout><div data-testid="content" /></AppLayout>} />"      </Routes>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
-    </MemoryRouter>);
-};
+    </MemoryRouter>),
+}
 ,
 describe('AppLayout', () => {'  it('hides header on auth routes', () => {'    mockUseAuth.mockReturnValue({ user: null, isAuthenticated: false, isLoading: false }),
     renderRoute('/login'),    expect(screen.queryByTestId('header')).not.toBeInTheDocument()  }),
   it('shows header on non-auth routes', () => {'    mockUseAuth.mockReturnValue({ user: null, isAuthenticated: false, isLoading: false }),
     renderRoute('/dashboard'),    expect(screen.getByTestId('header')).toBeInTheDocument()  }),
-  it('displays email verification banner when user email not verified', () => {'    mockUseAuth.mockReturnValue({ user: { id: 1', email: a@b.com', emailVerified: false }, isAuthenticated: true, isLoading: false }),    renderRoute('/dashboard'),    expect(screen.getByTestId('verify-banner')).toBeInTheDocument()  });
-  }),"
+  it('displays email verification banner when user email not verified', () => {'    mockUseAuth.mockReturnValue({ user: { id: 1', email: a@b.com', emailVerified: false }, isAuthenticated: true, isLoading: false }),    renderRoute('/dashboard'),    expect(screen.getByTestId('verify-banner')).toBeInTheDocument()  }),
+}),

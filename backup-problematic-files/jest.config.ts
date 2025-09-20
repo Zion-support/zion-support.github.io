@@ -105,8 +105,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de,
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }
-export default createJestConfig(config);
-};
+export default createJestConfig(config),
+}
 ,
 // createJestConfig is exported this way to ensure that next / jest can load the Next.js config which is async,
 export default createJestConfig (config),
@@ -127,4 +127,4 @@ const config: Config = {,
   }
 }
 export default createJestConfig (config),
-,)"
+,)

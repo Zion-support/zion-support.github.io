@@ -5,7 +5,7 @@ import { Routes, Route, Link } from 'react-router-dom',
 import { RouterWrapper } from '@/components/RouterWrapper',
 import { test, expect } from 'vitest',
 
-function TestApp() : any {
+function TestApp() {
   return (
     <RouterWrapper>
       <Routes>
@@ -13,10 +13,11 @@ function TestApp() : any {
         <Route path="/about" element={<div>About Page</div>} />
       </Routes>
     </RouterWrapper>
-  );
-};
+  ),
+}
+
 test('navigates between routes using RouterWrapper', async () => {
   render(<TestApp />),
   await userEvent.click(screen.getByText('About')),
-  expect(screen.getByText('About Page')).toBeInTheDocument();
-  }),
+  expect(screen.getByText('About Page')).toBeInTheDocument(),
+}),

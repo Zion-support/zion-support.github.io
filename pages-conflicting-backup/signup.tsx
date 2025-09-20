@@ -18,7 +18,7 @@ import {
   Cloud
 } from 'lucide-react'
 
-export default function Signup() : any {
+export default function Signup() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -30,12 +30,12 @@ export default function Signup() : any {
     website: '',
     industry: '',
     useCase: ''
-  });
+  })
 
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Record<string, string>>({})
 
   const industries = [
     'TechnologyHealthcare',
@@ -53,7 +53,7 @@ export default function Signup() : any {
     'Other'
   ]
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) : any => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -81,7 +81,7 @@ export default function Signup() : any {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) : any => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
     if (!validateForm()) return

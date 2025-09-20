@@ -1,20 +1,22 @@
 /** @type {import('next').NextConfig} */
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
-  assetPrefix,
-  output: 'export',
+  reactStrictMode: true,
   trailingSlash: true,
+  output: 'export',
+  
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  
+  // Image optimization
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for static export
   },
+
+  // Experimental features
   experimental: {
-    optimizePackageImports: ['@radix-ui/react-icons'],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
+    optimizeCss: true,
+    scrollRestoration: true,
   },
 };
 

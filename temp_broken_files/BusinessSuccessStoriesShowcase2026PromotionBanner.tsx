@@ -154,7 +154,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
               whileInView={{ opacity: 1, y: 0 }}
               className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8",
             >,
-              {stats.map((statindex) : any => {,
+              {stats.map((statindex) => {,
                 const StatIcon = stat.icon,
                 return (,
                   <div key={index} className="text-center">,
@@ -217,7 +217,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
               </div>,
               {/* Story Content */}
               <div className="space-y-4">,
-                {featuredStories.map((storyindex) : any => {,
+                {featuredStories.map((storyindex) => {,
                   const StoryIcon = story.icon,
                   const isActive = index === currentStory,
                   return (,
@@ -244,8 +244,8 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
                         </div>,
                       </div>,
                     </div>,
-                  );
-  })}
+                  ),
+                })}
               </div>,
               {/* Testimonial */}
               <div className="mt-6 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">,

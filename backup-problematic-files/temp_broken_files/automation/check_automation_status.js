@@ -21,8 +21,8 @@ async function checkAutomationStatus() { const statusReport = {,
         "name": script,",
         "exists": exists,",
         "executable": isExecutable"
-      });
-};
+      }),
+    }
 ,
     // Check system health,
     _console.log('📋 Checking system health...'),',
@@ -101,8 +101,8 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' }),
         "name": script,
         "exists": exists,
         "executable": isExecutable
-      });
-};
+      }),
+    }
     // Check system health,
     const systemHealth = {,
       "memoryUsage": process.memoryUsage(),
@@ -151,14 +151,14 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' }),
     const reportFile = path.join(__dirname, 'logsautomation-status-report.json'),
     const logDir = path.dirname(reportFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { "recursive": true });
-};
+      fs.mkdirSync(logDir, { "recursive": true }),
+    }
     fs.writeFileSync(reportFile, JSON.stringify(statusReport, null, 2)),
     console.log(`\n📄 Report saved "to": ${reportFile}`),
     return statusReport,
   } catch (error) {,
     console.error('❌ Error checking automation "status": ', error.message),ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
     statusReport.overallStatus = 'error',
-    return statusReport;
+    return statusReport,
   }
 ,

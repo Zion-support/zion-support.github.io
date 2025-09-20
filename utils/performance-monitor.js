@@ -10,22 +10,22 @@ if (typeof window !== 'undefined') {,
   // LCP monitoring,
   new PerformanceObserver((entryList) => {,
     for (const entry of entryList.getEntries()) {,
-      sendToAnalytics({ name: 'LCP', value: entry.startTime });
-};
+      sendToAnalytics({ name: 'LCP', value: entry.startTime }),
+    }
   }).observe({ entryTypes: ['largest-contentful-paint'] }),
   // FID monitoring,
   new PerformanceObserver((entryList) => {,
     for (const entry of entryList.getEntries()) {,
-      sendToAnalytics({ name: 'FID', value: entry.processingStart - entry.startTime });
-};
+      sendToAnalytics({ name: 'FID', value: entry.processingStart - entry.startTime }),
+    }
   }).observe({ entryTypes: ['first-input'] }),
   // CLS monitoring,
   new PerformanceObserver((entryList) => {,
     for (const entry of entryList.getEntries()) {,
       if (!entry.hadRecentInput) {,
-        sendToAnalytics({ name: 'CLS', value: entry.value });
-};
+        sendToAnalytics({ name: 'CLS', value: entry.value }),
+      }
     }
-  }).observe({ entryTypes: ['layout-shift'] });
-};
+  }).observe({ entryTypes: ['layout-shift'] }),
+}
 ,

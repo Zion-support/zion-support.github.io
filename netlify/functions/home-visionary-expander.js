@@ -52,6 +52,6 @@ exports.handler = async function(event, context) {
         function: 'home-visionary-expander',
         status: 'error'
       })
-    };
+    },
   }
 },

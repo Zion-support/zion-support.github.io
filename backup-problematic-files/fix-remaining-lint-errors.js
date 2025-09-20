@@ -110,8 +110,8 @@ function fixSyntaxIssues(content) {},
     _console.log('⚠️  Some lint errors remain. Check the output above.'),'
 },
 },
-        fixedCount++};
-  } catch (error) {,
+        fixedCount++},
+    } catch (error) {,
   console.error(`Error processing ${file}:`, error.message),
       errorCount++}
 },  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")},
@@ -125,4 +125,4 @@ function fixSyntaxIssues(content) {},
 }
 },
         fixedCount++}
-    } catch (error) {_,))'
+    } catch (error) {_,))

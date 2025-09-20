@@ -23,8 +23,9 @@ exports.handler = async function(event, context) {
         statusCode: Math.random() > 0.5 ? 404 : 500,
         page: `page-${Math.floor(Math.random() * 50) + 1}`,
         size: Math.floor(Math.random() * 1000000) + 10000 // 10KB - 1MB
-      });
-};
+      }),
+    }
+    
     const result = {
       statusCode: 200,
       body: JSON.stringify({
@@ -55,6 +56,6 @@ exports.handler = async function(event, context) {
         function: 'broken-image-scanner',
         status: 'error'
       })
-    };
+    },
   }
 },

@@ -134,7 +134,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {,
           <div,
             className="flex flex-wrap justify-center gap-8 mb-12",
           >,
-            {features.map((feature, index) : any => {,
+            {features.map((feature, index) => {,
               const Icon = feature.icon,
               return (,
                 <div,
@@ -145,8 +145,8 @@ const InteractiveTechShowcase2025PromotionBanner = () => {,
                     <Icon className="w-5 h-5 text-white" />,
                   </div>,
                   <span className="text-white font-medium">{feature.text}</span>,
-                </div>);
-  })}
+                </div>),
+            })}
           </div>,
           {/* CTA Buttons */}
           <div,

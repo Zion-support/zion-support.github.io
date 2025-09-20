@@ -118,7 +118,7 @@ const Blog: NextPage = () => {
       post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     
     return matchesCategory && matchesSearch
-  });
+  })
 
   const featuredPosts = blogPosts.filter(post => post.featured)
   const recentPosts = blogPosts.slice(0, 4)
@@ -334,10 +334,8 @@ const Blog: NextPage = () => {
                     </div>
                   </div>
                 </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
               </div>
             </div>
-=======
         <title>Blog - Zion Tech Group | Technology Insights & Industry Trends</title>
         <meta name="description" content="Stay updated with the latest technology insights, industry trends, and expert analysis from Zion Tech Group. Discover cutting-edge strategies for AI, cloud computing, cybersecurity, and more." />
         <meta name="keywords" content="technology blog, AI insights, cloud computing trends, cybersecurity analysis, business intelligence, digital transformation" />
@@ -445,7 +443,6 @@ const Blog: NextPage = () => {
                 </select>
               </div>
             </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </section>
 

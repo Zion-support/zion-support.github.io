@@ -20,7 +20,7 @@ class AutomationFactory {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
-};
+    }
   }
 
   loadStatus() {
@@ -31,7 +31,7 @@ class AutomationFactory {
       }
     } catch (error) {
       this.log(`Error loading status: ${error.message}`);
-};
+    }
   }
 
   saveStatus() {
@@ -40,11 +40,11 @@ class AutomationFactory {
         timestamp: new Date().toISOString(),
         runningScripts: Object.fromEntries(this.runningScripts),
         totalScripts: this.scripts.size
-      },
+      };
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
     } catch (error) {
       this.log(`Error saving status: ${error.message}`);
-};
+    }
   }
 
   log(message, level = 'INFO') {
@@ -59,7 +59,7 @@ class AutomationFactory {
       'lint-monitor': { file: 'lint-monitor.js', description: 'Continuous lint monitoring' },
       'lint-fixer': { file: 'lint-error-fixer.js', description: 'Automated lint error fixing' },
       'lint-manager': { file: 'lint-automation-manager.js', description: 'Lint automation management' }
-    },
+    };
 
     for (const [name, config] of Object.entries(scriptTypes)) {
       const scriptPath = path.join(__dirname, config.file);
@@ -72,7 +72,7 @@ class AutomationFactory {
           successCount: 0,
           errorCount: 0
         });
-};
+      }
     }
   }
 
@@ -91,7 +91,7 @@ class CodeQualityMonitor {
       testCoverage: 0,
       performance: 0,
       lastUpdated: new Date().toISOString()
-    },
+    };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
   }
 
@@ -107,7 +107,7 @@ class CodeQualityMonitor {
       this.log('Starting code quality analysis...');
       
       // Analyze TypeScript complexity
-      const result = execSync('npx tsc --noEmit', { encoding: 'utf8' }),
+      const result = execSync('npx tsc --noEmit', { encoding: 'utf8' });
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       this.metrics.testCoverage = this.calculateTestCoverage();
@@ -213,7 +213,7 @@ monitor.analyzeCodeQuality().then(metrics => {
       lastRun: null,
       successCount: 0,
       errorCount: 0
-    }),
+    });
     this.log('Generated enhanced code quality monitor script');
   }
 
@@ -257,7 +257,7 @@ class PerformanceOptimizer {
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
         recommendations: this.generateRecommendations()
-      },
+      };
       
       this.saveReport(report);
       this.log('Performance optimization completed');
@@ -277,7 +277,7 @@ class PerformanceOptimizer {
         recommendations: ['Consider code splitting', 'Remove unused dependencies']
       };
     } catch (error) {
-      return { error: error.message },
+      return { error: error.message };
     }
   }
 
@@ -288,28 +288,27 @@ class PerformanceOptimizer {
         optimized: 0,
         totalImages: 0,
         savings: '0KB'
-      },
+      };
     } catch (error) {
       return { error: error.message };
-  }
+    }
   }
 
   analyzeDependencies() {
     try {
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
       const dependencies = Object.keys(packageJson.dependencies || {});
-
-  const devDependencies = Object.keys(packageJson.devDependencies || {});
+      const devDependencies = Object.keys(packageJson.devDependencies || {});
       
       return {
         totalDependencies: dependencies.length + devDependencies.length,
         productionDependencies: dependencies.length,
         devDependencies: devDependencies.length,
         potentialUnused: this.findUnusedDependencies()
-      },
+      };
     } catch (error) {
       return { error: error.message };
-  }
+    }
   }
 
   findUnusedDependencies() {
@@ -351,7 +350,7 @@ optimizer.optimizePerformance().then(report => {
       lastRun: null,
       successCount: 0,
       errorCount: 0
-    }),
+    });
     this.log('Generated performance optimizer script');
   }
 
@@ -365,16 +364,16 @@ optimizer.optimizePerformance().then(report => {
     const startTime = Date.now();
 
     try {
-      this.log(`Starting script: ${scriptName}`),
-      this.runningScripts.set(scriptName, { startTime, pid: null }),
+      this.log(`Starting script: ${scriptName}`);
+      this.runningScripts.set(scriptName, { startTime, pid: null });
       this.saveStatus();
 
       const child = spawn('node', [script.path], {
         stdio: 'pipe',
         cwd: __dirname
-      }),
+      });
 
-      this.runningScripts.set(scriptName, { startTime, pid: child.pid }),
+      this.runningScripts.set(scriptName, { startTime, pid: child.pid });
       this.saveStatus();
 
       return new Promise((resolve) => {
@@ -434,7 +433,7 @@ optimizer.optimizePerformance().then(report => {
   }
 
   listScripts() {
-    console.log('\\nAvailable Automation Scripts: '),
+    console.log('\\nAvailable Automation Scripts:');
     console.log('==============================');
     
     for (const [name, script] of this.scripts) {
@@ -442,13 +441,14 @@ optimizer.optimizePerformance().then(report => {
       const lastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : 'Never';
       
       console.log(`\n${name}:`);
-      console.log(`  Description: ${script.description}`),
-      console.log(`  Status: ${status}`),
-      console.log(`  Last Run: ${lastRun}`),
-      console.log(`  Success Count: ${script.successCount}`),
+      console.log(`  Description: ${script.description}`);
+      console.log(`  Status: ${status}`);
+      console.log(`  Last Run: ${lastRun}`);
+      console.log(`  Success Count: ${script.successCount}`);
       console.log(`  Error Count: ${script.errorCount}`);
-};
-    console.log('\nRunning Scripts: '),
+    }
+    
+    console.log('\nRunning Scripts:');
     console.log('==================');
     for (const [name, info] of this.runningScripts) {
       const duration = Date.now() - info.startTime;
@@ -466,10 +466,10 @@ optimizer.optimizePerformance().then(report => {
       path.resolve(__dirname, '../**/*.js')
     ], {
       ignored: /node_modules|\.git|\.next/
-    }),
+    });
 
     watcher.on('change', (filePath) => {
-      this.log(`File changed: ${filePath}`),
+      this.log(`File changed: ${filePath}`);
       // Run code quality check on file changes
       this.runScript('code-quality').catch(error => {
         this.log(`Error running code quality check: ${error.message}`, 'ERROR');
@@ -506,7 +506,8 @@ switch (command) {
   case 'continuous':
     factory.startContinuousMode();
     break;
-  default: console.log('Usage:'),
+  default:
+    console.log('Usage:');
     console.log('  node automation-factory.js list');
     console.log('  node automation-factory.js run [script-name]');
     console.log('  node automation-factory.js generate');

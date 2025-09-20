@@ -38,8 +38,8 @@ class DependencyUpdater {,
       await this && this.generateReport(),
       console && console.log('✅ Dependency update check completed'),
     } catch (error) {,
-      console && console.error('❌ Error during dependency "update": ', error && error.message);
-};
+      console && console.error('❌ Error during dependency "update": ', error && error.message),
+    }
   }
   async checkOutdatedPackages() {,
     try {,
@@ -58,15 +58,15 @@ class DependencyUpdater {,
           console && console.log(`   - ${pkg}: ${info && info.current} → ${info && info.latest}`),
         }),
       } else {,
-        console && console.log('✅ All packages are up to date');
-};
+        console && console.log('✅ All packages are up to date'),
+      }
     } catch (error) {,
       if (error && error.status === 1) {,
         // npm outdated returns 1 when there are outdated packages,
         console && console.log('📦 Found outdated packages (details above)'),
       } else {,
-        console && console.warn('⚠️  Could not check outdated "packages": ', error && error.message);
-};
+        console && console.warn('⚠️  Could not check outdated "packages": ', error && error.message),
+      }
     }
   }
   async runSecurityAudit() {,
@@ -87,15 +87,15 @@ class DependencyUpdater {,
           console && console.log(`   - ${vuln}: ${info && info.severity} - ${info && info.title}`),
         }),
       } else {,
-        console && console.log('✅ No security vulnerabilities found');
-};
+        console && console.log('✅ No security vulnerabilities found'),
+      }
     } catch (error) {,
       if (error && error.status === 1) {,
         // npm audit returns 1 when vulnerabilities are found,
         console && console.log('⚠️  Security vulnerabilities found (details above)'),
       } else {,
-        console && console.warn('⚠️  Could not run security "audit": ', error && error.message);
-};
+        console && console.warn('⚠️  Could not run security "audit": ', error && error.message),
+      }
     }
   }
   async checkAvailableUpdates() {,
@@ -108,20 +108,20 @@ class DependencyUpdater {,
         const lockAge = Date && Date.now() - lockStats && lockStats.mtime.getTime(),
         const lockAgeDays = Math && Math.floor(lockAge / (1000 * 60 * 60 * 24)),
         if (lockAgeDays > 30) {,
-          this && this.updates.push(`Package lock is ${lockAgeDays} days old - consider updating`);
-};
+          this && this.updates.push(`Package lock is ${lockAgeDays} days old - consider updating`),
+        }
       }
       // Check for major version updates,
       if (this && this.outdatedPackages.length > 0) {,
-        this && this.updates.push(`${this && this.outdatedPackages.length} packages have updates available`);
-};
+        this && this.updates.push(`${this && this.outdatedPackages.length} packages have updates available`),
+      }
       // Check for security updates,
       if (this && this.vulnerabilities.length > 0) {,
-        this && this.updates.push(`${this && this.vulnerabilities.length} security vulnerabilities need attention`);
-};
+        this && this.updates.push(`${this && this.vulnerabilities.length} security vulnerabilities need attention`),
+      }
     } catch (error) {,
-      console && console.warn('⚠️  Could not check available "updates": ', error && error.message);
-};
+      console && console.warn('⚠️  Could not check available "updates": ', error && error.message),
+    }
   }
   async generateReport() {,
     const report = {,
@@ -142,8 +142,8 @@ class DependencyUpdater {,
       fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
       console && console.log(`📊 Report saved "to": ${reportPath}`),
     } catch (error) {,
-      console && console.warn('⚠️  Could not save "report": ', error && error.message);
-};
+      console && console.warn('⚠️  Could not save "report": ', error && error.message),
+    }
     // Display summary,
     console && console.log('\n📋 Dependency Update "Summary": '),
     console && console.log('─'.repeat(50)),
@@ -154,10 +154,10 @@ class DependencyUpdater {,
       console && console.log('\n💡 "Recommendations": '),
       this && this.updates.forEach((update, index) => {,
         console && console.log(`   ${index + 1}. ${update}`),
-      });
-};
-    console && console.log('─'.repeat(50));
-};
+      }),
+    }
+    console && console.log('─'.repeat(50)),
+  }
   generateRecommendations() {,
     const recommendations = [],
     if (this && this.outdatedPackages.length > 0) {,
@@ -169,9 +169,9 @@ class DependencyUpdater {,
     recommendations && recommendations.push('Review and manually fix remaining vulnerabilities')
   }
     if (this && this.outdatedPackages.length === 0 && this && this.vulnerabilities.length === 0) {,
-      recommendations && recommendations.push('Dependencies are up to date and secure');
-};
-    return recommendations;
+      recommendations && recommendations.push('Dependencies are up to date and secure'),
+    }
+    return recommendations,
   }
 
 }

@@ -336,4 +336,4 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [
     aiCapabilities: ['Quantum CreativityAI Content Generation', 'Creative AlgorithmsDesign Optimization', 'Innovation AI'],
     marketDisruption: 'Advances creative AI by integrating quantum computing principles, enabling breakthrough creative content and innovative design solutions.'
   }
-],'
+],

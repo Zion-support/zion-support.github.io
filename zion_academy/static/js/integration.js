@@ -21,15 +21,15 @@ class ZionIntegration {,
 ,
         this.setupContentTracking(),
         this.setupFeedbackIntegration(),
-        console.log('Zion Analytics & Feedback integration initialized');
-};
+        console.log('Zion Analytics & Feedback integration initialized'),
+    }
 ,
     setupContentTracking() {,
         // Add data attributes to existing content for better tracking,
         this.addTrackingAttributes(),
         // Track custom events for existing functionality,
-        this.trackExistingFeatures();
-};
+        this.trackExistingFeatures(),
+    }
 ,
     addTrackingAttributes() {,
         // Add course tracking to course cards,
@@ -58,8 +58,8 @@ class ZionIntegration {,
             if (lessonId) {,
                 btn.dataset.lessonId = lessonId,
             }
-        });
-};
+        }),
+    }
 ,
     extractIdFromUrl(url) {,
         if (!url) return null,
@@ -92,8 +92,8 @@ class ZionIntegration {,
             form.addEventListener('submit', (e) => {,
                 const query = form.querySelector('input[name="q"], input[type="search"]')?.value,
                 if (query) {,
-                    this.analytics.trackEvent('search', { query: query });
-};
+                    this.analytics.trackEvent('search', { query: query }),
+                }
             }),
         }),
         // Track navigation,
@@ -115,30 +115,30 @@ class ZionIntegration {,
                     form_action: form.action,
                     form_method: form.method}),
             }),
-        });
-};
+        }),
+    }
 ,
     setupFeedbackIntegration() {,
         // Add feedback buttons to content pages,
         this.addFeedbackButtons(),
         // Add feedback links to course/lesson pages,
-        this.addFeedbackLinks();
-};
+        this.addFeedbackLinks(),
+    }
 ,
     addFeedbackButtons() {,
         // Add feedback button to course pages,
         const courseContent = document.querySelector('.course-content, .course-detail'),
         if (courseContent) {,
             const feedbackBtn = this.createFeedbackButton('course'),
-            courseContent.appendChild(feedbackBtn);
-};
+            courseContent.appendChild(feedbackBtn),
+        }
 ,
         // Add feedback button to lesson pages,
         const lessonContent = document.querySelector('.lesson-content, .lesson-detail'),
         if (lessonContent) {,
             const feedbackBtn = this.createFeedbackButton('lesson'),
-            lessonContent.appendChild(feedbackBtn);
-};
+            lessonContent.appendChild(feedbackBtn),
+        }
     }
 ,
     createFeedbackButton(contentType) {,
@@ -169,8 +169,8 @@ class ZionIntegration {,
         lessonItems.forEach(item => {,
             const feedbackLink = this.createFeedbackLink('lesson', item),
             item.appendChild(feedbackLink),
-        });
-};
+        }),
+    }
 ,
     createFeedbackLink(contentType, parentElement) {,
         const link = document.createElement('a'),
@@ -198,8 +198,8 @@ class ZionIntegration {,
     // Utility methods for manual tracking,
     trackCustomEvent(eventName, data = {}) {,
         if (this.analytics) {,
-            this.analytics.trackCustomEvent(eventName, data);
-};
+            this.analytics.trackCustomEvent(eventName, data),
+        }
     }
 ,
     trackContentView(contentType, contentId, contentTitle) {,
@@ -209,20 +209,20 @@ class ZionIntegration {,
                 content_title: contentTitle}, {,
                 content_type: contentType,
                 [contentType === 'course' ? 'course_id' : 'lesson_id']: contentId
-            });
-};
+            }),
+        }
     }
 ,
     trackContentCompletion(contentType, contentId, contentTitle) {,
         if (this.analytics) {,
-            this.analytics.trackCompletion(contentType, contentId, contentTitle);
-};
+            this.analytics.trackCompletion(contentType, contentId, contentTitle),
+        }
     }
 ,
     showFeedback(contentType, contentId, contentTitle) {,
         if (this.feedback) {,
-            this.feedback.showFeedbackForContent(contentType, contentId, contentTitle);
-};
+            this.feedback.showFeedbackForContent(contentType, contentId, contentTitle),
+        }
     }
 ,
     // Method to get analytics data for display,
@@ -264,8 +264,8 @@ class ZionIntegration {,
                     </div>,
                 `,
             }
-        });
-};
+        }),
+    }
 }
 ,
 // Initialize integration when DOM is ready,
@@ -274,5 +274,5 @@ document.addEventListener('DOMContentLoaded', () => {,
 }),
 // Export for module systems,
 if (typeof module !== 'undefined' && module.exports) {,
-    module.exports = ZionIntegration;
-  }
+    module.exports = ZionIntegration,
+}

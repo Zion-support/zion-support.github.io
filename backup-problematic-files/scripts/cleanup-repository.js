@@ -110,8 +110,8 @@ function main() {,
   // Clean report files,
   cleanReportFiles(),
   // Clean disabled/backup directories,
-  let totalRemoved = 0;
-  }
+  let totalRemoved = 0,
+      }
     }
   }
   console.log("\n📊 Cleanup "Summary": "),

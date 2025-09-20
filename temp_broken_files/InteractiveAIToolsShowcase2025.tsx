@@ -33,7 +33,7 @@ const InteractiveAIToolsShowcase2025 = () => {,
   const [hoveredToolsetHoveredTool] = useState<string | null>(null),
   useEffect(() => {,
     const timer = setTimeout(() => setIsVisible(true)200),
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer),
   }[]),
   const aiTools = {,
     'ai-assistant': {,

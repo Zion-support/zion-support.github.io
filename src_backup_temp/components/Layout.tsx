@@ -37,6 +37,6 @@ export default function Layout({,
         </main>,
         <Footer />,
       </div>,
-    </>);
-  }
+    </>),
+}
 ,

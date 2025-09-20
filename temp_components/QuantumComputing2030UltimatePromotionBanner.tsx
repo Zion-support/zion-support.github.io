@@ -1,6 +1,6 @@
 import React from 'react',
 import Link from 'next/link',
-export default function QuantumComputing2030UltimatePromotionBanner() : any {,
+export default function QuantumComputing2030UltimatePromotionBanner() {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">,
       {/* Animated background elements */}
@@ -103,5 +103,5 @@ export default function QuantumComputing2030UltimatePromotionBanner() : any {,
           </div>,
         </div>,
       </div>,
-    </div>);
-  }
+    </div>),
+}

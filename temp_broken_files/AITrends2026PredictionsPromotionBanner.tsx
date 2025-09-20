@@ -212,6 +212,6 @@ const AITrends2026PredictionsPromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  );
-  },
+  ),
+},
 export default AITrends2026PredictionsPromotionBanner,

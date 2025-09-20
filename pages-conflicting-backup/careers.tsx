@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock } from 'lucide-react'
 
 
-export default function Careers() : any {
+export default function Careers() {
 	const openPositions = [
 		{
 			title: 'Senior AI Engineer',

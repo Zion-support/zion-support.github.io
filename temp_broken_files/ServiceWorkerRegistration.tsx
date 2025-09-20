@@ -9,7 +9,7 @@ interface ServiceWorkerRegistrationProps {,
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
   onUpdateAvailable,
   onUpdateInstalled
-}) : any => {,
+}) => {,
   const [isInstalling, setIsInstalling] = useState(false),
   const [isUpdateAvailable, setIsUpdateAvailable] = useState(false),
   const [isUpdateInstalled, setIsUpdateInstalled] = useState(false),
@@ -17,8 +17,8 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
   const [error, setError] = useState<string | null>(null),
   useEffect(() => {,
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {,
-      registerServiceWorker();
-};
+      registerServiceWorker(),
+    }
   }, []),
   const registerServiceWorker = async () => {,
     try {,
@@ -31,10 +31,10 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
           newWorker.addEventListener('statechange', () => {,
             if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {,
               setIsUpdateAvailable(true),
-              onUpdateAvailable?.();
-};
-          });
-};
+              onUpdateAvailable?.(),
+            }
+          }),
+        }
       }),
       // Handle controller change (update installed),
       navigator.serviceWorker.addEventListener('controllerchange', () => {,
@@ -46,15 +46,15 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
         }, 1000),
       }),
       // Handle service worker messages,
-      navigator.serviceWorker.addEventListener('message', (event) : any => {,
+      navigator.serviceWorker.addEventListener('message', (event) => {,
         if (event.data && event.data.type === 'SW_VERSION') {,
-          console.log('Service Worker version:', event.data.version);
-};
+          console.log('Service Worker version:', event.data.version),
+        }
       }),
     } catch (error) {,
       console.error('Service worker registration failed:', error),
-      setError('Failed to register service worker');
-};
+      setError('Failed to register service worker'),
+    }
   },
   const handleUpdate = async () => {,
     if (!registration) return,
@@ -63,8 +63,8 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
     try {,
       // Send message to service worker to skip waiting,
       if (registration.waiting) {,
-        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-};
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' }),
+      }
 ,
       // Check for updates,
       await registration.update(),
@@ -74,8 +74,8 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
       console.error('Update failed:', error),
       setError('Failed to update application'),
     } finally {,
-      setIsInstalling(false);
-};
+      setIsInstalling(false),
+    }
   },
   const handleDismiss = () => {,
     setIsUpdateAvailable(false),
@@ -193,6 +193,6 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
         </div>,
       )}
     </div>,
-  );
-  },
-export default ServiceWorkerRegistration,'
+  ),
+},
+export default ServiceWorkerRegistration,

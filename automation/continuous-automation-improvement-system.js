@@ -32,8 +32,8 @@ class ContinuousImprovementSystem {
         if (result.valid) {
           analysis.valid++,
         } else {
-          analysis.issues.push(result);
-};
+          analysis.issues.push(result),
+        }
       }
 
       // Generate recommendations
@@ -72,18 +72,22 @@ class ContinuousImprovementSystem {
       try {
         require('yaml').parse(content),
       } catch (error) {
-        issues.push(`Invalid YAML syntax: ${error.message}`);
-};
+        issues.push(`Invalid YAML syntax: ${error.message}`),
+      }
+      
       // Check for common issues
       if (content.includes('\\n') && content.includes('"')) {
-        issues.push('Malformed multi-line commands detected');
-};
+        issues.push('Malformed multi-line commands detected'),
+      }
+      
       if (!content.includes('timeout-minutes')) {
-        issues.push('Missing timeout configuration');
-};
+        issues.push('Missing timeout configuration'),
+      }
+      
       if (!content.includes('concurrency')) {
-        issues.push('Missing concurrency control');
-};
+        issues.push('Missing concurrency control'),
+      }
+      
       return {
         file: fileName,
         valid: issues.length === 0,
@@ -102,11 +106,13 @@ class ContinuousImprovementSystem {
     const recommendations = [],
     
     if (analysis.issues.length > 0) {
-      recommendations.push('Fix workflow syntax errors and validation issues');
-};
+      recommendations.push('Fix workflow syntax errors and validation issues'),
+    }
+    
     if (analysis.total > 50) {
-      recommendations.push('Consider consolidating workflows to reduce complexity');
-};
+      recommendations.push('Consider consolidating workflows to reduce complexity'),
+    }
+    
     recommendations.push('Add proper error handling with continue-on-error and if: always()'),
     recommendations.push('Implement proper timeout values for all jobs'),
     recommendations.push('Use concurrency groups to prevent resource conflicts'),
@@ -130,8 +136,9 @@ class ContinuousImprovementSystem {
     
     // Ensure reports directory exists
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-};
+      fs.mkdirSync(this.reportsDir, { recursive: true }),
+    }
+    
     const reportPath = path.join(this.reportsDir, 'workflow-improvement-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     
@@ -154,8 +161,8 @@ class ContinuousImprovementSystem {
           console.log('💡 Recommendations: '),
           report.recommendations.forEach((rec, index) => {
             console.log(`  ${index + 1}. ${rec}`),
-          });
-};
+          }),
+        }
       }
       
       if (mode === 'continuous') {
@@ -169,8 +176,8 @@ class ContinuousImprovementSystem {
       
     } catch (error) {
       console.error('❌ System error:', error.message),
-      process.exit(1);
-};
+      process.exit(1),
+    }
   }
 }
 
@@ -178,7 +185,7 @@ class ContinuousImprovementSystem {
 if (require.main === module) {
   const system = new ContinuousImprovementSystem(),
   const mode = process.argv[2] || 'once',
-  system.run(mode);
-  }
+  system.run(mode),
+}
 
-module.exports = ContinuousImprovementSystem,"
+module.exports = ContinuousImprovementSystem,

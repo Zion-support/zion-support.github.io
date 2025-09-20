@@ -9,7 +9,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function PortfolioPage() : any {
+export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -21,7 +21,7 @@ export default function PortfolioPage() : any {
     { id: 'space', name: 'Space Technology', icon: Rocket },
     { id: 'edge', name: 'Edge Computing', icon: Cpu },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building }
-  ],
+  ];
 
   const projects = [
     {
@@ -102,7 +102,7 @@ export default function PortfolioPage() : any {
       github: '#',
       featured: false
     }
-  ],
+  ];
 
   const filteredProjects = projects.filter(project => {
     const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
@@ -117,7 +117,7 @@ export default function PortfolioPage() : any {
     { number: '50+', label: 'Enterprise Clients', icon: Users },
     { number: '99.9%', label: 'Client Satisfaction', icon: Star },
     { number: '$500M+', label: 'Value Delivered', icon: TrendingUp }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -361,4 +361,4 @@ export default function PortfolioPage() : any {
       <EnhancedFooter />
     </div>
   );
-  }'
+}

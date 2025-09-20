@@ -75,8 +75,9 @@ Object.defineProperty(window, 'scrollTo', {
 
 // Polyfill for URL.revokeObjectURL
 if (typeof URL.revokeObjectURL === 'undefined') {
-  URL.revokeObjectURL = vi.fn();
-};
+  URL.revokeObjectURL = vi.fn(),
+}
+
 // Polyfill for BroadcastChannel
 if (typeof BroadcastChannel === 'undefined') {
   // @ts-expect-error - BroadcastChannel polyfill for test environment
@@ -106,7 +107,7 @@ if (typeof window.Shoplocket === 'undefined') {
 }
 
 // Mock safeStorage and safeSessionStorage
-vi.mock('@/utils/safeStorage', async (importOriginal) : any => {
+vi.mock('@/utils/safeStorage', async (importOriginal) => {
   const actual = await importOriginal() as any, // Type assertion
   return {
     ...actual,
@@ -144,7 +145,7 @@ vi.mock('firebase/app', () => ({
 })),
 
 vi.mock('firebase/firestore', () => {
-  const mockCollection = vi.fn((firestoreInstanceOrPath, pathIfV8) : any => {
+  const mockCollection = vi.fn((firestoreInstanceOrPath, pathIfV8) => {
     const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath : pathIfV8,
     return {
       path: actualPath,
@@ -163,7 +164,7 @@ vi.mock('firebase/firestore', () => {
     },
   }),
 
-  const mockDoc = vi.fn((firestoreInstanceOrCollectionRef, pathOrId, ...pathSegments) : any => {
+  const mockDoc = vi.fn((firestoreInstanceOrCollectionRef, pathOrId, ...pathSegments) => {
     let basePath = '',
     if (typeof (firestoreInstanceOrCollectionRef as any).path === 'string') {
       basePath = (firestoreInstanceOrCollectionRef as any).path,
@@ -287,6 +288,5 @@ vi.mock('react-redux', async () => {
     ...actualRedux,
     useDispatch: () => vi.fn(),
     useSelector: vi.fn(() => ({}))
-  };
-  }),
-'
+  },
+}),

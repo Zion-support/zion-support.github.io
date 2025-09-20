@@ -25,8 +25,8 @@ async function main() {,
   fs.writeFileSync(,
     path.join(__dirname, "..", "deployment.json"),
     JSON.stringify(output, null, 2),
-  );
-};
+  ),
+}
 ,
 main().catch((error) => {,
   console.error(error),

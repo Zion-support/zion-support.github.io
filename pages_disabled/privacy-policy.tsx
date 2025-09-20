@@ -378,7 +378,7 @@ const PrivacyPolicy: NextPage = () => {
               We&apos;re committed to transparency and protecting your privacy. 
               If you have any questions or concerns, don&apos;t hesitate to reach out.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
@@ -399,6 +399,6 @@ const PrivacyPolicy: NextPage = () => {
       <Footer />
     </div>
   );
-  };
+};
 
 export default PrivacyPolicy;

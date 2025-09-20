@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 console.log('📊 Starting continuous performance monitoring automation...');
 
 // Get automation interval from environment variable (default: 2 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000, // 2 hours
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
 
 async function runPerformanceMonitor() {
   try {
@@ -19,7 +19,7 @@ async function runPerformanceMonitor() {
     
     // Build the project first
     console.log('🏗️ Building project for performance analysis...');
-    execSync('npm run build', { stdio: 'inherit' }),
+    execSync('npm run build', { stdio: 'inherit' });
     
     // Check bundle size
     console.log('📦 Analyzing bundle size...');
@@ -28,7 +28,7 @@ async function runPerformanceMonitor() {
       if (fs.existsSync(distDir)) {
         const stats = fs.statSync(distDir);
         const sizeInMB = (stats.size / (1024 * 1024)).toFixed(2);
-        console.log(`📊 Total bundle size: ${sizeInMB} MB`),
+        console.log(`📊 Total bundle size: ${sizeInMB} MB`);
         
         if (stats.size > 50 * 1024 * 1024) { // 50MB
           console.log('⚠️  Bundle size is large, consider optimization');
@@ -54,7 +54,7 @@ async function runPerformanceMonitor() {
         if (stats.size > 100 * 1024) { // 100KB
           largeFiles++;
           console.log(`⚠️  Large file detected: ${file} (${(stats.size / 1024).toFixed(2)} KB)`);
-};
+        }
       }
       
       if (largeFiles === 0) {
@@ -80,7 +80,7 @@ async function runPerformanceMonitor() {
           const content = fs.readFileSync(file, 'utf8');
           const lines = content.split('\n');
           
-          for (let i = 0, i < lines.length, i++) {
+          for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
             if (line.startsWith('import ') && !line.includes('// used')) {
               // Simple check for unused imports (not comprehensive)
@@ -115,7 +115,7 @@ async function runPerformanceMonitor() {
       const usedMB = (memoryUsage.heapUsed / 1024 / 1024).toFixed(2);
       const totalMB = (memoryUsage.heapTotal / 1024 / 1024).toFixed(2);
       
-      console.log(`📊 Memory usage: ${usedMB} MB used / ${totalMB} MB total`),
+      console.log(`📊 Memory usage: ${usedMB} MB used / ${totalMB} MB total`);
       
       if (memoryUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
         console.log('⚠️  High memory usage detected');
@@ -162,4 +162,4 @@ runPerformanceMonitor();
 // Set up interval for continuous automation
 setInterval(runPerformanceMonitor, AUTOMATION_INTERVAL);
 
-console.log(`⏰ Performance monitoring scheduled to run every ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);'"
+console.log(`⏰ Performance monitoring scheduled to run every ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);

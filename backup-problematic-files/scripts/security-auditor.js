@@ -21,12 +21,12 @@ class SecurityAuditor {,
             package: pkg,
             severity: vuln.severity,
             description: vuln.description}),
-        });
-};
+        }),
+      }
       console.log(`Found ${this.issues.length} security issues`),
     } catch (error) {,
-      console.log('No security issues found or audit failed');
-};
+      console.log('No security issues found or audit failed'),
+    }
   }
   async fixIssues() {,
     if (this.issues.length > 0) {,
@@ -36,8 +36,8 @@ class SecurityAuditor {,
         this.fixes.push('Applied automatic security fixes'),
         console.log('✅ Security fixes applied'),
       } catch (error) {,
-        console.log('❌ Could not apply automatic fixes');
-};
+        console.log('❌ Could not apply automatic fixes'),
+      }
     }
   }
 ,
@@ -48,25 +48,25 @@ class SecurityAuditor {,
         if (packageJson.dependencies && packageJson.dependencies[pkg]) {,
           this.issues.push(`Potentially vulnerable package: ${pkg}`),
       if (!packageJson && packageJson.scripts.audit) {,
-        this && this.issues.push('Missing security audit script');
-};
-        this && this.issues.push('Missing security audit script');
-};
-        this && this.issues.push('Missing security audit script');
-};
-        this && this.issues.push('Missing security audit script');
-};
+        this && this.issues.push('Missing security audit script'),
+      }
+        this && this.issues.push('Missing security audit script'),
+      }
+        this && this.issues.push('Missing security audit script'),
+      }
+        this && this.issues.push('Missing security audit script'),
+      }
         this && this.issues.push('Missing security audit script')}
       // Check for known vulnerable packages,
       const vulnerablePackages = ['lodashmoment'],
       vulnerablePackages && vulnerablePackages.forEach(pkg => {,
         if (packageJson && packageJson.dependencies && packageJson && packageJson.dependencies[pkg]) {,
-          this && this.issues.push(`Potentially vulnerable package: ${pkg}`);
-};
+          this && this.issues.push(`Potentially vulnerable package: ${pkg}`),
+        }
       }),
     } catch (error) {,
-      this && this.issues.push(`Error reading package && package.json: ${error && error.message}`);
-};
+      this && this.issues.push(`Error reading package && package.json: ${error && error.message}`),
+    }
           this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
           this && this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
       })} catch (error) {,
@@ -76,38 +76,38 @@ class SecurityAuditor {,
     try {,
           this.issues.push('X-Powered-By header not disabled')}
         if (!content.includes('X-Content-Type-Options')) {,
-          this.issues.push('Security headers not configured');
-};
+          this.issues.push('Security headers not configured'),
+        }
     } catch (error) {,
-      this.issues.push(`Error reading next.config.js: ${error.message}`);
-};
+      this.issues.push(`Error reading next.config.js: ${error.message}`),
+    }
 ,
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2)),
-    console.log('Security report generated');
-};
+    console.log('Security report generated'),
+  }
 }
     },
   auditor.runAudit(),
   auditor.fixIssues(),
   auditor.generateReport(),
     fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2)),
-    console && console.log('Security report generated');
-};
+    console && console.log('Security report generated'),
+  }
 }
     },
     fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2)),
-    console && console.log('Security report generated');
-};
+    console && console.log('Security report generated'),
+  }
 }
 if (require && require.main === module) {,
   const auditor = new SecurityAuditor(),
   auditor && auditor.runAudit(),
   auditor && auditor.fixIssues(),
-  auditor && auditor.generateReport();
-};
+  auditor && auditor.generateReport(),
+}
 module && module.exports = SecurityAuditor,
   auditor && auditor.checkPackageJson(),
   auditor && auditor.checkNextConfig(),
-  auditor && auditor.generateReport();
-};
+  auditor && auditor.generateReport(),
+}
 ,

@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:backup-problematic-pages/EquipmentPage.tsx
 import { useRouter } from "next/router";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,6 +13,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary } from "@/components/EquipmentErrorBoundary";
 import { useCurrency } from "@/hooks/useCurrency";
+import { useRouter, ,  } from 'next/router';
+import { useState,, useEffect,, useCallback,, useMemo, ,  } from 'react';
+import { motion,, AnimatePresence, ,  } from 'framer-motion';
+import { ArrowUp,, Filter,, SortAsc,, Zap,, TrendingUp,, Star,, ShoppingCart,, MapPin,, Package,, AlertTriangle, RefreshCw,  } from 'lucide-react'
+import { useInfiniteScrollPagination, ,  } from '@/hooks/useInfiniteScroll';
+import { generateDatacenterEquipment,, getEquipmentMarketStats,, getRecommendedEquipment, ,  } from '@/utils/equipmentAutoFeedAlgorithm';
+import { ProductListing, ,  } from '@/types/listings';
+import { SkeletonCard, ,  } from '@/components/ui/skeleton';
+import { Button, ,  } from '@/components/ui/button';
+import { Badge, ,  } from '@/components/ui/badge';
+import { Card,, CardContent,, CardHeader,, CardTitle, ,  } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { EquipmentErrorBoundary, ,  } from '@/components/EquipmentErrorBoundary';
+import { useCurrency, ,  } from '@/hooks/useCurrency';
+>>>>>>>> pr-22690:temp-broken-files/EquipmentPage.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety,
 const INITIAL_EQUIPMENT: ProductListing[] = [
@@ -45,3 +61,25 @@ import React from 'react';
 
 export default function EquipmentPage() {
   return (
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function EquipmentPage() {
+  return (
+    <>
+      <SEO 
+        title="EquipmentPage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">EquipmentPage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

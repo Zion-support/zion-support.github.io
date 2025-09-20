@@ -195,7 +195,7 @@ const AIToolsShowcase2026 = () => {,
         <div,
           className="flex flex-wrap justify-center gap-3 mb-12",
         >,
-          {categories.map((category) : any => {,
+          {categories.map((category) => {,
             const Icon = category.icon,
             return (,
               <button,
@@ -220,7 +220,7 @@ const AIToolsShowcase2026 = () => {,
           className="grid md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
         >,
           <div>,
-            {filteredTools.map((toolindex) : any => {,
+            {filteredTools.map((toolindex) => {,
               const Icon = tool.icon,
               return (,
                 <div,
@@ -292,8 +292,8 @@ const AIToolsShowcase2026 = () => {,
                       </div>)}
                   </div>,
                 </div>,
-              );
-  })}
+              ),
+            })}
           </div>,
         </div>,
         {/* Call to Action */}

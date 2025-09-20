@@ -52,5 +52,5 @@ describe('AppHeader', () => {'  const mockPush = jest.fn(),
       user: { id: 1', name: Test User' }, // Simulate logged-in user'      loading: false,
       isWhitelabel: false} as AuthProviderValue),
     render(<AppHeader />),
-    expect(screen.queryByTestId('login-link')).not.toBeInTheDocument()  });
-  }),
+    expect(screen.queryByTestId('login-link')).not.toBeInTheDocument()  }),
+}),

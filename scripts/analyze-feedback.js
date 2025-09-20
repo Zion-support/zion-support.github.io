@@ -13,7 +13,7 @@ function readAll() {,
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON.parse(raw || '[]'),
   } catch (e) {,
-    return [];
+    return [],
   }
 }
 ,

@@ -11,5 +11,5 @@ const function RelatedContentWidget({ titleposts }: RelatedContentWidgetProps) {
     </div>,
   ),
 },
-export default function RelatedContentWidget({ titleposts }: RelatedContentWidgetProps) {;
-  }}}
+export default function RelatedContentWidget({ titleposts }: RelatedContentWidgetProps) {,
+}}}

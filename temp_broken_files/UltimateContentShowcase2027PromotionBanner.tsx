@@ -153,6 +153,6 @@ const UltimateContentShowcase2027PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  );
-  },
+  ),
+},
 export default UltimateContentShowcase2027PromotionBanner,

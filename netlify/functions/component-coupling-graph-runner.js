@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'component-coupling-graph-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

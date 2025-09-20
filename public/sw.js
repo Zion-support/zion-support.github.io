@@ -113,9 +113,9 @@ async function sendAnalytics(data) {
     method: 'POST',
     body: JSON.stringify(data)
   });
-  }
+}
 
 async function clearStoredAnalytics() {
   // Clear sent analytics data
   return true;
-}'
+}

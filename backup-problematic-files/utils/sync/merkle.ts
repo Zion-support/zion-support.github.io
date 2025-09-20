@@ -16,8 +16,8 @@ export function leafHashForVote(vote: ProposalVoteEntry): string {,
     voterId: vote.voterId,
     weight: vote.weight,
     choice: vote.choice}),
-  return sha256Hex(canonical);
-};
+  return sha256Hex(canonical),
+}
 ,
 export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {,
   if (!votes || votes.length === 0) return sha256Hex("EMPTY"),
@@ -25,8 +25,8 @@ export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {
     .slice(),
     .sort((a, b) => a.voterId.localeCompare(b.voterId)),
     .map(leafHashForVote),
-  return computeMerkleRootFromLeaves(leaves);
-};
+  return computeMerkleRootFromLeaves(leaves),
+}
 ,
 export function computeMerkleRootFromLeaves(leaves: string[]): string {,
   if (leaves.length === 0) return sha256Hex("EMPTY"),
@@ -36,12 +36,12 @@ export function computeMerkleRootFromLeaves(leaves: string[]): string {,
     for (let i = 0, i < layer.length, i += 2) {,
       const left = layer[i],
       const right = i + 1 < layer.length ? layer[i + 1] : left,
-      next.push(sha256Hex(left + right));
-};
+      next.push(sha256Hex(left + right)),
+    }
     layer = next,
   }
-  return layer[0];
-  }
+  return layer[0],
+}
 ,
 export function verifyVotesAgainstMerkleRoot(,
   votes: ProposalVoteEntry[],

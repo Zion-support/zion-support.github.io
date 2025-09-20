@@ -1,10 +1,9 @@
-=======
 export interface RealServiceQ22025 {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  features: string[],
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
 }
 
 export const realServicesQ22025: RealServiceQ22025[] = [
@@ -14,6 +13,5 @@ export const realServicesQ22025: RealServiceQ22025[] = [
     tagline: 'Second quarter service offering',
     price: '$299',
     features: ['Core features', 'Standard performance', 'Basic integration']
-=======
   }
 ];

@@ -45,6 +45,6 @@ exports.handler = async function(event, context) {
         function: 'seo-audit-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

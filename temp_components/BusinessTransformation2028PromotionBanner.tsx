@@ -78,5 +78,4 @@ const BusinessTransformation2028PromotionBanner: React.FC = () => {
   )
 },
 
-export default BusinessTransformation2028PromotionBanner;
-  }
+export default BusinessTransformation2028PromotionBanner,

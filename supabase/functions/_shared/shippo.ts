@@ -30,7 +30,7 @@ export async function createShippoShipment(params: ShippoCreateShipmentParams): 
   }),
   if (!res.ok) {
     const msg = await res.text(),
-    throw new Error(`Shippo create shipment failed: ${msg}`);
-};
-  return await res.json() as ShippoShipment;
+    throw new Error(`Shippo create shipment failed: ${msg}`),
   }
+  return await res.json() as ShippoShipment,
+}

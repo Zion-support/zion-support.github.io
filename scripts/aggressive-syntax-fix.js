@@ -18,8 +18,10 @@ const logger = winston.createLogger({
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
     format: winston.format.simple()
-  }));
-};
+  })),
+}
+
+
 const fs = require('fs'),
 const path = require('path'),
 const { glob } = require('glob'),
@@ -32,8 +34,9 @@ class AggressiveSyntaxFixer {
     }
 
     log(message) {
-        logger.info(`[Aggressive Syntax Fixer] ${message}`);
-};
+        logger.info(`[Aggressive Syntax Fixer] ${message}`),
+    }
+
     async fixAllSyntaxErrors() {
         this.log('🔧 Starting aggressive syntax error fixing...'),
 
@@ -46,12 +49,14 @@ class AggressiveSyntaxFixer {
             this.log(`📁 Found ${files.length} files to check`),
 
             for (const file of files) {
-                await this.fixFile(file);
-};
+                await this.fixFile(file),
+            }
+
             this.log(`✅ Fixed ${this.fixedFiles.length} files`),
             if (this.errors.length > 0) {
-                this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`);
-};
+                this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`),
+            }
+
             return {
                 fixedFiles: this.fixedFiles,
                 errors: this.errors
@@ -74,12 +79,13 @@ class AggressiveSyntaxFixer {
                 const fixedContent = this.createValidFile(filePath),
                 fs.writeFileSync(fullPath, fixedContent),
                 this.fixedFiles.push(filePath),
-                this.log(`✅ Fixed: ${filePath}`);
-};
+                this.log(`✅ Fixed: ${filePath}`),
+            }
+
         } catch (error) {
             this.errors.push({ file: filePath, error: error.message }),
-            this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-};
+            this.log(`❌ Error fixing ${filePath}: ${error.message}`),
+        }
     }
 
     hasSyntaxErrors(content) {
@@ -103,8 +109,9 @@ class AggressiveSyntaxFixer {
             /Unexpected token \./, // Dot token issues
         ],
 
-        return errorPatterns.some(pattern => pattern.test(content));
-};
+        return errorPatterns.some(pattern => pattern.test(content)),
+    }
+
     createValidFile(filePath) {
         const ext = path.extname(filePath),
         const fileName = path.basename(filePath, ext),
@@ -174,22 +181,25 @@ async function main() {
         
         if (result.fixedFiles.length > 0) {
             logger.info('\n✅ Fixed Files: '),
-            result.fixedFiles.forEach(file => logger.info(`  - ${file}`));
-};
+            result.fixedFiles.forEach(file => logger.info(`  - ${file}`)),
+        }
+        
         if (result.errors.length > 0) {
             logger.info('\n❌ Files with Errors: '),
-            result.errors.forEach(({ file, error }) => logger.info(`  - ${file}: ${error}`));
-};
+            result.errors.forEach(({ file, error }) => logger.info(`  - ${file}: ${error}`)),
+        }
+        
         process.exit(0),
     } catch (error) {
         logger.error('❌ Aggressive syntax fixing failed:', error.message),
-        process.exit(1);
-};
+        process.exit(1),
+    }
 }
 
 if (require.main === module) {
-    main();
-};
+    main(),
+}
+
 module.exports = AggressiveSyntaxFixer, 
 
 // Graceful shutdown handling
@@ -202,7 +212,6 @@ process.on('SIGINT', () => {
 process.on('SIGTERM', () => {
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here
-  process.exit(0);
-  }),
+  process.exit(0),
+}),
 
-))'"

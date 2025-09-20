@@ -4,13 +4,13 @@ import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolograp
 
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
-export default function AIEvalsPage() : any {
+export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	},
+	};
 
 	const plans = [
 		{ name: 'Startup', price: '$149/month', items: ['5K eval calls', 'Latency/Cost tracking', 'Toxicity/PII checks', 'CSV export'] },
@@ -69,7 +69,7 @@ export default function AIEvalsPage() : any {
 				</div>
 
 				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
-					<div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm mb-4">
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
 						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
 						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
 						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
@@ -81,4 +81,4 @@ export default function AIEvalsPage() : any {
 			</div>
 		</QuantumHolographicMatrixBackground>
 	);
-  }
+}

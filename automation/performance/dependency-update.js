@@ -27,8 +27,8 @@ class Script {,
         logger.add(,
           new winston.transports.Console({,
             format: winston.format.simple()}),
-        );
-};
+        ),
+      }
 ,
       // Dependency Update Automation Script (Frontend),
       const { execSync } = require('child_process'),
@@ -39,8 +39,8 @@ class Script {,
         execSync('npm update', { stdio: 'inherit' }),
         logger.info('Dependency update complete.'),
       } catch (err) {,
-        logger.error('Error updating dependencies:', err);
-};
+        logger.error('Error updating dependencies:', err),
+      }
     } catch (error) {,
       console.error('Error in Script:', error),
       throw error,
@@ -49,8 +49,8 @@ class Script {,
 ,
   stop() {,
     this.isRunning = false,
-    console.log('Stopping Script...');
-};
+    console.log('Stopping Script...'),
+  }
 }
 ,
 // Start the script,
@@ -59,8 +59,8 @@ if (require.main === module) {,
   script.start().catch((error) => {,
     console.error('Failed to start Script:', error),
     process.exit(1),
-  });
-};
+  }),
+}
 ,
 module.exports = Script,
 // Graceful shutdown handling,

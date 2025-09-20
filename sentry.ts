@@ -16,8 +16,8 @@ try {
   } else if (Sentry) {
     console.log('Real Sentry SDK loaded.'),
   } else {
-    throw new Error('@sentry/nextjs require returned null/undefined');
-};
+    throw new Error('@sentry/nextjs require returned null/undefined'),
+  }
 } catch (error) {
   console.error(
     'CRITICAL: Failed to require "@sentry/nextjs" (real SDK or webpack alias). Falling back to emergency inline mock.',
@@ -38,7 +38,7 @@ try {
 
 import { safeSessionStorage } from '@/utils/safeStorage',
 
-export function register() : any {
+export function register() {
   // Use environment variables directly instead of runtime config
   const SENTRY_DSN = process.env.NEXT_PUBLIC_SENTRY_DSN,
   const SENTRY_RELEASE = process.env.NEXT_PUBLIC_SENTRY_RELEASE,
@@ -63,18 +63,19 @@ export function register() : any {
     if (process.env.NODE_ENV === 'development') {
       console.log('Sentry disabled in development (no valid DSN configured)')
     } else {
-      console.warn('Sentry DSN not configured for production - error monitoring disabled');
-};
+      console.warn('Sentry DSN not configured for production - error monitoring disabled'),
+    }
     return,
   }
 
   // Emit granular warnings when individual env vars are missing so that tests can assert on them
   if (!SENTRY_RELEASE) {
-    console.warn('Warning: NEXT_PUBLIC_SENTRY_RELEASE is not set. Sentry will proceed without release information.');
-};
+    console.warn('Warning: NEXT_PUBLIC_SENTRY_RELEASE is not set. Sentry will proceed without release information.'),
+  }
   if (!SENTRY_ENVIRONMENT) {
-    console.warn('Warning: NEXT_PUBLIC_SENTRY_ENVIRONMENT is not set. Sentry will proceed without environment information.');
-};
+    console.warn('Warning: NEXT_PUBLIC_SENTRY_ENVIRONMENT is not set. Sentry will proceed without environment information.'),
+  }
+
   // Skip initialization if Sentry is mocked
   if (!Sentry || Sentry.init.toString().includes('mock')) {
     console.log('Sentry is mocked, skipping initialization'),
@@ -102,17 +103,17 @@ export function register() : any {
 
     // Set additional context
     if (SENTRY_RELEASE) {
-      Sentry.setTag('release', SENTRY_RELEASE);
-};
+      Sentry.setTag('release', SENTRY_RELEASE),
+    }
     if (SENTRY_ENVIRONMENT) {
-      Sentry.setTag('environment', SENTRY_ENVIRONMENT);
-};
+      Sentry.setTag('environment', SENTRY_ENVIRONMENT),
+    }
     Sentry.setTag('runtimebrowser'),
 
     console.log(`Sentry initialized successfully. Release: ${SENTRY_RELEASE}, Environment: ${SENTRY_ENVIRONMENT}`),
   } catch (error) {
-    console.error('Failed to initialize Sentry:', error);
-};
+    console.error('Failed to initialize Sentry:', error),
+  }
 }
 
 // Now using the direct import if available

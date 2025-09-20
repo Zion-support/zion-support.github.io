@@ -6,8 +6,8 @@ exports.handler = async function () {
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
   const githubBranch = process.env.GIT_BRANCH || 'main',
 
-  function log(msg) { console.log(`[content-freshness] ${msg}`);
-};
+  function log(msg) { console.log(`[content-freshness] ${msg}`), }
+
   async function fetchText(url) {
     try {
       const r = await fetch(url, { redirect: 'follow' }),
@@ -60,8 +60,8 @@ exports.handler = async function () {
       let daysOld = null,
       if (it.lastmod) {
         const t = Date.parse(it.lastmod),
-        if (!Number.isNaN(t)) daysOld = Math.round((now - t) / (1000 * 60 * 60 * 24));
-};
+        if (!Number.isNaN(t)) daysOld = Math.round((now - t) / (1000 * 60 * 60 * 24)),
+      }
       return { url: it.loc, lastmod: it.lastmod, daysOld },
     }),
     analyzed.sort((a, b) => (b.daysOld || 0) - (a.daysOld || 0)),
@@ -96,6 +96,6 @@ exports.handler = async function () {
     return { statusCode: 200, body: JSON.stringify({ ok: true, totals: summary.totals, jsonRes, mdRes }) },
   } catch (e) {
     log(String(e)),
-    return { statusCode: 500, body: JSON.stringify({ ok: false, error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ ok: false, error: String(e) }) },
   }
 },

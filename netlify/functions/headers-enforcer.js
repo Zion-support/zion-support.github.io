@@ -52,8 +52,9 @@ exports.handler = async function(event, context) {
         missingHeaders: ['X-Frame-OptionsContent-Security-Policy', 'Strict-Transport-Security'].slice(0, Math.floor(Math.random() * 3) + 1),
         severity: ['lowmedium', 'high'][Math.floor(Math.random() * 3)],
         recommendedAction: 'Add missing security headers'
-      });
-};
+      }),
+    }
+    
     const result = {
       statusCode: 200,
       body: JSON.stringify({
@@ -91,6 +92,6 @@ exports.handler = async function(event, context) {
         function: 'headers-enforcer',
         status: 'error'
       })
-    };
+    },
   }
 },

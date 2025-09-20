@@ -23,5 +23,5 @@ exports.handler = async () => {
   step('performance-budget-reporter', () => runNode('automation/performance-budget-reporter.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
-  },
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') },
+},

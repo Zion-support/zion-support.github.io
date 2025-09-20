@@ -1,10 +1,9 @@
-=======
 export interface Real2027Q2Addition {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  features: string[],
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
 }
 
 export const real2027Q2Additions: Real2027Q2Addition[] = [
@@ -14,6 +13,5 @@ export const real2027Q2Additions: Real2027Q2Addition[] = [
     tagline: 'Second quarter 2027 addition',
     price: '$1299',
     features: ['Q2 2027 features', 'Mid-year innovations', 'Advanced solutions']
-=======
   }
 ];

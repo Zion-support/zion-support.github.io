@@ -121,8 +121,8 @@ const TechnologyTrendsShowcase2025 = () => {,
       const interval = setInterval(() => {,
         setActiveTrend((prev) => (prev + 1) % trends.length),
       }4000),
-      return () => clearInterval(interval);
-};
+      return () => clearInterval(interval),
+    }
   }[isPlaying]),
   const currentTrend = trends[activeTrend],
   return (,
@@ -153,7 +153,7 @@ const TechnologyTrendsShowcase2025 = () => {,
         </div>,
         {/* Trend Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">,
-          {trends.map((trendindex) : any => {,
+          {trends.map((trendindex) => {,
             const Icon = trend.icon,
             return (,
               <button,
@@ -170,8 +170,8 @@ const TechnologyTrendsShowcase2025 = () => {,
                 <Icon className="w-5 h-5 mr-2" />,
                 {trend.title.split(' ')[0]}
               </button>,
-            );
-  })}
+            ),
+          })}
         </div>,
         {/* Main Trend Display */}
           <div,

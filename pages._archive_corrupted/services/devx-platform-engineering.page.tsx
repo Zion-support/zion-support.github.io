@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function DevXPlatformEngineering() : any {,
+export default function DevXPlatformEngineering() {,
   return (,
     <>,
       <Head>,

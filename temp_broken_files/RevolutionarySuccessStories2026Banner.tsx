@@ -138,6 +138,6 @@ const RevolutionarySuccessStories2026Banner = () => {,
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500">,
         <div className="h-full bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 animate-pulse"></div>,
       </div>,
-    </div>);
-  },
+    </div>),
+},
 export default RevolutionarySuccessStories2026Banner,

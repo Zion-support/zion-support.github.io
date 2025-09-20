@@ -50,5 +50,5 @@ try {,
   console.log('📋 Components should be ready for build'),
 } catch (error) {,
   console.error('❌ Import "error": ', error.message),
-  process.exit(1);
-};
+  process.exit(1),
+}

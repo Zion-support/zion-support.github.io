@@ -105,7 +105,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {,
     const interval = setInterval(() => {,
       setCurrentTech((prev) => (prev + 1) % absoluteTechs.length),
     }, 18000),
-    return () => clearInterval(interval);
+    return () => clearInterval(interval),
   }, []),
   return (,
       className="relative overflow-hidden",

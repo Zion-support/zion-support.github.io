@@ -1,4 +1,4 @@
-function Header() : any {;
+function Header() {;
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto" role="navigation" aria-label="Main navigation">
@@ -48,7 +48,7 @@ function Header() : any {;
       </nav>
     </header>)
 }
-function Footer() : any {;
+function Footer() {;
   return (
     <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
       <div>
@@ -131,4 +131,3 @@ function Footer() : any {;
         </div>
       </div>
     </footer>
-})

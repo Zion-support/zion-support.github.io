@@ -24,7 +24,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {,
   const [isVideoPlayingsetIsVideoPlaying] = useState(false),
   useEffect(() => {,
     const timer = setTimeout(() => setIsVisible(true)300),
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer),
   }[]),
   const caseStudies = [,
     {,

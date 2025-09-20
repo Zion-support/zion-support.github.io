@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client',
 import { execSync } from 'child_process',
 const prisma = new PrismaClient(),
 
-async function main() : any {
+async function main() {
   // At the beginning of main() or after prisma client initialization
   console.log('Attempting to seed categories via Django management command...'),
   try {
@@ -86,10 +86,12 @@ async function main() : any {
     }
   ],
 
-  await prisma.talent.createMany({ data: talents, skipDuplicates: true });
-};
+  await prisma.talent.createMany({ data: talents, skipDuplicates: true }),
+
+}
+
 main()
-  .catch((e) : any => {
+  .catch((e) => {
     console.error(e),
     process.exit(1),
   })

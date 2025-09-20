@@ -1,4 +1,5 @@
-<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
+<<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
+<<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
 import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
@@ -11,6 +12,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { useState, useEffect,  } from "react",
+import { useRouter,  } from "next/router",
+import { supabase,  } from "@/integrations/supabase/client",
+import { toast,  } from "@/hooks/use-toast",
+import { SEO,  } from "@/components/SEO",
+import { Header,  } from "@/components/Header",
+import { Avatar,, AvatarFallback, AvatarImage,  } from "@/components/ui/avatar",
+import { Button,  } from "@/components/ui/button",
+import { Card,, CardContent,, CardDescription,, CardHeader, CardTitle,  } from "@/components/ui/card",
+import { Badge,  } from "@/components/ui/badge";
+import { MapPin,, Clock,, Link,, as,, LinkIcon,, Github,, Twitter,, Linkedin,, CheckCircle2,, Mail,, Phone, Globe,  } from 'lucide-react'
+import { HireNowCTA,  } from "@/components/profile/HireNowCTA";
+>>>>>>>> pr-22690:temp-broken-files/ProfileDetail.tsx
 export default function ProfileDetail() {
   return (
   return (
@@ -90,11 +104,27 @@ href = {profileData.linkedin_url}
                 )}
               </div>
             </div>
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function ProfileDetail() {
+  return (
+    <>
+      <SEO 
+        title="ProfileDetail - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">ProfileDetail</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </div>
       </div>
-</>
-);
+    </>
+  );
 }
 }, [profileId]);
 <p>Error: {error ;
@@ -131,4 +161,3 @@ export default function ProfileDetail() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProfileDetail.tsx

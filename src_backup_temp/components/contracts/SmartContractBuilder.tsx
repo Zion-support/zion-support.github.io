@@ -12,4 +12,4 @@ export default function SmartContractBuilder(props: any) {return (,
       </div>',
     </div>,
   ),,',
-"}",'
+"}",

@@ -28,6 +28,6 @@ exports.handler = async function(event, context) {
         function: 'cloud_orchestrator',
         status: 'error'
       })
-    };
+    },
   }
 },

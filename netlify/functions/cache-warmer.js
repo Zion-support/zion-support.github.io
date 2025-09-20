@@ -8,8 +8,8 @@ exports.handler = async function(event, context) {
   const timeoutMs = 15000,
   const concurrency = 12,
 
-  function log(msg) { console.log(`[cache-warmer] ${msg}`);
-};
+  function log(msg) { console.log(`[cache-warmer] ${msg}`), }
+
   const ROOT = path.join(__dirname, '....'),
 
   function readContentRegistry() {
@@ -59,8 +59,8 @@ exports.handler = async function(event, context) {
     async function worker() {
       while (index < urls.length) {
         const u = urls[index++],
-        results.push(await fetchWithTimeout(u));
-};
+        results.push(await fetchWithTimeout(u)),
+      }
     }
     const workers = Array.from({ length: Math.min(concurrency, urls.length) }, () => worker()),
     await Promise.all(workers),
@@ -98,8 +98,7 @@ exports.handler = async function(event, context) {
     const status = putRes.status,
     let error,
     if (!ok) {
-      try { error = await putRes.text(), } catch (e) { error = String(e);
-};
+      try { error = await putRes.text(), } catch (e) { error = String(e), }
     }
     return { ok, status, error },
   }
@@ -134,8 +133,9 @@ exports.handler = async function(event, context) {
     let commitLatest = { ok: false }, commitHistory = { ok: false },
     if (githubToken) {
       commitHistory = await commitFile(dirHistory, summary, '[history]'),
-      commitLatest = await commitFile(dirLatest, summary, '[latest]');
-};
+      commitLatest = await commitFile(dirLatest, summary, '[latest]'),
+    }
+
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
@@ -143,6 +143,6 @@ exports.handler = async function(event, context) {
     },
   } catch (err) {
     log(String(err)),
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(err) }) };
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(err) }) },
   }
 },

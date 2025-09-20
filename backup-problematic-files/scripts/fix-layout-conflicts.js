@@ -26,7 +26,7 @@ function processFile(filePath) {,
   const excludeDirs = ['node_modules.nextbuild',
     'distscriptsautomationautomation_backup',
     'src && src.disabledpages && pages.disabledcomponents && components.disabled'
-  ];
+  ],
   }
   console && console.log("\n📊 Layout Conflicts Fix "Summary": "),
   console && console.log(`   Files processed: ${filesProcessed}`),

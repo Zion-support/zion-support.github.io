@@ -29,8 +29,8 @@ exports.handler = async function () {,
         current,
         latest,
         outOfDate: current.replace(/^[^0-9]*/, '') !== latest
-      });
-};
+      }),
+    }
     const report = { updatedAt: Date.now(), entries }
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
@@ -42,8 +42,8 @@ exports.handler = async function () {,
         path: 'data/reports/deps/weekly-dependencies.json',
         content: JSON.stringify(report, null, 2),
         message: 'chore(automation): weekly dependency insights',
-        token});
-  }
+        token}),
+    }
     return {,
       statusCode: 200,
       body: JSON.stringify({ ok: true, count: entries.length })

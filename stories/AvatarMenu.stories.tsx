@@ -12,9 +12,9 @@ export const Default: StoryObj<typeof AvatarMenu> = {,
     <MemoryRouter>,
       <AvatarMenu />,
     </MemoryRouter>),
-  play: async ({ canvasElement }) : any => {,
+  play: async ({ canvasElement }) => {,
     const canvas = within(canvasElement),
     await userEvent.click(canvas.getByRole('button')),
-    await userEvent.keyboard('{Escape}');
-};
+    await userEvent.keyboard('{Escape}'),
+  }
 },

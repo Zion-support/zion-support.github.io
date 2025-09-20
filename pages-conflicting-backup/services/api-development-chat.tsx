@@ -17,6 +17,6 @@ const ApiDevelopmentChat: NextPage = () => {
       </main>
     </div>
   );
-  };
+};
 
 export default ApiDevelopmentChat;

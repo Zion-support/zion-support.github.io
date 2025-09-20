@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function QuantumComputingPage() : any {
+export default function QuantumComputingPage() {
   const services = [
     {
       title: "Quantum Cybersecurity",
@@ -46,7 +46,7 @@ export default function QuantumComputingPage() : any {
       price: "$899/month",
       icon: Cpu
     }
-  ],
+  ];
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function QuantumComputingPage() : any {
       title: "Future-Ready",
       description: "Stay ahead of the curve with cutting-edge quantum technology"
     }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -251,4 +251,4 @@ export default function QuantumComputingPage() : any {
       <EnhancedFooter />
     </div>
   );
-  }'
+}

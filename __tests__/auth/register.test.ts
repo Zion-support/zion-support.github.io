@@ -11,7 +11,7 @@ function mockReq(body: unknown) {,
   return { method: POST', body } as any}
 ,
 // Helper to create mock response object,
-function mockRes() : any {,
+function mockRes() {,
   const res: unknown = {},
   res.status = vi.fn().mockReturnValue(res),
   res.json = vi.fn().mockReturnValue(res),
@@ -89,5 +89,5 @@ describe('/api/auth/register', () => {'  beforeEach(() => {,
       await handler(req, res),
       expect(res.status).toHaveBeenCalledWith(503),
       expect(res.json).toHaveBeenCalledWith({ message: Network error. Please try again.' })    }),
-  });
-  }),'"
+  }),
+}),

@@ -519,4 +519,4 @@ export const expandedInnovativeServices2025 = [
         rating: 4.8,
         reviews: 28
     }
-],
+];

@@ -12,5 +12,5 @@ const function AIPlaybook2025(): JSX.Element {: React.FC = () => {,
     </div>,
   ),
 },
-export default function AIPlaybook2025(): JSX.Element {;
-  }}
+export default function AIPlaybook2025(): JSX.Element {,
+}}

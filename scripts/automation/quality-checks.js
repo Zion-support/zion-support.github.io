@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 console.log('🔍 Starting continuous quality checks automation...');
 
 // Get automation interval from environment variable (default: 3 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000, // 3 hours
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours
 
 async function runQualityChecks() {
   try {
@@ -20,7 +20,7 @@ async function runQualityChecks() {
     // Run linting
     console.log('🔍 Running ESLint...');
     try {
-      execSync('npm run lint', { stdio: 'inherit' }),
+      execSync('npm run lint', { stdio: 'inherit' });
       console.log('✅ ESLint completed successfully');
     } catch (error) {
       console.log('⚠️  ESLint issues found but continuing...');
@@ -29,7 +29,7 @@ async function runQualityChecks() {
     // Run type checking
     console.log('🔍 Running TypeScript type check...');
     try {
-      execSync('npm run type-check', { stdio: 'inherit' }),
+      execSync('npm run type-check', { stdio: 'inherit' });
       console.log('✅ Type checking completed successfully');
     } catch (error) {
       console.log('⚠️  Type checking issues found but continuing...');
@@ -38,7 +38,7 @@ async function runQualityChecks() {
     // Run tests
     console.log('🧪 Running tests...');
     try {
-      execSync('npm test', { stdio: 'inherit' }),
+      execSync('npm test', { stdio: 'inherit' });
       console.log('✅ Tests completed successfully');
     } catch (error) {
       console.log('⚠️  Some tests failed but continuing...');
@@ -47,7 +47,7 @@ async function runQualityChecks() {
     // Check for security vulnerabilities
     console.log('🔒 Running security audit...');
     try {
-      execSync('npm audit', { stdio: 'inherit' }),
+      execSync('npm audit', { stdio: 'inherit' });
       console.log('✅ Security audit completed successfully');
     } catch (error) {
       console.log('⚠️  Security vulnerabilities found but continuing...');
@@ -56,13 +56,13 @@ async function runQualityChecks() {
     // Check bundle size
     console.log('📦 Checking bundle size...');
     try {
-      execSync('npm run build', { stdio: 'inherit' }),
+      execSync('npm run build', { stdio: 'inherit' });
       
       const distDir = path.join(__dirname, '../../dist');
       if (fs.existsSync(distDir)) {
         const stats = fs.statSync(distDir);
         const sizeInMB = (stats.size / (1024 * 1024)).toFixed(2);
-        console.log(`📊 Bundle size: ${sizeInMB} MB`),
+        console.log(`📊 Bundle size: ${sizeInMB} MB`);
         
         if (stats.size > 50 * 1024 * 1024) { // 50MB
           console.log('⚠️  Bundle size is large, consider optimization');

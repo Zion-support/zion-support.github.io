@@ -8,6 +8,6 @@ export default function Computervision({ }: ComputervisionProps) {,
     <div>,
       <h1>Computervision</h1>,
       <p>This component is currently under development.</p>,
-    </div>);
-  }
+    </div>),
+}
 ,

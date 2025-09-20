@@ -1,7 +1,6 @@
 
 Crawl-dela,y: 1`;
      }
-Crawl-dela,y: 1`;}
     /**;
      * Generate, JSON, sitemap for, JavaScript, applications;
      */;
@@ -11,7 +10,6 @@ Crawl-dela,y: 1`;}
             baseUrlurls: urls.map(url => ({
                 ...urlfullUr,l: `${baseUrl}${url.url}`lastmod: url.lastmod || new Date().toISOString();
      }));
-                ...urlfullUr,l: `${baseUrl}${url.url}`lastmod: url.lastmod || new Date().toISOString();}));
         };
         return JSON.stringify(jsonSitemap, null2);
     }
@@ -157,7 +155,6 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
         return {
             xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;
      };
-            xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;};
     }
     catch() {
         

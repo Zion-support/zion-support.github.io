@@ -110,7 +110,7 @@ const QuantumServicesPage: React.FC = () => {
     }
   ],
 
-export default function QuantumServices() : any {
+export default function QuantumServices() {
   return (
     <Layout>
       <SEO 
@@ -303,5 +303,4 @@ export default function QuantumServices() : any {
   )
 },
 
-export default QuantumServicesPage;
-  }
+export default QuantumServicesPage,

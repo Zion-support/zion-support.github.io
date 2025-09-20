@@ -11,5 +11,5 @@ const function SimpleLayout({ title, description, children }: SimpleLayoutProps)
     </div>,
   ),
 },
-export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {;
-  }}}
+export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {,
+}}}

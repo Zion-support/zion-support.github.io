@@ -1,11 +1,18 @@
-<<<<<<< HEAD:temp_broken_pages_all/Notifications.tsx
 import React { useState useEffect } from 'react';
+<<<<<<<< HEAD:temp_broken_pages_all/Notifications.tsx
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
+import { Bell,, Check,, X,, AlertCircle,, Info, CheckCircle,  } from 'lucide-react';
+import { Badge,  } from '@/components/ui/badge';
+import { Button,  } from '@/components/ui/button';
+import { Card,, CardContent,, CardHeader, CardTitle,  } from '@/components/ui/card';
+import { useAuth,  } from '@/hooks/useAuth';
+import { toast,  } from '@/hooks/use-toast';
+>>>>>>>> pr-22690:temp-broken-files/Notifications.tsx
 interface Notification {
   
   id: string;
@@ -200,7 +207,26 @@ export default function Notifications() {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Notifications</h1>
         <p className="text-lg text-gray-600">Your notifications...</p>
       </div>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Notifications.tsx
     </div>
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Notifications() {
+  return (
+    <>
+      <SEO 
+        title="Notifications - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Notifications</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 console.log('🔧 Starting console error fixer automation...');
 
 // Get automation interval from environment variable (default: 1 hour)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 3600000, // 1 hour
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour
 
 async function fixConsoleErrors() {
   try {
@@ -47,12 +47,12 @@ async function fixConsoleErrors() {
         
         if (modified) {
           fs.writeFileSync(file, newContent);
-          console.log(`✅ Fixed console errors in: ${file}`),
+          console.log(`✅ Fixed console errors in: ${file}`);
           fixedFiles++;
         }
       } catch (error) {
         console.log(`⚠️  Could not process file: ${file}`);
-};
+      }
     }
     
     console.log(`🎉 Console error fixer completed! Fixed ${fixedFiles} files`);

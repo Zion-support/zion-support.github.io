@@ -55,8 +55,9 @@ exports.handler = async function(event, context) {
         publishDate: new Date(Date.now() + Math.random() * 7 * 24 * 60 * 60 * 1000).toISOString(), // 0-7 days from now
         author: `Author ${Math.floor(Math.random() * 10) + 1}`,
         status: ['draftreview', 'readypublished'][Math.floor(Math.random() * 4)]
-      });
-};
+      }),
+    }
+    
     const result = {
       statusCode: 200,
       body: JSON.stringify({
@@ -95,6 +96,6 @@ exports.handler = async function(event, context) {
         function: 'newsroom-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

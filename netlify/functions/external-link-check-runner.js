@@ -40,8 +40,9 @@ exports.handler = async function(event, context) {
         page: `page-${Math.floor(Math.random() * 40) + 1}`,
         lastWorking: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString(), // 0-30 days ago
         suggestedReplacement: Math.random() > 0.7 ? `https://alternative-${i + 1}.com` : null
-      });
-};
+      }),
+    }
+    
     // Simulate redirect details
     const redirectDetails = [],
     for (let i = 0, i < linkCheckResults.redirectLinks, i++) {
@@ -50,8 +51,9 @@ exports.handler = async function(event, context) {
         redirectUrl: `https://new-site-${i + 1}.com/page-${i + 1}`,
         statusCode: Math.random() > 0.5 ? 301 : 302,
         page: `page-${Math.floor(Math.random() * 40) + 1}`
-      });
-};
+      }),
+    }
+    
     const result = {
       statusCode: 200,
       body: JSON.stringify({
@@ -89,6 +91,6 @@ exports.handler = async function(event, context) {
         function: 'external-link-check-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

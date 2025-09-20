@@ -109,7 +109,7 @@ const values = [,
     description: 'We invest in our people and their professional development',
     icon: Target}
 ],
-export default function TalentPage() : any {,
+export default function TalentPage() {,
   return (,
     <Layout,
       title="Join Our Team - Zion Tech Group",
@@ -360,4 +360,4 @@ export default function TalentPage() : any {,
       </div>,
     </Layout>,
   )}
-}))'
+}))

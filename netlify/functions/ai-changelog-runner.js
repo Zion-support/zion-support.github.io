@@ -39,6 +39,6 @@ exports.handler = async function(event, context) {
         function: 'ai-changelog-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

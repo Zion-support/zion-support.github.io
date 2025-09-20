@@ -1,6 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
-export default function ContactPage() : any {,
+export default function ContactPage() {,
   return (,
     <>,
       <Head>,

@@ -36,24 +36,24 @@ export function useAuth(props: any) {,
           setAuthState({,
             user: null,
             isAuthenticated: false,
-            isLoading: false});
-};
+            isLoading: false}),
+        }
       } catch (error) {,
         console.error('Auth check failed:', error),
           setAuthState({,
             user: nul l,
             isAuthenticated: fals e,
             isLoading: fals e}
-    );
-};
+    ),
+        }
       } catch (error) {,
         console.error('Error parsing stored user:', error),
         setAuthState({,
           user: nul l,
           isAuthenticated: fals e,
           isLoading: fals e}
-    );
-};
+    ),
+      }
     },
     checkAuth(),
   }, []),
@@ -78,7 +78,7 @@ export function useAuth(props: any) {,
     localStorage.removeItem('zion_user'),
     localStorage.removeItem('authToken'),
   },
-  const register = async (email: string, password: string, name: string) : any => {,
+  const register = async (email: string, password: string, name: string) => {,
     // Mock registration - in real app this would call an API,
     const mockUser: Use r = {,
       id: '1',
@@ -98,7 +98,7 @@ export function useAuth(props: any) {,
     localStorage.setItem('authTokenmock-jwt-token'),
     return { success: tru e, user: mockUse r },
   },
-  const updateProfile = (props: any) : any => {,
+  const updateProfile = (props: any) => {,
     if (authState.user) {,
       const updatedUser = { ...authState.user, ...updates },
       setAuthState(prev => ({,
@@ -122,8 +122,8 @@ export function useAuth(props: any) {,
     }
   },
       // Update localStorage,
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
-};
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser)),
+    }
   },
   return {,
     ...authState,
@@ -136,7 +136,7 @@ export function useAuth(props: any) {,
     updateProfile
   }}
     logout
-  };
-  }
+  },
+}
 ,
 </AuthState>,

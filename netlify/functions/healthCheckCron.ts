@@ -1,7 +1,7 @@
 import type { Handler, HandlerEvent, HandlerContext } from '@netlify/functions',
 
 const handler: Handler = async (event: HandlerEvent,
-  context: HandlerContext) : any => {
+  context: HandlerContext) => {
   const siteUrl = process.env.URL,
   if (!siteUrl) {
     console.error(
@@ -26,20 +26,22 @@ const handler: Handler = async (event: HandlerEvent,
         `Health check failed for ${healthEndpoint}: Status code ${response.status}. Response: ${responseText.substring(0, 100)}... (truncated)`,
       ),
     } else {
-      console.log(`Health check successful for ${healthEndpoint}: Status ${response.status}, Duration ${duration}ms`);
-};
+      console.log(`Health check successful for ${healthEndpoint}: Status ${response.status}, Duration ${duration}ms`),
+    }
+
     if (duration > 1000) {
-      console.warn(`Health check latency exceeded for ${healthEndpoint}: ${duration}ms`);
-};
+      console.warn(`Health check latency exceeded for ${healthEndpoint}: ${duration}ms`),
+    }
   } catch (error) {
     const duration = Date.now() - startTime,
     console.error(
       `Error during health check for ${healthEndpoint}: ${error instanceof Error ? error.message : String(error)}. Duration: ${duration}ms. Stack: ${error instanceof Error ? error.stack?.substring(0, 100) : String(error)}...(truncated)`,
-    );
-};
+    ),
+  }
+
   return {
     statusCode: 200, // The function itself completed
-  };
   },
+},
 
 export { handler },

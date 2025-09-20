@@ -17,7 +17,7 @@ content = content.replace(
       /export,\s*interface,\s*([^{]+)\s*{/g
       "export interface $1 {");
     content = content.replace(
-      /export,\s*const\s+([^=]+)\s*=\s*([^,]+);/g,
+      /export,\s*const\s+([^=]+)\s*=\s*([^;]+);/g,
       "export const $1 = $2;",
     );
     content = content.replace(
@@ -25,12 +25,12 @@ content = content.replace(
       "import React from 'react';",
     );
     content = content.replace(
-      /const\s+([^=]+)\s*=\s*([^,]+);/g,
+      /const\s+([^=]+)\s*=\s*([^;]+);/g,
       "const $1 = $2;",
     );
-    content = content.replace(/retu,\s*r,\s*n\s+([^,]+);/g, "return $1;");
+    content = content.replace(/retu,\s*r,\s*n\s+([^;]+);/g, "return $1;");
     content = content.replace(
-      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^,]+);/g,
+      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^;]+);/g,
       "if (!$1) return $2;",
     );
 
@@ -136,7 +136,7 @@ content = content.replace(/stri,\s*n,\s*g/g, "string");
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
-      console.log(`Fixed: ${filePath}`),
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
@@ -162,4 +162,3 @@ async function fixAllUtilsFiles() {
 }
 
 fixAllUtilsFiles();
-}}}'

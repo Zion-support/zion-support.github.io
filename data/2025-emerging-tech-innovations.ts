@@ -1,69 +1,67 @@
 export interface EmergingTechInnovationService {
-=======
 export interface EmergingTechService {
-  id: string,
-  name: string,
-  tagline: string,
-  description: string,
-  price: string,
-  period: string,
-  features: string[],
-  category: string,
-  marketSize: string,
-  targetAudience: string[],
-  competitiveAdvantage: string,
-  useCases: string[],
-  integrations: string[],
-  compliance: string[],
-  website: string,
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  price: string;
+  period: string;
+  features: string[];
+  category: string;
+  marketSize: string;
+  targetAudience: string[];
+  competitiveAdvantage: string;
+  useCases: string[];
+  integrations: string[];
+  compliance: string[];
+  website: string;
   contact: {
-    phone: string,
-    email: string,
-    address: string,
+    phone: string;
+    email: string;
+    address: string;
   };
-  trialDays: number,
-  setupTime: string,
-  competitors: string[],
-  roi: string,
-=======
+  trialDays: number;
+  setupTime: string;
+  competitors: string[];
+  roi: string;
 import { ServiceVariant } from '../types/service-variants';
 
 export interface EmergingTechInnovationService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: string,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
   contactInfo: {
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number,
-  technologyStack: string[],
-  innovationLevel: string,
-  futureProofing: string,
-  researchPartnerships: string[],
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+  technologyStack: string[];
+  innovationLevel: string;
+  futureProofing: string;
+  researchPartnerships: string[];
   popular?: boolean;
   icon?: string;
   color?: string;
@@ -74,24 +72,22 @@ export interface EmergingTechInnovationService {
   growthRate?: string;
   variant?: string;
   contactInfo?: {
-=======
-    mobile: string,
-    email: string,
-    address: string,
-    website: string,
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
   };
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number,
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
   realImplementation?: boolean;
   implementationDetails?: string;
 }
 
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
-=======
   // Quantum Computing Services
   {
     id: 'quantum-computing-as-a-service',
@@ -116,7 +112,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     marketSize: '$8.7B',
     targetAudience: ['Pharmaceutical companies', 'Financial institutions', 'Research universities', 'Government agencies', 'Technology companies'],
     competitiveAdvantage: 'First-to-market quantum computing platform with proprietary error correction algorithms',
-=======
     competitiveAdvantage: 'Largest quantum processor access, hybrid computing capabilities, comprehensive algorithm library, expert consultation',
     useCases: [
       'Drug discovery and molecular modeling',
@@ -152,7 +147,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
       'Export control compliance'
     ],
     website: 'https://ziontechgroup.com/quantum-computing',
-=======
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -386,7 +380,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
 ];
 
 export default emergingTechInnovations2025;
-=======
 }
 
 export const emergingTechInnovationServices2025: EmergingTechInnovationService[] = [
@@ -866,7 +859,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     rating: 4.8,
     reviews: 18
   }
-],
+];
     trialDays: 30,
     setupTime: '2-4 weeks',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket', 'Rigetti Computing'],
@@ -881,5 +874,3 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     researchPartnerships: ['MIT Quantum Engineering', 'Stanford Quantum Computing', 'Caltech Quantum Institute', 'National Quantum Initiative']
   }
 ];
-=======
-}

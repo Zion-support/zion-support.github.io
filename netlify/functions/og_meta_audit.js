@@ -29,8 +29,8 @@ exports.handler = async function(event, context) {,
         const twCard = extractNameMeta(html, 'twitter: card'),
         results.push({ route, ok: true, ogTitle: !!ogTitle, ogDesc: !!ogDesc, ogImage: !!ogImage, twitterCard: !!twCard }),
       } catch (e) {,
-        results.push({ route, ok: false, error: String(e) });
-};
+        results.push({ route, ok: false, error: String(e) }),
+      }
     }
 ,
     const payload = { origin, generatedAt: new Date().toISOString(), results },
@@ -58,6 +58,6 @@ exports.handler = async function(event, context) {,
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
 },
