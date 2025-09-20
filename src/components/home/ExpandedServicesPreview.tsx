@@ -7,7 +7,7 @@ import { ArrowRight; Star; Zap; TrendingUp; Shield; Users } from "lucide-react, 
 import { SERVICE_CATEGORIES } from "@/data/expandedServices, ";
 
 export function ExpandedServicesPreview() {
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case "AI Services": return "🤖";
     case "Micro SAAS": return "☁️";
@@ -223,4 +223,4 @@ export function ExpandedServicesPreview() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

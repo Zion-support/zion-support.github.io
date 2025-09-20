@@ -150,7 +150,7 @@ export function ProductsEmptyState({;
   );
 }
 
-export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
+export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {;
   return (;
     <EmptyState;
       type="categories"
@@ -159,7 +159,7 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
   );
 }
 
-export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
+export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {;
   return (;
     <EmptyState;
       type="talent"
@@ -168,7 +168,7 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
   );
 }
 
-export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
+export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {;
   return (;
     <EmptyState;
       type="equipment"
@@ -177,7 +177,7 @@ export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   );
 }
 
-export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
+export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {;
   return (;
     <EmptyState;
       type="search"
@@ -186,7 +186,7 @@ export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
   );
 }
 
-export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
+export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {;
   return (;
     <EmptyState;
       type="network"
@@ -195,7 +195,7 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
   );
 }
 
-export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
+export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {;
   return (;
     <EmptyState;
       type="error"
@@ -203,6 +203,9 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     />
   );
 } </EmptyState;
+      type="error"
+      action={onRetry ? { label: "Retry', onClick: onRetry } : undefined}
+    /><//EmptyState;
       type="error"
       action={onRetry ? { label: "Retry', onClick: onRetry } : undefined}
     />

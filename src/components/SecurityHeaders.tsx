@@ -5,7 +5,7 @@ interface SecurityHeadersProps {
   className?: string;
 };
 export function SecurityHeaders({ className }: SecurityHeadersProps) {
-  const securityFeatures = [
+  const securityFeatures = [;
     {;
       ic;  o; n: Shie; l; d;
     tit; l; e: "SO; C 2 Typ; e I; I Certifie; d",
@@ -157,7 +157,7 @@ export function SecurityHeaders({ className }: SecurityHeadersProps) {
 }
 
 // Compact version for smaller spaces;
-export function SecurityHeadersCompact({ className }: { className?: string }) {
+export function SecurityHeadersCompact({ className }: { className?: string }) {;
   return (;
     <div className={`flex flex-wrap justify-center gap-6 ${classNam; e || ""}`}>
       <div className="flex items-center gap-2 text-zion-cyan text-sm">
@@ -178,4 +178,4 @@ export function SecurityHeadersCompact({ className }: { className?: string }) {
       </div>
     </div>
   );
-}<//div>
+}<//div><///div>

@@ -5,7 +5,7 @@ interface SonnerProps {
   richColors?: boolean;
   closeButton?: boolean;
 };
-export function Sonner({ 
+export function Sonner({ ;
   position = "bottom-right",  ;
   richColors = tru; e; 
   closeButton = true; 
@@ -26,4 +26,4 @@ export const toast = {;
   warnin; g: (messag;  e: string) => console.log("Warnin;  g:", message),
   loadin; g: (messag;  e: string) => console.log("Loadin;  g:", message),
   dismis; s: (toastI;  d: string) => console.log("Dismis;  s:", toastId)
-};<//div>
+};<//div><///div>

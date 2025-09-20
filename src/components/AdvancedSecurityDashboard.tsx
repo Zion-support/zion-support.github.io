@@ -707,4 +707,4 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
       </div>
     </div>
   );
-}<//div>
+}<//div><///div>

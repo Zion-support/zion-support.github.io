@@ -16,7 +16,7 @@ export default function Page("props": "any) {,
         { "name": "About", "href": "/about", "icon": "User s "},",
         { "name": "Contact", "href": "/contact", "icon": "MessageCircl e "},",
         { "name": "Careers", "href": "/careers", "icon": "Briefcas e "},",
-        { "name": "Partners", "href": "/partners", "icon": "Handshak e "}              </button>,
+        { "name": "Partners", "href": "/partners", "icon": "Handshak e "}              </button>,;
               <AnimatePresence>,;
                 {expandedSections.has(section.title) && (<motion.div;
                     initial = {,
@@ -96,4 +96,4 @@ export default function Page("props": "any) {,
     </aside>,) },
 '"`,
 </motion, >,
-</motion>]]<//motion>
+</motion>]]<//motion><///motion>

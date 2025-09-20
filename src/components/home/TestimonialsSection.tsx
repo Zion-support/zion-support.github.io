@@ -1,7 +1,7 @@
 import React from "react;";
 
 export function TestimonialsSection() {
-  const testimonials = [
+  const testimonials = [;
     {;
       name: "Sarah Johnson", role: "CTO";
       company: "TechCorp Inc.", content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.";
@@ -67,4 +67,4 @@ export function TestimonialsSection() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

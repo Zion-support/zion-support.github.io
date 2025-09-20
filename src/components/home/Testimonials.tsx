@@ -7,4 +7,4 @@ const Testimonials: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default Testimonials,;<//div>
+export default Testimonials,;<//div><///div>

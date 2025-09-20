@@ -27,4 +27,4 @@ function withAuth<P>(Component: React.ComponentType<P>) {
 }
 
 export default withAuth;
-</Component {...props} />
+</Component {...props} /><//Component {...props} />

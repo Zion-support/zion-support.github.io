@@ -2,7 +2,7 @@ import React, { useState } from "react;";
 import { motion } from "framer-motion, ";
 
 export const WorkflowAutomation: React.FC = () => {
-  const [workflows] = useState([
+  const [workflows] = useState([;
     {;
       id: "1", name: "User Registration Flow";
       description: "Automated workflow for new user onboarding",
@@ -59,4 +59,4 @@ export const WorkflowAutomation: React.FC = () => {
 };
 
 export default WorkflowAutomation;
-<//div>
+<//div><///div>

@@ -183,7 +183,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 };
 
 // Accessibility toolbar component;
-export const AccessibilityToolbar: React.FC = () => {
+export const AccessibilityToolbar: React.FC = () => {;
     const {;
     isHighContrast;
     isReducedMotion;
@@ -247,7 +247,7 @@ export const AccessibilityToolbar: React.FC = () => {
 };
 
 // Skip to main content link;
-export const SkipToMainContent: React.FC = () => {
+export const SkipToMainContent: React.FC = () => {;
   return (;
     <a;
       href="#main-content"
@@ -256,4 +256,4 @@ export const SkipToMainContent: React.FC = () => {
       Skip to main content;
     </a>
   );
-};<//a>
+};<//a><///a>

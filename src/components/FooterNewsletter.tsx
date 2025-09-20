@@ -125,4 +125,4 @@ export const FooterNewslette; r: React.FC = () => {
     </div>
   );
 };
-<//div>
+<//div><///div>

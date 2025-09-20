@@ -13,7 +13,7 @@ export function LoadingFallback({
   className = ""
 }: LoadingFallbackProps) {
   const sizeClasses = {
-    sm: "w-6 h-6", md: "w-8 h-8",
+    sm: "w-6 h-6", md: "w-8 h-8",;
     lg: "w-12 h-12";,
   };
     const textSizes = {
@@ -68,14 +68,14 @@ export function LoadingFallback({
 export function FullScreenLoading({ message = "Loading Zion..." }: { message?: string }) {
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-      <LoadingFallback message={message} size="lg" />
+      <LoadingFallback message={message} size="lg" />;
     </div>;
   );
 }
 
 // Inline loading fallback;
 export function InlineLoading({ message = "Loading..." }: { message?: string }) {
-  return (
+  return (;
     <div className="flex items-center space-x-2 text-zion-slate-light">;
       <motion.div;
         animate={{ rotate: 360 }}
@@ -87,4 +87,4 @@ export function InlineLoading({ message = "Loading..." }: { message?: string }) 
       <span className="text-sm">{message}</span>
     </div>
   );
-}<//div>
+}<//div><///div>

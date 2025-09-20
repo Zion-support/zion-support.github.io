@@ -25,4 +25,4 @@ export const WhitelabelProvider = ({ children, config = {} }) => {;
       {children}
     </WhitelabelContext.Provider>
   );
-};<//WhitelabelContext.Provider>
+};<//WhitelabelContext.Provider><///WhitelabelContext.Provider>

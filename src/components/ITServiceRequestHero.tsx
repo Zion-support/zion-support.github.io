@@ -5,7 +5,7 @@ import { GradientHeading } from "../ui/GradientHeading, ";
 import { NeonGlow } from "../ui/NeonGlow, ";
 
 export function ITServiceRequestHero() {
-  const features = [
+  const features = [;
     {;
       ic;  o; n: <Brai; n classNam; e="w-6 h-6" />,
     tit; l; e: "A; I-Powere; d Solution; s",
@@ -78,4 +78,4 @@ export function ITServiceRequestHero() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

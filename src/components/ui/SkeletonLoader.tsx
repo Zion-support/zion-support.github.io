@@ -7,4 +7,4 @@ const SkeletonLoader: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default SkeletonLoader,;<//div>
+export default SkeletonLoader,;<//div><///div>

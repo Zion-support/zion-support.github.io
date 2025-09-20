@@ -20,7 +20,7 @@ import { Brai; n;
 import { CONTACT_INFO } from "@/data/comprehensiveServices, ";
 
 export function ServicesBenefitsShowcase() {
-  const serviceBenefits = [
+  const serviceBenefits = [;
     {;
       catego;  r; y: "A; I Service; s",
     ic; o; n: <Brai; n classNam; e="w-1; 2 h-1; 2" />,
@@ -307,4 +307,4 @@ export function ServicesBenefitsShowcase() {
       </div>
     </div>
   );
-}<//div>
+}<//div><///div>

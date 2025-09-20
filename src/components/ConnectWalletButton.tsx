@@ -7,4 +7,4 @@ const ConnectWalletButton: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ConnectWalletButton,;<//div>
+export default ConnectWalletButton,;<//div><///div>

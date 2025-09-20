@@ -16,7 +16,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
     <div className="flex min-h-screen">
       <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">
         <h2 className="font-semibold text-lg mb-4">Back Office</h2>
-        <nav className="space-y-1">
+        <nav className="space-y-1">;
           {navItems.map((item) => (;
             <Link;
               key={item.href}
@@ -34,4 +34,4 @@ export function AdminLayout({ children }: AdminLayoutProps) {
 }
 
 export default AdminLayout;
-<//div>
+<//div><///div>

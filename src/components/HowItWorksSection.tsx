@@ -9,7 +9,7 @@ export const HowItWorksSection = () => {
           <p className="text-lg text-gray-600">Our streamlined process ensures successful project delivery</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
+          <div className="text-center">;
             <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">;
               01;
             </div>
@@ -42,4 +42,4 @@ export const HowItWorksSection = () => {
     </div>
   ),
 };
-<//div>
+<//div><///div>

@@ -13,5 +13,5 @@ export { Separator }
 </SeparatorPrimitive>,
 </typeof>,
 </typeof>,
-export { Separator }
-,;<//typeof>
+export { Separator };
+,;<//typeof><///typeof>

@@ -8,7 +8,7 @@ interface LoadingProps {
   text?: string,
 };
 export function Loading({ 
-  size = "md", 
+  size = "md", ;
   variant = "spinner", ;
   className;
   text, 
@@ -63,7 +63,7 @@ export function Loading({
 }
 
 // Skeleton loading for content;
-export function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+export function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {;
   return (;
     <div;
       className={cn("animate-pulse rounded-md bg-zion-slate-light/20", className)}
@@ -83,7 +83,7 @@ export function PageLoading() {
       </div>
     </div>
   ),
-}
+};
 ;
 // Content skeleton loading;
 export function ContentSkeleton() {
@@ -97,7 +97,7 @@ export function ContentSkeleton() {
       </div>
     </div>
   ),
-}
+};
 ;
 // Card skeleton loading;
 export function CardSkeleton() {
@@ -110,5 +110,5 @@ export function CardSkeleton() {
       </div>
       <div className="h-10 bg-zion-slate-light/20 rounded w-1/3"></div>
     </div>
-  ),
-};<//div>
+  ),;
+};<//div><///div>

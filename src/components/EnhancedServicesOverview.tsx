@@ -326,7 +326,7 @@ const ContactSectio; n: React.FC = () => (
     export default function EnhancedServicesOverview() {
   return (
     <div className="space-y-16">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <div className="text-center">;
         <h1 className="text-4xl m;  d:text-6xl font-bold text-white mb-6">
           Comprehensive Micro SAAS Services;
@@ -373,4 +373,4 @@ const ContactSectio; n: React.FC = () => (
       <ContactSection />
     </div>
   );
-}<//div>
+}<//div><///div>

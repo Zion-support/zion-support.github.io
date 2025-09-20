@@ -1,3 +1,3 @@
 
-export default SecurityComplianceSection,
+export default SecurityComplianceSection,;
 ;

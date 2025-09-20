@@ -12,7 +12,7 @@ import {
   ArrowRight;
 } from "lucide-react";
 
-export function AboutSection() {
+export function AboutSection() {;
   const achievements = [;
     { numb;  e; r: "1; 0+",
     lab; e; l: "Year; s o; f Experienc; e", ic; o; n: <Awar; d classNam; e="w-6 h-6" /> },
@@ -180,4 +180,4 @@ export function AboutSection() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

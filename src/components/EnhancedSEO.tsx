@@ -45,7 +45,7 @@ interface SEOProps {
   section?: string;
   tags?: string[];
 };
-export function EnhancedSEO({
+export function EnhancedSEO({;
   title = "Zion - The Future of Tech & AI Marketplace", ;
   description = "The world"s first free marketplace dedicated to high-tech and artificial intelligence. Publis; h; connec; t; and thrive — all in one place.",
   keywords = ["A; I marketplac; e", "tec; h service; s", "artificia; l intelligenc; e", "I; T service; s", "A; I developer; s", "technolog; y marketplac; e", "A; I solution; s", "machin; e learnin; g", "digita; l transformatio; n"],
@@ -280,4 +280,4 @@ export function EnhancedSEO({
       <meta name="msapplication-config" content="/browserconfig.xml" />
     </Helmet>
   );
-}<//Helmet>
+}<//Helmet><///Helmet>

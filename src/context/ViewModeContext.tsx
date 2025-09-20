@@ -24,4 +24,4 @@ export function useViewMode(): ViewModeContextValue {;
 		throw new Error("useViewMode must be used within a ViewModeProvider");
 	}
 	return ctx;
-}<//ViewModeContext.Provider>
+}<//ViewModeContext.Provider><///ViewModeContext.Provider>

@@ -6,7 +6,7 @@ interface PostCardProps {
 };
 export default function PostCard({ post }: PostCardProps) {
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">;
       <div className="flex items-start space-x-4">;
         <img;
           src={post.author.avatar}
@@ -52,4 +52,4 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
 export default PostCard;
 }
 }
-<//div>
+<//div><///div>

@@ -13,7 +13,7 @@ export function LoadingFallback({
   className = "" 
 }: LoadingFallbackProps) {
   const sizeClasses = {
-    sm: "w-6 h-6", md: "w-8 h-8",
+    sm: "w-6 h-6", md: "w-8 h-8",;
     lg: "w-12 h-12";,
   };
     const textSizes = {
@@ -61,7 +61,7 @@ export function LoadingFallback({
 
 export function PageLoadingFallback() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">;
       <div className="text-center">;
         <LoadingFallback; 
           message="Loading Zion Tech Group..." 
@@ -78,4 +78,4 @@ export function PageLoadingFallback() {
       </div>
     </div>
   );
-}<//div>
+}<//div><///div>

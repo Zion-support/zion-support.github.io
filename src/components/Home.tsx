@@ -244,4 +244,4 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
       </section>;
     </div>;
   );
-};expor; t; defaul; t; Home;<//div>
+};expor; t; defaul; t; Home;<//div><///div>

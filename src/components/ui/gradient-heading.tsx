@@ -43,4 +43,4 @@ export function GradientHeading({ ;
       {children}
     </motion.h1>
   );
-}<//motion.h1>
+}<//motion.h1><///motion.h1>

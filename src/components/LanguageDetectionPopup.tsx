@@ -7,4 +7,4 @@ const LanguageDetectionPopup: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default LanguageDetectionPopup,;<//div>
+export default LanguageDetectionPopup,;<//div><///div>

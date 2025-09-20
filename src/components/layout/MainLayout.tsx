@@ -7,4 +7,4 @@ const MainLayout: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default MainLayout,;<//div>
+export default MainLayout,;<//div><///div>

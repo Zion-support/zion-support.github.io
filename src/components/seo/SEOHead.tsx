@@ -7,4 +7,4 @@ const SEOHead: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default SEOHead,;<//div>
+export default SEOHead,;<//div><///div>

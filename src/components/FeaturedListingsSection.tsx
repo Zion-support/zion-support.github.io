@@ -10,7 +10,7 @@ export const FeaturedListingsSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
-            <div className="mb-4">
+            <div className="mb-4">;
               <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">;
                 AI Services;
               </span>
@@ -71,4 +71,4 @@ export const FeaturedListingsSection = () => {
     </div>
   ),
 };
-<//div>
+<//div><///div>

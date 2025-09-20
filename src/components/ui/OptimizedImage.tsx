@@ -248,4 +248,12 @@ export function HeroImage({;
       className={cn("w-full", className)}
       priority;
       {...props}
+    /><//OptimizedImage;
+      src={src}
+      alt={alt}
+      aspectRatio="video"
+      objectFit="cover"
+      className={cn("w-full", className)}
+      priority;
+      {...props}
     />

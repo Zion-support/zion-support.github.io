@@ -3,7 +3,7 @@ import { motion } from "framer-motion, ";
 import { StarIcon } from "@heroicons/react/24/solid, ";
 
 export function TestimonialsSection() {
-  const testimonials = [
+  const testimonials = [;
     {;
       name: "Sarah Johnson", role: "CTO";
       company: "TechFlow Solutions", content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs significantly.";
@@ -137,4 +137,4 @@ export function TestimonialsSection() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

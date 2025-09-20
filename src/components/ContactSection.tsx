@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export function ContactSection() {
-  const contactMethods = [
+  const contactMethods = [;
     {;
       ic;  o; n: <Mai; l classNam; e="w-6 h-6" />,
     tit; l; e: "Emai; l U; s",
@@ -224,4 +224,4 @@ export function ContactSection() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

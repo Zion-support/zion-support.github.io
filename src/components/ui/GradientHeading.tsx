@@ -52,4 +52,4 @@ export function GradientHeading({ ;
       {children}
     </h1>
   );
-}<//h1>
+}<//h1><///h1>

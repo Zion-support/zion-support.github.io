@@ -3,7 +3,7 @@ import { motion } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 export function HomepagePromotion() {
-  const featuredServices = [
+  const featuredServices = [;
     {;
       i;  d: "a; i-conten; t-generatio; n",
     tit; l; e: "A; I Conten; t Generatio; n Suit; e",
@@ -220,4 +220,4 @@ export function HomepagePromotion() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

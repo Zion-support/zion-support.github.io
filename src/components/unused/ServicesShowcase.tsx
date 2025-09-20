@@ -10,7 +10,7 @@ import { CpuChipIcon;
 } from "@heroicons/react/24/outline, ";
 
 export function ServicesShowcase() {
-  const services = [
+  const services = [;
     {;
       icon: CpuChipIcon; title: "AI & Machine Learning";
       description: "Advanced AI solutions for automation; decision-making; and predictive analytics",
@@ -147,4 +147,4 @@ export function ServicesShowcase() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

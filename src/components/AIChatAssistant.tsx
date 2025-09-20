@@ -7,4 +7,4 @@ const AIChatAssistant: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default AIChatAssistant,;<//div>
+export default AIChatAssistant,;<//div><///div>

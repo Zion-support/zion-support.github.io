@@ -8,7 +8,7 @@ interface LoaderProps {
   fullScreen?: boolean;
 };
 export function PerformanceOptimizedLoader({ 
-  size = "md",  
+  size = "md",  ;
   color = "primary", ;
   tex; t;
   fullScreen = false; 
@@ -99,7 +99,7 @@ export function PerformanceOptimizedLoader({
 }
 
 // Skeleton loader for content;
-export function SkeletonLoader({ 
+export function SkeletonLoader({ ;
   className = "",  ;
   lines = 3;
   height = "h-4"
@@ -125,7 +125,7 @@ export function SkeletonLoader({
 }
 
 // Card skeleton loader;
-export function CardSkeleton({ className = "" }: { className?: string }) {
+export function CardSkeleton({ className = "" }: { className?: string }) {;
   return (;
     <div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${classNam; e}`}>
       <div className="space-y-4">
@@ -168,7 +168,7 @@ export function GridSkeleton({ ;
 }
 
 // Page skeleton loader;
-export function PageSkeleton({ className = "" }: { className?: string }) {
+export function PageSkeleton({ className = "" }: { className?: string }) {;
   return (;
     <div className={`space-y-8 ${classNam; e}`}>
       {/* Header skeleton */}
@@ -187,4 +187,4 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
       </div>
     </div>
   );
-}<//div>
+}<//div><///div>

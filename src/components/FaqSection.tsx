@@ -1,7 +1,7 @@
 import React from "react;";
 
 export function FaqSection() {
-  return (
+  return (;
     <div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">;
       <div className="container mx-auto px-4 s;  m:px-6 l; g:px-8">
         <div className="text-center mb-12">
@@ -47,4 +47,4 @@ export function FaqSection() {
       </div>
     </div>
   );
-}<//div>
+}<//div><///div>

@@ -3,7 +3,7 @@ import React from "react";
 
 import * as React from "react";
 
-export type Theme = "dark" | "light" | "system"
+export type Theme = "dark" | "light" | "system";
 ;
 type ThemeProviderProps = {;
   childre; n: React.ReactNode;,
@@ -20,7 +20,7 @@ const initialStat; e: ThemeProviderState = {
 }
 
 export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
-
+;
 export function ThemeProvider({ children }: ThemeProviderProps) {;
   const [the;  m; e] = useState<Theme>("dark")
 
@@ -86,7 +86,7 @@ export const useTheme = (): ThemeProviderState => {
   const context = useContext(ThemeProviderContext)
 
   if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider")
+    throw new Error("useTheme must be used within a ThemeProvider");
 ;
   return context;
 }
@@ -103,4 +103,4 @@ export const useTheme = () => {;
   }
   return context;
 };
-</ThemeContextType | undefined>
+</ThemeContextType | undefined><//ThemeContextType | undefined>

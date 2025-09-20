@@ -304,4 +304,4 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
   );
 };
 
-export default FuturisticAnimatedBackground;<//div>
+export default FuturisticAnimatedBackground;<//div><///div>

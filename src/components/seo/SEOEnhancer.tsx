@@ -7,4 +7,4 @@ const SEOEnhancer: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default SEOEnhancer,;<//div>
+export default SEOEnhancer,;<//div><///div>

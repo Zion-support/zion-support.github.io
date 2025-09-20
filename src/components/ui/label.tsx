@@ -23,4 +23,8 @@ export { Label , };
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
+  /><//LabelPrimitive.Root;
+    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props}
   />

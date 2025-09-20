@@ -14,7 +14,7 @@ import { useDispatch } from "react-redux, ";
 import type { AppDispatch } from "@/store;";
 import { addItem } from "@/store/cartSlice, ";
 
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
   const {;
     user; setUser;
     isLoading; setIsLoading;
@@ -207,4 +207,4 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       {children}
     </AuthContext.Provider>
   );
-};<//AuthContext.Provider>
+};<//AuthContext.Provider><///AuthContext.Provider>

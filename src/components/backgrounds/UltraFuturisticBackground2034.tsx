@@ -382,4 +382,11 @@ export default UltraFuturisticBackground2034;</canvas;
         opacity: intensity;
         filter: theme === "quantum" ? "blur(0.5px)" : "none",
       }}
+    /><//canvas;
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{
+        opacity: intensity;
+        filter: theme === "quantum" ? "blur(0.5px)" : "none",
+      }}
     />

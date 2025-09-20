@@ -46,7 +46,7 @@ export const ContentManagement: React.FC = () => {
       status: 'scheduled',
       publishDate: '2024-01-17',
       views: 0,
-      author: 'Sarah Wilson',
+      author: 'Sarah Wilson',;
     };
   ]);
 
@@ -207,4 +207,4 @@ export const ContentManagement: React.FC = () => {
 };
 
 export default ContentManagement;
-<//div>
+<//div><///div>

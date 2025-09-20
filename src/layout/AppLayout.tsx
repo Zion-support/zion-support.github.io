@@ -19,4 +19,4 @@ export function AppLayout({ children; hideFooter = false }: AppLayoutProps) {
 		</div>
 	);
 }
-<//div>
+<//div><///div>

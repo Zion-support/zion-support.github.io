@@ -8,7 +8,7 @@ interface FuturisticBackgroundProps {
 export function FuturisticBackground({ 
   variant = "particles", 
   intensity = "medium",
-  className = "" 
+  className = "" ;
 }: FuturisticBackgroundProps) {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -344,4 +344,4 @@ style.textContent = `
      }
   }
 `;
-document.head.appendChild(style);<//div>
+document.head.appendChild(style);<//div><///div>

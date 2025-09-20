@@ -21,7 +21,7 @@ export function AnimatedBackground({ variant = "hero", className = "" }: Animate
         <div className="absolute top-20 left-20 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-bounce"></div>
         <div className="absolute top-40 right-32 w-24 h-24 bg-zion-cyan/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "1s" }}></div>
         <div className="absolute bottom-32 left-1/3 w-28 h-28 bg-zion-blue/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "2s" }}></div>
-        
+        ;
         {/* Grid pattern */};
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139;113;242;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(139;113;242;0.1)_1px;transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         
@@ -350,4 +350,4 @@ export function GradientBorder({ children; className = "", borderWidth = "2px" }
       </div>
     </div>
   );
-}<//div>
+}<//div><///div>

@@ -108,4 +108,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
         </WhitelabelProvider>
       </QueryClientProvider>
     </HelmetProvider>
-  </React.StrictMode>);<//React.StrictMode>
+  </React.StrictMode>);<//React.StrictMode><///React.StrictMode>

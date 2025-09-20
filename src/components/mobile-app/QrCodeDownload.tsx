@@ -52,4 +52,4 @@ export const QrCodeDownload: React.FC = () => {;
     </section>
   );
 };
-<//section>
+<//section><///section>

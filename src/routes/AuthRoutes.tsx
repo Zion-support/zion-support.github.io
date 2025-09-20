@@ -42,4 +42,4 @@ const AuthRoutes = () => {
   );
 };
 
-export default AuthRoutes;<//Routes>
+export default AuthRoutes;<//Routes><///Routes>

@@ -328,4 +328,4 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
   );
 };
 
-export default InteractiveHero;<//section>
+export default InteractiveHero;<//section><///section>

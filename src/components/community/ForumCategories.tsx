@@ -5,7 +5,7 @@ export default function ForumCategories() {
   const categories: ForumCategoryInfo[] = [
     {
       id: "1",
-      name: "General Discussion",
+      name: "General Discussion",;
       description: "General topics and discussions",;
       postCount: 150; adminOnly: false;
       icon: "message-circle",
@@ -69,4 +69,4 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
 export default ForumCategories;
 }
 }
-<//div>
+<//div><///div>

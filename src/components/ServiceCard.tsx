@@ -234,4 +234,4 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
   );
 };
 
-export default ServiceCard;<//motion.div>
+export default ServiceCard;<//motion.div><///motion.div>

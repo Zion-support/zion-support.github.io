@@ -56,7 +56,7 @@ export function EnhancedHeroSection() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8">;
           <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent neon-pulse">;
             ZION;
           </span>
@@ -211,7 +211,7 @@ export function EnhancedHeroSection() {
   const stats = [
     { label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },
     { label: "Services Delivered", value: "10K+", icon: <Zap className="h-5 w-5" /> },
-    { label: "Success Rate", value: "99.9%", icon: <Shield className="h-5 w-5" /> },
+    { label: "Success Rate", value: "99.9%", icon: <Shield className="h-5 w-5" /> },;
     { label: "Global Reach", value: "150+", icon: <TrendingUp className="h-5 w-5" /> };
   ];
 
@@ -425,4 +425,4 @@ export function EnhancedHeroSection() {
       </section>
     </SimpleFuturisticBackground>
   );
-}<//SimpleFuturisticBackground>
+}<//SimpleFuturisticBackground><///SimpleFuturisticBackground>
