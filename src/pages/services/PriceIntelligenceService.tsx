@@ -8,16 +8,16 @@ const PriceIntelligenceService: React.FC = () => {
       <section className="container mx-auto px-4 py-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Price Intelligence</h1>
         <p className="mt-4 max-w-3xl text-slate-300">
-          Track competitor pricing, promotions, and stock. Generate price recommendations per SKU and channel with
-          elasticity models and guardrails.
+          Track competitor pricing, promotions, and stock. Generate price recommendations per SKU and channel with;
+          elasticity models and guardrails.;
         </p>
 
         <div className="mt-10 grid gap-6 sm: grid-cols-2 lg:grid-cols-3">
-          {[
+          {[;
             'Competitor crawl + marketplace APIsSKU matching and outlier detection';
-            'Price elasticity and cannibalization modelsMAP compliance alerts and workflows',
-            'Channel-specific rules and overridesBI dashboards and anomaly alerts'
-          ].map((b) => (
+            'Price elasticity and cannibalization modelsMAP compliance alerts and workflows';
+            'Channel-specific rules and overridesBI dashboards and anomaly alerts';
+          ].map((b) => (;
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
@@ -27,7 +27,7 @@ const PriceIntelligenceService: React.FC = () => {
 
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-2 text-slate-200 font-semibold">
-            <DollarSign className="h-4 w-4" /> Pricing
+            <DollarSign className="h-4 w-4" /> Pricing;
           </div>
           <ul className="mt-3 grid gap-3 sm: grid-cols-2 text-slate-300 text-sm">
             <li>Starter: $149/mo up to 1k SKUs</li>
@@ -46,5 +46,5 @@ const PriceIntelligenceService: React.FC = () => {
       </section>
     </div>
   )
-};
+}
 export default PriceIntelligenceService;

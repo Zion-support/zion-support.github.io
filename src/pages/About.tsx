@@ -28,6 +28,7 @@ export default function About() {
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with cutting-edge AI and emerging technologies.'
     },
+<<<<<<< HEAD
     {
       icon: Shield,
       title: 'Trust & Security',
@@ -39,6 +40,19 @@ export default function About() {
       description: 'We measure our success by the success of our clients and their digital transformation journey.'
     };
     {
+=======
+    {
+      icon: Shield,
+      title: 'Trust & Security',
+      description: 'Your data and business operations are protected with enterprise-grade security measures.'
+    },
+    {
+      icon: Heart,
+      title: 'Client Success',
+      description: 'We measure our success by the success of our clients and their digital transformation journey.'
+    },
+    {
+>>>>>>> 01968bce8d529a59f04f31cac6cee86ca38ed214
       icon: Rocket,
       title: 'Future-Ready',
       description: 'We build solutions that not only solve today\'s problems but prepare you for tomorrow\'s challenges.'
@@ -46,14 +60,21 @@ export default function About() {
   ];
   const team = [
     {
-      name: 'Kleber Santos',role: 'CEO & Founder',bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',image: '/team/kleber-santos.jpg'
-    };
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
+      image: '/team/kleber-santos.jpg'
+    },
     {
-      name: 'AI Research Team',role: 'AI & ML Specialists',bio: 'Experts in machine learning, neural networks, and autonomous systems development.',
+      name: 'AI Research Team',
+      role: 'AI & ML Specialists',
+      bio: 'Experts in machine learning, neural networks, and autonomous systems development.',
       image: '/team/ai-team.jpg'
-    };
+    },
     {
-      name: 'DevOps Engineers',role: 'Infrastructure & Cloud',bio: 'Specialists in cloud architecture, automation, and scalable infrastructure solutions.',
+      name: 'DevOps Engineers',
+      role: 'Infrastructure & Cloud',
+      bio: 'Specialists in cloud architecture, automation, and scalable infrastructure solutions.',
       image: '/team/devops-team.jpg'
     }
   ];

@@ -90,7 +90,12 @@ const EnhancedAccessibility: React.FC = () => {
     
     // Announce changes
     const settingNames = {
-      highContrast: 'High contrast',largeText: 'Large text',reducedMotion: 'Reduced motion',focusVisible: 'Focus visible',screenReader: 'Screen reader',keyboardNavigation: 'Keyboard navigation'
+      highContrast: 'High contrast',
+      largeText: 'Large text',
+      reducedMotion: 'Reduced motion',
+      focusVisible: 'Focus visible',
+      screenReader: 'Screen reader',
+      keyboardNavigation: 'Keyboard navigation'
     };
     announce(`${settingNames[setting]} ${value ? 'enabled' : 'disabled'}`);
   };
@@ -101,8 +106,13 @@ const EnhancedAccessibility: React.FC = () => {
     // Use screen reader announcement
     if (settings.screenReader) {
       const announcement = document.createElement('div');
+<<<<<<< HEAD
       announcement.setAttribute('aria-livepolite');
       announcement.setAttribute('aria-atomictrue');
+=======
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+>>>>>>> 01968bce8d529a59f04f31cac6cee86ca38ed214
       announcement.className = 'sr-only';
       announcement.textContent = message;
       document.body.appendChild(announcement);

@@ -180,16 +180,16 @@ import {
   SkipForward2Dodecagon
 } from "lucide-react";
 export const FuturisticNavigation: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-  const [scrolled, setScrolled] = useState(false),
-  const location = useLocation(),
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20),
+      setScrolled(window.scrollY > 20);
     },
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   useEffect(() => {
     setActiveDropdown(null);

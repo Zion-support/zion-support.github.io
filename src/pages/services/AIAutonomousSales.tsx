@@ -1,120 +1,120 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  TrendingUp,
-  Brain, 
-  Target, 
-  BarChart3, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  ChartBar,
-  PieChart,
-  Activity,
-  Eye,
-  Clock,
-  DollarSign,
-  Award,
-  Users,
-  Share2,
-  Zap,
-  Shield,
-  DollarSign as DollarSignIcon
+import { ;
+  TrendingUp;
+  Brain, ;
+  Target, ;
+  BarChart3, ;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  ChartBar;
+  PieChart;
+  Activity;
+  Eye;
+  Clock;
+  DollarSign;
+  Award;
+  Users;
+  Share2;
+  Zap;
+  Shield;
+  DollarSign as DollarSignIcon;
 } from "lucide-react";
 const AIAutonomousSales: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,title: 'AI-Powered Sales Intelligence',description: 'Advanced machine learning for autonomous sales strategy and optimization'
-    };
-    {
-      icon: Target,title: 'Lead Generation',description: 'Intelligent lead generation and qualification with AI-driven insights'
-    };
-    {
-      icon: TrendingUp,title: 'Sales Forecasting',description: 'Predictive sales forecasting and revenue optimization'
-    };
-    {
-      icon: BarChart3,title: 'Sales Analytics',description: 'Real-time analytics and insights into sales performance and trends'
-    };
-    {
-      icon: Users,title: 'Customer Segmentation',description: 'AI-driven customer segmentation and targeting strategies'
-    };
-    {
-      icon: DollarSignIcon,title: 'Revenue Optimization',description: 'Continuous optimization of sales processes and revenue generation'
+  const features = [;
+    {;
+      icon: Brain,title: 'AI-Powered Sales Intelligence',description: 'Advanced machine learning for autonomous sales strategy and optimization';
     }
-  ];
-  const benefits = [
-    'Increase sales revenue by 120%Improve lead conversion by 80%',
-    'Reduce sales cycle by 60%Automate sales processes',
-    '24/7 autonomous operationReal-time sales insights'
-  ],
+    {;
+      icon: Target,title: 'Lead Generation',description: 'Intelligent lead generation and qualification with AI-driven insights';
+    }
+    {;
+      icon: TrendingUp,title: 'Sales Forecasting',description: 'Predictive sales forecasting and revenue optimization';
+    }
+    {;
+      icon: BarChart3,title: 'Sales Analytics',description: 'Real-time analytics and insights into sales performance and trends';
+    }
+    {;
+      icon: Users,title: 'Customer Segmentation',description: 'AI-driven customer segmentation and targeting strategies';
+    }
+    {;
+      icon: DollarSignIcon,title: 'Revenue Optimization',description: 'Continuous optimization of sales processes and revenue generation';
+    }
+  ]
+  const benefits = [;
+    'Increase sales revenue by 120%Improve lead conversion by 80%';
+    'Reduce sales cycle by 60%Automate sales processes';
+    '24/7 autonomous operationReal-time sales insights';
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
+      {{/* Hero Section */}}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-400 text-sm font-medium mb-6">
               <TrendingUp className="w-4 h-4 mr-2" />
-              AI-Powered Autonomous Sales
+              AI-Powered Autonomous Sales;
             </div>
-            
+            ;
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Sales with
+              Transform Your Sales with;
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
-            
+            ;
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your sales operations with our AI-powered autonomous platform. 
-              Generate leads, optimize conversions, and maximize revenue with intelligent automation.
+              Revolutionize your sales operations with our AI-powered autonomous platform. ;
+              Generate leads, optimize conversions, and maximize revenue with intelligent automation.;
             </p>
-            
+            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-green-500/30 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {{/* Features Section */}}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Sales Features
+              Advanced Sales Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive sales capabilities for modern businesses
+              Our AI platform provides comprehensive sales capabilities for modern businesses;
             </p>
           </motion.div>
-          
+          ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
+            {features.map((feature, index) => (;
+              <motion.div;
+                key={{index}}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-300"
+                className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -127,26 +127,26 @@ const AIAutonomousSales: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {{/* Benefits Section */}}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Autonomous Sales?
+              Why Choose AI Autonomous Sales?;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in sales performance and revenue generation
+              Experience measurable improvements in sales performance and revenue generation;
             </p>
           </motion.div>
-          
+          ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -154,7 +154,7 @@ const AIAutonomousSales: React.FC = () => {
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefit, index) => (;
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
@@ -162,47 +162,47 @@ const AIAutonomousSales: React.FC = () => {
                 ))}
               </div>
             </motion.div>
-            
-            <motion.div
+            ;
+            <motion.div;
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-xl p-8"
+              className="className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-xl p-8";"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Sales?</h3>
               <p className="text-gray-300 mb-6">
-                Join thousands of businesses already using AI to enhance their sales performance.
+                Join thousands of businesses already using AI to enhance their sales performance.;
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
-                Get Started Today
+                Get Started Today;
               </button>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {{/* CTA Section */}}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Sales?
+              Ready to Revolutionize Sales?;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your journey to AI-powered sales with our comprehensive platform.
+              Start your journey to AI-powered sales with our comprehensive platform.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-green-500/30 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -210,5 +210,5 @@ const AIAutonomousSales: React.FC = () => {
       </section>
     </div>
   )
-};
+}
 export default AIAutonomousSales;

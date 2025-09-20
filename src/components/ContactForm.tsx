@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 interface FormData {
-  name: string,email: string,company: string,service: string,message: string,budget: string
+  name: string;
+  email: string;
+  company: string;
+  service: string;
+  message: string;
+  budget: string;
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',email: '',company: '',service: '',message: '',budget: ''
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: '',
+    budget: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -27,7 +37,12 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',email: '',company: '',service: '',message: '',budget: ''
+        name: '',
+        email: '',
+        company: '',
+        service: '',
+        message: '',
+        budget: ''
       });
     } catch (error) {
       setSubmitStatus('error');
@@ -37,10 +52,13 @@ const ContactForm: React.FC = () => {
   };
 
   const services = [
-    'AI ServicesMicro SaaS',
-    'IT ServicesQuantum Computing',
-    'BlockchainSpace Technology'
-  ],
+    'AI Services',
+    'Micro SaaS',
+    'IT Services',
+    'Quantum Computing',
+    'Blockchain',
+    'Space Technology'
+  ];
 
   const budgetRanges = [
     'Under $5,000',
@@ -194,6 +212,6 @@ const ContactForm: React.FC = () => {
       </div>
     </div>
   );
-},
+};
 
 export default ContactForm;

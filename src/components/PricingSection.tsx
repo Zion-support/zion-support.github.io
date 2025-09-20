@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const pricingTiers = [
   {
-    name: "Starter",price: "$99",period: "/month",description: "Perfect for small businesses and startups",features: [
+    name: "Starter",price: "$99",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: [
       "Basic AI Services";
       "Email Support",
       "5GB Storage",
@@ -13,7 +16,10 @@ const pricingTiers = [
     popular: false,color: "from-blue-500 to-cyan-500"
   };
   {
-    name: "Professional",price: "$299",period: "/month",description: "Ideal for growing businesses",features: [
+    name: "Professional",price: "$299",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [
       "Advanced AI Services";
       "Priority Support",
       "50GB Storage",
@@ -25,7 +31,10 @@ const pricingTiers = [
     popular: true,color: "from-purple-500 to-pink-500"
   };
   {
-    name: "Enterprise",price: "$999",period: "/month",description: "For large organizations",features: [
+    name: "Enterprise",price: "$999",
+      period: "/month",
+      description: "For large organizations",
+      features: [
       "Full AI Suite";
       "24/7 Dedicated Support",
       "Unlimited Storage",

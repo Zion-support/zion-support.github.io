@@ -8,71 +8,71 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
-export default function ProfileDetail() {
-    // useParams is typed as `any` in this environment due to missing type
-    // definitions, so avoid passing a type argument to prevent TS2347.
-    const { profileId } = useParams(),
-    const [profileData, setProfileData] = useState(null),
-    const [isLoading, setIsLoading] = useState(true),
-    const [error, setError] = useState(null),
+export default function ProfileDetail() {;
+    // useParams is typed as `any` in this environment due to missing type;
+    // definitions, so avoid passing a type argument to prevent TS2347.;
+    const { profileId } = useParams()
+    const [profileData, setProfileData] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
+    const [error, setError] = useState(null)
     useEffect(() => {
         const fetchProfile = async () => {
-            setIsLoading(true),
-            setError(null),
-            try {
-                if (!profileId) {
-                    setError("Profile ID is missing."),
-                    return,
+            setIsLoading(true)
+            setError(null)
+            try {;
+                if (if (!profileId) {;) {
+                    setError("Profile ID is missing.")
+                    return;
                 }
-                const { data, error } = await supabase
+                const { data, error } = await supabase;
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
-                    .single(),
-                if (error) {
-                    throw new Error(error.message),
+                    .single()
+                if (if (error) {;) {
+                    throw new Error(error.message)
                 }
-                if (!data) {
-                    setError("Profile not found."),
+                if (if (!data) {;) {
+                    setError("Profile not found.")
                     return;
                 }
-                setProfileData(data);
+                setProfileData(data)
             }
-            catch (err) {
-                setError(err.message || "Failed to fetch profile.");
-                toast({
-                    title: "Error",description: err.message || "Failed to fetch profile.",variant: "destructive"
-                });
+            catch (err) {;
+                setError(err.message || "Failed to fetch profile.")
+                toast({;
+                    title: "Error",description: err.message || "Failed to fetch profile.",variant: "destructive";
+                })
             }
-            finally {
-                setIsLoading(false),
+            finally {;
+                setIsLoading(false)
             }
-        },
-        fetchProfile(),
-    }, [profileId]),
-    if (isLoading) {
+        }
+        fetchProfile()
+    }, [profileId])
+    if (if (isLoading) {;) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
-      </div>),
+      </div>)
     }
-    if (error) {
+    if (if (error) {;) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
-      </div>);
+      </div>)
     }
-    if (!profileData) {
+    if (if (!profileData) {;) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
-      </div>),
+      </div>)
     }
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
-      
+      ;
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
-          {/* Main Content */}
+          {{/* Main Content */}}
           <div className="col-span-12 lg:col-span-8">
-            {/* Profile Header */}
+            {{/* Profile Header */}}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <div className="flex items-center space-x-4">
@@ -81,8 +81,8 @@ export default function ProfileDetail() {
                   </Avatar>
                   <div>
                     <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
-                      {profileData.full_name}
-                      {profileData.is_verified && (<CheckCircle2 className="w-5 h-5 text-zion-cyan"/>)}
+                      {{profileData.full_name}}
+                      {{profileData.is_verified && (<CheckCircle2 className="w-5 h-5 text-zion-cyan"/>)}}
                     </CardTitle>
                     <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
                   </div>
@@ -99,14 +99,14 @@ export default function ProfileDetail() {
                       <span>{profileData.availability}</span>
                     </div>)}
                   {profileData.hourly_rate && (<div className="text-white font-bold">
-                      ${profileData.hourly_rate}
+                      ${{profileData.hourly_rate}}
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>)}
                 </div>
               </CardContent>
             </Card>
 
-            {/* About Section */}
+            {{/* About Section */}}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>
@@ -116,7 +116,7 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
 
-            {/* Skills Section */}
+            {{/* Skills Section */}}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">Skills</CardTitle>
@@ -128,7 +128,7 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
 
-            {/* Experience Section */}
+            {{/* Experience Section */}}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>
@@ -143,7 +143,7 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
 
-            {/* Portfolio Section */}
+            {{/* Portfolio Section */}}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">Portfolio</CardTitle>
@@ -152,19 +152,19 @@ export default function ProfileDetail() {
                 {profileData.portfolio_links ? (<div className="flex flex-col gap-3">
                     {profileData.portfolio_links.map((link, index) => (<a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover: text-white flex items-center gap-2">
                         <LinkIcon className="h-4 w-4"/>
-                        {link.title || link.url}
+                        {{link.title || link.url}}
                       </a>))}
                   </div>) : (<p className="text-zion-slate-light">No portfolio links provided.</p>)}
               </CardContent>
             </Card>
           </div>
 
-          {/* Sidebar with HireNowCTA */}
+          {{/* Sidebar with HireNowCTA */}}
           <div className="col-span-4 lg:col-span-1">
-            <HireNowCTA talentProfile={{
-            id: profileData?.id || '',full_name: profileData?.full_name || '',professional_title: profileData?.professional_title || '',hourly_rate: profileData?.hourly_rate || 0
+            <HireNowCTA talentProfile={{;
+            id: profileData?.id || '',full_name: profileData?.full_name || '',professional_title: profileData?.professional_title || '',hourly_rate: profileData?.hourly_rate || 0;
         }}/>
-            {/* Contact Information */}
+            {{/* Contact Information */}}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Contact</h3>
               <div className="flex flex-col space-y-3">
@@ -179,33 +179,33 @@ export default function ProfileDetail() {
                 {profileData.website && (<div className="flex items-center gap-2 text-zion-slate-light">
                     <Globe className="h-4 w-4"/>
                     <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
-                      Website
+                      Website;
                     </a>
                   </div>)}
               </div>
             </div>
 
-            {/* Social Links */}
+            {{/* Social Links */}}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
               <div className="flex flex-col space-y-3">
                 {profileData.github_url && (<a href={profileData.github_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="GitHub" title="GitHub">
                     <Github className="h-4 w-4"/>
-                    GitHub
+                    GitHub;
                   </a>)}
                 {profileData.twitter_url && (<a href={profileData.twitter_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="Twitter" title="Twitter">
                     <Twitter className="h-4 w-4"/>
-                    Twitter
+                    Twitter;
                   </a>)}
                 {profileData.linkedin_url && (<a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn">
                     <Linkedin className="h-4 w-4"/>
-                    LinkedIn
+                    LinkedIn;
                   </a>)}
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-    </>);
+      ;
+    </>)
 }

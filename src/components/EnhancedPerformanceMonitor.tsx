@@ -7,47 +7,42 @@ export function EnhancedPerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,renderTime: 0,memoryUsage: 0,networkLatency: 0,fps: 0,lighthouseScore: 0
   });
-  const [isVisible, setIsVisible] = useState(false),
-
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     // Measure page load time
-    const loadTime = performance.now(),
-    
+    const loadTime = performance.now();
     // Measure memory usage
-    const memoryInfo = (performance as any).memory,
-    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0,
-
+    const memoryInfo = (performance as any).memory;
+    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
     // Measure render time
-    const renderTime = performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0,
-
+    const renderTime = performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0;
     // Measure network latency (simplified)
     const networkLatency = performance.getEntriesByType('resource')
       .reduce((acc, entry) => acc + entry.duration, 0) / 10,
 
     // Calculate FPS (simplified)
     let fps = 60,
-    let lastTime = performance.now(),
+    let lastTime = performance.now();
     let frameCount = 0,
 
     const measureFPS = () => {
-      frameCount++,
-      const currentTime = performance.now(),
+      frameCount++;
+      const currentTime = performance.now();
       if (currentTime - lastTime >= 1000) {
         fps = Math.round((frameCount * 1000) / (currentTime - lastTime)),
         frameCount = 0,
         lastTime = currentTime,
       }
-      requestAnimationFrame(measureFPS),
+      requestAnimationFrame(measureFPS);
     },
-    measureFPS(),
-
+    measureFPS();
     // Calculate Lighthouse score (simplified)
     const lighthouseScore = Math.max(0, Math.min(100, 
       100 - (loadTime / 10) - (memoryUsage * 2) - (networkLatency / 10)
     )),
 
     setMetrics({
-      loadTime: Math.round(loadTime),renderTime: Math.round(renderTime),memoryUsage: Math.round(memoryUsage * 100) / 100,networkLatency: Math.round(networkLatency);
+      loadTime: Math.round(loadTime),renderTime: Math.round(renderTime);memoryUsage: Math.round(memoryUsage * 100) / 100,networkLatency: Math.round(networkLatency);
       fps,
       lighthouseScore: Math.round(lighthouseScore)
     });
@@ -57,12 +52,11 @@ export function EnhancedPerformanceMonitor() {
         setIsVisible(!isVisible)
       }
     };
-    window.addEventListener('keydown', handleKeyPress),
-    return () => window.removeEventListener('keydown', handleKeyPress),
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
   }, [isVisible]),
 
-  if (!isVisible) return null,
-
+  if (!isVisible) return null;
   return (
     <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-xs font-mono z-50 min-w-[280px]">
       <div className="flex items-center justify-between mb-3">

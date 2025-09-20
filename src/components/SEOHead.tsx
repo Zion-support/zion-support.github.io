@@ -108,7 +108,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       canonical.setAttribute('href', url);
     } else {
       canonical = document.createElement('link');
+<<<<<<< HEAD
       canonical.setAttribute('relcanonical');
+=======
+      canonical.setAttribute('rel', 'canonical');
+>>>>>>> 01968bce8d529a59f04f31cac6cee86ca38ed214
       canonical.setAttribute('href', url);
       document.head.appendChild(canonical);
     }
@@ -118,7 +122,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     // Remove existing structured data
     const existingScript = document.querySelector('script[type="application/ld+json"]');
     if (existingScript) {
-      existingScript.remove()
+      existingScript.remove();
     }
 
     // Add new structured data
@@ -144,7 +148,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       ...(data.publishedTime && { "datePublished": data.publishedTime }),
       ...(data.modifiedTime && { "dateModified": data.modifiedTime }),
       ...(data.section && { "articleSection": data.section }),
+<<<<<<< HEAD
       ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join() })
+=======
+      ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join(', ') })
+>>>>>>> 01968bce8d529a59f04f31cac6cee86ca38ed214
     };
 
     const script = document.createElement('script');

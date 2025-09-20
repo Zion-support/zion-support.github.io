@@ -23,7 +23,7 @@ import NewProductsPage from "@/pages/NewProductsPage";
 import MoreProductsPage from "@/pages/MoreProductsPage";
 const MarketplaceRoutes = () => {
     return (<Routes>
-      {/* Marketplace Routes */}
+      {{/* Marketplace Routes */}}
       <Route index element={<Marketplace />}/>
       <Route path="/categories" element={<Categories />}/>
       <Route path="/category/:slug" element={<CategoryDetail />}/>
@@ -31,50 +31,50 @@ const MarketplaceRoutes = () => {
       <Route path="/marketplace/listing/:id" element={<ListingDetail />}/>
       <Route path="/listing/:id" element={<ListingDetail />}/>
 
-      {/* Equipment Routes */}
+      {{/* Equipment Routes */}}
       <Route path="/equipment" element={<EquipmentPage />}/>
       <Route path="/equipment/:id" element={<EquipmentDetail />}/>
       <Route path="/new-products" element={<NewProductsPage />}/>
       <Route path="/more-products" element={<MoreProductsPage />}/>
 
-      {/* Job Routes */}
+      {{/* Job Routes */}}
       <Route path="/post-job" element={<ProtectedRoute>
             <PostJob />
           </ProtectedRoute>}/>
       <Route path="/jobs/:id" element={<JobDetails />}/>
 
-      {/* AI Matcher Routes */}
+      {{/* AI Matcher Routes */}}
       <Route path="/ai-matcher" element={<AIMatcher />}/>
       <Route path="/match" element={<AIMatcher />}/>
 
-      {/* Creator Routes */}
+      {{/* Creator Routes */}}
       <Route path="/publish" element={<ProtectedRoute>
             <PublishProduct />
           </ProtectedRoute>}/>
 
-      {/* Service Routes */}
+      {{/* Service Routes */}}
       <Route path="/services" element={<ServicesPage />}/>
       <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />}/>
       <Route path="/request-quote" element={<RequestQuote />}/>
       <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />}/>
 
-      {/* Search Route */}
+      {{/* Search Route */}}
       <Route path="/search" element={<SearchPage />}/>
 
-      {/* Checkout Route - accessible even in staging */}
+      {{/* Checkout Route - accessible even in staging */}}
       <Route path="/checkout" element={<ProtectedRoute>
             <Checkout />
           </ProtectedRoute>}/>
 
-      {/* Project Room Routes */}
+      {{/* Project Room Routes */}}
       <Route path="/project/:projectId" element={<ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>}/>
 
-      {/* Video Call Routes */}
+      {{/* Video Call Routes */}}
       <Route path="/call/:roomId" element={<ProtectedRoute>
             <VideoCall />
           </ProtectedRoute>}/>
-    </Routes>),
-},
+    </Routes>)
+}
 export default MarketplaceRoutes;

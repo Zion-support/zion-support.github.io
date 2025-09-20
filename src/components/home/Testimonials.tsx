@@ -6,8 +6,7 @@ interface Testimonial {
 }
 
 const Testimonials: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0),
-
+  const [currentIndex, setCurrentIndex] = useState(0);
   const testimonials: Testimonial[] = [
     {
       id: 1,name: "Sarah Chen",role: "CTO",company: "TechFlow Solutions",content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.",rating: 5,avatar: "/images/testimonials/sarah-chen.jpg",industry: "Technology"
@@ -24,11 +23,11 @@ const Testimonials: React.FC = () => {
     }
   ];
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length),
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   },
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length),
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   },
 
   const goToTestimonial = (index: number) => {

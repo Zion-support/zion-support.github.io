@@ -113,9 +113,9 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   const [messages, setMessages] = useState<Message[]>([]),
   const [files, setFiles] = useState<FileItem[]>([]),
   const [selectedProject, setSelectedProject] = useState<Project | null>(null),
-  const [showProjectForm, setShowProjectForm] = useState(false),
-  const [showTaskForm, setShowTaskForm] = useState(false),
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [showProjectForm, setShowProjectForm] = useState(false);
+  const [showTaskForm, setShowTaskForm] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),
   const [selectedStatus, setSelectedStatus] = useState<string>('all'),
 
@@ -183,10 +183,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         sharedWith: ['Lisa Thompson'],permissions: 'view',version: '1.0'
       }
     ];
-    setTeamMembers(sampleTeamMembers),
-    setProjects(sampleProjects),
-    setMessages(sampleMessages),
-    setFiles(sampleFiles),
+    setTeamMembers(sampleTeamMembers);
+    setProjects(sampleProjects);
+    setMessages(sampleMessages);
+    setFiles(sampleFiles);
   }, []),
 
   // Get status color and icon
@@ -204,10 +204,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   const getProjectStatusColor = (status: string) => {
     switch (status) {
       case 'planning': return 'text-blue-400 bg-blue-400/20';
-      case 'active': return 'text-green-400 bg-green-400/20',
-      case 'review': return 'text-yellow-400 bg-yellow-400/20',
-      case 'completed': return 'text-purple-400 bg-purple-400/20',
-      case 'on-hold': return 'text-red-400 bg-red-400/20',
+      case 'active': return 'text-green-400 bg-green-400/20';
+      case 'review': return 'text-yellow-400 bg-yellow-400/20';
+      case 'completed': return 'text-purple-400 bg-purple-400/20';
+      case 'on-hold': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -215,9 +215,9 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20',
-      case 'high': return 'text-orange-400 bg-orange-400/20',
-      case 'critical': return 'text-red-400 bg-red-400/20',
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
+      case 'high': return 'text-orange-400 bg-orange-400/20';
+      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -225,18 +225,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   const getFileTypeIcon = (type: string) => {
     switch (type) {
       case 'document': return <FileText className="w-5 h-5" />;
-      case 'image': return <Image className="w-5 h-5" />,
-      case 'video': return <Video className="w-5 h-5" />,
-      case 'audio': return <File className="w-5 h-5" />,
-      case 'archive': return <Folder className="w-5 h-5" />,
+      case 'image': return <Image className="w-5 h-5" />;
+      case 'video': return <Video className="w-5 h-5" />;
+      case 'audio': return <File className="w-5 h-5" />;
+      case 'archive': return <Folder className="w-5 h-5" />;
       default: return <File className="w-5 h-5" />
     }
   };
   // Format file size
   const formatFileSize = (size: number) => {
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
-    if (size < 1024) return `${size.toFixed(1)} MB`,
-    return `${(size / 1024).toFixed(1)} GB`,
+    if (size < 1024) return `${size.toFixed(1)} MB`;
+    return `${(size / 1024).toFixed(1)} GB`;
   },
 
   // Handle project selection
@@ -254,7 +254,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           msg.reactions.push({ type: reactionType, count: 1 });
         }
       }
-      return msg,
+      return msg;
     })),
   },
 

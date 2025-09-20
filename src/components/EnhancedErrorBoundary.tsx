@@ -6,9 +6,9 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error: Error | null;
-  errorInfo: ErrorInfo | null;
+  errorInfo: ErrorInfo | null,
   errorId: string | null;
 }
 
@@ -56,9 +56,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   handleRetry = () => {
     this.setState({
-hasError: false,error: null,errorInfo: null,errorId: null
-    
-});
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null
+    });
   };
 
   handleReload = () => {
