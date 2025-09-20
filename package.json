@@ -126,6 +126,7 @@
     "@elastic/elasticsearch": "^8.12.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.2.10",
     "@playwright/test": "^1.45.3",
     "@tailwindcss/postcss": "^4.1.12",
     "@testing-library/cypress": "^8.0.2",
@@ -165,8 +166,7 @@
     "ts-jest": "^29.1.1",
     "typescript": "^5.4.5",
     "vite": "^7.1.6",
-    "vitest": "^3.2.4",
-    "@next/bundle-analyzer": "^14.2.10"
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "react": "^18.2.0",
