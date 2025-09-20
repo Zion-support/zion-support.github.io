@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+const QuickAccess: React.FC = () => {,
+  return (,};
+export default QuickAccess;)
+=======
 
 const QuickAccess: React.FC = () => {
   return (
@@ -252,3 +257,4 @@ export default function Page() {;";
 };
 
 export default QuickAccess;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

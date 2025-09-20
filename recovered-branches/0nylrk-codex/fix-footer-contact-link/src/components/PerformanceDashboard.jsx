@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default PerformanceDashboard;
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePerformance } from '@/hooks/usePerformance';
@@ -96,3 +100,4 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
         </CardHeader>
 
 export default PerformanceDashboard;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, {useState, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X} from 'lucide-react';
@@ -52,6 +55,7 @@ export function AccessibilityPanel(props: any) {
   ...settings,
   [key]: value !== null ? value : !settings[key]
         
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const accessibility.js: React.FC = () => {,
   return (,

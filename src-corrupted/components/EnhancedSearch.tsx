@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { useNavigate  } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
  from 'react';
@@ -520,3 +522,4 @@ setFilters(prev: > ({;
 </SearchResult>
 </any>
 </any>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,6 +1,12 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
+import globals from 'globals';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+=======
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -8,6 +14,25 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        process: 'readonly',
+        console: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly'
+      },
+=======
     files: ['src/**/*.ts', 'src/**/*.tsx'],
     ignores: [
       '**/node_modules/**',
@@ -179,8 +204,16 @@ export default [
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       parserOptions: {
         ecmaFeatures: {
+<<<<<<< HEAD
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+=======
           jsx: true,
         },
       },
@@ -194,11 +227,15 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
+<<<<<<< HEAD
+      'no-unused-vars': 'warn',
+=======
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -209,6 +246,7 @@ export default [
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       'no-console': 'warn',
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off'

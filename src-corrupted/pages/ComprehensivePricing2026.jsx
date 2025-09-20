@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
@@ -112,6 +117,7 @@ const ComprehensivePricing2026 = (props: any) => {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default ComprehensivePricing2026;

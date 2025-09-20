@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+      </div>,
+    </div>,
+=======
 
 import React from 'react',;
 import Head from 'next/head',;
@@ -758,6 +762,7 @@ const QuantumNeuralNetworkPlatform = () => {;
         </section>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default quantum-neural-network-platform;

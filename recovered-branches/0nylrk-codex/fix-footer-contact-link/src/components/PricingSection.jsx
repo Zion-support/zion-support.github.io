@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default PricingSection;
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building } from 'lucide-react';
@@ -136,3 +140,4 @@ export function PricingSection() {
       </div>
 
 export default PricingSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

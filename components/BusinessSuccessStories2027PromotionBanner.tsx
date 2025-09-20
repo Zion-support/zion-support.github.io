@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 'use client';
 
@@ -233,3 +235,4 @@ const BusinessSuccessStories2027PromotionBanner = () => {
 };
 
 export default BusinessSuccessStories2027PromotionBanner;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

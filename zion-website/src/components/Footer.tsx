@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+export default function Footer() {,
+  return (,
+        </div>,
+      </div>,
+    </footer>,
+  ),
+=======
 export default function Footer() {
   return (
     <footer className="bg-black">
@@ -32,4 +40,5 @@ export default function Footer() {
       </div>
     </footer>
   )
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 }

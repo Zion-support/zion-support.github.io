@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 
@@ -60,6 +62,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
   return (
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';

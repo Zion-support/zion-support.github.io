@@ -2,6 +2,14 @@ import React from 'react';
 
 const UltimateAIConsciousness2030: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6">
+      <h1 className="text-3xl font-bold">Ultimate AI Consciousness 2030</h1>
+      <p className="text-gray-600 mt-2">Placeholder page to resolve missing import.</p>
+    </div>
+  )
+}
+=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -202,3 +210,4 @@ const UltimateAIConsciousness2030: React.FC = () => {
 };
 
 export default UltimateAIConsciousness2030;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

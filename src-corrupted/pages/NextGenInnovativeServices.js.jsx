@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import React, {useState, useMemo} from 'react';
 import {motion} from 'framer-motion';
 import {Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award} from 'lucide-react';
@@ -118,6 +123,7 @@ export {NextGenInnovativeServices}() {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default NextGenInnovativeServices.js;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -813,3 +815,4 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 };
 
 export default MobileOptimizer;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default SecurityComplianceSection;
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award } from 'lucide-react';
@@ -171,3 +175,4 @@ export function SecurityComplianceSection() {
       </div>
 
 export default SecurityComplianceSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, {useState, useCallback} from 'react';'
 import {motion, AnimatePresence} from 'framer-motion';'
 import {Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2} from 'lucide-react';
@@ -42,6 +45,7 @@ export const MachineLearningDashboard = (props: any) => {
             epochs: 100,'
   optimizer: 'adam'
 if(predictionForm.modelId && predictionForm.input.trim()) {}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const MachineLearningDashboard.js: React.FC = () => {,
   return (,

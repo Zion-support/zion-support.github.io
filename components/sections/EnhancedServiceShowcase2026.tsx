@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, DollarSign, Shield, Rocket, Brain, Globe, Cpu, Atom } from 'lucide-react';
@@ -290,3 +292,4 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
 };
 
 export default EnhancedServiceShowcase2026;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

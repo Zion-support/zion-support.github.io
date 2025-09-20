@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+      </div>,
+    </div>,
+=======
 
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
@@ -884,6 +888,7 @@ function CareersPage() {
         </section>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default careers;

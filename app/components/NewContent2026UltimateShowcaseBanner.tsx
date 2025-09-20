@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+const NewContent2026UltimateShowcaseBanner: React.FC = () => {,
+  return (,
+})
+=======
 
 const NewContent2026UltimateShowcaseBanner: React.FC = () => {
   return (
@@ -154,3 +159,4 @@ const NewContent2026UltimateShowcaseBanner: React.FC = () => {
 };
 
 export default NewContent2026UltimateShowcaseBanner;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

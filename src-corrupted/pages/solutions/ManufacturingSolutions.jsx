@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import {motion} from 'framer-motion';
 import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog export default function ManufacturingSolutions
 export { ManufacturingSolutions }() {
@@ -94,6 +99,7 @@ export { ManufacturingSolutions }() {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default ManufacturingSolutions;

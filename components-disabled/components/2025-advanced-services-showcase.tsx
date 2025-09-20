@@ -4,8 +4,12 @@ import { motion, AnimatePresence  } from 'framer-motion';
   website: 'https://ziontechgroup.com';
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
+  website: 'https://ziontechgroup.com',}
+=======
   website: 'https://ziontechgroup.com'
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 const allServices = [;
   ...advancedEnterpriseServices2025;
   ...innovativeMicroSaasExpansion2025;

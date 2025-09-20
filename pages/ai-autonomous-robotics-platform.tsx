@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -361,3 +363,4 @@ const AIAutonomousRoboticsPlatform: React.FC = () => {
 };
 
 export default AIAutonomousRoboticsPlatform;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

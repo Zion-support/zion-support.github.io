@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import {
@@ -88,5 +90,6 @@ export default function ComprehensiveServicesShowcase2025V2() {;
   const allNewServices = [      staggerChildren: 0 && 0.1;
     }
   }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default 2025-comprehensive-services-showcase-v2;

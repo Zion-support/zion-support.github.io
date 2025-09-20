@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';'''
 import {motion} from 'framer-motion';'''
 import {Link} from 'react-router-dom';'''
@@ -325,6 +328,7 @@ export default function AIAutonomousCodeReview(props: any) {}
         </div>
       </section>
     </div>)}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const AIAutonomousCodeReview: React.FC = () => {,
   return (,

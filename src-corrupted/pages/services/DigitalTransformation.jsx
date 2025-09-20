@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import {Link} from 'react-router-dom';
 import {SEO} from '@/components/SEO';
 import {motion} from 'framer-motion';
@@ -90,6 +95,7 @@ const DigitalTransformation = (props: any) => {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default DigitalTransformation;

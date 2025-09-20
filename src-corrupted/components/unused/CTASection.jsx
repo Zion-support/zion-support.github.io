@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+export default CTASection;
+=======
 import {motion} from 'framer-motion';
 export default function Page(props: any) {
 ;
@@ -13,3 +16,4 @@ export default function Page(props: any) {
         <motion.div initial = {
 
 export default CTASection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

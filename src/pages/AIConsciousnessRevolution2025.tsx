@@ -23,6 +23,8 @@ const AIConsciousnessRevolution2025: React.FC = () => {
               <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg"></button>
                 Watch Demo</button>
               </button>
+<<<<<<< HEAD
+=======
             </div>
           </div>
         </div>
@@ -178,6 +180,7 @@ const AIConsciousnessRevolution2025: React.FC = () => {
         </div>
       </div>
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">

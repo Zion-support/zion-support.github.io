@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
@@ -150,5 +152,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400"/>
       </div>
     </motion.div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default ServiceCard;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React { useState } from 'react',;',';';
     ';';';';
 import { motion  } from 'framer-motion'; import { Link  } from 'react-router-dom',;',';';
@@ -1014,3 +1016,4 @@ import React { useState } from 'react' import { motion } from 'framer - motion' 
 </motion>
 </any>
 </any>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
@@ -504,5 +506,6 @@ export const AICodeGenerator = () => {
           </motion.div>)}
       </div>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default AICodeGenerator;

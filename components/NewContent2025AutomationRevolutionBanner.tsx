@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -182,3 +184,4 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
 };
 
 export default NewContent2025AutomationRevolutionBanner;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

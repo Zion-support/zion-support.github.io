@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import React from 'react';'''
 import {motion} from 'framer-motion';'''
 import {Link} from 'react-router-dom';'''
@@ -88,6 +93,7 @@ export default function AIConsciousnessSimulationPlatform(props: any) {}
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default AIConsciousnessSimulationPlatform;

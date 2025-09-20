@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';
 
 const QuantumAI2026RevolutionBanner = () => {
@@ -129,3 +132,4 @@ const QuantumAI2026RevolutionBanner = () => {
 };
 
 export default QuantumAI2026RevolutionBanner;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

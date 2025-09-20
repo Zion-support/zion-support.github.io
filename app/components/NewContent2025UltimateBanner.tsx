@@ -6,4 +6,8 @@ const NewContent2025UltimateBanner: React.FC = () => {,
       <p className="text-gray-300">Revolutionary technology component</p>,
     </div>,
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

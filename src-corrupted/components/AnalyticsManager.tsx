@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import {  import { motion  } from 'framer-motion';
 
  params - Function parameters
@@ -48,6 +50,7 @@ interface UserSession {
 export function AnalyticsManager(props: any) {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default AnalyticsManager;

@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 import {Building2, Server, Shield, Zap, Users, Globe, ArrowRight} from 'lucide-react';
@@ -27,6 +32,7 @@ export {EnterpriseIT}() {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default EnterpriseIT.js;

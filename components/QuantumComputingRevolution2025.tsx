@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 'use client';
 
@@ -199,3 +201,4 @@ const QuantumComputingRevolution2025: React.FC = () => {
 };
 
 export default QuantumComputingRevolution2025;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

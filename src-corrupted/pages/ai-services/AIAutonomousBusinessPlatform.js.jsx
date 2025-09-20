@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import {motion} from 'framer-motion';
 import {Link} from 'react-router-dom';
 import {Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu} from 'lucide-react';
@@ -101,6 +106,7 @@ export {AIAutonomousBusinessPlatform}() {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default AIAutonomousBusinessPlatform.js;

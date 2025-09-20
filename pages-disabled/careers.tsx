@@ -1,9 +1,15 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
 import Head from 'next/head';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 
+<<<<<<< HEAD
+const Page = () => {
+=======
 export default function CareersPage() {
   const openPositions = [
     {
@@ -110,6 +116,7 @@ export default function CareersPage() {
   ];
 
 const careers: React.FC = () => {
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   return (
     <MainLayout
       title="Careers - Zion Tech Group"

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import {  import { motion  } from 'framer-motion';
@@ -253,3 +255,4 @@ const benefits = [] const stats = [] export function NewsletterSection(props: an
 </motion>
 </motion>
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

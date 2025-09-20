@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+// Safe storage utilities for handling localStorage and sessionStorage
+=======
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
@@ -21,6 +24,7 @@ export const safeStorage = {
  * Safe storage utility for handling localStorage and sessionStorage
  * with error handling and fallbacks
  */
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 export type StorageType = 'localStorage' | 'sessionStorage';
 
@@ -45,6 +49,8 @@ class SafeStorage {
       console.warn(`Failed to access ${type}:`, error);
       return null;
     }
+<<<<<<< HEAD
+=======
   },
 
   /**
@@ -174,6 +180,7 @@ export const safeStorage = {
     } catch (error) {
       console.warn('localStorage not available:', error);
     }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   }
 
   setItem(key: string, value: any, options: StorageOptions = {}): boolean {

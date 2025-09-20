@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -40,6 +43,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { innovativeMicroSaasServices2032 } from '../data/innovativeMicroSaasServices2032';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const InnovativeServicesShowcase2032: React.FC = () => {,
   return (,

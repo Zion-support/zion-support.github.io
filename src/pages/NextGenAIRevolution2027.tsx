@@ -3,6 +3,11 @@ import { motion } from 'framer-motion';
 
 const NextGenAIRevolution2027: React.FC = () => {
   return (
+<<<<<<< HEAD
+          </motion.div>
+            </button>
+        </motion.div>
+=======
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -196,6 +201,7 @@ const NextGenAIRevolution2027: React.FC = () => {
         </motion.div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

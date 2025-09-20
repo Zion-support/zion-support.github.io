@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import {motion} from 'framer-motion';
 import {Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings} from 'lucide-react';
 import {Building, Brain, ArrowRight, Star, Rocket, Cpu, Database} from 'lucide-react';
@@ -235,6 +240,7 @@ export default function AutonomousBusinessOperationsPlatform(props: any) {}"""
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default AutonomousBusinessOperationsPlatform;

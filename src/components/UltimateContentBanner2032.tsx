@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { Link } from 'react-router-dom';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const UltimateContentBanner2032: React.FC = () => {
   return (

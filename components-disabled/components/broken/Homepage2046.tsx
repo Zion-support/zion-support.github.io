@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from 'react',
+
+const Homepage2046: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">Homepage2046</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
+export default Homepage2046;
+=======
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -78,3 +90,4 @@ const Homepage2046: React.FC = () => {
 };
 
 export default Homepage2046;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useEffect, useRef} from 'react';';
 import {motion, useInView} from 'framer-motion';
 import {EnhancedLoading} from "./EnhancedLoading";';
@@ -52,3 +54,4 @@ export {LazyWrapper};
 export {LazyWrapper, Page};
 ;
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

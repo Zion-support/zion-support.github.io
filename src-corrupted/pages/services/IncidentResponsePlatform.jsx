@@ -1,4 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
+      <Helmet>,
+        <title>IncidentResponsePlatform | Zion Tech Group</title>,
+        <meta name="description" content="IncidentResponsePlatform - Revolutionary technology solutions" />,
+      </Helmet>,
+      <div className="container mx-auto px-4 py-20">,
+        <div className="text-center">,
+          <h1 className="text-4xl font-bold mb-6">IncidentResponsePlatform</h1>,
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
+        </div>,
+      </div>,
+    </div>,
+=======
 import {Link} from 'react-router-dom';
 import {Helmet} from 'react-helmet-async';
 import {motion} from 'framer-motion';
@@ -109,6 +122,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default IncidentResponsePlatform;

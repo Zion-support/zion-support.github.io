@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence, useScroll} from 'framer-motion';
 import {Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X} from 'lucide-react';
@@ -79,6 +82,7 @@ export function InteractiveTimeline(props: any) {
             'Team': Users,
   'Launch': Award
         
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const interactive-timeline.js: React.FC = () => {,
   return (,

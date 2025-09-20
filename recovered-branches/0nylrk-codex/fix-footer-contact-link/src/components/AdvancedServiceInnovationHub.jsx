@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
@@ -602,5 +604,6 @@ const AdvancedServiceInnovationHub = () => {
         </div>
       </motion.div>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default AdvancedServiceInnovationHub;

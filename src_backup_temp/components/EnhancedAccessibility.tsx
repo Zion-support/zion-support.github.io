@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default EnhancedAccessibility;
+=======
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
 export const "EnhancedAccessibility": React.FC<EnhancedAccessibilityProps> = ({;
@@ -76,3 +80,4 @@ export const EnhancedAccessibility: React.FC = () => {
 }, []);, []);    if(isOpen) {
 
 export default EnhancedAccessibility;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

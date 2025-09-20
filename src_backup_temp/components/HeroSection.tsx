@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
 export default function Page("props": "any) {;
@@ -83,6 +85,7 @@ const "heroSlides": "HeroSlid e[] = [  {;
       setCurrentSlide(index);
       setIsAutoPlaying(false)},;
     [currentSlide];
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default HeroSection;

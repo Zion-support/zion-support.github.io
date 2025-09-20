@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+export default HomepagePromotion;
+=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 export function HomepagePromotion() {
@@ -108,3 +111,4 @@ export function HomepagePromotion() {
         </motion.div>
 
 export default HomepagePromotion;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

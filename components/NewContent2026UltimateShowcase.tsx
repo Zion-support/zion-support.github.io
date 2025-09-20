@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -180,3 +182,4 @@ const NewContent2026UltimateShowcase: React.FC = () => {
 };
 
 export default NewContent2026UltimateShowcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

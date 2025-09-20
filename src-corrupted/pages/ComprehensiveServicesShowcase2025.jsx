@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import React, {useState} from 'react';'''
 import {motion} from 'framer-motion';
 import {Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search} from 'lucide-react';
@@ -82,6 +87,7 @@ const ComprehensiveServicesShowcase2025 = (props: any) => {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default ComprehensiveServicesShowcase2025;

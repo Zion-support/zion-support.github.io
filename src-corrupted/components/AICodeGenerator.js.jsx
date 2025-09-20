@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, {useState, useCallback} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';'''
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
@@ -78,6 +81,7 @@ export const AICodeGenerator = (props: any) => {
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}
 try {}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const AICodeGenerator.js: React.FC = () => {,
   return (,

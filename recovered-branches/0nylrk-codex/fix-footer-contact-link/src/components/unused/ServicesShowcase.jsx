@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+export default ServicesShowcase;
+=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CpuChipIcon, CloudIcon, ShieldCheckIcon, LightBulbIcon, RocketLaunchIcon, ChartBarIcon } from '@heroicons/react/24/outline';
@@ -85,3 +88,4 @@ export function ServicesShowcase() {
         </motion.div>
 
 export default ServicesShowcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

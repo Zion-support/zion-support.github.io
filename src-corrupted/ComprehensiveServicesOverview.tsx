@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useMemo } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -40,5 +42,6 @@ const categoryIcons = {
     'AI & Threat Intelligence': Shield,
     'AI & Cloud Management': Cloud,
     'AI & DevOps': Code
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default ComprehensiveServicesOverview;

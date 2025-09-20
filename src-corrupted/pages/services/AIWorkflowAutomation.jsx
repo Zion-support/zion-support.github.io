@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 import {Zap, GitFork, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3} from 'lucide-react';
@@ -163,6 +168,7 @@ const AIWorkflowAutomation = (props: any) => {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default AIWorkflowAutomation;

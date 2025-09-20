@@ -1,5 +1,9 @@
 export default function TrustworthyModelRoutingPage() {
   return (
+<<<<<<< HEAD
+    <div className="bg-black min-h-screen">
+      <h1>AI 2026 Trustworthy Model Routing</h1>
+=======
     <div className="min-h-screen bg-white">
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-8">
@@ -54,6 +58,7 @@ export default function TrustworthyModelRoutingPage() {
           </p>
         </section>
       </article>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     </div>
   ) 
 } 

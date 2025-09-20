@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default OptimizedImage;
+=======
 import React, { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -92,3 +96,4 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
       </AnimatePresence>
 
 export default OptimizedImage;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

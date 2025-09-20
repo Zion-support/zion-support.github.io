@@ -1,5 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
@@ -697,6 +702,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default revolutionary-2027-services-showcase;

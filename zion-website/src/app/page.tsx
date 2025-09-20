@@ -203,6 +203,9 @@ export default function HomePage() {
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+=======
 }
       <div className="relative isolate px-6 pt-14 lg:px-8">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -282,3 +285,4 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our technology can accelerate your growth and innovation.</p>
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

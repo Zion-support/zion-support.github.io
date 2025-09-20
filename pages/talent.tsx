@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -29,3 +31,4 @@ export default function TalentPage() {
     </Layout>
   );
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

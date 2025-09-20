@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState} from 'react';
 export default InteractiveServiceShowcase;
 import {motion, AnimatePresence} from 'framer-motion';
@@ -293,3 +295,4 @@ export {InteractiveServiceShowcase};
 </motion>;
 </motion>;
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

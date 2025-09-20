@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket } from 'lucide-react';
@@ -321,5 +323,6 @@ const AdvancedAnalyticsDashboard = () => {
         </div>
       </motion.div>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default AdvancedAnalyticsDashboard;

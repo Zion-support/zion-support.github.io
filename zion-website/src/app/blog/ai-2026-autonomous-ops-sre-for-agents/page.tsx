@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+
+export default function Page() {
+  return (
+    <div className="bg-black min-h-screen">
+      <h1>AI 2026 Autonomous Ops SRE for Agents</h1>
+    </div>
+  ) 
+} 
+=======
 export default function Article() {
   return (
     <div className="min-h-screen bg-white">
@@ -36,3 +46,4 @@ export default function Article() {
 }
 
 export default page;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

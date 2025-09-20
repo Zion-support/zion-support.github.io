@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { SEO } from '@/components/SEO';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -622,6 +624,7 @@ export default function Cookies() {
       </main>
       <Footer />
     </>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 const Cookies: React.FC = () => {,
   return (,

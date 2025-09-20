@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+    </div>,
+=======
 import Link from 'next/link';
 import React from 'react';
 import SEO from '../../components/SEO';
@@ -54,6 +57,7 @@ const EnterpriseAISecurityBlueprint2026 = () => {
         </footer>
       </article>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default page;

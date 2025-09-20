@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -66,5 +68,6 @@ const contactInfo = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default ai-services;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
@@ -534,5 +536,6 @@ const AdvancedServicePortfolioDashboard = () => {
         </div>
       </motion.div>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default AdvancedServicePortfolioDashboard;

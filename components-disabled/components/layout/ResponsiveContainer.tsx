@@ -1,7 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+interface ResponsiveContainerProps {,
+=======
 
 interface ResponsiveContainerProps {
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   children: React.ReactNode;
   variant?: 'default' | 'wide' | 'narrow' | 'full';
   padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';

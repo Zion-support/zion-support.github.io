@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default AdvancedAnalytics;
+=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 export function AdvancedAnalytics() {
@@ -85,3 +89,4 @@ export function AdvancedAnalytics() {
       </div>
 
 export default AdvancedAnalytics;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

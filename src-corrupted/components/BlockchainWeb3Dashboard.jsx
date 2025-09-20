@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import {useState, useCallback} from 'react';'
 import {motion, AnimatePresence} from 'framer-motion';'
 import {Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2} from 'lucide-react';
@@ -27,6 +30,7 @@ export const BlockchainWeb3Dashboard = (props: any) => {
         data: ''
     });
 const handleConnectWallet = useCallback(async () => {}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const BlockchainWeb3Dashboard: React.FC = () => {,
   return (,

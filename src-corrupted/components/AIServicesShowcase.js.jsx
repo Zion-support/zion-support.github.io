@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default AIServicesShowcase.js;
+=======
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan} from 'lucide-react';
@@ -95,3 +99,4 @@ export function AIServicesShowcase(props: any) {
   text: 'Active' 
 
 export default AIServicesShowcase.js;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

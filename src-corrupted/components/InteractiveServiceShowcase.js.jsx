@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, {useState} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';'''
 import {Link} from 'react-router-dom';
@@ -299,6 +302,7 @@ const InteractiveServiceShowcase = (props: any) => {}
       </div>
     </section>)};
 export default InteractiveServiceShowcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const InteractiveServiceShowcase.js: React.FC = () => {,
   return (,

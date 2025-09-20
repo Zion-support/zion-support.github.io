@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle} from 'lucide-react';
@@ -259,3 +261,4 @@ export default function FuturisticServicesShowcase()() {
 </motion>
 </motion>
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

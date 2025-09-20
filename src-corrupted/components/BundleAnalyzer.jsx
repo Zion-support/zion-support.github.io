@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw } from 'lucide-react';
@@ -300,5 +302,6 @@ export const BundleAnalyzer = () => {
           </motion.div>)}
       </AnimatePresence>
     </>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default BundleAnalyzer;
