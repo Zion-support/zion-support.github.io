@@ -1,30 +1,33 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Atom
-  Cpu
-  Zap
-  Brain
-  CheckCircle
-  ArrowRight
-  Target
-  Network
-  Database
-  Shield
-  Globe
-  Rocket
-  Lightbulb
-  Code
-  BarChart3
-  Clock
-  TrendingUp
-  Users
-  Monitor
-  Server
-  Cloud
-  Lock
-  Eye
-} from "lucide-react"
+  Atom;
+  Cpu;
+  Zap;
+  Brain;
+  CheckCircle;
+  ArrowRight;
+  Target;
+  Network;
+  Database;
+  Shield;
+  Globe;
+  Rocket;
+  Lightbulb;
+  Code;
+  BarChart3;
+  Clock;
+  TrendingUp;
+  Users;
+  Monitor;
+  Server;
+  Cloud;
+  Lock;
+  Eye;
+}
+}
+ } from "lucide-react";
 export default function QuantumTechnology() {
   const [selectedApplication, setSelectedApplication] = useState('all')
   const [activeTab, setActiveTab] = useState('overview')
@@ -118,7 +121,7 @@ export default function QuantumTechnology() {
   r: y: "finance",benefi,
   t: s: ["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"]
       ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
@@ -127,7 +130,7 @@ export default function QuantumTechnology() {
   r: y: "healthcare",benefi,
   t: s: ["Faster Discovery", "Accurate Modeling", "Cost Reduction", "Better Efficacy"]
       ic,
-  o: n: Monitor
+  o: n: Monitor;
 },
   {
   tit,
@@ -136,7 +139,7 @@ export default function QuantumTechnology() {
   r: y: "logistics",benefi,
   t: s: ["Route Optimization", "Cost Reduction", "Efficiency", "Real-time Adaptation"]
       ic,
-  o: n: Network
+  o: n: Network;
 },
   {
   tit,
@@ -145,7 +148,7 @@ export default function QuantumTechnology() {
   r: y: "cybersecurity",benefi,
   t: s: ["Unbreakable Encryption", "Future-Proof Security", "Quantum Networks", "Secure Communication"]
       ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
@@ -154,7 +157,7 @@ export default function QuantumTechnology() {
   r: y: "research",benefi,
   t: s: ["Accurate Predictions", "Complex Modeling", "Faster Simulations", "Better Understanding"]
       ic,
-  o: n: Lightbulb
+  o: n: Lightbulb;
 },
   {
   tit,
@@ -163,7 +166,7 @@ export default function QuantumTechnology() {
   r: y: "research",benefi,
   t: s: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"]
       ic,
-  o: n: Brain
+  o: n: Brain;
 },
   ]
   const quantumTechnologies = [
@@ -173,7 +176,7 @@ export default function QuantumTechnology() {
   o: n: "Quantum bits using superconducting circuits for computation",advantag,
   e: s: ["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"]
       ic,
-  o: n: Cpu
+  o: n: Cpu;
 },
   {
   na,
@@ -181,7 +184,7 @@ export default function QuantumTechnology() {
   o: n: "Quantum bits using individual ions for precise control",advantag,
   e: s: ["High Fidelity", "Long Coherence", "Precise Control", "Low Error Rates"]
       ic,
-  o: n: Atom
+  o: n: Atom;
 },
   {
   na,
@@ -189,7 +192,7 @@ export default function QuantumTechnology() {
   o: n: "Quantum bits with inherent error protection",advantag,
   e: s: ["Error Protection", "Stability", "Fault Tolerance", "Long Coherence"]
       ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   na,
@@ -197,7 +200,7 @@ export default function QuantumTechnology() {
   o: n: "Quantum bits using light particles for communication",advantag,
   e: s: ["Room Temperature", "Fast Transmission", "Low Loss", "Network Ready"]
       ic,
-  o: n: Network
+  o: n: Network;
 },
   {
   na,
@@ -205,7 +208,7 @@ export default function QuantumTechnology() {
   o: n: "Quantum bits using semiconductor technology",advantag,
   e: s: ["Manufacturing", "Scalability", "Integration", "Cost Effective"]
       ic,
-  o: n: Server
+  o: n: Server;
 },
   {
   na,
@@ -213,7 +216,7 @@ export default function QuantumTechnology() {
   o: n: "Quantum bits using neutral atoms for computation",advantag,
   e: s: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"]
       ic,
-  o: n: Atom
+  o: n: Atom;
 },
   ]
   const quantumAdvantages = [
@@ -250,7 +253,7 @@ export default function QuantumTechnology() {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -270,7 +273,7 @@ export default function QuantumTechnology() {
   },
   }
   const filteredApplications = selectedApplication === 'all'
-    ? quantumApplications
+    ? quantumApplications;
     : quantumApplications.filter(app => app.category === selectedApplication)
 
   return (
@@ -284,7 +287,7 @@ export default function QuantumTechnology() {
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -306,7 +309,7 @@ export default function QuantumTechnology() {
               Quantum{' '},
   }
               <span className="bg-gradient-to-r from-zion-purple to-zion-pink bg-clip-text text-transparent">
-                Technology
+                Technology;
               </span>
             </h1>
             <p className="text-xl,
@@ -317,7 +320,7 @@ export default function QuantumTechnology() {
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-pink text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-purple/25";"
@@ -328,12 +331,12 @@ export default function QuantumTechnology() {
   l: e: 0.95 },
   }
               >
-                Quantum Consultation
+                Quantum Consultation;
               </motion.button>
               <button className="px-8 py-4 border border-zion-purple text-zion-purple rounded-xl font-semibold text-lg,
   hove: r: bg-zion-purple hove,
   r:text-white transition-all duration-300">
-                View Research
+                View Research;
               </button>
             </div>
           </motion.div>
@@ -344,7 +347,7 @@ export default function QuantumTechnology() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -361,15 +364,15 @@ export default function QuantumTechnology() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Quantum Technology Services
+              Quantum Technology Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our quantum solutions span the entire spectrum of quantum technologies
+              Our quantum solutions span the entire spectrum of quantum technologies;
               from computing and cryptography to networking and sensing.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8";"
@@ -382,7 +385,7 @@ export default function QuantumTechnology() {
   }
           >
             {quantumServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8,
@@ -420,7 +423,7 @@ export default function QuantumTechnology() {
   }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -437,17 +440,17 @@ export default function QuantumTechnology() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Quantum Applications by Industry
+              Quantum Applications by Industry;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how quantum technology is revolutionizing different industries
+              Discover how quantum technology is revolutionizing different industries;
               and creating new possibilities for innovation and growth.
             </p>
           </motion.div>
 
           {/* Application Filter */},
   }
-          <motion.div
+          <motion.div;
             className="className="flex flex-wrap justify-center gap-4 mb-12";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -463,16 +466,16 @@ export default function QuantumTechnology() {
   }
           >
             {applications.map((app) () => {
-  const Icon = app.icon
+  const Icon = app.icon;
               return (
-                <button
+                <button;
                   key={app.id},
   }
                   onClick={onClick={() => setSelectedApplication(app.id)},
   },
   }
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-  selectedApplication === app.id
+  selectedApplication === app.id;
                       ? 'bg-zion-purple text-white shadow-lg shadow-zion-purple/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light,
   hove: r: bg-zion-slate-dark hove,
@@ -489,7 +492,7 @@ export default function QuantumTechnology() {
 
           {/* Applications Grid */},
   }
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8";"
@@ -502,7 +505,7 @@ export default function QuantumTechnology() {
   }
           >
             {filteredApplications.map((app, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6,
@@ -545,7 +548,7 @@ export default function QuantumTechnology() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -562,15 +565,15 @@ export default function QuantumTechnology() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Quantum Computing Technologies
+              Quantum Computing Technologies;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We work with cutting-edge quantum computing platforms and technologies
+              We work with cutting-edge quantum computing platforms and technologies;
               to deliver the best solutions for your specific needs.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8";"
@@ -583,7 +586,7 @@ export default function QuantumTechnology() {
   }
           >
             {quantumTechnologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6,
@@ -625,7 +628,7 @@ export default function QuantumTechnology() {
   }
       <section className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-pink">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -642,15 +645,15 @@ export default function QuantumTechnology() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Quantum Computing Advantages
+              Quantum Computing Advantages;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the transformative power of quantum computing with
+              Experience the transformative power of quantum computing with;
               exponential speedups and capabilities beyond classical computing.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8";"
@@ -663,7 +666,7 @@ export default function QuantumTechnology() {
   }
           >
             {quantumAdvantages.map((advantage, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -685,7 +688,7 @@ export default function QuantumTechnology() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -702,15 +705,15 @@ export default function QuantumTechnology() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Quantum Technology Implementation
+              Quantum Technology Implementation;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our systematic approach ensures successful quantum technology deployment
+              Our systematic approach ensures successful quantum technology deployment;
               and maximum value for your organization.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8";"
@@ -728,31 +731,31 @@ export default function QuantumTechnology() {
   e: p: "01",tit,
   l: e: "Quantum Assessment",descripti,
   o: n: "Evaluate quantum readiness and identify opportunities",ic,
-  o: n: Eye
+  o: n: Eye;
 },
   {
   st,
   e: p: "02",tit,
   l: e: "Strategy Development",descripti,
   o: n: "Design quantum roadmap and implementation plan",ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   st,
   e: p: "03",tit,
   l: e: "Technology Selection",descripti,
   o: n: "Choose optimal quantum platforms and solutions",ic,
-  o: n: Cpu
+  o: n: Cpu;
 },
   {
   st,
   e: p: "04",tit,
   l: e: "Deployment & Optimization",descripti,
   o: n: "Implement and continuously improve quantum solutions",ic,
-  o: n: Rocket
+  o: n: Rocket;
 },
   ].map((phase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="relative";"
@@ -784,7 +787,7 @@ export default function QuantumTechnology() {
   }
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -803,13 +806,13 @@ export default function QuantumTechnology() {
               Ready to Explore Quantum Technology?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let's discuss how quantum computing and quantum technologies can
+              Let's discuss how quantum computing and quantum technologies can;
               transform your business and solve previously impossible challenges.
             </p>
 
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-pink text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-purple/25";"
@@ -820,12 +823,12 @@ export default function QuantumTechnology() {
   l: e: 0.95 },
   }
               >
-                Start Quantum Journey
+                Start Quantum Journey;
               </motion.button>
               <button className="px-8 py-4 border border-zion-purple text-zion-purple rounded-xl font-semibold text-lg,
   hove: r: bg-zion-purple hove,
   r:text-white transition-all duration-300">
-                Download Quantum Guide
+                Download Quantum Guide;
               </button>
             </div>
           </motion.div>

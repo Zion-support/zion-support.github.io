@@ -1,28 +1,31 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  CheckCircle
+  CheckCircle;
   AlertTriangle,
   XCircle,
   Clock,
   Activity,
   Server,
-  Database
-  Globe
-  Zap
-  RefreshCw
-  TrendingUp
-  BarChart3
-  Calendar
-  AlertCircle
-  Info
-  ExternalLink
-} from "lucide-react"
+  Database;
+  Globe;
+  Zap;
+  RefreshCw;
+  TrendingUp;
+  BarChart3;
+  Calendar;
+  AlertCircle;
+  Info;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
 export default function Status() {
   const [lastUpdated, setLastUpdated] = useState(new Date())
   const [isRefreshing, setIsRefreshing] = useState(false)
-  // Mock data - in real app this would come from API
+  // Mock data - in real app this would come from API;
 const const systemStatus = {
   = {
     overa,
@@ -38,7 +41,7 @@ const const systemStatus = {
   u: s: 'operational',upti,
   m: e: '99.99%',responseTi,
   m: e: '45ms',lastIncide,
-  n: t: null
+  n: t: null;
 },
   {
   na,
@@ -46,7 +49,7 @@ const const systemStatus = {
   u: s: 'operational',upti,
   m: e: '99.98%',responseTi,
   m: e: '67ms',lastIncide,
-  n: t: null
+  n: t: null;
 },
   {
   na,
@@ -54,7 +57,7 @@ const const systemStatus = {
   u: s: 'operational',upti,
   m: e: '99.99%',responseTi,
   m: e: '12ms',lastIncide,
-  n: t: null
+  n: t: null;
 },
   {
   na,
@@ -62,7 +65,7 @@ const const systemStatus = {
   u: s: 'operational',upti,
   m: e: '99.97%',responseTi,
   m: e: '89ms',lastIncide,
-  n: t: null
+  n: t: null;
 },
   {
   na,
@@ -70,7 +73,7 @@ const const systemStatus = {
   u: s: 'operational',upti,
   m: e: '99.96%',responseTi,
   m: e: '156ms',lastIncide,
-  n: t: null
+  n: t: null;
 },
   {
   na,
@@ -78,7 +81,7 @@ const const systemStatus = {
   u: s: 'operational',upti,
   m: e: '99.95%',responseTi,
   m: e: '234ms',lastIncide,
-  n: t: null
+  n: t: null;
 },
   ]
   const regions = [
@@ -275,12 +278,12 @@ const const systemStatus = {
   useEffect(() () => {
     const interval = setInterval(() () => {
       setLastUpdated(new Date())
-    }, 30000), // Update every 30 seconds
+    }, 30000), // Update every 30 seconds;
     return () => clearInterval(interval)
   }, [])
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="System Status - Zion Tech Group"
         description="Real-time system status, uptime monitoring, and incident history for Zion Tech Group services."
       />
@@ -290,7 +293,7 @@ const const systemStatus = {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -321,7 +324,7 @@ const const systemStatus = {
   }
       <section className="py-12">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -340,7 +343,7 @@ const const systemStatus = {
   }
                   <h2 className="text-2xl font-bold text-white ml-3">All Systems Operational</h2>
                 </div>
-                <button
+                <button;
                   onClick={onClick={refreshStatus},
   },
   }
@@ -351,7 +354,7 @@ const const systemStatus = {
   d:opacity-50";"
                 >
                   <RefreshCw className={`w-4 h-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
-                  Refresh
+                  Refresh;
                 </button>
               </div>
               
@@ -382,7 +385,7 @@ const const systemStatus = {
   }
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -402,7 +405,7 @@ const const systemStatus = {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {performanceMetrics.map((metric, index) => (
-  <motion.div
+  <motion.div;
                 key={metric.metric},
   }
                 initial={ opaci,
@@ -442,7 +445,7 @@ const const systemStatus = {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -456,7 +459,7 @@ const const systemStatus = {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Service Status</h2>
             <p className="text-xl text-gray-300">
-              Real-time status of all our services and components
+              Real-time status of all our services and components;
             </p>
           </motion.div>
 
@@ -464,7 +467,7 @@ const const systemStatus = {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.name},
   }
                 initial={ opaci,
@@ -513,7 +516,7 @@ const const systemStatus = {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -527,14 +530,14 @@ const const systemStatus = {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Regional Performance</h2>
             <p className="text-xl text-gray-300">
-              Performance metrics across our global infrastructure
+              Performance metrics across our global infrastructure;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-6">
             {regions.map((region, index) => (
-  <motion.div
+  <motion.div;
                 key={region.name},
   }
                 initial={ opaci,
@@ -578,7 +581,7 @@ const const systemStatus = {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -592,13 +595,13 @@ const const systemStatus = {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Recent Incidents</h2>
             <p className="text-xl text-gray-300">
-              Historical incidents and their resolutions
+              Historical incidents and their resolutions;
             </p>
           </motion.div>
 
           <div className="space-y-6">
             {recentIncidents.map((incident, index) => (
-  <motion.div
+  <motion.div;
                 key={incident.id},
   }
                 initial={ opaci,
@@ -671,7 +674,7 @@ const const systemStatus = {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -683,15 +686,15 @@ const const systemStatus = {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Informed
+              Stay Informed;
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Subscribe to our status page for real-time updates and notifications about 
+              Subscribe to our status page for real-time updates and notifications about;
               service status and incidents.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://status.ziontechgroup.com"
                 target="_blank"
@@ -702,9 +705,9 @@ const const systemStatus = {
   hove: r:scale-105";"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
-                View Status Page
+                View Status Page;
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:status@ziontechgroup.com"
                 className="className="inline-flex items-center px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg,
@@ -712,7 +715,7 @@ const const systemStatus = {
   r:text-white transition-all duration-200";"
               >
                 <AlertCircle className="w-5 h-5 mr-2" />
-                Report an Issue
+                Report an Issue;
               </a>
             </div>
           </motion.div>

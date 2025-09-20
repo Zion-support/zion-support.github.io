@@ -1,8 +1,8 @@
 import React from "react"
 import SEO from "@/components/SEO"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from "lucide-react"
+import { motion   } from "framer-motion";
+import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight   } from "lucide-react";
 export default function ServicesOverview() {
   const serviceCategories = [
   {
@@ -239,7 +239,7 @@ export default function ServicesOverview() {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -273,7 +273,7 @@ export default function ServicesOverview() {
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            Our Complete Service Portfolio
+            Our Complete Service Portfolio;
           </h1>
           <p className="text-xl m,
   d:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
@@ -311,7 +311,7 @@ export default function ServicesOverview() {
   }>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology solutions organized by category
+              Explore our comprehensive range of technology solutions organized by category;
             </p>
           </motion.div>
 
@@ -342,7 +342,7 @@ export default function ServicesOverview() {
                           <span className="text-lg font-semibold text-blue-600">{service.price}</span>
                           <Link to={service.href} className="inline-flex items-center text-blue-600,
   hove: r:text-blue-700 font-medium">
-                            Learn More
+                            Learn More;
                             <ArrowRight className="w-4 h-4 ml-1"/>
                           </Link>
                         </div>
@@ -352,7 +352,7 @@ export default function ServicesOverview() {
                   <div className="mt-8 text-center">
                     <Link to={category.services[0].href} className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hov,
   e: r:opacity-90 transition-opacity`}>
-                      Explore All {category.name} Services
+                      Explore All {category.name} Services;
                       <ArrowRight className="w-5 h-5 ml-2"/>
                     </Link>
                   </div>
@@ -371,7 +371,7 @@ export default function ServicesOverview() {
   }>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine deep technical expertise with business acumen to deliver solutions that drive real value
+              We combine deep technical expertise with business acumen to deliver solutions that drive real value;
             </p>
           </motion.div>
 
@@ -385,7 +385,7 @@ export default function ServicesOverview() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Expert Team</h3>
               <p className="text-gray-600">
-                Certified professionals with deep expertise across multiple technology domains
+                Certified professionals with deep expertise across multiple technology domains;
               </p>
             </motion.div>
 
@@ -395,7 +395,7 @@ export default function ServicesOverview() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Proven Results</h3>
               <p className="text-gray-600">
-                Track record of successful implementations and measurable business outcomes
+                Track record of successful implementations and measurable business outcomes;
               </p>
             </motion.div>
 
@@ -405,7 +405,7 @@ export default function ServicesOverview() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation Focus</h3>
               <p className="text-gray-600">
-                Stay ahead with cutting-edge technologies and emerging industry trends
+                Stay ahead with cutting-edge technologies and emerging industry trends;
               </p>
             </motion.div>
           </motion.div>
@@ -424,7 +424,7 @@ export default function ServicesOverview() {
           <motion.p className="text-xl mb-8 max-w-3xl mx-auto" variants={itemVariants} initial="hidden" whileInView="visible" viewport={ on,
   c: e: true },
   }>
-            Let our technology experts help you choose the right solutions and implement them successfully
+            Let our technology experts help you choose the right solutions and implement them successfully;
           </motion.p>
           <motion.div className="flex flex-col,
   s: m:flex-row gap-4 justify-center" variants={itemVariants} initial="hidden" whileInView="visible" viewport={ on,
@@ -432,12 +432,12 @@ export default function ServicesOverview() {
   }>
             <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hove: r: bg-gray-100 transition-colors">
-              Get Started Today
+              Get Started Today;
             </Link>
             <Link to="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-blue-600 transition-colors">
-              Schedule Consultation
+              Schedule Consultation;
             </Link>
           </motion.div>
         </div>

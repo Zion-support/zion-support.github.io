@@ -1,33 +1,36 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
-  Zap
-  Lock
-  Cloud
-  Shield
-  Users
-  Database
-  Network
-  ArrowRight
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Rocket
-  Target
-  Globe
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  Filter
-  Search
-  ChevronDown
-  ChevronUp
-} from "lucide-react"
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028"
+  Brain;
+  Zap;
+  Lock;
+  Cloud;
+  Shield;
+  Users;
+  Database;
+  Network;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Rocket;
+  Target;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Filter;
+  Search;
+  ChevronDown;
+  ChevronUp;
+}
+}
+ } from "lucide-react";
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo   } from "../data/innovativeServices2028";
 export default function InnovativeServices2028() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
@@ -40,40 +43,40 @@ export default function InnovativeServices2028() {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'roi':
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0])
       case 'name':
         return a.name.localeCompare(b.name)
       defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
   const getCategoryIcon = (categoryNa,
   m: e: string) () => {
   const category = serviceCategories.find(cat => cat.name === categoryName)
-    if (!category) return Brain
+    if (!category) return Brain;
 const,
   const: iconMap: { [ke,
   y: string]: any } = {
   = {
-      'Brain': Brain
-      'Zap': Zap
-      'Lock': Lock
-      'Cloud': Cloud
-      'Shield': Shield
-      'Users': Users
-      'Database': Database
-      'Network': Network
+      'Brain': Brain;
+      'Zap': Zap;
+      'Lock': Lock;
+      'Cloud': Cloud;
+      'Shield': Shield;
+      'Users': Users;
+      'Database': Database;
+      'Network': Network;
 }
 
-    return iconMap[category.icon] || Brain
+    return iconMap[category.icon] || Brain;
 }
 
   const getCategoryColor = (categoryNa,
@@ -108,7 +111,7 @@ const,
   }
       <section className="pt-32 pb-20 relative z-10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -122,16 +125,16 @@ const,
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Innovative Services 2028
+              Innovative Services 2028;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Discover the future of technology with our cutting-edge micro SAAS services
-              AI solutions, and innovative IT services designed to transform your business
+              Discover the future of technology with our cutting-edge micro SAAS services;
+              AI solutions, and innovative IT services designed to transform your business;
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
-              From AI-powered business intelligence to quantum computing solutions
-              we're pioneering the next generation of digital transformation
+              From AI-powered business intelligence to quantum computing solutions;
+              we're pioneering the next generation of digital transformation;
             </p>
 
             {/* Contact CTA */},
@@ -162,7 +165,7 @@ const,
   }
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm},
@@ -180,7 +183,7 @@ const,
               {/* Category Filter */},
   }
               <div className="relative">
-                <select
+                <select;
                   value={selectedCategory},
   }
                   onChange={(e) => setSelectedCategory(e.target.value)},
@@ -205,7 +208,7 @@ const,
               {/* Sort */},
   }
               <div className="relative">
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value)},
@@ -235,7 +238,7 @@ const,
   l: g: grid-cols-2 x,
   l:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -322,7 +325,7 @@ const,
   }
                   <AnimatePresence>
                     {expandedService === service.id && (
-  <motion.div
+  <motion.div;
                         initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -385,7 +388,7 @@ const,
                   {/* Action Buttons */},
   }
                   <div className="flex space-x-3">
-                    <button
+                    <button;
                       onClick={() => window.open(`mail,
   t: o:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
                       className="className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-xl font-semibold,
@@ -393,9 +396,9 @@ const,
   hove: r:to-blue-700 transition-all duration-300 transform hove,
   r:scale-105";"
                     >
-                      Get Started
+                      Get Started;
                     </button>
-                    <button
+                    <button;
                       onClick={onClick={() => setExpandedService(expandedService === service.id ? null : service.id)},
   },
   }
@@ -433,7 +436,7 @@ const,
   }
       <section className="py-20 bg-black/30 relative z-10">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -450,17 +453,17 @@ const,
           >
             <h2 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Flexible Pricing Plans
+              Flexible Pricing Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs and scale as you grow
+              Choose the perfect plan for your business needs and scale as you grow;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
-  <motion.div
+  <motion.div;
                 key={tier.name},
   }
                 initial={ opaci,
@@ -477,7 +480,7 @@ const,
   c: e: true },
   }
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
-  tier.recommended
+  tier.recommended;
                     ? 'bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/50 scale-105'
                     : 'bg-slate-800/50 border-slate-700/50,
   hove: r:border-cyan-500/30'
@@ -486,7 +489,7 @@ const,
                 {tier.recommended && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Recommended
+                      Recommended;
                     </span>
                   </div>
                 )}
@@ -509,12 +512,12 @@ const,
                     ))}
                   </ul>
 
-                  <button
+                  <button;
                     onClick={() => window.open(`mail,
   t: o:${contactInfo.email}?subject=Inquiry about ${tier.name} pricing plan`, '_blank')}
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300,
   transform: hover: scale-105 ${
-  tier.recommended
+  tier.recommended;
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white,
   hove: r:from-cyan-600,
   hove: r:to-blue-700'
@@ -522,7 +525,7 @@ const,
   r:bg-slate-600'
 }`}
                   >
-                    Get Started
+                    Get Started;
                   </button>
                 </div>
               </motion.div>
@@ -536,7 +539,7 @@ const,
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -555,7 +558,7 @@ const,
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                Contact our team of experts to discuss how our innovative services can drive your business forward
+                Contact our team of experts to discuss how our innovative services can drive your business forward;
               </p>
 
               <div className="grid grid-cols-1 m,
@@ -579,7 +582,7 @@ const,
 
               <div className="flex flex-col,
   s: m: flex-row gap-6 justify-center">
-                <button
+                <button;
                   onClick={() => window.open(`mailt,
   o:${contactInfo.email}?subject=Business Inquiry`, '_blank')}
                   className="className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white,
@@ -588,9 +591,9 @@ const,
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-cyan-500/25";"
                 >
-                  Start Your Journey
+                  Start Your Journey;
                 </button>
-                <button
+                <button;
                   onClick={() => window.open(`te,
   l:${contactInfo.phone}`, '_blank')}
                   className="className="px-10 py-5 border-2 border-cyan-500 text-cyan-400 rounded-xl font-semibold,
@@ -598,7 +601,7 @@ const,
   hove: r:text-white transition-all duration-300 transform hove,
   r:scale-105";"
                 >
-                  Schedule a Call
+                  Schedule a Call;
                 </button>
               </div>
             </motion.div>

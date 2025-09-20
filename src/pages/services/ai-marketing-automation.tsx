@@ -1,33 +1,37 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../../components/SEO"
+import { motion     } from "framer-motion";
+import { SEO     } from "../../components/SEO";
 import {
-  TrendingUp
+  TrendingUp;
   Brain,
   Target,
   Users,
   Zap,
   BarChart3,
   CheckCircle,
-  Star
-  ArrowRight
-  Mail
-  MessageCircle
-  Globe
-  Shield
-  Cloud
-  Rocket
-  Workflow
-  Calendar
-  Clock
-  Eye
-  Heart
-  ShoppingCart
-  Settings
-  Monitor
-  Filter
-  PieChart
-} from "lucide-react"
+  Star;
+  ArrowRight;
+  Mail;
+  MessageCircle;
+  Globe;
+  Shield;
+  Cloud;
+  Rocket;
+  Workflow;
+  Calendar;
+  Clock;
+  Eye;
+  Heart;
+  ShoppingCart;
+  Settings;
+  Monitor;
+  Filter;
+  PieChart;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIMarketingAutomation() {
   const features = [
   {
@@ -145,7 +149,7 @@ export default function AIMarketingAutomation() {
   ]
   return (
     <>
-      <SEO 
+      <SEO;
         title="AI Marketing Automation - Zion Tech Group"
         description="Transform your marketing with AI-powered automation. Personalize campaigns, optimize ROI, and scale your marketing operations with intelligent automation."
         keywords="AI marketing automation, marketing automation, personalized marketing, customer segmentation, marketing ROI, AI campaigns"
@@ -158,7 +162,7 @@ export default function AIMarketingAutomation() {
   l: g: py-32">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -177,18 +181,18 @@ export default function AIMarketingAutomation() {
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                AI Marketing Automation
+                AI Marketing Automation;
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize your marketing with intelligent AI automation. Personalize campaigns
-                optimize ROI, and scale your marketing operations with data-driven insights and 
+                Revolutionize your marketing with intelligent AI automation. Personalize campaigns;
+                optimize ROI, and scale your marketing operations with data-driven insights and;
                 predictive analytics.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -200,9 +204,9 @@ export default function AIMarketingAutomation() {
   hove: r:to-blue-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-cyan-500/25";"
                 >
-                  Start Free Trial
+                  Start Free Trial;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -212,7 +216,7 @@ export default function AIMarketingAutomation() {
                   className="className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400/10 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>
@@ -223,7 +227,7 @@ export default function AIMarketingAutomation() {
   }
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -237,10 +241,10 @@ export default function AIMarketingAutomation() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Intelligent Marketing Automation
+                Intelligent Marketing Automation;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI marketing automation platform combines advanced machine learning with 
+                Our AI marketing automation platform combines advanced machine learning with;
                 intelligent workflows to deliver personalized customer experiences at scale.
               </p>
             </motion.div>
@@ -249,7 +253,7 @@ export default function AIMarketingAutomation() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -282,7 +286,7 @@ export default function AIMarketingAutomation() {
   }
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -296,10 +300,10 @@ export default function AIMarketingAutomation() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Multi-Channel Marketing Automation
+                Multi-Channel Marketing Automation;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Automate your marketing across all channels with unified AI-powered workflows 
+                Automate your marketing across all channels with unified AI-powered workflows;
                 and consistent customer experiences.
               </p>
             </motion.div>
@@ -308,7 +312,7 @@ export default function AIMarketingAutomation() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {marketingChannels.map((channel, index) => (
-  <motion.div
+  <motion.div;
                   key={channel.title},
   }
                   initial={ opaci,
@@ -341,7 +345,7 @@ export default function AIMarketingAutomation() {
   }
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -355,10 +359,10 @@ export default function AIMarketingAutomation() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Marketing Automation Use Cases
+                Marketing Automation Use Cases;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how AI marketing automation can transform your specific marketing 
+                Discover how AI marketing automation can transform your specific marketing;
                 challenges and business objectives.
               </p>
             </motion.div>
@@ -367,7 +371,7 @@ export default function AIMarketingAutomation() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -397,7 +401,7 @@ export default function AIMarketingAutomation() {
   }
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -422,7 +426,7 @@ export default function AIMarketingAutomation() {
   d:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="space-y-6">
                 {benefits.slice(0, 4).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={benefit},
   }
                     initial={ opaci,
@@ -444,7 +448,7 @@ export default function AIMarketingAutomation() {
               </div>
               <div className="space-y-6">
                 {benefits.slice(4).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={benefit},
   }
                     initial={ opaci,
@@ -472,7 +476,7 @@ export default function AIMarketingAutomation() {
   }
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -494,7 +498,7 @@ export default function AIMarketingAutomation() {
               </p>
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -506,9 +510,9 @@ export default function AIMarketingAutomation() {
   hove: r:to-blue-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-cyan-500/25";"
                 >
-                  Start Free Trial
+                  Start Free Trial;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -518,7 +522,7 @@ export default function AIMarketingAutomation() {
                   className="className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg,
   hove: r: bg-cyan-400/10 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>

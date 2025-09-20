@@ -1,31 +1,35 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link     } from "react-router-dom";
+import { motion     } from "framer-motion";
 import {
-  Code
-  Smartphone
-  Globe
-  Database
-  Zap
-  Shield
-  Users
-  Target
-  ArrowRight
-  CheckCircle
-  Star
-  Lightbulb
-  TrendingUp
-  Settings
-  Workflow
-  FileText
-  Monitor
-  BarChart3
-  Rocket
-  Building2
-  Cpu
-  Network
-  GitFork
-} from "lucide-react"
+  Code;
+  Smartphone;
+  Globe;
+  Database;
+  Zap;
+  Shield;
+  Users;
+  Target;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Lightbulb;
+  TrendingUp;
+  Settings;
+  Workflow;
+  FileText;
+  Monitor;
+  BarChart3;
+  Rocket;
+  Building2;
+  Cpu;
+  Network;
+  GitFork;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function CustomDevelopment() {
   const services = [
   {
@@ -102,25 +106,25 @@ export default function CustomDevelopment() {
   tit,
   l: e: 'Custom Solutions',descripti,
   o: n: 'Tailored software solutions designed specifically for your business needs and workflows.',ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   tit,
   l: e: 'Scalability',descripti,
   o: n: 'Applications built to grow with your business and handle increasing demands.',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: 'Security',descripti,
   o: n: 'Enterprise-grade security measures built into every application.',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: 'Support & Maintenance',descripti,
   o: n: 'Ongoing support and maintenance to ensure your applications run smoothly.',ic,
-  o: n: Settings
+  o: n: Settings;
 },
   ]
   const industries = [
@@ -134,7 +138,7 @@ export default function CustomDevelopment() {
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             className="className="text-center max-w-4xl mx-auto";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -148,7 +152,7 @@ export default function CustomDevelopment() {
           >
             <h1 className="text-5xl,
   l: g: text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
-              Custom Development
+              Custom Development;
             </h1>
             <p className="text-xl l,
   g:text-2xl text-zion-slate-light mb-8 leading-relaxed">
@@ -157,22 +161,22 @@ export default function CustomDevelopment() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105 font-semibold";"
               >
-                Start Your Project
+                Start Your Project;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300 font-semibold";"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -183,7 +187,7 @@ export default function CustomDevelopment() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -197,10 +201,10 @@ export default function CustomDevelopment() {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Our Custom Development Services
+              Our Custom Development Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive custom development services designed to create software solutions
+              Comprehensive custom development services designed to create software solutions;
               that perfectly align with your business requirements.
             </p>
           </motion.div>
@@ -208,7 +212,7 @@ export default function CustomDevelopment() {
           <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8,
@@ -259,7 +263,7 @@ export default function CustomDevelopment() {
   }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -273,10 +277,10 @@ export default function CustomDevelopment() {
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Our Technology Stack
+              Our Technology Stack;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We use cutting-edge technologies and proven frameworks to build robust
+              We use cutting-edge technologies and proven frameworks to build robust;
               scalable, and maintainable applications.
             </p>
           </motion.div>
@@ -285,7 +289,7 @@ export default function CustomDevelopment() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6,
@@ -326,7 +330,7 @@ export default function CustomDevelopment() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -350,7 +354,7 @@ export default function CustomDevelopment() {
           <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6,
@@ -381,7 +385,7 @@ export default function CustomDevelopment() {
   }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -395,10 +399,10 @@ export default function CustomDevelopment() {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Industries We Serve
+              Industries We Serve;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our custom development expertise spans across multiple industries
+              Our custom development expertise spans across multiple industries;
               each with unique software requirements and challenges.
             </p>
           </motion.div>
@@ -406,7 +410,7 @@ export default function CustomDevelopment() {
           <div className="grid grid-cols-2 m,
   d:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center,
@@ -435,7 +439,7 @@ export default function CustomDevelopment() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -449,7 +453,7 @@ export default function CustomDevelopment() {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Our Development Process
+              Our Development Process;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven agile development methodology that ensures successful project delivery and client satisfaction.
@@ -480,7 +484,7 @@ export default function CustomDevelopment() {
   o: n: 'Deploy and launch with ongoing support and maintenance' },
   },
   ].map((phase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -511,7 +515,7 @@ export default function CustomDevelopment() {
   }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -533,22 +537,22 @@ export default function CustomDevelopment() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105 font-semibold";"
               >
-                Start Your Project
+                Start Your Project;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300 font-semibold";"
               >
-                Explore Services
+                Explore Services;
               </Link>
             </div>
           </motion.div>

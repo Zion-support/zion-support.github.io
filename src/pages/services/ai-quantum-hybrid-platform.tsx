@@ -1,32 +1,36 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
+import { SEO     } from "../../components/SEO";
 import {
-  Atom
+  Atom;
   Brain,
   Zap,
   Cpu,
   Users,
   Clock,
   TrendingUp,
-  CheckCircle
-  Network
-  Shield
-  Globe
-  Smartphone
-  Monitor
-  FileText
-  BarChart3
-  Rocket
-  Microscope
-  Telescope
-  Database
-  Lock
-  ArrowRight
-  Infinity
-  Target
-  Lightbulb
-  Gauge
-} from "lucide-react"
+  CheckCircle;
+  Network;
+  Shield;
+  Globe;
+  Smartphone;
+  Monitor;
+  FileText;
+  BarChart3;
+  Rocket;
+  Microscope;
+  Telescope;
+  Database;
+  Lock;
+  ArrowRight;
+  Infinity;
+  Target;
+  Lightbulb;
+  Gauge;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AIQuantumHybridPlatfor: m: React.FC = () () => {
   const features = [
@@ -120,7 +124,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Quantum Hybrid Platform - Zion Tech Group"
         description="Revolutionary AI-Quantum hybrid platform combining classical AI with quantum computing for unprecedented computational power and breakthrough discoveries."
       />
@@ -133,15 +137,15 @@ const,
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-indigo-400/10 border border-indigo-400/20 rounded-full text-indigo-400 text-sm font-medium mb-6">
               <Atom className="w-4 h-4 mr-2" />
-              Quantum AI Technology
+              Quantum AI Technology;
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI Quantum Hybrid Platform
+              AI Quantum Hybrid Platform;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              The future of computing is here. Our AI-Quantum hybrid platform combines the power of 
-              artificial intelligence with quantum computing to solve previously impossible problems 
+              The future of computing is here. Our AI-Quantum hybrid platform combines the power of;
+              artificial intelligence with quantum computing to solve previously impossible problems;
               and accelerate breakthrough discoveries across all domains.
             </p>
             <div className="flex flex-col,
@@ -150,11 +154,11 @@ const,
   hove: r:from-indigo-500,
   hove: r:to-purple-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg">
-                Access Platform
+                Access Platform;
               </button>
               <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-200">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -167,10 +171,10 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum-Classical Hybrid Intelligence
+              Quantum-Classical Hybrid Intelligence;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of quantum computing enhanced by artificial intelligence
+              Experience the power of quantum computing enhanced by artificial intelligence;
               delivering computational capabilities beyond imagination.
             </p>
           </div>
@@ -206,10 +210,10 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Quantum Capabilities
+              Advanced Quantum Capabilities;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From quantum machine learning to quantum cryptography, our platform delivers 
+              From quantum machine learning to quantum cryptography, our platform delivers;
               cutting-edge quantum computing capabilities.
             </p>
           </div>
@@ -247,7 +251,7 @@ const,
   l: g:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">
-                Revolutionary Applications
+                Revolutionary Applications;
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Our AI-Quantum hybrid platform opens new frontiers in science, technology,
@@ -299,10 +303,10 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Computational Power
+              Transform Your Computational Power;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented computational capabilities that will revolutionize 
+              Experience unprecedented computational capabilities that will revolutionize;
               your research, development, and business processes.
             </p>
           </div>
@@ -332,7 +336,7 @@ const,
             Ready for the Quantum Future?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the quantum revolution and access computational power that will transform 
+            Join the quantum revolution and access computational power that will transform;
             your industry and accelerate breakthrough discoveries.
           </p>
           <div className="flex flex-col,
@@ -341,11 +345,11 @@ const,
   hove: r:from-indigo-500,
   hove: r:to-purple-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg">
-              Access Platform
+              Access Platform;
             </button>
             <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-200">
-              Schedule Demo
+              Schedule Demo;
             </button>
           </div>
         </div>
@@ -353,4 +357,4 @@ const,
     </div>
   )
 }
-export default AIQuantumHybridPlatform
+export default AIQuantumHybridPlatform;

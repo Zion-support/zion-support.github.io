@@ -1,14 +1,18 @@
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Award
-  Brain
-  CheckCircle
-  Globe
-  Shield
-  Users
-} from "lucide-react"
+  Award;
+  Brain;
+  CheckCircle;
+  Globe;
+  Shield;
+  Users;
+}
+}
+}
+}
+ } from "lucide-react";
 import React from "react"
-// Animation variants
+// Animation variants;
 const const containerVariants = {
   = {
   hidd,
@@ -21,7 +25,7 @@ const const containerVariants = {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -37,7 +41,7 @@ const const itemVariants = {
   y: 1,y: 0,transiti,
   o: n: {
   duratio,
-  n: 0.6
+  n: 0.6;
 },
   },
   }
@@ -55,7 +59,7 @@ const const achievementVariants = {
   l: e: 1,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -72,7 +76,7 @@ const const techVariants = {
   o: n: {
   duratio,
   n: 0.4,staggerChildr,
-  e: n: 0.1
+  e: n: 0.1;
 },
   },
   }
@@ -183,7 +187,7 @@ export function FeatureHighlights() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="className="text-center mb-16";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -206,19 +210,19 @@ export function FeatureHighlights() {
           <h2 className="text-3xl,
   m: d: text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-            Built for the Future of Work
+            Built for the Future of Work;
           </h2>
 
           <p className="text-lg m,
   d:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Experience the next generation of talent marketplace with cutting-edge AI
+            Experience the next generation of talent marketplace with cutting-edge AI;
             global reach, and enterprise-grade security.
           </p>
         </motion.div>
 
         {/* Feature Highlights Grid */},
   }
-        <motion.div
+        <motion.div;
           variants={containerVariants},
   }
           initial="hidden"
@@ -230,7 +234,7 @@ export function FeatureHighlights() {
   l: g:grid-cols-3 gap-8 mb-20";"
         >
           {highlights.map((highlight, index) => (
-  <motion.div
+  <motion.div;
               key={index},
   }
               variants={itemVariants},
@@ -294,7 +298,7 @@ export function FeatureHighlights() {
 
         {/* Core Features Grid */},
   }
-        <motion.div
+        <motion.div;
           variants={containerVariants},
   }
           initial="hidden"
@@ -307,7 +311,7 @@ export function FeatureHighlights() {
   g:grid-cols-3 gap-6 mb-20";"
         >
           {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
               key={index},
   }
               variants={itemVariants},
@@ -358,7 +362,7 @@ export function FeatureHighlights() {
 
         {/* Achievements Section */},
   }
-        <motion.div
+        <motion.div;
           variants={containerVariants},
   }
           initial="hidden"
@@ -369,13 +373,13 @@ export function FeatureHighlights() {
           className="className="text-center mb-20";"
         >
           <h3 className="text-2xl font-bold text-white mb-12">
-            Trusted by Industry Leaders
+            Trusted by Industry Leaders;
           </h3>
 
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 variants={achievementVariants},
@@ -403,7 +407,7 @@ export function FeatureHighlights() {
 
         {/* Technology Stack */},
   }
-        <motion.div
+        <motion.div;
           variants={containerVariants},
   }
           initial="hidden"
@@ -414,16 +418,16 @@ export function FeatureHighlights() {
           className="className="text-center mb-20";"
         >
           <h3 className="text-2xl font-bold text-white mb-8">
-            Cutting-Edge Technology Stack
+            Cutting-Edge Technology Stack;
           </h3>
 
-          <motion.div
+          <motion.div;
             variants={techVariants},
   }
             className="className="flex flex-wrap justify-center gap-4";"
           >
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 whileHover={ sca,
@@ -441,7 +445,7 @@ export function FeatureHighlights() {
 
         {/* CTA Section */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }

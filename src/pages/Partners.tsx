@@ -1,40 +1,42 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Handshake
+  Handshake;
   Users,
   Star,
-  ArrowRight
-  Building
-  Globe
-  Award
-  TrendingUp
-  CheckCircle
-  Zap
-  Brain
-  Cloud
-  Shield
-  Database
-  Network
-  Rocket
-  Heart
-  Scale
-  Leaf
-  Lock
-  Cpu
-  Server
-  Code
-  Target
-  BarChart3
-  Eye
-  Leaf as LeafIcon
-  Building2
-  Users2
-  Award as AwardIcon
-  TrendingUp as TrendingUpIcon
-} from "lucide-react"
-import { Link } from "react-router-dom"
+  ArrowRight;
+  Building;
+  Globe;
+  Award;
+  TrendingUp;
+  CheckCircle;
+  Zap;
+  Brain;
+  Cloud;
+  Shield;
+  Database;
+  Network;
+  Rocket;
+  Heart;
+  Scale;
+  Leaf;
+  Lock;
+  Cpu;
+  Server;
+  Code;
+  Target;
+  BarChart3;
+  Eye;
+  Leaf as LeafIcon;
+  Building2;
+  Users2;
+  Award as AwardIcon;
+  TrendingUp as TrendingUpIcon;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function Partners() {
   const partnershipTypes = [
   {
@@ -288,7 +290,7 @@ export default function Partners() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Partners - Zion Tech Group"
         description="Join our partner ecosystem and grow your business with Zion Tech Group's innovative technology solutions and strategic partnerships."
       />
@@ -306,7 +308,7 @@ export default function Partners() {
             </div>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Partner With
+              Partner With;
               <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"> Zion Tech Group</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -314,7 +316,7 @@ export default function Partners() {
               Together, we can deliver innovative solutions that transform businesses and drive growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600,
   hove: r: from-indigo-600,
@@ -322,15 +324,15 @@ export default function Partners() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-indigo-500/25";"
               >
-                Become a Partner
+                Become a Partner;
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 border border-indigo-400 text-indigo-400,
   hove: r:bg-indigo-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Partner Inquiry
+                Partner Inquiry;
               </Link>
             </div>
           </div>
@@ -348,7 +350,7 @@ export default function Partners() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -365,7 +367,7 @@ export default function Partners() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Partnership Opportunities
+              Partnership Opportunities;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Choose the partnership model that best fits your business goals and expertise. 
@@ -376,7 +378,7 @@ export default function Partners() {
           <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-8">
             {partnershipTypes.map((type, index) => (
-  <motion.div
+  <motion.div;
                 key={type.title},
   }
                 initial={ opaci,
@@ -422,7 +424,7 @@ export default function Partners() {
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Examples</h4>
                   <div className="flex flex-wrap gap-2">
                     {type.examples.map((example, exampleIndex) => (
-  <span
+  <span;
                         key={exampleIndex},
   }
                         className="className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
@@ -443,7 +445,7 @@ export default function Partners() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -463,7 +465,7 @@ export default function Partners() {
               Why Partner With Us?
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our partners enjoy significant advantages that help them grow their business 
+              Our partners enjoy significant advantages that help them grow their business;
               and deliver exceptional value to their customers.
             </p>
           </motion.div>
@@ -472,7 +474,7 @@ export default function Partners() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {partnerBenefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={benefit.title},
   }
                 initial={ opaci,
@@ -506,7 +508,7 @@ export default function Partners() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -523,10 +525,10 @@ export default function Partners() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Partner Program Tiers
+              Partner Program Tiers;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our tiered partner program rewards success and provides increasing benefits 
+              Our tiered partner program rewards success and provides increasing benefits;
               as your partnership grows.
             </p>
           </motion.div>
@@ -535,7 +537,7 @@ export default function Partners() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {partnerPrograms.map((program, index) => (
-  <motion.div
+  <motion.div;
                 key={program.level},
   }
                 initial={ opaci,
@@ -591,7 +593,7 @@ export default function Partners() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -608,10 +610,10 @@ export default function Partners() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Partner Success Stories
+              Partner Success Stories;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              See how our partners have achieved remarkable success and growth 
+              See how our partners have achieved remarkable success and growth;
               through our partnership programs.
             </p>
           </motion.div>
@@ -619,7 +621,7 @@ export default function Partners() {
           <div className="grid grid-cols-1 l,
   g:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
-  <motion.div
+  <motion.div;
                 key={story.partner},
   }
                 initial={ opaci,
@@ -668,7 +670,7 @@ export default function Partners() {
       <section id="become-partner" className="py-20">
         <div className="container-responsive">
           <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-700/50">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -688,7 +690,7 @@ export default function Partners() {
                 Ready to Join Our Partner Ecosystem?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start your partnership journey today and unlock new growth opportunities 
+                Start your partnership journey today and unlock new growth opportunities;
                 with our AI-powered technology solutions.
               </p>
               
@@ -719,7 +721,7 @@ export default function Partners() {
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <Link
+                <Link;
                   to="/contact"
                   className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600,
   hove: r:from-cyan-600,
@@ -727,16 +729,16 @@ export default function Partners() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-cyan-500/25";"
                 >
-                  Apply Now
+                  Apply Now;
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link
+                <Link;
                   to="/contact"
                   className="className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400,
   hove: r:bg-cyan-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
                 >
-                  Schedule Consultation
+                  Schedule Consultation;
                 </Link>
               </div>
             </motion.div>

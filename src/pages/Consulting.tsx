@@ -1,5 +1,5 @@
 import React from "react"
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from "lucide-react"
+import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase   } from "lucide-react";
 const Consulting = () () => {
   const consultingServices = [
   {
@@ -59,37 +59,37 @@ const Consulting = () () => {
   l: e: "Financial Services",descripti,
   o: n: "Banking, insurance, and fintech consulting"
       ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "Healthcare",descripti,
   o: n: "Digital health and medical technology consulting",ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: "Manufacturing",descripti,
   o: n: "Industry 4.0 and smart manufacturing consulting",ic,
-  o: n: Cpu
+  o: n: Cpu;
 },
   {
   tit,
   l: e: "Retail & E-commerce",descripti,
   o: n: "Digital commerce and customer experience consulting",ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "Energy & Utilities",descripti,
   o: n: "Smart grid and sustainability consulting",ic,
-  o: n: Globe
+  o: n: Globe;
 },
   {
   tit,
   l: e: "Government",descripti,
   o: n: "Public sector digital transformation consulting",ic,
-  o: n: Briefcase
+  o: n: Briefcase;
 },
   ]
   const benefits = [
@@ -138,15 +138,15 @@ const Consulting = () () => {
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 text-orange-400 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2"/>
-              Consulting Services
+              Consulting Services;
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Expert Technology
+              Expert Technology;
               <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent"> Consulting</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Strategic technology consulting to help your organization navigate
+              Strategic technology consulting to help your organization navigate;
               digital transformation and achieve competitive advantages.
             </p>
             <div className="flex flex-col,
@@ -155,11 +155,11 @@ const Consulting = () () => {
   hove: r:from-orange-700,
   hove: r:to-red-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-                Explore Services
+                Explore Services;
               </a>
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Get Started
+                Get Started;
               </a>
             </div>
           </div>
@@ -175,10 +175,10 @@ const Consulting = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our Consulting Services
+              Our Consulting Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive consulting services designed to address your unique
+              Comprehensive consulting services designed to address your unique;
               technology challenges and opportunities.
             </p>
           </div>
@@ -218,10 +218,10 @@ const Consulting = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Industry Expertise
+              Industry Expertise;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Deep industry knowledge and experience across multiple sectors
+              Deep industry knowledge and experience across multiple sectors;
               to deliver relevant and effective solutions.
             </p>
           </div>
@@ -257,7 +257,7 @@ const Consulting = () () => {
                 Why Choose Our Consulting?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our consulting services provide strategic guidance and practical
+                Our consulting services provide strategic guidance and practical;
                 solutions that drive real business value and competitive advantage.
               </p>
               <ul className="space-y-3">
@@ -275,7 +275,7 @@ const Consulting = () () => {
                 <Award className="w-24 h-24 text-orange-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Proven Expertise</h3>
                 <p className="text-gray-300 mb-6">
-                  Our consultants bring decades of combined experience
+                  Our consultants bring decades of combined experience;
                   and proven track records of success.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -297,10 +297,10 @@ const Consulting = () () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-6">
-            Our Consulting Process
+            Our Consulting Process;
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            A systematic approach to delivering consulting services that ensures
+            A systematic approach to delivering consulting services that ensures;
             success and maximizes value for our clients.
           </p>
 
@@ -333,7 +333,7 @@ const Consulting = () () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our consulting services can help you navigate
+            Let's discuss how our consulting services can help you navigate;
             digital transformation and achieve your business goals.
           </p>
           <div className="flex flex-col,
@@ -342,11 +342,11 @@ const Consulting = () () => {
   hove: r:from-orange-700,
   hove: r:to-red-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Start Your Consultation
+              Start Your Consultation;
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-              View All Services
+              View All Services;
             </a>
           </div>
         </div>
@@ -354,4 +354,4 @@ const Consulting = () () => {
     </div>
   )
 }
-export default Consulting
+export default Consulting;

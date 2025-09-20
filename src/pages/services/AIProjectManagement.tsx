@@ -1,14 +1,14 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
-import { Button } from "../../components/ui/Button"
-import { Card } from "../../components/ui/Card"
-import { Badge } from "../../components/ui/Badge"
-import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail } from "lucide-react"
+import { SEO     } from "../../components/SEO";
+import { Button     } from "../../components/ui/Button";
+import { Card     } from "../../components/ui/Card";
+import { Badge     } from "../../components/ui/Badge";
+import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail     } from "lucide-react";
 const,
   AIProjectManagemen: t: React.FC = () () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Project Management Platform - Zion Tech Group"
         description="Revolutionary AI-powered project management platform that automates planning, resource allocation, and risk management with predictive analytics and intelligent workflow optimization."
       />
@@ -22,11 +22,11 @@ const,
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Platform
+              AI-Powered Platform;
             </Badge>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-              AI Project Management Platform
+              AI Project Management Platform;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -40,12 +40,12 @@ const,
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600,
   hove: r:from-blue-700,
   hove: r:to-purple-700">
-              Start Free Trial
+              Start Free Trial;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-slate-900">
-              Schedule Demo
+              Schedule Demo;
             </Button>
           </div>
         </div>
@@ -100,7 +100,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Advanced AI Features
+            Advanced AI Features;
           </h2>
           
           <div className="grid grid-cols-1,
@@ -165,7 +165,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Transparent Pricing
+            Transparent Pricing;
           </h2>
           
           <div className="grid grid-cols-1,
@@ -173,7 +173,7 @@ const,
             <Card className="bg-slate-800/50 border-slate-700 p-8 text-center relative">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <Badge variant="secondary" className="bg-blue-600 text-white">
-                  Most Popular
+                  Most Popular;
                 </Badge>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
@@ -182,28 +182,28 @@ const,
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Up to 25 users
+                  Up to 25 users;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic AI insights
+                  Basic AI insights;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  10 active projects
+                  10 active projects;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard integrations
+                  Standard integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Email support
+                  Email support;
                 </li>
               </ul>
               <Button className="w-full bg-blue-600 hove,
   r:bg-blue-700">
-                Get Started
+                Get Started;
               </Button>
             </Card>
             
@@ -214,28 +214,28 @@ const,
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Up to 100 users
+                  Up to 100 users;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Advanced AI analytics
+                  Advanced AI analytics;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Unlimited projects
+                  Unlimited projects;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom workflows
+                  Custom workflows;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Priority support
+                  Priority support;
                 </li>
               </ul>
               <Button className="w-full bg-purple-600,
   hove: r:bg-purple-700">
-                Get Started
+                Get Started;
               </Button>
             </Card>
             
@@ -246,28 +246,28 @@ const,
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Unlimited users
+                  Unlimited users;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Full AI suite
+                  Full AI suite;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  White-label options
+                  White-label options;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Dedicated support
+                  Dedicated support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom integrations
+                  Custom integrations;
                 </li>
               </ul>
               <Button className="w-full bg-green-600,
   hove: r: bg-green-700">
-                Contact Sales
+                Contact Sales;
               </Button>
             </Card>
           </div>
@@ -282,7 +282,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Market Opportunity
+            Market Opportunity;
           </h2>
           
           <div className="grid grid-cols-1 m,
@@ -341,12 +341,12 @@ const,
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600,
   hove: r:from-blue-700,
   hove: r:to-purple-700">
-              Start Free Trial
+              Start Free Trial;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white,
   hove: r:text-slate-900">
-              Schedule Demo
+              Schedule Demo;
             </Button>
           </div>
           
@@ -361,4 +361,4 @@ const,
     </div>
   )
 }
-export default AIProjectManagement
+export default AIProjectManagement;

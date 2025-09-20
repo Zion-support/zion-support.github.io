@@ -1,12 +1,13 @@
+import { useCallback    } from "react";
 import React, { useState, useEffect } from "react"
 import SEO from "@/components/SEO"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Button } from "@/components/ui/button"
-import { toast } from "@/hooks/use-toast"
-import { supabase } from "@/integrations/supabase/client"
-// Import refactored components
-import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection"
+import { Card, CardContent     } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger     } from "@/components/ui/tabs";
+import { Button     } from "@/components/ui/button";
+import { toast     } from "@/hooks/use-toast";
+import { supabase     } from "@/integrations/supabase/client";
+// Import refactored components;
+import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent     } from "@/components/admin/fraud-detection";
 export default function FraudDetection() {
   const [flags, setFlags] = useState([])
     const [filteredFlags, setFilteredFlags] = useState([])
@@ -22,22 +23,27 @@ export default function FraudDetection() {
   n: t: 0,dangerous_cou,
   n: t: 0,false_positiv,
   e: s: 0,actioned_cou,
-  n: t: 0
+  n: t: 0;
 })
-    // Fetch fraud flags
+    // Fetch fraud flags;
 const fetchFraudFlags = async () () => {
         setIsLoading(true)
         try {
-  const { data, error } = await supabase
+  
+}
+}
+}
+}
+  const { data, error } = await supabase;
                 .from("fraud_flags")
                 .select("*")
                 .order("timestamp", { ascendi,
   n: g: false })
             if (error)
-                throw error
+                throw error;
             setFlags(data || [])
             setFilteredFlags(data || [])
-            // Calculate stats
+            // Calculate stats;
 const const newStats = {
   = {
                 total_fla,
@@ -46,7 +52,7 @@ const const newStats = {
   n: t: data?.filter(flag => flag.severity === 'suspicious').length || 0,dangerous_cou,
   n: t: data?.filter(flag => flag.severity === 'dangerous').length || 0,false_positiv,
   e: s: data?.filter(flag => flag.is_false_positive).length || 0,actioned_cou,
-  n: t: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0
+  n: t: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0;
 }
             setStats(newStats)
         }
@@ -62,16 +68,20 @@ const const newStats = {
         }
         finally {
   setIsLoading(false)
+}
+}
+}
+}
         },
   }
     useEffect(() () => {
         fetchFraudFlags()
     }, [])
-    // Apply filters
+    // Apply filters;
     useEffect(() () => {
         let result = [[...flags],
   ]
-        // Apply search filter
+        // Apply search filter;
         if (if (searchQuery) {
   ) {
             const query = searchQuery.toLowerCase()
@@ -79,17 +89,17 @@ const const newStats = {
                 flag.content_excerpt.toLowerCase().includes(query) ||
                 flag.reason.toLowerCase().includes(query))
         }
-        // Apply status filter
+        // Apply status filter;
         if (if (statusFilter) {
   ) {
             result = result.filter((flag) => flag.status === statusFilter)
         }
-        // Apply severity filter
+        // Apply severity filter;
         if (if (severityFilter) {
   ) {
             result = result.filter((flag) => flag.severity === severityFilter)
         }
-        // Apply content type filter
+        // Apply content type filter;
         if (if (contentTypeFilter) {
   ) {
             result = result.filter((flag) => flag.content_type === contentTypeFilter)
@@ -99,8 +109,12 @@ const const newStats = {
     const handleAction = async (flagId, action) () => {
   try {
   const status = action === 'ignore' ? 'ignored' : 'actioned'
-const actionTaken = action === 'ignore' ? 'none' : action
-const { error } = await supabase
+const actionTaken = action === 'ignore' ? 'none' : action;
+}
+}
+}
+}
+const { error } = await supabase;
                 .from("fraud_flags")
                 .update({
   status,
@@ -111,13 +125,13 @@ const { error } = await supabase
 })
                 .eq("id", flagId)
             if (error)
-                throw error
+                throw error;
             toast({
   tit,
   l: e: "Flag updated",descripti,
   o: n: `Action '${action}' was applied successfully.`
 })
-            // Refresh the data
+            // Refresh the data;
             fetchFraudFlags()
         }
         catch (error) {
@@ -146,10 +160,10 @@ const { error } = await supabase
   m: d:items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Fraud Detection
+              Fraud Detection;
             </h1>
             <p className="text-zion-slate-light mt-2">
-              Monitor suspicious activities and protect the marketplace from fraud and abuse
+              Monitor suspicious activities and protect the marketplace from fraud and abuse;
             </p>
           </div>
           
@@ -157,7 +171,7 @@ const { error } = await supabase
   d:mt-0">
             <Button onClick={fetchFraudFlags} className="bg-zion-purple,
   hove: r:bg-zion-purple-light" disabled={isLoading}>
-              Refresh Data
+              Refresh Data;
             </Button>
           </div>
         </div>

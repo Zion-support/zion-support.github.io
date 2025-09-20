@@ -1,147 +1,150 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
+  Brain;
   Cloud,
   Shield,
   Rocket,
   Zap,
   Users,
   Globe,
-  Cpu
-  Lock
-  Heart
-  Star
-  ArrowRight
-  CheckCircle
-  TrendingUp
-  Code
-  Database
-  Network
-  Smartphone
-  BarChart3
-  MessageSquare
-  FileText
-  ShoppingCart
-  Headphones
-  Mail
-  Search
-  HelpCircle
-  ShieldCheck
-  Globe2
-  Leaf
-  Sparkles
-  Target
-  DollarSign
-  Clock
-  Award
-  Phone
-  Mail as MailIcon
-  MapPin
-  Infinity
-  Atom
-  Satellite
-  Car
-  Bot
-  Eye
-  CpuIcon
-  ZapIcon
-  ShieldIcon
-  CloudIcon
-  BrainIcon
-  RocketIcon
-  LeafIcon
-  GlobeIcon
-  CodeIcon
-  DatabaseIcon
-  NetworkIcon
-  SmartphoneIcon
-  BarChartIcon
-  MessageSquareIcon
-  FileTextIcon
-  ShoppingCartIcon
-  HeadphonesIcon
-  MailIcon as MailIcon2
-  SearchIcon
-  HelpCircleIcon
-  ShieldCheckIcon
-  Globe2Icon
-  LeafIcon as LeafIcon2
-  SparklesIcon
-  TargetIcon
-  DollarSignIcon
-  ClockIcon
-  AwardIcon
-  PhoneIcon
-  MapPinIcon
-  InfinityIcon
-  ChevronDown
-  ChevronUp
-  Play
-  ExternalLink
-  BookOpen
-  Lightbulb
-  Target as TargetIcon
-  Users as UsersIcon
-  Settings
-  BarChart
-  PieChart
-  LineChart
-  TrendingDown
-  Calculator
-  Calendar
-  Clock as ClockIcon
-  Award as AwardIcon
-  Star as StarIcon
-  Heart as HeartIcon
-  Zap as ZapIcon
-  Shield as ShieldIcon
-  Cloud as CloudIcon
-  Brain as BrainIcon
-  Rocket as RocketIcon
-  Leaf as LeafIcon
-  Globe as GlobeIcon
-  Code as CodeIcon
-  Database as DatabaseIcon
-  Network as NetworkIcon
-  Smartphone as SmartphoneIcon
-  BarChart3 as BarChart3Icon
-  MessageSquare as MessageSquareIcon
-  FileText as FileTextIcon
-  ShoppingCart as ShoppingCartIcon
-  Headphones as HeadphonesIcon
-  Mail as MailIcon3
-  Search as SearchIcon
-  HelpCircle as HelpCircleIcon
-  ShieldCheck as ShieldCheckIcon
-  Globe2 as Globe2Icon
-  Leaf as LeafIcon2
-  Sparkles as SparklesIcon
-  Target as TargetIcon2
-  DollarSign as DollarSignIcon
-  Clock as ClockIcon2
-  Award as AwardIcon2
-  Phone as PhoneIcon2
-  MapPin as MapPinIcon2
-  Infinity as InfinityIcon2
-} from "lucide-react"
-import { SEO } from "../components/SEO"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027"
-import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from "../data/innovativeITInfrastructureServices2027"
-import { EMERGING_TECHNOLOGY_SERVICES_2027 } from "../data/emergingTechnologyServices2027"
+  Cpu;
+  Lock;
+  Heart;
+  Star;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  MessageSquare;
+  FileText;
+  ShoppingCart;
+  Headphones;
+  Mail;
+  Search;
+  HelpCircle;
+  ShieldCheck;
+  Globe2;
+  Leaf;
+  Sparkles;
+  Target;
+  DollarSign;
+  Clock;
+  Award;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
+  Infinity;
+  Atom;
+  Satellite;
+  Car;
+  Bot;
+  Eye;
+  CpuIcon;
+  ZapIcon;
+  ShieldIcon;
+  CloudIcon;
+  BrainIcon;
+  RocketIcon;
+  LeafIcon;
+  GlobeIcon;
+  CodeIcon;
+  DatabaseIcon;
+  NetworkIcon;
+  SmartphoneIcon;
+  BarChartIcon;
+  MessageSquareIcon;
+  FileTextIcon;
+  ShoppingCartIcon;
+  HeadphonesIcon;
+  MailIcon as MailIcon2;
+  SearchIcon;
+  HelpCircleIcon;
+  ShieldCheckIcon;
+  Globe2Icon;
+  LeafIcon as LeafIcon2;
+  SparklesIcon;
+  TargetIcon;
+  DollarSignIcon;
+  ClockIcon;
+  AwardIcon;
+  PhoneIcon;
+  MapPinIcon;
+  InfinityIcon;
+  ChevronDown;
+  ChevronUp;
+  Play;
+  ExternalLink;
+  BookOpen;
+  Lightbulb;
+  Target as TargetIcon;
+  Users as UsersIcon;
+  Settings;
+  BarChart;
+  PieChart;
+  LineChart;
+  TrendingDown;
+  Calculator;
+  Calendar;
+  Clock as ClockIcon;
+  Award as AwardIcon;
+  Star as StarIcon;
+  Heart as HeartIcon;
+  Zap as ZapIcon;
+  Shield as ShieldIcon;
+  Cloud as CloudIcon;
+  Brain as BrainIcon;
+  Rocket as RocketIcon;
+  Leaf as LeafIcon;
+  Globe as GlobeIcon;
+  Code as CodeIcon;
+  Database as DatabaseIcon;
+  Network as NetworkIcon;
+  Smartphone as SmartphoneIcon;
+  BarChart3 as BarChart3Icon;
+  MessageSquare as MessageSquareIcon;
+  FileText as FileTextIcon;
+  ShoppingCart as ShoppingCartIcon;
+  Headphones as HeadphonesIcon;
+  Mail as MailIcon3;
+  Search as SearchIcon;
+  HelpCircle as HelpCircleIcon;
+  ShieldCheck as ShieldCheckIcon;
+  Globe2 as Globe2Icon;
+  Leaf as LeafIcon2;
+  Sparkles as SparklesIcon;
+  Target as TargetIcon2;
+  DollarSign as DollarSignIcon;
+  Clock as ClockIcon2;
+  Award as AwardIcon2;
+  Phone as PhoneIcon2;
+  MapPin as MapPinIcon2;
+  Infinity as InfinityIcon2;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027   } from "../data/innovativeMicroSaasServices2027";
+import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027   } from "../data/innovativeITInfrastructureServices2027";
+import { EMERGING_TECHNOLOGY_SERVICES_2027   } from "../data/emergingTechnologyServices2027";
 export default function ComprehensiveServicesLanding2027() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
 
-  // Combine all services
+  // Combine all services;
 const allServices = [
-  ...INNOVATIVE_MICRO_SAAS_SERVICES_2027
-    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027
-    ...EMERGING_TECHNOLOGY_SERVICES_2027
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2027;
+    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027;
+    ...EMERGING_TECHNOLOGY_SERVICES_2027;
 ]
-  // Get unique categories with counts
+  // Get unique categories with counts;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', cou,
@@ -276,14 +279,14 @@ const categories = [
   o: r: 'from-gray-500 to-slate-500' },
   },
   ]
-  // Filter services based on category and search
+  // Filter services based on category and search;
 const filteredServices = allServices.filter(service () => {
-  const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = searchQuery === '' || 
       service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const toggleServiceExpansion = (service,
@@ -332,7 +335,7 @@ const matchesSearch = searchQuery === '' ||
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
+      <SEO;
         title="Comprehensive Services Landing 2027 | Zion Tech Group"
         description="Explore our complete portfolio of innovative AI, quantum computing, space technology, and emerging tech services. Transform your business with cutting-edge solutions."
         keywords="AI services, quantum computing, space technology, emerging tech, Zion Tech Group, innovative solutions"
@@ -343,7 +346,7 @@ const matchesSearch = searchQuery === '' ||
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -357,13 +360,13 @@ const matchesSearch = searchQuery === '' ||
   m: d: text-7xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Comprehensive Services
+              Comprehensive Services;
             </span>
             <br />
             <span className="text-white">Landing 2027</span>
           </motion.h1>
           
-          <motion.p 
+          <motion.p;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -377,13 +380,13 @@ const matchesSearch = searchQuery === '' ||
             className="className="text-xl,
   m: d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";"
           >
-            Discover our complete portfolio of cutting-edge technology services designed to 
+            Discover our complete portfolio of cutting-edge technology services designed to;
             transform your business and drive innovation across every industry.
           </motion.p>
 
           {/* Search Bar */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -398,7 +401,7 @@ const matchesSearch = searchQuery === '' ||
           >
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search for services, technologies, or solutions..."
                 value={searchQuery},
@@ -416,7 +419,7 @@ const matchesSearch = searchQuery === '' ||
 
           {/* Quick Stats */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -458,7 +461,7 @@ const matchesSearch = searchQuery === '' ||
   }
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -475,10 +478,10 @@ const matchesSearch = searchQuery === '' ||
           >
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-6">
-              Explore Our Service Categories
+              Explore Our Service Categories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Navigate through our comprehensive service categories to find the perfect 
+              Navigate through our comprehensive service categories to find the perfect;
               solution for your business needs.
             </p>
           </motion.div>
@@ -490,7 +493,7 @@ const matchesSearch = searchQuery === '' ||
   l: g:grid-cols-3 x,
   l:grid-cols-4 gap-6">
             {categories.map((category, index) => (
-  <motion.button
+  <motion.button;
                 key={category.id},
   }
                 initial={ opaci,
@@ -511,7 +514,7 @@ const matchesSearch = searchQuery === '' ||
   }
                 className={`p-6 rounded-2xl border transition-all duration-300,
   transform: hover: scale-105 ${
-  activeCategory === category.id
+  activeCategory === category.id;
                     ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50'
                     : 'bg-white/10 backdrop-blur-lg border-white/20 hove,
   r:border-cyan-500/30'
@@ -530,7 +533,7 @@ const matchesSearch = searchQuery === '' ||
   }
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -561,7 +564,7 @@ const matchesSearch = searchQuery === '' ||
   }
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -622,7 +625,7 @@ const matchesSearch = searchQuery === '' ||
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <button
+                    <button;
                       onClick={onClick={() => toggleServiceExpansion(service.id)},
   },
   }
@@ -632,32 +635,32 @@ const matchesSearch = searchQuery === '' ||
                       {expandedService === service.id ? (
   <>
                           <ChevronUp className="w-4 h-4 mr-2" />
-                          Hide Details
+                          Hide Details;
                         </>
                       ) : (
   <>
                           <ChevronDown className="w-4 h-4 mr-2" />
-                          View Details
+                          View Details;
                         </>
                       )}
                     </button>
                     <div className="flex items-center gap-3">
-                      <Link
+                      <Link;
                         to={`/services/${service.id}`}
                         className="className="inline-flex items-center px-4 py-2 bg-white/10 border border-white/30 text-white font-medium rounded-lg,
   hove: r: bg-white/20 transition-all duration-300";"
                       >
                         <BookOpen className="w-4 h-4 mr-2" />
-                        Learn More
+                        Learn More;
                       </Link>
-                      <a
+                      <a;
                         href={`mailt,
   o:kleber@ziontechgroup.com?subject=Quote for ${service.title}`}
                         className="className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg,
   hove: r: from-cyan-600 hove,
   r:to-blue-700 transition-all duration-300";"
                       >
-                        Get Quote
+                        Get Quote;
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                     </div>
@@ -668,7 +671,7 @@ const matchesSearch = searchQuery === '' ||
   }
                 <AnimatePresence>
                   {expandedService === service.id && (
-  <motion.div
+  <motion.div;
                       initial={ heig,
   h: t: 0, opaci,
   t: y: 0 },
@@ -711,7 +714,7 @@ const matchesSearch = searchQuery === '' ||
                               ))},
   {service.integrations && service.integrations.length > 6 && (
   <div className="text-gray-400 text-sm">
-                                  +{service.integrations.length - 6} more integrations
+                                  +{service.integrations.length - 6} more integrations;
                                 </div>
                               )}
                             </div>
@@ -739,7 +742,7 @@ const matchesSearch = searchQuery === '' ||
                                 • {service.aiScore}% AI-powered accuracy<br />
                                 • {service.roi} ROI guarantee<br />
                                 • {service.setupTime} rapid deployment<br />
-                                • 24/7 expert support
+                                • 24/7 expert support;
                               </div>
                             </div>
                           </div>
@@ -753,7 +756,7 @@ const matchesSearch = searchQuery === '' ||
   {/* No Results Message */},
   },
   {filteredServices.length === 0 && (
-  <motion.div 
+  <motion.div;
                 initial={ opaci,
   t: y: 0 },
   }
@@ -775,7 +778,7 @@ const matchesSearch = searchQuery === '' ||
   }
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -795,12 +798,12 @@ const matchesSearch = searchQuery === '' ||
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact our team for a personalized consultation and discover how our 
+              Contact our team for a personalized consultation and discover how our;
               innovative services can drive your business forward.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-600,
   hove: r:from-cyan-600,
@@ -808,9 +811,9 @@ const matchesSearch = searchQuery === '' ||
   transform: hover:scale-105,
   hove: r:shadow-2xl";"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="bg-gradient-to-r from-purple-500 to-pink-600,
@@ -820,7 +823,7 @@ const matchesSearch = searchQuery === '' ||
   r:shadow-2xl flex items-center gap-2 justify-center";"
               >
                 <Phone className="w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
 
@@ -834,7 +837,7 @@ const matchesSearch = searchQuery === '' ||
                 <a href="t,
   e: l:+13024640950" className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors">
-                  +1 302 464 0950
+                  +1 302 464 0950;
                 </a>
               </div>
               <div className="text-center">
@@ -843,7 +846,7 @@ const matchesSearch = searchQuery === '' ||
                 <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-purple-400 hove,
   r:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com
+                  kleber@ziontechgroup.com;
                 </a>
               </div>
               <div className="text-center">
@@ -851,7 +854,7 @@ const matchesSearch = searchQuery === '' ||
                 <div className="text-white font-semibold mb-1">Address</div>
                 <div className="text-green-400 text-sm">
                   364 E Main St STE 1008<br />
-                  Middletown DE 19709
+                  Middletown DE 19709;
                 </div>
               </div>
             </div>
@@ -862,7 +865,7 @@ const matchesSearch = searchQuery === '' ||
   )
 }
 
-// Helper component for DNA icon
+// Helper component for DNA icon;
 function Dna({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

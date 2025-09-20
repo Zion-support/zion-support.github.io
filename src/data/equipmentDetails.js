@@ -36,7 +36,7 @@ export const equipmentDetails = [
   t: y: "3 years",delive,
   r: y: "2-3 business days",rati,
   n: g: 4.8,revie,
-  w: s: 127
+  w: s: 127;
 },
   {
   id: "network-switch-002",na,
@@ -74,7 +74,7 @@ export const equipmentDetails = [
   t: y: "Lifetime",delive,
   r: y: "1-2 business days",rati,
   n: g: 4.6,revie,
-  w: s: 89
+  w: s: 89;
 },
   {
   id: "storage-array-003",na,
@@ -113,7 +113,7 @@ export const equipmentDetails = [
   t: y: "5 years",delive,
   r: y: "3-5 business days",rati,
   n: g: 4.7,revie,
-  w: s: 156
+  w: s: 156;
 },
   {
   id: "workstation-004",na,
@@ -150,7 +150,7 @@ export const equipmentDetails = [
   t: y: "3 years",delive,
   r: y: "2-3 business days",rati,
   n: g: 4.9,revie,
-  w: s: 203
+  w: s: 203;
 },
   {
   id: "security-camera-005",na,
@@ -188,18 +188,18 @@ export const equipmentDetails = [
   t: y: "2 years",delive,
   r: y: "1-2 business days",rati,
   n: g: 4.5,revie,
-  w: s: 78
+  w: s: 78;
 },
   ]
-export const getEquipmentById = (id) () => {
+export const getEquipmentById = React.memo((id) () => {
   return equipmentDetails.find(equipment => equipment.id === id)
 }
 
-export const getEquipmentByCategory = (category) () => {
+export const getEquipmentByCategory = React.memo((category) () => {
   return equipmentDetails.filter(equipment => equipment.category === category)
 }
 
-export const searchEquipment = (query) () => {
+export const searchEquipment = React.memo((query) () => {
   const searchTerm = query.toLowerCase()
   return equipmentDetails.filter(equipment =>
     equipment.name.toLowerCase().includes(searchTerm) ||
@@ -207,4 +207,4 @@ export const searchEquipment = (query) () => {
     equipment.category.toLowerCase().includes(searchTerm)
   )
 }
-export const EQUIPMENT_DETAILS = equipmentDetails
+export const EQUIPMENT_DETAILS = equipmentDetails;

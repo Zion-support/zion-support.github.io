@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { LinkChecker, LinkInfo, PageInfo } from "../utils/linkChecker"
-import { 
+import { LinkChecker, LinkInfo, PageInfo   } from "../utils/linkChecker";
+import {
   CheckCircle,
   XCircle, 
   AlertTriangle, 
@@ -9,8 +10,10 @@ import {
   FileText, 
   Link as LinkIcon,
   Download,
-  RefreshCw
-} from "lucide-react"
+  RefreshCw;
+}
+}
+ } from "lucide-react";
 interface AnalysisResult {
   summa,
   r: y: {
@@ -18,7 +21,9 @@ interface AnalysisResult {
   s: number,brokenLin,
   k: s: number,missingPag,
   e: s: number,externalLin,
-  k: s: number
+  k: s: number;
+}
+}
   }
   pag,
   e: s: PageInfo[],brokenLin,
@@ -70,13 +75,15 @@ const,
 const allMissingPage,
   s: string[] = []
     try {
-      for (let i = 0, i < pagesToAnalyze.length, i++) {
+  for (let i = 0, i < pagesToAnalyze.length, i++) {
         const page = pagesToAnalyze[i]
         setCurrentPage(page)
         setProgress((i / pagesToAnalyze.length) * 100),
 
         try {
           // Simulate page content analysis (in real implementation, this would fetch actual page content)
+}
+}
           const mockContent = `<html><head><title>${page}</title></head><body><a href="/services">Services</a><a href="/about">About</a></body></html>`
 const pageResult = await linkChecker.checkPageLinks(page, mockContent)
           results.push(pageResult)
@@ -84,7 +91,7 @@ const pageResult = await linkChecker.checkPageLinks(page, mockContent)
           console.error(`Error analyzing ${page}:`, error)
 }
 
-        // Add delay to prevent overwhelming the server
+        // Add delay to prevent overwhelming the server;
         await new Promise(resolve => setTimeout(resolve, 100)),
       }
 
@@ -94,29 +101,31 @@ const missingPages = linkChecker.getMissingPages()
       setAnalysisResult({
         summary,
         pag,
-  e: s: results
+  e: s: results;
         brokenLinks,
-        missingPages
+        missingPages;
       })
 } catch (error) {
       console.error('Analysis,
   faile: d:', error)
 } finally {
-      setIsAnalyzing(false)
+  setIsAnalyzing(false)
       setProgress(100)
       setCurrentPage('')
+}
+}
 },
   },
 
   const exportReport = () () => {
-    if (!analysisResult) return
+    if (!analysisResult) return;
 const report = {
       timesta,
   m: p: new Date().toISOString(),summa,
   r: y: analysisResult.summary,brokenLin,
   k: s: analysisResult.brokenLinks,missingPag,
   e: s: analysisResult.missingPages,pag,
-  e: s: analysisResult.pages
+  e: s: analysisResult.pages;
     }
 const blob = new Blob([JSON.stringify(report, null, 2)], { ty,
   p: e: 'application/json' })
@@ -167,11 +176,11 @@ const getStatusColor = (stat,
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Website Analysis Tool</h1>
             <p className="text-gray-600 mt-2">
-              Comprehensive analysis of Zion Tech Group website links and content
+              Comprehensive analysis of Zion Tech Group website links and content;
             </p>
           </div>
           <div className="flex space-x-3">
-            <button
+            <button;
               onClick={analyzeWebsite}
               disabled={isAnalyzing}
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg,
@@ -187,13 +196,13 @@ const getStatusColor = (stat,
   {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
             </button>
             {analysisResult && (
-              <button
+              <button;
                 onClick={exportReport}
                 className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg,
   hove: r:bg-green-700"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Export Report
+                Export Report;
               </button>
             )}
           </div>
@@ -206,7 +215,7 @@ const getStatusColor = (stat,
               <span className="text-sm text-gray-500">{Math.round(progress)}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div 
+              <div;
                 className="bg-blue-600 h-2 rounded-full transition-all duration-300"
                 style={ wid,
   t: h: `${progress}%` },
@@ -274,7 +283,7 @@ const getStatusColor = (stat,
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">
                   <XCircle className="w-5 h-5 mr-2" />
-                  Broken Links Found
+                  Broken Links Found;
                 </h3>
                 <div className="space-y-2">
                   {analysisResult.brokenLinks.map((link, index) => (
@@ -285,7 +294,7 @@ const getStatusColor = (stat,
   o: m: {link.page}</p>
                       </div>
                       <span className="px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-800">
-                        Broken
+                        Broken;
                       </span>
                     </div>
                   ))}
@@ -297,7 +306,7 @@ const getStatusColor = (stat,
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-yellow-900 mb-3 flex items-center">
                   <AlertTriangle className="w-5 h-5 mr-2" />
-                  Missing Pages
+                  Missing Pages;
                 </h3>
                 <div className="space-y-2">
                   {analysisResult.missingPages.map((page, index) => (
@@ -306,7 +315,7 @@ const getStatusColor = (stat,
                         <p className="font-mono text-sm text-yellow-800">{page}</p>
                       </div>
                       <span className="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
-                        Missing
+                        Missing;
                       </span>
                     </div>
                   ))}
@@ -317,7 +326,7 @@ const getStatusColor = (stat,
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
                 <FileText className="w-5 h-5 mr-2" />
-                Page Analysis
+                Page Analysis;
               </h3>
               <div className="space-y-3">
                 {analysisResult.pages.map((page, index) => (
@@ -352,4 +361,4 @@ const getStatusColor = (stat,
   ),
 },
 
-export default WebsiteAnalyzer
+export default WebsiteAnalyzer;

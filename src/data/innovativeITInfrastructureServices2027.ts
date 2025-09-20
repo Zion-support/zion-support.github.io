@@ -1,7 +1,7 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
-  // Cloud-Native Infrastructure Platform
+  // Cloud-Native Infrastructure Platform;
   {
   i,
   d: "cloud-native-infrastructure-platform",tit,
@@ -51,7 +51,7 @@ export,
   ],
   }
 
-  // AI-Powered DevOps Automation Suite
+  // AI-Powered DevOps Automation Suite;
   {
   id: "ai-devops-automation-suite",tit,
   l: e: "AI-Powered DevOps Automation Suite",descripti,
@@ -100,7 +100,7 @@ export,
   ],
   }
 
-  // Zero-Trust Network Architecture
+  // Zero-Trust Network Architecture;
   {
   id: "zero-trust-network-architecture",tit,
   l: e: "Zero-Trust Network Architecture Platform",descripti,
@@ -149,7 +149,7 @@ export,
   ],
   }
 
-  // Edge Computing Infrastructure Platform
+  // Edge Computing Infrastructure Platform;
   {
   id: "edge-computing-infrastructure-platform",tit,
   l: e: "Edge Computing Infrastructure Platform",descripti,
@@ -198,7 +198,7 @@ export,
   ],
   }
 
-  // Hybrid Cloud Management Platform
+  // Hybrid Cloud Management Platform;
   {
   id: "hybrid-cloud-management-platform",tit,
   l: e: "Hybrid Cloud Management Platform",descripti,
@@ -247,7 +247,7 @@ export,
   ],
   }
 
-  // AI-Powered Data Center Optimization
+  // AI-Powered Data Center Optimization;
   {
   id: "ai-data-center-optimization",tit,
   l: e: "AI-Powered Data Center Optimization Platform",descripti,
@@ -296,7 +296,7 @@ export,
   ],
   }
 
-  // Container Orchestration Platform
+  // Container Orchestration Platform;
   {
   id: "container-orchestration-platform",tit,
   l: e: "Advanced Container Orchestration Platform",descripti,
@@ -345,7 +345,7 @@ export,
   ],
   }
 
-  // Network Performance Monitoring Platform
+  // Network Performance Monitoring Platform;
   {
   id: "network-performance-monitoring",tit,
   l: e: "AI-Powered Network Performance Monitoring Platform",descripti,
@@ -394,7 +394,7 @@ export,
   ],
   }
 
-  // Disaster Recovery as a Service
+  // Disaster Recovery as a Service;
   {
   id: "disaster-recovery-as-a-service",tit,
   l: e: "Enterprise Disaster Recovery as a Service",descripti,
@@ -443,7 +443,7 @@ export,
   ],
   }
 
-  // API Gateway and Management Platform
+  // API Gateway and Management Platform;
   {
   id: "api-gateway-management-platform",tit,
   l: e: "Enterprise API Gateway and Management Platform",descripti,

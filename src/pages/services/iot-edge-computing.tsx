@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../../components/SEO"
-import { motion } from "framer-motion"
-import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor     } from "lucide-react";
 const,
   IoTEdgeComputin: g: React.FC = () () => {
   const features = [
@@ -64,7 +64,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="IoT Edge Computing Services - Zion Tech Group"
         description="Transform your business with IoT edge computing solutions. Process data locally for faster insights and real-time decision making."
       />
@@ -73,7 +73,7 @@ const,
   }
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -92,14 +92,14 @@ const,
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              IoT Edge
+              IoT Edge;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-cyan-400">
-                Computing
+                Computing;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Bring intelligence to the edge of your network. Our IoT edge computing solutions process data locally 
+              Bring intelligence to the edge of your network. Our IoT edge computing solutions process data locally;
               for faster insights, reduced latency, and real-time decision making capabilities.
             </p>
             
@@ -109,11 +109,11 @@ const,
   hove: r:from-green-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-green-500/20">
-                Get Started
+                Get Started;
               </button>
               <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hove,
   r:bg-green-400/10 transition-all duration-200">
-                Learn More
+                Learn More;
               </button>
             </div>
           </motion.div>
@@ -124,7 +124,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -137,10 +137,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Edge Computing Features
+              Edge Computing Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful capabilities for intelligent edge processing
+              Powerful capabilities for intelligent edge processing;
             </p>
           </motion.div>
 
@@ -148,7 +148,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -180,7 +180,7 @@ const,
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -193,17 +193,17 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform industries with edge computing solutions
+              Transform industries with edge computing solutions;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {applications.map((application, index) => (
-  <motion.div
+  <motion.div;
                 key={application.title},
   }
                 initial={ opaci,
@@ -236,7 +236,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -252,13 +252,13 @@ const,
               Why Choose Edge Computing?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Unlock the power of local data processing
+              Unlock the power of local data processing;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d: grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -281,7 +281,7 @@ const,
               </ul>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -295,14 +295,14 @@ const,
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to bring intelligence to the edge? Our IoT edge computing experts can help you 
+                Ready to bring intelligence to the edge? Our IoT edge computing experts can help you;
                 design and implement solutions that transform your business operations.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r: from-green-400,
   hove: r:to-blue-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-green-500/20">
-                Contact Our Experts
+                Contact Our Experts;
               </button>
             </motion.div>
           </div>
@@ -313,7 +313,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -328,7 +328,7 @@ const,
               Ready for Edge Computing?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your business with intelligent edge processing and real-time insights
+              Transform your business with intelligent edge processing and real-time insights;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -336,11 +336,11 @@ const,
   hove: r:from-green-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-green-500/20">
-                Start Edge Journey
+                Start Edge Journey;
               </button>
               <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hove,
   r:bg-green-400/10 transition-all duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -349,4 +349,4 @@ const,
     </div>
   )
 }
-export default IoTEdgeComputing
+export default IoTEdgeComputing;

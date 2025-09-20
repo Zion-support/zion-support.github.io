@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause   } from "lucide-react";
 interface Testimonial {
   id: number,na,
   m: e: string,positi,
@@ -15,7 +16,9 @@ interface Testimonial {
     metri,
   c: string,val,
   u: e: string,chan,
-  g: e: string
+  g: e: string;
+}
+}
   },
   [],
   }
@@ -176,9 +179,9 @@ const [selectedCategory, setSelectedCategory] = useState('all')
 const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 const filteredTestimonials = selectedCategory === 'all' 
-    ? testimonials 
+    ? testimonials;
     : testimonials.filter(t => t.category === selectedCategory)
-  // Auto-play functionality
+  // Auto-play functionality;
   useEffect(() () => {
     if (!isAutoPlaying) return,
 
@@ -204,7 +207,7 @@ const renderStars = (rati,
   n: g: number) () => {
     return Array.from({ lengt,
   h: 5 }, (_, i) => (
-      <Star
+      <Star;
         key={i}
         className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}
       />
@@ -222,7 +225,7 @@ const renderStars = (rati,
   s: m: px-6 l,
   g:px-8 relative z-10">
         {/* Header */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -239,16 +242,16 @@ const renderStars = (rati,
         >
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-            Trusted by Industry Leaders
+            Trusted by Industry Leaders;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how Zion Tech Group has transformed businesses across industries with our 
+            See how Zion Tech Group has transformed businesses across industries with our;
             cutting-edge technology solutions and exceptional service delivery.
           </p>
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -264,7 +267,7 @@ const renderStars = (rati,
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
-            <button
+            <button;
               key={category.id}
               onClick={() () => {
                 setSelectedCategory(category.id)
@@ -272,7 +275,7 @@ const renderStars = (rati,
 },
   }
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category.id
+                selectedCategory === category.id;
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
                   : 'bg-white/10 text-gray-300,
   hove: r:bg-white/20 border border-white/20'
@@ -287,7 +290,7 @@ const renderStars = (rati,
         <div className="grid,
   l: g:grid-cols-2 gap-12 items-center">
           {/* Video Testimonial */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: -50 },
   }
@@ -305,7 +308,7 @@ const renderStars = (rati,
             <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
               <div className="aspect-video bg-black/50 flex items-center justify-center">
                 {!isVideoPlaying ? (
-                  <button
+                  <button;
                     onClick={() => setIsVideoPlaying(true)}
                     className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center,
   hove: r:bg-white/30 transition-all duration-300"
@@ -316,17 +319,17 @@ const renderStars = (rati,
                   <div className="text-center text-white">
                     <p className="text-lg font-medium mb-2">Client Success Story</p>
                     <p className="text-sm text-gray-300">
-                      Watch how Zion Tech Group transformed their business
+                      Watch how Zion Tech Group transformed their business;
                     </p>
                   </div>
                 )}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-2">
-                  Success Stories from Our Clients
+                  Success Stories from Our Clients;
                 </h3>
                 <p className="text-gray-300">
-                  Hear directly from our clients about the transformative impact 
+                  Hear directly from our clients about the transformative impact;
                   of our technology solutions on their businesses.
                 </p>
               </div>
@@ -334,7 +337,7 @@ const renderStars = (rati,
           </motion.div>
 
           {/* Current Testimonial */}
-          <motion.div
+          <motion.div;
             key={currentTestimonial}
             initial={ opaci,
   t: y: 0, x: 50 },
@@ -396,14 +399,14 @@ const renderStars = (rati,
             {/* Navigation Controls */}
             <div className="flex items-center justify-between mt-8">
               <div className="flex items-center space-x-4">
-                <button
+                <button;
                   onClick={prevTestimonial}
                   className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white,
   hove: r:bg-white/20 transition-all duration-300"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
-                <button
+                <button;
                   onClick={nextTestimonial}
                   className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white,
   hove: r:bg-white/20 transition-all duration-300"
@@ -412,7 +415,7 @@ const renderStars = (rati,
                 </button>
               </div>
 
-              <button
+              <button;
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}
                 className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white,
   hove: r:bg-white/20 transition-all duration-300"
@@ -424,11 +427,11 @@ const renderStars = (rati,
             {/* Testimonial Indicators */}
             <div className="flex justify-center space-x-2 mt-6">
               {filteredTestimonials.map((_, index) => (
-                <button
+                <button;
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial
+                    index === currentTestimonial;
                       ? 'bg-cyan-400 scale-125'
                       : 'bg-white/30,
   hove: r:bg-white/50'
@@ -440,7 +443,7 @@ const renderStars = (rati,
         </div>
 
         {/* Stats Section */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }

@@ -21,7 +21,9 @@ export interface SpecializedITInfrastructureService2026 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,12 +35,12 @@ export interface SpecializedITInfrastructureService2026 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
 }
 
 export,
   const: SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] = [
-  // 5G Enterprise Network Solutions
+  // 5G Enterprise Network Solutions;
   {
   i,
   d: "5g-enterprise-network-solutions-2026",tit,
@@ -119,7 +121,7 @@ export,
     marketSi,
   z: e: "$67.8 billion by 2026"
 }
-  // Zero Trust Network Architecture
+  // Zero Trust Network Architecture;
   {
   id: "zero-trust-network-architecture-2026",tit,
   l: e: "Zero Trust Network Architecture 2026",descripti,
@@ -199,7 +201,7 @@ export,
     marketSi,
   z: e: "$51.6 billion by 2026"
 }
-  // Hybrid Cloud Infrastructure
+  // Hybrid Cloud Infrastructure;
   {
   id: "hybrid-cloud-infrastructure-2026",tit,
   l: e: "Hybrid Cloud Infrastructure 2026",descripti,
@@ -359,7 +361,7 @@ export,
     marketSi,
   z: e: "$32.7 billion by 2026"
 }
-  // Edge Computing Infrastructure
+  // Edge Computing Infrastructure;
   {
   id: "edge-computing-infrastructure-2026",tit,
   l: e: "Edge Computing Infrastructure 2026",descripti,
@@ -519,7 +521,7 @@ export,
     marketSi,
   z: e: "$28.9 billion by 2026"
 }
-  // Intent-Based Networking
+  // Intent-Based Networking;
   {
   id: "intent-based-networking-2026",tit,
   l: e: "Intent-Based Networking 2026",descripti,
@@ -599,7 +601,7 @@ export,
     marketSi,
   z: e: "$18.7 billion by 2026"
 }
-  // Network Automation Platform
+  // Network Automation Platform;
   {
   id: "network-automation-platform-2026",tit,
   l: e: "Network Automation Platform 2026",descripti,
@@ -679,7 +681,7 @@ export,
     marketSi,
   z: e: "$15.3 billion by 2026"
 }
-  // Network Performance Monitoring
+  // Network Performance Monitoring;
   {
   id: "network-performance-monitoring-2026",tit,
   l: e: "Network Performance Monitoring 2026",descripti,

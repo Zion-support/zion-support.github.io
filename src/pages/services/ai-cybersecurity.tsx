@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../../components/SEO"
-import { motion } from "framer-motion"
-import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp     } from "lucide-react";
 const,
   AICybersecurit: y: React.FC = () () => {
   const features = [
@@ -64,7 +64,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Cybersecurity Services - Zion Tech Group"
         description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
       />
@@ -73,7 +73,7 @@ const,
   }
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -92,9 +92,9 @@ const,
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI-Powered
+              AI-Powered;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400">
-                Cybersecurity
+                Cybersecurity;
               </span>
             </h1>
             
@@ -109,11 +109,11 @@ const,
   hove: r:from-red-400,
   hove: r:to-orange-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-red-500/20">
-                Secure Your Business
+                Secure Your Business;
               </button>
               <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hove,
   r:bg-red-400/10 transition-all duration-200">
-                Security Assessment
+                Security Assessment;
               </button>
             </div>
           </motion.div>
@@ -124,7 +124,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -137,10 +137,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Security Features
+              Advanced Security Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience next-generation cybersecurity powered by artificial intelligence
+              Experience next-generation cybersecurity powered by artificial intelligence;
             </p>
           </motion.div>
 
@@ -148,7 +148,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -180,7 +180,7 @@ const,
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -193,17 +193,17 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Security Services
+              Comprehensive Security Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              End-to-end cybersecurity protection for your business
+              End-to-end cybersecurity protection for your business;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.title},
   }
                 initial={ opaci,
@@ -236,7 +236,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -252,13 +252,13 @@ const,
               Why Choose AI Cybersecurity?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Stay ahead of evolving threats with intelligent security
+              Stay ahead of evolving threats with intelligent security;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d: grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -281,7 +281,7 @@ const,
               </ul>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -295,14 +295,14 @@ const,
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Protected Today</h3>
               <p className="text-gray-300 mb-6">
-                Don't wait for a security breach. Our AI cybersecurity experts can assess your current 
+                Don't wait for a security breach. Our AI cybersecurity experts can assess your current;
                 security posture and implement advanced protection measures.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg,
   hove: r: from-red-400,
   hove: r:to-orange-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-red-500/20">
-                Security Assessment
+                Security Assessment;
               </button>
             </motion.div>
           </div>
@@ -313,7 +313,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -328,7 +328,7 @@ const,
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Protect your digital assets with AI-powered cybersecurity that never sleeps
+              Protect your digital assets with AI-powered cybersecurity that never sleeps;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -336,11 +336,11 @@ const,
   hove: r:from-red-400,
   hove: r:to-orange-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-red-500/20">
-                Start Security Assessment
+                Start Security Assessment;
               </button>
               <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hove,
   r:bg-red-400/10 transition-all duration-200">
-                Contact Security Team
+                Contact Security Team;
               </button>
             </div>
           </motion.div>
@@ -349,4 +349,4 @@ const,
     </div>
   )
 }
-export default AICybersecurity
+export default AICybersecurity;

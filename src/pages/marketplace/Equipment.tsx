@@ -8,4 +8,4 @@ const,
 		</div>
 	</div>
 )
-export default Equipment
+export default Equipment;

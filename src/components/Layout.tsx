@@ -1,8 +1,11 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { ReactNode } from "react"
+import { ReactNode   } from "react";
 interface LayoutProps {
   childr,
-  e: n: ReactNode
+  e: n: ReactNode;
+}
+}
 }
 const,
   navigatio: n: NavItem[] = [
@@ -76,7 +79,7 @@ export default function Layout({ children }: { childr,
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null)
   const location = useLocation()
   const isActive = (hr,
-  e: f: string) => location.pathname === href
+  e: f: string) => location.pathname === href;
 const toggleSidebarDropdown = (labe,
   l: string) () => {
   setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)
@@ -90,40 +93,40 @@ const toggleSidebarDropdown = (labe,
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <h1 className="text-2xl font-bold text-white">
-                Zion Tech Group
+                Zion Tech Group;
               </h1>
             </div>
             <nav className="hidden,
   m: d: flex space-x-6">
               <a href="/" className="text-white,
   hove: r:text-blue-300 transition-colors">
-                Home
+                Home;
               </a>
               <a href="/services" className="text-white,
   hove: r:text-blue-300 transition-colors">
-                Services
+                Services;
               </a>
               <a href="/products" className="text-white,
   hove: r:text-blue-300 transition-colors">
-                Products
+                Products;
               </a>
               <a href="/about" className="text-white,
   hove: r:text-blue-300 transition-colors">
-                About
+                About;
               </a>
               <a href="/contact" className="text-white,
   hove: r:text-blue-300 transition-colors">
-                Contact
+                Contact;
               </a>
             </nav>
             <div className="flex items-center space-x-4">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="bg-blue-600 hove,
   r:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors";"
               >
-                📞 Call Us
+                📞 Call Us;
               </a>
             </div>
           </div>
@@ -143,7 +146,7 @@ const toggleSidebarDropdown = (labe,
   <div key={item.label}>
                   {item.children ? (
   <div>
-                      <button
+                      <button;
                         onClick={onClick={() => toggleSidebarDropdown(item.label)},
   },
   }
@@ -162,7 +165,7 @@ const toggleSidebarDropdown = (labe,
                       {sidebarDropdownOpen === item.label && (
   <div className="ml-4 mt-2 space-y-1">
                           {item.children.map((child) => (
-  <a
+  <a;
                               key={child.label},
   }
                               href={child.href},
@@ -179,7 +182,7 @@ const toggleSidebarDropdown = (labe,
                       )}
                     </div>
                   ) : (
-  <a
+  <a;
                       href={item.href},
   }
                       className="className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md,

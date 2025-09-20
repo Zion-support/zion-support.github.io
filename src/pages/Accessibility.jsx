@@ -1,5 +1,5 @@
 import React from "react"
-import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from "lucide-react"
+import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart   } from "lucide-react";
 export default function Accessibility() {
   const accessibilityFeatures = [
   {
@@ -154,7 +154,7 @@ export default function Accessibility() {
             </div>
           </div>
           <h1 className="text-5xl font-bold text-white mb-6">
-            Accessibility
+            Accessibility;
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             We are committed to making Zion Tech Group's digital experiences accessible to everyone, regardless of ability or disability.
@@ -170,7 +170,7 @@ export default function Accessibility() {
             <div className="bg-zion-slate border border-zion-slate-light rounded-2xl p-8">
               <Heart className="w-16 h-16 text-zion-cyan mx-auto mb-6" />
               <h2 className="text-3xl font-bold text-white mb-6">
-                Our Accessibility Commitment
+                Our Accessibility Commitment;
               </h2>
               <p className="text-lg text-zion-slate-light leading-relaxed mb-6">
                 At Zion Tech Group, we believe that technology should be accessible to everyone. We are committed to creating digital experiences that work for people of all abilities, including those with disabilities.
@@ -188,12 +188,12 @@ export default function Accessibility() {
       <div className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Accessibility Features
+            Accessibility Features;
           </h2>
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {accessibilityFeatures.map((feature, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6,
@@ -220,13 +220,13 @@ export default function Accessibility() {
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Accessibility Compliance
+            Accessibility Compliance;
           </h2>
           <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {complianceStandards.map((standard, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 text-center";"
@@ -249,12 +249,12 @@ export default function Accessibility() {
       <div className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Assistive Technology Support
+            Assistive Technology Support;
           </h2>
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {assistiveTechnologies.map((tech, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6";"
@@ -280,13 +280,13 @@ export default function Accessibility() {
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Accessibility Tools
+            Accessibility Tools;
           </h2>
           <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {accessibilityTools.map((tool, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6,
@@ -295,13 +295,13 @@ export default function Accessibility() {
                 <div className="text-zion-cyan mb-4">{tool.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tool.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{tool.description}</p>
-                <a
+                <a;
                   href={tool.link},
   }
                   className="className="inline-flex items-center gap-2 text-zion-cyan,
   hove: r:text-zion-cyan-light transition-colors font-medium text-sm";"
                 >
-                  Access Tool
+                  Access Tool;
                   <span>→</span>
                 </a>
               </div>
@@ -315,7 +315,7 @@ export default function Accessibility() {
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Help Us Improve
+            Help Us Improve;
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             We value your feedback on accessibility. If you encounter any accessibility barriers or have suggestions for improvement, please let us know.
@@ -327,13 +327,13 @@ export default function Accessibility() {
               <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
               <p className="text-zion-slate-light text-sm mb-4">Send us detailed feedback about accessibility issues</p>
-              <a
+              <a;
                 href="mail,
   t: o:accessibility@ziontechgroup.com"
                 className="className="text-zion-cyan,
   hove: r:text-zion-cyan-light transition-colors font-medium";"
               >
-                accessibility@ziontechgroup.com
+                accessibility@ziontechgroup.com;
               </a>
             </div>
             
@@ -341,13 +341,13 @@ export default function Accessibility() {
               <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
               <p className="text-zion-slate-light text-sm mb-4">Speak directly with our accessibility team</p>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="text-zion-cyan,
   hove: r:text-zion-cyan-light transition-colors font-medium";"
               >
-                +1 (302) 464-0950
+                +1 (302) 464-0950;
               </a>
             </div>
             
@@ -355,12 +355,12 @@ export default function Accessibility() {
               <Users className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Accessibility Team</h3>
               <p className="text-zion-slate-light text-sm mb-4">Dedicated team focused on accessibility improvements</p>
-              <a
+              <a;
                 href="/contact"
                 className="className="text-zion-cyan,
   hove: r:text-zion-cyan-light transition-colors font-medium";"
               >
-                Contact Team
+                Contact Team;
               </a>
             </div>
           </div>
@@ -372,22 +372,22 @@ export default function Accessibility() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/accessibility-statement.pdf"
                 className="className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold,
   hove: r:bg-zion-cyan-light transition-colors inline-flex items-center gap-2";"
               >
                 <Download className="w-4 h-4" />
-                Accessibility Statement
+                Accessibility Statement;
               </a>
-              <a
+              <a;
                 href="/vpat.pdf"
                 className="className="border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold,
   hove: r:bg-zion-cyan hove,
   r:text-zion-slate-dark transition-colors inline-flex items-center gap-2";"
               >
                 <Download className="w-4 h-4" />
-                VPAT Document
+                VPAT Document;
               </a>
             </div>
           </div>

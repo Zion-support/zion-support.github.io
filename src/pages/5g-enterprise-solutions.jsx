@@ -1,7 +1,7 @@
 import React from "react"
-import { Helmet } from "react-helmet-async"
-import { motion } from "framer-motion"
-import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, GitFork, Target, Rocket, Lock, Cpu, Settings } from "lucide-react"
+import { Helmet   } from "react-helmet-async";
+import { motion   } from "framer-motion";
+import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, GitFork, Target, Rocket, Lock, Cpu, Settings   } from "lucide-react";
 const FiveGEnterpriseSolutions = () () => {
     const features = [
   {
@@ -111,9 +111,9 @@ const FiveGEnterpriseSolutions = () () => {
   o: n: 0.8 },
   } className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
-            5G Enterprise
+            5G Enterprise;
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">
-              Solutions
+              Solutions;
             </span>
           </motion.h1>
           <motion.p initial={ opacit,
@@ -140,11 +140,11 @@ const FiveGEnterpriseSolutions = () () => {
   hove: r:from-teal-700,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105">
-              Start Free Trial
+              Start Free Trial;
             </button>
             <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hove,
   r:bg-white/10 transition-all duration-300">
-              Schedule Demo
+              Schedule Demo;
             </button>
           </motion.div>
         </div>
@@ -162,10 +162,10 @@ const FiveGEnterpriseSolutions = () () => {
   o: n: 0.8 },
   } className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              5G Technology Features
+              5G Technology Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Revolutionary 5G capabilities for enterprise transformation
+              Revolutionary 5G capabilities for enterprise transformation;
             </p>
           </motion.div>
 
@@ -203,10 +203,10 @@ const FiveGEnterpriseSolutions = () () => {
   o: n: 0.8 },
   } className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Solutions
+              Industry Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform industries with 5G-powered enterprise solutions
+              Transform industries with 5G-powered enterprise solutions;
             </p>
           </motion.div>
 
@@ -246,10 +246,10 @@ const FiveGEnterpriseSolutions = () () => {
   o: n: 0.8 },
   } className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise Benefits
+              Enterprise Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform your business with 5G technology advantages
+              Transform your business with 5G technology advantages;
             </p>
           </motion.div>
 
@@ -285,10 +285,10 @@ const FiveGEnterpriseSolutions = () () => {
   o: n: 0.8 },
   } className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              5G Technology Stack
+              5G Technology Stack;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive 5G infrastructure and enterprise solutions
+              Comprehensive 5G infrastructure and enterprise solutions;
             </p>
           </motion.div>
 
@@ -347,10 +347,10 @@ const FiveGEnterpriseSolutions = () () => {
   o: n: 0.8 },
   } className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Implementation Process
+              Implementation Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Seamless 5G deployment for your enterprise
+              Seamless 5G deployment for your enterprise;
             </p>
           </motion.div>
 
@@ -412,17 +412,17 @@ const FiveGEnterpriseSolutions = () () => {
               Ready to Transform with 5G?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join leading enterprises leveraging 5G for competitive advantage
+              Join leading enterprises leveraging 5G for competitive advantage;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
               <button className="bg-white text-teal-900 px-8 py-4 rounded-lg font-semibold,
   hove: r:bg-gray-100 transition-all duration-300">
-                Get Started Now
+                Get Started Now;
               </button>
               <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hove,
   r:bg-white/10 transition-all duration-300">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -430,4 +430,4 @@ const FiveGEnterpriseSolutions = () () => {
       </section>
     </div>)
 }
-export default FiveGEnterpriseSolutions
+export default FiveGEnterpriseSolutions;

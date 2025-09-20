@@ -1,27 +1,31 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Database
+  Database;
   Shield,
   Lock,
   Eye,
   Search,
   BarChart3,
   Users,
-  FileText
-  CheckCircle
-  Star
-  ArrowRight
-  Play
-  Settings
-  Cloud
-  Zap
-  Brain
-  TrendingUp
-  AlertTriangle
-  Globe
-  Key
-} from "lucide-react"
+  FileText;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Play;
+  Settings;
+  Cloud;
+  Zap;
+  Brain;
+  TrendingUp;
+  AlertTriangle;
+  Globe;
+  Key;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AIDataGovernancePlatfor: m: React.FC = () () => {
   const features = [
@@ -70,7 +74,7 @@ const,
         'Email supportBasic reporting'
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -85,7 +89,7 @@ const,
         'Custom policies'
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -100,7 +104,7 @@ const,
         'SLA guarantees'
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const benefits = [
@@ -128,7 +132,7 @@ const,
       <div className="relative z-10">
         {/* Header Section */},
   }
-        <motion.header 
+        <motion.header;
           className="className="pt-20 pb-16 text-center";"
           initial={ opaci,
   t: y: 0, y: -50 },
@@ -141,7 +145,7 @@ const,
   }
         >
           <div className="max-w-4xl mx-auto px-6">
-            <motion.div 
+            <motion.div;
               className="className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-300 mb-6";"
               initial={ sca,
   l: e: 0.8, opaci,
@@ -157,12 +161,12 @@ const,
   }
             >
               <Database className="w-4 h-4" />
-              AI-Powered Data Governance
+              AI-Powered Data Governance;
             </motion.div>
             
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
-              AI Data Governance Platform
+              AI Data Governance Platform;
             </h1>
             
             <p className="text-xl m,
@@ -172,7 +176,7 @@ const,
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl,
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
@@ -185,9 +189,9 @@ const,
   }
               >
                 <Play className="w-5 h-5" />
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-xl,
   hove: r: bg-blue-500/10 transition-all duration-300 flex items-center gap-2";"
                 whileHover={ scal,
@@ -198,7 +202,7 @@ const,
   }
               >
                 <Settings className="w-5 h-5" />
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </div>
@@ -206,7 +210,7 @@ const,
 
         {/* Features Grid */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -225,7 +229,7 @@ const,
             <div className="text-center mb-16">
               <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Enterprise-Grade Features
+                Enterprise-Grade Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI-powered platform provides comprehensive data governance capabilities designed for modern enterprises.
@@ -236,7 +240,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   className="className="group relative p-6 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm,
@@ -291,7 +295,7 @@ const,
 
         {/* Compliance Frameworks */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6 bg-gradient-to-br from-blue-900/20 via-slate-900/50 to-cyan-900/20";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -310,7 +314,7 @@ const,
             <div className="text-center mb-16">
               <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Comprehensive Compliance Coverage
+                Comprehensive Compliance Coverage;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Stay compliant with all major regulatory frameworks through intelligent automation and continuous monitoring.
@@ -321,7 +325,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
               {complianceFrameworks.map((framework, index) => (
-  <motion.div
+  <motion.div;
                   key={framework},
   }
                   className="className="flex items-center gap-4 p-4 rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10";"
@@ -351,7 +355,7 @@ const,
 
         {/* Pricing Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -370,7 +374,7 @@ const,
             <div className="text-center mb-16">
               <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Transparent Pricing Plans
+                Transparent Pricing Plans;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your organization's data governance needs. All plans include our core AI capabilities and expert support.
@@ -380,11 +384,11 @@ const,
             <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                   key={plan.name},
   }
                   className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
-  plan.popular 
+  plan.popular;
                       ? 'border-blue-500 bg-gradient-to-br from-blue-500/20 to-cyan-500/20' 
                       : 'border-blue-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
 }`}
@@ -408,7 +412,7 @@ const,
                   {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -431,9 +435,9 @@ const,
                     ))}
                   </ul>
                   
-                  <motion.button 
+                  <motion.button;
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                         ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white,
   hove: r: from-blue-700,
   hove: r:to-cyan-700'
@@ -447,7 +451,7 @@ const,
   l: e: 0.98 },
   }
                   >
-                    Get Started
+                    Get Started;
                   </motion.button>
                 </motion.div>
               ))}
@@ -457,7 +461,7 @@ const,
 
         {/* Benefits Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6 bg-gradient-to-br from-blue-900/20 via-slate-900/50 to-cyan-900/20";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -487,7 +491,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={benefit},
   }
                   className="className="flex items-start gap-4 p-6 rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10";"
@@ -517,7 +521,7 @@ const,
 
         {/* CTA Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6 text-center";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -542,7 +546,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl,
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
@@ -554,10 +558,10 @@ const,
   l: e: 0.95 },
   }
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-xl,
   hove: r: bg-blue-500/10 transition-all duration-300 flex items-center gap-2";"
                 whileHover={ scal,
@@ -568,7 +572,7 @@ const,
   }
               >
                 <Users className="w-5 h-5" />
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </div>
@@ -578,4 +582,4 @@ const,
   )
 }
 
-export default AIDataGovernancePlatform
+export default AIDataGovernancePlatform;

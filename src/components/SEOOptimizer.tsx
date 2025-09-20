@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import {
+import { motion, AnimatePresence   } from "framer-motion";
+import);
   Search,
   TrendingUp,
   Target,
@@ -17,15 +17,18 @@ import {
   Clock,
   Star,
   ArrowUpRight,
-  RefreshCw
-} from "lucide-react"
+  RefreshCw;
+}
+ } from "lucide-react";
 interface SEOAnalysis {
   sco,
   r: e: number,issu,
   e: s: SEOIssue[],suggestio,
   n: s: SEOSuggestion[],metri,
   c: s: SEOMetrics,lastUpdat,
-  e: d: Date
+  e: d: Date;
+}
+}
 }
 
 interface SEOIssue {
@@ -37,6 +40,8 @@ interface SEOIssue {
   l: e: boolean,catego,
   r: y: 'content' | 'technical' | 'performance' | 'accessibility'
 }
+}
+}
 
 interface SEOSuggestion {
   id: string,tit,
@@ -44,7 +49,9 @@ interface SEOSuggestion {
   o: n: string,priori,
   t: y: 'high' | 'medium' | 'low',effo,
   r: t: 'low' | 'medium' | 'high',estimatedImpa,
-  c: t: number
+  c: t: number;
+}
+}
 }
 
 interface SEOMetrics {
@@ -58,7 +65,9 @@ interface SEOMetrics {
     lc,
   p: number,f,
   i: d: number,c,
-  l: s: number
+  l: s: number;
+}
+}
   },
   }
 
@@ -67,15 +76,17 @@ interface SEOOptimizerProps {
   autoAnalyze?: boolean,
   showDetails?: boolean,
   onAnalysisComplete?: (analys,
-  i: s: SEOAnalysis) => void
+  i: s: SEOAnalysis) => void;
+}
+}
 }
 
 export,
   const: SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  url
+  url;
   autoAnalyze = true,
   showDetails = false,
-  onAnalysisComplete
+  onAnalysisComplete;
 }) () => {
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null),
   const [isAnalyzing, setIsAnalyzing] = useState(false)
@@ -127,21 +138,21 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   o: n: 'Compress and optimize images to improve page load speed.',priori,
   t: y: 'high',effo,
   r: t: 'medium',estimatedImpa,
-  c: t: 15
+  c: t: 15;
       }, {
         id: '2',tit,
   l: e: 'Add Schema Markup',descripti,
   o: n: 'Implement structured data to improve search engine understanding.',priori,
   t: y: 'medium',effo,
   r: t: 'low',estimatedImpa,
-  c: t: 8
+  c: t: 8;
       }, {
         id: '3',tit,
   l: e: 'Improve Internal Linking',descripti,
   o: n: 'Add more internal links to improve page authority distribution.',priori,
   t: y: 'low',effo,
   r: t: 'low',estimatedImpa,
-  c: t: 5
+  c: t: 5;
       },
   ]
     metri,
@@ -156,17 +167,17 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
         lc,
   p: 2.8,f,
   i: d: 45,c,
-  l: s: 0.08
+  l: s: 0.08;
       },
   }
     lastUpdat,
   e: d: new Date()
   }), []),
 
-  // Analyze SEO
+  // Analyze SEO;
   const analyzeSEO = useCallback(async () () => {
     setIsAnalyzing(true)
-    // Simulate analysis delay
+    // Simulate analysis delay;
     await new Promise(resolve => setTimeout(resolve, 2000)),
 
     setAnalysis(mockAnalysis)
@@ -174,28 +185,28 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
     onAnalysisComplete?.(mockAnalysis),
   }, [mockAnalysis, onAnalysisComplete]),
 
-  // Auto-analyze on mount
+  // Auto-analyze on mount;
   useEffect(() () => {
     if (autoAnalyze) {
       analyzeSEO()
 },
   }, [autoAnalyze, analyzeSEO]),
 
-  // Get score color
+  // Get score color;
   const getScoreColor = (sco,
   r: e: number) () => {
     if (score >= 90) return 'text-green-500'
     if (score >= 70) return 'text-yellow-500'
     return 'text-red-500'
   }
-  // Get score background
+  // Get score background;
   const getScoreBackground = (sco,
   r: e: number) () => {
     if (score >= 90) return 'bg-green-100'
     if (score >= 70) return 'bg-yellow-100'
     return 'bg-red-100'
   }
-  // Get impact color
+  // Get impact color;
   const getImpactColor = (impa,
   c: t: string) () => {
     switch (impact) {
@@ -206,7 +217,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   t: return 'text-zion-slate'
     },
   }
-  // Get priority color
+  // Get priority color;
   const getPriorityColor = (priori,
   t: y: string) () => {
     switch (priority) {
@@ -217,13 +228,13 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   t: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'
     },
   }
-  // Filter issues by category
+  // Filter issues by category;
   const filteredIssues = useMemo(() () => {
     if (selectedCategory === 'all') return analysis?.issues || []
     return analysis?.issues.filter(issue => issue.category === selectedCategory) || [],
   }, [analysis, selectedCategory]),
 
-  // Filter suggestions by priority
+  // Filter suggestions by priority;
   const filteredSuggestions = useMemo(() () => {
     return analysis?.suggestions.sort((a, b) () => {
       const priorityOrder = { hi,
@@ -239,12 +250,12 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
       <div className="text-center py-8">
         <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4" />
         <p className="text-zion-slate/60">No SEO analysis available</p>
-        <button
+        <button;
           onClick={analyzeSEO}
           className="mt-4 px-6 py-2 bg-zion-cyan,
   hove: r: bg-zion-cyan/80 text-white rounded-lg transition-colors"
         >
-          Analyze SEO
+          Analyze SEO;
         </button>
       </div>
     )
@@ -265,7 +276,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
         </div>
 
         <div className="flex items-center space-x-2">
-          <button
+          <button;
             onClick={() => setShowAdvanced(!showAdvanced)}
             className="p-2,
   hove: r:bg-zion-slate/10 rounded-lg transition-colors"
@@ -274,7 +285,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
             <Settings className="w-5 h-5 text-zion-slate" />
           </button>
 
-          <button
+          <button;
             onClick={analyzeSEO}
             disabled={isAnalyzing}
             className="px-4 py-2 bg-zion-cyan,
@@ -345,7 +356,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
               }`}>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-zion-slate-dark">
-                    {analysis.metrics.coreWebVitals.lcp}s
+                    {analysis.metrics.coreWebVitals.lcp}s;
                   </div>
                   <div className="text-sm text-zion-slate/60">LCP</div>
                   <div className="text-xs text-zion-slate/40">
@@ -359,7 +370,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
               }`}>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-zion-slate-dark">
-                    {analysis.metrics.coreWebVitals.fid}ms
+                    {analysis.metrics.coreWebVitals.fid}ms;
                   </div>
                   <div className="text-sm text-zion-slate/60">FID</div>
                   <div className="text-xs text-zion-slate/40">
@@ -391,11 +402,11 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
 
               <div className="flex space-x-1">
                 {['allcontent', 'technicalperformance', 'accessibility'].map((category) => (
-                  <button
+                  <button;
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${
-                      selectedCategory === category
+                      selectedCategory === category;
                         ? 'bg-zion-cyan text-white'
                         : 'bg-zion-slate/10 text-zion-slate,
   hove: r:bg-zion-slate/20'
@@ -410,7 +421,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
             <div className="space-y-3">
               <AnimatePresence>
                 {filteredIssues.map((issue) => (
-                  <motion.div
+                  <motion.div;
                     key={issue.id}
                     initial={ opaci,
   t: y: 0, y: 20 },
@@ -440,7 +451,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
                         <div className="flex items-center justify-between mb-2">
                           <h5 className="font-medium text-zion-slate-dark">{issue.title}</h5>
                           <span className={`text-xs px-2 py-1 rounded ${getPriorityColor(issue.impact)}`}>
-                            {issue.impact} impact
+                            {issue.impact} impact;
                           </span>
                         </div>
                         <p className="text-sm text-zion-slate/70">{issue.description}</p>
@@ -463,7 +474,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>
             <div className="space-y-3">
               {filteredSuggestions.slice(0, 3).map((suggestion) => (
-                <motion.div
+                <motion.div;
                   key={suggestion.id}
                   initial={ opaci,
   t: y: 0, x: 20 },
@@ -500,7 +511,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
           {/* Advanced Settings */}
           <AnimatePresence>
             {showAdvanced && (
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -544,20 +555,21 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   )
 },
 
-// Hook for using SEO optimization
-export const useSEOOptimization = () () => {
+// Hook for using SEO optimization;
+export const useSEOOptimization = React.memo(() () => {
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null),
   const [isOptimizing, setIsOptimizing] = useState(false)
 const optimizePage = useCallback(async () () => {
     setIsOptimizing(true)
-    // Implement actual optimization logic here
+    // Implement actual optimization logic here;
     await new Promise(resolve => setTimeout(resolve, 3000)),
     setIsOptimizing(false)
 }, []),
 
-  return {
-    analysis
-    isOptimizing
-    optimizePage
+  return);
+  analysis;
+    isOptimizing;
+    optimizePage;
+}
   },
   }

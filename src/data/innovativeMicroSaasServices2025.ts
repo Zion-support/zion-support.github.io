@@ -21,7 +21,9 @@ export interface InnovativeMicroSaasService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,14 +35,14 @@ export interface InnovativeMicroSaasService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
-  demoUrl?: string
-  documentationUrl?: string
+  marketSize?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
 }
 
 export,
   const: INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [
-  // AI-Powered Business Intelligence & Analytics
+  // AI-Powered Business Intelligence & Analytics;
   {
   i,
   d: "ai-business-intelligence-platform",tit,
@@ -125,7 +127,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-bi"
 }
-  // Quantum AI Optimization Platform
+  // Quantum AI Optimization Platform;
   {
   id: "quantum-ai-optimization-platform",tit,
   l: e: "Quantum AI Optimization Platform",descripti,
@@ -209,7 +211,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/quantum-ai"
 }
-  // AI-Powered Cybersecurity Platform
+  // AI-Powered Cybersecurity Platform;
   {
   id: "ai-cybersecurity-platform",tit,
   l: e: "AI-Powered Cybersecurity Platform",descripti,
@@ -293,7 +295,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-cybersecurity"
 }
-  // IoT Edge Computing Platform
+  // IoT Edge Computing Platform;
   {
   id: "iot-edge-computing-platform",tit,
   l: e: "IoT Edge Computing Platform",descripti,
@@ -377,7 +379,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/iot-edge"
 }
-  // Blockchain Web3 Development Platform
+  // Blockchain Web3 Development Platform;
   {
   id: "blockchain-web3-platform",tit,
   l: e: "Blockchain Web3 Development Platform",descripti,
@@ -461,7 +463,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/blockchain-web3"
 }
-  // AI-Powered Marketing Automation
+  // AI-Powered Marketing Automation;
   {
   id: "ai-marketing-automation",tit,
   l: e: "AI-Powered Marketing Automation",descripti,
@@ -545,7 +547,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-marketing"
 }
-  // Cloud-Native DevOps Platform
+  // Cloud-Native DevOps Platform;
   {
   id: "cloud-native-devops-platform",tit,
   l: e: "Cloud-Native DevOps Platform",descripti,
@@ -629,7 +631,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/devops-platform"
 }
-  // AI-Powered Customer Service Platform
+  // AI-Powered Customer Service Platform;
   {
   id: "ai-customer-service-platform",tit,
   l: e: "AI-Powered Customer Service Platform",descripti,
@@ -713,7 +715,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-customer-service"
 }
-  // Data Privacy & Compliance Platform
+  // Data Privacy & Compliance Platform;
   {
   id: "data-privacy-compliance-platform",tit,
   l: e: "Data Privacy & Compliance Platform",descripti,
@@ -797,7 +799,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/data-privacy"
 }
-  // AI-Powered Content Generation Platform
+  // AI-Powered Content Generation Platform;
   {
   id: "ai-content-generation-platform",tit,
   l: e: "AI Content Generation Platform",descripti,
@@ -883,4 +885,4 @@ export,
   s://ziontechgroup.com/docs/ai-content"
 },
   ]
-export default INNOVATIVE_MICRO_SAAS_SERVICES_2025
+export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;

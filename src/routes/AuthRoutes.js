@@ -1,5 +1,5 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime"
-import { Route } from "react-router-dom"
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs   } from "react/jsx-runtime";
+import { Route   } from "react-router-dom";
 import Login from "@/pages/Login"
 import Signup from "@/pages/Signup"
 import ForgotPassword from "@/pages/ForgotPassword"

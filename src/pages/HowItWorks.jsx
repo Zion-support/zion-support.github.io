@@ -1,10 +1,10 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Link } from "react-router-dom"
-import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield } from "lucide-react"
+import { GradientHeading   } from "@/components/GradientHeading";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Link   } from "react-router-dom";
+import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield   } from "lucide-react";
 export default function HowItWorks() {
   const clientSteps = [
   {
@@ -143,7 +143,7 @@ export default function HowItWorks() {
           <div className="text-center mb-16">
             <GradientHeading>How Zion Works</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Discover how our AI-powered marketplace connects talented professionals with innovative projects
+              Discover how our AI-powered marketplace connects talented professionals with innovative projects;
             </p>
           </div>
 
@@ -156,11 +156,11 @@ export default function HowItWorks() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">The Zion Ecosystem</h2>
                 <p className="text-zion-slate-light text-lg mb-6">
-                  Zion is more than just a marketplace – it's a complete ecosystem designed to facilitate 
+                  Zion is more than just a marketplace – it's a complete ecosystem designed to facilitate;
                   meaningful connections between AI and tech professionals and the clients who need their expertise.
                 </p>
                 <p className="text-zion-slate-light text-lg mb-6">
-                  Our platform uses advanced AI algorithms to match the right talent with the right projects
+                  Our platform uses advanced AI algorithms to match the right talent with the right projects;
                   ensuring successful outcomes for everyone involved.
                 </p>
                 <div className="mt-8">

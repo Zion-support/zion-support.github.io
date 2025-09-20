@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 const categories = [
   {
   tit,
@@ -55,7 +55,9 @@ const specialServices = [
 },
   ]
 interface CategoriesSectionProps {
-  showTitle?: boolean
+  showTitle?: boolean;
+}
+}
 }
 
 const const containerVariants = {
@@ -71,7 +73,7 @@ const const containerVariants = {
   o: n: {
   staggerChildre,
   n: 0.1,delayChildr,
-  e: n: 0.2
+  e: n: 0.2;
 },
   },
   }
@@ -111,7 +113,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
-  <motion.div 
+  <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -128,15 +130,15 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-4">
-              Explore Categories
+              Explore Categories;
             </h2>
             <p className="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
+              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
             </p>
           </motion.div>
         )}
         
-        <motion.div 
+        <motion.div;
           className="className="grid grid-cols-1,
   s: m: grid-cols-2 l,
   g:grid-cols-4 gap-6";"
@@ -149,7 +151,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   }
         >
           {categories.map((category, index) => (
-  <motion.div
+  <motion.div;
               key={category.title},
   }
               variants={itemVariants},
@@ -177,7 +179,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           ))}
         </motion.div>
         
-        <motion.div 
+        <motion.div;
           className="className="mt-12";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -196,7 +198,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
-  <Link
+  <Link;
                 key={service.title},
   }
                 to={service.link},
@@ -215,7 +217,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </div>
         </motion.div>
         
-        <motion.div 
+        <motion.div;
           className="className="mt-12 flex justify-center";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -231,12 +233,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   a: y: 0.6 },
   }
         >
-          <Link 
+          <Link;
             to="/categories" 
             className="className="text-cyan-400 border-b border-cyan-400,
   hove: r: border-cyan-300 transition-colors flex items-center gap-2";"
           >
-            View All Categories
+            View All Categories;
             <span className="text-sm group-hove,
   r:translate-x-1 transition-transform duration-300">→</span>
           </Link>

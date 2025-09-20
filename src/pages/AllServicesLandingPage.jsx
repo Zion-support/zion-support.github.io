@@ -1,11 +1,11 @@
 import React from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings } from "lucide-react"
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from "@/data/expandedServices"
-import { TrustedBySection } from "@/components/TrustedBySection"
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings   } from "lucide-react";
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES   } from "@/data/expandedServices";
+import { TrustedBySection   } from "@/components/TrustedBySection";
 import SEO from "@/components/SEO"
 export default function AllServicesLandingPage() {
   const getCategoryIcon = (category) () => {
@@ -65,10 +65,10 @@ export default function AllServicesLandingPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-            Complete Tech Solutions Ecosystem
+            Complete Tech Solutions Ecosystem;
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            From cutting-edge AI automation to affordable micro SAAS solutions, comprehensive IT infrastructure
+            From cutting-edge AI automation to affordable micro SAAS solutions, comprehensive IT infrastructure;
             and digital transformation services - we provide everything your business needs to thrive in the digital age.
           </p>
           
@@ -77,13 +77,13 @@ export default function AllServicesLandingPage() {
             <Button size="lg" className="bg-white text-zion-purple,
   hove: r:bg-gray-100">
               <Phone className="h-5 w-5 mr-2"/>
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-zion-purple">
               <Mail className="h-5 w-5 mr-2"/>
-              Get Free Consultation
+              Get Free Consultation;
             </Button>
           </div>
 
@@ -117,10 +117,10 @@ export default function AllServicesLandingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
-              Explore Our Service Categories
+              Explore Our Service Categories;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Each category is designed to address specific business challenges and opportunities
+              Each category is designed to address specific business challenges and opportunities;
             </p>
           </div>
 
@@ -213,7 +213,7 @@ export default function AllServicesLandingPage() {
   }
                               </Badge>))},
   {service.features.length > 3 && (<Badge variant="outline" className="text-xs">
-                                +{service.features.length - 3} more
+                                +{service.features.length - 3} more;
                               </Badge>)}
                           </div>
                         </div>
@@ -267,7 +267,7 @@ export default function AllServicesLandingPage() {
                               <Globe className="h-4 w-4"/>
                               <a href={service.contactInfo.website} target="_blank" rel="noopener noreferrer" className="text-zion-cyan,
   hove: r:underline">
-                                Visit Website
+                                Visit Website;
                               </a>
                             </div>
                           </div>
@@ -278,10 +278,10 @@ export default function AllServicesLandingPage() {
                         <div className="flex space-x-2 pt-4">
                           <Button className="flex-1 bg-zion-purple,
   hove: r:bg-zion-purple-dark">
-                            Get Quote
+                            Get Quote;
                           </Button>
                           <Button variant="outline" className="flex-1">
-                            Learn More
+                            Learn More;
                           </Button>
                         </div>
                       </CardContent>
@@ -349,13 +349,13 @@ export default function AllServicesLandingPage() {
             <Button size="lg" className="bg-white text-zion-purple,
   hove: r:bg-gray-100">
               <Phone className="h-5 w-5 mr-2"/>
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white,
   hove: r:text-zion-purple">
               <Mail className="h-5 w-5 mr-2"/>
-              Email kleber@ziontechgroup.com
+              Email kleber@ziontechgroup.com;
             </Button>
           </div>
           

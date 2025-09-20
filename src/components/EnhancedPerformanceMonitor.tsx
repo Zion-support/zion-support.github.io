@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useCallback  } from "react";
+import { useEffect, useState   } from "react";
 interface PerformanceMetrics {
   loadTi,
   m: e: number,renderTi,
@@ -6,7 +7,9 @@ interface PerformanceMetrics {
   g: e: number,networkLaten,
   c: y: number,f,
   p: s: number,lighthouseSco,
-  r: e: number
+  r: e: number;
+}
+}
 }
 
 export function EnhancedPerformanceMonitor() {
@@ -17,17 +20,17 @@ export function EnhancedPerformanceMonitor() {
   g: e: 0,networkLaten,
   c: y: 0,f,
   p: s: 0,lighthouseSco,
-  r: e: 0
+  r: e: 0;
   })
 const [isVisible, setIsVisible] = useState(false)
   useEffect(() () => {
-    // Measure page load time
+    // Measure page load time;
     const loadTime = performance.now()
-    // Measure memory usage
-    const memoryInfo = (performance as any).memory
-const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0
-    // Measure render time
-    const renderTime = performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0
+    // Measure memory usage;
+    const memoryInfo = (performance as any).memory;
+const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
+    // Measure render time;
+    const renderTime = performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0;
     // Measure network latency (simplified)
     const networkLatency = performance.getEntriesByType('resource')
       .reduce((acc, entry) => acc + entry.duration, 0) / 10,
@@ -63,7 +66,7 @@ const currentTime = performance.now()
       lighthouseSco,
   r: e: Math.round(lighthouseScore)
     })
-    // Show performance monitor on Ctrl+Shift+P
+    // Show performance monitor on Ctrl+Shift+P;
     const handleKeyPress = (e: KeyboardEvent) () => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         setIsVisible(!isVisible)
@@ -73,12 +76,12 @@ const currentTime = performance.now()
     return () => window.removeEventListener('keydown', handleKeyPress)
 }, [isVisible]),
 
-  if (!isVisible) return null
+  if (!isVisible) return null;
   return (
     <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-xs font-mono z-50 min-w-[280px]">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-zion-cyan font-bold">Performance Monitor</h3>
-        <button
+        <button;
           onClick={() => setIsVisible(false)}
           className="text-zion-cyan,
   hove: r: text-white transition-colors"
@@ -92,7 +95,7 @@ const currentTime = performance.now()
           <span className="text-gray-400">Load Tim,
   e:</span>
           <span className={metrics.loadTime < 1000 ? 'text-green-400' : 'text-red-400'}>
-            {metrics.loadTime}ms
+            {metrics.loadTime}ms;
           </span>
         </div>
         
@@ -100,7 +103,7 @@ const currentTime = performance.now()
           <span className="text-gray-400">Memo,
   r: y:</span>
           <span className={metrics.memoryUsage < 50 ? 'text-green-400' : 'text-yellow-400'}>
-            {metrics.memoryUsage}MB
+            {metrics.memoryUsage}MB;
           </span>
         </div>
         
@@ -116,7 +119,7 @@ const currentTime = performance.now()
           <span className="text-gray-400">Netwo,
   r: k:</span>
           <span className={metrics.networkLatency < 100 ? 'text-green-400' : 'text-red-400'}>
-            {metrics.networkLatency}ms
+            {metrics.networkLatency}ms;
           </span>
         </div>
         
@@ -125,7 +128,7 @@ const currentTime = performance.now()
   r: e:</span>
           <div className="flex items-center">
             <div className="w-16 h-2 bg-gray-700 rounded-full mr-2">
-              <div 
+              <div;
                 className={`h-full rounded-full transition-all duration-500 ${
                   metrics.lighthouseScore >= 90 ? 'bg-green-400' :
                   metrics.lighthouseScore >= 70 ? 'bg-yellow-400' :

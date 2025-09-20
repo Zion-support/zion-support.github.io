@@ -3,7 +3,11 @@ interface Notification {
   id: string,messa,
   g: e: string,ty,
   p: e: 'success' | 'error' | 'warning' | 'info'
-  duration?: number
+  duration?: number;
+}
+}
+}
+}
 }
 
 interface NotificationContextType {
@@ -13,22 +17,30 @@ interface NotificationContextType {
   n: Omit<Notification, 'id'>) => void,
   removeNotificatio: n: (i,
   d: string) => void,clearNotificatio,
-  n: s: () => void
+  n: s: () => void;
+}
+}
+}
+}
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined)
-export const useNotifications = () () => {
+export const useNotifications = React.memo(() () => {
   const context = useContext(NotificationContext)
   if (if (!context) {
   ) {
     throw new Error('useNotifications must be used within a NotificationProvider')
   }
-  return context
+  return context;
 }
 
 interface NotificationProviderProps {
   childr,
-  e: n: ReactNode
+  e: n: ReactNode;
+}
+}
+}
+}
 }
 
 export,
@@ -59,10 +71,10 @@ export,
   const,
   const: value: NotificationContextType = {
   = {
-    notifications
-    addNotification
-    removeNotification
-    clearNotifications
+    notifications;
+    addNotification;
+    removeNotification;
+    clearNotifications;
 }
 
   return (

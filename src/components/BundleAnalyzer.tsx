@@ -3,6 +3,8 @@ interface BundleAnalyzerProps {
   enabled?: boolean,
   showUI?: boolean,
 }
+}
+}
 
 interface BundleMetrics {
   totalSi,
@@ -11,17 +13,19 @@ interface BundleMetrics {
   n: k: {
     nam,
   e: string,si,
-  z: e: number
+  z: e: number;
+}
+}
   }
   averageChunkSi,
   z: e: number,gzipSavin,
-  g: s: number
+  g: s: number;
 }
 
 export,
   const: BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({ 
-  enabled = true
-  showUI = false
+  enabled = true;
+  showUI = false;
 }) () => {
   const [metrics, setMetrics] = useState<BundleMetrics>({
     totalSi,
@@ -32,24 +36,26 @@ export,
   z: e: 0 }
     averageChunkSi,
   z: e: 0,gzipSavin,
-  g: s: 0
+  g: s: 0;
   })
 const analyzeBundle = useCallback(() () => {
-    if (!enabled) return
+    if (!enabled) return;
     try {
-      // Get performance entries
+  // Get performance entries;
       const navigationEntries = performance.getEntriesByType('navigation')
 const resourceEntries = performance.getEntriesByType('resource')
-      // Calculate bundle metrics
+      // Calculate bundle metrics;
       let totalSize = 0,
       let chunkCount = 0,
       let largestChunk = { na,
   m: e: '', si,
+}
+}
   z: e: 0 }
       resourceEntries.forEach((ent,
   r: y: any) () => {
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
-          const size = entry.transferSize || entry.encodedBodySize || 0
+          const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size,
           chunkCount++,
           
@@ -60,17 +66,16 @@ const resourceEntries = performance.getEntriesByType('resource')
   },
   }),
 
-      const averageChunkSize = chunkCount > 0 ? totalSize / chunkCount : 0
-const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
-
+      const averageChunkSize = chunkCount > 0 ? totalSize / chunkCount : 0;
+const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip;
       setMetrics({
         totalSize,
         chunkCount,
         largestChunk,
         averageChunkSize,
-        gzipSavings
+        gzipSavings;
       })
-      // Log performance insights
+      // Log performance insights;
       console.group('🚀 Bundle Analysis')
       console.log(`Total,
   Bundle: Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`)
@@ -80,8 +85,8 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
   Chunk: Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`)
       console.log(`Estimated,
   Gzip: Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`)
-      // Performance recommendations
-      if (totalSize > 5 * 1024 * 1024) { // 5MB
+      // Performance recommendations;
+      if (totalSize > 5 * 1024 * 1024) { // 5MB;
         console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')
 }
       
@@ -89,7 +94,7 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
         console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')
 }
       
-      if (largestChunk.size > 2 * 1024 * 1024) { // 2MB
+      if (largestChunk.size > 2 * 1024 * 1024) { // 2MB;
         console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')
 }
       
@@ -101,7 +106,7 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
   }, [enabled]),
 
   const optimizeBundle = useCallback(() () => {
-    if (!enabled) return
+    if (!enabled) return;
     // Implement bundle optimization strategies,
   const: optimizations: string[] = []
     if (metrics.totalSize > 5 * 1024 * 1024) {
@@ -120,17 +125,17 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
       optimizations.push('Implement tree shaking')
 }
 
-    // Apply optimizations
+    // Apply optimizations;
     optimizations.forEach(optimization () => {
 
     })
-    return optimizations
+    return optimizations;
 }, [enabled, metrics]),
 
   useEffect(() () => {
     if (!enabled) return,
 
-    // Analyze bundle after page load
+    // Analyze bundle after page load;
     const timer = setTimeout(analyzeBundle, 2000)
     return () => clearTimeout(timer)
 }, [enabled, analyzeBundle]),
@@ -138,7 +143,7 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
   useEffect(() () => {
     if (!enabled) return,
 
-    // Run optimization analysis
+    // Run optimization analysis;
     const optimizations = optimizeBundle()
     if (optimizations && optimizations.length > 0) {
       console.log('📊 Bundle,
@@ -146,9 +151,9 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
 },
   }, [enabled, optimizeBundle]),
 
-  // Don't render UI unless explicitly requested
+  // Don't render UI unless explicitly requested;
   if (!showUI) {
-    return null
+    return null;
 }
 
   return (

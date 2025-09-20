@@ -1,57 +1,60 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
+  Brain;
   Cloud,
   Shield,
   Rocket,
   Zap,
   Users,
   Globe,
-  Cpu
-  Lock
-  Heart
-  Star
-  ArrowRight
-  CheckCircle
-  TrendingUp
-  Code
-  Database
-  Network
-  Smartphone
-  BarChart3
-  MessageSquare
-  FileText
-  ShoppingCart
-  Headphones
-  Mail
-  Search
-  HelpCircle
-  ShieldCheck
-  Globe2
-  Leaf
-  Sparkles
-  Target
-  DollarSign
-  Clock
-  Award
-  Phone
-  Mail as MailIcon
-  MapPin
-  Infinity
-  Scale
-  Truck
-  Activity
-  ChartLine
-} from "lucide-react"
-import { SEO } from "../components/SEO"
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "../data/comprehensiveInnovativeServices2030"
+  Cpu;
+  Lock;
+  Heart;
+  Star;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  MessageSquare;
+  FileText;
+  ShoppingCart;
+  Headphones;
+  Mail;
+  Search;
+  HelpCircle;
+  ShieldCheck;
+  Globe2;
+  Leaf;
+  Sparkles;
+  Target;
+  DollarSign;
+  Clock;
+  Award;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
+  Infinity;
+  Scale;
+  Truck;
+  Activity;
+  ChartLine;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030   } from "../data/comprehensiveInnovativeServices2030";
 export default function InnovativeServicesOverview() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [sortBy, setSortBy] = useState('rating')
-  // Get unique categories from services
+  // Get unique categories from services;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', cou,
@@ -205,33 +208,33 @@ const categories = [
   },
   ]
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service () => {
-  const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'reviews':
-        return b.reviewCount - a.reviewCount
+        return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title)
       defau,
-  l: t: return b.rating - a.rating
+  l: t: return b.rating - a.rating;
 },
   })
   const featuredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => service.featured)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Innovative AI Services Overview - Zion Tech Group"
         description="Discover our comprehensive suite of innovative AI-powered services and solutions. From legal tech to healthcare analytics, supply chain optimization to financial trading - transform your business with cutting-edge technology."
       />
@@ -242,7 +245,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -255,16 +258,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           >
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Innovative AI Services Overview
+              Innovative AI Services Overview;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive suite of cutting-edge AI-powered services designed to transform your business operations
+              Discover our comprehensive suite of cutting-edge AI-powered services designed to transform your business operations;
               enhance efficiency, and drive innovation across all industries.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg,
@@ -272,16 +275,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="#services"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg,
   hove: r:bg-blue-500 hove,
   r:text-white transition-all duration-300";"
               >
-                Explore Services
+                Explore Services;
               </a>
             </div>
           </motion.div>
@@ -296,7 +299,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Featured Services
+              Featured Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our most popular and innovative AI-powered solutions that are transforming businesses worldwide.
@@ -307,7 +310,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {featuredServices.slice(0, 6).map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -331,7 +334,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   </div>
                   {service.featured && (
   <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                      Featured
+                      Featured;
                     </span>
                   )}
                 </div>
@@ -355,7 +358,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                       key={tagIndex},
   }
                       className="className="bg-slate-700 text-gray-300 px-2 py-1 rounded text-xs";"
@@ -371,13 +374,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     <TrendingUp className="w-4 h-4 text-green-400" />
                     <span className="text-green-400 text-sm font-semibold">{service.roi}</span>
                   </div>
-                  <Link
+                  <Link;
                     to={`/services/${service.id}`}
                     className="className="inline-flex items-center text-blue-400,
   hove: r: text-blue-300 transition-colors group-hov,
   e: r:text-blue-300";"
                   >
-                    Learn More
+                    Learn More;
                     <ArrowRight className="ml-1 w-4 h-4 group-hove,
   r:translate-x-1 transition-transform" />
                   </Link>
@@ -396,7 +399,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Browse by Category
+              Browse by Category;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find the perfect AI solution for your specific business needs and industry requirements.
@@ -408,14 +411,14 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   l: g:grid-cols-4 x,
   l:grid-cols-6 gap-4">
             {categories.map((category) => (
-  <motion.button
+  <motion.button;
                 key={category.id},
   }
                 onClick={onClick={() => setActiveCategory(category.id)},
   },
   }
                 className={`p-4 rounded-lg text-center transition-all duration-300 ${
-  activeCategory === category.id
+  activeCategory === category.id;
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
                     : 'bg-slate-700/50 text-gray-300,
   hove: r: bg-slate-600/50 hove,
@@ -448,7 +451,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             <div className="flex-1">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm},
@@ -467,7 +470,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             <div className="flex items-center space-x-4">
               <label className="text-white font-medium">Sort b,
   y:</label>
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -490,7 +493,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -514,7 +517,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   </div>
                   {service.featured && (
   <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                      Featured
+                      Featured;
                     </span>
                   )}
                 </div>
@@ -538,7 +541,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                       key={tagIndex},
   }
                       className="className="bg-slate-700 text-gray-300 px-2 py-1 rounded text-xs";"
@@ -554,13 +557,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     <TrendingUp className="w-4 h-4 text-green-400" />
                     <span className="text-green-400 text-sm font-semibold">{service.roi}</span>
                   </div>
-                  <Link
+                  <Link;
                     to={`/services/${service.id}`}
                     className="className="inline-flex items-center text-blue-400,
   hove: r: text-blue-300 transition-colors group-hov,
   e: r:text-blue-300";"
                   >
-                    Learn More
+                    Learn More;
                     <ArrowRight className="ml-1 w-4 h-4 group-hove,
   r:translate-x-1 transition-transform" />
                   </Link>
@@ -577,7 +580,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -597,7 +600,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg,
@@ -605,10 +608,10 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Schedule a Consultation
+                Schedule a Consultation;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg,
@@ -616,7 +619,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   r:text-white transition-all duration-300";"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </motion.div>
@@ -638,7 +641,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               <a href="t,
   e: l:+13024640950" className="text-gray-300,
   hove: r:text-blue-400 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -647,7 +650,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-gray-300,
   hove: r:text-blue-400 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -655,18 +658,18 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               <p className="text-white font-semibold mb-2">Address</p>
               <p className="text-gray-300">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </p>
             </div>
           </div>
           <div className="mt-8">
-            <a
+            <a;
               href="htt,
   p: s://ziontechgroup.com"
               className="className="inline-flex items-center text-blue-400 hove,
   r:text-blue-300 transition-colors";"
             >
-              Visit our website
+              Visit our website;
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </div>

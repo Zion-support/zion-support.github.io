@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { Search, MapPin, Briefcase, Star } from "lucide-react"
+import { Search, MapPin, Briefcase, Star   } from "lucide-react";
 const TalentDirectory = () () => {
     const talents = [
   {
@@ -109,9 +109,9 @@ const TalentDirectory = () () => {
   } transition={ durati,
   o: n: 0.8 },
   }>
-            Top Technology
+            Top Technology;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
-              {" "}Talent
+              {" "}Talent;
             </span>
           </motion.h1>
           <motion.p className="text-xl,
@@ -153,7 +153,7 @@ const TalentDirectory = () () => {
           <div className="flex flex-wrap items-center gap-4">
             <span className="text-gray-600 font-medium">Filter,
   b: y:</span>
-            {categories.map((category, index) => (<button key={category} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${index === 0
+            {categories.map((category, index) => (<button key={category} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${index === 0;
                 ? 'bg-violet-600 text-white'
                 : 'bg-gray-100 text-gray-700,
   hove: r:bg-gray-200'}`}>
@@ -171,7 +171,7 @@ const TalentDirectory = () () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Professionals</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover top-tier technology professionals ready to contribute to your next project
+              Discover top-tier technology professionals ready to contribute to your next project;
             </p>
           </div>
 
@@ -240,7 +240,10 @@ const TalentDirectory = () () => {
   hove: r: from-violet-700,
   hove: r:to-purple-700 transition-all duration-300 transform hove,
   r:scale-105">
-                  Connect with {talent.name.split(' ')[0],
+                  Connect with {
+  talent.name.split(' ')[0],
+}
+}
   },
   }
                 </button>
@@ -255,23 +258,23 @@ const TalentDirectory = () () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Looking for Top Talent?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Whether you need a single expert or a complete team, we can connect you with the 
+            Whether you need a single expert or a complete team, we can connect you with the;
             perfect technology professionals for your project.
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
             <button className="bg-white text-violet-600 px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-gray-100 transition-colors">
-              Post a Project
+              Post a Project;
             </button>
             <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-violet-600 transition-colors">
-              Browse All Talent
+              Browse All Talent;
             </button>
           </div>
         </div>
       </section>
     </div>)
 }
-export default TalentDirectory
+export default TalentDirectory;

@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   Zap,
   TrendingUp,
   BarChart3,
@@ -10,19 +10,23 @@ import {
   Shield,
   Users,
   Target,
-  ArrowRight
-  CheckCircle
-  Star
-  Phone
-  Mail
-  MapPin
-  Globe
-  Cpu
-  Database
-  Workflow
-  Gauge
-} from "lucide-react"
-import { Link } from "react-router-dom"
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  Cpu;
+  Database;
+  Workflow;
+  Gauge;
+}
+}
+}
+}
+ } from "lucide-react";
+import { Link     } from "react-router-dom";
 const,
   AIBusinessProcessOptimizatio: n: React.FC = () () => {
   const features = [
@@ -79,28 +83,28 @@ const,
   l: e: "Manufacturing & Production",descripti,
   o: n: "Optimize production lines, inventory management, and quality control processes for maximum efficiency and minimal waste."
       ic,
-  o: n: Cpu
+  o: n: Cpu;
 },
   {
   tit,
   l: e: "Financial Services",descripti,
   o: n: "Streamline loan processing, risk assessment, compliance workflows, and customer onboarding for faster service delivery."
       ic,
-  o: n: DollarSign
+  o: n: DollarSign;
 },
   {
   tit,
   l: e: "Healthcare & Life Sciences",descripti,
   o: n: "Optimize patient care workflows, clinical trial processes, and administrative operations for better patient outcomes."
       ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "Retail & E-commerce",descripti,
   o: n: "Streamline order fulfillment, inventory management, customer service, and supply chain operations for seamless customer experiences."
       ic,
-  o: n: Globe
+  o: n: Globe;
 },
   ]
   const pricing = [
@@ -119,7 +123,7 @@ const,
 ]
       ct,
   a: "Start Free Trial",popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -139,7 +143,7 @@ const,
 ]
       ct,
   a: "Start Free Trial",popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -160,7 +164,7 @@ const,
 ]
       ct,
   a: "Contact Sales",popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const roi = [
@@ -198,7 +202,7 @@ const,
   l: g:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -214,14 +218,14 @@ const,
             </div>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI-Powered Business Process Optimization
+              AI-Powered Business Process Optimization;
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Transform your business operations with intelligent process optimization that learns, adapts, and continuously improves your workflows for maximum efficiency and cost savings.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300,
   transform: hover:scale-105 shadow-lg,
@@ -232,11 +236,11 @@ const,
   focu: s:ring-offset-2,
   focu: s:ring-offset-slate-900";"
               >
-                Start Optimizing Today
+                Start Optimizing Today;
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hov,
   e: r:translate-x-1 transition-transform duration-200" />
               </Link>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300,
@@ -249,7 +253,7 @@ const,
   s:ring-offset-slate-900";"
               >
                 <Phone className="w-5 h-5 mr-2 inline-block" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </motion.div>
@@ -262,7 +266,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -278,7 +282,7 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Intelligent Process Optimization Features
+              Intelligent Process Optimization Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered platform provides comprehensive tools to analyze, optimize, and continuously improve your business processes.
@@ -289,7 +293,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -329,7 +333,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -345,7 +349,7 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Transform Your Business Operations
+              Transform Your Business Operations;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience measurable improvements in efficiency, cost reduction, and operational excellence.
@@ -356,7 +360,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -389,7 +393,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -405,7 +409,7 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI process optimization platform delivers results across diverse industries and business functions.
@@ -415,7 +419,7 @@ const,
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -453,7 +457,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -469,7 +473,7 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Flexible Pricing Plans
+              Flexible Pricing Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that best fits your business size and optimization needs.
@@ -479,7 +483,7 @@ const,
           <div className="grid,
   m: d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -496,7 +500,7 @@ const,
   c: e: true },
   }
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${
-  plan.popular 
+  plan.popular;
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20' 
                     : 'border-white/20'
 }`}
@@ -504,7 +508,7 @@ const,
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -546,7 +550,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -562,7 +566,7 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Proven Return on Investment
+              Proven Return on Investment;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our clients consistently achieve significant improvements in operational efficiency and cost reduction.
@@ -573,7 +577,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {roi.map((metric, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -607,7 +611,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -646,17 +650,17 @@ const,
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300,
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-blue-500/25";"
               >
-                Schedule a Consultation
+                Schedule a Consultation;
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hov,
   e: r:translate-x-1 transition-transform duration-200" />
               </Link>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300,
@@ -664,7 +668,7 @@ const,
   r:border-blue-400/50";"
               >
                 <Phone className="w-5 h-5 mr-2 inline-block" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </motion.div>
@@ -689,7 +693,7 @@ const,
             <a href="htt,
   p: s://ziontechgroup.com" className="hove,
   r:text-blue-400 transition-colors">
-              ziontechgroup.com
+              ziontechgroup.com;
             </a>
           </div>
         </div>
@@ -697,4 +701,4 @@ const,
     </div>
   )
 }
-export default AIBusinessProcessOptimization
+export default AIBusinessProcessOptimization;

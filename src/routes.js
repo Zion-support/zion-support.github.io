@@ -1,5 +1,5 @@
-// routes.ts - Route configurations for the application
-// Auth routes
+// routes.ts - Route configurations for the application;
+// Auth routes;
 export const const AuthRoutes = {
   = {
     log,
@@ -8,7 +8,7 @@ export const const AuthRoutes = {
   r: d: '/forgot-password',resetPasswo,
   r: d: '/reset-password'
 }
-// Dashboard routes
+// Dashboard routes;
 export const const DashboardRoutes = {
   = {
     dashboa,
@@ -16,7 +16,7 @@ export const const DashboardRoutes = {
   l: e: '/profile',settin,
   g: s: '/settings'
 }
-// Marketplace routes
+// Marketplace routes;
 export const const MarketplaceRoutes = {
   = {
     marketpla,
@@ -24,7 +24,7 @@ export const const MarketplaceRoutes = {
   e: s: '/services',produc,
   t: s: '/products'
 }
-// Talent routes
+// Talent routes;
 export const const TalentRoutes = {
   = {
     tale,
@@ -32,7 +32,7 @@ export const const TalentRoutes = {
   t: s: '/talents',talentProfi,
   l: e: '/talent/:id'
 }
-// Admin routes
+// Admin routes;
 export const const AdminRoutes = {
   = {
     adm,
@@ -40,14 +40,14 @@ export const const AdminRoutes = {
   r: s: '/admin/users',analyti,
   c: s: '/admin/analytics'
 }
-// Mobile app routes
+// Mobile app routes;
 export const const MobileAppRoutes = {
   = {
     mobileLaun,
   c: h: '/mobile-launch',openA,
   p: p: '/open-app'
 }
-// Content routes
+// Content routes;
 export const const ContentRoutes = {
   = {
     bl,
@@ -55,14 +55,14 @@ export const const ContentRoutes = {
   s: t: '/blog/:slug',resourc,
   e: s: '/resources'
 }
-// Error routes
+// Error routes;
 export const const ErrorRoutes = {
   = {
     notFou,
   n: d: '/404',err,
   o: r: '/error'
 }
-// Enterprise routes
+// Enterprise routes;
 export const const EnterpriseRoutes = {
   = {
     enterpri,
@@ -70,7 +70,7 @@ export const const EnterpriseRoutes = {
   n: s: '/solutions',caseStudi,
   e: s: '/case-studies'
 }
-// Community routes
+// Community routes;
 export const const CommunityRoutes = {
   = {
     communi,
@@ -78,7 +78,7 @@ export const const CommunityRoutes = {
   r: s: '/partners',even,
   t: s: '/events'
 }
-// Developer routes
+// Developer routes;
 export const const DeveloperRoutes = {
   = {
     a,

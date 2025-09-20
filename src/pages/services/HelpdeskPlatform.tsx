@@ -1,29 +1,33 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../../components/SEO"
+import { motion     } from "framer-motion";
+import { SEO     } from "../../components/SEO";
 import {
-  MessageCircle
+  MessageCircle;
   Brain,
   Target,
   Zap,
   BarChart3,
   Clock,
   Award,
-  Star
-  Globe
-  Cpu
-  Database
-  CheckCircle
-  Eye
-  Users
-  FileText
-  Shield
-  TrendingUp
-  Phone
-  Mail
-  Calendar
-  Search
-} from "lucide-react"
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  CheckCircle;
+  Eye;
+  Users;
+  FileText;
+  Shield;
+  TrendingUp;
+  Phone;
+  Mail;
+  Calendar;
+  Search;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function HelpdeskPlatform() {
   const features = [
   {
@@ -77,37 +81,37 @@ export default function HelpdeskPlatform() {
   chann,
   e: l: "Live Chat",descripti,
   o: n: "Real-time chat support with AI-powered instant responses",ic,
-  o: n: MessageCircle
+  o: n: MessageCircle;
 },
   {
   chann,
   e: l: "Email Support",descripti,
   o: n: "Intelligent email routing and automated responses",ic,
-  o: n: Mail
+  o: n: Mail;
 },
   {
   chann,
   e: l: "Phone Support",descripti,
   o: n: "Call center integration with smart call routing",ic,
-  o: n: Phone
+  o: n: Phone;
 },
   {
   chann,
   e: l: "Social Media",descripti,
   o: n: "Multi-platform social media support integration",ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   chann,
   e: l: "Self-Service",descripti,
   o: n: "Knowledge base and FAQ automation",ic,
-  o: n: Search
+  o: n: Search;
 },
   {
   chann,
   e: l: "Mobile Support",descripti,
   o: n: "Mobile-optimized support experience",ic,
-  o: n: Globe
+  o: n: Globe;
 },
   ]
   const useCases = [
@@ -140,7 +144,7 @@ export default function HelpdeskPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Helpdesk Platform - Zion Tech Group"
         description="Transform your customer support with AI-powered helpdesk automation, multi-channel support, and intelligent ticket management solutions."
       />
@@ -151,7 +155,7 @@ export default function HelpdeskPlatform() {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -170,20 +174,20 @@ export default function HelpdeskPlatform() {
             
             <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-              Revolutionize Customer Support with
+              Revolutionize Customer Support with;
               <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
-                {" "}AI-Powered Helpdesk
+                {" "}AI-Powered Helpdesk;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support operations with intelligent automation, multi-channel 
+              Transform your customer support operations with intelligent automation, multi-channel;
               support, and AI-powered insights that deliver exceptional customer experiences.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -195,9 +199,9 @@ export default function HelpdeskPlatform() {
   hove: r:to-red-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-orange-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -207,7 +211,7 @@ export default function HelpdeskPlatform() {
                 className="className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg,
   hove: r:bg-orange-400/10 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -218,7 +222,7 @@ export default function HelpdeskPlatform() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -232,10 +236,10 @@ export default function HelpdeskPlatform() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Advanced Helpdesk Features
+              Advanced Helpdesk Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered helpdesk platform combines cutting-edge artificial intelligence 
+              Our AI-powered helpdesk platform combines cutting-edge artificial intelligence;
               with proven support methodologies to deliver exceptional customer service.
             </p>
           </motion.div>
@@ -244,7 +248,7 @@ export default function HelpdeskPlatform() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -277,7 +281,7 @@ export default function HelpdeskPlatform() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -291,10 +295,10 @@ export default function HelpdeskPlatform() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Measurable Support Impact
+              Measurable Support Impact;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See real results with our AI-powered helpdesk solutions that deliver quantifiable 
+              See real results with our AI-powered helpdesk solutions that deliver quantifiable;
               improvements across all aspects of your customer support operations.
             </p>
           </motion.div>
@@ -305,7 +309,7 @@ export default function HelpdeskPlatform() {
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -360,7 +364,7 @@ export default function HelpdeskPlatform() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -374,10 +378,10 @@ export default function HelpdeskPlatform() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Multi-Channel Support
+              Multi-Channel Support;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our helpdesk platform provides unified support across all customer touchpoints
+              Our helpdesk platform provides unified support across all customer touchpoints;
               ensuring consistent and efficient service delivery.
             </p>
           </motion.div>
@@ -386,7 +390,7 @@ export default function HelpdeskPlatform() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {supportChannels.map((channel, index) => (
-  <motion.div
+  <motion.div;
                 key={channel.channel},
   }
                 initial={ opaci,
@@ -419,7 +423,7 @@ export default function HelpdeskPlatform() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -433,10 +437,10 @@ export default function HelpdeskPlatform() {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered helpdesk solutions are designed to work across industries, providing 
+              Our AI-powered helpdesk solutions are designed to work across industries, providing;
               tailored support strategies for your specific customer service needs.
             </p>
           </motion.div>
@@ -445,7 +449,7 @@ export default function HelpdeskPlatform() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.industry},
   }
                 initial={ opaci,
@@ -478,7 +482,7 @@ export default function HelpdeskPlatform() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -495,12 +499,12 @@ export default function HelpdeskPlatform() {
               Ready to Transform Your Support?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies that have already revolutionized their customer support 
+              Join hundreds of companies that have already revolutionized their customer support;
               with our AI-powered helpdesk solutions.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -512,9 +516,9 @@ export default function HelpdeskPlatform() {
   hove: r:to-red-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-orange-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -524,7 +528,7 @@ export default function HelpdeskPlatform() {
                 className="className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg,
   hove: r: bg-orange-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>

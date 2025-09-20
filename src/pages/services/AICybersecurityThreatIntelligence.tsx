@@ -1,55 +1,59 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Shield
+  Shield;
   CheckCircle,
   BarChart3,
   Zap,
-  ArrowRight
-  Play
-  Settings
-  Target
-  Cpu
-  Activity
-  Sparkles
-  Search
-  Globe
-  Building
-  DollarSign
-  Network
-  Key
-  Fingerprint
-  Monitor
-  AlertTriangle
-  Clock
-  Users
-  TrendingUp
-  Lock
-  Eye
-  Database
-  Server
-  Smartphone
-  Workflow
-  Rocket
-  RefreshCw
-  Bug
-  Virus
-  AlertCircle
-  ShieldCheck
-  Fire
-  Radar
-  Satellite
-  Wifi
-  Cloud
-  HardDrive
-  Smartphone
-  Laptop
-  Tablet
-  Globe2
-  MapPin
-  Calendar
-  Calculator
-} from "lucide-react"
+  ArrowRight;
+  Play;
+  Settings;
+  Target;
+  Cpu;
+  Activity;
+  Sparkles;
+  Search;
+  Globe;
+  Building;
+  DollarSign;
+  Network;
+  Key;
+  Fingerprint;
+  Monitor;
+  AlertTriangle;
+  Clock;
+  Users;
+  TrendingUp;
+  Lock;
+  Eye;
+  Database;
+  Server;
+  Smartphone;
+  Workflow;
+  Rocket;
+  RefreshCw;
+  Bug;
+  Virus;
+  AlertCircle;
+  ShieldCheck;
+  Fire;
+  Radar;
+  Satellite;
+  Wifi;
+  Cloud;
+  HardDrive;
+  Smartphone;
+  Laptop;
+  Tablet;
+  Globe2;
+  MapPin;
+  Calendar;
+  Calculator;
+}
+}
+}
+}
+ } from "lucide-react";
 const AICybersecurityThreatIntelligence = () () => {
   const features = [
   {
@@ -158,7 +162,7 @@ const AICybersecurityThreatIntelligence = () () => {
 ]
       ct,
   a: 'Start Free Trial',popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -174,7 +178,7 @@ const AICybersecurityThreatIntelligence = () () => {
 ]
       c,
   t: a: 'Start Free Trial',popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -191,7 +195,7 @@ const AICybersecurityThreatIntelligence = () () => {
 ]
       ct,
   a: 'Contact Sales',popul,
-  a: r: false
+  a: r: false;
 },
   ]
   return (
@@ -203,7 +207,7 @@ const AICybersecurityThreatIntelligence = () () => {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -216,17 +220,17 @@ const AICybersecurityThreatIntelligence = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Cybersecurity
+              AI-Powered Cybersecurity;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Cybersecurity
+              AI Cybersecurity;
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent"> Threat Intelligence</span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Stay ahead of cyber threats with AI-powered threat intelligence that detects
+              Stay ahead of cyber threats with AI-powered threat intelligence that detects;
               analyzes, and responds to security risks in real-time.
             </p>
             
@@ -236,12 +240,12 @@ const AICybersecurityThreatIntelligence = () () => {
   hove: r:from-red-600,
   hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hove,
   r:bg-red-500/10 transition-all duration-200 flex items-center justify-center">
                 <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -254,7 +258,7 @@ const AICybersecurityThreatIntelligence = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -267,10 +271,10 @@ const AICybersecurityThreatIntelligence = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Threat Intelligence Features
+              Advanced Threat Intelligence Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered platform provides comprehensive cybersecurity threat detection
+              Our AI-powered platform provides comprehensive cybersecurity threat detection;
               analysis, and response capabilities for modern organizations.
             </p>
           </motion.div>
@@ -279,7 +283,7 @@ const AICybersecurityThreatIntelligence = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -312,7 +316,7 @@ const AICybersecurityThreatIntelligence = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -325,10 +329,10 @@ const AICybersecurityThreatIntelligence = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Cybersecurity Services
+              Comprehensive Cybersecurity Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From threat detection to incident response, we provide end-to-end cybersecurity 
+              From threat detection to incident response, we provide end-to-end cybersecurity;
               solutions powered by artificial intelligence.
             </p>
           </motion.div>
@@ -336,7 +340,7 @@ const AICybersecurityThreatIntelligence = () () => {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -373,7 +377,7 @@ const AICybersecurityThreatIntelligence = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -386,7 +390,7 @@ const AICybersecurityThreatIntelligence = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Security Posture
+              Transform Your Security Posture;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in threat detection, response time, and overall security effectiveness.
@@ -397,7 +401,7 @@ const AICybersecurityThreatIntelligence = () () => {
   m: d:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -419,7 +423,7 @@ const AICybersecurityThreatIntelligence = () () => {
             </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index + 3},
   }
                   initial={ opaci,
@@ -449,7 +453,7 @@ const AICybersecurityThreatIntelligence = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -462,7 +466,7 @@ const AICybersecurityThreatIntelligence = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Choose the plan that fits your organization size and security requirements. 
@@ -473,7 +477,7 @@ const AICybersecurityThreatIntelligence = () () => {
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -487,7 +491,7 @@ const AICybersecurityThreatIntelligence = () () => {
   a: y: index * 0.1 },
   }
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-  plan.popular 
+  plan.popular;
                     ? 'border-red-500/50 bg-red-500/5' 
                     : 'border-slate-700/50'
 }`}
@@ -495,7 +499,7 @@ const AICybersecurityThreatIntelligence = () () => {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -519,7 +523,7 @@ const AICybersecurityThreatIntelligence = () () => {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-  plan.popular
+  plan.popular;
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white,
   hove: r: from-red-600,
   hove: r:to-orange-600'
@@ -541,7 +545,7 @@ const AICybersecurityThreatIntelligence = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -554,10 +558,10 @@ const AICybersecurityThreatIntelligence = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our cybersecurity threat intelligence solutions adapt to various industries, providing tailored 
+              Our cybersecurity threat intelligence solutions adapt to various industries, providing tailored;
               security and compliance for your specific business needs.
             </p>
           </motion.div>
@@ -566,7 +570,7 @@ const AICybersecurityThreatIntelligence = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -599,7 +603,7 @@ const AICybersecurityThreatIntelligence = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -612,7 +616,7 @@ const AICybersecurityThreatIntelligence = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Market Insights & ROI
+              Market Insights & ROI;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Understand the market landscape and potential return on investment for AI-powered cybersecurity solutions.
@@ -622,7 +626,7 @@ const AICybersecurityThreatIntelligence = () () => {
           <div className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-4 gap-6">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -640,7 +644,7 @@ const AICybersecurityThreatIntelligence = () () => {
               <p className="text-gray-300">Global Market Size 2024</p>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -658,7 +662,7 @@ const AICybersecurityThreatIntelligence = () () => {
               <p className="text-gray-300">Annual Growth Rate</p>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -676,7 +680,7 @@ const AICybersecurityThreatIntelligence = () () => {
               <p className="text-gray-300">Average ROI</p>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -703,7 +707,7 @@ const AICybersecurityThreatIntelligence = () () => {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -715,10 +719,10 @@ const AICybersecurityThreatIntelligence = () () => {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Start Your Cybersecurity Journey Today
+              Start Your Cybersecurity Journey Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations worldwide that use our AI-powered cybersecurity 
+              Join thousands of organizations worldwide that use our AI-powered cybersecurity;
               threat intelligence platform to protect their digital assets.
             </p>
             <div className="flex flex-col,
@@ -726,12 +730,12 @@ const AICybersecurityThreatIntelligence = () () => {
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg,
   hove: r:from-red-600,
   hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center">
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg,
   hove: r:bg-red-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
             
@@ -761,4 +765,4 @@ const AICybersecurityThreatIntelligence = () () => {
     </div>
   )
 }
-export default AICybersecurityThreatIntelligence
+export default AICybersecurityThreatIntelligence;

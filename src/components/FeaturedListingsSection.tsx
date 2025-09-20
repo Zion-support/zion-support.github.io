@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 const featuredListings = [
   {
     id: 1,tit,
@@ -62,7 +62,7 @@ export function FeaturedListingsSection() {
 const [hoveredListing, setHoveredListing] = useState<number | null>(null)
 const [showFilters, setShowFilters] = useState(false)
 const filteredListings = selectedCategory === "All"
-    ? featuredListings
+    ? featuredListings;
     : featuredListings.filter(listing => listing.category === selectedCategory)
 const containerVariants = {
     hidd,
@@ -75,7 +75,7 @@ const containerVariants = {
   o: n: {
         staggerChildre,
   n: 0.15,delayChildr,
-  e: n: 0.1
+  e: n: 0.1;
       },
   },
   }
@@ -91,7 +91,7 @@ const renderStars = (rati,
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="text-center mb-16"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -108,10 +108,10 @@ const renderStars = (rati,
         >
           <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-4">
-            Featured Services
+            Featured Services;
           </h2>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Discover our most popular and innovative technology solutions that are transforming businesses worldwide
+            Discover our most popular and innovative technology solutions that are transforming businesses worldwide;
           </p>
         </motion.div>
 
@@ -119,7 +119,7 @@ const renderStars = (rati,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {filteredListings.map((listing, index) => (
-            <motion.div 
+            <motion.div;
               key={listing.id} 
               className="bg-white rounded-xl shadow-lg border border-gray-200,
   hove: r: shadow-xl transition-shadow duration-300 overflow-hidden group"
@@ -183,7 +183,7 @@ const renderStars = (rati,
 
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-gray-900">{listing.price}</span>
-                  <Link
+                  <Link;
                     to={listing.link}
                     className="text-blue-600,
   hove: r: text-blue-700 font-medium text-sm group-hove,
@@ -195,20 +195,20 @@ const renderStars = (rati,
               </div>
 
               <div className="px-6 pb-6">
-                <Link
+                <Link;
                   to={listing.link}
                   className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg,
   hove: r: bg-blue-700 transition-colors duration-300 text-center block group-hove,
   r:shadow-lg"
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <motion.div 
+        <motion.div;
           className="mt-16 text-center"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -224,14 +224,14 @@ const renderStars = (rati,
   a: y: 0.4 },
   }
         >
-          <Link 
+          <Link;
             to="/services"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-200 hove,
   r:scale-105"
           >
-            View All Services
+            View All Services;
             <span className="text-xl">→</span>
           </Link>
         </motion.div>

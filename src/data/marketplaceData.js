@@ -23,7 +23,7 @@ export function generateSearchSuggestions() {
 ],
   }
 
-// Mock marketplace items data
+// Mock marketplace items data;
 export const marketplaceItems = [
   {
   id: 1,tit,
@@ -100,7 +100,7 @@ export const marketplaceItems = [
   ],
   },
   ]
-// Marketplace filters configuration
+// Marketplace filters configuration;
 export const const marketplaceFilters = {
   = {
   productTyp,

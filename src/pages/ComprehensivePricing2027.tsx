@@ -1,13 +1,16 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Check, Star, Brain, Cpu, Database, Network, Shield, Zap
-  Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp
-  ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
-} from "lucide-react"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "@/data/innovativeMicroSaasServices2027"
-import { EMERGING_TECH_SERVICES_2027 } from "@/data/emergingTechServices2027"
+  Check, Star, Brain, Cpu, Database, Network, Shield, Zap;
+  Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp;
+  ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign;
+}
+}
+ } from "lucide-react";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027   } from "@/data/innovativeMicroSaasServices2027";
+import { EMERGING_TECH_SERVICES_2027   } from "@/data/emergingTechServices2027";
 export default function ComprehensivePricing2027() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -21,7 +24,7 @@ export default function ComprehensivePricing2027() {
   const categories = [['All', ...Array.from(new Set(allServices.map(service => service.category)))],
   ]
 
-  const filteredServices = allServices
+  const filteredServices = allServices;
     .filter(service =>
       (selectedCategory === 'All' || service.category === service.category) &&
       (searchQuery === '' ||
@@ -30,9 +33,9 @@ export default function ComprehensivePricing2027() {
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
     )
     .sort((a, b) () => {
-  if (sortBy === 'price') return a.price - b.price
-      if (sortBy === 'aiScore') return b.aiScore - a.aiScore
-      return b.rating - a.rating
+  if (sortBy === 'price') return a.price - b.price;
+      if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
+      return b.rating - a.rating;
 })
   const const containerVariants = {
   = {
@@ -46,7 +49,7 @@ export default function ComprehensivePricing2027() {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -120,7 +123,7 @@ export default function ComprehensivePricing2027() {
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(20)].map((_, i) => (
-  <div
+  <div;
               key={i},
   }
               className="className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float";"
@@ -142,7 +145,7 @@ export default function ComprehensivePricing2027() {
 
       {/* Header Section */},
   }
-      <motion.section
+      <motion.section;
         className="className="relative z-10 pt-20 pb-16 px-6";"
         initial={ opaci,
   t: y: 0, y: -50 },
@@ -155,7 +158,7 @@ export default function ComprehensivePricing2027() {
   }
       >
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
+          <motion.h1;
             className="className="text-5xl,
   m: d: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent";"
             initial={ opacit,
@@ -171,9 +174,9 @@ export default function ComprehensivePricing2027() {
   a: y: 0.2 },
   }
           >
-            Comprehensive Pricing 2027
+            Comprehensive Pricing 2027;
           </motion.h1>
-          <motion.p
+          <motion.p;
             className="className="text-xl,
   m: d: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";"
             initial={ opacit,
@@ -193,7 +196,7 @@ export default function ComprehensivePricing2027() {
 
           {/* Pricing Stats */},
   }
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-2,
   m: d: grid-cols-4 gap-8 mt-16";"
             initial={ opacit,
@@ -246,7 +249,7 @@ export default function ComprehensivePricing2027() {
 
       {/* Search and Filters */},
   }
-      <motion.section
+      <motion.section;
         className="className="relative z-10 px-6 pb-12";"
         initial={ opaci,
   t: y: 0, y: 20 },
@@ -268,7 +271,7 @@ export default function ComprehensivePricing2027() {
               <div className="flex-1 w-full">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search services, features, or technologies..."
                     value={searchQuery},
@@ -287,7 +290,7 @@ export default function ComprehensivePricing2027() {
               {/* Category Filter */},
   }
               <div className="relative">
-                <select
+                <select;
                   value={selectedCategory},
   }
                   onChange={(e) => setSelectedCategory(e.target.value)},
@@ -308,7 +311,7 @@ export default function ComprehensivePricing2027() {
               {/* Sort By */},
   }
               <div className="relative">
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value as 'price' | 'aiScore' | 'rating')},
@@ -329,7 +332,7 @@ export default function ComprehensivePricing2027() {
               {/* View Mode Toggle */},
   }
               <div className="flex bg-zion-blue-light/20 rounded-lg p-1 border border-zion-purple/20">
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -338,7 +341,7 @@ export default function ComprehensivePricing2027() {
                 >
                   <Grid className="w-5 h-5" />
                 </button>
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -355,7 +358,7 @@ export default function ComprehensivePricing2027() {
 
       {/* Services Grid */},
   }
-      <motion.section
+      <motion.section;
         className="className="relative z-10 px-6 pb-20";"
         variants={containerVariants},
   }
@@ -365,7 +368,7 @@ export default function ComprehensivePricing2027() {
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
-  <motion.div
+  <motion.div;
                 className={viewMode === 'grid' ? 'grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8' : 'space-y-6'},
@@ -386,7 +389,7 @@ export default function ComprehensivePricing2027() {
   }
               >
                 {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                     key={service.id},
   }
                     variants={viewMode === 'grid' ? itemVariants : {},
@@ -395,7 +398,7 @@ export default function ComprehensivePricing2027() {
   }
                   >
                     {viewMode === 'grid' ? (
-  <motion.div
+  <motion.div;
                         className="className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer";"
                         variants={cardVariants},
   }
@@ -439,7 +442,7 @@ export default function ComprehensivePricing2027() {
   }
                         <div className="flex flex-wrap gap-2 mb-4">
                           {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                               key={tagIndex},
   }
                               className="className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30";"
@@ -476,12 +479,12 @@ export default function ComprehensivePricing2027() {
                           {expandedService === service.id ? (
   <>
                               <ChevronUp className="w-4 h-4" />
-                              Show Less
+                              Show Less;
                             </>
                           ) : (
   <>
                               <ChevronDown className="w-4 h-4" />
-                              View Details
+                              View Details;
                             </>
                           )}
                         </button>
@@ -490,7 +493,7 @@ export default function ComprehensivePricing2027() {
   }
                         <AnimatePresence>
                           {expandedService === service.id && (
-  <motion.div
+  <motion.div;
                               initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -539,7 +542,7 @@ export default function ComprehensivePricing2027() {
 
                               {/* CTA Button */},
   }
-                              <button
+                              <button;
                                 onClick={onClick={() => window.open(service.website, '_blank')},
   },
   }
@@ -548,7 +551,7 @@ export default function ComprehensivePricing2027() {
   hove: r:to-zion-cyan transition-all duration-300 transform hove,
   r:scale-105";"
                               >
-                                Get Started
+                                Get Started;
                               </button>
                             </motion.div>
                           )}
@@ -559,7 +562,7 @@ export default function ComprehensivePricing2027() {
                         {/* Service Image */},
   }
                         <div className="relative w-48 h-32 overflow-hidden rounded-lg flex-shrink-0">
-                          <img
+                          <img;
                             src={service.images[0],
   },
   }
@@ -611,7 +614,7 @@ export default function ComprehensivePricing2027() {
                           <div className="flex items-center justify-between">
                             <div className="flex flex-wrap gap-2">
                               {service.tags.slice(0, 4).map((tag, tagIndex) => (
-  <span
+  <span;
                                   key={tagIndex},
   }
                                   className="className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30";"
@@ -622,7 +625,7 @@ export default function ComprehensivePricing2027() {
                               ))}
                             </div>
 
-                            <button
+                            <button;
                               onClick={onClick={() => window.open(service.website, '_blank')},
   },
   }
@@ -630,7 +633,7 @@ export default function ComprehensivePricing2027() {
   hove: r: from-zion-blue hove,
   r:to-zion-cyan transition-all duration-300 flex items-center gap-2";"
                             >
-                              Get Started
+                              Get Started;
                             </button>
                           </div>
                         </div>
@@ -640,7 +643,7 @@ export default function ComprehensivePricing2027() {
                 ))}
               </motion.div>
             ) : (
-  <motion.div
+  <motion.div;
                 className="className="text-center py-20";"
                 initial={ opaci,
   t: y: 0 },
@@ -663,7 +666,7 @@ export default function ComprehensivePricing2027() {
 
       {/* CTA Section */},
   }
-      <motion.section
+      <motion.section;
         className="className="relative z-10 px-6 pb-20";"
         initial={ opaci,
   t: y: 0, y: 30 },
@@ -683,27 +686,27 @@ export default function ComprehensivePricing2027() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get in touch with our experts to discuss pricing, implementation, and how these innovative services can drive your success
+              Get in touch with our experts to discuss pricing, implementation, and how these innovative services can drive your success;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg,
   hove: r:from-zion-blue,
   hove: r:to-zion-cyan transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Contact Our Team
+                Contact Our Team;
               </Link>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg,
   hove: r:bg-zion-cyan hove,
   r:text-black transition-all duration-300";"
               >
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </a>
             </div>
           </div>

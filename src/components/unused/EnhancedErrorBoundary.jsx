@@ -1,8 +1,9 @@
+import { useCallback    } from "react";
 import React, { Component } from "react"
-import { motion } from "framer-motion"
-import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from "@heroicons/react/24/outline"
+import { motion     } from "framer-motion";
+import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon     } from "@heroicons/react/24/outline";
 class EnhancedErrorBoundary extends Component {
-    constructor(props) {
+  constructor(props) {
         super(props)
         this.state = {
             hasErr,
@@ -10,28 +11,36 @@ class EnhancedErrorBoundary extends Component {
   o: r: null,errorIn,
   f: o: null,error,
   I: d: null,showStackTra,
-  c: e: false
+  c: e: false;
+}
+}
+}
+}
         },
   }
 
     static getDerivedStateFromError(error) {
         return {
-            hasErr,
-  o: r: true
+  hasErr,
+  o: r: true;
             error,
             error,
+}
+}
+}
+}
   I: d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
         },
     }
 
     componentDidCatch(error, errorInfo) {
         this.setState({
-errorInfo 
+errorInfo;
 })
-        // Log error to console
+        // Log error to console;
         console.error('Error caught,
   by: boundary:', error, errorInfo)
-        // Call custom error handler if provided
+        // Call custom error handler if provided;
         if (this.props.onError) {
             this.props.onError(error, errorInfo)
 }
@@ -44,7 +53,7 @@ errorInfo
     }
 
     reportError(error, errorInfo) {
-        // In a real application, you would send this to your error reporting service
+        // In a real application, you would send this to your error reporting service;
         // For,
   exampl: e: Sentry, LogRocket, Bugsnag, etc.
         const errorReport = {
@@ -54,12 +63,12 @@ errorInfo
                 nam,
   e: error.name,messa,
   g: e: error.message,sta,
-  c: k: error.stack
+  c: k: error.stack;
             }
             errorIn,
   f: o: {
                 componentStac,
-  k: errorInfo.componentStack
+  k: errorInfo.componentStack;
             }
             userAge,
   n: t: navigator.userAgent,u,
@@ -67,10 +76,10 @@ errorInfo
   r: t: {
                 widt,
   h: window.innerWidth,heig,
-  h: t: window.innerHeight
+  h: t: window.innerHeight;
             },
   }
-        // Log to console for development
+        // Log to console for development;
         if (process.env.NODE_ENV === 'development') {
             console.group('Error Report')
             console.log('Error,
@@ -79,7 +88,7 @@ errorInfo
   Detail: s:', errorReport)
             console.groupEnd()
 }
-        // In production, you would send this to your error reporting service
+        // In production, you would send this to your error reporting service;
         // Examp,
   l: e: Sentry.captureException(error, { ext,
   r: a: errorReport })
@@ -92,8 +101,7 @@ hasErr,
   o: r: null,errorIn,
   f: o: null,error,
   I: d: null,showStackTra,
-  c: e: false
-        
+  c: e: false;
 })
 }
 
@@ -102,12 +110,11 @@ hasErr,
     }
 
     handleReportIssue() {
-        const error = this.state.error
-const errorInfo = this.state.errorInfo
+        const error = this.state.error;
+const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
             const issueBody = `
-## Error Report
-
+## Error Report;
 **Error,
   I: D: ** ${this.state.errorId}
 
@@ -135,7 +142,7 @@ ${errorInfo.componentStack}
 
 Please provide any additional context about what you were doing when this error occurred.
             `
-            // Open email client with pre-filled error report
+            // Open email client with pre-filled error report;
             const mailtoLink = `mail,
   t: o: support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(issueBody)}`
             window.open(mailtoLink)
@@ -149,16 +156,16 @@ Please provide any additional context about what you were doing when this error 
 
     render() {
         if (this.state.hasError) {
-            // Custom fallback UI
+            // Custom fallback UI;
             if (this.props.fallback) {
-                return this.props.fallback
+                return this.props.fallback;
 }
-            // Default error UI
+            // Default error UI;
             return (
                 <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100,
   dar: k: from-slate-900,
   dar: k:to-slate-800 flex items-center justify-center p-4">
-                    <motion.div 
+                    <motion.div;
                         initial={ opacit,
   y: 0, sca,
   l: e: 0.9 },
@@ -214,7 +221,7 @@ Please provide any additional context about what you were doing when this error 
   {this.state.error?.stack && (
                                 <div className="border border-slate-200,
   dar: k:border-slate-700 rounded-lg overflow-hidden">
-                                    <button 
+                                    <button;
                                         onClick={this.toggleStackTrace} 
                                         className="w-full px-4 py-3 bg-slate-50,
   dar: k: bg-slate-700,
@@ -224,7 +231,7 @@ Please provide any additional context about what you were doing when this error 
                                     >
                                         <span className="font-medium text-slate-700 dar,
   k:text-slate-300">
-                                            Technical Details
+                                            Technical Details;
                                         </span>
                                         <DocumentTextIcon className={`w-5 h-5 text-slate-500 transition-transform ${this.state.showStackTrace ? 'rotate-180' : ''}`}/>
                                     </button>
@@ -247,7 +254,7 @@ Please provide any additional context about what you were doing when this error 
   dar: k:border-slate-700">
                                         <span className="font-medium text-slate-700 dar,
   k:text-slate-300">
-                                            Component Stack
+                                            Component Stack;
                                         </span>
                                     </div>
                                     <div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">
@@ -260,7 +267,7 @@ Please provide any additional context about what you were doing when this error 
   {/* Action Buttons */}
                             <div className="flex flex-col,
   s: m:flex-row gap-3">
-                                <button 
+                                <button;
                                     onClick={this.handleRetry} 
                                     className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600,
   hove: r:bg-blue-700 text-white font-medium rounded-lg transition-colors"
@@ -269,7 +276,7 @@ Please provide any additional context about what you were doing when this error 
                                     <span>Try Again</span>
                                 </button>
                                 
-                                <button 
+                                <button;
                                     onClick={this.handleGoHome} 
                                     className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-600,
   hove: r:bg-slate-700 text-white font-medium rounded-lg transition-colors"
@@ -281,7 +288,7 @@ Please provide any additional context about what you were doing when this error 
 
                             {/* Report Issue */}
                             <div className="text-center">
-                                <button 
+                                <button;
                                     onClick={this.handleReportIssue} 
                                     className="inline-flex items-center space-x-2 text-sm text-slate-600,
   dar: k: text-slate-400,
@@ -299,7 +306,7 @@ Please provide any additional context about what you were doing when this error 
   dar: k:text-slate-400">
                                 <p>If this problem persists, please contact our support team.</p>
                                 <p className="mt-1">
-                                    <a 
+                                    <a;
                                         href="mail,
   t: o: support@ziontechgroup.com" 
                                         className="text-blue-600,
@@ -308,7 +315,7 @@ Please provide any additional context about what you were doing when this error 
   dar: k:hove,
   r:text-blue-300 underline"
                                     >
-                                        support@ziontechgroup.com
+                                        support@ziontechgroup.com;
                                     </a>
                                 </p>
                             </div>
@@ -318,8 +325,8 @@ Please provide any additional context about what you were doing when this error 
             )
         }
 
-        return this.props.children
+        return this.props.children;
 },
   }
 
-export default EnhancedErrorBoundary
+export default EnhancedErrorBoundary;

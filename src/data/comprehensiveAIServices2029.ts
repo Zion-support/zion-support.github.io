@@ -22,7 +22,9 @@ export interface ComprehensiveAIService2029 {
   e: string,ema,
   i: l: string,websi,
   t: e: string,addre,
-  s: s: string
+  s: s: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -34,14 +36,14 @@ export interface ComprehensiveAIService2029 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
-  demoUrl?: string
-  documentationUrl?: string
+  marketSize?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
 }
 
 export,
   const: COMPREHENSIVE_AI_SERVICES_2029: ComprehensiveAIService2029[] = [
-  // AI-Powered Business Intelligence
+  // AI-Powered Business Intelligence;
   {
   i,
   d: "ai-business-intelligence-platform",tit,
@@ -127,7 +129,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-business-intelligence-platform"
 }
-  // AI-Powered Customer Experience
+  // AI-Powered Customer Experience;
   {
   id: "ai-customer-experience-platform",tit,
   l: e: "AI Customer Experience Platform",descripti,
@@ -212,7 +214,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-customer-experience-platform"
 }
-  // AI-Powered Content Creation
+  // AI-Powered Content Creation;
   {
   id: "ai-content-creation-suite",tit,
   l: e: "AI Content Creation Suite",descripti,
@@ -297,7 +299,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-content-creation-suite"
 }
-  // AI-Powered Marketing Automation
+  // AI-Powered Marketing Automation;
   {
   id: "ai-marketing-automation-platform",tit,
   l: e: "AI Marketing Automation Platform",descripti,
@@ -382,7 +384,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-marketing-automation-platform"
 }
-  // AI-Powered Sales Intelligence
+  // AI-Powered Sales Intelligence;
   {
   id: "ai-sales-intelligence-platform",tit,
   l: e: "AI Sales Intelligence Platform",descripti,
@@ -467,7 +469,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-sales-intelligence-platform"
 }
-  // AI-Powered Financial Analytics
+  // AI-Powered Financial Analytics;
   {
   id: "ai-financial-analytics-platform",tit,
   l: e: "AI Financial Analytics Platform",descripti,
@@ -552,7 +554,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-financial-analytics-platform"
 }
-  // AI-Powered Healthcare Analytics
+  // AI-Powered Healthcare Analytics;
   {
   id: "ai-healthcare-analytics-platform",tit,
   l: e: "AI Healthcare Analytics Platform",descripti,
@@ -637,7 +639,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-healthcare-analytics-platform"
 }
-  // AI-Powered Supply Chain Optimization
+  // AI-Powered Supply Chain Optimization;
   {
   id: "ai-supply-chain-optimization",tit,
   l: e: "AI Supply Chain Optimization Platform",descripti,
@@ -722,7 +724,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-supply-chain-optimization"
 }
-  // AI-Powered Cybersecurity
+  // AI-Powered Cybersecurity;
   {
   id: "ai-cybersecurity-platform",tit,
   l: e: "AI Cybersecurity Platform",descripti,
@@ -808,4 +810,4 @@ export,
   s://ziontechgroup.com/docs/ai-cybersecurity-platform"
 },
   ]
-export default COMPREHENSIVE_AI_SERVICES_2029
+export default COMPREHENSIVE_AI_SERVICES_2029;

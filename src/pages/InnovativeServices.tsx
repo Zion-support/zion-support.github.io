@@ -1,27 +1,29 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Brain
-  Atom
-  Lock
-  Wifi
-  Shield
-  Eye
-  Globe2
-  Leaf
-  Zap
-  Rocket
-  Cpu
-  Database
-  Network
-  Code
-  Users
-  BarChart3
-  TrendingUp
-  Lightbulb
-  Target
-  Award
-} from "lucide-react"
+  Brain;
+  Atom;
+  Lock;
+  Wifi;
+  Shield;
+  Eye;
+  Globe2;
+  Leaf;
+  Zap;
+  Rocket;
+  Cpu;
+  Database;
+  Network;
+  Code;
+  Users;
+  BarChart3;
+  TrendingUp;
+  Lightbulb;
+  Target;
+  Award;
+}
+}
+ } from "lucide-react";
 const,
   InnovativeService: s: React.FC = () () => {
   const innovations = [
@@ -171,7 +173,7 @@ const,
   l: g:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -184,7 +186,7 @@ const,
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-gradient mb-6">
-              Cutting-Edge
+              Cutting-Edge;
               <span className="block text-zion-cyan">Innovations</span>
             </h1>
             <p className="text-xl m,
@@ -193,7 +195,7 @@ const,
               From AI automation to quantum computing, we're building tomorrow's solutions today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <motion.button;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -203,9 +205,9 @@ const,
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg,
   hove: r: shadow-xl transition-all duration-300";"
               >
-                Explore Innovations
+                Explore Innovations;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -216,7 +218,7 @@ const,
   hove: r: bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -232,7 +234,7 @@ const,
           <div className="grid grid-cols-2 m,
   d:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-  <motion.div
+  <motion.div;
                 key={stat.label},
   }
                 initial={ opaci,
@@ -264,7 +266,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -278,10 +280,10 @@ const,
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Revolutionary Technologies
+              Revolutionary Technologies;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Explore our portfolio of cutting-edge innovations that are reshaping industries
+              Explore our portfolio of cutting-edge innovations that are reshaping industries;
               and creating new possibilities for the future.
             </p>
           </motion.div>
@@ -290,7 +292,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {innovations.map((innovation, index) => (
-  <motion.div
+  <motion.div;
                 key={innovation.id},
   }
                 initial={ opaci,
@@ -353,7 +355,7 @@ const,
                     </ul>
                   </div>
 
-                  <motion.button
+                  <motion.button;
                     whileHover={ sca,
   l: e: 1.02 },
   }
@@ -365,7 +367,7 @@ const,
   hove: r:from-zion-cyan/30 hove,
   r:to-zion-purple/30 transition-all duration-300";"
                   >
-                    Learn More
+                    Learn More;
                   </motion.button>
                 </div>
               </motion.div>
@@ -380,7 +382,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -400,7 +402,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -410,9 +412,9 @@ const,
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg,
   hove: r: shadow-xl transition-all duration-300";"
               >
-                Start Your Project
+                Start Your Project;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -423,7 +425,7 @@ const,
   hove: r: bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
               >
-                Contact Our Team
+                Contact Our Team;
               </motion.button>
             </div>
           </motion.div>
@@ -432,4 +434,4 @@ const,
     </div>
   )
 }
-export default InnovativeServices
+export default InnovativeServices;

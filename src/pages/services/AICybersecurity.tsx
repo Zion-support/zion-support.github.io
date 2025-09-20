@@ -1,30 +1,34 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
 import {
-  Shield
+  Shield;
   Brain,
   Eye,
   Lock,
-  AlertTriangle
-  CheckCircle
-  ArrowRight
-  Star
-  Zap
-  Users
-  Database
-  Network
-  Cpu
-  Server
-  Globe
-  Target
-  TrendingUp
-  Activity
-  Fingerprint
-  Key
-  Search
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  AlertTriangle;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Zap;
+  Users;
+  Database;
+  Network;
+  Cpu;
+  Server;
+  Globe;
+  Target;
+  TrendingUp;
+  Activity;
+  Fingerprint;
+  Key;
+  Search;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function AICybersecurity() {
   const features = [
   {
@@ -99,7 +103,7 @@ export default function AICybersecurity() {
 ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO 
+      <SEO;
         title="AI Cybersecurity Services - Zion Tech Group"
         description="Advanced AI-powered cybersecurity solutions for comprehensive threat detection, prevention, and response. Protect your business with intelligent security."
       />
@@ -114,7 +118,7 @@ export default function AICybersecurity() {
         </div>
         
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -128,40 +132,40 @@ export default function AICybersecurity() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-full text-red-300 text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Security
+              AI-Powered Security;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Cybersecurity
+              AI Cybersecurity;
               <span className="block bg-gradient-to-r from-red-400 via-orange-500 to-yellow-600 bg-clip-text text-transparent">
-                Solutions
+                Solutions;
               </span>
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with cutting-edge AI-powered cybersecurity that adapts, learns, and evolves 
+              Protect your business with cutting-edge AI-powered cybersecurity that adapts, learns, and evolves;
               to counter the latest threats. Our intelligent security systems provide comprehensive protection.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg,
   hove: r:from-red-400,
   hove: r:to-orange-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-red-500/20";"
               >
-                Secure Your Business
+                Secure Your Business;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-red-400/30 text-red-400 font-semibold rounded-lg hove,
   r:bg-red-400/10 transition-all duration-200";"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -172,7 +176,7 @@ export default function AICybersecurity() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -185,10 +189,10 @@ export default function AICybersecurity() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Cybersecurity Features
+              AI Cybersecurity Features;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our AI-powered cybersecurity platform combines machine learning with advanced security protocols 
+              Our AI-powered cybersecurity platform combines machine learning with advanced security protocols;
               to provide comprehensive protection for your digital assets.
             </p>
           </motion.div>
@@ -197,7 +201,7 @@ export default function AICybersecurity() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -230,7 +234,7 @@ export default function AICybersecurity() {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -243,10 +247,10 @@ export default function AICybersecurity() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Security Services
+              Comprehensive Security Services;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              From threat detection to incident response, our AI cybersecurity services cover every aspect 
+              From threat detection to incident response, our AI cybersecurity services cover every aspect;
               of your security needs.
             </p>
           </motion.div>
@@ -254,7 +258,7 @@ export default function AICybersecurity() {
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.title},
   }
                 initial={ opaci,
@@ -294,7 +298,7 @@ export default function AICybersecurity() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -307,7 +311,7 @@ export default function AICybersecurity() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Security Technologies
+              Advanced Security Technologies;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Our platform leverages cutting-edge technologies to provide the most advanced cybersecurity protection available.
@@ -318,7 +322,7 @@ export default function AICybersecurity() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={tech},
   }
                 initial={ opaci,
@@ -348,7 +352,7 @@ export default function AICybersecurity() {
   }
       <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -368,22 +372,22 @@ export default function AICybersecurity() {
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg,
   hove: r:from-red-400,
   hove: r:to-orange-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-red-500/20";"
               >
-                Get Security Assessment
+                Get Security Assessment;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-red-400/30 text-red-400 font-semibold rounded-lg hove,
   r:bg-red-400/10 transition-all duration-200";"
               >
-                Explore All Services
+                Explore All Services;
               </Link>
             </div>
           </motion.div>

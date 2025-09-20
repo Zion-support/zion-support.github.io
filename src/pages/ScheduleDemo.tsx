@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Calendar
+  Calendar;
   Clock,
   Users,
   Video,
@@ -10,25 +11,27 @@ import {
   Phone,
   Mail,
   MapPin,
-  CheckCircle
-  Star
-  Zap
-  Brain
-  Shield
-  Cloud
-  Cpu
-  Globe
-  ArrowRight
-  Play
-  CalendarDays
-  Clock3
-  User
-  Building
-  MessageSquare
-  PhoneCall
-  Mail as MailIcon
-  ExternalLink
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Globe;
+  ArrowRight;
+  Play;
+  CalendarDays;
+  Clock3;
+  User;
+  Building;
+  MessageSquare;
+  PhoneCall;
+  Mail as MailIcon;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
 export default function ScheduleDemo() {
   const [selectedService, setSelectedService] = useState('')
   const [selectedDate, setSelectedDate] = useState('')
@@ -53,7 +56,7 @@ export default function ScheduleDemo() {
   o: n: '45 min',featur,
   e: s: ['AI Model TrainingReal-time Analytics', 'Custom WorkflowsIntegration Examples']
       popul,
-  a: r: true
+  a: r: true;
 },
   {
   id: 'cybersecurity',na,
@@ -64,7 +67,7 @@ export default function ScheduleDemo() {
   o: n: '60 min',featur,
   e: s: ['Threat DetectionIncident Response', 'Compliance DashboardSecurity Analytics']
       popul,
-  a: r: false
+  a: r: false;
 },
   {
   id: 'cloud-infrastructure',na,
@@ -75,7 +78,7 @@ export default function ScheduleDemo() {
   o: n: '50 min',featur,
   e: s: ['Multi-cloud ManagementDevOps Automation', 'Cost OptimizationPerformance Monitoring']
       popul,
-  a: r: true
+  a: r: true;
 },
   {
   id: 'quantum-computing',na,
@@ -86,7 +89,7 @@ export default function ScheduleDemo() {
   o: n: '75 min',featur,
   e: s: ['Quantum AlgorithmsHybrid Solutions', 'Performance BenchmarksUse Case Examples']
       popul,
-  a: r: false
+  a: r: false;
 },
   {
   id: 'data-analytics',na,
@@ -97,7 +100,7 @@ export default function ScheduleDemo() {
   o: n: '40 min',featur,
   e: s: ['Real-time DashboardsPredictive Analytics', 'Data VisualizationCustom Reports']
       popul,
-  a: r: false
+  a: r: false;
 },
   {
   id: 'custom-solution',na,
@@ -108,7 +111,7 @@ export default function ScheduleDemo() {
   o: n: '60 min',featur,
   e: s: ['Custom WorkflowsIntegration Planning', 'ROI AnalysisImplementation Roadmap']
       popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const availableTimes = [
@@ -155,27 +158,27 @@ export default function ScheduleDemo() {
   ]
   const handleSubmit = (e: React.FormEvent) () => {
   e.preventDefault()
-    // Handle form submission
+    // Handle form submission;
     console.log('Demo request submitte,
   d:', {
   servi,
   c: e: selectedService,da,
   t: e: selectedDate,ti,
-  m: e: selectedTime
-      ...formData
+  m: e: selectedTime;
+      ...formData;
 })
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) () => {
-  const { name, value } = e.target
+  const { name, value } = e.target;
     setFormData(prev => ({
-  ...prev
-      [name]: value
+  ...prev;
+      [name]: value;
 }))
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Schedule Demo - Zion Tech Group"
         description="Schedule a personalized demo of our AI, cybersecurity, cloud, and quantum computing solutions. Experience our technology firsthand with expert guidance."
       />
@@ -184,7 +187,7 @@ export default function ScheduleDemo() {
   }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -198,10 +201,10 @@ export default function ScheduleDemo() {
           >
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Schedule Your Demo
+              Schedule Your Demo;
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Experience our cutting-edge technology solutions firsthand. Book a personalized 
+              Experience our cutting-edge technology solutions firsthand. Book a personalized;
               demonstration with our experts and discover how Zion Tech Group can transform your business.
             </p>
             
@@ -234,7 +237,7 @@ export default function ScheduleDemo() {
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -251,7 +254,7 @@ export default function ScheduleDemo() {
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Choose Your Demo</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Select from our range of specialized demonstrations or request a custom solution demo
+              Select from our range of specialized demonstrations or request a custom solution demo;
             </p>
           </motion.div>
 
@@ -259,7 +262,7 @@ export default function ScheduleDemo() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {demoServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -292,7 +295,7 @@ export default function ScheduleDemo() {
                     </div>
                     {service.popular && (
   <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
-                        Popular
+                        Popular;
                       </span>
                     )}
                   </div>
@@ -317,7 +320,7 @@ export default function ScheduleDemo() {
                   </div>
 
                   <div className={`w-full py-2 px-4 rounded-lg text-center font-medium transition-all duration-300 ${
-  selectedService === service.id
+  selectedService === service.id;
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-700/50 text-gray-300,
   hove: r:bg-slate-600/50'
@@ -336,7 +339,7 @@ export default function ScheduleDemo() {
   }
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -353,7 +356,7 @@ export default function ScheduleDemo() {
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Why Schedule a Demo?</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Get the most out of your demo experience with our comprehensive approach
+              Get the most out of your demo experience with our comprehensive approach;
             </p>
           </motion.div>
 
@@ -361,7 +364,7 @@ export default function ScheduleDemo() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {demoBenefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={benefit.title},
   }
                 initial={ opaci,
@@ -395,7 +398,7 @@ export default function ScheduleDemo() {
       <section className="py-16">
         <div className="container-responsive">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -412,11 +415,11 @@ export default function ScheduleDemo() {
             >
               <h2 className="text-3xl font-bold text-white text-center mb-4">Schedule Your Demo</h2>
               <p className="text-gray-300 text-center max-w-2xl mx-auto">
-                Fill out the form below to schedule your personalized demonstration
+                Fill out the form below to schedule your personalized demonstration;
               </p>
             </motion.div>
 
-            <motion.form
+            <motion.form;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -441,9 +444,9 @@ export default function ScheduleDemo() {
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Preferred Date
+                      Preferred Date;
                     </label>
-                    <input
+                    <input;
                       type="date"
                       value={selectedDate},
   }
@@ -454,14 +457,14 @@ export default function ScheduleDemo() {
   focu: s:ring-2,
   focu: s:ring-cyan-500 focu,
   s:border-transparent";"
-                      required
+                      required;
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Preferred Time
+                      Preferred Time;
                     </label>
-                    <select
+                    <select;
                       value={selectedTime},
   }
                       onChange={(e) => setSelectedTime(e.target.value)},
@@ -471,7 +474,7 @@ export default function ScheduleDemo() {
   focu: s:ring-2,
   focu: s:ring-cyan-500 focu,
   s:border-transparent";"
-                      required
+                      required;
                     >
                       <option value="">Select a time</option>
                       {availableTimes.map(time => (
@@ -485,9 +488,9 @@ export default function ScheduleDemo() {
   }
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Demo Service
+                    Demo Service;
                   </label>
-                  <select
+                  <select;
                     value={selectedService},
   }
                     onChange={(e) => setSelectedService(e.target.value)},
@@ -497,7 +500,7 @@ export default function ScheduleDemo() {
   focu: s:ring-2,
   focu: s:ring-cyan-500 focu,
   s:border-transparent";"
-                    required
+                    required;
                   >
                     <option value="">Select a service</option>
                     {demoServices.map(service => (
@@ -515,7 +518,7 @@ export default function ScheduleDemo() {
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     First Name *
                   </label>
-                  <input
+                  <input;
                     type="text"
                     name="firstName"
                     value={formData.firstName},
@@ -527,14 +530,14 @@ export default function ScheduleDemo() {
   focu: s:ring-2,
   focu: s:ring-cyan-500 focu,
   s:border-transparent";"
-                    required
+                    required;
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Last Name *
                   </label>
-                  <input
+                  <input;
                     type="text"
                     name="lastName"
                     value={formData.lastName},
@@ -546,7 +549,7 @@ export default function ScheduleDemo() {
   focu: s:ring-2,
   focu: s:ring-cyan-500,
   focu: s:border-transparent";"
-                    required
+                    required;
                   />
                 </div>
               </div>
@@ -557,7 +560,7 @@ export default function ScheduleDemo() {
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address *
                   </label>
-                  <input
+                  <input;
                     type="email"
                     name="email"
                     value={formData.email},
@@ -569,14 +572,14 @@ export default function ScheduleDemo() {
   focu: s:ring-2,
   focu: s:ring-cyan-500 focu,
   s:border-transparent";"
-                    required
+                    required;
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Company *
                   </label>
-                  <input
+                  <input;
                     type="text"
                     name="company"
                     value={formData.company},
@@ -588,7 +591,7 @@ export default function ScheduleDemo() {
   focu: s:ring-2,
   focu: s:ring-cyan-500,
   focu: s:border-transparent";"
-                    required
+                    required;
                   />
                 </div>
               </div>
@@ -597,9 +600,9 @@ export default function ScheduleDemo() {
   d:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number
+                    Phone Number;
                   </label>
-                  <input
+                  <input;
                     type="tel"
                     name="phone"
                     value={formData.phone},
@@ -615,9 +618,9 @@ export default function ScheduleDemo() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Number of Attendees
+                    Number of Attendees;
                   </label>
-                  <select
+                  <select;
                     name="attendees"
                     value={formData.attendees},
   }
@@ -639,9 +642,9 @@ export default function ScheduleDemo() {
 
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Additional Information
+                  Additional Information;
                 </label>
-                <textarea
+                <textarea;
                   name="message"
                   value={formData.message},
   }
@@ -659,7 +662,7 @@ export default function ScheduleDemo() {
               </div>
 
               <div className="text-center">
-                <button
+                <button;
                   type="submit"
                   className="className="bg-gradient-to-r from-cyan-500 to-blue-600,
   hove: r:from-cyan-600,
@@ -668,7 +671,7 @@ export default function ScheduleDemo() {
   r:shadow-cyan-500/25 flex items-center gap-2 mx-auto";"
                 >
                   <Calendar className="w-5 h-5" />
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </motion.form>
@@ -680,7 +683,7 @@ export default function ScheduleDemo() {
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -704,13 +707,13 @@ export default function ScheduleDemo() {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-gray-300 mb-3">Speak with our experts directly</p>
-                <a
+                <a;
                   href="t,
   e: l:+13024640950"
                   className="className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors font-medium";"
                 >
-                  +1 (302) 464-0950
+                  +1 (302) 464-0950;
                 </a>
               </div>
 
@@ -720,13 +723,13 @@ export default function ScheduleDemo() {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-gray-300 mb-3">Send us your questions</p>
-                <a
+                <a;
                   href="mail,
   t: o:kleber@ziontechgroup.com"
                   className="className="text-blue-400,
   hove: r:text-blue-300 transition-colors font-medium";"
                 >
-                  kleber@ziontechgroup.com
+                  kleber@ziontechgroup.com;
                 </a>
               </div>
 
@@ -738,7 +741,7 @@ export default function ScheduleDemo() {
                 <p className="text-gray-300 mb-3">Get instant answers</p>
                 <button className="text-green-400 hove,
   r:text-green-300 transition-colors font-medium">
-                  Start Chat
+                  Start Chat;
                 </button>
               </div>
             </div>

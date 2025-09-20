@@ -1,74 +1,77 @@
+import { useCallback  } from "react";
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Phone
+  Phone;
   Mail,
   MapPin,
   Globe,
   Linkedin,
   Twitter,
   Facebook,
-  Instagram
-  Youtube
-  Github
-  ArrowRight
-  Star
-  Shield
-  Zap
-  Brain
-  Rocket
-  Heart
-  Crown
-  Sparkles
-  Flame
-  Sun
-  Moon
-  Infinity
-  Cloud
-  Cpu
-  Users
-  Search
-  BookOpen
-  MessageCircle
-  HelpCircle
-  DollarSign
-  Gauge
-  GitFork
-  Atom
-  Target
-  TrendingUp
-  Award
-  Code
-  Truck
-  Building
-  BarChart3
-  PenTool
-  Eye
-  Server
-  Smartphone
-  Database
-  Network
-  Clock
-  ShoppingCart
-  Lock
-  FileText
-  Settings
-  Key
-  Globe2
-  ShieldCheck
-  Leaf
-  Scale
-  Building2
-  Car
-  Home
-  Factory
-  City
-  CheckCircle
-  ArrowUpRight
-  Play
-  MailIcon
-} from "lucide-react"
+  Instagram;
+  Youtube;
+  Github;
+  ArrowRight;
+  Star;
+  Shield;
+  Zap;
+  Brain;
+  Rocket;
+  Heart;
+  Crown;
+  Sparkles;
+  Flame;
+  Sun;
+  Moon;
+  Infinity;
+  Cloud;
+  Cpu;
+  Users;
+  Search;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  GitFork;
+  Atom;
+  Target;
+  TrendingUp;
+  Award;
+  Code;
+  Truck;
+  Building;
+  BarChart3;
+  PenTool;
+  Eye;
+  Server;
+  Smartphone;
+  Database;
+  Network;
+  Clock;
+  ShoppingCart;
+  Lock;
+  FileText;
+  Settings;
+  Key;
+  Globe2;
+  ShieldCheck;
+  Leaf;
+  Scale;
+  Building2;
+  Car;
+  Home;
+  Factory;
+  City;
+  CheckCircle;
+  ArrowUpRight;
+  Play;
+  MailIcon;
+}
+}
+ } from "lucide-react";
 export,
   const: EnhancedFuturisticFooter: React.FC = () () => {
   const currentYear = new Date().getFullYear()
@@ -706,7 +709,7 @@ export,
   l: g:grid-cols-3 x,
   l:grid-cols-4 gap-8 mb-12">
           {footerSections.map((section, sectionIndex) => (
-  <motion.div
+  <motion.div;
               key={section.title},
   }
               initial={ opaci,
@@ -728,7 +731,7 @@ export,
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
   <li key={link.name}>
-                    <Link
+                    <Link;
                       to={link.href},
   }
                       className={`text-sm transition-colors duration-200,
@@ -757,7 +760,7 @@ export,
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">Contact Information</h3>
             <div className="space-y-3">
-              <a
+              <a;
                 href={`t,
   e: l:${contactInfo.phone}`}
                 className="className="flex items-center space-x-3 text-gray-300,
@@ -766,7 +769,7 @@ export,
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span>{contactInfo.phone}</span>
               </a>
-              <a
+              <a;
                 href={`mail,
   t: o:${contactInfo.email}`}
                 className="className="flex items-center space-x-3 text-gray-300,
@@ -775,7 +778,7 @@ export,
                 <Mail className="w-5 h-5 text-cyan-400" />
                 <span>{contactInfo.email}</span>
               </a>
-              <a
+              <a;
                 href={contactInfo.website},
   }
                 target="_blank"
@@ -800,7 +803,7 @@ export,
             <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-2">
               {quickLinks.map((link) => (
-  <Link
+  <Link;
                   key={link.name},
   }
                   to={link.href},
@@ -824,7 +827,7 @@ export,
   }
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
-  <a
+  <a;
                     key={social.name},
   }
                     href={social.href},
@@ -844,7 +847,7 @@ export,
               <div className="space-y-2">
                 <p className="text-sm text-gray-400">Subscribe to our newsletter for updates</p>
                 <form className="flex space-x-2">
-                  <input
+                  <input;
                     type="email"
                     placeholder="Enter your email"
                     className="className="flex-1 px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400,
@@ -853,13 +856,13 @@ export,
   focu: s:ring-cyan-400,
   focu: s:border-transparent text-sm";"
                   />
-                  <button
+                  <button;
                     type="submit"
                     className="className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600,
   hove: r:from-cyan-600 hove,
   r:to-blue-700 text-white rounded-lg transition-all duration-200 text-sm font-medium";"
                   >
-                    Subscribe
+                    Subscribe;
                   </button>
                 </form>
               </div>
@@ -916,25 +919,25 @@ export,
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <a href="/privacy" className="hov,
   e: r: text-cyan-400 transition-colors duration-200">
-                Privacy Policy
+                Privacy Policy;
               </a>
               <a href="/terms" className="hov,
   e: r:text-cyan-400 transition-colors duration-200">
-                Terms of Service
+                Terms of Service;
               </a>
               <a href="/cookies" className="hov,
   e: r:text-cyan-400 transition-colors duration-200">
-                Cookie Policy
+                Cookie Policy;
               </a>
               <a href="/sitemap" className="hove,
   r:text-cyan-400 transition-colors duration-200">
-                Sitemap
+                Sitemap;
               </a>
             </div>
 
             {/* Back to Top */},
   }
-            <button
+            <button;
               onClick={() => window.scrollTo({ t,
   o: p: 0, behavi,
   o: r: 'smooth' })}
@@ -950,7 +953,7 @@ export,
 
       {/* Floating Contact Button */},
   }
-      <motion.div
+      <motion.div;
         initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -965,7 +968,7 @@ export,
   }
         className="className="fixed bottom-6 right-6 z-50";"
       >
-        <a
+        <a;
           href="/contact"
           className="className="flex items-center space-x-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600,
   hove: r: from-cyan-600,

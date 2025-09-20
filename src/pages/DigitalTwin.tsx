@@ -1,51 +1,53 @@
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  Globe
+  Globe;
   Brain,
   Zap,
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Lock
-  Database
-  Cpu
-  Network
-  BarChart3
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-  Target
-  Users
-  ArrowRight
-  Key
-  Fingerprint
-  EyeOff
-  Server
-  Globe2
-  ShieldCheck
-  Wifi
-  Smartphone
-  Cloud
-  Activity
-  Clock
-  BarChart
-  PieChart
-  Cube
-  Layers
-  Monitor
-  Smartphone
-  Factory
-  Car
-  Heart
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Wifi;
+  Smartphone;
+  Cloud;
+  Activity;
+  Clock;
+  BarChart;
+  PieChart;
+  Cube;
+  Layers;
+  Monitor;
+  Smartphone;
+  Factory;
+  Car;
+  Heart;
+}
+}
+ } from "lucide-react";
 export default function DigitalTwin() {
   const features = [
   {
@@ -102,25 +104,25 @@ export default function DigitalTwin() {
   tit,
   l: e: 'Manufacturing',descripti,
   o: n: 'Digital twins for production lines and industrial processes',ic,
-  o: n: Factory
+  o: n: Factory;
 },
   {
   tit,
   l: e: 'Smart Cities',descripti,
   o: n: 'Urban infrastructure monitoring and management',ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   tit,
   l: e: 'Healthcare',descripti,
   o: n: 'Patient monitoring and medical device management',ic,
-  o: n: Heart
+  o: n: Heart;
 },
   {
   tit,
   l: e: 'Transportation',descripti,
   o: n: 'Vehicle fleet management and infrastructure optimization',ic,
-  o: n: Car
+  o: n: Car;
 },
   ]
   const digitalTwinCapabilities = [
@@ -156,7 +158,7 @@ export default function DigitalTwin() {
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="Digital Twin Platform - Zion Tech Group"
         description="Revolutionary digital twin platform with real-time monitoring, AI analytics, and 3D visualization. Transform your assets with virtual replicas and predictive insights."
         keywords="digital twin, virtual replicas, IoT monitoring, predictive analytics, 3D visualization, asset optimization, real-time monitoring"
@@ -168,7 +170,7 @@ export default function DigitalTwin() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -182,26 +184,26 @@ export default function DigitalTwin() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
                 <Globe className="w-4 h-4" />
-                Digital Innovation
+                Digital Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                Digital Twin
+                Digital Twin;
                 <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                  Platform
+                  Platform;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform your physical assets with our revolutionary digital twin platform. 
-                Create virtual replicas, monitor performance in real-time, and optimize 
+                Create virtual replicas, monitor performance in real-time, and optimize;
                 operations with AI-powered insights and predictive analytics.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -213,9 +215,9 @@ export default function DigitalTwin() {
   hove: r:to-blue-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-cyan-500/25";"
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -226,7 +228,7 @@ export default function DigitalTwin() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  View Demo
+                  View Demo;
                 </motion.button>
               </div>
             </motion.div>
@@ -244,7 +246,7 @@ export default function DigitalTwin() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -261,10 +263,10 @@ export default function DigitalTwin() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Revolutionary Digital Twin Features
+                Revolutionary Digital Twin Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our digital twin platform combines cutting-edge technology with practical 
+                Our digital twin platform combines cutting-edge technology with practical;
                 applications to deliver unprecedented insights and optimization capabilities.
               </p>
             </motion.div>
@@ -273,7 +275,7 @@ export default function DigitalTwin() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -320,7 +322,7 @@ export default function DigitalTwin() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -336,19 +338,19 @@ export default function DigitalTwin() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your Asset Management
+                  Transform Your Asset Management;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our digital twin platform delivers measurable improvements in operational 
-                  efficiency, cost reduction, and performance optimization while enabling 
+                  Our digital twin platform delivers measurable improvements in operational;
+                  efficiency, cost reduction, and performance optimization while enabling;
                   predictive maintenance and data-driven decision making.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -373,7 +375,7 @@ export default function DigitalTwin() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -395,7 +397,7 @@ export default function DigitalTwin() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Digital Twin Impact
+                      Digital Twin Impact;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -427,7 +429,7 @@ export default function DigitalTwin() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -444,10 +446,10 @@ export default function DigitalTwin() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Digital Twin Capabilities
+                Digital Twin Capabilities;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform provides comprehensive digital twin capabilities that 
+                Our platform provides comprehensive digital twin capabilities that;
                 enable virtual representation and optimization of physical assets.
               </p>
             </motion.div>
@@ -455,7 +457,7 @@ export default function DigitalTwin() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {digitalTwinCapabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                   key={capability.name},
   }
                   initial={ opaci,
@@ -504,7 +506,7 @@ export default function DigitalTwin() {
   }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -521,10 +523,10 @@ export default function DigitalTwin() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Digital Twin Use Cases
+                Digital Twin Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our digital twin platform adapts to various industries and applications
+                Our digital twin platform adapts to various industries and applications;
                 providing tailored solutions for different asset management needs.
               </p>
             </motion.div>
@@ -532,7 +534,7 @@ export default function DigitalTwin() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -579,7 +581,7 @@ export default function DigitalTwin() {
   }
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -600,13 +602,13 @@ export default function DigitalTwin() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading organizations that are already using our digital twin 
+                Join leading organizations that are already using our digital twin;
                 platform to revolutionize their asset management and operations.
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -618,9 +620,9 @@ export default function DigitalTwin() {
   hove: r:to-blue-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-cyan-500/25";"
                 >
-                  Start Today
+                  Start Today;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -631,7 +633,7 @@ export default function DigitalTwin() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>

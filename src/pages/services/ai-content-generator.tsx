@@ -1,21 +1,25 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
+import { SEO     } from "../../components/SEO";
 import {
-  FileText
+  FileText;
   Brain,
   Zap,
   Users,
   TrendingUp,
   Shield,
-  Clock
-  BarChart3
-  Headphones
-  Bot
-} from "lucide-react"
+  Clock;
+  BarChart3;
+  Headphones;
+  Bot;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIContentGenerator() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Content Generator - Zion Tech Group"
         description="Revolutionary AI-powered content creation that writes, optimizes, and scales your content strategy. Generate high-quality, SEO-optimized content in minutes."
       />
@@ -33,7 +37,7 @@ export default function AIContentGenerator() {
               <h1 className="text-4xl,
   m: d:text-5xl,
   l: g:text-6xl font-bold text-white mb-6 leading-tight">
-                AI Content Generator
+                AI Content Generator;
               </h1>
               <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -41,14 +45,14 @@ export default function AIContentGenerator() {
               </p>
             </div>
             <div className="mb-16">
-              <a
+              <a;
                 href="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-300 shadow-2xl hove,
   r:shadow-blue-500/25";"
               >
-                Get Started with AI Content Generator
+                Get Started with AI Content Generator;
               </a>
             </div>
           </div>
@@ -64,10 +68,10 @@ export default function AIContentGenerator() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Revolutionary AI Content Generation
+              Revolutionary AI Content Generation;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your content marketing with our advanced AI content generator
+              Transform your content marketing with our advanced AI content generator;
             </p>
           </div>
           
@@ -80,7 +84,7 @@ export default function AIContentGenerator() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Intelligent Content Creation</h3>
               <p className="text-gray-300">
-                AI-powered writing that understands your brand voice and creates engaging, original content
+                AI-powered writing that understands your brand voice and creates engaging, original content;
               </p>
             </div>
             
@@ -90,7 +94,7 @@ export default function AIContentGenerator() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">SEO Optimization</h3>
               <p className="text-gray-300">
-                Automatically optimize content for search engines with intelligent keyword integration
+                Automatically optimize content for search engines with intelligent keyword integration;
               </p>
             </div>
             
@@ -100,7 +104,7 @@ export default function AIContentGenerator() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Audience Targeting</h3>
               <p className="text-gray-300">
-                Create content specifically tailored to your target audience demographics and preferences
+                Create content specifically tailored to your target audience demographics and preferences;
               </p>
             </div>
             
@@ -110,7 +114,7 @@ export default function AIContentGenerator() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Performance Analytics</h3>
               <p className="text-gray-300">
-                Track content performance and get insights to improve your content strategy
+                Track content performance and get insights to improve your content strategy;
               </p>
             </div>
             
@@ -120,7 +124,7 @@ export default function AIContentGenerator() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Quality Assurance</h3>
               <p className="text-gray-300">
-                Built-in plagiarism detection and content quality checks ensure originality
+                Built-in plagiarism detection and content quality checks ensure originality;
               </p>
             </div>
             
@@ -130,7 +134,7 @@ export default function AIContentGenerator() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Rapid Content Scaling</h3>
               <p className="text-gray-300">
-                Generate weeks worth of content in minutes, not hours
+                Generate weeks worth of content in minutes, not hours;
               </p>
             </div>
           </div>
@@ -148,16 +152,16 @@ export default function AIContentGenerator() {
             Ready to Transform Your Content Strategy?
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Start generating high-quality, SEO-optimized content today
+            Start generating high-quality, SEO-optimized content today;
           </p>
-          <a
+          <a;
             href="/contact"
             className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-300 shadow-2xl hove,
   r:shadow-blue-500/25";"
           >
-            Get Started with AI Content Generator
+            Get Started with AI Content Generator;
           </a>
         </div>
       </section>

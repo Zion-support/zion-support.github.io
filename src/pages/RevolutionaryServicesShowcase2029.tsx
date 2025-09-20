@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Search, Filter, Star, Users, TrendingUp, Zap, Shield, Brain, Rocket, Globe, Cpu, Database, Cloud, Lock, Target, BarChart3, Code, Palette, Truck, Car, Plane, Dna, Atom, Link, Box } from "lucide-react"
-import { SEO } from "@/components/SEO"
-import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from "../../data/revolutionary-2029-cutting-edge-services"
-import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from "../../data/revolutionary-2029-emerging-tech-services"
+import { motion   } from "framer-motion";
+import { Search, Filter, Star, Users, TrendingUp, Zap, Shield, Brain, Rocket, Globe, Cpu, Database, Cloud, Lock, Target, BarChart3, Code, Palette, Truck, Car, Plane, Dna, Atom, Link, Box   } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES   } from "../../data/revolutionary-2029-cutting-edge-services";
+import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES   } from "../../data/revolutionary-2029-emerging-tech-services";
 export default function RevolutionaryServicesShowcase2029() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -30,8 +30,8 @@ export default function RevolutionaryServicesShowcase2029() {
   const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
@@ -41,10 +41,10 @@ export default function RevolutionaryServicesShowcase2029() {
       case 'price-high':
         return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''))
       case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'customers':
         return b.customers - a.customers,
-  defaul: t: return b.popular ? 1 : -1
+  defaul: t: return b.popular ? 1 : -1;
 },
   })
   const getCategoryIcon = (catego,
@@ -78,7 +78,7 @@ export default function RevolutionaryServicesShowcase2029() {
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Revolutionary 2029 Services Showcase - Zion Tech Group"
         description="Discover our cutting-edge AI, quantum computing, space technology, and emerging tech services that are revolutionizing industries worldwide."
       />
@@ -90,7 +90,7 @@ export default function RevolutionaryServicesShowcase2029() {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-24">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -104,7 +104,7 @@ export default function RevolutionaryServicesShowcase2029() {
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
-              Revolutionary
+              Revolutionary;
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> 2029</span>
             </h1>
             <p className="text-xl m,
@@ -113,7 +113,7 @@ export default function RevolutionaryServicesShowcase2029() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -124,9 +124,9 @@ export default function RevolutionaryServicesShowcase2029() {
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-300";"
               >
-                Explore Services
+                Explore Services;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -136,7 +136,7 @@ export default function RevolutionaryServicesShowcase2029() {
                 className="className="border-2 border-white/20 text-white px-8 py-3 rounded-lg font-semibold text-lg,
   hove: r:bg-white/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>
@@ -150,7 +150,7 @@ export default function RevolutionaryServicesShowcase2029() {
   l: g:px-8 py-16">
         <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -165,7 +165,7 @@ export default function RevolutionaryServicesShowcase2029() {
             <div className="text-4xl font-bold text-blue-400 mb-2">{allServices.length}</div>
             <div className="text-gray-400">Revolutionary Services</div>
           </motion.div>
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -181,7 +181,7 @@ export default function RevolutionaryServicesShowcase2029() {
             <div className="text-4xl font-bold text-purple-400 mb-2">20+</div>
             <div className="text-gray-400">Technology Categories</div>
           </motion.div>
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -197,7 +197,7 @@ export default function RevolutionaryServicesShowcase2029() {
             <div className="text-4xl font-bold text-green-400 mb-2">4.8+</div>
             <div className="text-gray-400">Average Rating</div>
           </motion.div>
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -229,7 +229,7 @@ export default function RevolutionaryServicesShowcase2029() {
             <div className="flex-1">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search revolutionary services..."
                   value={searchTerm},
@@ -248,7 +248,7 @@ export default function RevolutionaryServicesShowcase2029() {
             {/* Category Filter */},
   }
             <div className="lg:w-64">
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -271,7 +271,7 @@ export default function RevolutionaryServicesShowcase2029() {
             {/* Sort */},
   }
             <div className="lg:w-48">
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -304,7 +304,7 @@ export default function RevolutionaryServicesShowcase2029() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={service.id},
   }
               initial={ opaci,
@@ -328,7 +328,7 @@ export default function RevolutionaryServicesShowcase2029() {
                   <div className="text-3xl">{service.icon}</div>
                   {service.popular && (
   <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
-                      Popular
+                      Popular;
                     </span>
                   )}
                 </div>
@@ -433,7 +433,7 @@ export default function RevolutionaryServicesShowcase2029() {
                 {/* CTA Button */},
   }
                 <div className="flex gap-3">
-                  <a
+                  <a;
                     href={service.link},
   }
                     className="className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold,
@@ -441,7 +441,7 @@ export default function RevolutionaryServicesShowcase2029() {
   hove: r:to-purple-700 transition-all duration-300 group-hov,
   e: r:scale-105";"
                   >
-                    Learn More
+                    Learn More;
                   </a>
                   <button className="px-4 py-3 border border-white/20 text-white rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
@@ -468,7 +468,7 @@ export default function RevolutionaryServicesShowcase2029() {
           </p>
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-            <motion.button
+            <motion.button;
               whileHover={ scal,
   e: 1.05 },
   }
@@ -478,9 +478,9 @@ export default function RevolutionaryServicesShowcase2029() {
               className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r: bg-gray-100 transition-all duration-300";"
             >
-              Schedule a Demo
+              Schedule a Demo;
             </motion.button>
-            <motion.button
+            <motion.button;
               whileHover={ scal,
   e: 1.05 },
   }
@@ -490,7 +490,7 @@ export default function RevolutionaryServicesShowcase2029() {
               className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r: bg-white/10 transition-all duration-300";"
             >
-              Contact Sales Team
+              Contact Sales Team;
             </motion.button>
           </div>
           <div className="mt-8 text-gray-300">

@@ -21,7 +21,9 @@ export interface FinancialAIService2028 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,13 +35,13 @@ export interface FinancialAIService2028 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
   regulatoryCompliance?: string[],
   }
 
 export,
   const: SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = [
-  // AI-Powered Algorithmic Trading Platform
+  // AI-Powered Algorithmic Trading Platform;
   {
   i,
   d: "ai-algorithmic-trading-platform-2028",tit,
@@ -123,7 +125,7 @@ export,
   ],
   }
 
-  // AI-Powered Credit Risk Assessment
+  // AI-Powered Credit Risk Assessment;
   {
   id: "ai-credit-risk-assessment-2028",tit,
   l: e: "AI-Powered Credit Risk Assessment & Lending Platform",descripti,
@@ -206,7 +208,7 @@ export,
   ],
   }
 
-  // AI-Powered Fraud Detection System
+  // AI-Powered Fraud Detection System;
   {
   id: "ai-fraud-detection-system-2028",tit,
   l: e: "AI-Powered Fraud Detection & Prevention Platform",descripti,
@@ -289,7 +291,7 @@ export,
   ],
   }
 
-  // AI-Powered Wealth Management Platform
+  // AI-Powered Wealth Management Platform;
   {
   id: "ai-wealth-management-platform-2028",tit,
   l: e: "AI-Powered Wealth Management & Financial Planning Platform",descripti,
@@ -372,7 +374,7 @@ export,
   ],
   }
 
-  // AI-Powered Insurance Underwriting
+  // AI-Powered Insurance Underwriting;
   {
   id: "ai-insurance-underwriting-2028",tit,
   l: e: "AI-Powered Insurance Underwriting & Risk Assessment Platform",descripti,
@@ -456,4 +458,4 @@ export,
   },
   ]
 
-export default SPECIALIZED_FINANCIAL_AI_SERVICES_2028
+export default SPECIALIZED_FINANCIAL_AI_SERVICES_2028;

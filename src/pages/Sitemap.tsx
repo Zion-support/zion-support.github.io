@@ -1,55 +1,57 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Globe
-  Brain
-  Cloud
-  Shield
-  Rocket
-  Atom
-  Zap
-  Users
-  Building
-  Code
-  Database
-  Network
-  Lock
-  Eye
-  Heart
-  Factory
-  ShoppingCart
-  Leaf
-  Gamepad2
-  Coins
-  Satellite
-  TrendingUp
-  BarChart3
-  PenTool
-  Server
-  Smartphone
-  Cpu
-  Truck
-  FileText
-  BookOpen
-  MessageCircle
-  HelpCircle
-  DollarSign
-  Gauge
-  Workflow
-  Star
-  Target
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Calendar
-  Clock
-  Award
-  ChevronRight
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Globe;
+  Brain;
+  Cloud;
+  Shield;
+  Rocket;
+  Atom;
+  Zap;
+  Users;
+  Building;
+  Code;
+  Database;
+  Network;
+  Lock;
+  Eye;
+  Heart;
+  Factory;
+  ShoppingCart;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  TrendingUp;
+  BarChart3;
+  PenTool;
+  Server;
+  Smartphone;
+  Cpu;
+  Truck;
+  FileText;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  Workflow;
+  Star;
+  Target;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  Calendar;
+  Clock;
+  Award;
+  ChevronRight;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
 interface SitemapSection {
   tit,
   l: e: string,ic,
@@ -57,14 +59,18 @@ interface SitemapSection {
   o: n: string,lin,
   k: s: SitemapLink[[],
   ],
+}
+}
   }
 
 interface SitemapLink {
   na,
   m: e: string,pa,
-  t: h: string
-  description?: string
-  featured?: boolean
+  t: h: string;
+  description?: string;
+  featured?: boolean;
+}
+}
 }
 
 const,
@@ -646,7 +652,7 @@ const,
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO;
         title="Sitemap - Zion Tech Group"
         description="Complete sitemap of Zion Tech Group's website. Find all our services, solutions, and resources organized by category."
         keywords="sitemap, Zion Tech Group, website structure, services, solutions, navigation"
@@ -658,7 +664,7 @@ const,
   s: m: px-6,
   l: g:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -672,20 +678,20 @@ const,
           >
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Complete Website
+              Complete Website;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Sitemap
+                Sitemap;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Explore our comprehensive website structure and discover all the services
+              Explore our comprehensive website structure and discover all the services;
               solutions, and resources Zion Tech Group has to offer.
             </p>
           </motion.div>
 
           {/* Quick Links */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -702,13 +708,13 @@ const,
   m: d: grid-cols-3 l,
   g:grid-cols-6 gap-4">
               {quickLinks.map((link, index) => (
-  <Link
+  <Link;
                   key={index},
   }
                   to={link.path},
   }
                   className={`p-4 rounded-xl transition-all duration-300 text-center group ${
-  link.featured
+  link.featured;
                       ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40,
   hove: r: border-cyan-400/60'
                       : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 hove,
@@ -752,7 +758,7 @@ const,
           <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-12">
             {sitemapSections.map((section, sectionIndex) => (
-  <motion.div
+  <motion.div;
                 key={section.title},
   }
                 initial={ opaci,
@@ -783,7 +789,7 @@ const,
 
                 <div className="space-y-3">
                   {section.links.map((link, linkIndex) => (
-  <Link
+  <Link;
                       key={linkIndex},
   }
                       to={link.path},
@@ -797,7 +803,7 @@ const,
                         )}
                         <div>
                           <p className={`font-medium transition-colors duration-200 ${
-  link.featured 
+  link.featured;
                               ? 'text-cyan-400' 
                               : 'text-white group-hov,
   e: r:text-cyan-400'
@@ -827,7 +833,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -847,7 +853,7 @@ const,
               Need Help Finding Something?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our team is here to help you navigate 
+              Can't find what you're looking for? Our team is here to help you navigate;
               our services and find the right solution for your needs.
             </p>
             
@@ -869,22 +875,22 @@ const,
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-200";"
               >
-                Contact Us
+                Contact Us;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/search"
                 className="className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-200";"
               >
-                Search Our Site
+                Search Our Site;
               </Link>
             </div>
           </motion.div>
@@ -893,4 +899,4 @@ const,
     </div>
   )
 }
-export default Sitemap
+export default Sitemap;

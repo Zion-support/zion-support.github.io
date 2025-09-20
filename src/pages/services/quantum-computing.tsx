@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../../components/SEO"
-import { motion } from "framer-motion"
-import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud     } from "lucide-react";
 const,
   QuantumComputin: g: React.FC = () () => {
   const features = [
@@ -64,7 +64,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for AI, cryptography, and scientific research. Achieve quantum supremacy with our cutting-edge technology."
       />
@@ -73,7 +73,7 @@ const,
   }
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -92,9 +92,9 @@ const,
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Quantum Computing
+              Quantum Computing;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-400">
-                Revolution
+                Revolution;
               </span>
             </h1>
             
@@ -109,11 +109,11 @@ const,
   hove: r:from-purple-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-purple-500/20">
-                Get Started
+                Get Started;
               </button>
               <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hove,
   r:bg-purple-400/10 transition-all duration-200">
-                Learn More
+                Learn More;
               </button>
             </div>
           </motion.div>
@@ -124,7 +124,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -137,10 +137,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Features
+              Quantum Computing Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience the future of computing with our advanced quantum capabilities
+              Experience the future of computing with our advanced quantum capabilities;
             </p>
           </motion.div>
 
@@ -148,7 +148,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -180,7 +180,7 @@ const,
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -193,17 +193,17 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Use Cases
+              Quantum Computing Use Cases;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform industries with quantum computing applications
+              Transform industries with quantum computing applications;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.title},
   }
                 initial={ opaci,
@@ -236,7 +236,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -252,13 +252,13 @@ const,
               Why Choose Quantum Computing?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Unlock unprecedented computational power and capabilities
+              Unlock unprecedented computational power and capabilities;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d: grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -281,7 +281,7 @@ const,
               </ul>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -295,14 +295,14 @@ const,
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to experience the future of computing? Our quantum computing experts are here to help you 
+                Ready to experience the future of computing? Our quantum computing experts are here to help you;
                 harness the power of quantum mechanics for your business.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r: from-purple-400,
   hove: r:to-blue-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-purple-500/20">
-                Contact Our Experts
+                Contact Our Experts;
               </button>
             </motion.div>
           </div>
@@ -313,7 +313,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -328,7 +328,7 @@ const,
               Ready for the Quantum Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution and transform your business with unprecedented computational power
+              Join the quantum revolution and transform your business with unprecedented computational power;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -336,11 +336,11 @@ const,
   hove: r:from-purple-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-purple-500/20">
-                Start Quantum Journey
+                Start Quantum Journey;
               </button>
               <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hove,
   r:bg-purple-400/10 transition-all duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -349,4 +349,4 @@ const,
     </div>
   )
 }
-export default QuantumComputing
+export default QuantumComputing;

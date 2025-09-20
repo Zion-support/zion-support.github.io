@@ -1,38 +1,40 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Rocket
-  Brain
-  Zap
-  Globe
-  Shield
-  Cpu
-  Database
-  Network
-  Lock
-  TrendingUp
-  Users
-  ArrowRight
-  Star
-  Clock
-  DollarSign
-  Target
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  Lightbulb
-  Code
-  Cloud
-  Server
-  Smartphone
-  Monitor
-  Wifi
-  Key
-  BarChart3
-  Globe2
-  ShieldCheck
-} from "lucide-react"
+  Rocket;
+  Brain;
+  Zap;
+  Globe;
+  Shield;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  TrendingUp;
+  Users;
+  ArrowRight;
+  Star;
+  Clock;
+  DollarSign;
+  Target;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Lightbulb;
+  Code;
+  Cloud;
+  Server;
+  Smartphone;
+  Monitor;
+  Wifi;
+  Key;
+  BarChart3;
+  Globe2;
+  ShieldCheck;
+}
+}
+ } from "lucide-react";
 const,
   InnovativeServicesHu: b: React.FC = () () => {
   const serviceCategories = [
@@ -143,7 +145,7 @@ const,
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -161,7 +163,7 @@ const,
   t: y: 1,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -169,7 +171,7 @@ const,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */},
   }
-      <motion.div
+      <motion.div;
         className="className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20";"
         initial={ opaci,
   t: y: 0 },
@@ -183,7 +185,7 @@ const,
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1
+          <motion.h1;
             className="className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6";"
             initial={ ,
@@ -198,9 +200,9 @@ const,
   a: y: 0.2 },
   }
           >
-            Innovative Services Hub
+            Innovative Services Hub;
           </motion.h1>
-          <motion.p
+          <motion.p;
             className="className="text-xl,
   m: d: text-2xl text-indigo-100 max-w-4xl mx-auto mb-8";"
             initial={ ,
@@ -215,9 +217,9 @@ const,
   a: y: 0.4 },
   }
           >
-            Discover the future of technology with our comprehensive portfolio of innovative services
+            Discover the future of technology with our comprehensive portfolio of innovative services;
           </motion.p>
-          <motion.div
+          <motion.div;
             className="className="flex flex-wrap justify-center gap-4 text-sm";"
             initial={ sca,
   l: e: 0.8, opaci,
@@ -233,16 +235,16 @@ const,
   }
           >
             <span className="px-4 py-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-200">
-              🚀 40+ Services
+              🚀 40+ Services;
             </span>
             <span className="px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-200">
-              💰 500%+ ROI
+              💰 500%+ ROI;
             </span>
             <span className="px-4 py-2 bg-pink-500/20 border border-pink-400/30 rounded-full text-pink-200">
-              ⚡ Cutting-Edge Tech
+              ⚡ Cutting-Edge Tech;
             </span>
             <span className="px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-200">
-              🌍 Global Impact
+              🌍 Global Impact;
             </span>
           </motion.div>
         </div>
@@ -250,7 +252,7 @@ const,
 
       {/* Statistics Section */},
   }
-      <motion.div
+      <motion.div;
         className="className="container mx-auto px-4 py-16";"
         initial={ opaci,
   t: y: 0, y: 20 },
@@ -286,7 +288,7 @@ const,
 
       {/* Service Categories */},
   }
-      <motion.div
+      <motion.div;
         className="className="container mx-auto px-4 py-16";"
         variants={containerVariants},
   }
@@ -295,19 +297,19 @@ const,
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Explore Our Service Categories
+            Explore Our Service Categories;
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            From revolutionary AI to sustainable green technology, discover the perfect solution for your business
+            From revolutionary AI to sustainable green technology, discover the perfect solution for your business;
           </p>
         </div>
 
         <div className="grid grid-cols-1,
   m: d: grid-cols-2 gap-8">
           {serviceCategories.map((category) () => {
-  const IconComponent = category.icon
+  const IconComponent = category.icon;
             return (
-              <motion.div
+              <motion.div;
                 key={category.id},
   }
                 className="className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50,
@@ -371,7 +373,7 @@ const,
 
                 {/* CTA */},
   }
-                <a
+                <a;
                   href={category.route},
   }
                   className="className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600,
@@ -392,7 +394,7 @@ const,
 
       {/* Featured Services */},
   }
-      <motion.div
+      <motion.div;
         className="className="container mx-auto px-4 py-16";"
         initial={ opaci,
   t: y: 0, y: 20 },
@@ -407,17 +409,17 @@ const,
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Featured Revolutionary Services
+            Featured Revolutionary Services;
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Our most innovative and high-impact solutions that are transforming industries worldwide
+            Our most innovative and high-impact solutions that are transforming industries worldwide;
           </p>
         </div>
 
         <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-6">
           {featuredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={index},
   }
               className="className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50,
@@ -471,7 +473,7 @@ const,
   hove: r: from-blue-700,
   hove: r:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hove,
   r:scale-105">
-                Learn More
+                Learn More;
               </button>
             </motion.div>
           ))}
@@ -480,7 +482,7 @@ const,
 
       {/* Contact Section */},
   }
-      <motion.div
+      <motion.div;
         className="className="bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20 border-t border-slate-700/50";"
         initial={ opaci,
   t: y: 0, y: 50 },
@@ -513,7 +515,7 @@ const,
               <a href="t,
   e: l:+13024640950" className="text-blue-400,
   hove: r:text-blue-300 font-medium">
-                +1 (302) 464-0950
+                +1 (302) 464-0950;
               </a>
             </div>
 
@@ -524,7 +526,7 @@ const,
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-purple-400 hove,
   r:text-purple-300 font-medium">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
 
@@ -534,13 +536,13 @@ const,
               <p className="text-slate-300 mb-3">Come see our innovation center</p>
               <p className="text-green-400 font-medium">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown, DE 19709;
               </p>
             </div>
           </div>
 
           <div className="text-center mt-12">
-            <a
+            <a;
               href="htt,
   p: s: //ziontechgroup.com"
               target="_blank"
@@ -552,7 +554,7 @@ const,
   hove: r:shadow-2xl hove,
   r:shadow-indigo-500/25";"
             >
-              Visit Our Website
+              Visit Our Website;
               <ExternalLink className="w-5 h-5" />
             </a>
           </div>
@@ -561,4 +563,4 @@ const,
     </div>
   )
 }
-export default InnovativeServicesHub
+export default InnovativeServicesHub;

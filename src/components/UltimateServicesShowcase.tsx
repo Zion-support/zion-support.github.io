@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
   Brain,
   Cloud,
@@ -19,12 +20,14 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
-} from "lucide-react"
-// Import the new services
-import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion"
-import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services"
-import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions"
+  MapPin;
+}
+}
+ } from "lucide-react";
+// Import the new services;
+import { ultimateInnovativeServices2025   } from "../../data/2025-ultimate-innovative-services-expansion";
+import { enterpriseITInfrastructureServices2025   } from "../../data/2025-enterprise-it-infrastructure-services";
+import { innovativeMicroSaasSolutions2025   } from "../../data/2025-innovative-micro-saas-solutions";
 interface Service {
   id: string,na,
   m: e: string,tagli,
@@ -56,7 +59,9 @@ interface Service {
   e: string,ema,
   i: l: string,addre,
   s: s: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
   }
   realImplementati,
   o: n: boolean,implementationDetai,
@@ -68,7 +73,7 @@ interface Service {
   e: l: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',patentStat,
   u: s: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',aiCapabiliti,
   e: s: string[],marketDisrupti,
-  o: n: string
+  o: n: string;
 }
 
 const contact = {
@@ -93,14 +98,14 @@ const categories = [
   o: n: 'Cutting-edge infrastructure solutions for modern businesses',ic,
   o: n: <Cloud className="w-8 h-8" />,col,
   o: r: 'from-blue-600 to-cyan-700',servic,
-  e: s: enterpriseITInfrastructureServices2025
+  e: s: enterpriseITInfrastructureServices2025;
   }, {
     id: 'micro-saas',na,
   m: e: 'Micro SAAS Solutions',descripti,
   o: n: 'Innovative software solutions for small businesses',ic,
   o: n: <Code className="w-8 h-8" />,col,
   o: r: 'from-green-600 to-emerald-700',servic,
-  e: s: innovativeMicroSaasSolutions2025
+  e: s: innovativeMicroSaasSolutions2025;
   },
   ]
 const innovationLevelColors = {
@@ -114,12 +119,12 @@ export function UltimateServicesShowcase() {
 const [selectedService, setSelectedService] = useState<Service | null>(null),
 
   const allServices = [
-    ...ultimateInnovativeServices2025
-    ...enterpriseITInfrastructureServices2025
-    ...innovativeMicroSaasSolutions2025
+    ...ultimateInnovativeServices2025;
+    ...enterpriseITInfrastructureServices2025;
+    ...innovativeMicroSaasSolutions2025;
   ]
 const filteredServices = selectedCategory === 'all'
-    ? allServices
+    ? allServices;
     : categories.find(cat => cat.id === selectedCategory)?.services || []
 const containerVariants = {
     hidd,
@@ -132,7 +137,7 @@ const containerVariants = {
   o: n: {
         staggerChildre,
   n: 0.1,delayChildr,
-  e: n: 0.2
+  e: n: 0.2;
       },
   },
   }
@@ -157,7 +162,7 @@ const itemVariants = {
   s: m: px-6 l,
   g:px-8">
         {/* Header */}
-        <motion.div
+        <motion.div;
           className="text-center mb-16"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -172,7 +177,7 @@ const itemVariants = {
           <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
-              Ultimate Innovation
+              Ultimate Innovation;
             </span>
             <br />
             <span className="text-white">Services Showcase</span>
@@ -200,7 +205,7 @@ const itemVariants = {
         </motion.div>
 
         {/* Category Navigation */}
-        <motion.div
+        <motion.div;
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -213,7 +218,7 @@ const itemVariants = {
   a: y: 0.2 },
   }
         >
-          <button
+          <button;
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               selectedCategory === 'all'
@@ -226,11 +231,11 @@ const itemVariants = {
             All Services ({allServices.length})
           </button>
           {categories.map((category) => (
-            <button
+            <button;
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category.id
+                selectedCategory === category.id;
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
                   : 'bg-zion-slate-light text-zion-gray-light,
   hove: r: bg-zion-slate hove,
@@ -243,7 +248,7 @@ const itemVariants = {
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8"
@@ -252,7 +257,7 @@ const itemVariants = {
           animate="visible"
         >
           {filteredServices.map((service) => (
-            <motion.div
+            <motion.div;
               key={service.id}
               variants={itemVariants}
               className="group relative"
@@ -267,7 +272,7 @@ const itemVariants = {
                     <div className="text-3xl">{service.icon}</div>
                     {service.popular && (
                       <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                        Popular
+                        Popular;
                       </span>
                     )}
                   </div>
@@ -343,22 +348,22 @@ const itemVariants = {
                     <span className="text-zion-gray-light">({service.reviews} reviews)</span>
                   </div>
                   <span className="text-zion-cyan font-semibold">
-                    {service.customers} customers
+                    {service.customers} customers;
                   </span>
                 </div>
 
                 {/* Action Buttons */}
                 <div className="flex gap-2">
-                  <button
+                  <button;
                     onClick={() => setSelectedService(service)}
                     className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold,
   hove: r: from-zion-blue hove,
   r:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
                   >
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4" />
                   </button>
-                  <Link
+                  <Link;
                     to={service.link}
                     className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold,
   hove: r: bg-zion-cyan hove,
@@ -373,7 +378,7 @@ const itemVariants = {
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div
+        <motion.div;
           className="text-center mt-16"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -394,16 +399,16 @@ const itemVariants = {
               Join hundreds of companies already using our innovative solutions to gain competitive advantages and achieve breakthrough results.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold,
   hove: r: from-zion-blue,
   hove: r:to-zion-cyan transition-all duration-300 flex items-center gap-2"
               >
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <a
+              <a;
                 href={`te,
   l:${contact.mobile}`
                   .replace(/\s/g, '')
@@ -413,7 +418,7 @@ const itemVariants = {
   r:text-white transition-all duration-300 flex items-center gap-2"
               >
                 <Phone className="w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </div>
@@ -435,7 +440,7 @@ const itemVariants = {
                     {selectedService.tagline}
                   </p>
                 </div>
-                <button
+                <button;
                   onClick={() => setSelectedService(null)}
                   className="text-zion-gray-light,
   hove: r: text-white text-2xl"
@@ -524,15 +529,15 @@ const itemVariants = {
                   </div>
 
                   <div className="flex gap-3">
-                    <Link
+                    <Link;
                       to={selectedService.link}
                       className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold,
   hove: r: from-zion-blue,
   hove: r:to-zion-cyan transition-all duration-300 text-center"
                     >
-                      Get Started
+                      Get Started;
                     </Link>
-                    <a
+                    <a;
                       href={`te,
   l:${contact.mobile}`
                         .replace(/\s/g, '')
@@ -554,4 +559,4 @@ const itemVariants = {
   )
 }
 
-export default UltimateServicesShowcase
+export default UltimateServicesShowcase;

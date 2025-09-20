@@ -1,42 +1,45 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Check
+  Check;
   Star,
   Zap,
   Brain,
   Cloud,
   Shield,
   Users,
-  ArrowRight
-  Crown
-  Sparkles
-  Flame
-  Infinity
-  Target
-  Award
-  Code
-  Server
-  Database
-  Network
-  Lock
-  Globe
-  Rocket
-  Heart
-  Scale
-  Leaf
-  TrendingUp
-  DollarSign
-  Calendar
-  Clock
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-} from "lucide-react"
-import { Link } from "react-router-dom"
+  ArrowRight;
+  Crown;
+  Sparkles;
+  Flame;
+  Infinity;
+  Target;
+  Award;
+  Code;
+  Server;
+  Database;
+  Network;
+  Lock;
+  Globe;
+  Rocket;
+  Heart;
+  Scale;
+  Leaf;
+  TrendingUp;
+  DollarSign;
+  Calendar;
+  Clock;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual')
   const [selectedPlan, setSelectedPlan] = useState<string>('pro')
@@ -193,36 +196,36 @@ export default function Pricing() {
   o: r: 'from-orange-500 to-red-500'
 },
   ]
-  const savings = billingCycle === 'annual' ? 0.17 : 0, // 17% savings for annual
+  const savings = billingCycle === 'annual' ? 0.17 : 0, // 17% savings for annual;
 const benefits = [
   {
   tit,
   l: e: 'Transparent Pricing',descripti,
   o: n: 'No hidden fees or surprise charges',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: 'Flexible Plans',descripti,
   o: n: 'Scale up or down as your business grows',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: 'Custom Solutions',descripti,
   o: n: 'Tailored packages for unique requirements',ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   tit,
   l: e: '24/7 Support',descripti,
   o: n: 'Round-the-clock assistance when you need it',ic,
-  o: n: Users
+  o: n: Users;
 },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Pricing - Zion Tech Group"
         description="Transparent pricing for our AI, cloud, and technology solutions. Choose the plan that fits your business needs and budget."
       />
@@ -240,11 +243,11 @@ const benefits = [
             </div>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Transparent
+              Transparent;
               <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"> Pricing</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Choose the pricing plan that best fits your business needs. We offer flexible options 
+              Choose the pricing plan that best fits your business needs. We offer flexible options;
               for businesses of all sizes with transparent pricing and no hidden fees.
             </p>
             
@@ -252,9 +255,9 @@ const benefits = [
   }
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-sm font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
-                Monthly
+                Monthly;
               </span>
-              <button
+              <button;
                 onClick={onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')},
   },
   }
@@ -267,7 +270,7 @@ const benefits = [
 }`} />
               </button>
               <span className={`text-sm font-medium ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}>
-                Annual
+                Annual;
                 {billingCycle === 'annual' && (
   <span className="ml-2 px-2 py-1 bg-green-500 text-white text-xs rounded-full">
                     Save 17%
@@ -292,17 +295,17 @@ const benefits = [
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Choose Your Plan
+              Choose Your Plan;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Select the plan that aligns with your business goals and scale as you grow
+              Select the plan that aligns with your business goals and scale as you grow;
             </p>
           </div>
 
           <div className="grid grid-cols-1,
   l: g:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={plan.name},
   }
                 initial={ opaci,
@@ -320,7 +323,7 @@ const benefits = [
   }
                 className={`relative p-8 rounded-2xl border transition-all duration-300,
   hove: r: scale-105 ${
-  plan.popular
+  plan.popular;
                     ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-slate-700/50 ring-2 ring-cyan-400/20'
                     : 'border-slate-700/50 bg-slate-800/30 hove,
   r:border-slate-600/50'
@@ -330,7 +333,7 @@ const benefits = [
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-indigo-400 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-1">
                       <Star className="w-4 h-4" />
-                      Most Popular
+                      Most Popular;
                     </div>
                   </div>
                 )}
@@ -348,7 +351,7 @@ const benefits = [
                     <span className="text-6xl font-bold text-white">
                       {billingCycle === 'annual' 
                         ? Math.round(plan.price.annual * (1 - savings))
-                        : plan.price.monthly
+                        : plan.price.monthly;
 }
                     </span>
                     <span className="text-gray-400 ml-2">
@@ -358,7 +361,7 @@ const benefits = [
                   </div>
                   {billingCycle === 'annual' && (
   <p className="text-green-400 text-sm mt-2">
-                      Save ${Math.round(plan.price.annual * savings)} annually
+                      Save ${Math.round(plan.price.annual * savings)} annually;
                     </p>
                   )}
                 </div>
@@ -373,11 +376,11 @@ const benefits = [
                   ))}
                 </ul>
 
-                <Link
+                <Link;
                   to={plan.link},
   }
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-indigo-500 to-purple-600,
   hove: r: from-indigo-600,
   hove: r:to-purple-700 text-white,
@@ -403,17 +406,17 @@ const benefits = [
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Custom Service Packages
+              Custom Service Packages;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Need a custom solution? We offer tailored packages for specific business requirements
+              Need a custom solution? We offer tailored packages for specific business requirements;
             </p>
           </div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {servicePackages.map((service, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="p-8 rounded-2xl bg-slate-800/50,
@@ -442,12 +445,12 @@ const benefits = [
                   ))}
                 </ul>
 
-                <Link
+                <Link;
                   to="/contact"
                   className="className="inline-flex items-center gap-2 text-indigo-400,
   hove: r:text-indigo-300 font-medium transition-colors";"
                 >
-                  Get Custom Quote
+                  Get Custom Quote;
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -465,7 +468,7 @@ const benefits = [
               What Affects Pricing?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Understanding the factors that influence project costs helps you plan your budget effectively
+              Understanding the factors that influence project costs helps you plan your budget effectively;
             </p>
           </div>
 
@@ -473,7 +476,7 @@ const benefits = [
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {pricingFactors.map((factor, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="text-center p-6 rounded-2xl bg-slate-800/50,
@@ -498,10 +501,10 @@ const benefits = [
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise Features
+              Enterprise Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced capabilities for large organizations with complex requirements
+              Advanced capabilities for large organizations with complex requirements;
             </p>
           </div>
 
@@ -552,7 +555,7 @@ const benefits = [
   o: r: 'from-cyan-500 to-blue-500'
 },
   ].map((feature, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="p-6 rounded-2xl bg-slate-800/50,
@@ -575,7 +578,7 @@ const benefits = [
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -603,7 +606,7 @@ const benefits = [
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={benefit.title},
   }
                 initial={ opaci,
@@ -636,7 +639,7 @@ const benefits = [
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -653,7 +656,7 @@ const benefits = [
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
+              Frequently Asked Questions;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get answers to common questions about our pricing and services.
@@ -683,7 +686,7 @@ const benefits = [
   e: r: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time setup costs depending on complexity.'
 },
   ].map((faq, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -713,7 +716,7 @@ const benefits = [
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -737,7 +740,7 @@ const benefits = [
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/request-quote"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600,
   hove: r:from-cyan-600,
@@ -745,16 +748,16 @@ const benefits = [
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-cyan-500/25";"
               >
-                Get Your Quote
+                Get Your Quote;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400,
   hove: r:bg-cyan-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Talk to Sales
+                Talk to Sales;
               </a>
             </div>
           </motion.div>

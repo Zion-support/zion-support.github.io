@@ -1,20 +1,22 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Building
+  Building;
   Heart,
   Factory,
   DollarSign,
   Car,
-  Zap
-  Globe
-  Star
-  Brain
-  Cloud
-  Shield
-  TrendingUp
-} from "lucide-react"
-import { Link } from "react-router-dom"
+  Zap;
+  Globe;
+  Star;
+  Brain;
+  Cloud;
+  Shield;
+  TrendingUp;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
 const,
   IndustrySolution: s: React.FC = () () => {
   const industries = [
@@ -80,25 +82,25 @@ const,
   tit,
   l: e: 'Industry Expertise',descripti,
   o: n: 'Deep understanding of industry-specific challenges and requirements',ic,
-  o: n: Brain
+  o: n: Brain;
 },
   {
   tit,
   l: e: 'Customized Solutions',descripti,
   o: n: 'Tailored technology solutions for your specific industry needs',ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   tit,
   l: e: 'Proven Results',descripti,
   o: n: 'Track record of successful implementations across industries',ic,
-  o: n: Star
+  o: n: Star;
 },
   {
   tit,
   l: e: 'Future-Ready',descripti,
   o: n: 'Scalable solutions that grow with your business',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   ]
   return (
@@ -112,7 +114,7 @@ const,
         <div className="relative max-w-7xl mx-auto px-4,
   s: m:px-6,
   l: g:px-8 pt-32 pb-16">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -131,10 +133,10 @@ const,
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Industry Solutions
+              Industry Solutions;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Zion Tech Group delivers industry-specific technology solutions that address unique challenges 
+              Zion Tech Group delivers industry-specific technology solutions that address unique challenges;
               and drive transformation across diverse sectors. From healthcare to manufacturing, we understand your industry.
             </p>
           </motion.div>
@@ -146,7 +148,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -171,7 +173,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
               key={benefit.title},
   }
               initial={ opaci,
@@ -202,7 +204,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -216,7 +218,7 @@ const,
           className="className="text-center mb-12";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Industry Solutions
+            Industry Solutions;
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Comprehensive technology solutions designed specifically for your industry challenges.
@@ -227,7 +229,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
-  <motion.div
+  <motion.div;
               key={industry.title},
   }
               initial={ opaci,
@@ -269,7 +271,7 @@ const,
                 </ul>
               </div>
               
-              <Link
+              <Link;
                 to={industry.path},
   }
                 className="className="inline-flex items-center space-x-2 text-cyan-400,
@@ -289,7 +291,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -310,22 +312,22 @@ const,
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-600 transition-all duration-200,
   transform: hover:scale-105";"
             >
-              Get Started
+              Get Started;
             </Link>
-            <Link
+            <Link;
               to="/services"
               className="className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-200";"
             >
-              View All Services
+              View All Services;
             </Link>
           </div>
         </motion.div>
@@ -333,4 +335,4 @@ const,
     </div>
   )
 }
-export default IndustrySolutions
+export default IndustrySolutions;

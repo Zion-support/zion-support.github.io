@@ -1,6 +1,6 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { DollarSign, CheckCircle2, ExternalLink, Phone, Mail } from "lucide-react"
+import { SEO     } from "@/components/SEO";
+import { DollarSign, CheckCircle2, ExternalLink, Phone, Mail     } from "lucide-react";
 const,
   AISEOAudito: r: React.FC = () () => {
   return (
@@ -11,7 +11,7 @@ const,
         <h1 className="text-4xl,
   s: m:text-5xl font-extrabold tracking-tight">AI SEO Auditor</h1>
         <p className="mt-4 max-w-3xl text-slate-300">
-          Identify SEO issues, generate prioritized fixes, and ship updates automatically with guardrails. Nightly
+          Identify SEO issues, generate prioritized fixes, and ship updates automatically with guardrails. Nightly;
           crawls, Core Web Vitals checks, structured data validation, and content suggestions.
         </p>
 
@@ -32,7 +32,7 @@ const,
 
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-2 text-slate-200 font-semibold">
-            <DollarSign className="h-4 w-4" /> Pricing
+            <DollarSign className="h-4 w-4" /> Pricing;
           </div>
           <ul className="mt-3 grid gap-3,
   s: m: grid-cols-2 text-slate-300 text-sm">
@@ -63,4 +63,4 @@ const,
     </div>
   )
 }
-export default AISEOAuditor
+export default AISEOAuditor;

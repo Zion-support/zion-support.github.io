@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Link } from "react-router-dom"
-import { useTranslation } from "react-i18next"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react"
-import { useRef } from "react"
+import { Button   } from "@/components/ui/button";
+import { GradientHeading   } from "@/components/GradientHeading";
+import { Link   } from "react-router-dom";
+import { useTranslation   } from "react-i18next";
+import { motion, useScroll, useTransform   } from "framer-motion";
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield   } from "lucide-react";
+import { useRef   } from "react";
 export function HeroSection() {
     const { t } = useTranslation()
 const containerRef = useRef(null)
@@ -26,7 +26,7 @@ const containerVariants = {
   o: n: {
                 staggerChildre,
   n: 0.2,delayChildr,
-  e: n: 0.1
+  e: n: 0.1;
             },
   },
   }
@@ -98,7 +98,7 @@ const particleVariants = {
         <section ref={containerRef} className="relative overflow-hidden py-20,
   m: d:py-32 min-h-screen flex items-center">
             {/* Enhanced background with parallax effect */}
-            <motion.div 
+            <motion.div;
                 className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90" 
                 style={ y, opacity },
   }
@@ -106,12 +106,12 @@ const particleVariants = {
             
             {/* Animated floating particles with better positioning and variety */}
             <div className="absolute inset-0">
-                <motion.div 
+                <motion.div;
                     className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60" 
                     variants={floatingVariants} 
                     animate="animate"
                 />
-                <motion.div 
+                <motion.div;
                     className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50" 
                     variants={floatingVariants} 
                     animate="animate" 
@@ -119,7 +119,7 @@ const particleVariants = {
   a: y: "1s" },
   }
                 />
-                <motion.div 
+                <motion.div;
                     className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70" 
                     variants={floatingVariants} 
                     animate="animate" 
@@ -127,7 +127,7 @@ const particleVariants = {
   a: y: "2s" },
   }
                 />
-                <motion.div 
+                <motion.div;
                     className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light" 
                     variants={particleVariants} 
                     animate="animate" 
@@ -135,7 +135,7 @@ const particleVariants = {
   a: y: "0.5s" },
   }
                 />
-                <motion.div 
+                <motion.div;
                     className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-80" 
                     variants={floatingVariants} 
                     animate="animate" 
@@ -143,7 +143,7 @@ const particleVariants = {
   a: y: "1.5s" },
   }
                 />
-                <motion.div 
+                <motion.div;
                     className="absolute top-1/6 right-1/6 w-4 h-4 rounded-full bg-zion-cyan opacity-40" 
                     variants={floatingVariants} 
                     animate="animate" 
@@ -154,7 +154,7 @@ const particleVariants = {
             </div>
 
             {/* Enhanced decorative geometric shapes with animations */}
-            <motion.div 
+            <motion.div;
                 className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" 
                 animate={ rota,
   t: e: 360 },
@@ -165,7 +165,7 @@ const particleVariants = {
   s: e: "linear" },
   }
             />
-            <motion.div 
+            <motion.div;
                 className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30" 
                 animate={ rota,
   t: e: -360 },
@@ -178,12 +178,12 @@ const particleVariants = {
             />
             
             {/* New floating elements */}
-            <motion.div 
+            <motion.div;
                 className="absolute top-1/3 left-10 w-16 h-16 border border-zion-cyan/30 rounded-full opacity-20" 
                 variants={pulseVariants} 
                 animate="animate"
             />
-            <motion.div 
+            <motion.div;
                 className="absolute bottom-1/3 right-10 w-20 h-20 border border-zion-purple/30 rounded-full opacity-20" 
                 variants={pulseVariants} 
                 animate="animate" 
@@ -192,7 +192,7 @@ const particleVariants = {
   }
             />
             
-            <motion.div 
+            <motion.div;
                 className="container relative z-10 px-4 mx-auto text-center" 
                 variants={containerVariants} 
                 initial="hidden" 
@@ -216,7 +216,7 @@ const particleVariants = {
 
                 {/* Enhanced feature highlights with icons and animations */}
                 <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-8 mb-16 text-zion-slate-light">
-                    <motion.div 
+                    <motion.div;
                         className="flex items-center gap-3 group" 
                         whileHover={ sca,
   l: e: 1.05 },
@@ -233,7 +233,7 @@ const particleVariants = {
                         <span className="font-medium">AI-Powered Matching</span>
                     </motion.div>
                     
-                    <motion.div 
+                    <motion.div;
                         className="flex items-center gap-3 group" 
                         whileHover={ scal,
   e: 1.05 },
@@ -250,7 +250,7 @@ const particleVariants = {
                         <span className="font-medium">Global Talent Pool</span>
                     </motion.div>
                     
-                    <motion.div 
+                    <motion.div;
                         className="flex items-center gap-3 group" 
                         whileHover={ scal,
   e: 1.05 },
@@ -271,7 +271,7 @@ const particleVariants = {
                 {/* Enhanced CTA buttons with better animations and effects */}
                 <motion.div variants={itemVariants} className="flex flex-col,
   s: m: flex-row justify-center gap-6 mb-16">
-                    <motion.div 
+                    <motion.div;
                         whileHover={ scal,
   e: 1.05 },
   } 
@@ -284,7 +284,7 @@ const particleVariants = {
   n: g: 10 },
   }
                     >
-                        <Link 
+                        <Link;
                             to="/signup" 
                             className="group bg-gradient-to-r from-zion-purple via-zion-purple-dark to-zion-purple,
   hove: r: from-zion-purple-light,
@@ -298,7 +298,7 @@ const particleVariants = {
                         </Link>
                     </motion.div>
                     
-                    <motion.div 
+                    <motion.div;
                         whileHover={ scal,
   e: 1.05 },
   } 
@@ -311,7 +311,7 @@ const particleVariants = {
   n: g: 10 },
   }
                     >
-                        <Link 
+                        <Link;
                             id="browse-marketplace" 
                             to="/marketplace" 
                             className="group border-2 border-zion-cyan text-zion-cyan,
@@ -332,7 +332,7 @@ const particleVariants = {
                 <motion.div variants={itemVariants} className="mt-20 text-zion-slate-light/80">
                     <p className="text-lg mb-6 font-medium">Trusted by leading companies worldwide</p>
                     <div className="flex justify-center items-center gap-12 opacity-60">
-                        <motion.div 
+                        <motion.div;
                             className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" 
                             whileHover={ sca,
   l: e: 1.1, opaci,
@@ -343,7 +343,7 @@ const particleVariants = {
   s: s: 400 },
   }
                         />
-                        <motion.div 
+                        <motion.div;
                             className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" 
                             whileHover={ sca,
   l: e: 1.1, opaci,
@@ -354,7 +354,7 @@ const particleVariants = {
   s: s: 400 },
   }
                         />
-                        <motion.div 
+                        <motion.div;
                             className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" 
                             whileHover={ sca,
   l: e: 1.1, opaci,
@@ -365,7 +365,7 @@ const particleVariants = {
   s: s: 400 },
   }
                         />
-                        <motion.div 
+                        <motion.div;
                             className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" 
                             whileHover={ sca,
   l: e: 1.1, opaci,
@@ -382,7 +382,7 @@ const particleVariants = {
                 {/* New stats section */}
                 <motion.div variants={itemVariants} className="mt-16 grid grid-cols-1,
   m: d: grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <motion.div 
+                    <motion.div;
                         className="text-center group" 
                         whileHover={ ,
   y: -5 },
@@ -399,7 +399,7 @@ const particleVariants = {
                         <div className="text-zion-slate-light">Active Users</div>
                     </motion.div>
                     
-                    <motion.div 
+                    <motion.div;
                         className="text-center group" 
                         whileHover={ ,
   y: -5 },
@@ -416,7 +416,7 @@ const particleVariants = {
                         <div className="text-zion-slate-light">AI Services</div>
                     </motion.div>
                     
-                    <motion.div 
+                    <motion.div;
                         className="text-center group" 
                         whileHover={ ,
   y: -5 },

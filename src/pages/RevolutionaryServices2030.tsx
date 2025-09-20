@@ -1,8 +1,8 @@
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  Rocket
+  Rocket;
   Brain,
   Shield,
   Cloud,
@@ -16,45 +16,47 @@ import {
   Zap,
   Users,
   Star,
-  ArrowRight
-  Play
-  Download
-  ExternalLink
-  CheckCircle
-  Sparkles
-  Flame
-  Crown
-  Infinity
-  Cpu
-  Eye
-  MessageCircle
-  ShoppingCart
-  Settings
-  Code
-  Truck
-  Building
-  BarChart3
-  PenTool
-  Server
-  Smartphone
-  Network
-  Clock
-  ShoppingCart
-  FileText
-  Key
-  Globe2
-  ShieldCheck
-  Leaf
-  Scale
-  Building2
-  Car
-  Home
-  Factory
-  City
-  CheckCircle2
-  ArrowUpRight
-  MailIcon
-} from "lucide-react"
+  ArrowRight;
+  Play;
+  Download;
+  ExternalLink;
+  CheckCircle;
+  Sparkles;
+  Flame;
+  Crown;
+  Infinity;
+  Cpu;
+  Eye;
+  MessageCircle;
+  ShoppingCart;
+  Settings;
+  Code;
+  Truck;
+  Building;
+  BarChart3;
+  PenTool;
+  Server;
+  Smartphone;
+  Network;
+  Clock;
+  ShoppingCart;
+  FileText;
+  Key;
+  Globe2;
+  ShieldCheck;
+  Leaf;
+  Scale;
+  Building2;
+  Car;
+  Home;
+  Factory;
+  City;
+  CheckCircle2;
+  ArrowUpRight;
+  MailIcon;
+}
+}
+ } from "lucide-react";
 const,
   RevolutionaryServices203: 0: React.FC = () () => {
   const services = [
@@ -375,7 +377,7 @@ const,
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Revolutionary Services 2030 - Zion Tech Group"
         description="Experience the future of technology with Zion Tech Group's Revolutionary Services 2030. AI autonomous operations, quantum cybersecurity, and next-generation solutions."
         keywords="Revolutionary Services 2030, AI autonomous operations, quantum cybersecurity, future technology, Zion Tech Group"
@@ -386,7 +388,7 @@ const,
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -400,18 +402,18 @@ const,
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2" />
-              Revolutionary Services 2030
+              Revolutionary Services 2030;
             </div>
             <h1 className="text-6xl,
   m: d: text-7xl font-bold text-white mb-6">
-              The Future of
+              The Future of;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Technology
+                Technology;
               </span>
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience revolutionary AI-powered solutions that will transform your business operations
+              Experience revolutionary AI-powered solutions that will transform your business operations;
               secure your digital assets, and propel you into the future of technology.
             </p>
             <div className="flex flex-col,
@@ -422,14 +424,14 @@ const,
   hove: r:shadow-lg,
   hove: r:shadow-cyan-500/25 flex items-center gap-2 group">
                 <Play className="w-5 h-5" />
-                Watch Demo
+                Watch Demo;
                 <ArrowRight className="w-5 h-5 group-hov,
   e: r:translate-x-1 transition-transform duration-300" />
               </button>
               <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-xl hove,
   r:bg-slate-700/50 transition-all duration-300 flex items-center gap-2">
                 <Download className="w-5 h-5" />
-                Download Brochure
+                Download Brochure;
               </button>
             </div>
           </motion.div>
@@ -444,7 +446,7 @@ const,
   m: d: grid-cols-3 l,
   g:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
-  <motion.div
+  <motion.div;
                 key={stat.label},
   }
                 initial={ opaci,
@@ -476,7 +478,7 @@ const,
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -493,7 +495,7 @@ const,
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Revolutionary Services
+              Revolutionary Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our cutting-edge services that will redefine what's possible in technology and business.
@@ -503,7 +505,7 @@ const,
           <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -547,7 +549,7 @@ const,
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                       <Sparkles className="w-5 h-5 text-cyan-400" />
-                      Key Features
+                      Key Features;
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
@@ -563,7 +565,7 @@ const,
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                       <Crown className="w-5 h-5 text-yellow-400" />
-                      Benefits
+                      Benefits;
                     </h4>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, benefitIndex) => (
@@ -579,7 +581,7 @@ const,
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                       <Target className="w-5 h-5 text-blue-400" />
-                      Use Cases
+                      Use Cases;
                     </h4>
                     <ul className="space-y-2">
                       {service.useCases.map((useCase, useCaseIndex) => (
@@ -600,7 +602,7 @@ const,
   hove: r:shadow-lg,
   hove: r:shadow-cyan-500/25 flex items-center justify-center gap-2 group">
                     <Rocket className="w-4 h-4" />
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4 group-hove,
   r:translate-x-1 transition-transform duration-300" />
                   </button>
@@ -615,7 +617,7 @@ const,
   }
       <section className="py-20 bg-slate-800/20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -632,7 +634,7 @@ const,
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              What Our Clients Say
+              What Our Clients Say;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Hear from industry leaders who have transformed their businesses with our Revolutionary Services 2030.
@@ -642,7 +644,7 @@ const,
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-  <motion.div
+  <motion.div;
                 key={testimonial.name},
   }
                 initial={ opaci,
@@ -691,7 +693,7 @@ const,
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center border border-cyan-500/20">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -721,14 +723,14 @@ const,
   hove: r:shadow-lg,
   hove: r:shadow-cyan-500/25 flex items-center gap-2 group">
                   <Rocket className="w-5 h-5" />
-                  Get Started Today
+                  Get Started Today;
                   <ArrowRight className="w-5 h-5 group-hov,
   e: r:translate-x-1 transition-transform duration-300" />
                 </button>
                 <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-xl hove,
   r:bg-slate-700/50 transition-all duration-300 flex items-center gap-2">
                   <MailIcon className="w-5 h-5" />
-                  Contact Sales
+                  Contact Sales;
                 </button>
               </div>
             </motion.div>
@@ -738,4 +740,4 @@ const,
     </div>
   )
 }
-export default RevolutionaryServices2030
+export default RevolutionaryServices2030;

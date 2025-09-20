@@ -1,24 +1,24 @@
 import React, { useState } from "react"
-import { ADVANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from "@/data/advancedServices"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/Input"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from "lucide-react"
+import { ADVANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS   } from "@/data/advancedServices";
+import { Button   } from "@/components/ui/button";
+import { Input   } from "@/components/ui/Input";
+import { Badge   } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink   } from "lucide-react";
 import SEO from "@/components/SEO"
 export default function AdvancedServicesPage() {
   const [searchQuery, setSearchQuery] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [sortBy, setSortBy] = useState('featured')
-    // Filter services based on search and category
+    // Filter services based on search and category;
 const filteredServices = ADVANCED_SERVICES.filter(service () => {
   const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-        return matchesSearch && matchesCategory
+        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+        return matchesSearch && matchesCategory;
 })
-    // Sort services
+    // Sort services;
 const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price-low':
@@ -44,7 +44,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-            Advanced AI & IT Solutions
+            Advanced AI & IT Solutions;
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Transform your business with cutting-edge artificial intelligence, cybersecurity, and digital transformation services. 
@@ -71,12 +71,12 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan,
   hove: r: bg-zion-cyan-dark text-zion-blue font-semibold">
-              Get Free Consultation
+              Get Free Consultation;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan hove,
   r:text-zion-blue">
-              View Pricing
+              View Pricing;
             </Button>
           </div>
         </div>
@@ -121,7 +121,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Service Categories</h2>
             <p className="text-zion-slate-light text-lg">
-              Comprehensive solutions across all major technology domains
+              Comprehensive solutions across all major technology domains;
             </p>
           </div>
           
@@ -140,7 +140,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 </CardHeader>
                 <CardContent className="text-center">
                   <Badge variant="secondary" className="bg-zion-cyan text-zion-blue">
-                    {category.count} Services
+                    {category.count} Services;
                   </Badge>
                 </CardContent>
               </Card>))}
@@ -154,10 +154,10 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue mb-4">
-              {filteredServices.length} Advanced Services Available
+              {filteredServices.length} Advanced Services Available;
             </h2>
             <p className="text-zion-slate text-lg">
-              Expert solutions with proven results and comprehensive support
+              Expert solutions with proven results and comprehensive support;
             </p>
           </div>
 
@@ -176,7 +176,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Flexible Pricing Plans</h2>
             <p className="text-zion-slate-light text-lg">
-              Choose the plan that fits your business needs and budget
+              Choose the plan that fits your business needs and budget;
             </p>
           </div>
           
@@ -200,7 +200,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                   </ul>
                   <Button className="w-full mt-6 bg-zion-cyan,
   hove: r:bg-zion-cyan-dark text-zion-blue font-semibold">
-                    Get Started
+                    Get Started;
                   </Button>
                 </CardContent>
               </Card>))}
@@ -215,7 +215,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-zion-slate text-lg">
-              Proven expertise, innovative solutions, and dedicated support
+              Proven expertise, innovative solutions, and dedicated support;
             </p>
           </div>
           
@@ -270,13 +270,13 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
             <Button size="lg" className="bg-zion-cyan,
   hove: r: bg-zion-cyan-dark text-zion-blue font-semibold">
               <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan,
   hove: r:text-zion-blue">
               <Mail className="w-5 h-5 mr-2"/>
-              Email kleber@ziontechgroup.com
+              Email kleber@ziontechgroup.com;
             </Button>
           </div>
           
@@ -295,7 +295,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
       </section>
     </div>)
 }
-// Service Card Component
+// Service Card Component;
 function ServiceCard({ service }) {
   return (<Card className="h-full,
   hove: r: shadow-lg transition-all duration-300 border-zion-blue-light hove,
@@ -304,7 +304,7 @@ function ServiceCard({ service }) {
         <img src={service.images[0],
   } alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
         {service.featured && (<Badge className="absolute top-3 right-3 bg-zion-cyan text-zion-blue">
-            Featured
+            Featured;
           </Badge>)}
       </div>
       
@@ -373,12 +373,12 @@ function ServiceCard({ service }) {
         <div className="flex gap-2">
           <Button className="flex-1 bg-zion-cyan,
   hove: r: bg-zion-cyan-dark text-zion-blue font-semibold">
-            Get Quote
+            Get Quote;
           </Button>
           <Button variant="outline" className="border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan hove,
   r:text-zion-blue">
-            Learn More
+            Learn More;
           </Button>
         </div>
       </CardContent>

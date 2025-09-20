@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap } from "lucide-react"
+import { motion   } from "framer-motion";
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap   } from "lucide-react";
 const,
   NewsletterSectio: n: React.FC = () () => {
   const [email, setEmail] = useState('')
@@ -11,7 +12,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
     if (!email) return,
 
     setIsLoading(true)
-    // Simulate API call
+    // Simulate API call;
     setTimeout(() () => {
       setIsSubscribed(true)
       setIsLoading(false)
@@ -41,7 +42,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
     return (
       <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -60,10 +61,10 @@ const handleSubmit = async (e: React.FormEvent) () => {
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>
             <p className="text-gray-300 text-lg mb-6">
-              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights
+              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights;
               service announcements, and exclusive content.
             </p>
-            <button
+            <button;
               onClick={() => setIsSubscribed(false)}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full,
   hove: r: from-cyan-600,
@@ -72,7 +73,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
   hove: r:shadow-lg hove,
   r:shadow-cyan-500/25"
             >
-              Subscribe Another Email
+              Subscribe Another Email;
             </button>
           </motion.div>
         </div>
@@ -86,7 +87,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
         <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: -30 },
   }
@@ -99,7 +100,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Stay Ahead with Zion Tech Group
+              Stay Ahead with Zion Tech Group;
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Get exclusive access to the latest technology insights, service updates, and industry trends.
@@ -108,7 +109,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
 
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={ opaci,
   t: y: 0, x: -20 },
@@ -140,7 +141,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
           </motion.div>
 
           {/* Right Column - Newsletter Form */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -164,9 +165,9 @@ const handleSubmit = async (e: React.FormEvent) () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
+                    Email Address;
                   </label>
-                  <input
+                  <input;
                     type="email"
                     id="email"
                     value={email}
@@ -177,11 +178,11 @@ const handleSubmit = async (e: React.FormEvent) () => {
   focu: s:ring-2,
   focu: s:ring-cyan-500 focu,
   s:border-transparent transition-all duration-300"
-                    required
+                    required;
                   />
                 </div>
 
-                <button
+                <button;
                   type="submit"
                   disabled={isLoading || !email}
                   className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
@@ -200,7 +201,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
                     </div>
                   ) : (
                     <>
-                      Subscribe Now
+                      Subscribe Now;
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </>
                   )}
@@ -212,12 +213,12 @@ const handleSubmit = async (e: React.FormEvent) () => {
                   By subscribing, you agree to our{' '}
                   <a href="/privacy" className="text-cyan-400,
   hove: r: text-cyan-300 underline">
-                    Privacy Policy
+                    Privacy Policy;
                   </a>{' '}
                   and{' '}
                   <a href="/terms" className="text-cyan-400,
   hove: r: text-cyan-300 underline">
-                    Terms of Service
+                    Terms of Service;
                   </a>
                 </p>
               </div>
@@ -228,4 +229,4 @@ const handleSubmit = async (e: React.FormEvent) () => {
     </section>
   )
 }
-export default NewsletterSection
+export default NewsletterSection;

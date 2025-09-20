@@ -1,55 +1,54 @@
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Search, Filter, Star, Sparkles, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, ChevronDown, CheckCircle, ExternalLink } from "lucide-react"
-import { SEO } from "@/components/SEO"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028"
-import { COMPREHENSIVE_IT_SERVICES_2028 } from "../data/comprehensiveITServices2028"
-import { COMPREHENSIVE_PRICING_2028 } from "../data/comprehensivePricingGuide2028"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Search, Filter, Star, Sparkles, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, ChevronDown, CheckCircle, ExternalLink   } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028   } from "../data/innovativeMicroSaasServices2028";
+import { COMPREHENSIVE_IT_SERVICES_2028   } from "../data/comprehensiveITServices2028";
+import { COMPREHENSIVE_PRICING_2028   } from "../data/comprehensivePricingGuide2028";
 export default function Services2028() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedPriceRange, setSelectedPriceRange] = useState('all')
   const [sortBy, setSortBy] = useState('featured')
 
-  // Combine all services
+  // Combine all services;
 const allServices = [
-  ...INNOVATIVE_MICRO_SAAS_SERVICES_2028
-    ...COMPREHENSIVE_IT_SERVICES_2028
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2028;
+    ...COMPREHENSIVE_IT_SERVICES_2028;
 ]
 
-  // Get unique categories
+  // Get unique categories;
 const categories = [['all', ...Array.from(new Set(allServices.map(s => s.category)))],
   ]
 
-  // Filter services based on search and filters
+  // Filter services based on search and filters;
 const filteredServices = allServices.filter(service () => {
   const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
     
-const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    
+const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'low' && service.price < 2000) ||
                         (selectedPriceRange === 'medium' && service.price >= 2000 && service.price < 5000) ||
                         (selectedPriceRange === 'high' && service.price >= 5000)
     
-    return matchesSearch && matchesCategory && matchesPrice
+    return matchesSearch && matchesCategory && matchesPrice;
 })
 
-  // Sort services
+  // Sort services;
 const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price-low':
-        return a.price - b.price
+        return a.price - b.price;
       case 'price-high':
-        return b.price - a.price
+        return b.price - a.price;
       case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'name':
         return a.title.localeCompare(b.title)
       defau,
-  l: t: return b.featured ? 1 : -1
+  l: t: return b.featured ? 1 : -1;
 },
   })
   const const contactInfo = {
@@ -67,7 +66,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
       <div className="futuristic-bg">
         {[...Array(15)].map((_, i) => (
-  <div
+  <div;
             key={i},
   }
             className="className="matrix-rain";"
@@ -86,7 +85,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
           </div>
         ))},
   {[...Array(10)].map((_, i) => (
-  <div
+  <div;
             key={i},
   }
             className="className="quantum-particles";"
@@ -103,7 +102,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
         ))}
       </div>
 
-      <SEO 
+      <SEO;
         title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions"
         description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology."
         keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
@@ -113,7 +112,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -127,12 +126,12 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-neon-cyan via-neon-blue to-neon-purple bg-clip-text text-transparent">
-                2028 Services
+                2028 Services;
               </span>
             </h1>
             <p className="text-xl m,
   d:text-2xl text-neon-cyan/80 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, Quantum Computing, Blockchain & Web3, Edge Computing, and Enterprise IT Solutions
+              Revolutionary AI, Quantum Computing, Blockchain & Web3, Edge Computing, and Enterprise IT Solutions;
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center space-x-2 text-neon-green">
@@ -150,17 +149,17 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
             </div>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="#services"
                 className="className="btn-futuristic btn-primary text-lg px-8 py-4";"
               >
-                Explore Services
+                Explore Services;
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="className="btn-futuristic btn-secondary text-lg px-8 py-4";"
               >
-                Get Free Quote
+                Get Free Quote;
               </a>
             </div>
           </motion.div>
@@ -179,7 +178,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
               <div className="lg:col-span-2">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neon-cyan" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery},
@@ -198,7 +197,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
               {/* Category Filter */},
   }
               <div>
-                <select
+                <select;
                   value={selectedCategory},
   }
                   onChange={(e) => setSelectedCategory(e.target.value)},
@@ -221,7 +220,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
               {/* Price Filter */},
   }
               <div>
-                <select
+                <select;
                   value={selectedPriceRange},
   }
                   onChange={(e) => setSelectedPriceRange(e.target.value)},
@@ -246,7 +245,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
               <div className="flex items-center space-x-4">
                 <span className="text-neon-cyan font-semibold">Sort,
   b: y:</span>
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value)},
@@ -265,7 +264,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 </select>
               </div>
               <div className="text-neon-cyan">
-                {filteredServices.length} services found
+                {filteredServices.length} services found;
               </div>
             </div>
           </div>
@@ -280,7 +279,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -340,7 +339,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                     <span className="text-neon-cyan text-sm">Pri,
   c: e:</span>
                     <span className="text-neon-green font-bold text-lg">
-                      ${service.price.toLocaleString()}/month
+                      ${service.price.toLocaleString()}/month;
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
@@ -368,7 +367,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                     ))},
   {service.features.length > 3 && (
   <div className="text-neon-cyan/70 text-sm">
-                        +{service.features.length - 3} more features
+                        +{service.features.length - 3} more features;
                       </div>
                     )}
                   </div>
@@ -377,18 +376,18 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 {/* Service Actions */},
   }
                 <div className="flex flex-col space-y-3">
-                  <a
+                  <a;
                     href={service.href},
   }
                     className="className="btn-futuristic btn-primary w-full text-center";"
                   >
-                    Learn More
+                    Learn More;
                   </a>
-                  <a
+                  <a;
                     href="/contact"
                     className="className="btn-futuristic btn-secondary w-full text-center";"
                   >
-                    Get Quote
+                    Get Quote;
                   </a>
                 </div>
 
@@ -396,7 +395,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
                 <div className="mt-4 flex flex-wrap gap-2">
                   {service.tags.slice(0, 3).map((tag, idx) => (
-  <span
+  <span;
                       key={idx},
   }
                       className="className="px-2 py-1 bg-neon-cyan/10 border border-neon-cyan/20 rounded text-neon-cyan text-xs";"
@@ -416,7 +415,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
       <section className="py-20 bg-cyber-gray/30">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -435,7 +434,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-neon-cyan/80 mb-8 max-w-3xl mx-auto">
-              Get in touch with our experts to discuss how our 2028 services can revolutionize your operations
+              Get in touch with our experts to discuss how our 2028 services can revolutionize your operations;
             </p>
             
             <div className="grid grid-cols-1,
@@ -467,7 +466,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
 
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center mb-8">
-              <a
+              <a;
                 href={`te,
   l:${contactInfo.phone}`}
                 className="className="btn-futuristic btn-primary text-lg px-8 py-4";"
@@ -475,12 +474,12 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 Call {contactInfo.phone},
   }
               </a>
-              <a
+              <a;
                 href={`mail,
   t: o:${contactInfo.email}`}
                 className="className="btn-futuristic btn-secondary text-lg px-8 py-4";"
               >
-                Email Us
+                Email Us;
               </a>
             </div>
 

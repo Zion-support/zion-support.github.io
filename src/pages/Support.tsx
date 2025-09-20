@@ -1,31 +1,34 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { SEO } from "../components/SEO"
+import { SEO   } from "../components/SEO";
 import {
-  HelpCircle
+  HelpCircle;
   MessageCircle,
   Phone,
   Mail,
   Clock,
-  Search
-  BookOpen
-  FileText
-  Video
-  Users
-  Zap
-  CheckCircle
-  ArrowRight
-  ExternalLink
-  Ticket
-  MessageCircle
-  Headphones
-  Globe
-  Smartphone
-  Monitor
-  Shield
-  Rocket
-  Brain
-  Cloud
-} from "lucide-react"
+  Search;
+  BookOpen;
+  FileText;
+  Video;
+  Users;
+  Zap;
+  CheckCircle;
+  ArrowRight;
+  ExternalLink;
+  Ticket;
+  MessageCircle;
+  Headphones;
+  Globe;
+  Smartphone;
+  Monitor;
+  Shield;
+  Rocket;
+  Brain;
+  Cloud;
+}
+}
+ } from "lucide-react";
 const,
   Suppor: t: React.FC = () () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -181,7 +184,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Support - Zion Tech Group"
         description="Get help and support for all Zion Tech Group products and services. 24/7 support available through multiple channels including live chat, phone, and email."
       />
@@ -194,7 +197,7 @@ const,
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-cyan-400/10 border border-cyan-400/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <HelpCircle className="w-4 h-4 mr-2" />
-              Customer Support
+              Customer Support;
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
@@ -210,11 +213,11 @@ const,
   hove: r:from-cyan-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg">
-                Start Live Chat
+                Start Live Chat;
               </button>
               <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-200">
-                Submit Ticket
+                Submit Ticket;
               </button>
             </div>
           </div>
@@ -228,7 +231,7 @@ const,
           <div className="max-w-2xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search for help articles, tutorials, or common issues..."
                 value={searchQuery},
@@ -252,10 +255,10 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Multiple Ways to Get Support
+              Multiple Ways to Get Support;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the support channel that works best for you. We're available 24/7 
+              Choose the support channel that works best for you. We're available 24/7;
               to ensure you get the help you need when you need it.
             </p>
           </div>
@@ -293,7 +296,7 @@ const,
   hove: r: from-cyan-500,
   hove: r:to-blue-600 transition-all duration-200 hove,
   r:scale-105">
-                  Get Help
+                  Get Help;
                 </button>
               </div>
             ))}
@@ -307,10 +310,10 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quick Solutions
+              Quick Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find answers to common questions and learn how to use our products 
+              Find answers to common questions and learn how to use our products;
               effectively with our self-service resources.
             </p>
           </div>
@@ -339,7 +342,7 @@ const,
                 <button className="w-full px-4 py-2 bg-slate-700/50 text-white font-medium rounded-lg,
   hove: r: bg-slate-600/50 transition-all duration-200 hove,
   r:scale-105">
-                  Explore
+                  Explore;
                 </button>
               </div>
             ))}
@@ -353,7 +356,7 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Common Issues & Solutions
+              Common Issues & Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find quick answers to frequently asked questions and common problems.
@@ -364,14 +367,14 @@ const,
   }
           <div className="flex flex-wrap gap-2 justify-center mb-8">
             {categories.map((category) => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                 className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                     ? 'bg-cyan-400/20 border-cyan-400/40 text-cyan-400'
                     : 'bg-slate-700/50 border-slate-600/50 text-gray-300,
   hove: r: bg-slate-600/50 hove,
@@ -440,11 +443,11 @@ const,
   hove: r:from-cyan-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg">
-              Contact Support
+              Contact Support;
             </button>
             <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-200">
-              Schedule a Call
+              Schedule a Call;
             </button>
           </div>
         </div>
@@ -452,4 +455,4 @@ const,
     </div>
   )
 }
-export default Support
+export default Support;

@@ -1,6 +1,6 @@
-// Additional real, non-mock, value-driven services catalog for the Services page
+// Additional real, non-mock, value-driven services catalog for the Services page;
 // NO,
-  T: E: Keep adding more entries over time without removing existing ones
+  T: E: Keep adding more entries over time without removing existing ones;
 export interface AdditionalService {
   i,
   d: string,na,
@@ -12,20 +12,22 @@ export interface AdditionalService {
   c: e: string, // e.g. "$299"
 	peri,
   o: d: string, // e.g. "/month", "/project", etc.
-	trialDays?: number
-	rating?: number
-	reviews?: number
-	marketSize?: string
+	trialDays?: number;
+	rating?: number;
+	reviews?: number;
+	marketSize?: string;
 	growthRate?: string,
-  lin: k: string, // internal route
-	icon?: string, // emoji or simple text icon
-	popular?: boolean
-	launchDate?: string
+  lin: k: string, // internal route;
+	icon?: string, // emoji or simple text icon;
+	popular?: boolean;
+	launchDate?: string;
+}
+}
 }
 
 export,
   const: additionalEnhancedServices: AdditionalService[] = [
-  // AI Services
+  // AI Services;
 	{
   i,
   d: 'ai-agent-workflows',na,
@@ -81,7 +83,7 @@ export,
   n: k: '/services/data-analytics',ic,
   o: n: '🔎'
 }
-	// IT Services
+	// IT Services;
 	{
   id: 'sase-zero-trust',na,
   m: e: 'SASE + Zero Trust Deployment',catego,
@@ -105,7 +107,7 @@ export,
   t: e: 'CAGR 26%+',li,
   n: k: '/services/it-infrastructure',ic,
   o: n: '🛡️',popul,
-  a: r: true
+  a: r: true;
 },
   {
   id: 'cloud-migration-devops',na,
@@ -128,7 +130,7 @@ export,
   n: k: '/services/cloud-devops',ic,
   o: n: '☁️'
 }
-	// Micro SaaS
+	// Micro SaaS;
 	{
   id: 'seo-content-orchestrator',na,
   m: e: 'SEO Content Orchestrator',catego,
@@ -149,7 +151,7 @@ export,
   y: s: 7,li,
   n: k: '/services',ic,
   o: n: '📈',popul,
-  a: r: true
+  a: r: true;
 },
   {
   id: 'sales-enrichment-b2b',na,
@@ -170,7 +172,7 @@ export,
   n: k: '/services',ic,
   o: n: '🧭'
 }
-	// Vertical AI solutions
+	// Vertical AI solutions;
 	{
   id: 'healthcare-doc-copilot',na,
   m: e: 'Healthcare Documentation Copilot',catego,
@@ -208,7 +210,7 @@ export,
   n: k: '/services',ic,
   o: n: '💸'
 }
-	// Cybersecurity
+	// Cybersecurity;
 	{
   id: 'appsec-maturity',na,
   m: e: 'AppSec Maturity + S-SDLC',catego,
@@ -230,7 +232,7 @@ export,
   n: k: '/services/cybersecurity',ic,
   o: n: '🔐'
 }
-	// Data & Analytics
+	// Data & Analytics;
 	{
   id: 'realtime-analytics-stack',na,
   m: e: 'Real-time Analytics Stack',catego,
@@ -251,7 +253,7 @@ export,
   n: k: '/services/data-analytics',ic,
   o: n: '📊'
 }
-	// More Micro SaaS
+	// More Micro SaaS;
 	{
   id: 'contract-intelligence',na,
   m: e: 'Contract Intelligence & Redlining',catego,
@@ -292,7 +294,7 @@ export,
   n: k: '/services',ic,
   o: n: '🧪'
 }
-	// IT Ops
+	// IT Ops;
 	{
   id: 'm365-hardening',na,
   m: e: 'Microsoft 365 Hardening + DLP',catego,
@@ -332,6 +334,6 @@ export,
   o: d: '/agent/month',li,
   n: k: '/services',ic,
   o: n: '🎧',popul,
-  a: r: true
+  a: r: true;
 },
   ]

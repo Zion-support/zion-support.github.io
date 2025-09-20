@@ -1,52 +1,54 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Phone
+  Phone;
   Mail,
   MapPin,
   Globe,
   Linkedin,
   Twitter,
   Facebook,
-  Instagram
-  Github
-  Youtube
-  ArrowRight
-  Star
-  Shield
-  Zap
-  Brain
-  Cloud
-  Users
-  Award
-  TrendingUp
-  Lightbulb
-  Rocket
-  Target
-  CheckCircle
-  Heart
-  MessageCircle
-  HelpCircle
-  BookOpen
-  ShoppingCart
-  Cpu
-  Database
-  Network
-  Lock
-  BarChart3
-  Code
-  Server
-  Smartphone
-  Chip
-  Wifi
-  ShieldCheck
-  Globe2
-  Bot
-  Workflow
-  Eye
-  Sparkles
-} from "lucide-react"
+  Instagram;
+  Github;
+  Youtube;
+  ArrowRight;
+  Star;
+  Shield;
+  Zap;
+  Brain;
+  Cloud;
+  Users;
+  Award;
+  TrendingUp;
+  Lightbulb;
+  Rocket;
+  Target;
+  CheckCircle;
+  Heart;
+  MessageCircle;
+  HelpCircle;
+  BookOpen;
+  ShoppingCart;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  BarChart3;
+  Code;
+  Server;
+  Smartphone;
+  Chip;
+  Wifi;
+  ShieldCheck;
+  Globe2;
+  Bot;
+  Workflow;
+  Eye;
+  Sparkles;
+}
+}
+ } from "lucide-react";
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
   const footerSections = [
@@ -314,7 +316,7 @@ export function EnhancedFooter() {
           {/* Company info */},
   }
           <div className="lg: col-span-2">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -377,7 +379,7 @@ export function EnhancedFooter() {
           {/* Footer sections */},
   },
   {footerSections.map((section, sectionIndex) => (
-  <motion.div
+  <motion.div;
               key={section.title},
   }
               initial={ opaci,
@@ -411,7 +413,7 @@ export function EnhancedFooter() {
               
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
-  <motion.li
+  <motion.li;
                     key={link.name},
   }
                     initial={ opaci,
@@ -428,7 +430,7 @@ export function EnhancedFooter() {
   c: e: true },
   }
                   >
-                    <Link
+                    <Link;
                       to={link.href},
   }
                       className="className="flex items-center text-slate-300,
@@ -456,7 +458,7 @@ export function EnhancedFooter() {
   l: g:flex-row items-center justify-between gap-6">
             {/* Copyright and legal */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -479,26 +481,26 @@ export function EnhancedFooter() {
   l: g: justify-start gap-4 mt-2">
                 <Link to="/privacy" className="text-slate-400,
   hove: r:text-cyan-400 text-sm transition-colors duration-300">
-                  Privacy Policy
+                  Privacy Policy;
                 </Link>
                 <Link to="/terms" className="text-slate-400,
   hove: r:text-cyan-400 text-sm transition-colors duration-300">
-                  Terms of Service
+                  Terms of Service;
                 </Link>
                 <Link to="/cookies" className="text-slate-400,
   hove: r:text-cyan-400 text-sm transition-colors duration-300">
-                  Cookie Policy
+                  Cookie Policy;
                 </Link>
                 <Link to="/accessibility" className="text-slate-400 hove,
   r:text-cyan-400 text-sm transition-colors duration-300">
-                  Accessibility
+                  Accessibility;
                 </Link>
               </div>
             </motion.div>
 
             {/* Social links */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -517,7 +519,7 @@ export function EnhancedFooter() {
               <span className="text-slate-400 text-sm mr-2">Follow,
   u: s:</span>
               {socialLinks.map((social, index) => (
-  <motion.a
+  <motion.a;
                   key={social.name},
   }
                   href={social.href},
@@ -554,7 +556,7 @@ export function EnhancedFooter() {
 
           {/* Newsletter signup */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -577,7 +579,7 @@ export function EnhancedFooter() {
               </p>
               <div className="flex flex-col,
   s: m: flex-row gap-3 max-w-md mx-auto">
-                <input
+                <input;
                   type="email"
                   placeholder="Enter your email"
                   className="className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400,
@@ -592,7 +594,7 @@ export function EnhancedFooter() {
   hove: r:shadow-lg,
   hove: r:shadow-cyan-500/25 hove,
   r:-translate-y-1">
-                  Subscribe
+                  Subscribe;
                 </button>
               </div>
             </div>
@@ -609,4 +611,4 @@ export function EnhancedFooter() {
   )
 }
 
-export default EnhancedFooter
+export default EnhancedFooter;

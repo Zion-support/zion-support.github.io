@@ -1,21 +1,21 @@
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useState   } from "react";
+import { Button   } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
 import Link from "next/link"
 import SEO from "@/components/SEO"
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs"
-import { useAuth } from "@/hooks/useAuth"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps"
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps"
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus"
-import { MyApplications } from "@/components/jobs/MyApplications"
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner"
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard"
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox   } from "lucide-react";
+import { ProtectedRoute   } from "@/components/ProtectedRoute";
+import { SuggestedJobs   } from "@/components/jobs/SuggestedJobs";
+import { useAuth   } from "@/hooks/useAuth";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Avatar   } from "@/components/ui/avatar";
+import { Badge   } from "@/components/ui/badge";
+import { TalentOnboardingSteps   } from "@/components/onboarding/TalentOnboardingSteps";
+import { AdvancedOnboardingSteps   } from "@/components/onboarding/AdvancedOnboardingSteps";
+import { useOnboardingStatus   } from "@/hooks/useOnboardingStatus";
+import { MyApplications   } from "@/components/jobs/MyApplications";
+import { ProjectOfferBanner   } from "@/components/projects/ProjectOfferBanner";
+import { UpcomingInterviewsCard   } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
   const { user } = useAuth()
     const [activeTab, setActiveTab] = useState("job-matches")
@@ -23,7 +23,7 @@ function TalentDashboardContent() {
     const showAdvanced = onboardingStatus.profileCompleted &&
         onboardingStatus.skillsAdded &&
         onboardingStatus.availabilitySet &&
-        onboardingStatus.matchReceived
+        onboardingStatus.matchReceived;
     return (<>
       <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
       
@@ -39,12 +39,12 @@ function TalentDashboardContent() {
             <Button variant="outline" asChild>
               <Link href="/settings/account">
                 <UserIcon className="h-4 w-4 mr-2"/>
-                Profile Settings
+                Profile Settings;
               </Link>
             </Button>
             <Button asChild>
               <Link href="/dashboard/talent/applications">
-                <Inbox className="h-4 w-4 mr-2"/> Application Tracker
+                <Inbox className="h-4 w-4 mr-2"/> Application Tracker;
               </Link>
             </Button>
           </div>
@@ -80,7 +80,7 @@ function TalentDashboardContent() {
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">
                     <div className="flex items-center gap-1 text-lg font-bold">
                       <Star className="h-4 w-4 text-yellow-500"/>
-                      4.9
+                      4.9;
                     </div>
                     <span className="text-xs text-muted-foreground">Rating</span>
                   </div>
@@ -94,7 +94,7 @@ function TalentDashboardContent() {
                   <Button className="w-full" asChild>
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2"/>
-                      Messages
+                      Messages;
                     </Link>
                   </Button>
                 </div>
@@ -144,7 +144,7 @@ function TalentDashboardContent() {
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2"/>
-                  AI Job Matches
+                  AI Job Matches;
                 </TabsTrigger>
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
@@ -159,7 +159,7 @@ function TalentDashboardContent() {
                 <div className="mt-4 flex justify-center">
                   <Button variant="outline" asChild>
                     <Link href="/dashboard/talent/applications">
-                      <Inbox className="h-4 w-4 mr-2"/> View Full Application Tracker
+                      <Inbox className="h-4 w-4 mr-2"/> View Full Application Tracker;
                     </Link>
                   </Button>
                 </div>

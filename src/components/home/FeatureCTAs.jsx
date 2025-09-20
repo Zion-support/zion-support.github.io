@@ -1,19 +1,23 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link     } from "react-router-dom";
 import {
-  ArrowRight
+  ArrowRight;
   Users,
   Briefcase,
   Cpu,
   Shield,
   Zap,
-  Clock
-  Rocket
-  Target
-  TrendingUp
-  Award
-  Globe
-} from "lucide-react"
+  Clock;
+  Rocket;
+  Target;
+  TrendingUp;
+  Award;
+  Globe;
+}
+}
+}
+}
+ } from "lucide-react";
 export function FeatureCTAs() {
   const features = [
   {
@@ -141,7 +145,7 @@ export function FeatureCTAs() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
                 <p className="text-sm text-gray-500 mb-4">{feature.details}</p>
-                <Link 
+                <Link;
                   to={feature.link},
   }
                   className="className="inline-flex items-center text-blue-600,
@@ -169,7 +173,7 @@ export function FeatureCTAs() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose your next step and begin your journey with Zion Tech Group
+              Choose your next step and begin your journey with Zion Tech Group;
             </p>
           </div>
 
@@ -177,7 +181,7 @@ export function FeatureCTAs() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {ctaItems.map((item, index) => (
-  <a 
+  <a;
                 key={index} 
                 href={item.href} 
                 className="className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center,
@@ -205,7 +209,7 @@ export function FeatureCTAs() {
                 
                 <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.color} text-white font-medium rounded-lg,
   hove: r:bg-gradient-to-r ${item.hoverColor} transition-all duration-300`}>
-                  Get Started
+                  Get Started;
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </div>
               </a>
@@ -216,14 +220,14 @@ export function FeatureCTAs() {
             <p className="text-gray-400 mb-4">
               Need help choosing? Our experts are here to guide you.
             </p>
-            <a 
+            <a;
               href="/contact" 
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg,
   hove: r: from-orange-700,
   hove: r:to-red-700 transition-all duration-300 shadow-lg hove,
   r:shadow-xl";"
             >
-              Talk to an Expert
+              Talk to an Expert;
               <ArrowRight className="w-5 h-5 ml-2"/>
             </a>
           </div>

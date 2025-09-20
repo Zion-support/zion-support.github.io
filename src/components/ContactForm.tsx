@@ -1,11 +1,13 @@
 import React, { useState } from "react"
   interface FormData {
-    name: string,
+  name: string,
     email: string,
     company: string,
   service: string,
   message: string,
-  budget: string
+  budget: string;
+}
+}
 }
 
 const ContactForm: React.FC = () => {
@@ -20,18 +22,18 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }))
   }
     const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate API call
+    // Simulate API call;
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
+  await new Promise(resolve => setTimeout(resolve, 2000))
       setSubmitStatus('success')
         setFormData({
           name: '',
@@ -40,11 +42,15 @@ const ContactForm: React.FC = () => {
         service: '',
         message: '',
         budget: ''
+}
+}
       })
     } catch (error) {
       setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false)
+  setIsSubmitting(false)
+}
+}
     }
   }
   const services = [
@@ -66,12 +72,12 @@ const ContactForm: React.FC = () => {
     <div className="max-w-2xl mx-auto">
       <div className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8">
         <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Send us a message
+          Send us a message;
         </h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-gray-300 text-sm font-semibold mb-2">Name</label>
-            <input
+            <input;
               type="text"
               id="name"
               name="name"
@@ -82,12 +88,12 @@ const ContactForm: React.FC = () => {
   focu: s:ring-purple-500 focu,
   s:outline-none"
               placeholder="Your Name"
-              required
+              required;
             />
           </div>
           <div>
             <label htmlFor="email" className="block text-gray-300 text-sm font-semibold mb-2">Email</label>
-            <input
+            <input;
               type="email"
               id="email"
               name="email"
@@ -98,12 +104,12 @@ const ContactForm: React.FC = () => {
   focu: s:ring-purple-500 focu,
   s:outline-none"
               placeholder="your@example.com"
-              required
+              required;
             />
           </div>
           <div>
             <label htmlFor="company" className="block text-gray-300 text-sm font-semibold mb-2">Company (Optional)</label>
-            <input
+            <input;
               type="text"
               id="company"
               name="company"
@@ -118,7 +124,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div>
             <label htmlFor="service" className="block text-gray-300 text-sm font-semibold mb-2">Interested Service</label>
-            <select
+            <select;
               id="service"
               name="service"
               value={formData.service}
@@ -127,7 +133,7 @@ const ContactForm: React.FC = () => {
   focu: s: ring-2,
   focu: s:ring-purple-500 focu,
   s:outline-none"
-              required
+              required;
             >
               <option value="">Select a service</option>
               {services.map((service, index) => (
@@ -137,7 +143,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div>
             <label htmlFor="budget" className="block text-gray-300 text-sm font-semibold mb-2">Budget Range (Optional)</label>
-            <select
+            <select;
               id="budget"
               name="budget"
               value={formData.budget}
@@ -155,7 +161,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div>
             <label htmlFor="message" className="block text-gray-300 text-sm font-semibold mb-2">Message</label>
-            <textarea
+            <textarea;
               id="message"
               name="message"
               value={formData.message}
@@ -166,10 +172,10 @@ const ContactForm: React.FC = () => {
   focu: s:ring-purple-500,
   focu: s:outline-none"
               placeholder="Tell us about your project or question..."
-              required
+              required;
             ></textarea>
           </div>
-          <button
+          <button;
             type="submit"
             className="w-full bg-purple-600,
   hove: r:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300,
@@ -188,4 +194,4 @@ const ContactForm: React.FC = () => {
     </div>
   )
 }
-export default ContactForm
+export default ContactForm;

@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Search
+  Search;
   Filter,
   Star,
   ArrowRight,
@@ -20,43 +21,45 @@ import {
   Globe,
   Zap,
   Lock,
-  ShieldCheck
-  TrendingUp
-  CheckCircle
-  Clock
-  DollarSign
-  Target
-  Handshake
-  Lightbulb
-  Scale
-  Heart
-  Leaf
-  Eye
-  Atom
-  Building2
-  Car
-  Home
-  Factory
-  City
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  Award
-  TrendingDown
-  Users2
-  BarChart4
-  Zap2
-  Target2
-  Shield2
-  Rocket2
-  Brain2
-  Cpu2
-  Database2
-  Network2
-} from "lucide-react"
-import { SEO } from "../components/SEO"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025"
+  ShieldCheck;
+  TrendingUp;
+  CheckCircle;
+  Clock;
+  DollarSign;
+  Target;
+  Handshake;
+  Lightbulb;
+  Scale;
+  Heart;
+  Leaf;
+  Eye;
+  Atom;
+  Building2;
+  Car;
+  Home;
+  Factory;
+  City;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Award;
+  TrendingDown;
+  Users2;
+  BarChart4;
+  Zap2;
+  Target2;
+  Shield2;
+  Rocket2;
+  Brain2;
+  Cpu2;
+  Database2;
+  Network2;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025   } from "../data/innovativeMicroSaasServices2025";
 const,
   EnhancedServicesShowcase202: 5: React.FC = () () => {
   const [activeCategory, setActiveCategory] = useState('all')
@@ -65,8 +68,8 @@ const,
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [selectedService, setSelectedService] = useState<any>(null)
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
-  // Enhanced categories with new services
+  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  // Enhanced categories with new services;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', cou,
@@ -154,26 +157,26 @@ const categories = [
   },
   ]
   const filteredServices = allServices.filter(service () => {
-  const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'reviews':
-        return b.reviews - a.reviews
+        return b.reviews - a.reviews;
       case 'name':
         return a.title.localeCompare(b.title)
       defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
   const const containerVariants = {
@@ -188,7 +191,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -206,7 +209,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   t: y: 1,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -230,7 +233,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Enhanced Services Showcase 2025 - Zion Tech Group"
         description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
       />
@@ -242,7 +245,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   l: g:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1;
             className="className="text-5xl,
   m: d:text-7xl font-bold text-white mb-6";"
             initial={ opacit,
@@ -256,10 +259,10 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
           >
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
-              Enhanced Services Showcase 2025
+              Enhanced Services Showcase 2025;
             </span>
           </motion.h1>
-          <motion.p 
+          <motion.p;
             className="className="text-xl,
   m: d: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";"
             initial={ opacit,
@@ -273,14 +276,14 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   a: y: 0.2 },
   }
           >
-            Transform your business with our comprehensive portfolio of AI-powered micro SAAS services
+            Transform your business with our comprehensive portfolio of AI-powered micro SAAS services;
             cutting-edge IT solutions, and revolutionary technology services. 
             Experience the future of business automation and intelligence.
           </motion.p>
           
           {/* Contact Information Banner */},
   }
-          <motion.div 
+          <motion.div;
             className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 max-w-4xl mx-auto border border-white/20";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -321,7 +324,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
           {/* Key Statistics */},
   }
-          <motion.div 
+          <motion.div;
             className="className="grid grid-cols-2,
   m: d: grid-cols-4 gap-6 max-w-4xl mx-auto";"
             initial={ opacit,
@@ -368,7 +371,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
             <div className="relative max-w-md mx-auto">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -387,14 +390,14 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
             <div className="flex flex-wrap justify-center gap-3">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setActiveCategory(category.id)},
   },
   }
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-  activeCategory === category.id
+  activeCategory === category.id;
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-white/10 text-gray-300,
   hove: r:bg-white/20'
@@ -409,7 +412,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             {/* Sort and View Controls */},
   }
             <div className="flex justify-center items-center space-x-4">
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -426,7 +429,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               </select>
 
               <div className="flex bg-white/10 rounded-lg p-1">
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -434,7 +437,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 >
                   <Grid className="w-5 h-5" />
                 </button>
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -448,7 +451,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
           {/* Services Grid */},
   }
-          <motion.div
+          <motion.div;
             variants={containerVariants},
   }
             initial="hidden"
@@ -459,7 +462,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
           >
             {sortedServices.map((service) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 variants={itemVariants},
@@ -475,7 +478,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
               >
                 {viewMode === 'grid' ? (
-  // Grid View
+  // Grid View;
                   <div className="space-y-4">
                     {/* Header */},
   }
@@ -523,7 +526,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                         ))},
   {service.features.length > 3 && (
   <span className="px-2 py-1 bg-white/20 text-white text-xs rounded">
-                            +{service.features.length - 3} more
+                            +{service.features.length - 3} more;
                           </span>
                         )}
                       </div>
@@ -539,7 +542,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     </button>
                   </div>
                 ) : (
-  // List View
+  // List View;
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -572,7 +575,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
       <AnimatePresence>
         {selectedService && (
-  <motion.div
+  <motion.div;
             initial={ opaci,
   t: y: 0 },
   }
@@ -587,7 +590,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   },
   }
           >
-            <motion.div
+            <motion.div;
               initial={ sca,
   l: e: 0.9, opaci,
   t: y: 0 },
@@ -613,7 +616,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>
                     <p className="text-gray-300 text-lg">{selectedService.description}</p>
                   </div>
-                  <button
+                  <button;
                     onClick={onClick={() => setSelectedService(null)},
   },
   }
@@ -802,7 +805,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   )
 }
 
-// Grid and List icons
+// Grid and List icons;
 const Grid = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -815,4 +818,4 @@ const List = ({ className }: { className?: string }) => (
   </svg>
 )
 
-export default EnhancedServicesShowcase2025
+export default EnhancedServicesShowcase2025;

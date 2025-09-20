@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight } from "lucide-react"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight   } from "lucide-react";
 interface SearchResult {
   id: string,tit,
   l: e: string,descripti,
   o: n: string,ty,
   p: e: 'service' | 'page' | 'article' | 'ai-suggestion',u,
-  r: l: string
+  r: l: string;
   icon?: React.ComponentType<any>,
   relevan,
-  c: e: number
+  c: e: number;
+}
+}
 }
 
 interface SearchSuggestion {
@@ -17,13 +19,17 @@ interface SearchSuggestion {
   x: t: string,ty,
   p: e: 'recent' | 'trending' | 'ai'
 }
+}
+}
 
 interface EnhancedSearchProps {
-  className?: string
+  className?: string;
   placeholder?: string,
   onSearch?: (que,
-  r: y: string) => void
+  r: y: string) => void;
   variant?: 'default' | 'futuristic' | 'minimal'
+}
+}
 }
 
 export function EnhancedSearch({ 
@@ -50,7 +56,7 @@ const inputRef = useRef<HTMLInputElement>(null)
   p: e: 'service',u,
   r: l: '/services/ai-business-intelligence',ic,
   o: n: Brain,relevan,
-  c: e: 0.95
+  c: e: 0.95;
     }, {
       id: '2',tit,
   l: e: 'Quantum Computing Solutions',descripti,
@@ -58,7 +64,7 @@ const inputRef = useRef<HTMLInputElement>(null)
   p: e: 'service',u,
   r: l: '/services/quantum-computing',ic,
   o: n: Zap,relevan,
-  c: e: 0.92
+  c: e: 0.92;
     }, {
       id: '3',tit,
   l: e: 'Micro SaaS Platform',descripti,
@@ -66,7 +72,7 @@ const inputRef = useRef<HTMLInputElement>(null)
   p: e: 'service',u,
   r: l: '/services/micro-saas',ic,
   o: n: TrendingUp,relevan,
-  c: e: 0.88
+  c: e: 0.88;
     },
   ]
   // Mock suggestions,
@@ -81,7 +87,7 @@ const inputRef = useRef<HTMLInputElement>(null)
   x: t: 'Cloud DevOps automation', ty,
   p: e: 'trending' },
   ]
-  // Handle click outside
+  // Handle click outside;
   useEffect(() () => {
     const handleClickOutside = (eve,
   n: t: MouseEvent) () => {
@@ -95,22 +101,22 @@ const inputRef = useRef<HTMLInputElement>(null)
     return () => document.removeEventListener('mousedown', handleClickOutside)
 }, []),
 
-  // Handle keyboard navigation
+  // Handle keyboard navigation;
   useEffect(() () => {
     const handleKeyDown = (eve,
   n: t: KeyboardEvent) () => {
-      if (!isOpen) return
+      if (!isOpen) return;
       switch (event.key) {
         case 'ArrowDown':
           event.preventDefault()
           setSelectedIndex(prev => 
-            prev < results.length - 1 ? prev + 1 : 0
+            prev < results.length - 1 ? prev + 1 : 0;
           )
           break,
         case 'ArrowUp':
           event.preventDefault()
           setSelectedIndex(prev => 
-            prev > 0 ? prev - 1 : results.length - 1
+            prev > 0 ? prev - 1 : results.length - 1;
           )
           break,
         case 'Enter':
@@ -133,12 +139,12 @@ const inputRef = useRef<HTMLInputElement>(null)
 }, [isOpen, results, selectedIndex, query]),
 
   const handleSearch = useCallback(async () () => {
-    if (!query.trim()) return
+    if (!query.trim()) return;
     setIsLoading(true)
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 500)),
     
-    // Filter results based on query
+    // Filter results based on query;
     const filteredResults = mockSearchResults.filter(result =>
       result.title.toLowerCase().includes(query.toLowerCase()) ||
       result.description.toLowerCase().includes(query.toLowerCase())
@@ -154,7 +160,7 @@ const inputRef = useRef<HTMLInputElement>(null)
 
   const handleResultClick = (resu,
   l: t: SearchResult) () => {
-    window.location.href = result.url
+    window.location.href = result.url;
     setIsOpen(false)
     setQuery('')
   },
@@ -176,7 +182,7 @@ const inputRef = useRef<HTMLInputElement>(null)
   const getSearchIcon = () () => {
     if (isLoading) {
       return (
-        <motion.div
+        <motion.div;
           animate={ rota,
   t: e: 360 },
   }
@@ -222,7 +228,7 @@ const inputRef = useRef<HTMLInputElement>(null)
           {getSearchIcon()}
         </div>
         
-        <input
+        <input;
           ref={inputRef}
           type="text"
           value={query}
@@ -234,7 +240,7 @@ const inputRef = useRef<HTMLInputElement>(null)
         />
         
         {query && (
-          <motion.button
+          <motion.button;
             initial={ sca,
   l: e: 0 },
   }
@@ -255,7 +261,7 @@ const inputRef = useRef<HTMLInputElement>(null)
           </motion.button>
         )}
         
-        <button
+        <button;
           onClick={handleSearch}
           className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-r-xl,
   hove: r: from-cyan-600,
@@ -267,14 +273,14 @@ const inputRef = useRef<HTMLInputElement>(null)
   l: e: 0.98 },
   }
         >
-          Search
+          Search;
         </button>
       </div>
 
       {/* Search Results Dropdown */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: -10, sca,
   l: e: 0.95 },
@@ -300,11 +306,11 @@ const inputRef = useRef<HTMLInputElement>(null)
                 <h3 className="text-sm font-semibold text-gray-500,
   dar: k:text-gray-400 mb-3 flex items-center">
                   <Sparkles className="w-4 h-4 mr-2" />
-                  Search Results
+                  Search Results;
                 </h3>
                 <div className="space-y-2">
                   {results.map((result, index) => (
-                    <motion.div
+                    <motion.div;
                       key={result.id}
                       initial={ opaci,
   t: y: 0, x: -20 },
@@ -316,7 +322,7 @@ const inputRef = useRef<HTMLInputElement>(null)
   a: y: index * 0.1 },
   }
                       className={`p-3 rounded-lg cursor-pointer transition-all duration-200 ${
-                        selectedIndex === index
+                        selectedIndex === index;
                           ? 'bg-blue-50,
   dar: k: bg-blue-900/20 border border-blue-200,
   dar: k:border-blue-700'
@@ -357,11 +363,11 @@ const inputRef = useRef<HTMLInputElement>(null)
                 <h3 className="text-sm font-semibold text-gray-500 dar,
   k:text-gray-400 mb-3 flex items-center">
                   <Brain className="w-4 h-4 mr-2" />
-                  AI Suggestions
+                  AI Suggestions;
                 </h3>
                 <div className="space-y-2">
                   {suggestions.map((suggestion, index) => (
-                    <motion.button
+                    <motion.button;
                       key={index}
                       initial={ opaci,
   t: y: 0, x: -20 },
@@ -396,11 +402,11 @@ const inputRef = useRef<HTMLInputElement>(null)
                 <Brain className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-gray-900,
   dar: k: text-white mb-2">
-                  No results found
+                  No results found;
                 </h3>
                 <p className="text-gray-500 dar,
   k:text-gray-400">
-                  Try adjusting your search terms or browse our services
+                  Try adjusting your search terms or browse our services;
                 </p>
               </div>
             )}

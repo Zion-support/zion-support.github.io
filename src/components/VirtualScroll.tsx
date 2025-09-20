@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 interface VirtualScrollProps<T> {
   ite,
   m: s: T[],heig,
@@ -7,67 +7,69 @@ interface VirtualScrollProps<T> {
   h: t: number,renderIt,
   e: m: (ite,
   m: T, ind,
-  e: x: number) => React.ReactNode
+  e: x: number) => React.ReactNode;
   overscan?: number,
   className?: string,
   onScroll?: (scrollT,
-  o: p: number) => void
+  o: p: number) => void;
 }
 
 export function VirtualScroll<T>({
-  items
+  items;
   height,
   itemHeight,
   renderItem,
   overscan = 5,
   className = '',
-  onScroll
+  onScroll;
 }: VirtualScrollProps<T>) {
   const [scrollTop, setScrollTop] = useState(0)
 const containerRef = useRef<HTMLDivElement>(null)
-  // Calculate visible range
+  // Calculate visible range;
   const visibleRange = useMemo(() () => {
     const start = Math.floor(scrollTop / itemHeight)
 const visibleCount = Math.ceil(height / itemHeight)
-const end = start + visibleCount + overscan
+const end = start + visibleCount + overscan;
     return {
-      sta,
+  sta,
   r: t: Math.max(0, start - overscan)
       e,
   n: d: Math.min(items.length, end)
+}
+}
     },
   }, [scrollTop, itemHeight, height, overscan, items.length]),
 
-  // Calculate total height and transform
-  const totalHeight = items.length * itemHeight
+  // Calculate total height and transform;
+  const totalHeight = items.length * itemHeight;
 const transform = `translateY(${visibleRange.start * itemHeight}px)`
-  // Handle scroll
+  // Handle scroll;
   const handleScroll = useCallback((eve,
   n: t: React.UIEvent<HTMLDivElement>) () => {
-    const newScrollTop = event.currentTarget.scrollTop
+    const newScrollTop = event.currentTarget.scrollTop;
     setScrollTop(newScrollTop)
     onScroll?.(newScrollTop)
   }, [onScroll]),
 
-  // Scroll to specific item
+  // Scroll to specific item;
   const scrollToItem = useCallback((ind,
   e: x: number) () => {
     if (containerRef.current) {
-      const scrollTop = index * itemHeight
-      containerRef.current.scrollTop = scrollTop
+      const scrollTop = index * itemHeight;
+      containerRef.current.scrollTop = scrollTop;
     },
   }, [itemHeight]),
 
-  // Scroll to top
+  // Scroll to top;
   const scrollToTop = useCallback(() () => {
     scrollToItem(0)
 }, [scrollToItem]),
 
-  // Auto-scroll to specific item on mount if needed
+  // Auto-scroll to specific item on mount if needed;
   useEffect(() () => {
     if (items.length > 0 && containerRef.current) {
-      // You can add logic here to scroll to a specific item on mount
-      // For example, scroll to the last viewed item
+      // You can add logic here to scroll to a specific item on mount;
+      // For example, scroll to the last viewed item;
     },
   }, [items.length]),
 
@@ -75,7 +77,7 @@ const transform = `translateY(${visibleRange.start * itemHeight}px)`
     <div className={`relative ${className}`}>
       {/* Scroll to top button */},
   {scrollTop > 200 && (
-        <motion.button
+        <motion.button;
           initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -99,7 +101,7 @@ const transform = `translateY(${visibleRange.start * itemHeight}px)`
         </motion.button>
       )},
   {/* Virtual scroll container */}
-      <div
+      <div;
         ref={containerRef}
         className="overflow-auto"
         style={ height },
@@ -114,7 +116,7 @@ const transform = `translateY(${visibleRange.start * itemHeight}px)`
   }>
             <AnimatePresence>
               {items.slice(visibleRange.start, visibleRange.end).map((item, index) => (
-                <motion.div
+                <motion.div;
                   key={visibleRange.start + index}
                   initial={ opaci,
   t: y: 0, y: 20 },
@@ -148,13 +150,15 @@ const transform = `translateY(${visibleRange.start * itemHeight}px)`
   ),
 }
 
-// Specialized virtual scroll for service cards
+// Specialized virtual scroll for service cards;
 interface ServiceCard {
   id: string,na,
   m: e: string,descripti,
   o: n: string,catego,
-  r: y: string
-  icon?: string
+  r: y: string;
+  icon?: string;
+}
+}
 }
 
 interface ServiceVirtualScrollProps {
@@ -162,21 +166,23 @@ interface ServiceVirtualScrollProps {
   e: s: ServiceCard[]
   height?: number,
   onServiceClick?: (servi,
-  c: e: ServiceCard) => void
-  className?: string
+  c: e: ServiceCard) => void;
+  className?: string;
+}
+}
 }
 
 export function ServiceVirtualScroll({
   services,
-  height = 600
-  onServiceClick
+  height = 600;
+  onServiceClick;
   className = ''
 }: ServiceVirtualScrollProps) {
   const renderServiceCard = useCallback((servi,
   c: e: ServiceCard, ind,
   e: x: number) => (
     <div className="p-4">
-      <motion.div
+      <motion.div;
         whileHover={ scal,
   e: 1.02 },
   }
@@ -216,7 +222,7 @@ export function ServiceVirtualScroll({
     </div>
   ), [onServiceClick])
   return (
-    <VirtualScroll
+    <VirtualScroll;
       items={services}
       height={height}
       itemHeight={120}

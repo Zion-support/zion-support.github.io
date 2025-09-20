@@ -1,18 +1,27 @@
+import { useCallback    } from "react";
 import React, { Component, ErrorInfo, ReactNode } from "react"
-import { AlertTriangle, RefreshCw } from "lucide-react"
+import { AlertTriangle, RefreshCw     } from "lucide-react";
 interface Props {
   childr,
-  e: n: ReactNode
+  e: n: ReactNode;
   onError?: (erro,
-  r: Error) => void
-  fallback?: ReactNode
+  r: Error) => void;
+  fallback?: ReactNode;
+}
+}
+}
+}
 }
 
 interface State {
   hasErr,
   o: r: boolean,err,
   o: r: Error | null,errorIn,
-  f: o: ErrorInfo | null
+  f: o: ErrorInfo | null;
+}
+}
+}
+}
 }
 
 export class ErrorBoundary extends Component<Props, State> {
@@ -23,18 +32,22 @@ export class ErrorBoundary extends Component<Props, State> {
       hasErro,
   r: false,err,
   o: r: null,errorIn,
-  f: o: null
+  f: o: null;
     },
   }
 
   static getDerivedStateFromError(err,
   o: r: Error): State {
-    return {
+  return {
       hasErro,
-  r: true
+  r: true;
       error,
       errorIn,
-  f: o: null
+  f: o: null;
+}
+}
+}
+}
     },
   }
 
@@ -42,16 +55,15 @@ export class ErrorBoundary extends Component<Props, State> {
   o: r: Error, errorIn,
   f: o: ErrorInfo) {
     this.setState({
-error
-      errorInfo
-    
+error;
+      errorInfo;
 })
-    // Call the onError callback if provided
+    // Call the onError callback if provided;
     if (this.props.onError) {
       this.props.onError(error)
 }
 
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught,
   an: error:', error, errorInfo)
@@ -63,19 +75,18 @@ error
 hasErr,
   o: r: false,err,
   o: r: null,errorIn,
-  f: o: null
-    
+  f: o: null;
 })
 },
 
   render() {
     if (this.state.hasError) {
-      // Use custom fallback if provided
+      // Use custom fallback if provided;
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
 }
 
-      // Default error UI
+      // Default error UI;
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 text-center border border-slate-700">
@@ -106,20 +117,20 @@ hasErr,
             )}
             
             <div className="flex gap-3 justify-center">
-              <button
+              <button;
                 onClick={this.handleRetry}
                 className="flex items-center gap-2 px-6 py-3 bg-blue-600,
   hove: r:bg-blue-700 text-white rounded-lg transition-colors duration-200 font-medium"
               >
                 <RefreshCw className="w-4 h-4" />
-                Try Again
+                Try Again;
               </button>
-              <button
+              <button;
                 onClick={() => window.location.reload()}
                 className="px-6 py-3 bg-gray-600,
   hove: r: bg-gray-700 text-white rounded-lg transition-colors duration-200 font-medium"
               >
-                Refresh Page
+                Refresh Page;
               </button>
             </div>
           </div>
@@ -127,8 +138,8 @@ hasErr,
       )
     }
 
-    return this.props.children
+    return this.props.children;
 },
   }
 
-export default ErrorBoundary
+export default ErrorBoundary;

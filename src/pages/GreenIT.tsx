@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Leaf
+  Leaf;
   Zap,
   Sun,
   Wind,
@@ -25,154 +26,156 @@ import {
   BarChart3,
   Settings,
   ChevronDown,
-  ChevronUp
-  Lightbulb
-  Cpu
-  HardDrive
-  Network
-  Smartphone as Mobile
-  Laptop
-  Tablet
-  Printer
-  Router
-  Camera
-  Speaker
-  Headphones
-  Keyboard
-  Mouse
-  ExternalHardDrive
-  Usb
-  Wifi
-  Bluetooth
-  Battery
-  Power
-  Save
-  Eco
-  Plant
-  Mountain
-  Ocean
-  Forest
-  MountainSnow
-  Thermometer
-  Gauge
-  Activity
-  LineChart
-  PieChart
-  Calculator
-  FileText
-  Calendar
-  Clock
-  Star
-  Heart
-  Eye
-  Search
-  Filter
-  ArrowRight
-  Mail
-  Phone
-  MapPin
-  Clock as Time
-  DollarSign
-  Percent
-  Plus
-  Minus
-  X
-  Check
-  AlertTriangle
-  Info
-  HelpCircle
-  ExternalLink
-  Download
-  BookOpen
-  Video
-  Play
-  Pause
-  SkipBack
-  SkipForward
-  Volume2
-  VolumeX
-  Maximize2
-  Minimize2
-  RotateCcw
-  RefreshCw
-  PowerOff
-  PowerOn
-  BatteryCharging
-  BatteryFull
-  BatteryLow
-  BatteryMedium
-  BatteryEmpty
-  WifiOff
-  WifiLow
-  WifiMedium
-  WifiHigh
-  Signal
-  SignalLow
-  SignalMedium
-  SignalHigh
-  SignalOff
-  WifiHigh as WifiStrong
-  WifiMedium as WifiMedium2
-  WifiLow as WifiWeak
-  WifiOff as WifiNone
-  SignalHigh as SignalStrong
-  SignalMedium as SignalMedium2
-  SignalLow as SignalWeak
-  SignalOff as SignalNone
-  SignalHigh as SignalFull
-  SignalMedium as SignalHalf
-  SignalLow as SignalQuarter
-  SignalOff as SignalEmpty
-  WifiHigh as WifiFull
-  WifiMedium as WifiHalf
-  WifiLow as WifiQuarter
-  WifiOff as WifiEmpty
-  BatteryCharging as BatteryCharging2
-  BatteryFull as BatteryFull2
-  BatteryLow as BatteryLow2
-  BatteryMedium as BatteryMedium2
-  BatteryEmpty as BatteryEmpty2
-  BatteryCharging as BatteryCharging3
-  BatteryFull as BatteryFull3
-  BatteryLow as BatteryLow3
-  BatteryMedium as BatteryMedium3
-  BatteryEmpty as BatteryEmpty3
-  BatteryCharging as BatteryCharging4
-  BatteryFull as BatteryFull4
-  BatteryLow as BatteryLow4
-  BatteryMedium as BatteryMedium4
-  BatteryEmpty as BatteryEmpty4
-  BatteryCharging as BatteryCharging5
-  BatteryFull as BatteryFull5
-  BatteryLow as BatteryLow5
-  BatteryMedium as BatteryMedium5
-  BatteryEmpty as BatteryEmpty5
-  BatteryCharging as BatteryCharging6
-  BatteryFull as BatteryFull6
-  BatteryLow as BatteryLow6
-  BatteryMedium as BatteryMedium6
-  BatteryEmpty as BatteryEmpty6
-  BatteryCharging as BatteryCharging7
-  BatteryFull as BatteryFull7
-  BatteryLow as BatteryLow7
-  BatteryMedium as BatteryMedium7
-  BatteryEmpty as BatteryEmpty7
-  BatteryCharging as BatteryCharging8
-  BatteryFull as BatteryFull8
-  BatteryLow as BatteryLow8
-  BatteryMedium as BatteryMedium8
-  BatteryEmpty as BatteryEmpty8
-  BatteryCharging as BatteryCharging9
-  BatteryFull as BatteryFull9
-  BatteryLow as BatteryLow9
-  BatteryMedium as BatteryMedium9
-  BatteryEmpty as BatteryEmpty9
-  BatteryCharging as BatteryCharging10
-  BatteryFull as BatteryFull10
-  BatteryLow as BatteryLow10
-  BatteryMedium as BatteryMedium10
-  BatteryEmpty as BatteryEmpty10
-} from "lucide-react"
+  ChevronUp;
+  Lightbulb;
+  Cpu;
+  HardDrive;
+  Network;
+  Smartphone as Mobile;
+  Laptop;
+  Tablet;
+  Printer;
+  Router;
+  Camera;
+  Speaker;
+  Headphones;
+  Keyboard;
+  Mouse;
+  ExternalHardDrive;
+  Usb;
+  Wifi;
+  Bluetooth;
+  Battery;
+  Power;
+  Save;
+  Eco;
+  Plant;
+  Mountain;
+  Ocean;
+  Forest;
+  MountainSnow;
+  Thermometer;
+  Gauge;
+  Activity;
+  LineChart;
+  PieChart;
+  Calculator;
+  FileText;
+  Calendar;
+  Clock;
+  Star;
+  Heart;
+  Eye;
+  Search;
+  Filter;
+  ArrowRight;
+  Mail;
+  Phone;
+  MapPin;
+  Clock as Time;
+  DollarSign;
+  Percent;
+  Plus;
+  Minus;
+  X;
+  Check;
+  AlertTriangle;
+  Info;
+  HelpCircle;
+  ExternalLink;
+  Download;
+  BookOpen;
+  Video;
+  Play;
+  Pause;
+  SkipBack;
+  SkipForward;
+  Volume2;
+  VolumeX;
+  Maximize2;
+  Minimize2;
+  RotateCcw;
+  RefreshCw;
+  PowerOff;
+  PowerOn;
+  BatteryCharging;
+  BatteryFull;
+  BatteryLow;
+  BatteryMedium;
+  BatteryEmpty;
+  WifiOff;
+  WifiLow;
+  WifiMedium;
+  WifiHigh;
+  Signal;
+  SignalLow;
+  SignalMedium;
+  SignalHigh;
+  SignalOff;
+  WifiHigh as WifiStrong;
+  WifiMedium as WifiMedium2;
+  WifiLow as WifiWeak;
+  WifiOff as WifiNone;
+  SignalHigh as SignalStrong;
+  SignalMedium as SignalMedium2;
+  SignalLow as SignalWeak;
+  SignalOff as SignalNone;
+  SignalHigh as SignalFull;
+  SignalMedium as SignalHalf;
+  SignalLow as SignalQuarter;
+  SignalOff as SignalEmpty;
+  WifiHigh as WifiFull;
+  WifiMedium as WifiHalf;
+  WifiLow as WifiQuarter;
+  WifiOff as WifiEmpty;
+  BatteryCharging as BatteryCharging2;
+  BatteryFull as BatteryFull2;
+  BatteryLow as BatteryLow2;
+  BatteryMedium as BatteryMedium2;
+  BatteryEmpty as BatteryEmpty2;
+  BatteryCharging as BatteryCharging3;
+  BatteryFull as BatteryFull3;
+  BatteryLow as BatteryLow3;
+  BatteryMedium as BatteryMedium3;
+  BatteryEmpty as BatteryEmpty3;
+  BatteryCharging as BatteryCharging4;
+  BatteryFull as BatteryFull4;
+  BatteryLow as BatteryLow4;
+  BatteryMedium as BatteryMedium4;
+  BatteryEmpty as BatteryEmpty4;
+  BatteryCharging as BatteryCharging5;
+  BatteryFull as BatteryFull5;
+  BatteryLow as BatteryLow5;
+  BatteryMedium as BatteryMedium5;
+  BatteryEmpty as BatteryEmpty5;
+  BatteryCharging as BatteryCharging6;
+  BatteryFull as BatteryFull6;
+  BatteryLow as BatteryLow6;
+  BatteryMedium as BatteryMedium6;
+  BatteryEmpty as BatteryEmpty6;
+  BatteryCharging as BatteryCharging7;
+  BatteryFull as BatteryFull7;
+  BatteryLow as BatteryLow7;
+  BatteryMedium as BatteryMedium7;
+  BatteryEmpty as BatteryEmpty7;
+  BatteryCharging as BatteryCharging8;
+  BatteryFull as BatteryFull8;
+  BatteryLow as BatteryLow8;
+  BatteryMedium as BatteryMedium8;
+  BatteryEmpty as BatteryEmpty8;
+  BatteryCharging as BatteryCharging9;
+  BatteryFull as BatteryFull9;
+  BatteryLow as BatteryLow9;
+  BatteryMedium as BatteryMedium9;
+  BatteryEmpty as BatteryEmpty9;
+  BatteryCharging as BatteryCharging10;
+  BatteryFull as BatteryFull10;
+  BatteryLow as BatteryLow10;
+  BatteryMedium as BatteryMedium10;
+  BatteryEmpty as BatteryEmpty10;
+}
+}
+ } from "lucide-react";
 export default function GreenIT() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -581,11 +584,11 @@ export default function GreenIT() {
   setExpandedSection(expandedSection === sectionId ? null : sectionId)
   }
   const filteredSolutions = selectedCategory === 'all' 
-    ? greenSolutions 
+    ? greenSolutions;
     : greenSolutions.filter(solution => solution.category === selectedCategory)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Green IT Solutions - Zion Tech Group"
         description="Transform your technology infrastructure with our sustainable Green IT solutions. Reduce energy consumption, lower costs, and minimize environmental impact."
       />
@@ -595,7 +598,7 @@ export default function GreenIT() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -612,10 +615,10 @@ export default function GreenIT() {
             </div>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Green IT</span> Solutions
+              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Green IT</span> Solutions;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Transform your technology infrastructure with sustainable solutions that reduce 
+              Transform your technology infrastructure with sustainable solutions that reduce;
               energy consumption, lower costs, and minimize environmental impact.
             </p>
             <div className="mt-8 flex flex-col,
@@ -624,12 +627,12 @@ export default function GreenIT() {
   hove: r:from-green-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105">
-                Get Green IT Assessment
+                Get Green IT Assessment;
               </button>
               <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg,
   hove: r:bg-green-400 hove,
   r:text-white transition-all duration-200">
-                View Case Studies
+                View Case Studies;
               </button>
             </div>
           </motion.div>
@@ -640,7 +643,7 @@ export default function GreenIT() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -654,7 +657,7 @@ export default function GreenIT() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Environmental Impact</h2>
             <p className="text-xl text-gray-300">
-              Real results from implementing sustainable technology solutions
+              Real results from implementing sustainable technology solutions;
             </p>
           </motion.div>
 
@@ -662,7 +665,7 @@ export default function GreenIT() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {environmentalImpact.map((impact, index) => (
-  <motion.div
+  <motion.div;
                 key={impact.label},
   }
                 initial={ opaci,
@@ -693,7 +696,7 @@ export default function GreenIT() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -707,7 +710,7 @@ export default function GreenIT() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Green IT Solutions</h2>
             <p className="text-xl text-gray-300">
-              Comprehensive sustainable technology solutions for your organization
+              Comprehensive sustainable technology solutions for your organization;
             </p>
           </motion.div>
 
@@ -715,14 +718,14 @@ export default function GreenIT() {
   }
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                     ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'
                     : 'bg-slate-800/50 text-gray-300,
   hove: r:bg-slate-700/50'
@@ -737,7 +740,7 @@ export default function GreenIT() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
                 key={solution.id},
   }
                 initial={ opaci,
@@ -799,7 +802,7 @@ export default function GreenIT() {
                       </div>
                     </div>
                     
-                    <button
+                    <button;
                       onClick={onClick={() => toggleSection(solution.id)},
   },
   }
@@ -813,7 +816,7 @@ export default function GreenIT() {
                     </button>
                     
                     {expandedSection === solution.id && (
-  <motion.div
+  <motion.div;
                         initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -872,7 +875,7 @@ export default function GreenIT() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -886,7 +889,7 @@ export default function GreenIT() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Certifications</h2>
             <p className="text-xl text-gray-300">
-              Recognized for our commitment to environmental sustainability
+              Recognized for our commitment to environmental sustainability;
             </p>
           </motion.div>
 
@@ -894,7 +897,7 @@ export default function GreenIT() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {certifications.map((cert, index) => (
-  <motion.div
+  <motion.div;
                 key={cert.name},
   }
                 initial={ opaci,
@@ -924,7 +927,7 @@ export default function GreenIT() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -938,14 +941,14 @@ export default function GreenIT() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-gray-300">
-              Real results from organizations implementing our Green IT solutions
+              Real results from organizations implementing our Green IT solutions;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   l: g:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-  <motion.div
+  <motion.div;
                 key={study.title},
   }
                 initial={ opaci,
@@ -1023,7 +1026,7 @@ export default function GreenIT() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -1038,7 +1041,7 @@ export default function GreenIT() {
               Ready to Go Green?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start your sustainability journey today. Our Green IT experts will assess your 
+              Start your sustainability journey today. Our Green IT experts will assess your;
               current infrastructure and provide a customized plan to reduce costs and environmental impact.
             </p>
             
@@ -1048,22 +1051,22 @@ export default function GreenIT() {
   hove: r:from-green-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105">
-                Schedule Green IT Assessment
+                Schedule Green IT Assessment;
               </button>
-              <a
+              <a;
                 href="mail,
   t: o:greenit@ziontechgroup.com"
                 className="className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg,
   hove: r:bg-green-400 hove,
   r:text-white transition-all duration-200";"
               >
-                Contact Green IT Team
+                Contact Green IT Team;
               </a>
             </div>
             
             <div className="mt-8 text-center">
               <p className="text-gray-400 text-sm">
-                Get a free sustainability assessment and customized Green IT roadmap
+                Get a free sustainability assessment and customized Green IT roadmap;
               </p>
             </div>
           </motion.div>

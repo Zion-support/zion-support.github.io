@@ -1,11 +1,13 @@
-// Comprehensive Services 2025 - Zion Tech Group
-// Real, Innovative Micro SAAS, IT Infrastructure, and AI Services
+// Comprehensive Services 2025 - Zion Tech Group;
+// Real, Innovative Micro SAAS, IT Infrastructure, and AI Services;
 export interface ServiceContact {
   pho,
   n: e: string,ema,
   i: l: string,websi,
   t: e: string,addre,
-  s: s: string
+  s: s: string;
+}
+}
 }
 
 export interface MicroSaasService {
@@ -31,7 +33,9 @@ export interface MicroSaasService {
   o: d: string,innovationLev,
   e: l: string,marketSi,
   z: e: string,growthRa,
-  t: e: string
+  t: e: string;
+}
+}
 }
 
 export interface ITService {
@@ -56,6 +60,8 @@ export interface ITService {
   z: e: string,complian,
   c: e: string[[],
   ],
+}
+}
   }
 
 export interface AIService {
@@ -82,9 +88,11 @@ export interface AIService {
   z: e: string,ethical,
   A: I: string[[],
   ],
+}
+}
   }
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const,
   const: zionContact: ServiceContact = {
   = {
@@ -95,7 +103,7 @@ const,
   s://ziontechgroup.com",addre,
   s: s: "364 E Main St STE 1008 Middletown DE 19709"
 }
-// Revolutionary Micro SAAS Services 2025
+// Revolutionary Micro SAAS Services 2025;
 export,
   const: revolutionaryMicroSaasServices2025: MicroSaasService[] = [
   {
@@ -616,7 +624,7 @@ export,
   t: e: "27% annually"
 },
   ]
-// Advanced IT Infrastructure Services 2025
+// Advanced IT Infrastructure Services 2025;
 export,
   const: advancedITInfrastructureServices2025: ITService[] = [
   {
@@ -767,7 +775,7 @@ export,
   },
   ]
 
-// Revolutionary AI Services 2025
+// Revolutionary AI Services 2025;
 export,
   const: revolutionaryAIServices2025: AIService[] = [
   {
@@ -945,11 +953,11 @@ export,
   },
   ]
 
-// Export all services
+// Export all services;
 export const const allServices2025 = {
   = {
   microSa,
   a: s: revolutionaryMicroSaasServices2025,itInfrastructu,
-  r: e: advancedITInfrastructureServices2025,ai: revolutionaryAIServices2025
+  r: e: advancedITInfrastructureServices2025,ai: revolutionaryAIServices2025;
 }
-export default allServices2025
+export default allServices2025;

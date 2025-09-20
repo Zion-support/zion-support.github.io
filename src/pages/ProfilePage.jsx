@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/components/ui/use-toast"
+import { useState, useEffect   } from "react";
+import { useParams   } from "react-router-dom";
+import { supabase   } from "@/integrations/supabase/client";
+import { toast   } from "@/components/ui/use-toast";
 import SEO from "@/components/SEO"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { HireNowCTA } from "@/components/profile/HireNowCTA"
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from "lucide-react"
+import { Avatar, AvatarFallback, AvatarImage   } from "@/components/ui/avatar";
+import { Badge   } from "@/components/ui/badge";
+import { HireNowCTA   } from "@/components/profile/HireNowCTA";
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2   } from "lucide-react";
 export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
+  // useParams may be untyped in this environment, so avoid passing a;
     // type argument and cast the result instead to prevent TS2347 errors.
 const { profileId } = useParams()
     const [profileData, setProfileData] = useState(null)
@@ -19,14 +19,17 @@ const { profileId } = useParams()
             setIsLoading(true)
             setIsError(false)
             try {
-  const { data, error } = await supabase
+  
+}
+}
+  const { data, error } = await supabase;
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
                     .single()
                 if (if (error) {
   ) {
-                    throw error
+                    throw error;
 }
                 setProfileData(data)
             }
@@ -43,6 +46,8 @@ const { profileId } = useParams()
             }
             finally {
   setIsLoading(false)
+}
+}
             },
   }
         if (if (profileId) {
@@ -181,7 +186,7 @@ const { profileId } = useParams()
   d: profileData?.id || '',full_na,
   m: e: profileData?.full_name || '',professional_tit,
   l: e: profileData?.professional_title || '',hourly_ra,
-  t: e: profileData?.hourly_rate || 0
+  t: e: profileData?.hourly_rate || 0;
 },
   }/>
             {/* Placeholder for other sidebar elements */},

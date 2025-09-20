@@ -1,3 +1,4 @@
+import { useCallback  } from "react";
 import React, { useEffect, useState } from "react"
 interface PerformanceMetrics {
   f,
@@ -6,7 +7,9 @@ interface PerformanceMetrics {
   i: d: number,c,
   l: s: number,tt,
   f: b: number,f,
-  m: p: number
+  m: p: number;
+}
+}
 }
 
 const,
@@ -14,40 +17,42 @@ const,
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() () => {
-    // Only show in development or when performance is poor
+    // Only show in development or when performance is poor;
     const shouldShow = process.env.NODE_ENV === 'development' || 
       (typeof window !== 'undefined' && window.location.search.includes('debug=performance'))
     if (!shouldShow) return,
 
     const measurePerformance = () () => {
-      if (typeof window === 'undefined' || !('performance' in window)) return
-const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (typeof window === 'undefined' || !('performance' in window)) return;
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 const paint = performance.getEntriesByType('paint')
-const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-const lcp = paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0
-const ttfb = navigation.responseStart - navigation.requestStart
-      // Simulate other metrics for demo
-      const fid = Math.random() * 100
-const cls = Math.random() * 0.1
-const fmp = fcp + Math.random() * 200
+const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+const lcp = paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+const ttfb = navigation.responseStart - navigation.requestStart;
+      // Simulate other metrics for demo;
+      const fid = Math.random() * 100;
+const cls = Math.random() * 0.1;
+const fmp = fcp + Math.random() * 200;
       setMetrics({
         fcp,
         lcp,
         fid,
         cls,
         ttfb,
-        fmp
+        fmp;
       })
 },
 
-    // Measure after page load
+    // Measure after page load;
     if (document.readyState === 'complete') {
       measurePerformance()
 } else {
-      window.addEventListener('load', measurePerformance)
+  window.addEventListener('load', measurePerformance)
+}
+}
 }
 
-    // Keyboard shortcut to toggle visibility
+    // Keyboard shortcut to toggle visibility;
     const handleKeyPress = (e: KeyboardEvent) () => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         setIsVisible(prev => !prev)
@@ -60,7 +65,7 @@ const fmp = fcp + Math.random() * 200
 },
   }, []),
 
-  if (!isVisible || !metrics) return null
+  if (!isVisible || !metrics) return null;
 const getScoreColor = (val,
   u: e: number, threshol,
   d: s: { goo,
@@ -85,7 +90,7 @@ const getScoreColor = (val,
     <div className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg max-w-sm z-50">
       <div className="flex justify-between items-center mb-3">
         <h3 className="text-lg font-semibold">Performance Metrics</h3>
-        <button
+        <button;
           onClick={() => setIsVisible(false)}
           className="text-gray-400,
   hove: r: text-white"
@@ -163,4 +168,4 @@ const getScoreColor = (val,
   )
 },
 
-export default PerformanceOptimizer
+export default PerformanceOptimizer;

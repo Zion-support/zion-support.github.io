@@ -5,8 +5,10 @@ export interface PricingTier {
   n: g: 'monthly' | 'yearly' | 'one-time',featur,
   e: s: string[[],
   ]
-    popular?: boolean
-    savings?: string
+    popular?: boolean;
+    savings?: string;
+}
+}
 }
 
 export interface ServicePricing {
@@ -27,7 +29,9 @@ export interface ServicePricing {
   e: string,ema,
   i: l: string,addre,
   s: s: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 },
   }
 
@@ -42,7 +46,7 @@ const const CONTACT = {
 }
 export,
   const: comprehensivePricingGuide2025: ServicePricing[] = [
-  // FINANCIAL TECHNOLOGY SERVICES
+  // FINANCIAL TECHNOLOGY SERVICES;
     {
   i,
   d: 'ai-powered-invoice-factoring-platform',na,
@@ -105,7 +109,7 @@ export,
   o: n: 'AI-first invoice factoring solution for small to medium businesses',competito,
   r: s: ['BlueVineFundbox', 'Kabbage']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'crypto-payment-gateway-saas',na,
@@ -168,9 +172,9 @@ export,
   o: n: 'Enterprise crypto payment solution for e-commerce and SaaS companies',competito,
   r: s: ['Coinbase CommerceBitPay', 'CoinPayments']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // HEALTHCARE TECHNOLOGY SERVICES
+    // HEALTHCARE TECHNOLOGY SERVICES;
     {
   id: 'ai-telemedicine-platform',na,
   m: e: 'AI Telemedicine Platform',catego,
@@ -232,9 +236,9 @@ export,
   o: n: 'AI-enhanced telemedicine solution for healthcare providers',competito,
   r: s: ['TeladocAmwell', 'MDLive']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // EDUCATION TECHNOLOGY SERVICES
+    // EDUCATION TECHNOLOGY SERVICES;
     {
   id: 'ai-personalized-learning-platform',na,
   m: e: 'AI Personalized Learning Platform',catego,
@@ -296,9 +300,9 @@ export,
   o: n: 'AI-powered personalized learning pioneer for educational institutions',competito,
   r: s: ['DreamBoxKnewton', 'Smart Sparrow']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // MARKETING TECHNOLOGY SERVICES
+    // MARKETING TECHNOLOGY SERVICES;
     {
   id: 'ai-content-optimization-engine',na,
   m: e: 'AI Content Optimization Engine',catego,
@@ -361,9 +365,9 @@ export,
   o: n: 'AI-powered content optimization leader for marketing teams',competito,
   r: s: ['OptimizelyVWO', 'Google Optimize']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // AI SERVICES
+    // AI SERVICES;
     {
   id: 'ai-threat-intelligence-platform',na,
   m: e: 'AI Threat Intelligence Platform',catego,
@@ -426,9 +430,9 @@ export,
   o: n: 'AI-powered threat intelligence leader for enterprise security',competito,
   r: s: ['Recorded FutureThreatConnect', 'Anomali']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // IT SERVICES
+    // IT SERVICES;
     {
   id: 'automated-compliance-monitoring',na,
   m: e: 'Automated Compliance Monitoring',catego,
@@ -491,9 +495,9 @@ export,
   o: n: 'Automated compliance monitoring solution for regulated industries',competito,
   r: s: ['LogicGateMetricStream', 'ServiceNow GRC']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // MICRO SAAS SERVICES
+    // MICRO SAAS SERVICES;
     {
   id: 'ai-project-resource-optimizer',na,
   m: e: 'AI Project Resource Optimizer',catego,
@@ -556,7 +560,7 @@ export,
   o: n: 'AI-powered project optimization solution for project managers',competito,
   r: s: ['Monday.comAsana', 'ClickUp']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   ]
-export default comprehensivePricingGuide2025
+export default comprehensivePricingGuide2025;

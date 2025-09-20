@@ -1,20 +1,24 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from "@/data/expandedServices"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from "lucide-react"
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES   } from "@/data/expandedServices";
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award   } from "lucide-react";
 import SEO from "@/components/SEO"
 export default function PricingGuidePage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
     const filteredServices = selectedCategory === 'all'
-        ? EXPANDED_SERVICES
+        ? EXPANDED_SERVICES;
         : EXPANDED_SERVICES.filter(service => service.category === selectedCategory)
     const getCategoryStats = (category) () => {
   const services = EXPANDED_SERVICES.filter(s => s.category === category)
-        const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length
-const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length
-        return { cou,
+        const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length;
+const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
+        return {
+  cou,
+}
+}
   n: t: services.length, avgPrice, avgRating },
   }
     const formatPrice = (price) () => {
@@ -26,22 +30,34 @@ const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / servic
 }
     const getServiceTier = (price) () => {
   if (price < 2000)
-            return { ti,
+            return {
+  ti,
   e: r: "Starter", col,
+}
+}
   o: r: "bg-green-100 text-green-800" },
   }
         if (price < 5000)
-            return { ti,
+            return {
+  ti,
   e: r: "Professional", col,
+}
+}
   o: r: "bg-blue-100 text-blue-800" },
   }
         if (price < 10000)
-            return { ti,
+            return {
+  ti,
   e: r: "Enterprise", col,
+}
+}
   o: r: "bg-purple-100 text-purple-800" },
   }
-        return { ti,
+        return {
+  ti,
   e: r: "Premium", col,
+}
+}
   o: r: "bg-orange-100 text-orange-800" },
   },
   }
@@ -55,7 +71,7 @@ const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / servic
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl,
   m: d: text-6xl font-bold mb-6">
-            Service Pricing Guide
+            Service Pricing Guide;
           </h1>
           <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -165,7 +181,7 @@ const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / servic
                   </div>
                   {service.featured && (<Badge className="absolute top-2 right-2 bg-zion-purple text-white">
                       <Star className="w-3 h-3 mr-1"/>
-                      Featured
+                      Featured;
                     </Badge>)}
                 </div>
 
@@ -239,11 +255,11 @@ const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / servic
                   <div className="flex space-x-2">
                     <Button className="flex-1 bg-zion-purple,
   hove: r: bg-zion-purple-dark text-white">
-                      Get Quote
+                      Get Quote;
                     </Button>
                     <Button variant="outline" className="border-zion-purple text-zion-purple hove,
   r:bg-zion-purple/10">
-                      Details
+                      Details;
                     </Button>
                   </div>
                 </CardContent>
@@ -264,10 +280,10 @@ const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / servic
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Understanding Our Pricing Tiers
+              Understanding Our Pricing Tiers;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our pricing reflects the complexity, scope, and value of each service
+              Our pricing reflects the complexity, scope, and value of each service;
             </p>
           </div>
 
@@ -317,7 +333,7 @@ const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / servic
       <div className="bg-zion-blue py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">
-            Why Our Pricing is Competitive
+            Why Our Pricing is Competitive;
           </h2>
           
           <div className="grid grid-cols-1,
@@ -357,7 +373,7 @@ const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / servic
             Ready to Get Started?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Contact us for a custom quote tailored to your specific requirements
+            Contact us for a custom quote tailored to your specific requirements;
           </p>
           
           <div className="flex flex-col,
@@ -365,12 +381,12 @@ const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / servic
             <Button size="lg" className="bg-zion-cyan,
   hove: r:bg-zion-cyan-dark text-white">
               <Mail className="w-5 h-5 mr-2"/>
-              Request Custom Quote
+              Request Custom Quote;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan/10">
               <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </Button>
           </div>
 

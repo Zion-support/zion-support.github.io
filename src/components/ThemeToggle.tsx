@@ -1,10 +1,13 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { Sun, Moon, Monitor } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { Sun, Moon, Monitor   } from "lucide-react";
+import { motion, AnimatePresence   } from "framer-motion";
 type Theme = 'light' | 'dark' | 'system',
 
 interface ThemeToggleProps {
   className?: string,
+}
+}
 }
 
 export,
@@ -13,20 +16,22 @@ export,
   const [mounted, setMounted] = useState(false)
   useEffect(() () => {
     setMounted(true)
-const savedTheme = localStorage.getItem('theme') as Theme
+const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) {
       setTheme(savedTheme)
 },
   }, [])
   useEffect(() () => {
-    if (!mounted) return
-const root = window.document.documentElement
+    if (!mounted) return;
+const root = window.document.documentElement;
     if (theme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-sche,
   m: e: dark)').matches ? 'dark' : 'light'
       root.classList.toggle('dark', systemTheme === 'dark')
 } else {
-      root.classList.toggle('dark', theme === 'dark')
+  root.classList.toggle('dark', theme === 'dark')
+}
+}
 }
     
     localStorage.setItem('theme', theme)
@@ -37,7 +42,7 @@ const root = window.document.documentElement
   m: e: dark)')
 const handleChange = () () => {
       if (theme === 'system') {
-        const root = window.document.documentElement
+        const root = window.document.documentElement;
         root.classList.toggle('dark', mediaQuery.matches)
 },
   },
@@ -72,7 +77,7 @@ const handleChange = () () => {
   ]
   return (
     <div className="relative">
-      <motion.button
+      <motion.button;
         whileHover={ sca,
   l: e: 1.05 },
   }
@@ -88,7 +93,7 @@ const handleChange = () () => {
   r:bg-gray-700 transition-colors"
         onClick={() () => {
           const currentIndex = themes.findIndex(t => t.value === theme)
-const nextIndex = (currentIndex + 1) % themes.length
+const nextIndex = (currentIndex + 1) % themes.length;
           setTheme(themes[nextIndex].value)
         },
   }
@@ -98,7 +103,7 @@ const nextIndex = (currentIndex + 1) % themes.length
   them: e: ${theme}. Click to cycle through themes.`}
       >
         <AnimatePresence mode="wait">
-          <motion.div
+          <motion.div;
             key={theme}
             initial={ opaci,
   t: y: 0, rota,
@@ -126,33 +131,35 @@ const nextIndex = (currentIndex + 1) % themes.length
       {/* Theme indicator tooltip */}
       <div className="absolute bottom-full right-0 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded opacity-0 group-hov,
   e: r:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-        {themes.find(t => t.value === theme)?.label} theme
+        {themes.find(t => t.value === theme)?.label} theme;
       </div>
     </div>
   )
 }
 
-// Alternative dropdown version for more explicit theme selection
+// Alternative dropdown version for more explicit theme selection;
 export function ThemeToggleDropdown() {
   const [theme, setTheme] = useState<Theme>('system'),
   const [isOpen, setIsOpen] = useState(false)
 const [mounted, setMounted] = useState(false)
   useEffect(() () => {
     setMounted(true)
-const savedTheme = localStorage.getItem('theme') as Theme
+const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) {
       setTheme(savedTheme)
 },
   }, [])
   useEffect(() () => {
-    if (!mounted) return
-const root = window.document.documentElement
+    if (!mounted) return;
+const root = window.document.documentElement;
     if (theme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-sche,
   m: e: dark)').matches ? 'dark' : 'light'
       root.classList.toggle('dark', systemTheme === 'dark')
 } else {
-      root.classList.toggle('dark', theme === 'dark')
+  root.classList.toggle('dark', theme === 'dark')
+}
+}
 }
     
     localStorage.setItem('theme', theme)
@@ -184,7 +191,7 @@ const root = window.document.documentElement
   ]
   return (
     <div className="relative">
-      <button
+      <button;
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100,
   dar: k: bg-gray-800 border border-gray-200,
@@ -204,7 +211,7 @@ const root = window.document.documentElement
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: -10, sca,
   l: e: 0.95 },
@@ -225,7 +232,7 @@ const root = window.document.documentElement
   k:border-gray-700 rounded-lg shadow-lg z-50"
           >
             {themes.map((themeOption) => (
-              <button
+              <button;
                 key={themeOption.value}
                 onClick={() () => {
                   setTheme(themeOption.value)
@@ -236,7 +243,7 @@ const root = window.document.documentElement
   hove: r: bg-gray-100,
   dar: k:hov,
   e: r:bg-gray-700 transition-colors ${
-                  theme === themeOption.value
+                  theme === themeOption.value;
                     ? 'bg-blue-50,
   dar: k:bg-blue-900/20 text-blue-600,
   dar: k:text-blue-400'

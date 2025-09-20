@@ -1,66 +1,35 @@
-// Performance monitoring utilities
-export const measurePerformance = (na,
-  m: e: string, fn: () => void) () => {
-  const start = performance.now()
-  fn()
-  const end = performance.now()
-  console.log(`${name} took ${end - start} milliseconds`)
-  return end - start
-}
-
-export const debounce = <T extends (...ar,
-  g: s: any[]) => any>(
-  fun,
-  c: T,wa,
-  i: t: number
-): ((...ar,
-  g: s: Parameters<T>) => void) () => {
-  let,
-  timeou: t: NodeJS.Timeout
-  return (...arg,
-  s: Parameters<T>) () => {
-  clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
+// Performance monitoring utilities;
+export const performanceMonitor = {
+  measure(name, fn) {
+    const start = performance.now();
+    const result = fn();
+    const end = performance.now();
+    console.log(`${name}: ${(end - start).toFixed(2)}ms`);
+    return result;
   },
+  
+  measureAsync: async (name, fn) => {
+    const start = performance.now();
+    const result = await fn();
+    const end = performance.now();
+    console.log(`${name}: ${(end - start).toFixed(2)}ms`);
+    return result;
   }
+};
 
-export const throttle = <T extends (...ar,
-  g: s: any[]) => any>(
-  fun,
-  c: T,lim,
-  i: t: number
-): ((...ar,
-  g: s: Parameters<T>) => void) () => {
-  let,
-  inThrottl: e: boolean
-  return (...arg,
-  s: Parameters<T>) () => {
-  if (if (!inThrottle) {
-  ) {
-      func(...args)
-      inThrottle = true
-      setTimeout(() => (inThrottle = false), limit)
-    },
-  },
-  }
+export const lazyLoad = React.memo((importFn) => {
+  return React.lazy(importFn);
+};
 
-export const getPerformanceMetrics = () () => {
-  if (typeof window === 'undefined') return null
-const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-const paint = performance.getEntriesByType('paint')
-  return {
-  loadTi,
-  m: e: navigation.loadEventEnd - navigation.loadEventStart,domContentLoad,
-  e: d: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,firstPai,
-  n: t: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,firstContentfulPai,
-  n: t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-},
-  }
-
-export const logPerformanceMetrics = () () => {
-  const metrics = getPerformanceMetrics()
-  if (if (metrics) {
-  ) {
-
-  },
-  }
+export const memoize = React.memo((fn) => {
+  const cache = new Map();
+  return (...args) => {
+    const key = JSON.stringify(args);
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    const result = fn(...args);
+    cache.set(key, result);
+    return result;
+  };
+};

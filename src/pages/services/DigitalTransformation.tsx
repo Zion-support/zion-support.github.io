@@ -1,28 +1,32 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
 import {
-  Rocket
-  Cpu
-  Database
-  Cloud
-  Shield
-  Users
-  BarChart3
-  Zap
-  ArrowRight
-  CheckCircle
-  Star
-  Globe
-  Target
-  Lightbulb
-  TrendingUp
-  Settings
-  Workflow
-  FileText
-  Monitor
-  Smartphone
-} from "lucide-react"
+  Rocket;
+  Cpu;
+  Database;
+  Cloud;
+  Shield;
+  Users;
+  BarChart3;
+  Zap;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Globe;
+  Target;
+  Lightbulb;
+  TrendingUp;
+  Settings;
+  Workflow;
+  FileText;
+  Monitor;
+  Smartphone;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function DigitalTransformation() {
   const features = [
   {
@@ -137,7 +141,7 @@ export default function DigitalTransformation() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             className="className="text-center";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -151,38 +155,38 @@ export default function DigitalTransformation() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6">
               <Zap className="w-4 h-4 mr-2" />
-              Digital Transformation Solutions
+              Digital Transformation Solutions;
             </div>
             
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Digital
+              Digital;
               <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"> Transformation</span>
             </h1>
             <p className="text-xl l,
   g:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business for the digital age with comprehensive technology solutions that drive innovation
+              Transform your business for the digital age with comprehensive technology solutions that drive innovation;
               efficiency, and growth. Our expert team guides you through every step of your digital journey.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105 font-semibold";"
               >
-                Start Your Transformation
+                Start Your Transformation;
               </Link>
-              <Link
+              <Link;
                 to="/solutions"
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300 font-semibold";"
               >
-                View Solutions
+                View Solutions;
               </Link>
             </div>
           </motion.div>
@@ -192,7 +196,7 @@ export default function DigitalTransformation() {
   }
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -206,17 +210,17 @@ export default function DigitalTransformation() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Digital Transformation Features
+              Digital Transformation Features;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive digital transformation services designed to modernize your business operations
+              Comprehensive digital transformation services designed to modernize your business operations;
               and position you for future success.
             </p>
           </motion.div>
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -249,7 +253,7 @@ export default function DigitalTransformation() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -262,10 +266,10 @@ export default function DigitalTransformation() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Core Transformation Services
+              Core Transformation Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From strategy to implementation, we provide 
+              From strategy to implementation, we provide;
               end-to-end digital transformation solutions.
             </p>
           </motion.div>
@@ -273,7 +277,7 @@ export default function DigitalTransformation() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -308,7 +312,7 @@ export default function DigitalTransformation() {
   }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -322,7 +326,7 @@ export default function DigitalTransformation() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transformation Benefits
+              Transformation Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in efficiency, innovation, and business performance.
@@ -331,7 +335,7 @@ export default function DigitalTransformation() {
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6,
@@ -361,7 +365,7 @@ export default function DigitalTransformation() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -375,17 +379,17 @@ export default function DigitalTransformation() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our digital transformation expertise spans across multiple industries
+              Our digital transformation expertise spans across multiple industries;
               each with unique challenges and opportunities.
             </p>
           </motion.div>
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -411,7 +415,7 @@ export default function DigitalTransformation() {
   }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -425,7 +429,7 @@ export default function DigitalTransformation() {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Our Transformation Process
+              Our Transformation Process;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful digital transformation outcomes.
@@ -455,7 +459,7 @@ export default function DigitalTransformation() {
   o: n: 'Continuously improve and scale digital capabilities' },
   },
   ].map((phase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -486,7 +490,7 @@ export default function DigitalTransformation() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -499,7 +503,7 @@ export default function DigitalTransformation() {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Start Your Digital Transformation Today
+              Start Your Digital Transformation Today;
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Let our digital transformation experts guide you through your journey to digital excellence.
@@ -507,22 +511,22 @@ export default function DigitalTransformation() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105 font-semibold";"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </Link>
-              <Link
+              <Link;
                 to="/solutions"
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300 font-semibold";"
               >
-                Explore Solutions
+                Explore Solutions;
               </Link>
             </div>
           </motion.div>

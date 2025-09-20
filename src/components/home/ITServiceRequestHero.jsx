@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/Input"
-import { useNavigate } from "react-router-dom"
-import { motion } from "framer-motion"
-import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react"
+import { GradientHeading     } from "@/components/GradientHeading";
+import { Button     } from "@/components/ui/button";
+import { Input     } from "@/components/ui/Input";
+import { useNavigate     } from "react-router-dom";
+import { motion     } from "framer-motion";
+import { Clock, Globe, Shield, Zap, MapPin, ArrowRight     } from "lucide-react";
 export function ITServiceRequestHero() {
     const [location, setLocation] = useState("")
 const [isSubmitting, setIsSubmitting] = useState(false)
@@ -13,7 +13,7 @@ const handleSubmit = async (e) () => {
         e.preventDefault()
         if (location.trim()) {
             setIsSubmitting(true)
-            // Simulate API call
+            // Simulate API call;
             setTimeout(() () => {
                 setIsSubmitting(false)
                 navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)
@@ -31,7 +31,7 @@ const containerVariants = {
   o: n: {
                 duratio,
   n: 0.6,staggerChildr,
-  e: n: 0.2
+  e: n: 0.2;
             },
   },
   }
@@ -82,14 +82,14 @@ const features = [
                 <Zap className="w-6 h-6 text-zion-cyan"/>
               </div>
               <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
-                Global IT Services
+                Global IT Services;
               </span>
             </div>
             
             <GradientHeading className="mb-6 text-4xl,
   m: d: text-5xl,
   l: g:text-6xl leading-tight">
-              24x7 Global IT Onsite Services
+              24x7 Global IT Onsite Services;
             </GradientHeading>
             
             <p className="text-lg m,
@@ -158,7 +158,7 @@ const features = [
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105 group">
                     <span className="flex items-center gap-2">
-                      Request Service Now
+                      Request Service Now;
                       <ArrowRight className="w-5 h-5 group-hove,
   r:translate-x-1 transition-transform duration-200"/>
                     </span>

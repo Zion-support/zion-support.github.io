@@ -1,12 +1,14 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Loader2, Zap, Brain, Cloud, Atom } from "lucide-react"
+import { motion   } from "framer-motion";
+import { Loader2, Zap, Brain, Cloud, Atom   } from "lucide-react";
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   variant?: 'default' | 'futuristic' | 'ai' | 'quantum',
   text?: string,
   showProgress?: boolean,
   progress?: number,
+}
+}
 }
 
 const iconVariants = {
@@ -50,8 +52,8 @@ export function EnhancedLoadingSpinner({
   size = 'md', 
   variant = 'default'
   text = 'Loading...'
-  showProgress = false
-  progress = 0
+  showProgress = false;
+  progress = 0;
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-8 h-8',md: 'w-12 h-12',lg: 'w-16 h-16'
@@ -87,13 +89,13 @@ const getBackground = () () => {
     <div className="flex flex-col items-center justify-center space-y-4 p-6">
       {/* Main Spinner */}
       <div className="relative">
-        <motion.div
+        <motion.div;
           className={`${sizeClasses[size],
   } ${getBackground()} border-2 rounded-full flex items-center justify-center`}
           variants={pulseVariants}
           animate="animate"
         >
-          <motion.div
+          <motion.div;
             variants={iconVariants}
             animate="animate"
             className="w-3/4 h-3/4"
@@ -105,11 +107,11 @@ const getBackground = () () => {
         {/* Orbiting particles for futuristic variants */},
   {variant !== 'default' && (
           <>
-            <motion.div
+            <motion.div;
               className="absolute inset-0 w-full h-full"
               animate={
                 rota,
-  t: e: 360
+  t: e: 360;
               },
   }
               transition={
@@ -122,11 +124,11 @@ const getBackground = () () => {
             >
               <div className="absolute top-0 left-1/2 w-2 h-2 bg-cyan-400 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
             </motion.div>
-            <motion.div
+            <motion.div;
               className="absolute inset-0 w-full h-full"
               animate={
                 rota,
-  t: e: -360
+  t: e: -360;
               },
   }
               transition={
@@ -144,7 +146,7 @@ const getBackground = () () => {
       </div>
 
       {/* Loading Text */}
-      <motion.div
+      <motion.div;
         initial={ opaci,
   t: y: 0 },
   }
@@ -163,7 +165,7 @@ const getBackground = () () => {
 
       {/* Progress Bar */},
   {showProgress && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, wid,
   t: h: 0 },
@@ -178,7 +180,7 @@ const getBackground = () () => {
   }
           className="w-full max-w-xs bg-gray-200 rounded-full h-2 overflow-hidden"
         >
-          <motion.div
+          <motion.div;
             className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
             initial={ wid,
   t: h: 0 },
@@ -194,7 +196,7 @@ const getBackground = () () => {
         </motion.div>
       )},
   {/* Loading Dots */}
-      <motion.div
+      <motion.div;
         initial={ opaci,
   t: y: 0 },
   }
@@ -207,7 +209,7 @@ const getBackground = () () => {
         className="flex space-x-1"
       >
         {[0, 1, 2].map((i) => (
-          <motion.div
+          <motion.div;
             key={i}
             className="w-2 h-2 bg-gray-400 rounded-full"
             animate={
@@ -221,7 +223,7 @@ const getBackground = () () => {
               durati,
   o: n: 1.5,repe,
   a: t: Infinity,del,
-  a: y: i * 0.2
+  a: y: i * 0.2;
             },
   }
           />
@@ -231,6 +233,6 @@ const getBackground = () () => {
   )
 }
 
-// Export as ZionLoadingSpinner for backward compatibility
-export const ZionLoadingSpinner = EnhancedLoadingSpinner
-export default EnhancedLoadingSpinner
+// Export as ZionLoadingSpinner for backward compatibility;
+export const ZionLoadingSpinner = EnhancedLoadingSpinner;
+export default EnhancedLoadingSpinner;

@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() () => {
@@ -7,7 +8,9 @@ export function ScrollToTop() {
       if (window.pageYOffset > 300) {
         setIsVisible(true)
 } else {
-        setIsVisible(false)
+  setIsVisible(false)
+}
+}
 },
   },
 
@@ -25,7 +28,7 @@ const scrollToTop = () () => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.button
+        <motion.button;
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg,
   hove: r: shadow-xl,
@@ -60,7 +63,7 @@ const scrollToTop = () () => {
             ty,
   p: e: "spring",stiffne,
   s: s: 400,dampi,
-  n: g: 17
+  n: g: 17;
           },
   }
         >
@@ -73,4 +76,4 @@ const scrollToTop = () () => {
   )
 }
 
-export default ScrollToTop
+export default ScrollToTop;

@@ -1,156 +1,159 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
-  Zap
-  Shield
-  TrendingUp
-  Users
-  Globe
-  ArrowRight
-  CheckCircle
-  Play
-  BarChart3
-  Cpu
-  Eye
-  MessageSquare
-  Database
-  Network
-  Rocket
-  Target
-  Award
-  Clock
-  Star
-  Heart
-  Lock
-  Cloud
-  Smartphone
-  Monitor
-  Wifi
-  Bluetooth
-  Satellite
-  Atom
-  Dna
-  Microscope
-  Flask
-  TestTube
-  Syringe
-  Stethoscope
-  HeartPulse
-  BrainCircuit
-  Leaf
-  Space
-  Handshake
-  Calendar
-  DollarSign
-  Bitcoin
-  Ethereum
-  CreditCard
-  Wallet
-  Banknote
-  Coins
-  PiggyBank
-  Safe
-  Vault
-  LockKeyhole
-  Key
-  Fingerprint
-  QrCode
-  Barcode
-  Scan
-  Camera
-  VideoOff
-  Mic
-  MicOff
-  Volume2
-  VolumeX
-  Building
-  Truck
-  Sparkles
-  Crown
-  Lightbulb
-  Globe2
-  Search
-  Phone
-  Mail
-  FileText
-  Image
-  Video
-  Music
-  Code
-  Palette
-  ShoppingCart
-  Truck
-  Plane
-  Ship
-  Train
-  Car
-  Bike
-  Bus
-  Taxi
-  Helicopter
-  Rocket
-  Satellite
-  Telescope
-  Microscope
-  Flask
-  TestTube
-  Syringe
-  Stethoscope
-  HeartPulse
-  BrainCircuit
-  Eye
-  Ear
-  Hand
-  Foot
-  Bone
-  Tooth
-  Pill
-  Bandage
-  Thermometer
-  Scale
-  Calculator
-  ChartBar
-  PieChart
-  LineChart
-  Activity
-  TrendingDown
-  Minus
-  Plus
-  Equal
-  Divide
-  Percent
-  Euro
-  Pound
-  Yen
-  CreditCard
-  Wallet
-  Banknote
-  Coins
-  PiggyBank
-  Safe
-  Vault
-  LockKeyhole
-  Key
-  Fingerprint
-  QrCode
-  Barcode
-  Scan
-  Camera
-  VideoOff
-  Mic
-  MicOff
-  Volume2
-  VolumeX
-  Building
-  Leaf
-  Space
-  Handshake
-  Calendar
-} from "lucide-react"
+  Brain;
+  Zap;
+  Shield;
+  TrendingUp;
+  Users;
+  Globe;
+  ArrowRight;
+  CheckCircle;
+  Play;
+  BarChart3;
+  Cpu;
+  Eye;
+  MessageSquare;
+  Database;
+  Network;
+  Rocket;
+  Target;
+  Award;
+  Clock;
+  Star;
+  Heart;
+  Lock;
+  Cloud;
+  Smartphone;
+  Monitor;
+  Wifi;
+  Bluetooth;
+  Satellite;
+  Atom;
+  Dna;
+  Microscope;
+  Flask;
+  TestTube;
+  Syringe;
+  Stethoscope;
+  HeartPulse;
+  BrainCircuit;
+  Leaf;
+  Space;
+  Handshake;
+  Calendar;
+  DollarSign;
+  Bitcoin;
+  Ethereum;
+  CreditCard;
+  Wallet;
+  Banknote;
+  Coins;
+  PiggyBank;
+  Safe;
+  Vault;
+  LockKeyhole;
+  Key;
+  Fingerprint;
+  QrCode;
+  Barcode;
+  Scan;
+  Camera;
+  VideoOff;
+  Mic;
+  MicOff;
+  Volume2;
+  VolumeX;
+  Building;
+  Truck;
+  Sparkles;
+  Crown;
+  Lightbulb;
+  Globe2;
+  Search;
+  Phone;
+  Mail;
+  FileText;
+  Image;
+  Video;
+  Music;
+  Code;
+  Palette;
+  ShoppingCart;
+  Truck;
+  Plane;
+  Ship;
+  Train;
+  Car;
+  Bike;
+  Bus;
+  Taxi;
+  Helicopter;
+  Rocket;
+  Satellite;
+  Telescope;
+  Microscope;
+  Flask;
+  TestTube;
+  Syringe;
+  Stethoscope;
+  HeartPulse;
+  BrainCircuit;
+  Eye;
+  Ear;
+  Hand;
+  Foot;
+  Bone;
+  Tooth;
+  Pill;
+  Bandage;
+  Thermometer;
+  Scale;
+  Calculator;
+  ChartBar;
+  PieChart;
+  LineChart;
+  Activity;
+  TrendingDown;
+  Minus;
+  Plus;
+  Equal;
+  Divide;
+  Percent;
+  Euro;
+  Pound;
+  Yen;
+  CreditCard;
+  Wallet;
+  Banknote;
+  Coins;
+  PiggyBank;
+  Safe;
+  Vault;
+  LockKeyhole;
+  Key;
+  Fingerprint;
+  QrCode;
+  Barcode;
+  Scan;
+  Camera;
+  VideoOff;
+  Mic;
+  MicOff;
+  Volume2;
+  VolumeX;
+  Building;
+  Leaf;
+  Space;
+  Handshake;
+  Calendar;
+}
+}
+ } from "lucide-react";
 const microSAASServices2028 = [
-  // AI-Powered Content Creation
+  // AI-Powered Content Creation;
   {
   id: 'ai-content-creator-pro',na,
   m: e: 'AI Content Creator Pro',tagli,
@@ -192,9 +195,9 @@ const microSAASServices2028 = [
   t: e: '180% annual growth',rati,
   n: g: 4.8,revie,
   w: s: 456,custome,
-  r: s: 234
+  r: s: 234;
 }
-  // AI Image Generator
+  // AI Image Generator;
   {
   id: 'ai-image-generator-plus',na,
   m: e: 'AI Image Generator Plus',tagli,
@@ -236,9 +239,9 @@ const microSAASServices2028 = [
   t: e: '250% annual growth',rati,
   n: g: 4.9,revie,
   w: s: 234,custome,
-  r: s: 156
+  r: s: 156;
 }
-  // AI Video Creator
+  // AI Video Creator;
   {
   id: 'ai-video-creator-studio',na,
   m: e: 'AI Video Creator Studio',tagli,
@@ -280,9 +283,9 @@ const microSAASServices2028 = [
   t: e: '220% annual growth',rati,
   n: g: 4.7,revie,
   w: s: 189,custome,
-  r: s: 98
+  r: s: 98;
 }
-  // AI Code Generator
+  // AI Code Generator;
   {
   id: 'ai-code-generator-pro',na,
   m: e: 'AI Code Generator Pro',tagli,
@@ -324,9 +327,9 @@ const microSAASServices2028 = [
   t: e: '280% annual growth',rati,
   n: g: 4.8,revie,
   w: s: 567,custome,
-  r: s: 289
+  r: s: 289;
 }
-  // AI Design Assistant
+  // AI Design Assistant;
   {
   id: 'ai-design-assistant',na,
   m: e: 'AI Design Assistant',tagli,
@@ -368,9 +371,9 @@ const microSAASServices2028 = [
   t: e: '200% annual growth',rati,
   n: g: 4.6,revie,
   w: s: 234,custome,
-  r: s: 123
+  r: s: 123;
 }
-  // AI E-commerce Optimizer
+  // AI E-commerce Optimizer;
   {
   id: 'ai-ecommerce-optimizer',na,
   m: e: 'AI E-commerce Optimizer',tagli,
@@ -412,9 +415,9 @@ const microSAASServices2028 = [
   t: e: '320% annual growth',rati,
   n: g: 4.8,revie,
   w: s: 345,custome,
-  r: s: 178
+  r: s: 178;
 }
-  // AI Customer Service
+  // AI Customer Service;
   {
   id: 'ai-customer-service-pro',na,
   m: e: 'AI Customer Service Pro',tagli,
@@ -456,9 +459,9 @@ const microSAASServices2028 = [
   t: e: '240% annual growth',rati,
   n: g: 4.7,revie,
   w: s: 456,custome,
-  r: s: 234
+  r: s: 234;
 }
-  // AI Analytics Platform
+  // AI Analytics Platform;
   {
   id: 'ai-analytics-platform',na,
   m: e: 'AI Analytics Platform',tagli,
@@ -500,7 +503,7 @@ const microSAASServices2028 = [
   t: e: '260% annual growth',rati,
   n: g: 4.6,revie,
   w: s: 234,custome,
-  r: s: 123
+  r: s: 123;
 },
   ]
 const,
@@ -551,13 +554,13 @@ const,
   o: r: 'from-zion-emerald to-zion-teal' },
   },
   ]
-  const filteredServices = microSAASServices2028
+  const filteredServices = microSAASServices2028;
     .filter(service () => {
   const matchesCategory = selectedCategory === 'all' ||
         service.category.toLowerCase().includes(selectedCategory.replace('- '))
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase())
-      return matchesCategory && matchesSearch
+      return matchesCategory && matchesSearch;
 })
     .sort((a, b) () => {
   switch (sortBy) {
@@ -566,10 +569,10 @@ const,
         case 'price-high':
           return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''))
         case 'rating':
-          return b.rating - a.rating
+          return b.rating - a.rating;
         case 'popularity':
         defau,
-  l: t: return b.popular ? 1 : -1
+  l: t: return b.popular ? 1 : -1;
 },
   })
   return (
@@ -579,7 +582,7 @@ const,
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -592,9 +595,9 @@ const,
             className="className="text-5xl,
   m: d: text-7xl font-bold mb-6 text-gradient";"
           >
-            Micro SAAS Services 2028
+            Micro SAAS Services 2028;
           </motion.h1>
-          <motion.p
+          <motion.p;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -608,9 +611,9 @@ const,
             className="className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto";"
           >
-            Powerful, affordable, and intelligent micro SAAS solutions designed to transform your business operations
+            Powerful, affordable, and intelligent micro SAAS solutions designed to transform your business operations;
           </motion.p>
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -624,13 +627,13 @@ const,
             className="className="flex flex-wrap justify-center gap-4";"
           >
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
-              🚀 AI-Powered Solutions
+              🚀 AI-Powered Solutions;
             </div>
             <div className="bg-zion-purple/20 backdrop-blur-sm border border-zion-purple/30 rounded-full px-6 py-3 text-zion-purple font-semibold">
-              💰 Affordable Pricing
+              💰 Affordable Pricing;
             </div>
             <div className="bg-zion-blue/20 backdrop-blur-sm border border-zion-blue/30 rounded-full px-6 py-3 text-zion-blue font-semibold">
-              ⚡ Instant Setup
+              ⚡ Instant Setup;
             </div>
           </motion.div>
         </div>
@@ -646,7 +649,7 @@ const,
   }
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
-  <motion.button
+  <motion.button;
                   key={category.id},
   }
                   whileHover={ sca,
@@ -659,7 +662,7 @@ const,
   },
   }
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light,
   hove: r:bg-zion-slate/70'
@@ -677,7 +680,7 @@ const,
             <div className="flex flex-col,
   s: m:flex-row gap-4">
               <div className="relative">
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery},
@@ -691,7 +694,7 @@ const,
                 />
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
               </div>
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -721,7 +724,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -743,7 +746,7 @@ const,
   },
   {service.popular && (
   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
-                    Popular
+                    Popular;
                   </div>
                 )},
   {/* Service Icon */},
@@ -788,7 +791,7 @@ const,
                   ))},
   {service.features.length > 3 && (
   <div className="text-sm text-zion-slate-light">
-                      +{service.features.length - 3} more features
+                      +{service.features.length - 3} more features;
                     </div>
                   )}
                 </div>
@@ -805,14 +808,14 @@ const,
 
                 {/* CTA Button */},
   }
-                <Link
+                <Link;
                   to={service.link},
   }
                   className="className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hov,
   e: r: shadow-lg group-hov,
   e: r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 group-hove,
   r:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -841,7 +844,7 @@ const,
   }
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -856,7 +859,7 @@ const,
           >
             Ready to Get Started?
           </motion.h2>
-          <motion.p
+          <motion.p;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -869,9 +872,9 @@ const,
   }
             className="className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto";"
           >
-            Contact our team to discuss how our micro SAAS services can transform your business operations
+            Contact our team to discuss how our micro SAAS services can transform your business operations;
           </motion.p>
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -885,7 +888,7 @@ const,
             className="className="flex flex-col,
   s: m: flex-row gap-4 justify-center";"
           >
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg,
@@ -893,9 +896,9 @@ const,
   hove: r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";"
             >
               <Phone className="w-5 h-5" />
-              +1 302 464 0950
+              +1 302 464 0950;
             </a>
-            <a
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg,
@@ -903,7 +906,7 @@ const,
   r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";"
             >
               <Mail className="w-5 h-5" />
-              kleber@ziontechgroup.com
+              kleber@ziontechgroup.com;
             </a>
           </motion.div>
         </div>
@@ -911,4 +914,4 @@ const,
     </div>
   )
 }
-export default MicroSAASServices2028
+export default MicroSAASServices2028;

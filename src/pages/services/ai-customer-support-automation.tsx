@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones } from "lucide-react"
-import { SEO } from "@/components/SEO"
+import { motion     } from "framer-motion";
+import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones     } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function AICustomerSupportAutomation() {
   const features = [
   {
@@ -96,7 +96,7 @@ export default function AICustomerSupportAutomation() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Customer Support Automation Services - Zion Tech Group"
         description="Revolutionary AI-powered customer support automation that reduces costs, improves response times, and enhances customer satisfaction. 24/7 intelligent support across all channels."
       />
@@ -107,7 +107,7 @@ export default function AICustomerSupportAutomation() {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -127,7 +127,7 @@ export default function AICustomerSupportAutomation() {
             <h1 className="text-5xl,
   l: g: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
-                AI Customer Support
+                AI Customer Support;
               </span>
               <br />
               <span className="text-white">Automation</span>
@@ -136,13 +136,13 @@ export default function AICustomerSupportAutomation() {
             <p className="text-xl l,
   g:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer support with AI-powered automation that works 24/7. 
-              Reduce costs, improve response times, and deliver exceptional customer experiences 
+              Reduce costs, improve response times, and deliver exceptional customer experiences;
               across all channels.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -154,9 +154,9 @@ export default function AICustomerSupportAutomation() {
   hove: r:to-emerald-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <Rocket className="w-5 h-5 mr-2" />
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -167,7 +167,7 @@ export default function AICustomerSupportAutomation() {
   hove: r:bg-green-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Video className="w-5 h-5 mr-2" />
-                Watch Demo
+                Watch Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -178,7 +178,7 @@ export default function AICustomerSupportAutomation() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -192,10 +192,10 @@ export default function AICustomerSupportAutomation() {
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Advanced AI Technology for Better Support
+              Advanced AI Technology for Better Support;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered customer support platform combines natural language processing
+              Our AI-powered customer support platform combines natural language processing;
               machine learning, and automation to deliver exceptional customer experiences.
             </p>
           </motion.div>
@@ -204,7 +204,7 @@ export default function AICustomerSupportAutomation() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -237,7 +237,7 @@ export default function AICustomerSupportAutomation() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -251,10 +251,10 @@ export default function AICustomerSupportAutomation() {
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Proven Results & Benefits
+              Proven Results & Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered customer support automation delivers measurable improvements 
+              Our AI-powered customer support automation delivers measurable improvements;
               in efficiency, cost reduction, and customer satisfaction.
             </p>
           </motion.div>
@@ -263,7 +263,7 @@ export default function AICustomerSupportAutomation() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -290,7 +290,7 @@ export default function AICustomerSupportAutomation() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -304,10 +304,10 @@ export default function AICustomerSupportAutomation() {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Flexible Solutions for Every Business
+              Flexible Solutions for Every Business;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our range of AI-powered customer support solutions designed to 
+              Choose from our range of AI-powered customer support solutions designed to;
               meet your specific business needs and scale with your growth.
             </p>
           </motion.div>
@@ -315,7 +315,7 @@ export default function AICustomerSupportAutomation() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -347,7 +347,7 @@ export default function AICustomerSupportAutomation() {
                 <button className="w-full py-4 px-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg,
   hove: r: from-green-600 hove,
   r:to-emerald-600 transition-all duration-300">
-                  Get Started
+                  Get Started;
                 </button>
               </motion.div>
             ))}
@@ -359,7 +359,7 @@ export default function AICustomerSupportAutomation() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -373,10 +373,10 @@ export default function AICustomerSupportAutomation() {
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Trusted Across Industries
+              Trusted Across Industries;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered customer support automation is successfully deployed across 
+              Our AI-powered customer support automation is successfully deployed across;
               diverse industries, helping organizations deliver exceptional customer experiences.
             </p>
           </motion.div>
@@ -385,7 +385,7 @@ export default function AICustomerSupportAutomation() {
   m: d: grid-cols-3 l,
   g:grid-cols-6 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -417,7 +417,7 @@ export default function AICustomerSupportAutomation() {
   }
       <section className="py-20 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -433,12 +433,12 @@ export default function AICustomerSupportAutomation() {
               Ready to Transform Your Customer Support?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the AI revolution in customer support and deliver exceptional experiences 
+              Join the AI revolution in customer support and deliver exceptional experiences;
               while reducing costs and improving efficiency.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -450,9 +450,9 @@ export default function AICustomerSupportAutomation() {
   hove: r:to-emerald-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
-                Start Your Free Trial
+                Start Your Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -463,7 +463,7 @@ export default function AICustomerSupportAutomation() {
   hove: r: bg-green-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </motion.button>
             </div>
           </motion.div>

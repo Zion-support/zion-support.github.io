@@ -1,39 +1,43 @@
 
 import React from "react"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Link } from "react-router-dom"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle     } from "@/components/ui/card";
+import { Button     } from "@/components/ui/button";
+import { Badge     } from "@/components/ui/badge";
+import { Link     } from "react-router-dom";
 import {
-  ArrowRight
-  Users
-  Zap
-  Settings
-  Search
-  MessageSquare
-  Smartphone
-  Calendar
-  BookOpen
-  Code
-  Building
-  Clock
-  Brain
-  Server
-  TrendingUp
-  CheckCircle
-  Network
-  Monitor
-  Bot
-  FileText
-  Video
-  BarChart3
-  AlertTriangle
-  Eye
-  PieChart
-  PenTool
-  Shield
-  Cloud
-} from "lucide-react"
+  ArrowRight;
+  Users;
+  Zap;
+  Settings;
+  Search;
+  MessageSquare;
+  Smartphone;
+  Calendar;
+  BookOpen;
+  Code;
+  Building;
+  Clock;
+  Brain;
+  Server;
+  TrendingUp;
+  CheckCircle;
+  Network;
+  Monitor;
+  Bot;
+  FileText;
+  Video;
+  BarChart3;
+  AlertTriangle;
+  Eye;
+  PieChart;
+  PenTool;
+  Shield;
+  Cloud;
+}
+}
+}
+}
+ } from "lucide-react";
 export function FeatureCTAs() {
   const features = [
   {
@@ -194,10 +198,10 @@ export function FeatureCTAs() {
         <div className="text-center mb-16">
           <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-            Explore Our Comprehensive Solutions
+            Explore Our Comprehensive Solutions;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From AI services to IT infrastructure, discover the tools and expertise you need to transform your business
+            From AI services to IT infrastructure, discover the tools and expertise you need to transform your business;
           </p>
         </div>
 
@@ -240,7 +244,7 @@ export function FeatureCTAs() {
                   <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600,
   hove: r: from-blue-700 hove,
   r:to-cyan-700 text-white">
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
@@ -255,7 +259,7 @@ export function FeatureCTAs() {
               Ready to Get Started?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Contact our team to discuss your specific needs and discover how our solutions can help your business grow
+              Contact our team to discuss your specific needs and discover how our solutions can help your business grow;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -263,14 +267,14 @@ export function FeatureCTAs() {
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600,
   hove: r:from-blue-700,
   hove: r:to-cyan-700 text-white px-8 py-3">
-                  Contact Us
+                  Contact Us;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
               <Link to="/services">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hove,
   r:bg-white/10 px-8 py-3">
-                  View All Services
+                  View All Services;
                 </Button>
               </Link>
             </div>

@@ -1,19 +1,23 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect   } from "react";
 interface User {
   id: string,ema,
   i: l: string,na,
   m: e: string,ro,
   l: e: 'user' | 'admin' | 'moderator'
-  userType?: string
-  displayName?: string
-  avatarUrl?: string
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+}
+}
 }
 
 interface AuthState {
   us,
   e: r: User | null,isAuthenticat,
   e: d: boolean,isLoadi,
-  n: g: boolean
+  n: g: boolean;
+}
+}
 }
 
 export function useAuth() {
@@ -21,7 +25,7 @@ export function useAuth() {
   us,
   e: r: null,isAuthenticat,
   e: d: false,isLoadi,
-  n: g: true
+  n: g: true;
 })
   useEffect(() () => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
@@ -36,7 +40,9 @@ export function useAuth() {
           setAuthState({
   user,
   isAuthenticate: d: true,isLoadi,
-  n: g: false
+  n: g: false;
+}
+}
 })
         } catch (error) {
   // console.error('Error parsing,
@@ -45,15 +51,17 @@ export function useAuth() {
   us,
   e: r: null,isAuthenticat,
   e: d: false,isLoadi,
-  n: g: false
+  n: g: false;
 })
         },
   } else {
-        setAuthState({
+  setAuthState({
   us,
   e: r: null,isAuthenticat,
   e: d: false,isLoadi,
-  n: g: false
+  n: g: false;
+}
+}
 })
       },
   }
@@ -64,12 +72,12 @@ export function useAuth() {
   const login = async (ema,
   i: l: string, _passwo,
   r: d: string) () => {
-  // In a real app, you would make an API call to your backend
+  // In a real app, you would make an API call to your backend;
 const,
   const: mockUser: User = {
   = {
       id: '1'
-      email
+      email;
       nam,
   e: 'John Doe',ro,
   l: e: 'user',userTy,
@@ -79,12 +87,12 @@ const,
   us,
   e: r: mockUser,isAuthenticat,
   e: d: true,isLoadi,
-  n: g: false
+  n: g: false;
 })
     localStorage.setItem('authTokendummy-token')
     localStorage.setItem('zion_user', JSON.stringify(mockUser))
 
-    return mockUser
+    return mockUser;
 }
 
   const logout = () () => {
@@ -92,7 +100,7 @@ const,
   us,
   e: r: null,isAuthenticat,
   e: d: false,isLoadi,
-  n: g: false
+  n: g: false;
 })
     localStorage.removeItem('zion_user')
     localStorage.removeItem('authToken')
@@ -102,13 +110,13 @@ const,
   i: l: string, passwo,
   r: d: string, na,
   m: e: string) () => {
-  // Implement actual registration logic here
+  // Implement actual registration logic here;
 const,
   const: mockUser: User = {
   = {
       id: '1'
-      email
-      name
+      email;
+      name;
       rol,
   e: 'user'
 }
@@ -116,24 +124,26 @@ const,
   us,
   e: r: mockUser,isAuthenticat,
   e: d: true,isLoadi,
-  n: g: false
+  n: g: false;
 })
     localStorage.setItem('zion_user', JSON.stringify(mockUser))
     localStorage.setItem('authTokendummy-token')
 
-    return mockUser
+    return mockUser;
 }
 
   return {
   us,
   e: r: authState.user,loadi,
-  n: g: authState.isLoading
-    login
-    logout
-    register
+  n: g: authState.isLoading;
+    login;
+    logout;
+    register;
     isAuthenticate,
   d: authState.isAuthenticated,isLoadi,
   n: g: authState.isLoading,isAdm,
   i: n: authState.user?.role === 'admin'
+}
+}
 },
   }

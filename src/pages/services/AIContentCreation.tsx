@@ -1,29 +1,33 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
 import {
-  PenTool
+  PenTool;
   Brain,
   Image,
   Video,
-  FileText
-  CheckCircle
-  ArrowRight
-  Star
-  Zap
-  Users
-  Globe
-  Target
-  TrendingUp
-  Palette
-  Camera
-  Mic
-  Type
-  Sparkles
-  Lightbulb
-  BarChart3
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  FileText;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Zap;
+  Users;
+  Globe;
+  Target;
+  TrendingUp;
+  Palette;
+  Camera;
+  Mic;
+  Type;
+  Sparkles;
+  Lightbulb;
+  BarChart3;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function AIContentCreation() {
   const features = [
   {
@@ -101,7 +105,7 @@ export default function AIContentCreation() {
 ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO 
+      <SEO;
         title="AI Content Creation Services - Zion Tech Group"
         description="Revolutionary AI-powered content creation for writing, visual design, video production, and multimedia content generation."
       />
@@ -116,7 +120,7 @@ export default function AIContentCreation() {
         </div>
         
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -130,40 +134,40 @@ export default function AIContentCreation() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">
               <PenTool className="w-4 h-4 mr-2" />
-              AI-Powered Creation
+              AI-Powered Creation;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Content Creation
+              AI Content Creation;
               <span className="block bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-600 bg-clip-text text-transparent">
-                Services
+                Services;
               </span>
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your content strategy with AI-powered creation tools that generate high-quality 
+              Transform your content strategy with AI-powered creation tools that generate high-quality;
               written content, visual assets, videos, and multimedia content in seconds.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg,
   hove: r:from-purple-400,
   hove: r:to-pink-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-purple-500/20";"
               >
-                Start Creating
+                Start Creating;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
   r:bg-purple-400/10 transition-all duration-200";"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -174,7 +178,7 @@ export default function AIContentCreation() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -187,10 +191,10 @@ export default function AIContentCreation() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Content Creation Features
+              AI Content Creation Features;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our AI content creation platform combines cutting-edge technology with creative intelligence 
+              Our AI content creation platform combines cutting-edge technology with creative intelligence;
               to deliver engaging, high-quality content across all media types.
             </p>
           </motion.div>
@@ -199,7 +203,7 @@ export default function AIContentCreation() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -232,7 +236,7 @@ export default function AIContentCreation() {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -245,10 +249,10 @@ export default function AIContentCreation() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Content Services
+              Comprehensive Content Services;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              From written content to visual media, our AI content creation services cover every aspect 
+              From written content to visual media, our AI content creation services cover every aspect;
               of your content needs.
             </p>
           </motion.div>
@@ -256,7 +260,7 @@ export default function AIContentCreation() {
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.title},
   }
                 initial={ opaci,
@@ -296,7 +300,7 @@ export default function AIContentCreation() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -309,7 +313,7 @@ export default function AIContentCreation() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI Technologies
+              Advanced AI Technologies;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Our platform leverages cutting-edge AI technologies to provide the most advanced content creation capabilities available.
@@ -320,7 +324,7 @@ export default function AIContentCreation() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={tech},
   }
                 initial={ opaci,
@@ -350,7 +354,7 @@ export default function AIContentCreation() {
   }
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -370,22 +374,22 @@ export default function AIContentCreation() {
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg,
   hove: r:from-purple-400,
   hove: r:to-pink-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-purple-500/20";"
               >
-                Start Creating Today
+                Start Creating Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
   r:bg-purple-400/10 transition-all duration-200";"
               >
-                Explore All Services
+                Explore All Services;
               </Link>
             </div>
           </motion.div>

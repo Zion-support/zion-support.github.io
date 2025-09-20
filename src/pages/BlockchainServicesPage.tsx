@@ -1,30 +1,33 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Link
-  Coins
-  Shield
-  Zap
-  Database
-  Globe
-  TrendingUp
-  CheckCircle
-  ArrowRight
-  Lock
-  Network
-  Wallet
-  BarChart3
-  Star
-  Award
-  Target
-  Rocket
-  Crown
-  Sparkles
-  ChevronRight
-  Users
-  Clock
-  Check
-} from "lucide-react"
+  Link;
+  Coins;
+  Shield;
+  Zap;
+  Database;
+  Globe;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  Lock;
+  Network;
+  Wallet;
+  BarChart3;
+  Star;
+  Award;
+  Target;
+  Rocket;
+  Crown;
+  Sparkles;
+  ChevronRight;
+  Users;
+  Clock;
+  Check;
+}
+}
+ } from "lucide-react";
 const BlockchainServicesPage = () () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
@@ -198,7 +201,7 @@ const BlockchainServicesPage = () () => {
   },
   ]
   const filteredServices = selectedCategory === 'all'
-    ? blockchainServices
+    ? blockchainServices;
     : blockchainServices.filter(service => service.category === selectedCategory)
 
   return (
@@ -223,12 +226,12 @@ const BlockchainServicesPage = () () => {
             Blockchain{' '},
   }
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Services
+              Services;
             </span>
           </h1>
           <p className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge blockchain solutions. From smart contracts to DeFi platforms
+            Transform your business with cutting-edge blockchain solutions. From smart contracts to DeFi platforms;
             we build secure, scalable, and innovative blockchain applications.
           </p>
 
@@ -237,12 +240,12 @@ const BlockchainServicesPage = () () => {
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25">
-              Get Started
+              Get Started;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-              View Services
+              View Services;
             </button>
           </div>
         </div>
@@ -256,10 +259,10 @@ const BlockchainServicesPage = () () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-                Our Blockchain Services
+                Our Blockchain Services;
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Choose from our comprehensive range of blockchain development and consulting services
+                Choose from our comprehensive range of blockchain development and consulting services;
               </p>
             </div>
 
@@ -267,14 +270,14 @@ const BlockchainServicesPage = () () => {
   }
             <div className="flex flex-wrap gap-3 justify-center mb-8">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
                       : 'bg-zion-blue-dark/50 text-zion-slate-light,
   hove: r: bg-zion-cyan/20 hove,
@@ -302,7 +305,7 @@ const BlockchainServicesPage = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -382,7 +385,7 @@ const BlockchainServicesPage = () () => {
                     ))},
   {service.features.length > 4 && (
   <div className="text-zion-cyan text-sm font-medium">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features;
                       </div>
                     )}
                   </div>
@@ -391,7 +394,7 @@ const BlockchainServicesPage = () () => {
   }
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold,
   hove: r: scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-                    Get Started
+                    Get Started;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -411,7 +414,7 @@ const BlockchainServicesPage = () () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We combine deep blockchain expertise with cutting-edge technology to deliver
+              We combine deep blockchain expertise with cutting-edge technology to deliver;
               solutions that drive real business value.
             </p>
           </div>
@@ -457,7 +460,7 @@ const BlockchainServicesPage = () () => {
   o: n: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
 },
   ].map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -503,12 +506,12 @@ const BlockchainServicesPage = () () => {
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25">
-              Start Your Project
+              Start Your Project;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-              Schedule Consultation
+              Schedule Consultation;
             </button>
           </div>
         </div>
@@ -516,4 +519,4 @@ const BlockchainServicesPage = () () => {
     </div>
   )
 }
-export default BlockchainServicesPage
+export default BlockchainServicesPage;

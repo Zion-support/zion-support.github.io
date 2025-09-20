@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Brain,
   Atom,
@@ -21,13 +22,15 @@ import {
   ExternalLink,
   Phone,
   Mail,
-  MapPin
-} from "lucide-react"
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027"
+  MapPin;
+}
+}
+ } from "lucide-react";
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory   } from "../data/innovativeServices2027";
 const,
   categoryIcon: s: { [ke,
   y: string]: React.ComponentType<any> } = {
-  'AI & Consciousness': Brain
+  'AI & Consciousness': Brain;
   'Quantum AI': Atom,
   'Autonomous AI': Cpu,
   'Quantum Computing': Atom,
@@ -38,7 +41,7 @@ const,
   'Quantum Medicine': Dna,
   'Quantum Security': Shield,
   'Nanotechnology': Microscope,
-  'Neural Technology': Eye
+  'Neural Technology': Eye;
 },
 
 const,
@@ -69,7 +72,7 @@ const element = document.getElementById('innovative-services-2027')
 }, []),
 
   const filteredServices = selectedCategory === 'All'
-    ? innovativeServices2027
+    ? innovativeServices2027;
     : getServicesByCategory(selectedCategory)
 const toggleServiceExpansion = (service,
   I: d: string) () => {
@@ -92,7 +95,7 @@ const contactInfo = {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header Section */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -113,7 +116,7 @@ const contactInfo = {
           <h2 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-              Revolutionary
+              Revolutionary;
             </span>
             <br />
             <span className="text-white">Technology Services</span>
@@ -126,7 +129,7 @@ const contactInfo = {
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -141,7 +144,7 @@ const contactInfo = {
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-3">
-            <button
+            <button;
               onClick={() => setSelectedCategory('All')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
@@ -151,16 +154,16 @@ const contactInfo = {
   r:text-white'
               }`}
             >
-              All Categories
+              All Categories;
             </button>
             {serviceCategories2027.map((category) () => {
               const Icon = categoryIcons[category]
               return (
-                <button
+                <button;
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
-                    selectedCategory === category
+                    selectedCategory === category;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                       : 'bg-zion-slate-light/50 text-gray-300,
   hove: r: bg-zion-slate-light/70 hove,
@@ -176,7 +179,7 @@ const contactInfo = {
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -193,7 +196,7 @@ const contactInfo = {
   g:grid-cols-3 gap-8 mb-16"
         >
           {filteredServices.map((service, index) => (
-            <motion.div
+            <motion.div;
               key={service.id}
               initial={ opaci,
   t: y: 0, y: 20 },
@@ -229,7 +232,7 @@ const contactInfo = {
                 {/* Technology Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.technology.slice(0, 3).map((tech, techIndex) => (
-                    <span
+                    <span;
                       key={techIndex}
                       className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
                     >
@@ -238,7 +241,7 @@ const contactInfo = {
                   ))},
   {service.technology.length > 3 && (
                     <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
-                      +{service.technology.length - 3} more
+                      +{service.technology.length - 3} more;
                     </span>
                   )}
                 </div>
@@ -258,7 +261,7 @@ const contactInfo = {
                 {/* Price & CTA */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-white">{service.price}</div>
-                  <button
+                  <button;
                     onClick={() => toggleServiceExpansion(service.id)}
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold,
   hove: r: shadow-lg hove,
@@ -272,7 +275,7 @@ const contactInfo = {
                 {/* Expanded Service Details */}
                 <AnimatePresence>
                   {expandedService === service.id && (
-                    <motion.div
+                    <motion.div;
                       initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -330,7 +333,7 @@ const contactInfo = {
                         </div>
 
                         {/* Primary CTA */}
-                        <a
+                        <a;
                           href={service.href}
                           target={service.external ? "_blank" : "_self"}
                           rel={service.external ? "noopener noreferrer" : ""}
@@ -353,7 +356,7 @@ const contactInfo = {
         </motion.div>
 
         {/* Contact Section */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -394,16 +397,16 @@ const contactInfo = {
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Schedule Consultation
+                Schedule Consultation;
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com"
                 target="_blank"
@@ -411,7 +414,7 @@ const contactInfo = {
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hove,
   r:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Visit Website
+                Visit Website;
                 <ExternalLink className="w-4 h-4" />
               </a>
             </div>

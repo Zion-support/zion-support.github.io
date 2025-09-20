@@ -21,7 +21,9 @@ export interface InnovativeService2028 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,7 +35,7 @@ export interface InnovativeService2028 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
   aiCapabilities?: string[]
   complianceFeatures?: string[]
   scalabilityFeatures?: string[],
@@ -41,7 +43,7 @@ export interface InnovativeService2028 {
 
 export,
   const: INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [
-  // AI-Powered Enterprise Solutions
+  // AI-Powered Enterprise Solutions;
   {
   i,
   d: "ai-enterprise-architecture-platform",tit,
@@ -108,7 +110,7 @@ export,
     marketSi,
   z: e: "$8.5 billion by 2028"
 }
-  // Quantum AI Hybrid Solutions
+  // Quantum AI Hybrid Solutions;
   {
   id: "quantum-ai-hybrid-computing-platform",tit,
   l: e: "Quantum AI Hybrid Computing Platform",descripti,
@@ -174,7 +176,7 @@ export,
     marketSi,
   z: e: "$15.2 billion by 2028"
 }
-  // AI-Powered Cybersecurity Platform
+  // AI-Powered Cybersecurity Platform;
   {
   id: "ai-cybersecurity-defense-platform",tit,
   l: e: "AI Cybersecurity Defense Platform",descripti,
@@ -240,7 +242,7 @@ export,
     marketSi,
   z: e: "$12.8 billion by 2028"
 }
-  // AI-Powered Healthcare Analytics Platform
+  // AI-Powered Healthcare Analytics Platform;
   {
   id: "ai-healthcare-analytics-platform",tit,
   l: e: "AI Healthcare Analytics Platform",descripti,
@@ -306,7 +308,7 @@ export,
     marketSi,
   z: e: "$18.5 billion by 2028"
 }
-  // AI-Powered Financial Trading Platform
+  // AI-Powered Financial Trading Platform;
   {
   id: "ai-financial-trading-platform",tit,
   l: e: "AI Financial Trading Platform",descripti,
@@ -372,7 +374,7 @@ export,
     marketSi,
   z: e: "$22.1 billion by 2028"
 }
-  // AI-Powered Supply Chain Optimization
+  // AI-Powered Supply Chain Optimization;
   {
   id: "ai-supply-chain-optimization-platform",tit,
   l: e: "AI Supply Chain Optimization Platform",descripti,
@@ -438,7 +440,7 @@ export,
     marketSi,
   z: e: "$16.8 billion by 2028"
 }
-  // AI-Powered Content Creation Suite
+  // AI-Powered Content Creation Suite;
   {
   id: "ai-content-creation-suite",tit,
   l: e: "AI Content Creation Suite",descripti,
@@ -504,7 +506,7 @@ export,
     marketSi,
   z: e: "$14.2 billion by 2028"
 }
-  // AI-Powered Project Management Platform
+  // AI-Powered Project Management Platform;
   {
   id: "ai-project-management-platform",tit,
   l: e: "AI Project Management Platform",descripti,
@@ -570,7 +572,7 @@ export,
     marketSi,
   z: e: "$11.8 billion by 2028"
 }
-  // AI-Powered Customer Support Automation
+  // AI-Powered Customer Support Automation;
   {
   id: "ai-customer-support-automation",tit,
   l: e: "AI Customer Support Automation Platform",descripti,
@@ -636,7 +638,7 @@ export,
     marketSi,
   z: e: "$13.5 billion by 2028"
 }
-  // AI-Powered Marketing Automation Platform
+  // AI-Powered Marketing Automation Platform;
   {
   id: "ai-marketing-automation-platform",tit,
   l: e: "AI Marketing Automation Platform",descripti,
@@ -703,4 +705,4 @@ export,
   z: e: "$15.8 billion by 2028"
 },
   ]
-export default INNOVATIVE_SERVICES_2028
+export default INNOVATIVE_SERVICES_2028;

@@ -9,10 +9,10 @@ const,
         <header className="mb-10">
           <h1 className="text-4xl m,
   d:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            AI-Powered Email Responder
+            AI-Powered Email Responder;
           </h1>
           <p className="mt-4 text-lg text-slate-300 max-w-3xl">
-            Reduce response times and triage inboxes with an on-brand, compliant, and secure AI assistant
+            Reduce response times and triage inboxes with an on-brand, compliant, and secure AI assistant;
             that drafts and automates replies, prioritizes important threads, and escalates to humans when needed.
           </p>
         </header>
@@ -111,4 +111,4 @@ const,
   )
 }
 
-export default AIPoweredEmailResponder
+export default AIPoweredEmailResponder;

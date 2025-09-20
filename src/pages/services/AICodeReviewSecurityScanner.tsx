@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Code, Shield, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye as EyeIcon, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon, GitBranch, GitCommit, GitPullRequest, GitMerge, GitCompare, GitBranch as GitBranchIcon, GitCommit as GitCommitIcon, GitPullRequest as GitPullRequestIcon, GitMerge as GitMergeIcon, GitCompare as GitCompareIcon } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Code, Shield, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye as EyeIcon, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon, GitBranch, GitCommit, GitPullRequest, GitMerge, GitCompare, GitBranch as GitBranchIcon, GitCommit as GitCommitIcon, GitPullRequest as GitPullRequestIcon, GitMerge as GitMergeIcon, GitCompare as GitCompareIcon     } from "lucide-react";
 const AICodeReviewSecurityScanner = () () => {
   const features = [
   {
@@ -72,7 +72,7 @@ const AICodeReviewSecurityScanner = () () => {
 ]
       ct,
   a: 'Get Started',popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -88,7 +88,7 @@ const AICodeReviewSecurityScanner = () () => {
 ]
       ct,
   a: 'Start Free Trial',popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -104,7 +104,7 @@ const AICodeReviewSecurityScanner = () () => {
 ]
       ct,
   a: 'Contact Sales',popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const useCases = [
@@ -185,7 +185,7 @@ const AICodeReviewSecurityScanner = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -199,23 +199,23 @@ const AICodeReviewSecurityScanner = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6">
               <Code className="w-4 h-4 mr-2" />
-              AI-Powered Code Security
+              AI-Powered Code Security;
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Code Review
+              AI Code Review;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-                Security Scanner
+                Security Scanner;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your applications with AI-powered code security scanning that detects 
-              vulnerabilities, enforces secure coding practices, and integrates seamlessly 
+              Protect your applications with AI-powered code security scanning that detects;
+              vulnerabilities, enforces secure coding practices, and integrates seamlessly;
               with your development workflow.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -226,10 +226,10 @@ const AICodeReviewSecurityScanner = () () => {
   hove: r: from-green-600,
   hove: r:to-emerald-600 transition-all duration-200 flex items-center justify-center";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -239,7 +239,7 @@ const AICodeReviewSecurityScanner = () () => {
                 className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg,
   hove: r:bg-gray-800 transition-all duration-200 flex items-center justify-center";"
               >
-                Schedule Demo
+                Schedule Demo;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
             </div>
@@ -253,7 +253,7 @@ const AICodeReviewSecurityScanner = () () => {
   s: m: px-6,
   l: g:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -267,10 +267,10 @@ const AICodeReviewSecurityScanner = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Comprehensive Security Coverage
+              Comprehensive Security Coverage;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI scanner detects all major types of security vulnerabilities with 
+              Our AI scanner detects all major types of security vulnerabilities with;
               industry-leading accuracy and minimal false positives.
             </p>
           </motion.div>
@@ -278,7 +278,7 @@ const AICodeReviewSecurityScanner = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {vulnerabilityTypes.map((vulnType, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -328,7 +328,7 @@ const AICodeReviewSecurityScanner = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -342,10 +342,10 @@ const AICodeReviewSecurityScanner = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Advanced AI-Powered Features
+              Advanced AI-Powered Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI with comprehensive security analysis to deliver 
+              Our platform combines cutting-edge AI with comprehensive security analysis to deliver;
               accurate vulnerability detection and actionable remediation guidance.
             </p>
           </motion.div>
@@ -354,7 +354,7 @@ const AICodeReviewSecurityScanner = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -396,7 +396,7 @@ const AICodeReviewSecurityScanner = () () => {
   s: m: px-6,
   l: g:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -410,7 +410,7 @@ const AICodeReviewSecurityScanner = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your development team's security needs. 
@@ -421,7 +421,7 @@ const AICodeReviewSecurityScanner = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -435,7 +435,7 @@ const AICodeReviewSecurityScanner = () () => {
   a: y: index * 0.1 },
   }
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-  plan.popular 
+  plan.popular;
                     ? 'border-green-500/50 ring-2 ring-green-500/20' 
                     : 'border-gray-700'
 } hov,
@@ -444,7 +444,7 @@ const AICodeReviewSecurityScanner = () () => {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -468,7 +468,7 @@ const AICodeReviewSecurityScanner = () () => {
                   ))}
                 </ul>
 
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.02 },
   }
@@ -476,7 +476,7 @@ const AICodeReviewSecurityScanner = () () => {
   l: e: 0.98 },
   }
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white,
   hove: r: from-green-600,
   hove: r:to-emerald-600'
@@ -499,7 +499,7 @@ const AICodeReviewSecurityScanner = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -513,10 +513,10 @@ const AICodeReviewSecurityScanner = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Development Workflow Integration
+              Development Workflow Integration;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Code Review Security Scanner integrates seamlessly with your existing 
+              Our AI Code Review Security Scanner integrates seamlessly with your existing;
               development tools and workflows to ensure security at every stage.
             </p>
           </motion.div>
@@ -524,7 +524,7 @@ const AICodeReviewSecurityScanner = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -570,7 +570,7 @@ const AICodeReviewSecurityScanner = () () => {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -586,12 +586,12 @@ const AICodeReviewSecurityScanner = () () => {
               Ready to Secure Your Code?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading development teams that trust our AI-powered platform to 
+              Join leading development teams that trust our AI-powered platform to;
               detect vulnerabilities and maintain secure coding practices.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -602,10 +602,10 @@ const AICodeReviewSecurityScanner = () () => {
   hove: r: from-green-600,
   hove: r:to-emerald-600 transition-all duration-200 flex items-center justify-center";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -615,7 +615,7 @@ const AICodeReviewSecurityScanner = () () => {
                 className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg,
   hove: r: bg-gray-800 transition-all duration-200 flex items-center justify-center";"
               >
-                Contact Sales
+                Contact Sales;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
             </div>
@@ -625,4 +625,4 @@ const AICodeReviewSecurityScanner = () () => {
     </div>
   )
 }
-export default AICodeReviewSecurityScanner
+export default AICodeReviewSecurityScanner;

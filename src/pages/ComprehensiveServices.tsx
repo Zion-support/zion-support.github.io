@@ -1,13 +1,15 @@
-import { SEO } from "@/components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "@/components/SEO";
+import { motion   } from "framer-motion";
 import {
-  ArrowRight, Cloud as CloudIcon
-    Cpu, ExternalLink, Globe as GlobeIcon, Mail, MapPin, MessageSquare, Phone, Search, Sparkles, Star
-} from "lucide-react"
+  ArrowRight, Cloud as CloudIcon;
+    Cpu, ExternalLink, Globe as GlobeIcon, Mail, MapPin, MessageSquare, Phone, Search, Sparkles, Star;
+}
+}
+ } from "lucide-react";
 import React, { useState, useMemo } from "react"
-import { Link } from "react-router-dom"
-import { zionCuttingEdgeServices2029 } from "../../data/zion-2029-cutting-edge-services"
-import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech-services"
+import { Link   } from "react-router-dom";
+import { zionCuttingEdgeServices2029   } from "../../data/zion-2029-cutting-edge-services";
+import { zionEmergingTechServices2029   } from "../../data/zion-2029-emerging-tech-services";
 // Section component for displaying service categories,
   const: Section: React.FC<{
   ico,
@@ -15,7 +17,7 @@ import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech
   l: e: string,descripti,
   o: n: string,ite,
   m: s: any[],gradie,
-  n: t: string
+  n: t: string;
 }> = ({ icon, title, description, items, gradient }) => (
   <section className={`py-20 px-4,
   s: m: px-6 l,
@@ -41,7 +43,7 @@ import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech
       
       {items.length > 6 && (
   <div className="text-center mt-12">
-          <Link
+          <Link;
             to="/services"
             className="className="inline-flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg,
   hove: r: bg-cyan-500/10 transition-all duration-300";"
@@ -59,7 +61,7 @@ import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech
   const: ServiceCard: React.FC<{ servic,
   e: any, ind,
   e: x: number }> = ({ service, index }) => (
-  <motion.div
+  <motion.div;
     initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -111,14 +113,14 @@ import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech
         ))}
       </div>
     </div>
-    <Link
+    <Link;
       to={service.cta || '#'},
   }
       className="className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg,
   hove: r: from-cyan-600 hove,
   r:to-blue-600 transition-all duration-300 text-sm font-medium";"
     >
-      Learn More
+      Learn More;
       <ArrowRight className="w-4 h-4 ml-2" />
     </Link>
   </motion.div>
@@ -128,20 +130,20 @@ export default function ComprehensiveServices() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [sortBy, setSortBy] = useState<string>('popular')
 
-  // Combine all services
+  // Combine all services;
 const allServices = [[...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029],
   ]
 
-  // Filter services based on search and category
+  // Filter services based on search and category;
 const filteredServices = allServices.filter(service () => {
   const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase() === selectedCategory.toLowerCase()
-    return matchesSearch && matchesCategory
+    return matchesSearch && matchesCategory;
 })
 
-  // Sort services
+  // Sort services;
 const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price-low':
@@ -149,24 +151,24 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
       case 'price-high':
         return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''))
       case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'newest':
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
       defau,
-  l: t: return b.isPopular ? 1 : -1
+  l: t: return b.isPopular ? 1 : -1;
 },
   })
-  // Get unique categories
+  // Get unique categories;
 const categories = [['all', ...Array.from(new Set(allServices.map(service => service.category)))],
   ]
 
-  // Sample data for sections
+  // Sample data for sections;
 const microSaaS = allServices.filter(service => service.category === 'Micro SaaS').slice(0, 6)
   const itServices = allServices.filter(service => service.category === 'IT Services').slice(0, 6)
   const aiSolutions = allServices.filter(service => service.category === 'AI Solutions').slice(0, 6)
   return (
     <>
-      <SEO
+      <SEO;
         title="Comprehensive Services - Zion Tech Group"
         description="Micro SaaS, IT services, and AI solutions with clear pricing, links, and rapid delivery."
         keywords="micro saas, it services, ai solutions, soc2 automation, kubernetes, rag platform"
@@ -184,7 +186,7 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
         <div className="relative z-10 max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -199,27 +201,27 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Comprehensive
+                Comprehensive;
               </span>
               <br />
               <span className="text-white">Services</span>
             </h1>
             <p className="text-xl,
   m: d:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Discover our complete portfolio of cutting-edge technology solutions designed to transform industries and drive innovation
+              Discover our complete portfolio of cutting-edge technology solutions designed to transform industries and drive innovation;
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-600 transition-all duration-300";"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
-                Get Started Today
+                Get Started Today;
               </Link>
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com"
                 target="_blank"
@@ -228,7 +230,7 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
   r:bg-cyan-500/10 transition-all duration-300";"
               >
                 <GlobeIcon className="w-5 h-5 mr-2" />
-                Visit Our Website
+                Visit Our Website;
               </a>
             </div>
           </motion.div>
@@ -237,7 +239,7 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
 
       {/* Sections */},
   }
-      <Section
+      <Section;
         icon={<Sparkles className="h-6 w-6" />},
   }
         title="Micro SaaS Products"
@@ -247,7 +249,7 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
         gradient="from-violet-900/60 to-indigo-900/40"
       />
 
-      <Section
+      <Section;
         icon={<CloudIcon className="h-6 w-6" />},
   }
         title="IT Services"
@@ -257,7 +259,7 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
         gradient="from-sky-900/60 to-teal-900/40"
       />
 
-      <Section
+      <Section;
         icon={<Cpu className="h-6 w-6" />},
   }
         title="AI Solutions"
@@ -296,14 +298,14 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
 
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center mt-8">
-            <Link
+            <Link;
               to="/contact"
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg rounded-lg,
   hove: r:from-cyan-600 hove,
   r:to-blue-600 transition-all duration-300";"
             >
               <MessageSquare className="w-5 h-5 mr-2" />
-              Get Started Today
+              Get Started Today;
             </Link>
           </div>
         </motion.div>

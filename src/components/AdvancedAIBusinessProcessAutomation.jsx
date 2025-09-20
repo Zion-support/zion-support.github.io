@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useRef } from "react"
-import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from "lucide-react"
+import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader   } from "lucide-react";
 const mockBusinessProcesses = [
     {
         id: 'bp-001',na,
@@ -40,7 +41,7 @@ const mockBusinessProcesses = [
   n: s: ['Auto-approved 85% of invoicesFlagged 3 suspicious entries'],manualInterventio,
   n: s: 2,co,
   s: t: 150,efficien,
-  c: y: 94
+  c: y: 94;
             },
   ]
         rul,
@@ -57,7 +58,7 @@ const mockBusinessProcesses = [
   e: d: new Date('2024-01-15T,
   1: 0:3,
   0:00Z'),triggerCou,
-  n: t: 156
+  n: t: 156;
             },
   ]
         dependenci,
@@ -100,7 +101,7 @@ const mockBusinessProcesses = [
   n: s: ['Optimized task sequenceIdentified resource conflicts'],manualInterventio,
   n: s: 1,co,
   s: t: 200,efficien,
-  c: y: 89
+  c: y: 89;
             },
   ]
         rul,
@@ -117,7 +118,7 @@ const mockBusinessProcesses = [
   e: d: new Date('2024-01-14T,
   1: 4:1,
   5:00Z'),triggerCou,
-  n: t: 23
+  n: t: 23;
             },
   ]
         dependenci,
@@ -159,7 +160,7 @@ const mockBusinessProcesses = [
   n: s: ['Classified 47 tickets by priorityAssigned to optimal agents'],manualInterventio,
   n: s: 0,co,
   s: t: 50,efficien,
-  c: y: 98
+  c: y: 98;
             },
   ]
         rul,
@@ -176,7 +177,7 @@ const mockBusinessProcesses = [
   e: d: new Date('2024-01-15T,
   1: 6:4,
   5:00Z'),triggerCou,
-  n: t: 8
+  n: t: 8;
             },
   ]
         dependenci,
@@ -257,7 +258,7 @@ const formatCurrency = (amount) () => {
   l: e: 'currency',curren,
   c: y: 'USD',minimumFractionDigi,
   t: s: 0,maximumFractionDigi,
-  t: s: 0
+  t: s: 0;
         }).format(amount)
 },
     const formatPercentage = (value) () => {
@@ -265,22 +266,22 @@ const formatCurrency = (amount) () => {
 },
     const executeProcess = async (processId) () => {
         setIsExecuting(true)
-        // Simulate process execution
+        // Simulate process execution;
         await new Promise(resolve => setTimeout(resolve, 2000)),
         setIsExecuting(false)
-        // Update process status
-        setBusinessProcesses(prev => prev.map(p => p.id === processId
+        // Update process status;
+        setBusinessProcesses(prev => prev.map(p => p.id === processId;
             ? { ...p, lastExecut,
   e: d: new Date(), stat,
   u: s: 'active' }
             : p))
 },
     const filteredProcesses = businessProcesses.filter(process () => {
-        const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory
-const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus
+        const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory;
+const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus;
 const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             process.description.toLowerCase().includes(searchQuery.toLowerCase())
-        return matchesCategory && matchesStatus && matchesSearch
+        return matchesCategory && matchesStatus && matchesSearch;
 }),
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl,
@@ -290,7 +291,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
           <span className="font-semibold">AI BPA</span>
         </div>
         <div className="absolute -top-2 -right-2 bg-zion-cyan text-zion-slate text-xs px-2 py-1 rounded-full font-bold">
-          NEW
+          NEW;
         </div>
       </button>)
     }
@@ -373,18 +374,18 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
         <div className="flex items-center gap-4">
           <label className="flex items-center gap-2 text-sm">
             <input type="checkbox" checked={showAIInsights} onChange={(e) => setShowAIInsights(e.target.checked)} className="rounded"/>
-            Show AI Insights
+            Show AI Insights;
           </label>
           <label className="flex items-center gap-2 text-sm">
             <input type="checkbox" checked={showAutomation} onChange={(e) => setShowAutomation(e.target.checked)} className="rounded"/>
-            Show Automation Rules
+            Show Automation Rules;
           </label>
         </div>
       </div>
 
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
-        {['overviewprocesses', 'automationanalytics', 'optimization'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === tab
+        {['overviewprocesses', 'automationanalytics', 'optimization'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === tab;
                 ? 'text-zion-blue border-b-2 border-zion-blue'
                 : 'text-zion-slate-light,
   hove: r:text-zion-slate'}`}>
@@ -448,7 +449,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Brain className="w-5 h-5 text-zion-blue"/>
-                  AI Insights & Recommendations
+                  AI Insights & Recommendations;
                 </h3>
                 <div className="space-y-3">
                   {businessProcesses.slice(0, 3).map(process => (<div key={process.id} className="p-3 bg-zion-slate-light/10 rounded-lg">
@@ -467,7 +468,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   dar: k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Activity className="w-5 h-5 text-zion-blue"/>
-                  Recent Executions
+                  Recent Executions;
                 </h3>
                 <div className="space-y-3">
                   {businessProcesses.slice(0, 3).map(process => (<div key={process.id} className="flex items-center justify-between p-3 bg-zion-slate-light/10 rounded-lg">
@@ -488,7 +489,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
                           {process.executionHistory[0]?.status || 'Unknown'}
                         </span>
                         <span className="text-xs text-zion-slate-light">
-                          {process.executionHistory[0]?.duration || 0}s
+                          {process.executionHistory[0]?.duration || 0}s;
                         </span>
                       </div>
                     </div>))}
@@ -515,7 +516,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   hove: r: bg-zion-blue-dark disable,
   d:opacity-50 flex items-center gap-2">
                       {isExecuting ? <Loader className="w-4 h-4 animate-spin"/> : <Play className="w-4 h-4"/>}
-                      Execute
+                      Execute;
                     </button>
                     <button onClick={() => setSelectedProcess(process)} className="p-2 text-zion-slate-light,
   hove: r: text-zion-slate,
@@ -560,7 +561,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
                 {showAIInsights && (<div className="mb-4">
                     <h4 className="font-medium text-sm mb-2 flex items-center gap-2">
                       <Brain className="w-4 h-4 text-zion-blue"/>
-                      AI Insights
+                      AI Insights;
                     </h4>
                     <div className="space-y-2">
                       {process.aiInsights.map((insight, idx) => (<div key={idx} className="flex items-start gap-2 text-sm">
@@ -572,14 +573,14 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   {showAutomation && (<div>
                     <h4 className="font-medium text-sm mb-2 flex items-center gap-2">
                                              <Settings className="w-4 h-4 text-zion-blue"/>
-                       Automation Rules
+                       Automation Rules;
                     </h4>
                     <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-3">
                       {process.rules.map(rule => (<div key={rule.id} className="p-3 bg-zion-slate-light/10 rounded-lg">
                           <div className="flex items-center justify-between mb-2">
                             <span className="font-medium text-sm">{rule.name}</span>
-                            <span className={`px-2 py-1 rounded-full text-xs ${rule.isActive
+                            <span className={`px-2 py-1 rounded-full text-xs ${rule.isActive;
                             ? 'bg-green-100 text-green-700,
   dar: k: bg-green-900/20,
   dar: k:text-green-400'
@@ -599,7 +600,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
                             </span>
                             <span className="text-xs text-zion-slate-light">
                               Trigger,
-  e: d: {rule.triggerCount} times
+  e: d: {rule.triggerCount} times;
                             </span>
                           </div>
                         </div>))}
@@ -612,7 +613,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   dar: k: bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                                  <Settings className="w-5 h-5 text-zion-blue"/>
-                 Automation Engine Status
+                 Automation Engine Status;
               </h3>
               <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-4">
@@ -631,7 +632,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   dar: k:text-blue-400">Rules Active</p>
                   <p className="text-sm text-blue-600 dar,
   k:text-blue-300">
-                    {businessProcesses.reduce((acc, p) => acc + p.rules.filter(r => r.isActive).length, 0)} rules
+                    {businessProcesses.reduce((acc, p) => acc + p.rules.filter(r => r.isActive).length, 0)} rules;
                   </p>
                 </div>
                 <div className="text-center p-4 bg-purple-100,
@@ -649,14 +650,14 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <Settings className="w-5 h-5 text-zion-blue"/>
-                Automation Rules Management
+                Automation Rules Management;
               </h3>
               <div className="space-y-4">
                 {businessProcesses.flatMap(process => process.rules.map(rule => ({
                 ...rule,
                 processNa,
   m: e: process.name,processCatego,
-  r: y: process.category
+  r: y: process.category;
             }))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-zion-blue/10 rounded-lg">
@@ -668,7 +669,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.isActive
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.isActive;
                     ? 'bg-green-100 text-green-700,
   dar: k: bg-green-900/20,
   dar: k:text-green-400'
@@ -677,7 +678,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   k:text-red-400'}`}>
                         {rule.isActive ? 'Active' : 'Inactive'}
                       </span>
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.aiOptimized
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.aiOptimized;
                     ? 'bg-purple-100 text-purple-700,
   dar: k: bg-purple-900/20,
   dar: k:text-purple-400'
@@ -771,7 +772,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   dar: k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <Brain className="w-5 h-5 text-zion-blue"/>
-                AI Optimization Recommendations
+                AI Optimization Recommendations;
               </h3>
               <div className="space-y-4">
                 {businessProcesses.map(process => (<div key={process.id} className="p-4 bg-zion-slate-light/10 rounded-lg">
@@ -796,7 +797,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
                     {process.automationLevel !== 'fully-automated' && (<div className="mt-3 pt-3 border-t border-zion-slate-light/50">
                         <button className="px-4 py-2 bg-zion-blue text-white rounded-lg,
   hove: r:bg-zion-blue-dark text-sm">
-                          Apply AI Optimization
+                          Apply AI Optimization;
                         </button>
                       </div>)}
                   </div>))}
@@ -807,7 +808,7 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
   dar: k: bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-zion-blue"/>
-                Performance Improvement Opportunities
+                Performance Improvement Opportunities;
               </h3>
               <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-4">
@@ -821,11 +822,11 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
                   </div>
                   <p className="text-sm text-yellow-700 dar,
   k:text-yellow-300 mb-3">
-                    {businessProcesses.filter(p => p.automationLevel === 'manual').length} processes still require manual intervention
+                    {businessProcesses.filter(p => p.automationLevel === 'manual').length} processes still require manual intervention;
                   </p>
                   <button className="px-3 py-1 bg-yellow-600 text-white rounded text-sm,
   hove: r: bg-yellow-700">
-                    View Details
+                    View Details;
                   </button>
                 </div>
                 <div className="p-4 bg-blue-50,
@@ -838,11 +839,11 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
                   </div>
                   <p className="text-sm text-blue-700 dar,
   k:text-blue-300 mb-3">
-                    {businessProcesses.filter(p => p.efficiency < 90).length} processes below 90% efficiency target
+                    {businessProcesses.filter(p => p.efficiency < 90).length} processes below 90% efficiency target;
                   </p>
                   <button className="px-3 py-1 bg-blue-600 text-white rounded text-sm,
   hove: r:bg-blue-700">
-                    View Details
+                    View Details;
                   </button>
                 </div>
               </div>

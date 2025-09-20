@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Star,
   Quote,
@@ -8,8 +9,10 @@ import {
   Globe,
   Building,
   Users,
-  Award
-} from "lucide-react"
+  Award;
+}
+}
+ } from "lucide-react";
 interface Testimonial {
   id: string,na,
   m: e: string,positi,
@@ -20,7 +23,9 @@ interface Testimonial {
   n: g: number,indust,
   r: y: string,resul,
   t: s: string[],avat,
-  a: r: string
+  a: r: string;
+}
+}
 }
 
 const,
@@ -130,7 +135,7 @@ const goToTestimonial = (ind,
   s: m: px-6 l,
   g:px-8 relative z-10">
         {/* Section Header */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -147,7 +152,7 @@ const goToTestimonial = (ind,
         >
           <h2 className="text-4xl,
   s: m:text-5xl font-bold text-white mb-6">
-            What Our Clients Say
+            What Our Clients Say;
           </h2>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
             Real results from real businesses. Discover how Zion Tech Group is transforming industries worldwide.
@@ -157,7 +162,7 @@ const goToTestimonial = (ind,
         {/* Testimonials Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <AnimatePresence mode="wait">
-            <motion.div
+            <motion.div;
               key={currentTestimonial}
               initial={ opaci,
   t: y: 0, x: 100 },
@@ -180,7 +185,7 @@ const goToTestimonial = (ind,
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 opacity-50"></div>
 
                 {/* Quote icon */}
-                <motion.div
+                <motion.div;
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
                   animate={ rota,
   t: e: [0, 360],
@@ -198,7 +203,7 @@ const goToTestimonial = (ind,
                   {/* Rating */}
                   <div className="flex items-center mb-6">
                     {[...Array(currentTestimonialData.rating)].map((_, index) => (
-                      <motion.div
+                      <motion.div;
                         key={index}
                         initial={ sca,
   l: e: 0 },
@@ -225,7 +230,7 @@ const goToTestimonial = (ind,
                   <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-4 mb-8">
                     {currentTestimonialData.results.map((result, index) => (
-                      <motion.div
+                      <motion.div;
                         key={result}
                         initial={ opaci,
   t: y: 0, y: 20 },
@@ -269,7 +274,7 @@ const goToTestimonial = (ind,
 
           {/* Navigation Controls */}
           <div className="flex items-center justify-center mt-12 space-x-4">
-            <motion.button
+            <motion.button;
               onClick={prevTestimonial}
               className="p-3 rounded-full bg-white/10,
   hove: r: bg-white/20 transition-colors duration-200 border border-white/20"
@@ -285,11 +290,11 @@ const goToTestimonial = (ind,
 
             <div className="flex space-x-2">
               {testimonials.map((_, index) => (
-                <motion.button
+                <motion.button;
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial
+                    index === currentTestimonial;
                       ? 'bg-zion-cyan w-8'
                       : 'bg-white/30,
   hove: r:bg-white/50'
@@ -301,7 +306,7 @@ const goToTestimonial = (ind,
               ))}
             </div>
 
-            <motion.button
+            <motion.button;
               onClick={nextTestimonial}
               className="p-3 rounded-full bg-white/10,
   hove: r: bg-white/20 transition-colors duration-200 border border-white/20"
@@ -318,7 +323,7 @@ const goToTestimonial = (ind,
         </div>
 
         {/* Trust Indicators */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -336,7 +341,7 @@ const goToTestimonial = (ind,
         >
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-8">
-              Trusted by Industry Leaders
+              Trusted by Industry Leaders;
             </h3>
             <div className="grid grid-cols-1,
   m: d: grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -355,7 +360,7 @@ const goToTestimonial = (ind,
   e: l: '99.9% Uptime', val,
   u: e: 'Reliability' },
   ].map((indicator, index) => (
-                <motion.div
+                <motion.div;
                   key={indicator.label}
                   initial={ opaci,
   t: y: 0, y: 20 },
@@ -384,7 +389,7 @@ const goToTestimonial = (ind,
         </motion.div>
 
         {/* Bottom CTA */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -409,21 +414,21 @@ const goToTestimonial = (ind,
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl,
   hove: r:shadow-2xl,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:-translate-y-1"
               >
-                Start Your Transformation
+                Start Your Transformation;
               </a>
-              <a
+              <a;
                 href="/case-studies"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hove,
   r:bg-zion-cyan/10 transition-all duration-300"
               >
-                View Case Studies
+                View Case Studies;
               </a>
             </div>
           </div>

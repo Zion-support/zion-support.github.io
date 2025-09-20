@@ -1,26 +1,29 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Shield
+  Shield;
   Lock,
   Eye,
   Key,
   Server,
   Users,
   CheckCircle,
-  AlertTriangle
-  FileText
-  Globe
-  Database
-  Network
-  Zap
-  ArrowRight
-  ExternalLink
-  ChevronDown
-  ChevronUp
-  Mail
-} from "lucide-react"
+  AlertTriangle;
+  FileText;
+  Globe;
+  Database;
+  Network;
+  Zap;
+  ArrowRight;
+  ExternalLink;
+  ChevronDown;
+  ChevronUp;
+  Mail;
+}
+}
+ } from "lucide-react";
 export default function Security() {
   const [expandedCompliance, setExpandedCompliance] = useState<string | null>(null)
   const securityFeatures = [
@@ -186,25 +189,25 @@ export default function Security() {
   tit,
   l: e: 'Regular Security Training',descripti,
   o: n: 'Ongoing security awareness training for all employees',ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: 'Security Assessments',descripti,
   o: n: 'Regular penetration testing and vulnerability assessments',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: 'Incident Response',descripti,
   o: n: 'Comprehensive incident response and recovery procedures',ic,
-  o: n: AlertTriangle
+  o: n: AlertTriangle;
 },
   {
   tit,
   l: e: 'Security Updates',descripti,
   o: n: 'Regular security patches and system updates',ic,
-  o: n: Zap
+  o: n: Zap;
 },
   ]
   const toggleCompliance = (na,
@@ -213,7 +216,7 @@ export default function Security() {
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Security & Compliance - Zion Tech Group"
         description="Learn about Zion Tech Group's comprehensive security measures, compliance certifications, and data protection practices."
       />
@@ -223,7 +226,7 @@ export default function Security() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -243,7 +246,7 @@ export default function Security() {
               Security & <span className="bg-gradient-to-r from-red-400 via-orange-500 to-yellow-600 bg-clip-text text-transparent">Compliance</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Your data security is our top priority. We maintain the highest standards of security 
+              Your data security is our top priority. We maintain the highest standards of security;
               and compliance to protect your business and maintain your trust.
             </p>
           </motion.div>
@@ -258,7 +261,7 @@ export default function Security() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {securityMetrics.map((metric, index) => (
-  <motion.div
+  <motion.div;
                 key={metric.label},
   }
                 initial={ opaci,
@@ -288,7 +291,7 @@ export default function Security() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -302,7 +305,7 @@ export default function Security() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Security Features</h2>
             <p className="text-xl text-gray-300">
-              Multi-layered security approach to protect your data and systems
+              Multi-layered security approach to protect your data and systems;
             </p>
           </motion.div>
 
@@ -310,7 +313,7 @@ export default function Security() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {securityFeatures.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -358,7 +361,7 @@ export default function Security() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -372,13 +375,13 @@ export default function Security() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Compliance & Certifications</h2>
             <p className="text-xl text-gray-300">
-              We maintain the highest standards of compliance across multiple frameworks
+              We maintain the highest standards of compliance across multiple frameworks;
             </p>
           </motion.div>
 
           <div className="space-y-6">
             {complianceFrameworks.map((framework, index) => (
-  <motion.div
+  <motion.div;
                 key={framework.name},
   }
                 initial={ opaci,
@@ -393,7 +396,7 @@ export default function Security() {
   }
                 className="className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden";"
               >
-                <div 
+                <div;
                   className="className="p-6 cursor-pointer,
   hove: r:bg-slate-700/30 transition-colors duration-200";"
                   onClick={onClick={() => toggleCompliance(framework.name)},
@@ -423,7 +426,7 @@ export default function Security() {
                 </div>
                 
                 {expandedCompliance === framework.name && (
-  <motion.div
+  <motion.div;
                     initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -466,7 +469,7 @@ export default function Security() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -480,14 +483,14 @@ export default function Security() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Security Best Practices</h2>
             <p className="text-xl text-gray-300">
-              We follow industry-leading security practices to ensure your protection
+              We follow industry-leading security practices to ensure your protection;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {bestPractices.map((practice, index) => (
-  <motion.div
+  <motion.div;
                 key={practice.title},
   }
                 initial={ opaci,
@@ -522,7 +525,7 @@ export default function Security() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -536,13 +539,13 @@ export default function Security() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Security Resources</h2>
             <p className="text-xl text-gray-300">
-              Access our security documentation and resources
+              Access our security documentation and resources;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -564,10 +567,10 @@ export default function Security() {
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 group-hov,
   e: r:text-red-400 transition-colors duration-200">
-                    Security Whitepaper
+                    Security Whitepaper;
                   </h3>
                   <p className="text-gray-300 text-sm mb-4">
-                    Detailed overview of our security architecture and practices
+                    Detailed overview of our security architecture and practices;
                   </p>
                   <div className="flex items-center text-red-400 group-hov,
   e: r:text-red-300 transition-colors duration-200">
@@ -579,7 +582,7 @@ export default function Security() {
               </a>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -601,10 +604,10 @@ export default function Security() {
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 group-hov,
   e: r:text-red-400 transition-colors duration-200">
-                    Security Checklist
+                    Security Checklist;
                   </h3>
                   <p className="text-gray-300 text-sm mb-4">
-                    Essential security measures for your business
+                    Essential security measures for your business;
                   </p>
                   <div className="flex items-center text-red-400 group-hov,
   e: r:text-red-300 transition-colors duration-200">
@@ -616,7 +619,7 @@ export default function Security() {
               </a>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -638,10 +641,10 @@ export default function Security() {
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 group-hov,
   e: r:text-red-400 transition-colors duration-200">
-                    Incident Response
+                    Incident Response;
                   </h3>
                   <p className="text-gray-300 text-sm mb-4">
-                    Our incident response procedures and protocols
+                    Our incident response procedures and protocols;
                   </p>
                   <div className="flex items-center text-red-400 group-hov,
   e: r:text-red-300 transition-colors duration-200">
@@ -660,7 +663,7 @@ export default function Security() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -675,12 +678,12 @@ export default function Security() {
               Questions About Security?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our security team is available to answer your questions and provide 
+              Our security team is available to answer your questions and provide;
               detailed information about our security measures and compliance status.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="mail,
   t: o:security@ziontechgroup.com"
                 className="className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-400 to-orange-500 text-white font-semibold rounded-lg,
@@ -689,16 +692,16 @@ export default function Security() {
   hove: r:scale-105";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Contact Security Team
+                Contact Security Team;
               </a>
-              <a
+              <a;
                 href="/help/security"
                 className="className="inline-flex items-center px-8 py-3 border border-red-400 text-red-400 font-semibold rounded-lg,
   hove: r:bg-red-400 hove,
   r:text-white transition-all duration-200";"
               >
                 <FileText className="w-5 h-5 mr-2" />
-                Security Documentation
+                Security Documentation;
               </a>
             </div>
           </motion.div>

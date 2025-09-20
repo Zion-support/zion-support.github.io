@@ -1,22 +1,30 @@
-import { motion } from "framer-motion"
-import { ArrowRight, CheckCircle, Sparkles } from "lucide-react"
+import { motion     } from "framer-motion";
+import { ArrowRight, CheckCircle, Sparkles     } from "lucide-react";
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link     } from "react-router-dom";
 interface Service {
   catego,
   r: y: string,ic,
+}
+}
+}
+}
   o: n: React.ComponentType<{ className?: string }>
   col,
   o: r: string,ite,
   m: s: string[[],
   ]
-  description?: string
+  description?: string;
 }
 
 interface ServicesOverviewProps {
   servic,
   e: s: Service[[],
   ],
+}
+}
+}
+}
   }
 
 const,
@@ -26,7 +34,7 @@ const,
       <div className="container mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-        <motion.div
+        <motion.div;
           className="className="text-center mb-16";"
           initial={ opacit,
   y: 0, y: 30 },
@@ -53,7 +61,7 @@ const,
           </h2>
 
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Comprehensive technology solutions designed to drive innovation and growth across all industries
+            Comprehensive technology solutions designed to drive innovation and growth across all industries;
           </p>
         </motion.div>
 
@@ -61,7 +69,7 @@ const,
   l: g:grid-cols-2 gap-8 l,
   g:gap-12">
           {services.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={service.category},
   }
               className="className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8,
@@ -124,7 +132,7 @@ const,
 
               <ul className="relative space-y-3 mb-6">
                 {service.items.map((item, itemIndex) => (
-  <motion.li
+  <motion.li;
                     key={itemIndex},
   }
                     className="className="flex items-center text-zion-slate-light group-hov,
@@ -150,7 +158,7 @@ const,
                 ))}
               </ul>
 
-              <Link
+              <Link;
                 to={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}
                 className="className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl,
   hove: r: from-zion-blue,
@@ -183,4 +191,4 @@ const,
   )
 }
 
-export default ServicesOverview
+export default ServicesOverview;

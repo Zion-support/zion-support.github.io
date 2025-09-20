@@ -21,7 +21,9 @@ export interface EmergingTechInnovativeService2028 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,7 +35,7 @@ export interface EmergingTechInnovativeService2028 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
   aiCapabilities?: string[]
   sustainabilityFeatures?: string[]
   blockchainFeatures?: string[]
@@ -42,7 +44,7 @@ export interface EmergingTechInnovativeService2028 {
 
 export,
   const: EMERGING_TECH_INNOVATIVE_SERVICES_2028: EmergingTechInnovativeService2028[] = [
-  // Blockchain-Powered Supply Chain
+  // Blockchain-Powered Supply Chain;
   {
   i,
   d: "blockchain-supply-chain-platform",tit,
@@ -128,7 +130,7 @@ export,
   ],
   }
 
-  // AI-Powered Autonomous Vehicles
+  // AI-Powered Autonomous Vehicles;
   {
   id: "ai-autonomous-vehicles-platform",tit,
   l: e: "AI Autonomous Vehicles Platform",descripti,
@@ -213,7 +215,7 @@ export,
   ],
   }
 
-  // AI-Powered Space Technology
+  // AI-Powered Space Technology;
   {
   id: "ai-space-technology-platform",tit,
   l: e: "AI Space Technology Platform",descripti,
@@ -298,7 +300,7 @@ export,
   ],
   }
 
-  // AI-Powered Biotechnology
+  // AI-Powered Biotechnology;
   {
   id: "ai-biotechnology-platform",tit,
   l: e: "AI Biotechnology Platform",descripti,
@@ -383,7 +385,7 @@ export,
   ],
   }
 
-  // AI-Powered Renewable Energy
+  // AI-Powered Renewable Energy;
   {
   id: "ai-renewable-energy-platform",tit,
   l: e: "AI Renewable Energy Platform",descripti,
@@ -468,7 +470,7 @@ export,
   ],
   }
 
-  // AI-Powered Climate Technology
+  // AI-Powered Climate Technology;
   {
   id: "ai-climate-technology-platform",tit,
   l: e: "AI Climate Technology Platform",descripti,
@@ -553,7 +555,7 @@ export,
   ],
   }
 
-  // AI-Powered Quantum Internet
+  // AI-Powered Quantum Internet;
   {
   id: "ai-quantum-internet-platform",tit,
   l: e: "AI Quantum Internet Platform",descripti,

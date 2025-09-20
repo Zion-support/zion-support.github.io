@@ -1,4 +1,4 @@
-import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award } from "lucide-react"
+import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award     } from "lucide-react";
 export default function AIBusinessProcessOptimizer() {
   const features = [
   'AI-powered process mining and discoveryReal-time performance monitoring and alerts'
@@ -47,7 +47,7 @@ export default function AIBusinessProcessOptimizer() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Brain className="w-4 h-4 mr-2" /> AI-Powered Process Optimization
+            <Brain className="w-4 h-4 mr-2" /> AI-Powered Process Optimization;
           </div>
           <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-4">AI Business Process Optimizer</h1>
@@ -141,11 +141,11 @@ export default function AIBusinessProcessOptimizer() {
   s: m: flex-row gap-4 justify-center">
             <a href="t,
   e: l:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950;
             </a>
             <a href="mail,
   t: o:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
+              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com;
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">

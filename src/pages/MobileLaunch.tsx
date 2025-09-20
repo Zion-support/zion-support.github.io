@@ -1,44 +1,46 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Smartphone
+  Smartphone;
   Download,
   Zap,
   Shield,
   Cloud,
   Users,
   CheckCircle,
-  ArrowRight
-  Star
-  Globe
-  Lock
-  Wifi
-  Battery
-  Settings
-  Bell
-  Search
-  Home
-  User
-  BarChart3
-  MessageCircle
-  ShoppingCart
-  Calendar
-  FileText
-  Heart
-  Bookmark
-  Share2
-  Play
-  Pause
-  SkipBack
-  SkipForward
-  Volume2
-  Maximize2
-  RotateCcw
-  Wifi as WifiIcon
-  Battery as BatteryIcon
-  Signal
-} from "lucide-react"
+  ArrowRight;
+  Star;
+  Globe;
+  Lock;
+  Wifi;
+  Battery;
+  Settings;
+  Bell;
+  Search;
+  Home;
+  User;
+  BarChart3;
+  MessageCircle;
+  ShoppingCart;
+  Calendar;
+  FileText;
+  Heart;
+  Bookmark;
+  Share2;
+  Play;
+  Pause;
+  SkipBack;
+  SkipForward;
+  Volume2;
+  Maximize2;
+  RotateCcw;
+  Wifi as WifiIcon;
+  Battery as BatteryIcon;
+  Signal;
+}
+}
+ } from "lucide-react";
 import SEO from "../components/SEO"
 const,
   MobileLaunc: h: React.FC = () () => {
@@ -114,7 +116,7 @@ const,
   o: n: "🍎",descripti,
   o: n: "Download for iPhone and iPad",li,
   n: k: "#",featur,
-  e: d: true
+  e: d: true;
 },
   {
   platfo,
@@ -122,7 +124,7 @@ const,
   o: n: "🤖",descripti,
   o: n: "Download for Android devices",li,
   n: k: "#",featur,
-  e: d: true
+  e: d: true;
 },
   {
   platfo,
@@ -130,7 +132,7 @@ const,
   o: n: "🌐",descripti,
   o: n: "Access via browser",li,
   n: k: "/",featur,
-  e: d: false
+  e: d: false;
 },
   ]
   const systemRequirements = [
@@ -157,7 +159,7 @@ const,
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Mobile App - Zion Tech Group"
         description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
         keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
@@ -170,7 +172,7 @@ const,
         <div className="relative z-10 container mx-auto px-4">
           <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -30 },
   }
@@ -190,20 +192,20 @@ const,
               
               <h2 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6 leading-tight">
-                Take Zion
+                Take Zion;
                 <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Everywhere
+                  Everywhere;
                 </span>
               </h2>
               
               <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                Access your business solutions, AI services, and analytics on the go with our 
+                Access your business solutions, AI services, and analytics on the go with our;
                 powerful mobile application. Available for iOS and Android devices.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4">
-                <Link
+                <Link;
                   to="#download"
                   className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
@@ -211,20 +213,20 @@ const,
   hove: r:scale-105 shadow-lg shadow-cyan-500/25";"
                 >
                   <Download className="mr-2 w-5 h-5" />
-                  Download Now
+                  Download Now;
                 </Link>
-                <Link
+                <Link;
                   to="/contact"
                   className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400/10 transition-all duration-200";"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </div>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: 30 },
   }
@@ -304,7 +306,7 @@ const,
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -320,7 +322,7 @@ const,
               Powerful <span className="text-cyan-400">Mobile Features</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Experience the full power of Zion Tech Group's services in the palm of your hand 
+              Experience the full power of Zion Tech Group's services in the palm of your hand;
               with our feature-rich mobile application.
             </p>
           </motion.div>
@@ -329,7 +331,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -362,7 +364,7 @@ const,
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -385,7 +387,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {appScreens.map((screen, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -427,7 +429,7 @@ const,
   }
       <section id="download" className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -450,7 +452,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {downloadOptions.map((option, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -480,7 +482,7 @@ const,
                 <h3 className="text-2xl font-bold text-white mb-3">{option.platform}</h3>
                 <p className="text-slate-300 mb-6">{option.description}</p>
                 
-                <Link
+                <Link;
                   to={option.link},
   }
                   className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
@@ -488,7 +490,7 @@ const,
   hove: r:to-blue-500 transition-all duration-200 hove,
   r:scale-105";"
                 >
-                  Download
+                  Download;
                   <Download className="ml-2 w-4 h-4" />
                 </Link>
               </motion.div>
@@ -501,7 +503,7 @@ const,
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -524,7 +526,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-5 gap-6 max-w-4xl mx-auto">
             {systemRequirements.map((req, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -554,7 +556,7 @@ const,
   }
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -569,13 +571,13 @@ const,
               Ready to Go Mobile?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Download our mobile app today and take Zion Tech Group's powerful solutions 
+              Download our mobile app today and take Zion Tech Group's powerful solutions;
               with you wherever you go.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="#download"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
@@ -583,14 +585,14 @@ const,
   hove: r:scale-105 shadow-lg shadow-cyan-500/25";"
               >
                 <Download className="mr-2 w-5 h-5" />
-                Download App
+                Download App;
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                Get Support
+                Get Support;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </div>
@@ -600,4 +602,4 @@ const,
     </div>
   )
 }
-export default MobileLaunch
+export default MobileLaunch;

@@ -1,14 +1,16 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link   } from "react-router-dom";
 import {
-  Users
+  Users;
   Globe,
-  Award
-  TrendingUp
-  Building
-  CheckCircle
-  ArrowRight
-} from "lucide-react"
+  Award;
+  TrendingUp;
+  Building;
+  CheckCircle;
+  ArrowRight;
+}
+}
+ } from "lucide-react";
 export default function Partners() {
   const partnershipTypes = [
   {
@@ -134,24 +136,24 @@ export default function Partners() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-            Partner with Zion Tech Group
+            Partner with Zion Tech Group;
           </h1>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join our ecosystem of innovative partners and together we'll shape the future of technology
+            Join our ecosystem of innovative partners and together we'll shape the future of technology;
           </p>
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
             <Link to="/contact">
               <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold,
   hove: r:scale-105 transition-transform">
-                Become a Partner
+                Become a Partner;
               </button>
             </Link>
             <Link to="#partnership-types">
               <button className="px-8 py-4 border border-white text-white rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-zion-blue transition-colors">
-                Learn More
+                Learn More;
               </button>
             </Link>
           </div>
@@ -162,7 +164,7 @@ export default function Partners() {
       <section id="partnership-types" className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Partnership Opportunities
+            Partnership Opportunities;
           </h2>
           <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
@@ -215,7 +217,7 @@ export default function Partners() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our Trusted Partners
+            Our Trusted Partners;
           </h2>
           <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
@@ -224,7 +226,7 @@ export default function Partners() {
   <div key={index} className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20,
   hove: r:border-zion-cyan/50 transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-4">
-                  <img 
+                  <img;
                     src={partner.logo} 
                     alt={partner.name},
   }
@@ -243,7 +245,7 @@ export default function Partners() {
                   <span className="text-xs text-zion-slate-light">Partner since {partner.year}</span>
                   <button className="text-zion-cyan,
   hove: r:text-zion-cyan-light transition-colors text-sm">
-                    Learn More
+                    Learn More;
                   </button>
                 </div>
               </div>
@@ -256,34 +258,34 @@ export default function Partners() {
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            How to Become a Partner
+            How to Become a Partner;
           </h2>
           <div className="grid grid-cols-1,
   m: d:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                1
+                1;
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Initial Contact</h3>
               <p className="text-zion-slate-light text-sm">Reach out to discuss partnership opportunities</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                2
+                2;
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Evaluation</h3>
               <p className="text-zion-slate-light text-sm">We assess mutual benefits and alignment</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                3
+                3;
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Agreement</h3>
               <p className="text-zion-slate-light text-sm">Finalize partnership terms and conditions</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                4
+                4;
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Launch</h3>
               <p className="text-zion-slate-light text-sm">Begin collaboration and joint initiatives</p>
@@ -314,7 +316,7 @@ export default function Partners() {
               <button className="px-8 py-4 border border-white text-white rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-zion-blue transition-colors">
-                Learn About Zion Tech
+                Learn About Zion Tech;
               </button>
             </Link>
           </div>

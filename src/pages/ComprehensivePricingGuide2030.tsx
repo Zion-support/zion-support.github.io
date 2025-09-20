@@ -1,59 +1,62 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Brain
+  Brain;
   Cloud,
   Shield,
   Rocket,
   Zap,
   Users,
   Globe,
-  Cpu
-  Lock
-  Heart
-  Star
-  ArrowRight
-  CheckCircle
-  TrendingUp
-  Code
-  Database
-  Network
-  Smartphone
-  BarChart3
-  MessageSquare
-  FileText
-  ShoppingCart
-  Headphones
-  Mail
-  Search
-  HelpCircle
-  ShieldCheck
-  Globe2
-  Leaf
-  Sparkles
-  Target
-  DollarSign
-  Clock
-  Award
-  Phone
-  Mail as MailIcon
-  MapPin
-  Infinity
-  Bot
-  CircuitBoard
-  Satellite
-  Atom
-  Blockchain
-  Crown
-  Gem
-  Star as StarIcon
-} from "lucide-react"
-import { SEO } from "../components/SEO"
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "../data/comprehensiveInnovativeServices2030"
+  Cpu;
+  Lock;
+  Heart;
+  Star;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  MessageSquare;
+  FileText;
+  ShoppingCart;
+  Headphones;
+  Mail;
+  Search;
+  HelpCircle;
+  ShieldCheck;
+  Globe2;
+  Leaf;
+  Sparkles;
+  Target;
+  DollarSign;
+  Clock;
+  Award;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
+  Infinity;
+  Bot;
+  CircuitBoard;
+  Satellite;
+  Atom;
+  Blockchain;
+  Crown;
+  Gem;
+  Star as StarIcon;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030   } from "../data/comprehensiveInnovativeServices2030";
 export default function ComprehensivePricingGuide2030() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [priceRange, setPriceRange] = useState('all')
-  // Get unique categories from services
+  // Get unique categories from services;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', cou,
@@ -225,21 +228,20 @@ const categories = [
   },
   ]
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service () => {
-  const matchesCategory = activeCategory === 'all' || service.category === activeCategory
-    
-let matchesPrice = true
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+let matchesPrice = true;
     if (if (priceRange === 'budget') {
   ) {
-      matchesPrice = service.price >= 1000 && service.price < 10000
+      matchesPrice = service.price >= 1000 && service.price < 10000;
 } else if (if (priceRange === 'mid-range') {
   ) {
-      matchesPrice = service.price >= 10000 && service.price < 50000
+      matchesPrice = service.price >= 10000 && service.price < 50000;
 } else if (if (priceRange === 'enterprise') {
   ) {
-      matchesPrice = service.price >= 50000
+      matchesPrice = service.price >= 50000;
 }
     
-    return matchesCategory && matchesPrice
+    return matchesCategory && matchesPrice;
 })
 
   const getCategoryIcon = (catego,
@@ -275,26 +277,35 @@ let matchesPrice = true
   }
   const getPriceTier = (pri,
   c: e: number) () => {
-  if (price < 10000) return { tie,
+  if (price < 10000) return {
+  tie,
   r: 'Budget', ic,
   o: n: <StarIcon className="w-4 h-4" />, col,
+}
+}
   o: r: 'text-green-400' },
   }
-    if (price < 50000) return { ti,
+    if (price < 50000) return {
+  ti,
   e: r: 'Mid-Range', ic,
   o: n: <Gem className="w-4 h-4" />, col,
+}
+}
   o: r: 'text-blue-400' },
   }
-    return { ti,
+    return {
+  ti,
   e: r: 'Enterprise', ic,
   o: n: <Crown className="w-4 h-4" />, col,
+}
+}
   o: r: 'text-purple-400' },
   },
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
         description="Complete pricing guide for all our AI, blockchain, quantum computing, and emerging technology services. Transparent pricing with guaranteed ROI."
       />
@@ -304,7 +315,7 @@ let matchesPrice = true
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -318,17 +329,17 @@ let matchesPrice = true
   m: d: text-7xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-blue-600 bg-clip-text text-transparent">
-              Complete
+              Complete;
             </span>
             <br />
             <span className="text-white">Pricing Guide</span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
-              2030
+              2030;
             </span>
           </motion.h1>
           
-          <motion.p 
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -348,7 +359,7 @@ let matchesPrice = true
 
           {/* Pricing Summary */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -382,7 +393,7 @@ let matchesPrice = true
   }
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -397,19 +408,19 @@ let matchesPrice = true
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                Transparent
+                Transparent;
               </span> 
-              Pricing Structure
+              Pricing Structure;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our pricing is designed to provide exceptional value at every level. From budget-friendly 
+              Our pricing is designed to provide exceptional value at every level. From budget-friendly;
               solutions to enterprise-grade platforms, we ensure maximum ROI for your investment.
             </p>
           </motion.div>
 
           {/* Pricing Tiers */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -443,23 +454,23 @@ let matchesPrice = true
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Core AI functionality
+                  Core AI functionality;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic integrations
+                  Basic integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard support
+                  Standard support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  300%+ ROI guarantee
+                  300%+ ROI guarantee;
                 </li>
               </ul>
 
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="w-full bg-gradient-to-r from-green-500 to-emerald-600,
@@ -467,7 +478,7 @@ let matchesPrice = true
   hove: r:to-emerald-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300 transform hove,
   r:scale-105";"
               >
-                Get Budget Quote
+                Get Budget Quote;
               </a>
             </div>
 
@@ -491,23 +502,23 @@ let matchesPrice = true
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                  Advanced AI capabilities
+                  Advanced AI capabilities;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                  Premium integrations
+                  Premium integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                  Priority support
+                  Priority support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                  500%+ ROI guarantee
+                  500%+ ROI guarantee;
                 </li>
               </ul>
 
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="w-full bg-gradient-to-r from-blue-500 to-cyan-600,
@@ -515,7 +526,7 @@ let matchesPrice = true
   hove: r:to-cyan-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300 transform hove,
   r:scale-105";"
               >
-                Get Mid-Range Quote
+                Get Mid-Range Quote;
               </a>
             </div>
 
@@ -539,23 +550,23 @@ let matchesPrice = true
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  Full AI autonomy
+                  Full AI autonomy;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  Custom integrations
+                  Custom integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  24/7 dedicated support
+                  24/7 dedicated support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  1000%+ ROI guarantee
+                  1000%+ ROI guarantee;
                 </li>
               </ul>
 
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="w-full bg-gradient-to-r from-purple-500 to-pink-600,
@@ -563,14 +574,14 @@ let matchesPrice = true
   hove: r:to-pink-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300 transform hove,
   r:scale-105";"
               >
-                Get Enterprise Quote
+                Get Enterprise Quote;
               </a>
             </div>
           </motion.div>
 
           {/* Filters */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -585,7 +596,7 @@ let matchesPrice = true
           >
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setActiveCategory(category.id)},
@@ -593,7 +604,7 @@ let matchesPrice = true
   }
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300,
   transform: hover: scale-105 ${
-  activeCategory === category.id
+  activeCategory === category.id;
                       ? 'bg-gradient-to-r from-emerald-500 to-blue-600 text-white shadow-lg'
                       : 'bg-white/10 text-gray-300 hove,
   r:bg-white/20 border border-white/20'
@@ -607,7 +618,7 @@ let matchesPrice = true
 
             <div className="flex flex-wrap justify-center gap-4">
               {priceRanges.map((range) => (
-  <button
+  <button;
                   key={range.id},
   }
                   onClick={onClick={() => setPriceRange(range.id)},
@@ -615,7 +626,7 @@ let matchesPrice = true
   }
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300,
   transform: hover: scale-105 ${
-  priceRange === range.id
+  priceRange === range.id;
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
                       : 'bg-white/10 text-gray-300 hove,
   r:bg-white/20 border border-white/20'
@@ -630,7 +641,7 @@ let matchesPrice = true
 
           {/* Services Grid */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -648,7 +659,7 @@ let matchesPrice = true
             {filteredServices.map((service, index) () => {
   const priceTier = getPriceTier(service.price)
               return (
-                <motion.div
+                <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -707,7 +718,7 @@ let matchesPrice = true
   }
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                         key={tagIndex},
   }
                         className="className="px-2 py-1 bg-white/10 text-xs text-emerald-400 rounded-full border border-emerald-500/30";"
@@ -753,7 +764,7 @@ let matchesPrice = true
                   {/* Contact & Action */},
   }
                   <div className="space-y-3">
-                    <a
+                    <a;
                       href={`t,
   e: l:+13024640950`},
   }
@@ -763,16 +774,16 @@ let matchesPrice = true
   transform: hover:scale-105";"
                     >
                       <Phone className="w-4 h-4 inline mr-2" />
-                      Get Quote Now
+                      Get Quote Now;
                     </a>
-                    <a
+                    <a;
                       href={`mailt,
   o:kleber@ziontechgroup.com?subject=Pricing Inquiry for ${service.title}`}
                       className="className="w-full bg-white/10,
   hove: r:bg-white/20 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300 border border-white/20";"
                     >
                       <Mail className="w-4 h-4 inline mr-2" />
-                      Request Pricing
+                      Request Pricing;
                     </a>
                   </div>
 
@@ -797,7 +808,7 @@ let matchesPrice = true
   }
       <section className="py-20 px-4 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -813,7 +824,7 @@ let matchesPrice = true
             Ready to Get Started?
           </motion.h2>
           
-          <motion.p 
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -826,11 +837,11 @@ let matchesPrice = true
   }
             className="className="text-xl text-gray-300 mb-8";"
           >
-            Contact us today for a personalized quote and consultation. Our team of experts will help 
+            Contact us today for a personalized quote and consultation. Our team of experts will help;
             you choose the perfect solution for your business needs and budget.
           </motion.p>
 
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -844,7 +855,7 @@ let matchesPrice = true
             className="className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center";"
           >
-            <a 
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="bg-gradient-to-r from-emerald-500 to-blue-600,
@@ -854,9 +865,9 @@ let matchesPrice = true
             >
               <Phone className="w-5 h-5" />
               Call,
-  No: w: +1 302 464 0950
+  No: w: +1 302 464 0950;
             </a>
-            <a 
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="bg-gradient-to-r from-blue-500 to-purple-600,
@@ -865,13 +876,13 @@ let matchesPrice = true
   r:scale-105";"
             >
               <Mail className="w-5 h-5" />
-              Get Pricing Quote
+              Get Pricing Quote;
             </a>
           </motion.div>
 
           {/* Contact Details */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -924,7 +935,7 @@ let matchesPrice = true
             <a href="htt,
   p: s: //ziontechgroup.com" className="text-emerald-400 hove,
   r:text-emerald-300 ml-1">
-              ziontechgroup.com
+              ziontechgroup.com;
             </a>
           </p>
         </div>

@@ -1,6 +1,7 @@
+import { useCallback    } from "react";
 import React, { useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { 
+import { Link, useLocation     } from "react-router-dom";
+import {
   Menu,
   X, 
   ChevronDown, 
@@ -42,8 +43,12 @@ import {
   Info,
   Phone,
   Mail,
-  MapPin
-} from "lucide-react"
+  MapPin;
+}
+}
+}
+}
+ } from "lucide-react";
 interface SidebarItem {
   na,
   m: e: string,hr,
@@ -51,7 +56,11 @@ interface SidebarItem {
   o: n: React.ComponentType<any>
   children?: SidebarItem[],
   featured?: boolean,
-  description?: string
+  description?: string;
+}
+}
+}
+}
 }
 
 export function MainSidebar() {
@@ -303,24 +312,24 @@ const,
       na,
   m: e: 'Contact',hr,
   e: f: '/contact',ic,
-  o: n: Phone
+  o: n: Phone;
     },
   ]
 const renderSidebarItem = (it,
   e: m: SidebarItem, lev,
   e: l: number = 0) () => {
-    const isActive = location.pathname === item.href
-const hasChildren = item.children && item.children.length > 0
+    const isActive = location.pathname === item.href;
+const hasChildren = item.children && item.children.length > 0;
 const isExpanded = expandedSections.includes(item.name.toLowerCase())
-const isFeatured = item.featured
+const isFeatured = item.featured;
     return (
       <div key={item.name} className="mb-1">
         {hasChildren ? (
           <div>
-            <button
+            <button;
               onClick={() => toggleSection(item.name.toLowerCase())}
               className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-                level === 0 
+                level === 0;
                   ? 'text-slate-300,
   hove: r: text-white,
   hove: r:bg-slate-700/50' 
@@ -349,12 +358,12 @@ const isFeatured = item.featured
             )}
           </div>
         ) : (
-          <Link
+          <Link;
             to={item.href}
             className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-              isActive
+              isActive;
                 ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
-                : level === 0
+                : level === 0;
                 ? 'text-slate-300,
   hove: r: text-white,
   hove: r:bg-slate-700/50'
@@ -377,7 +386,7 @@ const isFeatured = item.featured
   return (
     <>
       {/* Mobile menu button */}
-      <button
+      <button;
         onClick={() => setIsOpen(!isOpen)}
         className="lg: hidden p-2 rounded-lg text-slate-400,
   hove: r:text-white hove,
@@ -388,18 +397,18 @@ const isFeatured = item.featured
 
       {/* Sidebar */}
       <div className={`
-        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl
+        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl;
         transform transition-transform duration-300 ease-in-out,
   l: g: translate-x-0,
   l: g:static l,
-  g:inset-0
+  g:inset-0;
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
             <h2 className="text-lg font-semibold text-white">Navigation</h2>
-            <button
+            <button;
               onClick={() => setIsOpen(false)}
               className="lg: hidden p-1 rounded text-slate-400,
   hove: r:text-white hove,
@@ -436,7 +445,7 @@ const isFeatured = item.featured
 
       {/* Overlay */},
   {isOpen && (
-        <div
+        <div;
           className="fixed inset-0 z-40 bg-black/50,
   l: g:hidden"
           onClick={() => setIsOpen(false)}

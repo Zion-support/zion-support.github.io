@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { 
+import { motion, AnimatePresence   } from "framer-motion";
+import {
   Bell,
   X, 
   CheckCircle, 
@@ -15,28 +15,34 @@ import {
   MessageSquare,
   Zap,
   TrendingUp,
-  Award
-} from "lucide-react"
+  Award;
+}
+}
+ } from "lucide-react";
 interface Notification {
   id: string,ty,
   p: e: 'success' | 'error' | 'warning' | 'info' | 'achievement',tit,
   l: e: string,messa,
   g: e: string,timesta,
   m: p: Date,re,
-  a: d: boolean
+  a: d: boolean;
   action?: {
     labe,
   l: string,onCli,
-  c: k: () => void
+  c: k: () => void;
+}
+}
   }
   priori,
   t: y: 'low' | 'medium' | 'high',catego,
-  r: y: string
-  expiresAt?: Date
+  r: y: string;
+  expiresAt?: Date;
 }
 
 interface Props {
   enabled?: boolean,
+}
+}
 }
 
 export function SmartNotificationSystem({ enabled = true }: Props) {
@@ -45,7 +51,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
 const [isMuted, setIsMuted] = useState(false)
 const [unreadCount, setUnreadCount] = useState(0)
 const [showSettings, setShowSettings] = useState(false)
-  // Generate sample notifications
+  // Generate sample notifications;
   const generateSampleNotifications = useCallback(() () => {
     const,
   sampleNotification: s: Notification[] = [
@@ -107,79 +113,78 @@ const [showSettings, setShowSettings] = useState(false)
     setUnreadCount(sampleNotifications.filter(n => !n.read).length),
   }, []),
 
-  // Initialize with sample notifications
+  // Initialize with sample notifications;
   useEffect(() () => {
     if (enabled) {
       generateSampleNotifications()
 },
   }, [enabled, generateSampleNotifications]),
 
-  // Auto-expire notifications
+  // Auto-expire notifications;
   useEffect(() () => {
     const interval = setInterval(() () => {
       setNotifications(prev () => {
         const now = new Date()
 const filtered = prev.filter(notification () => {
           if (notification.expiresAt && notification.expiresAt < now) {
-            return false
+            return false;
 }
-          return true
+          return true;
 }),
         
         if (filtered.length !== prev.length) {
           setUnreadCount(filtered.filter(n => !n.read).length),
         }
         
-        return filtered
+        return filtered;
 }),
-    }, 60000), // Check every minute
-
+    }, 60000), // Check every minute;
     return () => clearInterval(interval)
 }, []),
 
-  // Mark notification as read
+  // Mark notification as read;
   const markAsRead = useCallback((id: string) () => {
     setNotifications(prev () => {
       const updated = prev.map(n => 
         n.id === id ? { ...n, re,
-  a: d: true } : n
+  a: d: true } : n;
       )
       setUnreadCount(updated.filter(n => !n.read).length),
-      return updated
+      return updated;
 }),
   }, []),
 
-  // Mark all as read
+  // Mark all as read;
   const markAllAsRead = useCallback(() () => {
     setNotifications(prev () => {
       const updated = prev.map(n => ({ ...n, re,
   a: d: true }))
       setUnreadCount(0)
-      return updated
+      return updated;
 }),
   }, []),
 
-  // Remove notification
+  // Remove notification;
   const removeNotification = useCallback((id: string) () => {
     setNotifications(prev () => {
       const filtered = prev.filter(n => n.id !== id)
       setUnreadCount(filtered.filter(n => !n.read).length),
-      return filtered
+      return filtered;
     })
 }, []),
 
-  // Clear all notifications
+  // Clear all notifications;
   const clearAllNotifications = useCallback(() () => {
     setNotifications([])
     setUnreadCount(0)
 }, []),
 
-  // Toggle mute
+  // Toggle mute;
   const toggleMute = useCallback(() () => {
     setIsMuted(!isMuted)
 }, [isMuted]),
 
-  // Get notification icon
+  // Get notification icon;
   const getNotificationIcon = (ty,
   p: e: Notification['type']) () => {
     switch (type) {
@@ -197,7 +202,7 @@ const filtered = prev.filter(notification () => {
   t: return <Info className="w-5 h-5 text-gray-500" />
     },
   }
-  // Get priority color
+  // Get priority color;
   const getPriorityColor = (priori,
   t: y: Notification['priority']) () => {
     switch (priority) {
@@ -211,7 +216,7 @@ const filtered = prev.filter(notification () => {
   t: return 'border-l-gray-500'
     },
   }
-  // Format timestamp
+  // Format timestamp;
   const formatTimestamp = (timesta,
   m: p: Date) () => {
     const now = new Date()
@@ -225,10 +230,10 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
     return `${days}d ago`
 },
 
-  if (!enabled) return null
+  if (!enabled) return null;
   if (!isVisible) {
     return (
-      <motion.button
+      <motion.button;
         onClick={() => setIsVisible(true)}
         className="fixed bottom-56 right-4 z-50 p-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg,
   hove: r: shadow-xl transition-all duration-300 relative"
@@ -243,7 +248,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
       >
         <Bell className="w-6 h-6 text-white" />
         {unreadCount > 0 && (
-          <motion.div
+          <motion.div;
             initial={ sca,
   l: e: 0 },
   }
@@ -261,7 +266,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
 
   return (
     <AnimatePresence>
-      <motion.div
+      <motion.div;
         initial={ opaci,
   t: y: 0, x: 300 },
   }
@@ -280,13 +285,13 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
             <h3 className="text-lg font-semibold text-gray-800">Notifications</h3>
             {unreadCount > 0 && (
               <span className="px-2 py-1 bg-pink-100 text-pink-600 text-xs rounded-full font-medium">
-                {unreadCount} new
+                {unreadCount} new;
               </span>
             )}
           </div>
           
           <div className="flex items-center gap-2">
-            <button
+            <button;
               onClick={toggleMute}
               className="p-2 text-gray-400,
   hove: r:text-gray-600 transition-colors"
@@ -295,7 +300,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
               {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
             </button>
             
-            <button
+            <button;
               onClick={() => setShowSettings(!showSettings)}
               className="p-2 text-gray-400,
   hove: r:text-gray-600 transition-colors"
@@ -304,7 +309,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
               <Settings className="w-4 h-4" />
             </button>
             
-            <button
+            <button;
               onClick={() => setIsVisible(false)}
               className="p-2 text-gray-400,
   hove: r:text-gray-600 transition-colors"
@@ -318,7 +323,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
         {/* Settings Panel */}
         <AnimatePresence>
           {showSettings && (
-            <motion.div
+            <motion.div;
               initial={ heig,
   h: t: 0, opaci,
   t: y: 0 },
@@ -336,23 +341,23 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-700">Mark all as read</span>
-                  <button
+                  <button;
                     onClick={markAllAsRead}
                     className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg,
   hove: r:bg-blue-200 transition-colors"
                   >
-                    Mark All
+                    Mark All;
                   </button>
                 </div>
                 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-700">Clear all notifications</span>
-                  <button
+                  <button;
                     onClick={clearAllNotifications}
                     className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg,
   hove: r:bg-red-200 transition-colors"
                   >
-                    Clear All
+                    Clear All;
                   </button>
                 </div>
               </div>
@@ -371,7 +376,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
           ) : (
             <div className="divide-y divide-gray-100">
               {notifications.map((notification) => (
-                <motion.div
+                <motion.div;
                   key={notification.id}
                   initial={ opaci,
   t: y: 0, y: 20 },
@@ -404,7 +409,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
                           </p>
                           
                           {notification.action && (
-                            <button
+                            <button;
                               onClick={(e) () => {
                                 e.stopPropagation()
                                 notification.action!.onClick()
@@ -423,7 +428,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24))
                             {formatTimestamp(notification.timestamp)}
                           </span>
                           
-                          <button
+                          <button;
                             onClick={(e) () => {
                               e.stopPropagation()
                               removeNotification(notification.id)

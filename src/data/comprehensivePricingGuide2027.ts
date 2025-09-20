@@ -1,7 +1,7 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
-  // AI-Powered Micro SAAS Services
+  // AI-Powered Micro SAAS Services;
   {
   i,
   d: "ai-autonomous-code-reviewer",tit,
@@ -614,7 +614,7 @@ export,
   n: s: [["PubMed", "arXiv", "IEEE", "ACM", "Research Databases", "Citation Managers"],
   ],
   }
-  // Emerging Technology Services 2030
+  // Emerging Technology Services 2030;
   {
   id: "quantum-ai-hybrid-computing",tit,
   l: e: "Quantum-AI Hybrid Computing & Optimization Platform",descripti,
@@ -756,7 +756,7 @@ export,
   n: s: [["AWS IoT", "Azure IoT", "Google Cloud IoT", "Docker", "Kubernetes", "MQTT"],
   ],
   }
-  // IT Infrastructure Services
+  // IT Infrastructure Services;
   {
   id: "cloud-migration-automation",tit,
   l: e: "Enterprise Cloud Migration & Automation Suite",descripti,
@@ -946,11 +946,11 @@ export,
   ],
   },
   ]
-export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027
-export const getComprehensivePricingGuide2027ByCategory = (catego,
+export const getComprehensivePricingGuide2027 = React.memo(() => comprehensivePricingGuide2027;
+export const getComprehensivePricingGuide2027ByCategory = React.memo((catego,
   r: y: string) =>
   comprehensivePricingGuide2027.filter(item => item.category === category)
-export const getComprehensivePricingGuide2027ById = (i,
+export const getComprehensivePricingGuide2027ById = React.memo((i,
   d: string) =>
   comprehensivePricingGuide2027.find(item => item.id === id)
 export const pricingCategories2027 = [

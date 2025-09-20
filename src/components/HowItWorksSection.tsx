@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from "lucide-react"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield   } from "lucide-react";
 const steps = [
   {
     ic,
@@ -124,7 +124,7 @@ const containerVariants = {
   o: n: {
         staggerChildre,
   n: 0.2,delayChildr,
-  e: n: 0.1
+  e: n: 0.1;
       },
   },
   }
@@ -160,7 +160,7 @@ const statsVariants = {
 
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
-        <motion.div
+        <motion.div;
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={ rota,
   t: e: 360 },
@@ -171,7 +171,7 @@ const statsVariants = {
   s: e: "linear" },
   }
         />
-        <motion.div
+        <motion.div;
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={ rota,
   t: e: -360 },
@@ -182,7 +182,7 @@ const statsVariants = {
   s: e: "linear" },
   }
         />
-        <motion.div
+        <motion.div;
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
           animate={ sca,
   l: e: [1, 1.2, 1],
@@ -197,7 +197,7 @@ const statsVariants = {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
+        <motion.div;
           className="text-center mb-20"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -225,7 +225,7 @@ const statsVariants = {
         </motion.div>
 
         {/* Stats section */}
-        <motion.div
+        <motion.div;
           className="grid grid-cols-2,
   m: d:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}
@@ -236,7 +236,7 @@ const statsVariants = {
   }
         >
           {stats.map((stat, index) => (
-            <motion.div
+            <motion.div;
               key={index}
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
@@ -250,7 +250,7 @@ const statsVariants = {
           ))}
         </motion.div>
 
-        <motion.div
+        <motion.div;
           className="relative"
           variants={containerVariants}
           initial="hidden"
@@ -270,7 +270,7 @@ const statsVariants = {
   m: d: grid-cols-2 l,
   g:grid-cols-5 gap-8 relative">
             {steps.map((step, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 variants={containerVariants}
                 className="relative group"
@@ -326,7 +326,7 @@ const statsVariants = {
                 {/* Hover details */}
                 <AnimatePresence>
                   {hoveredStep === index && (
-                    <motion.div
+                    <motion.div;
                       className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 p-4 bg-zion-blue-dark rounded-xl border border-zion-cyan/30 shadow-2xl shadow-zion-cyan/20 backdrop-blur-sm z-10 min-w-[280px]"
                       initial={ opaci,
   t: y: 0, y: 10, sca,
@@ -366,7 +366,7 @@ const statsVariants = {
         </motion.div>
 
         {/* Call to action */}
-        <motion.div
+        <motion.div;
           className="text-center mt-16"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -393,7 +393,7 @@ const statsVariants = {
   transform: hover:scale-105,
   hove: r:shadow-lg hove,
   r:shadow-zion-cyan/25">
-                Start Your Project
+                Start Your Project;
               </button>
             </div>
           </div>

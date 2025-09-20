@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../../components/SEO"
-import { motion } from "framer-motion"
-import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus     } from "lucide-react";
 const,
   AIHRPlatfor: m: React.FC = () () => {
   const features = [
@@ -64,7 +64,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI HR Platform Services - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
       />
@@ -73,7 +73,7 @@ const,
   }
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -92,9 +92,9 @@ const,
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI HR
+              AI HR;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-400">
-                Platform
+                Platform;
               </span>
             </h1>
             
@@ -109,11 +109,11 @@ const,
   hove: r:from-blue-400,
   hove: r:to-indigo-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-blue-500/20">
-                Get Started
+                Get Started;
               </button>
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hove,
   r:bg-blue-400/10 transition-all duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -124,7 +124,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -137,10 +137,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI HR Platform Features
+              AI HR Platform Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive HR solutions powered by artificial intelligence
+              Comprehensive HR solutions powered by artificial intelligence;
             </p>
           </motion.div>
 
@@ -148,7 +148,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -180,7 +180,7 @@ const,
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -193,17 +193,17 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Platform Modules
+              Platform Modules;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive HR solutions for every aspect of people management
+              Comprehensive HR solutions for every aspect of people management;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {modules.map((module, index) => (
-  <motion.div
+  <motion.div;
                 key={module.title},
   }
                 initial={ opaci,
@@ -236,7 +236,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -252,13 +252,13 @@ const,
               Why Choose AI HR Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform your HR operations with intelligent automation
+              Transform your HR operations with intelligent automation;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d: grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -281,7 +281,7 @@ const,
               </ul>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -295,14 +295,14 @@ const,
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to transform your HR operations? Our AI HR experts can help you implement 
+                Ready to transform your HR operations? Our AI HR experts can help you implement;
                 intelligent solutions that streamline processes and improve employee experience.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg,
   hove: r: from-blue-400,
   hove: r:to-indigo-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-blue-500/20">
-                Contact HR Experts
+                Contact HR Experts;
               </button>
             </motion.div>
           </div>
@@ -313,7 +313,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -328,7 +328,7 @@ const,
               Ready to Transform Your HR?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the AI revolution in human resources management
+              Join the AI revolution in human resources management;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -336,11 +336,11 @@ const,
   hove: r:from-blue-400,
   hove: r:to-indigo-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-blue-500/20">
-                Start HR Transformation
+                Start HR Transformation;
               </button>
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hove,
   r:bg-blue-400/10 transition-all duration-200">
-                Request Demo
+                Request Demo;
               </button>
             </div>
           </motion.div>
@@ -349,4 +349,4 @@ const,
     </div>
   )
 }
-export default AIHRPlatform
+export default AIHRPlatform;

@@ -1,48 +1,51 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { Link, useSearchParams } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
+import { Link, useSearchParams   } from "react-router-dom";
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Search
+  Search;
   Filter,
   X,
   Clock,
   Tag,
   User,
-  Calendar
-  ArrowRight
-  FileText
-  Code
-  Brain
-  Cloud
-  Shield
-  Rocket
-  Atom
-  Building
-  Globe
-  Zap
-  TrendingUp
-  CheckCircle
-  Star
-  BookOpen
-  MessageCircle
-  Users
-  Target
-  BarChart3
-  Cpu
-  Database
-  Network
-  Lock
-  Eye
-  Heart
-  DollarSign
-  Factory
-  ShoppingCart
-  Leaf
-  Gamepad2
-  Coins
-  Satellite
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Calendar;
+  ArrowRight;
+  FileText;
+  Code;
+  Brain;
+  Cloud;
+  Shield;
+  Rocket;
+  Atom;
+  Building;
+  Globe;
+  Zap;
+  TrendingUp;
+  CheckCircle;
+  Star;
+  BookOpen;
+  MessageCircle;
+  Users;
+  Target;
+  BarChart3;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Eye;
+  Heart;
+  DollarSign;
+  Factory;
+  ShoppingCart;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
 interface SearchResult {
   id: string,tit,
   l: e: string,excer,
@@ -53,11 +56,13 @@ interface SearchResult {
   r: y: string,ta,
   g: s: string[[],
   ]
-  author?: string
-  date?: string
+  author?: string;
+  date?: string;
   readTime?: number,
-  relevanc: e: number
-  featured?: boolean
+  relevanc: e: number;
+  featured?: boolean;
+}
+}
 }
 
 const,
@@ -181,7 +186,7 @@ const,
   t: e: '2024-08-27',readTi,
   m: e: 8,relevan,
   c: e: 95,featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: '2',tit,
@@ -198,7 +203,7 @@ const,
   t: e: '2024-08-25',readTi,
   m: e: 6,relevan,
   c: e: 88,featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: '3',tit,
@@ -214,7 +219,7 @@ const,
   t: e: '2024-08-23',readTi,
   m: e: 7,relevan,
   c: e: 92,featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: '4',tit,
@@ -230,7 +235,7 @@ const,
   t: e: '2024-08-15',readTi,
   m: e: 6,relevan,
   c: e: 85,featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: '5',tit,
@@ -246,7 +251,7 @@ const,
   t: e: '2024-08-13',readTi,
   m: e: 8,relevan,
   c: e: 82,featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: '6',tit,
@@ -262,7 +267,7 @@ const,
   t: e: '2024-08-17',readTi,
   m: e: 10,relevan,
   c: e: 78,featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: '7',tit,
@@ -278,7 +283,7 @@ const,
   t: e: '2024-08-19',readTi,
   m: e: 9,relevan,
   c: e: 75,featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: '8',tit,
@@ -295,40 +300,41 @@ const,
   t: e: '2024-08-11',readTi,
   m: e: 7,relevan,
   c: e: 72,featur,
-  e: d: false
+  e: d: false;
 },
   ]
   useEffect(() () => {
     if (query.trim()) {
   performSearch()
     } else {
-      setResults([])
+  setResults([])
+}
+}
     },
   }, [query, selectedType, selectedCategory, sortBy])
 
   const performSearch = async () () => {
-    if (!query.trim()) return
+    if (!query.trim()) return;
     setIsSearching(true)
     
-    // Simulate API call delay
+    // Simulate API call delay;
     await new Promise(resolve => setTimeout(resolve, 500))
 
-    // Filter results based on search criteria
+    // Filter results based on search criteria;
 let filteredResults = mockSearchResults.filter(result () => {
   const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||
                           result.excerpt.toLowerCase().includes(query.toLowerCase()) ||
                           result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
-      const matchesType = selectedType === 'all' || result.type === selectedType
-const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory
-      
-      return matchesQuery && matchesType && matchesCategory
+      const matchesType = selectedType === 'all' || result.type === selectedType;
+const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory;
+      return matchesQuery && matchesType && matchesCategory;
 })
 
-    // Sort results
+    // Sort results;
     filteredResults.sort((a, b) () => {
   if (if (sortBy === 'relevance') {
   ) {
-        return b.relevance - a.relevance
+        return b.relevance - a.relevance;
 } else if (if (sortBy === 'date') {
   ) {
         return new Date(b.date || '1970-01-01').getTime() - new Date(a.date || '1970-01-01').getTime()
@@ -336,7 +342,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   ) {
         return a.title.localeCompare(b.title)
       }
-      return 0
+      return 0;
 })
 
     setResults(filteredResults)
@@ -387,30 +393,34 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   t: return <Globe className="w-4 h-4" />
     },
   }
-  // Update counts
+  // Update counts;
   useEffect(() () => {
     searchTypes.forEach(type () => {
   if (if (type.id === 'all') {
   ) {
-        type.count = results.length
+        type.count = results.length;
 } else {
-        type.count = results.filter(result => result.type === type.id).length
+  type.count = results.filter(result => result.type === type.id).length;
+}
+}
 },
   })
 
     categories.forEach(category () => {
   if (if (category.id === 'all') {
   ) {
-        category.count = results.length
+        category.count = results.length;
 } else {
-        category.count = results.filter(result => result.category === category.id).length
+  category.count = results.filter(result => result.category === category.id).length;
+}
+}
 },
   })
   }, [results])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO;
         title="Search - Zion Tech Group"
         description="Search through Zion Tech Group's comprehensive collection of services, news, and resources. Find exactly what you're looking for."
         keywords="search, Zion Tech Group, AI services, quantum computing, technology solutions"
@@ -422,7 +432,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   s: m: px-6,
   l: g:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -436,19 +446,19 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
           >
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Search Zion Tech
+              Search Zion Tech;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Group
+                Group;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find services, news, case studies, and resources across our comprehensive technology portfolio
+              Find services, news, case studies, and resources across our comprehensive technology portfolio;
             </p>
           </motion.div>
 
           {/* Search Bar */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -463,7 +473,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
           >
             <form onSubmit={handleSearch} className="relative">
               <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search for services, news, case studies, or any topic..."
                 value={query},
@@ -476,13 +486,13 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   focu: s:ring-cyan-400/50,
   focu: s:border-cyan-400/50 transition-all duration-300 text-lg";"
               />
-              <button
+              <button;
                 type="submit"
                 className="className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl,
   hove: r:from-cyan-600 hove,
   r:to-blue-700 transition-all duration-200";"
               >
-                Search
+                Search;
               </button>
             </form>
           </motion.div>
@@ -506,7 +516,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
           <div className="max-w-7xl mx-auto">
             {/* Filters */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -527,14 +537,14 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                   <div className="grid grid-cols-2,
   m: d:grid-cols-3 gap-2">
                     {searchTypes.map((type) => (
-  <button
+  <button;
                         key={type.id},
   }
                         onClick={onClick={() => setSelectedType(type.id)},
   },
   }
                         className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-  selectedType === type.id
+  selectedType === type.id;
                             ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40'
                             : 'text-gray-300,
   hove: r: text-white hove,
@@ -556,14 +566,14 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                   <div className="grid grid-cols-2,
   m: d:grid-cols-3 gap-2">
                     {categories.map((category) => (
-  <button
+  <button;
                         key={category.id},
   }
                         onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                         className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                             ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40'
                             : 'text-gray-300,
   hove: r: text-white hove,
@@ -582,7 +592,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   }
                 <div className="lg:w-48">
                   <label className="block text-sm font-medium text-cyan-400 mb-3">Sort By</label>
-                  <select
+                  <select;
                     value={sortBy},
   }
                     onChange={(e) => setSortBy(e.target.value as 'relevance' | 'date' | 'title')},
@@ -602,7 +612,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                 {/* Clear Filters */},
   }
                 <div className="lg:w-auto">
-                  <button
+                  <button;
                     onClick={onClick={clearFilters},
   },
   }
@@ -620,7 +630,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   }
             <div className="space-y-6">
               {isSearching ? (
-  <motion.div
+  <motion.div;
                   initial={ opaci,
   t: y: 0 },
   }
@@ -633,7 +643,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                   <p className="text-gray-400">Searching...</p>
                 </motion.div>
               ) : results.length === 0 ? (
-  <motion.div
+  <motion.div;
                   initial={ opaci,
   t: y: 0 },
   }
@@ -648,38 +658,38 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                   <div className="flex flex-wrap justify-center gap-2">
                     <span className="text-sm text-gray-500">Suggestio,
   n: s:</span>
-                    <button
+                    <button;
                       onClick={onClick={() => setQuery('AI')},
   },
   }
                       className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20,
   hove: r:bg-cyan-500/20 transition-colors duration-200";"
                     >
-                      AI
+                      AI;
                     </button>
-                    <button
+                    <button;
                       onClick={onClick={() => setQuery('quantum')},
   },
   }
                       className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20,
   hove: r:bg-cyan-500/20 transition-colors duration-200";"
                     >
-                      Quantum
+                      Quantum;
                     </button>
-                    <button
+                    <button;
                       onClick={onClick={() => setQuery('cloud')},
   },
   }
                       className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20,
   hove: r: bg-cyan-500/20 transition-colors duration-200";"
                     >
-                      Cloud
+                      Cloud;
                     </button>
                   </div>
                 </motion.div>
               ) : (
   <>
-                  <motion.div
+                  <motion.div;
                     initial={ opacit,
   y: 0 },
   }
@@ -695,7 +705,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
 
                   <div className="space-y-6">
                     {results.map((result, index) => (
-  <motion.div
+  <motion.div;
                         key={result.id},
   }
                         initial={ opaci,
@@ -736,7 +746,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                               {result.featured && (
   <span className="inline-flex items-center px-2 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded-full border border-yellow-400/20">
                                   <Star className="w-3 h-3 mr-1" />
-                                  Featured
+                                  Featured;
                                 </span>
                               )}
                             </div>
@@ -774,7 +784,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   {result.readTime && (
   <span className="flex items-center">
                                     <Clock className="w-4 h-4 mr-1" />
-                                    {result.readTime} min read
+                                    {result.readTime} min read;
                                   </span>
                                 )}
                               </div>
@@ -782,7 +792,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                               <div className="flex items-center space-x-3">
                                 <div className="flex flex-wrap gap-1">
                                   {result.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                                       key={tagIndex},
   }
                                       className="className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
@@ -793,13 +803,13 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                                   ))}
                                 </div>
                                 
-                                <Link
+                                <Link;
                                   to={result.url},
   }
                                   className="className="flex items-center text-cyan-400,
   hove: r: text-white transition-colors duration-300 group";"
                                 >
-                                  View
+                                  View;
                                   <ArrowRight className="w-4 h-4 ml-1 group-hove,
   r:translate-x-1 transition-transform duration-300" />
                                 </Link>
@@ -823,7 +833,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -840,10 +850,10 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
             >
               <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-                Popular Searches
+                Popular Searches;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover our most sought-after services and solutions
+                Discover our most sought-after services and solutions;
               </p>
             </motion.div>
 
@@ -888,7 +898,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   r: y: 'digital transformation' },
   },
   ].map((item, index) => (
-  <motion.button
+  <motion.button;
                   key={index},
   }
                   initial={ opaci,
@@ -934,4 +944,4 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   )
 }
 
-export default SearchPage
+export default SearchPage;

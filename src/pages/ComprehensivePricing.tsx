@@ -1,11 +1,12 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services"
-import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services"
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Button   } from "@/components/ui/button";
+import { cuttingEdgeComprehensiveServices2027   } from "../../data/2027-cutting-edge-comprehensive-services";
+import { specializedInnovativeServices2027   } from "../../data/2027-specialized-innovative-services";
+import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap   } from "lucide-react";
+import { Link   } from "react-router-dom";
 const const contactInfo = {
   = {
   mobi,
@@ -28,7 +29,7 @@ const pricingTiers = [
       'Email support'
 ]
     popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -43,7 +44,7 @@ const pricingTiers = [
       'Phone & email supportTraining sessions'
 ]
     popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -59,44 +60,44 @@ const pricingTiers = [
       'SLA guarantees'
 ]
     popula,
-  r: false
+  r: false;
 },
   ]
 export default function ComprehensivePricing() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')
 
-  // Combine all services
+  // Combine all services;
 const allServices = [[...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027],
   ]
 
-  // Get unique categories
+  // Get unique categories;
 const categories = Array.from(new Set(allServices.map(service => service.category)))
 
-  // Filter services based on selection
+  // Filter services based on selection;
 const filteredServices = allServices.filter(service () => {
-  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-let matchesPrice = true
+  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+let matchesPrice = true;
     if (if (selectedPriceRange !== 'all') {
   ) {
       const price = parseInt(service.price.replace(/[^0-9]/g, ''))
       switch (selectedPriceRange) {
   case 'under-1000':
-          matchesPrice = price < 1000
-          break
+          matchesPrice = price < 1000;
+          break;
         case '1000-3000':
-          matchesPrice = price >= 1000 && price < 3000
-          break
+          matchesPrice = price >= 1000 && price < 3000;
+          break;
         case '3000-5000':
-          matchesPrice = price >= 3000 && price < 5000
-          break
+          matchesPrice = price >= 3000 && price < 5000;
+          break;
         case 'over-5000':
-          matchesPrice = price >= 5000
-          break
+          matchesPrice = price >= 5000;
+          break;
 },
   }
 
-    return matchesCategory && matchesPrice
+    return matchesCategory && matchesPrice;
 })
 
   const getPriceRangeLabel = (ran,
@@ -118,7 +119,7 @@ let matchesPrice = true
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-            Comprehensive Pricing
+            Comprehensive Pricing;
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Transparent pricing for our revolutionary micro SAAS solutions.
@@ -186,7 +187,7 @@ let matchesPrice = true
                     <Button className={`w-full ${tier.popular ? 'bg-zion-cyan text-white,
   hove: r: bg-zion-cyan-dark' : 'bg-zion-blue text-white hove,
   r:bg-zion-blue-dark'}`}>
-                      Get Started
+                      Get Started;
                       <ArrowRight className="h-4 w-4 ml-2"/>
                     </Button>
                   </Link>
@@ -207,7 +208,7 @@ let matchesPrice = true
   }
           <div className="flex flex-col,
   m: d: flex-row gap-4 mb-12 max-w-4xl mx-auto">
-            <select
+            <select;
               className="className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark,
   focu: s:outline-none,
   focu: s:ring-2 focu,
@@ -222,7 +223,7 @@ let matchesPrice = true
   <option key={category} value={category}>{category}</option>
               ))}
             </select>
-            <select
+            <select;
               className="className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark,
   focu: s: outline-none,
   focu: s:ring-2 focu,
@@ -321,7 +322,7 @@ let matchesPrice = true
                       <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
-                      {service.customers} customers
+                      {service.customers} customers;
                     </Badge>
                   </div>
 
@@ -331,7 +332,7 @@ let matchesPrice = true
                     <Link to={service.link} className="w-full">
                       <Button className="w-full bg-zion-cyan text-white,
   hove: r: bg-zion-cyan-dark">
-                        Learn More
+                        Learn More;
                         <ArrowRight className="h-4 w-4 ml-2"/>
                       </Button>
                     </Link>
@@ -340,7 +341,7 @@ let matchesPrice = true
   hove: r:bg-zion-cyan hove,
   r:text-white">
                         <Phone className="h-4 w-4 mr-2"/>
-                        Get Quote
+                        Get Quote;
                       </Button>
                     </Link>
                   </div>
@@ -352,7 +353,7 @@ let matchesPrice = true
           {filteredServices.length === 0 && (
   <div className="text-center py-12">
               <p className="text-zion-slate-light text-lg">No services found matching your criteria.</p>
-              <Button
+              <Button;
                 onClick={() () => {
                   setSelectedCategory('all')
                   setSelectedPriceRange('all')
@@ -361,7 +362,7 @@ let matchesPrice = true
                 className="className="mt-4 bg-zion-cyan text-white,
   hove: r:bg-zion-cyan-dark";"
               >
-                Clear Filters
+                Clear Filters;
               </Button>
             </div>
           )}
@@ -416,7 +417,7 @@ let matchesPrice = true
               Ready to Get Started?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Contact us today for a free consultation and discover how our innovative solutions
+              Contact us today for a free consultation and discover how our innovative solutions;
               can transform your business.
             </p>
             <div className="flex flex-col,
@@ -425,7 +426,7 @@ let matchesPrice = true
                 <Button size="lg" className="bg-white text-zion-blue,
   hove: r:bg-gray-100 px-8 py-3">
                   <Phone className="h-5 w-5 mr-2"/>
-                  Get Free Consultation
+                  Get Free Consultation;
                 </Button>
               </Link>
               <Link to="/contact">
@@ -433,7 +434,7 @@ let matchesPrice = true
   hove: r:bg-white,
   hove: r:text-zion-blue px-8 py-3">
                   <Mail className="h-5 w-5 mr-2"/>
-                  Request Demo
+                  Request Demo;
                 </Button>
               </Link>
             </div>

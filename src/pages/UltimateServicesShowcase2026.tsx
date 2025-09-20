@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Star
+  Star;
   Rocket,
   Brain,
   Cloud,
@@ -10,42 +10,44 @@ import {
   Atom,
   Cpu,
   Network,
-  Database
-  TrendingUp
-  Users
-  Target
-  Globe
-  Code
-  Lock
-  Eye
-  Heart
-  ShoppingCart
-  MessageCircle
-  BarChart3
-  HelpCircle
-  FileText
-  Truck
-  Mail
-  Smartphone
-  DollarSign
-  CheckCircle
-  ArrowRight
-  Sparkles
-  Award
-  GitFork
-  Server
-  Building
-  Leaf
-  Satellite
-  Gamepad2
-  Coins
-  GraduationCap
-  Activity
-  Briefcase
-  Newspaper
-  BookOpen
-  ExternalLink
-} from "lucide-react"
+  Database;
+  TrendingUp;
+  Users;
+  Target;
+  Globe;
+  Code;
+  Lock;
+  Eye;
+  Heart;
+  ShoppingCart;
+  MessageCircle;
+  BarChart3;
+  HelpCircle;
+  FileText;
+  Truck;
+  Mail;
+  Smartphone;
+  DollarSign;
+  CheckCircle;
+  ArrowRight;
+  Sparkles;
+  Award;
+  GitFork;
+  Server;
+  Building;
+  Leaf;
+  Satellite;
+  Gamepad2;
+  Coins;
+  GraduationCap;
+  Activity;
+  Briefcase;
+  Newspaper;
+  BookOpen;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
 export default function UltimateServicesShowcase2026() {
   const services = [
   {
@@ -180,7 +182,7 @@ export default function UltimateServicesShowcase2026() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -194,7 +196,7 @@ export default function UltimateServicesShowcase2026() {
             <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                2026 Ultimate Services
+                2026 Ultimate Services;
               </span>
               <br />
               <span className="text-white">Showcase</span>
@@ -209,12 +211,12 @@ export default function UltimateServicesShowcase2026() {
   hove: r:from-blue-600,
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105">
-                Explore Services
+                Explore Services;
               </button>
               <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-gray-900 transition-all duration-300">
-                Get Started
+                Get Started;
               </button>
             </div>
           </motion.div>
@@ -227,7 +229,7 @@ export default function UltimateServicesShowcase2026() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -242,7 +244,7 @@ export default function UltimateServicesShowcase2026() {
           >
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Comprehensive Service Portfolio
+              Comprehensive Service Portfolio;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From AI-powered solutions to cutting-edge quantum computing, we offer the full spectrum of modern technology services.
@@ -253,7 +255,7 @@ export default function UltimateServicesShowcase2026() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {services.map((category, categoryIndex) => (
-  <motion.div
+  <motion.div;
                 key={category.category},
   }
                 initial={ opaci,
@@ -283,7 +285,7 @@ export default function UltimateServicesShowcase2026() {
                       <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                       <div className="flex flex-wrap gap-2 mb-3">
                         {service.features.map((feature, featureIndex) => (
-  <span
+  <span;
                             key={featureIndex},
   }
                             className="className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full";"
@@ -293,7 +295,7 @@ export default function UltimateServicesShowcase2026() {
                           </span>
                         ))}
                       </div>
-                      <a
+                      <a;
                         href={service.href},
   }
                         className="className="inline-flex items-center text-blue-400,
@@ -316,7 +318,7 @@ export default function UltimateServicesShowcase2026() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -341,12 +343,12 @@ export default function UltimateServicesShowcase2026() {
   hove: r:from-blue-600,
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105">
-                Start Your Journey
+                Start Your Journey;
               </button>
               <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-gray-900 transition-all duration-300">
-                Contact Us
+                Contact Us;
               </button>
             </div>
           </motion.div>

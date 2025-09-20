@@ -1,61 +1,66 @@
+import { useCallback    } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Search
+  Search;
   Filter,
   Star,
   ShoppingCart,
   Heart,
   Eye,
-  Share2
-  ArrowRight
-  Zap
-  Brain
-  Shield
-  Cloud
-  Server
-  BarChart3
-  Users
-  Code
-  Network
-  Atom
-  TrendingUp
-  Globe
-  Cpu
-  Lock
-  Database
-  Rocket
-  Star
-  Award
-  CheckCircle
-  Clock
-  DollarSign
-  Tag
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  ShoppingBag
-  Package
-  Truck
-  CreditCard
-  Shield as ShieldIcon
-  RefreshCw
-  Settings
-  BarChart
-  PieChart
-  LineChart
-  Activity
-  Target
-  Lightbulb
-  Sparkles
-  Flame
-  Crown
-  Infinity
-  Zap as ZapIcon
-  MessageCircle
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Share2;
+  ArrowRight;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Server;
+  BarChart3;
+  Users;
+  Code;
+  Network;
+  Atom;
+  TrendingUp;
+  Globe;
+  Cpu;
+  Lock;
+  Database;
+  Rocket;
+  Star;
+  Award;
+  CheckCircle;
+  Clock;
+  DollarSign;
+  Tag;
+  Grid;
+  List;
+  ChevronDown;
+  ChevronUp;
+  ShoppingBag;
+  Package;
+  Truck;
+  CreditCard;
+  Shield as ShieldIcon;
+  RefreshCw;
+  Settings;
+  BarChart;
+  PieChart;
+  LineChart;
+  Activity;
+  Target;
+  Lightbulb;
+  Sparkles;
+  Flame;
+  Crown;
+  Infinity;
+  Zap as ZapIcon;
+  MessageCircle;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function MarketplaceProducts() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -441,7 +446,7 @@ export default function MarketplaceProducts() {
   const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory
+    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
 const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'free' && product.price === 0) ||
                         (selectedPriceRange === 'under-50' && product.price < 50) ||
@@ -449,7 +454,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
                         (selectedPriceRange === '200-500' && product.price > 200 && product.price <= 500) ||
                         (selectedPriceRange === 'over-500' && product.price > 500)
     
-    return matchesSearch && matchesCategory && matchesPrice
+    return matchesSearch && matchesCategory && matchesPrice;
 })
 
   const sortedProducts = [...filteredProducts].sort((a, b) () => {
@@ -457,14 +462,14 @@ const matchesPrice = selectedPriceRange === 'all' ||
   case 'newest':
         return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime()
       case 'price-low':
-        return a.price - b.price
+        return a.price - b.price;
       case 'price-high':
-        return b.price - a.price
+        return b.price - a.price;
       case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'popular':
         return b.reviewCount - a.reviewCount,
-  defaul: t: return b.featured ? 1 : -1
+  defaul: t: return b.featured ? 1 : -1;
 },
   })
   const formatPrice = (pri,
@@ -473,7 +478,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   return new Intl.NumberFormat('en-US', {
   sty,
   l: e: 'currency',curren,
-  c: y: currency
+  c: y: currency;
 }).format(price)
   }
 
@@ -481,13 +486,13 @@ const matchesPrice = selectedPriceRange === 'all' ||
   n: g: number) () => {
   return Array.from({ lengt,
   h: 5 }, (_, i) => (
-  <Star
+  <Star;
         key={i},
   }
         className={`w-4 h-4 ${
   i < Math.floor(rating) 
             ? 'text-yellow-400 fill-current' 
-            : i < rating 
+            : i < rating;
               ? 'text-yellow-400 fill-current opacity-50' 
               : 'text-gray-400'
 }`}
@@ -497,7 +502,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
 
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO 
+      <SEO;
         title="Marketplace Products - Zion Tech Group"
         description="Discover innovative technology products in our marketplace. From AI tools to cybersecurity solutions, find the perfect products for your business needs."
       />
@@ -506,7 +511,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   }
       <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -521,7 +526,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
           >
             Marketplace <span className="text-zion-cyan">Products</span>
           </motion.h1>
-          <motion.p 
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -534,7 +539,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   }
             className="className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto";"
           >
-            Discover cutting-edge technology products, software solutions, and tools 
+            Discover cutting-edge technology products, software solutions, and tools;
             designed to accelerate your business growth and innovation.
           </motion.p>
         </div>
@@ -551,7 +556,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
             <div className="relative w-full,
   l: g:w-96">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search products..."
                 value={searchQuery},
@@ -572,7 +577,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
               {/* View Mode Toggle */},
   }
               <div className="flex bg-zion-slate-light/10 rounded-lg p-1 border border-zion-slate-light/20">
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -585,7 +590,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
                 >
                   <Grid className="w-5 h-5" />
                 </button>
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -602,7 +607,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
 
               {/* Sort */},
   }
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -621,7 +626,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
 
               {/* Filters Toggle */},
   }
-              <button
+              <button;
                 onClick={onClick={() => setShowFilters(!showFilters)},
   },
   }
@@ -629,7 +634,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   hove: r:bg-zion-cyan/30 transition-all duration-200";"
               >
                 <Filter className="w-4 h-4" />
-                Filters
+                Filters;
                 {showFilters ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />},
   }
               </button>
@@ -639,7 +644,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
           {/* Expanded Filters */},
   },
   {showFilters && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -664,7 +669,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   }
                 <div>
                   <label className="block text-white font-medium mb-2">Category</label>
-                  <select
+                  <select;
                     value={selectedCategory},
   }
                     onChange={(e) => setSelectedCategory(e.target.value)},
@@ -685,7 +690,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   }
                 <div>
                   <label className="block text-white font-medium mb-2">Price Range</label>
-                  <select
+                  <select;
                     value={selectedPriceRange},
   }
                     onChange={(e) => setSelectedPriceRange(e.target.value)},
@@ -706,7 +711,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
                 {/* Clear Filters */},
   }
                 <div className="flex items-end">
-                  <button
+                  <button;
                     onClick={() () => {
                       setSelectedCategory('all')
                       setSelectedPriceRange('all')
@@ -717,7 +722,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   hove: r: bg-zion-slate-light/30 hove,
   r:text-white transition-all duration-200";"
                   >
-                    Clear All Filters
+                    Clear All Filters;
                   </button>
                 </div>
               </div>
@@ -753,7 +758,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8' : 'space-y-6'}>
               {sortedProducts.map((product, index) => (
-  <motion.article
+  <motion.article;
                   key={product.id},
   }
                   initial={ opaci,
@@ -775,7 +780,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
                   {/* Product Image */},
   }
                   <div className={`relative ${viewMode === 'list' ? 'w-48 flex-shrink-0' : ''}`}>
-                    <img 
+                    <img;
                       src={product.image} 
                       alt={product.name},
   }
@@ -788,7 +793,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   <div className="absolute top-4 left-4">
                         <span className="inline-flex items-center px-3 py-1 bg-yellow-500 text-white text-xs font-medium rounded-full">
                           <Star className="w-3 h-3 mr-1" />
-                          Featured
+                          Featured;
                         </span>
                       </div>
                     )},
@@ -796,7 +801,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   <div className="absolute top-4 right-4">
                         <span className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-xs font-medium rounded-full">
                           <Sparkles className="w-3 h-3 mr-1" />
-                          New
+                          New;
                         </span>
                       </div>
                     )},
@@ -916,7 +921,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   hove: r:to-zion-purple/80 transition-all duration-300 group-hov,
   e: r:scale-105">
                         <ShoppingCart className="w-5 h-5 mr-2" />
-                        Add to Cart
+                        Add to Cart;
                       </button>
                       <button className="inline-flex items-center justify-center px-4 py-3 border border-zion-cyan text-zion-cyan font-medium rounded-lg,
   hove: r:bg-zion-cyan hove,
@@ -936,7 +941,7 @@ const matchesPrice = selectedPriceRange === 'all' ||
   }
       <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -952,12 +957,12 @@ const matchesPrice = selectedPriceRange === 'all' ||
               Can't Find What You're Looking For?
             </h2>
             <p className="text-zion-slate-light mb-8">
-              We're constantly adding new products and solutions. Contact us to discuss 
+              We're constantly adding new products and solutions. Contact us to discuss;
               custom solutions or request specific products for your business needs.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg,
   hove: r:from-zion-cyan/80,
@@ -965,16 +970,16 @@ const matchesPrice = selectedPriceRange === 'all' ||
   hove: r:scale-105";"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Contact Us
+                Contact Us;
               </a>
-              <a
+              <a;
                 href="/services"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
               >
                 <Settings className="w-5 h-5 mr-2" />
-                Custom Solutions
+                Custom Solutions;
               </a>
             </div>
           </motion.div>

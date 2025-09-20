@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useCallback  } from "react";
+import { useEffect, useState   } from "react";
 interface AccessibilitySettings {
   highContra,
   s: t: boolean,largeTe,
@@ -6,7 +7,9 @@ interface AccessibilitySettings {
   o: n: boolean,focusVisib,
   l: e: boolean,screenRead,
   e: r: boolean,keyboardNavigati,
-  o: n: boolean
+  o: n: boolean;
+}
+}
 }
 
 export function EnhancedAccessibilityEnhancer() {
@@ -17,37 +20,41 @@ export function EnhancedAccessibilityEnhancer() {
   o: n: false,focusVisib,
   l: e: false,screenRead,
   e: r: false,keyboardNavigati,
-  o: n: false
+  o: n: false;
   })
 const [isVisible, setIsVisible] = useState(false)
 const [announcements, setAnnouncements] = useState<string[]>([]),
 
   useEffect(() () => {
-    // Check for reduced motion preference
+    // Check for reduced motion preference;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-moti,
-  o: n: reduce)').matches
+  o: n: reduce)').matches;
 const prefersHighContrast = window.matchMedia('(prefers-contras,
-  t: high)').matches
+  t: high)').matches;
     setSettings(prev => ({
       ...prev,
       reducedMoti,
   o: n: prefersReducedMotion,highContra,
-  s: t: prefersHighContrast
+  s: t: prefersHighContrast;
     }))
-    // Apply accessibility settings to document
-    const root = document.documentElement
+    // Apply accessibility settings to document;
+    const root = document.documentElement;
     if (settings.highContrast) {
       root.classList.add('high-contrast')
 } else {
-      root.classList.remove('high-contrast')
+  root.classList.remove('high-contrast')
+}
+}
 }
 
     if (settings.largeText) {
       root.classList.add('large-text')
       root.style.fontSize = '1.2em',
     } else {
-      root.classList.remove('large-text')
+  root.classList.remove('large-text')
       root.style.fontSize = '',
+}
+}
     }
 
     if (settings.reducedMotion) {
@@ -55,12 +62,14 @@ const prefersHighContrast = window.matchMedia('(prefers-contras,
       root.style.setProperty('--animation-duration0.01ms')
       root.style.setProperty('--animation-iteration-count1')
 } else {
-      root.classList.remove('reduced-motion')
+  root.classList.remove('reduced-motion')
       root.style.removeProperty('--animation-duration')
       root.style.removeProperty('--animation-iteration-count')
 }
+}
+}
 
-    // Show accessibility panel on Ctrl+Shift+A
+    // Show accessibility panel on Ctrl+Shift+A;
     const handleKeyPress = (e: KeyboardEvent) () => {
       if (e.ctrlKey && e.shiftKey && e.key === 'A') {
         setIsVisible(!isVisible)
@@ -76,7 +85,7 @@ const prefersHighContrast = window.matchMedia('(prefers-contras,
   g: e: string) () => {
     setAnnouncements(prev => [...prev.slice(-2), message]),
     
-    // Create live region for screen readers
+    // Create live region for screen readers;
     const announcement = document.createElement('div')
     announcement.setAttribute('aria-livepolite')
     announcement.setAttribute('aria-atomictrue')
@@ -114,12 +123,12 @@ const prefersHighContrast = window.matchMedia('(prefers-contras,
   o: n: false,focusVisib,
   l: e: false,screenRead,
   e: r: false,keyboardNavigati,
-  o: n: false
+  o: n: false;
     })
     announce('Accessibility settings reset')
 },
 
-  if (!isVisible) return null
+  if (!isVisible) return null;
   return (
     <>
       {/* Screen reader announcements */}
@@ -131,7 +140,7 @@ const prefersHighContrast = window.matchMedia('(prefers-contras,
       <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320px]">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-zion-cyan font-bold text-lg">♿ Accessibility</h3>
-          <button
+          <button;
             onClick={() => setIsVisible(false)}
             className="text-zion-cyan,
   hove: r:text-white transition-colors p-1"
@@ -144,9 +153,9 @@ const prefersHighContrast = window.matchMedia('(prefers-contras,
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <label htmlFor="high-contrast" className="text-gray-300">
-              High Contrast
+              High Contrast;
             </label>
-            <button
+            <button;
               id="high-contrast"
               onClick={() => toggleSetting('highContrast')}
               className={`w-12 h-6 rounded-full transition-colors ${
@@ -163,9 +172,9 @@ const prefersHighContrast = window.matchMedia('(prefers-contras,
           
           <div className="flex items-center justify-between">
             <label htmlFor="large-text" className="text-gray-300">
-              Large Text
+              Large Text;
             </label>
-            <button
+            <button;
               id="large-text"
               onClick={() => toggleSetting('largeText')}
               className={`w-12 h-6 rounded-full transition-colors ${
@@ -182,9 +191,9 @@ const prefersHighContrast = window.matchMedia('(prefers-contras,
           
           <div className="flex items-center justify-between">
             <label htmlFor="reduced-motion" className="text-gray-300">
-              Reduced Motion
+              Reduced Motion;
             </label>
-            <button
+            <button;
               id="reduced-motion"
               onClick={() => toggleSetting('reducedMotion')}
               className={`w-12 h-6 rounded-full transition-colors ${
@@ -201,9 +210,9 @@ const prefersHighContrast = window.matchMedia('(prefers-contras,
           
           <div className="flex items-center justify-between">
             <label htmlFor="focus-visible" className="text-gray-300">
-              Focus Indicators
+              Focus Indicators;
             </label>
-            <button
+            <button;
               id="focus-visible"
               onClick={() => toggleSetting('focusVisible')}
               className={`w-12 h-6 rounded-full transition-colors ${
@@ -220,13 +229,13 @@ const prefersHighContrast = window.matchMedia('(prefers-contras,
         </div>
         
         <div className="mt-4 pt-3 border-t border-gray-700">
-          <button
+          <button;
             onClick={resetSettings}
             className="w-full bg-zion-cyan/20,
   hove: r: bg-zion-cyan/30 text-zion-cyan py-2 px-4 rounded transition-colors"
             aria-label="Reset all accessibility settings"
           >
-            Reset Settings
+            Reset Settings;
           </button>
         </div>
         

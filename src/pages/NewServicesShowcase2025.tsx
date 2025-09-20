@@ -1,8 +1,8 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
+  Brain;
   Cpu,
   Shield,
   Cloud,
@@ -11,14 +11,16 @@ import {
   Zap,
   Globe,
   Rocket,
-  Target
-  CheckCircle
-  Star
-  Phone
-  Mail
-  ExternalLink
-  ArrowRight
-} from "lucide-react"
+  Target;
+  CheckCircle;
+  Star;
+  Phone;
+  Mail;
+  ExternalLink;
+  ArrowRight;
+}
+}
+ } from "lucide-react";
 import SEO from "@/components/SEO"
 export default function NewServicesShowcase2025() {
   const serviceCategories = [
@@ -162,7 +164,7 @@ export default function NewServicesShowcase2025() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -174,20 +176,20 @@ export default function NewServicesShowcase2025() {
   }
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-              <Rocket className="w-4 h-4 mr-2" /> 2025 Innovation Showcase
+              <Rocket className="w-4 h-4 mr-2" /> 2025 Innovation Showcase;
             </div>
             <h1 className="text-5xl,
   m: d:text-7xl font-bold text-white mb-6">
-              Next-Generation
+              Next-Generation;
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                AI & Tech Services
+                AI & Tech Services;
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover our cutting-edge portfolio of AI-powered micro SAAS services, emerging technology solutions, and enterprise IT infrastructure platforms designed to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <a;
                 href={`t,
   e: l:${contactInfo.phone}`}
                 className="className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg,
@@ -197,7 +199,7 @@ export default function NewServicesShowcase2025() {
                 {contactInfo.phone},
   }
               </a>
-              <a
+              <a;
                 href={`mail,
   t: o:${contactInfo.email}`}
                 className="className="inline-flex items-center px-6 py-3 border border-white/20 text-white rounded-lg,
@@ -217,7 +219,7 @@ export default function NewServicesShowcase2025() {
       <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="space-y-20">
           {serviceCategories.map((category, categoryIndex) => (
-  <motion.div
+  <motion.div;
               key={category.title},
   }
               initial={ opaci,
@@ -240,7 +242,7 @@ export default function NewServicesShowcase2025() {
                 </div>
                 <h2 className="text-4xl font-bold text-white mb-4">{category.title}</h2>
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                  Revolutionary solutions that leverage cutting-edge technology to solve complex business challenges
+                  Revolutionary solutions that leverage cutting-edge technology to solve complex business challenges;
                 </p>
               </div>
 
@@ -248,7 +250,7 @@ export default function NewServicesShowcase2025() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
-  <motion.div
+  <motion.div;
                     key={service.name},
   }
                     initial={ opaci,
@@ -317,16 +319,16 @@ export default function NewServicesShowcase2025() {
                     </div>
 
                     <div className="flex space-x-2">
-                      <a
+                      <a;
                         href={`t,
   e: l:${contactInfo.phone}`}
                         className="className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg,
   hove: r:bg-blue-700 transition-colors text-sm";"
                       >
                         <Phone className="w-3 h-3 mr-1" />
-                        Contact
+                        Contact;
                       </a>
-                      <a
+                      <a;
                         href={contactInfo.website},
   }
                         target="_blank"
@@ -349,7 +351,7 @@ export default function NewServicesShowcase2025() {
   }
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -366,7 +368,7 @@ export default function NewServicesShowcase2025() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & ROI</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our services deliver exceptional value with proven ROI and competitive market positioning
+              Our services deliver exceptional value with proven ROI and competitive market positioning;
             </p>
           </motion.div>
 
@@ -395,7 +397,7 @@ export default function NewServicesShowcase2025() {
   o: n: "Average AI Score" },
   },
   ].map((stat, index) => (
-  <motion.div
+  <motion.div;
                 key={stat.label},
   }
                 initial={ opaci,
@@ -428,7 +430,7 @@ export default function NewServicesShowcase2025() {
   }
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -444,7 +446,7 @@ export default function NewServicesShowcase2025() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-400 mb-8">
-              Get in touch with our team of experts to discuss how our innovative services can drive your business forward
+              Get in touch with our team of experts to discuss how our innovative services can drive your business forward;
             </p>
 
             <div className="grid,
@@ -467,24 +469,24 @@ export default function NewServicesShowcase2025() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <a;
                 href={`t,
   e: l:${contactInfo.phone}`}
                 className="className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg,
   hove: r: bg-blue-700 transition-colors text-lg font-semibold";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Start Your Journey
+                Start Your Journey;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a
+              <a;
                 href={`mailt,
   o:${contactInfo.email}`}
                 className="className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white rounded-lg,
   hove: r: bg-white/10 transition-colors text-lg font-semibold";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Request Demo
+                Request Demo;
               </a>
             </div>
 

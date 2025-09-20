@@ -1,26 +1,29 @@
-import { motion } from "framer-motion"
+import { useCallback  } from "react";
+import { motion   } from "framer-motion";
 import {
-  Award
-  Brain
-  CheckCircle
-  Clock
-  Cloud
-  ExternalLink
-  Mail
-  MapPin
-  Phone
-  Rocket
-  Search
-  Server
-  Shield
-  Sparkles
-  TrendingUp
-} from "lucide-react"
+  Award;
+  Brain;
+  CheckCircle;
+  Clock;
+  Cloud;
+  ExternalLink;
+  Mail;
+  MapPin;
+  Phone;
+  Rocket;
+  Search;
+  Server;
+  Shield;
+  Sparkles;
+  TrendingUp;
+}
+}
+ } from "lucide-react";
 import React, { useState } from "react"
-import { ADVANCED_AI_SERVICES_2028 } from "../data/advancedAIServices2028"
-import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from "../data/comprehensiveITInfrastructure2028"
-import { comprehensivePricingGuide2028 } from "../data/comprehensivePricingGuide2028"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028"
+import { ADVANCED_AI_SERVICES_2028   } from "../data/advancedAIServices2028";
+import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028   } from "../data/comprehensiveITInfrastructure2028";
+import { comprehensivePricingGuide2028   } from "../data/comprehensivePricingGuide2028";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028   } from "../data/innovativeMicroSaasServices2028";
 const,
   ComprehensiveServicesLanding202: 8: React.FC = () () => {
   const [activeTab, setActiveTab] = useState('ai')
@@ -78,7 +81,7 @@ const,
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -96,7 +99,7 @@ const,
   t: y: 1,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -108,7 +111,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -121,24 +124,24 @@ const,
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
-              Comprehensive Services 2028
+              Comprehensive Services 2028;
             </div>
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Transform Your Business
+                Transform Your Business;
               </span>
               <br />
               <span className="text-white">With Cutting-Edge Technology</span>
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive suite of AI, IT infrastructure, and micro SAAS solutions designed to revolutionize 
+              Discover our comprehensive suite of AI, IT infrastructure, and micro SAAS solutions designed to revolutionize;
               your business operations and drive unprecedented growth in 2028 and beyond.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg,
@@ -148,16 +151,16 @@ const,
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call,
-  No: w: +1 302 464 0950
+  No: w: +1 302 464 0950;
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hove,
   r:bg-white/20 transition-all duration-300 border border-white/20";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Get Free Consultation
+                Get Free Consultation;
               </a>
             </div>
           </motion.div>
@@ -192,7 +195,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -209,23 +212,23 @@ const,
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Comprehensive Service Categories
+              Comprehensive Service Categories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our diverse range of innovative solutions across multiple domains and industries
+              Explore our diverse range of innovative solutions across multiple domains and industries;
             </p>
           </motion.div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {serviceCategories.map((category) => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setActiveTab(category.id)},
   },
   }
                 className={`flex items-center space-x-3 px-6 py-3 rounded-lg transition-all duration-300 ${
-  activeTab === category.id
+  activeTab === category.id;
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-white/10 text-gray-300,
   hove: r:bg-white/20'
@@ -246,7 +249,7 @@ const,
   }
           <div className="max-w-md mx-auto mb-8">
             <div className="relative">
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -265,7 +268,7 @@ const,
 
           {/* Services Grid */},
   }
-          <motion.div
+          <motion.div;
             variants={containerVariants},
   }
             initial="hidden"
@@ -275,7 +278,7 @@ const,
   g:grid-cols-3 gap-8";"
           >
             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 variants={itemVariants},
@@ -318,7 +321,7 @@ const,
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.tags.slice(0, 3).map((tag) => (
-  <span
+  <span;
                       key={tag},
   }
                       className="className="px-2 py-1 bg-white/10 text-white text-xs rounded-full";"
@@ -330,7 +333,7 @@ const,
                 </div>
 
                 <div className="flex space-x-2">
-                  <a
+                  <a;
                     href={`t,
   e: l:+13024640950`},
   }
@@ -338,9 +341,9 @@ const,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-300 text-sm font-medium";"
                   >
-                    Get Started
+                    Get Started;
                   </a>
-                  <a
+                  <a;
                     href={`mailt,
   o:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
                     className="className="px-4 py-2 border border-white/20 text-white rounded-lg,
@@ -361,7 +364,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -378,10 +381,10 @@ const,
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Market Analysis & Competitive Intelligence
+              Market Analysis & Competitive Intelligence;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Stay ahead of the competition with our comprehensive market insights and competitive analysis
+              Stay ahead of the competition with our comprehensive market insights and competitive analysis;
             </p>
           </motion.div>
 
@@ -389,7 +392,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {comprehensivePricingGuide2028.map((item, index) => (
-  <motion.div
+  <motion.div;
                 key={item.id},
   }
                 initial={ opaci,
@@ -437,7 +440,7 @@ const,
   Competitor: s:</h4>
                   <div className="flex flex-wrap gap-2">
                     {item.marketInfo.competitors.slice(0, 3).map((competitor) => (
-  <span
+  <span;
                         key={competitor},
   }
                         className="className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full";"
@@ -449,14 +452,14 @@ const,
                   </div>
                 </div>
 
-                <a
+                <a;
                   href={`mail,
   t: o:kleber@ziontechgroup.com?subject=Detailed pricing for ${item.title}`}
                   className="className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg,
   hove: r: from-blue-700 hove,
   r:to-purple-700 transition-all duration-300 font-medium";"
                 >
-                  Get Detailed Pricing
+                  Get Detailed Pricing;
                 </a>
               </motion.div>
             ))}
@@ -470,7 +473,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -490,7 +493,7 @@ const,
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with unmatched expertise and proven results
+              We deliver cutting-edge technology solutions with unmatched expertise and proven results;
             </p>
           </motion.div>
 
@@ -528,7 +531,7 @@ const,
   o: r: "from-red-600 to-orange-600"
 },
   ].map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -564,7 +567,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -583,13 +586,13 @@ const,
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the future of technology with our innovative services. Get started today and experience the power of AI
+              Join the future of technology with our innovative services. Get started today and experience the power of AI;
               advanced infrastructure, and cutting-edge micro SAAS solutions.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg,
@@ -599,16 +602,16 @@ const,
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call,
-  No: w: +1 302 464 0950
+  No: w: +1 302 464 0950;
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hove,
   r:bg-white/20 transition-all duration-300 border border-white/20";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Schedule Free Consultation
+                Schedule Free Consultation;
               </a>
             </div>
           </motion.div>
@@ -639,17 +642,17 @@ const,
                 <a href="htt,
   p: s://ziontechgroup.com" className="block text-gray-300,
   hove: r:text-white transition-colors">
-                  Main Website
+                  Main Website;
                 </a>
                 <a href="mail,
   t: o:kleber@ziontechgroup.com" className="block text-gray-300,
   hove: r:text-white transition-colors">
-                  Get Quote
+                  Get Quote;
                 </a>
                 <a href="t,
   e: l:+13024640950" className="block text-gray-300,
   hove: r:text-white transition-colors">
-                  Call Support
+                  Call Support;
                 </a>
               </div>
             </div>
@@ -665,7 +668,7 @@ const,
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a
+                <a;
                   href="htt,
   p: s://ziontechgroup.com"
                   className="className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hove,
@@ -687,4 +690,4 @@ const,
     </div>
   )
 }
-export default ComprehensiveServicesLanding2028
+export default ComprehensiveServicesLanding2028;

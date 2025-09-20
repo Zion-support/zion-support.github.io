@@ -1,26 +1,30 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   TrendingUp,
   Shield,
   Zap,
   Atom,
   BarChart3,
   DollarSign,
-  Target
-  CheckCircle
-  Star
-  ArrowRight
-  Cpu
-  Lock
-  Globe
-  Users
-  Clock
-  Phone
-  Mail
-  MapPin
-} from "lucide-react"
+  Target;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Cpu;
+  Lock;
+  Globe;
+  Users;
+  Clock;
+  Phone;
+  Mail;
+  MapPin;
+}
+}
+}
+}
+ } from "lucide-react";
 const AIQuantumFinancialTrading = () () => {
   const features = [
   {
@@ -85,7 +89,7 @@ const AIQuantumFinancialTrading = () () => {
         "Mobile app access"
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -104,7 +108,7 @@ const AIQuantumFinancialTrading = () () => {
         "White-label options"
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -123,7 +127,7 @@ const AIQuantumFinancialTrading = () () => {
         "On-premise deployment"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const benefits = [
@@ -161,7 +165,7 @@ const AIQuantumFinancialTrading = () () => {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -176,7 +180,7 @@ const AIQuantumFinancialTrading = () () => {
               <Atom className="w-12 h-12 text-purple-400 mr-3" />
               <h1 className="text-5xl,
   l: g: text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                AI Quantum Financial Trading
+                AI Quantum Financial Trading;
               </h1>
             </div>
             <p className="text-xl l,
@@ -186,23 +190,23 @@ const AIQuantumFinancialTrading = () () => {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg,
   hove: r:from-purple-600,
   hove: r:to-cyan-600 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Start Trading Now
+                Start Trading Now;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="#demo"
                 className="className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg,
   hove: r:bg-purple-400 hove,
   r:text-white transition-all duration-300";"
               >
-                Watch Demo
+                Watch Demo;
               </a>
             </div>
           </motion.div>
@@ -215,7 +219,7 @@ const AIQuantumFinancialTrading = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -232,10 +236,10 @@ const AIQuantumFinancialTrading = () () => {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Revolutionary Trading Technology
+              Revolutionary Trading Technology;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge quantum computing with advanced AI algorithms 
+              Our platform combines cutting-edge quantum computing with advanced AI algorithms;
               to deliver unprecedented trading performance and profitability.
             </p>
           </motion.div>
@@ -244,7 +248,7 @@ const AIQuantumFinancialTrading = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -282,7 +286,7 @@ const AIQuantumFinancialTrading = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -299,7 +303,7 @@ const AIQuantumFinancialTrading = () () => {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Proven Results & Benefits
+              Proven Results & Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our platform has delivered exceptional results for traders and institutions worldwide.
@@ -310,7 +314,7 @@ const AIQuantumFinancialTrading = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -343,7 +347,7 @@ const AIQuantumFinancialTrading = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -360,7 +364,7 @@ const AIQuantumFinancialTrading = () () => {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Competitive Pricing Plans
+              Competitive Pricing Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that best fits your trading needs and budget.
@@ -370,7 +374,7 @@ const AIQuantumFinancialTrading = () () => {
           <div className="grid grid-cols-1 l,
   g:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -387,7 +391,7 @@ const AIQuantumFinancialTrading = () () => {
   c: e: true },
   }
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
-  plan.popular 
+  plan.popular;
                     ? 'border-purple-400 shadow-2xl shadow-purple-500/20' 
                     : 'border-slate-600'
 }`}
@@ -395,7 +399,7 @@ const AIQuantumFinancialTrading = () () => {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -418,10 +422,10 @@ const AIQuantumFinancialTrading = () () => {
                   ))}
                 </ul>
 
-                <a
+                <a;
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white,
   hove: r: from-purple-600,
   hove: r:to-cyan-600'
@@ -429,7 +433,7 @@ const AIQuantumFinancialTrading = () () => {
   r:bg-slate-500'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -443,7 +447,7 @@ const AIQuantumFinancialTrading = () () => {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -466,17 +470,17 @@ const AIQuantumFinancialTrading = () () => {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg,
   hove: r:from-purple-600,
   hove: r:to-cyan-600 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg,
@@ -484,7 +488,7 @@ const AIQuantumFinancialTrading = () () => {
   r:text-white transition-all duration-300";"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </motion.div>
@@ -506,7 +510,7 @@ const AIQuantumFinancialTrading = () () => {
               <a href="t,
   e: l:+13024640950" className="text-white,
   hove: r:text-purple-400 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -515,7 +519,7 @@ const AIQuantumFinancialTrading = () () => {
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-white hove,
   r:text-purple-400 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -529,4 +533,4 @@ const AIQuantumFinancialTrading = () () => {
     </div>
   )
 }
-export default AIQuantumFinancialTrading
+export default AIQuantumFinancialTrading;

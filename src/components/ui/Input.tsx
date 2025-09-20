@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react"
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string
-  error?: string
+  label?: string;
+  error?: string;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -14,7 +14,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   }
           </label>
         )}
-        <input
+        <input;
           ref={ref},
   }
           className={`
@@ -22,7 +22,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   focu: s: outline-none,
   focu: s:ring-2,
   focu: s:ring-blue-500 focu,
-  s:border-blue-500
+  s:border-blue-500;
             ${error ? 'border-red-500' : ''},
   }
             ${className},
@@ -42,4 +42,4 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = 'Input'
 export { Input },
   }
-export default Input
+export default Input;

@@ -1,164 +1,168 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Users
-  Cpu
-  Shield
-  Cloud
-  Database
-  Network
-  Zap
-  Target
-  ArrowRight
-  Play
-  Settings
-  Activity
-  BarChart3
-  TrendingUp
-  Shield
-  Database
-  Smartphone
-  Code
-  FileText
-  AlertCircle
-  CheckSquare
-  Calculator
-  PieChart
-  LineChart
-  Target2
-  Wallet
-  PiggyBank
-  CreditCard
-  Receipt
-  Cloud
-  Zap2
-  Gauge
-  BarChart4
-  TrendingUp2
-  Lightbulb
-  Strategy
-  Brain
-  Compass
-  RefreshCw
-  TrendingUp3
-  Layers
-  Workflow
-  Scale
-  Award
-  Lock
-  Wifi
-  Bluetooth
-  Radio
-  Sensor
-  Chip
-  Circuit
-  Orbit
-  Planet
-  Star
-  Telescope
-  Antenna
-  Signal
-  Navigation
-  Earth
-  Moon
-  Sun
-  Binary
-  Network
-  Database2
-  Lock2
-  Key2
-  Fingerprint2
-  Eye
-  Brain2
-  Cpu2
-  Memory
-  HardDrive
-  Server2
-  Phone
-  Mail
-  Calendar
-  MessageSquare
-  UserPlus
-  UserCheck
-  UserX
-  UserMinus
-  UserEdit
-  UserSearch
-  UserList
-  UserSettings
-  UserCog
-  UserShield
-  UserStar
-  UserHeart
-  UserCheck2
-  UserX2
-  UserMinus2
-  UserPlus2
-  UserEdit2
-  UserSearch2
-  UserList2
-  UserSettings2
-  UserCog2
-  UserShield2
-  UserStar2
-  UserHeart2
-  Monitor
-  Eye2
-  Users2
-  MousePointer
-  Clock
-  MapPin
-  Device
-  Globe2
-  Smartphone2
-  Tablet
-  Laptop
-  Desktop
-  Server3
-  Database3
-  HardDrive2
-  Memory2
-  Cpu3
-  Network2
-  Wifi2
-  Bluetooth2
-  Radio2
-  Signal2
-  Antenna2
-  Satellite2
-  Orbit2
-  Planet2
-  Star2
-  Telescope2
-  Navigation2
-  Earth2
-  Moon2
-  Sun2
-  Binary2
-  Network3
-  Database4
-  Lock3
-  Key3
-  Fingerprint3
-  Eye3
-  Brain3
-  Cpu4
-  Memory3
-  HardDrive3
-  Server4
-  Rocket
-  Globe
-  Building
-  DollarSign
-  Users
-  Clock
-  Search
-  Sparkles
-  Zap
-  Cpu
-  Server
-  Network2
-} from "lucide-react"
+  Users;
+  Cpu;
+  Shield;
+  Cloud;
+  Database;
+  Network;
+  Zap;
+  Target;
+  ArrowRight;
+  Play;
+  Settings;
+  Activity;
+  BarChart3;
+  TrendingUp;
+  Shield;
+  Database;
+  Smartphone;
+  Code;
+  FileText;
+  AlertCircle;
+  CheckSquare;
+  Calculator;
+  PieChart;
+  LineChart;
+  Target2;
+  Wallet;
+  PiggyBank;
+  CreditCard;
+  Receipt;
+  Cloud;
+  Zap2;
+  Gauge;
+  BarChart4;
+  TrendingUp2;
+  Lightbulb;
+  Strategy;
+  Brain;
+  Compass;
+  RefreshCw;
+  TrendingUp3;
+  Layers;
+  Workflow;
+  Scale;
+  Award;
+  Lock;
+  Wifi;
+  Bluetooth;
+  Radio;
+  Sensor;
+  Chip;
+  Circuit;
+  Orbit;
+  Planet;
+  Star;
+  Telescope;
+  Antenna;
+  Signal;
+  Navigation;
+  Earth;
+  Moon;
+  Sun;
+  Binary;
+  Network;
+  Database2;
+  Lock2;
+  Key2;
+  Fingerprint2;
+  Eye;
+  Brain2;
+  Cpu2;
+  Memory;
+  HardDrive;
+  Server2;
+  Phone;
+  Mail;
+  Calendar;
+  MessageSquare;
+  UserPlus;
+  UserCheck;
+  UserX;
+  UserMinus;
+  UserEdit;
+  UserSearch;
+  UserList;
+  UserSettings;
+  UserCog;
+  UserShield;
+  UserStar;
+  UserHeart;
+  UserCheck2;
+  UserX2;
+  UserMinus2;
+  UserPlus2;
+  UserEdit2;
+  UserSearch2;
+  UserList2;
+  UserSettings2;
+  UserCog2;
+  UserShield2;
+  UserStar2;
+  UserHeart2;
+  Monitor;
+  Eye2;
+  Users2;
+  MousePointer;
+  Clock;
+  MapPin;
+  Device;
+  Globe2;
+  Smartphone2;
+  Tablet;
+  Laptop;
+  Desktop;
+  Server3;
+  Database3;
+  HardDrive2;
+  Memory2;
+  Cpu3;
+  Network2;
+  Wifi2;
+  Bluetooth2;
+  Radio2;
+  Signal2;
+  Antenna2;
+  Satellite2;
+  Orbit2;
+  Planet2;
+  Star2;
+  Telescope2;
+  Navigation2;
+  Earth2;
+  Moon2;
+  Sun2;
+  Binary2;
+  Network3;
+  Database4;
+  Lock3;
+  Key3;
+  Fingerprint3;
+  Eye3;
+  Brain3;
+  Cpu4;
+  Memory3;
+  HardDrive3;
+  Server4;
+  Rocket;
+  Globe;
+  Building;
+  DollarSign;
+  Users;
+  Clock;
+  Search;
+  Sparkles;
+  Zap;
+  Cpu;
+  Server;
+  Network2;
+}
+}
+}
+}
+ } from "lucide-react";
 const ITConsulting = () () => {
   const features = [
   {
@@ -259,7 +263,7 @@ const ITConsulting = () () => {
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             className="className="text-center max-w-4xl mx-auto";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -274,12 +278,12 @@ const ITConsulting = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
               <Briefcase className="w-4 h-4 mr-2" />
-              IT Consulting Services
+              IT Consulting Services;
             </div>
             
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              IT
+              IT;
               <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Consulting</span>
             </h1>
             <p className="text-xl,
@@ -290,22 +294,22 @@ const ITConsulting = () () => {
             
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105 font-semibold";"
               >
-                Get Expert Advice
+                Get Expert Advice;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300 font-semibold";"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -316,7 +320,7 @@ const ITConsulting = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -330,10 +334,10 @@ const ITConsulting = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive IT Consulting Features
+              Comprehensive IT Consulting Features;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive IT consulting services designed to help you make the right technology decisions
+              Comprehensive IT consulting services designed to help you make the right technology decisions;
               and implement solutions that drive business success.
             </p>
           </motion.div>
@@ -341,7 +345,7 @@ const ITConsulting = () () => {
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -392,7 +396,7 @@ const ITConsulting = () () => {
   }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -406,10 +410,10 @@ const ITConsulting = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Core IT Consulting Services
+              Core IT Consulting Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From strategy to implementation, we provide 
+              From strategy to implementation, we provide;
               comprehensive IT consulting solutions.
             </p>
           </motion.div>
@@ -418,7 +422,7 @@ const ITConsulting = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {expertise.map((area, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -456,7 +460,7 @@ const ITConsulting = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -470,7 +474,7 @@ const ITConsulting = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              IT Consulting Benefits
+              IT Consulting Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in IT efficiency, security, and business alignment.
@@ -480,7 +484,7 @@ const ITConsulting = () () => {
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6,
@@ -511,7 +515,7 @@ const ITConsulting = () () => {
   }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -525,10 +529,10 @@ const ITConsulting = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our IT consulting expertise spans across multiple industries
+              Our IT consulting expertise spans across multiple industries;
               each with unique technology challenges and requirements.
             </p>
           </motion.div>
@@ -536,7 +540,7 @@ const ITConsulting = () () => {
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -563,7 +567,7 @@ const ITConsulting = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -577,7 +581,7 @@ const ITConsulting = () () => {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Our Consulting Process
+              Our Consulting Process;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful consulting outcomes and lasting value.
@@ -608,7 +612,7 @@ const ITConsulting = () () => {
   o: n: 'Support implementation and measure results' },
   },
   ].map((phase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -639,7 +643,7 @@ const ITConsulting = () () => {
   }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -652,7 +656,7 @@ const ITConsulting = () () => {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Start Your IT Consultation Today
+              Start Your IT Consultation Today;
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Let our IT consulting experts help you make the right technology decisions.
@@ -660,22 +664,22 @@ const ITConsulting = () () => {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105 font-semibold";"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300 font-semibold";"
               >
-                Explore Services
+                Explore Services;
               </Link>
             </div>
           </motion.div>
@@ -684,4 +688,4 @@ const ITConsulting = () () => {
     </div>
   )
 }
-export default ITConsulting
+export default ITConsulting;

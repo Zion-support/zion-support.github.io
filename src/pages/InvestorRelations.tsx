@@ -1,38 +1,40 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  TrendingUp
+  TrendingUp;
   BarChart3,
   FileText,
   Download,
-  ExternalLink
-  Calendar
-  DollarSign
-  Users
-  Globe
-  Award
-  CheckCircle
-  ArrowRight
-  Star
-  Zap
-  Brain
-  Shield
-  Cloud
-  Cpu
-  Building
-  ChartLine
-  PieChart
-  Activity
-  Target
-  Rocket
-  Lightbulb
-  Briefcase
-  Handshake
-  Clock
-  Mail
-  Phone
-} from "lucide-react"
+  ExternalLink;
+  Calendar;
+  DollarSign;
+  Users;
+  Globe;
+  Award;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Building;
+  ChartLine;
+  PieChart;
+  Activity;
+  Target;
+  Rocket;
+  Lightbulb;
+  Briefcase;
+  Handshake;
+  Clock;
+  Mail;
+  Phone;
+}
+}
+ } from "lucide-react";
 export default function InvestorRelations() {
   const financialHighlights = [
   {
@@ -161,7 +163,7 @@ export default function InvestorRelations() {
   p: e: 'PDF',si,
   z: e: '8.2 MB',da,
   t: e: 'March 2024',featur,
-  e: d: true
+  e: d: true;
 },
   {
   tit,
@@ -170,7 +172,7 @@ export default function InvestorRelations() {
   p: e: 'Audio/Transcript',si,
   z: e: '15.4 MB',da,
   t: e: 'November 2024',featur,
-  e: d: false
+  e: d: false;
 },
   {
   tit,
@@ -179,7 +181,7 @@ export default function InvestorRelations() {
   p: e: 'PDF',si,
   z: e: '12.8 MB',da,
   t: e: 'December 2024',featur,
-  e: d: true
+  e: d: true;
 },
   {
   tit,
@@ -189,7 +191,7 @@ export default function InvestorRelations() {
   p: e: 'PDF',si,
   z: e: '3.1 MB',da,
   t: e: 'Updated Monthly',featur,
-  e: d: false
+  e: d: false;
 },
   {
   tit,
@@ -199,7 +201,7 @@ export default function InvestorRelations() {
   p: e: 'PDF',si,
   z: e: '6.7 MB',da,
   t: e: 'April 2024',featur,
-  e: d: false
+  e: d: false;
 },
   {
   tit,
@@ -208,7 +210,7 @@ export default function InvestorRelations() {
   p: e: 'PDF',si,
   z: e: 'Various',da,
   t: e: 'Quarterly',featur,
-  e: d: false
+  e: d: false;
 },
   ]
   const upcomingEvents = [
@@ -262,7 +264,7 @@ export default function InvestorRelations() {
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Investor Relations - Zion Tech Group"
         description="Access financial information, quarterly reports, investor presentations, and company performance data for Zion Tech Group. Stay informed about our growth and strategic initiatives."
       />
@@ -271,7 +273,7 @@ export default function InvestorRelations() {
   }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -285,7 +287,7 @@ export default function InvestorRelations() {
           >
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Investor Relations
+              Investor Relations;
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Access comprehensive financial information, quarterly reports, and strategic updates. 
@@ -297,7 +299,7 @@ export default function InvestorRelations() {
             <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {financialHighlights.map((highlight, index) => (
-  <motion.div
+  <motion.div;
                   key={highlight.metric},
   }
                   initial={ opaci,
@@ -327,7 +329,7 @@ export default function InvestorRelations() {
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -344,7 +346,7 @@ export default function InvestorRelations() {
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Quarterly Performance</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Track our financial performance and growth trajectory across quarters
+              Track our financial performance and growth trajectory across quarters;
             </p>
           </motion.div>
 
@@ -390,7 +392,7 @@ export default function InvestorRelations() {
   }
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -407,14 +409,14 @@ export default function InvestorRelations() {
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Strategic Initiatives</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Major investments and strategic projects driving our future growth
+              Major investments and strategic projects driving our future growth;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-6">
             {strategicInitiatives.map((initiative, index) => (
-  <motion.div
+  <motion.div;
                 key={initiative.title},
   }
                 initial={ opaci,
@@ -470,7 +472,7 @@ export default function InvestorRelations() {
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -487,7 +489,7 @@ export default function InvestorRelations() {
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Investor Resources</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Access our latest financial reports, presentations, and governance documents
+              Access our latest financial reports, presentations, and governance documents;
             </p>
           </motion.div>
 
@@ -495,7 +497,7 @@ export default function InvestorRelations() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {investorResources.map((resource, index) => (
-  <motion.div
+  <motion.div;
                 key={resource.title},
   }
                 initial={ opaci,
@@ -521,7 +523,7 @@ export default function InvestorRelations() {
                     </div>
                     {resource.featured && (
   <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
-                        Featured
+                        Featured;
                       </span>
                     )}
                   </div>
@@ -546,7 +548,7 @@ export default function InvestorRelations() {
   transform: hover:scale-105 shadow-lg hove,
   r:shadow-cyan-500/25 flex items-center justify-center gap-2">
                     <Download className="w-4 h-4" />
-                    Download
+                    Download;
                   </button>
                 </div>
               </motion.div>
@@ -559,7 +561,7 @@ export default function InvestorRelations() {
   }
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -576,14 +578,14 @@ export default function InvestorRelations() {
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Upcoming Events</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Mark your calendar for important investor events and earnings calls
+              Mark your calendar for important investor events and earnings calls;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-6">
             {upcomingEvents.map((event, index) => (
-  <motion.div
+  <motion.div;
                 key={event.title},
   }
                 initial={ opaci,
@@ -632,7 +634,7 @@ export default function InvestorRelations() {
 
                 <button className="w-full bg-slate-700/50,
   hove: r:bg-slate-600/50 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300">
-                  Register Now
+                  Register Now;
                 </button>
               </motion.div>
             ))}
@@ -644,7 +646,7 @@ export default function InvestorRelations() {
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -668,7 +670,7 @@ export default function InvestorRelations() {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-3">Direct investor inquiries</p>
-                <a
+                <a;
                   href={`mailt,
   o:${contactInfo.investorRelations}`}
                   className="className="text-cyan-400,
@@ -685,7 +687,7 @@ export default function InvestorRelations() {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-300 mb-3">Speak with our team</p>
-                <a
+                <a;
                   href={`t,
   e: l:${contactInfo.phone}`}
                   className="className="text-blue-400,

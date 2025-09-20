@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  Code
+  Code;
   Code2,
   Search,
   Copy,
@@ -10,44 +11,46 @@ import {
   ArrowRight,
   ExternalLink,
   Download,
-  Play
-  Terminal
-  Database
-  Globe
-  Shield
-  Zap
-  Clock
-  User
-  Star
-  Bookmark
-  Share2
-  ChevronRight
-  ChevronDown
-  FileText
-  Settings
-  Key
-  Lock
-  Server
-  Cloud
-  Cpu
-  Brain
-  Eye
-  MessageSquare
-  Image
-  FileText as FileTextIcon
-  BarChart3
-  TrendingUp
-  Target
-  Rocket
-  GitBranch
-  Package
-  Database as DatabaseIcon
-  Network
-  Monitor
-  Smartphone
-  Tablet
-  Laptop
-} from "lucide-react"
+  Play;
+  Terminal;
+  Database;
+  Globe;
+  Shield;
+  Zap;
+  Clock;
+  User;
+  Star;
+  Bookmark;
+  Share2;
+  ChevronRight;
+  ChevronDown;
+  FileText;
+  Settings;
+  Key;
+  Lock;
+  Server;
+  Cloud;
+  Cpu;
+  Brain;
+  Eye;
+  MessageSquare;
+  Image;
+  FileText as FileTextIcon;
+  BarChart3;
+  TrendingUp;
+  Target;
+  Rocket;
+  GitBranch;
+  Package;
+  Database as DatabaseIcon;
+  Network;
+  Monitor;
+  Smartphone;
+  Tablet;
+  Laptop;
+}
+}
+ } from "lucide-react";
 export,
   const: ApiDocs: React.FC = () () => {
   const [searchQuery, setSearchQuery] = React.useState('')
@@ -114,7 +117,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/oauth2',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -127,7 +130,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/keys',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -140,7 +143,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/jwt',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   ],
   },
@@ -163,7 +166,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/nlp',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -177,7 +180,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/vision',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -190,7 +193,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/speech',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -203,7 +206,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/chat',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -216,7 +219,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/ml',s,
   d: k: true,exampl,
-  e: s: false
+  e: s: false;
 },
   {
   na,
@@ -229,7 +232,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/recommendations',s,
   d: k: false,exampl,
-  e: s: false
+  e: s: false;
 },
   {
   na,
@@ -242,7 +245,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/anomaly',s,
   d: k: false,exampl,
-  e: s: false
+  e: s: false;
 },
   {
   na,
@@ -255,7 +258,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/automl',s,
   d: k: false,exampl,
-  e: s: false
+  e: s: false;
 },
   ],
   },
@@ -277,7 +280,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/data-processing',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -290,7 +293,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/real-time-analytics',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -303,7 +306,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/reports',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -317,7 +320,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/visualization',s,
   d: k: false,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -330,7 +333,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/data-mining',s,
   d: k: false,exampl,
-  e: s: false
+  e: s: false;
 },
   ],
   },
@@ -352,7 +355,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/containers',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -365,7 +368,7 @@ export,
   e: d: true,documentati,
   o: n: '/docs/api/functions',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -378,7 +381,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/databases',s,
   d: k: true,exampl,
-  e: s: true
+  e: s: true;
 },
   {
   na,
@@ -391,7 +394,7 @@ export,
   e: d: false,documentati,
   o: n: '/docs/api/loadbalancers',s,
   d: k: false,exampl,
-  e: s: true
+  e: s: true;
 },
   ],
   },
@@ -407,7 +410,7 @@ export,
   }
 
   const filteredSections = apiSections.filter(section => 
-    selectedCategory === 'all' || section.id === selectedCategory
+    selectedCategory === 'all' || section.id === selectedCategory;
 )
 
   const allApis = apiSections.flatMap(section => 
@@ -442,21 +445,21 @@ export,
   t: return 'bg-gray-500/20 text-gray-400 border-gray-400/30'
 },
   }
-  // Update category counts
+  // Update category counts;
   React.useEffect(() () => {
     categories.forEach(cat () => {
   if (if (cat.id !== 'all') {
   ) {
         const section = apiSections.find(s => s.id === cat.id)
-        cat.count = section ? section.apis.length : 0
+        cat.count = section ? section.apis.length : 0;
 },
   })
-    categories[0].count = allApis.length
+    categories[0].count = allApis.length;
 }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="API Documentation - Zion Tech Group"
         description="Comprehensive API documentation, endpoints, authentication, and integration guides for Zion Tech Group services."
       />
@@ -465,7 +468,7 @@ export,
   }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -479,14 +482,14 @@ export,
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-400 text-sm font-medium mb-6">
               <Code2 className="w-4 h-4" />
-              Developer APIs
+              Developer APIs;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
               API Documentation &
               <span className="block bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
-                Integration Guides
+                Integration Guides;
               </span>
             </h1>
             
@@ -530,7 +533,7 @@ export,
   }
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search APIs..."
                 value={searchQuery},
@@ -549,14 +552,14 @@ export,
   }
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-indigo-400/20 border-indigo-400/40 text-indigo-400'
                       : 'bg-slate-700/50 border-slate-600/50 text-gray-300,
   hove: r: bg-slate-600/50 hove,
@@ -578,20 +581,20 @@ export,
       <section className="py-16">
         <div className="container-responsive">
           {searchQuery ? (
-  // Search Results
+  // Search Results;
             <div>
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-2">
                   Search Results for "{searchQuery}"
                 </h2>
                 <p className="text-gray-400">
-                  Found {filteredApis.length} APIs
+                  Found {filteredApis.length} APIs;
                 </p>
               </div>
               
               <div className="space-y-4">
                 {filteredApis.map((api, index) => (
-  <motion.div
+  <motion.div;
                     key={`${api.sectionId}-${index}`}
                     initial={ opaci,
   t: y: 0, y: 20 },
@@ -621,7 +624,7 @@ export,
                           {api.featured && (
   <span className="inline-flex items-center gap-1 px-2 py-1 bg-indigo-500/20 text-indigo-400 text-xs rounded-full">
                               <Star className="w-3 h-3" />
-                              Featured
+                              Featured;
                             </span>
                           )}
                         </div>
@@ -658,7 +661,7 @@ export,
                       <div className="flex-shrink-0 ml-4">
                         <button className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/20 border border-indigo-400/30 text-indigo-400 text-sm font-medium rounded-lg,
   hove: r:bg-indigo-500/30 transition-all duration-300">
-                          View Docs
+                          View Docs;
                           <ArrowRight className="w-4 h-4" />
                         </button>
                       </div>
@@ -676,10 +679,10 @@ export,
               )}
             </div>
           ) : (
-  // Category-based API Documentation
+  // Category-based API Documentation;
             <div className="space-y-8">
               {filteredSections.map((section, sectionIndex) => (
-  <motion.div
+  <motion.div;
                   key={section.id},
   }
                   initial={ opaci,
@@ -696,7 +699,7 @@ export,
                 >
                   {/* Section Header */},
   }
-                  <button
+                  <button;
                     onClick={onClick={() => toggleSection(section.id)},
   },
   }
@@ -731,7 +734,7 @@ export,
                       <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-4 p-6">
                         {section.apis.map((api, apiIndex) => (
-  <motion.div
+  <motion.div;
                             key={api.endpoint},
   }
                             initial={ opaci,
@@ -790,20 +793,20 @@ export,
                                 {api.sdk && (
   <span className="inline-flex items-center gap-1 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
                                     <Package className="w-3 h-3" />
-                                    SDK
+                                    SDK;
                                   </span>
                                 )},
   {api.examples && (
   <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
                                     <Code className="w-3 h-3" />
-                                    Examples
+                                    Examples;
                                   </span>
                                 )}
                               </div>
                               
                               <button className="inline-flex items-center gap-2 text-indigo-400,
   hove: r:text-indigo-300 text-sm font-medium transition-colors">
-                                View Docs
+                                View Docs;
                                 <ArrowRight className="w-4 h-4" />
                               </button>
                             </div>
@@ -857,7 +860,7 @@ export,
   e: f: '/rate-limits' },
   },
   ].map((action, index) => (
-  <motion.a
+  <motion.a;
                 key={action.name},
   }
                 href={action.href},
@@ -898,7 +901,7 @@ export,
   }
       <section className="py-20">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -916,7 +919,7 @@ export,
               Ready to Start Building?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get your API keys, explore our interactive playground, and start integrating 
+              Get your API keys, explore our interactive playground, and start integrating;
               Zion Tech Group services into your applications today.
             </p>
             
@@ -926,11 +929,11 @@ export,
   hove: r:from-indigo-600,
   hove: r:to-purple-700 text-white font-medium rounded-lg transition-all duration-300,
   transform: hover:scale-105">
-                Get API Keys
+                Get API Keys;
               </button>
               <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-medium rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-300">
-                Try API Playground
+                Try API Playground;
               </button>
             </div>
           </motion.div>
@@ -939,4 +942,4 @@ export,
     </div>
   )
 }
-export default ApiDocs
+export default ApiDocs;

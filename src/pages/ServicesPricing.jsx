@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from "lucide-react"
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight   } from "lucide-react";
 import SEO from "@/components/SEO"
 const pricingTiers = [
   {
@@ -30,7 +30,7 @@ const pricingTiers = [
 ]
         colo,
   r: "from-emerald-500 to-green-600",popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -58,7 +58,7 @@ const pricingTiers = [
 ]
         colo,
   r: "from-blue-500 to-indigo-600",popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -83,7 +83,7 @@ const pricingTiers = [
         notInclude,
   d: [],col,
   o: r: "from-purple-500 to-indigo-600",popul,
-  a: r: false
+  a: r: false;
 },
   ]
 const serviceCategories = [
@@ -262,22 +262,22 @@ export default function ServicesPricing() {
         <div className="container mx-auto text-center">
           <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-            Transparent Pricing
+            Transparent Pricing;
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your business. Our flexible pricing ensures you only pay for what you need
+            Choose the perfect plan for your business. Our flexible pricing ensures you only pay for what you need;
             with the ability to scale up as you grow.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r:bg-zion-cyan-light">
               <Phone className="w-5 h-5 mr-2"/>
-              +1 302 464 0950
+              +1 302 464 0950;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10">
               <Mail className="w-5 h-5 mr-2"/>
-              kleber@ziontechgroup.com
+              kleber@ziontechgroup.com;
             </Button>
           </div>
         </div>
@@ -305,7 +305,7 @@ export default function ServicesPricing() {
               <a href="htt,
   p: s: //ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hove,
   r:underline">
-                ziontechgroup.com
+                ziontechgroup.com;
               </a>
             </div>
           </div>
@@ -318,10 +318,10 @@ export default function ServicesPricing() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Choose Your Plan
+              Choose Your Plan;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              All plans include our core features with additional capabilities as you scale up
+              All plans include our core features with additional capabilities as you scale up;
             </p>
           </div>
 
@@ -331,7 +331,7 @@ export default function ServicesPricing() {
   hove: r:border-zion-purple/50 transition-all duration-300 ${tier.popular ? 'ring-2 ring-zion-purple scale-105' : ''}`}>
                 {tier.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white px-4 py-2">
-                      Most Popular
+                      Most Popular;
                     </Badge>
                   </div>)}
                 
@@ -369,7 +369,7 @@ export default function ServicesPricing() {
                   
                   <Button className={`w-full mt-6 bg-gradient-to-r ${tier.color} hov,
   e: r:opacity-90 text-white`} size="lg">
-                    Get Started
+                    Get Started;
                     <ArrowRight className="w-4 h-4 ml-2"/>
                   </Button>
                 </CardContent>
@@ -384,7 +384,7 @@ export default function ServicesPricing() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Service-Specific Pricing
+              Service-Specific Pricing;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
               Detailed pricing for each service category. Contact us for custom enterprise solutions.
@@ -394,13 +394,13 @@ export default function ServicesPricing() {
           <Tabs value={selectedTier} onValueChange={setSelectedTier} className="max-w-6xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 bg-zion-blue border-zion-blue-light">
               <TabsTrigger value="starter" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                Starter
+                Starter;
               </TabsTrigger>
               <TabsTrigger value="professional" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                Professional
+                Professional;
               </TabsTrigger>
               <TabsTrigger value="enterprise" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                Enterprise
+                Enterprise;
               </TabsTrigger>
             </TabsList>
             
@@ -444,7 +444,7 @@ export default function ServicesPricing() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              We deliver more than just software - we deliver business transformation
+              We deliver more than just software - we deliver business transformation;
             </p>
           </div>
 
@@ -471,18 +471,18 @@ export default function ServicesPricing() {
             Ready to Get Started?
           </h2>
           <p className="text-zion-cyan text-lg mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your specific needs and get a custom quote tailored to your business
+            Contact us today to discuss your specific needs and get a custom quote tailored to your business;
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r: bg-zion-cyan-light">
               <Phone className="w-5 h-5 mr-2"/>
-              Schedule a Consultation
+              Schedule a Consultation;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10">
               <Mail className="w-5 h-5 mr-2"/>
-              Request Custom Quote
+              Request Custom Quote;
             </Button>
           </div>
         </div>

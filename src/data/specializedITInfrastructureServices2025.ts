@@ -21,7 +21,9 @@ export interface SpecializedITInfrastructureService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,14 +35,14 @@ export interface SpecializedITInfrastructureService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
-  demoUrl?: string
-  documentationUrl?: string
+  marketSize?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
 }
 
 export,
   const: SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService[] = [
-  // Cloud-Native Infrastructure Platform
+  // Cloud-Native Infrastructure Platform;
   {
   i,
   d: "cloud-native-infrastructure-platform",tit,
@@ -125,7 +127,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/cloud-native-infrastructure"
 }
-  // Edge Computing Infrastructure
+  // Edge Computing Infrastructure;
   {
   id: "edge-computing-infrastructure",tit,
   l: e: "Edge Computing Infrastructure Platform",descripti,
@@ -209,7 +211,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/edge-computing"
 }
-  // Hybrid Cloud Management Platform
+  // Hybrid Cloud Management Platform;
   {
   id: "hybrid-cloud-management",tit,
   l: e: "Hybrid Cloud Management Platform",descripti,
@@ -292,7 +294,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/hybrid-cloud-management"
 }
-  // Network Security Infrastructure
+  // Network Security Infrastructure;
   {
   id: "network-security-infrastructure",tit,
   l: e: "Advanced Network Security Infrastructure",descripti,
@@ -376,7 +378,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/network-security"
 }
-  // Data Center Infrastructure Management
+  // Data Center Infrastructure Management;
   {
   id: "data-center-infrastructure-management",tit,
   l: e: "Data Center Infrastructure Management Platform",descripti,
@@ -460,7 +462,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/data-center-management"
 }
-  // Storage Infrastructure Platform
+  // Storage Infrastructure Platform;
   {
   id: "storage-infrastructure-platform",tit,
   l: e: "Intelligent Storage Infrastructure Platform",descripti,
@@ -544,7 +546,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/storage-infrastructure"
 }
-  // Network Performance Monitoring
+  // Network Performance Monitoring;
   {
   id: "network-performance-monitoring",tit,
   l: e: "Network Performance Monitoring Platform",descripti,
@@ -628,7 +630,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/network-monitoring"
 }
-  // Infrastructure Automation Platform
+  // Infrastructure Automation Platform;
   {
   id: "infrastructure-automation-platform",tit,
   l: e: "Infrastructure Automation Platform",descripti,
@@ -712,7 +714,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/infrastructure-automation"
 }
-  // Disaster Recovery Infrastructure
+  // Disaster Recovery Infrastructure;
   {
   id: "disaster-recovery-infrastructure",tit,
   l: e: "Disaster Recovery Infrastructure Platform",descripti,
@@ -797,4 +799,4 @@ export,
   s://ziontechgroup.com/docs/disaster-recovery"
 },
   ]
-export default SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025
+export default SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025;

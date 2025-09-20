@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Loader2,
   CheckCircle,
@@ -10,30 +10,34 @@ import {
   Cpu,
   Database,
   Network,
-  Shield
-} from "lucide-react"
+  Shield;
+}
+}
+ } from "lucide-react";
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   fullScreen?: boolean,
 }
+}
+}
 
 export function LoadingSpinner({
   size = 'md'
   text = 'Loading...'
-  fullScreen = false
+  fullScreen = false;
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-8 h-8',md: 'w-16 h-16',lg: 'w-32 h-32'
   }
-const containerClasses = fullScreen
+const containerClasses = fullScreen;
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
     : 'flex items-center justify-center p-8'
   return (
     <div className={containerClasses}>
       <div className="text-center">
         {/* Animated Logo */}
-        <motion.div
+        <motion.div;
           className="relative mx-auto mb-4"
           animate={
             rota,
@@ -57,7 +61,7 @@ const containerClasses = fullScreen
         >
           <div className={`${sizeClasses[size],
   } bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center relative overflow-hidden`}>
-            <motion.div
+            <motion.div;
               className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue"
               animate={
                 backgrou,
@@ -76,7 +80,7 @@ const containerClasses = fullScreen
           </div>
 
           {/* Glow Effect */}
-          <motion.div
+          <motion.div;
             className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50"
             animate={ opaci,
   t: y: [0.3, 0.6, 0.3],
@@ -90,7 +94,7 @@ const containerClasses = fullScreen
         </motion.div>
 
         {/* Loading Text */}
-        <motion.div
+        <motion.div;
           className="text-zion-cyan font-medium"
           animate={ opaci,
   t: y: [0.5, 1, 0.5],
@@ -107,7 +111,7 @@ const containerClasses = fullScreen
         {/* Loading Dots */}
         <div className="flex justify-center mt-3 space-x-1">
           {[0, 1, 2].map((index) => (
-            <motion.div
+            <motion.div;
               key={index}
               className="w-2 h-2 bg-zion-cyan rounded-full"
               animate={
@@ -121,7 +125,7 @@ const containerClasses = fullScreen
                 durati,
   o: n: 1.5,repe,
   a: t: Infinity,del,
-  a: y: index * 0.2
+  a: y: index * 0.2;
               },
   }
             />
@@ -135,6 +139,8 @@ const containerClasses = fullScreen
 interface PageLoaderProps {
   pageName?: string,
 }
+}
+}
 
 export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   return (
@@ -142,7 +148,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
       <div className="text-center">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
-          <motion.div
+          <motion.div;
             className="absolute top-1/4 left-1/4 w-32 h-32 border border-zion-cyan/20 rounded-full"
             animate={
               sca,
@@ -156,7 +162,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   a: t: Infinity },
   }
           />
-          <motion.div
+          <motion.div;
             className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-zion-purple/20 rounded-full"
             animate={
               sca,
@@ -174,7 +180,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
         </div>
 
         {/* Main Content */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -188,7 +194,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
         >
           <div className="relative">
             <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full mx-auto mb-6"></div>
-            <motion.div
+            <motion.div;
               className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full"
               animate={ rota,
   t: e: 360 },
@@ -200,11 +206,11 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   }
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-xl">
-              ZION
+              ZION;
             </div>
           </div>
 
-          <motion.h2
+          <motion.h2;
             className="text-2xl font-bold text-white mb-2"
             animate={ opaci,
   t: y: [0.7, 1, 0.7],
@@ -218,7 +224,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
             Loading {pageName}
           </motion.h2>
 
-          <motion.p
+          <motion.p;
             className="text-zion-slate-light"
             animate={ opaci,
   t: y: [0.5, 1, 0.5],
@@ -236,7 +242,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
           {/* Progress Bar */}
           <div className="mt-6 w-64 mx-auto">
             <div className="bg-zion-slate-light/20 rounded-full h-2 overflow-hidden">
-              <motion.div
+              <motion.div;
                 className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"
                 initial={ wid,
   t: h: 0 },
@@ -261,13 +267,15 @@ interface SkeletonLoaderProps {
   lines?: number,
   className?: string,
 }
+}
+}
 
 export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ leng,
   t: h: lines }).map((_, index) => (
-        <motion.div
+        <motion.div;
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"
           animate={
@@ -281,7 +289,7 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
             durati,
   o: n: 1.5,repe,
   a: t: Infinity,del,
-  a: y: index * 0.1
+  a: y: index * 0.1;
           },
   }
           style={

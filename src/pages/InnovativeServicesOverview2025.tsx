@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Brain
+  Brain;
   Shield,
   Cloud,
   Rocket,
@@ -14,16 +14,18 @@ import {
   Mail,
   MapPin,
   Award,
-  Sparkles
-  Heart
-  Truck
-  FileText
-  Activity
-  TrendingUp
-  Target
-  Zap
-  Globe
-} from "lucide-react"
+  Sparkles;
+  Heart;
+  Truck;
+  FileText;
+  Activity;
+  TrendingUp;
+  Target;
+  Zap;
+  Globe;
+}
+}
+ } from "lucide-react";
 const InnovativeServicesOverview2025 = () () => {
   const serviceCategories = [
   {
@@ -125,7 +127,7 @@ const InnovativeServicesOverview2025 = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -139,22 +141,22 @@ const InnovativeServicesOverview2025 = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
-              Innovative Services 2025
+              Innovative Services 2025;
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Cutting-Edge AI Solutions for
+              Cutting-Edge AI Solutions for;
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {' '}Modern Businesses
+                {' '}Modern Businesses;
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Discover our comprehensive suite of AI-powered micro SAAS services designed to 
+              Discover our comprehensive suite of AI-powered micro SAAS services designed to;
               transform your business operations and drive sustainable growth.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -166,9 +168,9 @@ const InnovativeServicesOverview2025 = () () => {
   hove: r:to-purple-700 transition-all duration-200";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
-                Explore Services
+                Explore Services;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -180,7 +182,7 @@ const InnovativeServicesOverview2025 = () () => {
   r:text-zion-slate-dark transition-all duration-200";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>
@@ -193,7 +195,7 @@ const InnovativeServicesOverview2025 = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -207,17 +209,17 @@ const InnovativeServicesOverview2025 = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Featured AI Services
+              Featured AI Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our most innovative and impactful AI-powered solutions
+              Our most innovative and impactful AI-powered solutions;
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {serviceCategories.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -270,7 +272,7 @@ const InnovativeServicesOverview2025 = () () => {
                   </ul>
                 </div>
                 
-                <a
+                <a;
                   href={service.path},
   }
                   className="className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg,
@@ -278,7 +280,7 @@ const InnovativeServicesOverview2025 = () () => {
   r:to-purple-700 transition-all duration-200";"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
-                  Learn More
+                  Learn More;
                 </a>
               </motion.div>
             ))}
@@ -292,7 +294,7 @@ const InnovativeServicesOverview2025 = () () => {
   s: m: px-6,
   l: g:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -306,10 +308,10 @@ const InnovativeServicesOverview2025 = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Additional AI Services
+              Additional AI Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Explore our complete portfolio of AI-powered solutions
+              Explore our complete portfolio of AI-powered solutions;
             </p>
           </motion.div>
           
@@ -317,7 +319,7 @@ const InnovativeServicesOverview2025 = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {additionalServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -338,13 +340,13 @@ const InnovativeServicesOverview2025 = () () => {
                 <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{service.description}</p>
                 <div className="text-xl font-bold text-white mb-4">{service.price}</div>
-                <a
+                <a;
                   href={service.path},
   }
                   className="className="inline-flex items-center w-full justify-center px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light font-medium rounded-lg,
   hove: r:bg-zion-slate-light/30 transition-all duration-200";"
                 >
-                  View Details
+                  View Details;
                 </a>
               </motion.div>
             ))}
@@ -358,7 +360,7 @@ const InnovativeServicesOverview2025 = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -374,7 +376,7 @@ const InnovativeServicesOverview2025 = () () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Let's discuss how our AI services can drive your business forward
+              Let's discuss how our AI services can drive your business forward;
             </p>
             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-6 mb-8">
@@ -393,7 +395,7 @@ const InnovativeServicesOverview2025 = () () => {
             </div>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg,
@@ -401,9 +403,9 @@ const InnovativeServicesOverview2025 = () () => {
   hove: r:to-purple-700 transition-all duration-200";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
-                Contact Us
+                Contact Us;
               </a>
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg,
@@ -411,7 +413,7 @@ const InnovativeServicesOverview2025 = () () => {
   r:text-zion-slate-dark transition-all duration-200";"
               >
                 <Globe className="w-5 h-5 mr-2" />
-                Visit Website
+                Visit Website;
               </a>
             </div>
           </motion.div>
@@ -420,4 +422,4 @@ const InnovativeServicesOverview2025 = () () => {
     </div>
   )
 }
-export default InnovativeServicesOverview2025
+export default InnovativeServicesOverview2025;

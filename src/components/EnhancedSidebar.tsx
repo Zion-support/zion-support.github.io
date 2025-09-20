@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
+import { Link, useLocation   } from "react-router-dom";
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Home,
   Brain,
@@ -42,8 +43,10 @@ import {
   DollarSign,
   Leaf,
   Building,
-  User
-} from "lucide-react"
+  User;
+}
+}
+ } from "lucide-react";
 export,
   const: EnhancedSidebar: React.FC = () () => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']))
@@ -54,13 +57,15 @@ const toggleSection = (secti,
     if (newExpanded.has(section)) {
       newExpanded.delete(section)
     } else {
-      newExpanded.add(section)
+  newExpanded.add(section)
+}
+}
 }
     setExpandedSections(newExpanded)
 },
 
   const isActive = (pa,
-  t: h: string) => location.pathname === path
+  t: h: string) => location.pathname === path;
 const navigationSections = [
     {
       titl,
@@ -189,7 +194,7 @@ const quickActions = [
   l: g:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
       <div className="p-6">
         {/* Logo Section */}
-        <motion.div
+        <motion.div;
           className="mb-8"
           initial={ opaci,
   t: y: 0, y: -20 },
@@ -212,7 +217,7 @@ const quickActions = [
             </div>
             <div>
               <h2 className="text-lg font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                ZION TECH GROUP
+                ZION TECH GROUP;
               </h2>
               <p className="text-xs text-zion-slate-light">Navigation</p>
             </div>
@@ -220,7 +225,7 @@ const quickActions = [
         </motion.div>
 
         {/* Quick Actions */}
-        <motion.div
+        <motion.div;
           className="mb-8"
           initial={ opaci,
   t: y: 0, y: -20 },
@@ -236,7 +241,7 @@ const quickActions = [
           <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
           <div className="space-y-2">
             {quickActions.map((action, index) => (
-              <motion.div
+              <motion.div;
                 key={action.name}
                 initial={ opaci,
   t: y: 0, x: -20 },
@@ -249,7 +254,7 @@ const quickActions = [
   a: y: index * 0.1 },
   }
               >
-                <Link
+                <Link;
                   to={action.href}
                   className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
                     action.variant === 'primary'
@@ -274,7 +279,7 @@ const quickActions = [
         {/* Navigation Sections */}
         <div className="space-y-6">
           {navigationSections.map((section, sectionIndex) => (
-            <motion.div
+            <motion.div;
               key={section.title}
               initial={ opaci,
   t: y: 0, y: -20 },
@@ -287,7 +292,7 @@ const quickActions = [
   a: y: sectionIndex * 0.1 },
   }
             >
-              <button
+              <button;
                 onClick={() => toggleSection(section.title)}
                 className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light,
   hove: r: text-white,
@@ -307,7 +312,7 @@ const quickActions = [
 
               <AnimatePresence>
                 {expandedSections.has(section.title) && (
-                  <motion.div
+                  <motion.div;
                     initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -326,7 +331,7 @@ const quickActions = [
                     className="ml-7 mt-2 space-y-1"
                   >
                     {section.items.map((item, itemIndex) => (
-                      <motion.div
+                      <motion.div;
                         key={item.name}
                         initial={ opaci,
   t: y: 0, x: -20 },
@@ -339,7 +344,7 @@ const quickActions = [
   a: y: itemIndex * 0.05 },
   }
                       >
-                        <Link
+                        <Link;
                           to={item.href}
                           className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
                             isActive(item.href)
@@ -363,7 +368,7 @@ const quickActions = [
         </div>
 
         {/* Contact Info */}
-        <motion.div
+        <motion.div;
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
           initial={ opaci,
   t: y: 0, y: 20 },

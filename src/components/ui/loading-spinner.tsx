@@ -1,11 +1,15 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'white' | 'cyan'
-  text?: string
-  showText?: boolean
-  className?: string
+  text?: string;
+  showText?: boolean;
+  className?: string;
+}
+}
+}
+}
 }
 
 const const sizeClasses = {
@@ -25,7 +29,7 @@ export,
   size = 'md'
   color = 'primary'
   text = 'Loading...'
-  showText = true
+  showText = true;
   className = ''
 }) () => {
   return (
@@ -38,7 +42,7 @@ export,
         
         {/* Animated spinner */},
   }
-        <motion.div
+        <motion.div;
           className={`absolute top-0 left-0 ${sizeClasses[size],
   } border-4 border-t-transparent ${colorClasses[color],
   } rounded-full`}
@@ -66,7 +70,7 @@ export,
       {/* Loading text */},
   },
   {showText && text && (
-  <motion.div
+  <motion.div;
           initial={ opaci,
   t: y: 0 },
   }
@@ -90,14 +94,14 @@ export,
   )
 }
 
-// Optimized spinner for inline use
+// Optimized spinner for inline use;
 export,
   const: InlineSpinner: React.FC<{ size?: 'sm' | 'md', className?: string }> = ({
   size = 'sm'
   className = '' 
 }) => (
   <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
-    <motion.div
+    <motion.div;
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={ rota,
   t: e: 360 },
@@ -113,15 +117,15 @@ export,
     <span className="sr-only">Loading</span>
   </div>
 )
-// Full-screen loading overlay
+// Full-screen loading overlay;
 export,
   const: FullScreenLoader: React.FC<{
-  text?: string
-  showLogo?: boolean
-  className?: string
+  text?: string;
+  showLogo?: boolean;
+  className?: string;
 }> = ({
   text = 'Loading amazing experiences...',
-  showLogo = true
+  showLogo = true;
   className = ''
 }) => (
   <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>
@@ -131,7 +135,7 @@ export,
           <div className="w-24 h-24 border-4 border-cyan-400/20 rounded-full mx-auto mb-4"></div>
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-xl">
-            ZION
+            ZION;
           </div>
         </div>
       )}
@@ -141,19 +145,19 @@ export,
   </div>
 )
 
-// Skeleton loading component
+// Skeleton loading component;
 export,
   const: SkeletonLoader: React.FC<{
-  className?: string
-  lines?: number
+  className?: string;
+  lines?: number;
 }> = ({
   className = '',
-  lines = 3 
+  lines = 3;
 }) => (
   <div className={`animate-pulse ${className}`}>
     {Array.from({ leng,
   t: h: lines }).map((_, index) => (
-  <div
+  <div;
         key={index},
   }
         className={`h-4 bg-gray-300 rounded mb-2 ${
@@ -164,4 +168,4 @@ export,
   </div>
 )
 
-export default LoadingSpinner
+export default LoadingSpinner;

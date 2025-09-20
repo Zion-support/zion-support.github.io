@@ -1,8 +1,8 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { Link } from "react-router-dom"
+import { SEO     } from "@/components/SEO";
+import { Link     } from "react-router-dom";
 import {
-  Shield
+  Shield;
   Brain,
   Eye,
   Zap,
@@ -11,145 +11,149 @@ import {
   DollarSign,
   Clock,
   AlertTriangle,
-  Lock
-  Target
-  TrendingUp
-  Award
-  Phone
-  Mail
-  MapPin
-  Star
-  Search
-  FileText
-  Network
-  Server
-  Database
-  Cloud
-  Globe
-  Users
-  Settings
-  Activity
-  BarChart3
-  PieChart
-  LineChart
-  TrendingDown
-  AlertCircle
-  CheckSquare
-  Calendar
-  RefreshCw
-  Target as TargetIcon
-  Zap as ZapIcon
-  Shield as ShieldIcon
-  Globe as GlobeIcon
-  Monitor
-  Smartphone
-  Laptop
-  Tablet
-  Router
-  Firewall
-  Bug
-  Key
-  Fingerprint
-  Scan
-  Radar
-  Satellite
-  Telescope
-  Microscope
-  MagnifyingGlass
-  Binoculars
-  Camera
-  Video
-  Audio
-  FileSearch
-  Code
-  Terminal
-  Command
-  Cpu
-  Memory
-  HardDrive
-  Wifi
-  Bluetooth
-  Usb
-  Hdmi
-  Ethernet
-  Fiber
-  Antenna
-  Tower
-  Building
-  Home
-  Office
-  Factory
-  Hospital
-  Bank
-  School
-  University
-  Government
-  Military
-  Space
-  Ocean
-  Mountain
-  Forest
-  Desert
-  Arctic
-  Tropical
-  Urban
-  Rural
-  Suburban
-  Industrial
-  Commercial
-  Residential
-  Agricultural
-  Mining
-  Oil
-  Gas
-  Renewable
-  Nuclear
-  Solar
-  Wind
-  Hydro
-  Geothermal
-  Biomass
-  Tidal
-  Wave
-  Fusion
-  Fission
-  Plasma
-  Quantum
-  Nanotechnology
-  Biotechnology
-  Robotics
-  Automation
-  IoT
-  Edge
-  Fog
-  Cloud
-  Hybrid
-  Multi
-  Single
-  Dual
-  Triple
-  Quad
-  Octa
-  Hexa
-  Deca
-  Centi
-  Milli
-  Micro
-  Nano
-  Pico
-  Femto
-  Atto
-  Zepto
-  Yocto
-  Kilo
-  Mega
-  Giga
-  Tera
-  Peta
-  Exa
-  Zetta
-  Yotta
-} from "lucide-react"
+  Lock;
+  Target;
+  TrendingUp;
+  Award;
+  Phone;
+  Mail;
+  MapPin;
+  Star;
+  Search;
+  FileText;
+  Network;
+  Server;
+  Database;
+  Cloud;
+  Globe;
+  Users;
+  Settings;
+  Activity;
+  BarChart3;
+  PieChart;
+  LineChart;
+  TrendingDown;
+  AlertCircle;
+  CheckSquare;
+  Calendar;
+  RefreshCw;
+  Target as TargetIcon;
+  Zap as ZapIcon;
+  Shield as ShieldIcon;
+  Globe as GlobeIcon;
+  Monitor;
+  Smartphone;
+  Laptop;
+  Tablet;
+  Router;
+  Firewall;
+  Bug;
+  Key;
+  Fingerprint;
+  Scan;
+  Radar;
+  Satellite;
+  Telescope;
+  Microscope;
+  MagnifyingGlass;
+  Binoculars;
+  Camera;
+  Video;
+  Audio;
+  FileSearch;
+  Code;
+  Terminal;
+  Command;
+  Cpu;
+  Memory;
+  HardDrive;
+  Wifi;
+  Bluetooth;
+  Usb;
+  Hdmi;
+  Ethernet;
+  Fiber;
+  Antenna;
+  Tower;
+  Building;
+  Home;
+  Office;
+  Factory;
+  Hospital;
+  Bank;
+  School;
+  University;
+  Government;
+  Military;
+  Space;
+  Ocean;
+  Mountain;
+  Forest;
+  Desert;
+  Arctic;
+  Tropical;
+  Urban;
+  Rural;
+  Suburban;
+  Industrial;
+  Commercial;
+  Residential;
+  Agricultural;
+  Mining;
+  Oil;
+  Gas;
+  Renewable;
+  Nuclear;
+  Solar;
+  Wind;
+  Hydro;
+  Geothermal;
+  Biomass;
+  Tidal;
+  Wave;
+  Fusion;
+  Fission;
+  Plasma;
+  Quantum;
+  Nanotechnology;
+  Biotechnology;
+  Robotics;
+  Automation;
+  IoT;
+  Edge;
+  Fog;
+  Cloud;
+  Hybrid;
+  Multi;
+  Single;
+  Dual;
+  Triple;
+  Quad;
+  Octa;
+  Hexa;
+  Deca;
+  Centi;
+  Milli;
+  Micro;
+  Nano;
+  Pico;
+  Femto;
+  Atto;
+  Zepto;
+  Yocto;
+  Kilo;
+  Mega;
+  Giga;
+  Tera;
+  Peta;
+  Exa;
+  Zetta;
+  Yotta;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AICybersecurityThreatIntelligence() {
   const features = [
   {
@@ -205,7 +209,7 @@ export default function AICybersecurityThreatIntelligence() {
         "Basic reporting"
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -224,7 +228,7 @@ export default function AICybersecurityThreatIntelligence() {
         "Threat intelligence feeds"
 ]
       popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -243,7 +247,7 @@ export default function AICybersecurityThreatIntelligence() {
         "Compliance consulting"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const benefits = [
@@ -376,7 +380,7 @@ export default function AICybersecurityThreatIntelligence() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="AI-Powered Cybersecurity Threat Intelligence Platform | Zion Tech Group"
         description="Transform your cybersecurity with AI-powered threat detection, real-time monitoring, and automated response. 99.7% threat detection rate, 24/7 protection, and global threat intelligence."
         keywords="AI cybersecurity, threat intelligence, threat detection, security monitoring, incident response, cybersecurity platform"
@@ -392,16 +396,16 @@ export default function AICybersecurityThreatIntelligence() {
             <h1 className="text-4xl m,
   d:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
-                AI-Powered Cybersecurity
+                AI-Powered Cybersecurity;
               </span>
               <br />
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Threat Intelligence Platform
+                Threat Intelligence Platform;
               </span>
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
               Revolutionize your cybersecurity posture with our advanced AI platform. 
-              Detect threats in real-time, respond automatically, and gain global threat 
+              Detect threats in real-time, respond automatically, and gain global threat;
               intelligence to stay ahead of evolving cyber risks.
             </p>
             
@@ -414,7 +418,7 @@ export default function AICybersecurityThreatIntelligence() {
                 <a href="t,
   e: l:+13024640950" className="hov,
   e: r:text-cyan-400 transition-colors">
-                  +1 302 464 0950
+                  +1 302 464 0950;
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -422,7 +426,7 @@ export default function AICybersecurityThreatIntelligence() {
                 <a href="mail,
   t: o:kleber@ziontechgroup.com" className="hove,
   r:text-cyan-400 transition-colors">
-                  kleber@ziontechgroup.com
+                  kleber@ziontechgroup.com;
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -433,7 +437,7 @@ export default function AICybersecurityThreatIntelligence() {
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="mailt,
   o:kleber@ziontechgroup.com?subject=AI Cybersecurity Threat Intelligence Demo Request&body=Hi, I'm interested in a demo of your AI Cybersecurity Threat Intelligence platform. Please provide more details about features, pricing, and implementation timeline."
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg,
@@ -442,9 +446,9 @@ export default function AICybersecurityThreatIntelligence() {
   transform: hover:scale-105";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
-                Request Demo
+                Request Demo;
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
@@ -452,7 +456,7 @@ export default function AICybersecurityThreatIntelligence() {
   r:text-white transition-all duration-300";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </div>
@@ -511,7 +515,7 @@ export default function AICybersecurityThreatIntelligence() {
               Powerful Features for <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">Modern Security</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform combines cutting-edge technology with cybersecurity expertise to deliver 
+              Our AI platform combines cutting-edge technology with cybersecurity expertise to deliver;
               unprecedented protection and threat intelligence.
             </p>
           </div>
@@ -622,14 +626,14 @@ export default function AICybersecurityThreatIntelligence() {
   d:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
   <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-  plan.popular 
+  plan.popular;
                   ? 'border-red-500/50 bg-slate-800/70' 
                   : 'border-slate-600'
 }`}>
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -653,14 +657,14 @@ export default function AICybersecurityThreatIntelligence() {
                 </ul>
 
                 <div className="text-center">
-                  <a
+                  <a;
                     href="mail,
   t: o:kleber@ziontechgroup.com?subject=Pricing Inquiry - AI Cybersecurity Threat Intelligence&body=Hi, I'm interested in the {plan.name} plan for your AI Cybersecurity Threat Intelligence platform. Please provide more details about implementation and next steps."
                     className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg,
   hove: r: from-red-600 hove,
   r:to-orange-700 transition-all duration-300 w-full justify-center";"
                   >
-                    Get Started
+                    Get Started;
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
@@ -805,7 +809,7 @@ export default function AICybersecurityThreatIntelligence() {
           
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center mb-8">
-            <a
+            <a;
               href="mailt,
   o:kleber@ziontechgroup.com?subject=AI Cybersecurity Threat Intelligence Demo Request&body=Hi, I'm interested in a demo of your AI Cybersecurity Threat Intelligence platform. Please provide more details about features, pricing, and implementation timeline."
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg,
@@ -814,9 +818,9 @@ export default function AICybersecurityThreatIntelligence() {
   transform: hover:scale-105";"
             >
               <ArrowRight className="w-5 h-5 mr-2" />
-              Request Demo
+              Request Demo;
             </a>
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
@@ -824,7 +828,7 @@ export default function AICybersecurityThreatIntelligence() {
   r:text-white transition-all duration-300";"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </a>
           </div>
           
@@ -867,7 +871,7 @@ export default function AICybersecurityThreatIntelligence() {
               <a href="t,
   e: l:+13024640950" className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div>
@@ -878,7 +882,7 @@ export default function AICybersecurityThreatIntelligence() {
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-cyan-400 hove,
   r:text-cyan-300 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div>
@@ -888,7 +892,7 @@ export default function AICybersecurityThreatIntelligence() {
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-slate-300">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </p>
             </div>
           </div>

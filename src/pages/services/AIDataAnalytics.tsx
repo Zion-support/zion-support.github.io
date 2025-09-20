@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { CheckCircle, BarChart3, TrendingUp, Target, Zap, Shield, Brain, Database, Globe, Smartphone, Users, PieChart } from "lucide-react"
-import { SEO } from "@/components/SEO"
+import { motion     } from "framer-motion";
+import { CheckCircle, BarChart3, TrendingUp, Target, Zap, Shield, Brain, Database, Globe, Smartphone, Users, PieChart     } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function AIDataAnalytics() {
   const features = [
   {
@@ -68,7 +68,7 @@ export default function AIDataAnalytics() {
 ]
       c,
   t: a: "Start Free Trial",popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -86,7 +86,7 @@ export default function AIDataAnalytics() {
 ]
       c,
   t: a: "Start Free Trial",popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -104,7 +104,7 @@ export default function AIDataAnalytics() {
 ]
       ct,
   a: "Contact Sales",popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const benefits = [
@@ -195,7 +195,7 @@ export default function AIDataAnalytics() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Data Analytics - Intelligent Business Intelligence Platform | Zion Tech Group"
         description="Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today."
         keywords="AI data analytics, business intelligence, predictive analytics, data insights, AI analytics platform"
@@ -210,7 +210,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 relative z-10">
-          <motion.div 
+          <motion.div;
             className="className="text-center";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -224,7 +224,7 @@ export default function AIDataAnalytics() {
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
-              AI Data Analytics
+              AI Data Analytics;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
@@ -236,11 +236,11 @@ export default function AIDataAnalytics() {
   hove: r:from-emerald-700,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </motion.div>
@@ -253,7 +253,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -270,10 +270,10 @@ export default function AIDataAnalytics() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Powered by Advanced AI
+              Powered by Advanced AI;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI engine processes massive amounts of data to uncover hidden patterns and predict future outcomes
+              Our AI engine processes massive amounts of data to uncover hidden patterns and predict future outcomes;
             </p>
           </motion.div>
 
@@ -281,7 +281,7 @@ export default function AIDataAnalytics() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10,
@@ -320,7 +320,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -337,10 +337,10 @@ export default function AIDataAnalytics() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Analytics for Every Business Need
+              Analytics for Every Business Need;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From customer insights to financial forecasting, our AI analytics cover every aspect of your business
+              From customer insights to financial forecasting, our AI analytics cover every aspect of your business;
             </p>
           </motion.div>
 
@@ -348,7 +348,7 @@ export default function AIDataAnalytics() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -383,7 +383,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -400,17 +400,17 @@ export default function AIDataAnalytics() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Proven Results
+              Proven Results;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Join thousands of businesses who have transformed their decision-making with AI analytics
+              Join thousands of businesses who have transformed their decision-making with AI analytics;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -446,7 +446,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -463,10 +463,10 @@ export default function AIDataAnalytics() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Seamless Integrations
+              Seamless Integrations;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Connect with your existing tools and data sources without disruption
+              Connect with your existing tools and data sources without disruption;
             </p>
           </motion.div>
 
@@ -474,7 +474,7 @@ export default function AIDataAnalytics() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {integrations.map((integration, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -509,7 +509,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -526,7 +526,7 @@ export default function AIDataAnalytics() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Choose the plan that fits your data analytics needs. All plans include a 14-day free trial.
@@ -536,7 +536,7 @@ export default function AIDataAnalytics() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -562,7 +562,7 @@ export default function AIDataAnalytics() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -586,7 +586,7 @@ export default function AIDataAnalytics() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                     ? 'bg-gradient-to-r from-emerald-600 to-blue-600 text-white,
   hove: r: from-emerald-700,
   hove: r:to-blue-700'
@@ -608,7 +608,7 @@ export default function AIDataAnalytics() {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -627,7 +627,7 @@ export default function AIDataAnalytics() {
               Ready to Transform Your Data Analytics?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join thousands of businesses who have already revolutionized their decision-making with AI
+              Join thousands of businesses who have already revolutionized their decision-making with AI;
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
@@ -635,11 +635,11 @@ export default function AIDataAnalytics() {
   hove: r:from-emerald-700,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>

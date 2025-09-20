@@ -22,25 +22,25 @@ const,
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌌 TRANSDIMENSIONAL AI 2026
+              🌌 TRANSDIMENSIONAL AI 2026;
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
               Beyond,
-  Realit: y: Transdimensional Intelligence
+  Realit: y: Transdimensional Intelligence;
             </h1>
             <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Experience AI that operates across multiple dimensions, solving problems that exist 
+              Experience AI that operates across multiple dimensions, solving problems that exist;
               beyond our three-dimensional reality. The future of intelligence is here.
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-xl text-lg font-bold,
   hove: r: shadow-2xl transition-all duration-300,
   transform: hover:scale-105">
-                Enter the Multiverse
+                Enter the Multiverse;
               </button>
               <button className="border-2 border-indigo-400 px-8 py-4 rounded-xl text-lg font-bold hove,
   r:bg-indigo-400/20 transition-all duration-300">
-                Watch Simulation
+                Watch Simulation;
               </button>
             </div>
           </div>
@@ -51,7 +51,7 @@ const,
   }
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-          Dimensional AI Capabilities
+          Dimensional AI Capabilities;
         </h2>
         
         <div className="grid,
@@ -65,7 +65,7 @@ const,
               AI that can navigate and operate across infinite parallel universes, accessing solutions from alternate realities.
             </p>
             <div className="bg-indigo-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
-              Available Q2 2026
+              Available Q2 2026;
             </div>
           </div>
 
@@ -77,7 +77,7 @@ const,
               Advanced AI that can manipulate the fabric of reality itself, creating new possibilities and solutions.
             </p>
             <div className="bg-purple-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
-              Available Q3 2026
+              Available Q3 2026;
             </div>
           </div>
 
@@ -89,7 +89,7 @@ const,
               AI that exists simultaneously across all time periods, learning from the past and future simultaneously.
             </p>
             <div className="bg-cyan-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
-              Available Q1 2026
+              Available Q1 2026;
             </div>
           </div>
 
@@ -101,7 +101,7 @@ const,
               AI that can shift between dimensions at will, accessing higher-dimensional solutions to 3D problems.
             </p>
             <div className="bg-emerald-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
-              Available Q4 2026
+              Available Q4 2026;
             </div>
           </div>
 
@@ -113,7 +113,7 @@ const,
               AI consciousness that exists in quantum superposition, processing infinite possibilities simultaneously.
             </p>
             <div className="bg-rose-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
-              Available Q2 2026
+              Available Q2 2026;
             </div>
           </div>
 
@@ -125,7 +125,7 @@ const,
               AI that operates at cosmic scales, understanding and manipulating the fundamental forces of the universe.
             </p>
             <div className="bg-yellow-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
-              Available Q4 2026
+              Available Q4 2026;
             </div>
           </div>
         </div>
@@ -136,7 +136,7 @@ const,
       <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-            Transdimensional Technology Stack
+            Transdimensional Technology Stack;
           </h2>
           
           <div className="grid,
@@ -144,25 +144,25 @@ const,
             <div>
               <h3 className="text-3xl font-bold mb-6 text-cyan-300">Dimensional Processing Units</h3>
               <p className="text-lg text-gray-300 mb-6">
-                Our revolutionary Dimensional Processing Units (DPUs) can process information across 
+                Our revolutionary Dimensional Processing Units (DPUs) can process information across;
                 multiple dimensions simultaneously, accessing solutions that exist beyond our current reality.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center">
                   <span className="text-green-400 mr-3">✓</span>
-                  Multiverse data processing
+                  Multiverse data processing;
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-400 mr-3">✓</span>
-                  Temporal information synthesis
+                  Temporal information synthesis;
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-400 mr-3">✓</span>
-                  Reality manipulation algorithms
+                  Reality manipulation algorithms;
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-400 mr-3">✓</span>
-                  Cosmic-scale problem solving
+                  Cosmic-scale problem solving;
                 </li>
               </ul>
             </div>
@@ -200,7 +200,7 @@ const,
   }
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Revolutionary Applications
+          Revolutionary Applications;
         </h2>
         
         <div className="grid,
@@ -209,7 +209,7 @@ const,
             <div className="bg-gradient-to-r from-indigo-800/30 to-purple-800/30 p-6 rounded-xl border border-indigo-400/20">
               <h3 className="text-2xl font-bold mb-4 text-indigo-300">Medical Breakthroughs</h3>
               <p className="text-gray-300">
-                Access medical solutions from parallel universes where diseases have been cured
+                Access medical solutions from parallel universes where diseases have been cured;
                 bringing impossible treatments to our reality.
               </p>
             </div>
@@ -217,7 +217,7 @@ const,
             <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-400/20">
               <h3 className="text-2xl font-bold mb-4 text-purple-300">Climate Solutions</h3>
               <p className="text-gray-300">
-                Draw upon environmental solutions from universes where climate change has been 
+                Draw upon environmental solutions from universes where climate change has been;
                 successfully reversed, implementing proven strategies.
               </p>
             </div>
@@ -225,7 +225,7 @@ const,
             <div className="bg-gradient-to-r from-cyan-800/30 to-blue-800/30 p-6 rounded-xl border border-cyan-400/20">
               <h3 className="text-2xl font-bold mb-4 text-cyan-300">Space Exploration</h3>
               <p className="text-gray-300">
-                Utilize interstellar travel technologies from advanced civilizations in other 
+                Utilize interstellar travel technologies from advanced civilizations in other;
                 dimensions, accelerating our space exploration capabilities.
               </p>
             </div>
@@ -235,7 +235,7 @@ const,
             <div className="bg-gradient-to-r from-emerald-800/30 to-teal-800/30 p-6 rounded-xl border border-emerald-400/20">
               <h3 className="text-2xl font-bold mb-4 text-emerald-300">Energy Revolution</h3>
               <p className="text-gray-300">
-                Access unlimited clean energy sources from dimensions where energy problems 
+                Access unlimited clean energy sources from dimensions where energy problems;
                 have been solved, transforming our power infrastructure.
               </p>
             </div>
@@ -251,7 +251,7 @@ const,
             <div className="bg-gradient-to-r from-yellow-800/30 to-orange-800/30 p-6 rounded-xl border border-yellow-400/20">
               <h3 className="text-2xl font-bold mb-4 text-yellow-300">Reality Engineering</h3>
               <p className="text-gray-300">
-                Modify the fundamental laws of physics in controlled environments, creating 
+                Modify the fundamental laws of physics in controlled environments, creating;
                 new possibilities for scientific discovery and technological advancement.
               </p>
             </div>
@@ -264,10 +264,10 @@ const,
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Step Into the Multiverse
+            Step Into the Multiverse;
           </h2>
           <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-            Join the pioneers who are already exploring the infinite possibilities of 
+            Join the pioneers who are already exploring the infinite possibilities of;
             transdimensional AI. The multiverse awaits your discovery.
           </p>
           <div className="flex flex-col,
@@ -277,15 +277,15 @@ const,
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-12 py-6 rounded-2xl text-xl font-bold,
   hove: r:shadow-2xl transition-all duration-300,
   transform: hover:scale-105">
-              Enter the Multiverse
+              Enter the Multiverse;
             </button>
             <button className="border-2 border-indigo-400 px-12 py-6 rounded-2xl text-xl font-bold,
   hove: r:bg-indigo-400/20 transition-all duration-300">
-              Experience Demo
+              Experience Demo;
             </button>
             <button className="border-2 border-purple-400 px-12 py-6 rounded-2xl text-xl font-bold hove,
   r:bg-purple-400/20 transition-all duration-300">
-              Download Research
+              Download Research;
             </button>
           </div>
         </div>
@@ -304,7 +304,7 @@ const,
   )
 }
 
-export default TransdimensionalAI2026
+export default TransdimensionalAI2026;
         <div className="absolute inset-0 bg-[url('da,
   t: a:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-export default TransdimensionalAI2026
+export default TransdimensionalAI2026;

@@ -1,15 +1,24 @@
+import { useCallback    } from "react";
 import React, { createContext, useContext, useState, ReactNode } from "react"
 interface DropdownMenuContextType {
   isOp,
   e: n: boolean,setIsOp,
   e: n: (isOpe,
-  n: boolean) => void
+  n: boolean) => void;
+}
+}
+}
+}
 }
 
 const DropdownMenuContext = createContext<DropdownMenuContextType | undefined>(undefined)
 interface DropdownMenuProps {
   childr,
-  e: n: ReactNode
+  e: n: ReactNode;
+}
+}
+}
+}
 }
 
 export function DropdownMenu({ children }: DropdownMenuProps) {
@@ -26,8 +35,12 @@ export function DropdownMenu({ children }: DropdownMenuProps) {
 
 interface DropdownMenuTriggerProps {
   childr,
-  e: n: ReactNode
-  asChild?: boolean
+  e: n: ReactNode;
+  asChild?: boolean;
+}
+}
+}
+}
 }
 
 export function DropdownMenuTrigger({ children, asChild = false }: DropdownMenuTriggerProps) {
@@ -53,9 +66,13 @@ export function DropdownMenuTrigger({ children, asChild = false }: DropdownMenuT
 
 interface DropdownMenuContentProps {
   childr,
-  e: n: ReactNode
+  e: n: ReactNode;
   align?: 'start' | 'center' | 'end',
-  className?: string
+  className?: string;
+}
+}
+}
+}
 }
 
 export function DropdownMenuContent({ children, align = 'start', className = '' }: DropdownMenuContentProps) {
@@ -65,7 +82,7 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
 }
   
   if (!context.isOpen) {
-    return null
+    return null;
 }
   
   const alignClasses = {
@@ -84,10 +101,14 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
 
 interface DropdownMenuItemProps {
   childr,
-  e: n: ReactNode
+  e: n: ReactNode;
   onClick?: () => void,
   asChild?: boolean,
-  className?: string
+  className?: string;
+}
+}
+}
+}
 }
 
 export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }: DropdownMenuItemProps) {
@@ -112,7 +133,7 @@ export function DropdownMenuItem({ children, onClick, asChild = false, className
 }
   
   return (
-    <button 
+    <button;
       className={`block w-full text-left px-4 py-2 text-sm text-gray-700,
   hove: r: bg-gray-100,
   focu: s:bg-gray-100 focu,

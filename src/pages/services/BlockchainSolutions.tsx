@@ -1,71 +1,75 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
-import { motion } from "framer-motion"
+import { SEO     } from "../../components/SEO";
+import { motion     } from "framer-motion";
 import {
-  Link
+  Link;
   Shield,
   Zap,
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Lock
-  Database
-  Cpu
-  Network
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-  Target
-  Users
-  ArrowRight
-  Key
-  Fingerprint
-  EyeOff
-  Server
-  Globe2
-  ShieldCheck
-  Wifi
-  Smartphone
-  Activity
-  Clock
-  BarChart
-  PieChart
-  GitBranch
-  Code
-  Package
-  Play
-  Settings
-  Monitor
-  Rocket
-  Globe
-  Factory
-  Car
-  Heart
-  LineChart
-  Scatter
-  Layers
-  Bitcoin
-  Ethereum
-  Smartphone as Mobile
-  Cloud
-  LockKeyhole
-  FileCheck
-  Scale
-  Building2
-  Car as Vehicle
-  HeartPulse
-  ShoppingCart
-  CreditCard
-  Truck
-  Plane
-  Ship
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Wifi;
+  Smartphone;
+  Activity;
+  Clock;
+  BarChart;
+  PieChart;
+  GitBranch;
+  Code;
+  Package;
+  Play;
+  Settings;
+  Monitor;
+  Rocket;
+  Globe;
+  Factory;
+  Car;
+  Heart;
+  LineChart;
+  Scatter;
+  Layers;
+  Bitcoin;
+  Ethereum;
+  Smartphone as Mobile;
+  Cloud;
+  LockKeyhole;
+  FileCheck;
+  Scale;
+  Building2;
+  Car as Vehicle;
+  HeartPulse;
+  ShoppingCart;
+  CreditCard;
+  Truck;
+  Plane;
+  Ship;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function BlockchainSolutions() {
   const features = [
   {
@@ -125,25 +129,25 @@ export default function BlockchainSolutions() {
   l: e: 'Financial Services',descripti,
   o: n: 'Cryptocurrency, DeFi, and cross-border payments'
       ic,
-  o: n: CreditCard
+  o: n: CreditCard;
 },
   {
   tit,
   l: e: 'Supply Chain',descripti,
   o: n: 'Transparent tracking and verification of goods',ic,
-  o: n: Truck
+  o: n: Truck;
 },
   {
   tit,
   l: e: 'Healthcare',descripti,
   o: n: 'Secure patient records and medical data sharing',ic,
-  o: n: HeartPulse
+  o: n: HeartPulse;
 },
   {
   tit,
   l: e: 'Real Estate',descripti,
   o: n: 'Property tokenization and smart contract automation',ic,
-  o: n: Building2
+  o: n: Building2;
 },
   ]
   const blockchainCapabilities = [
@@ -217,7 +221,7 @@ export default function BlockchainSolutions() {
   ]
   return (
     <>
-      <SEO 
+      <SEO;
         title="Blockchain Solutions - Zion Tech Group"
         description="Revolutionary blockchain solutions including smart contracts, DeFi, NFTs, and enterprise blockchain. Transform your business with decentralized technology."
         keywords="blockchain, smart contracts, DeFi, NFTs, cryptocurrency, distributed ledger, decentralized finance, enterprise blockchain"
@@ -229,7 +233,7 @@ export default function BlockchainSolutions() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -243,26 +247,26 @@ export default function BlockchainSolutions() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
                 <Link className="w-4 h-4" />
-                Blockchain Innovation
+                Blockchain Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                Blockchain
+                Blockchain;
                 <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Solutions
+                  Solutions;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform your business with revolutionary blockchain technology. 
-                Smart contracts, DeFi solutions, NFTs, and enterprise blockchain 
+                Smart contracts, DeFi solutions, NFTs, and enterprise blockchain;
                 that create trust, transparency, and new business opportunities.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -274,9 +278,9 @@ export default function BlockchainSolutions() {
   hove: r:to-blue-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-green-500/25";"
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -287,7 +291,7 @@ export default function BlockchainSolutions() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  View Demo
+                  View Demo;
                 </motion.button>
               </div>
             </motion.div>
@@ -305,7 +309,7 @@ export default function BlockchainSolutions() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -322,10 +326,10 @@ export default function BlockchainSolutions() {
             >
               <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-                Revolutionary Blockchain Features
+                Revolutionary Blockchain Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our blockchain solutions combine cutting-edge technology with practical 
+                Our blockchain solutions combine cutting-edge technology with practical;
                 applications to deliver unprecedented security, transparency, and efficiency.
               </p>
             </motion.div>
@@ -334,7 +338,7 @@ export default function BlockchainSolutions() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -381,7 +385,7 @@ export default function BlockchainSolutions() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -397,19 +401,19 @@ export default function BlockchainSolutions() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your Business with Blockchain
+                  Transform Your Business with Blockchain;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our blockchain solutions deliver measurable improvements in cost reduction
-                  operational efficiency, and trust while enabling new business models 
+                  Our blockchain solutions deliver measurable improvements in cost reduction;
+                  operational efficiency, and trust while enabling new business models;
                   and revenue streams.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -434,7 +438,7 @@ export default function BlockchainSolutions() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -456,7 +460,7 @@ export default function BlockchainSolutions() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Blockchain Impact
+                      Blockchain Impact;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -488,7 +492,7 @@ export default function BlockchainSolutions() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -505,10 +509,10 @@ export default function BlockchainSolutions() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Blockchain Capabilities
+                Blockchain Capabilities;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform provides comprehensive blockchain development and 
+                Our platform provides comprehensive blockchain development and;
                 integration services for various use cases and industries.
               </p>
             </motion.div>
@@ -516,7 +520,7 @@ export default function BlockchainSolutions() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {blockchainCapabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                   key={capability.name},
   }
                   initial={ opaci,
@@ -565,7 +569,7 @@ export default function BlockchainSolutions() {
   }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -582,10 +586,10 @@ export default function BlockchainSolutions() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Industries We Transform
+                Industries We Transform;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our blockchain solutions are designed to revolutionize 
+                Our blockchain solutions are designed to revolutionize;
                 various industries with innovative applications and use cases.
               </p>
             </motion.div>
@@ -594,7 +598,7 @@ export default function BlockchainSolutions() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
-  <motion.div
+  <motion.div;
                   key={industry.name},
   }
                   initial={ opaci,
@@ -641,7 +645,7 @@ export default function BlockchainSolutions() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -658,10 +662,10 @@ export default function BlockchainSolutions() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Blockchain Use Cases
+                Blockchain Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our blockchain platform adapts to various business needs and industries
+                Our blockchain platform adapts to various business needs and industries;
                 providing tailored solutions for different requirements.
               </p>
             </motion.div>
@@ -669,7 +673,7 @@ export default function BlockchainSolutions() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -716,7 +720,7 @@ export default function BlockchainSolutions() {
   }
         <section className="py-20 bg-gradient-to-r from-green-500/10 to-blue-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -737,13 +741,13 @@ export default function BlockchainSolutions() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading organizations that are already using our blockchain 
+                Join leading organizations that are already using our blockchain;
                 solutions to create trust, transparency, and new business opportunities.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -755,9 +759,9 @@ export default function BlockchainSolutions() {
   hove: r:to-blue-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-green-500/25";"
                 >
-                  Start Today
+                  Start Today;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -768,7 +772,7 @@ export default function BlockchainSolutions() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>

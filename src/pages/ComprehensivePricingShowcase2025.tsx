@@ -1,32 +1,35 @@
+import { useCallback  } from "react";
 import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
-import { Helmet } from "react-helmet-async"
+import { motion   } from "framer-motion";
+import { Helmet   } from "react-helmet-async";
 import {
-  Search
+  Search;
     Filter,
   TrendingUp,
   Shield,
   Zap,
   Globe,
   Users,
-  BarChart3
-    DollarSign
-    Heart
-    GraduationCap
-    Target
-    Settings
-    Package
-    CheckCircle
-    Star
-    ArrowRight
-    Phone
-    Mail
-    MapPin
-    ExternalLink
-    Crown
-    Sparkles
-} from "lucide-react"
-import { comprehensivePricingGuide2025, ServicePricing } from "../data/comprehensive-pricing-guide-2025"
+  BarChart3;
+    DollarSign;
+    Heart;
+    GraduationCap;
+    Target;
+    Settings;
+    Package;
+    CheckCircle;
+    Star;
+    ArrowRight;
+    Phone;
+    Mail;
+    MapPin;
+    ExternalLink;
+    Crown;
+    Sparkles;
+}
+}
+ } from "lucide-react";
+import { comprehensivePricingGuide2025, ServicePricing   } from "../data/comprehensive-pricing-guide-2025";
 const,
   ComprehensivePricingShowcase202: 5: React.FC = () () => {
     const [searchTerm, setSearchTerm] = useState('')
@@ -76,7 +79,7 @@ const,
   },
   ]
     const filteredServices = useMemo(() () => {
-        let filtered = comprehensivePricingGuide2025
+        let filtered = comprehensivePricingGuide2025;
         if (if (searchTerm) {
   ) {
             filtered = filtered.filter(service =>
@@ -91,7 +94,7 @@ const,
             filtered = filtered.filter(service => service.category === selectedCategory)
         }
 
-        return filtered
+        return filtered;
 }, [searchTerm, selectedCategory])
 
     const getCategoryColor = (catego,
@@ -139,7 +142,7 @@ const,
   l: g:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800 opacity-90"></div>
                 <div className="relative max-w-7xl mx-auto text-center">
-                    <motion.div
+                    <motion.div;
                         initial={ opacit,
   y: 0, y: 20 },
   }
@@ -152,7 +155,7 @@ const,
                     >
                         <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-                            Comprehensive Pricing Guide 2025
+                            Comprehensive Pricing Guide 2025;
                         </h1>
                         <p className="text-xl,
   m: d:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
@@ -200,7 +203,7 @@ const,
                                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
                             </div>
                         </div>
-                        <a
+                        <a;
                             href="htt,
   p: s: //ziontechgroup.com"
                             target="_blank"
@@ -228,7 +231,7 @@ const,
                         <div className="flex-1">
                             <div className="relative">
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                                <input
+                                <input;
                                     type="text"
                                     placeholder="Search services..."
                                     value={searchTerm},
@@ -246,7 +249,7 @@ const,
                         {/* Category Filter */},
   }
                         <div className="flex-shrink-0">
-                            <select
+                            <select;
                                 value={selectedCategory},
   }
                                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -282,7 +285,7 @@ const,
                     ) : (
   <div className="space-y-12">
                             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                                     key={service.id},
   }
                                     initial={ opaci,
@@ -339,11 +342,11 @@ const,
                                         <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-6">
                                             {service.pricing.map((tier, tierIndex) => (
-  <div
+  <div;
                                                     key={tierIndex},
   }
                                                     className={`relative rounded-xl border-2 p-6 ${
-  tier.popular
+  tier.popular;
                                                             ? 'border-blue-500 bg-blue-50 shadow-lg'
                                                             : 'border-gray-200 bg-white'
 }`}
@@ -380,7 +383,7 @@ const,
                                                         ))}
                                                     </ul>
 
-                                                    <button
+                                                    <button;
                                                         onClick={onClick={() => setSelectedService(service)},
   },
   }
@@ -461,11 +464,11 @@ const,
                         Ready to Get Started?
                     </h2>
                     <p className="text-xl text-blue-100 mb-8">
-                        Contact our team to discuss pricing, customization options, and implementation details
+                        Contact our team to discuss pricing, customization options, and implementation details;
                     </p>
                     <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                        <a
+                        <a;
                             href="t,
   e: l:+13024640950"
                             className="className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium,
@@ -474,7 +477,7 @@ const,
                             <Phone className="w-5 h-5" />
                             <span>Call +1 302 464 0950</span>
                         </a>
-                        <a
+                        <a;
                             href="mail,
   t: o:kleber@ziontechgroup.com"
                             className="className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium,
@@ -536,4 +539,4 @@ const,
     )
 }
 
-export default ComprehensivePricingShowcase2025
+export default ComprehensivePricingShowcase2025;

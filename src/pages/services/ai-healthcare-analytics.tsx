@@ -1,30 +1,34 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Activity
+  Activity;
   Heart,
   Brain,
   Zap,
   CheckCircle,
   Clock,
-  DollarSign
-  Users
-  BarChart3
-  Shield
-  TrendingUp
-  Award
-  Star
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  Stethoscope
-  Pill
-  Microscope
-  Database
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  DollarSign;
+  Users;
+  BarChart3;
+  Shield;
+  TrendingUp;
+  Award;
+  Star;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Stethoscope;
+  Pill;
+  Microscope;
+  Database;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function AIHealthcareAnalytics() {
   const features = [
   {
@@ -79,7 +83,7 @@ export default function AIHealthcareAnalytics() {
         "HIPAA compliance"
 ]
       popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -97,7 +101,7 @@ export default function AIHealthcareAnalytics() {
         "Integration support"
 ]
       popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -115,7 +119,7 @@ export default function AIHealthcareAnalytics() {
         "On-premise deployment"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const benefits = [
@@ -159,7 +163,7 @@ export default function AIHealthcareAnalytics() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI-Powered Healthcare Analytics Platform - Zion Tech Group"
         description="Revolutionary AI platform for healthcare analytics, patient monitoring, and clinical insights. Improve patient outcomes while reducing healthcare costs by 20-35%."
       />
@@ -170,7 +174,7 @@ export default function AIHealthcareAnalytics() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -183,7 +187,7 @@ export default function AIHealthcareAnalytics() {
           >
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI-Powered Healthcare Analytics
+              AI-Powered Healthcare Analytics;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -192,7 +196,7 @@ export default function AIHealthcareAnalytics() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg,
@@ -200,16 +204,16 @@ export default function AIHealthcareAnalytics() {
   hove: r:to-pink-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Transform Your Healthcare
+                Transform Your Healthcare;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="#demo"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-red-500 text-red-400 font-semibold rounded-lg,
   hove: r:bg-red-500 hove,
   r:text-white transition-all duration-300";"
               >
-                Watch Demo
+                Watch Demo;
               </a>
             </div>
           </motion.div>
@@ -235,7 +239,7 @@ export default function AIHealthcareAnalytics() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -267,7 +271,7 @@ export default function AIHealthcareAnalytics() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Healthcare Excellence
+              Powerful Features for Healthcare Excellence;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Everything you need to deliver better patient care and achieve operational excellence in healthcare.
@@ -278,7 +282,7 @@ export default function AIHealthcareAnalytics() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -315,7 +319,7 @@ export default function AIHealthcareAnalytics() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Specialty-Specific Solutions
+              Specialty-Specific Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Tailored AI analytics for different medical specialties and healthcare delivery models.
@@ -325,7 +329,7 @@ export default function AIHealthcareAnalytics() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -361,7 +365,7 @@ export default function AIHealthcareAnalytics() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your healthcare organization size and analytics needs.
@@ -371,7 +375,7 @@ export default function AIHealthcareAnalytics() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -385,7 +389,7 @@ export default function AIHealthcareAnalytics() {
   a: y: index * 0.1 },
   }
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
-  plan.popular 
+  plan.popular;
                     ? 'border-red-500 ring-2 ring-red-500/20' 
                     : 'border-slate-700'
 } hov,
@@ -394,7 +398,7 @@ export default function AIHealthcareAnalytics() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -417,11 +421,11 @@ export default function AIHealthcareAnalytics() {
                   ))}
                 </ul>
                 
-                <a
+                <a;
                   href="htt,
   p: s: //ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white,
   hove: r:from-red-700,
   hove: r:to-pink-700'
@@ -429,7 +433,7 @@ export default function AIHealthcareAnalytics() {
   r:bg-slate-600'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -445,7 +449,7 @@ export default function AIHealthcareAnalytics() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -457,7 +461,7 @@ export default function AIHealthcareAnalytics() {
   }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Market-Leading Healthcare Solution
+                Market-Leading Healthcare Solution;
               </h2>
               <div className="space-y-6">
                 <div className="flex items-center">
@@ -491,7 +495,7 @@ export default function AIHealthcareAnalytics() {
               </div>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -533,7 +537,7 @@ export default function AIHealthcareAnalytics() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -553,7 +557,7 @@ export default function AIHealthcareAnalytics() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg,
@@ -561,10 +565,10 @@ export default function AIHealthcareAnalytics() {
   hove: r:to-pink-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Schedule a Demo
+                Schedule a Demo;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-red-500 text-red-400 font-semibold rounded-lg,
@@ -572,7 +576,7 @@ export default function AIHealthcareAnalytics() {
   r:text-white transition-all duration-300";"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </motion.div>
@@ -594,7 +598,7 @@ export default function AIHealthcareAnalytics() {
               <a href="t,
   e: l:+13024640950" className="text-gray-300,
   hove: r:text-red-400 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -603,7 +607,7 @@ export default function AIHealthcareAnalytics() {
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-gray-300,
   hove: r:text-red-400 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -611,18 +615,18 @@ export default function AIHealthcareAnalytics() {
               <p className="text-white font-semibold mb-2">Address</p>
               <p className="text-gray-300">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </p>
             </div>
           </div>
           <div className="mt-8">
-            <a
+            <a;
               href="htt,
   p: s://ziontechgroup.com"
               className="className="inline-flex items-center text-red-400 hove,
   r:text-red-300 transition-colors";"
             >
-              Visit our website
+              Visit our website;
               <ExternalLink className="ml-2 w-4 h-4" />
             </a>
           </div>

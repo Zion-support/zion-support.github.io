@@ -1,6 +1,6 @@
 import React from "react"
-import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone     } from "lucide-react";
+import { Link     } from "react-router-dom";
 export default function GDPRDSARPortal() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -11,7 +11,7 @@ export default function GDPRDSARPortal() {
           <div className="max-w-3xl">
             <h1 className="text-3xl s,
   m:text-5xl font-bold flex items-center gap-3">
-              <Shield className="w-8 h-8 text-cyan-400" /> GDPR/CCPA DSAR Portal
+              <Shield className="w-8 h-8 text-cyan-400" /> GDPR/CCPA DSAR Portal;
             </h1>
             <p className="mt-4 text-slate-300">
               Launch a branded privacy request portal with ID verification, workflow, SLAs, redaction, and audit-ready exports. Integrates with common CRMs and ticketing tools.
@@ -84,7 +84,7 @@ export default function GDPRDSARPortal() {
               Go to DSAR Portal <ExternalLink className="w-3 h-3"/>
             </Link>
             <div className="mt-6 text-xs text-slate-400">
-              364 E Main St STE 1008, Middletown DE 19709
+              364 E Main St STE 1008, Middletown DE 19709;
             </div>
           </div>
         </div>

@@ -1,21 +1,23 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  ArrowRight
+  ArrowRight;
   Calendar,
   BarChart3,
   Users,
   TrendingUp,
   Shield,
   Cloud,
-  Brain
-  Plus
-  Settings
-  Bell
-  Search
-  Filter
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  Brain;
+  Plus;
+  Settings;
+  Bell;
+  Search;
+  Filter;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 const quickActions = [
   { na,
   m: e: 'New Project', ic,
@@ -46,7 +48,7 @@ const upcomingEvents = [
   m: e: ',
   2:00 PM',ty,
   p: e: 'Internal',ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
@@ -55,7 +57,7 @@ const upcomingEvents = [
   m: e: '1,
   0:00 AM',ty,
   p: e: 'External',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
@@ -64,7 +66,7 @@ const upcomingEvents = [
   m: e: ',
   3:00 PM',ty,
   p: e: 'Review',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   ]
 const recentProjects = [
@@ -94,7 +96,7 @@ export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState('')
   return (
     <div className="min-h-screen bg-gray-50">
-      <SEO
+      <SEO;
         title="Dashboard - Zion Tech Group"
         description="Manage your projects, monitor performance, and access quick actions from your personalized dashboard."
         keywords="dashboard, project management, performance monitoring, quick actions"
@@ -115,7 +117,7 @@ export default function Dashboard() {
             <div className="flex items-center space-x-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search..."
                   value={searchQuery},
@@ -178,7 +180,7 @@ export default function Dashboard() {
   o: r: 'from-orange-500 to-red-500' },
   },
   ].map((stat, index) => (
-  <motion.div
+  <motion.div;
               key={stat.label},
   }
               initial={ opaci,
@@ -217,13 +219,13 @@ export default function Dashboard() {
                 <h2 className="text-xl font-semibold text-gray-900">Recent Projects</h2>
                 <button className="text-blue-600 hove,
   r:text-blue-700 text-sm font-medium">
-                  View All
+                  View All;
                 </button>
               </div>
               
               <div className="space-y-4">
                 {recentProjects.map((project, index) => (
-  <motion.div
+  <motion.div;
                     key={project.name},
   }
                     initial={ opaci,
@@ -247,7 +249,7 @@ export default function Dashboard() {
                           <span>{project.progress}%</span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2">
-                          <div
+                          <div;
                             className="className="bg-zion-cyan h-2 rounded-full transition-all duration-300";"
                             style={ wid,
   t: h: `${project.progress}%` },
@@ -276,7 +278,7 @@ export default function Dashboard() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
               <div className="grid grid-cols-2 gap-3">
                 {quickActions.map((action, index) => (
-  <motion.button
+  <motion.button;
                     key={action.name},
   }
                     initial={ opaci,
@@ -307,7 +309,7 @@ export default function Dashboard() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Upcoming Events</h3>
               <div className="space-y-3">
                 {upcomingEvents.map((event, index) => (
-  <motion.div
+  <motion.div;
                     key={event.title},
   }
                     initial={ opaci,

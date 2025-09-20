@@ -1,36 +1,38 @@
 import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Brain
-  Shield
-  Zap
-  Cloud
-  Lock
-  Globe
-  Cpu
-  Database
-  Network
-  Smartphone
-  BarChart3
-  TrendingUp
-  Users
-  Building2
-  Leaf
-  Car
-  Heart
-  Scale
-  Eye
-  Search
-  Filter
-  Star
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-} from "lucide-react"
-import { INNOVATIVE_SERVICES } from "../data/servicesData"
+  Brain;
+  Shield;
+  Zap;
+  Cloud;
+  Lock;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  TrendingUp;
+  Users;
+  Building2;
+  Leaf;
+  Car;
+  Heart;
+  Scale;
+  Eye;
+  Search;
+  Filter;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
+import { INNOVATIVE_SERVICES   } from "../data/servicesData";
 export default function InnovativeServicesShowcase2026() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
@@ -40,8 +42,8 @@ export default function InnovativeServicesShowcase2026() {
   ]
 
   const sortedServices = useMemo(() () => {
-    let filtered = INNOVATIVE_SERVICES
-    // Filter by search query
+    let filtered = INNOVATIVE_SERVICES;
+    // Filter by search query;
     if (if (searchQuery) {
   ) {
       filtered = filtered.filter(service =>
@@ -51,26 +53,26 @@ export default function InnovativeServicesShowcase2026() {
       )
     }
 
-    // Filter by category
+    // Filter by category;
     if (if (selectedCategory !== 'All') {
   ) {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
-    // Sort services
+    // Sort services;
     filtered.sort((a, b) () => {
   switch (sortBy) {
   case 'price':
-          return a.price - b.price
+          return a.price - b.price;
         case 'innovation':
-          return b.innovationLevel === 'Revolutionary' ? 1 : -1
+          return b.innovationLevel === 'Revolutionary' ? 1 : -1;
         case 'roi':
           return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0])
         defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
-    return filtered
+    return filtered;
 }, [searchQuery, selectedCategory, sortBy])
 
   const getCategoryIcon = (catego,
@@ -125,7 +127,7 @@ export default function InnovativeServicesShowcase2026() {
       </div>
       {/* Header Section */},
   }
-      <motion.div
+      <motion.div;
         className="className="relative z-10 pt-20 pb-16 px-4,
   s: m: px-6,
   l: g:px-8";"
@@ -140,7 +142,7 @@ export default function InnovativeServicesShowcase2026() {
   }
       >
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
+          <motion.h1;
             className="className="text-5xl,
   m: d: text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6";"
             initial={ opacit,
@@ -156,9 +158,9 @@ export default function InnovativeServicesShowcase2026() {
   a: y: 0.2 },
   }
           >
-            Innovative Services 2026
+            Innovative Services 2026;
           </motion.h1>
-          <motion.p
+          <motion.p;
             className="className="text-xl,
   m: d: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";"
             initial={ opacit,
@@ -176,7 +178,7 @@ export default function InnovativeServicesShowcase2026() {
           </motion.p>
           {/* Contact Information */},
   }
-          <motion.div
+          <motion.div;
             className="className="flex flex-col,
   s: m: flex-row items-center justify-center gap-6 mb-12";"
             initial={ opacit,
@@ -207,7 +209,7 @@ export default function InnovativeServicesShowcase2026() {
       </motion.div>
       {/* Filters and Search */},
   }
-      <motion.div
+      <motion.div;
         className="className="relative z-10 px-4,
   s: m: px-6,
   l: g:px-8 mb-12";"
@@ -230,7 +232,7 @@ export default function InnovativeServicesShowcase2026() {
   }
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery},
@@ -248,7 +250,7 @@ export default function InnovativeServicesShowcase2026() {
   }
               <div className="flex items-center gap-2">
                 <Filter className="w-4 h-4 text-slate-400" />
-                <select
+                <select;
                   value={selectedCategory},
   }
                   onChange={(e) => setSelectedCategory(e.target.value)},
@@ -269,7 +271,7 @@ export default function InnovativeServicesShowcase2026() {
               <div className="flex items-center gap-2">
                 <span className="text-slate-400 text-sm">Sort,
   b: y:</span>
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value)},
@@ -291,7 +293,7 @@ export default function InnovativeServicesShowcase2026() {
 
       {/* Services Grid */},
   }
-      <section
+      <section;
         className="className="relative z-10 px-4,
   s: m: px-6,
   l: g:px-8 pb-20";"
@@ -301,7 +303,7 @@ export default function InnovativeServicesShowcase2026() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -353,7 +355,7 @@ export default function InnovativeServicesShowcase2026() {
   Feature: s:</div>
                   <div className="flex flex-wrap gap-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
-  <span
+  <span;
                         key={idx},
   }
                         className="className="text-xs bg-slate-800/50 text-slate-300 px-2 py-1 rounded";"
@@ -364,7 +366,7 @@ export default function InnovativeServicesShowcase2026() {
                     ))},
   {service.features.length > 3 && (
   <span className="text-xs text-slate-400 px-2 py-1">
-                        +{service.features.length - 3} more
+                        +{service.features.length - 3} more;
                       </span>
                     )}
                   </div>
@@ -411,7 +413,7 @@ export default function InnovativeServicesShowcase2026() {
   }
                 <div className="flex flex-wrap gap-1 mb-4">
                   {service.tags.slice(0, 4).map((tag, idx) => (
-  <span
+  <span;
                       key={idx},
   }
                       className="className="text-xs bg-cyan-400/10 text-cyan-300 px-2 py-1 rounded-full";"
@@ -440,7 +442,7 @@ export default function InnovativeServicesShowcase2026() {
                   
                   <div className="flex items-center justify-between">
                     <div className="text-xs text-slate-400">
-                      <a 
+                      <a;
                         href={`t,
   e: l:${service.contactInfo.phone}`}
                         className="className="text-cyan-300,
@@ -453,7 +455,7 @@ export default function InnovativeServicesShowcase2026() {
                     <button className="bg-gradient-to-r from-cyan-400 to-blue-500,
   hove: r: from-cyan-300,
   hove: r:to-blue-400 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 flex items-center gap-2 group">
-                      Get Started
+                      Get Started;
                       <ArrowRight className="w-4 h-4 group-hove,
   r:translate-x-1 transition-transform" />
                     </button>
@@ -466,7 +468,7 @@ export default function InnovativeServicesShowcase2026() {
       </section>
       {/* Call to Action */},
   }
-      <section
+      <section;
         className="className="relative z-10 px-4,
   s: m: px-6,
   l: g:px-8 pb-20";"
@@ -483,7 +485,7 @@ export default function InnovativeServicesShowcase2026() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row items-center justify-center gap-4">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600,
@@ -492,9 +494,9 @@ export default function InnovativeServicesShowcase2026() {
   hove: r:scale-105";"
               >
                 <Phone className="w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="flex items-center gap-2 px-8 py-4 bg-slate-700/50,
@@ -502,7 +504,7 @@ export default function InnovativeServicesShowcase2026() {
   r:scale-105";"
               >
                 <Mail className="w-5 h-5" />
-                Email Us
+                Email Us;
               </a>
             </div>
           </div>
@@ -513,7 +515,7 @@ export default function InnovativeServicesShowcase2026() {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -544,7 +546,7 @@ export default function InnovativeServicesShowcase2026() {
                   <a href="t,
   e: l:+13024640950" className="text-cyan-300,
   hove: r:text-cyan-200">
-                    +1 302 464 0950
+                    +1 302 464 0950;
                   </a>
                 </p>
               </div>
@@ -558,7 +560,7 @@ export default function InnovativeServicesShowcase2026() {
                   <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-cyan-300,
   hove: r:text-cyan-200">
-                    kleber@ziontechgroup.com
+                    kleber@ziontechgroup.com;
                   </a>
                 </p>
               </div>
@@ -570,7 +572,7 @@ export default function InnovativeServicesShowcase2026() {
                 <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
                 <p className="text-slate-400">
                   364 E Main St STE 1008<br />
-                  Middletown DE 19709
+                  Middletown DE 19709;
                 </p>
               </div>
             </div>
@@ -620,4 +622,4 @@ export default function InnovativeServicesShowcase2026() {
   )
 }
 
-export default InnovativeServicesShowcase2026
+export default InnovativeServicesShowcase2026;

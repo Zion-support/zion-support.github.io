@@ -1,8 +1,8 @@
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import React, { Suspense, useState, useEffect, useMemo, useCallback }  from "react";
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  CheckCircle
+  CheckCircle;
   ArrowRight,
   Star,
   Zap,
@@ -40,13 +40,16 @@ import {
   Clock,
   Phone,
   Mail,
-  TrendingUp 
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
-import { HeroSection } from "@/components/HeroSection"
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner"
-import { ErrorBoundary } from "@/components/ui/ErrorBoundary"
-// Lazy load heavy components
+  TrendingUp;
+}
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+import { HeroSection   } from "@/components/HeroSection";
+import { LoadingSpinner   } from "@/components/ui/LoadingSpinner";
+import { ErrorBoundary   } from "@/components/ui/ErrorBoundary";
+// Lazy load heavy components;
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"))
 const BenefitsSection = React.lazy(() => import("@/components/BenefitsSection"))
 const HowItWorksSection = React.lazy(() => import("@/components/HowItWorksSection"))
@@ -76,7 +79,10 @@ interface StatItem {
   e: l: string,descripti,
   o: n: string,ic,
   o: n: React.ComponentType<any>,col,
-  o: r: string
+  o: r: string;
+}
+}
+}
 }
 
 interface AIService {
@@ -86,7 +92,10 @@ interface AIService {
   o: n: React.ComponentType<any>,featur,
   e: s: string[],hr,
   e: f: string,col,
-  o: r: string
+  o: r: string;
+}
+}
+}
 }
 
 interface ServiceCategory {
@@ -99,6 +108,9 @@ interface ServiceCategory {
   o: r: string,servic,
   e: s: string[[],
   ],
+}
+}
+}
   }
 
 interface EmergingTech {
@@ -108,7 +120,10 @@ interface EmergingTech {
   o: n: React.ComponentType<any>,hr,
   e: f: string,pri,
   c: e: string,catego,
-  r: y: string
+  r: y: string;
+}
+}
+}
 }
 
 interface MicroSaasService {
@@ -118,7 +133,10 @@ interface MicroSaasService {
   o: n: React.ComponentType<any>,hr,
   e: f: string,pri,
   c: e: string,catego,
-  r: y: string
+  r: y: string;
+}
+}
+}
 }
 
 export default function Home() {
@@ -126,7 +144,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() () => {
-    // Simulate loading time for better UX
+    // Simulate loading time for better UX;
 const timer = setTimeout(() () => {
       setIsLoading(false)
     }, 1000)
@@ -370,14 +388,14 @@ const timer = setTimeout(() () => {
         <div className="text-center text-white">
           <div className="text-red-500 text-xl mb-4">Something went wrong</div>
           <p className="text-gray-300">{error}</p>
-          <button 
+          <button;
             onClick={onClick={() => setError(null)},
   },
   }
             className="className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg,
   hove: r: bg-blue-700 transition-colors";"
           >
-            Try Again
+            Try Again;
           </button>
         </div>
       </div>
@@ -386,7 +404,7 @@ const timer = setTimeout(() () => {
 
   return (
     <ErrorBoundary onError={handleError}>
-      <SEO 
+      <SEO;
         title="Zion Tech Group - AI-Powered Business Solutions"
         description="Transform your business with cutting-edge AI solutions, cloud infrastructure, and digital transformation services. Expert IT consulting for the modern enterprise."
         keywords="AI solutions, cloud computing, digital transformation, IT consulting, cybersecurity, machine learning, business intelligence"
@@ -399,7 +417,7 @@ const timer = setTimeout(() () => {
 
         {/* Stats Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-4,
   s: m: px-6,
   l: g:px-8 bg-slate-800/30";"
@@ -421,7 +439,7 @@ const timer = setTimeout(() () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-  <motion.div
+  <motion.div;
                   key={stat.label},
   }
                   className="className="text-center";"
@@ -453,7 +471,7 @@ const timer = setTimeout(() () => {
 
         {/* AI Services Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-4,
   s: m: px-6,
   l: g:px-8";"
@@ -473,10 +491,10 @@ const timer = setTimeout(() () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
-                AI-Powered Solutions
+                AI-Powered Solutions;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage the power of artificial intelligence to transform your business operations and drive innovation
+                Leverage the power of artificial intelligence to transform your business operations and drive innovation;
               </p>
             </div>
             
@@ -484,7 +502,7 @@ const timer = setTimeout(() () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.title},
   }
                   className="className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50,
@@ -519,7 +537,7 @@ const timer = setTimeout(() () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <Link;
                     to={service.href},
   }
                     className="className="inline-flex items-center text-zion-cyan,
@@ -535,7 +553,7 @@ const timer = setTimeout(() () => {
 
         {/* Service Categories */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-4,
   s: m: px-6,
   l: g:px-8 bg-slate-800/30";"
@@ -555,10 +573,10 @@ const timer = setTimeout(() () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
-                Our Service Categories
+                Our Service Categories;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions across all major domains
+                Comprehensive technology solutions across all major domains;
               </p>
             </div>
             
@@ -566,7 +584,7 @@ const timer = setTimeout(() () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
                   key={category.name},
   }
                   className="className="group cursor-pointer";"
@@ -609,7 +627,7 @@ const timer = setTimeout(() () => {
 
         {/* Emerging Technology Solutions */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-4,
   s: m: px-6,
   l: g:px-8";"
@@ -629,10 +647,10 @@ const timer = setTimeout(() () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
-                Emerging Technology Solutions
+                Emerging Technology Solutions;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Stay ahead of the curve with our cutting-edge technology platforms
+                Stay ahead of the curve with our cutting-edge technology platforms;
               </p>
             </div>
             
@@ -640,7 +658,7 @@ const timer = setTimeout(() () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
               {emergingTech.map((tech, index) => (
-  <motion.div
+  <motion.div;
                   key={tech.title},
   }
                   className="className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50,
@@ -683,7 +701,7 @@ const timer = setTimeout(() () => {
 
         {/* Micro-SaaS Solutions */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-4,
   s: m: px-6,
   l: g:px-8 bg-slate-800/30";"
@@ -703,17 +721,17 @@ const timer = setTimeout(() () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
-                Micro-SaaS Solutions
+                Micro-SaaS Solutions;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Affordable, specialized software solutions for growing businesses
+                Affordable, specialized software solutions for growing businesses;
               </p>
             </div>
             
             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
               {microSaasServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.title},
   }
                   className="className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50,

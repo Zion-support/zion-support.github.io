@@ -1,17 +1,19 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Shield
-  Lock
-  CheckCircle
-  AlertTriangle
-  Users
-  Award
-  FileText
-  Globe
-  Server
-  Eye
-} from "lucide-react"
+  Shield;
+  Lock;
+  CheckCircle;
+  AlertTriangle;
+  Users;
+  Award;
+  FileText;
+  Globe;
+  Server;
+  Eye;
+}
+}
+ } from "lucide-react";
 const securityFeatures = [
   {
   tit,
@@ -101,7 +103,7 @@ export function SecurityComplianceSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="className="text-center mb-16";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -118,7 +120,7 @@ export function SecurityComplianceSection() {
         >
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-4">
-            Security & Compliance
+            Security & Compliance;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Enterprise-grade security with industry-leading compliance certifications.
@@ -132,7 +134,7 @@ export function SecurityComplianceSection() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6 mb-16">
           {securityFeatures.map((feature, index) => (
-  <motion.div
+  <motion.div;
               key={feature.title},
   }
               className="className="bg-slate-800 border border-slate-700 rounded-xl p-6,
@@ -173,7 +175,7 @@ export function SecurityComplianceSection() {
 
         {/* Compliance Features */},
   }
-        <motion.div 
+        <motion.div;
           className="className="mb-16";"
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -190,7 +192,7 @@ export function SecurityComplianceSection() {
   }
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
-            Comprehensive Security Features
+            Comprehensive Security Features;
           </h3>
           
           <div className="grid grid-cols-1,
@@ -216,7 +218,7 @@ export function SecurityComplianceSection() {
 
         {/* Security Metrics */},
   }
-        <motion.div 
+        <motion.div;
           className="className="mb-16";"
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -234,7 +236,7 @@ export function SecurityComplianceSection() {
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
-              Security Performance Metrics
+              Security Performance Metrics;
             </h3>
             
             <div className="grid grid-cols-1,
@@ -261,7 +263,7 @@ export function SecurityComplianceSection() {
 
         {/* Call to Action */},
   }
-        <motion.div 
+        <motion.div;
           className="className="text-center";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -279,7 +281,7 @@ export function SecurityComplianceSection() {
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
-              Secure Your Business Today
+              Secure Your Business Today;
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Get enterprise-grade security and compliance without the complexity.
@@ -289,13 +291,13 @@ export function SecurityComplianceSection() {
   s: m: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600,
   hove: r:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Security Assessment
+                Security Assessment;
                 <Shield className="ml-2 h-5 w-5" />
               </button>
               <button className="inline-flex items-center px-6 py-3 border border-white text-white,
   hove: r:bg-white hove,
   r:text-blue-600 rounded-lg font-medium transition-colors duration-200">
-                Compliance Review
+                Compliance Review;
                 <FileText className="ml-2 h-5 w-5" />
               </button>
             </div>

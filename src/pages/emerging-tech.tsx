@@ -1,20 +1,22 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Atom
+  Atom;
   Brain,
   Network,
   Satellite,
   TrendingUp,
-  Leaf
-  Zap
-  Shield
-  Cloud
-  Globe
-  Rocket
-  Star
-} from "lucide-react"
-import { Link } from "react-router-dom"
+  Leaf;
+  Zap;
+  Shield;
+  Cloud;
+  Globe;
+  Rocket;
+  Star;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
 const,
   EmergingTec: h: React.FC = () () => {
   const technologies = [
@@ -94,7 +96,7 @@ const,
         <div className="relative max-w-7xl mx-auto px-4,
   s: m:px-6,
   l: g:px-8 pt-32 pb-16">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -113,7 +115,7 @@ const,
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Emerging Technologies
+              Emerging Technologies;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Discover the future of technology with Zion Tech Group's cutting-edge emerging technology solutions. 
@@ -132,7 +134,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
               key={tech.title},
   }
               initial={ opaci,
@@ -174,7 +176,7 @@ const,
                 </ul>
               </div>
               
-              <Link
+              <Link;
                 to={tech.path},
   }
                 className="className="inline-flex items-center space-x-2 text-cyan-400,
@@ -194,7 +196,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -215,22 +217,22 @@ const,
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-600 transition-all duration-200,
   transform: hover:scale-105";"
             >
-              Get Started
+              Get Started;
             </Link>
-            <Link
+            <Link;
               to="/services"
               className="className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-200";"
             >
-              View All Services
+              View All Services;
             </Link>
           </div>
         </motion.div>
@@ -238,4 +240,4 @@ const,
     </div>
   )
 }
-export default EmergingTech
+export default EmergingTech;

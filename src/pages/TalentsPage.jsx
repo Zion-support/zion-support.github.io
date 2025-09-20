@@ -1,8 +1,8 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime"
-import { Header } from "@/components/header/Header"
-import { Footer } from "@/components/Footer"
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment   } from "react/jsx-runtime";
+import { Header   } from "@/components/header/Header";
+import { Footer   } from "@/components/Footer";
 import SEO from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
+import { GradientHeading   } from "@/components/GradientHeading";
 export default function TalentsPage() {
   return (_jsxs(_Fragment, { childr,
   e: n: [_jsx(SEO, { tit,

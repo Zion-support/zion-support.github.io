@@ -1,8 +1,8 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  BookOpen
+  BookOpen;
   Target,
   FileText,
   Users,
@@ -16,44 +16,46 @@ import {
   Star,
   Clock,
   User,
-  Tag
-  TrendingUp
-  Brain
-  Shield
-  Search
-  Filter
-  Bookmark
-  Share2
-  Eye
-  Heart
-  MessageCircle
-  Zap
-  Globe
-  Rocket
-  Cpu
-  Database
-  Network
-  Lock
-  Award
-  BarChart3
-  Leaf
-  Building
-  Cloud
-  Server
-  Target as TargetIcon
-  Users as UsersIcon
-  Code as CodeIcon
-  HelpCircle as HelpCircleIcon
-  Calendar as CalendarIcon
-  Download as DownloadIcon
-  Play as PlayIcon
-  ExternalLink as ExternalLinkIcon
-  Star as StarIcon
-  Clock as ClockIcon
-  User as UserIcon
-  Tag as TagIcon
-} from "lucide-react"
-import { Link } from "react-router-dom"
+  Tag;
+  TrendingUp;
+  Brain;
+  Shield;
+  Search;
+  Filter;
+  Bookmark;
+  Share2;
+  Eye;
+  Heart;
+  MessageCircle;
+  Zap;
+  Globe;
+  Rocket;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Award;
+  BarChart3;
+  Leaf;
+  Building;
+  Cloud;
+  Server;
+  Target as TargetIcon;
+  Users as UsersIcon;
+  Code as CodeIcon;
+  HelpCircle as HelpCircleIcon;
+  Calendar as CalendarIcon;
+  Download as DownloadIcon;
+  Play as PlayIcon;
+  ExternalLink as ExternalLinkIcon;
+  Star as StarIcon;
+  Clock as ClockIcon;
+  User as UserIcon;
+  Tag as TagIcon;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function Resources() {
   const resources = [
   {
@@ -267,7 +269,7 @@ export default function Resources() {
   e: f: '/pricing-guide-2030',ty,
   p: e: 'Guide',featur,
   e: d: true,ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
@@ -276,7 +278,7 @@ export default function Resources() {
   e: f: '/services',ty,
   p: e: 'Overview',featur,
   e: d: true,ic,
-  o: n: Brain
+  o: n: Brain;
 },
   {
   tit,
@@ -285,7 +287,7 @@ export default function Resources() {
   e: f: '/security',ty,
   p: e: 'Framework',featur,
   e: d: true,ic,
-  o: n: Shield
+  o: n: Shield;
 },
   ]
   const upcomingEvents = [
@@ -364,7 +366,7 @@ export default function Resources() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Resources - Zion Tech Group"
         description="Access our comprehensive library of resources including blog posts, case studies, white papers, webinars, documentation, and support materials to help you succeed with technology."
       />
@@ -382,11 +384,11 @@ export default function Resources() {
             </div>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Knowledge
+              Knowledge;
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 bg-clip-text text-transparent"> Hub</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Access our comprehensive library of resources, insights, and tools to accelerate your 
+              Access our comprehensive library of resources, insights, and tools to accelerate your;
               technology journey and stay ahead of the curve.
             </p>
             
@@ -395,7 +397,7 @@ export default function Resources() {
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search resources, articles, guides..."
                   className="className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-gray-400,
@@ -407,7 +409,7 @@ export default function Resources() {
                 <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg,
   hove: r:from-purple-600 hove,
   r:to-pink-600 transition-all duration-300">
-                  Search
+                  Search;
                 </button>
               </div>
             </div>
@@ -438,7 +440,7 @@ export default function Resources() {
   o: n: Users },
   },
   ].map((stat, index) => (
-  <motion.div
+  <motion.div;
                   key={stat.label},
   }
                   initial={ opaci,
@@ -481,17 +483,17 @@ export default function Resources() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Featured Resources
+              Featured Resources;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Start with these essential resources to get the most value from our platform
+              Start with these essential resources to get the most value from our platform;
             </p>
           </div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {featuredResources.map((resource, index) => (
-  <motion.div
+  <motion.div;
                 key={resource.title},
   }
                 initial={ opaci,
@@ -524,13 +526,13 @@ export default function Resources() {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-purple-400 font-medium">{resource.type}</span>
-                  <Link
+                  <Link;
                     to={resource.href},
   }
                     className="className="inline-flex items-center gap-2 text-purple-400,
   hove: r:text-purple-300 font-medium transition-colors";"
                   >
-                    View Resource
+                    View Resource;
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -546,10 +548,10 @@ export default function Resources() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Browse by Category
+              Browse by Category;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our resources organized by topic and type to find exactly what you need
+              Explore our resources organized by topic and type to find exactly what you need;
             </p>
           </div>
 
@@ -557,7 +559,7 @@ export default function Resources() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {resources.map((category, index) => (
-  <motion.div
+  <motion.div;
                 key={category.name},
   }
                 initial={ opaci,
@@ -581,7 +583,7 @@ export default function Resources() {
                 {category.featured && (
   <div className="absolute -top-3 left-6">
                     <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                      Featured
+                      Featured;
                     </div>
                   </div>
                 )}
@@ -607,7 +609,7 @@ export default function Resources() {
                   ))}
                 </div>
                 
-                <Link
+                <Link;
                   to={`/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
                   className="className="inline-flex items-center gap-2 text-purple-400,
   hove: r:text-purple-300 font-medium transition-colors";"
@@ -628,17 +630,17 @@ export default function Resources() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Upcoming Events
+              Upcoming Events;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join our live events and webinars to learn from industry experts
+              Join our live events and webinars to learn from industry experts;
             </p>
           </div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {upcomingEvents.map((event, index) => (
-  <motion.div
+  <motion.div;
                 key={event.title},
   }
                 initial={ opaci,
@@ -683,13 +685,13 @@ export default function Resources() {
                   </div>
                 </div>
                 
-                <Link
+                <Link;
                   to={event.href},
   }
                   className="className="inline-flex items-center gap-2 text-orange-400,
   hove: r:text-orange-300 font-medium transition-colors";"
                 >
-                  Register Now
+                  Register Now;
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
@@ -704,17 +706,17 @@ export default function Resources() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quick Access
+              Quick Access;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find what you need quickly with these direct links to our most popular resources
+              Find what you need quickly with these direct links to our most popular resources;
             </p>
           </div>
 
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-4">
             {quickLinks.map((link, index) => (
-  <motion.div
+  <motion.div;
                 key={link.name},
   }
                 initial={ opaci,
@@ -731,7 +733,7 @@ export default function Resources() {
   c: e: true },
   }
               >
-                <Link
+                <Link;
                   to={link.href},
   }
                   className="className="block p-6 rounded-xl bg-slate-800/50,
@@ -765,7 +767,7 @@ export default function Resources() {
       <section className="py-20">
         <div className="container-responsive">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -781,7 +783,7 @@ export default function Resources() {
             >
               <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                Stay Updated
+                Stay Updated;
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Get the latest resources, insights, and updates delivered directly to your inbox. 
@@ -790,7 +792,7 @@ export default function Resources() {
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
+                <input;
                   type="email"
                   placeholder="Enter your email"
                   className="className="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400,
@@ -803,7 +805,7 @@ export default function Resources() {
   hove: r:from-purple-600,
   hove: r:to-pink-600 transition-all duration-300 transform hove,
   r:scale-105">
-                  Subscribe
+                  Subscribe;
                 </button>
               </div>
               
@@ -819,7 +821,7 @@ export default function Resources() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -843,7 +845,7 @@ export default function Resources() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600,
   hove: r:from-purple-600,
@@ -851,16 +853,16 @@ export default function Resources() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-purple-500/25";"
               >
-                Contact Our Team
+                Contact Our Team;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/docs"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400,
   hove: r:bg-purple-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Browse Documentation
+                Browse Documentation;
               </Link>
             </div>
           </motion.div>

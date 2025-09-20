@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: ULTIMATE_REAL_SERVICES_2025: ProductListing[] = [
   {
@@ -808,79 +808,79 @@ export const const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   ic,
   o: n: "🤖",descripti,
   o: n: "Advanced artificial intelligence solutions and development platforms",cou,
-  n: t: 4
+  n: t: 4;
 }
   "Cybersecurity": {
   ic,
   o: n: "🔒",descripti,
   o: n: "Comprehensive security solutions and threat protection",cou,
-  n: t: 2
+  n: t: 2;
 }
   "Cloud Services": {
   ic,
   o: n: "☁️",descripti,
   o: n: "Cloud infrastructure and migration solutions",cou,
-  n: t: 1
+  n: t: 1;
 }
   "Blockchain": {
   ic,
   o: n: "⛓️",descripti,
   o: n: "Distributed ledger technology and smart contract solutions",cou,
-  n: t: 1
+  n: t: 1;
 }
   "Quantum Computing": {
   ic,
   o: n: "⚛️",descripti,
   o: n: "Quantum computing platforms and quantum-resistant solutions",cou,
-  n: t: 2
+  n: t: 2;
 }
   "IoT": {
   ic,
   o: n: "📡",descripti,
   o: n: "Internet of Things and edge computing solutions",cou,
-  n: t: 1
+  n: t: 1;
 }
   "Compliance": {
   ic,
   o: n: "📋",descripti,
   o: n: "Regulatory compliance and data governance solutions",cou,
-  n: t: 1
+  n: t: 1;
 }
   "DevOps": {
   ic,
   o: n: "🔄",descripti,
   o: n: "Development operations and microservices management",cou,
-  n: t: 1
+  n: t: 1;
 }
   "Fintech": {
   ic,
   o: n: "💳",descripti,
   o: n: "Financial technology and payment processing solutions",cou,
-  n: t: 1
+  n: t: 1;
 }
   "Healthcare AI": {
   ic,
   o: n: "🏥",descripti,
   o: n: "AI-powered healthcare and medical diagnostic solutions",cou,
-  n: t: 1
+  n: t: 1;
 }
   "Smart Cities": {
   ic,
   o: n: "🏙️",descripti,
   o: n: "Smart city infrastructure and urban management solutions",cou,
-  n: t: 1
+  n: t: 1;
 }
   "Augmented Reality": {
   ic,
   o: n: "👁️",descripti,
   o: n: "AR/VR solutions and immersive technology platforms",cou,
-  n: t: 1
+  n: t: 1;
 }
   "Logistics AI": {
   ic,
   o: n: "🚚",descripti,
   o: n: "AI-powered logistics and supply chain automation",cou,
-  n: t: 1
+  n: t: 1;
 },
   }
 export const const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {

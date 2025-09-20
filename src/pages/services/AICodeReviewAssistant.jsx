@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Helmet } from "react-helmet-async"
-import { motion } from "framer-motion"
-import { CheckCircle, Shield, Zap, TrendingUp, GitFork, BarChart3, Clock, Star, ArrowRight } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Helmet     } from "react-helmet-async";
+import { motion     } from "framer-motion";
+import { CheckCircle, Shield, Zap, TrendingUp, GitFork, BarChart3, Clock, Star, ArrowRight     } from "lucide-react";
 const AICodeReviewAssistant = () () => {
     const features = [
   {
@@ -74,7 +74,7 @@ const AICodeReviewAssistant = () () => {
                 "Email support"
 ]
             popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -91,7 +91,7 @@ const AICodeReviewAssistant = () () => {
                 "Team analytics"
 ]
             popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -108,7 +108,7 @@ const AICodeReviewAssistant = () () => {
                 "SLA guarantees"
 ]
             popula,
-  r: false
+  r: false;
 },
   ]
     const integrations = [
@@ -160,9 +160,9 @@ const AICodeReviewAssistant = () () => {
   o: n: 0.6, del,
   a: y: 0.2 },
   }>
-              AI-Powered
+              AI-Powered;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Code Review Assistant
+                {" "}Code Review Assistant;
               </span>
             </motion.h1>
             <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial={ opaci,
@@ -206,11 +206,11 @@ const AICodeReviewAssistant = () () => {
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg,
   hove: r: from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300">
-                Start Free Trial
+                Start Free Trial;
               </Link>
               <Link to="/enhanced-services" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hove,
   r:bg-gray-800 transition-all duration-300">
-                View All Services
+                View All Services;
               </Link>
             </motion.div>
           </div>
@@ -231,10 +231,10 @@ const AICodeReviewAssistant = () () => {
   }>
               <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-                Powerful Features for Modern Development
+                Powerful Features for Modern Development;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive code review capabilities that integrate seamlessly with your existing workflow
+                Comprehensive code review capabilities that integrate seamlessly with your existing workflow;
               </p>
             </motion.div>
             
@@ -272,16 +272,16 @@ const AICodeReviewAssistant = () () => {
   }>
               <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Flexible Pricing Plans;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that best fits your team size and requirements
+                Choose the plan that best fits your team size and requirements;
               </p>
             </motion.div>
             
             <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
+              {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular;
                 ? 'border-blue-400 bg-blue-900/20'
                 : 'border-white/20,
   hove: r:border-white/40'}`} initial={ opaci,
@@ -294,7 +294,7 @@ const AICodeReviewAssistant = () () => {
   }>
                   {plan.popular && (<div className="text-center mb-4">
                       <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>)}
                   
@@ -316,12 +316,12 @@ const AICodeReviewAssistant = () () => {
                       </li>))}
                   </ul>
                   
-                  <Link to="/contact" className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular
+                  <Link to="/contact" className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular;
                 ? 'bg-blue-600,
   hove: r: bg-blue-700 text-white'
                 : 'bg-white/10 hove,
   r:bg-white/20 text-white border border-white/20'}`}>
-                    Get Started
+                    Get Started;
                   </Link>
                 </motion.div>))}
             </div>
@@ -397,7 +397,7 @@ const AICodeReviewAssistant = () () => {
   o: n: 0.6, del,
   a: y: 0.2 },
   }>
-              Join hundreds of development teams already using our AI-powered code review assistant
+              Join hundreds of development teams already using our AI-powered code review assistant;
             </motion.p>
             
             <motion.div className="flex flex-col,
@@ -412,14 +412,14 @@ const AICodeReviewAssistant = () () => {
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg,
   hove: r: from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300">
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5"/>
               </Link>
               <a href="t,
   e: l:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg,
   hove: r:bg-gray-800 transition-all duration-300">
                 Ca,
-  l: l: +1 302 464 0950
+  l: l: +1 302 464 0950;
               </a>
             </motion.div>
 
@@ -436,19 +436,19 @@ const AICodeReviewAssistant = () () => {
   m: d: grid-cols-2 gap-4 text-sm text-gray-300">
                 <div className="flex items-center">
                   <span className="text-green-400 mr-2">✓</span>
-                  AI-Powered Security Scanning
+                  AI-Powered Security Scanning;
                 </div>
                 <div className="flex items-center">
                   <span className="text-green-400 mr-2">✓</span>
-                  Seamless Git Integration
+                  Seamless Git Integration;
                 </div>
                 <div className="flex items-center">
                   <span className="text-green-400 mr-2">✓</span>
-                  Custom Rule Configuration
+                  Custom Rule Configuration;
                 </div>
                 <div className="flex items-center">
                   <span className="text-green-400 mr-2">✓</span>
-                  24/7 Automated Coverage
+                  24/7 Automated Coverage;
                 </div>
               </div>
             </motion.div>
@@ -476,4 +476,4 @@ const AICodeReviewAssistant = () () => {
       </div>
     </>)
 }
-export default AICodeReviewAssistant
+export default AICodeReviewAssistant;

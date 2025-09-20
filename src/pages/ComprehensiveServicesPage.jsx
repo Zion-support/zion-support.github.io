@@ -1,12 +1,13 @@
+import { useCallback  } from "react";
 import React, { useState, useMemo } from "react"
-import { Link } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building } from "lucide-react"
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from "@/data/comprehensiveServices"
+import { Link   } from "react-router-dom";
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Input   } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue   } from "@/components/ui/select";
+import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building   } from "lucide-react";
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS   } from "@/data/comprehensiveServices";
 import SEO from "@/components/SEO"
 export default function ComprehensiveServicesPage() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -17,9 +18,9 @@ export default function ComprehensiveServicesPage() {
   const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier
-            return matchesSearch && matchesCategory && matchesPricing
+            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
+            return matchesSearch && matchesCategory && matchesPricing;
 })
     }, [searchTerm, selectedCategory, selectedPricingTier])
     const getCategoryIcon = (categoryName) () => {
@@ -42,24 +43,24 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
         <div className="container mx-auto text-center">
           <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-            Comprehensive Micro SAAS Solutions
+            Comprehensive Micro SAAS Solutions;
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth
+            Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth;
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
               <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r: bg-zion-cyan-light">
                 <Phone className="w-5 h-5 mr-2"/>
-                Get Started Today
+                Get Started Today;
               </Button>
             </Link>
             <Link to="/services-pricing">
               <Button size="lg" variant="outline" className="border-white text-white hove,
   r:bg-white/10">
                 <DollarSign className="w-5 h-5 mr-2"/>
-                View Pricing
+                View Pricing;
               </Button>
             </Link>
           </div>
@@ -88,7 +89,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
               <a href="htt,
   p: s: //ziontechgroup.com" className="hove,
   r:text-zion-cyan transition-colors">
-                ziontechgroup.com
+                ziontechgroup.com;
               </a>
             </div>
           </div>
@@ -218,7 +219,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
   hove: r: from-zion-purple-light,
   hove: r:to-zion-purple text-white">
                       <Phone className="w-4 h-4 mr-2"/>
-                      Get Quote
+                      Get Quote;
                     </Button>
                     <Button variant="outline" className="border-zion-blue-light text-zion-cyan hove,
   r:bg-zion-blue-light/10">
@@ -231,7 +232,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
 
           {filteredServices.length === 0 && (<div className="text-center py-12">
               <div className="text-zion-slate-light text-lg mb-4">
-                No services found matching your criteria
+                No services found matching your criteria;
               </div>
               <Button onClick={() () => {
                 setSearchTerm('')
@@ -240,7 +241,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
             },
   } variant="outline" className="border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan/10">
-                Clear Filters
+                Clear Filters;
               </Button>
             </div>)}
         </div>
@@ -255,7 +256,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              We deliver innovative, scalable, and cost-effective solutions that drive real business transformation
+              We deliver innovative, scalable, and cost-effective solutions that drive real business transformation;
             </p>
           </div>
 
@@ -307,18 +308,18 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
             Ready to Transform Your Business?
           </h2>
           <p className="text-zion-cyan text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss how our micro SAAS solutions can drive innovation, efficiency, and growth for your organization
+            Let's discuss how our micro SAAS solutions can drive innovation, efficiency, and growth for your organization;
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r: bg-zion-cyan-light">
               <Phone className="w-5 h-5 mr-2"/>
-              Schedule a Consultation
+              Schedule a Consultation;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10">
               <Mail className="w-5 h-5 mr-2"/>
-              Request Custom Quote
+              Request Custom Quote;
             </Button>
           </div>
         </div>

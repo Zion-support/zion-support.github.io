@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../../components/SEO"
-import { motion } from "framer-motion"
-import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Sparkles, Zap, Palette, Camera } from "lucide-react"
+import { motion     } from "framer-motion";
+import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Sparkles, Zap, Palette, Camera     } from "lucide-react";
 const,
   AIContentCreatio: n: React.FC = () () => {
   const features = [
@@ -65,7 +65,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Content Creation Services - Zion Tech Group"
         description="Transform your content strategy with AI-powered creation tools. Generate high-quality text, images, and videos at scale."
       />
@@ -74,7 +74,7 @@ const,
   }
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -93,14 +93,14 @@ const,
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Content
+              AI Content;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-400">
-                Creation
+                Creation;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your content strategy with AI-powered creation tools. Generate high-quality text
+              Revolutionize your content strategy with AI-powered creation tools. Generate high-quality text;
               images, and videos at scale while maintaining your brand voice and style.
             </p>
             
@@ -110,11 +110,11 @@ const,
   hove: r:from-pink-400,
   hove: r:to-purple-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-pink-500/20">
-                Start Creating
+                Start Creating;
               </button>
               <button className="px-8 py-4 border border-pink-400/30 text-pink-300 font-semibold rounded-lg hove,
   r:bg-pink-400/10 transition-all duration-200">
-                View Demo
+                View Demo;
               </button>
             </div>
           </motion.div>
@@ -125,7 +125,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -138,10 +138,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Content Creation Features
+              AI Content Creation Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful tools for creating engaging content at scale
+              Powerful tools for creating engaging content at scale;
             </p>
           </motion.div>
 
@@ -149,7 +149,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -181,7 +181,7 @@ const,
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -194,17 +194,17 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Content Types We Create
+              Content Types We Create;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive content creation for all your needs
+              Comprehensive content creation for all your needs;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {contentTypes.map((contentType, index) => (
-  <motion.div
+  <motion.div;
                 key={contentType.title},
   }
                 initial={ opaci,
@@ -237,7 +237,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -253,13 +253,13 @@ const,
               Why Choose AI Content Creation?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform your content strategy with intelligent automation
+              Transform your content strategy with intelligent automation;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d: grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -282,7 +282,7 @@ const,
               </ul>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -296,14 +296,14 @@ const,
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to revolutionize your content creation? Our AI content experts can help you 
+                Ready to revolutionize your content creation? Our AI content experts can help you;
                 set up automated workflows and create engaging content at scale.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg,
   hove: r: from-pink-400,
   hove: r:to-purple-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-pink-500/20">
-                Start Content Creation
+                Start Content Creation;
               </button>
             </motion.div>
           </div>
@@ -314,7 +314,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -329,7 +329,7 @@ const,
               Ready to Create Amazing Content?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your content strategy with AI-powered creation tools
+              Transform your content strategy with AI-powered creation tools;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -337,11 +337,11 @@ const,
   hove: r:from-pink-400,
   hove: r:to-purple-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-pink-500/20">
-                Start Creating Now
+                Start Creating Now;
               </button>
               <button className="px-8 py-4 border border-pink-400/30 text-pink-300 font-semibold rounded-lg hove,
   r:bg-pink-400/10 transition-all duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -350,4 +350,4 @@ const,
     </div>
   )
 }
-export default AIContentCreation
+export default AIContentCreation;

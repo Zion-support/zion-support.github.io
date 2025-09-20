@@ -1,11 +1,15 @@
 import React from "react"
-import { cn } from "@/lib/utils"
+import { cn     } from "@/lib/utils";
 interface BadgeProps {
   variant?: 'default' | 'secondary' | 'destructive' | 'outline' | 'success' | 'warning',
   size?: 'sm' | 'md' | 'lg',
   childr,
-  e: n: React.ReactNode
-  className?: string
+  e: n: React.ReactNode;
+  className?: string;
+}
+}
+}
+}
 }
 
 const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
@@ -35,13 +39,13 @@ const sizeClasses = {
       sm: 'px-2 py-0.5 text-xs',md: 'px-2.5 py-0.5 text-sm',lg: 'px-3 py-1 text-base'
     }
     return (
-      <div
+      <div;
         ref={ref}
         className={cn(
-          baseClasses
+          baseClasses;
           variantClasses[variant],
           sizeClasses[size],
-          className
+          className;
         )},
   {...props}
       >

@@ -1,23 +1,25 @@
 import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  DollarSign
-  TrendingUp
-  Users
-  Clock
-  CheckCircle
-  Star
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  Zap
-  Shield
-  Cpu
-  Brain
-} from "lucide-react"
+  DollarSign;
+  TrendingUp;
+  Users;
+  Clock;
+  CheckCircle;
+  Star;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Zap;
+  Shield;
+  Cpu;
+  Brain;
+}
+}
+ } from "lucide-react";
 import SEO from "../components/SEO"
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026"
+import { ALL_PRICING_GUIDES_2026, marketSummary2026   } from "../data/comprehensivePricingGuide2026";
 const,
   ComprehensivePricingGuide202: 6: React.FC = () () => {
   const [selectedService, setSelectedService] = useState<string>('all')
@@ -29,13 +31,13 @@ const,
   ]
 
   const filteredPricing = useMemo(() () => {
-    let filtered = ALL_PRICING_GUIDES_2026
+    let filtered = ALL_PRICING_GUIDES_2026;
     if (if (selectedService !== 'all') {
   ) {
       filtered = filtered.filter(service => service.serviceName === selectedService)
     }
 
-    return filtered
+    return filtered;
 }, [selectedService])
 
   const getServiceIcon = (serviceNa,
@@ -60,7 +62,7 @@ const,
   }
   return (
     <>
-      <SEO
+      <SEO;
         title="Comprehensive Pricing Guide 2026 - Zion Tech Group"
         description="Explore detailed pricing for Zion Tech Group's revolutionary 2026 services. Compare pricing tiers, ROI analysis, and market comparisons."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, 2026 services, Zion Tech Group"
@@ -72,7 +74,7 @@ const,
         <section className="relative overflow-hidden py-20">
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20"></div>
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <motion.h1
+            <motion.h1;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -85,12 +87,12 @@ const,
               className="className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6";"
             >
-              Comprehensive Pricing
+              Comprehensive Pricing;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400">
-                Guide 2026
+                Guide 2026;
               </span>
             </motion.h1>
-            <motion.p
+            <motion.p;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -104,13 +106,13 @@ const,
               className="className="text-xl,
   m: d:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto";"
             >
-              Transparent pricing for revolutionary services. Compare pricing tiers, analyze ROI, and understand the value proposition
+              Transparent pricing for revolutionary services. Compare pricing tiers, analyze ROI, and understand the value proposition;
               of Zion Tech Group's cutting-edge 2026 solutions.
             </motion.p>
 
             {/* Market Summary Cards */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -151,7 +153,7 @@ const,
   }
                 <div>
                   <label className="block text-white mb-2 font-medium">Select Service</label>
-                  <select
+                  <select;
                     value={selectedService},
   }
                     onChange={(e) => setSelectedService(e.target.value)},
@@ -174,7 +176,7 @@ const,
   }
                 <div>
                   <label className="block text-white mb-2 font-medium">Select Tier</label>
-                  <select
+                  <select;
                     value={selectedTier},
   }
                     onChange={(e) => setSelectedTier(e.target.value)},
@@ -202,7 +204,7 @@ const,
         <section className="py-12">
           <div className="container mx-auto px-4">
             {filteredPricing.map((servicePricing, index) => (
-  <motion.div
+  <motion.div;
                 key={servicePricing.serviceId},
   }
                 initial={ opaci,
@@ -273,7 +275,7 @@ const,
                 <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-6">
                   {servicePricing.pricingTiers.map((tier, tierIndex) => (
-  <motion.div
+  <motion.div;
                       key={tier.name},
   }
                       initial={ opaci,
@@ -394,7 +396,7 @@ const,
                       <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg,
   hove: r: from-blue-600 hove,
   r:to-purple-600 transition-all duration-300">
-                        Get Started
+                        Get Started;
                       </button>
                     </motion.div>
                   ))}
@@ -434,7 +436,7 @@ const,
   }
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -486,7 +488,7 @@ const,
   }
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -502,28 +504,28 @@ const,
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-                Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services
+                Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services;
                 can transform your business with unprecedented ROI and performance improvements.
               </p>
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <a
+                <a;
                   href="t,
   e: l:+13024640950"
                   className="className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg,
   hove: r:bg-green-600 transition-colors";"
                 >
                   <Phone className="w-5 h-5" />
-                  Call +1 302 464 0950
+                  Call +1 302 464 0950;
                 </a>
-                <a
+                <a;
                   href="mail,
   t: o:kleber@ziontechgroup.com"
                   className="className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hove,
   r:bg-blue-600 transition-colors";"
                 >
                   <Mail className="w-5 h-5" />
-                  Email kleber@ziontechgroup.com
+                  Email kleber@ziontechgroup.com;
                 </a>
               </div>
               <div className="mt-8 text-zinc-400">
@@ -537,4 +539,4 @@ const,
     </>
   )
 }
-export default ComprehensivePricingGuide2026
+export default ComprehensivePricingGuide2026;

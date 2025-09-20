@@ -1,30 +1,32 @@
 import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
-import { Helmet } from "react-helmet-async"
+import { motion   } from "framer-motion";
+import { Helmet   } from "react-helmet-async";
 import {
-  Search
+  Search;
     Filter,
   TrendingUp,
   Shield,
   Zap,
   Globe,
   Users,
-  BarChart3
-    DollarSign
-    Heart
-    GraduationCap
-    Target
-    Settings
-    Package
-    CheckCircle
-    Star
-    ArrowRight
-    Phone
-    Mail
-    MapPin
-    ExternalLink
-} from "lucide-react"
-import { comprehensiveServices2025Enhanced, EnhancedService } from "../data/comprehensive-services-2025-enhanced"
+  BarChart3;
+    DollarSign;
+    Heart;
+    GraduationCap;
+    Target;
+    Settings;
+    Package;
+    CheckCircle;
+    Star;
+    ArrowRight;
+    Phone;
+    Mail;
+    MapPin;
+    ExternalLink;
+}
+}
+ } from "lucide-react";
+import { comprehensiveServices2025Enhanced, EnhancedService   } from "../data/comprehensive-services-2025-enhanced";
 const,
   ComprehensiveServicesShowcase2025Enhance: d: React.FC = () () => {
     const [searchTerm, setSearchTerm] = useState('')
@@ -79,7 +81,7 @@ const,
   },
   ]
     const filteredServices = useMemo(() () => {
-        let filtered = comprehensiveServices2025Enhanced
+        let filtered = comprehensiveServices2025Enhanced;
         if (if (searchTerm) {
   ) {
             filtered = filtered.filter(service =>
@@ -94,19 +96,19 @@ const,
             filtered = filtered.filter(service => service.category === selectedCategory)
         }
 
-        // Sort services
+        // Sort services;
         filtered.sort((a, b) () => {
   switch (sortBy) {
   case 'price':
 const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
                     const priceB = parseFloat(b.pricing.monthly.replace(/[^0-9.]/g, ''))
-                    return priceA - priceB
+                    return priceA - priceB;
                 case 'popularity':
                     return b.trialDays - a.trialDays, // More trial days = more,
   popular: default: return a.name.localeCompare(b.name)
             },
   })
-        return filtered
+        return filtered;
 }, [searchTerm, selectedCategory, sortBy])
 
     const getCategoryColor = (catego,
@@ -155,7 +157,7 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
   l: g:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800 opacity-90"></div>
                 <div className="relative max-w-7xl mx-auto text-center">
-                    <motion.div
+                    <motion.div;
                         initial={ opacit,
   y: 0, y: 20 },
   }
@@ -168,11 +170,11 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
                     >
                         <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-                            Comprehensive Services Showcase 2025
+                            Comprehensive Services Showcase 2025;
                         </h1>
                         <p className="text-xl m,
   d:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-                            Discover our cutting-edge suite of micro SAAS services, AI-powered solutions, and innovative technology platforms designed to transform your business
+                            Discover our cutting-edge suite of micro SAAS services, AI-powered solutions, and innovative technology platforms designed to transform your business;
                         </p>
                         <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
@@ -216,7 +218,7 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
                                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
                             </div>
                         </div>
-                        <a
+                        <a;
                             href="htt,
   p: s: //ziontechgroup.com"
                             target="_blank"
@@ -244,7 +246,7 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
                         <div className="flex-1">
                             <div className="relative">
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                                <input
+                                <input;
                                     type="text"
                                     placeholder="Search services..."
                                     value={searchTerm},
@@ -262,7 +264,7 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
                         {/* Category Filter */},
   }
                         <div className="flex-shrink-0">
-                            <select
+                            <select;
                                 value={selectedCategory},
   }
                                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -283,7 +285,7 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
                         {/* Sort */},
   }
                         <div className="flex-shrink-0">
-                            <select
+                            <select;
                                 value={sortBy},
   }
                                 onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity')},
@@ -319,7 +321,7 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
                             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                                     key={service.id},
   }
                                     initial={ opaci,
@@ -415,7 +417,7 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
 
                                         {/* Action Button */},
   }
-                                        <a
+                                        <a;
                                             href={service.link},
   }
                                             className="className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-medium,
@@ -444,11 +446,11 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
                         Ready to Transform Your Business?
                     </h2>
                     <p className="text-xl text-blue-100 mb-8">
-                        Get in touch with our team to discuss how our innovative solutions can drive your business forward
+                        Get in touch with our team to discuss how our innovative solutions can drive your business forward;
                     </p>
                     <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                        <a
+                        <a;
                             href="t,
   e: l:+13024640950"
                             className="className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium,
@@ -457,7 +459,7 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
                             <Phone className="w-5 h-5" />
                             <span>Call +1 302 464 0950</span>
                         </a>
-                        <a
+                        <a;
                             href="mail,
   t: o:kleber@ziontechgroup.com"
                             className="className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium,
@@ -519,4 +521,4 @@ const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''))
     )
 }
 
-export default ComprehensiveServicesShowcase2025Enhanced
+export default ComprehensiveServicesShowcase2025Enhanced;

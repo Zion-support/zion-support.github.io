@@ -1,6 +1,6 @@
 import React from "react"
-import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building } from "lucide-react"
-import { SEO } from "../../components/SEO"
+import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building     } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function MicroCRM() {
   const features = [
   {
@@ -39,30 +39,30 @@ export default function MicroCRM() {
   tit,
   l: e: 'Small Business CRM',descripti,
   o: n: 'Perfect for small businesses looking to manage customer relationships efficiently.',ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   tit,
   l: e: 'Sales Team Management',descripti,
   o: n: 'Empower sales teams with tools to track leads and manage customer interactions.',ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: 'Customer Support',descripti,
   o: n: 'Track customer issues and provide timely support with integrated ticketing.',ic,
-  o: n: Phone
+  o: n: Phone;
 },
   {
   tit,
   l: e: 'Marketing Campaigns',descripti,
   o: n: 'Manage marketing campaigns and track customer engagement and responses.',ic,
-  o: n: Target
+  o: n: Target;
 },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Micro CRM - Zion Tech Group"
         description="Streamline your customer relationship management with our Micro CRM solution. Perfect for small businesses and growing teams."
       />
@@ -80,11 +80,11 @@ export default function MicroCRM() {
             
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Micro CRM
+              Micro CRM;
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Streamline your customer relationships with our lightweight
+              Streamline your customer relationships with our lightweight;
               powerful CRM solution designed for small businesses and growing teams.
             </p>
             
@@ -95,11 +95,11 @@ export default function MicroCRM() {
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg,
   hove: r:shadow-cyan-400/25">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </div>
@@ -112,10 +112,10 @@ export default function MicroCRM() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Essential CRM Features
+              Essential CRM Features;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our Micro CRM provides all the essential features you need to manage 
+              Our Micro CRM provides all the essential features you need to manage;
               customer relationships without the complexity of enterprise solutions.
             </p>
           </div>
@@ -147,7 +147,7 @@ export default function MicroCRM() {
               Why Choose Micro CRM?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Experience the benefits of professional CRM software without the complexity 
+              Experience the benefits of professional CRM software without the complexity;
               and cost of enterprise solutions.
             </p>
           </div>
@@ -171,10 +171,10 @@ export default function MicroCRM() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Perfect For Your Business
+              Perfect For Your Business;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Whether you're a small business owner or managing a growing sales team
+              Whether you're a small business owner or managing a growing sales team;
               our Micro CRM adapts to your needs.
             </p>
           </div>
@@ -203,7 +203,7 @@ export default function MicroCRM() {
             Ready to Transform Your Customer Relationships?
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have improved their customer management 
+            Join thousands of businesses that have improved their customer management;
             with our Micro CRM solution.
           </p>
           <div className="flex flex-col,
@@ -213,11 +213,11 @@ export default function MicroCRM() {
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg,
   hove: r:shadow-cyan-400/25">
-              Start Free Trial
+              Start Free Trial;
             </button>
               <button className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>
           </div>
         </div>

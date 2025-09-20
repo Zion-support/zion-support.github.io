@@ -1,6 +1,7 @@
+import { useCallback    } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
+import { motion, AnimatePresence     } from "framer-motion";
+import { ChevronLeft, ChevronRight, Star, Quote     } from "lucide-react";
 interface Testimonial {
   id: number,na,
   m: e: string,ro,
@@ -9,7 +10,11 @@ interface Testimonial {
   n: t: string,rati,
   n: g: number,avat,
   a: r: string,indust,
-  r: y: string
+  r: y: string;
+}
+}
+}
+}
 }
 
 const,
@@ -74,7 +79,7 @@ const nextTestimonial = () () => {
       <div className="container mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-        <motion.div
+        <motion.div;
           className="text-center mb-16"
           initial={ opacit,
   y: 0, y: 30 },
@@ -107,7 +112,7 @@ const nextTestimonial = () () => {
         {/* Testimonial Carousel */}
         <div className="relative max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
-            <motion.div
+            <motion.div;
               key={currentIndex}
               initial={ opaci,
   t: y: 0, x: 100 },
@@ -163,7 +168,7 @@ const nextTestimonial = () () => {
           </AnimatePresence>
 
           {/* Navigation Arrows */}
-          <button
+          <button;
             onClick={prevTestimonial}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan,
   hove: r: bg-zion-cyan,
@@ -177,7 +182,7 @@ const nextTestimonial = () () => {
             <ChevronLeft className="w-6 h-6" />
           </button>
 
-          <button
+          <button;
             onClick={nextTestimonial}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan,
   hove: r: bg-zion-cyan,
@@ -195,11 +200,11 @@ const nextTestimonial = () () => {
         {/* Dots Indicator */}
         <div className="flex justify-center mt-8 space-x-2">
           {testimonials.map((_, index) => (
-            <button
+            <button;
               key={index}
               onClick={() => goToTestimonial(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
+                index === currentIndex;
                   ? 'bg-zion-cyan scale-125'
                   : 'bg-zion-slate-light,
   hove: r:bg-zion-cyan/50'
@@ -210,7 +215,7 @@ const nextTestimonial = () () => {
         </div>
 
         {/* Trust Indicators */}
-        <motion.div
+        <motion.div;
           className="mt-16 text-center"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -251,4 +256,4 @@ const nextTestimonial = () () => {
     </section>
   )
 }
-export default Testimonials
+export default Testimonials;

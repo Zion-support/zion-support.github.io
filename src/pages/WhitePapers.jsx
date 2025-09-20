@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { FileText, Download, Calendar, User } from "lucide-react"
+import { Link   } from "react-router-dom";
+import { FileText, Download, Calendar, User   } from "lucide-react";
 const WhitePapers = () () => {
 	const whitePapers = [
   {
@@ -28,7 +28,7 @@ const WhitePapers = () () => {
 					<div className="mb-8 text-center">
 						<div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
 							<FileText className="w-4 h-4 mr-2" />
-							Research & Insights
+							Research & Insights;
 						</div>
 						<h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">White Papers</h1>
@@ -40,7 +40,7 @@ const WhitePapers = () () => {
 					<div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
 						{whitePapers.map((paper, index) => (
-  <div
+  <div;
 								key={index},
   }
 								className="className="bg-slate-800/50 border border-white/10 rounded-xl p-6,
@@ -71,14 +71,14 @@ const WhitePapers = () () => {
   }
 									</div>
 								</div>
-								<Link
+								<Link;
 									to="/contact"
 									className="className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg,
   hove: r: from-blue-700 hove,
   r:to-cyan-700 transition-all duration-300";"
 								>
 									<Download className="w-4 h-4 mr-2" />
-									Request PDF
+									Request PDF;
 								</Link>
 							</div>
 						))}
@@ -89,4 +89,4 @@ const WhitePapers = () () => {
 	)
 }
 
-export default WhitePapers
+export default WhitePapers;

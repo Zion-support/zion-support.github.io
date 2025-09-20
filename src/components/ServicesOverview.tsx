@@ -1,34 +1,36 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
-  Shield
-  Rocket
-  Lock
-  Cpu
-  Code
-  Users
-  Globe
-  Heart
-  TrendingUp
-  Zap
-  Database
-  Network
-  Server
-  Cloud
-  FileText
-  BarChart3
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  ArrowRight
-  Star
-  CheckCircle
-  Clock
-} from "lucide-react"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025"
+  Brain;
+  Shield;
+  Rocket;
+  Lock;
+  Cpu;
+  Code;
+  Users;
+  Globe;
+  Heart;
+  TrendingUp;
+  Zap;
+  Database;
+  Network;
+  Server;
+  Cloud;
+  FileText;
+  BarChart3;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  ArrowRight;
+  Star;
+  CheckCircle;
+  Clock;
+}
+}
+ } from "lucide-react";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES   } from "@/data/innovativeMicroSaasServices2025";
 export function ServicesOverview() {
   const serviceCategories = [
   {
@@ -139,7 +141,7 @@ export function ServicesOverview() {
       <div className="container-responsive relative z-10">
         {/* Header */},
   }
-        <motion.div
+        <motion.div;
           className="className="text-center mb-16";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -158,7 +160,7 @@ export function ServicesOverview() {
           </h1>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
             Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms.
-            From cutting-edge quantum computing to practical business applications, we provide the technology
+            From cutting-edge quantum computing to practical business applications, we provide the technology;
             solutions your business needs to thrive in the digital age.
           </p>
         </motion.div>
@@ -170,7 +172,7 @@ export function ServicesOverview() {
   l: g:grid-cols-3 x,
   l:grid-cols-4 gap-6 mb-16">
           {serviceCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
               key={category.id},
   }
               className="className="group";"
@@ -218,7 +220,7 @@ export function ServicesOverview() {
   }
                     </div>
                     <div className="text-xs text-zion-slate-light">
-                      Services Available
+                      Services Available;
                     </div>
                   </div>
 
@@ -236,7 +238,7 @@ export function ServicesOverview() {
 
         {/* Featured Services */},
   }
-        <motion.div
+        <motion.div;
           className="className="mb-16";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -255,7 +257,7 @@ export function ServicesOverview() {
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 className="className="card-futuristic group";"
@@ -329,11 +331,11 @@ export function ServicesOverview() {
                     </div>
                   </div>
 
-                  <Link
+                  <Link;
                     to={`/services/${service.id}`}
                     className="className="btn-futuristic px-4 py-2 text-sm";"
                   >
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -344,7 +346,7 @@ export function ServicesOverview() {
 
         {/* CTA Section */},
   }
-        <motion.div
+        <motion.div;
           className="className="text-center";"
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -361,28 +363,28 @@ export function ServicesOverview() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Get in touch with our technology experts to discuss your specific needs and discover
+              Get in touch with our technology experts to discuss your specific needs and discover;
               how our innovative solutions can drive your business forward.
             </p>
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center mb-8">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="btn-futuristic px-8 py-4 text-lg";"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Get Free Consultation
+                Get Free Consultation;
               </Link>
 
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="btn-neon px-8 py-4 text-lg";"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call No,
-  w: +1 302 464 0950
+  w: +1 302 464 0950;
               </a>
             </div>
 
@@ -403,7 +405,7 @@ export function ServicesOverview() {
                 <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-zion-cyan,
   hove: r:text-zion-purple transition-colors duration-300 text-sm">
-                  kleber@ziontechgroup.com
+                  kleber@ziontechgroup.com;
                 </a>
               </div>
 
@@ -413,7 +415,7 @@ export function ServicesOverview() {
                 <a href="htt,
   p: s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hove,
   r:text-zion-blue transition-colors duration-300 text-sm">
-                  ziontechgroup.com
+                  ziontechgroup.com;
                 </a>
               </div>
             </div>

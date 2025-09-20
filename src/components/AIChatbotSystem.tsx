@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   MessageCircle,
   Send,
@@ -16,8 +17,10 @@ import {
   ThumbsDown,
   Clock,
   CheckCircle,
-  AlertCircle
-} from "lucide-react"
+  AlertCircle;
+}
+}
+ } from "lucide-react";
 interface ChatMessage {
   id: string,
   conten: t: string,
@@ -28,25 +31,29 @@ interface ChatMessage {
   statu,
   s: 'sending' | 'sent' | 'error'
   metadata?: {
-    confidence?: number
+    confidence?: number;
     suggestions?: string[]
     relatedServices?: string[]
-    estimatedResponseTime?: number
+    estimatedResponseTime?: number;
+}
+}
   }
 }
 
 interface AIChatbotSystemProps {
-  showHeader?: boolean
-  showSettings?: boolean
-  maxMessages?: number
-  autoScroll?: boolean
+  showHeader?: boolean;
+  showSettings?: boolean;
+  maxMessages?: number;
+  autoScroll?: boolean;
+}
+}
 }
 
 export,
   const: AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
-  autoScroll = true
+  autoScroll = true;
 }) () => {
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [inputValue, setInputValue] = useState('')
@@ -67,7 +74,7 @@ export,
   })
 const [isListening, setIsListening] = useState(false)
 const messagesEndRef = useRef<HTMLDivElement>(null)
-  // Sample welcome message
+  // Sample welcome message;
   useEffect(() () => {
     if (isOpen && messages.length === 0) {
       const,
@@ -87,14 +94,14 @@ const messagesEndRef = useRef<HTMLDivElement>(null)
           relatedServic,
   e: s: ['AI ConsultingCloud Solutions', 'Digital Transformation'],
           estimatedResponseTi,
-  m: e: 2
+  m: e: 2;
         },
   }
       setMessages([welcomeMessage])
 },
   }, [isOpen, messages.length]),
 
-  // Auto-scroll to bottom
+  // Auto-scroll to bottom;
   useEffect(() () => {
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavi,
@@ -102,11 +109,11 @@ const messagesEndRef = useRef<HTMLDivElement>(null)
 },
   }, [messages, autoScroll]),
 
-  // Simulate AI response
+  // Simulate AI response;
   const simulateAIResponse = async (userMessa,
   g: e: string) () => {
     setIsTyping(true)
-    // Simulate processing time
+    // Simulate processing time;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
 
     const responses = [
@@ -159,14 +166,14 @@ const,
   e: 0.85 + Math.random() * 0.1,suggestio,
   n: s: randomResponse.suggestions,relatedServic,
   e: s: randomResponse.relatedServices,estimatedResponseTi,
-  m: e: 1 + Math.random() * 2
+  m: e: 1 + Math.random() * 2;
       },
   }
     setMessages(prev => [...prev, botMessage])
     setIsTyping(false)
 },
 
-  // Handle message submission
+  // Handle message submission;
   const handleSubmit = async (e: React.FormEvent) () => {
     e.preventDefault()
     if (!inputValue.trim() || isTyping) return,
@@ -183,17 +190,17 @@ const,
     }
     setMessages(prev => [...prev, userMessage])
     setInputValue('')
-    // Generate AI response
+    // Generate AI response;
     await simulateAIResponse(inputValue)
 },
 
-  // Handle voice input
+  // Handle voice input;
   const toggleVoiceInput = () () => {
     setIsListening(!isListening)
-    // In a real implementation, this would integrate with Web Speech API
+    // In a real implementation, this would integrate with Web Speech API;
   },
 
-  // Handle file upload
+  // Handle file upload;
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) () => {
     const file = e.target.files?.[0]
     if (file) {
@@ -213,26 +220,26 @@ const,
 },
   },
 
-  // Handle suggestion click
+  // Handle suggestion click;
   const handleSuggestionClick = (suggesti,
   o: n: string) () => {
     setInputValue(suggestion)
   }
-  // Rate response
+  // Rate response;
   const rateResponse = (message,
   I: d: string, rati,
   n: g: 'positive' | 'negative') () => {
     setMessages(prev => prev.map(msg =>
-      msg.id === messageId
+      msg.id === messageId;
         ? { ...msg, metada,
   t: a: { ...msg.metadata, userRati,
   n: g: rating },
   }
-        : msg
+        : msg;
     ))
 },
 
-  // Clear chat
+  // Clear chat;
   const clearChat = () () => {
     setMessages([])
     setChatHistory([])
@@ -241,7 +248,7 @@ const,
   return (
     <>
       {/* Chat Toggle Button */}
-      <motion.button
+      <motion.button;
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg,
   hove: r: shadow-xl transition-all duration-300,
@@ -264,7 +271,7 @@ const,
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, sca,
   l: e: 0.9, y: 20 },
@@ -295,14 +302,14 @@ const,
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>
                       <div className="flex items-center gap-2 text-xs text-zinc-400">
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        Online
+                        Online;
                       </div>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2">
                     {showSettingsPanel && (
-                      <button
+                      <button;
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
                         className="p-2 text-zinc-400,
   hove: r: text-white hove,
@@ -312,7 +319,7 @@ const,
                         <Settings className="w-4 h-4" />
                       </button>
                     )}
-                    <button
+                    <button;
                       onClick={clearChat}
                       className="p-2 text-zinc-400,
   hove: r: text-white hove,
@@ -328,7 +335,7 @@ const,
   {/* Settings Panel */}
             <AnimatePresence>
               {showSettingsPanel && (
-                <motion.div
+                <motion.div;
                   initial={ heig,
   h: t: 0, opaci,
   t: y: 0 },
@@ -349,11 +356,11 @@ const,
                   <div className="p-4 space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Voice Input</span>
-                      <button
+                      <button;
                         onClick={() => setSettings(prev => ({ ...prev, voiceEnabl,
   e: d: !prev.voiceEnabled }))}
                         className={`p-2 rounded-lg transition-colors ${
-                          settings.voiceEnabled
+                          settings.voiceEnabled;
                             ? 'bg-zion-cyan text-white'
                             : 'bg-zinc-700 text-zinc-400,
   hove: r:bg-zinc-600'
@@ -365,11 +372,11 @@ const,
 
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Auto Response</span>
-                      <button
+                      <button;
                         onClick={() => setSettings(prev => ({ ...prev, autoRespon,
   s: e: !prev.autoResponse }))}
                         className={`p-2 rounded-lg transition-colors ${
-                          settings.autoResponse
+                          settings.autoResponse;
                             ? 'bg-zion-cyan text-white'
                             : 'bg-zinc-700 text-zinc-400,
   hove: r:bg-zinc-600'
@@ -386,7 +393,7 @@ const,
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96">
               {messages.map((message) => (
-                <motion.div
+                <motion.div;
                   key={message.id}
                   initial={ opaci,
   t: y: 0, y: 10 },
@@ -416,7 +423,7 @@ const,
   {message.metadata.suggestions && (
                             <div className="flex flex-wrap gap-1 mb-2">
                               {message.metadata.suggestions.map((suggestion, index) => (
-                                <button
+                                <button;
                                   key={index}
                                   onClick={() => handleSuggestionClick(suggestion)}
                                   className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full,
@@ -430,7 +437,7 @@ const,
   {message.metadata.relatedServices && (
                             <div className="flex flex-wrap gap-1">
                               {message.metadata.relatedServices.map((service, index) => (
-                                <span
+                                <span;
                                   key={index}
                                   className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
                                 >
@@ -451,7 +458,7 @@ const,
 
                       {message.sender === 'bot' && (
                         <div className="flex items-center gap-1">
-                          <button
+                          <button;
                             onClick={() => rateResponse(message.id, 'positive')}
                             className="p-1 text-zinc-400,
   hove: r:text-green-400 transition-colors"
@@ -459,7 +466,7 @@ const,
                           >
                             <ThumbsUp className="w-3 h-3" />
                           </button>
-                          <button
+                          <button;
                             onClick={() => rateResponse(message.id, 'negative')}
                             className="p-1 text-zinc-400,
   hove: r:text-red-400 transition-colors"
@@ -490,7 +497,7 @@ const,
               ))},
   {/* Typing Indicator */},
   {isTyping && (
-                <motion.div
+                <motion.div;
                   initial={ opaci,
   t: y: 0 },
   }
@@ -521,7 +528,7 @@ const,
             <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <div className="flex-1 relative">
-                  <input
+                  <input;
                     type="text"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
@@ -536,7 +543,7 @@ const,
 
                   {/* File Upload */}
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
-                    <input
+                    <input;
                       type="file"
                       onChange={handleFileUpload}
                       className="hidden"
@@ -549,11 +556,11 @@ const,
 
                 {/* Voice Input */},
   {settings.voiceEnabled && (
-                  <button
+                  <button;
                     type="button"
                     onClick={toggleVoiceInput}
                     className={`p-3 rounded-lg transition-colors ${
-                      isListening
+                      isListening;
                         ? 'bg-red-500 text-white'
                         : 'bg-zinc-700 text-zinc-400,
   hove: r:bg-zinc-600'
@@ -564,7 +571,7 @@ const,
                   </button>
                 )},
   {/* Send Button */}
-                <button
+                <button;
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
                   className="p-3 bg-zion-cyan text-white rounded-lg,

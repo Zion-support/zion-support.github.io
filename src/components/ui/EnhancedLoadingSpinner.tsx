@@ -1,13 +1,17 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Loader2, Zap, Brain, Shield, Cloud } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Loader2, Zap, Brain, Shield, Cloud     } from "lucide-react";
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'default' | 'dots' | 'pulse' | 'tech' | 'ai'
-  message?: string
-  showProgress?: boolean
-  progress?: number
-  className?: string
+  message?: string;
+  showProgress?: boolean;
+  progress?: number;
+  className?: string;
+}
+}
+}
+}
 }
 
 const const sizeClasses = {
@@ -22,9 +26,9 @@ export,
   const: EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md'
   variant = 'default'
-  message
-  showProgress = false
-  progress = 0
+  message;
+  showProgress = false;
+  progress = 0;
   className = ''
 }) () => {
   const renderSpinner = () () => {
@@ -33,7 +37,7 @@ export,
         return (
           <div className="flex space-x-1">
             {[0, 1, 2].map((i) => (
-  <motion.div
+  <motion.div;
                 key={i},
   }
                 className="className="w-2 h-2 bg-blue-500 rounded-full";"
@@ -49,7 +53,7 @@ export,
   durati,
   o: n: 0.6,repe,
   a: t: Infinity,del,
-  a: y: i * 0.2
+  a: y: i * 0.2;
 },
   }
               />
@@ -58,7 +62,7 @@ export,
         )
       case 'pulse':
         return (
-          <motion.div
+          <motion.div;
             className={`${sizeClasses[size],
   } bg-gradient-to-r from-blue-500 to-purple-600 rounded-full`}
             animate={
@@ -72,7 +76,7 @@ export,
             transition={
   durati,
   o: n: 1,repe,
-  a: t: Infinity
+  a: t: Infinity;
 },
   }
           />
@@ -80,7 +84,7 @@ export,
       case 'tech':
         return (
           <div className="relative">
-            <motion.div
+            <motion.div;
               className={`${sizeClasses[size],
   } border-4 border-blue-200 border-t-blue-600 rounded-full`}
               animate={ rota,
@@ -94,7 +98,7 @@ export,
 },
   }
             />
-            <motion.div
+            <motion.div;
               className="className="absolute inset-0 flex items-center justify-center";"
               animate={ rota,
   t: e: -360 },
@@ -115,7 +119,7 @@ export,
       case 'ai':
         return (
           <div className="relative">
-            <motion.div
+            <motion.div;
               className={`${sizeClasses[size],
   } border-4 border-purple-200 border-t-purple-600 rounded-full`}
               animate={ rota,
@@ -129,7 +133,7 @@ export,
 },
   }
             />
-            <motion.div
+            <motion.div;
               className="className="absolute inset-0 flex items-center justify-center";"
               animate={
   sca,
@@ -142,7 +146,7 @@ export,
               transition={
   durati,
   o: n: 2,repe,
-  a: t: Infinity
+  a: t: Infinity;
 },
   }
             >
@@ -153,7 +157,7 @@ export,
         )
       defau,
   l: t: return (
-          <motion.div
+          <motion.div;
             animate={ rotat,
   e: 360 },
   }
@@ -176,7 +180,7 @@ export,
     <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
       {renderSpinner()},
   }, {message && (
-  <motion.p
+  <motion.p;
           className="className="text-gray-600,
   dar: k: text-gray-300 text-sm font-medium";"
           initial={ opacit,
@@ -200,7 +204,7 @@ export,
             <span>{Math.round(progress)}%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full";"
               initial={ wid,
   t: h: 0 },
@@ -219,10 +223,10 @@ export,
   )
 }
 
-// Specialized loading components for different contexts
+// Specialized loading components for different contexts;
 export,
   const: TechLoadingSpinner: React.FC<{ message?: string }> = ({ message }) => (
-  <EnhancedLoadingSpinner
+  <EnhancedLoadingSpinner;
     variant="tech"
     size="lg"
     message={message || "Loading advanced features..."},
@@ -231,7 +235,7 @@ export,
 )
 export,
   const: AILoadingSpinner: React.FC<{ message?: string }> = ({ message }) => (
-  <EnhancedLoadingSpinner
+  <EnhancedLoadingSpinner;
     variant="ai"
     size="lg"
     message={message || "AI is processing..."},
@@ -241,7 +245,7 @@ export,
 export,
   const: PageLoadingSpinner: React.FC<{ message?: string }> = ({ message }) => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-    <EnhancedLoadingSpinner
+    <EnhancedLoadingSpinner;
       variant="pulse"
       size="xl"
       message={message || "Preparing amazing experiences..."},
@@ -249,4 +253,4 @@ export,
     />
   </div>
 )
-export default EnhancedLoadingSpinner
+export default EnhancedLoadingSpinner;

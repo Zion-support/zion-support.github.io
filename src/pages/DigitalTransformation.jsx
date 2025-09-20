@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
-import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from "lucide-react"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
+import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database   } from "lucide-react";
 import SEO from "../components/SEO"
 const transformationServices = [
   {
@@ -97,7 +97,7 @@ const testimonials = [
   m: e: "Carlos Rodriguez",ro,
   l: e: "CEO, InnovateCorp"
         rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   conte,
@@ -105,7 +105,7 @@ const testimonials = [
   m: e: "Lisa Chang",ro,
   l: e: "COO, TechFlow Solutions"
         rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   conte,
@@ -114,7 +114,7 @@ const testimonials = [
   m: e: "Marcus Johnson",ro,
   l: e: "CTO, DigitalFirst Inc"
         rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
 const stats = [
@@ -158,14 +158,14 @@ export default function DigitalTransformation() {
   } className="relative z-10">
             <h1 className="text-4xl,
   m: d: text-6xl font-bold mb-6 text-white">
-              Digital
+              Digital;
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Transformation
+                Transformation;
               </span>
             </h1>
             <p className="text-xl m,
   d:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Transform your business for the digital age with comprehensive modernization strategies
+              Transform your business for the digital age with comprehensive modernization strategies;
               process automation, and technology innovation that drives real results.
             </p>
             <div className="flex flex-col,
@@ -177,12 +177,12 @@ export default function DigitalTransformation() {
   } className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold,
   hove: r: shadow-xl,
   hove: r:shadow-zion-cyan/25 transition-all duration-300">
-                Start Your Transformation
+                Start Your Transformation;
               </motion.button>
               <Link to="/contact" className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-                Free Assessment
+                Free Assessment;
               </Link>
             </div>
           </motion.div>
@@ -201,7 +201,7 @@ export default function DigitalTransformation() {
           <div className="grid grid-cols-2 m,
   d:grid-cols-4 gap-8">
             {stats.map((stat, index) () => {
-  const IconComponent = stat.icon
+  const IconComponent = stat.icon;
             return (<motion.div key={stat.label} initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -237,7 +237,7 @@ export default function DigitalTransformation() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              Our Transformation Services
+              Our Transformation Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive digital transformation solutions designed to modernize every aspect of your business.
@@ -247,7 +247,7 @@ export default function DigitalTransformation() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {transformationServices.map((service, index) () => {
-  const IconComponent = service.icon
+  const IconComponent = service.icon;
             return (<motion.div key={service.title} initial={ opaci,
   t: y: 0, y: 20 },
   } whileInView={ opaci,
@@ -285,7 +285,7 @@ export default function DigitalTransformation() {
                   <Link to="/contact" className="inline-flex items-center gap-2 text-zion-cyan,
   hove: r: text-white transition-colors group-hove,
   r:translate-x-1 transition-transform duration-300">
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4"/>
                   </Link>
                 </motion.div>)
@@ -308,7 +308,7 @@ export default function DigitalTransformation() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              Our Transformation Process
+              Our Transformation Process;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful digital transformation with measurable results.
@@ -350,7 +350,7 @@ export default function DigitalTransformation() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              Transformation Benefits
+              Transformation Benefits;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Digital transformation delivers measurable benefits that impact every aspect of your business.
@@ -363,28 +363,28 @@ export default function DigitalTransformation() {
   titl,
   e: "Operational Efficiency",descripti,
   o: n: "Streamlined processes and automation reduce costs and improve productivity by up to 60%.",ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   tit,
   l: e: "Customer Experience",descripti,
   o: n: "Enhanced digital touchpoints and personalized experiences increase customer satisfaction and loyalty.",ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "Data-Driven Insights",descripti,
   o: n: "Real-time analytics and business intelligence enable informed decision-making and strategic planning.",ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "Competitive Advantage",descripti,
   o: n: "Innovation and agility position your business ahead of competitors in the digital marketplace.",ic,
-  o: n: Rocket
+  o: n: Rocket;
 },
   ].map((benefit, index) () => {
-  const IconComponent = benefit.icon
+  const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial={ opaci,
   t: y: 0, x: index % 2 === 0 ? -20 : 20 },
   } whileInView={ opaci,
@@ -424,7 +424,7 @@ export default function DigitalTransformation() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              Success Stories
+              Success Stories;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               See how we've helped organizations transform their business through digital innovation.
@@ -486,12 +486,12 @@ export default function DigitalTransformation() {
   } className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold,
   hove: r: shadow-xl,
   hove: r:shadow-zion-cyan/25 transition-all duration-300">
-                  Start Transformation
+                  Start Transformation;
                 </motion.button>
                 <Link to="/contact" className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-                  Schedule Consultation
+                  Schedule Consultation;
                 </Link>
               </div>
             </div>

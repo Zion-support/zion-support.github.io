@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Search
+  Search;
   Filter,
   Star,
   TrendingUp,
@@ -10,34 +10,36 @@ import {
   Brain,
   Globe,
   Leaf,
-  Rocket
-  Car
-  Satellite
-  Dna
-  Wind
-  Cloud
-  Network
-  DollarSign
-  Clock
-  Users
-  Target
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  ExternalLink
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028"
-import { EMERGING_TECH_INNOVATIVE_SERVICES_2028 } from "../data/emergingTechInnovativeServices2028"
+  Rocket;
+  Car;
+  Satellite;
+  Dna;
+  Wind;
+  Cloud;
+  Network;
+  DollarSign;
+  Clock;
+  Users;
+  Target;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028   } from "../data/innovativeMicroSaasServices2028";
+import { EMERGING_TECH_INNOVATIVE_SERVICES_2028   } from "../data/emergingTechInnovativeServices2028";
 export default function InnovativeServicesShowcase2028() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('All')
 
   const allServices = [
-  ...INNOVATIVE_MICRO_SAAS_SERVICES_2028
-    ...EMERGING_TECH_INNOVATIVE_SERVICES_2028
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2028;
+    ...EMERGING_TECH_INNOVATIVE_SERVICES_2028;
 ]
 
   const categories = [['All', ...Array.from(new Set(allServices.map(service => service.category)))],
@@ -49,9 +51,9 @@ export default function InnovativeServicesShowcase2028() {
   const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory
-const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.innovationLevel === selectedInnovationLevel
-    return matchesSearch && matchesCategory && matchesInnovationLevel
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.innovationLevel === selectedInnovationLevel;
+    return matchesSearch && matchesCategory && matchesInnovationLevel;
 })
   const getCategoryIcon = (catego,
   r: y: string) () => {
@@ -107,7 +109,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="2028 Innovative Services Showcase - Zion Tech Group"
         description="Discover our cutting-edge 2028 innovative micro SAAS services, AI solutions, and emerging technology platforms. Transform your business with revolutionary AI-powered solutions."
       />
@@ -120,7 +122,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
   s: m: px-6,
   l: g:px-8 py-24">
           <div className="text-center">
-            <motion.h1 
+            <motion.h1;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -133,12 +135,12 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
               className="className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6";"
             >
-              2028 Innovative Services
+              2028 Innovative Services;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Showcase
+                Showcase;
               </span>
             </motion.h1>
-            <motion.p 
+            <motion.p;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -153,7 +155,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
             >
               Discover our revolutionary micro SAAS services, AI-powered solutions, and cutting-edge emerging technologies that will transform your business in 2028 and beyond.
             </motion.p>
-            <motion.div 
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -196,7 +198,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
   }
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -215,7 +217,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
   }
             <div className="relative">
               <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -239,7 +241,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
   }
             <div className="relative">
               <Star className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <select
+              <select;
                 value={selectedInnovationLevel},
   }
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)},
@@ -271,7 +273,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={service.id},
   }
               initial={ opaci,
@@ -332,7 +334,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
                   ))},
   {service.features.length > 3 && (
   <div className="text-xs text-gray-500">
-                      +{service.features.length - 3} more features
+                      +{service.features.length - 3} more features;
                     </div>
                   )}
                 </div>
@@ -397,7 +399,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
                     <span>{service.contactInfo.email}</span>
                   </div>
                 </div>
-                <a
+                <a;
                   href={service.contactInfo.website},
   }
                   target="_blank"
@@ -405,7 +407,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
                   className="className="flex items-center gap-2 px-4 py-2 bg-blue-600,
   hove: r: bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors group";"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 group-hove,
   r:translate-x-1 transition-transform" />
                 </a>
@@ -435,7 +437,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact our team of experts to learn how our innovative 2028 services can revolutionize your operations
+              Contact our team of experts to learn how our innovative 2028 services can revolutionize your operations;
               increase efficiency, and drive unprecedented growth.
             </p>
             <div className="flex flex-col,
@@ -450,7 +452,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
               </div>
               <div className="flex items-center gap-2 text-white">
                 <Globe className="w-5 h-5" />
-                <a 
+                <a;
                   href="htt,
   p: s://ziontechgroup.com" 
                   target="_blank" 
@@ -458,13 +460,13 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
                   className="className="hov,
   e: r:text-blue-400 transition-colors";"
                 >
-                  ziontechgroup.com
+                  ziontechgroup.com;
                 </a>
               </div>
             </div>
             <div className="mt-6 text-sm text-gray-400">
               Addres,
-  s: 364 E Main St STE 1008, Middletown DE 19709
+  s: 364 E Main St STE 1008, Middletown DE 19709;
             </div>
           </div>
         </div>

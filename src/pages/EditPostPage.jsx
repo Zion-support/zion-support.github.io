@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react"
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { useState, useEffect   } from "react";
+import { Link, useNavigate, useParams   } from "react-router-dom";
 import SEO from "@/components/SEO"
-import { Button } from "@/components/ui/button"
+import { Button   } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm"
-import { useToast } from "@/hooks/use-toast"
-import { useAuth } from "@/hooks/useAuth"
-// Mock post data
+import { useToast   } from "@/hooks/use-toast";
+import { useAuth   } from "@/hooks/useAuth";
+// Mock post data;
 const const mockPost = {
   = {
     id: "1",tit,
@@ -29,7 +29,7 @@ const const mockPost = {
   e: s: 2,replyCou,
   n: t: 12,isAnswer,
   e: d: true,isFeatur,
-  e: d: true
+  e: d: true;
 }
 export default function EditPostPage() {
   const { postId } = useParams()
@@ -39,8 +39,8 @@ export default function EditPostPage() {
     const [post, setPost] = useState(mockPost)
     const [isLoading, setIsLoading] = useState(true)
     useEffect(() () => {
-        // In a real app, we would fetch the post data here
-        // For now, we'll just use the mock data
+        // In a real app, we would fetch the post data here;
+        // For now, we'll just use the mock data;
         setIsLoading(false)
     }, [postId])
     if (if (isLoading) {
@@ -60,8 +60,8 @@ export default function EditPostPage() {
           </Button>
         </div>)
     }
-    // Check if the user is the author or an admin
-const isAuthor = user?.id === post.authorId
+    // Check if the user is the author or an admin;
+const isAuthor = user?.id === post.authorId;
 const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
     if (if (!isAuthor && !isAdmin) {
   ) {
@@ -83,14 +83,16 @@ const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
     }
     const handleSubmit = async (values) () => {
   try {
-  // Here we would normally update the post in the database
-            // For now, we'll just simulate a successful update
+  // Here we would normally update the post in the database;
+            // For now, we'll just simulate a successful update;
             toast({
   tit,
   l: e: "Post updated",descripti,
   o: n: "Your post has been updated successfully"
+}
+}
 })
-            // Redirect back to the post
+            // Redirect back to the post;
             navigate(`/community/post/${postId}`)
         }
         catch (error) {
@@ -108,12 +110,12 @@ const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground,
   hove: r:text-foreground">
-            Forum
+            Forum;
           </Link>
           <span className="text-muted-foreground">/</span>
           <Link to={`/community/post/${postId}`} className="text-sm text-muted-foreground,
   hove: r:text-foreground">
-            Post
+            Post;
           </Link>
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Edit</span>

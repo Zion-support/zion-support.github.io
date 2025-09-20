@@ -1,12 +1,12 @@
-<<<<<<< HEAD
-// Main entry point for the application
+<<<<<<< HEAD;
+// Main entry point for the application;
 =======
-import { jsx as _jsx } from "react/jsx-runtime"
+import { jsx as _jsx  } from "react/jsx-runtime";
 import React from "react"
-import { createRoot } from "react-dom/client"
+import { createRoot  } from "react-dom/client";
 import App from "./App"
 import './index.css'
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter  } from "react-router-dom";
 const rootElement = document.getElementById('root')
 if (if (!rootElement) {
   ) {
@@ -16,4 +16,4 @@ const root = createRoot(rootElement)
 root.render(_jsx(React.StrictMode, { childr,
   e: n: _jsx(BrowserRouter, { childr,
   e: n: _jsx(App, {}) }) }))
->>>>>>> origin/zion-enhancements-v6
+>>>>>>> origin/zion-enhancements-v6;

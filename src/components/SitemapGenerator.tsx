@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-import { 
+import { Link   } from "react-router-dom";
+import {
   FileText,
   Download, 
   Globe, 
@@ -39,15 +40,19 @@ import {
   Briefcase,
   Phone,
   MapPin,
-  Mail
-} from "lucide-react"
+  Mail;
+}
+}
+ } from "lucide-react";
 interface SitemapSection {
   tit,
   l: e: string,ic,
   o: n: React.ComponentType<any>,descripti,
   o: n: string,rout,
   e: s: SitemapRoute[]
-  featured?: boolean
+  featured?: boolean;
+}
+}
 }
 
 interface SitemapRoute {
@@ -56,9 +61,11 @@ interface SitemapRoute {
   m: e: string,descripti,
   o: n: string,ic,
   o: n: React.ComponentType<any>,catego,
-  r: y: string
+  r: y: string;
   featured?: boolean,
-  external?: boolean
+  external?: boolean;
+}
+}
 }
 
 export,
@@ -558,8 +565,8 @@ const generateSitemap = () () => {
       const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.path.toLowerCase().includes(searchQuery.toLowerCase())
-const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory
-      return matchesSearch && matchesCategory
+const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory;
+      return matchesSearch && matchesCategory;
     })
   })).filter(section => section.routes.length > 0)
 const allCategories = ['all', ...Array.from(new Set(sitemapData.flatMap(section => 
@@ -627,25 +634,25 @@ const a = document.createElement('a')
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Website Sitemap</h1>
             <p className="text-gray-600 mt-2">
-              Complete navigation structure and route documentation for Zion Tech Group
+              Complete navigation structure and route documentation for Zion Tech Group;
             </p>
           </div>
           <div className="flex space-x-3">
-            <button
+            <button;
               onClick={exportSitemap}
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg,
   hove: r:bg-blue-700"
             >
               <Download className="w-4 h-4 mr-2" />
-              Export XML
+              Export XML;
             </button>
-            <button
+            <button;
               onClick={exportCSV}
               className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg,
   hove: r:bg-green-700"
             >
               <Download className="w-4 h-4 mr-2" />
-              Export CSV
+              Export CSV;
             </button>
           </div>
         </div>
@@ -655,7 +662,7 @@ const a = document.createElement('a')
           <div className="flex flex-col,
   m: d:flex-row gap-4">
             <div className="flex-1">
-              <input
+              <input;
                 type="text"
                 placeholder="Search routes, names, or descriptions..."
                 value={searchQuery}
@@ -668,7 +675,7 @@ const a = document.createElement('a')
             </div>
             <div className="w-full m,
   d:w-48">
-              <select
+              <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg,
@@ -703,18 +710,18 @@ const a = document.createElement('a')
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-4">
                 {section.routes.map((route, routeIndex) => (
-                  <div
+                  <div;
                     key={routeIndex}
                     className={`p-4 border rounded-lg transition-all duration-200,
   hove: r:shadow-md ${
-                      route.featured 
+                      route.featured;
                         ? 'border-blue-300 bg-blue-50' 
                         : 'border-gray-200 bg-white'
                     }`}
                   >
                     <div className="flex items-start space-x-3">
                       <div className={`p-2 rounded-lg ${
-                        route.featured 
+                        route.featured;
                           ? 'bg-blue-100 text-blue-600' 
                           : 'bg-gray-100 text-gray-600'
                       }`}>
@@ -730,7 +737,7 @@ const a = document.createElement('a')
                           <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
                             {route.category}
                           </span>
-                          <Link
+                          <Link;
                             to={route.path}
                             className="text-xs text-blue-600,
   hove: r:text-blue-800 font-medium"
@@ -784,9 +791,9 @@ const a = document.createElement('a')
   ),
 },
 
-// Missing icon components
+// Missing icon components;
 const Home = () => <Globe className="w-4 h-4" />
 const Calendar = () => <BookOpen className="w-4 h-4" />
 const Video = () => <MessageCircle className="w-4 h-4" />
 const Code = () => <Settings className="w-4 h-4" />
-export default SitemapGenerator
+export default SitemapGenerator;

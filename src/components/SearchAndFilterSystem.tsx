@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect, useMemo } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Search,
   Filter,
@@ -15,8 +16,10 @@ import {
   Brain,
   Cloud,
   Shield,
-  Globe
-} from "lucide-react"
+  Globe;
+}
+}
+ } from "lucide-react";
 interface SearchResult {
   id: string,tit,
   l: e: string,descripti,
@@ -29,29 +32,35 @@ interface SearchResult {
   ty,
   p: e: 'service' | 'article' | 'team' | 'technology'
 }
+}
+}
 
 interface FilterOption {
   id: string,lab,
   e: l: string,val,
   u: e: string,cou,
-  n: t: number
+  n: t: number;
+}
+}
 }
 
 interface SearchAndFilterSystemProps {
   da,
   t: a: SearchResult[]
   onResultsChange?: (result,
-  s: SearchResult[]) => void
+  s: SearchResult[]) => void;
   placeholder?: string,
-  showFilters?: boolean
+  showFilters?: boolean;
+}
+}
 }
 
 export,
   const: SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
-  data
+  data;
   onResultsChange,
   placeholder = "Search services, articles, team members...",
-  showFilters = true
+  showFilters = true;
 }) () => {
   const [searchQuery, setSearchQuery] = useState('')
 const [isSearchFocused, setIsSearchFocused] = useState(false)
@@ -60,107 +69,111 @@ const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set()),
 const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance'),
 
-  // Filter options
+  // Filter options;
   const filterOptions = useMemo(() () => {
     const categories = data.reduce((acc, item) () => {
       acc[item.category] = (acc[item.category] || 0) + 1,
-      return acc
+      return acc;
 }, {} as Record<string, number>),
 
     const types = data.reduce((acc, item) () => {
       acc[item.type] = (acc[item.type] || 0) + 1,
-      return acc
+      return acc;
 }, {} as Record<string, number>),
 
     return {
-      categori,
+  categori,
   e: s: Object.entries(categories).map(([key, count]) => ({
         id: key,lab,
   e: l: key.charAt(0).toUpperCase() + key.slice(1),val,
-  u: e: key
-        count
+  u: e: key;
+        count;
+}
+}
       })),
       typ,
   e: s: Object.entries(types).map(([key, count]) => ({
         id: key,lab,
   e: l: key.charAt(0).toUpperCase() + key.slice(1),val,
-  u: e: key
-        count
+  u: e: key;
+        count;
       }))
     },
   }, [data]),
 
-  // Filtered and sorted results
+  // Filtered and sorted results;
   const filteredResults = useMemo(() () => {
     let results = data.filter(item () => {
-      // Search query filter
+      // Search query filter;
       const matchesSearch = searchQuery === '' ||
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      // Category filter
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory
-      // Active filters
+      // Category filter;
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+      // Active filters;
       const matchesFilters = activeFilters.size === 0 ||
         Array.from(activeFilters).some(filter =>
           item.tags.includes(filter) ||
           item.type === filter ||
-          item.category === filter
+          item.category === filter;
         )
-      return matchesSearch && matchesCategory && matchesFilters
+      return matchesSearch && matchesCategory && matchesFilters;
 }),
 
-    // Sort results
+    // Sort results;
     switch (sortBy) {
       case 'date':
         results = results.sort((a, b) () => {
-          if (!a.date || !b.date) return 0
+          if (!a.date || !b.date) return 0;
           return new Date(b.date).getTime() - new Date(a.date).getTime()
 }),
         break,
       case 'rating':
         results = results.sort((a, b) () => {
-          if (!a.rating || !b.rating) return 0
-          return b.rating - a.rating
+          if (!a.rating || !b.rating) return 0;
+          return b.rating - a.rating;
 }),
         break,
       case 'name':
         results = results.sort((a, b) => a.title.localeCompare(b.title)),
         break,
       defau,
-  l: t: // relevance
-        // Keep original order for relevance
-        break
+  l: t: // relevance;
+        // Keep original order for relevance;
+        break;
     }
 
-    return results
+    return results;
 }, [data, searchQuery, selectedCategory, activeFilters, sortBy]),
 
-  // Update parent component with results
+  // Update parent component with results;
   useEffect(() () => {
     onResultsChange?.(filteredResults),
   }, [filteredResults, onResultsChange]),
 
-  // Toggle filter
+  // Toggle filter;
   const toggleFilter = (filter,
   I: d: string) () => {
     const newFilters = new Set(activeFilters)
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId)
     } else {
-      newFilters.add(filterId)
+  newFilters.add(filterId)
+}
+}
 }
     setActiveFilters(newFilters)
 },
 
-  // Clear all filters
+  // Clear all filters;
   const clearAllFilters = () () => {
     setActiveFilters(new Set())
     setSelectedCategory('all')
     setSortBy('relevance')
 },
 
-  // Get icon for type
+  // Get icon for type;
   const getTypeIcon = (ty,
   p: e: string) () => {
     switch (type) {
@@ -172,7 +185,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   t: return <Globe className="w-4 h-4" />
     },
   }
-  // Get category color
+  // Get category color;
   const getCategoryColor = (catego,
   r: y: string) () => {
     const colors = {
@@ -187,7 +200,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
       <div className="relative mb-6">
         <div className="relative">
           <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5" />
-          <input
+          <input;
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -201,7 +214,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   s:border-transparent transition-all duration-300 backdrop-blur-md"
           />
           {searchQuery && (
-            <button
+            <button;
               onClick={() => setSearchQuery('')}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400,
   hove: r:text-white transition-colors"
@@ -214,7 +227,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
         {/* Search Suggestions */}
         <AnimatePresence>
           {isSearchFocused && searchQuery && (
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: -10 },
   }
@@ -227,7 +240,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
               className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto"
             >
               {filteredResults.slice(0, 5).map((result) => (
-                <div
+                <div;
                   key={result.id}
                   className="p-3,
   hove: r: bg-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 las,
@@ -257,7 +270,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
         <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Category Filter */}
           <div className="relative">
-            <select
+            <select;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm,
@@ -278,7 +291,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
 
           {/* Sort Options */}
           <div className="relative">
-            <select
+            <select;
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm,
@@ -296,17 +309,17 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
           </div>
 
           {/* Filter Toggle */}
-          <button
+          <button;
             onClick={() => setShowFilterPanel(!showFilterPanel)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-              showFilterPanel
+              showFilterPanel;
                 ? 'bg-zion-cyan text-white'
                 : 'bg-zinc-900/50 text-zinc-300,
   hove: r:text-white border border-zinc-700/50'
             }`}
           >
             <Filter className="w-4 h-4" />
-            Filters
+            Filters;
             {activeFilters.size > 0 && (
               <span className="ml-1 px-2 py-0.5 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                 {activeFilters.size}
@@ -316,12 +329,12 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
 
           {/* Clear Filters */},
   {activeFilters.size > 0 && (
-            <button
+            <button;
               onClick={clearAllFilters}
               className="px-3 py-2 text-sm text-zinc-400,
   hove: r:text-white transition-colors"
             >
-              Clear all
+              Clear all;
             </button>
           )}
         </div>
@@ -329,7 +342,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   {/* Filter Panel */}
       <AnimatePresence>
         {showFilterPanel && (
-          <motion.div
+          <motion.div;
             initial={ heig,
   h: t: 0, opaci,
   t: y: 0 },
@@ -360,7 +373,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
                   <div className="space-y-2">
                     {filterOptions.types.map((type) => (
                       <label key={type.id} className="flex items-center gap-2 cursor-pointer">
-                        <input
+                        <input;
                           type="checkbox"
                           checked={activeFilters.has(type.value)}
                           onChange={() => toggleFilter(type.value)}
@@ -380,7 +393,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>
                   <div className="flex flex-wrap gap-2">
                     {['AICloud', 'SecurityDevOps', 'Digital TransformationMachine Learning'].map((tag) => (
-                      <button
+                      <button;
                         key={tag}
                         onClick={() => toggleFilter(tag.toLowerCase())}
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${
@@ -402,7 +415,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
                   <div className="space-y-2">
                     {['GlobalNorth America', 'EuropeAsia Pacific'].map((location) => (
                       <label key={location} className="flex items-center gap-2 cursor-pointer">
-                        <input
+                        <input;
                           type="checkbox"
                           checked={activeFilters.has(location.toLowerCase())}
                           onChange={() => toggleFilter(location.toLowerCase())}
@@ -423,14 +436,14 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
 
       {/* Results Count */}
       <div className="mb-4 text-sm text-zinc-400">
-        Showing {filteredResults.length} of {data.length} results
+        Showing {filteredResults.length} of {data.length} results;
         {searchQuery && ` for "${searchQuery}"`}
       </div>
 
       {/* Search Results */}
       <div className="space-y-4">
         {filteredResults.map((result) => (
-          <motion.div
+          <motion.div;
             key={result.id}
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -495,7 +508,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
 
       {/* No Results */},
   {filteredResults.length === 0 && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0 },
   }
@@ -507,14 +520,14 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
           <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
           <h3 className="text-xl font-medium text-zinc-300 mb-2">No results found</h3>
           <p className="text-zinc-400 mb-4">
-            Try adjusting your search terms or filters
+            Try adjusting your search terms or filters;
           </p>
-          <button
+          <button;
             onClick={clearAllFilters}
             className="px-4 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors"
           >
-            Clear all filters
+            Clear all filters;
           </button>
         </motion.div>
       )}

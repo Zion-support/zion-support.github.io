@@ -1,21 +1,23 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  FileText
-  Shield
-  Users
-  Globe
-  Mail
-  Phone
-  MapPin
-  Calendar
-  Mail
-  Phone
-  ExternalLink
-  Scale
-  Gavel
-  BookOpen
-} from "lucide-react"
+  FileText;
+  Shield;
+  Users;
+  Globe;
+  Mail;
+  Phone;
+  MapPin;
+  Calendar;
+  Mail;
+  Phone;
+  ExternalLink;
+  Scale;
+  Gavel;
+  BookOpen;
+}
+}
+ } from "lucide-react";
 const TermsOfService = () () => {
   const lastUpdated = '2025-01-15'
   
@@ -111,37 +113,37 @@ const sections = [
   tit,
   l: e: 'Service Usage',descripti,
   o: n: 'Services are provided "as is" without warranties of any kind',ic,
-  o: n: CheckCircle
+  o: n: CheckCircle;
 },
   {
   tit,
   l: e: 'Data Security',descripti,
   o: n: 'We implement industry-standard security measures to protect your data',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: 'Payment Terms',descripti,
   o: n: 'Fees are billed according to your service agreement and are non-refundable',ic,
-  o: n: CheckCircle
+  o: n: CheckCircle;
 },
   {
   tit,
   l: e: 'Intellectual Property',descripti,
   o: n: 'All content and services remain the property of Zion Tech Group',ic,
-  o: n: Lock
+  o: n: Lock;
 },
   {
   tit,
   l: e: 'Liability Limits',descripti,
   o: n: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',ic,
-  o: n: AlertTriangle
+  o: n: AlertTriangle;
 },
   {
   tit,
   l: e: 'Termination Rights',descripti,
   o: n: 'Either party may terminate services with appropriate notice as specified in service agreements',ic,
-  o: n: AlertTriangle
+  o: n: AlertTriangle;
 },
   ]
   const disputeResolution = [
@@ -186,7 +188,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -205,7 +207,7 @@ const sections = [
 
             {/* Services Description */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -223,7 +225,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
-                Description of Services
+                Description of Services;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -234,23 +236,23 @@ const sections = [
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Artificial Intelligence and Machine Learning solutions
+                    Artificial Intelligence and Machine Learning solutions;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Cybersecurity consulting and implementation
+                    Cybersecurity consulting and implementation;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Cloud infrastructure and digital transformation
+                    Cloud infrastructure and digital transformation;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Software development and consulting
+                    Software development and consulting;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Technology strategy and advisory services
+                    Technology strategy and advisory services;
                   </li>
                 </ul>
                 <p>
@@ -261,7 +263,7 @@ const sections = [
 
             {/* User Accounts */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -279,7 +281,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Users className="w-8 h-8 text-zion-cyan" />
-                User Accounts and Responsibilities
+                User Accounts and Responsibilities;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -290,19 +292,19 @@ const sections = [
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Maintaining the security of your account and password
+                    Maintaining the security of your account and password;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    All activities that occur under your account
+                    All activities that occur under your account;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Notifying us immediately of any unauthorized use
+                    Notifying us immediately of any unauthorized use;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Ensuring your account information is up to date
+                    Ensuring your account information is up to date;
                   </li>
                 </ul>
                 <p>
@@ -313,7 +315,7 @@ const sections = [
 
             {/* Acceptable Use */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -331,7 +333,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
-                Acceptable Use Policy
+                Acceptable Use Policy;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -342,27 +344,27 @@ const sections = [
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Violate any applicable laws or regulations
+                    Violate any applicable laws or regulations;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Infringe on intellectual property rights
+                    Infringe on intellectual property rights;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Transmit harmful, offensive, or inappropriate content
+                    Transmit harmful, offensive, or inappropriate content;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Attempt to gain unauthorized access to our systems
+                    Attempt to gain unauthorized access to our systems;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Interfere with the proper functioning of our services
+                    Interfere with the proper functioning of our services;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Use our services for commercial purposes without authorization
+                    Use our services for commercial purposes without authorization;
                   </li>
                 </ul>
                 <p>
@@ -373,7 +375,7 @@ const sections = [
 
             {/* Intellectual Property */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -391,7 +393,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Lock className="w-8 h-8 text-zion-cyan" />
-                Intellectual Property Rights
+                Intellectual Property Rights;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -402,19 +404,19 @@ const sections = [
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Text, graphics, images, and software
+                    Text, graphics, images, and software;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Trademarks, service marks, and logos
+                    Trademarks, service marks, and logos;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Patents and trade secrets
+                    Patents and trade secrets;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Copyrighted materials and designs
+                    Copyrighted materials and designs;
                   </li>
                 </ul>
                 <p>
@@ -428,7 +430,7 @@ const sections = [
 
             {/* Privacy and Data */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -446,7 +448,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Eye className="w-8 h-8 text-zion-cyan" />
-                Privacy and Data Protection
+                Privacy and Data Protection;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -464,7 +466,7 @@ const sections = [
 
             {/* Limitation of Liability */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -482,7 +484,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
-                Limitation of Liability
+                Limitation of Liability;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -493,19 +495,19 @@ const sections = [
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Loss of profits, data, or business opportunities
+                    Loss of profits, data, or business opportunities;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Service interruptions or technical failures
+                    Service interruptions or technical failures;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Security breaches or data loss
+                    Security breaches or data loss;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Third-party actions or content
+                    Third-party actions or content;
                   </li>
                 </ul>
                 <p>
@@ -516,7 +518,7 @@ const sections = [
 
             {/* Disclaimers */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -534,7 +536,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Info className="w-8 h-8 text-zion-cyan" />
-                Disclaimers
+                Disclaimers;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -548,19 +550,19 @@ const sections = [
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Our services will be uninterrupted or error-free
+                    Our services will be uninterrupted or error-free;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Defects will be corrected
+                    Defects will be corrected;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Our services are free of viruses or other harmful components
+                    Our services are free of viruses or other harmful components;
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    The results obtained from using our services will be accurate or reliable
+                    The results obtained from using our services will be accurate or reliable;
                   </li>
                 </ul>
                 <p>
@@ -571,7 +573,7 @@ const sections = [
 
             {/* Indemnification */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -589,7 +591,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
-                Indemnification
+                Indemnification;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -600,19 +602,19 @@ const sections = [
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Your use of our services
+                    Your use of our services;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Your violation of these Terms
+                    Your violation of these Terms;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Your violation of any third-party rights
+                    Your violation of any third-party rights;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Any content you submit or transmit through our services
+                    Any content you submit or transmit through our services;
                   </li>
                 </ul>
               </div>
@@ -620,7 +622,7 @@ const sections = [
 
             {/* Termination */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -638,7 +640,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
-                Termination
+                Termination;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -656,7 +658,7 @@ const sections = [
 
             {/* Governing Law */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -674,7 +676,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Globe className="w-8 h-8 text-zion-cyan" />
-                Governing Law and Dispute Resolution
+                Governing Law and Dispute Resolution;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -692,7 +694,7 @@ const sections = [
 
             {/* Changes to Terms */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -710,7 +712,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
-                Changes to These Terms
+                Changes to These Terms;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -728,7 +730,7 @@ const sections = [
 
             {/* Contact Information */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -745,7 +747,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
-                Contact Information
+                Contact Information;
               </h2>
 
               <p className="text-zion-slate-light mb-6">
@@ -777,7 +779,7 @@ const sections = [
                 <button className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg,
   hove: r:bg-purple-700 transition-colors">
                   <Download className="w-4 h-4" />
-                  Download PDF
+                  Download PDF;
                 </button>
               </div>
 
@@ -794,7 +796,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -807,14 +809,14 @@ const sections = [
   }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Table of Contents
+                Table of Contents;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-4">
                 {sections.map((section, index) => (
-  <motion.a
+  <motion.a;
                     key={section.id},
   }
                     href={`#${section.id}`}
@@ -850,7 +852,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -863,14 +865,14 @@ const sections = [
   }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Key Provisions
+                Key Provisions;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
                 {keyProvisions.map((provision, index) => (
-  <motion.div
+  <motion.div;
                     key={provision.title},
   }
                     initial={ opaci,
@@ -905,7 +907,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8 bg-white">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -941,7 +943,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -954,14 +956,14 @@ const sections = [
   }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Dispute Resolution Process
+                Dispute Resolution Process;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
                 {disputeResolution.map((step, index) => (
-  <motion.div
+  <motion.div;
                     key={step.step},
   }
                     initial={ opaci,
@@ -996,7 +998,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-purple-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -1032,12 +1034,12 @@ const sections = [
   s: m:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg,
   hove: r:bg-purple-50 transition-colors">
-                  Contact Legal Team
+                  Contact Legal Team;
                 </button>
                 <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg,
   hove: r:bg-white hove,
   r:text-purple-600 transition-colors">
-                  Request Clarification
+                  Request Clarification;
                 </button>
               </div>
             </motion.div>
@@ -1047,4 +1049,4 @@ const sections = [
     </>
   )
 }
-export default TermsOfService
+export default TermsOfService;

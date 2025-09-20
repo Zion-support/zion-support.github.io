@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-	Rocket,
+  Rocket,
 	Brain,
 	Zap,
 	Shield,
@@ -14,10 +15,12 @@ import {
 	ArrowRight,
 	Star,
 	Play,
-	Pause
-} from "lucide-react"
+	Pause;
+}
+}
+ } from "lucide-react";
 interface ServiceShowcase {
-	id: string,tit,
+  id: string,tit,
   l: e: string,descripti,
   o: n: string,ic,
   o: n: React.ComponentType<any>,col,
@@ -25,6 +28,8 @@ interface ServiceShowcase {
   e: s: string[],pri,
   c: e: string,stat,
   u: s: 'active' | 'beta' | 'new'
+}
+}
 }
 const,
   futuristicService: s: ServiceShowcase[] = [
@@ -132,7 +137,7 @@ const getStatusText = (stat,
 			<div className="container mx-auto px-4">
 				{/* Header */}
 				<div className="text-center mb-16">
-					<motion.h2
+					<motion.h2;
 						initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -145,12 +150,12 @@ const getStatusText = (stat,
 						className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6"
 					>
-						Futuristic
+						Futuristic;
 						<span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-							Service Showcase
+							Service Showcase;
 						</span>
 					</motion.h2>
-					<motion.p
+					<motion.p;
 						initial={ opacit,
   y: 0, y: 20 },
   }
@@ -171,7 +176,7 @@ const getStatusText = (stat,
 					{/* Control Panel */}
 					<div className="flex justify-center mb-8">
 						<div className="bg-white/10 backdrop-blur-sm rounded-full p-2 flex items-center gap-2">
-							<button
+							<button;
 								onClick={() => setIsPlaying(!isPlaying)}
 								className="p-3 bg-white/20,
   hove: r:bg-white/30 rounded-full transition-colors"
@@ -180,11 +185,11 @@ const getStatusText = (stat,
 							</button>
 							<div className="flex gap-2">
 								{futuristicServices.map((_, index) => (
-									<button
+									<button;
 										key={index}
 										onClick={() => setCurrentService(index)}
 										className={`w-3 h-3 rounded-full transition-all ${
-											index === currentService
+											index === currentService;
 												? 'bg-zion-cyan scale-125'
 												: 'bg-white/30,
   hove: r:bg-white/50'
@@ -196,7 +201,7 @@ const getStatusText = (stat,
 					</div>
 					{/* Service Display */}
 					<AnimatePresence mode="wait">
-						<motion.div
+						<motion.div;
 							key={currentService}
 							initial={ opaci,
   t: y: 0, x: 100 },
@@ -238,7 +243,7 @@ const getStatusText = (stat,
 										</div>
 										<ul className="space-y-3">
 											{futuristicServices[currentService].features.map((feature, index) => (
-												<motion.li
+												<motion.li;
 													key={index}
 													initial={ opaci,
   t: y: 0, x: -20 },
@@ -257,7 +262,7 @@ const getStatusText = (stat,
 											))}
 										</ul>
 									</div>
-									<a
+									<a;
 										href="htt,
   p: s: //ziontechgroup.com/contact"
 										target="_blank"
@@ -267,7 +272,7 @@ const getStatusText = (stat,
   hove: r:to-zion-cyan text-white font-semibold rounded-full transition-all duration-300 transform hove,
   r:scale-105 shadow-lg"
 									>
-										Get Started
+										Get Started;
 										<ArrowRight className="ml-2 w-5 h-5" />
 									</a>
 								</div>
@@ -280,7 +285,7 @@ const getStatusText = (stat,
   m: e: "w-32 h-32 text-white/80" })}
 										</div>
 										{/* Animated particles */}
-										<motion.div
+										<motion.div;
 											animate={
 												rota,
   t: e: [0, 360],
@@ -310,13 +315,13 @@ const getStatusText = (stat,
 				{/* Service Grid */}
 				<div className="mt-20">
 					<h3 className="text-3xl font-bold text-white text-center mb-12">
-						Explore All Services
+						Explore All Services;
 					</h3>
 					<div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
 						{futuristicServices.map((service, index) => (
-							<motion.div
+							<motion.div;
 								key={service.id}
 								initial={ opaci,
   t: y: 0, y: 20 },

@@ -1,22 +1,25 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
+import { Link   } from "react-router-dom";
 import {
-  Search
+  Search;
   Calendar,
   Clock,
   User,
   Tag,
-  ArrowRight
-  TrendingUp
-  Lightbulb
-  Code
-  Shield
-  Cloud
-  Brain
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  ArrowRight;
+  TrendingUp;
+  Lightbulb;
+  Code;
+  Shield;
+  Cloud;
+  Brain;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 interface BlogPost {
   id: string,tit,
   l: e: string,excer,
@@ -31,7 +34,9 @@ interface BlogPost {
   g: e: string,featur,
   e: d: boolean,vie,
   w: s: number,lik,
-  e: s: number
+  e: s: number;
+}
+}
 }
 
 interface Category {
@@ -39,7 +44,9 @@ interface Category {
   m: e: string,ic,
   o: n: any,cou,
   n: t: number,col,
-  o: r: string
+  o: r: string;
+}
+}
 }
 
 const,
@@ -113,7 +120,7 @@ const,
   g: e: '/blog/ai-autonomous-research.jpg',featur,
   e: d: true,vie,
   w: s: 18250,lik,
-  e: s: 945
+  e: s: 945;
 },
   {
   id: '2',tit,
@@ -131,7 +138,7 @@ const,
   g: e: '/blog/ai-supply-chain-optimization.jpg',featur,
   e: d: true,vie,
   w: s: 16580,lik,
-  e: s: 823
+  e: s: 823;
 },
   {
   id: '3',tit,
@@ -150,7 +157,7 @@ const,
   g: e: '/blog/ai-content-marketing-suite.jpg',featur,
   e: d: true,vie,
   w: s: 14230,lik,
-  e: s: 756
+  e: s: 756;
 },
   {
   id: '4',tit,
@@ -167,7 +174,7 @@ const,
   g: e: '/blog/ai-business-intelligence-2025.jpg',featur,
   e: d: false,vie,
   w: s: 15420,lik,
-  e: s: 892
+  e: s: 892;
 },
   {
   id: '5',tit,
@@ -185,7 +192,7 @@ const,
   g: e: '/blog/zero-trust-security-guide.jpg',featur,
   e: d: false,vie,
   w: s: 12850,lik,
-  e: s: 756
+  e: s: 756;
 },
   {
   id: '3',tit,
@@ -202,7 +209,7 @@ const,
   g: e: '/blog/microservices-kubernetes-docker.jpg',featur,
   e: d: false,vie,
   w: s: 9870,lik,
-  e: s: 543
+  e: s: 543;
 },
   {
   id: '4',tit,
@@ -219,7 +226,7 @@ const,
   g: e: '/blog/ai-customer-experience-analytics.jpg',featur,
   e: d: false,vie,
   w: s: 11230,lik,
-  e: s: 678
+  e: s: 678;
 },
   {
   id: '5',tit,
@@ -237,7 +244,7 @@ const,
   g: e: '/blog/micro-saas-niche-applications.jpg',featur,
   e: d: false,vie,
   w: s: 8760,lik,
-  e: s: 432
+  e: s: 432;
 },
   {
   id: '6',tit,
@@ -255,7 +262,7 @@ const,
   g: e: '/blog/cloud-finops-enterprise.jpg',featur,
   e: d: false,vie,
   w: s: 7650,lik,
-  e: s: 398
+  e: s: 398;
 },
   {
   id: '7',tit,
@@ -273,7 +280,7 @@ const,
   g: e: '/blog/ai-ethics-business.jpg',featur,
   e: d: false,vie,
   w: s: 13450,lik,
-  e: s: 789
+  e: s: 789;
 },
   {
   id: '8',tit,
@@ -290,7 +297,7 @@ const,
   g: e: '/blog/data-governance-ai-projects.jpg',featur,
   e: d: false,vie,
   w: s: 9870,lik,
-  e: s: 567
+  e: s: 567;
 },
   ]
 export default function Blog() {
@@ -336,7 +343,7 @@ export default function Blog() {
   g: s: ['AIBusiness', 'Trends2024']
       ima,
   g: e: '/blog/ai-business-trends-2024.jpg',featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 2,tit,
@@ -410,8 +417,8 @@ export default function Blog() {
   const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
 })
 
   const featuredPost = blogPosts.find(post => post.featured)
@@ -419,7 +426,7 @@ export default function Blog() {
   const getCategoryIcon = (category,
   I: d: string) () => {
   const category = categories.find(cat => cat.id === categoryId)
-    return category ? category.icon : BookOpen
+    return category ? category.icon : BookOpen;
 }
 
   const getCategoryName = (category,
@@ -430,7 +437,7 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Blog - Zion Tech Group"
         description="Stay updated with the latest insights on AI, technology, and business innovation from Zion Tech Group."
       />
@@ -440,7 +447,7 @@ export default function Blog() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -474,7 +481,7 @@ export default function Blog() {
   }
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search articles..."
                 value={searchQuery},
@@ -493,14 +500,14 @@ export default function Blog() {
   }
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-cyan-400 text-white border-cyan-400'
                       : 'bg-slate-800/50 text-gray-300 border-slate-600/50,
   hove: r: border-cyan-400/50 hove,
@@ -522,7 +529,7 @@ export default function Blog() {
   {featuredPost && (
   <section className="py-12">
           <div className="container mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -536,7 +543,7 @@ export default function Blog() {
             >
               <div className="flex items-center gap-2 mb-4">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm font-medium rounded-full">
-                  Featured
+                  Featured;
                 </span>
                 <span className="text-gray-400 text-sm">{featuredPost.category.toUpperCase()}</span>
               </div>
@@ -564,7 +571,7 @@ export default function Blog() {
   }
                     </div>
                     
-                    <Link
+                    <Link;
                       to={`/blog/${post.id}`}
                       className="className="flex items-center space-x-2 text-cyan-400,
   hove: r:text-cyan-300 transition-colors duration-200 font-medium";"
@@ -576,7 +583,7 @@ export default function Blog() {
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {featuredPost.tags.map((tag) => (
-  <span
+  <span;
                         key={tag},
   }
                         className="className="px-3 py-1 bg-slate-700/50 text-gray-300 text-sm rounded-full";"
@@ -587,14 +594,14 @@ export default function Blog() {
                     ))}
                   </div>
 
-                  <Link
+                  <Link;
                     to={`/blog/${featuredPost.id}`}
                     className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg,
   hove: r: from-cyan-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105";"
                   >
-                    Read Full Article
+                    Read Full Article;
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
@@ -617,7 +624,7 @@ export default function Blog() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -633,7 +640,7 @@ export default function Blog() {
               {selectedCategory === 'all' ? 'All Articles' : `${categories.find(c => c.id === selectedCategory)?.name}`}
             </h2>
             <p className="text-gray-300">
-              {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} found
+              {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} found;
             </p>
           </motion.div>
 
@@ -642,7 +649,7 @@ export default function Blog() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {filteredPosts.map((post, index) => (
-  <motion.article
+  <motion.article;
                   key={post.id},
   }
                   initial={ opaci,
@@ -680,7 +687,7 @@ export default function Blog() {
                           </span>
                           {post.featured && (
   <span className="px-2 py-1 bg-cyan-400/20 text-cyan-400 text-xs font-medium rounded">
-                              Featured
+                              Featured;
                             </span>
                           )}
                         </div>
@@ -711,7 +718,7 @@ export default function Blog() {
 
                         <div className="flex flex-wrap gap-2 mb-4">
                           {post.tags.slice(0, 3).map((tag) => (
-  <span
+  <span;
                               key={tag},
   }
                               className="className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded";"
@@ -735,7 +742,7 @@ export default function Blog() {
               ))}
             </div>
           ) : (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -752,7 +759,7 @@ export default function Blog() {
               <p className="text-gray-300 mb-6">
                 Try adjusting your search terms or category filter.
               </p>
-              <button
+              <button;
                 onClick={() () => {
                   setSearchQuery('')
                   setSelectedCategory('all')
@@ -761,7 +768,7 @@ export default function Blog() {
                 className="className="px-6 py-3 bg-cyan-400 text-white font-semibold rounded-lg,
   hove: r:bg-cyan-500 transition-colors duration-200";"
               >
-                Clear Filters
+                Clear Filters;
               </button>
             </motion.div>
           )}
@@ -772,7 +779,7 @@ export default function Blog() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -785,15 +792,15 @@ export default function Blog() {
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Stay Updated
+              Stay Updated;
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get the latest insights on AI, technology, and business innovation 
+              Get the latest insights on AI, technology, and business innovation;
               delivered directly to your inbox.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400,
@@ -805,7 +812,7 @@ export default function Blog() {
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg,
   hove: r:from-cyan-500 hove,
   r:to-blue-600 transition-all duration-200">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </motion.div>

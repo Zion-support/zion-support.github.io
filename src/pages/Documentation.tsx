@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  BookOpen
+  BookOpen;
   Code,
   FileText,
   Search,
@@ -11,38 +12,40 @@ import {
   ExternalLink,
   Download,
   Copy,
-  CheckCircle
-  Clock
-  User
-  Star
-  Bookmark
-  Share2
-  ChevronRight
-  ChevronDown
-  Terminal
-  Database
-  Code2
-  Cpu
-  Shield
-  Cloud
-  Brain
-  Zap
-  Globe
-  Settings
-  Play
-  Code2
-  GitBranch
-  Package
-  Server
-  Lock
-  Key
-  Database as DatabaseIcon
-  Network
-  Monitor
-  Smartphone
-  Tablet
-  Laptop
-} from "lucide-react"
+  CheckCircle;
+  Clock;
+  User;
+  Star;
+  Bookmark;
+  Share2;
+  ChevronRight;
+  ChevronDown;
+  Terminal;
+  Database;
+  Code2;
+  Cpu;
+  Shield;
+  Cloud;
+  Brain;
+  Zap;
+  Globe;
+  Settings;
+  Play;
+  Code2;
+  GitBranch;
+  Package;
+  Server;
+  Lock;
+  Key;
+  Database as DatabaseIcon;
+  Network;
+  Monitor;
+  Smartphone;
+  Tablet;
+  Laptop;
+}
+}
+ } from "lucide-react";
 export,
   const: Documentation: React.FC = () () => {
   const [searchQuery, setSearchQuery] = React.useState('')
@@ -323,7 +326,7 @@ export,
   }
 
   const filteredSections = documentationSections.filter(section => 
-    selectedCategory === 'all' || section.id === selectedCategory
+    selectedCategory === 'all' || section.id === selectedCategory;
 )
 
   const allArticles = documentationSections.flatMap(section => 
@@ -336,21 +339,21 @@ export,
     article.section.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
-  // Update category counts
+  // Update category counts;
   React.useEffect(() () => {
     categories.forEach(cat () => {
   if (if (cat.id !== 'all') {
   ) {
         const section = documentationSections.find(s => s.id === cat.id)
-        cat.count = section ? section.articles.length : 0
+        cat.count = section ? section.articles.length : 0;
 },
   })
-    categories[0].count = allArticles.length
+    categories[0].count = allArticles.length;
 }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Documentation - Zion Tech Group"
         description="Comprehensive documentation, API references, tutorials, and guides for Zion Tech Group services and APIs."
       />
@@ -359,7 +362,7 @@ export,
   }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -373,14 +376,14 @@ export,
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-400 text-sm font-medium mb-6">
               <Code className="w-4 h-4" />
-              Developer Resources
+              Developer Resources;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
               Documentation &
               <span className="block bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                Developer Guides
+                Developer Guides;
               </span>
             </h1>
             
@@ -424,7 +427,7 @@ export,
   }
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search documentation..."
                 value={searchQuery},
@@ -443,14 +446,14 @@ export,
   }
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-blue-400/20 border-blue-400/40 text-blue-400'
                       : 'bg-slate-700/50 border-slate-600/50 text-gray-300,
   hove: r: bg-slate-600/50 hove,
@@ -472,20 +475,20 @@ export,
       <section className="py-16">
         <div className="container-responsive">
           {searchQuery ? (
-  // Search Results
+  // Search Results;
             <div>
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-2">
                   Search Results for "{searchQuery}"
                 </h2>
                 <p className="text-gray-400">
-                  Found {filteredArticles.length} articles
+                  Found {filteredArticles.length} articles;
                 </p>
               </div>
               
               <div className="space-y-4">
                 {filteredArticles.map((article, index) => (
-  <motion.div
+  <motion.div;
                     key={`${article.section}-${index}`}
                     initial={ opaci,
   t: y: 0, y: 20 },
@@ -511,7 +514,7 @@ export,
                           {article.featured && (
   <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
                               <Star className="w-3 h-3" />
-                              Featured
+                              Featured;
                             </span>
                           )}
                         </div>
@@ -544,7 +547,7 @@ export,
                       <div className="flex-shrink-0 ml-4">
                         <button className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-400 text-sm font-medium rounded-lg,
   hove: r:bg-blue-500/30 transition-all duration-300">
-                          View
+                          View;
                           <ArrowRight className="w-4 h-4" />
                         </button>
                       </div>
@@ -562,10 +565,10 @@ export,
               )}
             </div>
           ) : (
-  // Category-based Documentation
+  // Category-based Documentation;
             <div className="space-y-8">
               {filteredSections.map((section, sectionIndex) => (
-  <motion.div
+  <motion.div;
                   key={section.id},
   }
                   initial={ opaci,
@@ -582,7 +585,7 @@ export,
                 >
                   {/* Section Header */},
   }
-                  <button
+                  <button;
                     onClick={onClick={() => toggleSection(section.id)},
   },
   }
@@ -597,7 +600,7 @@ export,
                         <div>
                           <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                           <p className="text-gray-400 text-sm">
-                            {section.articles.length} articles • {section.articles.reduce((acc, article) => acc + parseInt(article.readTime), 0)} min total
+                            {section.articles.length} articles • {section.articles.reduce((acc, article) => acc + parseInt(article.readTime), 0)} min total;
                           </p>
                         </div>
                       </div>
@@ -616,7 +619,7 @@ export,
                       <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-4 p-6">
                         {section.articles.map((article, articleIndex) => (
-  <motion.div
+  <motion.div;
                             key={article.path},
   }
                             initial={ opaci,
@@ -668,7 +671,7 @@ export,
                             <div className="flex items-center justify-between">
                               <button className="inline-flex items-center gap-2 text-blue-400,
   hove: r: text-blue-300 text-sm font-medium transition-colors">
-                                Read Article
+                                Read Article;
                                 <ArrowRight className="w-4 h-4" />
                               </button>
                               
@@ -733,7 +736,7 @@ export,
   e: f: '/support' },
   },
   ].map((action, index) => (
-  <motion.a
+  <motion.a;
                 key={action.name},
   }
                 href={action.href},
@@ -774,7 +777,7 @@ export,
   }
       <section className="py-20">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -802,11 +805,11 @@ export,
   hove: r:from-blue-600,
   hove: r:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300,
   transform: hover:scale-105">
-                Contact Developer Support
+                Contact Developer Support;
               </button>
               <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-medium rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-300">
-                Join Developer Community
+                Join Developer Community;
               </button>
             </div>
           </motion.div>
@@ -815,4 +818,4 @@ export,
     </div>
   )
 }
-export default Documentation
+export default Documentation;

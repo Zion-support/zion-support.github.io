@@ -1,39 +1,43 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   TrendingUp,
   DollarSign,
   CheckCircle,
   Star,
   Users,
-  Globe
-  Lock
-  Cpu
-  Database
-  Network
-  BarChart3
-  ArrowRight
-  Sparkles
-  Atom
-  Workflow
-  Target
-  Rocket
-  Shield
-  Zap
-  Activity
-  LineChart
-  PieChart
-  Target as TargetIcon
-  BrainCircuit
-  Clock
-  AlertTriangle
-  TrendingDown
-  DollarSign as DollarIcon
-  BarChart
-  PieChart as PieChartIcon
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Globe;
+  Lock;
+  Cpu;
+  Database;
+  Network;
+  BarChart3;
+  ArrowRight;
+  Sparkles;
+  Atom;
+  Workflow;
+  Target;
+  Rocket;
+  Shield;
+  Zap;
+  Activity;
+  LineChart;
+  PieChart;
+  Target as TargetIcon;
+  BrainCircuit;
+  Clock;
+  AlertTriangle;
+  TrendingDown;
+  DollarSign as DollarIcon;
+  BarChart;
+  PieChart as PieChartIcon;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function AIFinancialTrading() {
   const features = [
   {
@@ -68,7 +72,7 @@ export default function AIFinancialTrading() {
   o: n: "AI-powered momentum detection and trend following strategies",successRa,
   t: e: "87.3%",avgRetu,
   r: n: "12.5%",ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   na,
@@ -76,7 +80,7 @@ export default function AIFinancialTrading() {
   o: n: "Real-time price difference detection across multiple exchanges",successRa,
   t: e: "94.1%",avgRetu,
   r: n: "8.2%",ic,
-  o: n: DollarSign
+  o: n: DollarSign;
 },
   {
   na,
@@ -84,7 +88,7 @@ export default function AIFinancialTrading() {
   o: n: "Statistical analysis for price correction opportunities",successRa,
   t: e: "82.7%",avgRetu,
   r: n: "15.8%",ic,
-  o: n: BarChart
+  o: n: BarChart;
 },
   {
   na,
@@ -92,7 +96,7 @@ export default function AIFinancialTrading() {
   o: n: "Social media and news sentiment-driven trading decisions",successRa,
   t: e: "79.5%",avgRetu,
   r: n: "18.3%",ic,
-  o: n: BrainCircuit
+  o: n: BrainCircuit;
 },
   ]
   const benefits = [
@@ -162,7 +166,7 @@ export default function AIFinancialTrading() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
       />
@@ -174,7 +178,7 @@ export default function AIFinancialTrading() {
   l: g:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -189,17 +193,17 @@ export default function AIFinancialTrading() {
               <TrendingUp className="w-12 h-12 text-green-400 mr-3" />
               <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white">
-                AI Financial Trading Platform
+                AI Financial Trading Platform;
               </h1>
             </div>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your trading with AI-powered algorithms, predictive analytics
+              Revolutionize your trading with AI-powered algorithms, predictive analytics;
               and automated risk management for maximum returns and minimal risks.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -210,9 +214,9 @@ export default function AIFinancialTrading() {
   hove: r: shadow-lg,
   hove: r:shadow-green-500/25 transition-all duration-300";"
               >
-                Start Trading Today
+                Start Trading Today;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -222,7 +226,7 @@ export default function AIFinancialTrading() {
                 className="className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-green-400/10 transition-all duration-300";"
               >
-                View Demo
+                View Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -235,7 +239,7 @@ export default function AIFinancialTrading() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -249,10 +253,10 @@ export default function AIFinancialTrading() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Advanced Trading Capabilities
+              Advanced Trading Capabilities;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI trading platform combines cutting-edge machine learning with financial expertise 
+              Our AI trading platform combines cutting-edge machine learning with financial expertise;
               to deliver unprecedented trading performance and risk management.
             </p>
           </motion.div>
@@ -261,7 +265,7 @@ export default function AIFinancialTrading() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -295,7 +299,7 @@ export default function AIFinancialTrading() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -309,10 +313,10 @@ export default function AIFinancialTrading() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Proven Trading Strategies
+              Proven Trading Strategies;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform employs multiple sophisticated trading strategies with proven 
+              Our AI platform employs multiple sophisticated trading strategies with proven;
               track records and consistent returns.
             </p>
           </motion.div>
@@ -320,7 +324,7 @@ export default function AIFinancialTrading() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {tradingStrategies.map((strategy, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -368,7 +372,7 @@ export default function AIFinancialTrading() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -382,7 +386,7 @@ export default function AIFinancialTrading() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Multi-Asset Trading Support
+              Multi-Asset Trading Support;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Trade across multiple asset classes with our unified AI trading platform.
@@ -393,7 +397,7 @@ export default function AIFinancialTrading() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {supportedAssets.map((asset, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -423,7 +427,7 @@ export default function AIFinancialTrading() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -448,7 +452,7 @@ export default function AIFinancialTrading() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -477,7 +481,7 @@ export default function AIFinancialTrading() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -491,7 +495,7 @@ export default function AIFinancialTrading() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your trading needs. All plans include our core AI features.
@@ -501,7 +505,7 @@ export default function AIFinancialTrading() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -515,7 +519,7 @@ export default function AIFinancialTrading() {
   a: y: index * 0.1 },
   }
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
-  index === 1 
+  index === 1;
                     ? 'border-green-400/50 shadow-lg shadow-green-500/25' 
                     : 'border-slate-600/50'
 } relative`}
@@ -523,7 +527,7 @@ export default function AIFinancialTrading() {
                 {index === 1 && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -545,7 +549,7 @@ export default function AIFinancialTrading() {
                   ))}
                 </ul>
 
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.05 },
   }
@@ -553,7 +557,7 @@ export default function AIFinancialTrading() {
   l: e: 0.95 },
   }
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  index === 1
+  index === 1;
                       ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white,
   hove: r: shadow-lg,
   hove: r:shadow-green-500/25'
@@ -561,7 +565,7 @@ export default function AIFinancialTrading() {
   r:bg-green-400/10'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
               </motion.div>
             ))}
@@ -575,7 +579,7 @@ export default function AIFinancialTrading() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-green-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -591,12 +595,12 @@ export default function AIFinancialTrading() {
               Ready to Start AI-Powered Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join successful traders worldwide who have already transformed their 
+              Join successful traders worldwide who have already transformed their;
               trading performance with our AI platform.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -607,9 +611,9 @@ export default function AIFinancialTrading() {
   hove: r: shadow-lg,
   hove: r:shadow-green-500/25 transition-all duration-300";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -619,7 +623,7 @@ export default function AIFinancialTrading() {
                 className="className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r: bg-green-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>

@@ -21,7 +21,9 @@ export interface AdvancedMicroSaasService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,12 +35,12 @@ export interface AdvancedMicroSaasService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
 }
 
 export,
   const: ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
-  // AI-Powered Financial Services
+  // AI-Powered Financial Services;
   {
   i,
   d: "ai-credit-risk-assessment",tit,
@@ -119,7 +121,7 @@ export,
     marketSi,
   z: e: "$12.4 billion by 2025"
 }
-  // AI-Powered Healthcare Solutions
+  // AI-Powered Healthcare Solutions;
   {
   id: "ai-medical-imaging-analysis",tit,
   l: e: "AI Medical Imaging Analysis Platform",descripti,
@@ -199,7 +201,7 @@ export,
     marketSi,
   z: e: "$45.8 billion by 2025"
 }
-  // AI-Powered Legal Services
+  // AI-Powered Legal Services;
   {
   id: "ai-contract-analysis-platform",tit,
   l: e: "AI Contract Analysis & Review Platform",descripti,
@@ -279,7 +281,7 @@ export,
     marketSi,
   z: e: "$8.7 billion by 2025"
 }
-  // AI-Powered Supply Chain Optimization
+  // AI-Powered Supply Chain Optimization;
   {
   id: "ai-supply-chain-optimizer",tit,
   l: e: "AI Supply Chain Optimization Platform",descripti,
@@ -359,7 +361,7 @@ export,
     marketSi,
   z: e: "$15.8 billion by 2025"
 }
-  // AI-Powered HR & Talent Management
+  // AI-Powered HR & Talent Management;
   {
   id: "ai-talent-acquisition-platform",tit,
   l: e: "AI Talent Acquisition & Management Platform",descripti,

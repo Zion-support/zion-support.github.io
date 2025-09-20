@@ -1,7 +1,7 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
-  // AI-Powered Business Intelligence & Analytics
+  // AI-Powered Business Intelligence & Analytics;
   {
   i,
   d: "ai-revenue-optimization-platform",tit,
@@ -51,7 +51,7 @@ export,
   ],
   }
 
-  // AI-Powered Customer Experience
+  // AI-Powered Customer Experience;
   {
   id: "ai-customer-journey-orchestrator",tit,
   l: e: "AI Customer Journey Orchestrator",descripti,
@@ -99,7 +99,7 @@ export,
   ],
   }
 
-  // AI-Powered Marketing Automation
+  // AI-Powered Marketing Automation;
   {
   id: "ai-marketing-attribution-engine",tit,
   l: e: "AI Marketing Attribution Engine",descripti,
@@ -147,7 +147,7 @@ export,
   ],
   }
 
-  // AI-Powered Content Creation
+  // AI-Powered Content Creation;
   {
   id: "ai-content-performance-optimizer",tit,
   l: e: "AI Content Performance Optimizer",descripti,
@@ -196,7 +196,7 @@ export,
   ],
   }
 
-  // AI-Powered HR & Recruitment
+  // AI-Powered HR & Recruitment;
   {
   id: "ai-talent-acquisition-platform",tit,
   l: e: "AI Talent Acquisition Platform",descripti,
@@ -245,7 +245,7 @@ export,
   ],
   }
 
-  // AI-Powered Financial Operations
+  // AI-Powered Financial Operations;
   {
   id: "ai-financial-fraud-detection",tit,
   l: e: "AI Financial Fraud Detection",descripti,
@@ -293,7 +293,7 @@ export,
   ],
   }
 
-  // AI-Powered Supply Chain
+  // AI-Powered Supply Chain;
   {
   id: "ai-supply-chain-optimizer",tit,
   l: e: "AI Supply Chain Optimizer",descripti,
@@ -342,7 +342,7 @@ export,
   ],
   }
 
-  // AI-Powered Healthcare
+  // AI-Powered Healthcare;
   {
   id: "ai-medical-diagnostic-assistant",tit,
   l: e: "AI Medical Diagnostic Assistant",descripti,
@@ -391,7 +391,7 @@ export,
   ],
   }
 
-  // AI-Powered Legal Tech
+  // AI-Powered Legal Tech;
   {
   id: "ai-legal-document-analyzer",tit,
   l: e: "AI Legal Document Analyzer",descripti,
@@ -440,7 +440,7 @@ export,
   ],
   }
 
-  // AI-Powered Education
+  // AI-Powered Education;
   {
   id: "ai-personalized-learning-platform",tit,
   l: e: "AI Personalized Learning Platform",descripti,

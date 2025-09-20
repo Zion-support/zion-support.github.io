@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react"
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data/innovativeServices2025"
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices   } from "../data/innovativeServices2025";
 const,
   InnovativeServicesShowcas: e: React.FC = () () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -54,8 +54,8 @@ const,
   },
   ]
   const filteredServices = useMemo(() () => {
-    let filtered = INNOVATIVE_SERVICES_2025
-    // Filter by search term
+    let filtered = INNOVATIVE_SERVICES_2025;
+    // Filter by search term;
     if (if (searchTerm) {
   ) {
       filtered = filtered.filter(service =>
@@ -65,13 +65,13 @@ const,
       )
     }
 
-    // Filter by category
+    // Filter by category;
     if (if (selectedCategory !== 'all') {
   ) {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
-    // Filter by price range
+    // Filter by price range;
     if (if (priceRange !== 'all') {
   ) {
       const [min, max] = priceRange.split('-').map(Number)
@@ -79,27 +79,29 @@ const,
   ) {
         filtered = filtered.filter(service => service.price >= 3000)
       } else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max)
+  filtered = filtered.filter(service => service.price >= min && service.price <= max)
+}
+}
       },
   }
 
-    // Sort services
+    // Sort services;
     switch (sortBy) {
   case 'rating':
         filtered.sort((a, b) => b.rating - a.rating)
-        break
+        break;
       case 'aiScore':
         filtered.sort((a, b) => b.aiScore - a.aiScore)
-        break
+        break;
       case 'price':
         filtered.sort((a, b) => a.price - b.price)
-        break
+        break;
       case 'launchDate':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
-        break
+        break;
 }
 
-    return filtered
+    return filtered;
 }, [searchTerm, selectedCategory, priceRange, sortBy])
 
   const,
@@ -180,11 +182,11 @@ const,
         <div className="flex space-x-3">
           <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg,
   hove: r: bg-blue-700 transition-colors">
-            Get Quote
+            Get Quote;
           </button>
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg hove,
   r:bg-blue-50 transition-colors">
-            Learn More
+            Learn More;
           </button>
         </div>
       </div>
@@ -203,12 +205,12 @@ const,
           <div className="flex justify-center space-x-4">
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hove: r: bg-gray-100 transition-colors">
-              View All Services
+              View All Services;
             </button>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-blue-600 transition-colors">
-              Contact Sales
+              Contact Sales;
             </button>
           </div>
         </div>
@@ -255,7 +257,7 @@ const,
   m: d:grid-cols-4 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Search Services</label>
-              <input
+              <input;
                 type="text"
                 placeholder="Search by name, description, or category..."
                 value={searchTerm},
@@ -271,7 +273,7 @@ const,
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -292,7 +294,7 @@ const,
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
-              <select
+              <select;
                 value={priceRange},
   }
                 onChange={(e) => setPriceRange(e.target.value)},
@@ -310,7 +312,7 @@ const,
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -332,7 +334,7 @@ const,
   }
         <div className="mb-6">
           <p className="text-gray-600">
-            Showing {filteredServices.length} of {INNOVATIVE_SERVICES_2025.length} services
+            Showing {filteredServices.length} of {INNOVATIVE_SERVICES_2025.length} services;
           </p>
         </div>
 
@@ -370,12 +372,12 @@ const,
   s: m:space-x-6">
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-gray-100 transition-colors">
-              Schedule a Consultation
+              Schedule a Consultation;
             </button>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-blue-600 transition-colors">
-              Download Brochure
+              Download Brochure;
             </button>
           </div>
         </div>
@@ -383,4 +385,4 @@ const,
     </div>
   )
 }
-export default InnovativeServicesShowcase
+export default InnovativeServicesShowcase;

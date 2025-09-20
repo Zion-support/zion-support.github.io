@@ -1,20 +1,22 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  DollarSign
+  DollarSign;
   TrendingUp,
   Shield,
   BarChart3,
   Brain,
-  Zap
-  Lock
-  Eye
-  Cloud
-  Star
-  Calculator
-  PieChart
-} from "lucide-react"
-import { Link } from "react-router-dom"
+  Zap;
+  Lock;
+  Eye;
+  Cloud;
+  Star;
+  Calculator;
+  PieChart;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
 const,
   FinancialSolution: s: React.FC = () () => {
   const solutions = [
@@ -73,25 +75,25 @@ const,
   tit,
   l: e: 'Risk Mitigation',descripti,
   o: n: 'Advanced AI algorithms identify and mitigate financial risks',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: 'Cost Optimization',descripti,
   o: n: 'Intelligent systems optimize financial operations and reduce costs',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: 'Compliance Assurance',descripti,
   o: n: 'Automated compliance monitoring ensures regulatory adherence',ic,
-  o: n: Lock
+  o: n: Lock;
 },
   {
   tit,
   l: e: 'Data-Driven Decisions',descripti,
   o: n: 'AI-powered insights enable better financial decision-making',ic,
-  o: n: Brain
+  o: n: Brain;
 },
   ]
   return (
@@ -105,7 +107,7 @@ const,
         <div className="relative max-w-7xl mx-auto px-4,
   s: m:px-6,
   l: g:px-8 pt-32 pb-16">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -124,7 +126,7 @@ const,
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Financial Solutions
+              Financial Solutions;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Revolutionize your financial operations with Zion Tech Group's AI-powered financial technology solutions. 
@@ -139,7 +141,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -164,7 +166,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
               key={benefit.title},
   }
               initial={ opaci,
@@ -195,7 +197,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -209,7 +211,7 @@ const,
           className="className="text-center mb-12";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Our Financial Solutions
+            Our Financial Solutions;
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Comprehensive financial technology solutions designed for modern financial institutions.
@@ -220,7 +222,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
               key={solution.title},
   }
               initial={ opaci,
@@ -271,7 +273,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -292,22 +294,22 @@ const,
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-600 transition-all duration-200,
   transform: hover:scale-105";"
             >
-              Get Started
+              Get Started;
             </Link>
-            <Link
+            <Link;
               to="/services"
               className="className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-200";"
             >
-              View All Services
+              View All Services;
             </Link>
           </div>
         </motion.div>
@@ -315,4 +317,4 @@ const,
     </div>
   )
 }
-export default FinancialSolutions
+export default FinancialSolutions;

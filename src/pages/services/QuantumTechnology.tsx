@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity } from "lucide-react"
+import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity     } from "lucide-react";
 const QuantumTechnology = () () => {
   const quantumServices = [
   {
@@ -10,7 +10,7 @@ const QuantumTechnology = () () => {
       featur,
   e: s: ["Quantum algorithms", "Pattern recognition", "Data analysis", "Machine learning"]
       ic,
-  o: n: Box
+  o: n: Box;
 },
   {
   tit,
@@ -20,7 +20,7 @@ const QuantumTechnology = () () => {
       featur,
   e: s: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"]
       ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   tit,
@@ -30,7 +30,7 @@ const QuantumTechnology = () () => {
       featur,
   e: s: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"]
       ic,
-  o: n: Shield
+  o: n: Shield;
 },
   ]
   const quantumTechnologies = [
@@ -80,15 +80,15 @@ const QuantumTechnology = () () => {
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Box className="w-4 h-4 mr-2"/>
-              Quantum Technology
+              Quantum Technology;
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Quantum
+              Quantum;
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Technology</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of quantum computing to solve complex problems that are impossible
+              Harness the power of quantum computing to solve complex problems that are impossible;
               for classical computers. Experience the future of computation.
             </p>
             <div className="flex flex-col,
@@ -97,11 +97,11 @@ const QuantumTechnology = () () => {
   hove: r:from-purple-700,
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-                Explore Services
+                Explore Services;
               </a>
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Get Started
+                Get Started;
               </a>
             </div>
           </div>
@@ -122,8 +122,8 @@ const QuantumTechnology = () () => {
                 What is Quantum Computing?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Quantum computing leverages the principles of quantum mechanics to process information in ways that
-                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously
+                Quantum computing leverages the principles of quantum mechanics to process information in ways that;
+                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously;
                 quantum computers can solve complex problems exponentially faster.
               </p>
               <div className="space-y-4">
@@ -146,7 +146,7 @@ const QuantumTechnology = () () => {
                 <Cpu className="h-24 w-24 text-purple-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold mb-2">Quantum Advantage</h3>
                 <p className="text-gray-300">
-                  Solve problems in minutes that would take classical computers thousands of years
+                  Solve problems in minutes that would take classical computers thousands of years;
                 </p>
               </div>
             </div>
@@ -163,10 +163,10 @@ const QuantumTechnology = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our Quantum Services
+              Our Quantum Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge quantum technology solutions designed to solve
+              Cutting-edge quantum technology solutions designed to solve;
               the most complex computational challenges.
             </p>
           </div>
@@ -207,10 +207,10 @@ const QuantumTechnology = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Quantum Technologies We Use
+              Quantum Technologies We Use;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Advanced quantum technologies and platforms to build
+              Advanced quantum technologies and platforms to build;
               revolutionary computing solutions.
             </p>
           </div>
@@ -253,7 +253,7 @@ const QuantumTechnology = () () => {
                 Why Choose Quantum Technology?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Quantum technology represents the next frontier in computing
+                Quantum technology represents the next frontier in computing;
                 offering unprecedented capabilities for solving complex problems.
               </p>
               <ul className="space-y-3">
@@ -271,7 +271,7 @@ const QuantumTechnology = () () => {
                 <Rocket className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Quantum Innovation</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team is at the forefront of quantum technology research
+                  Our team is at the forefront of quantum technology research;
                   and development.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -296,7 +296,7 @@ const QuantumTechnology = () () => {
             Ready for the Quantum Future?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how quantum technology can solve your most
+            Let's discuss how quantum technology can solve your most;
             complex computational challenges.
           </p>
           <div className="flex flex-col,
@@ -305,11 +305,11 @@ const QuantumTechnology = () () => {
   hove: r:from-purple-700,
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Get Started
+              Get Started;
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-              View All Services
+              View All Services;
             </a>
           </div>
         </div>
@@ -317,4 +317,4 @@ const QuantumTechnology = () () => {
     </div>
   )
 }
-export default QuantumTechnology
+export default QuantumTechnology;

@@ -1,5 +1,5 @@
-// Expanded Innovative Services 2027 - Zion Tech Group
-// Additional Micro SAAS, IT Infrastructure, and AI Services
+// Expanded Innovative Services 2027 - Zion Tech Group;
+// Additional Micro SAAS, IT Infrastructure, and AI Services;
 export interface ExpandedService2027 {
   id: string,na,
   m: e: string,catego,
@@ -20,11 +20,13 @@ export interface ExpandedService2027 {
   r: number,profession,
   a: l: number,enterpri,
   s: e: number,cust,
-  o: m: string
+  o: m: string;
+}
+}
 }
     freeTi,
   e: r: boolean,trialPeri,
-  o: d: string
+  o: d: string;
 }
   marketPri,
   c: e: string,competito,
@@ -41,7 +43,7 @@ export interface ExpandedService2027 {
   e: string,ema,
   i: l: string,websi,
   t: e: string,addre,
-  s: s: string
+  s: s: string;
 }
   technicalSpe,
   c: s: {
@@ -50,7 +52,7 @@ export interface ExpandedService2027 {
   t: y: string[],complian,
   c: e: string[],apiEndpoin,
   t: s: number,scalabili,
-  t: y: string
+  t: y: string;
 }
   suppo,
   r: t: string,rati,
@@ -60,7 +62,7 @@ export interface ExpandedService2027 {
   u: s: 'active' | 'beta' | 'coming-soon'
 }
 
-// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE
+// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export,
   const: advancedCybersecurityServices: ExpandedService2027[] = [
   {
@@ -239,7 +241,7 @@ export,
   u: s: 'active'
 },
   ]
-// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE
+// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export,
   const: advancedDataAnalyticsServices: ExpandedService2027[] = [
   {
@@ -418,7 +420,7 @@ export,
   u: s: 'active'
 },
   ]
-// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS
+// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export,
   const: advancedCloudDevOpsServices: ExpandedService2027[] = [
   {
@@ -598,7 +600,7 @@ export,
   u: s: 'active'
 },
   ]
-// 4. ADVANCED IOT & EDGE COMPUTING
+// 4. ADVANCED IOT & EDGE COMPUTING;
 export,
   const: advancedIoTServices: ExpandedService2027[] = [
   {
@@ -779,7 +781,7 @@ export,
   u: s: 'active'
 },
   ]
-// 5. ADVANCED FINANCIAL TECHNOLOGY
+// 5. ADVANCED FINANCIAL TECHNOLOGY;
 export,
   const: advancedFinTechServices: ExpandedService2027[] = [
   {
@@ -957,7 +959,7 @@ export,
   u: s: 'active'
 },
   ]
-// 6. ADVANCED HEALTHCARE TECHNOLOGY
+// 6. ADVANCED HEALTHCARE TECHNOLOGY;
 export,
   const: advancedHealthcareServices: ExpandedService2027[] = [
   {
@@ -1137,40 +1139,40 @@ export,
   u: s: 'active'
 },
   ]
-// Export all expanded services
+// Export all expanded services;
 export const ALL_EXPANDED_SERVICES_2027 = [
-  ...advancedCybersecurityServices
-  ...advancedDataAnalyticsServices
-  ...advancedCloudDevOpsServices
-  ...advancedIoTServices
-  ...advancedFinTechServices
-  ...advancedHealthcareServices
+  ...advancedCybersecurityServices;
+  ...advancedDataAnalyticsServices;
+  ...advancedCloudDevOpsServices;
+  ...advancedIoTServices;
+  ...advancedFinTechServices;
+  ...advancedHealthcareServices;
 ]
 
-// Service categories for filtering
+// Service categories for filtering;
 export const EXPANDED_SERVICE_CATEGORIES = [
   'AllCybersecurity'
   'Data AnalyticsCloud & DevOps'
   'IoT & Edge ComputingFinancial Technology'
   'Healthcare Technology'
 ]
-// Helper function to get services by category
-export const getExpandedServicesByCategory = (catego,
+// Helper function to get services by category;
+export const getExpandedServicesByCategory = React.memo((catego,
   r: y: string): ExpandedService2027[] () => {
   if (if (category === 'All') {
   ) {
-    return ALL_EXPANDED_SERVICES_2027
+    return ALL_EXPANDED_SERVICES_2027;
 }
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)
 }
 
-// Helper function to get services by subcategory
-export const getExpandedServicesBySubcategory = (subcatego,
+// Helper function to get services by subcategory;
+export const getExpandedServicesBySubcategory = React.memo((subcatego,
   r: y: string): ExpandedService2027[] () => {
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)
 }
-// Helper function to search services
-export const searchExpandedServices = (que,
+// Helper function to search services;
+export const searchExpandedServices = React.memo((que,
   r: y: string): ExpandedService2027[] () => {
   const lowercaseQuery = query.toLowerCase()
   return ALL_EXPANDED_SERVICES_2027.filter(service =>

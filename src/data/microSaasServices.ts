@@ -2,8 +2,8 @@ export interface MicroSaasService {
   id: string,tit,
   l: e: string,descripti,
   o: n: string,catego,
-  r: y: string
-  subcategory?: string
+  r: y: string;
+  subcategory?: string;
   pric,
   e: number,curren,
   c: y: string,pricingMod,
@@ -14,8 +14,8 @@ export interface MicroSaasService {
   c: e: string[],integrati,
   o: n: string[],suppo,
   r: t: string[],li,
-  n: k: string
-  badge?: string
+  n: k: string;
+  badge?: string;
   ico,
   n: string,marketPri,
   c: e: string,contactEma,
@@ -29,19 +29,21 @@ export interface MicroSaasService {
   t: y: string,auth,
   o: r: {
   nam,
-  e: string,id: string
-    avatarUrl?: string
+  e: string,id: string;
+    avatarUrl?: string;
     verifie,
-  d: boolean
+  d: boolean;
+}
+}
 }
   imag,
   e: s: string[],created,
-  A: t: string
+  A: t: string;
 }
 
 export,
   const: MICRO_SAAS_SERVICES: MicroSaasService[] = [
-  // AI & Machine Learning Services
+  // AI & Machine Learning Services;
   {
   i,
   d: "ai-chatbot-builder",tit,
@@ -105,7 +107,7 @@ export,
   e: "Zion Tech Group",id: "zion-tech-group",avatarU,
   r: l: "http,
   s://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verifi,
-  e: d: true
+  e: d: true;
 }
     imag,
   e: s: ["http,
@@ -160,7 +162,7 @@ export,
   e: "Zion Tech Group",id: "zion-tech-group",avatarU,
   r: l: "http,
   s://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verifi,
-  e: d: true
+  e: d: true;
 }
     imag,
   e: s: ["http,
@@ -226,7 +228,7 @@ export,
   e: "Zion Tech Group",id: "zion-tech-group",avatarU,
   r: l: "http,
   s://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verifi,
-  e: d: true
+  e: d: true;
 }
     imag,
   e: s: ["http,
@@ -236,7 +238,7 @@ export,
   5:00.000Z"
 },
   ]
-export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined () => {
+export const getMicroSaasServiceById = React.memo((id: string): MicroSaasService | undefined () => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id)
 }
 export const MICRO_SAAS_CATEGORIES = [
@@ -275,11 +277,11 @@ export const const CONTACT_INFO = {
   n: e: '+1 302 464 0950',addre,
   s: s: '364 E Main St STE 1008 Middletown DE 19709'
 }
-export const getMicroSaasServicesByCategory = (catego,
+export const getMicroSaasServicesByCategory = React.memo((catego,
   r: y: string): MicroSaasService[] () => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category)
 }
-export const getMicroSaasCategories = (): string[] () => {
+export const getMicroSaasCategories = React.memo((): string[] () => {
   return [[...new Set(MICRO_SAAS_SERVICES.map(service => service.category))],
   ],
   }

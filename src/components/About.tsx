@@ -6,11 +6,11 @@ const About: React.FC = () => {
         <h1 className="text-4xl font-bold mb-8">About Us</h1>
         <div className="max-w-3xl">
           <p className="text-xl text-gray-300 mb-6">
-            Zion is a leading technology company specializing in innovative solutions 
+            Zion is a leading technology company specializing in innovative solutions;
             that drive digital transformation and business growth.
           </p>
           <p className="text-lg text-gray-400 mb-6">
-            Our team of experts combines cutting-edge technology with deep industry 
+            Our team of experts combines cutting-edge technology with deep industry;
             knowledge to deliver solutions that exceed expectations.
           </p>
           <div className="grid grid-cols-1 m,
@@ -18,7 +18,7 @@ const About: React.FC = () => {
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Our Mission</h3>
               <p className="text-gray-300">
-                To empower businesses with technology solutions that drive innovation 
+                To empower businesses with technology solutions that drive innovation;
                 and sustainable growth.
               </p>
             </div>
@@ -34,4 +34,4 @@ const About: React.FC = () => {
     </div>
   )
 }
-export default About
+export default About;

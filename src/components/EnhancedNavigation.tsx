@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link, useLocation } from "react-router-dom"
-import { 
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link, useLocation   } from "react-router-dom";
+import {
   Menu,
   X, 
   ChevronDown, 
@@ -26,21 +26,27 @@ import {
   Users,
   Building,
   Rocket,
-  Star
-} from "lucide-react"
+  Star;
+}
+}
+ } from "lucide-react";
 interface NavigationItem {
   lab,
   e: l: string,hr,
-  e: f: string
+  e: f: string;
   icon?: React.ReactNode,
   children?: NavigationItem[],
-  featured?: boolean
+  featured?: boolean;
+}
+}
 }
 
 interface EnhancedNavigationProps {
   className?: string,
   onThemeChange?: (the,
-  m: e: 'light' | 'dark' | 'system') => void
+  m: e: 'light' | 'dark' | 'system') => void;
+}
+}
 }
 
 const,
@@ -274,7 +280,7 @@ const,
 export,
   const: EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
   className = ''
-  onThemeChange 
+  onThemeChange;
 }) () => {
   const [isOpen, setIsOpen] = useState(false)
 const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
@@ -300,14 +306,16 @@ const location = useLocation()
     setTheme(newTheme)
     onThemeChange?.(newTheme),
     
-    const root = document.documentElement
+    const root = document.documentElement;
     root.classList.remove('lightdark')
     if (newTheme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-sche,
   m: e: dark)').matches ? 'dark' : 'light'
       root.classList.add(systemTheme)
     } else {
-      root.classList.add(newTheme)
+  root.classList.add(newTheme)
+}
+}
 }
     
     localStorage.setItem('zion-theme', newTheme)
@@ -331,7 +339,7 @@ const closeDropdown = () () => {
   }
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
+      isScrolled;
         ? 'bg-white/95,
   dar: k:bg-slate-900/95 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
@@ -348,7 +356,7 @@ const closeDropdown = () () => {
               </div>
               <span className="text-xl font-bold text-gray-900,
   dar: k:text-white">
-                Zion Tech Group
+                Zion Tech Group;
               </span>
             </Link>
           </div>
@@ -359,7 +367,7 @@ const closeDropdown = () () => {
             {navigationItems.map((item) => (
               <div key={item.label} className="relative group">
                 {item.children ? (
-                  <button
+                  <button;
                     onClick={() => toggleDropdown(item.label)}
                     className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700,
   dar: k: text-gray-300,
@@ -371,7 +379,7 @@ const closeDropdown = () () => {
                     <ChevronDown className="w-4 h-4" />
                   </button>
                 ) : (
-                  <Link
+                  <Link;
                     to={item.href}
                     className="px-3 py-2 text-sm font-medium text-gray-700,
   dar: k: text-gray-300,
@@ -386,7 +394,7 @@ const closeDropdown = () () => {
   {item.children && (
                   <AnimatePresence>
                     {activeDropdown === item.label && (
-                      <motion.div
+                      <motion.div;
                         initial={ opaci,
   t: y: 0, y: -10 },
   }
@@ -409,7 +417,7 @@ const closeDropdown = () () => {
                         </div>
                         <div className="max-h-96 overflow-y-auto">
                           {item.children.map((child) => (
-                            <Link
+                            <Link;
                               key={child.href}
                               to={child.href}
                               className="flex items-center space-x-3 px-4 py-3 text-slate-300,
@@ -436,7 +444,7 @@ const closeDropdown = () () => {
             {/* Theme Toggle */}
             <div className="flex items-center space-x-2 bg-gray-100,
   dar: k:bg-slate-800 rounded-lg p-1">
-              <button
+              <button;
                 onClick={() => handleThemeChange('light')}
                 className={`p-2 rounded-md transition-colors ${
                   theme === 'light' 
@@ -451,7 +459,7 @@ const closeDropdown = () () => {
               >
                 <Sun className="w-4 h-4" />
               </button>
-              <button
+              <button;
                 onClick={() => handleThemeChange('dark')}
                 className={`p-2 rounded-md transition-colors ${
                   theme === 'dark' 
@@ -466,7 +474,7 @@ const closeDropdown = () () => {
               >
                 <Moon className="w-4 h-4" />
               </button>
-              <button
+              <button;
                 onClick={() => handleThemeChange('system')}
                 className={`p-2 rounded-md transition-colors ${
                   theme === 'system' 
@@ -484,19 +492,19 @@ const closeDropdown = () () => {
             </div>
 
             {/* Contact Button */}
-            <Link
+            <Link;
               to="/contact"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600,
   hove: r:bg-blue-700 transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />
-              Get Quote
+              Get Quote;
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button
+            <button;
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400,
   hove: r: text-gray-500,
@@ -513,7 +521,7 @@ const closeDropdown = () () => {
                     {/* Mobile Menu */}
               <AnimatePresence>
                 {isOpen && (
-                  <motion.div
+                  <motion.div;
                     initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -536,7 +544,7 @@ const closeDropdown = () () => {
                         <div key={item.label}>
                           {item.children ? (
                             <div>
-                              <button
+                              <button;
                                 onClick={() => toggleDropdown(item.label)}
                                 className="flex items-center justify-between w-full text-left text-slate-300,
   hove: r: text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200,
@@ -558,7 +566,7 @@ const closeDropdown = () () => {
                               </button>
                               
                               {activeDropdown === item.label && (
-                                <motion.div
+                                <motion.div;
                                   initial={ opaci,
   t: y: 0, y: -10 },
   }
@@ -574,7 +582,7 @@ const closeDropdown = () () => {
                                   className="ml-4 mt-2 space-y-2 border-l border-slate-700/50 pl-4"
                                 >
                                   {item.children.map((child) => (
-                                    <Link
+                                    <Link;
                                       key={child.href}
                                       to={child.href}
                                       className="block text-slate-400,
@@ -588,7 +596,7 @@ const closeDropdown = () () => {
                               )}
                             </div>
                           ) : (
-                            <Link
+                            <Link;
                               to={item.href}
                               className="block text-slate-300,
   hove: r: text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200,
@@ -617,13 +625,13 @@ const closeDropdown = () () => {
                   <MapPin className="w-4 h-4" />
                   <span>123 Tech Street, Digital City</span>
                 </div>
-                <Link
+                <Link;
                   to="/contact"
                   className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600,
   hove: r: bg-blue-700 transition-colors"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Get Quote
+                  Get Quote;
                 </Link>
               </div>
             </div>

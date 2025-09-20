@@ -1,22 +1,30 @@
 
 import React, { useState } from "react"
-import { useAdminQuotes } from "@/hooks/useAdminQuotes"
-import { useAuth } from "@/hooks/useAuth"
+import { useAdminQuotes     } from "@/hooks/useAdminQuotes";
+import { useAuth     } from "@/hooks/useAuth";
 import {
-  Card
-  CardContent
-} from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Navigate } from "react-router-dom"
+  Card;
+  CardContent;
+}
+}
+}
+}
+ } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger     } from "@/components/ui/tabs";
+import { Navigate     } from "react-router-dom";
 import type { QuoteRequest } from "@/types/quotes"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import { QuoteDetails } from "@/components/quotes/QuoteDetails"
-import { ExportToCSV } from "@/components/quotes/ExportToCSV"
+import { ProtectedRoute     } from "@/components/ProtectedRoute";
+import { QuoteDetails     } from "@/components/quotes/QuoteDetails";
+import { ExportToCSV     } from "@/components/quotes/ExportToCSV";
 import {
-  QuoteStatusCards
-  QuotesFilter
-  QuotesTable
-} from "@/components/admin/quotes"
+  QuoteStatusCards;
+  QuotesFilter;
+  QuotesTable;
+}
+}
+}
+}
+ } from "@/components/admin/quotes";
 export default function QuoteManager() {
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin'
@@ -24,22 +32,26 @@ const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null)
   const [showDetails, setShowDetails] = useState(false)
 
   const {
-  quotes
-    isLoading
-    error
-    statusFilter
-    setStatusFilter
-    archiveFilter
-    setArchiveFilter
-    searchQuery
-    setSearchQuery
-    dateRange
-    setDateRange
-    updateStatus
-    toggleArchive
-    deleteQuote
+  quotes;
+    isLoading;
+    error;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter;
+    searchQuery;
+    setSearchQuery;
+    dateRange;
+    setDateRange;
+    updateStatus;
+    toggleArchive;
+    deleteQuote;
+}
+}
+}
+}
 } = useAdminQuotes()
-  // Count quotes by status
+  // Count quotes by status;
 const const statusCounts = {
   = {
     n,
@@ -52,7 +64,7 @@ const const statusCounts = {
   e: d: quotes.filter((,
   q: QuoteRequest) => q.status === 'responded').length,clos,
   e: d: quotes.filter((,
-  q: QuoteRequest) => q.status === 'closed').length
+  q: QuoteRequest) => q.status === 'closed').length;
 }
   const handleViewDetails = (quo,
   t: e: QuoteRequest) () => {
@@ -95,7 +107,7 @@ const const statusCounts = {
 
             {/* Filters */},
   }
-            <QuotesFilter
+            <QuotesFilter;
               searchQuery={searchQuery},
   }
               setSearchQuery={setSearchQuery},
@@ -128,7 +140,7 @@ const const statusCounts = {
                 {/* Quotes Table */},
   }
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-                  <QuotesTable
+                  <QuotesTable;
                     quotes={quotes.filter((quo,
   t: e: QuoteRequest) => !quote.is_archived)},
   }
@@ -148,7 +160,7 @@ const const statusCounts = {
 
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-                  <QuotesTable
+                  <QuotesTable;
                     quotes={quotes.filter((quo,
   t: e: QuoteRequest) => quote.is_archived)},
   }
@@ -173,7 +185,7 @@ const const statusCounts = {
 
         {/* Quote Details Modal */},
   }
-        <QuoteDetails
+        <QuoteDetails;
           quote={selectedQuote},
   }
           isOpen={showDetails},

@@ -1,43 +1,46 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Code
+  Code;
   Search,
-  Filter
-  ArrowRight
-  Download
-  ExternalLink
-  Github
-  Globe
-  Database
-  Server
-  Shield
-  Brain
-  Cloud
-  Cpu
-  Zap
-  Users
-  Calendar
-  Star
-  Bookmark
-  Share2
-  Copy
-  CheckCircle
-  Clock
-  Tag
-  Play
-  Terminal
-  FileText
-  Key
-  Lock
-  Eye
-  EyeOff
-  ChevronDown
-  ChevronRight
-  AlertCircle
-  Info
-} from "lucide-react"
+  Filter;
+  ArrowRight;
+  Download;
+  ExternalLink;
+  Github;
+  Globe;
+  Database;
+  Server;
+  Shield;
+  Brain;
+  Cloud;
+  Cpu;
+  Zap;
+  Users;
+  Calendar;
+  Star;
+  Bookmark;
+  Share2;
+  Copy;
+  CheckCircle;
+  Clock;
+  Tag;
+  Play;
+  Terminal;
+  FileText;
+  Key;
+  Lock;
+  Eye;
+  EyeOff;
+  ChevronDown;
+  ChevronRight;
+  AlertCircle;
+  Info;
+}
+}
+ } from "lucide-react";
 export default function APIDocumentation() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -406,9 +409,9 @@ export default function APIDocumentation() {
   const matchesSearch = endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
-      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory
-const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod
-      return matchesSearch && matchesCategory && matchesMethod
+      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory;
+const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod;
+      return matchesSearch && matchesCategory && matchesMethod;
 })
   })).filter(category => category.endpoints.length > 0)
 
@@ -418,7 +421,9 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
     if (newExpanded.has(endpointPath)) {
   newExpanded.delete(endpointPath)
     } else {
-      newExpanded.add(endpointPath)
+  newExpanded.add(endpointPath)
+}
+}
     }
     setExpandedEndpoints(newExpanded)
   }
@@ -426,7 +431,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   const copyToClipboard = (te,
   x: t: string) () => {
   navigator.clipboard.writeText(text)
-    // Show success message
+    // Show success message;
 }
 
   const getMethodColor = (meth,
@@ -443,7 +448,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="API Documentation - Zion Tech Group"
         description="Complete API reference, endpoints, authentication, and code examples for Zion Tech Group services. Build powerful integrations with our comprehensive API documentation."
       />
@@ -452,7 +457,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -466,7 +471,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
           >
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              API Documentation
+              API Documentation;
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Comprehensive API reference with endpoints, authentication, and code examples. 
@@ -479,7 +484,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   m: d:flex-row gap-4 max-w-3xl mx-auto mb-8">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search APIs, endpoints, or methods..."
                   value={searchQuery},
@@ -493,7 +498,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   s:border-transparent";"
                 />
               </div>
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -508,7 +513,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
-              <select
+              <select;
                 value={selectedMethod},
   }
                 onChange={(e) => setSelectedMethod(e.target.value)},
@@ -555,7 +560,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
       <section className="py-16">
         <div className="container-responsive">
           {filteredEndpoints.map((category, categoryIndex) => (
-  <motion.div
+  <motion.div;
               key={category.category},
   }
               initial={ opaci,
@@ -586,7 +591,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   }
               <div className="space-y-6">
                 {category.endpoints.map((endpoint, endpointIndex) => (
-  <motion.div
+  <motion.div;
                     key={endpoint.path},
   }
                     initial={ opaci,
@@ -615,7 +620,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   }
                           </code>
                         </div>
-                        <button
+                        <button;
                           onClick={onClick={() => toggleEndpoint(endpoint.path)},
   },
   }
@@ -644,7 +649,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                           <div>
                             <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                               <Key className="w-5 h-5 text-cyan-400" />
-                              Parameters
+                              Parameters;
                             </h4>
                             <div className="bg-slate-700/30 rounded-lg overflow-hidden">
                               <table className="w-full">
@@ -686,7 +691,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                           <div>
                             <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                               <CheckCircle className="w-5 h-5 text-green-400" />
-                              Responses
+                              Responses;
                             </h4>
                             <div className="space-y-3">
                               {endpoint.responses.map((response, idx) => (
@@ -715,7 +720,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                           <div>
                             <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                               <Terminal className="w-5 h-5 text-purple-400" />
-                              Code Examples
+                              Code Examples;
                             </h4>
                             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-4">
@@ -723,7 +728,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   <div key={language} className="bg-slate-700/30 rounded-lg p-4">
                                   <div className="flex items-center justify-between mb-3">
                                     <span className="text-sm font-medium text-gray-300 capitalize">{language}</span>
-                                    <button
+                                    <button;
                                       onClick={onClick={() => copyToClipboard(code)},
   },
   }
@@ -750,7 +755,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
             </motion.div>
           ))},
   {filteredEndpoints.length === 0 && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0 },
   }
@@ -762,7 +767,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
               <div className="text-gray-400 text-lg mb-4">
                 No API endpoints found matching your criteria.
               </div>
-              <button
+              <button;
                 onClick={() () => {
                   setSearchQuery('')
                   setSelectedCategory('All')
@@ -772,7 +777,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                 className="className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors";"
               >
-                Clear all filters
+                Clear all filters;
               </button>
             </motion.div>
           )}
@@ -783,7 +788,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -802,7 +807,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
               Ready to Get Started?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get your API keys, explore our interactive API playground, and start building 
+              Get your API keys, explore our interactive API playground, and start building;
               powerful integrations with Zion Tech Group services.
             </p>
             <div className="flex flex-col,
@@ -812,15 +817,15 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   hove: r:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300,
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-cyan-500/25">
-                Get API Keys
+                Get API Keys;
               </button>
               <button className="border border-cyan-400/50 text-cyan-400,
   hove: r:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">
-                API Playground
+                API Playground;
               </button>
               <button className="border border-cyan-400/50 text-cyan-400 hove,
   r:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">
-                Contact Support
+                Contact Support;
               </button>
             </div>
           </motion.div>

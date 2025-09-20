@@ -1,8 +1,8 @@
 import React from "react"
-// Next.js routing - no need for react-router-dom
+// Next.js routing - no need for react-router-dom;
 import Login from "@/pages/Login"
 import Signup from "@/pages/Signup"
-import { ProtectedRoute } from "../ProtectedRoute"
+import { ProtectedRoute   } from "../ProtectedRoute";
 const AuthRoutes = () () => {
     return (<Routes>
       <Route path="/login" element={<Login />}/>
@@ -23,4 +23,4 @@ const AuthRoutes = () () => {
           </ProtectedRoute>}/>
     </Routes>)
 }
-export default AuthRoutes
+export default AuthRoutes;

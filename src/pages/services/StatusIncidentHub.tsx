@@ -1,6 +1,6 @@
 import React from "react"
-import { Activity, Server, CheckCircle, ExternalLink, Mail, Phone } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Activity, Server, CheckCircle, ExternalLink, Mail, Phone     } from "lucide-react";
+import { Link     } from "react-router-dom";
 export default function StatusIncidentHub() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -8,7 +8,7 @@ export default function StatusIncidentHub() {
   l: g: py-28">
         <h1 className="text-3xl s,
   m:text-5xl font-bold flex items-center gap-3">
-          <Server className="w-8 h-8 text-cyan-400"/> Status & Incident Hub
+          <Server className="w-8 h-8 text-cyan-400"/> Status & Incident Hub;
         </h1>
         <p className="mt-4 text-slate-300">Public status pages, incident timelines, SLA tracking, and subscriber notifications. Integrates with PagerDuty, Opsgenie, and Slack.</p>
         <div className="mt-8 grid gap-4,

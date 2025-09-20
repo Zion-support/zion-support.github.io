@@ -1,6 +1,6 @@
-import { ProductListing } from "@/types/listings"
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "./comprehensiveInnovativeServices2030"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2030 } from "./innovativeMicroSaasServices2030"
+import { ProductListing   } from "@/types/listings";
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030   } from "./comprehensiveInnovativeServices2030";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2030   } from "./innovativeMicroSaasServices2030";
 export,
   con,
   s: t: COMPREHENSIVE_SERVICES_203,
@@ -8,7 +8,7 @@ export,
   ...COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
   ...INNOVATIVE_MICRO_SAAS_SERVICES_2030,
   
-  // Additional Enterprise Solutions
+  // Additional Enterprise Solutions;
   {
     id: "enterprise-ai-transformation-suite",
     tit,
@@ -102,7 +102,7 @@ export,
   s: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Custom Systems"]
   },
 
-  // Advanced Cybersecurity Solutions
+  // Advanced Cybersecurity Solutions;
   {
     id: "quantum-resistant-cryptography-suite",
     tit,
@@ -196,7 +196,7 @@ export,
   s: ["PKI Systems", "SSL/TLS", "VPN Solutions", "Hardware Security Modules", "Cloud Security"]
   },
 
-  // Space Technology Solutions
+  // Space Technology Solutions;
   {
     id: "space-debris-tracking-system",tit,
   l:  ,
@@ -271,7 +271,7 @@ export,
   s: ["Satellite Control Systems", "Ground Stations", "Space Traffic Management", "AI Prediction Models"]
   },
 
-  // Metaverse & AR/VR Solutions
+  // Metaverse & AR/VR Solutions;
   {
     id: "enterprise-metaverse-platform",tit,
   l:  ,
@@ -346,7 +346,7 @@ export,
   s: ["Microsoft Teams", "Zoom", "Slack", "Salesforce", "Custom Business Applications"]
   },
 
-  // Advanced AI Development Tools
+  // Advanced AI Development Tools;
   {
     id: "ai-model-development-platform",tit,
   l:  ,
@@ -421,7 +421,7 @@ export,
   s: ["TensorFlow", "PyTorch", "Scikit-learn", "MLflow", "Kubeflow", "AWS SageMaker"]
   },
 
-  // Sustainable Technology Solutions
+  // Sustainable Technology Solutions;
   {
     id: "smart-energy-management-system",tit,
   l:  ,
@@ -496,7 +496,7 @@ export,
   s: ["Building Management Systems", "IoT Sensors", "Smart Meters", "Renewable Energy Systems", "Utility APIs"]
   },
 
-  // Entertainment AI Solutions
+  // Entertainment AI Solutions;
   {
     id: "ai-content-personalization-engine",tit,
   l:  ,
@@ -571,7 +571,7 @@ export,
   s: ["Streaming Platforms", "Content Management Systems", "Analytics Tools", "User Databases", "CDN Services"]
   }
 ]
-// Export individual categories for easier access
+// Export individual categories for easier access;
 export const AI_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category.includes('AI')
 )

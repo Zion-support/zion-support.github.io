@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link   } from "react-router-dom";
 const Training = () () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -13,7 +13,7 @@ const Training = () () => {
             <h1 className="text-5xl,
   m:  ,
   d:text-6xl font-bold mb-6">
-              Training Programs
+              Training Programs;
             </h1>
             <p className="text-xl,
   m:  ,
@@ -30,7 +30,7 @@ const Training = () () => {
   l:  ,
   g:px-8 text-center">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Coming Soon
+              Coming Soon;
             </h2>
             <p className="text-xl text-slate-600 mb-8">
               We're developing comprehensive training programs. Check back soon!
@@ -40,11 +40,11 @@ const Training = () () => {
   v: e:  ,
   r:from-blue-700 hove,
   r:to-cyan-700 transition-all duration-300">
-              Contact Us
+              Contact Us;
             </Link>
           </div>
         </section>
       </div>
     )
 }
-export default Training
+export default Training;

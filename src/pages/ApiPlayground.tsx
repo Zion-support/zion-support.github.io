@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from "lucide-react"
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info   } from "lucide-react";
 export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('all')
@@ -136,7 +137,7 @@ export default function ApiPlayground() {
   s://docs.ziontechgroup.com/api/ai-text-analysis',s,
   d: k: 'http,
   s://github.com/ziontechgroup/ai-sdk',featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 2,na,
@@ -193,14 +194,14 @@ export default function ApiPlayground() {
 },
   ]
         tot,
-  a: l: 1
+  a: l: 1;
 }
       documentati,
   o: n: 'http,
   s://docs.ziontechgroup.com/api/cloud-resources',s,
   d: k: 'http,
   s://github.com/ziontechgroup/cloud-sdk',featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: 3,na,
@@ -257,14 +258,14 @@ export default function ApiPlayground() {
   r: e: 0.2,recommendatio,
   n: s: ["Enable 2FA", "Monitor login patterns"]
         detect,
-  e: d: false
+  e: d: false;
 }
       documentati,
   o: n: 'http,
   s://docs.ziontechgroup.com/api/security-threats',s,
   d: k: 'http,
   s://github.com/ziontechgroup/security-sdk',featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 4,na,
@@ -304,7 +305,7 @@ export default function ApiPlayground() {
   y: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10"
         form,
   a: t: "json",timeo,
-  u: t: 30
+  u: t: 30;
 }
       responseExamp,
   l: e: {
@@ -321,14 +322,14 @@ export default function ApiPlayground() {
   ]
         total_ro,
   w: s: 2,execution_ti,
-  m: e: 0.15
+  m: e: 0.15;
 }
       documentati,
   o: n: 'http,
   s://docs.ziontechgroup.com/api/data-query',s,
   d: k: 'http,
   s://github.com/ziontechgroup/data-sdk',featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: 5,na,
@@ -382,36 +383,36 @@ export default function ApiPlayground() {
   p: e: "sensor",locati,
   o: n: "building-a",stat,
   u: s: "active",last_readi,
-  n: g: 22.5
+  n: g: 22.5;
 },
   ]
         tot,
-  a: l: 1
+  a: l: 1;
 }
       documentati,
   o: n: 'http,
   s://docs.ziontechgroup.com/api/iot-devices',s,
   d: k: 'http,
   s://github.com/ziontechgroup/iot-sdk',featur,
-  e: d: false
+  e: d: false;
 },
   ]
-  // Update counts
+  // Update counts;
   categories.forEach(cat () => {
-  cat.count = apis.filter(api => api.category === cat.id).length
+  cat.count = apis.filter(api => api.category === cat.id).length;
 })
 
   methods.forEach(method () => {
-  method.count = apis.filter(api => api.method === method.id).length
+  method.count = apis.filter(api => api.method === method.id).length;
 })
 
   const filteredApis = apis.filter(api () => {
   const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          api.description.toLowerCase().includes(searchQuery.toLowerCase())
 
-    const matchesCategory = activeCategory === 'all' || api.category === category.id
-const matchesMethod = activeMethod === 'all' || api.method === method.id
-    return matchesSearch && matchesCategory && matchesMethod
+    const matchesCategory = activeCategory === 'all' || api.category === category.id;
+const matchesMethod = activeMethod === 'all' || api.method === method.id;
+    return matchesSearch && matchesCategory && matchesMethod;
 })
 
   const getCategoryIcon = (category,
@@ -441,10 +442,10 @@ const matchesMethod = activeMethod === 'all' || api.method === method.id
   }
 
   const handleTestApi = async () () => {
-    if (!selectedApi) return
+    if (!selectedApi) return;
     setIsLoading(true)
 
-    // Simulate API call
+    // Simulate API call;
     setTimeout(() () => {
       setResponseData(JSON.stringify(selectedApi.responseExample, null, 2))
       setIsLoading(false)
@@ -456,12 +457,12 @@ const matchesMethod = activeMethod === 'all' || api.method === method.id
   navigator.clipboard.writeText(text)
   }
   const downloadResponse = () () => {
-    if (!responseData) return
+    if (!responseData) return;
 const blob = new Blob([responseData], { ty,
   p: e: 'application/json' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
-    a.href = url
+    a.href = url;
     a.download = `${selectedApi?.name.toLowerCase().replace(/\s+/g, '-')}-response.json`
     document.body.appendChild(a)
     a.click()
@@ -480,7 +481,7 @@ const blob = new Blob([responseData], { ty,
             </div>
           </div>
           <h1 className="text-5xl font-bold text-white mb-6">
-            API Playground
+            API Playground;
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Explore, test, and integrate with our powerful APIs. Build amazing applications with our comprehensive developer tools.
@@ -496,7 +497,7 @@ const blob = new Blob([responseData], { ty,
             <div className="mb-8">
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   value={searchQuery},
   }
@@ -516,14 +517,14 @@ const blob = new Blob([responseData], { ty,
   }
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
-  <button
+  <button;
                       key={category.id},
   }
                       onClick={onClick={() => setActiveCategory(category.id)},
   },
   }
                       className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-  activeCategory === category.id
+  activeCategory === category.id;
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light,
   hove: r: bg-zion-slate-light hove,
@@ -541,14 +542,14 @@ const blob = new Blob([responseData], { ty,
   }
                 <div className="flex flex-wrap gap-2">
                   {methods.map((method) => (
-  <button
+  <button;
                       key={method.id},
   }
                       onClick={onClick={() => setActiveMethod(method.id)},
   },
   }
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-  activeMethod === method.id
+  activeMethod === method.id;
                           ? 'bg-zion-purple text-white'
                           : 'bg-zion-slate text-zion-slate-light,
   hove: r: bg-zion-slate-light hove,
@@ -570,7 +571,7 @@ const blob = new Blob([responseData], { ty,
                 <h2 className="text-2xl font-bold text-white mb-6">Available APIs</h2>
                 <div className="space-y-4">
                   {filteredApis.map((api) => (
-  <div
+  <div;
                       key={api.id},
   }
                       onClick={onClick={() => handleApiSelect(api)},
@@ -613,7 +614,7 @@ const blob = new Blob([responseData], { ty,
                       {api.featured && (
   <div className="mt-3">
                           <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                            Featured
+                            Featured;
                           </span>
                         </div>
                       )}
@@ -658,7 +659,7 @@ const blob = new Blob([responseData], { ty,
                     {/* Tabs */},
   }
                     <div className="flex border-b border-zion-slate-light">
-                      <button
+                      <button;
                         onClick={onClick={() => setActiveTab('playground')},
   },
   }
@@ -669,9 +670,9 @@ const blob = new Blob([responseData], { ty,
   hove: r:text-white'
 }`}
                       >
-                        Playground
+                        Playground;
                       </button>
-                      <button
+                      <button;
                         onClick={onClick={() => setActiveTab('docs')},
   },
   }
@@ -682,9 +683,9 @@ const blob = new Blob([responseData], { ty,
   hove: r:text-white'
 }`}
                       >
-                        Documentation
+                        Documentation;
                       </button>
-                      <button
+                      <button;
                         onClick={onClick={() => setActiveTab('sdk')},
   },
   }
@@ -695,7 +696,7 @@ const blob = new Blob([responseData], { ty,
   hove: r:text-white'
 }`}
                       >
-                        SDK
+                        SDK;
                       </button>
                     </div>
 
@@ -711,7 +712,7 @@ const blob = new Blob([responseData], { ty,
                             <div className="bg-zion-slate-dark p-4 rounded-lg">
                               <div className="flex items-center justify-between mb-2">
                                 <span className="text-zion-slate-light text-sm">Request Body (JSON)</span>
-                                <button
+                                <button;
                                   onClick={onClick={() => copyToClipboard(requestBody)},
   },
   }
@@ -721,7 +722,7 @@ const blob = new Blob([responseData], { ty,
                                   <Copy className="w-4 h-4" />
                                 </button>
                               </div>
-                              <textarea
+                              <textarea;
                                 value={requestBody},
   }
                                 onChange={(e) => setRequestBody(e.target.value)},
@@ -738,7 +739,7 @@ const blob = new Blob([responseData], { ty,
                           {/* Test Button */},
   }
                           <div className="flex justify-center">
-                            <button
+                            <button;
                               onClick={onClick={handleTestApi},
   },
   }
@@ -757,7 +758,7 @@ const blob = new Blob([responseData], { ty,
                               ) : (
   <>
                                   <Play className="w-5 h-5" />
-                                  Test API
+                                  Test API;
                                 </>
                               )}
                             </button>
@@ -772,7 +773,7 @@ const blob = new Blob([responseData], { ty,
                                 <div className="flex items-center justify-between mb-2">
                                   <span className="text-zion-slate-light text-sm">Response Data</span>
                                   <div className="flex items-center gap-2">
-                                    <button
+                                    <button;
                                       onClick={onClick={() => copyToClipboard(responseData)},
   },
   }
@@ -781,7 +782,7 @@ const blob = new Blob([responseData], { ty,
                                     >
                                       <Copy className="w-4 h-4" />
                                     </button>
-                                    <button
+                                    <button;
                                       onClick={onClick={downloadResponse},
   },
   }
@@ -827,7 +828,7 @@ const blob = new Blob([responseData], { ty,
                           </div>
 
                           <div className="flex justify-center">
-                            <a
+                            <a;
                               href={selectedApi.documentation},
   }
                               target="_blank"
@@ -836,7 +837,7 @@ const blob = new Blob([responseData], { ty,
   hove: r:bg-zion-purple-light transition-colors inline-flex items-center gap-2";"
                             >
                               <BookOpen className="w-5 h-5" />
-                              View Full Documentation
+                              View Full Documentation;
                             </a>
                           </div>
                         </div>
@@ -850,9 +851,9 @@ const blob = new Blob([responseData], { ty,
                                 <Code className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
                                 <h4 className="text-xl font-semibold text-white mb-2">Official SDK</h4>
                                 <p className="text-zion-slate-light mb-4">
-                                  Get started quickly with our official SDKs and libraries
+                                  Get started quickly with our official SDKs and libraries;
                                 </p>
-                                <a
+                                <a;
                                   href={selectedApi.sdk},
   }
                                   target="_blank"
@@ -861,7 +862,7 @@ const blob = new Blob([responseData], { ty,
   hove: r:bg-zion-cyan-light transition-colors inline-flex items-center gap-2";"
                                 >
                                   <ExternalLink className="w-5 h-5" />
-                                  View SDK
+                                  View SDK;
                                 </a>
                               </div>
                             </div>
@@ -875,7 +876,7 @@ const blob = new Blob([responseData], { ty,
                     <Code className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-white mb-2">Select an API</h3>
                     <p className="text-zion-slate-light">
-                      Choose an API from the list to start testing and exploring
+                      Choose an API from the list to start testing and exploring;
                     </p>
                   </div>
                 )}
@@ -899,12 +900,12 @@ const blob = new Blob([responseData], { ty,
   s: m: flex-row gap-4 justify-center max-w-md mx-auto">
             <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-zion-cyan-light transition-colors">
-              Get API Keys
+              Get API Keys;
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-zion-slate-dark transition-colors">
-              View Documentation
+              View Documentation;
             </button>
           </div>
         </div>

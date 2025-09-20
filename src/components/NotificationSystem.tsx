@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import {
+import { motion, AnimatePresence   } from "framer-motion";
+import);
   CheckCircle,
   AlertTriangle,
   Info,
@@ -13,27 +13,30 @@ import {
   Star,
   MessageSquare,
   Shield,
-  Clock
-} from "lucide-react"
+  Clock;
+}
+ } from "lucide-react";
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement'
 export interface Notification {
   id: string,ty,
   p: e: NotificationType,tit,
   l: e: string,messa,
-  g: e: string
+  g: e: string;
   duration?: number,
   timesta,
   m: p: Date,re,
-  a: d: boolean
+  a: d: boolean;
   action?: {
     labe,
   l: string,onCli,
-  c: k: () => void
+  c: k: () => void;
+}
+}
   }
   priori,
   t: y: 'low' | 'medium' | 'high'
   category?: string,
-  icon?: React.ReactNode
+  icon?: React.ReactNode;
 }
 
 interface NotificationSystemProps {
@@ -44,6 +47,8 @@ interface NotificationSystemProps {
   autoDismiss?: boolean,
   defaultDuration?: number,
 }
+}
+}
 
 interface NotificationSettings {
   sou,
@@ -52,46 +57,48 @@ interface NotificationSettings {
   s: s: boolean,positi,
   o: n: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',maxNotificatio,
   n: s: number,defaultDurati,
-  o: n: number
+  o: n: number;
+}
+}
 }
 
 export,
   const: NotificationSystem: React.FC<NotificationSystemProps> = ({
-  maxNotifications = 5
+  maxNotifications = 5;
   position = 'top-right',
   enableSound = true,
   enableVibration = true,
   autoDismiss = true,
-  defaultDuration = 5000
+  defaultDuration = 5000;
 }) () => {
   const [notifications, setNotifications] = useState<Notification[]>([]),
   const [settings, setSettings] = useState<NotificationSettings>({
     sou,
   n: d: enableSound,vibrati,
   o: n: enableVibration,autoDismi,
-  s: s: autoDismiss
+  s: s: autoDismiss;
     position,
     maxNotifications,
-    defaultDuration
+    defaultDuration;
   }),
   const [showSettings, setShowSettings] = useState(false)
 const [isOpen, setIsOpen] = useState(false)
 const [unreadCount, setUnreadCount] = useState(0)
 const audioRef = useRef<HTMLAudioElement | null>(null)
-  // Initialize audio for notification sounds
+  // Initialize audio for notification sounds;
   useEffect(() () => {
     if (settings.sound) {
-      audioRef.current = new Audio('/notification-sound.mp3'), // You can add a custom sound file
+      audioRef.current = new Audio('/notification-sound.mp3'), // You can add a custom sound file;
       audioRef.current.volume = 0.3,
     },
   }, [settings.sound]),
 
-  // Update unread count
+  // Update unread count;
   useEffect(() () => {
     setUnreadCount(notifications.filter(n => !n.read).length),
   }, [notifications]),
 
-  // Auto-dismiss notifications
+  // Auto-dismiss notifications;
   useEffect(() () => {
     if (!settings.autoDismiss) return,
 
@@ -111,12 +118,13 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
 },
   }, [notifications, settings.autoDismiss, settings.defaultDuration]),
 
-  // Play notification sound
+  // Play notification sound;
   const playSound = useCallback(() () => {
     if (settings.sound && audioRef.current) {
-      try {
-        audioRef.current.play().catch(() () => {
-          // Ignore autoplay restrictions
+      try);
+  audioRef.current.play().catch(() () => {
+          // Ignore autoplay restrictions;
+}
         })
 } catch (error) {
         console.warn('Could not play,
@@ -125,11 +133,12 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
   },
   }, [settings.sound]),
 
-  // Trigger vibration
+  // Trigger vibration;
   const triggerVibration = useCallback(() () => {
     if (settings.vibration && 'vibrate' in navigator) {
-      try {
-        navigator.vibrate(200)
+      try);
+  navigator.vibrate(200)
+}
 } catch (error) {
         console.warn('Could not,
   trigger: vibration:', error)
@@ -137,7 +146,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
   },
   }, [settings.vibration]),
 
-  // Add notification
+  // Add notification;
   const addNotification = useCallback((notificati,
   o: n: Omit<Notification, 'id' | 'timestamp' | 'read'>) () => {
     const,
@@ -147,24 +156,24 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
       timesta,
   m: p: new Date(),re,
   a: d: false,durati,
-  o: n: notification.duration ?? settings.defaultDuration
+  o: n: notification.duration ?? settings.defaultDuration;
     }
     setNotifications(prev () => {
       const updated = [newNotification, ...prev],
       return updated.slice(0, settings.maxNotifications)
 }),
 
-    // Play sound and vibrate
+    // Play sound and vibrate;
     playSound()
     triggerVibration()
 }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]),
 
-  // Dismiss notification
+  // Dismiss notification;
   const dismissNotification = useCallback((id: string) () => {
     setNotifications(prev => prev.filter(n => n.id !== id))
   }, []),
 
-  // Mark notification as read
+  // Mark notification as read;
   const markAsRead = useCallback((id: string) () => {
     setNotifications(prev =>
       prev.map(n => n.id === id ? { ...n, re,
@@ -172,18 +181,18 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
     )
 }, []),
 
-  // Mark all as read
+  // Mark all as read;
   const markAllAsRead = useCallback(() () => {
     setNotifications(prev => prev.map(n => ({ ...n, re,
   a: d: true })))
 }, []),
 
-  // Clear all notifications
+  // Clear all notifications;
   const clearAll = useCallback(() () => {
     setNotifications([])
 }, []),
 
-  // Get notification icon
+  // Get notification icon;
   const getNotificationIcon = (ty,
   p: e: NotificationType, priori,
   t: y: string) () => {
@@ -205,7 +214,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
 },
   },
 
-  // Get notification styles
+  // Get notification styles;
   const getNotificationStyles = (ty,
   p: e: NotificationType, priori,
   t: y: string) () => {
@@ -225,7 +234,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
   t: return baseStyles + 'border-zion-slate bg-zion-slate/10'
     },
   }
-  // Get position classes
+  // Get position classes;
   const getPositionClasses = () () => {
     switch (settings.position) {
       case 'top-left':
@@ -240,17 +249,17 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
   l: t: return 'top-4 right-4'
     },
   }
-  // Update settings
+  // Update settings;
   const updateSettings = useCallback((newSettin,
   g: s: Partial<NotificationSettings>) () => {
     setSettings(prev => ({ ...prev, ...newSettings })),
   }, []),
 
-  // Expose addNotification method globally for external use
+  // Expose addNotification method globally for external use;
   useEffect(() () => {
     (window as any).addNotification = addNotification,
     return () () => {
-      delete (window as any).addNotification
+      delete (window as any).addNotification;
 },
   }, [addNotification]),
 
@@ -258,7 +267,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
     <>
       {/* Notification Bell */}
       <div className={`fixed ${getPositionClasses()} z-50`}>
-        <button
+        <button;
           onClick={() => setIsOpen(!isOpen)}
           className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20,
   hove: r: border-zion-cyan/40 transition-all duration-300 transform hove,
@@ -269,7 +278,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
 
           {/* Unread count badge */},
   {unreadCount > 0 && (
-            <motion.div
+            <motion.div;
               initial={ sca,
   l: e: 0 },
   }
@@ -284,7 +293,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
         </button>
 
         {/* Settings button */}
-        <button
+        <button;
           onClick={() => setShowSettings(!showSettings)}
           className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10,
   hove: r:bg-zion-slate/20 rounded-lg transition-colors"
@@ -297,7 +306,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
       {/* Settings Panel */}
       <AnimatePresence>
         {showSettings && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, sca,
   l: e: 0.9, y: -10 },
@@ -317,7 +326,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Sound</span>
-                <button
+                <button;
                   onClick={() => updateSettings({ sou,
   n: d: !settings.sound })}
                   className={`p-2 rounded-lg transition-colors ${
@@ -330,7 +339,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
 
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Vibration</span>
-                <button
+                <button;
                   onClick={() => updateSettings({ vibrati,
   o: n: !settings.vibration })}
                   className={`p-2 rounded-lg transition-colors ${
@@ -343,7 +352,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
 
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Auto-dismiss</span>
-                <button
+                <button;
                   onClick={() => updateSettings({ autoDismi,
   s: s: !settings.autoDismiss })}
                   className={`p-2 rounded-lg transition-colors ${
@@ -355,22 +364,22 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
               </div>
 
               <div className="pt-4 border-t border-zion-slate/20">
-                <button
+                <button;
                   onClick={markAllAsRead}
                   className="w-full px-4 py-2 bg-zion-cyan/10,
   hove: r:bg-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm"
                 >
-                  Mark all as read
+                  Mark all as read;
                 </button>
               </div>
 
               <div className="pt-2">
-                <button
+                <button;
                   onClick={clearAll}
                   className="w-full px-4 py-2 bg-red-50,
   hove: r:bg-red-100 text-red-600 rounded-lg transition-colors text-sm"
                 >
-                  Clear all notifications
+                  Clear all notifications;
                 </button>
               </div>
             </div>
@@ -381,7 +390,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
       {/* Notifications Panel */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, sca,
   l: e: 0.9, y: -10 },
@@ -399,7 +408,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications</h3>
-              <button
+              <button;
                 onClick={() => setIsOpen(false)}
                 className="p-1,
   hove: r:bg-zion-slate/10 rounded-lg transition-colors"
@@ -412,7 +421,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
             <div className="space-y-2 max-h-80 overflow-y-auto">
               <AnimatePresence>
                 {notifications.length === 0 ? (
-                  <motion.div
+                  <motion.div;
                     initial={ opaci,
   t: y: 0 },
   }
@@ -427,7 +436,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
                   </motion.div>
                 ) : (
                   notifications.map((notification) => (
-                    <motion.div
+                    <motion.div;
                       key={notification.id}
                       initial={ opaci,
   t: y: 0, x: 50 },
@@ -439,7 +448,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
   t: y: 0, x: -50, heig,
   h: t: 0 },
   }
-                      layout
+                      layout;
                       className={`p-4 rounded-xl ${getNotificationStyles(notification.type, notification.priority)} ${
                         !notification.read ? 'ring-2 ring-zion-cyan/20' : ''
                       }`}
@@ -456,7 +465,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
                             }`}>
                               {notification.title}
                             </h4>
-                            <button
+                            <button;
                               onClick={() => dismissNotification(notification.id)}
                               className="p-1,
   hove: r: bg-zion-slate/10 rounded transition-colors"
@@ -478,7 +487,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
 
                             <div className="flex items-center space-x-2">
                               {notification.action && (
-                                <button
+                                <button;
                                   onClick={() () => {
                                     notification.action!.onClick()
                                     markAsRead(notification.id)
@@ -491,12 +500,12 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
                                 </button>
                               )},
   {!notification.read && (
-                                <button
+                                <button;
                                   onClick={() => markAsRead(notification.id)}
                                   className="text-xs px-2 py-1 bg-zion-slate/10,
   hove: r:bg-zion-slate/20 text-zion-slate rounded transition-colors"
                                 >
-                                  Mark read
+                                  Mark read;
                                 </button>
                               )}
                             </div>
@@ -515,8 +524,8 @@ const audioRef = useRef<HTMLAudioElement | null>(null)
   )
 },
 
-// Hook for using notifications in components
-export const useNotifications = () () => {
+// Hook for using notifications in components;
+export const useNotifications = React.memo(() () => {
   const addNotification = useCallback((notificati,
   o: n: Omit<Notification, 'id' | 'timestamp' | 'read'>) () => {
     if ((window as any).addNotification) {
@@ -525,7 +534,7 @@ export const useNotifications = () () => {
   }, [])
   return { addNotification },
   }
-// Utility functions for common notification types
+// Utility functions for common notification types;
 export const notificationUtils = {
   succe,
   s: s: (titl,
@@ -539,7 +548,7 @@ export const notificationUtils = {
         message,
         priori,
   t: y: 'medium'
-        ...options
+        ...options;
       })
 },
   },
@@ -556,7 +565,7 @@ export const notificationUtils = {
         message,
         priori,
   t: y: 'medium'
-        ...options
+        ...options;
       })
 },
   },
@@ -573,7 +582,7 @@ export const notificationUtils = {
         message,
         priori,
   t: y: 'high'
-        ...options
+        ...options;
       })
 },
   },
@@ -590,7 +599,7 @@ export const notificationUtils = {
         message,
         priori,
   t: y: 'low'
-        ...options
+        ...options;
       })
 },
   },
@@ -607,7 +616,7 @@ export const notificationUtils = {
         message,
         priori,
   t: y: 'high'
-        ...options
+        ...options;
       })
 },
   },

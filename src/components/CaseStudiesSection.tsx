@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
   TrendingUp,
   Users,
@@ -8,8 +8,10 @@ import {
   Clock,
   ArrowRight,
   Star,
-  CheckCircle
-} from "lucide-react"
+  CheckCircle;
+}
+}
+ } from "lucide-react";
 const caseStudies = [
   {
     id: 1,tit,
@@ -74,7 +76,7 @@ export function CaseStudiesSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="text-center mb-16"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -91,10 +93,10 @@ export function CaseStudiesSection() {
         >
           <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-4">
-            Success Stories
+            Success Stories;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we've helped businesses across industries achieve
+            Discover how we've helped businesses across industries achieve;
             remarkable results through innovative technology solutions.
           </p>
         </motion.div>
@@ -102,7 +104,7 @@ export function CaseStudiesSection() {
         <div className="grid grid-cols-1 l,
   g:grid-cols-3 gap-8">
           {caseStudies.map((study, index) => (
-            <motion.div
+            <motion.div;
               key={study.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden,
   hove: r: border-blue-500/50 transition-all duration-300,
@@ -123,7 +125,7 @@ export function CaseStudiesSection() {
   }
             >
               <div className="relative">
-                <img 
+                <img;
                   src={study.image} 
                   alt={study.title}
                   className="w-full h-48 object-cover"
@@ -170,7 +172,7 @@ export function CaseStudiesSection() {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div;
           className="mt-16 text-center"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -191,26 +193,26 @@ export function CaseStudiesSection() {
               Ready to Write Your Success Story?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their
+              Join hundreds of satisfied clients who have transformed their;
               businesses with our innovative technology solutions.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600,
   hove: r:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
               >
-                Start Your Project
+                Start Your Project;
                 <TrendingUp className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/case-studies"
                 className="inline-flex items-center px-6 py-3 border border-white text-white,
   hove: r:bg-white hove,
   r:text-blue-600 rounded-lg font-medium transition-colors duration-200"
               >
-                View All Case Studies
+                View All Case Studies;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>

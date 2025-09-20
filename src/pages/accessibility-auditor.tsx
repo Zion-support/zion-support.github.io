@@ -1,24 +1,26 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link   } from "react-router-dom";
 import {
-  Eye
-  Shield
-  CheckCircle
-  AlertTriangle
-  BarChart3
-  Users
-  Globe
-  ArrowRight
-  Star
-  Heart
-  Users
-  Zap
-  Lock
-  FileText
-  Phone
-  Mail
-  MessageCircle
-} from "lucide-react"
+  Eye;
+  Shield;
+  CheckCircle;
+  AlertTriangle;
+  BarChart3;
+  Users;
+  Globe;
+  ArrowRight;
+  Star;
+  Heart;
+  Users;
+  Zap;
+  Lock;
+  FileText;
+  Phone;
+  Mail;
+  MessageCircle;
+}
+}
+ } from "lucide-react";
 export default function AccessibilityPage() {
   const currentYear = new Date().getFullYear()
   const accessibilityFeatures = [
@@ -104,26 +106,26 @@ export default function AccessibilityPage() {
   m: e: 'Screen Reader Support',descripti,
   o: n: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver'
       ic,
-  o: n: Monitor
+  o: n: Monitor;
 },
   {
   na,
   m: e: 'Mobile Accessibility',descripti,
   o: n: 'Optimized for mobile devices with touch-friendly interfaces and responsive design',ic,
-  o: n: Smartphone
+  o: n: Smartphone;
 },
   {
   na,
   m: e: 'Voice Navigation',descripti,
   o: n: 'Voice control support for hands-free navigation and interaction',ic,
-  o: n: Globe
+  o: n: Globe;
 },
   {
   na,
   m: e: 'Customizable Interface',descripti,
   o: n: 'Personalizable themes, fonts, and layout options to meet individual needs'
       ic,
-  o: n: Zap
+  o: n: Zap;
 },
   ]
   const const containerVariants = {
@@ -138,7 +140,7 @@ export default function AccessibilityPage() {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -154,7 +156,7 @@ export default function AccessibilityPage() {
   y: 1,y: 0,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -167,14 +169,14 @@ export default function AccessibilityPage() {
           <div className="text-center mb-16">
             <h1 className="text-4xl m,
   d:text-6xl font-bold mb-6">
-              Accessibility
+              Accessibility;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Auditor
+                {" "}Auditor;
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ensure your digital products are accessible to everyone. Our comprehensive
-              accessibility auditing service helps you meet compliance standards and
+              Ensure your digital products are accessible to everyone. Our comprehensive;
+              accessibility auditing service helps you meet compliance standards and;
               provide inclusive user experiences.
             </p>
           </div>
@@ -288,19 +290,19 @@ export default function AccessibilityPage() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></span>
-                    Expand your audience reach to users with disabilities
+                    Expand your audience reach to users with disabilities;
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></span>
-                    Reduce legal risk and ensure compliance
+                    Reduce legal risk and ensure compliance;
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></span>
-                    Improve overall user experience for all users
+                    Improve overall user experience for all users;
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></span>
-                    Enhance brand reputation and social responsibility
+                    Enhance brand reputation and social responsibility;
                   </li>
                 </ul>
               </div>
@@ -310,19 +312,19 @@ export default function AccessibilityPage() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2"></span>
-                    Automated testing for consistent results
+                    Automated testing for consistent results;
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2"></span>
-                    Expert manual review and validation
+                    Expert manual review and validation;
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2"></span>
-                    Detailed technical recommendations
+                    Detailed technical recommendations;
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2"></span>
-                    Ongoing monitoring and support
+                    Ongoing monitoring and support;
                   </li>
                 </ul>
               </div>
@@ -335,25 +337,25 @@ export default function AccessibilityPage() {
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Ready to Make Your Digital Products Accessible?</h3>
               <p className="text-gray-300 mb-6">
-                Get a comprehensive accessibility audit and ensure your products are
+                Get a comprehensive accessibility audit and ensure your products are;
                 inclusive for all users. Contact us today to get started.
               </p>
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <Link
+                <Link;
                   to="/contact"
                   className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg,
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300";"
                 >
-                  Get Accessibility Audit
+                  Get Accessibility Audit;
                 </Link>
-                <Link
+                <Link;
                   to="/services"
                   className="className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hove,
   r:bg-gray-800 transition-all duration-300";"
                 >
-                  View All Services
+                  View All Services;
                 </Link>
               </div>
             </div>

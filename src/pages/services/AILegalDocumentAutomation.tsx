@@ -1,35 +1,39 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  FileText
+  FileText;
   Shield,
   Zap,
   CheckCircle,
   BarChart3,
   Sparkles,
   ArrowRight,
-  Brain
-  Cpu
-  Database
-  Globe
-  Rocket
-  Target
-  TrendingUp
-  Layers
-  Scale
-  Gavel
-  BookOpen
-  Search
-  Clock
-  DollarSign
-  Phone
-  Mail
-  MapPin
-  Building
-  Home
-  Heart
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Brain;
+  Cpu;
+  Database;
+  Globe;
+  Rocket;
+  Target;
+  TrendingUp;
+  Layers;
+  Scale;
+  Gavel;
+  BookOpen;
+  Search;
+  Clock;
+  DollarSign;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Home;
+  Heart;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function AILegalDocumentAutomation() {
   const features = [
   'AI-powered contract analysis and generationLegal document template automation'
@@ -90,7 +94,7 @@ export default function AILegalDocumentAutomation() {
         'Basic legal research tools'
 ]
       recommende,
-  d: false
+  d: false;
 },
   {
   pl,
@@ -103,7 +107,7 @@ export default function AILegalDocumentAutomation() {
         'Advanced legal researchContract negotiation assistance'
 ]
       recommende,
-  d: true
+  d: true;
 },
   {
   pl,
@@ -117,7 +121,7 @@ export default function AILegalDocumentAutomation() {
         'API accessCustom integrations'
 ]
       recommende,
-  d: false
+  d: false;
 },
   ]
   const legalTechnologies = [
@@ -160,7 +164,7 @@ export default function AILegalDocumentAutomation() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="AI Legal Document Automation - Zion Tech Group"
         description="Transform your legal practice with AI-powered document automation, contract generation, and compliance management. Reduce costs and improve efficiency."
       />
@@ -171,7 +175,7 @@ export default function AILegalDocumentAutomation() {
   s: m: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -189,16 +193,16 @@ export default function AILegalDocumentAutomation() {
             </div>
             <h1 className="text-4xl,
   s: m:text-6xl font-bold tracking-tight mb-6">
-              AI Legal Document
+              AI Legal Document;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Automation</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your legal practice with AI-powered document automation, intelligent contract generation
+              Revolutionize your legal practice with AI-powered document automation, intelligent contract generation;
               and automated compliance management. Save time, reduce costs, and minimize legal risks.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg,
@@ -206,16 +210,16 @@ export default function AILegalDocumentAutomation() {
   hove: r:to-purple-500 transition-all duration-300 font-semibold";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center px-6 py-3 border border-blue-400/30 text-blue-400 rounded-lg hove,
   r:bg-blue-400/10 transition-all duration-300";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Get Quote
+                Get Quote;
               </a>
             </div>
           </motion.div>
@@ -229,10 +233,10 @@ export default function AILegalDocumentAutomation() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Powerful Legal Automation Features
+              Powerful Legal Automation Features;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Our AI platform combines cutting-edge technology with legal expertise to deliver 
+              Our AI platform combines cutting-edge technology with legal expertise to deliver;
               comprehensive document automation solutions.
             </p>
           </div>
@@ -241,7 +245,7 @@ export default function AILegalDocumentAutomation() {
   m: d:grid-cols-2 l,
   g:grid-cols-4">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -274,7 +278,7 @@ export default function AILegalDocumentAutomation() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Transform Your Legal Practice
+              Transform Your Legal Practice;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Experience unprecedented efficiency and accuracy in legal document management.
@@ -285,7 +289,7 @@ export default function AILegalDocumentAutomation() {
   m: d:grid-cols-2 l,
   g:grid-cols-3">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -317,7 +321,7 @@ export default function AILegalDocumentAutomation() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Industry-Specific Solutions
+              Industry-Specific Solutions;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Tailored legal automation solutions for various industries and practice areas.
@@ -327,7 +331,7 @@ export default function AILegalDocumentAutomation() {
           <div className="grid gap-8 m,
   d:grid-cols-2">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -373,7 +377,7 @@ export default function AILegalDocumentAutomation() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Transparent Pricing Plans
+              Transparent Pricing Plans;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Choose the plan that best fits your legal practice needs and scale as you grow.
@@ -383,7 +387,7 @@ export default function AILegalDocumentAutomation() {
           <div className="grid gap-8 m,
   d:grid-cols-3 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -397,7 +401,7 @@ export default function AILegalDocumentAutomation() {
   a: y: index * 0.1 },
   }
                 className={`relative bg-slate-800/50 backdrop-blur border rounded-xl p-8 ${
-  plan.recommended 
+  plan.recommended;
                     ? 'border-blue-500/50 bg-blue-500/5' 
                     : 'border-slate-700/50'
 }`}
@@ -405,7 +409,7 @@ export default function AILegalDocumentAutomation() {
                 {plan.recommended && (
   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Recommended
+                      Recommended;
                     </span>
                   </div>
                 )}
@@ -427,11 +431,11 @@ export default function AILegalDocumentAutomation() {
                   ))}
                 </ul>
 
-                <a
+                <a;
                   href="t,
   e: l: +13024640950"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-  plan.recommended
+  plan.recommended;
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white,
   hove: r:from-blue-400,
   hove: r:to-purple-500'
@@ -439,7 +443,7 @@ export default function AILegalDocumentAutomation() {
   r:bg-slate-600'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -454,7 +458,7 @@ export default function AILegalDocumentAutomation() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Seamless Technology Integration
+              Seamless Technology Integration;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Integrate with your existing legal technology stack and workflow systems.
@@ -465,7 +469,7 @@ export default function AILegalDocumentAutomation() {
   m: d:grid-cols-2 l,
   g:grid-cols-3">
             {legalTechnologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -485,7 +489,7 @@ export default function AILegalDocumentAutomation() {
               >
                 <h3 className="font-semibold text-lg mb-2">{tech.name}</h3>
                 <p className="text-slate-400 text-sm mb-4">{tech.category}</p>
-                <a
+                <a;
                   href={tech.url},
   }
                   target="_blank"
@@ -493,7 +497,7 @@ export default function AILegalDocumentAutomation() {
                   className="className="text-blue-400,
   hove: r:text-blue-300 text-sm inline-flex items-center";"
                 >
-                  Visit Website
+                  Visit Website;
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </a>
               </motion.div>
@@ -509,7 +513,7 @@ export default function AILegalDocumentAutomation() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Comprehensive Compliance Support
+              Comprehensive Compliance Support;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Stay compliant with major regulatory frameworks and industry standards.
@@ -520,7 +524,7 @@ export default function AILegalDocumentAutomation() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 max-w-4xl mx-auto">
             {complianceFrameworks.map((framework, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -547,7 +551,7 @@ export default function AILegalDocumentAutomation() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -564,13 +568,13 @@ export default function AILegalDocumentAutomation() {
               Ready to Transform Your Legal Practice?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Join hundreds of law firms and legal departments that have already 
+              Join hundreds of law firms and legal departments that have already;
               revolutionized their document management with AI automation.
             </p>
             
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center mb-8">
-              <a 
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg,
@@ -578,16 +582,16 @@ export default function AILegalDocumentAutomation() {
   hove: r:to-purple-500 transition-all duration-300 font-semibold text-lg";"
               >
                 <Phone className="w-6 h-6 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-blue-400/50 text-blue-400 rounded-lg,
   hove: r:bg-blue-400/10 transition-all duration-300 font-semibold text-lg";"
               >
                 <Mail className="w-6 h-6 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </a>
             </div>
 

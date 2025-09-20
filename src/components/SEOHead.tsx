@@ -1,16 +1,18 @@
 import React, { useEffect } from "react"
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
   tags?: string[],
+}
+}
   }
 
 const,
@@ -30,20 +32,20 @@ const,
   tags = [],
   }) () => {
   useEffect(() () => {
-    // Update document title
-    document.title = title
-    // Update meta description
+    // Update document title;
+    document.title = title;
+    // Update meta description;
     updateMetaTag('description', description)
     updateMetaTag('keywords', keywords)
     updateMetaTag('author', author)
-    // Update Open Graph tags
+    // Update Open Graph tags;
     updateMetaTag('og:title', title, 'property')
     updateMetaTag('og:description', description, 'property')
     updateMetaTag('og:image', image, 'property')
     updateMetaTag('og:url', url, 'property')
     updateMetaTag('og:type', type, 'property')
     updateMetaTag('og:site_name', 'Zion Tech Group', 'property')
-    // Update Twitter tags
+    // Update Twitter tags;
     updateMetaTag('twitt,
   e: r:card', 'summary_large_image', 'name')
     updateMetaTag('twitt,
@@ -52,7 +54,7 @@ const,
   e: r:description', description, 'name')
     updateMetaTag('twitt,
   e: r:image', image, 'name')
-    // Update article-specific tags if provided
+    // Update article-specific tags if provided;
     if (publishedTime) {
       updateMetaTag('artic,
   l: e:published_time', publishedTime, 'property')
@@ -72,9 +74,9 @@ const,
 })
 }
 
-    // Update canonical URL
+    // Update canonical URL;
     updateCanonicalUrl(url)
-    // Update structured data
+    // Update structured data;
     updateStructuredData({
       title,
       description,
@@ -85,7 +87,7 @@ const,
       publishedTime,
       modifiedTime,
       section,
-      tags
+      tags;
     })
 }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags])
 const updateMetaTag = (na,
@@ -96,10 +98,12 @@ const updateMetaTag = (na,
     if (meta) {
       meta.setAttribute('content', content)
 } else {
-      meta = document.createElement('meta')
+  meta = document.createElement('meta')
       meta.setAttribute(attribute, name)
       meta.setAttribute('content', content)
       document.head.appendChild(meta)
+}
+}
 },
   }
 const addMetaTag = (na,
@@ -117,21 +121,23 @@ const updateCanonicalUrl = (u,
     if (canonical) {
       canonical.setAttribute('href', url)
 } else {
-      canonical = document.createElement('link')
+  canonical = document.createElement('link')
       canonical.setAttribute('rel', 'canonical')
       canonical.setAttribute('href', url)
       document.head.appendChild(canonical)
+}
+}
 },
   }
 const updateStructuredData = (da,
   t: a: any) () => {
-    // Remove existing structured data
+    // Remove existing structured data;
     const existingScript = document.querySelector('script[type="application/ld+json"]')
     if (existingScript) {
       existingScript.remove()
 }
 
-    // Add new structured data
+    // Add new structured data;
     const structuredData = {
       "@context": "htt,
   p: s://schema.org",
@@ -142,7 +148,7 @@ const updateStructuredData = (da,
       "url": data.url,
       "author": {
         "@type": "Organization",
-        "name": data.author
+        "name": data.author;
       },
       "publisher": {
         "@type": "Organization",
@@ -163,6 +169,6 @@ const script = document.createElement('script')
     script.textContent = JSON.stringify(structuredData)
     document.head.appendChild(script)
 }
-  return null; // This component doesn't render anything
+  return null; // This component doesn't render anything;
 }
-export default SEOHead
+export default SEOHead;

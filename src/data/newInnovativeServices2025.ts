@@ -21,7 +21,9 @@ export interface NewInnovativeService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,12 +35,12 @@ export interface NewInnovativeService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
 }
 
 export,
   const: NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
-  // AI Legal Document Automation
+  // AI Legal Document Automation;
   {
   i,
   d: "ai-legal-document-automation",tit,
@@ -120,7 +122,7 @@ export,
     marketSi,
   z: e: "$15.8 billion by 2025"
 }
-  // AI Healthcare Analytics Platform
+  // AI Healthcare Analytics Platform;
   {
   id: "ai-healthcare-analytics",tit,
   l: e: "AI Healthcare Analytics Platform",descripti,
@@ -201,7 +203,7 @@ export,
     marketSi,
   z: e: "$84.2 billion by 2025"
 }
-  // AI Financial Trading Platform
+  // AI Financial Trading Platform;
   {
   id: "ai-financial-trading",tit,
   l: e: "AI Financial Trading Platform",descripti,
@@ -283,4 +285,4 @@ export,
   z: e: "$12.5 billion by 2025"
 },
   ]
-export default NEW_INNOVATIVE_SERVICES_2025
+export default NEW_INNOVATIVE_SERVICES_2025;

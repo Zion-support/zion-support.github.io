@@ -21,7 +21,9 @@ export interface ComprehensiveRealService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,14 +35,14 @@ export interface ComprehensiveRealService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
-  demoUrl?: string
-  documentationUrl?: string
+  marketSize?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
 }
 
 export,
   const: COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
-  // AI-Powered Business Intelligence & Analytics
+  // AI-Powered Business Intelligence & Analytics;
   {
   i,
   d: "ai-business-intelligence-platform",tit,
@@ -125,7 +127,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-bi"
 }
-  // AI-Powered Content Creation Suite
+  // AI-Powered Content Creation Suite;
   {
   id: "ai-content-creation-suite",tit,
   l: e: "AI Content Creation Suite",descripti,
@@ -209,7 +211,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-content"
 }
-  // AI-Powered Customer Support Platform
+  // AI-Powered Customer Support Platform;
   {
   id: "ai-customer-support-platform",tit,
   l: e: "AI Customer Support Platform",descripti,
@@ -293,7 +295,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-support"
 }
-  // AI-Powered Sales Copilot
+  // AI-Powered Sales Copilot;
   {
   id: "ai-sales-copilot",tit,
   l: e: "AI Sales Copilot",descripti,
@@ -377,7 +379,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-sales"
 }
-  // AI-Powered Cybersecurity Suite
+  // AI-Powered Cybersecurity Suite;
   {
   id: "ai-cybersecurity-suite",tit,
   l: e: "AI-Powered Cybersecurity Suite",descripti,
@@ -461,7 +463,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-security"
 }
-  // AI-Powered Data Analytics & BI
+  // AI-Powered Data Analytics & BI;
   {
   id: "ai-data-analytics-bi",tit,
   l: e: "AI Data Analytics & BI",descripti,
@@ -544,7 +546,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-analytics"
 }
-  // Cloud Infrastructure & DevOps
+  // Cloud Infrastructure & DevOps;
   {
   id: "cloud-infrastructure-devops",tit,
   l: e: "Cloud Infrastructure & DevOps",descripti,
@@ -628,7 +630,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/cloud-devops"
 }
-  // Cybersecurity & Compliance
+  // Cybersecurity & Compliance;
   {
   id: "cybersecurity-compliance",tit,
   l: e: "Cybersecurity & Compliance",descripti,
@@ -712,7 +714,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/cybersecurity"
 }
-  // Quantum Computing Services
+  // Quantum Computing Services;
   {
   id: "quantum-computing-services",tit,
   l: e: "Quantum Computing Services",descripti,
@@ -796,7 +798,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/quantum"
 }
-  // Blockchain & Web3 Solutions
+  // Blockchain & Web3 Solutions;
   {
   id: "blockchain-web3-solutions",tit,
   l: e: "Blockchain & Web3 Solutions",descripti,
@@ -880,7 +882,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/blockchain"
 }
-  // IoT & Edge Computing Services
+  // IoT & Edge Computing Services;
   {
   id: "iot-edge-computing-services",tit,
   l: e: "IoT & Edge Computing Services",descripti,
@@ -964,7 +966,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/iot-edge"
 }
-  // Digital Twin Solutions
+  // Digital Twin Solutions;
   {
   id: "digital-twin-solutions",tit,
   l: e: "Digital Twin Solutions",descripti,
@@ -1048,7 +1050,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/digital-twin"
 }
-  // Space Technology Solutions
+  // Space Technology Solutions;
   {
   id: "space-technology-solutions",tit,
   l: e: "Space Technology Solutions",descripti,
@@ -1132,7 +1134,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/space-tech"
 }
-  // Green IT Solutions
+  // Green IT Solutions;
   {
   id: "green-it-solutions",tit,
   l: e: "Green IT Solutions",descripti,
@@ -1215,7 +1217,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/green-it"
 }
-  // Zero Trust Network Architecture
+  // Zero Trust Network Architecture;
   {
   id: "zero-trust-network-architecture",tit,
   l: e: "Zero Trust Network Architecture",descripti,
@@ -1299,4 +1301,4 @@ export,
   s://ziontechgroup.com/docs/zero-trust"
 },
   ]
-export default COMPREHENSIVE_REAL_SERVICES_2025
+export default COMPREHENSIVE_REAL_SERVICES_2025;

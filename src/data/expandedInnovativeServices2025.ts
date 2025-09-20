@@ -21,7 +21,9 @@ export interface ExpandedInnovativeService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -36,7 +38,7 @@ export interface ExpandedInnovativeService {
 
 export,
   const: EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
-  // AI-Powered Cybersecurity Threat Intelligence
+  // AI-Powered Cybersecurity Threat Intelligence;
   {
   i,
   d: "ai-cybersecurity-threat-intelligence",tit,
@@ -114,7 +116,7 @@ export,
   },
   }
 
-  // AI Sales Co-pilot for SMBs
+  // AI Sales Co-pilot for SMBs;
   {
   id: "ai-sales-copilot-smb",tit,
   l: e: "AI Sales Co‑pilot for SMBs",descripti,
@@ -185,7 +187,7 @@ export,
   },
   }
 
-  // FinOps cost optimization for cloud
+  // FinOps cost optimization for cloud;
   {
   id: "cloud-finops-optimizer",tit,
   l: e: "Cloud FinOps Optimizer",descripti,
@@ -249,7 +251,7 @@ export,
   },
   }
 
-  // Managed MLOps platform
+  // Managed MLOps platform;
   {
   id: "managed-mlops-platform",tit,
   l: e: "Managed MLOps Platform",descripti,
@@ -313,7 +315,7 @@ export,
   },
   }
 
-  // eCommerce personalization micro‑SaaS
+  // eCommerce personalization micro‑SaaS;
   {
   id: "ecommerce-personalization-engine",tit,
   l: e: "eCommerce Personalization Engine",descripti,
@@ -364,7 +366,7 @@ export,
   s://ziontechgroup.com" },
   },
   }
-  // SOC2-in-a-box compliance automation
+  // SOC2-in-a-box compliance automation;
   {
   id: "soc2-in-a-box",tit,
   l: e: "SOC 2‑in‑a‑Box Compliance Automation",descripti,
@@ -479,7 +481,7 @@ export,
   },
   }
 
-  // Blockchain-Based Supply Chain Transparency
+  // Blockchain-Based Supply Chain Transparency;
   {
   id: "blockchain-supply-chain-transparency",tit,
   l: e: "Blockchain Supply Chain Transparency Platform",descripti,
@@ -543,7 +545,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // IoT Edge Computing Analytics Platform
+  // IoT Edge Computing Analytics Platform;
   {
   id: "iot-edge-computing-analytics",tit,
   l: e: "IoT Edge Computing Analytics Platform",descripti,
@@ -607,7 +609,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // AI-Powered Legal Document Analysis
+  // AI-Powered Legal Document Analysis;
   {
   id: "ai-legal-document-analysis",tit,
   l: e: "AI Legal Document Analysis Platform",descripti,
@@ -671,7 +673,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // Quantum-Ready Cryptography Platform
+  // Quantum-Ready Cryptography Platform;
   {
   id: "quantum-ready-cryptography",tit,
   l: e: "Quantum-Ready Cryptography Platform",descripti,
@@ -735,7 +737,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // AI-Powered Healthcare Diagnostics
+  // AI-Powered Healthcare Diagnostics;
   {
   id: "ai-healthcare-diagnostics",tit,
   l: e: "AI Healthcare Diagnostics Platform",descripti,
@@ -799,7 +801,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // Sustainable Energy Management Platform
+  // Sustainable Energy Management Platform;
   {
   id: "sustainable-energy-management",tit,
   l: e: "Sustainable Energy Management Platform",descripti,
@@ -863,7 +865,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // AI-Powered Financial Fraud Detection
+  // AI-Powered Financial Fraud Detection;
   {
   id: "ai-financial-fraud-detection",tit,
   l: e: "AI Financial Fraud Detection Platform",descripti,
@@ -926,7 +928,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // Autonomous Vehicle Fleet Management
+  // Autonomous Vehicle Fleet Management;
   {
   id: "autonomous-vehicle-fleet-management",tit,
   l: e: "Autonomous Vehicle Fleet Management Platform",descripti,
@@ -990,7 +992,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // AI-Powered Content Creation Platform
+  // AI-Powered Content Creation Platform;
   {
   id: "ai-content-creation-platform",tit,
   l: e: "AI Content Creation Platform",descripti,
@@ -1054,7 +1056,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // AI Agent Helpdesk for ITSM
+  // AI Agent Helpdesk for ITSM;
   {
   id: "ai-agent-itsm-helpdesk",tit,
   l: e: "AI Agent Helpdesk for ITSM",descripti,
@@ -1122,7 +1124,7 @@ export,
   },
   }
 
-  // Data Governance & Quality as a Service
+  // Data Governance & Quality as a Service;
   {
   id: "data-governance-quality-aas",tit,
   l: e: "Data Governance & Quality as a Service",descripti,
@@ -1185,7 +1187,7 @@ export,
   },
   }
 
-  // Cloud Landing Zone in 10 Days
+  // Cloud Landing Zone in 10 Days;
   {
   id: "cloud-landing-zone-10-days",tit,
   l: e: "Cloud Landing Zone in 10 Days",descripti,
@@ -1248,7 +1250,7 @@ export,
   },
   }
 
-  // Marketing Content Ops Co-pilot
+  // Marketing Content Ops Co-pilot;
   {
   id: "marketing-content-ops-copilot",tit,
   l: e: "Marketing Content Ops Co‑pilot",descripti,
@@ -1299,7 +1301,7 @@ export,
   },
   }
   
-  // Cloud Cost Optimization AI
+  // Cloud Cost Optimization AI;
   {
   id: "cloud-cost-optimizer-ai",tit,
   l: e: "Cloud Cost Optimizer AI",descripti,
@@ -1375,7 +1377,7 @@ export,
   ],
   },
   }
-  // SOC 2 & ISO 27001 Compliance Copilot
+  // SOC 2 & ISO 27001 Compliance Copilot;
   {
   id: "soc2-iso-compliance-copilot",tit,
   l: e: "Compliance Copilot for SOC 2 & ISO 27001",descripti,
@@ -1439,7 +1441,7 @@ export,
   ],
   },
   }
-  // Data Pipeline Observability Platform
+  // Data Pipeline Observability Platform;
   {
   id: "data-pipeline-observability",tit,
   l: e: "Data Pipeline Observability Platform",descripti,
@@ -1502,7 +1504,7 @@ export,
   ],
   },
   }
-  // AI Customer Support Agent Platform
+  // AI Customer Support Agent Platform;
   {
   id: "ai-customer-support-agent",tit,
   l: e: "AI Customer Support Agent Platform",descripti,
@@ -1616,7 +1618,7 @@ export,
   s://ziontechgroup.com" },
   },
   }
-  // MLOps Continuous Delivery Platform
+  // MLOps Continuous Delivery Platform;
   {
   id: "mlops-continuous-delivery",tit,
   l: e: "MLOps Continuous Delivery Platform",descripti,
@@ -1681,4 +1683,4 @@ export,
   },
   ]
 
-export default EXPANDED_INNOVATIVE_SERVICES_2025
+export default EXPANDED_INNOVATIVE_SERVICES_2025;

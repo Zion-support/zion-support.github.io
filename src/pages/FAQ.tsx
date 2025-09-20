@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { SEO } from "../components/SEO"
-import { HelpCircle, Search, ChevronDown, ChevronUp, MessageCircle, Phone, Mail, Clock, Users, Shield, Zap, Globe, Cpu, Database, Server, Lock, ArrowRight, DollarSign, Settings, FileText, Target, BookOpen } from "lucide-react"
-import { Link } from "react-router-dom"
+import { SEO   } from "../components/SEO";
+import { HelpCircle, Search, ChevronDown, ChevronUp, MessageCircle, Phone, Mail, Clock, Users, Shield, Zap, Globe, Cpu, Database, Server, Lock, ArrowRight, DollarSign, Settings, FileText, Target, BookOpen   } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function FAQ() {
   const [openCategory, setOpenCategory] = useState('general')
   const [searchQuery, setSearchQuery] = useState('')
@@ -162,15 +163,15 @@ export default function FAQ() {
       )
       if (if (filtered.length > 0) {
   ) {
-        acc[category] = filtered
+        acc[category] = filtered;
 },
   }
-    return acc
+    return acc;
 }, {})
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="FAQ - Zion Tech Group"
         description="Find answers to frequently asked questions about our services, pricing, implementation process, and support options."
       />
@@ -188,7 +189,7 @@ export default function FAQ() {
             </div>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Frequently Asked
+              Frequently Asked;
               <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"> Questions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -201,7 +202,7 @@ export default function FAQ() {
             <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search for answers..."
                   value={searchQuery},
@@ -225,7 +226,7 @@ export default function FAQ() {
       <section className="py-12">
         <div className="container-responsive">
           <div className="flex flex-wrap justify-center gap-4">
-            <button
+            <button;
               onClick={onClick={() => setOpenCategory('all')},
   },
   }
@@ -241,14 +242,14 @@ export default function FAQ() {
               <span>All Questions</span>
             </button>
             {categories.map((category) => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setOpenCategory(category.id)},
   },
   }
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-  openCategory === category.id
+  openCategory === category.id;
                     ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/20'
                     : 'bg-slate-700/50 text-slate-300,
   hove: r: bg-indigo-500/10 hove,
@@ -285,16 +286,16 @@ export default function FAQ() {
               <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No questions found</h3>
               <p className="text-gray-300 mb-6">
-                Try adjusting your search terms or browse all categories
+                Try adjusting your search terms or browse all categories;
               </p>
-              <button
+              <button;
                 onClick={onClick={() => setSearchQuery('')},
   },
   }
                 className="className="px-6 py-3 bg-indigo-500,
   hove: r: bg-indigo-600 text-white font-medium rounded-lg transition-colors";"
               >
-                Clear Search
+                Clear Search;
               </button>
             </div>
           )}
@@ -310,7 +311,7 @@ export default function FAQ() {
               Still Have Questions?
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Our support team is here to help. Contact us through any of these channels 
+              Our support team is here to help. Contact us through any of these channels;
               and we'll get back to you as soon as possible.
             </p>
             
@@ -347,7 +348,7 @@ export default function FAQ() {
   o:support@ziontechgroup.com'
 },
   ].map((option, index) => (
-  <div
+  <div;
                   key={index},
   }
                   className="className="p-8 rounded-2xl bg-slate-800/50,
@@ -361,7 +362,7 @@ export default function FAQ() {
                   <h3 className="text-xl font-bold text-white mb-3">{option.title}</h3>
                   <p className="text-gray-300 text-sm mb-6">{option.description}</p>
                   
-                  <a
+                  <a;
                     href={option.link},
   }
                     className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600,
@@ -385,10 +386,10 @@ export default function FAQ() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Additional Resources
+              Additional Resources;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive documentation, case studies, and learning resources
+              Explore our comprehensive documentation, case studies, and learning resources;
             </p>
           </div>
 
@@ -429,7 +430,7 @@ export default function FAQ() {
   n: k: '/support'
 },
   ].map((resource, index) => (
-  <Link
+  <Link;
                 key={index},
   }
                 to={resource.link},
@@ -448,7 +449,7 @@ export default function FAQ() {
                 
                 <div className="inline-flex items-center gap-2 text-indigo-400 group-hov,
   e: r:text-indigo-300 font-medium transition-colors">
-                  Explore
+                  Explore;
                   <ArrowRight className="w-4 h-4" />
                 </div>
               </Link>
@@ -460,7 +461,7 @@ export default function FAQ() {
   )
 }
 
-// FAQ Item Component
+// FAQ Item Component;
 function FAQItem({ question, answer }: { questi,
   o: n: string, answ,
   e: r: string }) {
@@ -468,7 +469,7 @@ function FAQItem({ question, answer }: { questi,
 
   return (
     <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg overflow-hidden">
-      <button
+      <button;
         onClick={onClick={() => setIsOpen(!isOpen)},
   },
   }

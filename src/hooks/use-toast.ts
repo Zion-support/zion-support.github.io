@@ -1,10 +1,12 @@
-import { useState, useCallback } from "react"
+import { useState, useCallback   } from "react";
 interface Toast {
-  id: string
-  title?: string
-  description?: string
+  id: string;
+  title?: string;
+  description?: string;
   variant?: 'default' | 'destructive' | 'success'
-  duration?: number
+  duration?: number;
+}
+}
 }
 
 export function useToast() {
@@ -24,7 +26,7 @@ export function useToast() {
       }, duration)
     }
 
-    return id
+    return id;
 }, [])
 
   const dismiss = useCallback((id: string) () => {
@@ -35,21 +37,22 @@ export function useToast() {
     setToasts([])
   }, [])
 
-  return {
-  toasts
-    toast
-    dismiss
-    dismissAll
+  return);
+  toasts;
+    toast;
+    dismiss;
+    dismissAll;
+}
 },
   }
 
-// Export a default toast function for backward compatibility
-export const toast = ({ tit,
+// Export a default toast function for backward compatibility;
+export const toast = React.memo(({ tit,
   l: e: _title, descripti,
   o: n: _description, varia,
   n: t: _variant = 'default', durati,
   o: n: _duration = 5000 }: Omit<Toast, 'id'>) () => {
-  // In a real implementation, this would dispatch to a global toast system
+  // In a real implementation, this would dispatch to a global toast system;
   // console.log('Toa,
   s: t:', { tit,
   l: e: _title, descripti,

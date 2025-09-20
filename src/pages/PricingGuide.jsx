@@ -1,14 +1,15 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from "lucide-react"
+import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES   } from "@/data/expandedServices";
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock   } from "lucide-react";
 import SEO from "@/components/SEO"
 export default function PricingGuide() {
   const [selectedCategory, setSelectedCategory] = useState('all')
     const filteredServices = selectedCategory === 'all'
-        ? EXPANDED_SERVICES
+        ? EXPANDED_SERVICES;
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory)
     const getCategoryIcon = (category) () => {
   const const icons = {
@@ -82,10 +83,10 @@ export default function PricingGuide() {
         <div className="container mx-auto text-center">
           <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-            IT Services Pricing Guide
+            IT Services Pricing Guide;
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Transparent pricing for enterprise technology solutions. Compare our competitive rates 
+            Transparent pricing for enterprise technology solutions. Compare our competitive rates;
             with market averages and discover the value we deliver.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -93,13 +94,13 @@ export default function PricingGuide() {
   hove: r:bg-zion-cyan,
   hove: r:text-white">
               <Phone className="w-5 h-5 mr-2"/>
-              Get Custom Quote
+              Get Custom Quote;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-zion-purple">
               <Mail className="w-5 h-5 mr-2"/>
-              Schedule Consultation
+              Schedule Consultation;
             </Button>
           </div>
         </div>
@@ -133,7 +134,7 @@ export default function PricingGuide() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Pricing Overview</h2>
             <p className="text-zion-slate-light text-lg">
-              Competitive pricing with guaranteed ROI and transparent cost structure
+              Competitive pricing with guaranteed ROI and transparent cost structure;
             </p>
           </div>
 
@@ -184,7 +185,7 @@ export default function PricingGuide() {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button variant={selectedCategory === 'all' ? 'default' : 'outline'} onClick={() => setSelectedCategory('all')} className="bg-zion-purple,
   hove: r:bg-zion-purple-dark">
-              All Categories
+              All Categories;
             </Button>
             {EXPANDED_SERVICE_CATEGORIES.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.value)} className={selectedCategory === category.value ? 'bg-zion-purple,
   hove: r:bg-zion-purple-dark' : ''}>
@@ -208,7 +209,7 @@ export default function PricingGuide() {
   }
                       </div>
                       {service.featured && (<Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
-                          Featured
+                          Featured;
                         </Badge>)}
                     </div>
                     <CardTitle className="text-white text-xl mb-2">{service.title}</CardTitle>
@@ -277,12 +278,12 @@ export default function PricingGuide() {
   hove: r: bg-zion-purple,
   hove: r:text-white flex-1">
                         <Mail className="w-4 h-4 mr-1"/>
-                        Get Quote
+                        Get Quote;
                       </Button>
                       <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark,
   hove: r:from-zion-purple-light hove,
   r:to-zion-purple flex-1">
-                        Learn More
+                        Learn More;
                       </Button>
                     </div>
                   </CardContent>
@@ -293,7 +294,7 @@ export default function PricingGuide() {
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <div className="text-zion-slate-light text-xl mb-4">No services found in this category</div>
               <Button onClick={() => setSelectedCategory('all')}>
-                View All Services
+                View All Services;
               </Button>
             </div>)}
         </div>
@@ -306,7 +307,7 @@ export default function PricingGuide() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-zion-slate-light text-lg">
-              We deliver exceptional value through expertise, innovation, and proven results
+              We deliver exceptional value through expertise, innovation, and proven results;
             </p>
           </div>
 
@@ -322,7 +323,7 @@ export default function PricingGuide() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-slate-light text-sm">
-                  Certified professionals with 10+ years of experience in enterprise technology
+                  Certified professionals with 10+ years of experience in enterprise technology;
                 </p>
               </CardContent>
             </Card>
@@ -336,7 +337,7 @@ export default function PricingGuide() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-slate-light text-sm">
-                  99.9% uptime guarantee with comprehensive service level agreements
+                  99.9% uptime guarantee with comprehensive service level agreements;
                 </p>
               </CardContent>
             </Card>
@@ -350,7 +351,7 @@ export default function PricingGuide() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-slate-light text-sm">
-                  Every solution designed to maximize return on investment and business value
+                  Every solution designed to maximize return on investment and business value;
                 </p>
               </CardContent>
             </Card>
@@ -364,7 +365,7 @@ export default function PricingGuide() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-slate-light text-sm">
-                  Services available worldwide with local expertise and global best practices
+                  Services available worldwide with local expertise and global best practices;
                 </p>
               </CardContent>
             </Card>
@@ -378,7 +379,7 @@ export default function PricingGuide() {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
-            Contact us today for a personalized quote and consultation. Our experts will help you 
+            Contact us today for a personalized quote and consultation. Our experts will help you;
             choose the right services for your business needs and budget.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -386,13 +387,13 @@ export default function PricingGuide() {
   hove: r: bg-zion-cyan,
   hove: r:text-white">
               <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white,
   hove: r:text-zion-purple">
               <Mail className="w-5 h-5 mr-2"/>
-              Email kleber@ziontechgroup.com
+              Email kleber@ziontechgroup.com;
             </Button>
           </div>
           <div className="mt-8 text-zion-cyan">

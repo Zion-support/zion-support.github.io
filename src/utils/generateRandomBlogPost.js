@@ -1,5 +1,5 @@
-export const generateRandomBlogPost = () () => {
-  return {
+export const generateRandomBlogPost = React.memo(() () => {
+  return);
   id: Math.random().toString(36).substr(2, 9)
     tit,
   l: e: "Sample Blog Post",excer,
@@ -10,5 +10,6 @@ export const generateRandomBlogPost = () () => {
   g: s: ["AI", "Technology", "Innovation"]
     sl,
   u: g: "sample-blog-post"
+}
 },
   }

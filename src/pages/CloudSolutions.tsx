@@ -1,21 +1,23 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Cloud
-  Server
-  Database
-  Shield
-  Zap
-  Globe
-  Lock
-  BarChart3
-  ArrowRight
-  CheckCircle
-  Play
-  Code
-  Settings
-  Users
-} from "lucide-react"
+  Cloud;
+  Server;
+  Database;
+  Shield;
+  Zap;
+  Globe;
+  Lock;
+  BarChart3;
+  ArrowRight;
+  CheckCircle;
+  Play;
+  Code;
+  Settings;
+  Users;
+}
+}
+ } from "lucide-react";
 export default function CloudSolutions() {
   const cloudServices = [
   {
@@ -122,7 +124,7 @@ export default function CloudSolutions() {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -152,7 +154,7 @@ export default function CloudSolutions() {
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -168,16 +170,16 @@ export default function CloudSolutions() {
               Cloud Solutions for the{' '},
   }
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Digital Age
+                Digital Age;
               </span>
             </h1>
             <p className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with enterprise-grade cloud infrastructure, DevOps automation
+              Transform your business with enterprise-grade cloud infrastructure, DevOps automation;
               and scalable solutions that drive innovation and growth.
             </p>
 
-            <motion.div
+            <motion.div;
               className="className="flex flex-col,
   s: m: flex-row gap-6 justify-center mb-16";"
               initial={ opacit,
@@ -191,7 +193,7 @@ export default function CloudSolutions() {
   a: y: 0.3 },
   }
             >
-              <motion.button
+              <motion.button;
                 className="className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r: scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25 flex items-center gap-3";"
@@ -202,11 +204,11 @@ export default function CloudSolutions() {
   l: e: 0.95 },
   }
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="w-5 h-5 group-hov,
   e: r: translate-x-1 transition-transform" />
               </motion.button>
-              <motion.button
+              <motion.button;
                 className="className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan,
   hove: r:text-white transition-all duration-300 flex items-center gap-3";"
@@ -218,7 +220,7 @@ export default function CloudSolutions() {
   }
               >
                 <Play className="w-5 h-5" />
-                Watch Demo
+                Watch Demo;
               </motion.button>
             </motion.div>
           </motion.div>
@@ -229,7 +231,7 @@ export default function CloudSolutions() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -246,15 +248,15 @@ export default function CloudSolutions() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Comprehensive Cloud Services
+              Comprehensive Cloud Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From migration to optimization, we provide end-to-end cloud solutions that
+              From migration to optimization, we provide end-to-end cloud solutions that;
               transform your infrastructure and accelerate your digital transformation.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8";"
@@ -267,7 +269,7 @@ export default function CloudSolutions() {
   }
           >
             {cloudServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6,
@@ -305,7 +307,7 @@ export default function CloudSolutions() {
   }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -325,12 +327,12 @@ export default function CloudSolutions() {
               Why Choose Our Cloud Solutions?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the benefits of enterprise-grade cloud infrastructure with
+              Experience the benefits of enterprise-grade cloud infrastructure with;
               expert guidance and proven methodologies.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8";"
@@ -343,7 +345,7 @@ export default function CloudSolutions() {
   }
           >
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -365,7 +367,7 @@ export default function CloudSolutions() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -382,15 +384,15 @@ export default function CloudSolutions() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Technologies We Master
+              Technologies We Master;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our expertise spans the leading cloud platforms and tools, ensuring
+              Our expertise spans the leading cloud platforms and tools, ensuring;
               you get the best solution for your specific needs.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-2,
   m: d: grid-cols-3 l,
   g:grid-cols-6 gap-8";"
@@ -403,7 +405,7 @@ export default function CloudSolutions() {
   }
           >
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center group";"
@@ -429,7 +431,7 @@ export default function CloudSolutions() {
   }
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -448,10 +450,10 @@ export default function CloudSolutions() {
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let our cloud experts help you build a scalable, secure, and cost-effective
+              Let our cloud experts help you build a scalable, secure, and cost-effective;
               cloud infrastructure that drives your business forward.
             </p>
-            <motion.button
+            <motion.button;
               className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r: scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25";"
@@ -462,7 +464,7 @@ export default function CloudSolutions() {
   l: e: 0.95 },
   }
             >
-              Start Your Cloud Journey
+              Start Your Cloud Journey;
             </motion.button>
           </motion.div>
         </div>

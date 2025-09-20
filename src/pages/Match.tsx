@@ -1,44 +1,47 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Sparkles
+  Sparkles;
   Users,
   Target,
   CheckCircle,
-  ArrowRight
-  Star
-  Zap
-  Brain
-  Shield
-  Cloud
-  Cpu
-  Database
-  Rocket
-  MessageCircle
-  Search
-  Filter
-  Settings
-  RefreshCw
-  Heart
-  Bookmark
-  Share2
-  Download
-  Upload
-  FileText
-  BarChart3
-  Globe
-  Award
-  TrendingUp
-  Clock
-  Eye
-  Lock
-  Key
-  Wifi
-  Server
-  Network
-  Settings as SettingsIcon
-} from "lucide-react"
+  ArrowRight;
+  Star;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Database;
+  Rocket;
+  MessageCircle;
+  Search;
+  Filter;
+  Settings;
+  RefreshCw;
+  Heart;
+  Bookmark;
+  Share2;
+  Download;
+  Upload;
+  FileText;
+  BarChart3;
+  Globe;
+  Award;
+  TrendingUp;
+  Clock;
+  Eye;
+  Lock;
+  Key;
+  Wifi;
+  Server;
+  Network;
+  Settings as SettingsIcon;
+}
+}
+ } from "lucide-react";
 import SEO from "../components/SEO"
 const,
   Matc: h: React.FC = () () => {
@@ -91,7 +94,7 @@ const,
       matchSco,
   r: e: 98,ic,
   o: n: Brain,featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 2,na,
@@ -106,7 +109,7 @@ const,
       matchSco,
   r: e: 95,ic,
   o: n: Cloud,featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: 3,na,
@@ -121,7 +124,7 @@ const,
       matchSco,
   r: e: 92,ic,
   o: n: Shield,featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 4,na,
@@ -136,7 +139,7 @@ const,
       matchSco,
   r: e: 90,ic,
   o: n: Database,featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: 5,na,
@@ -151,7 +154,7 @@ const,
       matchSco,
   r: e: 88,ic,
   o: n: Cpu,featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: 6,na,
@@ -166,19 +169,19 @@ const,
       matchSco,
   r: e: 87,ic,
   o: n: Zap,featur,
-  e: d: true
+  e: d: true;
 },
   ]
   const filteredServices = matchedServices.filter(service () => {
-  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Service Matcher - Zion Tech Group"
         description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs."
         keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
@@ -189,7 +192,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -210,36 +213,36 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
             
             <h2 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6 leading-tight">
-              Find Your Perfect
+              Find Your Perfect;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Technology Match
+                Technology Match;
               </span>
             </h2>
             
             <p className="text-xl,
   m: d:text-2xl text-slate-300 mb-8 leading-relaxed">
-              Our AI-powered matching algorithm analyzes your business needs and connects you 
+              Our AI-powered matching algorithm analyzes your business needs and connects you;
               with the perfect technology solutions. Get personalized recommendations in seconds.
             </p>
             
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/25";"
               >
-                Get Matched
+                Get Matched;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                Browse All Services
+                Browse All Services;
               </Link>
             </div>
           </motion.div>
@@ -255,7 +258,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
             <div className="relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search for services, features, or use cases..."
                 value={searchQuery},
@@ -274,14 +277,14 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
                       : 'bg-slate-700/50 text-slate-300,
   hove: r: bg-slate-600/50 hove,
@@ -306,7 +309,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -322,7 +325,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
               Your <span className="text-cyan-400">Perfect Matches</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Based on your business profile and requirements, here are the services 
+              Based on your business profile and requirements, here are the services;
               that best match your needs.
             </p>
           </motion.div>
@@ -331,7 +334,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -364,7 +367,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                       </div>
                     )}
                     <div className="bg-cyan-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                      {service.matchScore}% Match
+                      {service.matchScore}% Match;
                     </div>
                   </div>
                 </div>
@@ -400,7 +403,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                   ))},
   {service.features.length > 3 && (
   <div className="text-slate-500 text-sm text-center">
-                      +{service.features.length - 3} more features
+                      +{service.features.length - 3} more features;
                     </div>
                   )}
                 </div>
@@ -408,20 +411,20 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                 {/* Actions */},
   }
                 <div className="flex gap-2">
-                  <Link
+                  <Link;
                     to={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg,
   hove: r: from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200";"
                   >
-                    Learn More
+                    Learn More;
                   </Link>
-                  <Link
+                  <Link;
                     to="/contact"
                     className="className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400/30 text-cyan-400 text-sm font-medium rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
                   >
-                    Contact
+                    Contact;
                   </Link>
                 </div>
               </motion.div>
@@ -429,7 +432,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
           </div>
 
           {filteredServices.length === 0 && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0 },
   }
@@ -445,12 +448,12 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
               <p className="text-slate-300 mb-6">
                 Try adjusting your search criteria or browse all our services.
               </p>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg,
   hove: r:bg-cyan-400 transition-all duration-200";"
               >
-                Browse All Services
+                Browse All Services;
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </motion.div>
@@ -462,7 +465,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -475,10 +478,10 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              How Our <span className="text-cyan-400">AI Matcher</span> Works
+              How Our <span className="text-cyan-400">AI Matcher</span> Works;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our intelligent matching algorithm uses advanced AI to analyze your business needs 
+              Our intelligent matching algorithm uses advanced AI to analyze your business needs;
               and find the perfect technology solutions.
             </p>
           </motion.div>
@@ -492,24 +495,24 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   l: e: "Analyze Your Needs",descripti,
   o: n: "Our AI analyzes your business profile, industry, and specific requirements."
                 ic,
-  o: n: Brain
+  o: n: Brain;
 },
   {
   st,
   e: p: "02",tit,
   l: e: "Match with Services",descripti,
   o: n: "We match you with services that best fit your needs and budget.",ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   st,
   e: p: "03",tit,
   l: e: "Get Recommendations",descripti,
   o: n: "Receive personalized recommendations with match scores and detailed analysis.",ic,
-  o: n: Sparkles
+  o: n: Sparkles;
 },
   ].map((step, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -540,7 +543,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -561,22 +564,22 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/25";"
               >
-                Start Matching
+                Start Matching;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                Browse All Services
+                Browse All Services;
               </Link>
             </div>
           </motion.div>
@@ -585,4 +588,4 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
     </div>
   )
 }
-export default Match
+export default Match;

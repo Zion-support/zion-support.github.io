@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { Brain, Shield, Database, TrendingUp } from "lucide-react"
+import { Brain, Shield, Database, TrendingUp     } from "lucide-react";
 const AIServices = () () => {
     const aiServices = [
   {
@@ -33,7 +33,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "1-hour consultation",rati,
   n: g: 4.9,reviewCou,
-  n: t: 156
+  n: t: 156;
 },
   {
   id: "machine-learning",tit,
@@ -67,7 +67,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "Proof of concept",rati,
   n: g: 4.8,reviewCou,
-  n: t: 234
+  n: t: 234;
 },
   {
   id: "natural-language-processing",tit,
@@ -103,7 +103,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "Demo version",rati,
   n: g: 4.9,reviewCou,
-  n: t: 189
+  n: t: 189;
 },
   {
   id: "computer-vision",tit,
@@ -139,7 +139,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "Pilot project",rati,
   n: g: 4.8,reviewCou,
-  n: t: 145
+  n: t: 145;
 },
   {
   id: "predictive-analytics",tit,
@@ -173,7 +173,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "30-day trial",rati,
   n: g: 4.7,reviewCou,
-  n: t: 198
+  n: t: 198;
 },
   {
   id: "ai-automation",tit,
@@ -207,7 +207,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "Process assessment",rati,
   n: g: 4.8,reviewCou,
-  n: t: 267
+  n: t: 267;
 },
   {
   id: "ai-ethics",tit,
@@ -239,7 +239,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "Ethics assessment",rati,
   n: g: 4.9,reviewCou,
-  n: t: 89
+  n: t: 89;
 },
   {
   id: "ai-infrastructure",tit,
@@ -273,7 +273,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "Infrastructure audit",rati,
   n: g: 4.8,reviewCou,
-  n: t: 134
+  n: t: 134;
 },
   {
   id: "ai-integration",tit,
@@ -307,7 +307,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "Integration assessment",rati,
   n: g: 4.7,reviewCou,
-  n: t: 178
+  n: t: 178;
 },
   {
   id: "ai-training",tit,
@@ -340,7 +340,7 @@ const AIServices = () () => {
             freeTri,
   a: l: "Introductory session",rati,
   n: g: 4.8,reviewCou,
-  n: t: 223
+  n: t: 223;
 },
   ]
     const categories = [["All Services", "Strategy", "ML", "NLP", "Vision", "Analytics", "Automation", "Ethics", "Infrastructure", "Integration", "Training"],
@@ -348,7 +348,7 @@ const AIServices = () () => {
 
     return (
         <div className="min-h-screen bg-background">
-            <SEO 
+            <SEO;
                 title="AI Services - Zion Tech Group" 
                 description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy." 
                 keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" 
@@ -363,14 +363,14 @@ const AIServices = () () => {
                 <div className="relative container mx-auto px-4 text-center">
                     <h1 className="text-5xl,
   m: d:text-6xl font-bold mb-6">
-                        AI Services for
+                        AI Services for;
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
-                            {" "}Innovation
+                            {" "}Innovation;
                         </span>
                     </h1>
                     <p className="text-xl,
   m: d:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8">
-                        Harness the power of artificial intelligence to transform your business operations
+                        Harness the power of artificial intelligence to transform your business operations;
                         enhance customer experiences, and drive innovation across all departments.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
@@ -378,12 +378,12 @@ const AIServices = () () => {
   hove: r: from-pink-700,
   hove: r:to-rose-700 transition-all duration-300,
   transform: hover:scale-105">
-                            Start Your AI Journey
+                            Start Your AI Journey;
                         </button>
                         <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-pink-400 hove,
   r:text-white transition-all duration-300">
-                            View Case Studies
+                            View Case Studies;
                         </button>
                     </div>
                 </div>
@@ -417,7 +417,7 @@ const AIServices = () () => {
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Services Portfolio</h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Comprehensive AI solutions designed to meet your business challenges and drive innovation
+                            Comprehensive AI solutions designed to meet your business challenges and drive innovation;
                         </p>
                     </div>
 
@@ -506,7 +506,7 @@ const AIServices = () () => {
   r:scale-105">
                                         <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                                             <ExternalLink className="h-4 w-4 mr-2"/>
-                                            Get Started
+                                            Get Started;
                                         </a>
                                     </button>
                                 </div>
@@ -524,7 +524,7 @@ const AIServices = () () => {
                         Ready to Transform Your Business with AI?
                     </h2>
                     <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                        Start with a consultation and see how our AI services can streamline your operations
+                        Start with a consultation and see how our AI services can streamline your operations;
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
@@ -532,13 +532,13 @@ const AIServices = () () => {
   hove: r: from-pink-700,
   hove: r:to-rose-700 transition-all duration-300">
                             <Rocket className="h-5 w-5 mr-2 inline"/>
-                            Start AI Consultation
+                            Start AI Consultation;
                         </button>
                         <button className="border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-pink-600 hove,
   r:text-white transition-all duration-300">
                             <Phone className="h-5 w-5 mr-2 inline"/>
-                            Call +1 302 464 0950
+                            Call +1 302 464 0950;
                         </button>
                     </div>
                 </div>
@@ -546,4 +546,4 @@ const AIServices = () () => {
         </div>
     )
 }
-export default AIServices
+export default AIServices;

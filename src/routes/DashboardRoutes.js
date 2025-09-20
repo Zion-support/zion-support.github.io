@@ -1,5 +1,5 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime"
-import { Route } from "react-router-dom"
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs   } from "react/jsx-runtime";
+import { Route   } from "react-router-dom";
 import Dashboard from "@/pages/Dashboard"
 import ClientDashboard from "@/pages/ClientDashboard"
 import TalentDashboard from "@/pages/TalentDashboard"

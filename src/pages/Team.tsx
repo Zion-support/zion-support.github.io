@@ -1,55 +1,58 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Linkedin
+  Linkedin;
   Twitter,
   Mail,
   Globe,
-  Github
-  Award
-  Users
-  Target
-  Rocket
-  Brain
-  Cloud
-  Shield
-  Atom
-  Zap
-  Heart
-  Star
-  CheckCircle
-  ArrowRight
-  Building
-  Lightbulb
-  TrendingUp
-  Eye
-  Lock
-  Network
-  Database
-  Code
-  Leaf
-  Gamepad2
-  Coins
-  Satellite
-  Phone
-  MapPin
-  Calendar
-  Clock
-  BookOpen
-  MessageCircle
-  HelpCircle
-  DollarSign
-  Gauge
-  Workflow
-  BarChart3
-  PenTool
-  Server
-  Smartphone
-  Cpu
-  Truck
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Github;
+  Award;
+  Users;
+  Target;
+  Rocket;
+  Brain;
+  Cloud;
+  Shield;
+  Atom;
+  Zap;
+  Heart;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Building;
+  Lightbulb;
+  TrendingUp;
+  Eye;
+  Lock;
+  Network;
+  Database;
+  Code;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  Phone;
+  MapPin;
+  Calendar;
+  Clock;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  Workflow;
+  BarChart3;
+  PenTool;
+  Server;
+  Smartphone;
+  Cpu;
+  Truck;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
 interface TeamMember {
   id: string,na,
   m: e: string,tit,
@@ -58,11 +61,11 @@ interface TeamMember {
   i: o: string,experti,
   s: e: string[],experien,
   c: e: string,educati,
-  o: n: string
-  linkedin?: string
-  twitter?: string
-  github?: string
-  website?: string
+  o: n: string;
+  linkedin?: string;
+  twitter?: string;
+  github?: string;
+  website?: string;
   emai,
   l: string,ima,
   g: e: string,featur,
@@ -70,6 +73,8 @@ interface TeamMember {
   i: p: boolean,achievemen,
   t: s: string[[],
   ],
+}
+}
   }
 
 const,
@@ -368,25 +373,27 @@ const,
   },
   ]
 
-  // Update department counts
+  // Update department counts;
   departments.forEach(dept () => {
   if (if (dept.id === 'all') {
   ) {
-      dept.count = teamMembers.length
+      dept.count = teamMembers.length;
 } else if (if (dept.id === 'leadership') {
   ) {
-      dept.count = teamMembers.filter(member => member.leadership).length
+      dept.count = teamMembers.filter(member => member.leadership).length;
 } else {
-      dept.count = teamMembers.filter(member => member.department === dept.id).length
+  dept.count = teamMembers.filter(member => member.department === dept.id).length;
+}
+}
 },
   })
 
   const filteredMembers = teamMembers.filter(member () => {
-  const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment
+  const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment;
 const matchesRole = selectedRole === 'all' || 
                        (selectedRole === 'leadership' && member.leadership) ||
                        (selectedRole === 'individual' && !member.leadership)
-    return matchesDepartment && matchesRole
+    return matchesDepartment && matchesRole;
 })
 
   const leadershipTeam = teamMembers.filter(member => member.leadership)
@@ -394,7 +401,7 @@ const matchesRole = selectedRole === 'all' ||
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO;
         title="Our Team - Zion Tech Group"
         description="Meet the exceptional team behind Zion Tech Group. Our experts in AI, quantum computing, cybersecurity, and emerging technologies are driving innovation."
         keywords="Zion Tech Group team, AI experts, quantum computing specialists, cybersecurity professionals, technology leadership"
@@ -406,7 +413,7 @@ const matchesRole = selectedRole === 'all' ||
   s: m: px-6,
   l: g:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -420,21 +427,21 @@ const matchesRole = selectedRole === 'all' ||
           >
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Meet Our
+              Meet Our;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Exceptional Team
+                Exceptional Team;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               The brilliant minds behind Zion Tech Group's innovations in AI, quantum computing,
-  and emerging technologies. Our diverse team brings together expertise from leading 
+  and emerging technologies. Our diverse team brings together expertise from leading;
               institutions and companies worldwide.
             </p>
           </motion.div>
 
           {/* Team Stats */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -474,7 +481,7 @@ const matchesRole = selectedRole === 'all' ||
   o: r: 'from-green-500 to-emerald-500' },
   },
   ].map((stat, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -516,7 +523,7 @@ const matchesRole = selectedRole === 'all' ||
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -533,17 +540,17 @@ const matchesRole = selectedRole === 'all' ||
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Leadership Team
+              Leadership Team;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our visionary leaders driving innovation and strategic direction
+              Our visionary leaders driving innovation and strategic direction;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 l,
   g:grid-cols-3 gap-8">
             {leadershipTeam.map((member, index) => (
-  <motion.div
+  <motion.div;
                 key={member.id},
   }
                 initial={ opaci,
@@ -608,7 +615,7 @@ const matchesRole = selectedRole === 'all' ||
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {member.expertise.slice(0, 3).map((skill, skillIndex) => (
-  <span
+  <span;
                         key={skillIndex},
   }
                         className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
@@ -621,7 +628,7 @@ const matchesRole = selectedRole === 'all' ||
                   
                   <div className="flex justify-center space-x-3">
                     {member.linkedin && (
-  <a
+  <a;
                         href={member.linkedin},
   }
                         target="_blank"
@@ -634,7 +641,7 @@ const matchesRole = selectedRole === 'all' ||
                       </a>
                     )},
   {member.twitter && (
-  <a
+  <a;
                         href={member.twitter},
   }
                         target="_blank"
@@ -647,7 +654,7 @@ const matchesRole = selectedRole === 'all' ||
                       </a>
                     )},
   {member.github && (
-  <a
+  <a;
                         href={member.github},
   }
                         target="_blank"
@@ -660,7 +667,7 @@ const matchesRole = selectedRole === 'all' ||
                       </a>
                     )},
   {member.website && (
-  <a
+  <a;
                         href={member.website},
   }
                         target="_blank"
@@ -672,7 +679,7 @@ const matchesRole = selectedRole === 'all' ||
                         <Globe className="w-5 h-5" />
                       </a>
                     )}
-                    <a
+                    <a;
                       href={`mail,
   t: o:${member.email}`}
                       className="className="p-2 text-gray-400,
@@ -695,7 +702,7 @@ const matchesRole = selectedRole === 'all' ||
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -712,10 +719,10 @@ const matchesRole = selectedRole === 'all' ||
           >
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our Team by Department
+              Our Team by Department;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Explore our talented team members across different departments and specialties
+              Explore our talented team members across different departments and specialties;
             </p>
           </motion.div>
 
@@ -728,14 +735,14 @@ const matchesRole = selectedRole === 'all' ||
               <div className="grid grid-cols-2 m,
   d:grid-cols-5 gap-2">
                 {departments.map((dept) => (
-  <button
+  <button;
                     key={dept.id},
   }
                     onClick={onClick={() => setSelectedDepartment(dept.id)},
   },
   }
                     className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-  selectedDepartment === dept.id
+  selectedDepartment === dept.id;
                         ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40'
                         : 'text-gray-300,
   hove: r: text-white hove,
@@ -768,14 +775,14 @@ const matchesRole = selectedRole === 'all' ||
   n: t: teamMembers.filter(m => !m.leadership).length },
   },
   ].map((role) => (
-  <button
+  <button;
                     key={role.id},
   }
                     onClick={onClick={() => setSelectedRole(role.id)},
   },
   }
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-  selectedRole === role.id
+  selectedRole === role.id;
                         ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40'
                         : 'text-gray-300,
   hove: r: text-white hove,
@@ -796,7 +803,7 @@ const matchesRole = selectedRole === 'all' ||
   l: g:grid-cols-3 x,
   l:grid-cols-4 gap-6">
             {filteredMembers.map((member, index) => (
-  <motion.div
+  <motion.div;
                 key={member.id},
   }
                 initial={ opaci,
@@ -856,7 +863,7 @@ const matchesRole = selectedRole === 'all' ||
                   
                   <div className="flex flex-wrap gap-1 mb-4">
                     {member.expertise.slice(0, 2).map((skill, skillIndex) => (
-  <span
+  <span;
                         key={skillIndex},
   }
                         className="className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
@@ -869,7 +876,7 @@ const matchesRole = selectedRole === 'all' ||
                   
                   <div className="flex justify-center space-x-2">
                     {member.linkedin && (
-  <a
+  <a;
                         href={member.linkedin},
   }
                         target="_blank"
@@ -882,7 +889,7 @@ const matchesRole = selectedRole === 'all' ||
                       </a>
                     )},
   {member.github && (
-  <a
+  <a;
                         href={member.github},
   }
                         target="_blank"
@@ -894,7 +901,7 @@ const matchesRole = selectedRole === 'all' ||
                         <Github className="w-4 h-4" />
                       </a>
                     )}
-                    <a
+                    <a;
                       href={`mail,
   t: o:${member.email}`}
                       className="className="p-2 text-gray-400,
@@ -917,7 +924,7 @@ const matchesRole = selectedRole === 'all' ||
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -934,10 +941,10 @@ const matchesRole = selectedRole === 'all' ||
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Our Culture & Values
+              Our Culture & Values;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              The principles that guide our team and drive our success
+              The principles that guide our team and drive our success;
             </p>
           </motion.div>
 
@@ -965,7 +972,7 @@ const matchesRole = selectedRole === 'all' ||
   o: n: 'Our team is committed to lifelong learning and staying ahead of technology trends.' },
   },
   ].map((value, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -1000,7 +1007,7 @@ const matchesRole = selectedRole === 'all' ||
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -1017,7 +1024,7 @@ const matchesRole = selectedRole === 'all' ||
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-              Join Our Team
+              Join Our Team;
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Ready to work with cutting-edge technologies and brilliant minds? 
@@ -1025,22 +1032,22 @@ const matchesRole = selectedRole === 'all' ||
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/careers"
                 className="className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-200";"
               >
-                View Open Positions
+                View Open Positions;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-200";"
               >
-                Contact Us
+                Contact Us;
               </Link>
             </div>
           </motion.div>
@@ -1049,4 +1056,4 @@ const matchesRole = selectedRole === 'all' ||
     </div>
   )
 }
-export default Team
+export default Team;

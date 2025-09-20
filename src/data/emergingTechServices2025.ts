@@ -21,7 +21,9 @@ export interface EmergingTechService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,12 +35,12 @@ export interface EmergingTechService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
 }
 
 export,
   const: EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
-  // AI-Powered Neuromorphic Computing Platform
+  // AI-Powered Neuromorphic Computing Platform;
   {
   i,
   d: "ai-neuromorphic-computing-platform",tit,
@@ -118,7 +120,7 @@ export,
     marketSi,
   z: e: "$8.9 billion by 2027"
 }
-  // AI-Powered Synthetic Biology Platform
+  // AI-Powered Synthetic Biology Platform;
   {
   id: "ai-synthetic-biology-platform",tit,
   l: e: "AI Synthetic Biology Platform",descripti,
@@ -198,7 +200,7 @@ export,
     marketSi,
   z: e: "$23.7 billion by 2028"
 }
-  // AI-Powered Quantum Internet Platform
+  // AI-Powered Quantum Internet Platform;
   {
   id: "ai-quantum-internet-platform",tit,
   l: e: "AI Quantum Internet Platform",descripti,
@@ -279,4 +281,4 @@ export,
   z: e: "$15.8 billion by 2030"
 },
   ]
-export default EMERGING_TECH_SERVICES_2025
+export default EMERGING_TECH_SERVICES_2025;

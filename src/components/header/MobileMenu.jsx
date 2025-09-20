@@ -1,5 +1,6 @@
+import { useCallback    } from "react";
 import React, { useState } from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation     } from "react-router-dom";
 import Menu from "lucide-react/dist/esm/icons/menu"
 import X from "lucide-react/dist/esm/icons/x"
 import User from "lucide-react/dist/esm/icons/user"
@@ -8,9 +9,9 @@ import Home from "lucide-react/dist/esm/icons/home"
 import Store from "lucide-react/dist/esm/icons/store"
 import Users from "lucide-react/dist/esm/icons/users"
 import Settings from "lucide-react/dist/esm/icons/settings"
-import { useAuth } from "@/hooks/useAuth"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { useAuth     } from "@/hooks/useAuth";
+import { cn     } from "@/lib/utils";
+import { Button     } from "@/components/ui/button";
 export function MobileMenu({ className }) {
   const { user, isAuthenticated } = useAuth()
 const location = useLocation()
@@ -56,7 +57,7 @@ const navigationItems = [
   return (
     <div className={cn("md:hidden", className)}>
       {/* Mobile menu button */}
-      <Button 
+      <Button;
         variant="ghost" 
         size="sm" 
         onClick={toggleMenu} 
@@ -73,7 +74,7 @@ const navigationItems = [
           <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
             <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
               <h2 className="text-lg font-semibold text-white">Menu</h2>
-              <Button 
+              <Button;
                 variant="ghost" 
                 size="sm" 
                 onClick={toggleMenu} 
@@ -87,16 +88,16 @@ const navigationItems = [
             {/* Navigation items */}
             <nav className="p-4 space-y-2">
               {navigationItems.map((item) () => {
-                const Icon = item.icon
+                const Icon = item.icon;
 const isActive = item.matches(location.pathname)
                 return (
-                  <Link 
+                  <Link;
                     key={item.href} 
                     to={item.href} 
                     onClick={toggleMenu} 
                     className={cn(
                       "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors"
-                      isActive
+                      isActive;
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
                         : "hov,
   e: r: bg-zion-purple/10 hove,
@@ -120,7 +121,7 @@ const isActive = item.matches(location.pathname)
                       {user?.email || 'User'}
                     </span>
                   </div>
-                  <Link 
+                  <Link;
                     to="/messages" 
                     onClick={toggleMenu} 
                     className="flex items-center gap-3 px-4 py-2 text-white,
@@ -129,7 +130,7 @@ const isActive = item.matches(location.pathname)
                     <MessageSquare className="h-5 w-5"/>
                     <span>Messages</span>
                   </Link>
-                  <Link 
+                  <Link;
                     to="/profile" 
                     onClick={toggleMenu} 
                     className="flex items-center gap-3 px-4 py-2 text-white,
@@ -141,22 +142,22 @@ const isActive = item.matches(location.pathname)
                 </div>
               ) : (
                 <div className="space-y-3">
-                  <Link 
+                  <Link;
                     to="/login" 
                     onClick={toggleMenu} 
                     className="block w-full px-4 py-2 text-center bg-zion-purple text-white rounded-lg,
   hove: r:bg-zion-purple-dark transition-colors"
                   >
-                    Login
+                    Login;
                   </Link>
-                  <Link 
+                  <Link;
                     to="/signup" 
                     onClick={toggleMenu} 
                     className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-cyan rounded-lg,
   hove: r: bg-zion-cyan hove,
   r:text-zion-blue-dark transition-colors"
                   >
-                    Sign Up
+                    Sign Up;
                   </Link>
                 </div>
               )}

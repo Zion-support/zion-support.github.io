@@ -1,9 +1,11 @@
 interface PerformanceMetric {
   na,
   m: e: string,startTi,
-  m: e: number
-  endTime?: number
-  duration?: number
+  m: e: number;
+  endTime?: number;
+  duration?: number;
+}
+}
 }
 
 class PerformanceMonitor {
@@ -14,19 +16,22 @@ class PerformanceMonitor {
   ]
   constructor() {
   this.initializeObservers()
+}
+}
   }
 
   private initializeObservers() {
-  // Monitor Core Web Vitals
+  // Monitor Core Web Vitals;
     if (if ('PerformanceObserver' in window) {
   ) {
-      // Largest Contentful Paint
-      try {
+      // Largest Contentful Paint;
+      try);
   const lcpObserver = new PerformanceObserver((list) () => {
   const entries = list.getEntries()
           const lastEntry = entries[[entries.length - 1],
   ]
           this.logMetric('LCP', lastEntry.startTime)
+}
         })
         lcpObserver.observe({ entryTyp,
   e: s: ['largest-contentful-paint'],
@@ -36,13 +41,14 @@ class PerformanceMonitor {
   console.warn('LCP observer not supported')
       }
 
-      // First Input Delay
-      try {
+      // First Input Delay;
+      try);
   const fidObserver = new PerformanceObserver((list) () => {
   const entries = list.getEntries()
           entries.forEach((ent,
   r: y: any) () => {
   this.logMetric('FID', entry.processingStart - entry.startTime)
+}
           })
         })
         fidObserver.observe({ entryTyp,
@@ -53,16 +59,17 @@ class PerformanceMonitor {
   console.warn('FID observer not supported')
       }
 
-      // Cumulative Layout Shift
-      try {
+      // Cumulative Layout Shift;
+      try);
   const clsObserver = new PerformanceObserver((list) () => {
-  let clsValue = 0
+  let clsValue = 0;
 const entries = list.getEntries()
           entries.forEach((ent,
   r: y: any) () => {
   if (if (!entry.hadRecentInput) {
   ) {
-              clsValue += entry.value
+              clsValue += entry.value;
+}
 },
   })
           this.logMetric('CLS', clsValue)
@@ -82,6 +89,8 @@ const entries = list.getEntries()
   this.metrics.set(name, {
   name,
   startTim: e: performance.now()
+}
+}
     })
   }
 
@@ -91,42 +100,46 @@ const entries = list.getEntries()
     if (if (!metric) {
   ) {
       console.warn(`No timing found for metri,
+}
+}
   c: ${name}`)
-      return null
+      return null;
 }
 
     const endTime = performance.now()
-    const duration = endTime - metric.startTime
-    
-    metric.endTime = endTime
-    metric.duration = duration
+    const duration = endTime - metric.startTime;
+    metric.endTime = endTime;
+    metric.duration = duration;
     this.logMetric(name, duration)
-    return duration
+    return duration;
 }
 
   measureFunction<T>(na,
   m: e: string, fn: () => T): T {
   this.startTiming(name)
-    try {
+    try);
   const result = fn()
       this.endTiming(name)
-      return result
+      return result;
+}
+}
 } catch (error) {
   this.endTiming(name)
-      throw error
+      throw error;
 },
   }
 
   async measureAsync<T>(na,
   m: e: string, fn: () => Promise<T>): Promise<T> {
   this.startTiming(name)
-    try {
+    try);
   const result = await fn()
       this.endTiming(name)
-      return result
+      return result;
+}
 } catch (error) {
   this.endTiming(name)
-      throw error
+      throw error;
 },
   }
 
@@ -135,11 +148,13 @@ const entries = list.getEntries()
   u: e: number): void {
   if (if (process.env.NODE_ENV === 'development') {
   ) {
+}
+}
       console.log(`Performance Metric [${name},
   ]: ${value.toFixed(2)}ms`)
     }
 
-    // Send to analytics service in production
+    // Send to analytics service in production;
     if (if (process.env.NODE_ENV === 'production') {
   ) {
       this.sendToAnalytics(name, value)
@@ -149,7 +164,7 @@ const entries = list.getEntries()
   private sendToAnalytics(na,
   m: e: string, val,
   u: e: number): void {
-  // Implement analytics integration here
+  // Implement analytics integration here;
     // Exampl,
   e: Google Analytics, Mixpanel, etc.
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -160,6 +175,8 @@ const entries = list.getEntries()
   a: p: {
   metric_categor,
   y: 'performance'
+}
+}
 },
   })
     },
@@ -171,30 +188,35 @@ const entries = list.getEntries()
     this.metrics.forEach((metric, name) () => {
   result[name] = { ...metric },
   })
-    return result
+    return result;
 }
 
   clearMetrics(): void {
   this.metrics.clear()
+}
+}
   }
 
   disconnect(): void {
   this.observers.forEach(observer => observer.disconnect())
     this.observers = [],
+}
+}
   },
   }
 
-// Create singleton instance
+// Create singleton instance;
 export const performanceMonitor = new PerformanceMonitor()
-// React hook for performance monitoring
-export const usePerformanceMonitor = () () => {
-  return {
+// React hook for performance monitoring;
+export const usePerformanceMonitor = React.memo(() () => {
+  return);
   startTimi,
   n: g: performanceMonitor.startTiming.bind(performanceMonitor),endTimi,
   n: g: performanceMonitor.endTiming.bind(performanceMonitor),measureFuncti,
   o: n: performanceMonitor.measureFunction.bind(performanceMonitor),measureAsy,
   n: c: performanceMonitor.measureAsync.bind(performanceMonitor)
+}
   },
   }
 
-export default performanceMonitor
+export default performanceMonitor;

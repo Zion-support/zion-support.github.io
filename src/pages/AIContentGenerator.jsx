@@ -1,10 +1,10 @@
 import React from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Badge   } from "@/components/ui/badge";
 import SEO from "@/components/SEO"
-import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react"
-import { Link } from "react-router-dom"
+import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail   } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function AIContentGenerator() {
   const features = [
   {
@@ -89,7 +89,7 @@ export default function AIContentGenerator() {
                 "Basic SEO suggestions"
 ]
             popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -108,7 +108,7 @@ export default function AIContentGenerator() {
                 "Team collaboration"
 ]
             popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -127,7 +127,7 @@ export default function AIContentGenerator() {
                 "API access"
 ]
             popula,
-  r: false
+  r: false;
 },
   ]
     const benefits = [
@@ -147,7 +147,7 @@ export default function AIContentGenerator() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-            <SEO 
+            <SEO;
                 title="AI Content Generator - Zion Tech Group" 
                 description="Generate high-quality, SEO-optimized content with AI-powered writing tools. Create blogs, social media posts, marketing copy, and more."
             />
@@ -161,14 +161,14 @@ export default function AIContentGenerator() {
                 <div className="relative max-w-7xl mx-auto text-center">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-6">
                         <Brain className="w-4 h-4 mr-2" />
-                        AI-Powered Content Generation
+                        AI-Powered Content Generation;
                     </div>
                     <h1 className="text-5xl m,
   d:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                        AI Content Generator
+                        AI Content Generator;
                     </h1>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                        Transform your content creation with AI-powered writing tools. Generate high-quality
+                        Transform your content creation with AI-powered writing tools. Generate high-quality;
                         SEO-optimized content for blogs, social media, marketing campaigns, and more.
                     </p>
                     <div className="flex flex-col,
@@ -177,12 +177,12 @@ export default function AIContentGenerator() {
   hove: r:from-cyan-600,
   hove: r:to-purple-600 transition-all duration-300">
                             <Zap className="w-5 h-5 mr-2" />
-                            Start Free Trial
+                            Start Free Trial;
                         </Button>
                         <Button variant="outline" className="px-8 py-4 border-cyan-500/30 text-cyan-400 font-semibold text-lg hove,
   r:bg-cyan-500/10 transition-all duration-300">
                             <FileText className="w-5 h-5 mr-2" />
-                            View Demo
+                            View Demo;
                         </Button>
                     </div>
                 </div>
@@ -200,7 +200,7 @@ export default function AIContentGenerator() {
                             Powerful Features for <span className="text-cyan-400">Content Creation</span>
                         </h2>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                            Our AI content generator provides everything you need to create engaging
+                            Our AI content generator provides everything you need to create engaging;
                             high-quality content that drives results.
                         </p>
                     </div>
@@ -290,7 +290,7 @@ export default function AIContentGenerator() {
                                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                                         <Badge className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2">
-                                            Most Popular
+                                            Most Popular;
                                         </Badge>
                                     </div>
                                 )}
@@ -315,7 +315,7 @@ export default function AIContentGenerator() {
                                     <Button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500,
   hove: r: from-cyan-600 hove,
   r:to-purple-600 text-white">
-                                        Get Started
+                                        Get Started;
                                     </Button>
                                 </CardContent>
                             </Card>
@@ -372,12 +372,12 @@ export default function AIContentGenerator() {
   hove: r:from-cyan-600,
   hove: r:to-purple-600 transition-all duration-300">
                             <Star className="w-5 h-5 mr-2" />
-                            Start Free Trial
+                            Start Free Trial;
                         </Button>
                         <Button variant="outline" className="px-8 py-4 border-cyan-500/30 text-cyan-400 font-semibold text-lg hove,
   r:bg-cyan-500/10 transition-all duration-300">
                             <ArrowRight className="w-5 h-5 mr-2" />
-                            Learn More
+                            Learn More;
                         </Button>
                     </div>
                 </div>

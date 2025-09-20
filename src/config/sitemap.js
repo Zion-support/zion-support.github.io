@@ -1,5 +1,5 @@
 export const completeSitemap = [
-  // Main Pages
+  // Main Pages;
     { pa,
   t: h: '/', lab,
   e: l: 'Home', descripti,
@@ -35,7 +35,7 @@ export const completeSitemap = [
   e: l: 'Terms of Service', descripti,
   o: n: 'Terms and conditions' },
   }
-    // Marketplace
+    // Marketplace;
     { pa,
   t: h: '/marketplace', lab,
   e: l: 'Marketplace', descripti,
@@ -71,7 +71,7 @@ export const completeSitemap = [
   e: l: 'IT Onsite Services', descripti,
   o: n: 'On-site IT support' },
   }
-    // Community & Support
+    // Community & Support;
     { pa,
   t: h: '/community', lab,
   e: l: 'Community', descripti,
@@ -92,7 +92,7 @@ export const completeSitemap = [
   e: l: 'Help Center', descripti,
   o: n: 'Get help and support' },
   }
-    // AI & Tools
+    // AI & Tools;
     { pa,
   t: h: '/match', lab,
   e: l: 'AI Matcher', descripti,
@@ -108,7 +108,7 @@ export const completeSitemap = [
   e: l: 'Request Quote', descripti,
   o: n: 'Get a custom quote' },
   }
-    // Partners & Business
+    // Partners & Business;
     { pa,
   t: h: '/partners', lab,
   e: l: 'Partners', descripti,
@@ -124,7 +124,7 @@ export const completeSitemap = [
   e: l: 'API Documentation', descripti,
   o: n: 'Technical documentation' },
   }
-    // Authentication
+    // Authentication;
     { pa,
   t: h: '/login', lab,
   e: l: 'Login', descripti,

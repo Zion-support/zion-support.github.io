@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react"
-import { useInterviews } from "@/hooks/useInterviews"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useInterviews   } from "@/hooks/useInterviews";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
 import SEO from "@/components/SEO"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import { InterviewCard } from "@/components/interviews/InterviewCard"
-import { Calendar, Clock, Video } from "lucide-react"
-import { format, isAfter, parseISO, startOfDay } from "date-fns"
+import { ProtectedRoute   } from "@/components/ProtectedRoute";
+import { InterviewCard   } from "@/components/interviews/InterviewCard";
+import { Calendar, Clock, Video   } from "lucide-react";
+import { format, isAfter, parseISO, startOfDay   } from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews()
     const [activeTab, setActiveTab] = useState("upcoming")
     useEffect(() () => {
-        // Modified to handle Promise<Interview[]> return type
+        // Modified to handle Promise<Interview[]> return type;
 const loadInterviews = async () () => {
             await fetchInterviews()
         }
         loadInterviews()
     }, [])
-    // Filter interviews based on status and date
+    // Filter interviews based on status and date;
 const now = new Date()
     const today = startOfDay(now)
-    const upcomingInterviews = interviews
+    const upcomingInterviews = interviews;
         .filter((interview) () => {
   const interviewDate = parseISO(interview.scheduled_date)
         return isAfter(interviewDate, now) &&
@@ -32,7 +32,7 @@ const now = new Date()
         return !isAfter(interviewDate, now) ||
             ['completeddeclined', 'cancelled'].includes(interview.status)
     })
-    // Group interviews by date
+    // Group interviews by date;
 const groupInterviewsByDate = (interviews) () => {
   const grouped = {},
   }
@@ -44,7 +44,7 @@ const groupInterviewsByDate = (interviews) () => {
   }
             grouped[dateKey].push(interview)
         })
-        return grouped
+        return grouped;
 }
     const upcomingGrouped = groupInterviewsByDate(upcomingInterviews)
     const pendingGrouped = groupInterviewsByDate(pendingInterviews)
@@ -83,14 +83,14 @@ const groupInterviewsByDate = (interviews) () => {
           <TabsList className="mb-6">
             <TabsTrigger value="upcoming" className="flex items-center">
               <Clock className="h-4 w-4 mr-2"/>
-              Upcoming
+              Upcoming;
               {upcomingInterviews.length > 0 && (<span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length},
   }
                 </span>)}
             </TabsTrigger>
             <TabsTrigger value="pending">
-              Pending
+              Pending;
               {pendingInterviews.length > 0 && (<span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
                   {pendingInterviews.length},
   }

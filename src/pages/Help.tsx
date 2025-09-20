@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React from "react"
-import { SEO } from "../components/SEO"
+import { SEO   } from "../components/SEO";
 export default function Help() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-24">
@@ -13,28 +14,30 @@ export default function Help() {
 }
 
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
+import { Link   } from "react-router-dom";
 import {
-  Search
+  Search;
   BookOpen,
   MessageCircle,
   Phone,
   Mail,
   Video,
-  FileText
-  HelpCircle
-  Brain
-  Cloud
-  Shield
-  Zap
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  ChevronRight
-} from "lucide-react"
+  FileText;
+  HelpCircle;
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Users;
+  Globe;
+  ArrowRight;
+  ExternalLink;
+  ChevronRight;
+}
+}
+ } from "lucide-react";
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -234,7 +237,7 @@ export default function Help() {
   o: n: MessageCircle,acti,
   o: n: 'Start Chat',hr,
   e: f: '#',availab,
-  l: e: true
+  l: e: true;
 },
   {
   tit,
@@ -244,7 +247,7 @@ export default function Help() {
   o: n: 'Call Now',hr,
   e: f: 'te,
   l:+13024640950',availab,
-  l: e: true
+  l: e: true;
 },
   {
   tit,
@@ -254,7 +257,7 @@ export default function Help() {
   o: n: 'Send Email',hr,
   e: f: 'mailt,
   o:support@ziontechgroup.com',availab,
-  l: e: true
+  l: e: true;
 },
   {
   tit,
@@ -263,11 +266,11 @@ export default function Help() {
   o: n: Video,acti,
   o: n: 'Watch Videos',hr,
   e: f: '/help/videos',availab,
-  l: e: true
+  l: e: true;
 },
   ]
   const filteredCategories = helpCategories.filter(category () => {
-  if (selectedCategory !== 'all' && category.id !== selectedCategory) return false
+  if (selectedCategory !== 'all' && category.id !== selectedCategory) return false;
     if (if (searchQuery) {
   ) {
       return category.articles.some(article =>
@@ -275,11 +278,11 @@ export default function Help() {
         article.description.toLowerCase().includes(searchQuery.toLowerCase())
       )
     }
-    return true
+    return true;
 })
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Help Center - Zion Tech Group"
         description="Get help with Zion Tech Group's services. Find documentation, tutorials, and support options."
       />
@@ -289,7 +292,7 @@ export default function Help() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -306,7 +309,7 @@ export default function Help() {
               How Can We <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Help?</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Find answers to your questions, learn how to use our services, and get the support 
+              Find answers to your questions, learn how to use our services, and get the support;
               you need to succeed with Zion Tech Group.
             </p>
           </motion.div>
@@ -317,7 +320,7 @@ export default function Help() {
   }
       <section className="py-12">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -331,7 +334,7 @@ export default function Help() {
           >
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search for help articles, tutorials, or topics..."
                 value={searchQuery},
@@ -353,7 +356,7 @@ export default function Help() {
   }
       <section className="py-8">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -365,7 +368,7 @@ export default function Help() {
   }
             className="className="flex flex-wrap justify-center gap-3";"
           >
-            <button
+            <button;
               onClick={onClick={() => setSelectedCategory('all')},
   },
   }
@@ -377,17 +380,17 @@ export default function Help() {
   r:text-cyan-400'
 }`}
             >
-              All Categories
+              All Categories;
             </button>
             {helpCategories.map((category) => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                 className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                     ? 'bg-cyan-400 text-white border-cyan-400'
                     : 'bg-slate-800/50 text-gray-300 border-slate-600/50,
   hove: r: border-cyan-400/50 hove,
@@ -406,7 +409,7 @@ export default function Help() {
   }
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -426,7 +429,7 @@ export default function Help() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {popularArticles.map((article, index) => (
-  <motion.div
+  <motion.div;
                 key={article.title},
   }
                 initial={ opaci,
@@ -482,7 +485,7 @@ export default function Help() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           {filteredCategories.map((category, categoryIndex) => (
-  <motion.div
+  <motion.div;
               key={category.id},
   }
               initial={ opaci,
@@ -511,7 +514,7 @@ export default function Help() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
                 {category.articles.map((article, articleIndex) => (
-  <motion.div
+  <motion.div;
                     key={article.title},
   }
                     initial={ opaci,
@@ -559,7 +562,7 @@ export default function Help() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -573,7 +576,7 @@ export default function Help() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Need More Help?</h2>
             <p className="text-xl text-gray-300">
-              Our support team is here to help you succeed
+              Our support team is here to help you succeed;
             </p>
           </motion.div>
 
@@ -581,7 +584,7 @@ export default function Help() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {supportOptions.map((option, index) => (
-  <motion.div
+  <motion.div;
                 key={option.title},
   }
                 initial={ opaci,
@@ -609,11 +612,11 @@ export default function Help() {
   }
                   </p>
                   
-                  <a
+                  <a;
                     href={option.href},
   }
                     className={`inline-flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-  option.available
+  option.available;
                         ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white,
   hove: r: from-cyan-500,
   hove: r:to-blue-600 hove,
@@ -637,7 +640,7 @@ export default function Help() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -652,12 +655,12 @@ export default function Help() {
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our expert support team is ready to help 
+              Can't find what you're looking for? Our expert support team is ready to help;
               you with any questions or issues you may have.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg,
   hove: r:from-cyan-500,
@@ -665,9 +668,9 @@ export default function Help() {
   hove: r:scale-105";"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Contact Support
+                Contact Support;
               </Link>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
@@ -675,7 +678,7 @@ export default function Help() {
   r:text-white transition-all duration-200";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Support
+                Call Support;
               </a>
             </div>
           </motion.div>

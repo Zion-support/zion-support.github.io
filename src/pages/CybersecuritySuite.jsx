@@ -1,10 +1,10 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Check, Shield, AlertTriangle, Eye } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Check, Shield, AlertTriangle, Eye   } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function CybersecuritySuite() {
   const features = [
   "24/7 threat monitoring and detection"
@@ -36,7 +36,7 @@ export default function CybersecuritySuite() {
                 "Security dashboard"
 ]
             popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -55,7 +55,7 @@ export default function CybersecuritySuite() {
                 "Security team training"
 ]
             popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -77,7 +77,7 @@ export default function CybersecuritySuite() {
                 "API access & integrations"
 ]
             popula,
-  r: false
+  r: false;
 },
   ]
     const securityServices = [
@@ -127,12 +127,12 @@ export default function CybersecuritySuite() {
         <div className="container mx-auto text-center">
           <div className="mb-8">
             <Badge className="bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-400 border-red-500/30 px-4 py-2 text-lg">
-              Enterprise-Grade Security
+              Enterprise-Grade Security;
             </Badge>
           </div>
           <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
-            Cybersecurity Suite
+            Cybersecurity Suite;
           </h1>
           <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -144,12 +144,12 @@ export default function CybersecuritySuite() {
             <Button size="lg" className="bg-gradient-to-r from-red-500 to-orange-500,
   hove: r:from-red-600,
   hove: r:to-orange-600 text-white px-8 py-4 text-lg">
-              Start Security Assessment
+              Start Security Assessment;
             </Button>
             <Button size="lg" variant="outline" className="border-red-500 text-red-400 hove,
   r:bg-red-500/10 px-8 py-4 text-lg">
               <Shield className="h-5 w-5 mr-2"/>
-              Security Demo
+              Security Demo;
             </Button>
           </div>
         </div>
@@ -162,7 +162,7 @@ export default function CybersecuritySuite() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold mb-4 text-white">
-              Comprehensive Security Solutions
+              Comprehensive Security Solutions;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Our cybersecurity suite covers every aspect of modern security needs, from threat detection to compliance management.
@@ -196,7 +196,7 @@ export default function CybersecuritySuite() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold mb-4 text-white">
-              Advanced Security Features
+              Advanced Security Features;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Our platform combines cutting-edge technology with expert security knowledge to deliver unmatched protection.
@@ -228,7 +228,7 @@ export default function CybersecuritySuite() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold mb-4 text-white">
-              Industry Compliance & Standards
+              Industry Compliance & Standards;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Our platform helps you meet and maintain compliance with major industry standards and regulations.
@@ -256,7 +256,7 @@ export default function CybersecuritySuite() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold mb-4 text-white">
-              Security Plans for Every Business
+              Security Plans for Every Business;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Choose the security level that matches your business needs and budget. All plans include our core security features.
@@ -269,7 +269,7 @@ export default function CybersecuritySuite() {
   hove: r:border-red-500/40 transition-all duration-300`}>
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2">
-                      Most Popular
+                      Most Popular;
                     </Badge>
                   </div>)}
                 <CardHeader className="text-center pb-4">
@@ -289,7 +289,7 @@ export default function CybersecuritySuite() {
                 <div className="p-6 pt-0">
                   <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-red-500 to-orange-500' : 'bg-red-500,
   hove: r:bg-red-600'}`}>
-                    Get Started
+                    Get Started;
                   </Button>
                 </div>
               </Card>))}
@@ -314,12 +314,12 @@ export default function CybersecuritySuite() {
             <Button size="lg" className="bg-gradient-to-r from-red-500 to-orange-500,
   hove: r:from-red-600,
   hove: r:to-orange-600 text-white px-8 py-4 text-lg">
-              Free Security Assessment
+              Free Security Assessment;
             </Button>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-red-500 text-red-400,
   hove: r:bg-red-500/10 px-8 py-4 text-lg">
-                Contact Security Team
+                Contact Security Team;
               </Button>
             </Link>
           </div>

@@ -1,25 +1,27 @@
 import React from "react"
-import { Helmet } from "react-helmet-async"
+import { Helmet   } from "react-helmet-async";
 interface SEOProps {
   tit,
   l: e: string,descripti,
-  o: n: string
+  o: n: string;
   keywords?: string,
   ogImage?: string,
   ogUrl?: string,
   canonicalUrl?: string,
-  structuredData?: object
+  structuredData?: object;
+}
+}
 }
 
 export,
   const: EnhancedSEO: React.FC<SEOProps> = ({
-  title
+  title;
   description,
   keywords,
   ogImage,
   ogUrl,
   canonicalUrl,
-  structuredData
+  structuredData;
 }) () => {
   const defaultOgImage = '/images/zion-tech-group-og.jpg'
 const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformation, Zion Tech Group',

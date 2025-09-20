@@ -1,13 +1,13 @@
 import React, { useState } from "react"
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm"
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay"
+import { ServiceDescriptionForm   } from "@/components/services/ServiceDescriptionForm";
+import { GeneratedDescriptionDisplay   } from "@/components/services/GeneratedDescriptionDisplay";
 import SEO from "@/components/SEO"
-import { useAuth } from "@/hooks/useAuth"
-import { Navigate } from "react-router-dom"
+import { useAuth   } from "@/hooks/useAuth";
+import { Navigate   } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth()
     const [generatedDescription, setGeneratedDescription] = useState(null)
-    // Show loading while checking authentication
+    // Show loading while checking authentication;
     if (if (isLoading) {
   ) {
         return (<div className="flex justify-center items-center min-h-screen bg-zion-blue">
@@ -16,7 +16,7 @@ export default function ServiceDescriptionGenerator() {
         </div>
       </div>)
     }
-    // Redirect to login if not authenticated
+    // Redirect to login if not authenticated;
     if (if (!isAuthenticated) {
   ) {
         return <Navigate to="/login" state={ fr,
@@ -25,7 +25,7 @@ export default function ServiceDescriptionGenerator() {
     }
     const handleDescriptionSave = (editedDescription) () => {
   setGeneratedDescription(editedDescription)
-        // Here you could also save to database if needed
+        // Here you could also save to database if needed;
 }
     return (<div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO title="Service Description Generator" description="Generate professional service descriptions using AI" keywords="service description, AI content, professional description generator"/>

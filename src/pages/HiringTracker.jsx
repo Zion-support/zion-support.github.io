@@ -1,11 +1,11 @@
-import { useState } from "react"
-import { useParams } from "react-router-dom"
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard"
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useState   } from "react";
+import { useParams   } from "react-router-dom";
+import { KanbanBoard   } from "@/components/hiring-tracker/KanbanBoard";
+import { HiringAnalytics   } from "@/components/hiring-tracker/HiringAnalytics";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
 import SEO from "@/components/SEO"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import { Briefcase } from "lucide-react"
+import { ProtectedRoute   } from "@/components/ProtectedRoute";
+import { Briefcase   } from "lucide-react";
 function HiringTrackerContent() {
   const { jobId } = useParams()
     const [activeTab, setActiveTab] = useState("kanban")
@@ -17,10 +17,10 @@ function HiringTrackerContent() {
           <div>
             <h1 className="text-3xl font-bold flex items-center">
               <Briefcase className="mr-2 h-6 w-6 text-primary"/>
-              Hiring Pipeline
+              Hiring Pipeline;
             </h1>
             <p className="text-muted-foreground mt-1">
-              Track and manage your candidates through the hiring process
+              Track and manage your candidates through the hiring process;
             </p>
           </div>
         </div>

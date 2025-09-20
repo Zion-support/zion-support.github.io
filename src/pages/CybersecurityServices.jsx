@@ -1,10 +1,10 @@
 import React from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Badge   } from "@/components/ui/badge";
 import SEO from "@/components/SEO"
-import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server   } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function CybersecurityServices() {
   const services = [
   {
@@ -96,7 +96,7 @@ export default function CybersecurityServices() {
                 "Security training"
 ]
             popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -113,7 +113,7 @@ export default function CybersecurityServices() {
                 "Compliance assistance"
 ]
             popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -131,7 +131,7 @@ export default function CybersecurityServices() {
                 "Executive reporting"
 ]
             popula,
-  r: false
+  r: false;
 },
   ]
     const testimonials = [
@@ -141,7 +141,7 @@ export default function CybersecurityServices() {
   l: e: "CISO, FinTech Solutions"
             conte,
   n: t: "Zion's cybersecurity team helped us achieve SOC 2 compliance in record time. Their expertise is unmatched.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -149,7 +149,7 @@ export default function CybersecurityServices() {
   l: e: "IT Director, HealthCare Plus"
             conte,
   n: t: "The penetration testing revealed critical vulnerabilities we didn't know existed. Their thorough approach saved us.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -157,7 +157,7 @@ export default function CybersecurityServices() {
   l: e: "CEO, E-commerce Pro"
             conte,
   n: t: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
@@ -170,11 +170,11 @@ export default function CybersecurityServices() {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
         <div className="container mx-auto relative z-10 text-center">
           <Badge className="mb-6 bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
-            🛡️ Enterprise-Grade Security
+            🛡️ Enterprise-Grade Security;
           </Badge>
           <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-            Cybersecurity Services
+            Cybersecurity Services;
           </h1>
           <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -187,14 +187,14 @@ export default function CybersecurityServices() {
   hove: r:from-zion-purple-light,
   hove: r:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
-                Get Security Assessment
+                Get Security Assessment;
                 <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10 px-8 py-4 text-lg">
               <Link to="/contact">
-                Emergency Response
+                Emergency Response;
               </Link>
             </Button>
           </div>
@@ -207,7 +207,7 @@ export default function CybersecurityServices() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Security Services
+              Comprehensive Security Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our expert cybersecurity team provides a full range of security services to protect your business assets and data.
@@ -249,7 +249,7 @@ export default function CybersecurityServices() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Security Solutions for Every Need
+              Security Solutions for Every Need;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               From network security to compliance, we provide comprehensive protection across all aspects of your infrastructure.
@@ -287,7 +287,7 @@ export default function CybersecurityServices() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Security Plans
+              Flexible Security Plans;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Choose the security plan that fits your business needs. All plans include our core cybersecurity features.
@@ -299,7 +299,7 @@ export default function CybersecurityServices() {
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300,
   hove: r:shadow-2xl`}>
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
-                    Most Popular
+                    Most Popular;
                   </Badge>)}
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-white mb-2">{plan.name}</CardTitle>
@@ -324,7 +324,7 @@ export default function CybersecurityServices() {
   hove: r: from-zion-purple-light hove,
   r:to-zion-purple text-white">
                     <Link to="/contact">
-                      Get Started
+                      Get Started;
                     </Link>
                   </Button>
                 </CardContent>
@@ -339,7 +339,7 @@ export default function CybersecurityServices() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Trusted by Security Leaders
+              Trusted by Security Leaders;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               See what our clients say about our cybersecurity expertise and commitment to protecting their businesses.
@@ -381,14 +381,14 @@ export default function CybersecurityServices() {
   hove: r:from-zion-purple-light,
   hove: r:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
-                Get Security Assessment
+                Get Security Assessment;
                 <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10 px-8 py-4 text-lg">
               <Link to="/contact">
-                Contact Security Team
+                Contact Security Team;
               </Link>
             </Button>
           </div>

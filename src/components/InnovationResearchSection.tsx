@@ -1,17 +1,19 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Lightbulb
-  TestTube
-  BookOpen
-  Award
-  Users
-  TrendingUp
-  Rocket
-  Brain
-  Microscope
-  Target
-} from "lucide-react"
+  Lightbulb;
+  TestTube;
+  BookOpen;
+  Award;
+  Users;
+  TrendingUp;
+  Rocket;
+  Brain;
+  Microscope;
+  Target;
+}
+}
+ } from "lucide-react";
 const researchAreas = [
   {
   ic,
@@ -72,7 +74,7 @@ export function InnovationResearchSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="className="text-center mb-16";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -89,17 +91,17 @@ export function InnovationResearchSection() {
         >
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-4">
-            Innovation & Research
+            Innovation & Research;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Pushing the boundaries of technology through cutting-edge research
+            Pushing the boundaries of technology through cutting-edge research;
             breakthrough innovations, and collaborative partnerships with leading institutions.
           </p>
         </motion.div>
 
         {/* Innovation Metrics */},
   }
-        <motion.div 
+        <motion.div;
           className="className="grid grid-cols-2,
   m: d: grid-cols-4 gap-8 mb-16";"
           initial={ opacit,
@@ -129,7 +131,7 @@ export function InnovationResearchSection() {
 
         {/* Research Areas */},
   }
-        <motion.div 
+        <motion.div;
           className="className="mb-16";"
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -146,13 +148,13 @@ export function InnovationResearchSection() {
   }
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Active Research Areas
+            Active Research Areas;
           </h3>
           
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {researchAreas.map((area, index) => (
-  <motion.div
+  <motion.div;
                 key={area.title},
   }
                 className="className="bg-slate-800 border border-slate-700 rounded-xl p-6,
@@ -188,7 +190,7 @@ export function InnovationResearchSection() {
                         <span>{area.progress}%</span>
                       </div>
                       <div className="w-full bg-slate-700 rounded-full h-2">
-                        <motion.div
+                        <motion.div;
                           className={`h-2 bg-gradient-to-r ${area.color} rounded-full`}
                           initial={ wid,
   t: h: 0 },
@@ -215,7 +217,7 @@ export function InnovationResearchSection() {
 
         {/* Research Highlights */},
   }
-        <motion.div 
+        <motion.div;
           className="className="mb-12";"
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -233,7 +235,7 @@ export function InnovationResearchSection() {
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-6">
-              Latest Research Breakthroughs
+              Latest Research Breakthroughs;
             </h3>
             
             <div className="grid grid-cols-1,
@@ -265,7 +267,7 @@ export function InnovationResearchSection() {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div;
           className="className="text-center";"
           initial={ opacit,
   y: 0, y: 20 },
@@ -283,23 +285,23 @@ export function InnovationResearchSection() {
         >
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
-              Join the Innovation Revolution
+              Join the Innovation Revolution;
             </h3>
             <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
-              Partner with us to explore the frontiers of technology and create
+              Partner with us to explore the frontiers of technology and create;
               solutions that will shape the future of humanity.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-indigo-600,
   hove: r:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Research Partnership
+                Research Partnership;
                 <Flask className="ml-2 h-5 w-5" />
               </button>
               <button className="inline-flex items-center px-6 py-3 border border-white text-white,
   hove: r:bg-white hove,
   r:text-indigo-600 rounded-lg font-medium transition-colors duration-200">
-                View Publications
+                View Publications;
                 <BookOpen className="ml-2 h-5 w-5" />
               </button>
             </div>

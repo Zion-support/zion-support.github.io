@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRight, Bot, Users, Star, Clock, TrendingUp } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRight, Bot, Users, Star, Clock, TrendingUp     } from "lucide-react";
 export default function AICustomerExperienceSupport() {
   const features = [
   'AI-powered chatbot with 95% accuracy and natural language processingIntelligent ticket routing and priority classification'
@@ -100,14 +100,14 @@ export default function AICustomerExperienceSupport() {
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-200">
-                Get Support Demo
+                Get Support Demo;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a href="htt,
   p: s://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-500,
   hove: r:text-white transition-all duration-200">
-                Visit Site
+                Visit Site;
               </a>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function AICustomerExperienceSupport() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">AI Chatbot</h4>
               <p className="text-slate-300 text-sm">
-                24/7 intelligent support with natural language processing
+                24/7 intelligent support with natural language processing;
               </p>
             </div>
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
@@ -210,7 +210,7 @@ export default function AICustomerExperienceSupport() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Sentiment Analysis</h4>
               <p className="text-slate-300 text-sm">
-                Real-time customer mood detection and response optimization
+                Real-time customer mood detection and response optimization;
               </p>
             </div>
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
@@ -219,7 +219,7 @@ export default function AICustomerExperienceSupport() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Analytics</h4>
               <p className="text-slate-300 text-sm">
-                Comprehensive performance metrics and customer insights
+                Comprehensive performance metrics and customer insights;
               </p>
             </div>
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
@@ -228,7 +228,7 @@ export default function AICustomerExperienceSupport() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Multi-Channel</h4>
               <p className="text-slate-300 text-sm">
-                Unified support across all customer touchpoints
+                Unified support across all customer touchpoints;
               </p>
             </div>
           </div>
@@ -295,20 +295,20 @@ export default function AICustomerExperienceSupport() {
             <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-200">
-              Start Free Trial
+              Start Free Trial;
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a href="t,
   e: l:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-500,
   hove: r:text-white transition-all duration-200">
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </a>
           </div>
           <p className="text-slate-400 mt-6">
             Contact us at <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-cyan-400 hove,
-  r:underline">kleber@ziontechgroup.com</a> for enterprise solutions
+  r:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
           </p>
         </div>
       </section>

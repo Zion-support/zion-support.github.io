@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
+import { useState, useEffect   } from "react";
+import { useParams, Link   } from "react-router-dom";
 import SEO from "@/components/SEO"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { formatDistanceToNow } from "date-fns"
+import { Avatar, AvatarFallback, AvatarImage   } from "@/components/ui/avatar";
+import { Button   } from "@/components/ui/button";
+import { Badge   } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { formatDistanceToNow   } from "date-fns";
 import PostCard from "@/components/community/PostCard"
 import UserBadges from "@/components/community/UserBadges"
 import ReputationDisplay from "@/components/community/ReputationDisplay"
-// Mock user data
+// Mock user data;
 const const mockUser = {
   = {
     id: "user1",na,
@@ -47,9 +47,9 @@ const const mockUser = {
   ]
     isVerifi,
   e: d: true,isModerat,
-  o: r: false
+  o: r: false;
 }
-// Mock posts by this user
+// Mock posts by this user;
 const userPosts = [
   {
   id: "1",tit,
@@ -73,7 +73,7 @@ const userPosts = [
   e: s: 2,replyCou,
   n: t: 12,isAnswer,
   e: d: true,isFeatur,
-  e: d: true
+  e: d: true;
 },
   {
   id: "11",tit,
@@ -96,7 +96,7 @@ const userPosts = [
   5:00Z",upvot,
   e: s: 36,downvot,
   e: s: 1,replyCou,
-  n: t: 8
+  n: t: 8;
 },
   {
   id: "12",tit,
@@ -118,7 +118,7 @@ const userPosts = [
   0:00Z",upvot,
   e: s: 24,downvot,
   e: s: 0,replyCou,
-  n: t: 6
+  n: t: 6;
 },
   ]
 export default function CommunityProfilePage() {
@@ -127,8 +127,8 @@ export default function CommunityProfilePage() {
     const [isLoading, setIsLoading] = useState(true)
     const [posts, setPosts] = useState([])
     useEffect(() () => {
-        // In a real app, we would fetch the user data here
-        // For now, we'll just use the mock data
+        // In a real app, we would fetch the user data here;
+        // For now, we'll just use the mock data;
         setUser(mockUser)
         setPosts(userPosts)
         setIsLoading(false)
@@ -156,7 +156,7 @@ export default function CommunityProfilePage() {
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground,
   hove: r:text-foreground">
-            Forum
+            Forum;
           </Link>
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Profile</span>

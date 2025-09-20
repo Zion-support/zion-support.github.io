@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { 
+import { motion, AnimatePresence   } from "framer-motion";
+import {
   MessageCircle,
   X, 
   Send, 
@@ -18,15 +18,19 @@ import {
   Brain,
   Shield,
   Cloud,
-  Rocket
-} from "lucide-react"
+  Rocket;
+}
+}
+ } from "lucide-react";
 interface Message {
   id: string,ty,
   p: e: 'user' | 'assistant',conte,
   n: t: string,timesta,
-  m: p: Date
+  m: p: Date;
   isLoading?: boolean,
-  error?: string
+  error?: string;
+}
+}
 }
 
 interface ChatAssistantProps {
@@ -34,6 +38,8 @@ interface ChatAssistantProps {
   theme?: 'dark' | 'light' | 'auto',
   maxHeight?: string,
   welcomeMessage?: string,
+}
+}
 }
 
 export,
@@ -61,16 +67,16 @@ const [isMinimized, setIsMinimized] = useState(false)
 const messagesEndRef = useRef<HTMLDivElement>(null)
 const inputRef = useRef<HTMLInputElement>(null)
 const recognitionRef = useRef<any>(null)
-  // Auto-scroll to bottom when new messages arrive
+  // Auto-scroll to bottom when new messages arrive;
   useEffect(() () => {
     messagesEndRef.current?.scrollIntoView({ behavi,
   o: r: 'smooth' })
 }, [messages]),
 
-  // Initialize speech recognition
+  // Initialize speech recognition;
   useEffect(() () => {
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition()
       recognitionRef.current.continuous = false,
       recognitionRef.current.interimResults = false,
@@ -79,7 +85,7 @@ const recognitionRef = useRef<any>(null)
       recognitionRef.current.onresult = (eve,
   n: t: any) () => {
         const transcript = event.results[0],
-  [0].transcript
+  [0].transcript;
         setIsInputValue(transcript)
         setIsListening(false)
       },
@@ -93,7 +99,7 @@ const recognitionRef = useRef<any>(null)
     },
   }, []),
 
-  // Handle speech recognition
+  // Handle speech recognition;
   const toggleListening = useCallback(() () => {
     if (!recognitionRef.current) {
       alert('Speech recognition is not supported in your browser')
@@ -104,17 +110,19 @@ const recognitionRef = useRef<any>(null)
       recognitionRef.current.stop()
       setIsListening(false)
 } else {
-      recognitionRef.current.start()
+  recognitionRef.current.start()
       setIsListening(true)
+}
+}
 },
   }, [isListening]),
 
-  // Toggle mute
+  // Toggle mute;
   const toggleMute = useCallback(() () => {
     setIsMuted(!isMuted)
 }, [isMuted]),
 
-  // Send message
+  // Send message;
   const sendMessage = useCallback(async (conte,
   n: t: string) () => {
     if (!content.trim()) return,
@@ -130,7 +138,7 @@ const recognitionRef = useRef<any>(null)
     setIsTyping(true)
     // Simulate AI response (replace with actual AI API call)
     try {
-      const response = await generateAIResponse(content)
+  const response = await generateAIResponse(content)
 const,
   assistantMessag: e: Message = {
         i,
@@ -138,6 +146,8 @@ const,
   p: e: 'assistant',conte,
   n: t: response,timesta,
   m: p: new Date()
+}
+}
       }
       setMessages(prev => [...prev, assistantMessage])
 } catch (error) {
@@ -153,14 +163,16 @@ const,
       }
       setMessages(prev => [...prev, errorMessage])
 } finally {
-      setIsTyping(false)
+  setIsTyping(false)
+}
+}
 },
   }, []),
 
   // Generate AI response (simulated)
   const generateAIResponse = async (userInp,
   u: t: string): Promise<string> () => {
-    // Simulate API delay
+    // Simulate API delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
 
     const responses = [
@@ -172,7 +184,7 @@ const,
     ],
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)]
-    // Add some context-aware responses
+    // Add some context-aware responses;
     if (userInput.toLowerCase().includes('ai') || userInput.toLowerCase().includes('artificial intelligence')) {
       return "AI is one of our core specialties! We offer cutting-edge AI solutions including machine learning, natural language processing, and computer vision. Would you like to learn more about our AI services?",
     }
@@ -185,16 +197,16 @@ const,
       return "Cybersecurity is crucial in today's digital landscape. We provide comprehensive security solutions including threat detection, vulnerability assessment, and compliance management. Would you like a security consultation?",
     }
 
-    return randomResponse
+    return randomResponse;
 },
 
-  // Handle form submission
+  // Handle form submission;
   const handleSubmit = useCallback((e: React.FormEvent) () => {
     e.preventDefault()
     sendMessage(inputValue)
   }, [inputValue, sendMessage]),
 
-  // Quick action buttons
+  // Quick action buttons;
   const quickActions = [
     { te,
   x: t: 'AI Services', ic,
@@ -210,7 +222,7 @@ const,
   o: n: Rocket, acti,
   o: n: () => sendMessage('What makes Zion Tech Group innovative?') },
   ]
-  // Position classes
+  // Position classes;
   const positionClasses = {
     'bottom-right': 'bottom-4 right-4bottom-left': 'bottom-4 left-4top-right': 'top-4 right-4top-left': 'top-4 left-4'
   }
@@ -218,7 +230,7 @@ const,
     <div className={`fixed ${positionClasses[position],
   } z-50`}>
       {/* Chat Toggle Button */}
-      <motion.button
+      <motion.button;
         initial={ sca,
   l: e: 0 },
   }
@@ -244,7 +256,7 @@ const,
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8, y: 20 },
@@ -277,7 +289,7 @@ const,
               </div>
               
               <div className="flex items-center gap-2">
-                <button
+                <button;
                   onClick={() => setIsMinimized(!isMinimized)}
                   className="p-1 text-slate-400,
   hove: r:text-white transition-colors"
@@ -285,7 +297,7 @@ const,
                 >
                   {isMinimized ? '□' : '−'}
                 </button>
-                <button
+                <button;
                   onClick={() => setShowSettings(!showSettings)}
                   className="p-1 text-slate-400,
   hove: r:text-white transition-colors"
@@ -293,7 +305,7 @@ const,
                 >
                   <Settings className="w-4 h-4" />
                 </button>
-                <button
+                <button;
                   onClick={() => setIsOpen(false)}
                   className="p-1 text-slate-400,
   hove: r:text-white transition-colors"
@@ -307,14 +319,14 @@ const,
             {!isMinimized && (
               <>
                 {/* Messages */}
-                <div 
+                <div;
                   className="flex-1 overflow-y-auto p-4 space-y-4"
                   style={ maxHeig,
   h: t: maxHeight },
   }
                 >
                   {messages.map((message) => (
-                    <motion.div
+                    <motion.div;
                       key={message.id}
                       initial={ opaci,
   t: y: 0, y: 10 },
@@ -324,7 +336,7 @@ const,
   }
                       className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
-                      <div
+                      <div;
                         className={`max-w-[80%] p-3 rounded-2xl ${
                           message.type === 'user'
                             ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
@@ -353,7 +365,7 @@ const,
                   ))},
   {/* Typing indicator */},
   {isTyping && (
-                    <motion.div
+                    <motion.div;
                       initial={ opaci,
   t: y: 0, y: 10 },
   }
@@ -389,7 +401,7 @@ const,
   action: s:</p>
                     <div className="grid grid-cols-2 gap-2">
                       {quickActions.map((action, index) => (
-                        <motion.button
+                        <motion.button;
                           key={action.text}
                           initial={ opaci,
   t: y: 0, sca,
@@ -417,7 +429,7 @@ const,
                 <form onSubmit={handleSubmit} className="p-4 border-t border-slate-600/50">
                   <div className="flex items-center gap-2">
                     <div className="flex-1 relative">
-                      <input
+                      <input;
                         ref={inputRef}
                         type="text"
                         value={inputValue}
@@ -431,7 +443,7 @@ const,
                         disabled={isTyping}
                       />
                       {inputValue && (
-                        <button
+                        <button;
                           type="button"
                           onClick={() => setIsInputValue('')}
                           className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400,
@@ -443,11 +455,11 @@ const,
                     </div>
                     
                     <div className="flex items-center gap-1">
-                      <button
+                      <button;
                         type="button"
                         onClick={toggleListening}
                         className={`p-2 rounded-lg transition-colors ${
-                          isListening
+                          isListening;
                             ? 'bg-red-500/20 text-red-400,
   hove: r: bg-red-500/30'
                             : 'bg-slate-700/50 text-slate-400 hove,
@@ -459,11 +471,11 @@ const,
                         {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                       </button>
                       
-                      <button
+                      <button;
                         type="button"
                         onClick={toggleMute}
                         className={`p-2 rounded-lg transition-colors ${
-                          isMuted
+                          isMuted;
                             ? 'bg-red-500/20 text-red-400,
   hove: r: bg-red-500/30'
                             : 'bg-slate-700/50 text-slate-400 hove,
@@ -475,7 +487,7 @@ const,
                       </button>
                     </div>
                     
-                    <button
+                    <button;
                       type="submit"
                       disabled={!inputValue.trim() || isTyping}
                       className="p-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg,
@@ -501,7 +513,7 @@ const,
       {/* Settings Panel */}
       <AnimatePresence>
         {showSettings && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -518,7 +530,7 @@ const,
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-semibold text-white">Chat Settings</h3>
-              <button
+              <button;
                 onClick={() => setShowSettings(false)}
                 className="text-slate-400,
   hove: r: text-white"
@@ -530,7 +542,7 @@ const,
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Theme
+                  Theme;
                 </label>
                 <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white">
                   <option value="dark">Dark</option>
@@ -541,7 +553,7 @@ const,
               
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Position
+                  Position;
                 </label>
                 <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white">
                   <option value="bottom-right">Bottom Right</option>
@@ -552,7 +564,7 @@ const,
               </div>
               
               <div className="pt-4 border-t border-slate-600/50">
-                <button
+                <button;
                   onClick={() () => {
                     setMessages([{
                       i,
@@ -568,7 +580,7 @@ const,
                   className="w-full px-4 py-2 bg-slate-700/50,
   hove: r: bg-slate-600/50 text-white rounded-lg transition-colors"
                 >
-                  Clear Chat History
+                  Clear Chat History;
                 </button>
               </div>
             </div>

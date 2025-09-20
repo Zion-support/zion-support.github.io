@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { PenTool, Brain, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, Search, Eye, Share2, Calendar } from "lucide-react"
+import { motion     } from "framer-motion";
+import { PenTool, Brain, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, Search, Eye, Share2, Calendar     } from "lucide-react";
 const,
   AIContentMarketingSuit: e: React.FC = () () => {
   const features = [
@@ -54,7 +54,7 @@ const,
         "Basic analytics"
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -72,7 +72,7 @@ const,
         "White-label options"
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -91,7 +91,7 @@ const,
         "SLA guarantees"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const contentTypes = [
@@ -139,7 +139,7 @@ const,
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[si,
   z: e: 50px_50px] animate-pulse"></div>
-          <motion.div 
+          <motion.div;
             className="className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl";"
             animate={
   scal,
@@ -160,7 +160,7 @@ const,
         </div>
 
         <div className="relative container mx-auto px-4 py-24 text-center text-white">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -177,7 +177,7 @@ const,
               </div>
               <h1 className="text-5xl,
   l: g: text-7xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                AI Content Marketing Suite
+                AI Content Marketing Suite;
               </h1>
             </div>
             <p className="text-xl l,
@@ -187,17 +187,17 @@ const,
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <a 
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact" 
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold text-lg,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300 flex items-center";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a 
+              <a;
                 href="t,
   e: l:+13024640950" 
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
@@ -205,7 +205,7 @@ const,
   r:text-white transition-all duration-300 flex items-center";"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
           </motion.div>
@@ -216,7 +216,7 @@ const,
   }
       <div className="relative py-24">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -233,10 +233,10 @@ const,
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Powerful Content Marketing Tools
+              Powerful Content Marketing Tools;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Everything you need to create, optimize, and distribute content that drives results
+              Everything you need to create, optimize, and distribute content that drives results;
             </p>
           </motion.div>
 
@@ -244,7 +244,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -285,7 +285,7 @@ const,
   }
       <div className="relative py-24">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -302,17 +302,17 @@ const,
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Create Any Type of Content
+              Create Any Type of Content;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From blog posts to video scripts, our AI handles all your content needs
+              From blog posts to video scripts, our AI handles all your content needs;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {contentTypes.map((content, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -354,7 +354,7 @@ const,
   }
       <div className="relative py-24">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -368,7 +368,7 @@ const,
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Choose the plan that fits your content marketing needs. All plans include our core AI features.
@@ -378,7 +378,7 @@ const,
           <div className="grid m,
   d:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -392,7 +392,7 @@ const,
   a: y: index * 0.1 },
   }
                 className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
-  plan.popular 
+  plan.popular;
                     ? 'border-zion-cyan/40 scale-105 shadow-lg shadow-zion-cyan/25' 
                     : 'border-zion-cyan/20,
   hove: r:border-zion-cyan/40'
@@ -401,7 +401,7 @@ const,
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </div>
                   </div>
                 )}
@@ -425,11 +425,11 @@ const,
                   ))}
                 </ul>
 
-                <a 
+                <a;
                   href="htt,
   p: s: //ziontechgroup.com/contact" 
                   className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25'
@@ -438,7 +438,7 @@ const,
   r:text-white'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -450,7 +450,7 @@ const,
   }
       <div className="relative py-24">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -472,23 +472,23 @@ const,
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <a 
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact" 
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold text-lg,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300";"
               >
-                Start Free Trial
+                Start Free Trial;
               </a>
-              <a 
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com" 
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan,
   hove: r:text-white transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </a>
             </div>
             <div className="mt-8 text-zion-slate-light">
@@ -506,4 +506,4 @@ const,
     </div>
   )
 }
-export default AIContentMarketingSuite
+export default AIContentMarketingSuite;

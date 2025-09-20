@@ -1,11 +1,13 @@
-// Comprehensive Services 2026 - Zion Tech Group
-// Revolutionary Micro SAAS, IT Infrastructure, and AI Services
+// Comprehensive Services 2026 - Zion Tech Group;
+// Revolutionary Micro SAAS, IT Infrastructure, and AI Services;
 export interface ServiceContact {
   pho,
   n: e: string,ema,
   i: l: string,websi,
   t: e: string,addre,
-  s: s: string
+  s: s: string;
+}
+}
 }
 
 export interface MicroSaasService {
@@ -31,7 +33,9 @@ export interface MicroSaasService {
   o: d: string,innovationLev,
   e: l: string,marketSi,
   z: e: string,growthRa,
-  t: e: string
+  t: e: string;
+}
+}
 }
 
 export interface ITService {
@@ -56,6 +60,8 @@ export interface ITService {
   z: e: string,complian,
   c: e: string[[],
   ],
+}
+}
   }
 
 export interface AIService {
@@ -82,9 +88,11 @@ export interface AIService {
   z: e: string,ethical,
   A: I: string[[],
   ],
+}
+}
   }
 
-// Revolutionary Micro SAAS Services 2026
+// Revolutionary Micro SAAS Services 2026;
 export,
   const: revolutionaryMicroSaasServices2026: MicroSaasService[] = [
   {
@@ -151,7 +159,7 @@ export,
   z: e: "$8.6 billion by 2026",growthRa,
   t: e: "45% annually"
 }
-  // New Innovative Services Added
+  // New Innovative Services Added;
   {
   id: 2,na,
   m: e: "Autonomous Data Center Manager",catego,
@@ -733,7 +741,7 @@ export,
   t: e: "35% annually"
 },
   ]
-// Revolutionary IT Infrastructure Services 2026
+// Revolutionary IT Infrastructure Services 2026;
 export,
   const: revolutionaryITInfrastructureServices2026: ITService[] = [
   {
@@ -845,7 +853,7 @@ export,
   },
   ]
 
-// Revolutionary AI Services 2026
+// Revolutionary AI Services 2026;
 export,
   const: revolutionaryAIServices2026: AIService[] = [
   {
@@ -964,9 +972,9 @@ export,
   },
   ]
 
-// Export all services
+// Export all services;
 export const ALL_REVOLUTIONARY_SERVICES_2026 = [
-  ...revolutionaryMicroSaasServices2026
-  ...revolutionaryITInfrastructureServices2026
-  ...revolutionaryAIServices2026
+  ...revolutionaryMicroSaasServices2026;
+  ...revolutionaryITInfrastructureServices2026;
+  ...revolutionaryAIServices2026;
 ]

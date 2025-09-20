@@ -1,5 +1,5 @@
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
-  // Healthcare & Life Sciences
+  // Healthcare & Life Sciences;
   {
   id: "ai-diagnostic-platform",tit,
   l: e: "AI Diagnostic Imaging Platform",descripti,
@@ -59,7 +59,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   r: y: "Hospitals, Research Institutions, Pharma"
 }
   
-  // Financial Services
+  // Financial Services;
   {
   id: "ai-risk-management",tit,
   l: e: "AI Risk Management Platform",descripti,
@@ -119,7 +119,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   r: y: "Hedge Funds, Investment Banks, Trading Firms"
 }
   
-  // Manufacturing & Industry 4.0
+  // Manufacturing & Industry 4.0;
   {
   id: "smart-manufacturing-platform",tit,
   l: e: "Smart Manufacturing Platform",descripti,
@@ -179,7 +179,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   r: y: "Manufacturing, Prototyping, Research"
 }
   
-  // Energy & Sustainability
+  // Energy & Sustainability;
   {
   id: "smart-grid-platform",tit,
   l: e: "Smart Grid Management Platform",descripti,
@@ -239,7 +239,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   r: y: "Energy, Manufacturing, Environmental"
 }
   
-  // Transportation & Logistics
+  // Transportation & Logistics;
   {
   id: "autonomous-logistics",tit,
   l: e: "Autonomous Logistics Platform",descripti,
@@ -299,7 +299,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   r: y: "Cities, Transportation, Government"
 }
   
-  // Education & Training
+  // Education & Training;
   {
   id: "ai-education-platform",tit,
   l: e: "AI-Powered Education Platform",descripti,
@@ -330,7 +330,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   r: y: "Schools, Universities, Corporate Training"
 }
   
-  // Retail & E-commerce
+  // Retail & E-commerce;
   {
   id: "ai-retail-platform",tit,
   l: e: "AI Retail Intelligence Platform",descripti,

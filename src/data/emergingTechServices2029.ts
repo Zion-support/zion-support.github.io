@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: EMERGING_TECH_SERVICES_2029: ProductListing[] = [
   {
@@ -473,4 +473,4 @@ export,
   },
   ]
 
-export default EMERGING_TECH_SERVICES_2029
+export default EMERGING_TECH_SERVICES_2029;

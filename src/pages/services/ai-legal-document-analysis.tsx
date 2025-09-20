@@ -1,27 +1,31 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  FileText
+  FileText;
   Search,
   Shield,
   Zap,
   Brain,
   CheckCircle,
   Clock,
-  DollarSign
-  Users
-  BarChart3
-  Lock
-  Globe
-  Award
-  Star
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  DollarSign;
+  Users;
+  BarChart3;
+  Lock;
+  Globe;
+  Award;
+  Star;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function AILegalDocumentAnalysis() {
   const features = [
   {
@@ -76,7 +80,7 @@ export default function AILegalDocumentAnalysis() {
         "Basic compliance alerts"
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -93,7 +97,7 @@ export default function AILegalDocumentAnalysis() {
         "API access"
 ]
       popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -111,7 +115,7 @@ export default function AILegalDocumentAnalysis() {
         "SLA guarantees"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const benefits = [
@@ -124,7 +128,7 @@ export default function AILegalDocumentAnalysis() {
 ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI-Powered Legal Document Analysis Platform - Zion Tech Group"
         description="Advanced AI platform for legal document analysis, contract review, and compliance monitoring. Reduce legal review time by 85% with intelligent automation."
       />
@@ -135,7 +139,7 @@ export default function AILegalDocumentAnalysis() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -148,7 +152,7 @@ export default function AILegalDocumentAnalysis() {
           >
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI-Powered Legal Document Analysis
+              AI-Powered Legal Document Analysis;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -157,7 +161,7 @@ export default function AILegalDocumentAnalysis() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg,
@@ -165,16 +169,16 @@ export default function AILegalDocumentAnalysis() {
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="#demo"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg,
   hove: r:bg-blue-500 hove,
   r:text-white transition-all duration-300";"
               >
-                Watch Demo
+                Watch Demo;
               </a>
             </div>
           </motion.div>
@@ -200,7 +204,7 @@ export default function AILegalDocumentAnalysis() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -232,7 +236,7 @@ export default function AILegalDocumentAnalysis() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Legal Professionals
+              Powerful Features for Legal Professionals;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Everything you need to streamline legal document analysis and improve your practice efficiency.
@@ -243,7 +247,7 @@ export default function AILegalDocumentAnalysis() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -280,7 +284,7 @@ export default function AILegalDocumentAnalysis() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your legal practice needs. All plans include our core AI analysis capabilities.
@@ -290,7 +294,7 @@ export default function AILegalDocumentAnalysis() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -304,7 +308,7 @@ export default function AILegalDocumentAnalysis() {
   a: y: index * 0.1 },
   }
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-  plan.popular 
+  plan.popular;
                     ? 'border-blue-500 ring-2 ring-blue-500/20' 
                     : 'border-slate-700'
 } hov,
@@ -313,7 +317,7 @@ export default function AILegalDocumentAnalysis() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -336,11 +340,11 @@ export default function AILegalDocumentAnalysis() {
                   ))}
                 </ul>
                 
-                <a
+                <a;
                   href="htt,
   p: s: //ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white,
   hove: r:from-blue-700,
   hove: r:to-purple-700'
@@ -348,7 +352,7 @@ export default function AILegalDocumentAnalysis() {
   r:bg-slate-600'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -364,7 +368,7 @@ export default function AILegalDocumentAnalysis() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -376,7 +380,7 @@ export default function AILegalDocumentAnalysis() {
   }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Market-Leading Legal Tech Solution
+                Market-Leading Legal Tech Solution;
               </h2>
               <div className="space-y-6">
                 <div className="flex items-center">
@@ -410,7 +414,7 @@ export default function AILegalDocumentAnalysis() {
               </div>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -452,7 +456,7 @@ export default function AILegalDocumentAnalysis() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -472,7 +476,7 @@ export default function AILegalDocumentAnalysis() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg,
@@ -480,10 +484,10 @@ export default function AILegalDocumentAnalysis() {
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Schedule a Demo
+                Schedule a Demo;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg,
@@ -491,7 +495,7 @@ export default function AILegalDocumentAnalysis() {
   r:text-white transition-all duration-300";"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </motion.div>
@@ -513,7 +517,7 @@ export default function AILegalDocumentAnalysis() {
               <a href="t,
   e: l:+13024640950" className="text-gray-300,
   hove: r:text-blue-400 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -522,7 +526,7 @@ export default function AILegalDocumentAnalysis() {
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-gray-300,
   hove: r:text-blue-400 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -530,18 +534,18 @@ export default function AILegalDocumentAnalysis() {
               <p className="text-white font-semibold mb-2">Address</p>
               <p className="text-gray-300">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </p>
             </div>
           </div>
           <div className="mt-8">
-            <a
+            <a;
               href="htt,
   p: s://ziontechgroup.com"
               className="className="inline-flex items-center text-blue-400 hove,
   r:text-blue-300 transition-colors";"
             >
-              Visit our website
+              Visit our website;
               <ExternalLink className="ml-2 w-4 h-4" />
             </a>
           </div>

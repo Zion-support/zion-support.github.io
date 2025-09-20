@@ -21,7 +21,9 @@ export interface InnovativeAIService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,12 +35,12 @@ export interface InnovativeAIService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
 }
 
 export,
   const: INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
-  // AI-Powered Quantum Machine Learning Platform
+  // AI-Powered Quantum Machine Learning Platform;
   {
   i,
   d: "ai-quantum-machine-learning",tit,
@@ -118,7 +120,7 @@ export,
   r: s: ["None - First quantum ML platform"],marketSi,
   z: e: "$67.3 billion by 2027"
 }
-  // AI-Powered Natural Language Processing Suite
+  // AI-Powered Natural Language Processing Suite;
   {
   id: "ai-natural-language-processing-suite",tit,
   l: e: "AI Natural Language Processing Suite",descripti,
@@ -198,7 +200,7 @@ export,
     marketSi,
   z: e: "$43.7 billion by 2027"
 }
-  // AI-Powered Computer Vision & Image Recognition
+  // AI-Powered Computer Vision & Image Recognition;
   {
   id: "ai-computer-vision-image-recognition",tit,
   l: e: "AI Computer Vision & Image Recognition Platform",descripti,
@@ -279,7 +281,7 @@ export,
   z: e: [["$51.3 billion by 2027"],
   ],
   }
-  // AI-Powered Predictive Analytics & Forecasting
+  // AI-Powered Predictive Analytics & Forecasting;
   {
   id: "ai-predictive-analytics-forecasting",tit,
   l: e: "AI Predictive Analytics & Forecasting Platform",descripti,
@@ -359,7 +361,7 @@ export,
     marketSi,
   z: e: "$28.9 billion by 2027"
 }
-  // AI-Powered Autonomous Systems & Robotics
+  // AI-Powered Autonomous Systems & Robotics;
   {
   id: "ai-autonomous-systems-robotics",tit,
   l: e: "AI Autonomous Systems & Robotics Platform",descripti,
@@ -440,7 +442,7 @@ export,
   z: e: [["$74.1 billion by 2027"],
   ],
   }
-  // AI-Powered Healthcare Diagnostics & Treatment
+  // AI-Powered Healthcare Diagnostics & Treatment;
   {
   id: "ai-healthcare-diagnostics-treatment",tit,
   l: e: "AI Healthcare Diagnostics & Treatment Platform",descripti,
@@ -521,7 +523,7 @@ export,
   z: e: [["$95.6 billion by 2027"],
   ],
   }
-  // AI-Powered Financial Technology & Trading
+  // AI-Powered Financial Technology & Trading;
   {
   id: "ai-fintech-trading-platform",tit,
   l: e: "AI Financial Technology & Trading Platform",descripti,
@@ -602,7 +604,7 @@ export,
   z: e: [["$156.8 billion by 2027"],
   ],
   }
-  // AI-Powered Creative Content Generation
+  // AI-Powered Creative Content Generation;
   {
   id: "ai-creative-content-generation",tit,
   l: e: "AI Creative Content Generation Platform",descripti,
@@ -683,7 +685,7 @@ export,
   z: e: [["$15.7 billion by 2027"],
   ],
   }
-  // AI-Powered Energy Management & Optimization
+  // AI-Powered Energy Management & Optimization;
   {
   id: "ai-energy-management-optimization",tit,
   l: e: "AI Energy Management & Optimization Platform",descripti,

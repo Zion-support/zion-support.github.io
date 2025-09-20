@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../../components/SEO"
-import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from "lucide-react"
+import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3     } from "lucide-react";
 export default function MicroSAASSolutions() {
   const services = [
   {
@@ -50,25 +50,25 @@ export default function MicroSAASSolutions() {
   tit,
   l: e: "Rapid Deployment",descripti,
   o: n: "Quick time-to-market with agile development methodologies",ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   tit,
   l: e: "Scalability",descripti,
   o: n: "Built to grow with your business from day one",ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "Cost Efficiency",descripti,
   o: n: "Reduced infrastructure costs with cloud-native solutions",ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: "Security",descripti,
   o: n: "Enterprise-grade security and compliance standards",ic,
-  o: n: Shield
+  o: n: Shield;
 },
   ]
     const industries = [
@@ -76,25 +76,25 @@ export default function MicroSAASSolutions() {
   na,
   m: e: "Healthcare",descripti,
   o: n: "HIPAA-compliant patient management systems",ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   na,
   m: e: "Finance",descripti,
   o: n: "Regulatory-compliant financial tools",ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   na,
   m: e: "Education",descripti,
   o: n: "Learning management and student tracking",ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   na,
   m: e: "Real Estate",descripti,
   o: n: "Property management and client portals",ic,
-  o: n: Building
+  o: n: Building;
 },
   ]
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
@@ -108,25 +108,25 @@ export default function MicroSAASSolutions() {
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-            Micro SAAS Solutions
+            Micro SAAS Solutions;
             <span className="block text-3xl m,
   d:text-4xl text-zion-cyan mt-2">
-              Rapid Deployment, Maximum Impact
+              Rapid Deployment, Maximum Impact;
             </span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business ideas into powerful, scalable software solutions with our micro SAAS development 
+            Transform your business ideas into powerful, scalable software solutions with our micro SAAS development;
             services designed for rapid deployment and growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-zion-cyan,
   hove: r: bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Your Project
+              Start Your Project;
             </button>
             <button className="border-2 border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan hove,
   r:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Portfolio
+              View Portfolio;
             </button>
           </div>
         </div>
@@ -138,10 +138,10 @@ export default function MicroSAASSolutions() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Comprehensive SAAS Development Services
+              Comprehensive SAAS Development Services;
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              From concept to deployment, we provide end-to-end micro SAAS development services that 
+              From concept to deployment, we provide end-to-end micro SAAS development services that;
               accelerate your business growth and digital transformation.
             </p>
           </div>
@@ -183,7 +183,7 @@ export default function MicroSAASSolutions() {
               Why Choose Our Micro SAAS Solutions?
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Experience the advantages of rapid development, scalability, and cost-effective solutions 
+              Experience the advantages of rapid development, scalability, and cost-effective solutions;
               designed for modern business needs.
             </p>
           </div>
@@ -214,7 +214,7 @@ export default function MicroSAASSolutions() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Industry-Specific Solutions
+              Industry-Specific Solutions;
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
               Tailored micro SAAS solutions designed for the unique requirements and compliance needs of different industries.
@@ -250,18 +250,18 @@ export default function MicroSAASSolutions() {
             Ready to Build Your Micro SAAS Solution?
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Let us help you transform your business idea into a powerful, scalable software solution 
+            Let us help you transform your business idea into a powerful, scalable software solution;
             that drives growth and innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-zion-cyan,
   hove: r: bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Your Project
+              Start Your Project;
             </button>
             <button className="border-2 border-white text-white,
   hove: r:bg-white hove,
   r:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Consultation
+              Schedule Consultation;
             </button>
           </div>
         </div>

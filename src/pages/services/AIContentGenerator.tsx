@@ -1,24 +1,28 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import SEO from "@/components/SEO"
 import {
-  PenTool
+  PenTool;
   FileText,
   Image,
   Video,
   Globe,
   Zap,
   Brain,
-  Shield
-  CheckCircle
-  TrendingUp
-  MessageSquare
-  Search
-  Target
-  BarChart3
-  Users
-  Sparkles
-} from "lucide-react"
+  Shield;
+  CheckCircle;
+  TrendingUp;
+  MessageSquare;
+  Search;
+  Target;
+  BarChart3;
+  Users;
+  Sparkles;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIContentGenerator() {
   const features = [
   {
@@ -78,7 +82,7 @@ export default function AIContentGenerator() {
 ]
       ct,
   a: 'Start Free Trial',popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -94,7 +98,7 @@ export default function AIContentGenerator() {
 ]
       ct,
   a: 'Start Free Trial',popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -110,12 +114,12 @@ export default function AIContentGenerator() {
 ]
       ct,
   a: 'Contact Sales',popul,
-  a: r: false
+  a: r: false;
 },
   ]
   return (
     <>
-      <SEO 
+      <SEO;
         title="AI Content Generator - Create Engaging Content with AI"
         description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns."
         canonical="/services/ai-content-generator"
@@ -127,7 +131,7 @@ export default function AIContentGenerator() {
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-600/10 to-red-600/10"></div>
           <div className="container-responsive relative z-10">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -141,7 +145,7 @@ export default function AIContentGenerator() {
             >
               <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
-                AI Content Generator
+                AI Content Generator;
               </h1>
               <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8">
@@ -154,12 +158,12 @@ export default function AIContentGenerator() {
   hove: r:from-purple-600,
   hove: r:to-pink-700 transition-all duration-300,
   transform: hover:scale-105">
-                  Start Free Trial
+                  Start Free Trial;
                 </button>
                   <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold,
   hove: r:bg-purple-500 hove,
   r:text-white transition-all duration-300">
-                  Watch Demo
+                  Watch Demo;
                 </button>
               </div>
             </motion.div>
@@ -170,7 +174,7 @@ export default function AIContentGenerator() {
   }
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -184,10 +188,10 @@ export default function AIContentGenerator() {
             >
               <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 text-white">
-                AI-Powered Content Creation
+                AI-Powered Content Creation;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge artificial intelligence to create high-quality content 
+                Leverage cutting-edge artificial intelligence to create high-quality content;
                 that engages your audience and drives results.
               </p>
             </motion.div>
@@ -196,7 +200,7 @@ export default function AIContentGenerator() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -228,7 +232,7 @@ export default function AIContentGenerator() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -242,10 +246,10 @@ export default function AIContentGenerator() {
             >
               <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 text-white">
-                Proven Results
+                Proven Results;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of content creators and marketers who have transformed 
+                Join thousands of content creators and marketers who have transformed;
                 their content strategy with AI-powered generation.
               </p>
             </motion.div>
@@ -254,7 +258,7 @@ export default function AIContentGenerator() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -281,7 +285,7 @@ export default function AIContentGenerator() {
   }
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -295,7 +299,7 @@ export default function AIContentGenerator() {
             >
               <h2 className="text-4xl,
   m: d:text-5xl font-bold mb-6 text-white">
-                Simple, Transparent Pricing
+                Simple, Transparent Pricing;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your content creation needs. 
@@ -306,7 +310,7 @@ export default function AIContentGenerator() {
             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -320,7 +324,7 @@ export default function AIContentGenerator() {
   a: y: index * 0.1 },
   }
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-  plan.popular 
+  plan.popular;
                       ? 'border-purple-500/50 shadow-lg shadow-purple-500/20' 
                       : 'border-slate-700/50'
 }`}
@@ -328,7 +332,7 @@ export default function AIContentGenerator() {
                   {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -352,7 +356,7 @@ export default function AIContentGenerator() {
                   </ul>
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-purple-500 to-pink-600,
   hove: r: from-purple-600,
   hove: r:to-pink-700 text-white'
@@ -373,7 +377,7 @@ export default function AIContentGenerator() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -390,7 +394,7 @@ export default function AIContentGenerator() {
                 Ready to Revolutionize Your Content Creation?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of creators using AI to produce engaging content 
+                Join thousands of creators using AI to produce engaging content;
                 faster, smarter, and more effectively than ever before.
               </p>
               <div className="flex flex-col,
@@ -399,12 +403,12 @@ export default function AIContentGenerator() {
   hove: r:from-purple-600,
   hove: r:to-pink-700 transition-all duration-300,
   transform: hover:scale-105">
-                  Start Free Trial
+                  Start Free Trial;
                 </button>
                 <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold,
   hove: r:bg-purple-500 hove,
   r:text-white transition-all duration-300">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </motion.div>

@@ -1,24 +1,24 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Search, Filter, Star, TrendingUp, Clock, Users, DollarSign, Globe, Shield, Bot, Cloud, BarChart3, Workflow, FileText, Sparkles, Building, Car, Leaf, Zap, Home, Scale, GraduationCap, ShoppingCart, Hotel } from "lucide-react"
-import { SEO } from "@/components/SEO"
-import { enhancedServices2025 } from "../../data/enhanced-2025-services"
-import { specializedIndustryServices } from "../../data/specialized-industry-services"
-import { allServices } from "../../data/services"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Search, Filter, Star, TrendingUp, Clock, Users, DollarSign, Globe, Shield, Bot, Cloud, BarChart3, Workflow, FileText, Sparkles, Building, Car, Leaf, Zap, Home, Scale, GraduationCap, ShoppingCart, Hotel   } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+import { enhancedServices2025   } from "../../data/enhanced-2025-services";
+import { specializedIndustryServices   } from "../../data/specialized-industry-services";
+import { allServices   } from "../../data/services";
+import { Link   } from "react-router-dom";
 export default function ServicesOverview() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedIndustry, setSelectedIndustry] = useState('all')
   const [sortBy, setSortBy] = useState('name')
 
-  // Combine all services
+  // Combine all services;
 const allAvailableServices = [
-  ...enhancedServices2025
-    ...specializedIndustryServices
-    ...allServices
+  ...enhancedServices2025;
+    ...specializedIndustryServices;
+    ...allServices;
 ]
-  // Categories for filtering
+  // Categories for filtering;
 const categories = [
   { id: 'all', na,
   m: e: 'All Categories', ic,
@@ -69,7 +69,7 @@ const categories = [
   o: n: Cloud },
   },
   ]
-  // Industries for filtering
+  // Industries for filtering;
 const industries = [
   { id: 'all', na,
   m: e: 'All Industries', ic,
@@ -120,20 +120,19 @@ const industries = [
   o: n: DollarSign },
   },
   ]
-  // Filter and sort services
-const filteredServices = allAvailableServices
+  // Filter and sort services;
+const filteredServices = allAvailableServices;
     .filter(service () => {
   const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline?.toLowerCase().includes(searchTerm.toLowerCase())
       
-const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-      
+const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 const matchesIndustry = selectedIndustry === 'all' || 
                              (service.industry && service.industry === selectedIndustry) ||
                              (!service.industry && selectedIndustry === 'all')
       
-      return matchesSearch && matchesCategory && matchesIndustry
+      return matchesSearch && matchesCategory && matchesIndustry;
 })
     .sort((a, b) () => {
   switch (sortBy) {
@@ -148,12 +147,12 @@ const matchesIndustry = selectedIndustry === 'all' ||
         case 'new':
           return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0)
         defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
   const renderServiceCard = (servi,
   c: e: any) => (
-  <motion.div
+  <motion.div;
       key={service.id},
   }
       className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20,
@@ -179,12 +178,12 @@ const matchesIndustry = selectedIndustry === 'all' ||
         <div className="flex gap-2">
           {service.isPopular && (
   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs px-3 py-1 rounded-full">
-              Popular
+              Popular;
             </span>
           )},
   {service.isNew && (
   <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-white text-xs px-3 py-1 rounded-full">
-              New
+              New;
             </span>
           )}
         </div>
@@ -211,7 +210,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
   <div className="text-sm text-gray-400 mt-1">
             P,
   r: o: ${service.pricing.professional}/month | Enterpri,
-  s: e: ${service.pricing.enterprise}/month
+  s: e: ${service.pricing.enterprise}/month;
           </div>
         )}
       </div>
@@ -274,7 +273,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
       </div>
 
       <div className="flex items-center justify-between">
-        <Link
+        <Link;
           to={service.link || `/services/${service.id}`}
           className="className="inline-flex items-center text-cyan-400,
   hove: r:text-cyan-300 transition-colors text-sm";"
@@ -286,7 +285,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
           {service.trialDays && (
   <span className="flex items-center">
               <Clock className="w-3 h-3 mr-1" />
-              {service.trialDays}d trial
+              {service.trialDays}d trial;
             </span>
           )},
   {service.setupTime && (
@@ -302,7 +301,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
   )
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO;
         title="Zion Tech Group - Complete Services Overview & Pricing"
         description="Explore our comprehensive range of AI, IT, and specialized industry services. Detailed pricing, features, and ROI information for all our technology solutions."
         keywords="AI services pricing, IT services, specialized industry solutions, technology consulting, digital transformation, service pricing"
@@ -316,7 +315,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1;
             className="className="text-5xl,
   m: d:text-7xl font-bold text-white mb-6";"
             initial={ opacit,
@@ -329,13 +328,13 @@ const matchesIndustry = selectedIndustry === 'all' ||
   o: n: 0.8 },
   }
           >
-            Complete Services
+            Complete Services;
             <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Overview
+              Overview;
             </span>
           </motion.h1>
           
-          <motion.p 
+          <motion.p;
             className="className="text-xl text-gray-300 max-w-4xl mx-auto mb-8";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -351,7 +350,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
             Discover our comprehensive portfolio of cutting-edge technology services, complete with detailed pricing, features, and ROI information.
           </motion.p>
 
-          <motion.div 
+          <motion.div;
             className="className="flex flex-col,
   s: m: flex-row gap-4 justify-center";"
             initial={ opacit,
@@ -365,23 +364,23 @@ const matchesIndustry = selectedIndustry === 'all' ||
   a: y: 0.4 },
   }
           >
-            <Link
+            <Link;
               to="/contact"
               className="className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold,
   hove: r: from-cyan-600,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105";"
             >
-              Get Custom Quote
+              Get Custom Quote;
             </Link>
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-full font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300";"
             >
-              Call +1 (302) 464-0950
+              Call +1 (302) 464-0950;
             </a>
           </motion.div>
         </div>
@@ -400,7 +399,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
   }
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm},
@@ -416,7 +415,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
               {/* Category Filter */},
   }
               <div>
-                <select
+                <select;
                   value={selectedCategory},
   }
                   onChange={(e) => setSelectedCategory(e.target.value)},
@@ -437,7 +436,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
               {/* Industry Filter */},
   }
               <div>
-                <select
+                <select;
                   value={selectedIndustry},
   }
                   onChange={(e) => setSelectedIndustry(e.target.value)},
@@ -458,7 +457,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
               {/* Sort By */},
   }
               <div>
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value)},
@@ -489,10 +488,10 @@ const matchesIndustry = selectedIndustry === 'all' ||
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-white">
-              {filteredServices.length} Services Available
+              {filteredServices.length} Services Available;
             </h2>
             <div className="text-gray-400">
-              Showing {filteredServices.length} of {allAvailableServices.length} services
+              Showing {filteredServices.length} of {allAvailableServices.length} services;
             </div>
           </div>
 
@@ -520,7 +519,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
   s: m: px-6,
   l: g:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
+          <motion.h2;
             className="className="text-4xl font-bold text-white mb-6";"
             initial={ opacit,
   y: 0, y: 20 },
@@ -538,7 +537,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
             Ready to Get Started?
           </motion.h2>
           
-          <motion.p 
+          <motion.p;
             className="className="text-xl text-gray-300 mb-8";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -557,7 +556,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
             Contact us to discuss your specific needs and get a customized solution for your business.
           </motion.p>
 
-          <motion.div 
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d: grid-cols-3 gap-6 mb-8";"
             initial={ opacit,
@@ -580,7 +579,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
               <a href="t,
   e: l: +13024640950" className="text-cyan-400,
   hove: r:text-cyan-300">
-                +1 (302) 464-0950
+                +1 (302) 464-0950;
               </a>
             </div>
             
@@ -590,7 +589,7 @@ const matchesIndustry = selectedIndustry === 'all' ||
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-cyan-400,
   hove: r:text-cyan-300">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             
@@ -599,12 +598,12 @@ const matchesIndustry = selectedIndustry === 'all' ||
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </p>
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div;
             className="className="flex flex-col,
   s: m:flex-row gap-4 justify-center";"
             initial={ opacit,
@@ -621,22 +620,22 @@ const matchesIndustry = selectedIndustry === 'all' ||
   c: e: true },
   }
           >
-            <Link
+            <Link;
               to="/contact"
               className="className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold,
   hove: r: from-cyan-600,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105";"
             >
-              Schedule a Consultation
+              Schedule a Consultation;
             </Link>
-            <Link
+            <Link;
               to="/pricing"
               className="className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-full font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300";"
             >
-              View Detailed Pricing
+              View Detailed Pricing;
             </Link>
           </motion.div>
         </div>

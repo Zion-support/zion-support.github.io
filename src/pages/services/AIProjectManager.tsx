@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone } from "lucide-react"
-import { SEO } from "@/components/SEO"
+import { motion     } from "framer-motion";
+import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone     } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function AIProjectManager() {
   const features = [
   {
@@ -65,7 +65,7 @@ export default function AIProjectManager() {
 ]
       ct,
   a: "Start Free Trial",popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -83,7 +83,7 @@ export default function AIProjectManager() {
 ]
       ct,
   a: "Start Free Trial",popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -101,7 +101,7 @@ export default function AIProjectManager() {
 ]
       ct,
   a: "Contact Sales",popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const benefits = [
@@ -129,7 +129,7 @@ export default function AIProjectManager() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group"
         description="Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today."
         keywords="AI project management, project management software, AI task prioritization, resource optimization, project analytics"
@@ -144,7 +144,7 @@ export default function AIProjectManager() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 relative z-10">
-          <motion.div 
+          <motion.div;
             className="className="text-center";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -158,7 +158,7 @@ export default function AIProjectManager() {
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
-              AI Project Manager
+              AI Project Manager;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
@@ -170,11 +170,11 @@ export default function AIProjectManager() {
   hove: r:from-blue-700,
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </motion.div>
@@ -187,7 +187,7 @@ export default function AIProjectManager() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -204,10 +204,10 @@ export default function AIProjectManager() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Powered by Advanced AI
+              Powered by Advanced AI;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI engine learns from your team's patterns and continuously optimizes your project workflows
+              Our AI engine learns from your team's patterns and continuously optimizes your project workflows;
             </p>
           </motion.div>
 
@@ -215,7 +215,7 @@ export default function AIProjectManager() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10,
@@ -254,7 +254,7 @@ export default function AIProjectManager() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -271,17 +271,17 @@ export default function AIProjectManager() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Proven Results
+              Proven Results;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Join thousands of teams who have transformed their project management with AI
+              Join thousands of teams who have transformed their project management with AI;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -317,7 +317,7 @@ export default function AIProjectManager() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -334,7 +334,7 @@ export default function AIProjectManager() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Choose the plan that fits your team size and needs. All plans include a 14-day free trial.
@@ -344,7 +344,7 @@ export default function AIProjectManager() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -370,7 +370,7 @@ export default function AIProjectManager() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -394,7 +394,7 @@ export default function AIProjectManager() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white,
   hove: r: from-purple-700,
   hove: r:to-pink-700'
@@ -416,7 +416,7 @@ export default function AIProjectManager() {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -435,7 +435,7 @@ export default function AIProjectManager() {
               Ready to Transform Your Project Management?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join thousands of teams who have already revolutionized their workflow with AI
+              Join thousands of teams who have already revolutionized their workflow with AI;
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
@@ -443,11 +443,11 @@ export default function AIProjectManager() {
   hove: r:from-blue-700,
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>

@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { 
+import { useCallback  } from "react";
+import { useState, useEffect   } from "react";
+import { motion, AnimatePresence   } from "framer-motion";
+import {
   Accessibility as AccessibilityIcon,
   Type, 
   Eye, 
@@ -12,16 +13,20 @@ import {
   Contrast,
   Sun,
   Moon,
-  Settings
-} from "lucide-react"
+  Settings;
+}
+}
+ } from "lucide-react";
 interface AccessibilitySettings {
   fontSi,
   z: e: number,
   highContras: t: boolean,
   reducedMotio: n: boolean,
-  soundEnable: d: boolean
+  soundEnable: d: boolean;
   them,
   e: 'light' | 'dark' | 'auto'
+}
+}
 }
 
 export function Accessibility() {
@@ -39,7 +44,7 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
   m: e: 'auto'
   })
   useEffect(() () => {
-    // Load settings from localStorage
+    // Load settings from localStorage;
     const savedSettings = localStorage.getItem('accessibility-settings')
     if (savedSettings) {
       const parsed = JSON.parse(savedSettings)
@@ -47,7 +52,7 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
       applySettings(parsed)
     }
 
-    // Add keyboard shortcuts
+    // Add keyboard shortcuts;
     const handleKeyDown = (e: KeyboardEvent) () => {
       if (e.ctrlKey) {
         switch (e.key) {
@@ -55,15 +60,15 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
           case '+':
             e.preventDefault()
             increaseFontSize()
-            break
+            break;
           case '-':
             e.preventDefault()
             decreaseFontSize()
-            break
+            break;
           case '0':
             e.preventDefault()
             resetSettings()
-            break
+            break;
         },
   },
   },
@@ -74,25 +79,29 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
 
   const applySettings = (newSettin,
   g: s: AccessibilitySettings) () => {
-    const root = document.documentElement
-    // Apply font size
+    const root = document.documentElement;
+    // Apply font size;
     root.style.fontSize = `${newSettings.fontSize}px`,
     
-    // Apply high contrast
+    // Apply high contrast;
     if (newSettings.highContrast) {
       root.classList.add('high-contrast')
 } else {
-      root.classList.remove('high-contrast')
+  root.classList.remove('high-contrast')
+}
+}
 }
     
-    // Apply reduced motion
+    // Apply reduced motion;
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion')
 } else {
-      root.classList.remove('reduced-motion')
+  root.classList.remove('reduced-motion')
+}
+}
 }
     
-    // Apply theme
+    // Apply theme;
     if (newSettings.theme === 'light') {
       root.classList.add('light-theme')
       root.classList.remove('dark-theme')
@@ -100,7 +109,9 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
       root.classList.add('dark-theme')
       root.classList.remove('light-theme')
 } else {
-      root.classList.remove('light-themedark-theme')
+  root.classList.remove('light-themedark-theme')
+}
+}
 },
   },
 
@@ -143,7 +154,7 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
   return (
     <>
       {/* Accessibility Toggle Button */}
-      <button
+      <button;
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500,
   hove: r: bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-200,
@@ -161,7 +172,7 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: -400 },
   }
@@ -182,9 +193,9 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-semibold text-white flex items-center gap-2">
                             <AccessibilityIcon className="w-5 h-5 text-cyan-400" />
-          Accessibility
+          Accessibility;
                 </h2>
-                <button
+                <button;
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400,
   hove: r:text-white transition-colors"
@@ -198,10 +209,10 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
                   <Type className="w-4 h-4" />
-                  Font Size
+                  Font Size;
                 </label>
                 <div className="flex items-center gap-3">
-                  <button
+                  <button;
                     onClick={decreaseFontSize}
                     disabled={settings.fontSize <= 12}
                     className="p-2 bg-slate-800,
@@ -213,9 +224,9 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
                     <Minus className="w-4 h-4 text-white" />
                   </button>
                   <span className="text-white font-mono min-w-[3rem] text-center">
-                    {settings.fontSize}px
+                    {settings.fontSize}px;
                   </span>
-                  <button
+                  <button;
                     onClick={increaseFontSize}
                     disabled={settings.fontSize >= 24}
                     className="p-2 bg-slate-800,
@@ -234,9 +245,9 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Contrast className="w-4 h-4" />
-                    High Contrast
+                    High Contrast;
                   </span>
-                  <input
+                  <input;
                     type="checkbox"
                     checked={settings.highContrast}
                     onChange={(e) => updateSetting('highContrast', e.target.checked)}
@@ -257,9 +268,9 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Eye className="w-4 h-4" />
-                    Reduced Motion
+                    Reduced Motion;
                   </span>
-                  <input
+                  <input;
                     type="checkbox"
                     checked={settings.reducedMotion}
                     onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
@@ -279,15 +290,15 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
                   <Settings className="w-4 h-4" />
-                  Theme
+                  Theme;
                 </label>
                 <div className="grid grid-cols-3 gap-2">
                   {(['autolight', 'dark'] as const).map((theme) => (
-                    <button
+                    <button;
                       key={theme}
                       onClick={() => updateSetting('theme', theme)}
                       className={`p-2 rounded-md text-xs font-medium transition-colors ${
-                        settings.theme === theme
+                        settings.theme === theme;
                           ? 'bg-cyan-500 text-white'
                           : 'bg-slate-800 text-gray-300,
   hove: r:bg-slate-700'
@@ -306,9 +317,9 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Volume2 className="w-4 h-4" />
-                    Sound Effects
+                    Sound Effects;
                   </span>
-                  <input
+                  <input;
                     type="checkbox"
                     checked={settings.soundEnabled}
                     onChange={(e) => updateSetting('soundEnabled', e.target.checked)}
@@ -328,7 +339,7 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
               <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
                 <h3 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
                   <Keyboard className="w-4 h-4" />
-                  Keyboard Shortcuts
+                  Keyboard Shortcuts;
                 </h3>
                 <div className="space-y-2 text-xs text-gray-300">
                   <div className="flex justify-between">
@@ -350,12 +361,12 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
               </div>
 
               {/* Reset Button */}
-              <button
+              <button;
                 onClick={resetSettings}
                 className="w-full px-4 py-2 bg-slate-800,
   hove: r:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"
               >
-                Reset to Defaults
+                Reset to Defaults;
               </button>
             </div>
           </motion.div>

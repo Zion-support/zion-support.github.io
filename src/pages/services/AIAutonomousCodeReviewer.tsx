@@ -1,47 +1,51 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Code
+  Code;
   CheckCircle,
   Shield,
   Zap,
-  ArrowRight
-  Play
-  Settings
-  Target
-  Cpu
-  Activity
-  Sparkles
-  Search
-  GitBranch
-  Terminal
-  Workflow
-  Rocket
-  RefreshCw
-  Lock
-  Eye
-  AlertTriangle
-  Clock
-  Users
-  BarChart3
-  TrendingUp
-  Globe
-  Building
-  DollarSign
-  Network
-  Key
-  Fingerprint
-  Monitor
-  Server
-  Database
-  Smartphone
-  Box
-  Layers
-  GitBranch
-  Github
-  Gitlab
-  Bitbucket
-} from "lucide-react"
+  ArrowRight;
+  Play;
+  Settings;
+  Target;
+  Cpu;
+  Activity;
+  Sparkles;
+  Search;
+  GitBranch;
+  Terminal;
+  Workflow;
+  Rocket;
+  RefreshCw;
+  Lock;
+  Eye;
+  AlertTriangle;
+  Clock;
+  Users;
+  BarChart3;
+  TrendingUp;
+  Globe;
+  Building;
+  DollarSign;
+  Network;
+  Key;
+  Fingerprint;
+  Monitor;
+  Server;
+  Database;
+  Smartphone;
+  Box;
+  Layers;
+  GitBranch;
+  Github;
+  Gitlab;
+  Bitbucket;
+}
+}
+}
+}
+ } from "lucide-react";
 const AIAutonomousCodeReviewer = () () => {
   const features = [
   {
@@ -151,7 +155,7 @@ const AIAutonomousCodeReviewer = () () => {
 ]
       ct,
   a: 'Start Free Trial',popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -167,7 +171,7 @@ const AIAutonomousCodeReviewer = () () => {
 ]
       ct,
   a: 'Start Free Trial',popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -184,7 +188,7 @@ const AIAutonomousCodeReviewer = () () => {
 ]
       ct,
   a: 'Contact Sales',popul,
-  a: r: false
+  a: r: false;
 },
   ]
   return (
@@ -196,7 +200,7 @@ const AIAutonomousCodeReviewer = () () => {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -209,17 +213,17 @@ const AIAutonomousCodeReviewer = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
               <Code className="w-4 h-4 mr-2" />
-              AI-Powered Code Review
+              AI-Powered Code Review;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Autonomous
+              AI Autonomous;
               <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> Code Reviewer</span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your code review process with AI-powered analysis that catches bugs
+              Revolutionize your code review process with AI-powered analysis that catches bugs;
               improves security, and maintains code quality automatically.
             </p>
             
@@ -229,12 +233,12 @@ const AIAutonomousCodeReviewer = () () => {
   hove: r:from-blue-600,
   hove: r:to-cyan-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hove,
   r:bg-blue-500/10 transition-all duration-200 flex items-center justify-center">
                 <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -247,7 +251,7 @@ const AIAutonomousCodeReviewer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -260,7 +264,7 @@ const AIAutonomousCodeReviewer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Code Review Features
+              Intelligent Code Review Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI-powered platform provides comprehensive code analysis, security scanning,
@@ -272,7 +276,7 @@ const AIAutonomousCodeReviewer = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -305,7 +309,7 @@ const AIAutonomousCodeReviewer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -318,10 +322,10 @@ const AIAutonomousCodeReviewer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Code Review Services
+              Comprehensive Code Review Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From static analysis to security scanning, we provide end-to-end code review 
+              From static analysis to security scanning, we provide end-to-end code review;
               solutions for modern development teams.
             </p>
           </motion.div>
@@ -329,7 +333,7 @@ const AIAutonomousCodeReviewer = () () => {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -366,7 +370,7 @@ const AIAutonomousCodeReviewer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -379,7 +383,7 @@ const AIAutonomousCodeReviewer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Development Process
+              Transform Your Development Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in code quality, security, and development efficiency.
@@ -390,7 +394,7 @@ const AIAutonomousCodeReviewer = () () => {
   m: d:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -412,7 +416,7 @@ const AIAutonomousCodeReviewer = () () => {
             </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index + 3},
   }
                   initial={ opaci,
@@ -442,7 +446,7 @@ const AIAutonomousCodeReviewer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -455,7 +459,7 @@ const AIAutonomousCodeReviewer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Choose the plan that fits your team size and development needs. 
@@ -466,7 +470,7 @@ const AIAutonomousCodeReviewer = () () => {
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -480,7 +484,7 @@ const AIAutonomousCodeReviewer = () () => {
   a: y: index * 0.1 },
   }
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-  plan.popular 
+  plan.popular;
                     ? 'border-blue-500/50 bg-blue-500/5' 
                     : 'border-slate-700/50'
 }`}
@@ -488,7 +492,7 @@ const AIAutonomousCodeReviewer = () () => {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -512,7 +516,7 @@ const AIAutonomousCodeReviewer = () () => {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-  plan.popular
+  plan.popular;
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white,
   hove: r: from-blue-600,
   hove: r:to-cyan-600'
@@ -534,7 +538,7 @@ const AIAutonomousCodeReviewer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -547,10 +551,10 @@ const AIAutonomousCodeReviewer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI code review solutions adapt to various industries, providing tailored 
+              Our AI code review solutions adapt to various industries, providing tailored;
               analysis and recommendations for your specific development needs.
             </p>
           </motion.div>
@@ -559,7 +563,7 @@ const AIAutonomousCodeReviewer = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -592,7 +596,7 @@ const AIAutonomousCodeReviewer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -605,7 +609,7 @@ const AIAutonomousCodeReviewer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Market Insights & ROI
+              Market Insights & ROI;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Understand the market landscape and potential return on investment for AI-powered code review solutions.
@@ -615,7 +619,7 @@ const AIAutonomousCodeReviewer = () () => {
           <div className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-4 gap-6">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -633,7 +637,7 @@ const AIAutonomousCodeReviewer = () () => {
               <p className="text-gray-300">Global Market Size 2024</p>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -651,7 +655,7 @@ const AIAutonomousCodeReviewer = () () => {
               <p className="text-gray-300">Annual Growth Rate</p>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -669,7 +673,7 @@ const AIAutonomousCodeReviewer = () () => {
               <p className="text-gray-300">Average ROI</p>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -696,7 +700,7 @@ const AIAutonomousCodeReviewer = () () => {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -708,10 +712,10 @@ const AIAutonomousCodeReviewer = () () => {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Start Your AI Code Review Journey Today
+              Start Your AI Code Review Journey Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of development teams worldwide that use our AI-powered 
+              Join thousands of development teams worldwide that use our AI-powered;
               code review platform to improve code quality and accelerate development.
             </p>
             <div className="flex flex-col,
@@ -719,12 +723,12 @@ const AIAutonomousCodeReviewer = () () => {
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg,
   hove: r:from-blue-600,
   hove: r:to-cyan-600 transition-all duration-200 flex items-center justify-center">
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg,
   hove: r:bg-blue-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
             
@@ -754,4 +758,4 @@ const AIAutonomousCodeReviewer = () () => {
     </div>
   )
 }
-export default AIAutonomousCodeReviewer
+export default AIAutonomousCodeReviewer;

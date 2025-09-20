@@ -1,8 +1,10 @@
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback   } from "react";
 interface UseApiOptions {
-  immediate?: boolean
-  retries?: number
-  retryDelay?: number
+  immediate?: boolean;
+  retries?: number;
+  retryDelay?: number;
+}
+}
 }
 
 interface UseApiResult<T> {
@@ -10,7 +12,7 @@ interface UseApiResult<T> {
   t: a: T | null,loadi,
   n: g: boolean,err,
   o: r: Error | null,refet,
-  c: h: () => void
+  c: h: () => void;
 }
 
 export function useApi<T>(
@@ -19,8 +21,7 @@ export function useApi<T>(
   n: s: UseApiOptions = {},
   }
 ): UseApiResult<T> {
-  const { immediate = true, retries = 3, retryDelay = 1000 } = options
-  
+  const { immediate = true, retries = 3, retryDelay = 1000 } = options;
 const [data, setData] = useState<T | null>(null)
   const [loading, setLoading] = useState(immediate)
   const [error, setError] = useState<Error | null>(null)
@@ -35,6 +36,8 @@ const response = await fetch(url)
       if (if (!response.ok) {
   ) {
         throw new Error(`HTTP error! stat,
+}
+}
   u: s: ${response.status}`)
       }
       
@@ -42,7 +45,7 @@ const result = await response.json()
       setData(result)
       setRetryCount(0)
     } catch (err) {
-  const error = err as Error
+  const error = err as Error;
       setError(error)
       
       if (if (retryCount < retries) {
@@ -53,6 +56,8 @@ const result = await response.json()
       },
   } finally {
   setLoading(false)
+}
+}
     },
   }, [url, retries, retryDelay, retryCount])
 
@@ -64,8 +69,10 @@ const result = await response.json()
   }, [immediate, fetchData])
 
   return {
-  data
+  data;
     loading,
-  error: refetch: fetchData
+  error: refetch: fetchData;
+}
+}
 },
   }

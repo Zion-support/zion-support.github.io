@@ -1,17 +1,22 @@
+import { useCallback    } from "react";
 import React, { useState, useEffect, createContext, useContext } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell } from "lucide-react"
+import { motion, AnimatePresence     } from "framer-motion";
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell     } from "lucide-react";
 export type NotificationType = 'success' | 'error' | 'warning' | 'info'
 export interface Notification {
   id: string,ty,
   p: e: NotificationType,tit,
   l: e: string,messa,
-  g: e: string
+  g: e: string;
   duration?: number,
   action?: {
     lab,
   e: l: string,onCli,
-  c: k: () => void
+  c: k: () => void;
+}
+}
+}
+}
   },
   }
 
@@ -23,21 +28,29 @@ interface NotificationContextType {
   removeNotificati,
   o: n: (i,
   d: string) => void,clearA,
-  l: l: () => void
+  l: l: () => void;
+}
+}
+}
+}
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined)
-export const useNotifications = () () => {
+export const useNotifications = React.memo(() () => {
   const context = useContext(NotificationContext)
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
 }
-  return context
+  return context;
 },
 
 interface NotificationProviderProps {
   childr,
-  e: n: React.ReactNode
+  e: n: React.ReactNode;
+}
+}
+}
+}
 }
 
 export,
@@ -49,7 +62,7 @@ export,
     const id = Math.random().toString(36).substr(2, 9)
 const newNotification = { ...notification, id },
     setNotifications(prev => [...prev, newNotification])
-    // Auto-remove after duration
+    // Auto-remove after duration;
     if (notification.duration !== 0) {
       setTimeout(() () => {
         removeNotification(id)
@@ -75,12 +88,12 @@ const clearAll = () () => {
 const,
   NotificationContaine: r: React.FC = () () => {
   const { notifications, removeNotification, clearAll } = useNotifications()
-  if (notifications.length === 0) return null
+  if (notifications.length === 0) return null;
   return (
     <div className="fixed top-4 right-4 z-[9999] space-y-2 max-w-sm">
       <AnimatePresence mode="popLayout">
         {notifications.map((notification, index) => (
-          <motion.div
+          <motion.div;
             key={notification.id}
             initial={ opaci,
   t: y: 0, x: 300, sca,
@@ -99,7 +112,7 @@ const,
   o: n: 0.3,del,
   a: y: index * 0.1,ty,
   p: e: "spring",stiffne,
-  s: s: 200
+  s: s: 200;
             },
   }
             className="relative"
@@ -110,7 +123,7 @@ const,
       </AnimatePresence>
 
       {notifications.length > 1 && (
-        <motion.button
+        <motion.button;
           initial={ opaci,
   t: y: 0, y: 10 },
   }
@@ -133,7 +146,11 @@ interface NotificationItemProps {
   notificati,
   o: n: Notification,onRemo,
   v: e: (i,
-  d: string) => void
+  d: string) => void;
+}
+}
+}
+}
 }
 
 const,
@@ -178,8 +195,8 @@ const getBackgroundColor = (ty,
     },
   }
   return (
-    <motion.div
-      layout
+    <motion.div;
+      layout;
       className={`p-4 rounded-lg border backdrop-blur-sm ${getBorderColor(notification.type)} ${getBackgroundColor(notification.type)} bg-white/5`}
     >
       <div className="flex items-start space-x-3">
@@ -196,7 +213,7 @@ const getBackgroundColor = (ty,
           </p>
 
           {notification.action && (
-            <button
+            <button;
               onClick={notification.action.onClick}
               className="mt-2 text-xs font-medium text-zion-cyan,
   hove: r: text-zion-cyan/80 transition-colors duration-200"
@@ -206,7 +223,7 @@ const getBackgroundColor = (ty,
           )}
         </div>
 
-        <button
+        <button;
           onClick={() => onRemove(notification.id)}
           className="flex-shrink-0 text-gray-400,
   hove: r: text-white transition-colors duration-200"
@@ -217,13 +234,13 @@ const getBackgroundColor = (ty,
     </motion.div>
   )
 }
-// Utility functions for easy notification creation
+// Utility functions for easy notification creation;
 export const notify = {
   succe,
   s: s: (titl,
   e: string, messa,
   g: e: string, options?: Partial<Notification>) () => {
-    // This would be used with the context
+    // This would be used with the context;
     console.log('Success,
   notificatio: n:', { title, message, ...options })
 },

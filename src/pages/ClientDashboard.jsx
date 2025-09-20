@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react"
-import { JobsList } from "@/components/jobs/JobsList"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Link } from "react-router-dom"
+import { useState, useEffect   } from "react";
+import { JobsList   } from "@/components/jobs/JobsList";
+import { Button   } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { Link   } from "react-router-dom";
 import SEO from "@/components/SEO"
-import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents"
-import { useJobs } from "@/hooks/useJobs"
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps"
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard"
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard"
-import { useIsMobile } from "@/hooks/use-mobile"
+import { BriefcaseIcon, PlusCircle, Kanban   } from "lucide-react";
+import { ProtectedRoute   } from "@/components/ProtectedRoute";
+import { SuggestedTalents   } from "@/components/jobs/SuggestedTalents";
+import { useJobs   } from "@/hooks/useJobs";
+import { ClientOnboardingSteps   } from "@/components/onboarding/ClientOnboardingSteps";
+import { ActiveProjectsCard   } from "@/components/projects/ActiveProjectsCard";
+import { UpcomingInterviewsCard   } from "@/components/interviews/UpcomingInterviewsCard";
+import { useIsMobile   } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState("all")
     const { jobs, isLoading } = useJobs()
@@ -44,12 +44,12 @@ function ClientDashboardContent() {
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>
               <Link to="/hiring-tracker">
-                <Kanban className="h-4 w-4 mr-2"/> Hiring Pipeline
+                <Kanban className="h-4 w-4 mr-2"/> Hiring Pipeline;
               </Link>
             </Button>
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>
               <Link to="/post-job">
-                <PlusCircle className="h-4 w-4 mr-2"/> Post New Job
+                <PlusCircle className="h-4 w-4 mr-2"/> Post New Job;
               </Link>
             </Button>
           </div>
@@ -107,12 +107,12 @@ function ClientDashboardContent() {
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary"/>
-                  AI Talent Suggestions
+                  AI Talent Suggestions;
                 </h2>
                 
                 {selectedJobId ? (<SuggestedTalents jobId={selectedJobId}/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center">
                     <p className="text-muted-foreground">
-                      Select a job to see AI-matched talent suggestions
+                      Select a job to see AI-matched talent suggestions;
                     </p>
                   </div>)}
               </div>

@@ -1,6 +1,6 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { CheckCircle2, Globe, DollarSign, ExternalLink, Phone, Mail } from "lucide-react"
+import { SEO     } from "@/components/SEO";
+import { CheckCircle2, Globe, DollarSign, ExternalLink, Phone, Mail     } from "lucide-react";
 const,
   LandingPageGenerato: r: React.FC = () () => {
   return (
@@ -10,7 +10,7 @@ const,
         <h1 className="text-4xl,
   s: m:text-5xl font-extrabold tracking-tight">Landing Page Generator</h1>
         <p className="mt-4 max-w-3xl text-slate-300">
-          Create optimized, on-brand pages from a prompt or product brief. Built-in copy, image generation, forms
+          Create optimized, on-brand pages from a prompt or product brief. Built-in copy, image generation, forms;
           analytics, and deployment to your stack.
         </p>
 
@@ -31,7 +31,7 @@ const,
 
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-2 text-slate-200 font-semibold">
-            <DollarSign className="h-4 w-4" /> Pricing
+            <DollarSign className="h-4 w-4" /> Pricing;
           </div>
           <ul className="mt-3 grid gap-3,
   s: m: grid-cols-2 text-slate-300 text-sm">
@@ -62,4 +62,4 @@ const,
     </div>
   )
 }
-export default LandingPageGenerator
+export default LandingPageGenerator;

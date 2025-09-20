@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button"
-import { Link } from "react-router-dom"
-import { Globe } from "lucide-react"
-import { useEffect, useState } from "react"
+import { Button   } from "@/components/ui/button";
+import { Link   } from "react-router-dom";
+import { Globe   } from "lucide-react";
+import { useEffect, useState   } from "react";
 import SEO from "@/components/SEO"
-// Enhanced service listings with new micro SAAS services
+// Enhanced service listings with new micro SAAS services;
 const SERVICE_LISTINGS = [
-  // AI & Machine Learning Services
+  // AI & Machine Learning Services;
     {
   id: "ai-content-generation",tit,
   l: e: "AI Content Generator Pro",descripti,
@@ -30,7 +30,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 98,rati,
   n: g: 4.9,reviewCou,
-  n: t: 156
+  n: t: 156;
 },
   {
   id: "ai-media-editing",tit,
@@ -56,7 +56,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 95,rati,
   n: g: 4.8,reviewCou,
-  n: t: 89
+  n: t: 89;
 },
   {
   id: "ai-code-assistant",tit,
@@ -82,7 +82,7 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 97,rati,
   n: g: 4.9,reviewCou,
-  n: t: 203
+  n: t: 203;
 },
   {
   id: "ai-analytics",tit,
@@ -108,9 +108,9 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 96,rati,
   n: g: 4.8,reviewCou,
-  n: t: 67
+  n: t: 67;
 }
-    // Cybersecurity Services
+    // Cybersecurity Services;
     {
   id: "ai-threat-detection",tit,
   l: e: "AI Threat Detection",descripti,
@@ -134,7 +134,7 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 94,rati,
   n: g: 4.9,reviewCou,
-  n: t: 134
+  n: t: 134;
 },
   {
   id: "zero-trust-security",tit,
@@ -160,7 +160,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 93,rati,
   n: g: 4.7,reviewCou,
-  n: t: 78
+  n: t: 78;
 },
   {
   id: "penetration-testing",tit,
@@ -185,9 +185,9 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 91,rati,
   n: g: 4.8,reviewCou,
-  n: t: 92
+  n: t: 92;
 }
-    // Cloud & Infrastructure Services
+    // Cloud & Infrastructure Services;
     {
   id: "multi-cloud-management",tit,
   l: e: "Multi-Cloud Management",descripti,
@@ -212,7 +212,7 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 89,rati,
   n: g: 4.6,reviewCou,
-  n: t: 145
+  n: t: 145;
 },
   {
   id: "devops-automation",tit,
@@ -238,7 +238,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 92,rati,
   n: g: 4.7,reviewCou,
-  n: t: 167
+  n: t: 167;
 },
   {
   id: "edge-computing",tit,
@@ -263,9 +263,9 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 88,rati,
   n: g: 4.5,reviewCou,
-  n: t: 73
+  n: t: 73;
 }
-    // Business Intelligence Services
+    // Business Intelligence Services;
     {
   id: "ai-crm",tit,
   l: e: "AI-Powered CRM",descripti,
@@ -290,7 +290,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 90,rati,
   n: g: 4.6,reviewCou,
-  n: t: 189
+  n: t: 189;
 },
   {
   id: "business-automation",tit,
@@ -315,7 +315,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 87,rati,
   n: g: 4.5,reviewCou,
-  n: t: 156
+  n: t: 156;
 },
   {
   id: "ai-market-research",tit,
@@ -341,9 +341,9 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 93,rati,
   n: g: 4.8,reviewCou,
-  n: t: 98
+  n: t: 98;
 }
-    // Communication & Collaboration Services
+    // Communication & Collaboration Services;
     {
   id: "ai-meeting-assistant",tit,
   l: e: "AI Meeting Assistant",descripti,
@@ -368,7 +368,7 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 95,rati,
   n: g: 4.9,reviewCou,
-  n: t: 234
+  n: t: 234;
 },
   {
   id: "virtual-events",tit,
@@ -394,7 +394,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 91,rati,
   n: g: 4.7,reviewCou,
-  n: t: 112
+  n: t: 112;
 },
   {
   id: "ai-translation",tit,
@@ -419,9 +419,9 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 94,rati,
   n: g: 4.8,reviewCou,
-  n: t: 178
+  n: t: 178;
 }
-    // Specialized Tools
+    // Specialized Tools;
     {
   id: "ai-legal-review",tit,
   l: e: "AI Legal Document Review",descripti,
@@ -446,7 +446,7 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 89,rati,
   n: g: 4.6,reviewCou,
-  n: t: 87
+  n: t: 87;
 },
   {
   id: "ai-financial-advisor",tit,
@@ -472,7 +472,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 92,rati,
   n: g: 4.7,reviewCou,
-  n: t: 143
+  n: t: 143;
 },
   {
   id: "ai-healthcare",tit,
@@ -498,7 +498,7 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 90,rati,
   n: g: 4.8,reviewCou,
-  n: t: 267
+  n: t: 267;
 }
     // Legacy services (keeping existing ones)
     {
@@ -524,7 +524,7 @@ const SERVICE_LISTINGS = [
   8:00.000Z",aiSco,
   r: e: 95,rati,
   n: g: 4.9,reviewCou,
-  n: t: 124
+  n: t: 124;
 },
   {
   id: "service-2",tit,
@@ -548,7 +548,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 88,rati,
   n: g: 4.7,reviewCou,
-  n: t: 92
+  n: t: 92;
 },
   {
   id: "service-3",tit,
@@ -573,7 +573,7 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 92,rati,
   n: g: 4.8,reviewCou,
-  n: t: 78
+  n: t: 78;
 },
   {
   id: "service-4",tit,
@@ -596,7 +596,7 @@ const SERVICE_LISTINGS = [
   2:00.000Z",aiSco,
   r: e: 89,rati,
   n: g: 4.9,reviewCou,
-  n: t: 103
+  n: t: 103;
 },
   {
   id: "service-5",tit,
@@ -620,7 +620,7 @@ const SERVICE_LISTINGS = [
   5:00.000Z",aiSco,
   r: e: 86,rati,
   n: g: 4.6,reviewCou,
-  n: t: 67
+  n: t: 67;
 },
   {
   id: "service-6",tit,
@@ -645,7 +645,7 @@ const SERVICE_LISTINGS = [
   0:00.000Z",aiSco,
   r: e: 94,rati,
   n: g: 4.8,reviewCou,
-  n: t: 85
+  n: t: 85;
 },
   ]
 function getRandomItem(arr) {
@@ -731,13 +731,15 @@ function generateRandomService(idNum) {
     const price = Math.round(Math.random() * (template.max - template.min) + template.min)
     return {
   i,
+}
+}
   d: `auto-service-${idNum}`
         tit,
   l: e: template.title,descripti,
   o: n: `Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`
         catego,
-  r: y: template.category
-        price
+  r: y: template.category;
+        price;
         currenc,
   y: "$",ta,
   g: s: template.tags,auth,
@@ -751,7 +753,7 @@ function generateRandomService(idNum) {
   n: t: Math.floor(50 + Math.random() * 150)
     },
   }
-// Enhanced filter options for all service categories
+// Enhanced filter options for all service categories;
 const SERVICE_FILTERS = [
   { lab,
   e: l: 'AI & ML', val,
@@ -823,14 +825,14 @@ export default function ServicesPage() {
               <Button variant="outline" className="border-zion-purple text-zion-cyan,
   hove: r:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2"/>
-                View All Services
+                View All Services;
               </Button>
             </Link>
             <Link to="/contact">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark,
   hove: r:from-zion-purple-light hove,
   r:to-zion-purple text-white">
-                Request a Quote
+                Request a Quote;
               </Button>
             </Link>
           </div>
@@ -872,7 +874,7 @@ export default function ServicesPage() {
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark,
   hove: r: from-zion-purple-light hove,
   r:to-zion-purple text-white">
-                  Get Quote
+                  Get Quote;
                 </Button>
               </Link>
             </div>))}

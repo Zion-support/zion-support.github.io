@@ -1,8 +1,8 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Search
+  Search;
   Filter,
   Star,
   TrendingUp,
@@ -11,36 +11,38 @@ import {
   Brain,
   Globe,
   Cpu,
-  Lock
-  ArrowRight
-  CheckCircle
-  DollarSign
-  Clock
-  Users
-  Target
-  Award
-  Sparkles
-  Rocket
-  BarChart3
-  MessageSquare
-  Mail
-  Database
-  Network
-  Cloud
-  Smartphone
-  Palette
-  Leaf
-  Code
-  Wallet
-  Box
-  Phone
-  Mail as MailIcon
-  MapPin
-  Globe as GlobeIcon
-  ExternalLink
-} from "lucide-react"
-import { SEO } from "../components/SEO"
-import { INNOVATIVE_SERVICES_2025 } from "../data/innovativeServices2025"
+  Lock;
+  ArrowRight;
+  CheckCircle;
+  DollarSign;
+  Clock;
+  Users;
+  Target;
+  Award;
+  Sparkles;
+  Rocket;
+  BarChart3;
+  MessageSquare;
+  Mail;
+  Database;
+  Network;
+  Cloud;
+  Smartphone;
+  Palette;
+  Leaf;
+  Code;
+  Wallet;
+  Box;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
+  Globe as GlobeIcon;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
+import { INNOVATIVE_SERVICES_2025   } from "../data/innovativeServices2025";
 const,
   ComprehensiveServicesLanding202: 5: React.FC = () () => {
   const getCategoryIcon = (catego,
@@ -104,15 +106,15 @@ const,
   o: n: getCategoryIcon(category),col,
   o: r: getCategoryColor(category)
   }))
-  const totalServices = INNOVATIVE_SERVICES_2025.length
+  const totalServices = INNOVATIVE_SERVICES_2025.length;
 const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0)
   const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) () => {
   const roi = parseInt(service.roi.replace('%', ''))
-    return sum + roi
-}, 0) / totalServices
+    return sum + roi;
+}, 0) / totalServices;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Comprehensive Services Landing 2025 - Zion Tech Group"
         description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
       />
@@ -121,7 +123,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   }
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -140,14 +142,14 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Complete Technology
+              Complete Technology;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400">
-                Solutions Portfolio
+                Solutions Portfolio;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Explore our comprehensive suite of innovative technology services designed to transform 
+              Explore our comprehensive suite of innovative technology services designed to transform;
               your business operations and drive digital innovation across all industries.
             </p>
             
@@ -171,21 +173,21 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/innovative-services-showcase-2025"
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg,
   hove: r:from-blue-400,
   hove: r:to-purple-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-blue-500/20";"
               >
-                Explore All Services
+                Explore All Services;
               </Link>
-              <Link
+              <Link;
                 to="/comprehensive-pricing-guide-2027"
                 className="className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hove,
   r:bg-blue-400/10 transition-all duration-200";"
               >
-                View Pricing Guide
+                View Pricing Guide;
               </Link>
             </div>
           </motion.div>
@@ -199,10 +201,10 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-              Service Categories
+              Service Categories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Browse our services by category to find the perfect solution for your business needs
+              Browse our services by category to find the perfect solution for your business needs;
             </p>
           </div>
 
@@ -210,7 +212,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {servicesByCategory.map((categoryData, index) => (
-  <motion.div
+  <motion.div;
                 key={categoryData.category},
   }
                 initial={ opaci,
@@ -225,7 +227,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   }
                 className="className="group";"
               >
-                <Link
+                <Link;
                   to="/innovative-services-showcase-2025"
                   className="className="block bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50,
   hove: r: border-blue-500/50 transition-all duration-300,
@@ -250,7 +252,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
                     </h3>
                     
                     <p className="text-gray-300 mb-6">
-                      {categoryData.services.length} innovative services designed to transform your {categoryData.category.toLowerCase()} operations
+                      {categoryData.services.length} innovative services designed to transform your {categoryData.category.toLowerCase()} operations;
                     </p>
                     
                     <div className="space-y-3 mb-6">
@@ -262,7 +264,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
                       ))},
   {categoryData.services.length > 3 && (
   <div className="text-sm text-blue-400">
-                          +{categoryData.services.length - 3} more services
+                          +{categoryData.services.length - 3} more services;
                         </div>
                       )}
                     </div>
@@ -288,10 +290,10 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-              Featured Services
+              Featured Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our most popular and innovative solutions that are transforming businesses worldwide
+              Our most popular and innovative solutions that are transforming businesses worldwide;
             </p>
           </div>
 
@@ -299,7 +301,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -368,7 +370,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
                   </div>
                 </div>
 
-                <Link
+                <Link;
                   to="/innovative-services-showcase-2025"
                   className="className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg,
   hove: r: from-blue-400,
@@ -377,7 +379,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   e: r:shadow-blue-500/30 text-center block";"
                 >
                   <span className="flex items-center justify-center">
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4 ml-2 group-hove,
   r:translate-x-1 transition-transform" />
                   </span>
@@ -387,14 +389,14 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
           </div>
 
           <div className="text-center mt-12">
-            <Link
+            <Link;
               to="/innovative-services-showcase-2025"
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg,
   hove: r: from-blue-400,
   hove: r:to-purple-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-blue-500/20";"
             >
-              View All Services
+              View All Services;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
@@ -411,8 +413,8 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven business expertise to deliver 
-              solutions that drive real results and measurable ROI
+              We combine cutting-edge technology with proven business expertise to deliver;
+              solutions that drive real results and measurable ROI;
             </p>
           </div>
 
@@ -445,7 +447,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   o: n: 'Bank-grade security with compliance certifications and best practices'
 },
   ].map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -475,7 +477,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   }
       <section className="px-4 pb-20">
         <div className="max-w-4xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -491,7 +493,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our team of technology experts is ready to help you select the perfect solution 
+              Our team of technology experts is ready to help you select the perfect solution;
               and provide a customized implementation plan for your business needs.
             </p>
             
@@ -513,7 +515,7 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
 
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg,
@@ -521,15 +523,15 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   hove: r:to-purple-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-blue-500/20";"
               >
-                Call Sales Team
+                Call Sales Team;
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hove,
   r:bg-blue-400/10 transition-all duration-200";"
               >
-                Email Sales
+                Email Sales;
               </a>
             </div>
             
@@ -546,4 +548,4 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
     </div>
   )
 }
-export default ComprehensiveServicesLanding2025
+export default ComprehensiveServicesLanding2025;

@@ -1,29 +1,33 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Atom
+  Atom;
   Cpu,
   Zap,
   Brain,
   Users,
   Globe,
-  Database
-  Network
-  Lock
-  Eye
-  Target
-  Award
-  Star
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  Rocket
-  Microscope
-  TestTube
-} from "lucide-react"
+  Database;
+  Network;
+  Lock;
+  Eye;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Rocket;
+  Microscope;
+  TestTube;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   QuantumComputingElit: e: React.FC = () () => {
   const features = [
@@ -98,7 +102,7 @@ const,
         "Quantum consulting"
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -170,7 +174,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -188,7 +192,7 @@ const,
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Quantum Computing Elite
+              Quantum Computing Elite;
             </h1>
             <p className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -197,7 +201,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg,
@@ -205,17 +209,17 @@ const,
   hove: r:to-cyan-600 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Access Quantum Computing
+                Access Quantum Computing;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hove,
   r:bg-zion-slate-light transition-all duration-300";"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call Quantum Team
+                Call Quantum Team;
               </a>
             </div>
           </motion.div>
@@ -228,7 +232,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -244,10 +248,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Revolutionary Quantum Capabilities
+              Revolutionary Quantum Capabilities;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our quantum computing platform provides access to the most advanced quantum technologies
+              Our quantum computing platform provides access to the most advanced quantum technologies;
               enabling breakthroughs in science, technology, and business.
             </p>
           </motion.div>
@@ -256,7 +260,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -292,7 +296,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -308,10 +312,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Applications
+              Quantum Computing Applications;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how quantum computing is revolutionizing industries and solving previously 
+              Discover how quantum computing is revolutionizing industries and solving previously;
               impossible problems across various domains.
             </p>
           </motion.div>
@@ -320,7 +324,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {quantumApplications.map((app, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -352,7 +356,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -368,10 +372,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Quantum Technologies
+              Advanced Quantum Technologies;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform supports multiple quantum computing approaches, ensuring optimal performance 
+              Our platform supports multiple quantum computing approaches, ensuring optimal performance;
               for different types of computational problems.
             </p>
           </motion.div>
@@ -379,7 +383,7 @@ const,
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-6">
             {quantumTechnologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -413,7 +417,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -429,10 +433,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Plans
+              Quantum Computing Plans;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the quantum computing plan that fits your research and business needs. All plans include 
+              Choose the quantum computing plan that fits your research and business needs. All plans include;
               access to our quantum infrastructure and expert support.
             </p>
           </motion.div>
@@ -440,7 +444,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -457,7 +461,7 @@ const,
   c: e: true },
   }
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
-  plan.popular 
+  plan.popular;
                     ? 'border-blue-500 shadow-2xl shadow-blue-500/25' 
                     : 'border-zion-slate-light'
 }`}
@@ -465,7 +469,7 @@ const,
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -488,7 +492,7 @@ const,
                   ))}
                 </ul>
 
-                <a
+                <a;
                   href="htt,
   p: s: //ziontechgroup.com/contact"
                   className="className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg,
@@ -496,7 +500,7 @@ const,
   hove: r:to-cyan-600 transition-all duration-300 transform hove,
   r:scale-105";"
                 >
-                  Get Quantum Access
+                  Get Quantum Access;
                 </a>
               </motion.div>
             ))}
@@ -510,7 +514,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -529,7 +533,7 @@ const,
               Ready to Access Quantum Computing?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get in touch with our quantum computing experts to discuss how quantum computing can 
+              Get in touch with our quantum computing experts to discuss how quantum computing can;
               accelerate your research and business objectives.
             </p>
           </motion.div>
@@ -541,13 +545,13 @@ const,
                 <Phone className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Call Quantum Team</h3>
-              <a 
+              <a;
                 href="t,
   e: l:+13024640950" 
                 className="className="text-zion-slate-light,
   hove: r:text-white transition-colors duration-300";"
               >
-                +1 (302) 464-0950
+                +1 (302) 464-0950;
               </a>
             </div>
             
@@ -556,13 +560,13 @@ const,
                 <Mail className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email Quantum Team</h3>
-              <a 
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com" 
                 className="className="text-zion-slate-light hove,
   r:text-white transition-colors duration-300";"
               >
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             
@@ -573,13 +577,13 @@ const,
               <h3 className="text-xl font-semibold text-white mb-2">Visit Quantum Center</h3>
               <p className="text-zion-slate-light">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown, DE 19709;
               </p>
             </div>
           </div>
 
           <div className="text-center">
-            <a
+            <a;
               href="htt,
   p: s: //ziontechgroup.com/contact"
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg,
@@ -587,7 +591,7 @@ const,
   hove: r:to-cyan-600 transition-all duration-300 transform hove,
   r:scale-105";"
             >
-              Schedule Quantum Demo
+              Schedule Quantum Demo;
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </div>
@@ -604,30 +608,30 @@ const,
             © 2024 Zion Tech Group. All rights reserved.
           </p>
           <div className="flex justify-center space-x-6">
-            <a 
+            <a;
               href="htt,
   p: s://ziontechgroup.com" 
               className="className="text-zion-slate-light,
   hove: r:text-white transition-colors duration-300";"
             >
-              Visit Website
+              Visit Website;
               <ExternalLink className="inline ml-1 h-4 w-4" />
             </a>
-            <a 
+            <a;
               href="htt,
   p: s://ziontechgroup.com/privacy" 
               className="className="text-zion-slate-light,
   hove: r:text-white transition-colors duration-300";"
             >
-              Privacy Policy
+              Privacy Policy;
             </a>
-            <a 
+            <a;
               href="htt,
   p: s://ziontechgroup.com/terms" 
               className="className="text-zion-slate-light hove,
   r:text-white transition-colors duration-300";"
             >
-              Terms of Service
+              Terms of Service;
             </a>
           </div>
         </div>
@@ -635,4 +639,4 @@ const,
     </div>
   )
 }
-export default QuantumComputingElite
+export default QuantumComputingElite;

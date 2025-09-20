@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Search, Filter, Star, Users, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, CheckCircle, Play, Pause, Volume2, VolumeX } from "lucide-react"
-import { SEO } from "@/components/SEO"
-import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from "../../data/revolutionary-2029-advanced-micro-saas-services"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Search, Filter, Star, Users, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, CheckCircle, Play, Pause, Volume2, VolumeX   } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES   } from "../../data/revolutionary-2029-advanced-micro-saas-services";
 export default function RevolutionaryServices2029() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -17,8 +18,8 @@ export default function RevolutionaryServices2029() {
   const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
@@ -30,10 +31,10 @@ export default function RevolutionaryServices2029() {
       case 'price-high':
         return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''))
       case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'customers':
         return b.customers - a.customers,
-  defaul: t: return 0
+  defaul: t: return 0;
 },
   })
   const togglePlay = () => setIsPlaying(!isPlaying)
@@ -55,7 +56,7 @@ export default function RevolutionaryServices2029() {
   }
       <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
-  <motion.div
+  <motion.div;
             key={i},
   }
             className="className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20";"
@@ -71,7 +72,7 @@ export default function RevolutionaryServices2029() {
   durati,
   o: n: Math.random() * 10 + 10,repe,
   a: t: Infinity,del,
-  a: y: Math.random() * 5
+  a: y: Math.random() * 5;
 },
   }
             style={
@@ -86,7 +87,7 @@ export default function RevolutionaryServices2029() {
       </div>
 
       <div className="relative z-10">
-        <SEO 
+        <SEO;
           title="Revolutionary 2029 Advanced Micro SAAS Services | Zion Tech Group"
           description="Discover our cutting-edge 2029 micro SAAS services featuring AI automation, quantum computing, cybersecurity, and more. Transform your business with next-generation technology."
           keywords="2029 micro SAAS, AI automation, quantum computing, cybersecurity, business intelligence, Zion Tech Group"
@@ -98,7 +99,7 @@ export default function RevolutionaryServices2029() {
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -112,22 +113,22 @@ export default function RevolutionaryServices2029() {
             >
               <h1 className="text-5xl,
   m: d: text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-                Revolutionary 2029
+                Revolutionary 2029;
               </h1>
               <h2 className="text-3xl,
   m: d:text-5xl font-bold text-white mb-6">
-                Advanced Micro SAAS Services
+                Advanced Micro SAAS Services;
               </h2>
               <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Experience the future of business technology with our cutting-edge AI automation
+                Experience the future of business technology with our cutting-edge AI automation;
                 quantum computing, and next-generation micro SAAS solutions.
               </p>
             </motion.div>
 
             {/* Audio Controls */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -142,7 +143,7 @@ export default function RevolutionaryServices2029() {
   }
               className="className="flex items-center justify-center space-x-4 mb-8";"
             >
-              <button
+              <button;
                 onClick={onClick={togglePlay},
   },
   }
@@ -153,7 +154,7 @@ export default function RevolutionaryServices2029() {
               >
                 {isPlaying ? <Pause size={24} /> : <Play size={24} />}
               </button>
-              <button
+              <button;
                 onClick={onClick={toggleMute},
   },
   }
@@ -164,7 +165,7 @@ export default function RevolutionaryServices2029() {
               >
                 {volume > 0 ? <Volume2 size={24} /> : <VolumeX size={24} />}
               </button>
-              <input
+              <input;
                 type="range"
                 min="0"
                 max="1"
@@ -179,7 +180,7 @@ export default function RevolutionaryServices2029() {
 
             {/* Stats */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -241,7 +242,7 @@ export default function RevolutionaryServices2029() {
                 <div className="flex-1">
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
+                    <input;
                       type="text"
                       placeholder="Search revolutionary services..."
                       value={searchQuery},
@@ -260,7 +261,7 @@ export default function RevolutionaryServices2029() {
                 {/* Category Filter */},
   }
                 <div className="flex-shrink-0">
-                  <select
+                  <select;
                     value={selectedCategory},
   }
                     onChange={(e) => setSelectedCategory(e.target.value)},
@@ -283,7 +284,7 @@ export default function RevolutionaryServices2029() {
                 {/* Sort */},
   }
                 <div className="flex-shrink-0">
-                  <select
+                  <select;
                     value={sortBy},
   }
                     onChange={(e) => setSortBy(e.target.value)},
@@ -319,7 +320,7 @@ export default function RevolutionaryServices2029() {
   g:grid-cols-3 gap-8">
               <AnimatePresence>
                 {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                     key={service.id},
   }
                     initial={ opaci,
@@ -346,7 +347,7 @@ export default function RevolutionaryServices2029() {
   },
   {service.popular && (
   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
-                          POPULAR
+                          POPULAR;
                         </div>
                       )},
   {/* Service Icon */},
@@ -394,7 +395,7 @@ export default function RevolutionaryServices2029() {
   {service.features.length > 3 && (
   <div className="text-purple-400 text-sm cursor-pointer,
   hove: r:underline">
-                              +{service.features.length - 3} more features
+                              +{service.features.length - 3} more features;
                             </div>
                           )}
                         </div>
@@ -446,7 +447,7 @@ export default function RevolutionaryServices2029() {
                       {/* CTA Button */},
   }
                       <div className="flex space-x-3">
-                        <a
+                        <a;
                           href={service.link},
   }
                           className="className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 px-4 rounded-xl font-semibold,
@@ -454,7 +455,7 @@ export default function RevolutionaryServices2029() {
   hove: r:to-pink-700 transition-all duration-300,
   transform: hover:scale-105";"
                         >
-                          Learn More
+                          Learn More;
                         </a>
                         <button className="px-4 py-3 border border-purple-500 text-purple-400 rounded-xl,
   hove: r:bg-purple-500 hove,
@@ -486,7 +487,7 @@ export default function RevolutionaryServices2029() {
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -509,22 +510,22 @@ export default function RevolutionaryServices2029() {
               </p>
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <a
+                <a;
                   href="/contact"
                   className="className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:from-purple-700,
   hove: r:to-pink-700 transition-all duration-300,
   transform: hover:scale-105";"
                 >
-                  Get Started Today
+                  Get Started Today;
                 </a>
-                <a
+                <a;
                   href="/request-quote"
                   className="className="border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:bg-purple-500,
   hove: r:text-white transition-all duration-300";"
                 >
-                  Request Custom Quote
+                  Request Custom Quote;
                 </a>
               </div>
             </motion.div>
@@ -535,20 +536,28 @@ export default function RevolutionaryServices2029() {
       <style jsx>{`
         .animate-blob {
   animatio,
-  n: blob 7s infinite
+  n: blob 7s infinite;
+}
+}
 }
         .animation-delay-2000 {
   animation-del,
-  a: y: 2s
+  a: y: 2s;
+}
+}
 }
         .animation-delay-4000 {
   animation-del,
-  a: y: 4s
+  a: y: 4s;
+}
+}
 }
         @keyframes blob {
   0% {
   transfo,
   r: m: translate(0px, 0px) scale(1)
+}
+}
           }
           33% {
   transfo,
@@ -565,34 +574,40 @@ export default function RevolutionaryServices2029() {
   }
         .line-clamp-3 {
   displ,
-  a: y: -webkit-box
+  a: y: -webkit-box;
           -webkit-line-cla,
-  m: p: 3
+  m: p: 3;
           -webkit-box-orien,
   t: vertical,overfl,
-  o: w: hidden
+  o: w: hidden;
+}
+}
 }
         .slid,
   e: r: :-webkit-slider-thumb {
   appearanc,
   e: none,heig,
   h: t: 20px,wid,
-  t: h: 20px
+  t: h: 20px;
           border-radiu,
   s: 50%,backgrou,
   n: d: #8b5cf6,curs,
-  o: r: pointer
+  o: r: pointer;
+}
+}
 }
         .slid,
   e: r: :-moz-range-thumb {
   heigh,
   t: 20px,wid,
-  t: h: 20px
+  t: h: 20px;
           border-radiu,
   s: 50%,backgrou,
   n: d: #8b5cf6,curs,
   o: r: pointer,bord,
-  e: r: none
+  e: r: none;
+}
+}
 }
       `}</style>
     </div>

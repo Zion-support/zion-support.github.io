@@ -1,14 +1,14 @@
-import { loadStripe, Stripe } from "@stripe/stripe-js"
+import { loadStripe, Stripe   } from "@stripe/stripe-js";
 let,
   stripePromis: e: Promise<Stripe | null>
 export function getStripe() {
   if (if (!stripePromise) {
   ) {
     const key =
-      import.meta.env.PROD
+      import.meta.env.PROD;
         ? (import.meta.env['VITE_STRIPE_PUBLISHABLE_KEY'] as string)
         : (import.meta.env['VITE_STRIPE_TEST_KEY'] as string)
     stripePromise = loadStripe(key)
   }
-  return stripePromise
+  return stripePromise;
 }

@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect   } from "react";
 import SEO from "@/components/SEO"
-import { TalentCard } from "@/components/talent/TalentCard"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/components/ui/use-toast"
-import { useNavigate } from "react-router-dom"
+import { TalentCard   } from "@/components/talent/TalentCard";
+import { useAuth   } from "@/hooks/useAuth";
+import { supabase   } from "@/integrations/supabase/client";
+import { toast   } from "@/components/ui/use-toast";
+import { useNavigate   } from "react-router-dom";
 export default function SavedTalentsPage() {
   const { user } = useAuth()
     const [savedTalents, setSavedTalents] = useState([])
@@ -17,35 +17,37 @@ export default function SavedTalentsPage() {
   if (if (!user) {
   ) {
                     console.warn("User not authenticated.")
-                    return
+                    return;
 }
-                const { data, error } = await supabase
+}
+}
+                const { data, error } = await supabase;
                     .from("saved_talents")
                     .select(`
             talent_profile (
-  id
-              user_id
-              full_name
-              professional_title
-              profile_picture_url
-              hourly_rate
-              bio
-              years_experience
-              key_projects
-              skills
-              location
-              availability
-              is_verified
+  id;
+              user_id;
+              full_name;
+              professional_title;
+              profile_picture_url;
+              hourly_rate;
+              bio;
+              years_experience;
+              key_projects;
+              skills;
+              location;
+              availability;
+              is_verified;
 )
           `)
                     .eq("user_id", user.id)
                 if (if (error) {
   ) {
-                    throw error
+                    throw error;
 }
                 if (if (data) {
   ) {
-                    // Extract talent profiles and convert to TalentProfile type
+                    // Extract talent profiles and convert to TalentProfile type;
 const talentProfiles = data.map(item => item.talent_profile)
                     setSavedTalents(talentProfiles)
                 },
@@ -62,6 +64,8 @@ const talentProfiles = data.map(item => item.talent_profile)
             }
             finally {
   setIsLoading(false)
+}
+}
             },
   }
         fetchSavedTalents()
@@ -83,19 +87,21 @@ const talentProfiles = data.map(item => item.talent_profile)
   if (if (!user) {
   ) {
                 console.warn("User not authenticated.")
-                return
+                return;
+}
+}
 }
             if (if (isCurrentlySaved) {
   ) {
-                // Remove from saved talents
-const { error } = await supabase
+                // Remove from saved talents;
+const { error } = await supabase;
                     .from('saved_talents')
                     .delete()
                     .eq('user_id', user.id)
                     .eq('talent_id', talentId)
                 if (if (error) {
   ) {
-                    throw error
+                    throw error;
 }
                 setSavedTalents(prevTalents => prevTalents.filter(talent => talent.id !== talentId))
                 toast({
@@ -105,8 +111,10 @@ const { error } = await supabase
 })
             }
             else {
-                // Add to saved talents
-const { error } = await supabase
+  // Add to saved talents;
+}
+}
+const { error } = await supabase;
                     .from('saved_talents')
                     .insert([{ user_,
   i: d: user.id, talent_,
@@ -114,12 +122,15 @@ const { error } = await supabase
   ])
                 if (if (error) {
   ) {
-                    throw error
+                    throw error;
 }
-                // Fetch the updated talent profile and add it to the list
-const { da,
+                // Fetch the updated talent profile and add it to the list;
+const {
+  da,
   t: a: talentData, err,
-  o: r: talentError } = await supabase
+}
+}
+  o: r: talentError } = await supabase;
                     .from('talent_profiles')
                     .select('*')
                     .eq('id', talentId)
@@ -134,7 +145,7 @@ const { da,
   o: n: "Failed to update saved talents. Please try again later.",varia,
   n: t: "destructive"
 })
-                    return
+                    return;
 }
                 if (if (talentData) {
   ) {

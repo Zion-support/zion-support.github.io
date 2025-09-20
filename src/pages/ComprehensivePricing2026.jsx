@@ -1,12 +1,13 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
-// import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services"
-// import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
+// import { ultimateInnovativeServices2026   } from "../data/2026-ultimate-innovative-services";
+// import { enterpriseITInfrastructureServices2026   } from "../data/2026-enterprise-it-infrastructure-services";
 const ComprehensivePricing2026 = () () => {
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [billingCycle, setBillingCycle] = useState('monthly')
-    // Combine all services
+    // Combine all services;
 const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026],
   ]
     const categories = [
@@ -27,13 +28,13 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
             case 'Specialized Industry':
                 return allServices.filter(service => ['Supply Chain ManagementFinancial Technology', 'Healthcare TechnologyLegal Technology', 'Blockchain TechnologyInternet of Things', 'Quantum Computing'].includes(service.category))
             defau,
-  l: t: return allServices
+  l: t: return allServices;
 },
   }
     const filteredServices = getCategoryServices(selectedCategory)
     const getAnnualPrice = (monthlyPrice) () => {
   const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''))
-        const annualPrice = price * 12 * 0.8, // 20% discount for annual
+        const annualPrice = price * 12 * 0.8, // 20% discount for annual;
         return `$${annualPrice.toLocaleString()}`
 }
     const const containerVariants = {
@@ -48,7 +49,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -86,9 +87,9 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   } transition={ durati,
   o: n: 0.8 },
   }>
-            Comprehensive
+            Comprehensive;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Pricing 2026
+              {" "}Pricing 2026;
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={ opaci,
@@ -99,7 +100,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   o: n: 0.8, del,
   a: y: 0.2 },
   }>
-            Transparent pricing for all our innovative services. Choose the plan that fits your business needs 
+            Transparent pricing for all our innovative services. Choose the plan that fits your business needs;
             with flexible billing options and enterprise-grade support.
           </motion.p>
 
@@ -137,15 +138,15 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   m: d: grid-cols-2 gap-4 text-sm">
               <div>
                 <strong>Mobi,
-  l: e:</strong> +1 302 464 0950
+  l: e:</strong> +1 302 464 0950;
               </div>
               <div>
                 <strong>Ema,
-  i: l:</strong> kleber@ziontechgroup.com
+  i: l:</strong> kleber@ziontechgroup.com;
               </div>
               <div>
                 <strong>Addre,
-  s: s:</strong> 364 E Main St STE 1008 Middletown DE 19709
+  s: s:</strong> 364 E Main St STE 1008 Middletown DE 19709;
               </div>
               <div>
                 <strong>Websi,
@@ -165,7 +166,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   g:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map(category => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${selectedCategory === category
+            {categories.map(category => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${selectedCategory === category;
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
                 : 'bg-white/10 text-gray-300,
   hove: r: bg-white/20 hove,
@@ -201,7 +202,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-4xl">{service.icon}</div>
                     {service.popular && (<span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                        Popular
+                        Popular;
                       </span>)}
                   </div>
 
@@ -226,7 +227,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   }
                     </div>
                     {billingCycle === 'annual' && (<div className="text-sm text-green-400 mt-1">
-                        Save 20% with annual billing
+                        Save 20% with annual billing;
                       </div>)}
                   </div>
 
@@ -292,12 +293,12 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
                     <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500,
   hove: r: from-cyan-600,
   hove: r:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center">
-                      Learn More
+                      Learn More;
                     </a>
                     <Link to="/contact" className="flex-1 bg-white/10,
   hove: r:bg-white/20 text-white text-sm font-semibold py-2 px-4 rounded-lg border border-white/30 hove,
   r:border-cyan-400/50 transition-all duration-300 text-center">
-                      Get Quote
+                      Get Quote;
                     </Link>
                   </div>
                 </div>
@@ -338,7 +339,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
               Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Solutions</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Need custom solutions or enterprise-grade implementations? We offer tailored packages 
+              Need custom solutions or enterprise-grade implementations? We offer tailored packages;
               with dedicated support, custom development, and white-label options.
             </p>
             
@@ -406,7 +407,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   hove: r: shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30,
   hove: r:border-cyan-500/60">
                   <span className="text-xl">🚀</span>
-                  Get Custom Quote
+                  Get Custom Quote;
                   <span className="text-xl">→</span>
                 </Link>
               </motion.div>
@@ -420,7 +421,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   hove: r:border-cyan-400/50 hove,
   r:bg-white/20 transition-all duration-300 shadow-lg">
                   <span className="text-xl">📞</span>
-                  Call Now
+                  Call Now;
                 </a>
               </motion.div>
             </div>
@@ -457,4 +458,4 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
       </section>
     </div>)
 }
-export default ComprehensivePricing2026
+export default ComprehensivePricing2026;

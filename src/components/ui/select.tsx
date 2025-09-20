@@ -2,19 +2,23 @@ import React from "react"
 interface SelectProps {
   childr,
   e:  ,
-  n: React.ReactNode
+  n: React.ReactNode;
   className?: string,
   value?: string,
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void
-  disabled?: boolean
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  disabled?: boolean;
+}
+}
+}
+}
 }
 
 export function Select({
   children,
   className = ''
-  value
-  onChange
-  disabled = false
+  value;
+  onChange;
+  disabled = false;
 }: SelectProps) {
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visib,
   l:  ,
@@ -30,7 +34,7 @@ export function Select({
   d:cursor-not-allowed disable,
   d:opacity-50'
   return (
-    <select
+    <select;
       className={`${baseClasses} ${className}`}
       value={value}
       onChange={onChange}
@@ -46,7 +50,11 @@ interface SelectItemProps {
   e:  ,
   n: React.ReactNode,val,
   u:  ,
-  e: string
+  e: string;
+}
+}
+}
+}
 }
 
 export function SelectItem({ children, value }: SelectItemProps) {
@@ -60,8 +68,12 @@ export function SelectItem({ children, value }: SelectItemProps) {
 interface SelectTriggerProps {
   childr,
   e:  ,
-  n: React.ReactNode
-  className?: string
+  n: React.ReactNode;
+  className?: string;
+}
+}
+}
+}
 }
 
 export function SelectTrigger({ children, className = '' }: SelectTriggerProps) {
@@ -87,6 +99,10 @@ export function SelectTrigger({ children, className = '' }: SelectTriggerProps) 
 interface SelectValueProps {
   placeholder?: string,
 }
+}
+}
+}
+}
 
 export function SelectValue({ placeholder }: SelectValueProps) {
   return <span className="text-sm">{placeholder || 'Select an option'}</span>
@@ -95,7 +111,11 @@ export function SelectValue({ placeholder }: SelectValueProps) {
 interface SelectContentProps {
   childr,
   e:  ,
-  n: React.ReactNode
+  n: React.ReactNode;
+}
+}
+}
+}
 }
 
 export function SelectContent({ children }: SelectContentProps) {

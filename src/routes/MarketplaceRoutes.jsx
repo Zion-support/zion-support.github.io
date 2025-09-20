@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
+import { Route, Routes   } from "react-router-dom";
+import { ProtectedRoute   } from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace"
 import Categories from "@/pages/Categories"
 import CategoryDetail from "@/pages/CategoryDetail"
@@ -87,4 +87,4 @@ const MarketplaceRoutes = () () => {
           </ProtectedRoute>}/>
     </Routes>)
 }
-export default MarketplaceRoutes
+export default MarketplaceRoutes;

@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { CheckCircle, TrendingUp, Target, Zap, BarChart3, Globe, Smartphone, Users, Shield, Brain, Search, PenTool } from "lucide-react"
-import { SEO } from "@/components/SEO"
+import { motion     } from "framer-motion";
+import { CheckCircle, TrendingUp, Target, Zap, BarChart3, Globe, Smartphone, Users, Shield, Brain, Search, PenTool     } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function AIContentOptimizer() {
   const features = [
   {
@@ -65,7 +65,7 @@ export default function AIContentOptimizer() {
 ]
       ct,
   a: "Start Free Trial",popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -83,7 +83,7 @@ export default function AIContentOptimizer() {
 ]
       ct,
   a: "Start Free Trial",popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -101,7 +101,7 @@ export default function AIContentOptimizer() {
 ]
       ct,
   a: "Contact Sales",popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const benefits = [
@@ -159,7 +159,7 @@ export default function AIContentOptimizer() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group"
         description="Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today."
         keywords="AI content optimization, content SEO, content analytics, content performance, AI content creation"
@@ -174,7 +174,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 relative z-10">
-          <motion.div 
+          <motion.div;
             className="className="text-center";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -188,7 +188,7 @@ export default function AIContentOptimizer() {
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
-              AI Content Optimizer
+              AI Content Optimizer;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
@@ -200,11 +200,11 @@ export default function AIContentOptimizer() {
   hove: r:from-green-700,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
                 <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </motion.div>
@@ -217,7 +217,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -234,10 +234,10 @@ export default function AIContentOptimizer() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Powered by Advanced AI
+              Powered by Advanced AI;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI engine analyzes millions of content pieces to optimize yours for maximum impact
+              Our AI engine analyzes millions of content pieces to optimize yours for maximum impact;
             </p>
           </motion.div>
 
@@ -245,7 +245,7 @@ export default function AIContentOptimizer() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10,
@@ -284,7 +284,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -301,10 +301,10 @@ export default function AIContentOptimizer() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Optimize Any Content Type
+              Optimize Any Content Type;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From blog posts to social media, our AI optimizes content for every platform and audience
+              From blog posts to social media, our AI optimizes content for every platform and audience;
             </p>
           </motion.div>
 
@@ -312,7 +312,7 @@ export default function AIContentOptimizer() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -347,7 +347,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -364,17 +364,17 @@ export default function AIContentOptimizer() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Proven Results
+              Proven Results;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Join thousands of content creators who have transformed their content performance with AI
+              Join thousands of content creators who have transformed their content performance with AI;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -410,7 +410,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -427,7 +427,7 @@ export default function AIContentOptimizer() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Choose the plan that fits your content creation needs. All plans include a 14-day free trial.
@@ -437,7 +437,7 @@ export default function AIContentOptimizer() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -463,7 +463,7 @@ export default function AIContentOptimizer() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -487,7 +487,7 @@ export default function AIContentOptimizer() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white,
   hove: r: from-green-700,
   hove: r:to-blue-700'
@@ -509,7 +509,7 @@ export default function AIContentOptimizer() {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -528,7 +528,7 @@ export default function AIContentOptimizer() {
               Ready to Optimize Your Content?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join thousands of content creators who have already revolutionized their content performance with AI
+              Join thousands of content creators who have already revolutionized their content performance with AI;
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
@@ -536,11 +536,11 @@ export default function AIContentOptimizer() {
   hove: r:from-green-700,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>

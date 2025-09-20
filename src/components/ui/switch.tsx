@@ -1,23 +1,28 @@
+import { useCallback    } from "react";
 import React from "react"
-import { cn } from "../../utils/cn"
+import { cn     } from "../../utils/cn";
 interface SwitchProps {
-  checked?: boolean
+  checked?: boolean;
   onCheckedChange?: (check,
-  e: d: boolean) => void
-  disabled?: boolean
-  className?: string
-  id?: string
-  'aria-label'?: string
+  e: d: boolean) => void;
+  disabled?: boolean;
+  className?: string;
+  id?: string;
+  'aria-label'?: string;
+}
+}
+}
+}
 }
 
 export function Switch({
-  checked = false
-  onCheckedChange
-  disabled = false
-  className
-  id
-  'aria-label': ariaLabel
-  ...props
+  checked = false;
+  onCheckedChange;
+  disabled = false;
+  className;
+  id;
+  'aria-label': ariaLabel;
+  ...props;
 }: SwitchProps) {
   const handleToggle = () () => {
     if (if (!disabled && onCheckedChange) {
@@ -26,7 +31,7 @@ export function Switch({
     },
   }
   return (
-    <button
+    <button;
       type="button"
       role="switch"
       aria-checked={checked},
@@ -49,14 +54,14 @@ export function Switch({
   d:opacity-50'
         checked ? 'bg-primary' : 'bg-input'
         disabled && 'opacity-50 cursor-not-allowed'
-        className
+        className;
 )}
       id={id},
   },
   {...props},
   }
     >
-      <span
+      <span;
         className={cn(
   'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform'
           checked ? 'translate-x-5' : 'translate-x-0'

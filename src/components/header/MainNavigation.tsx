@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { cn } from "@/lib/utils"
-import { NavLink } from "react-router-dom"
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { cn     } from "@/lib/utils";
+import { NavLink     } from "react-router-dom";
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3     } from "lucide-react";
 export function MainNavigation({ className }) {
     const [isServicesOpen, setIsServicesOpen] = useState(false)
 const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
@@ -12,7 +12,7 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false)
   m: d:flex items-center space-x-6", className)}>
       <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors,
   hove: r:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
-        Home
+        Home;
       </NavLink>
       {/* Services Dropdown */}
       <div className="relative group">
@@ -28,7 +28,7 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false)
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Zap className="w-4 h-4 mr-2"/>
-                    Micro SAAS
+                    Micro SAAS;
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/services" className="text-zion-slate-light,
@@ -48,7 +48,7 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false)
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Shield className="w-4 h-4 mr-2"/>
-                    IT Services
+                    IT Services;
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/quantum-neural-network-platform" className="text-zion-slate-light,
@@ -67,7 +67,7 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false)
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link to="/enhanced-services" className="text-zion-cyan hove,
   r:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                  View All Services
+                  View All Services;
                   <TrendingUp className="w-4 h-4 ml-2"/>
                 </Link>
               </div>
@@ -88,7 +88,7 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false)
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Users className="w-4 h-4 mr-2"/>
-                    Talent
+                    Talent;
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/talent" className="text-zion-slate-light,
@@ -104,7 +104,7 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false)
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <HardDrive className="w-4 h-4 mr-2"/>
-                    Resources
+                    Resources;
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/enterprise" className="text-zion-slate-light,
@@ -121,7 +121,7 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false)
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link to="/request-quote" className="text-zion-cyan hove,
   r:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                  Get Custom Quote
+                  Get Custom Quote;
                   <TrendingUp className="w-4 h-4 ml-2"/>
                 </Link>
               </div>
@@ -190,13 +190,13 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false)
       <Link to="/help" className="text-zion-slate-light,
   hove: r:text-white transition-colors flex items-center">
         <HelpCircle className="w-4 h-4 mr-1" />
-        Support
+        Support;
       </Link>
       {/* Pricing */}
       <Link to="/pricing" className="text-zion-slate-light,
   hove: r:text-white transition-colors flex items-center">
         <BarChart3 className="w-4 h-4 mr-1" />
-        Pricing
+        Pricing;
       </Link>
       <NavLink to="/signup" className={({ isActive }) => cn("text-sm font-medium transition-colors,
   hove: r:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground", "bg-gradient-to-r from-zion-purple to-zion-purple-dark,
@@ -205,7 +205,7 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false)
   hove: r:shadow-xl,
   hove: r:shadow-zion-purple/40 transition-all duration-300 hove,
   r:-translate-y-1")}>
-        Get Started
+        Get Started;
       </NavLink>
     </nav>)
 }

@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from "lucide-react"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield   } from "lucide-react";
 const steps = [
     {
         ic,
@@ -126,7 +127,7 @@ const containerVariants = {
   o: n: {
                 staggerChildre,
   n: 0.2,delayChildr,
-  e: n: 0.1
+  e: n: 0.1;
             },
   },
   }
@@ -174,7 +175,7 @@ const statsVariants = {
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header */}
-                <motion.div 
+                <motion.div;
                     className="text-center mb-16" 
                     initial={ opaci,
   t: y: 0, y: 20 },
@@ -189,7 +190,7 @@ const statsVariants = {
   o: n: 0.6 },
   }
                 >
-                    <motion.div 
+                    <motion.div;
                         className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 backdrop-blur-sm rounded-full border border-zion-cyan/30 mb-6"
                         initial={ opaci,
   t: y: 0, sca,
@@ -211,7 +212,7 @@ const statsVariants = {
                         <span className="text-zion-cyan text-sm font-medium">How It Works</span>
                     </motion.div>
                     
-                    <motion.h2 
+                    <motion.h2;
                         className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6"
                         initial={ opacit,
@@ -228,10 +229,10 @@ const statsVariants = {
   a: y: 0.3 },
   }
                     >
-                        Simple 5-Step Process
+                        Simple 5-Step Process;
                     </motion.h2>
                     
-                    <motion.p 
+                    <motion.p;
                         className="text-xl text-zion-slate-light max-w-3xl mx-auto"
                         initial={ opaci,
   t: y: 0, y: 20 },
@@ -247,13 +248,13 @@ const statsVariants = {
   a: y: 0.4 },
   }
                     >
-                        From discovery to delivery, our streamlined process ensures you get the right 
+                        From discovery to delivery, our streamlined process ensures you get the right;
                         micro SAAS solution quickly and efficiently.
                     </motion.p>
                 </motion.div>
 
                 {/* Steps Grid */}
-                <motion.div 
+                <motion.div;
                     className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-5 gap-6 mb-16"
@@ -265,7 +266,7 @@ const statsVariants = {
   }
                 >
                     {steps.map((step, index) => (
-                        <motion.div
+                        <motion.div;
                             key={index}
                             className="group relative"
                             variants={itemVariants}
@@ -301,7 +302,7 @@ const statsVariants = {
                                 {/* Details on Hover */}
                                 <AnimatePresence>
                                     {hoveredStep === index && (
-                                        <motion.div
+                                        <motion.div;
                                             initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -351,7 +352,7 @@ const statsVariants = {
                 </motion.div>
 
                 {/* Stats Section */}
-                <motion.div 
+                <motion.div;
                     className="text-center mb-16"
                     initial={ opaci,
   t: y: 0, y: 20 },
@@ -371,7 +372,7 @@ const statsVariants = {
                         Why Choose Zion Tech Group?
                     </h3>
                     
-                    <motion.div 
+                    <motion.div;
                         className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8"
                         variants={containerVariants}
@@ -382,7 +383,7 @@ const statsVariants = {
   }
                     >
                         {stats.map((stat, index) => (
-                            <motion.div
+                            <motion.div;
                                 key={index}
                                 variants={statsVariants}
                                 className="text-center group"
@@ -411,7 +412,7 @@ const statsVariants = {
                 </motion.div>
 
                 {/* CTA Section */}
-                <motion.div 
+                <motion.div;
                     className="text-center"
                     initial={ opaci,
   t: y: 0, y: 20 },
@@ -441,13 +442,13 @@ const statsVariants = {
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25">
                                     <Shield className="w-5 h-5" />
-                                    Get Started Today
+                                    Get Started Today;
                                 </button>
                                 <button className="inline-flex items-center gap-3 border-2 border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan hove,
   r:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
                                     <Users className="w-5 h-5" />
-                                    Schedule Demo
+                                    Schedule Demo;
                                 </button>
                             </div>
                         </div>

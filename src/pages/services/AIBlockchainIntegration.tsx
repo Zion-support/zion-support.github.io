@@ -1,28 +1,32 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   Shield,
   Zap,
   TrendingUp,
   CheckCircle,
   Star,
   Users,
-  Globe
-  Lock
-  Cpu
-  Database
-  Network
-  BarChart3
-  ArrowRight
-  Sparkles
-  Atom
-  Workflow
-  Eye
-  Target
-  Rocket
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Globe;
+  Lock;
+  Cpu;
+  Database;
+  Network;
+  BarChart3;
+  ArrowRight;
+  Sparkles;
+  Atom;
+  Workflow;
+  Eye;
+  Target;
+  Rocket;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function AIBlockchainIntegration() {
   const features = [
   {
@@ -106,7 +110,7 @@ export default function AIBlockchainIntegration() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Blockchain Integration - Zion Tech Group"
         description="Revolutionary AI-powered blockchain integration platform for secure, intelligent, and automated blockchain operations."
       />
@@ -118,7 +122,7 @@ export default function AIBlockchainIntegration() {
   l: g:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -133,17 +137,17 @@ export default function AIBlockchainIntegration() {
               <Brain className="w-12 h-12 text-cyan-400 mr-3" />
               <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white">
-                AI Blockchain Integration
+                AI Blockchain Integration;
               </h1>
             </div>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your blockchain operations with AI-powered intelligence
+              Revolutionize your blockchain operations with AI-powered intelligence;
               automated smart contracts, and enhanced security protocols.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -154,9 +158,9 @@ export default function AIBlockchainIntegration() {
   hove: r: shadow-lg,
   hove: r:shadow-cyan-500/25 transition-all duration-300";"
               >
-                Get Started Today
+                Get Started Today;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -166,7 +170,7 @@ export default function AIBlockchainIntegration() {
                 className="className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-cyan-400/10 transition-all duration-300";"
               >
-                Watch Demo
+                Watch Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -179,7 +183,7 @@ export default function AIBlockchainIntegration() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -193,10 +197,10 @@ export default function AIBlockchainIntegration() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Revolutionary Features
+              Revolutionary Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Blockchain Integration platform combines cutting-edge artificial intelligence 
+              Our AI Blockchain Integration platform combines cutting-edge artificial intelligence;
               with blockchain technology to deliver unprecedented capabilities.
             </p>
           </motion.div>
@@ -205,7 +209,7 @@ export default function AIBlockchainIntegration() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -239,7 +243,7 @@ export default function AIBlockchainIntegration() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -264,7 +268,7 @@ export default function AIBlockchainIntegration() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -293,7 +297,7 @@ export default function AIBlockchainIntegration() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -307,7 +311,7 @@ export default function AIBlockchainIntegration() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include our core AI features.
@@ -317,7 +321,7 @@ export default function AIBlockchainIntegration() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -331,7 +335,7 @@ export default function AIBlockchainIntegration() {
   a: y: index * 0.1 },
   }
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
-  index === 1 
+  index === 1;
                     ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/25' 
                     : 'border-slate-600/50'
 } relative`}
@@ -339,7 +343,7 @@ export default function AIBlockchainIntegration() {
                 {index === 1 && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -361,7 +365,7 @@ export default function AIBlockchainIntegration() {
                   ))}
                 </ul>
 
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.05 },
   }
@@ -369,7 +373,7 @@ export default function AIBlockchainIntegration() {
   l: e: 0.95 },
   }
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  index === 1
+  index === 1;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white,
   hove: r: shadow-lg,
   hove: r:shadow-cyan-500/25'
@@ -377,7 +381,7 @@ export default function AIBlockchainIntegration() {
   r:bg-cyan-400/10'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
               </motion.div>
             ))}
@@ -391,7 +395,7 @@ export default function AIBlockchainIntegration() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -411,7 +415,7 @@ export default function AIBlockchainIntegration() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -422,9 +426,9 @@ export default function AIBlockchainIntegration() {
   hove: r: shadow-lg,
   hove: r:shadow-cyan-500/25 transition-all duration-300";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -434,7 +438,7 @@ export default function AIBlockchainIntegration() {
                 className="className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r: bg-cyan-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>

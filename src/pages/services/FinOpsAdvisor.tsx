@@ -1,13 +1,17 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  DollarSign
+  DollarSign;
   Play,
   Settings,
   Target,
   CheckCircle,
-  ArrowRight 
-} from "lucide-react"
+  ArrowRight;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function FinOpsAdvisor() {
   const features = [
   {
@@ -61,7 +65,7 @@ export default function FinOpsAdvisor() {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -75,17 +79,17 @@ export default function FinOpsAdvisor() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
               <DollarSign className="w-4 h-4 mr-2" />
-              Cloud Financial Operations
+              Cloud Financial Operations;
             </div>
             
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              FinOps
+              FinOps;
               <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Advisor</span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Optimize your cloud spending with our FinOps advisory services that 
+              Optimize your cloud spending with our FinOps advisory services that;
               help you achieve cost efficiency while maintaining performance.
             </p>
             
@@ -95,12 +99,12 @@ export default function FinOpsAdvisor() {
   hove: r:from-emerald-600,
   hove: r:to-teal-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hove,
   r:bg-emerald-500/10 transition-all duration-200 flex items-center justify-center">
                 <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -113,7 +117,7 @@ export default function FinOpsAdvisor() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -126,10 +130,10 @@ export default function FinOpsAdvisor() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive FinOps Features
+              Comprehensive FinOps Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides all the tools you need to implement effective 
+              Our platform provides all the tools you need to implement effective;
               financial operations for your cloud infrastructure.
             </p>
           </motion.div>
@@ -138,7 +142,7 @@ export default function FinOpsAdvisor() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -171,7 +175,7 @@ export default function FinOpsAdvisor() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -184,10 +188,10 @@ export default function FinOpsAdvisor() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Core FinOps Services
+              Core FinOps Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From cost analysis to optimization strategies, we provide 
+              From cost analysis to optimization strategies, we provide;
               end-to-end FinOps solutions for your cloud environment.
             </p>
           </motion.div>
@@ -195,7 +199,7 @@ export default function FinOpsAdvisor() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -232,7 +236,7 @@ export default function FinOpsAdvisor() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -245,7 +249,7 @@ export default function FinOpsAdvisor() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Cloud Economics
+              Transform Your Cloud Economics;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in cost efficiency, resource utilization, and financial planning.
@@ -256,7 +260,7 @@ export default function FinOpsAdvisor() {
   m: d:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -278,7 +282,7 @@ export default function FinOpsAdvisor() {
             </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index + 3},
   }
                   initial={ opaci,
@@ -308,7 +312,7 @@ export default function FinOpsAdvisor() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -321,10 +325,10 @@ export default function FinOpsAdvisor() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our FinOps solutions adapt to various industries, providing 
+              Our FinOps solutions adapt to various industries, providing;
               tailored cost optimization for your specific needs.
             </p>
           </motion.div>
@@ -333,7 +337,7 @@ export default function FinOpsAdvisor() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -366,7 +370,7 @@ export default function FinOpsAdvisor() {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -378,10 +382,10 @@ export default function FinOpsAdvisor() {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Optimize Your Cloud Costs Today
+              Optimize Your Cloud Costs Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our FinOps solutions to 
+              Join organizations worldwide that use our FinOps solutions to;
               achieve cost efficiency and maximize cloud ROI.
             </p>
             <div className="flex flex-col,
@@ -389,12 +393,12 @@ export default function FinOpsAdvisor() {
               <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg,
   hove: r:from-emerald-600,
   hove: r:to-teal-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hove,
   r:bg-emerald-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -403,4 +407,4 @@ export default function FinOpsAdvisor() {
     </div>
   )
 }
-export default FinOpsAdvisor
+export default FinOpsAdvisor;

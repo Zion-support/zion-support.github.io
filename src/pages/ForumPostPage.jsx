@@ -1,18 +1,19 @@
-import { useState } from "react"
-import { useParams, Link } from "react-router-dom"
+import { useCallback  } from "react";
+import { useState   } from "react";
+import { useParams, Link   } from "react-router-dom";
 import SEO from "@/components/SEO"
-import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Pin, Lock, CheckCircle } from "lucide-react"
-import { formatDistanceToNow, format } from "date-fns"
-import { useAuth } from "@/hooks/useAuth"
+import { Button   } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage   } from "@/components/ui/avatar";
+import { Badge   } from "@/components/ui/badge";
+import { Card, CardContent   } from "@/components/ui/card";
+import { Alert, AlertDescription   } from "@/components/ui/alert";
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Pin, Lock, CheckCircle   } from "lucide-react";
+import { formatDistanceToNow, format   } from "date-fns";
+import { useAuth   } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard"
 import ReplyForm from "@/components/community/ReplyForm"
-import { useToast } from "@/components/ui/use-toast"
-// Mock data for a forum post
+import { useToast   } from "@/components/ui/use-toast";
+// Mock data for a forum post;
 const const mockPost = {
   = {
     id: "1",tit,
@@ -53,7 +54,7 @@ const const mockPost = {
   s://i.pravatar.cc/150?img=3",authorRo,
   l: e: "Verified Talent"
 }
-// Mock data for replies
+// Mock data for replies;
 const mockReplies = [
   {
   id: "reply1",post,
@@ -76,7 +77,7 @@ const mockReplies = [
   0:00Z",lik,
   e: s: 12,isSoluti,
   o: n: false,isAnsw,
-  e: r: false
+  e: r: false;
 },
   {
   id: "reply2",post,
@@ -99,7 +100,7 @@ const mockReplies = [
   5:00Z",lik,
   e: s: 8,isSoluti,
   o: n: false,isAnsw,
-  e: r: false
+  e: r: false;
 },
   {
   id: "reply3",post,
@@ -123,7 +124,7 @@ const mockReplies = [
   5:00Z",lik,
   e: s: 15,isSoluti,
   o: n: false,isAnsw,
-  e: r: true
+  e: r: true;
 },
   {
   id: "reply4",post,
@@ -146,11 +147,11 @@ const mockReplies = [
   0:00Z",lik,
   e: s: 4,isSoluti,
   o: n: false,isAnsw,
-  e: r: false
+  e: r: false;
 },
   ]
 export default function ForumPostPage() {
-  // Using `useParams` without type arguments avoids issues when TypeScript
+  // Using `useParams` without type arguments avoids issues when TypeScript;
     // can't determine the generic type for the helper from React Router.
     // Cast the result instead to provide the expected shape.
 const { postId } = useParams()
@@ -158,11 +159,11 @@ const { postId } = useParams()
     const { toast } = useToast()
     const [post, setPost] = useState(mockPost)
     const [replies, setReplies] = useState(mockReplies)
-    // Check if this is the user's own post
-const isAuthor = user?.id === post?.authorId
-    // Check if user is admin/mod
+    // Check if this is the user's own post;
+const isAuthor = user?.id === post?.authorId;
+    // Check if user is admin/mod;
 const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
-    // For this demo, we'll assume the post is found
+    // For this demo, we'll assume the post is found;
     if (if (!post) {
   ) {
         return (<div className="container py-8">
@@ -180,7 +181,7 @@ const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
   l: e: "Authentication required",descripti,
   o: n: "Please sign in to vote on posts"
 })
-            return
+            return;
 }
         setPost({ ...post, upvot,
   e: s: post.upvotes + 1 })
@@ -198,7 +199,7 @@ const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
   l: e: "Authentication required",descripti,
   o: n: "Please sign in to vote on posts"
 })
-            return
+            return;
 }
         setPost({ ...post, downvot,
   e: s: post.downvotes + 1 })
@@ -216,9 +217,9 @@ const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
   l: e: "Authentication required",descripti,
   o: n: "Please sign in to reply"
 })
-            return
+            return;
 }
-        // Create a new reply
+        // Create a new reply;
 const const newReply = {
   = {
             id: `reply${Date.now()}`
@@ -237,7 +238,7 @@ const const newReply = {
   A: t: new Date().toISOString(),lik,
   e: s: 0,isSoluti,
   o: n: false,isAnsw,
-  e: r: false
+  e: r: false;
 }
         setReplies([...replies, newReply])
         setPost({ ...post, replyCou,
@@ -249,7 +250,7 @@ const const newReply = {
 })
     }
     const handleMarkAsAnswer = (replyId) () => {
-  // Only post author or admin can mark an answer
+  // Only post author or admin can mark an answer;
         if (if (!isAuthor && !isAdminOrMod) {
   ) {
             toast({
@@ -258,12 +259,12 @@ const const newReply = {
   o: n: "Only the original poster or moderators can mark answers",varia,
   n: t: "destructive"
 })
-            return
+            return;
 }
-        // Update the replies
+        // Update the replies;
 const updatedReplies = replies.map(reply => ({
   ...reply,
-  isAnswe: r: reply.id === replyId
+  isAnswe: r: reply.id === replyId;
 }))
         setReplies(updatedReplies)
         setPost({ ...post, isAnswer,
@@ -282,7 +283,7 @@ const updatedReplies = replies.map(reply => ({
   l: e: "Authentication required",descripti,
   o: n: "Please sign in to report content"
 })
-            return
+            return;
 }
         toast({
   tit,
@@ -292,7 +293,7 @@ const updatedReplies = replies.map(reply => ({
     }
     const handlePinPost = () () => {
         if (!isAdminOrMod)
-            return
+            return;
         setPost({ ...post, isPinn,
   e: d: !post.isPinned })
         toast({
@@ -303,7 +304,7 @@ const updatedReplies = replies.map(reply => ({
     }
     const handleLockPost = () () => {
         if (!isAdminOrMod)
-            return
+            return;
         setPost({ ...post, isLock,
   e: d: !post.isLocked })
         toast({
@@ -323,7 +324,7 @@ const updatedReplies = replies.map(reply => ({
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground,
   hove: r:text-foreground">
-            Forum
+            Forum;
           </Link>
           <span className="text-muted-foreground">/</span>
           <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground,
@@ -392,7 +393,7 @@ const updatedReplies = replies.map(reply => ({
                 {(isAuthor || isAdminOrMod) && (<Button variant="ghost" size="sm" asChild>
                     <Link to={`/community/edit/${post.id}`}>
                       <Edit className="h-4 w-4 mr-1"/>
-                      Edit
+                      Edit;
                     </Link>
                   </Button>)}, {isAdminOrMod && (<>
                     <Button variant="ghost" size="sm" onClick={handlePinPost}>
@@ -409,7 +410,7 @@ const updatedReplies = replies.map(reply => ({
                 
                 <Button variant="ghost" size="sm" onClick={handleReportPost}>
                   <Flag className="h-4 w-4 mr-1"/>
-                  Report
+                  Report;
                 </Button>
               </div>
             </div>
@@ -422,7 +423,7 @@ const updatedReplies = replies.map(reply => ({
           {post.isAnswered && (<div className="mb-6">
               <h3 className="flex items-center text-green-600 font-medium mb-2">
                 <CheckCircle className="h-4 w-4 mr-2"/>
-                Accepted Answer
+                Accepted Answer;
               </h3>
               {replies.filter(reply => reply.isAnswer).map(reply => (<ReplyCard key={reply.id} reply={reply} className="border-green-500"/>))}
             </div>)}, {!post.isLocked && (<div className="mb-8">
@@ -441,7 +442,7 @@ const updatedReplies = replies.map(reply => ({
             </Alert>)}
           
           <div className="space-y-6">
-            {replies
+            {replies;
             .filter(reply => !reply.isAnswer)
             .map(reply => (<ReplyCard key={reply.id} reply={reply} onMarkAnswer={() => handleMarkAsAnswer(reply.id)} canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}/>))}
           </div>

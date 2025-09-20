@@ -1,35 +1,37 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  FileText
-  Shield
-  Users
-  Globe
-  CheckCircle
-  AlertTriangle
-  Scale
-  Lock
-  Mail
-  Phone
-  MapPin
-  Calendar
-  CheckCircle
-  AlertTriangle
-  Lock
-  Eye
-  Database
-  Zap
-  Rocket
-  Brain
-  Cpu
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  FileText;
+  Shield;
+  Users;
+  Globe;
+  CheckCircle;
+  AlertTriangle;
+  Scale;
+  Lock;
+  Mail;
+  Phone;
+  MapPin;
+  Calendar;
+  CheckCircle;
+  AlertTriangle;
+  Lock;
+  Eye;
+  Database;
+  Zap;
+  Rocket;
+  Brain;
+  Cpu;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 const,
   Term: s: React.FC = () () => {
   const currentYear = new Date().getFullYear()
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+      <SEO;
         title="Terms of Service - Zion Tech Group"
         description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions."
       />
@@ -41,7 +43,7 @@ const,
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -59,10 +61,10 @@ const,
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-              Terms of Service
+              Terms of Service;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              These terms govern your use of our services. Please read them carefully
+              These terms govern your use of our services. Please read them carefully;
               before using our technology solutions.
             </p>
           </motion.div>
@@ -73,7 +75,7 @@ const,
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -86,10 +88,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Key Terms Overview
+              Key Terms Overview;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Understanding these fundamental terms helps ensure a smooth
+              Understanding these fundamental terms helps ensure a smooth;
               relationship between you and Zion Tech Group.
             </p>
           </motion.div>
@@ -98,7 +100,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {termsSections.map((section, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -130,7 +132,7 @@ const,
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -143,10 +145,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Your Obligations
+              Your Obligations;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              As a user of our services, you have certain responsibilities
+              As a user of our services, you have certain responsibilities;
               that help ensure a secure and productive environment.
             </p>
           </motion.div>
@@ -155,7 +157,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {userObligations.map((obligation, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -186,7 +188,7 @@ const,
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -206,7 +208,7 @@ const,
                 <span>Last Updated</span>
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                To maintain a secure and professional environment, certain activities
+                To maintain a secure and professional environment, certain activities;
                 are strictly prohibited when using our services.
               </p>
               <div className="space-y-4">
@@ -219,7 +221,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -264,7 +266,7 @@ const,
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -277,10 +279,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Service Levels & Support
+              Service Levels & Support;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide different levels of support to meet your business needs
+              We provide different levels of support to meet your business needs;
               and ensure optimal service delivery.
             </p>
           </motion.div>
@@ -289,7 +291,7 @@ const,
             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
               {serviceLevels.map((level, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -312,7 +314,7 @@ const,
                     <h3 className="text-xl font-semibold text-white mb-2">{level.level}</h3>
                     {level.included && (
   <span className="inline-block px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">
-                        Included
+                        Included;
                       </span>
                     )}
                   </div>
@@ -335,7 +337,7 @@ const,
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -347,10 +349,10 @@ const,
   }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Intellectual Property Rights
+                Intellectual Property Rights;
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Understanding intellectual property rights is crucial for both
+                Understanding intellectual property rights is crucial for both;
                 protecting our innovations and respecting your contributions.
               </p>
               <div className="space-y-4">
@@ -364,7 +366,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -420,7 +422,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -472,7 +474,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -517,7 +519,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -563,7 +565,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -608,7 +610,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -653,7 +655,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -692,7 +694,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -746,7 +748,7 @@ const,
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -759,10 +761,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Limitation of Liability
+              Limitation of Liability;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We strive to provide reliable services, but it's important to understand
+              We strive to provide reliable services, but it's important to understand;
               the scope of our liability and your responsibilities.
             </p>
           </motion.div>
@@ -815,7 +817,7 @@ const,
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -828,10 +830,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Termination & Cancellation
+              Termination & Cancellation;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Understanding the terms for ending our service relationship
+              Understanding the terms for ending our service relationship;
               helps ensure a smooth transition for all parties.
             </p>
           </motion.div>
@@ -882,7 +884,7 @@ const,
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -898,7 +900,7 @@ const,
               Questions About Terms?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about these terms or need clarification
+              If you have questions about these terms or need clarification;
               please contact our legal team.
             </p>
           </motion.div>
@@ -930,7 +932,7 @@ const,
   }
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -949,22 +951,22 @@ const,
               Contact us if you need any clarification or have questions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <a;
                 href="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold,
   hove: r: from-blue-500,
   hove: r:to-purple-600 transition-all duration-300,
   hove: r:scale-105";"
               >
-                Contact Us
+                Contact Us;
               </a>
-              <a
+              <a;
                 href="/privacy"
                 className="className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold,
   hove: r:bg-blue-400 hove,
   r:text-white transition-all duration-300";"
               >
-                Privacy Policy
+                Privacy Policy;
               </a>
             </div>
           </motion.div>
@@ -973,4 +975,4 @@ const,
     </div>
   )
 }
-export default Terms
+export default Terms;

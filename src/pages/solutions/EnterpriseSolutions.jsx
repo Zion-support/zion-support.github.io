@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp     } from "lucide-react";
 export default function EnterpriseSolutions() {
   const solutions = [
   {
@@ -89,11 +89,11 @@ export default function EnterpriseSolutions() {
           <div className="text-center">
             <h1 className="text-4xl,
   m: d:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-              Enterprise Solutions
+              Enterprise Solutions;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your enterprise with cutting-edge technology solutions designed for scale, security, and innovation
+              Transform your enterprise with cutting-edge technology solutions designed for scale, security, and innovation;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -101,11 +101,11 @@ export default function EnterpriseSolutions() {
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300,
   transform: hover:scale-105">
-                Get Enterprise Quote
+                Get Enterprise Quote;
               </Link>
               <Link to="/services/ai-autonomous-systems" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/20 transition-all duration-300">
-                Explore AI Solutions
+                Explore AI Solutions;
               </Link>
             </div>
           </div>
@@ -129,10 +129,10 @@ export default function EnterpriseSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-              Comprehensive Enterprise Solutions
+              Comprehensive Enterprise Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From infrastructure to innovation, we provide end-to-end solutions that drive enterprise success
+              From infrastructure to innovation, we provide end-to-end solutions that drive enterprise success;
             </p>
           </div>
 
@@ -140,7 +140,7 @@ export default function EnterpriseSolutions() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {solutions.map((solution, index) () => {
-  const Icon = solution.icon
+  const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8,
   hove: r: border-cyan-500/50 transition-all duration-300,
   hove: r:transform hove,
@@ -175,7 +175,7 @@ export default function EnterpriseSolutions() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Proven results and measurable impact for enterprise organizations
+              Proven results and measurable impact for enterprise organizations;
             </p>
           </div>
 
@@ -201,10 +201,10 @@ export default function EnterpriseSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Success Stories
+              Success Stories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real results from real enterprise clients
+              Real results from real enterprise clients;
             </p>
           </div>
 
@@ -235,7 +235,7 @@ export default function EnterpriseSolutions() {
                 </div>
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400,
   hove: r:text-cyan-300 transition-colors duration-300">
-                  Read Full Case Study
+                  Read Full Case Study;
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
               </div>))}
@@ -254,7 +254,7 @@ export default function EnterpriseSolutions() {
             Ready to Transform Your Enterprise?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our enterprise solutions can drive innovation, efficiency, and growth for your organization
+            Let's discuss how our enterprise solutions can drive innovation, efficiency, and growth for your organization;
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -262,11 +262,11 @@ export default function EnterpriseSolutions() {
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300,
   transform: hover:scale-105">
-              Schedule Consultation
+              Schedule Consultation;
             </Link>
             <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/20 transition-all duration-300">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>

@@ -1,42 +1,45 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Mail
+  Mail;
   Lock,
   Eye,
   EyeOff,
   User,
   Building,
   Globe,
-  ArrowRight
-  CheckCircle
-  AlertCircle
-  Shield
-  Zap
-  Brain
-  Cloud
-  Server
-  BarChart3
-  Code
-  Network
-  Atom
-  TrendingUp
-  Heart
-  MessageCircle
-  ExternalLink
-  Github
-  Linkedin
-  Twitter
-  Facebook
-  Chrome
-  Apple
-  Smartphone
-  Monitor
-  Tablet
-  Laptop
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  ArrowRight;
+  CheckCircle;
+  AlertCircle;
+  Shield;
+  Zap;
+  Brain;
+  Cloud;
+  Server;
+  BarChart3;
+  Code;
+  Network;
+  Atom;
+  TrendingUp;
+  Heart;
+  MessageCircle;
+  ExternalLink;
+  Github;
+  Linkedin;
+  Twitter;
+  Facebook;
+  Chrome;
+  Apple;
+  Smartphone;
+  Monitor;
+  Tablet;
+  Laptop;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 export default function Login() {
   const [isLogin, setIsLogin] = useState(true)
   const [showPassword, setShowPassword] = useState(false)
@@ -51,16 +54,16 @@ export default function Login() {
   n: y: '',pho,
   n: e: '',acceptTer,
   m: s: false,acceptMarketi,
-  n: g: false
+  n: g: false;
 })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) () => {
-  const { name, value, type, checked } = e.target
+  const { name, value, type, checked } = e.target;
     setFormData(prev => ({
-  ...prev
-      [name]: type === 'checkbox' ? checked : value
+  ...prev;
+      [name]: type === 'checkbox' ? checked : value;
 }))
   }
 
@@ -68,13 +71,13 @@ export default function Login() {
   e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000))
     
     setIsSubmitting(false)
     setSubmitted(true)
     
-    // Reset form after 5 seconds
+    // Reset form after 5 seconds;
     setTimeout(() () => {
       setSubmitted(false)
       setFormData({
@@ -87,7 +90,7 @@ export default function Login() {
   n: y: '',pho,
   n: e: '',acceptTer,
   m: s: false,acceptMarketi,
-  n: g: false
+  n: g: false;
 })
     }, 5000)
   }
@@ -164,7 +167,7 @@ export default function Login() {
   ]
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO 
+      <SEO;
         title={isLogin ? "Login - Zion Tech Group" : "Sign Up - Zion Tech Group"},
   }
         description={isLogin ? "Access your Zion Tech Group account to manage your projects and services." : "Join Zion Tech Group to access cutting-edge technology solutions and AI services."},
@@ -181,7 +184,7 @@ export default function Login() {
             {/* Header */},
   }
             <div className="text-center mb-8">
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -202,7 +205,7 @@ export default function Login() {
   }
                 </h1>
                 <p className="text-zion-slate-light">
-                  {isLogin 
+                  {isLogin;
                     ? 'Sign in to access your dashboard and projects' 
                     : 'Join thousands of businesses transforming with AI technology'
 }
@@ -212,7 +215,7 @@ export default function Login() {
 
             {/* Social Login */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -227,7 +230,7 @@ export default function Login() {
             >
               <div className="grid grid-cols-2 gap-3">
                 {socialLoginOptions.map((option) => (
-  <button
+  <button;
                     key={option.name},
   }
                     className={`${option.color} text-white px-4 py-3 rounded-lg font-medium transition-all duration-200,
@@ -251,7 +254,7 @@ export default function Login() {
 
             {/* Form */},
   }
-            <motion.form
+            <motion.form;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -271,9 +274,9 @@ export default function Login() {
                   <div className="grid grid-cols-2 gap-3">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
-                        First Name
+                        First Name;
                       </label>
-                      <input
+                      <input;
                         type="text"
                         id="firstName"
                         name="firstName"
@@ -281,7 +284,7 @@ export default function Login() {
   }
                         onChange={handleInputChange},
   }
-                        required
+                        required;
                         className="className="w-full px-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:border-zion-cyan,
@@ -292,9 +295,9 @@ export default function Login() {
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
-                        Last Name
+                        Last Name;
                       </label>
-                      <input
+                      <input;
                         type="text"
                         id="lastName"
                         name="lastName"
@@ -302,7 +305,7 @@ export default function Login() {
   }
                         onChange={handleInputChange},
   }
-                        required
+                        required;
                         className="className="w-full px-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:border-zion-cyan,
@@ -315,9 +318,9 @@ export default function Login() {
                   
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                      Company
+                      Company;
                     </label>
-                    <input
+                    <input;
                       type="text"
                       id="company"
                       name="company"
@@ -336,9 +339,9 @@ export default function Login() {
                   
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
-                      Phone
+                      Phone;
                     </label>
-                    <input
+                    <input;
                       type="tel"
                       id="phone"
                       name="phone"
@@ -359,9 +362,9 @@ export default function Login() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  Email Address
+                  Email Address;
                 </label>
-                <input
+                <input;
                   type="email"
                   id="email"
                   name="email"
@@ -369,7 +372,7 @@ export default function Login() {
   }
                   onChange={handleInputChange},
   }
-                  required
+                  required;
                   className="className="w-full px-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:border-zion-cyan,
@@ -381,10 +384,10 @@ export default function Login() {
 
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
-                  Password
+                  Password;
                 </label>
                 <div className="relative">
-                  <input
+                  <input;
                     type={showPassword ? 'text' : 'password'},
   }
                     id="password"
@@ -393,7 +396,7 @@ export default function Login() {
   }
                     onChange={handleInputChange},
   }
-                    required
+                    required;
                     className="className="w-full px-4 py-3 pr-12 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:border-zion-cyan,
@@ -401,7 +404,7 @@ export default function Login() {
   s:ring-zion-cyan/20 transition-all duration-200";"
                     placeholder="Enter your password"
                   />
-                  <button
+                  <button;
                     type="button"
                     onClick={onClick={() => setShowPassword(!showPassword)},
   },
@@ -418,10 +421,10 @@ export default function Login() {
               {!isLogin && (
   <div>
                   <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
-                    Confirm Password
+                    Confirm Password;
                   </label>
                   <div className="relative">
-                    <input
+                    <input;
                       type={showConfirmPassword ? 'text' : 'password'},
   }
                       id="confirmPassword"
@@ -430,7 +433,7 @@ export default function Login() {
   }
                       onChange={handleInputChange},
   }
-                      required
+                      required;
                       className="className="w-full px-4 py-3 pr-12 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:border-zion-cyan,
@@ -438,7 +441,7 @@ export default function Login() {
   s:ring-zion-cyan/20 transition-all duration-200";"
                       placeholder="Confirm your password"
                     />
-                    <button
+                    <button;
                       type="button"
                       onClick={onClick={() => setShowConfirmPassword(!showConfirmPassword)},
   },
@@ -455,14 +458,14 @@ export default function Login() {
   {!isLogin && (
   <div className="space-y-3">
                   <label className="flex items-center">
-                    <input
+                    <input;
                       type="checkbox"
                       name="acceptTerms"
                       checked={formData.acceptTerms},
   }
                       onChange={handleInputChange},
   }
-                      required
+                      required;
                       className="className="w-4 h-4 text-zion-cyan bg-zion-slate-light/10 border-zion-slate-light/20,
   rounded: focus: ring-zion-cyan focu,
   s:ring-2";"
@@ -472,20 +475,20 @@ export default function Login() {
   }
                       <Link to="/terms" className="text-zion-cyan,
   hove: r:text-zion-cyan/80 transition-colors duration-200">
-                        Terms of Service
+                        Terms of Service;
                       </Link>{' '},
   }
                       and{' '},
   }
                       <Link to="/privacy" className="text-zion-cyan,
   hove: r:text-zion-cyan/80 transition-colors duration-200">
-                        Privacy Policy
+                        Privacy Policy;
                       </Link>
                     </span>
                   </label>
                   
                   <label className="flex items-center">
-                    <input
+                    <input;
                       type="checkbox"
                       name="acceptMarketing"
                       checked={formData.acceptMarketing},
@@ -497,7 +500,7 @@ export default function Login() {
   s:ring-2";"
                     />
                     <span className="ml-2 text-sm text-zion-slate-light">
-                      I want to receive updates about new features and services
+                      I want to receive updates about new features and services;
                     </span>
                   </label>
                 </div>
@@ -505,7 +508,7 @@ export default function Login() {
   {isLogin && (
   <div className="flex items-center justify-between">
                   <label className="flex items-center">
-                    <input
+                    <input;
                       type="checkbox"
                       className="className="w-4 h-4 text-zion-cyan bg-zion-slate-light/10 border-zion-slate-light/20,
   rounded: focus: ring-zion-cyan,
@@ -520,7 +523,7 @@ export default function Login() {
                 </div>
               )}
 
-              <button
+              <button;
                 type="submit"
                 disabled={isSubmitting},
   }
@@ -552,7 +555,7 @@ export default function Login() {
             {/* Success Message */},
   },
   {submitted && (
-  <motion.div
+  <motion.div;
                 initial={ opaci,
   t: y: 0, sca,
   l: e: 0.9 },
@@ -575,7 +578,7 @@ export default function Login() {
             )},
   {/* Toggle Form Type */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -592,7 +595,7 @@ export default function Login() {
                 {isLogin ? "Don't have an account?" : "Already have an account?"},
   {' '},
   }
-                <button
+                <button;
                   onClick={onClick={() => setIsLogin(!isLogin)},
   },
   }
@@ -614,7 +617,7 @@ export default function Login() {
           <div className="w-full max-w-2xl mx-auto">
             {/* Stats */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -637,7 +640,7 @@ export default function Login() {
 
             {/* Features */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -668,7 +671,7 @@ export default function Login() {
 
             {/* CTA */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -681,14 +684,14 @@ export default function Login() {
   }
               className="className="mt-12 text-center";"
             >
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-6 py-3 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg,
   hove: r: bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Get in Touch
+                Get in Touch;
               </Link>
             </motion.div>
           </div>

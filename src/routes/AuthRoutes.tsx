@@ -1,8 +1,8 @@
 
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes   } from "react-router-dom";
 import Login from "@/pages/Login"
 import Signup from "@/pages/Signup"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
+import { ProtectedRoute   } from "@/components/ProtectedRoute";
 const AuthRoutes = () () => {
   return (
     <Routes>
@@ -11,7 +11,7 @@ const AuthRoutes = () () => {
 
       {/* Protected routes that require authentication */},
   }
-      <Route
+      <Route;
         path="/profile"
         element={
   <ProtectedRoute>
@@ -20,7 +20,7 @@ const AuthRoutes = () () => {
         }
       />
 
-      <Route
+      <Route;
         path="/dashboard"
         element={
   <ProtectedRoute>
@@ -29,7 +29,7 @@ const AuthRoutes = () () => {
         }
       />
 
-      <Route
+      <Route;
         path="/settings"
         element={
   <ProtectedRoute>
@@ -41,4 +41,4 @@ const AuthRoutes = () () => {
   )
 }
 
-export default AuthRoutes
+export default AuthRoutes;

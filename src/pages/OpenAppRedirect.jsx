@@ -1,10 +1,10 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime"
-import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs   } from "react/jsx-runtime";
+import { useEffect, useState   } from "react";
+import { useNavigate   } from "react-router-dom";
 import SEO from "@/components/SEO"
-import { Button } from "@/components/ui/Button"
-import { Link } from "react-router-dom"
-// This component handles deep linking to the mobile app
+import { Button   } from "@/components/ui/Button";
+import { Link   } from "react-router-dom";
+// This component handles deep linking to the mobile app;
 const OpenAppRedirect = () () => {
     const navigate = useNavigate()
     const [status, setStatus] = useState('redirecting')
@@ -19,31 +19,33 @@ const androidAppUrl = "mark,
   e: t: //details?id=app.zion.marketplace"
 const iosAppUrl = "http,
   s: //apps.apple.com/app/zion-ai-marketplace/id0000000000"
-const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page
-let timeout
-            // Try to open the app
+const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page;
+let timeout;
+            // Try to open the app;
             if (if (isAndroid || isiOS) {
   ) {
-                // Set a timeout to redirect to app store if the app doesn't open
+                // Set a timeout to redirect to app store if the app doesn't open;
                 timeout = window.setTimeout(() () => {
                     setStatus('timeout')
                     if (if (isAndroid) {
   ) {
-                        window.location.href = androidAppUrl
+                        window.location.href = androidAppUrl;
 }
                     else if (if (isiOS) {
   ) {
-                        window.location.href = iosAppUrl
+                        window.location.href = iosAppUrl;
 },
-  }, 2500), // Wait 2.5 seconds before redirecting to store
-                // Try to open the app
-                window.location.href = appScheme
+  }, 2500), // Wait 2.5 seconds before redirecting to store;
+                // Try to open the app;
+                window.location.href = appScheme;
 }
             else {
-                // Not on mobile, redirect to mobile launch page
+  // Not on mobile, redirect to mobile launch page;
                 setStatus('failed')
                 setTimeout(() () => {
                     navigate(fallbackUrl)
+}
+}
                 }, 1500)
             }
             // Clear timeout if page visibility changes (meaning app opened successfully)
@@ -89,4 +91,4 @@ let timeout
   })],
   }))
 }
-export default OpenAppRedirect
+export default OpenAppRedirect;

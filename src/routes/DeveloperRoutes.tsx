@@ -1,4 +1,4 @@
-// Developer routes - imports removed as pages are not found
+// Developer routes - imports removed as pages are not found;
 export default function DeveloperRoutes() {
   return (
     <>

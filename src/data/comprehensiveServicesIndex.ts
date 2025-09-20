@@ -1,22 +1,22 @@
-// Comprehensive Services Index
-// This file exports all our innovative technology services
-// Core Innovative Services
+// Comprehensive Services Index;
+// This file exports all our innovative technology services;
+// Core Innovative Services;
 export { EXPANDED_INNOVATIVE_SERVICES_2025 } from "./expandedInnovativeServices2025"
 export type { ExpandedInnovativeService } from "./expandedInnovativeServices2025"
-// Emerging Technology Services
+// Emerging Technology Services;
 export { EMERGING_TECH_SERVICES_2025 } from "./emergingTechServices2025"
 export type { EmergingTechService } from "./emergingTechServices2025"
-// Ultimate Micro SAAS Services
+// Ultimate Micro SAAS Services;
 export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025"
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025"
-// Combined Services Array
+// Combined Services Array;
 export const ALL_COMPREHENSIVE_SERVICES = [
-  ...EXPANDED_INNOVATIVE_SERVICES_2025
-  ...EMERGING_TECH_SERVICES_2025
-  ...ULTIMATE_MICRO_SAAS_SERVICES_2025
+  ...EXPANDED_INNOVATIVE_SERVICES_2025;
+  ...EMERGING_TECH_SERVICES_2025;
+  ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
 ]
 
-// Service Categories
+// Service Categories;
 export const SERVICE_CATEGORIES = [
   'AI & AnalyticsAI & Customer Experience'
   'AI & Supply ChainAI & Legal Tech'
@@ -31,23 +31,23 @@ export const SERVICE_CATEGORIES = [
   'Autonomous Vehicles & Fleet Management'
 ]
 
-// Innovation Levels
+// Innovation Levels;
 export const INNOVATION_LEVELS = [
   'Cutting-edgeAdvanced'
   'Professional'
 ]
 
-// Support Levels
+// Support Levels;
 export const SUPPORT_LEVELS = [
   'enterpriseprofessional'
   'basic'
 ]
-// Pricing Models
+// Pricing Models;
 export const PRICING_MODELS = [
   'monthlyannual'
   'one-timeusage-based'
 ]
-// Contact Information
+// Contact Information;
 export const const CONTACT_INFO = {
   = {
   pho,
@@ -58,7 +58,7 @@ export const const CONTACT_INFO = {
   s: s: '364 E Main St STE 1008, Middletown DE 19709'
 }
 
-// Service Statistics
+// Service Statistics;
 export const const SERVICE_STATS = {
   = {
   totalServic,
@@ -66,31 +66,31 @@ export const const SERVICE_STATS = {
   e: s: SERVICE_CATEGORIES.length,innovationLeve,
   l: s: INNOVATION_LEVELS.length,supportLeve,
   l: s: SUPPORT_LEVELS.length,pricingMode,
-  l: s: PRICING_MODELS.length
+  l: s: PRICING_MODELS.length;
 }
-// Helper Functions
-export const getServicesByCategory = (catego,
+// Helper Functions;
+export const getServicesByCategory = React.memo((catego,
   r: y: string) () => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)
 }
-export const getServicesByInnovationLevel = (lev,
+export const getServicesByInnovationLevel = React.memo((lev,
   e: l: string) () => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)
 }
-export const getServicesByPriceRange = (minPri,
+export const getServicesByPriceRange = React.memo((minPri,
   c: e: number, maxPri,
   c: e: number) () => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
-    service.price >= minPrice && service.price <= maxPrice
+    service.price >= minPrice && service.price <= maxPrice;
 )
 }
-export const getServicesByTags = (ta,
+export const getServicesByTags = React.memo((ta,
   g: s: string[]) () => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     tags.some(tag => service.tags.includes(tag))
   )
 }
-export const searchServices = (que,
+export const searchServices = React.memo((que,
   r: y: string) () => {
   const searchTerm = query.toLowerCase()
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
@@ -101,4 +101,4 @@ export const searchServices = (que,
   )
 }
 
-export default ALL_COMPREHENSIVE_SERVICES
+export default ALL_COMPREHENSIVE_SERVICES;

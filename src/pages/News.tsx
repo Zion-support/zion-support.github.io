@@ -1,29 +1,31 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Calendar
+  Calendar;
   Clock,
   User,
   Tag,
   ArrowRight,
   Search,
-  Filter
-  TrendingUp
-  Zap
-  Brain
-  Cloud
-  Shield
-  Rocket
-  Atom
-  Globe
-  Award
-  Users
-  Building
-  Code
-  Database
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Filter;
+  TrendingUp;
+  Zap;
+  Brain;
+  Cloud;
+  Shield;
+  Rocket;
+  Atom;
+  Globe;
+  Award;
+  Users;
+  Building;
+  Code;
+  Database;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
 interface NewsArticle {
   id: string,tit,
   l: e: string,excer,
@@ -35,7 +37,9 @@ interface NewsArticle {
   g: s: string[],ima,
   g: e: string,featur,
   e: d: boolean,readTi,
-  m: e: number
+  m: e: number;
+}
+}
 }
 
 const,
@@ -102,7 +106,7 @@ const,
       ima,
   g: e: '/images/news/ai-quantum-platform.jpg',featur,
   e: d: true,readTi,
-  m: e: 8
+  m: e: 8;
 },
   {
   id: '2',tit,
@@ -116,7 +120,7 @@ const,
       ima,
   g: e: '/images/news/micro-saas-solutions.jpg',featur,
   e: d: true,readTi,
-  m: e: 6
+  m: e: 6;
 },
   {
   id: '3',tit,
@@ -132,7 +136,7 @@ const,
       ima,
   g: e: '/images/news/ai-cybersecurity.jpg',featur,
   e: d: false,readTi,
-  m: e: 7
+  m: e: 7;
 },
   {
   id: '4',tit,
@@ -146,7 +150,7 @@ const,
       ima,
   g: e: '/images/news/techcrunch-award.jpg',featur,
   e: d: false,readTi,
-  m: e: 4
+  m: e: 4;
 },
   {
   id: '5',tit,
@@ -162,7 +166,7 @@ const,
       ima,
   g: e: '/images/news/edge-computing-iot.jpg',featur,
   e: d: false,readTi,
-  m: e: 9
+  m: e: 9;
 },
   {
   id: '6',tit,
@@ -177,7 +181,7 @@ const,
       ima,
   g: e: '/images/news/quantum-ml.jpg',featur,
   e: d: false,readTi,
-  m: e: 10
+  m: e: 10;
 },
   {
   id: '7',tit,
@@ -192,7 +196,7 @@ const,
       ima,
   g: e: '/images/news/cloud-finops.jpg',featur,
   e: d: false,readTi,
-  m: e: 6
+  m: e: 6;
 },
   {
   id: '8',tit,
@@ -207,26 +211,28 @@ const,
       ima,
   g: e: '/images/news/digital-twin.jpg',featur,
   e: d: false,readTi,
-  m: e: 8
+  m: e: 8;
 },
   ]
-  // Update category counts
+  // Update category counts;
   categories.forEach(category () => {
   if (if (category.id === 'all') {
   ) {
-      category.count = newsArticles.length
+      category.count = newsArticles.length;
 } else {
-      category.count = newsArticles.filter(article => article.category === category.id).length
+  category.count = newsArticles.filter(article => article.category === category.id).length;
+}
+}
 },
   })
 
-  const filteredArticles = newsArticles
+  const filteredArticles = newsArticles;
     .filter(article () => {
   const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory
-      return matchesSearch && matchesCategory
+      const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
+      return matchesSearch && matchesCategory;
 })
     .sort((a, b) () => {
   if (if (sortBy === 'latest') {
@@ -237,16 +243,16 @@ const,
         return new Date(a.date).getTime() - new Date(b.date).getTime()
       } else if (if (sortBy === 'readTime') {
   ) {
-        return a.readTime - b.readTime
+        return a.readTime - b.readTime;
 }
-      return 0
+      return 0;
 })
 
   const featuredArticles = newsArticles.filter(article => article.featured)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO;
         title="News & Updates - Zion Tech Group"
         description="Stay updated with the latest news, innovations, and insights from Zion Tech Group. Discover breakthroughs in AI, quantum computing, and emerging technologies."
         keywords="AI news, quantum computing updates, technology trends, Zion Tech Group news, AI innovations"
@@ -258,7 +264,7 @@ const,
   s: m: px-6,
   l: g:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -274,7 +280,7 @@ const,
   m: d:text-6xl font-bold text-white mb-6">
               Latest News &
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Updates
+                Updates;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -285,7 +291,7 @@ const,
 
           {/* Search and Filter Bar */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -305,7 +311,7 @@ const,
   }
                 <div className="flex-1 relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search news and articles..."
                     value={searchQuery},
@@ -323,7 +329,7 @@ const,
                 {/* Category Filter */},
   }
                 <div className="flex-shrink-0">
-                  <select
+                  <select;
                     value={selectedCategory},
   }
                     onChange={(e) => setSelectedCategory(e.target.value)},
@@ -345,7 +351,7 @@ const,
                 {/* Sort */},
   }
                 <div className="flex-shrink-0">
-                  <select
+                  <select;
                     value={sortBy},
   }
                     onChange={(e) => setSortBy(e.target.value)},
@@ -382,7 +388,7 @@ const,
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -399,17 +405,17 @@ const,
             >
               <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-                Featured Stories
+                Featured Stories;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Don't miss our most important updates and breakthrough announcements
+                Don't miss our most important updates and breakthrough announcements;
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-8">
               {featuredArticles.map((article, index) => (
-  <motion.article
+  <motion.article;
                   key={article.id},
   }
                   initial={ opaci,
@@ -456,7 +462,7 @@ const,
                       </span>
                       <span className="flex items-center">
                         <Clock className="w-4 h-4 mr-2" />
-                        {article.readTime} min read
+                        {article.readTime} min read;
                       </span>
                       <span className="flex items-center">
                         <User className="w-4 h-4 mr-2" />
@@ -479,7 +485,7 @@ const,
                     <div className="flex items-center justify-between">
                       <div className="flex flex-wrap gap-2">
                         {article.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                             key={tagIndex},
   }
                             className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20";"
@@ -490,12 +496,12 @@ const,
                         ))}
                       </div>
                       
-                      <Link
+                      <Link;
                         to={`/news/${article.id}`}
                         className="className="flex items-center text-cyan-400,
   hove: r: text-white transition-colors duration-300 group";"
                       >
-                        Read More
+                        Read More;
                         <ArrowRight className="w-4 h-4 ml-2 group-hove,
   r:translate-x-1 transition-transform duration-300" />
                       </Link>
@@ -513,7 +519,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -530,15 +536,15 @@ const,
           >
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Latest News
+              Latest News;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Stay updated with all our latest news, insights, and technology updates
+              Stay updated with all our latest news, insights, and technology updates;
             </p>
           </motion.div>
 
           {filteredArticles.length === 0 ? (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0 },
   }
@@ -556,7 +562,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {filteredArticles.map((article, index) => (
-  <motion.article
+  <motion.article;
                   key={article.id},
   }
                   initial={ opaci,
@@ -603,7 +609,7 @@ const,
                       </span>
                       <span className="flex items-center">
                         <Clock className="w-4 h-4 mr-1" />
-                        {article.readTime} min
+                        {article.readTime} min;
                       </span>
                     </div>
                     
@@ -621,7 +627,7 @@ const,
                     <div className="flex items-center justify-between">
                       <div className="flex flex-wrap gap-1">
                         {article.tags.slice(0, 2).map((tag, tagIndex) => (
-  <span
+  <span;
                             key={tagIndex},
   }
                             className="className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
@@ -632,12 +638,12 @@ const,
                         ))}
                       </div>
                       
-                      <Link
+                      <Link;
                         to={`/news/${article.id}`}
                         className="className="flex items-center text-cyan-400,
   hove: r: text-white transition-colors duration-300 text-sm";"
                       >
-                        Read
+                        Read;
                         <ArrowRight className="w-4 h-4 ml-1 group-hove,
   r:translate-x-1 transition-transform duration-300" />
                       </Link>
@@ -656,7 +662,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -673,7 +679,7 @@ const,
           >
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-6">
-              Stay Updated with Zion Tech Group
+              Stay Updated with Zion Tech Group;
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Get the latest news, insights, and technology updates delivered directly to your inbox. 
@@ -681,7 +687,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="className="flex-1 px-6 py-3 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400,
@@ -693,7 +699,7 @@ const,
               <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600 hove,
   r:to-blue-700 transition-all duration-200">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </motion.div>
@@ -702,4 +708,4 @@ const,
     </div>
   )
 }
-export default News
+export default News;

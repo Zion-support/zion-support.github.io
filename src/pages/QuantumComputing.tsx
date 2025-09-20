@@ -1,42 +1,44 @@
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  Atom
+  Atom;
   Brain,
   Zap,
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Globe
-  Lock
-  Database
-  Cpu
-  Network
-  BarChart3
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-  Target
-  Users
-  ArrowRight
-  Key
-  Fingerprint
-  EyeOff
-  Server
-  Globe2
-  ShieldCheck
-  Infinity
-  Rocket
-  Sparkles
-  Flask
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Infinity;
+  Rocket;
+  Sparkles;
+  Flask;
+}
+}
+ } from "lucide-react";
 export default function QuantumComputing() {
   const features = [
   {
@@ -93,25 +95,25 @@ export default function QuantumComputing() {
   tit,
   l: e: 'Drug Discovery',descripti,
   o: n: 'Accelerate pharmaceutical research and molecular modeling',ic,
-  o: n: Flask
+  o: n: Flask;
 },
   {
   tit,
   l: e: 'Financial Modeling',descripti,
   o: n: 'Revolutionary risk assessment and portfolio optimization',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: 'Climate Research',descripti,
   o: n: 'Advanced climate modeling and environmental simulations',ic,
-  o: n: Globe
+  o: n: Globe;
 },
   {
   tit,
   l: e: 'AI & Machine Learning',descripti,
   o: n: 'Quantum-enhanced artificial intelligence algorithms',ic,
-  o: n: Brain
+  o: n: Brain;
 },
   ]
   const quantumApplications = [
@@ -147,7 +149,7 @@ export default function QuantumComputing() {
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="Quantum Computing - Zion Tech Group"
         description="Revolutionary quantum computing solutions with AI integration, quantum cryptography, and breakthrough computational capabilities. Transform your business with quantum technology."
         keywords="quantum computing, quantum AI, quantum cryptography, quantum machine learning, quantum optimization, quantum simulation"
@@ -159,7 +161,7 @@ export default function QuantumComputing() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -173,26 +175,26 @@ export default function QuantumComputing() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-400 text-sm font-medium mb-6">
                 <Atom className="w-4 h-4" />
-                Quantum Innovation
+                Quantum Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                Quantum
+                Quantum;
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                  Computing
+                  Computing;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Experience the future of computing with our revolutionary quantum platform. 
-                Harness the power of quantum mechanics for breakthrough discoveries
+                Harness the power of quantum mechanics for breakthrough discoveries;
                 unbreakable security, and computational capabilities beyond imagination.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -204,9 +206,9 @@ export default function QuantumComputing() {
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-purple-500/25";"
                 >
-                  Explore Quantum
+                  Explore Quantum;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -217,7 +219,7 @@ export default function QuantumComputing() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>
@@ -235,7 +237,7 @@ export default function QuantumComputing() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -252,10 +254,10 @@ export default function QuantumComputing() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Revolutionary Quantum Features
+                Revolutionary Quantum Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our quantum platform combines cutting-edge quantum technology with 
+                Our quantum platform combines cutting-edge quantum technology with;
                 practical applications to deliver unprecedented computational power.
               </p>
             </motion.div>
@@ -264,7 +266,7 @@ export default function QuantumComputing() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -311,7 +313,7 @@ export default function QuantumComputing() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -327,19 +329,19 @@ export default function QuantumComputing() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your Computational Capabilities
+                  Transform Your Computational Capabilities;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our quantum computing platform delivers breakthrough performance in 
-                  problem-solving, optimization, and simulation while opening new 
+                  Our quantum computing platform delivers breakthrough performance in;
+                  problem-solving, optimization, and simulation while opening new;
                   possibilities in AI, cryptography, and scientific research.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -364,7 +366,7 @@ export default function QuantumComputing() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -386,7 +388,7 @@ export default function QuantumComputing() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Quantum Performance
+                      Quantum Performance;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -418,7 +420,7 @@ export default function QuantumComputing() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -435,10 +437,10 @@ export default function QuantumComputing() {
             >
               <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-                Quantum Applications
+                Quantum Applications;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From machine learning to cryptography, our quantum platform enables 
+                From machine learning to cryptography, our quantum platform enables;
                 revolutionary applications across industries and domains.
               </p>
             </motion.div>
@@ -446,7 +448,7 @@ export default function QuantumComputing() {
             <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
               {quantumApplications.map((application, index) => (
-  <motion.div
+  <motion.div;
                   key={application.name},
   }
                   initial={ opaci,
@@ -495,7 +497,7 @@ export default function QuantumComputing() {
   }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -512,10 +514,10 @@ export default function QuantumComputing() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Quantum Computing Use Cases
+                Quantum Computing Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our quantum platform adapts to various industries and research areas
+                Our quantum platform adapts to various industries and research areas;
                 providing tailored solutions for complex computational challenges.
               </p>
             </motion.div>
@@ -523,7 +525,7 @@ export default function QuantumComputing() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -570,7 +572,7 @@ export default function QuantumComputing() {
   }
         <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -591,13 +593,13 @@ export default function QuantumComputing() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading research institutions and companies that are already using 
+                Join leading research institutions and companies that are already using;
                 our quantum platform to solve the world's most complex problems.
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -609,9 +611,9 @@ export default function QuantumComputing() {
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-purple-500/25";"
                 >
-                  Start Quantum Journey
+                  Start Quantum Journey;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -622,7 +624,7 @@ export default function QuantumComputing() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>

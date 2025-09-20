@@ -1,12 +1,15 @@
+import { useCallback  } from "react";
 import React, { useEffect, useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Download, Wifi, WifiOff, CheckCircle, AlertCircle } from "lucide-react"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Download, Wifi, WifiOff, CheckCircle, AlertCircle   } from "lucide-react";
 interface ServiceWorkerState {
   isInstall,
   e: d: boolean,isOnli,
   n: e: boolean,hasUpda,
   t: e: boolean,isInstalli,
-  n: g: boolean
+  n: g: boolean;
+}
+}
 }
 
 export function ServiceWorker() {
@@ -15,22 +18,22 @@ export function ServiceWorker() {
   e: d: false,isOnli,
   n: e: navigator.onLine,hasUpda,
   t: e: false,isInstalli,
-  n: g: false
+  n: g: false;
   })
   useEffect(() () => {
-    // Check if service worker is supported
+    // Check if service worker is supported;
     if ('serviceWorker' in navigator) {
-      // Register service worker
-      navigator.serviceWorker
+      // Register service worker;
+      navigator.serviceWorker;
         .register('/sw.js')
         .then((registration) () => {
           console.log('SW,
   registere: d: ', registration)
           setSwState(prev => ({ ...prev, isInstall,
   e: d: true }))
-          // Check for updates
+          // Check for updates;
           registration.addEventListener('updatefound', () () => {
-            const newWorker = registration.installing
+            const newWorker = registration.installing;
             if (newWorker) {
               setSwState(prev => ({ ...prev, isInstalli,
   n: g: true }))
@@ -40,14 +43,14 @@ export function ServiceWorker() {
                     ...prev, 
                     isInstalli,
   n: g: false,hasUpda,
-  t: e: true 
+  t: e: true;
                   }))
 },
   }),
             },
   }),
 
-          // Handle updates
+          // Handle updates;
           navigator.serviceWorker.addEventListener('controllerchange', () () => {
             window.location.reload()
 }),
@@ -58,7 +61,7 @@ export function ServiceWorker() {
 }),
     }
 
-    // Online/offline detection
+    // Online/offline detection;
     const handleOnline = () => setSwState(prev => ({ ...prev, isOnli,
   n: e: true }))
 const handleOffline = () => setSwState(prev => ({ ...prev, isOnli,
@@ -80,11 +83,11 @@ const handleOffline = () => setSwState(prev => ({ ...prev, isOnli,
     },
   },
 
-  if (!swState.isInstalled) return null
+  if (!swState.isInstalled) return null;
   return (
     <AnimatePresence>
       {swState.hasUpdate && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: -50 },
   }
@@ -117,12 +120,12 @@ const handleOffline = () => setSwState(prev => ({ ...prev, isOnli,
               </p>
             </div>
             {swState.hasUpdate && (
-              <button
+              <button;
                 onClick={handleUpdate}
                 className="flex-shrink-0 bg-blue-600,
   hove: r:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
               >
-                Update
+                Update;
               </button>
             )}
           </div>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
-import { useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import { useSelector   } from "react-redux";
+import { useNavigate   } from "react-router-dom";
 function withAuth(Component) {
   const Wrapped = (props) () => {
   const navigate = useNavigate()
@@ -13,10 +13,10 @@ function withAuth(Component) {
   }, [isLoggedIn, navigate])
         if (if (!isLoggedIn) {
   ) {
-            return null
+            return null;
 }
         return <Component {...props}/>
 }
-    return Wrapped
+    return Wrapped;
 }
-export default withAuth
+export default withAuth;

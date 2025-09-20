@@ -1,9 +1,9 @@
 
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  Play
+  Play;
   Calendar,
   Clock,
   Users,
@@ -12,14 +12,16 @@ import {
   BookOpen,
   ArrowRight,
   Star,
-  ExternalLink
-  Clock3
-  User
-  Tag
-  Download
-  Share2
-  Bookmark
-} from "lucide-react"
+  ExternalLink;
+  Clock3;
+  User;
+  Tag;
+  Download;
+  Share2;
+  Bookmark;
+}
+}
+ } from "lucide-react";
 export,
   const: Webinars: React.FC = () () => {
   const webinars = [
@@ -188,7 +190,7 @@ export,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Webinars - Zion Tech Group"
         description="Join our expert-led webinars on AI, quantum computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve."
       />
@@ -197,7 +199,7 @@ export,
   }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -211,19 +213,19 @@ export,
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-400 text-sm font-medium mb-6">
               <Video className="w-4 h-4" />
-              Live Learning Sessions
+              Live Learning Sessions;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
               Expert Webinars &
               <span className="block bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-600 bg-clip-text text-transparent">
-                Learning Sessions
+                Learning Sessions;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join industry experts and thought leaders for in-depth discussions on cutting-edge technologies
+              Join industry experts and thought leaders for in-depth discussions on cutting-edge technologies;
               practical implementation strategies, and future industry trends.
             </p>
             
@@ -258,11 +260,11 @@ export,
         <div className="container-responsive">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
-  <button
+  <button;
                 key={category.name},
   }
                 className={`px-6 py-3 rounded-full border transition-all duration-300 ${
-  category.active
+  category.active;
                     ? 'border-purple-400 bg-purple-400/20 text-purple-400'
                     : 'border-slate-600 text-gray-400,
   hove: r: border-slate-500 hove,
@@ -290,7 +292,7 @@ export,
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
             {featuredWebinars.map((webinar) => (
-  <motion.div
+  <motion.div;
                 key={webinar.id},
   }
                 initial={ opaci,
@@ -318,7 +320,7 @@ export,
                   <div className="absolute top-4 right-4">
                     <span className="inline-flex items-center px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-400 text-xs font-medium">
                       <Star className="w-3 h-3 mr-1" />
-                      Featured
+                      Featured;
                     </span>
                   </div>
                   <div className="absolute bottom-4 left-4">
@@ -378,7 +380,7 @@ export,
   hove: r:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 transform hove,
   r:scale-105 flex items-center justify-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    Register Now
+                    Register Now;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -399,7 +401,7 @@ export,
           
           <div className="space-y-6">
             {upcomingWebinars.map((webinar) => (
-  <motion.div
+  <motion.div;
                 key={webinar.id},
   }
                 initial={ opaci,
@@ -445,7 +447,7 @@ export,
                       </span>
                       {webinar.featured && (
   <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-medium rounded-full border border-purple-400/30">
-                          Featured
+                          Featured;
                         </span>
                       )}
                       <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full border border-green-400/30">
@@ -483,7 +485,7 @@ export,
                       </span>
                       <span className="flex items-center gap-2">
                         <Users className="w-4 h-4" />
-                        {webinar.attendees.toLocaleString()} registered
+                        {webinar.attendees.toLocaleString()} registered;
                       </span>
                     </div>
                     
@@ -506,7 +508,7 @@ export,
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-purple-500/25">
                       <Calendar className="w-4 h-4" />
-                      Register
+                      Register;
                       <ArrowRight className="w-4 h-4" />
                     </button>
                     
@@ -532,7 +534,7 @@ export,
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -547,16 +549,16 @@ export,
   }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Never Miss a Learning Opportunity
+              Never Miss a Learning Opportunity;
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get notified about upcoming webinars, new learning resources, and exclusive content 
+              Get notified about upcoming webinars, new learning resources, and exclusive content;
               from our technology experts.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="className="flex-1 px-6 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400,
@@ -569,7 +571,7 @@ export,
   hove: r:from-purple-600,
   hove: r:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 transform hove,
   r:scale-105">
-                Subscribe
+                Subscribe;
               </button>
             </div>
             
@@ -582,4 +584,4 @@ export,
     </div>
   )
 }
-export default Webinars
+export default Webinars;

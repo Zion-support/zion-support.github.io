@@ -1,18 +1,22 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Server
-  Shield
-  Cloud
-  Database
-  Network
-  Lock
-  Zap
-  Globe
-  Cpu
-  HardDrive
-  Check
-} from "lucide-react"
+  Server;
+  Shield;
+  Cloud;
+  Database;
+  Network;
+  Lock;
+  Zap;
+  Globe;
+  Cpu;
+  HardDrive;
+  Check;
+}
+}
+}
+}
+ } from "lucide-react";
 const ITInfrastructure = () () => {
   const services = [
   {
@@ -80,7 +84,7 @@ const ITInfrastructure = () () => {
   }
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -97,9 +101,9 @@ const ITInfrastructure = () () => {
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              IT Infrastructure
+              IT Infrastructure;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                Solutions
+                Solutions;
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
@@ -114,7 +118,7 @@ const ITInfrastructure = () () => {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -131,10 +135,10 @@ const ITInfrastructure = () () => {
           >
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-6">
-              Comprehensive Infrastructure Services
+              Comprehensive Infrastructure Services;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              From server management to cloud optimization, we provide end-to-end IT infrastructure solutions
+              From server management to cloud optimization, we provide end-to-end IT infrastructure solutions;
               that ensure your business runs smoothly and efficiently.
             </p>
           </motion.div>
@@ -143,7 +147,7 @@ const ITInfrastructure = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -192,7 +196,7 @@ const ITInfrastructure = () () => {
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -220,7 +224,7 @@ const ITInfrastructure = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -253,7 +257,7 @@ const ITInfrastructure = () () => {
   }
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -273,7 +277,7 @@ const ITInfrastructure = () () => {
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Let our experts help you build a robust, scalable, and secure infrastructure
+              Let our experts help you build a robust, scalable, and secure infrastructure;
               that drives your business forward.
             </p>
             <div className="flex flex-col,
@@ -281,12 +285,12 @@ const ITInfrastructure = () () => {
               <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25">
-                Get Started Today
+                Get Started Today;
               </button>
               <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-                Schedule Consultation
+                Schedule Consultation;
               </button>
             </div>
           </motion.div>
@@ -295,4 +299,4 @@ const ITInfrastructure = () () => {
     </div>
   )
 }
-export default ITInfrastructure
+export default ITInfrastructure;

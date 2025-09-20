@@ -1,28 +1,30 @@
 import React from "react"
-import { SEO } from "../components/SEO"
+import { SEO   } from "../components/SEO";
 import {
-  Code
-  Zap
-  Users
-  TrendingUp
-  Shield
-  Globe
-  Building
-  Rocket
-  Cpu
-  BarChart3
-  Database
-  Cloud
-  Lock
-  Smartphone
-  Target
-  DollarSign
-  Clock
-  CheckCircle
-  Star
-  ArrowRight
-  Brain
-} from "lucide-react"
+  Code;
+  Zap;
+  Users;
+  TrendingUp;
+  Shield;
+  Globe;
+  Building;
+  Rocket;
+  Cpu;
+  BarChart3;
+  Database;
+  Cloud;
+  Lock;
+  Smartphone;
+  Target;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Brain;
+}
+}
+ } from "lucide-react";
 export default function MicroSAASSolutions() {
   const services = [
   {
@@ -73,25 +75,25 @@ export default function MicroSAASSolutions() {
   tit,
   l: e: "Rapid Deployment",descripti,
   o: n: "Quick time-to-market with agile development methodologies",ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   tit,
   l: e: "Scalability",descripti,
   o: n: "Built to grow with your business from day one",ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "Cost Efficiency",descripti,
   o: n: "Reduced infrastructure costs with cloud-native solutions",ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: "Security",descripti,
   o: n: "Enterprise-grade security and compliance standards",ic,
-  o: n: Shield
+  o: n: Shield;
 },
   ]
   const industries = [
@@ -99,37 +101,37 @@ export default function MicroSAASSolutions() {
   na,
   m: e: "Healthcare",descripti,
   o: n: "HIPAA-compliant patient management systems",ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   na,
   m: e: "Finance",descripti,
   o: n: "Regulatory-compliant financial tools",ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   na,
   m: e: "Education",descripti,
   o: n: "Learning management and student tracking",ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   na,
   m: e: "Manufacturing",descripti,
   o: n: "Production planning and inventory management",ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   na,
   m: e: "Retail",descripti,
   o: n: "E-commerce and point-of-sale solutions",ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   na,
   m: e: "Real Estate",descripti,
   o: n: "Property management and client portals",ic,
-  o: n: Building
+  o: n: Building;
 },
   ]
   const processSteps = [
@@ -168,7 +170,7 @@ export default function MicroSAASSolutions() {
   ]
   return (
     <>
-      <SEO
+      <SEO;
         title="Micro SAAS Solutions - Custom Software Development"
         description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications."
         keywords="micro saas, custom software, saas development, software solutions, business applications"
@@ -192,12 +194,12 @@ export default function MicroSAASSolutions() {
 
               <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-                Micro SAAS
+                Micro SAAS;
                 <span className="text-gradient block">Solutions</span>
               </h1>
 
               <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-                Transform your business with custom Micro SAAS solutions. From development to deployment
+                Transform your business with custom Micro SAAS solutions. From development to deployment;
                 we deliver scalable, secure, and efficient software-as-a-service applications.
               </p>
 
@@ -226,7 +228,7 @@ export default function MicroSAASSolutions() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Micro SAAS Services</h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Comprehensive solutions designed to accelerate your business growth
+                Comprehensive solutions designed to accelerate your business growth;
               </p>
             </div>
 
@@ -234,7 +236,7 @@ export default function MicroSAASSolutions() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {services.map((service, index) => (
-  <div
+  <div;
                   key={service.title},
   }
                   className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6,
@@ -268,14 +270,14 @@ export default function MicroSAASSolutions() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Micro SAAS Solutions?</h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Understanding the fundamental advantages that make our solutions essential
+                Understanding the fundamental advantages that make our solutions essential;
               </p>
             </div>
 
             <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
-  <div
+  <div;
                   key={benefit.title},
   }
                   className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8,
@@ -300,7 +302,7 @@ export default function MicroSAASSolutions() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Industries We Serve</h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Proven solutions across diverse industry verticals
+                Proven solutions across diverse industry verticals;
               </p>
             </div>
 
@@ -308,7 +310,7 @@ export default function MicroSAASSolutions() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
-  <div
+  <div;
                   key={industry.name},
   }
                   className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6,
@@ -333,7 +335,7 @@ export default function MicroSAASSolutions() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Development Process</h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                A proven methodology that ensures successful project delivery
+                A proven methodology that ensures successful project delivery;
               </p>
             </div>
 
@@ -371,28 +373,28 @@ export default function MicroSAASSolutions() {
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Micro SAAS?</h2>
               <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-                Let's discuss how custom Micro SAAS solutions can transform your business
+                Let's discuss how custom Micro SAAS solutions can transform your business;
                 and accelerate your growth in the digital marketplace.
               </p>
 
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <a
+                <a;
                   href="/contact"
                   className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105";"
                 >
-                  Start Your Project
+                  Start Your Project;
                 </a>
-                <a
+                <a;
                   href="/contact"
                   className="className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
                 >
-                  Get Consultation
+                  Get Consultation;
                 </a>
               </div>
             </div>

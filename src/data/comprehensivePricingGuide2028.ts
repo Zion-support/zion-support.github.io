@@ -13,7 +13,9 @@ export interface ComprehensivePricingPlan2028 {
   nam,
   e: string,pri,
   c: e: number,descripti,
-  o: n: string
+  o: n: string;
+}
+}
 },
   [[],
   ]
@@ -21,8 +23,8 @@ export interface ComprehensivePricingPlan2028 {
   o: n: {
   featur,
   e: string,includ,
-  e: d: boolean
-    details?: string
+  e: d: boolean;
+    details?: string;
 },
   []
   contactIn,
@@ -30,7 +32,7 @@ export interface ComprehensivePricingPlan2028 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
 },
   }
 
@@ -49,6 +51,8 @@ export interface ServiceCategory2028 {
   e: s: string[],benefi,
   t: s: string[[],
   ],
+}
+}
   },
   [[],
   ],

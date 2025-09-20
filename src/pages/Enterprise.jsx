@@ -1,8 +1,8 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Check, Users, Shield, BarChart3, Zap, Globe, Phone   } from "lucide-react";
 export default function Enterprise() {
   const features = [
   {
@@ -96,7 +96,7 @@ export default function Enterprise() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Enterprise Solutions
+            Enterprise Solutions;
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Scale your tech operations with Zion Tech Group's comprehensive enterprise platform. 
@@ -106,12 +106,12 @@ export default function Enterprise() {
   s: m: flex-row gap-4 justify-center">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r:bg-zion-cyan-light">
-              Schedule Demo
+              Schedule Demo;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-zion-blue-dark">
-              Contact Sales
+              Contact Sales;
             </Button>
           </div>
         </div>
@@ -123,10 +123,10 @@ export default function Enterprise() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Enterprise-Grade Features
+              Enterprise-Grade Features;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Everything you need to manage large-scale tech operations efficiently and securely
+              Everything you need to manage large-scale tech operations efficiently and securely;
             </p>
           </div>
           
@@ -156,10 +156,10 @@ export default function Enterprise() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Enterprise Plans
+              Enterprise Plans;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your organization's needs and scale
+              Choose the plan that fits your organization's needs and scale;
             </p>
           </div>
           
@@ -215,12 +215,12 @@ export default function Enterprise() {
   s: m: flex-row gap-4 justify-center">
               <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r:bg-zion-cyan-light">
-                Schedule Consultation
+                Schedule Consultation;
               </Button>
               <Button size="lg" variant="outline" className="border-zion-purple text-zion-purple,
   hove: r:bg-zion-purple hove,
   r:text-white">
-                Download Brochure
+                Download Brochure;
               </Button>
             </div>
           </div>

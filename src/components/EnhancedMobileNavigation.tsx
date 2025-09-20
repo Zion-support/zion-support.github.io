@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link, useLocation } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link, useLocation   } from "react-router-dom";
 import {
   Menu,
   X,
@@ -32,12 +33,16 @@ import {
   MessageCircle,
   Mail,
   MapPin,
-  Clock
-} from "lucide-react"
+  Clock;
+}
+}
+ } from "lucide-react";
 interface NavigationItem {
   lab,
   e: l: string,pa,
   t: h: string,ic,
+}
+}
   o: n: React.ComponentType<{ size?: number, className?: string }>,
   children?: NavigationItem[],
   description?: string,
@@ -171,9 +176,11 @@ const menuRef = useRef<HTMLDivElement>(null)
       if (newSet.has(label)) {
         newSet.delete(label)
       } else {
-        newSet.add(label)
+  newSet.add(label)
 }
-      return newSet
+}
+}
+      return newSet;
 }),
   },
 
@@ -195,29 +202,29 @@ const menuRef = useRef<HTMLDivElement>(null)
   e: m: NavigationItem, dep,
   t: h: number = 0) () => {
     const isExpanded = expandedItems.has(item.label)
-const hasChildren = item.children && item.children.length > 0
+const hasChildren = item.children && item.children.length > 0;
 const isItemActive = isActive(item.path)
     return (
       <div key={item.label} className="w-full">
-        <motion.div
+        <motion.div;
           initial={false}
           animate={ backgroundCol,
   o: r: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' },
   }
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
         >
-          <Link
+          <Link;
             to={item.path}
             onClick={() => handleNavigation(item.path)}
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${
-              isItemActive
+              isItemActive;
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'
                 : 'text-white,
   hove: r:text-zion-cyan'
             }`}
           >
             <div className="flex items-center gap-3">
-              <item.icon
+              <item.icon;
                 size={20}
                 className={isItemActive ? 'text-zion-cyan' : 'text-zion-slate-light'}
               />
@@ -229,7 +236,7 @@ const isItemActive = isActive(item.path)
               </div>
             </div>
             {hasChildren && (
-              <ChevronDown
+              <ChevronDown;
                 size={16}
                 className={`transition-transform duration-200 ${
                   isExpanded ? 'rotate-180' : ''
@@ -239,13 +246,13 @@ const isItemActive = isActive(item.path)
           </Link>
 
           {hasChildren && (
-            <button
+            <button;
               onClick={() => toggleExpanded(item.label)}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light,
   hove: r:text-white transition-colors"
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
             >
-              <ChevronDown
+              <ChevronDown;
                 size={16}
                 className={`transition-transform duration-200 ${
                   isExpanded ? 'rotate-180' : ''
@@ -258,7 +265,7 @@ const isItemActive = isActive(item.path)
         {hasChildren && (
           <AnimatePresence>
             {isExpanded && (
-              <motion.div
+              <motion.div;
                 initial={ heig,
   h: t: 0, opaci,
   t: y: 0 },
@@ -291,7 +298,7 @@ const isItemActive = isActive(item.path)
   return (
     <>
       {/* Mobile Menu Toggle */}
-      <button
+      <button;
         onClick={() => setIsOpen(true)}
         className="lg: hidden p-2 text-white,
   hove: r:text-zion-cyan transition-colors,
@@ -306,7 +313,7 @@ const isItemActive = isActive(item.path)
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0 },
   }
@@ -322,7 +329,7 @@ const isItemActive = isActive(item.path)
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50,
   l: g:hidden"
           >
-            <motion.div
+            <motion.div;
               ref={menuRef}
               initial={ x: '100%' },
   }
@@ -347,7 +354,7 @@ const isItemActive = isActive(item.path)
                     <p className="text-sm text-zion-slate-light">Technology Solutions</p>
                   </div>
                 </div>
-                <button
+                <button;
                   onClick={() => setIsOpen(false)}
                   className="p-2 text-zion-slate-light,
   hove: r: text-white transition-colors rounded-lg hove,
@@ -363,11 +370,11 @@ const isItemActive = isActive(item.path)
                 {/* Quick Actions */}
                 <div className="p-6 border-b border-zion-slate-light/20">
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
-                    Quick Actions
+                    Quick Actions;
                   </h3>
                   <div className="grid grid-cols-3 gap-3">
                     {quickActions.map(action => (
-                      <Link
+                      <Link;
                         key={action.label}
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}
@@ -384,7 +391,7 @@ const isItemActive = isActive(item.path)
                 {/* Main Navigation */}
                 <nav className="p-6">
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
-                    Navigation
+                    Navigation;
                   </h3>
                   <div className="space-y-1">
                     {navigationItems.map(item => renderNavigationItem(item))}
@@ -394,7 +401,7 @@ const isItemActive = isActive(item.path)
                 {/* Contact Information */}
                 <div className="p-6 border-t border-zion-slate-light/20">
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
-                    Contact Info
+                    Contact Info;
                   </h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-3 text-zion-slate-light">
@@ -424,11 +431,11 @@ const isItemActive = isActive(item.path)
                   <div className="flex items-center gap-4">
                     <Link to="/privacy" className="hov,
   e: r: text-white transition-colors">
-                      Privacy
+                      Privacy;
                     </Link>
                     <Link to="/terms" className="hove,
   r:text-white transition-colors">
-                      Terms
+                      Terms;
                     </Link>
                   </div>
                 </div>

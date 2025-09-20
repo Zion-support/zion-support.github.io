@@ -1,10 +1,10 @@
 import React from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Badge   } from "@/components/ui/badge";
 import SEO from "@/components/SEO"
-import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react"
-import { Link } from "react-router-dom"
+import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star   } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function AIAnalyticsDashboard() {
   const features = [
   {
@@ -47,7 +47,7 @@ export default function AIAnalyticsDashboard() {
                 "Monthly reports"
 ]
             popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -64,7 +64,7 @@ export default function AIAnalyticsDashboard() {
                 "API access"
 ]
             popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -81,7 +81,7 @@ export default function AIAnalyticsDashboard() {
                 "Custom integrations"
 ]
             popula,
-  r: false
+  r: false;
 },
   ]
     const testimonials = [
@@ -91,7 +91,7 @@ export default function AIAnalyticsDashboard() {
   l: e: "CTO, TechFlow Inc."
             conte,
   n: t: "Zion's AI Analytics Dashboard transformed how we understand our customer data. The insights are game-changing.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -99,7 +99,7 @@ export default function AIAnalyticsDashboard() {
   l: e: "Data Scientist, DataCorp"
             conte,
   n: t: "The predictive analytics capabilities are incredible. We've improved our forecasting accuracy by 40%.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -108,7 +108,7 @@ export default function AIAnalyticsDashboard() {
             conte,
   n: t: "Real-time dashboards help us make faster, better decisions. ROI was immediate."
             rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
@@ -121,11 +121,11 @@ export default function AIAnalyticsDashboard() {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
         <div className="container mx-auto relative z-10 text-center">
           <Badge className="mb-6 bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
-            🚀 New AI-Powered Service
+            🚀 New AI-Powered Service;
           </Badge>
           <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-            AI Analytics Dashboard
+            AI Analytics Dashboard;
           </h1>
           <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -138,14 +138,14 @@ export default function AIAnalyticsDashboard() {
   hove: r:from-zion-purple-light,
   hove: r:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10 px-8 py-4 text-lg">
               <Link to="/contact">
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </Button>
           </div>
@@ -158,7 +158,7 @@ export default function AIAnalyticsDashboard() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful AI Analytics Features
+              Powerful AI Analytics Features;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our platform combines cutting-edge AI technology with intuitive design to deliver insights that drive business growth.
@@ -196,7 +196,7 @@ export default function AIAnalyticsDashboard() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include our core AI analytics features.
@@ -208,7 +208,7 @@ export default function AIAnalyticsDashboard() {
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300,
   hove: r:shadow-2xl`}>
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
-                    Most Popular
+                    Most Popular;
                   </Badge>)}
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-white mb-2">{plan.name}</CardTitle>
@@ -233,7 +233,7 @@ export default function AIAnalyticsDashboard() {
   hove: r: from-zion-purple-light hove,
   r:to-zion-purple text-white">
                     <Link to="/contact">
-                      Get Started
+                      Get Started;
                     </Link>
                   </Button>
                 </CardContent>
@@ -248,7 +248,7 @@ export default function AIAnalyticsDashboard() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Industry Leaders;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               See what our customers say about the transformative power of AI analytics.
@@ -290,14 +290,14 @@ export default function AIAnalyticsDashboard() {
   hove: r:from-zion-purple-light,
   hove: r:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
-                Start Your Free Trial
+                Start Your Free Trial;
                 <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10 px-8 py-4 text-lg">
               <Link to="/contact">
-                Contact Sales
+                Contact Sales;
               </Link>
             </Button>
           </div>

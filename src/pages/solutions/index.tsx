@@ -1,33 +1,37 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link     } from "react-router-dom";
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   Shield,
   Cloud,
   Server,
   BarChart3,
   Users,
   ShoppingCart,
-  Building
-  Heart
-  Globe
-  Zap
-  Atom
-  Network
-  TrendingUp
-  Rocket
-  Target
-  Star
-  Cpu
-  Lock
-  Eye
-  Activity
-  Workflow
-  Sparkles
-  Award
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Building;
+  Heart;
+  Globe;
+  Zap;
+  Atom;
+  Network;
+  TrendingUp;
+  Rocket;
+  Target;
+  Star;
+  Cpu;
+  Lock;
+  Eye;
+  Activity;
+  Workflow;
+  Sparkles;
+  Award;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function Solutions() {
   const solutionCategories = [
   {
@@ -253,7 +257,7 @@ export default function Solutions() {
   e: f: '/solutions/ai-business-intelligence',ic,
   o: n: BarChart3,descripti,
   o: n: 'Transform your data into actionable insights with AI-powered analytics',featur,
-  e: d: true
+  e: d: true;
 },
   {
   na,
@@ -261,7 +265,7 @@ export default function Solutions() {
   e: f: '/solutions/quantum-computing',ic,
   o: n: Atom,descripti,
   o: n: 'Leverage the power of quantum computing for complex problem-solving',featur,
-  e: d: true
+  e: d: true;
 },
   {
   na,
@@ -269,7 +273,7 @@ export default function Solutions() {
   e: f: '/solutions/enterprise',ic,
   o: n: Building,descripti,
   o: n: 'Comprehensive digital transformation for enterprise organizations',featur,
-  e: d: true
+  e: d: true;
 },
   {
   na,
@@ -277,12 +281,12 @@ export default function Solutions() {
   e: f: '/solutions/ai-powered-security',ic,
   o: n: Shield,descripti,
   o: n: 'Next-generation cybersecurity powered by artificial intelligence',featur,
-  e: d: true
+  e: d: true;
 },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Solutions - Zion Tech Group"
         description="Comprehensive technology solutions including AI, quantum computing, enterprise solutions, healthcare technology, and digital transformation services."
       />
@@ -292,7 +296,7 @@ export default function Solutions() {
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -306,7 +310,7 @@ export default function Solutions() {
           >
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Comprehensive
+              Comprehensive;
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -314,7 +318,7 @@ export default function Solutions() {
               From AI and quantum computing to enterprise solutions and digital transformation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg,
   hove: r:from-cyan-500,
@@ -322,14 +326,14 @@ export default function Solutions() {
   hove: r:scale-105 shadow-lg,
   hove: r:shadow-cyan-400/25";"
               >
-                Get Started
+                Get Started;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-300";"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -340,7 +344,7 @@ export default function Solutions() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -354,10 +358,10 @@ export default function Solutions() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Featured Solutions
+              Featured Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our most popular and innovative solutions that are transforming industries worldwide
+              Our most popular and innovative solutions that are transforming industries worldwide;
             </p>
           </motion.div>
 
@@ -365,7 +369,7 @@ export default function Solutions() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {featuredSolutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
                 key={solution.name},
   }
                 initial={ opaci,
@@ -380,7 +384,7 @@ export default function Solutions() {
   }
                 className="className="group";"
               >
-                <Link
+                <Link;
                   to={solution.href},
   }
                   className="className="block p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl,
@@ -421,7 +425,7 @@ export default function Solutions() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -435,16 +439,16 @@ export default function Solutions() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Solution Categories
+              Solution Categories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology solutions organized by category
+              Explore our comprehensive range of technology solutions organized by category;
             </p>
           </motion.div>
 
           <div className="space-y-12">
             {solutionCategories.map((category, categoryIndex) => (
-  <motion.div
+  <motion.div;
                 key={category.title},
   }
                 initial={ opaci,
@@ -473,7 +477,7 @@ export default function Solutions() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
                   {category.solutions.map((solution, solutionIndex) => (
-  <Link
+  <Link;
                       key={solution.name},
   }
                       to={solution.href},
@@ -515,7 +519,7 @@ export default function Solutions() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -536,7 +540,7 @@ export default function Solutions() {
                 Let our expert team help you implement the right solutions for your organization's unique needs.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link
+                <Link;
                   to="/contact"
                   className="className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg,
   hove: r: from-cyan-500,
@@ -544,14 +548,14 @@ export default function Solutions() {
   hove: r:scale-105 shadow-lg,
   hove: r:shadow-cyan-400/25";"
                 >
-                  Schedule a Consultation
+                  Schedule a Consultation;
                 </Link>
-                <Link
+                <Link;
                   to="/request-quote"
                   className="className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-300";"
                 >
-                  Request a Quote
+                  Request a Quote;
                 </Link>
               </div>
             </div>

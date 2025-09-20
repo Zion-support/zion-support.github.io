@@ -1,29 +1,33 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
 import {
-  Cpu
+  Cpu;
   Network,
   Zap,
   Globe,
-  Shield
-  CheckCircle
-  ArrowRight
-  Star
-  Brain
-  Cloud
-  Database
-  Wifi
-  Activity
-  BarChart3
-  Settings
-  Monitor
-  Smartphone
-  Server
-  Router
-  Satellite
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Shield;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Brain;
+  Cloud;
+  Database;
+  Wifi;
+  Activity;
+  BarChart3;
+  Settings;
+  Monitor;
+  Smartphone;
+  Server;
+  Router;
+  Satellite;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function IoTEdgeComputing() {
   const features = [
   {
@@ -98,7 +102,7 @@ export default function IoTEdgeComputing() {
 ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO 
+      <SEO;
         title="IoT Edge Computing Services - Zion Tech Group"
         description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
       />
@@ -113,7 +117,7 @@ export default function IoTEdgeComputing() {
         </div>
         
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -127,14 +131,14 @@ export default function IoTEdgeComputing() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6">
               <Cpu className="w-4 h-4 mr-2" />
-              Edge Computing
+              Edge Computing;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              IoT Edge Computing
+              IoT Edge Computing;
               <span className="block bg-gradient-to-r from-green-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
-                Solutions
+                Solutions;
               </span>
             </h1>
             
@@ -145,22 +149,22 @@ export default function IoTEdgeComputing() {
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-green-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-green-500/20";"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hove,
   r:bg-green-400/10 transition-all duration-200";"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -171,7 +175,7 @@ export default function IoTEdgeComputing() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -184,10 +188,10 @@ export default function IoTEdgeComputing() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Edge Computing Features
+              Edge Computing Features;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our IoT edge computing platform combines cutting-edge technology with practical business applications 
+              Our IoT edge computing platform combines cutting-edge technology with practical business applications;
               to deliver real-time processing and insights.
             </p>
           </motion.div>
@@ -196,7 +200,7 @@ export default function IoTEdgeComputing() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -229,7 +233,7 @@ export default function IoTEdgeComputing() {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -242,10 +246,10 @@ export default function IoTEdgeComputing() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive IoT Services
+              Comprehensive IoT Services;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              From edge infrastructure to device management, our IoT services cover every aspect 
+              From edge infrastructure to device management, our IoT services cover every aspect;
               of your connected ecosystem needs.
             </p>
           </motion.div>
@@ -253,7 +257,7 @@ export default function IoTEdgeComputing() {
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.title},
   }
                 initial={ opaci,
@@ -293,7 +297,7 @@ export default function IoTEdgeComputing() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -306,7 +310,7 @@ export default function IoTEdgeComputing() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced IoT Technologies
+              Advanced IoT Technologies;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Our platform leverages cutting-edge technologies to provide the most advanced IoT and edge computing solutions available.
@@ -317,7 +321,7 @@ export default function IoTEdgeComputing() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={tech},
   }
                 initial={ opaci,
@@ -347,7 +351,7 @@ export default function IoTEdgeComputing() {
   }
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-blue-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -367,22 +371,22 @@ export default function IoTEdgeComputing() {
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-green-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-green-500/20";"
               >
-                Start Your IoT Journey
+                Start Your IoT Journey;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hove,
   r:bg-green-400/10 transition-all duration-200";"
               >
-                Explore All Services
+                Explore All Services;
               </Link>
             </div>
           </motion.div>

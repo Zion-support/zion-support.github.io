@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
-import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
+import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch     } from "lucide-react";
 import SEO from "@/components/SEO"
 const features = [
   {
@@ -48,25 +48,25 @@ const useCases = [
   tit,
   l: e: "Development Teams",descripti,
   o: n: "Streamline code review processes for development teams of any size.",ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "Open Source Projects",descripti,
   o: n: "Maintain high code quality standards in open source contributions.",ic,
-  o: n: GitFork
+  o: n: GitFork;
 },
   {
   tit,
   l: e: "Enterprise Applications",descripti,
   o: n: "Ensure security and compliance in enterprise-grade applications.",ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: "CI/CD Pipelines",descripti,
   o: n: "Integrate automated code review into your continuous integration workflows.",ic,
-  o: n: Cpu
+  o: n: Cpu;
 },
   ]
 const testimonials = [
@@ -76,7 +76,7 @@ const testimonials = [
   m: e: "Alex Thompson",ro,
   l: e: "Lead Developer, CodeFlow Inc"
         rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   conte,
@@ -84,7 +84,7 @@ const testimonials = [
   m: e: "Maria Santos",ro,
   l: e: "Security Engineer, SecureTech"
         rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
 export default function AIAutonomousCodeReview() {
@@ -108,14 +108,14 @@ export default function AIAutonomousCodeReview() {
   } className="text-center">
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
               <Code className="w-4 h-4"/>
-              AI-Powered Code Review
+              AI-Powered Code Review;
             </div>
             
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Autonomous
+              AI Autonomous;
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Code Review
+                Code Review;
               </span>
             </h1>
             
@@ -133,12 +133,12 @@ export default function AIAutonomousCodeReview() {
   hove: r: shadow-xl,
   hove: r:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 <Play className="w-5 h-5"/>
-                Watch Demo
+                Watch Demo;
               </motion.button>
               <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300 flex items-center gap-2 justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="w-5 h-5"/>
               </Link>
             </div>
@@ -161,7 +161,7 @@ export default function AIAutonomousCodeReview() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              Intelligent Code Analysis
+              Intelligent Code Analysis;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI system provides comprehensive code review capabilities that go beyond human review capabilities.
@@ -171,7 +171,7 @@ export default function AIAutonomousCodeReview() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {features.map((feature, index) () => {
-  const IconComponent = feature.icon
+  const IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial={ opaci,
   t: y: 0, y: 20 },
   } whileInView={ opaci,
@@ -248,7 +248,7 @@ export default function AIAutonomousCodeReview() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-5xl font-bold mb-6 text-white">
-              Perfect For Every Development Team
+              Perfect For Every Development Team;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From solo developers to enterprise teams, our AI system adapts to your development workflow.
@@ -259,7 +259,7 @@ export default function AIAutonomousCodeReview() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {useCases.map((useCase, index) () => {
-  const IconComponent = useCase.icon
+  const IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial={ opaci,
   t: y: 0, y: 20 },
   } whileInView={ opaci,
@@ -294,7 +294,7 @@ export default function AIAutonomousCodeReview() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              What Developers Say
+              What Developers Say;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what development teams have to say about our AI code review.
@@ -351,13 +351,13 @@ export default function AIAutonomousCodeReview() {
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold,
   hove: r:shadow-xl,
   hove: r:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5"/>
               </Link>
               <Link to="/pricing" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300 flex items-center gap-2 justify-center">
-                View Pricing
+                View Pricing;
                 <ArrowRight className="w-5 h-5"/>
               </Link>
             </div>

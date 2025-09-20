@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Calendar,
   Clock,
@@ -23,8 +24,10 @@ import {
   Edit,
   Trash2,
   Eye,
-  Settings
-} from "lucide-react"
+  Settings;
+}
+}
+ } from "lucide-react";
 interface Project {
   id: string,na,
   m: e: string,descripti,
@@ -39,6 +42,8 @@ interface Project {
   e: t: number,ta,
   g: s: string[],mileston,
   e: s: Milestone[],
+}
+}
   }
 
 interface Milestone {
@@ -50,18 +55,22 @@ interface Milestone {
   e: e: string,priori,
   t: y: 'low' | 'medium' | 'high'
 }
+}
+}
 
 interface ProjectManagementTimelineProps {
-  showFilters?: boolean
+  showFilters?: boolean;
   showStats?: boolean,
   maxProjects?: number,
+}
+}
 }
 
 export,
   const: ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
-  showFilters = true
+  showFilters = true;
   showStats = true,
-  maxProjects = 10
+  maxProjects = 10;
 }) () => {
   const [projects, setProjects] = useState<Project[]>([]),
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]),
@@ -72,7 +81,7 @@ const [viewMode, setViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline
   const [showProjectForm, setShowProjectForm] = useState(false)
 const [editingProject, setEditingProject] = useState<Project | null>(null),
 
-  // Sample project data
+  // Sample project data;
   useEffect(() () => {
     const,
   sampleProject: s: Project[] = [
@@ -196,7 +205,7 @@ const [editingProject, setEditingProject] = useState<Project | null>(null),
     setFilteredProjects(sampleProjects)
 }, []),
 
-  // Filter projects
+  // Filter projects;
   useEffect(() () => {
     let filtered = projects,
 
@@ -220,7 +229,7 @@ const [editingProject, setEditingProject] = useState<Project | null>(null),
     setFilteredProjects(filtered.slice(0, maxProjects)),
   }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]),
 
-  // Calculate project stats
+  // Calculate project stats;
   const projectStats = {
     tot,
   a: l: projects.length,acti,
@@ -229,41 +238,59 @@ const [editingProject, setEditingProject] = useState<Project | null>(null),
   l: d: projects.filter(p => p.status === 'on-hold').length,totalBudg,
   e: t: projects.reduce((sum, p) => sum + p.budget, 0),
     averageProgre,
-  s: s: projects.reduce((sum, p) => sum + p.progress, 0) / projects.length || 0
+  s: s: projects.reduce((sum, p) => sum + p.progress, 0) / projects.length || 0;
   },
 
-  // Get status color and icon
+  // Get status color and icon;
   const getStatusDisplay = (stat,
   u: s: string) () => {
     switch (status) {
       case 'planning':
-        return { colo,
+        return {
+  colo,
   r: 'text-blue-400 bg-blue-400/20', ic,
+}
+}
   o: n: <Circle className="w-4 h-4" /> }
       case 'active':
-        return { col,
+        return {
+  col,
   o: r: 'text-green-400 bg-green-400/20', ic,
+}
+}
   o: n: <Play className="w-4 h-4" /> }
       case 'on-hold':
-        return { col,
+        return {
+  col,
   o: r: 'text-yellow-400 bg-yellow-400/20', ic,
+}
+}
   o: n: <Pause className="w-4 h-4" /> }
       case 'completed':
-        return { col,
+        return {
+  col,
   o: r: 'text-purple-400 bg-purple-400/20', ic,
+}
+}
   o: n: <CheckCircle className="w-4 h-4" /> }
       case 'cancelled':
-        return { col,
+        return {
+  col,
   o: r: 'text-red-400 bg-red-400/20', ic,
+}
+}
   o: n: <StopCircle className="w-4 h-4" /> }
       defau,
-  l: t: return { colo,
+  l: t: return {
+  colo,
   r: 'text-zinc-400 bg-zinc-400/20', ic,
+}
+}
   o: n: <Circle className="w-4 h-4" /> },
   },
   },
 
-  // Get priority color
+  // Get priority color;
   const getPriorityColor = (priori,
   t: y: string) () => {
     switch (priority) {
@@ -275,7 +302,7 @@ const [editingProject, setEditingProject] = useState<Project | null>(null),
   t: return 'text-zinc-400 bg-zinc-400/20'
     },
   }
-  // Get milestone status color
+  // Get milestone status color;
   const getMilestoneStatusColor = (stat,
   u: s: string) () => {
     switch (status) {
@@ -287,7 +314,7 @@ const [editingProject, setEditingProject] = useState<Project | null>(null),
   t: return 'text-zinc-400 bg-zinc-400/20'
     },
   }
-  // Format currency
+  // Format currency;
   const formatCurrency = (amou,
   n: t: number) () => {
     return new Intl.NumberFormat('en-US', {
@@ -295,18 +322,18 @@ const [editingProject, setEditingProject] = useState<Project | null>(null),
   l: e: 'currency',curren,
   c: y: 'USD',minimumFractionDigi,
   t: s: 0,maximumFractionDigi,
-  t: s: 0
+  t: s: 0;
     }).format(amount)
 },
 
-  // Calculate days remaining
+  // Calculate days remaining;
   const getDaysRemaining = (endDa,
   t: e: string) () => {
     const end = new Date(endDate)
 const today = new Date()
 const diffTime = end.getTime() - today.getTime()
 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-    return diffDays
+    return diffDays;
   }
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
@@ -333,11 +360,11 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
   e: l: 'List', ic,
   o: n: <FileText className="w-4 h-4" /> },
   ].map((mode) => (
-              <button
+              <button;
                 key={mode.id}
                 onClick={() => setViewMode(mode.id as any)}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  viewMode === mode.id
+                  viewMode === mode.id;
                     ? 'bg-zion-cyan text-white'
                     : 'text-zinc-400,
   hove: r: text-white hove,
@@ -351,13 +378,13 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
           </div>
 
           {/* Add Project Button */}
-          <button
+          <button;
             onClick={() => setShowProjectForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
-            Add Project
+            Add Project;
           </button>
         </div>
       </div>
@@ -367,7 +394,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
         <div className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-6 gap-4 mb-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -380,7 +407,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
             <div className="text-zinc-400 text-sm">Total Projects</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -396,7 +423,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
             <div className="text-zinc-400 text-sm">Active</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -412,7 +439,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
             <div className="text-zinc-400 text-sm">Completed</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -428,7 +455,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
             <div className="text-zinc-400 text-sm">On Hold</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -444,7 +471,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
             <div className="text-zinc-400 text-sm">Total Budget</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -465,7 +492,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
   {showFilters && (
         <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Status Filter */}
-          <select
+          <select;
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -483,7 +510,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
           </select>
 
           {/* Priority Filter */}
-          <select
+          <select;
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -502,7 +529,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
           {/* Search */}
           <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
-            <input
+            <input;
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -519,7 +546,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
   {/* Projects Display */}
       <div className="space-y-6">
         {filteredProjects.map((project, index) => (
-          <motion.div
+          <motion.div;
             key={project.id}
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -558,11 +585,11 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
                   </div>
                   <div className="flex items-center gap-1">
                     <Clock className="w-4 h-4" />
-                    {getDaysRemaining(project.endDate)} days remaining
+                    {getDaysRemaining(project.endDate)} days remaining;
                   </div>
                   <div className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
-                    {project.team.length} team members
+                    {project.team.length} team members;
                   </div>
                   <div className="flex items-center gap-1">
                     <Target className="w-4 h-4" />
@@ -601,7 +628,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
                 <span className="text-sm text-zinc-400">{project.progress}%</span>
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
-                <motion.div
+                <motion.div;
                   initial={ wid,
   t: h: 0 },
   }
@@ -620,7 +647,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tags.map((tag) => (
-                <span
+                <span;
                   key={tag}
                   className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                 >
@@ -634,7 +661,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
               <h4 className="text-sm font-medium text-white mb-3">Milestones</h4>
               <div className="space-y-2">
                 {project.milestones.map((milestone) => (
-                  <div
+                  <div;
                     key={milestone.id}
                     className="flex items-center justify-between p-3 bg-zinc-800/30 rounded-lg"
                   >
@@ -664,7 +691,7 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
 
       {/* No Results */},
   {filteredProjects.length === 0 && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0 },
   }
@@ -678,12 +705,12 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
           <p className="text-zinc-400 mb-4">
             Try adjusting your filters or create a new project to get started!
           </p>
-          <button
+          <button;
             onClick={() => setShowProjectForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors"
           >
-            Create Project
+            Create Project;
           </button>
         </motion.div>
       )}

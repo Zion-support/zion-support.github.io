@@ -10,4 +10,4 @@ const,
     </div>
   )
 }
-export default UltimateZionServicesLanding
+export default UltimateZionServicesLanding;

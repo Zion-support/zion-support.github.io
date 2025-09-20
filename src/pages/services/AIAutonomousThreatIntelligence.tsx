@@ -1,41 +1,45 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Shield
+  Shield;
   Eye,
   AlertTriangle,
   Target,
   CheckCircle,
-  Star
-  BarChart3
-  Users
-  Globe
-  Zap
-  Cpu
-  Database
-  Network
-  Rocket
-  Lightbulb
-  Code
-  Server
-  Sparkles
-  Activity
-  Gauge
-  Workflow
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Clock
-  Lock
-  Smartphone
-  Wifi
-  Cloud
-  BarChart
-  TrendingUp
-  Activity
-  ShieldCheck
-} from "lucide-react"
+  Star;
+  BarChart3;
+  Users;
+  Globe;
+  Zap;
+  Cpu;
+  Database;
+  Network;
+  Rocket;
+  Lightbulb;
+  Code;
+  Server;
+  Sparkles;
+  Activity;
+  Gauge;
+  Workflow;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Clock;
+  Lock;
+  Smartphone;
+  Wifi;
+  Cloud;
+  BarChart;
+  TrendingUp;
+  Activity;
+  ShieldCheck;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIAutonomousThreatIntelligence() {
   const features = [
   {
@@ -141,7 +145,7 @@ export default function AIAutonomousThreatIntelligence() {
         'Predictive analytics'
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -171,7 +175,7 @@ export default function AIAutonomousThreatIntelligence() {
         </div>
         
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -190,18 +194,18 @@ export default function AIAutonomousThreatIntelligence() {
             
             <h1 className="text-5xl,
   m: d: text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
-              AI Autonomous Threat Intelligence
+              AI Autonomous Threat Intelligence;
             </h1>
             
             <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              The world's most advanced AI-powered threat intelligence platform that autonomously detects
+              The world's most advanced AI-powered threat intelligence platform that autonomously detects;
               analyzes, and neutralizes cyber threats in real-time.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -213,9 +217,9 @@ export default function AIAutonomousThreatIntelligence() {
   hove: r:to-orange-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-red-500/25";"
               >
-                Start Security Trial
+                Start Security Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -226,7 +230,7 @@ export default function AIAutonomousThreatIntelligence() {
   hove: r: bg-red-400 hove,
   r:text-gray-900 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -239,7 +243,7 @@ export default function AIAutonomousThreatIntelligence() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -253,17 +257,17 @@ export default function AIAutonomousThreatIntelligence() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-              Revolutionary Security Features
+              Revolutionary Security Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of cybersecurity with autonomous AI threat intelligence
+              Experience the future of cybersecurity with autonomous AI threat intelligence;
             </p>
           </motion.div>
 
           <div className="grid m,
   d:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -312,7 +316,7 @@ export default function AIAutonomousThreatIntelligence() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -326,10 +330,10 @@ export default function AIAutonomousThreatIntelligence() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-              Threat Protection Types
+              Threat Protection Types;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive protection against all types of cyber threats
+              Comprehensive protection against all types of cyber threats;
             </p>
           </motion.div>
 
@@ -337,7 +341,7 @@ export default function AIAutonomousThreatIntelligence() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {threatTypes.map((threat, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -391,7 +395,7 @@ export default function AIAutonomousThreatIntelligence() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -405,17 +409,17 @@ export default function AIAutonomousThreatIntelligence() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-              Security Plans
+              Security Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect threat intelligence plan for your organization
+              Choose the perfect threat intelligence plan for your organization;
             </p>
           </motion.div>
 
           <div className="grid m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -429,7 +433,7 @@ export default function AIAutonomousThreatIntelligence() {
   a: y: index * 0.2 },
   }
                 className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
-  plan.popular 
+  plan.popular;
                     ? 'border-red-400/60 shadow-lg shadow-red-500/25' 
                     : 'border-red-500/20'
 } hov,
@@ -438,7 +442,7 @@ export default function AIAutonomousThreatIntelligence() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -462,7 +466,7 @@ export default function AIAutonomousThreatIntelligence() {
                   ))}
                 </ul>
                 
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.05 },
   }
@@ -470,7 +474,7 @@ export default function AIAutonomousThreatIntelligence() {
   l: e: 0.95 },
   }
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-red-600 to-orange-600,
   hove: r: from-red-700,
   hove: r:to-orange-700'
@@ -478,7 +482,7 @@ export default function AIAutonomousThreatIntelligence() {
   r:bg-red-600/30'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
               </motion.div>
             ))}
@@ -492,7 +496,7 @@ export default function AIAutonomousThreatIntelligence() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-red-900/50 to-orange-900/50">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -508,12 +512,12 @@ export default function AIAutonomousThreatIntelligence() {
               Ready to Secure Your Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join the cybersecurity revolution with autonomous AI threat intelligence
+              Join the cybersecurity revolution with autonomous AI threat intelligence;
             </p>
             
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -525,9 +529,9 @@ export default function AIAutonomousThreatIntelligence() {
   hove: r:to-orange-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-red-500/25";"
               >
-                Start Security Trial
+                Start Security Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -538,7 +542,7 @@ export default function AIAutonomousThreatIntelligence() {
   hove: r: bg-red-400 hove,
   r:text-gray-900 transition-all duration-300";"
               >
-                Contact Security Team
+                Contact Security Team;
               </motion.button>
             </div>
           </motion.div>

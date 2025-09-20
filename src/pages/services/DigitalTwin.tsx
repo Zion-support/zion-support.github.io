@@ -1,8 +1,8 @@
 
 import React from "react"
-import { SEO } from "../../components/SEO"
-import { Eye, Cpu, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Zap, Building, Factory, Car, Heart, Cloud } from "lucide-react"
-import { Link } from "react-router-dom"
+import { SEO     } from "../../components/SEO";
+import { Eye, Cpu, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Zap, Building, Factory, Car, Heart, Cloud     } from "lucide-react";
+import { Link     } from "react-router-dom";
 export default function DigitalTwin() {
   const services = [
   {
@@ -215,7 +215,7 @@ export default function DigitalTwin() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Digital Twin Services - Zion Tech Group"
         description="Transform your operations with our advanced Digital Twin technology solutions. Create real-time digital replicas for predictive maintenance, optimization, and innovation across industries."
       />
@@ -228,7 +228,7 @@ export default function DigitalTwin() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Digital
+              Digital;
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Twin</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -236,7 +236,7 @@ export default function DigitalTwin() {
               Monitor, predict, and optimize operations with unprecedented precision and insight.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600,
   hove: r: from-cyan-600,
@@ -244,15 +244,15 @@ export default function DigitalTwin() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-cyan-500/25";"
               >
-                Get Digital Twin Assessment
+                Get Digital Twin Assessment;
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 border border-cyan-400 text-cyan-400,
   hove: r:bg-cyan-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
           </div>
@@ -265,10 +265,10 @@ export default function DigitalTwin() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry-Specific Digital Twin Solutions
+              Industry-Specific Digital Twin Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From manufacturing to healthcare, we create specialized digital twins that address 
+              From manufacturing to healthcare, we create specialized digital twins that address;
               your industry's unique challenges and opportunities.
             </p>
           </div>
@@ -277,7 +277,7 @@ export default function DigitalTwin() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {services.map((service, index) => (
-  <div
+  <div;
                 key={service.name},
   }
                 className="className="group p-8 rounded-2xl bg-slate-800/50,
@@ -320,12 +320,12 @@ export default function DigitalTwin() {
                   </ul>
                 </div>
 
-                <Link
+                <Link;
                   to="/request-quote"
                   className="className="inline-flex items-center gap-2 text-cyan-400,
   hove: r:text-cyan-300 font-medium transition-colors";"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -340,7 +340,7 @@ export default function DigitalTwin() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Technology Stack
+              Advanced Technology Stack;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We leverage cutting-edge technologies to create powerful, scalable, and secure digital twin solutions.
@@ -370,10 +370,10 @@ export default function DigitalTwin() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Success Stories
+              Success Stories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how our Digital Twin solutions have transformed operations across industries
+              See how our Digital Twin solutions have transformed operations across industries;
             </p>
           </div>
 
@@ -424,10 +424,10 @@ export default function DigitalTwin() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our Digital Twin Implementation Process
+              Our Digital Twin Implementation Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A systematic approach to creating and deploying effective digital twin solutions
+              A systematic approach to creating and deploying effective digital twin solutions;
             </p>
           </div>
 
@@ -439,28 +439,28 @@ export default function DigitalTwin() {
   p: '01',tit,
   l: e: 'Assessment & Planning',descripti,
   o: n: 'Analyze assets and define digital twin scope and objectives',ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   st,
   e: p: '02',tit,
   l: e: 'Data Integration',descripti,
   o: n: 'Connect IoT sensors and integrate existing data sources',ic,
-  o: n: Database
+  o: n: Database;
 },
   {
   st,
   e: p: '03',tit,
   l: e: 'Model Development',descripti,
   o: n: 'Create accurate digital replicas with AI and ML capabilities',ic,
-  o: n: Cpu
+  o: n: Cpu;
 },
   {
   st,
   e: p: '04',tit,
   l: e: 'Deployment & Optimization',descripti,
   o: n: 'Deploy and continuously optimize the digital twin system',ic,
-  o: n: RefreshCw
+  o: n: RefreshCw;
 },
   ].map((phase, index) => (
   <div key={index} className="text-center">
@@ -485,11 +485,11 @@ export default function DigitalTwin() {
               Ready to Create Your Digital Twin?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how Digital Twin technology can revolutionize your operations
+              Let's discuss how Digital Twin technology can revolutionize your operations;
               improve efficiency, and drive innovation in your industry.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600,
   hove: r: from-cyan-600,
@@ -497,15 +497,15 @@ export default function DigitalTwin() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-cyan-500/25";"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 border border-cyan-400 text-cyan-400,
   hove: r:bg-cyan-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Schedule Free Consultation
+                Schedule Free Consultation;
               </Link>
             </div>
           </div>

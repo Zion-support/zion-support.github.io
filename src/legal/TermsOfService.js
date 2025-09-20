@@ -1,4 +1,4 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime"
+import { jsx as _jsx, jsxs as _jsxs   } from "react/jsx-runtime";
 export default function TermsOfService() {
   return (_jsxs("div", { classNa,
   m: e: "max-w-4xl mx-auto space-y-8", childr,

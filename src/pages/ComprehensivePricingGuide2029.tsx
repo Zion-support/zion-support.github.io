@@ -1,9 +1,10 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles } from "lucide-react"
-import { SEO } from "@/components/SEO"
-import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from "../../data/revolutionary-2029-cutting-edge-services"
-import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from "../../data/revolutionary-2029-emerging-tech-services"
+import { motion   } from "framer-motion";
+import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles   } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES   } from "../../data/revolutionary-2029-cutting-edge-services";
+import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES   } from "../../data/revolutionary-2029-emerging-tech-services";
 export default function ComprehensivePricingGuide2029() {
   const [selectedPlan, setSelectedPlan] = useState('enterprise')
   const [billingCycle, setBillingCycle] = useState('monthly')
@@ -133,10 +134,10 @@ export default function ComprehensivePricingGuide2029() {
   e: s: allServices.filter(s => !s.category.includes('AI') && !s.category.includes('Space') && !s.category.includes('Quantum'))
     },
   ]
-  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1
+  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Comprehensive Pricing Guide 2029 - Zion Tech Group"
         description="Complete pricing information for our revolutionary 2029 AI, quantum computing, space technology, and emerging tech services."
       />
@@ -148,7 +149,7 @@ export default function ComprehensivePricingGuide2029() {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-24">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -162,7 +163,7 @@ export default function ComprehensivePricingGuide2029() {
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
-              Pricing Guide
+              Pricing Guide;
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> 2029</span>
             </h1>
             <p className="text-xl m,
@@ -174,7 +175,7 @@ export default function ComprehensivePricingGuide2029() {
   }
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
-              <button
+              <button;
                 onClick={onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')},
   },
   }
@@ -182,14 +183,14 @@ export default function ComprehensivePricingGuide2029() {
   billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
 }`}
               >
-                <span
+                <span;
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
   billingCycle === 'yearly' ? 'translate-x-9' : 'translate-x-1'
 }`}
                 />
               </button>
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-                Yearly
+                Yearly;
                 {billingCycle === 'yearly' && (
   <span className="ml-2 text-sm bg-green-500 text-white px-2 py-1 rounded-full">Save 17%</span>
                 )}
@@ -207,7 +208,7 @@ export default function ComprehensivePricingGuide2029() {
         <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
               key={plan.id},
   }
               initial={ opaci,
@@ -226,7 +227,7 @@ export default function ComprehensivePricingGuide2029() {
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                     <Crown className="w-4 h-4" />
-                    Most Popular
+                    Most Popular;
                   </span>
                 </div>
               )}
@@ -265,7 +266,7 @@ export default function ComprehensivePricingGuide2029() {
   }
                 <button className={`w-full bg-gradient-to-r ${plan.buttonColor} text-white py-3 px-6 rounded-lg font-semibold,
   hove: r:opacity-90 transition-all duration-300`}>
-                  Get Started
+                  Get Started;
                 </button>
               </div>
             </motion.div>
@@ -278,7 +279,7 @@ export default function ComprehensivePricingGuide2029() {
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -291,7 +292,7 @@ export default function ComprehensivePricingGuide2029() {
           className="className="text-center mb-16";"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
-            Service-Specific Pricing
+            Service-Specific Pricing;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Detailed pricing for each category of our revolutionary services. Mix and match services based on your specific needs.
@@ -300,7 +301,7 @@ export default function ComprehensivePricingGuide2029() {
 
         <div className="space-y-12">
           {serviceCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
               key={category.name},
   }
               initial={ opaci,
@@ -331,7 +332,7 @@ export default function ComprehensivePricingGuide2029() {
                         <div className="text-2xl">{service.icon}</div>
                         {service.popular && (
   <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                            Popular
+                            Popular;
                           </span>
                         )}
                       </div>
@@ -361,14 +362,14 @@ export default function ComprehensivePricingGuide2029() {
                         ))}
                       </div>
 
-                      <a
+                      <a;
                         href={service.link},
   }
                         className="className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold,
   hove: r: from-blue-700 hove,
   r:to-purple-700 transition-all duration-300";"
                       >
-                        Learn More
+                        Learn More;
                       </a>
                     </div>
                   ))}
@@ -388,7 +389,7 @@ export default function ComprehensivePricingGuide2029() {
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -428,7 +429,7 @@ export default function ComprehensivePricingGuide2029() {
 
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-            <motion.button
+            <motion.button;
               whileHover={ scal,
   e: 1.05 },
   }
@@ -438,9 +439,9 @@ export default function ComprehensivePricingGuide2029() {
               className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r: bg-gray-100 transition-all duration-300";"
             >
-              Request Custom Quote
+              Request Custom Quote;
             </motion.button>
-            <motion.button
+            <motion.button;
               whileHover={ scal,
   e: 1.05 },
   }
@@ -450,7 +451,7 @@ export default function ComprehensivePricingGuide2029() {
               className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-white/10 transition-all duration-300";"
             >
-              Schedule Consultation
+              Schedule Consultation;
             </motion.button>
           </div>
         </motion.div>
@@ -461,7 +462,7 @@ export default function ComprehensivePricingGuide2029() {
       <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -474,7 +475,7 @@ export default function ComprehensivePricingGuide2029() {
           className="className="text-center mb-12";"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
-            Frequently Asked Questions
+            Frequently Asked Questions;
           </h2>
         </motion.div>
 
@@ -506,7 +507,7 @@ export default function ComprehensivePricingGuide2029() {
   e: r: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements."
 },
   ].map((faq, index) => (
-  <motion.div
+  <motion.div;
               key={index},
   }
               initial={ opaci,
@@ -542,7 +543,7 @@ export default function ComprehensivePricingGuide2029() {
           </p>
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center mb-8">
-            <motion.button
+            <motion.button;
               whileHover={ scal,
   e: 1.05 },
   }
@@ -552,9 +553,9 @@ export default function ComprehensivePricingGuide2029() {
               className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r: bg-gray-100 transition-all duration-300";"
             >
-              Start Free Trial
+              Start Free Trial;
             </motion.button>
-            <motion.button
+            <motion.button;
               whileHover={ scal,
   e: 1.05 },
   }
@@ -564,7 +565,7 @@ export default function ComprehensivePricingGuide2029() {
               className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r: bg-white/10 transition-all duration-300";"
             >
-              Contact Sales
+              Contact Sales;
             </motion.button>
           </div>
           <div className="text-gray-300">

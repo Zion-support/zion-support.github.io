@@ -1,7 +1,7 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
-  // Quantum Computing as a Service
+  // Quantum Computing as a Service;
   {
   i,
   d: "quantum-computing-as-a-service",tit,
@@ -51,7 +51,7 @@ export,
   ],
   }
 
-  // Space Technology Platform
+  // Space Technology Platform;
   {
   id: "space-technology-platform",tit,
   l: e: "Advanced Space Technology Platform",descripti,
@@ -100,7 +100,7 @@ export,
   ],
   }
 
-  // Neuromorphic Computing Platform
+  // Neuromorphic Computing Platform;
   {
   id: "neuromorphic-computing-platform",tit,
   l: e: "Neuromorphic Computing Platform",descripti,
@@ -148,7 +148,7 @@ export,
   ],
   }
 
-  // Synthetic Biology Platform
+  // Synthetic Biology Platform;
   {
   id: "synthetic-biology-platform",tit,
   l: e: "Synthetic Biology Design Platform",descripti,
@@ -197,7 +197,7 @@ export,
   ],
   }
 
-  // Fusion Energy Technology Platform
+  // Fusion Energy Technology Platform;
   {
   id: "fusion-energy-technology-platform",tit,
   l: e: "Fusion Energy Technology Platform",descripti,
@@ -246,7 +246,7 @@ export,
   ],
   }
 
-  // Metaverse Development Platform
+  // Metaverse Development Platform;
   {
   id: "metaverse-development-platform",tit,
   l: e: "Enterprise Metaverse Development Platform",descripti,
@@ -295,7 +295,7 @@ export,
   ],
   }
 
-  // Brain-Computer Interface Platform
+  // Brain-Computer Interface Platform;
   {
   id: "brain-computer-interface-platform",tit,
   l: e: "Advanced Brain-Computer Interface Platform",descripti,
@@ -344,7 +344,7 @@ export,
   ],
   }
 
-  // Quantum Internet Platform
+  // Quantum Internet Platform;
   {
   id: "quantum-internet-platform",tit,
   l: e: "Quantum Internet Infrastructure Platform",descripti,
@@ -392,7 +392,7 @@ export,
   ],
   }
 
-  // Autonomous Vehicle Technology Platform
+  // Autonomous Vehicle Technology Platform;
   {
   id: "autonomous-vehicle-technology",tit,
   l: e: "Autonomous Vehicle Technology Platform",descripti,
@@ -441,7 +441,7 @@ export,
   ],
   }
 
-  // Advanced Robotics Platform
+  // Advanced Robotics Platform;
   {
   id: "advanced-robotics-platform",tit,
   l: e: "Advanced Robotics and Automation Platform",descripti,

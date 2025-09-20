@@ -1,24 +1,26 @@
-
+import { useCallback  } from "react";
 import SEO from "@/components/SEO"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Badge   } from "@/components/ui/badge";
+import { Button   } from "@/components/ui/button";
 import Input from "@/components/ui/Input"
-import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices"
-import { motion } from "framer-motion"
+import { MICRO_SAAS_SERVICES   } from "@/data/microSaasServices";
+import { motion   } from "framer-motion";
 import {
-  ArrowRight
-    BarChart3
-    Briefcase
-    Globe
-    Grid
-    List
-    MessageCircle
-    Search
-    Star
-} from "lucide-react"
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-// Sample data for demonstration
+  ArrowRight;
+    BarChart3;
+    Briefcase;
+    Globe;
+    Grid;
+    List;
+    MessageCircle;
+    Search;
+    Star;
+}
+}
+ } from "lucide-react";
+import { useEffect, useState   } from "react";
+import { Link   } from "react-router-dom";
+// Sample data for demonstration;
 const MICRO_SAAS_SERVICES = [
   {
   id: 'micro-crm',tit,
@@ -127,7 +129,7 @@ export default function ComprehensiveServicesOverview2027() {
   const [expandedService, setExpandedService] = useState<string | null>(null)
 
   useEffect(() () => {
-    let filtered = MICRO_SAAS_SERVICES
+    let filtered = MICRO_SAAS_SERVICES;
     if (if (selectedCategory !== 'all') {
   ) {
       filtered = filtered.filter(service => service.category === selectedCategory)
@@ -152,11 +154,11 @@ export default function ComprehensiveServicesOverview2027() {
         case 'price':
           return (a.price || 0) - (b.price || 0)
         case 'aiScore':
-          return b.aiScore - a.aiScore
+          return b.aiScore - a.aiScore;
         case 'newest':
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
         defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
     setFilteredServices(filtered)
@@ -164,7 +166,7 @@ export default function ComprehensiveServicesOverview2027() {
 
   const ServiceCard = ({ service }: { servi,
   c: e: any }) => (
-  <motion.div
+  <motion.div;
       initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -182,11 +184,11 @@ export default function ComprehensiveServicesOverview2027() {
     >
       {service.featured && (
   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
-          Featured
+          Featured;
         </div>
       )}
       <div className="relative mb-6 overflow-hidden rounded-xl">
-        <img
+        <img;
           src={service.images[0],
   },
   }
@@ -247,14 +249,14 @@ export default function ComprehensiveServicesOverview2027() {
             <span className="text-white text-sm">{new Date(service.createdAt).toLocaleDateString()}</span>
           </div>
         </div>
-        <Button 
-          asChild 
+        <Button;
+          asChild;
           className="className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue,
   hove: r: from-zion-cyan-light hove,
   r:to-zion-blue-light";"
         >
           <Link to={service.href}>
-            Learn More
+            Learn More;
             <ArrowRight className="ml-2 w-4 h-4" />
           </Link>
         </Button>
@@ -263,7 +265,7 @@ export default function ComprehensiveServicesOverview2027() {
   )
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO
+      <SEO;
         title="Comprehensive Services Overview 2027 - Zion Tech Group"
         description="Explore our comprehensive portfolio of innovative AI, IT, and business solutions. From AI-powered chatbots to quantum computing services, discover cutting-edge technology solutions."
         keywords="AI services, IT solutions, business automation, cybersecurity, blockchain, quantum computing, Zion Tech Group"
@@ -275,7 +277,7 @@ export default function ComprehensiveServicesOverview2027() {
   l: g:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -288,12 +290,12 @@ export default function ComprehensiveServicesOverview2027() {
           >
             <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Comprehensive Services Overview
+              Comprehensive Services Overview;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                2027 Edition
+                2027 Edition;
               </span>
             </h1>
-            <motion.p 
+            <motion.p;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -319,7 +321,7 @@ export default function ComprehensiveServicesOverview2027() {
             <div className="flex items-center gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery},
@@ -334,7 +336,7 @@ export default function ComprehensiveServicesOverview2027() {
                 />
               </div>
               <div className="flex items-center gap-2">
-                <Button
+                <Button;
                   variant={viewMode === 'grid' ? 'default' : 'outline'},
   }
                   size="sm"
@@ -348,7 +350,7 @@ export default function ComprehensiveServicesOverview2027() {
                 >
                   <Grid className="w-4 h-4" />
                 </Button>
-                <Button
+                <Button;
                   variant={viewMode === 'list' ? 'default' : 'outline'},
   }
                   size="sm"
@@ -363,7 +365,7 @@ export default function ComprehensiveServicesOverview2027() {
                   <List className="w-4 h-4" />
                 </Button>
               </div>
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value as any)},
@@ -393,7 +395,7 @@ export default function ComprehensiveServicesOverview2027() {
               <div className="flex-1 max-w-md">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                  <Input
+                  <Input;
                     placeholder="Search services..."
                     value={searchQuery},
   }
@@ -405,7 +407,7 @@ export default function ComprehensiveServicesOverview2027() {
               </div>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
-                  <Button
+                  <Button;
                     variant={viewMode === 'grid' ? 'default' : 'outline'},
   }
                     size="sm"
@@ -417,7 +419,7 @@ export default function ComprehensiveServicesOverview2027() {
                   >
                     <Grid className="w-4 h-4" />
                   </Button>
-                  <Button
+                  <Button;
                     variant={viewMode === 'list' ? 'default' : 'outline'},
   }
                     size="sm"
@@ -430,7 +432,7 @@ export default function ComprehensiveServicesOverview2027() {
                     <List className="w-4 h-4" />
                   </Button>
                 </div>
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value as any)},
@@ -446,7 +448,7 @@ export default function ComprehensiveServicesOverview2027() {
             </div>
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
-  <Button
+  <Button;
                   key={category.id},
   }
                   variant={selectedCategory === category.id ? 'default' : 'outline'},
@@ -471,7 +473,7 @@ export default function ComprehensiveServicesOverview2027() {
             </div>
             <div className="flex flex-wrap gap-4">
               {pricingModels.map((pricing) => (
-  <Button
+  <Button;
                   key={pricing.id},
   }
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'},
@@ -506,7 +508,7 @@ export default function ComprehensiveServicesOverview2027() {
         {filteredServices.length === 0 && (
   <div className="text-center py-16">
             <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
-            <Button
+            <Button;
               onClick={() () => {
                 setSelectedCategory('all')
                 setSelectedPricing('all')
@@ -516,7 +518,7 @@ export default function ComprehensiveServicesOverview2027() {
               className="className="bg-zion-cyan,
   hove: r:bg-zion-cyan-light";"
             >
-              Clear Filters
+              Clear Filters;
             </Button>
           </div>
         )}
@@ -542,7 +544,7 @@ export default function ComprehensiveServicesOverview2027() {
   hove: r:from-zion-cyan-light,
   hove: r:to-zion-blue-light">
               <Link to="/contact">
-                Schedule Consultation
+                Schedule Consultation;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
@@ -552,7 +554,7 @@ export default function ComprehensiveServicesOverview2027() {
               <a href="t,
   e: l:+13024640950">
                 Call No,
-  w: +1 302 464 0950
+  w: +1 302 464 0950;
               </a>
             </Button>
           </div>

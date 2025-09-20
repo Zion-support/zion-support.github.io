@@ -1,25 +1,25 @@
 import React, { useState } from "react"
-// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025"
-// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025"
-// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025"
+// import { ULTIMATE_MICRO_SAAS_SERVICES_2025   } from "../data/ultimateMicroSaasServices2025";
+// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025   } from "../data/innovativeEnterpriseSolutions2025";
+// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025   } from "../data/emergingTechnologySolutions2025";
 const UltimateServicesShowcase2025 = () () => {
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [selectedPriceRange, setSelectedPriceRange] = useState('all')
     const [searchTerm, setSearchTerm] = useState('')
     const [sortBy, setSortBy] = useState('name')
-    // Combine all services
+    // Combine all services;
 const allServices = [
-  ...ULTIMATE_MICRO_SAAS_SERVICES_2025
-        ...INNOVATIVE_ENTERPRISE_SOLUTIONS_2025
-        ...EMERGING_TECHNOLOGY_SOLUTIONS_2025
+  ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
+        ...INNOVATIVE_ENTERPRISE_SOLUTIONS_2025;
+        ...EMERGING_TECHNOLOGY_SOLUTIONS_2025;
 ]
-    // Get unique categories
+    // Get unique categories;
 const categories = [['all', ...Array.from(new Set(allServices.map(service => service.category)))],
   ]
-    // Filter and sort services
-const filteredServices = allServices
+    // Filter and sort services;
+const filteredServices = allServices;
         .filter(service () => {
-  const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory
+  const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
 const priceMatch = selectedPriceRange === 'all' ||
             (selectedPriceRange === 'low' && service.price < 5000) ||
             (selectedPriceRange === 'medium' && service.price >= 5000 && service.price < 15000) ||
@@ -27,18 +27,18 @@ const priceMatch = selectedPriceRange === 'all' ||
         const searchMatch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-        return categoryMatch && priceMatch && searchMatch
+        return categoryMatch && priceMatch && searchMatch;
 })
         .sort((a, b) () => {
   switch (sortBy) {
   case 'price':
-                return a.price - b.price
+                return a.price - b.price;
             case 'name':
                 return a.title.localeCompare(b.title)
             case 'category':
                 return a.category.localeCompare(b.category)
             defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
     const formatPrice = (price) () => {
@@ -64,7 +64,7 @@ const priceMatch = selectedPriceRange === 'all' ||
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Ultimate Services Showcase 2025
+            Ultimate Services Showcase 2025;
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             Discover our comprehensive portfolio of innovative micro SAAS services, IT solutions, and AI-powered platforms. 
@@ -98,7 +98,7 @@ const priceMatch = selectedPriceRange === 'all' ||
   hove: r:from-cyan-600,
   hove: r:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hove,
   r:scale-105">
-                Visit Our Website
+                Visit Our Website;
               </a>
             </div>
           </div>
@@ -253,12 +253,12 @@ const priceMatch = selectedPriceRange === 'all' ||
   hove: r: from-cyan-600,
   hove: r:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300,
   transform: hover:scale-105">
-                      Contact Us
+                      Contact Us;
                     </a>
                     <a href={`te,
   l:${service.contactInfo.phone}`} className="bg-gray-700,
   hove: r:bg-gray-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300">
-                      Call Now
+                      Call Now;
                     </a>
                   </div>
                 </div>
@@ -279,7 +279,7 @@ const priceMatch = selectedPriceRange === 'all' ||
               </div>
               <div>
                 <div className="text-4xl font-bold text-green-400 mb-2">
-                  ${(allServices.reduce((sum, service) => sum + service.price, 0) / 1000).toFixed(0)}K
+                  ${(allServices.reduce((sum, service) => sum + service.price, 0) / 1000).toFixed(0)}K;
                 </div>
                 <div className="text-gray-300">Total Portfolio Value</div>
               </div>
@@ -317,12 +317,12 @@ const priceMatch = selectedPriceRange === 'all' ||
   hove: r:from-cyan-600,
   hove: r:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300,
   transform: hover:scale-105">
-                Schedule Consultation
+                Schedule Consultation;
               </a>
               <a href="t,
   e: l:+13024640950" className="bg-gray-700 hove,
   r:bg-gray-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </a>
             </div>
           </div>
@@ -330,4 +330,4 @@ const priceMatch = selectedPriceRange === 'all' ||
       </div>
     </div>)
 }
-export default UltimateServicesShowcase2025
+export default UltimateServicesShowcase2025;

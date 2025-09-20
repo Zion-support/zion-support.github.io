@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin } from "lucide-react"
+import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin   } from "lucide-react";
 const CloudDevOpsServices = () () => {
     const [searchTerm, setSearchTerm] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [selectedPricing, setSelectedPricing] = useState('all')
-    // Cloud & DevOps Services data
+    // Cloud & DevOps Services data;
 const cloudDevOpsServices = [
   {
   id: 1,na,
@@ -189,9 +189,9 @@ const cloudDevOpsServices = [
   const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing
-        return matchesSearch && matchesCategory && matchesPricing
+        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
+        return matchesSearch && matchesCategory && matchesPricing;
 })
     const getCategoryIcon = (category) () => {
   switch (category) {
@@ -221,10 +221,10 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
         <div className="text-center mb-12">
           <h1 className="text-4xl,
   m: d:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent mb-4">
-            Cloud & DevOps Services
+            Cloud & DevOps Services;
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Scalable cloud infrastructure, automated DevOps pipelines, and container orchestration solutions that accelerate your development cycle
+            Scalable cloud infrastructure, automated DevOps pipelines, and container orchestration solutions that accelerate your development cycle;
           </p>
         </div>
 
@@ -298,7 +298,7 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
               
               <div className="mb-4">
                 <div className="text-2xl font-bold text-white mb-2">
-                  ${service.price.toLocaleString()}/month
+                  ${service.price.toLocaleString()}/month;
                 </div>
                 <div className="text-sm text-gray-400">{service.userLimit}</div>
               </div>
@@ -344,7 +344,7 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
           <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Infrastructure?</h2>
             <p className="text-gray-300 mb-6">
-              Our cloud and DevOps solutions are designed to grow with your business needs
+              Our cloud and DevOps solutions are designed to grow with your business needs;
             </p>
             <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-6 text-center">
@@ -369,4 +369,4 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
       </div>
     </div>)
 }
-export default CloudDevOpsServices
+export default CloudDevOpsServices;

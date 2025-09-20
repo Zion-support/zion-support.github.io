@@ -1,5 +1,5 @@
 import React from "react"
-import { Helmet } from "react-helmet-async"
+import { Helmet   } from "react-helmet-async";
 const,
   AdvancedTechInnovation202: 7: React.FC = () () => {
   return (
@@ -14,13 +14,13 @@ const,
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 ADVANCED INNOVATION • 2027
+            🚀 ADVANCED INNOVATION • 2027;
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Advanced Tech Innovation 2027
+            Advanced Tech Innovation 2027;
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities
+            Explore the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities;
           </p>
         </div>
 
@@ -34,7 +34,7 @@ const,
   r:animate-bounce">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI Consciousness</h3>
             <p className="text-blue-100 mb-6 text-center">
-              Breakthrough AI systems with genuine consciousness, self-awareness, and emotional intelligence
+              Breakthrough AI systems with genuine consciousness, self-awareness, and emotional intelligence;
             </p>
             <ul className="text-blue-200 space-y-2 mb-6 text-sm">
               <li>• Self-aware decision making</li>
@@ -53,7 +53,7 @@ const,
   e: r:animate-spin">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
             <p className="text-cyan-100 mb-6 text-center">
-              Revolutionary fusion of quantum computing and artificial intelligence for unprecedented processing power
+              Revolutionary fusion of quantum computing and artificial intelligence for unprecedented processing power;
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Quantum neural networks</li>
@@ -72,7 +72,7 @@ const,
   e: r:animate-pulse">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
             <p className="text-emerald-100 mb-6 text-center">
-              Direct brain-computer interfaces enabling thought-controlled digital environments
+              Direct brain-computer interfaces enabling thought-controlled digital environments;
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Thought control</li>
@@ -91,7 +91,7 @@ const,
   e: r:animate-bounce">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
             <p className="text-orange-100 mb-6 text-center">
-              Revolutionary space technologies enabling interplanetary travel and colonization
+              Revolutionary space technologies enabling interplanetary travel and colonization;
             </p>
             <ul className="text-orange-200 space-y-2 mb-6 text-sm">
               <li>• Faster-than-light travel</li>
@@ -110,7 +110,7 @@ const,
   e: r:animate-pulse">🌐</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Metaverse 4.0</h3>
             <p className="text-violet-100 mb-6 text-center">
-              Next-generation metaverse with photorealistic avatars and persistent virtual worlds
+              Next-generation metaverse with photorealistic avatars and persistent virtual worlds;
             </p>
             <ul className="text-violet-200 space-y-2 mb-6 text-sm">
               <li>• Photorealistic avatars</li>
@@ -129,7 +129,7 @@ const,
   r:animate-bounce">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Biotech Revolution</h3>
             <p className="text-pink-100 mb-6 text-center">
-              Revolutionary biotechnology enabling human enhancement and longevity
+              Revolutionary biotechnology enabling human enhancement and longevity;
             </p>
             <ul className="text-pink-200 space-y-2 mb-6 text-sm">
               <li>• Human enhancement</li>
@@ -269,19 +269,19 @@ const,
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-            <a 
+            <a;
               href="/pages/ComprehensiveServices2025" 
               className="className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg,
   hove: r:shadow-lg transition-all duration-300 font-semibold text-lg";"
             >
-              Explore Our Services
+              Explore Our Services;
             </a>
-            <a 
+            <a;
               href="/contact" 
               className="className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hove,
   r:bg-blue-400/10 transition-colors font-semibold text-lg";"
             >
-              Get Started Today
+              Get Started Today;
             </a>
           </div>
         </div>
@@ -289,4 +289,4 @@ const,
     </div>
   )
   }
-export default AdvancedTechInnovation2027
+export default AdvancedTechInnovation2027;

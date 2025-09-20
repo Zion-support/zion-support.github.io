@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export interface PricingTier {
   id: string,na,
   m: e: string,pri,
@@ -8,11 +8,13 @@ export interface PricingTier {
   o: n: string,featur,
   e: s: string[[],
   ]
-  popular?: boolean
-  recommended?: boolean
-  savings?: string
-  setupFee?: number
-  contractLength?: string
+  popular?: boolean;
+  recommended?: boolean;
+  savings?: string;
+  setupFee?: number;
+  contractLength?: string;
+}
+}
 }
 
 export interface ServicePricing {
@@ -26,14 +28,16 @@ export interface ServicePricing {
   averagePric,
   e: string,competito,
   r: s: string[],valuePropositi,
-  o: n: string
+  o: n: string;
+}
+}
 }
   r,
   o: i: {
   timefram,
   e: string,percenta,
   g: e: string,savin,
-  g: s: string
+  g: s: string;
 }
   featur,
   e: s: {
@@ -49,7 +53,7 @@ export interface ServicePricing {
   responseTim,
   e: string,channe,
   l: s: string[],s,
-  l: a: string
+  l: a: string;
 },
   }
 
@@ -784,4 +788,4 @@ export,
 },
   },
   ]
-export default COMPREHENSIVE_PRICING_GUIDE_2025
+export default COMPREHENSIVE_PRICING_GUIDE_2025;

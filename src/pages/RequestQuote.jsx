@@ -1,14 +1,14 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import {Header} from "@/components/Header"
-import { Footer } from "@/components/Footer"
-import {QuoteRequestForm} from "@/components/QuoteRequestForm"
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
-import {CheckCircle, Clock, Users, Zap} from "lucide-react"
+import { SEO   } from "@/components/SEO";
+import { Header  } from "@/components/Header";
+import { Footer   } from "@/components/Footer";
+import { QuoteRequestForm  } from "@/components/QuoteRequestForm";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from "@/components/ui/card";
+import { CheckCircle, Clock, Users, Zap  } from "lucide-react";
 export default function RequestQuote() {
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO 
+      <SEO;
         title="Request a Quote | Zion Tech Group" 
         description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs." 
         keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes" 
@@ -25,10 +25,10 @@ export default function RequestQuote() {
   }
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              Get Your Custom Quote
+              Get Your Custom Quote;
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Whether you need AI services, IT solutions, top talent, or specialized equipment
+              Whether you need AI services, IT solutions, top talent, or specialized equipment;
               we'll provide you with a detailed, competitive quote tailored to your specific requirements.
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function RequestQuote() {
               </CardHeader>
               <CardContent className="text-center">
                 <CardDescription className="text-zion-slate-light">
-                  Get your quote within 24 hours
+                  Get your quote within 24 hours;
                 </CardDescription>
               </CardContent>
             </Card>
@@ -57,7 +57,7 @@ export default function RequestQuote() {
               </CardHeader>
               <CardContent className="text-center">
                 <CardDescription className="text-zion-slate-light">
-                  Tailored to your specific needs
+                  Tailored to your specific needs;
                 </CardDescription>
               </CardContent>
             </Card>
@@ -69,7 +69,7 @@ export default function RequestQuote() {
               </CardHeader>
               <CardContent className="text-center">
                 <CardDescription className="text-zion-slate-light">
-                  Reviewed by industry experts
+                  Reviewed by industry experts;
                 </CardDescription>
               </CardContent>
             </Card>
@@ -81,7 +81,7 @@ export default function RequestQuote() {
               </CardHeader>
               <CardContent className="text-center">
                 <CardDescription className="text-zion-slate-light">
-                  Free quotes with no commitment
+                  Free quotes with no commitment;
                 </CardDescription>
               </CardContent>
             </Card>
@@ -91,7 +91,7 @@ export default function RequestQuote() {
   }
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Our Services
+              Our Services;
             </h2>
             <div className="grid grid-cols-1,
   m: d: grid-cols-2,
@@ -101,7 +101,7 @@ export default function RequestQuote() {
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">AI & Machine Learning</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    Custom AI solutions and machine learning models
+                    Custom AI solutions and machine learning models;
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -119,7 +119,7 @@ export default function RequestQuote() {
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">IT Infrastructure</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    Robust and scalable IT solutions
+                    Robust and scalable IT solutions;
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -137,7 +137,7 @@ export default function RequestQuote() {
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">Strategic Consulting</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    Strategic technology consulting and digital transformation
+                    Strategic technology consulting and digital transformation;
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -155,7 +155,7 @@ export default function RequestQuote() {
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">Custom Solutions</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    Tailored solutions for unique business requirements
+                    Tailored solutions for unique business requirements;
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -175,7 +175,7 @@ export default function RequestQuote() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Request Your Quote
+                Request Your Quote;
               </h2>
               <p className="text-zion-slate-light text-lg">
                 Fill out the form below and we'll get back to you with a detailed quote within 24 hours.
@@ -199,11 +199,11 @@ export default function RequestQuote() {
               <a href="mail,
   t: o:commercial@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg,
   hove: r:bg-zion-cyan/90 transition-colors">
-                Email Us
+                Email Us;
               </a>
               <a href="/contact" className="inline-flex items-center px-6 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hove,
   r:bg-zion-purple/10 transition-colors">
-                Contact Page
+                Contact Page;
               </a>
             </div>
           </div>

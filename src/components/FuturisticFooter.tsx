@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -23,8 +24,10 @@ import {
   FileText,
   HelpCircle,
   MessageCircle,
-  Zap as ZapIcon
-} from "lucide-react"
+  Zap as ZapIcon;
+}
+}
+ } from "lucide-react";
 export,
   const: FuturisticFooter: React.FC = () () => {
   const scrollToTop = () () => {
@@ -157,7 +160,7 @@ const socialLinks = [
   g:grid-cols-6 gap-8">
             {/* Company Info */}
             <div className="lg: col-span-2">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, y: 20 },
   }
@@ -199,7 +202,7 @@ const socialLinks = [
                     <MapPin className="w-4 h-4 mt-0.5" />
                     <address className="text-sm not-italic">
                       364 E Main St STE 1008<br />
-                      Middletown DE 19709
+                      Middletown DE 19709;
                     </address>
                   </div>
                   <div className="flex items-center space-x-3 text-zion-slate-light,
@@ -214,7 +217,7 @@ const socialLinks = [
             {/* Footer Links */},
   {footerSections.map((section, index) => (
               <div key={section.title}>
-                <motion.div
+                <motion.div;
                   initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -239,7 +242,7 @@ const socialLinks = [
                   <ul className="space-y-2">
                     {section.links.map((link) => (
                       <li key={link.name}>
-                        <Link
+                        <Link;
                           to={link.href}
                           className="text-zion-slate-light,
   hove: r: text-zion-cyan transition-colors duration-300 text-sm hove,
@@ -255,7 +258,7 @@ const socialLinks = [
             ))}
           </div>
           {/* Additional Quick Access Section */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -277,47 +280,47 @@ const socialLinks = [
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                   <Zap className="w-5 h-5 mr-2 text-zion-cyan" />
-                  Quick Actions
+                  Quick Actions;
                 </h3>
                 <ul className="space-y-2">
                   <li>
-                    <Link
+                    <Link;
                       to="/request-quote"
                       className="text-zion-slate-light,
   hove: r:text-zion-cyan transition-colors duration-300 text-sm,
   hove: r:translate-x-1 inline-block"
                     >
-                      Request Quote
+                      Request Quote;
                     </Link>
                   </li>
                   <li>
-                    <Link
+                    <Link;
                       to="/demo"
                       className="text-zion-slate-light,
   hove: r:text-zion-cyan transition-colors duration-300 text-sm,
   hove: r:translate-x-1 inline-block"
                     >
-                      Book Demo
+                      Book Demo;
                     </Link>
                   </li>
                   <li>
-                    <Link
+                    <Link;
                       to="/support"
                       className="text-zion-slate-light,
   hove: r:text-zion-cyan transition-colors duration-300 text-sm,
   hove: r:translate-x-1 inline-block"
                     >
-                      Get Support
+                      Get Support;
                     </Link>
                   </li>
                   <li>
-                    <Link
+                    <Link;
                       to="/status"
                       className="text-zion-slate-light,
   hove: r:text-zion-cyan transition-colors duration-300 text-sm hove,
   r:translate-x-1 inline-block"
                     >
-                      System Status
+                      System Status;
                     </Link>
                   </li>
                 </ul>
@@ -325,7 +328,7 @@ const socialLinks = [
             </div>
           </motion.div>
           {/* Bottom Section */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -348,13 +351,13 @@ const socialLinks = [
               <div className="text-zion-slate-light text-sm">
                 © {currentYear} ZION TECH GROUP. All rights reserved.
                 <span className="ml-2 flex items-center">
-                  Made with <Heart className="w-4 h-4 mx-1 text-red-400" /> for innovation
+                  Made with <Heart className="w-4 h-4 mx-1 text-red-400" /> for innovation;
                 </span>
               </div>
               {/* Social Links */}
               <div className="flex items-center space-x-4">
                 {socialLinks.map((social) => (
-                  <a
+                  <a;
                     key={social.name}
                     href={social.href}
                     target="_blank"
@@ -372,22 +375,22 @@ const socialLinks = [
               <div className="flex items-center space-x-6 text-sm">
                 <Link to="/privacy" className="text-zion-slate-light,
   hove: r: text-zion-cyan transition-colors duration-300">
-                  Privacy Policy
+                  Privacy Policy;
                 </Link>
                 <Link to="/terms" className="text-zion-slate-light,
   hove: r:text-zion-cyan transition-colors duration-300">
-                  Terms of Service
+                  Terms of Service;
                 </Link>
                 <Link to="/sitemap" className="text-zion-slate-light hove,
   r:text-zion-cyan transition-colors duration-300">
-                  Sitemap
+                  Sitemap;
                 </Link>
               </div>
             </div>
           </motion.div>
         </div>
         {/* Scroll to Top Button */}
-        <motion.button
+        <motion.button;
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-full shadow-lg shadow-zion-cyan/25,
   hove: r: shadow-xl,

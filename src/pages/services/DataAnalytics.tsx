@@ -1,34 +1,38 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  BarChart3
-  TrendingUp
-  Database
-  Zap
-  Shield
-  Globe
-  Brain
-  Cloud
-  Lock
-  Users
-  Rocket
-  CheckCircle
-  ArrowRight
-  PieChart
-  LineChart
-  Activity
-  Target
-  Lightbulb
-  Eye
-  Search
-  Filter
-  Download
-  Share2
-  Cpu
-  Network
-  FileText
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  BarChart3;
+  TrendingUp;
+  Database;
+  Zap;
+  Shield;
+  Globe;
+  Brain;
+  Cloud;
+  Lock;
+  Users;
+  Rocket;
+  CheckCircle;
+  ArrowRight;
+  PieChart;
+  LineChart;
+  Activity;
+  Target;
+  Lightbulb;
+  Eye;
+  Search;
+  Filter;
+  Download;
+  Share2;
+  Cpu;
+  Network;
+  FileText;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function DataAnalytics() {
   const features = [
   {
@@ -159,7 +163,7 @@ export default function DataAnalytics() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+      <SEO;
         title="Data Analytics Services - Zion Tech Group"
         description="Transform your business data into actionable insights with our comprehensive data analytics solutions. Real-time dashboards, predictive analytics, and automated reporting."
       />
@@ -169,7 +173,7 @@ export default function DataAnalytics() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -183,15 +187,15 @@ export default function DataAnalytics() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <BarChart3 className="w-4 h-4 mr-2" />
-              Data-Driven Insights
+              Data-Driven Insights;
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Data
+              Data;
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"> Analytics</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business data into actionable insights with our comprehensive
+              Transform your business data into actionable insights with our comprehensive;
               analytics solutions. Make data-driven decisions with confidence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -199,12 +203,12 @@ export default function DataAnalytics() {
   hove: r:from-blue-500,
   hove: r:to-purple-600 transition-all duration-300,
   hove: r:scale-105">
-                Get Started
+                Get Started;
               </button>
               <button className="px-8 py-3 border border-blue-400 text-blue-400 rounded-lg font-semibold,
   hove: r:bg-blue-400 hove,
   r:text-white transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -217,7 +221,7 @@ export default function DataAnalytics() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -232,7 +236,7 @@ export default function DataAnalytics() {
                 What is Data Analytics?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Data Analytics is the process of examining, cleaning, transforming, and modeling data
+                Data Analytics is the process of examining, cleaning, transforming, and modeling data;
                 to discover useful information, draw conclusions, and support decision-making.
                 It combines statistical analysis, machine learning, and business intelligence.
               </p>
@@ -261,7 +265,7 @@ export default function DataAnalytics() {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -312,7 +316,7 @@ export default function DataAnalytics() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -325,10 +329,10 @@ export default function DataAnalytics() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Key Features
+              Key Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Data Analytics platform provides comprehensive capabilities for
+              Our Data Analytics platform provides comprehensive capabilities for;
               data processing, analysis, and visualization.
             </p>
           </motion.div>
@@ -337,7 +341,7 @@ export default function DataAnalytics() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -369,7 +373,7 @@ export default function DataAnalytics() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -382,10 +386,10 @@ export default function DataAnalytics() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Core Solutions
+              Core Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive data analytics solutions designed to transform your business
+              Comprehensive data analytics solutions designed to transform your business;
               data into actionable intelligence and insights.
             </p>
           </motion.div>
@@ -393,7 +397,7 @@ export default function DataAnalytics() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -436,7 +440,7 @@ export default function DataAnalytics() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -449,10 +453,10 @@ export default function DataAnalytics() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Industry Use Cases
+              Industry Use Cases;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Data analytics is transforming industries across the globe
+              Data analytics is transforming industries across the globe;
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
@@ -460,7 +464,7 @@ export default function DataAnalytics() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -503,7 +507,7 @@ export default function DataAnalytics() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -516,10 +520,10 @@ export default function DataAnalytics() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Business Benefits
+              Business Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how data analytics can transform your organization
+              Discover how data analytics can transform your organization;
               and drive measurable business outcomes.
             </p>
           </motion.div>
@@ -528,7 +532,7 @@ export default function DataAnalytics() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -560,7 +564,7 @@ export default function DataAnalytics() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -573,7 +577,7 @@ export default function DataAnalytics() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Implementation Process
+              Implementation Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our proven methodology ensures successful data analytics deployment and rapid value realization.
@@ -608,7 +612,7 @@ export default function DataAnalytics() {
   o: n: 'Monitor performance and continuously improve analytics capabilities'
 },
   ].map((phase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -639,7 +643,7 @@ export default function DataAnalytics() {
   }
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -654,7 +658,7 @@ export default function DataAnalytics() {
               Ready to Transform Your Data?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how data analytics can revolutionize your business intelligence
+              Discover how data analytics can revolutionize your business intelligence;
               improve decision-making, and drive unprecedented growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -662,12 +666,12 @@ export default function DataAnalytics() {
   hove: r: from-blue-500,
   hove: r:to-purple-600 transition-all duration-300,
   hove: r:scale-105">
-                Start Your Analytics Journey
+                Start Your Analytics Journey;
               </button>
               <button className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold,
   hove: r:bg-blue-400 hove,
   r:text-white transition-all duration-300">
-                Schedule Consultation
+                Schedule Consultation;
               </button>
             </div>
           </motion.div>

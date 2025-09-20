@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { 
+import { motion, AnimatePresence   } from "framer-motion";
+import {
   Brain,
   Zap, 
   Shield, 
@@ -12,9 +12,11 @@ import {
   ArrowRight,
   Star,
   CheckCircle,
-  Rocket
-} from "lucide-react"
-import { Link } from "react-router-dom"
+  Rocket;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
 interface AIService {
   id: string,na,
   m: e: string,descripti,
@@ -25,7 +27,9 @@ interface AIService {
     starte,
   r: number,profession,
   a: l: number,enterpri,
-  s: e: number
+  s: e: number;
+}
+}
   }
   ic,
   o: n: React.ComponentType<any>,rou,
@@ -141,10 +145,10 @@ const [sortBy, setSortBy] = useState<'name' | 'category' | 'status'>('name'),
 const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))],
 
   const filteredServices = aiServices.filter(service () => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 }),
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
@@ -156,7 +160,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
       case 'status':
         return a.status.localeCompare(b.status)
       defau,
-  l: t: return 0
+  l: t: return 0;
     },
   })
 const getStatusColor = (stat,
@@ -186,7 +190,7 @@ const getStatusText = (stat,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -200,23 +204,23 @@ const getStatusText = (stat,
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Solutions Hub
+              AI-Powered Solutions Hub;
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Advanced AI Services
+              Advanced AI Services;
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                {' '}Platform
+                {' '}Platform;
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform 
+              Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform;
               your business operations and drive innovation across all industries.
             </p>
           </motion.div>
 
           {/* Search and Filter Controls */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -231,7 +235,7 @@ const getStatusText = (stat,
   l: g:flex-row gap-4 justify-center items-center mb-12"
           >
             <div className="relative w-full max-w-md">
-              <input
+              <input;
                 type="text"
                 placeholder="Search AI services..."
                 value={searchQuery}
@@ -245,7 +249,7 @@ const getStatusText = (stat,
               <Brain className="absolute right-3 top-3 w-5 h-5 text-gray-400" />
             </div>
             
-            <select
+            <select;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white,
@@ -260,7 +264,7 @@ const getStatusText = (stat,
               ))}
             </select>
 
-            <select
+            <select;
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'name' | 'category' | 'status')}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white,
@@ -282,7 +286,7 @@ const getStatusText = (stat,
   g:px-8">
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
-            <motion.div
+            <motion.div;
               key={`${selectedCategory}-${searchQuery}-${sortBy}`}
               initial={ opaci,
   t: y: 0 },
@@ -301,7 +305,7 @@ const getStatusText = (stat,
   g:grid-cols-3 gap-8"
             >
               {sortedServices.map((service, index) => (
-                <motion.div
+                <motion.div;
                   key={service.id}
                   initial={ opaci,
   t: y: 0, y: 20 },
@@ -357,13 +361,13 @@ const getStatusText = (stat,
                   </div>
 
                   {/* Action Button */}
-                  <Link
+                  <Link;
                     to={service.route}
                     className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-lg font-semibold,
   hove: r: from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
                   >
-                    Explore Service
+                    Explore Service;
                     <ArrowRight className="w-4 h-4 ml-2 group-hove,
   r:translate-x-1 transition-transform duration-300" />
                   </Link>
@@ -374,7 +378,7 @@ const getStatusText = (stat,
 
           {/* No Results Message */},
   {sortedServices.length === 0 && (
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0 },
   }
@@ -396,7 +400,7 @@ const getStatusText = (stat,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -415,27 +419,27 @@ const getStatusText = (stat,
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact our team to discuss how our AI-powered solutions can drive innovation 
+              Contact our team to discuss how our AI-powered solutions can drive innovation;
               and growth for your organization.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold,
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 text-lg flex items-center justify-center"
               >
                 <Rocket className="w-5 h-5 mr-2" />
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/new-services-showcase-2025"
                 className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold,
   hove: r:bg-blue-500 hove,
   r:text-white transition-all duration-300 text-lg"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -444,4 +448,4 @@ const getStatusText = (stat,
     </div>
   )
 }
-export default AdvancedAIServicesHub
+export default AdvancedAIServicesHub;

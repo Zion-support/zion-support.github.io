@@ -1,37 +1,41 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Activity
+  Activity;
   Shield,
   Zap,
   CheckCircle,
   BarChart3,
   Sparkles,
   ArrowRight,
-  Brain
-  Cpu
-  Database
-  Globe
-  Rocket
-  Target
-  TrendingUp
-  Layers
-  Heart
-  Stethoscope
-  Pill
-  Microscope
-  Search
-  Clock
-  DollarSign
-  Phone
-  Mail
-  MapPin
-  Users
-  FileText
-  AlertTriangle
-  Building
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Brain;
+  Cpu;
+  Database;
+  Globe;
+  Rocket;
+  Target;
+  TrendingUp;
+  Layers;
+  Heart;
+  Stethoscope;
+  Pill;
+  Microscope;
+  Search;
+  Clock;
+  DollarSign;
+  Phone;
+  Mail;
+  MapPin;
+  Users;
+  FileText;
+  AlertTriangle;
+  Building;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function AIHealthcareAnalytics() {
   const features = [
   'Real-time patient data analytics and insightsPredictive disease modeling and risk assessment'
@@ -93,7 +97,7 @@ export default function AIHealthcareAnalytics() {
         'HIPAA compliance'
 ]
       recommend,
-  e: d: false
+  e: d: false;
 },
   {
   pl,
@@ -107,7 +111,7 @@ export default function AIHealthcareAnalytics() {
         'API accessIntegration support'
 ]
       recommend,
-  e: d: true
+  e: d: true;
 },
   {
   pl,
@@ -121,7 +125,7 @@ export default function AIHealthcareAnalytics() {
         'On-site trainingCustom development'
 ]
       recommende,
-  d: false
+  d: false;
 },
   ]
   const healthcareTechnologies = [
@@ -190,7 +194,7 @@ export default function AIHealthcareAnalytics() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="AI Healthcare Analytics Platform - Zion Tech Group"
         description="Transform healthcare delivery with AI-powered analytics, predictive modeling, and clinical decision support. Improve outcomes and reduce costs."
       />
@@ -201,7 +205,7 @@ export default function AIHealthcareAnalytics() {
   s: m: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20" />
         <div className="relative container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -219,7 +223,7 @@ export default function AIHealthcareAnalytics() {
             </div>
             <h1 className="text-4xl,
   s: m:text-6xl font-bold tracking-tight mb-6">
-              AI Healthcare
+              AI Healthcare;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Analytics Platform</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
@@ -228,7 +232,7 @@ export default function AIHealthcareAnalytics() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a 
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg,
@@ -236,16 +240,16 @@ export default function AIHealthcareAnalytics() {
   hove: r:to-blue-500 transition-all duration-300 font-semibold";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center px-6 py-3 border border-green-400/30 text-green-400 rounded-lg hove,
   r:bg-green-400/10 transition-all duration-300";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Get Demo
+                Get Demo;
               </a>
             </div>
           </motion.div>
@@ -259,10 +263,10 @@ export default function AIHealthcareAnalytics() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Advanced Healthcare Analytics Features
+              Advanced Healthcare Analytics Features;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Our AI platform delivers comprehensive healthcare analytics capabilities designed 
+              Our AI platform delivers comprehensive healthcare analytics capabilities designed;
               to transform clinical decision-making and operational efficiency.
             </p>
           </div>
@@ -271,7 +275,7 @@ export default function AIHealthcareAnalytics() {
   m: d:grid-cols-2 l,
   g:grid-cols-4">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -304,7 +308,7 @@ export default function AIHealthcareAnalytics() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m:text-4xl font-bold mb-4">
-              Transform Healthcare Delivery
+              Transform Healthcare Delivery;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Experience measurable improvements in patient care, operational efficiency, and financial performance.
@@ -315,7 +319,7 @@ export default function AIHealthcareAnalytics() {
   m: d: grid-cols-2 l,
   g:grid-cols-3">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -347,7 +351,7 @@ export default function AIHealthcareAnalytics() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Healthcare Industry Solutions
+              Healthcare Industry Solutions;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Tailored analytics solutions for various healthcare settings and specialties.
@@ -357,7 +361,7 @@ export default function AIHealthcareAnalytics() {
           <div className="grid gap-8 m,
   d:grid-cols-2">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -403,7 +407,7 @@ export default function AIHealthcareAnalytics() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m:text-4xl font-bold mb-4">
-              Comprehensive Analytics Capabilities
+              Comprehensive Analytics Capabilities;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Multi-dimensional healthcare analytics covering clinical, operational, financial, and population health domains.
@@ -413,7 +417,7 @@ export default function AIHealthcareAnalytics() {
           <div className="grid gap-8,
   m: d:grid-cols-2">
             {analyticsCapabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -451,7 +455,7 @@ export default function AIHealthcareAnalytics() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Transparent Pricing Plans
+              Transparent Pricing Plans;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Choose the plan that best fits your healthcare organization's needs and scale as you grow.
@@ -461,7 +465,7 @@ export default function AIHealthcareAnalytics() {
           <div className="grid gap-8 m,
   d:grid-cols-3 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -475,7 +479,7 @@ export default function AIHealthcareAnalytics() {
   a: y: index * 0.1 },
   }
                 className={`relative bg-slate-800/50 backdrop-blur border rounded-xl p-8 ${
-  plan.recommended 
+  plan.recommended;
                     ? 'border-green-500/50 bg-green-500/5' 
                     : 'border-slate-700/50'
 }`}
@@ -483,7 +487,7 @@ export default function AIHealthcareAnalytics() {
                 {plan.recommended && (
   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Recommended
+                      Recommended;
                     </span>
                   </div>
                 )}
@@ -505,11 +509,11 @@ export default function AIHealthcareAnalytics() {
                   ))}
                 </ul>
 
-                <a
+                <a;
                   href="t,
   e: l: +13024640950"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-  plan.recommended
+  plan.recommended;
                       ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white,
   hove: r:from-green-400,
   hove: r:to-blue-500'
@@ -517,7 +521,7 @@ export default function AIHealthcareAnalytics() {
   r:bg-slate-600'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -532,7 +536,7 @@ export default function AIHealthcareAnalytics() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Seamless EHR Integration
+              Seamless EHR Integration;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Integrate with your existing healthcare information systems and workflow platforms.
@@ -543,7 +547,7 @@ export default function AIHealthcareAnalytics() {
   m: d:grid-cols-2 l,
   g:grid-cols-3">
             {healthcareTechnologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -563,7 +567,7 @@ export default function AIHealthcareAnalytics() {
               >
                 <h3 className="font-semibold text-lg mb-2">{tech.name}</h3>
                 <p className="text-slate-400 text-sm mb-4">{tech.category}</p>
-                <a
+                <a;
                   href={tech.url},
   }
                   target="_blank"
@@ -571,7 +575,7 @@ export default function AIHealthcareAnalytics() {
                   className="className="text-green-400,
   hove: r:text-green-300 text-sm inline-flex items-center";"
                 >
-                  Visit Website
+                  Visit Website;
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </a>
               </motion.div>
@@ -587,7 +591,7 @@ export default function AIHealthcareAnalytics() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   s: m: text-4xl font-bold mb-4">
-              Healthcare Compliance & Security
+              Healthcare Compliance & Security;
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Meet the highest standards of healthcare data security and regulatory compliance.
@@ -598,7 +602,7 @@ export default function AIHealthcareAnalytics() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 max-w-4xl mx-auto">
             {complianceStandards.map((standard, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -625,7 +629,7 @@ export default function AIHealthcareAnalytics() {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -642,13 +646,13 @@ export default function AIHealthcareAnalytics() {
               Ready to Transform Healthcare Analytics?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Join leading healthcare organizations that have already revolutionized 
+              Join leading healthcare organizations that have already revolutionized;
               their analytics capabilities with AI-powered insights.
             </p>
             
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center mb-8">
-              <a 
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg,
@@ -656,16 +660,16 @@ export default function AIHealthcareAnalytics() {
   hove: r:to-blue-500 transition-all duration-300 font-semibold text-lg";"
               >
                 <Phone className="w-6 h-6 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </a>
-              <a 
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-green-400/50 text-green-400 rounded-lg,
   hove: r:bg-green-400/10 transition-all duration-300 font-semibold text-lg";"
               >
                 <Mail className="w-6 h-6 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </a>
             </div>
 

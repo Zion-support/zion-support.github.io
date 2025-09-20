@@ -1,271 +1,274 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Brain
-  Zap
-  Shield
-  CheckCircle
-  ArrowRight
-  Star
-  Users
-  Award
-  Globe
-  Lock
-  Activity
-  Clock
-  Eye
-  Database
-  Code
-  FileText
-  Wrench
-  Cpu
-  Target
-  Rocket
-  Lightbulb
-  Gauge
-  Network
-  Server
-  Building
-  Car
-  Plane
-  Factory
-  Cog
-  BarChart3
-  TrendingUp
-  MapPin
-  Layers
-  RefreshCw
-  AlertTriangle
-  Package
-  Warehouse
-  Route
-  Navigation
-  Box
-  Ship
-  Train
-  Truck
-  Cloud
-  Settings
-  Palette
-  Smartphone
-  Tablet
-  Monitor
-  Wifi
-  Bluetooth
-  Battery
-  Signal
-  HardDrive
-  MemoryStick
-  Router
-  Switch
-  Hub
-  Modem
-  Firewall
-  LoadBalancer
-  Gateway
-  Proxy
-  VPN
-  SSL
-  TLS
-  SSH
-  FTP
-  HTTP
-  HTTPS
-  DNS
-  DHCP
-  NTP
-  SMTP
-  POP3
-  IMAP
-  LDAP
-  Kerberos
-  OAuth
-  JWT
-  SAML
-  OpenID
-  Radius
-  Tacacs
-  Syslog
-  SNMP
-  NetFlow
-  sFlow
-  IPFIX
-  BGP
-  OSPF
-  EIGRP
-  RIP
-  VLAN
-  VXLAN
-  GRE
-  IPSec
-  MPLS
-  SDN
-  NFV
-  VNF
-  Container
-  Pod
-  Service
-  Ingress
-  Egress
-  Cluster
-  Node
-  Namespace
-  ConfigMap
-  Secret
-  PersistentVolume
-  StorageClass
-  StatefulSet
-  DaemonSet
-  Job
-  CronJob
-  HorizontalPodAutoscaler
-  VerticalPodAutoscaler
-  NetworkPolicy
-  PodSecurityPolicy
-  Role
-  RoleBinding
-  ClusterRole
-  ClusterRoleBinding
-  ServiceAccount
-  Token
-  Certificate
-  CSR
-  CRL
-  OCSP
-  HSM
-  TPM
-  SecureEnclave
-  TrustZone
-  SGX
-  SEV
-  TDX
-  ARM
-  x86
-  RISC
-  CISC
-  GPU
-  TPU
-  FPGA
-  ASIC
-  SoC
-  SiP
-  PCB
-  Motherboard
-  Backplane
-  Chassis
-  Rack
-  Cabinet
-  Datacenter
-  Colocation
-  Edge
-  Fog
-  Public
-  Private
-  Community
-  Government
-  Financial
-  Healthcare
-  Education
-  Retail
-  Manufacturing
-  Transportation
-  Energy
-  Utilities
-  Telecommunications
-  Media
-  Entertainment
-  Gaming
-  Social
-  Ecommerce
-  Fintech
-  Insurtech
-  Healthtech
-  Edtech
-  Proptech
-  Legaltech
-  Regtech
-  Adtech
-  MarTech
-  HRTech
-  SalesTech
-  SupportTech
-  SecurityTech
-  PrivacyTech
-  ComplianceTech
-  GovernanceTech
-  RiskTech
-  AuditTech
-  MonitoringTech
-  ObservabilityTech
-  LoggingTech
-  TracingTech
-  MetricsTech
-  AlertingTech
-  IncidentTech
-  ChangeTech
-  ReleaseTech
-  DeploymentTech
-  CI
-  CD
-  DevOps
-  GitOps
-  SecOps
-  DataOps
-  MLOps
-  AIOps
-  NoOps
-  SRE
-  Platform
-  Infrastructure
-  Application
-  Data
-  Security
-  Storage
-  Compute
-  Memory
-  Cache
-  Buffer
-  Queue
-  Stream
-  Batch
-  RealTime
-  NearRealTime
-  Offline
-  Online
-  Hybrid
-  Multi
-  Single
-  Distributed
-  Centralized
-  Decentralized
-  Federated
-  Hierarchical
-  Flat
-  Mesh
-  Ring
-  Bus
-  Tree
-  Graph
-  Matrix
-  Vector
-  Scalar
-  Tensor
-  Array
-  List
-  Stack
-  Deque
-  PriorityQueue
-  Heap
-  HashTable
-  BloomFilter
-  SkipList
-  Trie
-  BTree
-  RedBlackTree
-  AVLTree
-  SplayTree
-  Treap
-} from "lucide-react"
+  Brain;
+  Zap;
+  Shield;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Users;
+  Award;
+  Globe;
+  Lock;
+  Activity;
+  Clock;
+  Eye;
+  Database;
+  Code;
+  FileText;
+  Wrench;
+  Cpu;
+  Target;
+  Rocket;
+  Lightbulb;
+  Gauge;
+  Network;
+  Server;
+  Building;
+  Car;
+  Plane;
+  Factory;
+  Cog;
+  BarChart3;
+  TrendingUp;
+  MapPin;
+  Layers;
+  RefreshCw;
+  AlertTriangle;
+  Package;
+  Warehouse;
+  Route;
+  Navigation;
+  Box;
+  Ship;
+  Train;
+  Truck;
+  Cloud;
+  Settings;
+  Palette;
+  Smartphone;
+  Tablet;
+  Monitor;
+  Wifi;
+  Bluetooth;
+  Battery;
+  Signal;
+  HardDrive;
+  MemoryStick;
+  Router;
+  Switch;
+  Hub;
+  Modem;
+  Firewall;
+  LoadBalancer;
+  Gateway;
+  Proxy;
+  VPN;
+  SSL;
+  TLS;
+  SSH;
+  FTP;
+  HTTP;
+  HTTPS;
+  DNS;
+  DHCP;
+  NTP;
+  SMTP;
+  POP3;
+  IMAP;
+  LDAP;
+  Kerberos;
+  OAuth;
+  JWT;
+  SAML;
+  OpenID;
+  Radius;
+  Tacacs;
+  Syslog;
+  SNMP;
+  NetFlow;
+  sFlow;
+  IPFIX;
+  BGP;
+  OSPF;
+  EIGRP;
+  RIP;
+  VLAN;
+  VXLAN;
+  GRE;
+  IPSec;
+  MPLS;
+  SDN;
+  NFV;
+  VNF;
+  Container;
+  Pod;
+  Service;
+  Ingress;
+  Egress;
+  Cluster;
+  Node;
+  Namespace;
+  ConfigMap;
+  Secret;
+  PersistentVolume;
+  StorageClass;
+  StatefulSet;
+  DaemonSet;
+  Job;
+  CronJob;
+  HorizontalPodAutoscaler;
+  VerticalPodAutoscaler;
+  NetworkPolicy;
+  PodSecurityPolicy;
+  Role;
+  RoleBinding;
+  ClusterRole;
+  ClusterRoleBinding;
+  ServiceAccount;
+  Token;
+  Certificate;
+  CSR;
+  CRL;
+  OCSP;
+  HSM;
+  TPM;
+  SecureEnclave;
+  TrustZone;
+  SGX;
+  SEV;
+  TDX;
+  ARM;
+  x86;
+  RISC;
+  CISC;
+  GPU;
+  TPU;
+  FPGA;
+  ASIC;
+  SoC;
+  SiP;
+  PCB;
+  Motherboard;
+  Backplane;
+  Chassis;
+  Rack;
+  Cabinet;
+  Datacenter;
+  Colocation;
+  Edge;
+  Fog;
+  Public;
+  Private;
+  Community;
+  Government;
+  Financial;
+  Healthcare;
+  Education;
+  Retail;
+  Manufacturing;
+  Transportation;
+  Energy;
+  Utilities;
+  Telecommunications;
+  Media;
+  Entertainment;
+  Gaming;
+  Social;
+  Ecommerce;
+  Fintech;
+  Insurtech;
+  Healthtech;
+  Edtech;
+  Proptech;
+  Legaltech;
+  Regtech;
+  Adtech;
+  MarTech;
+  HRTech;
+  SalesTech;
+  SupportTech;
+  SecurityTech;
+  PrivacyTech;
+  ComplianceTech;
+  GovernanceTech;
+  RiskTech;
+  AuditTech;
+  MonitoringTech;
+  ObservabilityTech;
+  LoggingTech;
+  TracingTech;
+  MetricsTech;
+  AlertingTech;
+  IncidentTech;
+  ChangeTech;
+  ReleaseTech;
+  DeploymentTech;
+  CI;
+  CD;
+  DevOps;
+  GitOps;
+  SecOps;
+  DataOps;
+  MLOps;
+  AIOps;
+  NoOps;
+  SRE;
+  Platform;
+  Infrastructure;
+  Application;
+  Data;
+  Security;
+  Storage;
+  Compute;
+  Memory;
+  Cache;
+  Buffer;
+  Queue;
+  Stream;
+  Batch;
+  RealTime;
+  NearRealTime;
+  Offline;
+  Online;
+  Hybrid;
+  Multi;
+  Single;
+  Distributed;
+  Centralized;
+  Decentralized;
+  Federated;
+  Hierarchical;
+  Flat;
+  Mesh;
+  Ring;
+  Bus;
+  Tree;
+  Graph;
+  Matrix;
+  Vector;
+  Scalar;
+  Tensor;
+  Array;
+  List;
+  Stack;
+  Deque;
+  PriorityQueue;
+  Heap;
+  HashTable;
+  BloomFilter;
+  SkipList;
+  Trie;
+  BTree;
+  RedBlackTree;
+  AVLTree;
+  SplayTree;
+  Treap;
+}
+}
+ } from "lucide-react";
 const workflowSolutions = [
   {
   id: 1,tit,
@@ -525,7 +528,7 @@ export default function AIWorkflowAutomation() {
   const categories = [['AllProcess Automation', 'Document ProcessingWorkflow Orchestration', 'Decision AutomationAnalytics', 'Task Management'],
   ]
   const filteredSolutions = selectedCategory === 'All'
-    ? workflowSolutions
+    ? workflowSolutions;
     : workflowSolutions.filter(solution => solution.category === selectedCategory)
   return (
     <div className="min-h-screen bg-futuristic">
@@ -539,7 +542,7 @@ export default function AIWorkflowAutomation() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -551,7 +554,7 @@ export default function AIWorkflowAutomation() {
   }
             className="className="text-center max-w-4xl mx-auto";"
           >
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -571,12 +574,12 @@ export default function AIWorkflowAutomation() {
 
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Workflow
+              AI Workflow;
               <span className="text-gradient block">Automation</span>
             </h1>
 
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Transform your business with intelligent AI workflow automation. From process
+              Transform your business with intelligent AI workflow automation. From process;
               automation to decision making, we help you build the future of work.
             </p>
 
@@ -602,7 +605,7 @@ export default function AIWorkflowAutomation() {
   }
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -616,14 +619,14 @@ export default function AIWorkflowAutomation() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">AI Workflow Automation Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Understanding the fundamental advantages that make AI workflow automation essential
+              Understanding the fundamental advantages that make AI workflow automation essential;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {workflowBenefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={benefit.title},
   }
                 initial={ opaci,
@@ -666,7 +669,7 @@ export default function AIWorkflowAutomation() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -680,7 +683,7 @@ export default function AIWorkflowAutomation() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Workflow Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive support for leading AI workflow automation technologies
+              Comprehensive support for leading AI workflow automation technologies;
             </p>
           </motion.div>
 
@@ -688,7 +691,7 @@ export default function AIWorkflowAutomation() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {workflowTechnologies.map((technology, index) => (
-  <motion.div
+  <motion.div;
                 key={technology.name},
   }
                 initial={ opaci,
@@ -719,7 +722,7 @@ export default function AIWorkflowAutomation() {
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
                     : 'bg-green-500/20 text-green-400 border border-green-500/30'
 }`}>
-                  {technology.reliability} Reliability
+                  {technology.reliability} Reliability;
                 </span>
               </motion.div>
             ))}
@@ -731,7 +734,7 @@ export default function AIWorkflowAutomation() {
   }
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -745,7 +748,7 @@ export default function AIWorkflowAutomation() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our AI Workflow Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              A proven methodology that ensures successful AI workflow automation implementation
+              A proven methodology that ensures successful AI workflow automation implementation;
             </p>
           </motion.div>
 
@@ -753,7 +756,7 @@ export default function AIWorkflowAutomation() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-  <motion.div
+  <motion.div;
                 key={step.step},
   }
                 initial={ opaci,
@@ -794,7 +797,7 @@ export default function AIWorkflowAutomation() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -808,7 +811,7 @@ export default function AIWorkflowAutomation() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">AI Workflow Automation Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive solutions designed for intelligent workflow automation
+              Comprehensive solutions designed for intelligent workflow automation;
             </p>
           </motion.div>
 
@@ -816,14 +819,14 @@ export default function AIWorkflowAutomation() {
   }
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
-  <button
+  <button;
                 key={category},
   }
                 onClick={onClick={() => setSelectedCategory(category)},
   },
   }
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-  selectedCategory === category
+  selectedCategory === category;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20,
   hove: r:border-zion-cyan/40'
@@ -839,7 +842,7 @@ export default function AIWorkflowAutomation() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
                 key={solution.id},
   }
                 initial={ opaci,
@@ -876,7 +879,7 @@ export default function AIWorkflowAutomation() {
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
-  <span
+  <span;
                       key={techIndex},
   }
                       className="className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30";"
@@ -913,7 +916,7 @@ export default function AIWorkflowAutomation() {
   }
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -927,7 +930,7 @@ export default function AIWorkflowAutomation() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">AI Workflow Automation Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Organizations that have transformed their operations with AI workflow automation
+              Organizations that have transformed their operations with AI workflow automation;
             </p>
           </motion.div>
 
@@ -935,7 +938,7 @@ export default function AIWorkflowAutomation() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
-  <motion.div
+  <motion.div;
                 key={story.id},
   }
                 initial={ opaci,
@@ -993,7 +996,7 @@ export default function AIWorkflowAutomation() {
   }
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -1007,28 +1010,28 @@ export default function AIWorkflowAutomation() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how AI workflow automation can revolutionize your operations
+              Let's discuss how AI workflow automation can revolutionize your operations;
               improve efficiency, and create competitive advantages.
             </p>
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Start Workflow Project
+                Start Workflow Project;
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
               >
-                Workflow Consultation
+                Workflow Consultation;
               </a>
             </div>
           </motion.div>

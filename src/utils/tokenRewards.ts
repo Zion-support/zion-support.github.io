@@ -1,4 +1,4 @@
-import { apiClient } from "@/services/api"
+import { apiClient   } from "@/services/api";
 export async function rewardOnboarding(user,
   I: d: string) {
   await apiClient('/functions/v1/token-manager/earn', {
@@ -12,7 +12,7 @@ export async function earnTokensForPurchase(
   user,
   I: d: string,purchaseAmou,
   n: t: number,purchaseTy,
-  p: e: string
+  p: e: string;
 ): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
   meth,
@@ -26,7 +26,7 @@ export async function earnTokensForPurchase(
 export async function earnTokensForReferral(
   user,
   I: d: string,referredUser,
-  I: d: string
+  I: d: string;
 ): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
   meth,

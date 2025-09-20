@@ -1,22 +1,22 @@
 import React, { useState } from "react"
-import { TrustedBySection } from "@/components/TrustedBySection"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices"
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users } from "lucide-react"
-import { Link } from "react-router-dom"
+import { TrustedBySection   } from "@/components/TrustedBySection";
+import { Button   } from "@/components/ui/button";
+import { Badge   } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { MICRO_SAAS_SERVICES   } from "@/data/microSaasServices";
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users   } from "lucide-react";
+import { Link   } from "react-router-dom";
 const const categoryIcons = {
   = {
-    'AI Business Solutions': Brain
-    'IT Infrastructure': Cloud
-    'Data Analytics': BarChart3
-    'AI Development': Code
-    'FinTech': DollarSign
-    'HealthTech': Heart
-    'E-commerce': ShoppingCart
-    'EdTech': GraduationCap
+    'AI Business Solutions': Brain;
+    'IT Infrastructure': Cloud;
+    'Data Analytics': BarChart3;
+    'AI Development': Code;
+    'FinTech': DollarSign;
+    'HealthTech': Heart;
+    'E-commerce': ShoppingCart;
+    'EdTech': GraduationCap;
 }
 const benefits = [
   {
@@ -57,7 +57,7 @@ const features = [
 export default function MicroSaasServices() {
   const [selectedCategory, setSelectedCategory] = useState('all')
     const filteredServices = selectedCategory === 'all'
-        ? MICRO_SAAS_SERVICES
+        ? MICRO_SAAS_SERVICES;
         : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory)
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */},
@@ -66,7 +66,7 @@ export default function MicroSaasServices() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl,
   m: d: text-6xl font-bold mb-6">
-            Micro SAAS Solutions
+            Micro SAAS Solutions;
           </h1>
           <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -77,13 +77,13 @@ export default function MicroSaasServices() {
             <Button size="lg" className="bg-white text-zion-blue,
   hove: r: bg-gray-100">
               <Globe className="h-5 w-5 mr-2"/>
-              View All Services
+              View All Services;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-zion-blue">
               <Phone className="h-5 w-5 mr-2"/>
-              Contact Sales
+              Contact Sales;
             </Button>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function MicroSaasServices() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              We deliver enterprise-grade solutions with startup agility and proven results
+              We deliver enterprise-grade solutions with startup agility and proven results;
             </p>
           </div>
           
@@ -129,10 +129,10 @@ export default function MicroSaasServices() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-zion-blue mb-4">
-              Enterprise Features, Startup Pricing
+              Enterprise Features, Startup Pricing;
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Every service includes our comprehensive feature set designed for growth and scalability
+              Every service includes our comprehensive feature set designed for growth and scalability;
             </p>
           </div>
           
@@ -155,10 +155,10 @@ export default function MicroSaasServices() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-zion-blue mb-4">
-              Flexible Pricing Plans
+              Flexible Pricing Plans;
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Choose the plan that fits your business needs and scale as you grow
+              Choose the plan that fits your business needs and scale as you grow;
             </p>
           </div>
           
@@ -215,7 +215,7 @@ export default function MicroSaasServices() {
                     ))}
                   </ul>
                   <Button className="w-full" variant={tier.key === 'professional' ? 'default' : 'outline'}>
-                    Get Started
+                    Get Started;
                   </Button>
                 </CardContent>
               </Card>))}
@@ -230,10 +230,10 @@ export default function MicroSaasServices() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Services by Category
+              Services by Category;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              Explore our comprehensive range of micro SAAS solutions organized by industry and function
+              Explore our comprehensive range of micro SAAS solutions organized by industry and function;
             </p>
           </div>
           
@@ -295,7 +295,7 @@ export default function MicroSaasServices() {
                         </div>
                         <Button size="sm" className="bg-zion-purple,
   hove: r:bg-zion-purple-dark">
-                          Learn More
+                          Learn More;
                         </Button>
                       </div>
                     </CardContent>
@@ -316,7 +316,7 @@ export default function MicroSaasServices() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Get in touch with our team to discuss your needs and discover how our micro SAAS solutions can drive your success
+              Get in touch with our team to discuss your needs and discover how our micro SAAS solutions can drive your success;
             </p>
           </div>
           
@@ -366,21 +366,21 @@ export default function MicroSaasServices() {
                 <Link to="/request-quote">
                   <Button className="w-full bg-zion-purple,
   hove: r: bg-zion-purple-dark">
-                    Request Custom Quote
+                    Request Custom Quote;
                   </Button>
                 </Link>
                 <Link to="/contact">
                   <Button variant="outline" className="w-full border-zion-purple text-zion-purple,
   hove: r:bg-zion-purple,
   hove: r:text-white">
-                    Schedule Consultation
+                    Schedule Consultation;
                   </Button>
                 </Link>
                 <Link to="/services">
                   <Button variant="outline" className="w-full border-zion-blue text-zion-blue,
   hove: r:bg-zion-blue hove,
   r:text-white">
-                    View All Services
+                    View All Services;
                   </Button>
                 </Link>
               </div>

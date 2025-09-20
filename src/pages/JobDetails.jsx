@@ -1,18 +1,19 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { useParams, useNavigate } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, Clock, DollarSign, Briefcase } from "@/components/icons"
-import { formatDistanceToNow } from "date-fns"
-import { toast } from "sonner"
-import { useAuth } from "@/hooks/useAuth"
+import { useParams, useNavigate   } from "react-router-dom";
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Calendar, Clock, DollarSign, Briefcase   } from "@/components/icons";
+import { formatDistanceToNow   } from "date-fns";
+import { toast   } from "sonner";
+import { useAuth   } from "@/hooks/useAuth";
 import useJobDetails from "@/hooks/useJobDetails"
-import { ApplyToJobModal } from "@/components/messaging/job-application"
+import { ApplyToJobModal   } from "@/components/messaging/job-application";
 import SEO from "@/components/SEO"
-import { useWhitelabel } from "@/context/WhitelabelContext"
+import { useWhitelabel   } from "@/context/WhitelabelContext";
 export default function JobDetails() {
-  // Cast to specify the expected route param type since useParams may be untyped
+  // Cast to specify the expected route param type since useParams may be untyped;
 const { jobId } = useParams()
     const { job, isLoading, error } = useJobDetails(jobId)
     const { user, isAuthenticated } = useAuth()
@@ -42,12 +43,12 @@ const { jobId } = useParams()
   ) {
             toast.error("Please log in to apply for this job")
             navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`))
-            return
+            return;
 }
         if (if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
   ) {
             toast.error("Only job seekers can apply for jobs")
-            return
+            return;
 }
         setIsApplyModalOpen(true)
     }
@@ -60,14 +61,14 @@ const { jobId } = useParams()
             return "Not specified"
         return `$${budget.min} - $${budget.max}`
 }
-    const isOwnJob = user?.id === job.client_id
+    const isOwnJob = user?.id === job.client_id;
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Button variant="outline" size="sm" onClick={() => navigate('/jobs')}>
-            ← Back to Jobs
+            ← Back to Jobs;
           </Button>
         </div>
         
@@ -82,7 +83,10 @@ const { jobId } = useParams()
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
                     <div className="flex items-center text-muted-foreground">
                       <Calendar className="mr-2 h-4 w-4"/>
-                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuff,
+                      <span>Posted {
+  formatDistanceToNow(new Date(job.created_at), { addSuff,
+}
+}
   i: x: true })}</span>
                     </div>
                   </div>
@@ -142,7 +146,7 @@ const { jobId } = useParams()
                 </div>
                 
                 {!isOwnJob && (<Button className="w-full mt-4" onClick={handleApply} disabled={isOwnJob}>
-                    Apply Now
+                    Apply Now;
                   </Button>)}, {isOwnJob && (<div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>)}
@@ -161,7 +165,7 @@ const { jobId } = useParams()
   o: n: job.description,company_na,
   m: e: job.company_name || "Company",budg,
   e: t: job.budget,client_,
-  i: d: job.client_id
+  i: d: job.client_id;
 },
   } isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>)

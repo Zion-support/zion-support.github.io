@@ -9,15 +9,19 @@ const,
   e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate API call
+    // Simulate API call;
     try {
   await new Promise(resolve => setTimeout(resolve, 1500))
       setSubmitStatus('success')
       setEmail('')
+}
+}
     } catch (error) {
   setSubmitStatus('error')
     } finally {
   setIsSubmitting(false)
+}
+}
     },
   }
 
@@ -27,7 +31,7 @@ const,
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-12 border border-purple-500/30">
           <h2 className="text-4xl,
   m: d:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Stay Updated
+            Stay Updated;
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Get the latest insights on AI, quantum computing, and cutting-edge technology delivered to your inbox.
@@ -46,21 +50,21 @@ const,
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
             <div className="flex flex-col,
   s: m:flex-row gap-4">
-              <input
+              <input;
                 type="email"
                 value={email},
   }
                 onChange={(e) => setEmail(e.target.value)},
   }
                 placeholder="Enter your email address"
-                required
+                required;
                 className="className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400,
   focu: s: outline-none,
   focu: s:ring-2,
   focu: s:ring-purple-500 focu,
   s:border-transparent transition-all duration-300";"
               />
-              <button
+              <button;
                 type="submit"
                 disabled={isSubmitting},
   }
@@ -97,4 +101,4 @@ const,
   )
 }
 
-export default NewsletterSignup
+export default NewsletterSignup;

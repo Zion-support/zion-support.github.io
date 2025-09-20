@@ -1,7 +1,8 @@
+import { useCallback    } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence     } from "framer-motion";
 import {
-  Brain
+  Brain;
   Search,
   TrendingUp,
   Zap,
@@ -10,36 +11,40 @@ import {
   Clock,
   DollarSign,
   CheckCircle,
-  Star
-  ArrowRight
-  Globe
-  BookOpen
-  Target
-  BarChart3
-  Cpu
-  Lock
-  Activity
-  Award
-  Rocket
-  Sparkles
-  Eye
-  Workflow
-  Database
-  Network
-  Smartphone
-  Server
-  Chip
-  Wifi
-  ShieldCheck
-  Bot
-  Workflow as WorkflowIcon
-  Eye as EyeIcon
-  Sparkles as SparklesIcon
-  Zap as ZapIcon
-  Phone
-  Mail
-  MapPin
-} from "lucide-react"
+  Star;
+  ArrowRight;
+  Globe;
+  BookOpen;
+  Target;
+  BarChart3;
+  Cpu;
+  Lock;
+  Activity;
+  Award;
+  Rocket;
+  Sparkles;
+  Eye;
+  Workflow;
+  Database;
+  Network;
+  Smartphone;
+  Server;
+  Chip;
+  Wifi;
+  ShieldCheck;
+  Bot;
+  Workflow as WorkflowIcon;
+  Eye as EyeIcon;
+  Sparkles as SparklesIcon;
+  Zap as ZapIcon;
+  Phone;
+  Mail;
+  MapPin;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIAutonomousResearchAssistant() {
   const [activeTab, setActiveTab] = useState('overview')
   const [isVisible, setIsVisible] = useState(false)
@@ -122,7 +127,7 @@ export default function AIAutonomousResearchAssistant() {
   }
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
-  <motion.div
+  <motion.div;
               key={i},
   }
               className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50";"
@@ -157,7 +162,7 @@ export default function AIAutonomousResearchAssistant() {
         
         {/* Gradient orbs with neon glow */},
   }
-        <motion.div 
+        <motion.div;
           className="className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl";"
           animate={
   sca,
@@ -176,7 +181,7 @@ export default function AIAutonomousResearchAssistant() {
   }
         />
         
-        <motion.div 
+        <motion.div;
           className="className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl";"
           animate={
   sca,
@@ -191,7 +196,7 @@ export default function AIAutonomousResearchAssistant() {
   o: n: 5,repe,
   a: t: Infinity,ea,
   s: e: "easeInOut",del,
-  a: y: 1
+  a: y: 1;
 },
   }
         />
@@ -203,7 +208,7 @@ export default function AIAutonomousResearchAssistant() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -216,22 +221,22 @@ export default function AIAutonomousResearchAssistant() {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              Revolutionary AI Research Platform
+              Revolutionary AI Research Platform;
             </div>
             <h1 className="text-5xl,
   m: d: text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-              AI Autonomous Research Assistant
+              AI Autonomous Research Assistant;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              The world's first fully autonomous AI research platform that conducts comprehensive research
+              The world's first fully autonomous AI research platform that conducts comprehensive research;
               analyzes data, and generates insights across multiple domains without human intervention.
             </p>
           </motion.div>
 
           {/* Key Metrics */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -265,7 +270,7 @@ export default function AIAutonomousResearchAssistant() {
 
           {/* CTA Buttons */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -286,13 +291,13 @@ export default function AIAutonomousResearchAssistant() {
   hove: r:shadow-2xl,
   hove: r:shadow-cyan-500/25 flex items-center">
               <Rocket className="w-5 h-5 mr-2" />
-              Get Started Today
+              Get Started Today;
             </button>
             <button className="px-8 py-4 border-2 border-cyan-400/50,
   hove: r:border-cyan-400 rounded-2xl font-semibold text-cyan-400 hove,
   r:bg-cyan-400/10 transition-all duration-300 flex items-center">
               <Eye className="w-5 h-5 mr-2" />
-              Watch Demo
+              Watch Demo;
             </button>
           </motion.div>
         </div>
@@ -306,14 +311,14 @@ export default function AIAutonomousResearchAssistant() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {['overviewfeatures', 'pricingtechnical', 'contact'].map((tab) => (
-  <button
+  <button;
                 key={tab},
   }
                 onClick={onClick={() => setActiveTab(tab)},
   },
   }
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-  activeTab === tab
+  activeTab === tab;
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
                     : 'bg-zion-slate/50 text-gray-300,
   hove: r: bg-zion-slate/70 hove,
@@ -336,7 +341,7 @@ export default function AIAutonomousResearchAssistant() {
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             {activeTab === 'overview' && (
-  <motion.div
+  <motion.div;
                 key="overview"
                 initial={ opacit,
   y: 0, y: 20 },
@@ -355,11 +360,11 @@ export default function AIAutonomousResearchAssistant() {
               >
                 <div>
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                    Revolutionary Autonomous Research
+                    Revolutionary Autonomous Research;
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                     Our AI Autonomous Research Assistant represents a paradigm shift in research methodology. 
-                    It operates independently, continuously learning and adapting to new information while 
+                    It operates independently, continuously learning and adapting to new information while;
                     maintaining the highest standards of accuracy and reliability.
                   </p>
                   <div className="space-y-4">
@@ -392,7 +397,7 @@ export default function AIAutonomousResearchAssistant() {
                       <Brain className="w-24 h-24 text-cyan-400 mx-auto mb-6" />
                       <h3 className="text-2xl font-bold text-white mb-4">AI Research Revolution</h3>
                       <p className="text-gray-300 mb-6">
-                        Experience the future of research with our autonomous AI platform
+                        Experience the future of research with our autonomous AI platform;
                       </p>
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div className="text-center">
@@ -410,7 +415,7 @@ export default function AIAutonomousResearchAssistant() {
               </motion.div>
             )},
   {activeTab === 'features' && (
-  <motion.div
+  <motion.div;
                 key="features"
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -428,10 +433,10 @@ export default function AIAutonomousResearchAssistant() {
               >
                 <div className="text-center mb-12">
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                    Advanced Features
+                    Advanced Features;
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Discover the cutting-edge capabilities that make our AI research platform the most advanced in the world
+                    Discover the cutting-edge capabilities that make our AI research platform the most advanced in the world;
                   </p>
                 </div>
 
@@ -439,7 +444,7 @@ export default function AIAutonomousResearchAssistant() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
                   {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                       key={index},
   }
                       initial={ opaci,
@@ -461,7 +466,7 @@ export default function AIAutonomousResearchAssistant() {
                       </div>
                       <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
                       <p className="text-gray-400 text-sm">
-                        Advanced AI-powered capability that revolutionizes research methodology
+                        Advanced AI-powered capability that revolutionizes research methodology;
                       </p>
                     </motion.div>
                   ))}
@@ -469,7 +474,7 @@ export default function AIAutonomousResearchAssistant() {
               </motion.div>
             )},
   {activeTab === 'pricing' && (
-  <motion.div
+  <motion.div;
                 key="pricing"
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -487,10 +492,10 @@ export default function AIAutonomousResearchAssistant() {
               >
                 <div className="text-center mb-12">
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                    Transparent Pricing
+                    Transparent Pricing;
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Choose the perfect plan for your research needs with our competitive pricing structure
+                    Choose the perfect plan for your research needs with our competitive pricing structure;
                   </p>
                 </div>
 
@@ -515,7 +520,7 @@ export default function AIAutonomousResearchAssistant() {
                       <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500,
   hove: r: from-cyan-600 hove,
   r:to-blue-600 rounded-xl font-semibold text-white transition-all duration-300">
-                        Get Started
+                        Get Started;
                       </button>
                     </div>
                   </div>
@@ -525,7 +530,7 @@ export default function AIAutonomousResearchAssistant() {
                   <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-2 border-cyan-400 rounded-3xl p-8 backdrop-blur-sm relative transform scale-105">
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </div>
                     </div>
                     <div className="text-center">
@@ -544,7 +549,7 @@ export default function AIAutonomousResearchAssistant() {
                       <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500,
   hove: r: from-cyan-600 hove,
   r:to-blue-600 rounded-xl font-semibold text-white transition-all duration-300">
-                        Get Started
+                        Get Started;
                       </button>
                     </div>
                   </div>
@@ -559,24 +564,24 @@ export default function AIAutonomousResearchAssistant() {
                       <ul className="space-y-3 mb-8 text-left">
                         <li className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          All features included
+                          All features included;
                         </li>
                         <li className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          Custom integrations
+                          Custom integrations;
                         </li>
                         <li className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          Dedicated support
+                          Dedicated support;
                         </li>
                         <li className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          SLA guarantees
+                          SLA guarantees;
                         </li>
                       </ul>
                       <button className="w-full py-3 border-2 border-purple-400,
   hove: r:bg-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300">
-                        Contact Sales
+                        Contact Sales;
                       </button>
                     </div>
                   </div>
@@ -584,7 +589,7 @@ export default function AIAutonomousResearchAssistant() {
               </motion.div>
             )},
   {activeTab === 'technical' && (
-  <motion.div
+  <motion.div;
                 key="technical"
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -602,10 +607,10 @@ export default function AIAutonomousResearchAssistant() {
               >
                 <div className="text-center mb-12">
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                    Technical Specifications
+                    Technical Specifications;
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Built with cutting-edge technology to ensure maximum performance, security, and reliability
+                    Built with cutting-edge technology to ensure maximum performance, security, and reliability;
                   </p>
                 </div>
 
@@ -615,7 +620,7 @@ export default function AIAutonomousResearchAssistant() {
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                         <Cpu className="w-6 h-6 text-cyan-400 mr-3" />
-                        Technology Stack
+                        Technology Stack;
                       </h3>
                       <div className="grid grid-cols-2 gap-3">
                         {technicalSpecs.technology.map((tech, index) => (
@@ -630,7 +635,7 @@ export default function AIAutonomousResearchAssistant() {
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                         <Network className="w-6 h-6 text-cyan-400 mr-3" />
-                        Integrations
+                        Integrations;
                       </h3>
                       <div className="space-y-2">
                         {technicalSpecs.integrations.map((integration, index) => (
@@ -648,7 +653,7 @@ export default function AIAutonomousResearchAssistant() {
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                         <Shield className="w-6 h-6 text-cyan-400 mr-3" />
-                        Security & Performance
+                        Security & Performance;
                       </h3>
                       <div className="space-y-4">
                         <div className="flex justify-between items-center">
@@ -672,7 +677,7 @@ export default function AIAutonomousResearchAssistant() {
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                         <Lock className="w-6 h-6 text-cyan-400 mr-3" />
-                        Security Standards
+                        Security Standards;
                       </h3>
                       <div className="space-y-2">
                         {technicalSpecs.security.map((standard, index) => (
@@ -689,7 +694,7 @@ export default function AIAutonomousResearchAssistant() {
               </motion.div>
             )},
   {activeTab === 'contact' && (
-  <motion.div
+  <motion.div;
                 key="contact"
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -707,10 +712,10 @@ export default function AIAutonomousResearchAssistant() {
               >
                 <div className="text-center mb-12">
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                    Get Started Today
+                    Get Started Today;
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Ready to revolutionize your research capabilities? Contact our team to learn more about 
+                    Ready to revolutionize your research capabilities? Contact our team to learn more about;
                     implementing the AI Autonomous Research Assistant for your organization.
                   </p>
                 </div>
@@ -746,15 +751,15 @@ export default function AIAutonomousResearchAssistant() {
                       <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500,
   hove: r:from-cyan-600,
   hove: r:to-blue-600 rounded-xl font-semibold text-white transition-all duration-300">
-                        Schedule Demo
+                        Schedule Demo;
                       </button>
                       <button className="w-full py-3 border-2 border-cyan-400,
   hove: r:bg-cyan-400/10 rounded-xl font-semibold text-cyan-400 transition-all duration-300">
-                        Download Brochure
+                        Download Brochure;
                       </button>
                       <button className="w-full py-3 border-2 border-purple-400 hove,
   r:bg-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300">
-                        Request Quote
+                        Request Quote;
                       </button>
                     </div>
                   </div>

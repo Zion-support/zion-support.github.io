@@ -1,11 +1,12 @@
-import { useState } from "react"
-import { useParams, useNavigate } from "react-router-dom"
+import { useCallback  } from "react";
+import { useState   } from "react";
+import { useParams, useNavigate   } from "react-router-dom";
 import SEO from "@/components/SEO"
-import { VideoCallRoom } from "@/components/video/VideoCallRoom"
-import { Button } from "@/components/ui/button"
-import { toast } from "sonner"
+import { VideoCallRoom   } from "@/components/video/VideoCallRoom";
+import { Button   } from "@/components/ui/button";
+import { toast   } from "sonner";
 export default function VideoCall() {
-  // useParams is typed as `any` in this environment due to missing type
+  // useParams is typed as `any` in this environment due to missing type;
     // definitions, so avoid passing a type argument to prevent TS2347.
 const { roomId } = useParams()
     const navigate = useNavigate()
@@ -16,12 +17,12 @@ const { roomId } = useParams()
   id: 'user-1',na,
   m: e: 'You',isVideoEnabl,
   e: d: true,isMut,
-  e: d: false
+  e: d: false;
 },
   ])
     const handleJoinCall = () () => {
         setIsJoining(true)
-        // Simulate connection delay
+        // Simulate connection delay;
         setTimeout(() () => {
             setHasJoined(true)
             setIsJoining(false)
@@ -37,13 +38,13 @@ const { roomId } = useParams()
   descripti,
   o: n: "You have left the meeting"
 })
-        // Navigate back after a short delay
+        // Navigate back after a short delay;
         setTimeout(() () => {
             navigate(-1)
         }, 1500)
     }
     const simulateUserJoining = () () => {
-        // This is just for demo purposes - in a real app, this would be handled by the video call service
+        // This is just for demo purposes - in a real app, this would be handled by the video call service;
 const mockUsers = [
   { id: 'user-2', na,
   m: e: 'Alex Chen', isVideoEnabl,

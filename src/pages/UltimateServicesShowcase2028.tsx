@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Search
+  Search;
   Filter,
   Star,
   Zap,
@@ -17,19 +18,21 @@ import {
   Lock,
   Target,
   Rocket,
-  Sparkles
-  ChevronDown
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  Globe as GlobeIcon
-  Award
-  Clock
-  DollarSign
-  BarChart3
-} from "lucide-react"
-import { INNOVATIVE_SERVICES_2028 } from "../data/innovativeServices2028"
+  Sparkles;
+  ChevronDown;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  Globe as GlobeIcon;
+  Award;
+  Clock;
+  DollarSign;
+  BarChart3;
+}
+}
+ } from "lucide-react";
+import { INNOVATIVE_SERVICES_2028   } from "../data/innovativeServices2028";
 const,
   UltimateServicesShowcase202: 8: React.FC = () () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -38,14 +41,14 @@ const,
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [expandedService, setExpandedService] = useState<string | null>(null)
 
-  // Get unique categories
+  // Get unique categories;
 const categories = [['all', ...Array.from(new Set(INNOVATIVE_SERVICES_2028.map(service => service.category)))],
   ]
 
-  // Filter and sort services
-const filteredServices = INNOVATIVE_SERVICES_2028
+  // Filter and sort services;
+const filteredServices = INNOVATIVE_SERVICES_2028;
     .filter(service => 
-      selectedCategory === 'all' || service.category === selectedCategory
+      selectedCategory === 'all' || service.category === selectedCategory;
 )
     .filter(service => 
       service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -56,11 +59,11 @@ const filteredServices = INNOVATIVE_SERVICES_2028
     .sort((a, b) () => {
   switch (sortBy) {
   case 'price':
-          return a.price - b.price
+          return a.price - b.price;
         case 'category':
           return a.category.localeCompare(b.category)
         case 'innovation':
-          return a.innovationLevel === 'revolutionary' ? 1 : -1
+          return a.innovationLevel === 'revolutionary' ? 1 : -1;
         case 'name':
         defau,
   l: t: return a.title.localeCompare(b.title)
@@ -108,7 +111,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -140,7 +143,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   z: e:50px_50px] animate-pulse"></div>
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
-  <motion.div
+  <motion.div;
               key={i},
   }
               className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60 shadow-lg shadow-cyan-400/50";"
@@ -180,7 +183,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -193,11 +196,11 @@ const filteredServices = INNOVATIVE_SERVICES_2028
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              2028 Services
+              2028 Services;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, Quantum Computing, and Next-Generation Technology Solutions
+              Revolutionary AI, Quantum Computing, and Next-Generation Technology Solutions;
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full px-4 py-2">
@@ -230,7 +233,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   }
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services, features, or categories..."
                   value={searchTerm},
@@ -248,7 +251,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
               {/* Category Filter */},
   }
               <div className="relative">
-                <select
+                <select;
                   value={selectedCategory},
   }
                   onChange={(e) => setSelectedCategory(e.target.value)},
@@ -272,7 +275,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
               {/* Sort */},
   }
               <div className="relative">
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value)},
@@ -294,7 +297,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
               {/* View Mode Toggle */},
   }
               <div className="flex bg-slate-700/50 border border-slate-600/50 rounded-xl p-1">
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -305,9 +308,9 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   hove: r:text-white'
 }`}
                 >
-                  Grid
+                  Grid;
                 </button>
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -318,7 +321,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   hove: r:text-white'
 }`}
                 >
-                  List
+                  List;
                 </button>
               </div>
             </div>
@@ -332,7 +335,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   s: m: px-6 l,
   g:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             variants={containerVariants},
   }
             initial="hidden"
@@ -345,7 +348,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
 }
           >
             {filteredServices.map((service) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 variants={itemVariants},
@@ -358,7 +361,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
 }`}
               >
                 {viewMode === 'grid' ? (
-  // Grid View
+  // Grid View;
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -406,7 +409,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
 
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
-  <span
+  <span;
                           key={index},
   }
                           className="className="px-2 py-1 text-xs bg-slate-700/50 text-cyan-400 rounded-lg";"
@@ -418,7 +421,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <button
+                      <button;
                         onClick={onClick={() => setExpandedService(expandedService === service.id ? null : service.id)},
   },
   }
@@ -429,13 +432,13 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   }
                         <ChevronDown className={`w-4 h-4 transition-transform ${expandedService === service.id ? 'rotate-180' : ''}`} />
                       </button>
-                      <Link
+                      <Link;
                         to={`/services/${service.id}`}
                         className="className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg,
   hove: r: from-cyan-600 hove,
   r:to-blue-600 transition-all duration-200 font-medium";"
                       >
-                        Get Started
+                        Get Started;
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
@@ -444,7 +447,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   }
                     <AnimatePresence>
                       {expandedService === service.id && (
-  <motion.div
+  <motion.div;
                           initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -493,7 +496,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
                     </AnimatePresence>
                   </div>
                 ) : (
-  // List View
+  // List View;
                   <div className="flex-1 p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-4">
@@ -541,7 +544,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028
                     <div className="flex items-center justify-between">
                       <div className="flex flex-wrap gap-2">
                         {service.tags.slice(0, 4).map((tag, index) => (
-  <span
+  <span;
                             key={index},
   }
                             className="className="px-3 py-1 text-sm bg-slate-700/50 text-cyan-400 rounded-lg";"
@@ -551,13 +554,13 @@ const filteredServices = INNOVATIVE_SERVICES_2028
                           </span>
                         ))}
                       </div>
-                      <Link
+                      <Link;
                         to={`/services/${service.id}`}
                         className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg,
   hove: r: from-cyan-600 hove,
   r:to-blue-600 transition-all duration-200 font-medium";"
                       >
-                        Get Started
+                        Get Started;
                         <ArrowRight className="w-5 h-5" />
                       </Link>
                     </div>
@@ -586,11 +589,11 @@ const filteredServices = INNOVATIVE_SERVICES_2028
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our cutting-edge 2028 services can revolutionize your operations
+              Let's discuss how our cutting-edge 2028 services can revolutionize your operations;
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg,
@@ -598,16 +601,16 @@ const filteredServices = INNOVATIVE_SERVICES_2028
   hove: r:to-blue-600 transition-all duration-200 font-medium";"
               >
                 <Phone className="w-5 h-5" />
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hove,
   r:bg-slate-600/50 transition-all duration-200 font-medium";"
               >
                 <Mail className="w-5 h-5" />
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="mt-6 text-sm text-gray-400">
@@ -623,4 +626,4 @@ const filteredServices = INNOVATIVE_SERVICES_2028
     </div>
   )
 }
-export default UltimateServicesShowcase2028
+export default UltimateServicesShowcase2028;

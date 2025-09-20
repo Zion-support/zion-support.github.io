@@ -1,70 +1,75 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Search
-  Filter
-  Grid3X3
-  List
-  ChevronDown
-  ChevronUp
-  Star
-  Users
-  Globe
-  Lock
-  Code
-  BarChart3
-  Target
-  Rocket
-  Lightbulb
-  Award
-  Clock
-  DollarSign
-  TrendingUp
-  Eye
-  Handshake
-  Building
-  ShieldCheck
-  Network2
-  Smartphone as Mobile
-  Server as Infrastructure
-  Monitor as Analytics
-  Zap as Lightning
-  Users2
-  Award as Trophy
-  Clock as Time
-  DollarSign as Money
-  TrendingUp as Growth
-  Eye as Vision
-  Handshake as Partnership
-  Building as Enterprise
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  CheckCircle
-  ArrowRight
-  Shield
-  Brain
-  Cloud
-  Database
-  Smartphone
-  Server
-  Monitor
-  Cpu
-  Network
-  Smartphone as IoT
-  Server as Edge
-  Monitor as Healthcare
-  Cpu as FinTech
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Search;
+  Filter;
+  Grid3X3;
+  List;
+  ChevronDown;
+  ChevronUp;
+  Star;
+  Users;
+  Globe;
+  Lock;
+  Code;
+  BarChart3;
+  Target;
+  Rocket;
+  Lightbulb;
+  Award;
+  Clock;
+  DollarSign;
+  TrendingUp;
+  Eye;
+  Handshake;
+  Building;
+  ShieldCheck;
+  Network2;
+  Smartphone as Mobile;
+  Server as Infrastructure;
+  Monitor as Analytics;
+  Zap as Lightning;
+  Users2;
+  Award as Trophy;
+  Clock as Time;
+  DollarSign as Money;
+  TrendingUp as Growth;
+  Eye as Vision;
+  Handshake as Partnership;
+  Building as Enterprise;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  CheckCircle;
+  ArrowRight;
+  Shield;
+  Brain;
+  Cloud;
+  Database;
+  Smartphone;
+  Server;
+  Monitor;
+  Cpu;
+  Network;
+  Smartphone as IoT;
+  Server as Edge;
+  Monitor as Healthcare;
+  Cpu as FinTech;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
 import {
-  ALL_EXPANDED_SERVICES_2027
-  EXPANDED_SERVICE_CATEGORIES
-  getExpandedServicesByCategory
-  searchExpandedServices
-  type ExpandedService2027
-} from "@/data/expandedInnovativeServices2027"
+  ALL_EXPANDED_SERVICES_2027;
+  EXPANDED_SERVICE_CATEGORIES;
+  getExpandedServicesByCategory;
+  searchExpandedServices;
+  type ExpandedService2027;
+}
+}
+ } from "@/data/expandedInnovativeServices2027";
 const,
   ExpandedServicesShowcase202: 7: React.FC = () () => {
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -86,19 +91,19 @@ const,
   r: y: string) () => {
   switch (category) {
   case 'Cybersecurity':
-        return Shield
+        return Shield;
       case 'Data Analytics':
-        return BarChart3
+        return BarChart3;
       case 'Cloud & DevOps':
-        return Cloud
+        return Cloud;
       case 'IoT & Edge Computing':
-        return IoT
+        return IoT;
       case 'Financial Technology':
-        return FinTech
+        return FinTech;
       case 'Healthcare Technology':
-        return Healthcare
+        return Healthcare;
       defaul,
-  t: return Rocket
+  t: return Rocket;
 },
   }
   const getCategoryColor = (catego,
@@ -135,7 +140,7 @@ const,
     const categoryColor = getCategoryColor(service.category)
 
     return (
-      <motion.div
+      <motion.div;
         key={service.id},
   }
         initial={ opaci,
@@ -221,7 +226,7 @@ const,
                 </div>
               ))},
   {service.features.length > 3 && (
-  <button
+  <button;
                   onClick={onClick={() => setExpandedService(expandedService === service.id ? null : service.id)},
   },
   }
@@ -239,7 +244,7 @@ const,
   }
           <AnimatePresence>
             {expandedService === service.id && (
-  <motion.div
+  <motion.div;
                 initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -344,7 +349,7 @@ const,
             </div>
 
             <div className="flex space-x-2">
-              <a
+              <a;
                 href={`mail,
   t: o:${service.contactInfo.email}`}
                 className="className="flex-1 bg-blue-600,
@@ -353,7 +358,7 @@ const,
                 <Mail className="w-4 h-4" />
                 <span>Contact</span>
               </a>
-              <a
+              <a;
                 href={service.contactInfo.website},
   }
                 target="_blank"
@@ -380,7 +385,7 @@ const,
     const categoryColor = getCategoryColor(service.category)
 
     return (
-      <motion.div
+      <motion.div;
         key={service.id},
   }
         initial={ opaci,
@@ -464,7 +469,7 @@ const,
             {/* Actions */},
   }
             <div className="flex items-center space-x-3">
-              <a
+              <a;
                 href={`mail,
   t: o:${service.contactInfo.email}`}
                 className="className="bg-blue-600,
@@ -473,7 +478,7 @@ const,
                 <Mail className="w-4 h-4" />
                 <span>Contact Sales</span>
               </a>
-              <a
+              <a;
                 href={service.contactInfo.website},
   }
                 target="_blank"
@@ -499,7 +504,7 @@ const,
   dar: k: from-slate-900,
   dar: k:via-slate-800 dar,
   k:to-slate-900">
-      <SEO
+      <SEO;
         title="Expanded Innovative Services 2027 - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting-edge solutions."
         keywords="micro SAAS, IT services, AI services, cybersecurity, data analytics, cloud DevOps, IoT, fintech, healthcare technology"
@@ -512,7 +517,7 @@ const,
   s: m: px-6,
   l: g:px-8 py-24">
           <div className="text-center">
-            <motion.h1
+            <motion.h1;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -526,12 +531,12 @@ const,
   m: d: text-6xl font-bold text-gray-900,
   dar: k:text-white mb-6";"
             >
-              Expanded Innovative Services
+              Expanded Innovative Services;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                2027
+                2027;
               </span>
             </motion.h1>
-            <motion.p
+            <motion.p;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -551,7 +556,7 @@ const,
 
             {/* Contact Info */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -621,7 +626,7 @@ const,
             <div className="flex-1 max-w-md">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery},
@@ -642,7 +647,7 @@ const,
             {/* Category Filter */},
   }
             <div className="flex items-center space-x-4">
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -667,7 +672,7 @@ const,
   }
               <div className="flex items-center space-x-2 bg-gray-100,
   dar: k:bg-slate-700 rounded-lg p-1">
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -685,7 +690,7 @@ const,
                 >
                   <Grid3X3 className="w-5 h-5" />
                 </button>
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -713,7 +718,7 @@ const,
         <div className="mb-8">
           <p className="text-gray-600,
   dar: k:text-gray-300">
-            Showing {filteredServices.length} of {ALL_EXPANDED_SERVICES_2027.length} services
+            Showing {filteredServices.length} of {ALL_EXPANDED_SERVICES_2027.length} services;
           </p>
         </div>
 
@@ -737,7 +742,7 @@ const,
   dar: k:text-white mb-2">No services found</h3>
             <p className="text-gray-600 dar,
   k:text-gray-300">
-              Try adjusting your search criteria or category filter
+              Try adjusting your search criteria or category filter;
             </p>
           </div>
         )}
@@ -761,7 +766,7 @@ const,
   s: m: flex-row items-center justify-center space-y-4,
   s: m:space-y-0,
   s: m:space-x-4">
-            <a
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,
@@ -770,7 +775,7 @@ const,
               <Mail className="w-5 h-5" />
               <span>Get Started</span>
             </a>
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
@@ -786,4 +791,4 @@ const,
     </div>
   )
 }
-export default ExpandedServicesShowcase2027
+export default ExpandedServicesShowcase2027;

@@ -1,31 +1,34 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Shield
-  Lock
-  Eye
-  AlertTriangle
-  CheckCircle
-  ArrowRight
-  Zap
-  Network
-  Database
-  Smartphone
-  Monitor
-  Globe
-  Users
-  Key
-  Fingerprint
-  Server
-  Cloud
-  ShieldCheck
-  Bug
-  Target
-  TrendingUp
-  Clock
-  BarChart3
-  CreditCard
-} from "lucide-react"
+  Shield;
+  Lock;
+  Eye;
+  AlertTriangle;
+  CheckCircle;
+  ArrowRight;
+  Zap;
+  Network;
+  Database;
+  Smartphone;
+  Monitor;
+  Globe;
+  Users;
+  Key;
+  Fingerprint;
+  Server;
+  Cloud;
+  ShieldCheck;
+  Bug;
+  Target;
+  TrendingUp;
+  Clock;
+  BarChart3;
+  CreditCard;
+}
+}
+ } from "lucide-react";
 export default function CybersecuritySolutions() {
   const [selectedThreat, setSelectedThreat] = useState('all')
   const [activeService, setActiveService] = useState('overview')
@@ -121,7 +124,7 @@ export default function CybersecuritySolutions() {
   c: t: "High",solutio,
   n: s: ["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"]
       ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   tit,
@@ -131,7 +134,7 @@ export default function CybersecuritySolutions() {
   c: t: "Critical",solutio,
   n: s: ["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"]
       ic,
-  o: n: Lock
+  o: n: Lock;
 },
   {
   tit,
@@ -141,7 +144,7 @@ export default function CybersecuritySolutions() {
   c: t: "Medium",solutio,
   n: s: ["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"]
       ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
@@ -151,7 +154,7 @@ export default function CybersecuritySolutions() {
   c: t: "Medium",solutio,
   n: s: ["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"]
       ic,
-  o: n: Network
+  o: n: Network;
 },
   {
   tit,
@@ -161,7 +164,7 @@ export default function CybersecuritySolutions() {
   c: t: "High",solutio,
   n: s: ["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"]
       ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
@@ -171,7 +174,7 @@ export default function CybersecuritySolutions() {
   c: t: "Critical",solutio,
   n: s: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"]
       ic,
-  o: n: Bug
+  o: n: Bug;
 },
   ]
   const complianceFrameworks = [
@@ -181,7 +184,7 @@ export default function CybersecuritySolutions() {
   o: n: "Service Organization Control 2 compliance for data security",requiremen,
   t: s: ["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"]
       ic,
-  o: n: ShieldCheck
+  o: n: ShieldCheck;
 },
   {
   na,
@@ -189,7 +192,7 @@ export default function CybersecuritySolutions() {
   o: n: "International standard for information security management",requiremen,
   t: s: ["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"]
       ic,
-  o: n: CheckCircle
+  o: n: CheckCircle;
 },
   {
   na,
@@ -197,7 +200,7 @@ export default function CybersecuritySolutions() {
   o: n: "General Data Protection Regulation for EU data privacy",requiremen,
   t: s: ["Data Protection", "User Consent", "Right to Erasure", "Data Portability"]
       ic,
-  o: n: Lock
+  o: n: Lock;
 },
   {
   na,
@@ -205,7 +208,7 @@ export default function CybersecuritySolutions() {
   o: n: "Health Insurance Portability and Accountability Act",requiremen,
   t: s: ["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"]
       ic,
-  o: n: Database
+  o: n: Database;
 },
   {
   na,
@@ -213,7 +216,7 @@ export default function CybersecuritySolutions() {
   o: n: "Payment Card Industry Data Security Standard",requiremen,
   t: s: ["Card Data Protection", "Network Security", "Access Control", "Monitoring"]
       ic,
-  o: n: CreditCard
+  o: n: CreditCard;
 },
   {
   na,
@@ -221,7 +224,7 @@ export default function CybersecuritySolutions() {
   o: n: "U.S. government framework for cybersecurity risk management",requiremen,
   t: s: ["Identify", "Protect", "Detect", "Respond", "Recover"]
       ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   ]
   const securityMetrics = [
@@ -258,7 +261,7 @@ export default function CybersecuritySolutions() {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -278,7 +281,7 @@ export default function CybersecuritySolutions() {
   },
   }
   const filteredThreats = selectedThreat === 'all'
-    ? securityThreats
+    ? securityThreats;
     : securityThreats.filter(threat => threat.type === selectedThreat)
 
   return (
@@ -292,7 +295,7 @@ export default function CybersecuritySolutions() {
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -314,7 +317,7 @@ export default function CybersecuritySolutions() {
               Cybersecurity{' '},
   }
               <span className="bg-gradient-to-r from-zion-red to-zion-orange bg-clip-text text-transparent">
-                Solutions
+                Solutions;
               </span>
             </h1>
             <p className="text-xl,
@@ -325,7 +328,7 @@ export default function CybersecuritySolutions() {
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-red/25";"
@@ -336,12 +339,12 @@ export default function CybersecuritySolutions() {
   l: e: 0.95 },
   }
               >
-                Security Assessment
+                Security Assessment;
               </motion.button>
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg,
   hove: r: bg-zion-red hove,
   r:text-white transition-all duration-300">
-                View Security Report
+                View Security Report;
               </button>
             </div>
           </motion.div>
@@ -352,7 +355,7 @@ export default function CybersecuritySolutions() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -369,15 +372,15 @@ export default function CybersecuritySolutions() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Comprehensive Security Services
+              Comprehensive Security Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our cybersecurity solutions provide end-to-end protection for your digital assets
+              Our cybersecurity solutions provide end-to-end protection for your digital assets;
               ensuring business continuity and regulatory compliance.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8";"
@@ -390,7 +393,7 @@ export default function CybersecuritySolutions() {
   }
           >
             {securityServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8,
@@ -428,7 +431,7 @@ export default function CybersecuritySolutions() {
   }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -445,17 +448,17 @@ export default function CybersecuritySolutions() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Understanding Cyber Threats
+              Understanding Cyber Threats;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Stay informed about the latest cybersecurity threats and learn how our solutions
+              Stay informed about the latest cybersecurity threats and learn how our solutions;
               protect against evolving attack vectors.
             </p>
           </motion.div>
 
           {/* Threat Filter */},
   }
-          <motion.div
+          <motion.div;
             className="className="flex flex-wrap justify-center gap-4 mb-12";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -471,16 +474,16 @@ export default function CybersecuritySolutions() {
   }
           >
             {threatTypes.map((threat) () => {
-  const Icon = threat.icon
+  const Icon = threat.icon;
               return (
-                <button
+                <button;
                   key={threat.id},
   }
                   onClick={onClick={() => setSelectedThreat(threat.id)},
   },
   }
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-  selectedThreat === threat.id
+  selectedThreat === threat.id;
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light,
   hove: r: bg-zion-slate-dark hove,
@@ -497,7 +500,7 @@ export default function CybersecuritySolutions() {
 
           {/* Threats Grid */},
   }
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8";"
@@ -510,7 +513,7 @@ export default function CybersecuritySolutions() {
   }
           >
             {filteredThreats.map((threat, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6,
@@ -563,7 +566,7 @@ export default function CybersecuritySolutions() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -580,15 +583,15 @@ export default function CybersecuritySolutions() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Compliance & Standards
+              Compliance & Standards;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Meet industry standards and regulatory requirements with our comprehensive
+              Meet industry standards and regulatory requirements with our comprehensive;
               compliance management solutions.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8";"
@@ -601,7 +604,7 @@ export default function CybersecuritySolutions() {
   }
           >
             {complianceFrameworks.map((framework, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6,
@@ -643,7 +646,7 @@ export default function CybersecuritySolutions() {
   }
       <section className="py-20 bg-gradient-to-r from-zion-red-dark to-zion-orange">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -660,15 +663,15 @@ export default function CybersecuritySolutions() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Security Performance Metrics
+              Security Performance Metrics;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our cybersecurity solutions deliver measurable results and provide
+              Our cybersecurity solutions deliver measurable results and provide;
               peace of mind through proven protection capabilities.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8";"
@@ -681,7 +684,7 @@ export default function CybersecuritySolutions() {
   }
           >
             {securityMetrics.map((metric, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="text-center";"
@@ -703,7 +706,7 @@ export default function CybersecuritySolutions() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -720,15 +723,15 @@ export default function CybersecuritySolutions() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Our Security Implementation Process
+              Our Security Implementation Process;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              A systematic approach to implementing comprehensive cybersecurity solutions
+              A systematic approach to implementing comprehensive cybersecurity solutions;
               that protect your business from evolving threats.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8";"
@@ -746,31 +749,31 @@ export default function CybersecuritySolutions() {
   e: p: "01",tit,
   l: e: "Security Assessment",descripti,
   o: n: "Evaluate current security posture and identify vulnerabilities",ic,
-  o: n: Eye
+  o: n: Eye;
 },
   {
   st,
   e: p: "02",tit,
   l: e: "Strategy Development",descripti,
   o: n: "Design comprehensive security roadmap and policies",ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   st,
   e: p: "03",tit,
   l: e: "Implementation",descripti,
   o: n: "Deploy security solutions and configure protection systems",ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   st,
   e: p: "04",tit,
   l: e: "Monitoring & Maintenance",descripti,
   o: n: "Continuous security monitoring and regular updates",ic,
-  o: n: Monitor
+  o: n: Monitor;
 },
   ].map((phase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="relative";"
@@ -802,7 +805,7 @@ export default function CybersecuritySolutions() {
   }
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-red-dark">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -821,13 +824,13 @@ export default function CybersecuritySolutions() {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Don't wait for a security breach. Let's discuss how our cybersecurity solutions
+              Don't wait for a security breach. Let's discuss how our cybersecurity solutions;
               can protect your organization from evolving threats.
             </p>
 
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-red/25";"
@@ -838,12 +841,12 @@ export default function CybersecuritySolutions() {
   l: e: 0.95 },
   }
               >
-                Security Assessment
+                Security Assessment;
               </motion.button>
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg,
   hove: r: bg-zion-red hove,
   r:text-white transition-all duration-300">
-                Download Security Guide
+                Download Security Guide;
               </button>
             </div>
           </motion.div>

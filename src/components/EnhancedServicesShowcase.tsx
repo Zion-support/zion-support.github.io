@@ -1,8 +1,8 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
+  Brain;
   Cloud,
   Shield,
   Zap,
@@ -37,8 +37,10 @@ import {
   Phone,
   Mail,
   TrendingUp,
-  ArrowRight
-} from "lucide-react"
+  ArrowRight;
+}
+}
+ } from "lucide-react";
 export,
   const: EnhancedServicesShowcase: React.FC = () () => {
   const services = [
@@ -115,7 +117,7 @@ export,
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -133,7 +135,7 @@ export,
   t: y: 1,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -142,7 +144,7 @@ export,
       <div className="container mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -156,15 +158,15 @@ export,
         >
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-            Our Comprehensive Services
+            Our Comprehensive Services;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From AI-powered solutions to cybersecurity, we deliver cutting-edge technology services 
+            From AI-powered solutions to cybersecurity, we deliver cutting-edge technology services;
             that drive business transformation and growth.
           </p>
         </motion.div>
 
-        <motion.div
+        <motion.div;
           variants={containerVariants},
   }
           initial="hidden"
@@ -177,7 +179,7 @@ export,
   g:grid-cols-3 gap-8";"
         >
           {services.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={index},
   }
               variants={itemVariants},
@@ -232,7 +234,7 @@ export,
           ))}
         </motion.div>
 
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -245,7 +247,7 @@ export,
   }
           className="className="text-center mt-16";"
         >
-          <Link
+          <Link;
             to="/services"
             className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl,
   hove: r: from-cyan-600,
@@ -253,7 +255,7 @@ export,
   transform: hover:scale-105 shadow-lg hove,
   r:shadow-cyan-500/25";"
           >
-            View All Services
+            View All Services;
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </motion.div>

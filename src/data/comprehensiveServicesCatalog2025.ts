@@ -1,6 +1,6 @@
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "./innovativeMicroSaasServices2025"
-import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "./expandedInnovativeServices2025"
-import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025 } from "./emergingTechServices2025"
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES   } from "./innovativeMicroSaasServices2025";
+import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025   } from "./expandedInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025   } from "./emergingTechServices2025";
 export interface ComprehensiveService2025 {
   id: string,tit,
   l: e: string,descripti,
@@ -24,7 +24,9 @@ export interface ComprehensiveService2025 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -36,20 +38,20 @@ export interface ComprehensiveService2025 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
-  launchDate?: string
-  betaAccess?: boolean
+  marketSize?: string;
+  launchDate?: string;
+  betaAccess?: boolean;
 }
 
-// Combine all services into one comprehensive catalog
+// Combine all services into one comprehensive catalog;
 export,
   const: COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [
-  ...INNOVATIVE_MICRO_SAAS_SERVICES_2025
-  ...EXPANDED_INNOVATIVE_SERVICES_2025
-  ...EMERGING_TECH_SERVICES_2025
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  ...EXPANDED_INNOVATIVE_SERVICES_2025;
+  ...EMERGING_TECH_SERVICES_2025;
 ]
 
-// Service categories for easy filtering
+// Service categories for easy filtering;
 export const SERVICE_CATEGORIES = [
   "AI & Analytics"
   "AI & Customer Experience"
@@ -90,7 +92,7 @@ export const SERVICE_CATEGORIES = [
   "Transportation"
   "Logistics"
 ]
-// Service pricing tiers
+// Service pricing tiers;
 export const PRICING_TIERS = [
   { i,
   d: 'budget', na,
@@ -109,7 +111,7 @@ export const PRICING_TIERS = [
   n: t: 0 },
   },
   ]
-// Innovation levels
+// Innovation levels;
 export const INNOVATION_LEVELS = [
   { id: 'advanced', na,
   m: e: 'Advanced', cou,
@@ -124,7 +126,7 @@ export const INNOVATION_LEVELS = [
   n: t: 0 },
   },
   ]
-// Support levels
+// Support levels;
 export const SUPPORT_LEVELS = [
   { id: 'standard', na,
   m: e: 'Standard', cou,
@@ -139,75 +141,75 @@ export const SUPPORT_LEVELS = [
   n: t: 0 },
   },
   ]
-// Calculate counts for each category
-export const calculateServiceStats = () () => {
+// Calculate counts for each category;
+export const calculateServiceStats = React.memo(() () => {
   const const stats = {
   = {
     totalServic,
   e: s: COMPREHENSIVE_SERVICES_CATALOG_2025.length,categori,
   e: s: SERVICE_CATEGORIES.length,pricingTie,
   r: s: PRICING_TIERS.map(tier => ({
-  ...tier
+  ...tier;
       coun,
   t: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service () => {
-  if (tier.id === 'budget') return service.price <= 1000
-        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000
-        if (tier.id === 'enterprise') return service.price > 5000
-        return false
-}).length
+  if (tier.id === 'budget') return service.price <= 1000;
+        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
+        if (tier.id === 'enterprise') return service.price > 5000;
+        return false;
+}).length;
 }))
     innovationLeve,
   l: s: INNOVATION_LEVELS.map(level => ({
-  ...level
+  ...level;
       coun,
   t: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
-        service.innovationLevel.toLowerCase() === level.id
-).length
+        service.innovationLevel.toLowerCase() === level.id;
+).length;
 }))
     supportLeve,
   l: s: SUPPORT_LEVELS.map(level => ({
-  ...level
+  ...level;
       coun,
   t: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
-        service.supportLevel.toLowerCase() === level.id
-).length
+        service.supportLevel.toLowerCase() === level.id;
+).length;
 }))
   }
-  return stats
+  return stats;
 }
 
-// Get services by category
-export const getServicesByCategory = (catego,
+// Get services by category;
+export const getServicesByCategory = React.memo((catego,
   r: y: string) () => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase().replace('- '))
   )
 }
 
-// Get services by price range
-export const getServicesByPriceRange = (minPri,
+// Get services by price range;
+export const getServicesByPriceRange = React.memo((minPri,
   c: e: number, maxPri,
   c: e: number) () => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
-    service.price >= minPrice && service.price <= maxPrice
+    service.price >= minPrice && service.price <= maxPrice;
 )
 }
-// Get services by innovation level
-export const getServicesByInnovationLevel = (lev,
+// Get services by innovation level;
+export const getServicesByInnovationLevel = React.memo((lev,
   e: l: string) () => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.innovationLevel.toLowerCase() === level.toLowerCase()
   )
 }
-// Get services by support level
-export const getServicesBySupportLevel = (lev,
+// Get services by support level;
+export const getServicesBySupportLevel = React.memo((lev,
   e: l: string) () => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.supportLevel.toLowerCase() === level.toLowerCase()
   )
 }
-// Search services
-export const searchServices = (que,
+// Search services;
+export const searchServices = React.memo((que,
   r: y: string) () => {
   const searchTerm = query.toLowerCase()
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
@@ -220,28 +222,28 @@ export const searchServices = (que,
 }
 
 // Get featured services (high ROI and innovation)
-export const getFeaturedServices = (lim,
+export const getFeaturedServices = React.memo((lim,
   i: t: number = 10) () => {
-  return COMPREHENSIVE_SERVICES_CATALOG_2025
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .sort((a, b) () => {
   const aScore = parseInt(a.roi.replace(/\D/g, '')) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0)
       const bScore = parseInt(b.roi.replace(/\D/g, '')) + (b.innovationLevel === 'Cutting-edge' ? 100 : 0)
-      return bScore - aScore
+      return bScore - aScore;
 })
     .slice(0, limit)
 }
 
 // Get trending services (recent and popular)
-export const getTrendingServices = (lim,
+export const getTrendingServices = React.memo((lim,
   i: t: number = 10) () => {
-  return COMPREHENSIVE_SERVICES_CATALOG_2025
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'))
-    .sort((a, b) => b.price - a.price) // Higher price often indicates more demand
+    .sort((a, b) => b.price - a.price) // Higher price often indicates more demand;
     .slice(0, limit)
 }
 
-// Get services by industry
-export const getServicesByIndustry = (indust,
+// Get services by industry;
+export const getServicesByIndustry = React.memo((indust,
   r: y: string) () => {
   const,
   const: industryMap: { [ke,
@@ -273,15 +275,15 @@ export const getServicesByIndustry = (indust,
     categories.some(category => service.category.includes(category))
   )
 }
-// Get service recommendations based on user preferences
-export const getServiceRecommendations = (preferenc,
+// Get service recommendations based on user preferences;
+export const getServiceRecommendations = React.memo((preferenc,
   e: s: {
-  industry?: string
-  budget?: number
-  innovationLevel?: string
-  supportLevel?: string
+  industry?: string;
+  budget?: number;
+  innovationLevel?: string;
+  supportLevel?: string;
 }) () => {
-  let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025
+  let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025;
   if (if (preferences.industry) {
   ) {
     recommendations = getServicesByIndustry(preferences.industry)
@@ -309,8 +311,8 @@ export const getServiceRecommendations = (preferenc,
   return recommendations.sort((a, b) () => {
   const aScore = parseInt(a.roi.replace(/\D/g, ''))
     const bScore = parseInt(b.roi.replace(/\D/g, ''))
-    return bScore - aScore
+    return bScore - aScore;
 })
 }
 
-export default COMPREHENSIVE_SERVICES_CATALOG_2025
+export default COMPREHENSIVE_SERVICES_CATALOG_2025;

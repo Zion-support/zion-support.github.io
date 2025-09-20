@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from "lucide-react"
-import { SEO } from "@/components/SEO"
+import { Link     } from "react-router-dom";
+import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield     } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 const CloudDevOps = () () => {
   const cloudServices = [
   {
@@ -87,7 +87,7 @@ const CloudDevOps = () () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+      <SEO;
         title="Cloud & DevOps — Zion Tech Group | Cloud Migration & DevOps Services"
         description="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices."
         keywords="cloud migration, DevOps, AWS, Azure, GCP, infrastructure as code, CI/CD"
@@ -104,11 +104,11 @@ const CloudDevOps = () () => {
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Cloud className="w-4 h-4 mr-2"/>
-              Cloud & DevOps
+              Cloud & DevOps;
             </div>
             <h1 className="text-4xl m,
   d:text-6xl font-bold text-white mb-6">
-              Transform Your Infrastructure with
+              Transform Your Infrastructure with;
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Modern DevOps</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -213,21 +213,21 @@ const CloudDevOps = () () => {
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-            <a 
+            <a;
               href="t,
   e: l:+13024640950" 
               className="className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all,
   hove: r:scale-105";"
             >
-              📞 Call +1 (302) 464-0950
+              📞 Call +1 (302) 464-0950;
             </a>
-            <a 
+            <a;
               href="/contact" 
               className="className="bg-transparent border-2 border-white text-white,
   hove: r:bg-white hove,
   r:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all";"
             >
-              Get Started
+              Get Started;
             </a>
           </div>
         </div>
@@ -235,4 +235,4 @@ const CloudDevOps = () () => {
     </div>
   )
 }
-export default CloudDevOps
+export default CloudDevOps;

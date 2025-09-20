@@ -1,5 +1,5 @@
 import React from 'react'
-export const EmergingTechServices = () () => {
+export const EmergingTechServices = React.memo(() () => {
   const emergingTechServices = [
   {
   id: 1,
@@ -27,7 +27,7 @@ export const EmergingTechServices = () () => {
     <div className="py-16 bg-gradient-to-r from-green-900 to-blue-900">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-white mb-4">
-          Emerging Technology Services
+          Emerging Technology Services;
         </h2>
         <div className="grid,
   m: d:grid-cols-2 gap-8">
@@ -45,4 +45,4 @@ export const EmergingTechServices = () () => {
   )
 }
 
-export default EmergingTechServices
+export default EmergingTechServices;

@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Brain
+  Brain;
   Shield,
   Cloud,
   Rocket,
@@ -19,35 +20,37 @@ import {
   Star,
   Target,
   TrendingUp,
-  Award
-  Zap
-  Eye
-  BarChart3
-  Smartphone
-  Building2
-  Car
-  Leaf
-  Satellite
-  Banknote
-  Building
-  Phone
-} from "lucide-react"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027"
+  Award;
+  Zap;
+  Eye;
+  BarChart3;
+  Smartphone;
+  Building2;
+  Car;
+  Leaf;
+  Satellite;
+  Banknote;
+  Building;
+  Phone;
+}
+}
+ } from "lucide-react";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027   } from "../data/innovativeMicroSaasServices2027";
 import SEO from "../components/SEO"
 const,
   const: categoryIcons: { [ke,
   y: string]: React.ComponentType<any> } = {
   = {
-  'AI & Customer Success': Brain
-  'Blockchain & DeFi': Lock
-  'Quantum Computing': Zap
-  'AI & Healthcare': Heart
-  'Metaverse & AR/VR': Eye
-  'Autonomous Systems': Car
-  'Green Tech': Leaf
-  'Space Tech': Satellite
-  'FinTech': Banknote
-  'IoT & Smart Cities': Building
+  'AI & Customer Success': Brain;
+  'Blockchain & DeFi': Lock;
+  'Quantum Computing': Zap;
+  'AI & Healthcare': Heart;
+  'Metaverse & AR/VR': Eye;
+  'Autonomous Systems': Car;
+  'Green Tech': Leaf;
+  'Space Tech': Satellite;
+  'FinTech': Banknote;
+  'IoT & Smart Cities': Building;
 }
 
 const,
@@ -65,27 +68,27 @@ export default function InnovativeServices2027() {
   ]
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service () => {
-  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''))
       case 'innovation':
         return a.innovationLevel === 'revolutionary' ? 1 : -1,
-  defaul: t: return 0
+  defaul: t: return 0;
 },
   })
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO 
+      <SEO;
         title="2027 Innovative Services - Zion Tech Group"
         description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
       />
@@ -95,7 +98,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -109,37 +112,37 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-              2027 Innovative Services
+              2027 Innovative Services;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, Quantum Computing, Blockchain, and emerging technology solutions 
+              Revolutionary AI, Quantum Computing, Blockchain, and emerging technology solutions;
               that are transforming industries worldwide. Experience the future of technology today.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <motion.div
+              <motion.div;
                 whileHover={ sca,
   l: e: 1.05 },
   }
                 className="className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold shadow-lg";"
               >
-                🚀 Cutting-Edge Innovation
+                🚀 Cutting-Edge Innovation;
               </motion.div>
-              <motion.div
+              <motion.div;
                 whileHover={ sca,
   l: e: 1.05 },
   }
                 className="className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full text-white font-semibold shadow-lg";"
               >
-                💎 Premium Quality
+                💎 Premium Quality;
               </motion.div>
-              <motion.div
+              <motion.div;
                 whileHover={ sca,
   l: e: 1.05 },
   }
                 className="className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-white font-semibold shadow-lg";"
               >
-                🌟 Market Leading ROI
+                🌟 Market Leading ROI;
               </motion.div>
             </div>
           </motion.div>
@@ -156,7 +159,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   }
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-  <motion.button
+  <motion.button;
                   key={category},
   }
                   whileHover={ sca,
@@ -169,7 +172,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   },
   }
                   className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
-  selectedCategory === category
+  selectedCategory === category;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
                       : 'bg-gray-800/50 text-gray-300,
   hove: r:bg-gray-700/50'
@@ -185,7 +188,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   }
             <div className="flex flex-col,
   s: m:flex-row gap-4">
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery},
@@ -197,7 +200,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   focu: s:ring-2 focu,
   s:ring-cyan-500";"
               />
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value as any)},
@@ -221,7 +224,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
       <section className="py-16">
         <div className="container-responsive">
           <AnimatePresence mode="wait">
-            <motion.div
+            <motion.div;
               key={`${selectedCategory}-${searchQuery}-${sortBy}`}
               initial={ opaci,
   t: y: 0 },
@@ -240,7 +243,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   g:grid-cols-3 gap-8";"
             >
               {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -266,7 +269,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
                       {React.createElement(categoryIcons[service.category] || Star, {
   classNa,
   m: e: "w-8 h-8 text-white",si,
-  z: e: 32
+  z: e: 32;
 })}
                       <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
                         {service.innovationLevel},
@@ -341,7 +344,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
                     <div className="mb-6">
                       <div className="flex flex-wrap gap-2">
                         {service.tags.slice(0, 4).map((tag, idx) => (
-  <span
+  <span;
                             key={idx},
   }
                             className="className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-full";"
@@ -355,7 +358,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
 
                     {/* CTA Button */},
   }
-                    <motion.button
+                    <motion.button;
                       whileHover={ sca,
   l: e: 1.05 },
   }
@@ -369,7 +372,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   },
   }
                     >
-                      Get Started - Contact Us
+                      Get Started - Contact Us;
                     </motion.button>
 
                     {/* Contact Info */},
@@ -404,7 +407,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
           {/* No Results */},
   },
   {sortedServices.length === 0 && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0 },
   }
@@ -414,7 +417,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
               className="className="text-center py-16";"
             >
               <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
-              <button
+              <button;
                 onClick={() () => {
                   setSelectedCategory('all')
                   setSearchQuery('')
@@ -424,7 +427,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   hove: r: from-cyan-600 hove,
   r:to-blue-700 transition-all duration-300";"
               >
-                View All Services
+                View All Services;
               </button>
             </motion.div>
           )}
@@ -435,7 +438,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   }
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -454,12 +457,12 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
               Ready to Lead the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the elite group of forward-thinking companies that are already leveraging our 
+              Join the elite group of forward-thinking companies that are already leveraging our;
               revolutionary 2027 services to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -473,9 +476,9 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   },
   }
               >
-                Schedule a Consultation
+                Schedule a Consultation;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -488,7 +491,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
   },
   }
               >
-                View Pricing Plans
+                View Pricing Plans;
               </motion.button>
             </div>
           </motion.div>
@@ -501,7 +504,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
         <div className="container-responsive">
           <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -30 },
   }
@@ -520,7 +523,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -539,7 +542,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCa
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 30 },
   }

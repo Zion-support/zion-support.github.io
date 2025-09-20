@@ -1,26 +1,28 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Zap
-  Code
-  Database
-  Users
-  Shield
-  CheckCircle
-  ArrowRight
-  Clock
-  Star
-  TrendingUp
-  BarChart3
-  Settings
-  Lightbulb
-  Briefcase
-  Award
-  Rocket
-  Target
-  Globe
-} from "lucide-react"
+  Zap;
+  Code;
+  Database;
+  Users;
+  Shield;
+  CheckCircle;
+  ArrowRight;
+  Clock;
+  Star;
+  TrendingUp;
+  BarChart3;
+  Settings;
+  Lightbulb;
+  Briefcase;
+  Award;
+  Rocket;
+  Target;
+  Globe;
+}
+}
+ } from "lucide-react";
 const MicroSAASPage = () () => {
   const saasServices = [
   {
@@ -83,7 +85,7 @@ const MicroSAASPage = () () => {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -99,7 +101,7 @@ const MicroSAASPage = () () => {
   y: 1,y: 0,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -108,7 +110,7 @@ const MicroSAASPage = () () => {
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -126,8 +128,8 @@ const MicroSAASPage = () () => {
           <h1 className="text-5xl,
   l: g:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Micro SAAS
-            </span> Solutions
+              Micro SAAS;
+            </span> Solutions;
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
             Build and scale your software-as-a-service business with our micro SAAS solutions.
@@ -153,7 +155,7 @@ const MicroSAASPage = () () => {
         </motion.div>
         {/* SAAS Services Grid */},
   }
-        <motion.div
+        <motion.div;
           variants={containerVariants},
   }
           initial="hidden"
@@ -162,7 +164,7 @@ const MicroSAASPage = () () => {
   l: g:grid-cols-2 gap-8 mb-16";"
         >
           {saasServices.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={service.id},
   }
               variants={itemVariants},
@@ -213,7 +215,7 @@ const MicroSAASPage = () () => {
   Case: s:</h4>
                 <div className="flex flex-wrap gap-2">
                   {service.useCases.map((useCase, useCaseIndex) => (
-  <span
+  <span;
                       key={useCaseIndex},
   }
                       className="className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20";"
@@ -226,12 +228,12 @@ const MicroSAASPage = () () => {
               </div>
               {/* CTA Button */},
   }
-              <Link
+              <Link;
                 to={`/micro-saas/${service.id}`}
                 className="className="inline-flex items-center text-zion-cyan,
   hove: r: text-zion-cyan-light transition-colors duration-300";"
               >
-                Learn More
+                Learn More;
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hove,
   r:translate-x-1" />
               </Link>
@@ -240,7 +242,7 @@ const MicroSAASPage = () () => {
         </motion.div>
         {/* SAAS Benefits */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -255,17 +257,17 @@ const MicroSAASPage = () () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Benefits of Micro SAAS
+              Benefits of Micro SAAS;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Discover why micro SAAS solutions are the future of software delivery
+              Discover why micro SAAS solutions are the future of software delivery;
               and how they can transform your business.
             </p>
           </div>
           <div className="grid grid-cols-2,
   m: d:grid-cols-3 gap-4">
             {saasBenefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={benefit},
   }
                 initial={ opaci,
@@ -290,7 +292,7 @@ const MicroSAASPage = () () => {
         </motion.div>
         {/* Why Choose Our SAAS */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -316,7 +318,7 @@ const MicroSAASPage = () () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Rapid Development</h3>
               <p className="text-zion-slate-light">
-                Get to market faster with our proven development process
+                Get to market faster with our proven development process;
               </p>
             </div>
             <div className="text-center">
@@ -325,7 +327,7 @@ const MicroSAASPage = () () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
               <p className="text-zion-slate-light">
-                Built with enterprise-grade security and compliance
+                Built with enterprise-grade security and compliance;
               </p>
             </div>
             <div className="text-center">
@@ -334,14 +336,14 @@ const MicroSAASPage = () () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Scalable Growth</h3>
               <p className="text-zion-slate-light">
-                Architecture that grows with your business needs
+                Architecture that grows with your business needs;
               </p>
             </div>
           </div>
         </motion.div>
         {/* Call to Action */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -358,27 +360,27 @@ const MicroSAASPage = () () => {
             Ready to Build Your SAAS?
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Let our SAAS experts help you create a successful software product
+            Let our SAAS experts help you create a successful software product;
             that scales with your business and delights your customers.
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   hove: r:scale-105";"
             >
-              Start SAAS Project
+              Start SAAS Project;
             </Link>
-            <Link
+            <Link;
               to="/services/pricing"
               className="className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
             >
-              View SAAS Pricing
+              View SAAS Pricing;
             </Link>
           </div>
         </motion.div>
@@ -386,4 +388,4 @@ const MicroSAASPage = () () => {
     </div>
   )
 }
-export default MicroSAASPage
+export default MicroSAASPage;

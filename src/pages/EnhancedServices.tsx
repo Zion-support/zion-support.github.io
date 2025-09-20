@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Search
+  Search;
   Filter,
   Star,
   ArrowRight,
@@ -21,38 +22,40 @@ import {
   Globe,
   Zap,
   Lock,
-  ShieldCheck
-  TrendingUp
-  CheckCircle
-  Clock
-  DollarSign
-  Target
-  Handshake
-  Lightbulb
-  Phone
-  Mail
-  Globe as GlobeIcon
-  Award
-  TrendingUp as TrendingUpIcon
-  Zap as ZapIcon
-  Shield as ShieldIcon
-  Brain as BrainIcon
-  Cpu as CpuIcon
-  Database as DatabaseIcon
-  Network as NetworkIcon
-  Rocket as RocketIcon
-  Users as UsersIcon
-  BarChart3 as BarChart3Icon
-  Code as CodeIcon
-  Server as ServerIcon
-  Chip as ChipIcon
-  Globe as GlobeIcon2
-  Zap as ZapIcon2
-  Lock as LockIcon
-  ShieldCheck as ShieldCheckIcon
-} from "lucide-react"
-import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from "../data/enhancedMicroSaasServices2025"
-import { SEO } from "../components/SEO"
+  ShieldCheck;
+  TrendingUp;
+  CheckCircle;
+  Clock;
+  DollarSign;
+  Target;
+  Handshake;
+  Lightbulb;
+  Phone;
+  Mail;
+  Globe as GlobeIcon;
+  Award;
+  TrendingUp as TrendingUpIcon;
+  Zap as ZapIcon;
+  Shield as ShieldIcon;
+  Brain as BrainIcon;
+  Cpu as CpuIcon;
+  Database as DatabaseIcon;
+  Network as NetworkIcon;
+  Rocket as RocketIcon;
+  Users as UsersIcon;
+  BarChart3 as BarChart3Icon;
+  Code as CodeIcon;
+  Server as ServerIcon;
+  Chip as ChipIcon;
+  Globe as GlobeIcon2;
+  Zap as ZapIcon2;
+  Lock as LockIcon;
+  ShieldCheck as ShieldCheckIcon;
+}
+}
+ } from "lucide-react";
+import { ENHANCED_MICRO_SAAS_SERVICES_2025   } from "../data/enhancedMicroSaasServices2025";
+import { SEO   } from "../components/SEO";
 const,
   EnhancedService: s: React.FC = () () => {
   const [activeCategory, setActiveCategory] = useState('all')
@@ -60,8 +63,7 @@ const,
   const [sortBy, setSortBy] = useState('rating')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   
-const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025
-  
+const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', cou,
@@ -119,18 +121,18 @@ const categories = [
   },
   ]
   const filteredServices = allServices.filter(service () => {
-  const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'innovation':
         return b.innovationLevel.localeCompare(a.innovationLevel)
       case 'roi':
@@ -138,7 +140,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       case 'name':
         return a.title.localeCompare(b.title)
       defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
   const const containerVariants = {
@@ -153,7 +155,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -207,7 +209,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Innovative Micro SAAS Services - Zion Tech Group"
         description="Discover our cutting-edge micro SAAS services including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with innovative technology solutions."
       />
@@ -220,7 +222,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8 py-24">
           <div className="text-center">
-            <motion.h1 
+            <motion.h1;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -233,12 +235,12 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               className="className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6";"
             >
-              Revolutionary Micro SAAS
+              Revolutionary Micro SAAS;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">
-                Services & Solutions
+                Services & Solutions;
               </span>
             </motion.h1>
-            <motion.p 
+            <motion.p;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -257,7 +259,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             
             {/* Contact Information */},
   }
-            <motion.div 
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -306,7 +308,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             <div className="flex-1 max-w-md">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm},
@@ -322,7 +324,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </div>
             
             <div className="flex gap-4">
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -338,7 +340,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 <option value="name">Sort by Name</option>
               </select>
               
-              <button
+              <button;
                 onClick={onClick={() => setViewMode(viewMode === 'grid' ? 'list' : 'grid')},
   },
   }
@@ -355,14 +357,14 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
           <div className="mt-6 flex flex-wrap gap-3">
             {categories.map((category) => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setActiveCategory(category.id)},
   },
   }
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-  activeCategory === category.id
+  activeCategory === category.id;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg'
                     : 'bg-white/10 text-gray-300,
   hove: r:bg-white/20'
@@ -377,7 +379,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
         {/* Services Grid */},
   }
-        <motion.div
+        <motion.div;
           variants={containerVariants},
   }
           initial="hidden"
@@ -391,7 +393,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 }`}
         >
           {sortedServices.map((service) => (
-  <motion.div
+  <motion.div;
               key={service.id},
   }
               variants={itemVariants},
@@ -469,14 +471,14 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     </span>
                   </div>
                   
-                  <Link
+                  <Link;
                     to={`/services/${service.id}`}
                     className="className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium rounded-lg,
   hove: r: from-zion-blue,
   hove: r:to-zion-cyan transition-all duration-300 transform hove,
   r:scale-105";"
                   >
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -487,7 +489,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
         {/* Call to Action */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -510,7 +512,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg,
@@ -520,16 +522,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call,
-  No: w: +1 302 464 0950
+  No: w: +1 302 464 0950;
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/20 transition-all duration-300";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Email Us
+                Email Us;
               </a>
             </div>
           </div>
@@ -538,4 +540,4 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
     </div>
   )
 }
-export default EnhancedServices
+export default EnhancedServices;

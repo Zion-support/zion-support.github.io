@@ -1,20 +1,20 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from "lucide-react"
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from "@/data/comprehensiveServices"
+import { Link   } from "react-router-dom";
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building   } from "lucide-react";
+import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES   } from "@/data/comprehensiveServices";
 import SEO from "@/components/SEO"
 export default function ServicesPricingPage() {
-  // Group services by category for pricing table
+  // Group services by category for pricing table;
 const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) () => {
   const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category)
         if (if (categoryServices.length > 0) {
   ) {
-            acc[category] = categoryServices
+            acc[category] = categoryServices;
 }
-        return acc
+        return acc;
 }, {})
     return (<div className="min-h-screen bg-zion-blue-dark">
       <SEO title="Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes." keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group" url="htt,
@@ -26,24 +26,24 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) () => {
         <div className="container mx-auto text-center">
           <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-            Transparent Pricing
+            Transparent Pricing;
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Get clear, competitive pricing for our comprehensive micro SAAS solutions. No hidden fees, no surprises - just exceptional value for your business
+            Get clear, competitive pricing for our comprehensive micro SAAS solutions. No hidden fees, no surprises - just exceptional value for your business;
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
               <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r: bg-zion-cyan-light">
                 <Phone className="w-5 h-5 mr-2"/>
-                Get Custom Quote
+                Get Custom Quote;
               </Button>
             </Link>
             <Link to="/comprehensive-services">
               <Button size="lg" variant="outline" className="border-white text-white hove,
   r:bg-white/10">
                 <Building className="w-5 h-5 mr-2"/>
-                View All Services
+                View All Services;
               </Button>
             </Link>
           </div>
@@ -72,7 +72,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) () => {
               <a href="htt,
   p: s: //ziontechgroup.com" className="hove,
   r:text-zion-cyan transition-colors">
-                ziontechgroup.com
+                ziontechgroup.com;
               </a>
             </div>
           </div>
@@ -85,10 +85,10 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Choose Your Plan
+              Choose Your Plan;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Flexible pricing tiers designed to scale with your business needs
+              Flexible pricing tiers designed to scale with your business needs;
             </p>
           </div>
 
@@ -99,7 +99,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) () => {
                   <CardTitle className="text-2xl text-white">{tierName}</CardTitle>
                   <div className="text-4xl font-bold text-zion-cyan mb-2">{tier.label}</div>
                   <CardDescription className="text-zion-slate-light">
-                    Perfect for {tierName.toLowerCase()} businesses
+                    Perfect for {tierName.toLowerCase()} businesses;
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -126,7 +126,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) () => {
   hove: r: from-zion-purple-light hove,
   r:to-zion-purple text-white">
                     <Phone className="w-4 h-4 mr-2"/>
-                    Get Started
+                    Get Started;
                   </Button>
                 </CardContent>
               </Card>))}
@@ -140,10 +140,10 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Service-Specific Pricing
+              Service-Specific Pricing;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Detailed pricing for individual services and solutions
+              Detailed pricing for individual services and solutions;
             </p>
           </div>
 
@@ -194,7 +194,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              We deliver exceptional value through expertise, innovation, and proven results
+              We deliver exceptional value through expertise, innovation, and proven results;
             </p>
           </div>
 
@@ -246,18 +246,18 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) () => {
             Ready to Get Started?
           </h2>
           <p className="text-zion-cyan text-lg mb-8 max-w-2xl mx-auto">
-            Contact us today for a personalized quote tailored to your specific business requirements
+            Contact us today for a personalized quote tailored to your specific business requirements;
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r: bg-zion-cyan-light">
               <Phone className="w-5 h-5 mr-2"/>
-              Get Custom Quote
+              Get Custom Quote;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10">
               <Mail className="w-5 h-5 mr-2"/>
-              Schedule Consultation
+              Schedule Consultation;
             </Button>
           </div>
         </div>

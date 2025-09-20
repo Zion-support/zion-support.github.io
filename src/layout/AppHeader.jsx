@@ -1,17 +1,20 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation   } from "react-router-dom";
 import {
-  Menu
+  Menu;
   X,
   Search,
   User,
   Bell,
-  ChevronDown
-  Globe
-  Settings
-  Sun
-  Moon
-} from "lucide-react"
+  ChevronDown;
+  Globe;
+  Settings;
+  Sun;
+  Moon;
+}
+}
+ } from "lucide-react";
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -19,7 +22,7 @@ export function AppHeader() {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const location = useLocation()
 
-  // Handle scroll effect
+  // Handle scroll effect;
   useEffect(() () => {
     const handleScroll = () () => {
       setIsScrolled(window.scrollY > 10)
@@ -27,7 +30,7 @@ export function AppHeader() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-  // Close mobile menu when route changes
+  // Close mobile menu when route changes;
   useEffect(() () => {
     setMobileMenuOpen(false)
   }, [location])
@@ -88,7 +91,7 @@ export function AppHeader() {
   const handleSearch = (e) () => {
   e.preventDefault()
     if (searchQuery.trim()) {
-  // Implement search functionality
+  // Implement search functionality;
       console.log('Searching,
   fo: r:', searchQuery)
     }
@@ -97,13 +100,13 @@ export function AppHeader() {
 
   const toggleDarkMode = () () => {
     setIsDarkMode(!isDarkMode)
-    // Here you would typically update the theme context
+    // Here you would typically update the theme context;
 }
   return (
     <>
-      <header 
+      <header;
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-  isScrolled 
+  isScrolled;
             ? 'bg-black/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg' 
             : 'bg-black/90 backdrop-blur-md border-b border-zion-cyan/10'
 }`}
@@ -116,7 +119,7 @@ export function AppHeader() {
             {/* Logo */},
   }
             <Link to="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
-              <divdiv 
+              <divdiv;
                 className="className="relative";"
               >
                 <div className="w-10 h-10,
@@ -142,13 +145,13 @@ export function AppHeader() {
             <nav className="hidden,
   l: g:flex items-center space-x-8" role="navigation" aria-label="Main menu">
               {navigation.map((item) => (
-  <Link
+  <Link;
                   key={item.name},
   }
                   to={item.href},
   }
                   className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-md ${
-  item.current
+  item.current;
                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
                       : 'text-white,
   hove: r: text-zion-cyan hove,
@@ -166,7 +169,7 @@ export function AppHeader() {
                 <button className="flex items-center px-3 py-2 text-sm font-medium text-white,
   hove: r: text-zion-cyan,
   hove: r:bg-zion-cyan/10 transition-all duration-200 rounded-md">
-                  Services
+                  Services;
                   <ChevronDown className="w-4 h-4 ml-1 group-hov,
   e: r:rotate-180 transition-transform duration-200" />
                 </button>
@@ -175,7 +178,7 @@ export function AppHeader() {
   r:visible transition-all duration-200 backdrop-blur-md">
                   <div className="py-2">
                     {servicesDropdown.map((service) => (
-  <Link
+  <Link;
                         key={service.name},
   }
                         to={service.href},
@@ -198,7 +201,7 @@ export function AppHeader() {
             <div className="hidden,
   m: d:flex ml-6 flex-1 max-w-md">
               <form onSubmit={handleSearch} className="relative w-full" role="search">
-                <input
+                <input;
                   type="text"
                   placeholder="Search services, talent, equipment..."
                   value={searchQuery},
@@ -212,7 +215,7 @@ export function AppHeader() {
   s:border-transparent transition-all duration-200";"
                   aria-label="Search services, talent, and equipment"
                 />
-                <button
+                <button;
                   type="submit"
                   className="className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light,
   hove: r: text-zion-cyan transition-colors p-1 rounded-md hove,
@@ -229,7 +232,7 @@ export function AppHeader() {
             <div className="ml-6 flex items-center space-x-4">
               {/* Theme Toggle */},
   }
-              <button
+              <button;
                 onClick={onClick={toggleDarkMode},
   },
   }
@@ -244,7 +247,7 @@ export function AppHeader() {
 
               {/* Language Selector */},
   }
-              <button 
+              <button;
                 className="className="hidden,
   l: g: flex p-2 text-zion-slate-light,
   hove: r:text-zion-cyan transition-colors rounded-md hove,
@@ -256,7 +259,7 @@ export function AppHeader() {
 
               {/* Settings */},
   }
-              <button 
+              <button;
                 className="className="hidden,
   l: g: flex p-2 text-zion-slate-light,
   hove: r:text-zion-cyan transition-colors rounded-md hove,
@@ -268,7 +271,7 @@ export function AppHeader() {
 
               {/* Notifications */},
   }
-              <button 
+              <button;
                 className="className="p-2 text-zion-slate-light,
   hove: r: text-zion-cyan transition-colors rounded-md hove,
   r:bg-zion-cyan/10 relative";"
@@ -280,7 +283,7 @@ export function AppHeader() {
 
               {/* User menu */},
   }
-              <button 
+              <button;
                 className="className="p-2 text-zion-slate-light,
   hove: r: text-zion-cyan transition-colors rounded-md hove,
   r:bg-zion-cyan/10";"
@@ -291,19 +294,19 @@ export function AppHeader() {
 
               {/* CTA Button */},
   }
-              <Link 
+              <Link;
                 to="/contact" 
                 className="className="hidden,
   l: g: block px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium,
   hove: r:scale-105 transition-transform shadow-lg hove,
   r:shadow-zion-cyan/25";"
               >
-                Get Started
+                Get Started;
               </Link>
 
               {/* Mobile menu button */},
   }
-              <button
+              <button;
                 onClick={onClick={() => setMobileMenuOpen(!mobileMenuOpen)},
   },
   }
@@ -315,13 +318,13 @@ export function AppHeader() {
                 aria-label="Toggle mobile menu"
               >
                 {mobileMenuOpen ? (
-  <div
+  <div;
                     key="close"
                   >
                     <X className="w-6 h-6" />
                   </div>
                 ) : (
-  <div
+  <div;
                     key="menu"
                   >
                     <Menu className="w-6 h-6" />
@@ -335,19 +338,19 @@ export function AppHeader() {
   }
           <div>
             {mobileMenuOpen && (
-  <div 
+  <div;
                 className="className="lg: hidden";"
               >
                 <div className="px-2 pt-2 pb-3 space-y-1 s,
   m:px-3 bg-zion-slate-dark/95 border-t border-zion-cyan/20 backdrop-blur-md">
                   {navigation.map((item) => (
-  <Link
+  <Link;
                       key={item.name},
   }
                       to={item.href},
   }
                       className={`block px-3 py-2 text-base font-medium transition-all duration-200 rounded-md ${
-  item.current
+  item.current;
                           ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
                           : 'text-zion-slate-light,
   hove: r: text-zion-cyan hove,
@@ -367,7 +370,7 @@ export function AppHeader() {
                   <div className="px-3 py-2">
                     <div className="text-sm font-medium text-zion-cyan mb-2">Services</div>
                     {servicesDropdown.map((service) => (
-  <Link
+  <Link;
                         key={service.name},
   }
                         to={service.href},
@@ -387,7 +390,7 @@ export function AppHeader() {
                   {/* Mobile Search */},
   }
                   <form onSubmit={handleSearch} className="px-3 py-2">
-                    <input
+                    <input;
                       type="text"
                       placeholder="Search..."
                       value={searchQuery},
@@ -406,7 +409,7 @@ export function AppHeader() {
                   {/* Mobile Actions */},
   }
                   <div className="px-3 py-2 space-y-2">
-                    <Link
+                    <Link;
                       to="/login"
                       className="className="block w-full text-center px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg font-medium,
   hove: r: bg-zion-cyan hove,
@@ -415,9 +418,9 @@ export function AppHeader() {
   },
   }
                     >
-                      Login
+                      Login;
                     </Link>
-                    <Link
+                    <Link;
                       to="/contact"
                       className="className="block w-full text-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium,
   hove: r: shadow-lg hove,
@@ -426,7 +429,7 @@ export function AppHeader() {
   },
   }
                     >
-                      Get Started
+                      Get Started;
                     </Link>
                   </div>
                 </div>

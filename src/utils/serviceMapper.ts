@@ -1,5 +1,5 @@
-import { specializedIndustrySolutions2026 } from "../../data/2026-specialized-industry-solutions"
-// Interface for the existing service structure
+import { specializedIndustrySolutions2026   } from "../../data/2026-specialized-industry-solutions";
+// Interface for the existing service structure;
 export interface Service {
   id: string,tit,
   l: e: string,descripti,
@@ -23,7 +23,9 @@ export interface Service {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -35,11 +37,11 @@ export interface Service {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
   compliance?: string[],
   }
 
-// Map 2026 services to existing service structure
+// Map 2026 services to existing service structure;
 export function map2026ServicesToExistingStructure(): Service[],
   {
   return specializedIndustrySolutions2026.map(service => ({
@@ -65,7 +67,7 @@ export function map2026ServicesToExistingStructure(): Service[],
   phon,
   e: service.contactInfo.mobile,ema,
   i: l: service.contactInfo.email,websi,
-  t: e: service.contactInfo.website
+  t: e: service.contactInfo.website;
 }
     technicalSpe,
   c: s: {
@@ -74,11 +76,11 @@ export function map2026ServicesToExistingStructure(): Service[],
   n: s: service.integrations,apiEndpoin,
   t: s: 200, // Default,
   value: uptime: "99.9%", // Default,
-  value: security: ["SOC 2", "ISO 27001", "Data encryption"] // Default security
+  value: security: ["SOC 2", "ISO 27001", "Data encryption"] // Default security;
 }
     competito,
   r: s: service.competitors,marketSi,
   z: e: service.marketSize,complian,
-  c: e: ["SOC 2", "ISO 27001"] // Default compliance
+  c: e: ["SOC 2", "ISO 27001"] // Default compliance;
 }))
 }

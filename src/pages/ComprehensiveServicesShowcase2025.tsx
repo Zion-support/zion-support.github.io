@@ -1,47 +1,49 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Brain
-  Zap
-  Shield
-  TrendingUp
-  Users
-  Globe
-  ArrowRight
-  CheckCircle
-  Play
-  BarChart3
-  Cpu
-  Eye
-  MessageSquare
-  Database
-  Network
-  Rocket
-  Target
-  Award
-  Clock
-  Star
-  Search
-  Filter
-  DollarSign
-  Server
-  Code
-  ExternalLink
-  Phone
-  Mail
-  MapPin
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
-import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServices2025"
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025"
+  Brain;
+  Zap;
+  Shield;
+  TrendingUp;
+  Users;
+  Globe;
+  ArrowRight;
+  CheckCircle;
+  Play;
+  BarChart3;
+  Cpu;
+  Eye;
+  MessageSquare;
+  Database;
+  Network;
+  Rocket;
+  Target;
+  Award;
+  Clock;
+  Star;
+  Search;
+  Filter;
+  DollarSign;
+  Server;
+  Code;
+  ExternalLink;
+  Phone;
+  Mail;
+  MapPin;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+import { ADVANCED_MICRO_SAAS_SERVICES_2025   } from "../data/advancedMicroSaasServices2025";
+import { EMERGING_TECH_SERVICES_2025   } from "../data/emergingTechServices2025";
 export default function ComprehensiveServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedPriceRange, setSelectedPriceRange] = useState('all')
 
   const allServices = [
-  ...ADVANCED_MICRO_SAAS_SERVICES_2025
-    ...EMERGING_TECH_SERVICES_2025
+  ...ADVANCED_MICRO_SAAS_SERVICES_2025;
+    ...EMERGING_TECH_SERVICES_2025;
 ]
   const categories = [['all', ...new Set(allServices.map(service => service.category))],
   ]
@@ -65,7 +67,7 @@ export default function ComprehensiveServicesShowcase2025() {
   },
   ]
 
-  const filteredServices = allServices
+  const filteredServices = allServices;
     .filter(service =>
       service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -73,9 +75,9 @@ export default function ComprehensiveServicesShowcase2025() {
     )
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
     .filter(service () => {
-  if (selectedPriceRange === 'all') return true
+  if (selectedPriceRange === 'all') return true;
 const priceRange = getPriceRange(service.price)
-      return priceRange === selectedPriceRange
+      return priceRange === selectedPriceRange;
 })
 
   const getPriceRange = (pri,
@@ -110,19 +112,19 @@ const priceRange = getPriceRange(service.price)
   const getCategoryIcon = (catego,
   r: y: string) () => {
   switch (category) {
-  case 'AI/ML': return Brain
-      case 'Cybersecurity': return Shield
-      case 'Analytics': return BarChart3
-      case 'Communication': return MessageSquare
-      case 'Infrastructure': return Server
-      case 'Development': return Code
+  case 'AI/ML': return Brain;
+      case 'Cybersecurity': return Shield;
+      case 'Analytics': return BarChart3;
+      case 'Communication': return MessageSquare;
+      case 'Infrastructure': return Server;
+      case 'Development': return Code;
       defaul,
-  t: return Globe
+  t: return Globe;
 },
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Comprehensive Services Showcase 2025 - Zion Tech Group"
         description="Explore our comprehensive portfolio of advanced micro SAAS services, emerging technology solutions, and innovative AI-powered platforms. From quantum computing to edge AI, discover cutting-edge solutions for your business."
       />
@@ -134,7 +136,7 @@ const priceRange = getPriceRange(service.price)
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-24">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -148,9 +150,9 @@ const priceRange = getPriceRange(service.price)
           >
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Comprehensive Services
+              Comprehensive Services;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Showcase 2025
+                Showcase 2025;
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
@@ -188,7 +190,7 @@ const priceRange = getPriceRange(service.price)
   }
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -206,7 +208,7 @@ const priceRange = getPriceRange(service.price)
             {/* Category Filter */},
   }
             <div>
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -229,7 +231,7 @@ const priceRange = getPriceRange(service.price)
             {/* Price Range Filter */},
   }
             <div>
-              <select
+              <select;
                 value={selectedPriceRange},
   }
                 onChange={(e) => setSelectedPriceRange(e.target.value)},
@@ -261,7 +263,7 @@ const priceRange = getPriceRange(service.price)
           <div className="text-center mb-16">
             <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-              {filteredServices.length} Innovative Services Available
+              {filteredServices.length} Innovative Services Available;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Each service is designed with real-world applications, proven ROI, and market-leading innovation.
@@ -272,7 +274,7 @@ const priceRange = getPriceRange(service.price)
   l: g: grid-cols-2 x,
   l:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -339,7 +341,7 @@ const priceRange = getPriceRange(service.price)
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-200">
-                      Get Quote
+                      Get Quote;
                     </button>
                     <button className="px-4 py-2 border border-white/30 text-white rounded-lg hove,
   r:bg-white/10 transition-all duration-200">
@@ -364,7 +366,7 @@ const priceRange = getPriceRange(service.price)
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Our team of experts is ready to help you implement these innovative solutions
+            Our team of experts is ready to help you implement these innovative solutions;
             and drive your business forward with cutting-edge technology.
           </p>
 
@@ -384,7 +386,7 @@ const priceRange = getPriceRange(service.price)
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Visit Website</h3>
               <p className="text-gray-300">Explore our full range of services</p>
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com"
                 target="_blank"
@@ -392,7 +394,7 @@ const priceRange = getPriceRange(service.price)
                 className="className="mt-2 text-indigo-400,
   hove: r:text-indigo-300 transition-colors";"
               >
-                ziontechgroup.com
+                ziontechgroup.com;
               </a>
             </div>
 
@@ -407,22 +409,22 @@ const priceRange = getPriceRange(service.price)
 
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="/contact"
               className="className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg,
   hove: r:from-indigo-700,
   hove: r:to-purple-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl";"
             >
-              Start Your Journey
+              Start Your Journey;
             </a>
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300";"
             >
-              Call Now
+              Call Now;
             </a>
           </div>
         </div>

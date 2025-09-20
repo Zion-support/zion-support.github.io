@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom"
+import { Route   } from "react-router-dom";
 import CommunityPage from "../pages/CommunityPage"
 export default function CommunityRoutes() {
   return (

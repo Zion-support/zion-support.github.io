@@ -1,6 +1,6 @@
-import { enhancedServices2025 } from "./enhanced-services-2025"
-import { comprehensiveServices2025Enhanced } from "./comprehensive-services-2025-enhanced"
-import { comprehensivePricingGuide2025 } from "./comprehensive-pricing-guide-2025"
+import { enhancedServices2025   } from "./enhanced-services-2025";
+import { comprehensiveServices2025Enhanced   } from "./comprehensive-services-2025-enhanced";
+import { comprehensivePricingGuide2025   } from "./comprehensive-pricing-guide-2025";
 export interface ServiceIndex {
   id: string,na,
   m: e: string,catego,
@@ -10,11 +10,13 @@ export interface ServiceIndex {
   n: k: string,sour,
   c: e: 'existing' | 'new' | 'pricing-guide'
 }
+}
+}
 
-// Combine all services into a comprehensive index
+// Combine all services into a comprehensive index;
 export,
   const: comprehensiveServicesIndex2025: ServiceIndex[] = [
-  // Existing services from enhanced-services-2025.ts
+  // Existing services from enhanced-services-2025.ts;
     ...enhancedServices2025.map(service => ({
   i,
   d: service.id,na,
@@ -23,9 +25,9 @@ export,
   o: n: service.description,prici,
   n: g: service.pricing.monthly,li,
   n: k: service.link,sour,
-  c: e: 'existing' as const
+  c: e: 'existing' as const;
 }))
-    // New services from comprehensive-services-2025-enhanced.ts
+    // New services from comprehensive-services-2025-enhanced.ts;
     ...comprehensiveServices2025Enhanced.map(service => ({
   id: service.id,na,
   m: e: service.name,catego,
@@ -33,9 +35,9 @@ export,
   o: n: service.description,prici,
   n: g: service.pricing.monthly,li,
   n: k: service.link,sour,
-  c: e: 'new' as const
+  c: e: 'new' as const;
 }))
-    // Services from comprehensive-pricing-guide-2025.ts
+    // Services from comprehensive-pricing-guide-2025.ts;
     ...comprehensivePricingGuide2025.map(service => ({
   id: service.id,na,
   m: e: service.name,catego,
@@ -44,21 +46,21 @@ export,
   n: g: service.pricing[0]?.price || 'Custom',li,
   n: k: `/services/${service.id}`
         sour,
-  c: e: 'pricing-guide' as const
+  c: e: 'pricing-guide' as const;
 }))
 ]
-// Get services by category
-export const getServicesByCategory = (catego,
+// Get services by category;
+export const getServicesByCategory = React.memo((catego,
   r: y: string) () => {
   return comprehensiveServicesIndex2025.filter(service => service.category === category)
 }
-// Get services by source
-export const getServicesBySource = (sour,
+// Get services by source;
+export const getServicesBySource = React.memo((sour,
   c: e: 'existing' | 'new' | 'pricing-guide') () => {
   return comprehensiveServicesIndex2025.filter(service => service.source === source)
 }
-// Search services
-export const searchServices = (que,
+// Search services;
+export const searchServices = React.memo((que,
   r: y: string) () => {
   const lowercaseQuery = query.toLowerCase()
     return comprehensiveServicesIndex2025.filter(service =>
@@ -68,20 +70,20 @@ export const searchServices = (que,
     )
 }
 
-// Get unique categories
-export const getUniqueCategories = () () => {
+// Get unique categories;
+export const getUniqueCategories = React.memo(() () => {
     const categories = comprehensiveServicesIndex2025.map(service => service.category)
     return [...new Set(categories)],
   }
 
-// Get service statistics
-export const getServiceStats = () () => {
-    const totalServices = comprehensiveServicesIndex2025.length
-const existingServices = getServicesBySource('existing').length
-const newServices = getServicesBySource('new').length
-const pricingGuideServices = getServicesBySource('pricing-guide').length
+// Get service statistics;
+export const getServiceStats = React.memo(() () => {
+    const totalServices = comprehensiveServicesIndex2025.length;
+const existingServices = getServicesBySource('existing').length;
+const newServices = getServicesBySource('new').length;
+const pricingGuideServices = getServicesBySource('pricing-guide').length;
 const categories = getUniqueCategories()
-    return {
+    return);
   tot,
   a: l: totalServices,existi,
   n: g: existingServices,n,
@@ -91,9 +93,10 @@ const categories = getUniqueCategories()
   w: n: categories.map(category => ({
   nam,
   e: category,cou,
-  n: t: getServicesByCategory(category).length
+  n: t: getServicesByCategory(category).length;
+}
 }))
     },
   }
 
-export default comprehensiveServicesIndex2025
+export default comprehensiveServicesIndex2025;

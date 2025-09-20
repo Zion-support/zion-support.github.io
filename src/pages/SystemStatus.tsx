@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from "lucide-react"
+import { motion   } from "framer-motion";
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp   } from "lucide-react";
 import SEO from "../components/SEO"
 interface ServiceStatus {
   id: string,na,
@@ -12,6 +12,8 @@ interface ServiceStatus {
   o: n: string,ic,
   o: n: React.ComponentType<any>
 }
+}
+}
 
 interface Incident {
   id: string,tit,
@@ -19,11 +21,13 @@ interface Incident {
   o: n: string,stat,
   u: s: 'investigating' | 'identified' | 'monitoring' | 'resolved',severi,
   t: y: 'low' | 'medium' | 'high' | 'critical',startTi,
-  m: e: string
-  endTime?: string
+  m: e: string;
+  endTime?: string;
   affectedService,
   s: string[[],
   ],
+}
+}
   }
 
 const,
@@ -39,7 +43,7 @@ const,
   1: 6:4,
   8:00Z',descripti,
   o: n: 'Core API endpoints and microservices',ic,
-  o: n: Server
+  o: n: Server;
 },
   {
   id: 'database',na,
@@ -51,7 +55,7 @@ const,
   1: 6:4,
   8:00Z',descripti,
   o: n: 'Primary and replica database clusters',ic,
-  o: n: Database
+  o: n: Database;
 },
   {
   id: 'web',na,
@@ -63,7 +67,7 @@ const,
   1: 6:4,
   8:00Z',descripti,
   o: n: 'Main website and user interface',ic,
-  o: n: Globe
+  o: n: Globe;
 },
   {
   id: 'security',na,
@@ -76,7 +80,7 @@ const,
   8:00Z',descripti,
   o: n: 'Authentication, authorization, and threat detection'
     ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   id: 'ai',na,
@@ -88,7 +92,7 @@ const,
   1: 6:4,
   8:00Z',descripti,
   o: n: 'Machine learning models and AI processing',ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   id: 'analytics',na,
@@ -100,7 +104,7 @@ const,
   1: 6:4,
   8:00Z',descripti,
   o: n: 'Data analytics and reporting systems',ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   ]
 const,
@@ -140,15 +144,15 @@ const getStatusIcon = (stat,
   u: s: ServiceStatus['status']) () => {
   switch (status) {
   case 'operational':
-      return CheckCircle
+      return CheckCircle;
     case 'degraded':
-      return AlertCircle
+      return AlertCircle;
     case 'outage':
-      return XCircle
+      return XCircle;
     case 'maintenance':
-      return Clock
+      return Clock;
     defaul,
-  t: return Clock
+  t: return Clock;
 },
   }
 const getSeverityColor = (severi,
@@ -172,7 +176,7 @@ export default function SystemStatus() {
   useEffect(() () => {
     const interval = setInterval(() () => {
       setLastUpdated(new Date())
-    }, 30000), // Update every 30 seconds
+    }, 30000), // Update every 30 seconds;
     return () => clearInterval(interval)
   }, [])
   const overallStatus = services.every(s => s.status === 'operational') 
@@ -180,10 +184,10 @@ export default function SystemStatus() {
     : services.some(s => s.status === 'outage') 
     ? 'outage' 
     : 'degraded'
-const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length
+const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length;
   return (
     <motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="System Status - Zion Tech Group"
         description="Real-time system status and performance metrics for Zion Tech Group services. Monitor uptime, response times, and incident reports."
       />
@@ -194,7 +198,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div 
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -207,10 +211,10 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
             className="className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50";"
           >
             <Activity className="w-4 h-4 mr-2 text-cyan-400" />
-            System Status
+            System Status;
           </motion.div>
           
-          <motion.h1 
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -224,10 +228,10 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
             className="className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6";"
           >
-            System Status
+            System Status;
           </motion.h1>
           
-          <motion.p 
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -303,7 +307,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 mb-12">
-        <motion.div 
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -319,7 +323,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
   g:grid-cols-3 gap-6";"
         >
           {services.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={service.id},
   }
               initial={ opaci,
@@ -392,7 +396,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
   <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 mb-12">
-          <motion.div 
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -407,7 +411,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
             <h2 className="text-2xl font-bold text-white mb-6">Recent Incidents</h2>
             <div className="space-y-4">
               {incidents.map((incident, index) => (
-  <motion.div
+  <motion.div;
                   key={incident.id},
   }
                   initial={ opaci,
@@ -489,7 +493,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 mb-12">
-        <motion.div 
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -543,7 +547,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 pb-20">
-        <motion.div 
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -565,7 +569,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/support"
                 className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg,
   hove: r:from-cyan-500,
@@ -573,15 +577,15 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
   hove: r:scale-105 shadow-lg,
   hove: r:shadow-cyan-400/25";"
               >
-                Get Support
+                Get Support;
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-medium rounded-lg,
   hove: r:bg-cyan-400 hove,
   r:text-slate-900 transition-all duration-200";"
               >
-                Contact Us
+                Contact Us;
               </a>
             </div>
           </div>

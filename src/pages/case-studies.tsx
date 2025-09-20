@@ -1,22 +1,24 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  CheckCircle
-  TrendingUp
-  Users
-  DollarSign
-  Clock
-  Target
-  ArrowRight
-  Star
-  Award
-  Zap
-  Shield
-  Cloud
-  Brain
-  Globe
-} from "lucide-react"
+  CheckCircle;
+  TrendingUp;
+  Users;
+  DollarSign;
+  Clock;
+  Target;
+  ArrowRight;
+  Star;
+  Award;
+  Zap;
+  Shield;
+  Cloud;
+  Brain;
+  Globe;
+}
+}
+ } from "lucide-react";
 const caseStudies = [
   {
   id: 1,tit,
@@ -198,13 +200,13 @@ export default function CaseStudies() {
   const [searchTerm, setSearchTerm] = useState('')
 
   const filteredCaseStudies = caseStudies.filter(study () => {
-  const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry
+  const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
 const matchesTechnology = selectedTechnology === 'All' ||
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()))
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesIndustry && matchesTechnology && matchesSearch
+    return matchesIndustry && matchesTechnology && matchesSearch;
 })
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -214,7 +216,7 @@ const matchesTechnology = selectedTechnology === 'All' ||
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -232,11 +234,11 @@ const matchesTechnology = selectedTechnology === 'All' ||
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Real Results, Real Impact
+              Real Results, Real Impact;
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover how Zion Tech Group has transformed businesses across industries with
-              cutting-edge technology solutions. Our case studies showcase measurable results
+              Discover how Zion Tech Group has transformed businesses across industries with;
+              cutting-edge technology solutions. Our case studies showcase measurable results;
               and proven success stories.
             </p>
           </motion.div>
@@ -256,7 +258,7 @@ const matchesTechnology = selectedTechnology === 'All' ||
   }
               <div className="md:col-span-2">
                 <div className="relative">
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search case studies..."
                     value={searchTerm},
@@ -274,7 +276,7 @@ const matchesTechnology = selectedTechnology === 'All' ||
               {/* Industry Filter */},
   }
               <div>
-                <select
+                <select;
                   value={selectedIndustry},
   }
                   onChange={(e) => setSelectedIndustry(e.target.value)},
@@ -293,7 +295,7 @@ const matchesTechnology = selectedTechnology === 'All' ||
               {/* Technology Filter */},
   }
               <div>
-                <select
+                <select;
                   value={selectedTechnology},
   }
                   onChange={(e) => setSelectedTechnology(e.target.value)},
@@ -322,7 +324,7 @@ const matchesTechnology = selectedTechnology === 'All' ||
           <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-8">
             {filteredCaseStudies.map((study, index) => (
-  <motion.div
+  <motion.div;
                 key={study.id},
   }
                 initial={ opaci,
@@ -369,14 +371,14 @@ const matchesTechnology = selectedTechnology === 'All' ||
                   <div className="mb-3">
                     <h4 className="font-semibold text-white mb-2 flex items-center gap-2">
                       <Target className="w-4 h-4 text-red-400" />
-                      Challenge
+                      Challenge;
                     </h4>
                     <p className="text-zion-slate-light text-sm">{study.challenge}</p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-2 flex items-center gap-2">
                       <Zap className="w-4 h-4 text-yellow-400" />
-                      Solution
+                      Solution;
                     </h4>
                     <p className="text-zion-slate-light text-sm">{study.solution}</p>
                   </div>
@@ -387,7 +389,7 @@ const matchesTechnology = selectedTechnology === 'All' ||
                 <div className="mb-4">
                   <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
                     <TrendingUp className="w-4 h-4 text-green-400" />
-                    Key Results
+                    Key Results;
                   </h4>
                   <div className="grid grid-cols-2 gap-2">
                     {study.results.slice(0, 4).map((result, idx) => (
@@ -418,7 +420,7 @@ const matchesTechnology = selectedTechnology === 'All' ||
                     </span>
                     <span className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-400" />
-                      {study.metrics.satisfaction}% satisfaction
+                      {study.metrics.satisfaction}% satisfaction;
                     </span>
                   </div>
                 </div>
@@ -426,12 +428,12 @@ const matchesTechnology = selectedTechnology === 'All' ||
                 {/* CTA */},
   }
                 <div className="flex items-center justify-between">
-                  <Link
+                  <Link;
                     href={`/case-studies/${study.id}`}
                     className="className="inline-flex items-center text-zion-cyan,
   hove: r:text-zion-cyan-light transition-colors duration-300";"
                   >
-                    Read Full Case Study
+                    Read Full Case Study;
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                   <div className="text-right">
@@ -451,7 +453,7 @@ const matchesTechnology = selectedTechnology === 'All' ||
         <div className="max-w-4xl mx-auto text-center px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -470,26 +472,26 @@ const matchesTechnology = selectedTechnology === 'All' ||
               Ready to Create Your Success Story?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Let's discuss how Zion Tech Group can transform your business with
+              Let's discuss how Zion Tech Group can transform your business with;
               cutting-edge technology solutions.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 href="/contact"
                 className="className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl,
   hove: r:bg-zion-slate-light transition-all duration-300 font-medium text-lg";"
               >
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 href="/services"
                 className="className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl,
   hove: r:bg-white hove,
   r:text-zion-cyan transition-all duration-300 font-medium text-lg";"
               >
-                View Our Services
+                View Our Services;
               </Link>
             </div>
           </motion.div>

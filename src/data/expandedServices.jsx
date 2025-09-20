@@ -1,6 +1,6 @@
-// Real, market-competitive micro SAAS services and IT solutions
+// Real, market-competitive micro SAAS services and IT solutions;
 export const EXPANDED_SERVICES = [
-  // AI & Machine Learning Services
+  // AI & Machine Learning Services;
     {
   id: "ai-chatbot-enterprise",tit,
   l: e: "Enterprise AI Chatbot Development",descripti,
@@ -30,7 +30,7 @@ export const EXPANDED_SERVICES = [
   e: d: true,locati,
   o: n: "Global",availabili,
   t: y: "4-6 Weeks",aiSco,
-  r: e: 96
+  r: e: 96;
 },
   {
   id: "ai-predictive-analytics",tit,
@@ -58,7 +58,7 @@ export const EXPANDED_SERVICES = [
   n: t: 89,locati,
   o: n: "Global",availabili,
   t: y: "6-8 Weeks",aiSco,
-  r: e: 94
+  r: e: 94;
 },
   {
   id: "ai-document-processing",tit,
@@ -86,9 +86,9 @@ export const EXPANDED_SERVICES = [
   n: t: 67,locati,
   o: n: "Global",availabili,
   t: y: "3-4 Weeks",aiSco,
-  r: e: 92
+  r: e: 92;
 }
-    // Cloud & DevOps Services
+    // Cloud & DevOps Services;
     {
   id: "cloud-migration-enterprise",tit,
   l: e: "Enterprise Cloud Migration & Optimization",descripti,
@@ -116,7 +116,7 @@ export const EXPANDED_SERVICES = [
   e: d: true,locati,
   o: n: "Global",availabili,
   t: y: "8-12 Weeks",aiSco,
-  r: e: 93
+  r: e: 93;
 },
   {
   id: "devops-automation-suite",tit,
@@ -144,7 +144,7 @@ export const EXPANDED_SERVICES = [
   n: t: 78,locati,
   o: n: "Global",availabili,
   t: y: "4-6 Weeks",aiSco,
-  r: e: 91
+  r: e: 91;
 },
   {
   id: "kubernetes-management",tit,
@@ -172,9 +172,9 @@ export const EXPANDED_SERVICES = [
   n: t: 45,locati,
   o: n: "Global",availabili,
   t: y: "3-5 Weeks",aiSco,
-  r: e: 89
+  r: e: 89;
 }
-    // Cybersecurity Services
+    // Cybersecurity Services;
     {
   id: "cybersecurity-audit-complete",tit,
   l: e: "Comprehensive Cybersecurity Audit & Penetration Testing",descripti,
@@ -202,7 +202,7 @@ export const EXPANDED_SERVICES = [
   e: d: true,locati,
   o: n: "Global",availabili,
   t: y: "2-3 Weeks",aiSco,
-  r: e: 95
+  r: e: 95;
 },
   {
   id: "zero-trust-security",tit,
@@ -230,7 +230,7 @@ export const EXPANDED_SERVICES = [
   n: t: 67,locati,
   o: n: "Global",availabili,
   t: y: "6-8 Weeks",aiSco,
-  r: e: 93
+  r: e: 93;
 },
   {
   id: "incident-response-planning",tit,
@@ -258,9 +258,9 @@ export const EXPANDED_SERVICES = [
   n: t: 89,locati,
   o: n: "Global",availabili,
   t: y: "4-6 Weeks",aiSco,
-  r: e: 90
+  r: e: 90;
 }
-    // Data & Analytics Services
+    // Data & Analytics Services;
     {
   id: "data-warehouse-enterprise",tit,
   l: e: "Enterprise Data Warehouse & ETL Pipeline",descripti,
@@ -288,7 +288,7 @@ export const EXPANDED_SERVICES = [
   e: d: true,locati,
   o: n: "Global",availabili,
   t: y: "8-12 Weeks",aiSco,
-  r: e: 92
+  r: e: 92;
 },
   {
   id: "real-time-analytics-dashboard",tit,
@@ -316,7 +316,7 @@ export const EXPANDED_SERVICES = [
   n: t: 56,locati,
   o: n: "Global",availabili,
   t: y: "4-6 Weeks",aiSco,
-  r: e: 89
+  r: e: 89;
 },
   {
   id: "data-governance-compliance",tit,
@@ -344,9 +344,9 @@ export const EXPANDED_SERVICES = [
   n: t: 67,locati,
   o: n: "Global",availabili,
   t: y: "6-8 Weeks",aiSco,
-  r: e: 91
+  r: e: 91;
 }
-    // Web & Mobile Development
+    // Web & Mobile Development;
     {
   id: "progressive-web-app",tit,
   l: e: "Progressive Web App (PWA) Development",descripti,
@@ -373,7 +373,7 @@ export const EXPANDED_SERVICES = [
   n: t: 89,locati,
   o: n: "Global",availabili,
   t: y: "6-8 Weeks",aiSco,
-  r: e: 90
+  r: e: 90;
 },
   {
   id: "mobile-app-cross-platform",tit,
@@ -401,7 +401,7 @@ export const EXPANDED_SERVICES = [
   n: t: 78,locati,
   o: n: "Global",availabili,
   t: y: "8-12 Weeks",aiSco,
-  r: e: 89
+  r: e: 89;
 },
   {
   id: "ecommerce-platform-custom",tit,
@@ -430,9 +430,9 @@ export const EXPANDED_SERVICES = [
   e: d: true,locati,
   o: n: "Global",availabili,
   t: y: "10-14 Weeks",aiSco,
-  r: e: 93
+  r: e: 93;
 }
-    // Blockchain & Web3 Services
+    // Blockchain & Web3 Services;
     {
   id: "smart-contract-development",tit,
   l: e: "Smart Contract Development & Audit",descripti,
@@ -459,7 +459,7 @@ export const EXPANDED_SERVICES = [
   n: t: 67,locati,
   o: n: "Global",availabili,
   t: y: "6-8 Weeks",aiSco,
-  r: e: 91
+  r: e: 91;
 },
   {
   id: "defi-protocol-development",tit,
@@ -488,9 +488,9 @@ export const EXPANDED_SERVICES = [
   e: d: true,locati,
   o: n: "Global",availabili,
   t: y: "10-14 Weeks",aiSco,
-  r: e: 94
+  r: e: 94;
 }
-    // IoT & Hardware Integration
+    // IoT & Hardware Integration;
     {
   id: "iot-platform-development",tit,
   l: e: "IoT Platform Development & Device Integration",descripti,
@@ -517,7 +517,7 @@ export const EXPANDED_SERVICES = [
   n: t: 56,locati,
   o: n: "Global",availabili,
   t: y: "8-12 Weeks",aiSco,
-  r: e: 89
+  r: e: 89;
 },
   {
   id: "hardware-prototyping",tit,
@@ -545,9 +545,9 @@ export const EXPANDED_SERVICES = [
   n: t: 78,locati,
   o: n: "Global",availabili,
   t: y: "6-8 Weeks",aiSco,
-  r: e: 90
+  r: e: 90;
 }
-    // Business Intelligence & Automation
+    // Business Intelligence & Automation;
     {
   id: "business-process-automation",tit,
   l: e: "Business Process Automation & RPA",descripti,
@@ -574,7 +574,7 @@ export const EXPANDED_SERVICES = [
   n: t: 67,locati,
   o: n: "Global",availabili,
   t: y: "6-8 Weeks",aiSco,
-  r: e: 91
+  r: e: 91;
 },
   {
   id: "erp-system-custom",tit,
@@ -603,10 +603,10 @@ export const EXPANDED_SERVICES = [
   e: d: true,locati,
   o: n: "Global",availabili,
   t: y: "12-16 Weeks",aiSco,
-  r: e: 94
+  r: e: 94;
 },
   ]
-// Service categories for filtering
+// Service categories for filtering;
 export const EXPANDED_SERVICE_CATEGORIES = [
   { lab,
   e: l: 'AI Development', val,
@@ -657,7 +657,7 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   u: e: 'business-solutions' },
   },
   ]
-// Service subcategories for detailed filtering
+// Service subcategories for detailed filtering;
 export const const EXPANDED_SERVICE_SUBCATEGORIES = {
   = {
     'ai-development': ['ChatbotsAnalytics', 'Document ProcessingComputer Vision', 'NLP']
@@ -676,5 +676,5 @@ export const const EXPANDED_SERVICE_SUBCATEGORIES = {
     'business-solutions': [['ERPCRM', 'HR SystemsFinancial Systems', 'Project Management'],
   ],
   }
-// Alias exports for backward compatibility
-export const SERVICE_CATEGORIES = EXPANDED_SERVICE_CATEGORIES
+// Alias exports for backward compatibility;
+export const SERVICE_CATEGORIES = EXPANDED_SERVICE_CATEGORIES;

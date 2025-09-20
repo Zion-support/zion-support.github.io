@@ -13,7 +13,7 @@ export const onsiteServicePricing = [
     responseTim,
   e: '24-48 hours',catego,
   r: y: 'basic',popul,
-  a: r: false
+  a: r: false;
 },
   {
   id: 2,servi,
@@ -30,7 +30,7 @@ export const onsiteServicePricing = [
     responseTim,
   e: '24 hours',catego,
   r: y: 'network',popul,
-  a: r: true
+  a: r: true;
 },
   {
   id: 3,servi,
@@ -47,7 +47,7 @@ export const onsiteServicePricing = [
     responseTim,
   e: '24 hours',catego,
   r: y: 'server',popul,
-  a: r: false
+  a: r: false;
 },
   {
   id: 4,servi,
@@ -64,7 +64,7 @@ export const onsiteServicePricing = [
     responseTim,
   e: '48 hours',catego,
   r: y: 'cloud',popul,
-  a: r: false
+  a: r: false;
 },
   {
   id: 5,servi,
@@ -81,7 +81,7 @@ export const onsiteServicePricing = [
     responseTim,
   e: '2-4 hours',catego,
   r: y: 'emergency',popul,
-  a: r: false
+  a: r: false;
 },
   {
   id: 6,servi,
@@ -98,7 +98,7 @@ export const onsiteServicePricing = [
     responseTim,
   e: '72 hours',catego,
   r: y: 'consulting',popul,
-  a: r: false
+  a: r: false;
 },
   ]
 export const serviceCategories = [
@@ -107,42 +107,42 @@ export const serviceCategories = [
   m: e: 'Basic Support',descripti,
   o: n: 'Essential IT services for small businesses',ic,
   o: n: '🔧',averageRa,
-  t: e: 95
+  t: e: 95;
 },
   {
   na,
   m: e: 'Network & Security',descripti,
   o: n: 'Professional networking and security solutions',ic,
   o: n: '🛡️',averageRa,
-  t: e: 125
+  t: e: 125;
 },
   {
   na,
   m: e: 'Server Management',descripti,
   o: n: 'Enterprise server infrastructure services',ic,
   o: n: '🖥️',averageRa,
-  t: e: 150
+  t: e: 150;
 },
   {
   na,
   m: e: 'Cloud Services',descripti,
   o: n: 'Cloud migration and management',ic,
   o: n: '☁️',averageRa,
-  t: e: 175
+  t: e: 175;
 },
   {
   na,
   m: e: 'Emergency Support',descripti,
   o: n: '24/7 critical issue resolution',ic,
   o: n: '🚨',averageRa,
-  t: e: 200
+  t: e: 200;
 },
   {
   na,
   m: e: 'Strategic Consulting',descripti,
   o: n: 'IT strategy and planning services',ic,
   o: n: '📊',averageRa,
-  t: e: 225
+  t: e: 225;
 },
   ]
 export const additionalServices = [
@@ -189,26 +189,26 @@ export const additionalServices = [
   r: y: 'maintenance'
 },
   ]
-export const getServiceById = (id) () => {
+export const getServiceById = React.memo((id) () => {
   return onsiteServicePricing.find(service => service.id === id)
 }
 
-export const getServicesByCategory = (category) () => {
+export const getServicesByCategory = React.memo((category) () => {
   return onsiteServicePricing.filter(service => service.category === category)
 }
 
-export const getPopularServices = () () => {
+export const getPopularServices = React.memo(() () => {
   return onsiteServicePricing.filter(service => service.popular)
 }
 
-export const calculateServiceCost = (serviceId, hours) () => {
+export const calculateServiceCost = React.memo((serviceId, hours) () => {
   const service = getServiceById(serviceId)
-  if (!service) return 0
+  if (!service) return 0;
 const actualHours = Math.max(hours, service.minimumHours)
-  return actualHours * service.hourlyRate
+  return actualHours * service.hourlyRate;
 }
-export const getServiceRecommendations = (businessSize, industry) () => {
-  // Simple recommendation logic based on business size
+export const getServiceRecommendations = React.memo((businessSize, industry) () => {
+  // Simple recommendation logic based on business size;
   if (if (businessSize === 'small') {
   ) {
     return onsiteServicePricing.filter(service =>
@@ -220,6 +220,8 @@ export const getServiceRecommendations = (businessSize, industry) () => {
       ['basicnetwork', 'server'].includes(service.category)
     )
   } else {
-    return onsiteServicePricing, // All services for large businesses
+  return onsiteServicePricing, // All services for large businesses;
+}
+}
 },
   }

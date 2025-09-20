@@ -1,25 +1,30 @@
+import { useCallback    } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  FileText
+  FileText;
   Shield,
   CheckCircle,
   Clock,
   DollarSign,
   Users,
   TrendingUp,
-  Award
-  ArrowRight
-  Star
-  Zap
-  Brain
-  Lock
-  Globe
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-} from "lucide-react"
+  Award;
+  ArrowRight;
+  Star;
+  Zap;
+  Brain;
+  Lock;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AILegalDocumentAnalyze: r: React.FC = () () => {
   const [activeTab, setActiveTab] = useState('overview')
@@ -69,7 +74,7 @@ const,
         "Standard integrations"
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -87,7 +92,7 @@ const,
         "Custom workflows"
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -105,7 +110,7 @@ const,
         "Custom security features"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const competitors = [
@@ -142,7 +147,7 @@ const,
         </div>
 
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -160,7 +165,7 @@ const,
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-              AI Legal Document Analyzer
+              AI Legal Document Analyzer;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -193,7 +198,7 @@ const,
   }
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -204,10 +209,10 @@ const,
   hove: r: from-cyan-600,
   hove: r:to-blue-600 transition-all duration-300";"
               >
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -218,7 +223,7 @@ const,
   hove: r: bg-cyan-500 hove,
   r:text-white transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -233,14 +238,14 @@ const,
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2">
             {['overviewfeatures', 'pricingcompetitors', 'contact'].map((tab) => (
-  <button
+  <button;
                 key={tab},
   }
                 onClick={onClick={() => setActiveTab(tab)},
   },
   }
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-  activeTab === tab
+  activeTab === tab;
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
                     : 'text-gray-400,
   hove: r: text-white hove,
@@ -264,7 +269,7 @@ const,
           {/* Overview Tab */},
   },
   {activeTab === 'overview' && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -279,7 +284,7 @@ const,
             >
               <div>
                 <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  Revolutionize Your Legal Document Analysis
+                  Revolutionize Your Legal Document Analysis;
                 </h2>
                 <p className="text-lg text-gray-300 mb-6">
                   Our AI-powered platform transforms how legal professionals analyze documents. Using advanced natural language processing and machine learning, we can identify risks, compliance issues, and optimization opportunities in seconds, not hours.
@@ -329,7 +334,7 @@ const,
   {/* Features Tab */},
   },
   {activeTab === 'features' && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -341,14 +346,14 @@ const,
   }
             >
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Powerful Features for Legal Professionals
+                Powerful Features for Legal Professionals;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -416,7 +421,7 @@ const,
   {/* Pricing Tab */},
   },
   {activeTab === 'pricing' && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -428,13 +433,13 @@ const,
   }
             >
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Transparent Pricing Plans
+                Transparent Pricing Plans;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
                 {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -448,7 +453,7 @@ const,
   a: y: index * 0.1 },
   }
                     className={`relative p-8 rounded-2xl border transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 scale-105'
                         : 'bg-gray-800/50 border-gray-600,
   hove: r:border-cyan-500/50'
@@ -457,7 +462,7 @@ const,
                     {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
+                          Most Popular;
                         </span>
                       </div>
                     )}
@@ -484,7 +489,7 @@ const,
                     <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg font-semibold,
   hove: r: from-cyan-600 hove,
   r:to-blue-600 transition-all duration-300">
-                      Get Started
+                      Get Started;
                     </button>
                   </motion.div>
                 ))}
@@ -495,7 +500,7 @@ const,
                 <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold,
   hove: r: bg-cyan-500 hove,
   r:text-white transition-all duration-300">
-                  Contact Sales
+                  Contact Sales;
                 </button>
               </div>
             </motion.div>
@@ -503,7 +508,7 @@ const,
   {/* Competitors Tab */},
   },
   {activeTab === 'competitors' && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -515,7 +520,7 @@ const,
   }
             >
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Competitive Analysis
+                Competitive Analysis;
               </h2>
               
               <div className="grid grid-cols-1,
@@ -531,7 +536,7 @@ const,
                     </div>
                     <div className="text-cyan-400 font-semibold mb-2">{competitor.price}</div>
                     <div className="text-gray-300 text-sm">
-                      Established competitor with similar features but higher pricing
+                      Established competitor with similar features but higher pricing;
                     </div>
                   </div>
                 ))}
@@ -560,7 +565,7 @@ const,
   {/* Contact Tab */},
   },
   {activeTab === 'contact' && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -573,7 +578,7 @@ const,
               className="className="text-center";"
             >
               <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Get Started Today
+                Get Started Today;
               </h2>
               
               <div className="grid grid-cols-1,
@@ -585,7 +590,7 @@ const,
                   <a href="t,
   e: l:+13024640950" className="text-cyan-400 font-semibold,
   hove: r:text-cyan-300">
-                    +1 302 464 0950
+                    +1 302 464 0950;
                   </a>
                 </div>
                 
@@ -596,7 +601,7 @@ const,
                   <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-purple-400 font-semibold,
   hove: r:text-purple-300">
-                    kleber@ziontechgroup.com
+                    kleber@ziontechgroup.com;
                   </a>
                 </div>
                 
@@ -607,7 +612,7 @@ const,
                   <a href="htt,
   p: s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-green-400 font-semibold,
   hove: r:text-green-300 flex items-center justify-center gap-2">
-                    ziontechgroup.com
+                    ziontechgroup.com;
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
@@ -623,12 +628,12 @@ const,
                   <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-600 transition-all duration-300">
-                    Start Free Trial
+                    Start Free Trial;
                   </button>
                   <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-300">
-                    Schedule Demo
+                    Schedule Demo;
                   </button>
                 </div>
               </div>
@@ -640,4 +645,4 @@ const,
   )
 }
 
-export default AILegalDocumentAnalyzer
+export default AILegalDocumentAnalyzer;

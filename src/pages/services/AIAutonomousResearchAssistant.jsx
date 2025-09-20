@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe     } from "lucide-react";
 const AIAutonomousResearchAssistant = () () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */},
@@ -17,7 +17,7 @@ const AIAutonomousResearchAssistant = () () => {
             </div>
             <h1 className="text-4xl m,
   d:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              AI Autonomous Research Assistant
+              AI Autonomous Research Assistant;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize your research capabilities with our AI-powered autonomous research assistant. 
@@ -28,12 +28,12 @@ const AIAutonomousResearchAssistant = () () => {
               <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold,
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 text-lg">
-                Get Started Today
+                Get Started Today;
               </Link>
               <Link to="/case-studies" className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold,
   hove: r:border-gray-500 hove,
   r:text-white transition-all duration-300 text-lg">
-                View Case Studies
+                View Case Studies;
               </Link>
             </div>
           </div>
@@ -54,14 +54,14 @@ const AIAutonomousResearchAssistant = () () => {
                 What is AI Autonomous Research Assistant?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our AI Autonomous Research Assistant is a cutting-edge artificial intelligence system designed to 
-                autonomously conduct comprehensive research across multiple domains. It combines advanced natural 
-                language processing, machine learning algorithms, and vast knowledge databases to deliver 
+                Our AI Autonomous Research Assistant is a cutting-edge artificial intelligence system designed to;
+                autonomously conduct comprehensive research across multiple domains. It combines advanced natural;
+                language processing, machine learning algorithms, and vast knowledge databases to deliver;
                 unprecedented research capabilities.
               </p>
               <p className="text-lg text-gray-300 mb-6">
-                Unlike traditional research tools, our AI assistant works independently, continuously learning 
-                and adapting to new information, identifying patterns, and generating insights that human 
+                Unlike traditional research tools, our AI assistant works independently, continuously learning;
+                and adapting to new information, identifying patterns, and generating insights that human;
                 researchers might miss.
               </p>
               <div className="flex items-center space-x-4">
@@ -117,7 +117,7 @@ const AIAutonomousResearchAssistant = () () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-center mb-16">
-            Key Features
+            Key Features;
           </h2>
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 l,
@@ -128,7 +128,7 @@ const AIAutonomousResearchAssistant = () () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Intelligent Search & Discovery</h3>
               <p className="text-gray-300">
-                Advanced semantic search capabilities that understand context and find relevant information 
+                Advanced semantic search capabilities that understand context and find relevant information;
                 across multiple sources and languages.
               </p>
             </div>
@@ -139,7 +139,7 @@ const AIAutonomousResearchAssistant = () () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Pattern Recognition</h3>
               <p className="text-gray-300">
-                Identifies hidden patterns, correlations, and trends in large datasets that human researchers 
+                Identifies hidden patterns, correlations, and trends in large datasets that human researchers;
                 might overlook.
               </p>
             </div>
@@ -160,7 +160,7 @@ const AIAutonomousResearchAssistant = () () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Multi-Domain Expertise</h3>
               <p className="text-gray-300">
-                Specialized knowledge across scientific, business, medical, and technological domains with 
+                Specialized knowledge across scientific, business, medical, and technological domains with;
                 continuous learning capabilities.
               </p>
             </div>
@@ -171,7 +171,7 @@ const AIAutonomousResearchAssistant = () () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">
-                Self-directed research processes that can work independently, prioritize tasks, and adapt 
+                Self-directed research processes that can work independently, prioritize tasks, and adapt;
                 to new information automatically.
               </p>
             </div>
@@ -182,7 +182,7 @@ const AIAutonomousResearchAssistant = () () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Global Knowledge Access</h3>
               <p className="text-gray-300">
-                Access to worldwide databases, research papers, patents, and real-time information sources 
+                Access to worldwide databases, research papers, patents, and real-time information sources;
                 across multiple languages.
               </p>
             </div>
@@ -198,7 +198,7 @@ const AIAutonomousResearchAssistant = () () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-center mb-16">
-            How It Works
+            How It Works;
           </h2>
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 l,
@@ -209,7 +209,7 @@ const AIAutonomousResearchAssistant = () () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Research Request</h3>
               <p className="text-gray-300">
-                Submit your research query or topic through our intuitive interface. The AI analyzes your 
+                Submit your research query or topic through our intuitive interface. The AI analyzes your;
                 requirements and develops a research strategy.
               </p>
             </div>
@@ -220,7 +220,7 @@ const AIAutonomousResearchAssistant = () () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Autonomous Investigation</h3>
               <p className="text-gray-300">
-                The AI independently searches multiple sources, analyzes data, identifies patterns, and 
+                The AI independently searches multiple sources, analyzes data, identifies patterns, and;
                 cross-references information across domains.
               </p>
             </div>
@@ -231,7 +231,7 @@ const AIAutonomousResearchAssistant = () () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Insight Generation</h3>
               <p className="text-gray-300">
-                Advanced algorithms process the collected data to generate insights, identify trends, and 
+                Advanced algorithms process the collected data to generate insights, identify trends, and;
                 create comprehensive research summaries.
               </p>
             </div>
@@ -242,7 +242,7 @@ const AIAutonomousResearchAssistant = () () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Deliver Results</h3>
               <p className="text-gray-300">
-                Receive detailed reports, visualizations, and actionable insights with source citations and 
+                Receive detailed reports, visualizations, and actionable insights with source citations and;
                 recommendations for further research.
               </p>
             </div>
@@ -258,7 +258,7 @@ const AIAutonomousResearchAssistant = () () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-center mb-16">
-            Applications
+            Applications;
           </h2>
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 l,
@@ -346,7 +346,7 @@ const AIAutonomousResearchAssistant = () () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Unprecedented Speed</h3>
                   <p className="text-gray-300">
-                    Complete research tasks in minutes that would take human researchers weeks or months
+                    Complete research tasks in minutes that would take human researchers weeks or months;
                     dramatically accelerating your innovation timeline.
                   </p>
                 </div>
@@ -359,7 +359,7 @@ const AIAutonomousResearchAssistant = () () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Comprehensive Coverage</h3>
                   <p className="text-gray-300">
-                    Access and analyze information from thousands of sources simultaneously, ensuring no 
+                    Access and analyze information from thousands of sources simultaneously, ensuring no;
                     relevant data is missed in your research.
                   </p>
                 </div>
@@ -372,7 +372,7 @@ const AIAutonomousResearchAssistant = () () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Pattern Discovery</h3>
                   <p className="text-gray-300">
-                    Identify hidden connections and patterns across multiple domains that human researchers 
+                    Identify hidden connections and patterns across multiple domains that human researchers;
                     might never discover, leading to breakthrough insights.
                   </p>
                 </div>
@@ -387,7 +387,7 @@ const AIAutonomousResearchAssistant = () () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">24/7 Availability</h3>
                   <p className="text-gray-300">
-                    Research never stops with our autonomous AI that works around the clock, continuously 
+                    Research never stops with our autonomous AI that works around the clock, continuously;
                     learning and updating information.
                   </p>
                 </div>
@@ -400,7 +400,7 @@ const AIAutonomousResearchAssistant = () () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Cost Efficiency</h3>
                   <p className="text-gray-300">
-                    Reduce research costs significantly by automating time-consuming tasks and eliminating 
+                    Reduce research costs significantly by automating time-consuming tasks and eliminating;
                     the need for extensive manual research teams.
                   </p>
                 </div>
@@ -413,7 +413,7 @@ const AIAutonomousResearchAssistant = () () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Scalable Research</h3>
                   <p className="text-gray-300">
-                    Handle multiple research projects simultaneously without compromising quality, scaling 
+                    Handle multiple research projects simultaneously without compromising quality, scaling;
                     your research capabilities exponentially.
                   </p>
                 </div>
@@ -442,16 +442,16 @@ const AIAutonomousResearchAssistant = () () => {
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 text-lg">
-              Start Your Research Project
+              Start Your Research Project;
             </Link>
             <Link to="/pricing" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold,
   hove: r:border-gray-500 hove,
   r:text-white transition-all duration-300 text-lg">
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
       </section>
     </div>)
 }
-export default AIAutonomousResearchAssistant
+export default AIAutonomousResearchAssistant;

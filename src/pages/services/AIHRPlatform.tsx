@@ -1,31 +1,35 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../../components/SEO"
+import { motion     } from "framer-motion";
+import { SEO     } from "../../components/SEO";
 import {
-  Users
-  Brain
-  Target
-  Zap
-  BarChart3
-  Clock
-  Award
-  Star
-  Globe
-  Cpu
-  Database
-  CheckCircle
-  Eye
-  FileText
-  Shield
-  TrendingUp
-  Search
-  Download
-  Upload
-  Calendar
-  MessageSquare
-  UserCheck
-  GraduationCap
-} from "lucide-react"
+  Users;
+  Brain;
+  Target;
+  Zap;
+  BarChart3;
+  Clock;
+  Award;
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  CheckCircle;
+  Eye;
+  FileText;
+  Shield;
+  TrendingUp;
+  Search;
+  Download;
+  Upload;
+  Calendar;
+  MessageSquare;
+  UserCheck;
+  GraduationCap;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIHRPlatform() {
   const features = [
   {
@@ -80,40 +84,40 @@ export default function AIHRPlatform() {
   l: e: "Recruitment & Onboarding",descripti,
   o: n: "AI-powered job matching, candidate screening, and automated onboarding"
       ic,
-  o: n: UserCheck
+  o: n: UserCheck;
 },
   {
   modu,
   l: e: "Performance Management",descripti,
   o: n: "Goal setting, performance tracking, and development planning"
       ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   modu,
   l: e: "Learning & Development",descripti,
   o: n: "Personalized training programs and skill development tracking",ic,
-  o: n: GraduationCap
+  o: n: GraduationCap;
 },
   {
   modu,
   l: e: "Employee Engagement",descripti,
   o: n: "Pulse surveys, feedback systems, and engagement analytics"
       ic,
-  o: n: MessageSquare
+  o: n: MessageSquare;
 },
   {
   modu,
   l: e: "Payroll & Benefits",descripti,
   o: n: "Automated payroll processing and benefits administration",ic,
-  o: n: FileText
+  o: n: FileText;
 },
   {
   modu,
   l: e: "HR Analytics",descripti,
   o: n: "Workforce insights, predictive analytics, and reporting"
       ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   ]
   const useCases = [
@@ -145,7 +149,7 @@ export default function AIHRPlatform() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+      <SEO;
         title="AI HR Platform - Zion Tech Group"
         description="Transform your human resources with AI-powered recruitment, talent management, and employee experience solutions. Optimize your workforce with intelligent HR automation."
       />
@@ -156,7 +160,7 @@ export default function AIHRPlatform() {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -175,20 +179,20 @@ export default function AIHRPlatform() {
 
             <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-              Transform HR with
+              Transform HR with;
               <span className="bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
-                {" "}AI-Powered Intelligence
+                {" "}AI-Powered Intelligence;
               </span>
             </h1>
 
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your human resources with intelligent automation, AI-powered
+              Revolutionize your human resources with intelligent automation, AI-powered;
               recruitment, and data-driven insights that optimize your entire workforce.
             </p>
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -200,9 +204,9 @@ export default function AIHRPlatform() {
   hove: r:to-indigo-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -212,7 +216,7 @@ export default function AIHRPlatform() {
                 className="className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg,
   hove: r:bg-blue-400/10 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -223,7 +227,7 @@ export default function AIHRPlatform() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -237,10 +241,10 @@ export default function AIHRPlatform() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Advanced HR Features
+              Advanced HR Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered HR platform combines cutting-edge artificial intelligence
+              Our AI-powered HR platform combines cutting-edge artificial intelligence;
               with proven human resources methodologies to deliver exceptional results.
             </p>
           </motion.div>
@@ -249,7 +253,7 @@ export default function AIHRPlatform() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -282,7 +286,7 @@ export default function AIHRPlatform() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -296,10 +300,10 @@ export default function AIHRPlatform() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Measurable HR Impact
+              Measurable HR Impact;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See real results with our AI-powered HR solutions that deliver quantifiable
+              See real results with our AI-powered HR solutions that deliver quantifiable;
               improvements across all aspects of your human resources operations.
             </p>
           </motion.div>
@@ -310,7 +314,7 @@ export default function AIHRPlatform() {
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -365,7 +369,7 @@ export default function AIHRPlatform() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -379,10 +383,10 @@ export default function AIHRPlatform() {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Comprehensive HR Modules
+              Comprehensive HR Modules;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform provides end-to-end HR functionality, covering every aspect
+              Our AI platform provides end-to-end HR functionality, covering every aspect;
               of the employee lifecycle and HR operations.
             </p>
           </motion.div>
@@ -391,7 +395,7 @@ export default function AIHRPlatform() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {hrModules.map((module, index) => (
-  <motion.div
+  <motion.div;
                 key={module.module},
   }
                 initial={ opaci,
@@ -424,7 +428,7 @@ export default function AIHRPlatform() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -438,10 +442,10 @@ export default function AIHRPlatform() {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered HR solutions are designed to work across industries, providing
+              Our AI-powered HR solutions are designed to work across industries, providing;
               tailored HR strategies for your specific workforce needs.
             </p>
           </motion.div>
@@ -450,7 +454,7 @@ export default function AIHRPlatform() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.industry},
   }
                 initial={ opaci,
@@ -483,7 +487,7 @@ export default function AIHRPlatform() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -500,12 +504,12 @@ export default function AIHRPlatform() {
               Ready to Transform Your HR?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of organizations that have already revolutionized their human
+              Join hundreds of organizations that have already revolutionized their human;
               resources with our AI-powered HR platform.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -517,9 +521,9 @@ export default function AIHRPlatform() {
   hove: r:to-indigo-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -529,7 +533,7 @@ export default function AIHRPlatform() {
                 className="className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg,
   hove: r: bg-blue-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>

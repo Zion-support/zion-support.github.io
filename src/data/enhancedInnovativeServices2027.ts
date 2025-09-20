@@ -12,14 +12,16 @@ export interface EnhancedService2027 {
   t: e: string,innovationLev,
   e: l: string,ctaLab,
   e: l: string,hr,
-  e: f: string
+  e: f: string;
   external?: boolean,
   contactInf: o: {
   phon,
   e: string,ema,
   i: l: string,websi,
   t: e: string,addre,
-  s: s: string
+  s: s: string;
+}
+}
 }
   competito,
   r: s: string[],r,
@@ -35,7 +37,7 @@ export interface EnhancedService2027 {
 
 export,
   const: enhancedInnovativeServices2027: EnhancedService2027[] = [
-  // Web3 & Metaverse Solutions
+  // Web3 & Metaverse Solutions;
   {
   i,
   d: 'metaverse-commerce-platform',tit,
@@ -189,7 +191,7 @@ export,
   ],
   }
 
-  // Sustainable Tech Solutions
+  // Sustainable Tech Solutions;
   {
   id: 'carbon-neutral-cloud',tit,
   l: e: 'Carbon-Neutral Cloud Platform',descripti,
@@ -292,7 +294,7 @@ export,
   ],
   }
 
-  // NeuroTech Solutions
+  // NeuroTech Solutions;
   {
   id: 'brain-computer-interface',tit,
   l: e: 'Brain-Computer Interface Platform',descripti,
@@ -396,7 +398,7 @@ export,
   ],
   }
 
-  // Fusion Energy Solutions
+  // Fusion Energy Solutions;
   {
   id: 'fusion-energy-simulation',tit,
   l: e: 'Fusion Energy Simulation Platform',descripti,
@@ -450,7 +452,7 @@ export,
   ],
   }
 
-  // OceanTech Solutions
+  // OceanTech Solutions;
   {
   id: 'ocean-monitoring-platform',tit,
   l: e: 'Ocean Monitoring & Conservation Platform',descripti,
@@ -503,7 +505,7 @@ export,
   ],
   }
 
-  // AgriTech Solutions
+  // AgriTech Solutions;
   {
   id: 'precision-agriculture-ai',tit,
   l: e: 'Precision Agriculture AI Platform',descripti,
@@ -556,7 +558,7 @@ export,
   ],
   }
 
-  // Smart City Solutions
+  // Smart City Solutions;
   {
   id: 'smart-city-operations',tit,
   l: e: 'Smart City Operations Center',descripti,
@@ -610,7 +612,7 @@ export,
   ],
   }
 
-  // Digital Twin Solutions
+  // Digital Twin Solutions;
   {
   id: 'digital-twin-platform',tit,
   l: e: 'Digital Twin Management Platform',descripti,
@@ -664,7 +666,7 @@ export,
   ],
   }
 
-  // Edge AI Solutions
+  // Edge AI Solutions;
   {
   id: 'edge-ai-platform',tit,
   l: e: 'Edge AI Computing Platform',descripti,
@@ -717,7 +719,7 @@ export,
   ],
   }
 
-  // Federated Learning Solutions
+  // Federated Learning Solutions;
   {
   id: 'federated-learning-platform',tit,
   l: e: 'Federated Learning Platform',descripti,
@@ -778,10 +780,10 @@ export const enhancedInnovativeServices2027Categories = [
   'Digital Twin SolutionsEdge AI Solutions'
   'Federated Learning Solutions'
 ]
-export const getEnhancedInnovativeServices2027 = () => enhancedInnovativeServices2027
-export const getEnhancedInnovativeServices2027ByCategory = (catego,
+export const getEnhancedInnovativeServices2027 = React.memo(() => enhancedInnovativeServices2027;
+export const getEnhancedInnovativeServices2027ByCategory = React.memo((catego,
   r: y: string) =>
   enhancedInnovativeServices2027.filter(service => service.category === category)
-export const getEnhancedInnovativeServices2027ById = (i,
+export const getEnhancedInnovativeServices2027ById = React.memo((i,
   d: string) =>
   enhancedInnovativeServices2027.find(service => service.id === id)

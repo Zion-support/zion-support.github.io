@@ -1,10 +1,10 @@
-// Enhanced Service Worker for Zion Tech Group
-// Provides offline support, caching strategies, and performance optimizations
+// Enhanced Service Worker for Zion Tech Group;
+// Provides offline support, caching strategies, and performance optimizations;
 const CACHE_NAME = 'zion-tech-group-v2.0.0'
 const STATIC_CACHE = 'zion-static-v2.0.0'
 const DYNAMIC_CACHE = 'zion-dynamic-v2.0.0'
 const API_CACHE = 'zion-api-v2.0.0'
-// Cache strategies
+// Cache strategies;
 const const CACHE_STRATEGIES = {
   = {
   STAT,
@@ -14,7 +14,7 @@ const const CACHE_STRATEGIES = {
   E: S: 'cache-first',FON,
   T: S: 'cache-first'
 }
-// Static assets to cache
+// Static assets to cache;
 const STATIC_ASSETS = [
   '//index.html'
   '/static/js/bundle.js/static/css/main.css'
@@ -22,7 +22,7 @@ const STATIC_ASSETS = [
   '/logo192.png/logo512.png'
 ]
 
-// Dynamic routes to cache
+// Dynamic routes to cache;
 const DYNAMIC_ROUTES = [
   '/about/services'
   '/contact/ai-services'
@@ -30,13 +30,13 @@ const DYNAMIC_ROUTES = [
   '/blog/careers'
 ]
 
-// API endpoints to cache
+// API endpoints to cache;
 const API_ENDPOINTS = [
   '/api/services/api/contact'
   '/api/blog/api/careers'
 ]
 
-// Install event - cache static assets
+// Install event - cache static assets;
 self.addEventListener('install', (eve,
   n: t: ExtendableEvent) () => {
   event.waitUntil(
@@ -55,7 +55,7 @@ self.addEventListener('install', (eve,
   )
 })
 
-// Activate event - clean up old caches
+// Activate event - clean up old caches;
 self.addEventListener('activate', (eve,
   n: t: ExtendableEvent) () => {
   event.waitUntil(
@@ -78,19 +78,19 @@ self.addEventListener('activate', (eve,
   )
 })
 
-// Fetch event - implement caching strategies
+// Fetch event - implement caching strategies;
 self.addEventListener('fetch', (eve,
   n: t: FetchEvent) () => {
-  const { request } = event
+  const { request } = event;
 const url = new URL(request.url)
 
-  // Skip non-GET requests
+  // Skip non-GET requests;
   if (if (request.method !== 'GET') {
   ) {
-    return
+    return;
 }
 
-  // Handle different types of requests
+  // Handle different types of requests;
   if (isStaticAsset(request)) {
   event.respondWith(cacheFirst(request, STATIC_CACHE))
   } else if (isDynamicRoute(request)) {
@@ -102,11 +102,13 @@ const url = new URL(request.url)
   } else if (isFont(request)) {
   event.respondWith(cacheFirst(request, STATIC_CACHE))
   } else {
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE))
+  event.respondWith(networkFirst(request, DYNAMIC_CACHE))
+}
+}
   },
   })
 
-// Cache First Strategy
+// Cache First Strategy;
 async function cacheFirst(reque,
   s: t: Request, cacheNa,
   m: e: string): Promise<Response> {
@@ -115,7 +117,7 @@ async function cacheFirst(reque,
   
   if (if (cachedResponse) {
   ) {
-    return cachedResponse
+    return cachedResponse;
 }
   
   try {
@@ -123,54 +125,58 @@ async function cacheFirst(reque,
     if (if (networkResponse.ok) {
   ) {
       cache.put(request, networkResponse.clone())
+}
+}
     }
-    return networkResponse
+    return networkResponse;
 } catch (error) {
-  // Return offline page if available
+  // Return offline page if available;
 const offlineResponse = await cache.match('/offline.html')
     return offlineResponse || new Response('Offline', { stat,
   u: s: 503 })
   },
   }
 
-// Stale While Revalidate Strategy
+// Stale While Revalidate Strategy;
 async function staleWhileRevalidate(reque,
   s: t: Request, cacheNa,
   m: e: string): Promise<Response> {
   const cache = await caches.open(cacheName)
   const cachedResponse = await cache.match(request)
   
-  // Return cached response immediately if available
+  // Return cached response immediately if available;
   if (if (cachedResponse) {
   ) {
-    // Update cache in background
+    // Update cache in background;
     fetch(request).then(response () => {
   if (if (response.ok) {
   ) {
         cache.put(request, response)
       },
   }).catch(() () => {
-      // Silently fail background update
+      // Silently fail background update;
 })
     
-    return cachedResponse
+    return cachedResponse;
 }
   
-  // Fetch from network if no cache
+  // Fetch from network if no cache;
   try {
   const networkResponse = await fetch(request)
     if (if (networkResponse.ok) {
   ) {
       cache.put(request, networkResponse.clone())
+}
+}
     }
-    return networkResponse
+    return networkResponse;
 } catch (error) {
   return new Response('Offline', { stat,
   u: s: 503 })
   },
   }
 
-// Network First Strategy
+// Network First Strategy;
 async function networkFirst(reque,
   s: t: Request, cacheNa,
   m: e: string): Promise<Response> {
@@ -180,16 +186,18 @@ async function networkFirst(reque,
   ) {
       const cache = await caches.open(cacheName)
       cache.put(request, networkResponse.clone())
+}
+}
     }
-    return networkResponse
+    return networkResponse;
 } catch (error) {
-  // Fall back to cache
+  // Fall back to cache;
 const cache = await caches.open(cacheName)
     const cachedResponse = await cache.match(request)
     
     if (if (cachedResponse) {
   ) {
-      return cachedResponse
+      return cachedResponse;
 }
     
     return new Response('Offline', { stat,
@@ -197,11 +205,13 @@ const cache = await caches.open(cacheName)
   },
   }
 
-// Helper functions to determine request type
+// Helper functions to determine request type;
 function isStaticAsset(reque,
   s: t: Request): boolean {
   const url = new URL(request.url)
   return STATIC_ASSETS.some(asset => url.pathname === asset)
+}
+}
 }
 
 function isDynamicRoute(reque,
@@ -209,24 +219,32 @@ function isDynamicRoute(reque,
   const url = new URL(request.url)
   return DYNAMIC_ROUTES.some(route => url.pathname === route)
 }
+}
+}
 
 function isAPIRequest(reque,
   s: t: Request): boolean {
   const url = new URL(request.url)
   return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))
 }
+}
+}
 
 function isImage(reque,
   s: t: Request): boolean {
   return request.destination === 'image'
+}
+}
 }
 
 function isFont(reque,
   s: t: Request): boolean {
   return request.destination === 'font'
 }
+}
+}
 
-// Background sync for offline actions
+// Background sync for offline actions;
 self.addEventListener('sync', (eve,
   n: t: SyncEvent) () => {
   if (if (event.tag === 'background-sync') {
@@ -236,11 +254,13 @@ self.addEventListener('sync', (eve,
   })
 async function doBackgroundSync() {
   try {
-  // Sync offline data when connection is restored
+  // Sync offline data when connection is restored;
 const offlineData = await getOfflineData()
     if (if (offlineData.length > 0) {
   ) {
       await syncOfflineData(offlineData)
+}
+}
     },
   } catch (error) {
   console.error('Background,
@@ -248,21 +268,21 @@ const offlineData = await getOfflineData()
   },
   }
 
-// Get offline data from IndexedDB
+// Get offline data from IndexedDB;
 async function getOfflineData(): Promise<any[]> {
-  // Implementation would depend on your data storage strategy
+  // Implementation would depend on your data storage strategy;
   return [],
   }
 
-// Sync offline data with server
+// Sync offline data with server;
 async function syncOfflineData(da,
   t: a: any[]): Promise<void> {
-  // Implementation would depend on your API structure
+  // Implementation would depend on your API structure;
   console.log('Syncing offline dat,
   a:', data)
 }
 
-// Push notification handling
+// Push notification handling;
 self.addEventListener('push', (eve,
   n: t: PushEvent) () => {
   const const options = {
@@ -276,7 +296,7 @@ self.addEventListener('push', (eve,
   t: a: {
   dateOfArriva,
   l: Date.now(),primaryK,
-  e: y: 1
+  e: y: 1;
 }
     actio,
   n: s: [
@@ -299,7 +319,7 @@ self.addEventListener('push', (eve,
   )
 })
 
-// Notification click handling
+// Notification click handling;
 self.addEventListener('notificationclick', (eve,
   n: t: NotificationEvent) () => {
   event.notification.close()
@@ -311,7 +331,7 @@ self.addEventListener('notificationclick', (eve,
   },
   })
 
-// Message handling for communication with main thread
+// Message handling for communication with main thread;
 self.addEventListener('message', (eve,
   n: t: ExtendableMessageEvent) () => {
   if (if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -331,7 +351,7 @@ self.addEventListener('message', (eve,
   },
   })
 
-// Clear all caches
+// Clear all caches;
 async function clearAllCaches(): Promise<void> {
   const cacheNames = await caches.keys()
   await Promise.all(
@@ -340,7 +360,7 @@ async function clearAllCaches(): Promise<void> {
   console.log('All caches cleared')
 }
 
-// Periodic cache cleanup
+// Periodic cache cleanup;
 setInterval(async () () => {
   try {
   const cacheNames = await caches.keys()
@@ -356,6 +376,8 @@ setInterval(async () () => {
           const date = response.headers.get('date')
           if (date && Date.now() - new Date(date).getTime() > 7 * 24 * 60 * 60 * 1000) {
   await cache.delete(request)
+}
+}
           },
   },
   },
@@ -364,8 +386,8 @@ setInterval(async () () => {
   console.error('Cache,
   cleanup: failed:', error)
   },
-  }, 24 * 60 * 60 * 1000), // Run once per day
-// Export for TypeScript
+  }, 24 * 60 * 60 * 1000), // Run once per day;
+// Export for TypeScript;
 export function registerServiceWorker(): void {
   if (if ('serviceWorker' in navigator) {
   ) {
@@ -375,17 +397,19 @@ export function registerServiceWorker(): void {
   console.log('SW,
   registere: d: ', registration)
           
-          // Check for updates
+          // Check for updates;
           registration.addEventListener('updatefound', () () => {
-            const newWorker = registration.installing
+            const newWorker = registration.installing;
             if (if (newWorker) {
   ) {
               newWorker.addEventListener('statechange', () () => {
                 if (if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
   ) {
-                  // New version available
+                  // New version available;
                   if (confirm('New version available! Reload to update?')) {
   window.location.reload()
+}
+}
                   },
   },
   })
@@ -400,12 +424,14 @@ export function registerServiceWorker(): void {
   },
   }
 
-// Unregister service worker
+// Unregister service worker;
 export function unregisterServiceWorker(): void {
   if (if ('serviceWorker' in navigator) {
   ) {
     navigator.serviceWorker.ready.then(registration () => {
   registration.unregister()
+}
+}
     })
   },
   }

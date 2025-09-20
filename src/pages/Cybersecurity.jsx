@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from "lucide-react"
+import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3   } from "lucide-react";
 const Cybersecurity = () () => {
     const securityServices = [
   {
@@ -97,7 +97,7 @@ const Cybersecurity = () () => {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl m,
   d:text-6xl font-bold text-white mb-6">
-              Cybersecurity for the
+              Cybersecurity for the;
               <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"> Digital Age</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -111,11 +111,11 @@ const Cybersecurity = () () => {
   hove: r:to-orange-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl,
   transform: hover:scale-105">
-                Security Assessment
+                Security Assessment;
               </button>
               <button className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -130,10 +130,10 @@ const Cybersecurity = () () => {
   g:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Security Services
+              Comprehensive Security Services;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our cybersecurity portfolio covers all aspects of digital security, providing comprehensive 
+              Our cybersecurity portfolio covers all aspects of digital security, providing comprehensive;
               protection for your organization's most valuable assets.
             </p>
           </div>
@@ -160,7 +160,7 @@ const Cybersecurity = () () => {
                   <button className="w-full py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg,
   hove: r: from-red-700 hove,
   r:to-orange-700 transition-all duration-300">
-                    Learn More
+                    Learn More;
                   </button>
                 </div>
               </div>))}
@@ -235,10 +235,10 @@ const Cybersecurity = () () => {
   g:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Compliance & Regulatory Excellence
+                Compliance & Regulatory Excellence;
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Stay compliant with industry standards and regulations through our automated compliance 
+                Stay compliant with industry standards and regulations through our automated compliance;
                 management solutions. From SOC2 to GDPR, we ensure your organization meets all requirements.
               </p>
               <div className="space-y-4">
@@ -300,7 +300,7 @@ const Cybersecurity = () () => {
             Ready to Secure Your Digital Future?
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-            Don't wait for a security breach. Protect your organization with our comprehensive 
+            Don't wait for a security breach. Protect your organization with our comprehensive;
             cybersecurity solutions today.
           </p>
           <div className="flex flex-col,
@@ -309,15 +309,15 @@ const Cybersecurity = () () => {
   hove: r:bg-gray-100 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl,
   transform: hover:scale-105">
-              Security Assessment
+              Security Assessment;
             </button>
             <button className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-              Download Security Guide
+              Download Security Guide;
             </button>
           </div>
         </div>
       </section>
     </div>)
 }
-export default Cybersecurity
+export default Cybersecurity;

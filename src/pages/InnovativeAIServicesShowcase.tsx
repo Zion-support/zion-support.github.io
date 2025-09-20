@@ -1,11 +1,13 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
   Zap, Sparkles, TrendingUp, Route, Users, PenTool,
-  CheckCircle, ArrowRight, ExternalLink, Phone, Mail
-  BarChart3, Shield, Briefcase, Package, Target
-} from "lucide-react"
+  CheckCircle, ArrowRight, ExternalLink, Phone, Mail;
+  BarChart3, Shield, Briefcase, Package, Target;
+}
+}
+ } from "lucide-react";
 import SEO from "@/components/SEO"
 export default function InnovativeAIServicesShowcase() {
   const services = [
@@ -120,7 +122,7 @@ export default function InnovativeAIServicesShowcase() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="Innovative AI Services Showcase - Zion Tech Group"
         description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
       />
@@ -130,7 +132,7 @@ export default function InnovativeAIServicesShowcase() {
       <section className="relative py-20,
   s: m: py-24">
         <div className="container mx-auto px-4 text-center">
-          <motion.div 
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -143,10 +145,10 @@ export default function InnovativeAIServicesShowcase() {
             className="className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold mb-6";"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            Innovative AI-Powered Solutions
+            Innovative AI-Powered Solutions;
           </motion.div>
           
-          <motion.h1 
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -160,13 +162,13 @@ export default function InnovativeAIServicesShowcase() {
             className="className="text-4xl,
   s: m: text-6xl font-extrabold tracking-tight mb-6";"
           >
-            AI Services That
+            AI Services That;
             <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Transform Business
+              Transform Business;
             </span>
           </motion.h1>
           
-          <motion.p 
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -179,7 +181,7 @@ export default function InnovativeAIServicesShowcase() {
   }
             className="className="text-xl text-slate-300 max-w-3xl mx-auto mb-8";"
           >
-            Discover our comprehensive suite of AI-powered micro SaaS solutions designed to revolutionize 
+            Discover our comprehensive suite of AI-powered micro SaaS solutions designed to revolutionize;
             how businesses operate, scale, and succeed in the digital age.
           </motion.p>
         </div>
@@ -193,7 +195,7 @@ export default function InnovativeAIServicesShowcase() {
   m: d: grid-cols-2 l,
   g:grid-cols-3">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -259,7 +261,7 @@ export default function InnovativeAIServicesShowcase() {
                   <div className="text-lg font-bold text-white">{service.pricing.starter}</div>
                 </div>
                 
-                <Link 
+                <Link;
                   to={service.route},
   }
                   className="className="inline-flex items-center text-cyan-400,
@@ -318,27 +320,27 @@ export default function InnovativeAIServicesShowcase() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of organizations already using our AI-powered solutions to drive growth
+            Join hundreds of organizations already using our AI-powered solutions to drive growth;
             efficiency, and competitive advantage.
           </p>
           
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center mb-8">
-            <a 
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold,
   hove: r:bg-cyan-50 transition-colors";"
             >
-              Start Free Trial
+              Start Free Trial;
             </a>
-            <a 
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="px-8 py-4 border border-white/30 text-white rounded-lg,
   hove: r:bg-white/10 transition-colors";"
             >
-              Call Us
+              Call Us;
             </a>
           </div>
           
@@ -359,10 +361,10 @@ export default function InnovativeAIServicesShowcase() {
           <div className="bg-slate-900/40 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-6">Visit Our Website</h3>
             <p className="text-slate-300 mb-6">
-              Learn more about our complete suite of AI-powered business solutions and discover 
+              Learn more about our complete suite of AI-powered business solutions and discover;
               how we can help transform your organization.
             </p>
-            <a 
+            <a;
               href="htt,
   p: s: //ziontechgroup.com" 
               target="_blank" 

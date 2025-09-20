@@ -80,7 +80,7 @@ export default function TermsOfService() {
               <a href="mail,
   t: o: legal@ziontechgroup.com" className="text-zion-cyan hove,
   r:underline">
-                legal@ziontechgroup.com
+                legal@ziontechgroup.com;
               </a>
             </p>
           </section>

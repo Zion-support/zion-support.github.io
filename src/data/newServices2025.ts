@@ -2,8 +2,8 @@ export interface NewService {
   id: string,tit,
   l: e: string,descripti,
   o: n: string,catego,
-  r: y: string
-  subcategory?: string
+  r: y: string;
+  subcategory?: string;
   pric,
   e: number,curren,
   c: y: string,pricingMod,
@@ -11,7 +11,9 @@ export interface NewService {
   e: s: string[],benefi,
   t: s: string[],ta,
   g: s: string[],marketPri,
-  c: e: string
+  c: e: string;
+}
+}
 }
 
 export,

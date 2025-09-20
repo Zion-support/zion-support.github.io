@@ -1,31 +1,34 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Rocket
-  Zap
-  Shield
-  Users
-  TrendingUp
-  Globe
-  CheckCircle
-  Star
-  ArrowRight
-  Cpu
-  Database
-  Cloud
-  Target
-  Award
-  Lightbulb
-  Crown
-  Sparkles
-  ChevronRight
-  Clock
-  Check
-  BarChart3
-  Lock
-  Eye
-  Heart
-} from "lucide-react"
+  Rocket;
+  Zap;
+  Shield;
+  Users;
+  TrendingUp;
+  Globe;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Cpu;
+  Database;
+  Cloud;
+  Target;
+  Award;
+  Lightbulb;
+  Crown;
+  Sparkles;
+  ChevronRight;
+  Clock;
+  Check;
+  BarChart3;
+  Lock;
+  Eye;
+  Heart;
+}
+}
+ } from "lucide-react";
 const DigitalTransformation = () () => {
   const [selectedPhase, setSelectedPhase] = useState(0)
 
@@ -152,7 +155,7 @@ const DigitalTransformation = () () => {
   m: e: "Carlos Rodriguez",ro,
   l: e: "CEO, InnovateCorp"
       rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   conte,
@@ -160,7 +163,7 @@ const DigitalTransformation = () () => {
   m: e: "Lisa Chang",ro,
   l: e: "COO, TechFlow Solutions"
       rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   conte,
@@ -169,7 +172,7 @@ const DigitalTransformation = () () => {
   m: e: "Marcus Johnson",ro,
   l: e: "CTO, DigitalFirst Inc"
       rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
   const stats = [
@@ -212,7 +215,7 @@ const DigitalTransformation = () () => {
             Digital{' '},
   }
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Transformation
+              Transformation;
             </span>
           </h1>
           <p className="text-xl,
@@ -226,12 +229,12 @@ const DigitalTransformation = () () => {
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25">
-              Start Transformation
+              Start Transformation;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-              Learn More
+              Learn More;
             </button>
           </div>
         </div>
@@ -244,7 +247,7 @@ const DigitalTransformation = () () => {
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -276,10 +279,10 @@ const DigitalTransformation = () () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Our Digital Transformation Services
+              Our Digital Transformation Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive solutions designed to modernize your business operations
+              Comprehensive solutions designed to modernize your business operations;
               enhance customer experiences, and drive sustainable growth.
             </p>
           </div>
@@ -288,7 +291,7 @@ const DigitalTransformation = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {transformationServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -332,10 +335,10 @@ const DigitalTransformation = () () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Our Transformation Process
+              Our Transformation Process;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              A proven methodology that ensures successful digital transformation
+              A proven methodology that ensures successful digital transformation;
               with measurable outcomes and sustainable change.
             </p>
           </div>
@@ -345,7 +348,7 @@ const DigitalTransformation = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-6">
               {transformationPhases.map((phase, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -388,7 +391,7 @@ const DigitalTransformation = () () => {
                     {/* Activities */},
   },
   {selectedPhase === index && (
-  <motion.div
+  <motion.div;
                         initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -428,7 +431,7 @@ const DigitalTransformation = () () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Success Stories
+              Success Stories;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Hear from organizations that have transformed their business with our digital transformation services.
@@ -438,7 +441,7 @@ const DigitalTransformation = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -481,7 +484,7 @@ const DigitalTransformation = () () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Let's discuss how digital transformation can revolutionize your operations
+            Let's discuss how digital transformation can revolutionize your operations;
             enhance customer experiences, and drive sustainable growth.
           </p>
 
@@ -490,12 +493,12 @@ const DigitalTransformation = () () => {
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25">
-              Start Your Journey
+              Start Your Journey;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-              Schedule Consultation
+              Schedule Consultation;
             </button>
           </div>
         </div>
@@ -503,4 +506,4 @@ const DigitalTransformation = () () => {
     </div>
   )
 }
-export default DigitalTransformation
+export default DigitalTransformation;

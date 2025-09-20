@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from "lucide-react"
+import { Link   } from "react-router-dom";
+import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2   } from "lucide-react";
 const Tutorials = () () => {
   const tutorialCategories = [
   {
@@ -187,12 +187,12 @@ const Tutorials = () () => {
             Interactive{' '},
   }
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Tutorials
+              Tutorials;
             </span>
           </h1>
           <p className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Master cutting-edge technologies with our comprehensive tutorials
+            Master cutting-edge technologies with our comprehensive tutorials;
             hands-on projects, and expert-led learning paths.
           </p>
 
@@ -201,12 +201,12 @@ const Tutorials = () () => {
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25">
-              Start Learning
+              Start Learning;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-              Browse Tutorials
+              Browse Tutorials;
             </button>
           </div>
         </div>
@@ -219,10 +219,10 @@ const Tutorials = () () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Featured Tutorials
+              Featured Tutorials;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Start your learning journey with our most popular and highly-rated tutorials
+              Start your learning journey with our most popular and highly-rated tutorials;
               covering the latest in AI, cybersecurity, and emerging technologies.
             </p>
           </div>
@@ -231,7 +231,7 @@ const Tutorials = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {featuredTutorials.map((tutorial, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden,
@@ -283,7 +283,7 @@ const Tutorials = () () => {
                     </div>
                     <div className="flex items-center text-zion-slate-light text-sm">
                       <Users className="w-4 h-4 mr-2" />
-                      {tutorial.students} students
+                      {tutorial.students} students;
                     </div>
                   </div>
 
@@ -297,7 +297,7 @@ const Tutorials = () () => {
                     </div>
                     <button className="text-zion-cyan,
   hove: r:text-white transition-colors duration-300">
-                      Start Learning
+                      Start Learning;
                     </button>
                   </div>
                 </div>
@@ -314,10 +314,10 @@ const Tutorials = () () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Learning Paths
+              Learning Paths;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Follow structured learning paths designed to take you from beginner
+              Follow structured learning paths designed to take you from beginner;
               to expert in your chosen technology domain.
             </p>
           </div>
@@ -325,7 +325,7 @@ const Tutorials = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {learningPaths.map((path, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 text-center,
@@ -341,7 +341,7 @@ const Tutorials = () () => {
                 <div className="space-y-2 mb-6 text-zion-slate-light">
                   <div className="flex items-center justify-center gap-2">
                     <BookOpen className="w-4 h-4" />
-                    {path.courses} courses
+                    {path.courses} courses;
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Clock className="w-4 h-4" />
@@ -357,7 +357,7 @@ const Tutorials = () () => {
 
                 <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 rounded-lg font-semibold,
   hove: r:scale-105 transition-all duration-300">
-                  Start Path
+                  Start Path;
                 </button>
               </div>
             ))}
@@ -374,7 +374,7 @@ const Tutorials = () () => {
             Ready to Start Learning?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Join thousands of learners who are already mastering cutting-edge technologies
+            Join thousands of learners who are already mastering cutting-edge technologies;
             with our comprehensive tutorial library and expert-led courses.
           </p>
 
@@ -383,12 +383,12 @@ const Tutorials = () () => {
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25">
-              Get Started Today
+              Get Started Today;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-              Contact Us
+              Contact Us;
             </button>
           </div>
         </div>
@@ -397,4 +397,4 @@ const Tutorials = () () => {
   )
 }
 
-export default Tutorials
+export default Tutorials;

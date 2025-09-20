@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp     } from "lucide-react";
 export default function HealthcareSolutions() {
   const solutions = [
   {
@@ -88,11 +88,11 @@ export default function HealthcareSolutions() {
           <div className="text-center">
             <h1 className="text-4xl,
   m: d:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-              Healthcare Solutions
+              Healthcare Solutions;
             </h1>
             <p className="text-xl,
   m: d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionizing healthcare delivery with AI-powered solutions that improve patient outcomes and operational efficiency
+              Revolutionizing healthcare delivery with AI-powered solutions that improve patient outcomes and operational efficiency;
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
@@ -100,11 +100,11 @@ export default function HealthcareSolutions() {
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300,
   transform: hover:scale-105">
-                Get Healthcare Quote
+                Get Healthcare Quote;
               </Link>
               <Link to="/services/ai-autonomous-systems" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/20 transition-all duration-300">
-                Explore AI Solutions
+                Explore AI Solutions;
               </Link>
             </div>
           </div>
@@ -128,10 +128,10 @@ export default function HealthcareSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-              Comprehensive Healthcare Solutions
+              Comprehensive Healthcare Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From patient care to operational efficiency, we provide end-to-end healthcare technology solutions
+              From patient care to operational efficiency, we provide end-to-end healthcare technology solutions;
             </p>
           </div>
 
@@ -139,7 +139,7 @@ export default function HealthcareSolutions() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {solutions.map((solution, index) () => {
-  const Icon = solution.icon
+  const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8,
   hove: r: border-cyan-500/50 transition-all duration-300,
   hove: r:transform hove,
@@ -171,10 +171,10 @@ export default function HealthcareSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Healthcare Transformation Benefits
+              Healthcare Transformation Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Measurable improvements in patient care and operational efficiency
+              Measurable improvements in patient care and operational efficiency;
             </p>
           </div>
 
@@ -200,10 +200,10 @@ export default function HealthcareSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Healthcare Success Stories
+              Healthcare Success Stories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real results from healthcare organizations using our solutions
+              Real results from healthcare organizations using our solutions;
             </p>
           </div>
 
@@ -234,7 +234,7 @@ export default function HealthcareSolutions() {
                 </div>
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400,
   hove: r:text-cyan-300 transition-colors duration-300">
-                  Read Full Case Study
+                  Read Full Case Study;
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
               </div>))}
@@ -253,7 +253,7 @@ export default function HealthcareSolutions() {
             Ready to Transform Healthcare?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our healthcare solutions can improve patient outcomes and operational efficiency
+            Let's discuss how our healthcare solutions can improve patient outcomes and operational efficiency;
           </p>
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
@@ -261,11 +261,11 @@ export default function HealthcareSolutions() {
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300,
   transform: hover:scale-105">
-              Schedule Consultation
+              Schedule Consultation;
             </Link>
             <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/20 transition-all duration-300">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>

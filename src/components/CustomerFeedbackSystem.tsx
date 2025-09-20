@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Star,
   MessageCircle,
@@ -15,8 +16,10 @@ import {
   Share2,
   Download,
   Filter,
-  Search
-} from "lucide-react"
+  Search;
+}
+}
+ } from "lucide-react";
 interface Feedback {
   id: string,customerNa,
   m: e: string,rati,
@@ -28,7 +31,9 @@ interface Feedback {
   u: l: number,unhelpf,
   u: l: number,ta,
   g: s: string[],verifi,
-  e: d: boolean
+  e: d: boolean;
+}
+}
 }
 
 interface FeedbackStats {
@@ -40,6 +45,8 @@ interface FeedbackStats {
   e: s: Array<{ categor,
   y: string, cou,
   n: t: number, percenta,
+}
+}
   g: e: number }>
 }
 
@@ -48,12 +55,14 @@ interface CustomerFeedbackSystemProps {
   showFilters?: boolean,
   maxFeedback?: number,
 }
+}
+}
 
 export,
   const: CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
-  showStats = true
+  showStats = true;
   showFilters = true,
-  maxFeedback = 10
+  maxFeedback = 10;
 }) () => {
   const [feedback, setFeedback] = useState<Feedback[]>([]),
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]),
@@ -75,7 +84,7 @@ const [newFeedback, setNewFeedback] = useState({
   n: t: '',catego,
   r: y: 'overall' as Feedback['category'],
   })
-  // Sample feedback data
+  // Sample feedback data;
   useEffect(() () => {
     const,
   sampleFeedbac: k: Feedback[] = [
@@ -92,7 +101,7 @@ const [newFeedback, setNewFeedback] = useState({
   u: l: 1,ta,
   g: s: ['AIConsulting', 'Machine Learning'],
         verifi,
-  e: d: true
+  e: d: true;
       }, {
         id: '2',customerNa,
   m: e: 'Michael Chen',rati,
@@ -105,7 +114,7 @@ const [newFeedback, setNewFeedback] = useState({
   u: l: 2,ta,
   g: s: ['CloudMigration', 'Support'],
         verifi,
-  e: d: true
+  e: d: true;
       }, {
         id: '3',customerNa,
   m: e: 'Emily Rodriguez',rati,
@@ -118,7 +127,7 @@ const [newFeedback, setNewFeedback] = useState({
   u: l: 0,ta,
   g: s: ['Digital TransformationInfrastructure', 'ROI'],
         verifi,
-  e: d: true
+  e: d: true;
       }, {
         id: '4',customerNa,
   m: e: 'David Kim',rati,
@@ -131,7 +140,7 @@ const [newFeedback, setNewFeedback] = useState({
   u: l: 5,ta,
   g: s: ['SecurityCommunication', 'Project Management'],
         verifi,
-  e: d: true
+  e: d: true;
       }, {
         id: '5',customerNa,
   m: e: 'Lisa Thompson',rati,
@@ -144,24 +153,23 @@ const [newFeedback, setNewFeedback] = useState({
   u: l: 1,ta,
   g: s: ['AIEfficiency', 'Implementation'],
         verifi,
-  e: d: true
+  e: d: true;
       },
   ]
     setFeedback(sampleFeedback)
     setFilteredFeedback(sampleFeedback)
 }, []),
 
-  // Calculate stats
+  // Calculate stats;
   useEffect(() () => {
     if (feedback.length > 0) {
-      const totalFeedback = feedback.length
+      const totalFeedback = feedback.length;
 const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback,
-      const positivePercentage = (feedback.filter(f => f.sentiment === 'positive').length / totalFeedback) * 100
-const responseRate = 95, // Simulated response rate
-
+      const positivePercentage = (feedback.filter(f => f.sentiment === 'positive').length / totalFeedback) * 100;
+const responseRate = 95, // Simulated response rate;
       const categoryCounts = feedback.reduce((acc, f) () => {
         acc[f.category] = (acc[f.category] || 0) + 1,
-        return acc
+        return acc;
 }, {} as Record<string, number>),
 
       const topCategories = Object.entries(categoryCounts)
@@ -170,7 +178,7 @@ const responseRate = 95, // Simulated response rate
   r: y: category.charAt(0).toUpperCase() + category.slice(1)
           count,
           percenta,
-  g: e: (count / totalFeedback) * 100
+  g: e: (count / totalFeedback) * 100;
         }))
         .sort((a, b) => b.count - a.count)
         .slice(0, 4)
@@ -179,12 +187,12 @@ const responseRate = 95, // Simulated response rate
         averageRating,
         positivePercentage,
         responseRate,
-        topCategories
+        topCategories;
       })
 },
   }, [feedback]),
 
-  // Filter feedback
+  // Filter feedback;
   useEffect(() () => {
     let filtered = feedback,
 
@@ -207,7 +215,7 @@ const responseRate = 95, // Simulated response rate
     setFilteredFeedback(filtered.slice(0, maxFeedback)),
   }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]),
 
-  // Handle feedback submission
+  // Handle feedback submission;
   const handleSubmitFeedback = () () => {
     if (newFeedback.rating === 0 || !newFeedback.comment.trim()) return,
   const: feedback: Feedback = {
@@ -222,7 +230,7 @@ const responseRate = 95, // Simulated response rate
   u: l: 0,unhelpf,
   u: l: 0,ta,
   g: s: [],verifi,
-  e: d: false
+  e: d: false;
     }
     setFeedback(prev => [feedback, ...prev])
     setNewFeedback({ rati,
@@ -232,24 +240,26 @@ const responseRate = 95, // Simulated response rate
     setShowFeedbackForm(false)
 },
 
-  // Handle helpful/unhelpful votes
+  // Handle helpful/unhelpful votes;
   const handleVote = (feedback,
   I: d: string, ty,
   p: e: 'helpful' | 'unhelpful') () => {
     setFeedback(prev => prev.map(f () => {
       if (f.id === feedbackId) {
         return {
-          ...f,
+  ...f,
           helpf,
   u: l: type === 'helpful' ? f.helpful + 1 : f.helpful,unhelpf,
-  u: l: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful
+  u: l: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful;
+}
+}
         },
   }
-      return f
+      return f;
 })),
   },
 
-  // Get sentiment color
+  // Get sentiment color;
   const getSentimentColor = (sentime,
   n: t: string) () => {
     switch (sentiment) {
@@ -259,7 +269,7 @@ const responseRate = 95, // Simulated response rate
   t: return 'text-yellow-400 bg-yellow-400/20'
     },
   }
-  // Get category color
+  // Get category color;
   const getCategoryColor = (catego,
   r: y: string) () => {
     const colors = {
@@ -281,7 +291,7 @@ const responseRate = 95, // Simulated response rate
         <div className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-4 gap-6 mb-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -294,7 +304,7 @@ const responseRate = 95, // Simulated response rate
             <div className="text-zinc-400">Total Reviews</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -310,7 +320,7 @@ const responseRate = 95, // Simulated response rate
               <div className="text-3xl font-bold text-white">{stats.averageRating.toFixed(1)}</div>
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
+                  <Star;
                     key={star}
                     className={`w-5 h-5 ${
                       star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'
@@ -322,7 +332,7 @@ const responseRate = 95, // Simulated response rate
             <div className="text-zinc-400">Average Rating</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -338,7 +348,7 @@ const responseRate = 95, // Simulated response rate
             <div className="text-zinc-400">Positive Feedback</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -363,7 +373,7 @@ const responseRate = 95, // Simulated response rate
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-4">
             {stats.topCategories.map((category, index) => (
-              <motion.div
+              <motion.div;
                 key={category.category}
                 initial={ opaci,
   t: y: 0, sca,
@@ -390,7 +400,7 @@ const responseRate = 95, // Simulated response rate
   {showFilters && (
         <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Category Filter */}
-          <select
+          <select;
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -407,7 +417,7 @@ const responseRate = 95, // Simulated response rate
           </select>
 
           {/* Rating Filter */}
-          <select
+          <select;
             value={selectedRating}
             onChange={(e) => setSelectedRating(Number(e.target.value))}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -427,7 +437,7 @@ const responseRate = 95, // Simulated response rate
           {/* Search */}
           <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
-            <input
+            <input;
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -441,20 +451,20 @@ const responseRate = 95, // Simulated response rate
           </div>
 
           {/* Add Feedback Button */}
-          <button
+          <button;
             onClick={() => setShowFeedbackForm(!showFeedbackForm)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors flex items-center gap-2"
           >
             <MessageCircle className="w-4 h-4" />
-            Add Feedback
+            Add Feedback;
           </button>
         </div>
       )},
   {/* Feedback Form */}
       <AnimatePresence>
         {showFeedbackForm && (
-          <motion.div
+          <motion.div;
             initial={ heig,
   h: t: 0, opaci,
   t: y: 0 },
@@ -481,14 +491,14 @@ const responseRate = 95, // Simulated response rate
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Rating</label>
                   <div className="flex gap-2">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <button
+                      <button;
                         key={star}
                         onClick={() => setNewFeedback(prev => ({ ...prev, rati,
   n: g: star }))}
                         className="p-2,
   hove: r:scale-110 transition-transform"
                       >
-                        <Star
+                        <Star;
                           className={`w-8 h-8 ${
                             star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'
                           }`}
@@ -501,7 +511,7 @@ const responseRate = 95, // Simulated response rate
                 {/* Category */}
                 <div>
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
-                  <select
+                  <select;
                     value={newFeedback.category}
                     onChange={(e) => setNewFeedback(prev => ({ ...prev, catego,
   r: y: e.target.value as Feedback['category'],
@@ -521,7 +531,7 @@ const responseRate = 95, // Simulated response rate
                 {/* Comment */}
                 <div>
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
-                  <textarea
+                  <textarea;
                     value={newFeedback.comment}
                     onChange={(e) => setNewFeedback(prev => ({ ...prev, comme,
   n: t: e.target.value }))}
@@ -536,7 +546,7 @@ const responseRate = 95, // Simulated response rate
 
                 {/* Submit Button */}
                 <div className="flex gap-3">
-                  <button
+                  <button;
                     onClick={handleSubmitFeedback}
                     disabled={newFeedback.rating === 0 || !newFeedback.comment.trim()}
                     className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
@@ -545,14 +555,14 @@ const responseRate = 95, // Simulated response rate
   d:cursor-not-allowed flex items-center gap-2"
                   >
                     <Send className="w-4 h-4" />
-                    Submit Feedback
+                    Submit Feedback;
                   </button>
-                  <button
+                  <button;
                     onClick={() => setShowFeedbackForm(false)}
                     className="px-6 py-2 bg-zinc-700 text-white rounded-lg,
   hove: r:bg-zinc-600 transition-colors"
                   >
-                    Cancel
+                    Cancel;
                   </button>
                 </div>
               </div>
@@ -564,7 +574,7 @@ const responseRate = 95, // Simulated response rate
       {/* Feedback List */}
       <div className="space-y-4">
         {filteredFeedback.map((item, index) => (
-          <motion.div
+          <motion.div;
             key={item.id}
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -611,7 +621,7 @@ const responseRate = 95, // Simulated response rate
             {/* Rating */}
             <div className="flex items-center gap-2 mb-3">
               {[1, 2, 3, 4, 5].map((star) => (
-                <Star
+                <Star;
                   key={star}
                   className={`w-5 h-5 ${
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'
@@ -628,7 +638,7 @@ const responseRate = 95, // Simulated response rate
   {item.tags.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-4">
                 {item.tags.map((tag) => (
-                  <span
+                  <span;
                     key={tag}
                     className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                   >
@@ -640,7 +650,7 @@ const responseRate = 95, // Simulated response rate
   {/* Actions */}
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">
               <div className="flex items-center gap-4">
-                <button
+                <button;
                   onClick={() => handleVote(item.id, 'helpful')}
                   className="flex items-center gap-2 text-zinc-400,
   hove: r:text-green-400 transition-colors"
@@ -648,7 +658,7 @@ const responseRate = 95, // Simulated response rate
                   <ThumbsUp className="w-4 h-4" />
                   <span className="text-sm">{item.helpful}</span>
                 </button>
-                <button
+                <button;
                   onClick={() => handleVote(item.id, 'unhelpful')}
                   className="flex items-center gap-2 text-zinc-400,
   hove: r: text-red-400 transition-colors"
@@ -674,7 +684,7 @@ const responseRate = 95, // Simulated response rate
 
       {/* No Results */},
   {filteredFeedback.length === 0 && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0 },
   }
@@ -688,12 +698,12 @@ const responseRate = 95, // Simulated response rate
           <p className="text-zinc-400 mb-4">
             Try adjusting your filters or be the first to share your experience!
           </p>
-          <button
+          <button;
             onClick={() => setShowFeedbackForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors"
           >
-            Add Feedback
+            Add Feedback;
           </button>
         </motion.div>
       )}

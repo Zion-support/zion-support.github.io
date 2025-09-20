@@ -1,24 +1,28 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Workflow
+  Workflow;
   Zap,
   Brain,
   BarChart3,
   Shield,
   Users,
   Clock,
-  TrendingUp
-  CheckCircle
-  Star
-  ArrowRight
-  Play
-  Pause
-  Settings
-  Database
-  Cloud
-  Lock
-} from "lucide-react"
+  TrendingUp;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Play;
+  Pause;
+  Settings;
+  Database;
+  Cloud;
+  Lock;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AIWorkflowOrchestrato: r: React.FC = () () => {
   const features = [
@@ -67,7 +71,7 @@ const,
         'Basic analytics'
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -81,7 +85,7 @@ const,
         'Advanced analyticsCompliance features'
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -95,7 +99,7 @@ const,
         'Custom compliance frameworksAdvanced security features'
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const benefits = [
@@ -117,7 +121,7 @@ const,
       <div className="relative z-10">
         {/* Header Section */},
   }
-        <motion.header 
+        <motion.header;
           className="className="pt-20 pb-16 text-center";"
           initial={ opaci,
   t: y: 0, y: -50 },
@@ -130,7 +134,7 @@ const,
   }
         >
           <div className="max-w-4xl mx-auto px-6">
-            <motion.div 
+            <motion.div;
               className="className="inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-2 text-sm text-purple-300 mb-6";"
               initial={ sca,
   l: e: 0.8, opaci,
@@ -146,12 +150,12 @@ const,
   }
             >
               <Workflow className="w-4 h-4" />
-              AI-Powered Workflow Management
+              AI-Powered Workflow Management;
             </motion.div>
             
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              AI Workflow Orchestrator
+              AI Workflow Orchestrator;
             </h1>
             
             <p className="text-xl m,
@@ -161,7 +165,7 @@ const,
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl,
   hove: r:from-purple-700,
   hove: r:to-blue-700 transition-all duration-300 shadow-lg,
@@ -174,9 +178,9 @@ const,
   }
               >
                 <Play className="w-5 h-5" />
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 border border-purple-500/30 text-purple-300 font-semibold rounded-xl,
   hove: r: bg-purple-500/10 transition-all duration-300 flex items-center gap-2";"
                 whileHover={ scal,
@@ -187,7 +191,7 @@ const,
   }
               >
                 <Settings className="w-5 h-5" />
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </div>
@@ -195,7 +199,7 @@ const,
 
         {/* Features Grid */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -214,7 +218,7 @@ const,
             <div className="text-center mb-16">
               <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Powerful Features
+                Powerful Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI-powered platform provides everything you need to orchestrate complex workflows with intelligence and precision.
@@ -225,7 +229,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   className="className="group relative p-6 rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm,
@@ -280,7 +284,7 @@ const,
 
         {/* Pricing Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6 bg-gradient-to-br from-purple-900/20 via-slate-900/50 to-blue-900/20";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -299,7 +303,7 @@ const,
             <div className="text-center mb-16">
               <h2 className="text-4xl,
   m: d:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Simple, Transparent Pricing
+                Simple, Transparent Pricing;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your business needs. All plans include our core AI capabilities and 24/7 support.
@@ -309,11 +313,11 @@ const,
             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                   key={plan.name},
   }
                   className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
-  plan.popular 
+  plan.popular;
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/20 to-blue-500/20' 
                       : 'border-purple-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
 }`}
@@ -337,7 +341,7 @@ const,
                   {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -360,9 +364,9 @@ const,
                     ))}
                   </ul>
                   
-                  <motion.button 
+                  <motion.button;
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                         ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white,
   hove: r: from-purple-700,
   hove: r:to-blue-700'
@@ -376,7 +380,7 @@ const,
   l: e: 0.98 },
   }
                   >
-                    Get Started
+                    Get Started;
                   </motion.button>
                 </motion.div>
               ))}
@@ -386,7 +390,7 @@ const,
 
         {/* Benefits Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -416,7 +420,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={benefit},
   }
                   className="className="flex items-start gap-4 p-6 rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-blue-500/10";"
@@ -446,7 +450,7 @@ const,
 
         {/* CTA Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6 text-center";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -471,7 +475,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl,
   hove: r:from-purple-700,
   hove: r:to-blue-700 transition-all duration-300 shadow-lg,
@@ -483,10 +487,10 @@ const,
   l: e: 0.95 },
   }
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 border border-purple-500/30 text-purple-300 font-semibold rounded-xl,
   hove: r: bg-purple-500/10 transition-all duration-300 flex items-center gap-2";"
                 whileHover={ scal,
@@ -497,7 +501,7 @@ const,
   }
               >
                 <Users className="w-5 h-5" />
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </div>
@@ -507,4 +511,4 @@ const,
   )
 }
 
-export default AIWorkflowOrchestrator
+export default AIWorkflowOrchestrator;

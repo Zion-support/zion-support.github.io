@@ -1,12 +1,12 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Zap } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Zap     } from "lucide-react";
 export function Logo({ customLogo, customColor, className = '' }) {
   if (if (customLogo) {
   ) {
     return (
       <Link to="/" className={`flex-shrink-0 group ${className}`}>
-        <img 
+        <img;
           src={customLogo} 
           alt="Logo" 
           className="className="h-8 w-auto";"
@@ -15,12 +15,12 @@ export function Logo({ customLogo, customColor, className = '' }) {
     )
   }
 
-  const logoColor = customColor || '#3b82f6', // Default blue color
+  const logoColor = customColor || '#3b82f6', // Default blue color;
   return (
     <Link to="/" className={`flex-shrink-0 group ${className}`}>
       <div className="flex items-center space-x-3">
         <div className="relative">
-          <div 
+          <div;
             className="className="w-10 h-10 rounded-lg flex items-center justify-center group-hov,
   e: r: scale-110 transition-transform duration-300";"
             style={ backgroundColo,
@@ -29,7 +29,7 @@ export function Logo({ customLogo, customColor, className = '' }) {
           >
             <Zap className="w-6 h-6 text-white" />
           </div>
-          <div 
+          <div;
             className="className="absolute inset-0 rounded-lg blur-lg opacity-50 group-hov,
   e: r: opacity-75 transition-opacity duration-300";"
             style={ backgroundColo,
@@ -37,14 +37,14 @@ export function Logo({ customLogo, customColor, className = '' }) {
   }
           ></div>
         </div>
-        <h1 
+        <h1;
           className="className="text-2xl font-bold group-hov,
   e: r: scale-105 transition-transform duration-300";"
           style={ colo,
   r: logoColor },
   }
         >
-          Zion Tech Group
+          Zion Tech Group;
         </h1>
       </div>
     </Link>

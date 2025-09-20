@@ -1,11 +1,13 @@
 import React from "react"
-import { Navigate, useLocation } from "react-router-dom"
-import { useAuth } from "@/hooks/useAuth"
+import { Navigate, useLocation   } from "react-router-dom";
+import { useAuth   } from "@/hooks/useAuth";
 interface ProtectedRouteProps {
   childr,
-  e: n: React.ReactNode
+  e: n: React.ReactNode;
   requireAuth?: boolean,
   roles?: string[],
+}
+}
   }
 
 export function ProtectedRoute({ children, requireAuth = true, roles = [],

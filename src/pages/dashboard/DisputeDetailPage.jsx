@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { DisputeDetail } from "@/components/disputes"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
+import { DisputeDetail     } from "@/components/disputes";
+import { ProtectedRoute     } from "@/components/ProtectedRoute";
 function DisputeDetailPage() {
   return (<ProtectedRoute>
       <>
@@ -12,4 +12,4 @@ function DisputeDetailPage() {
       </>
     </ProtectedRoute>)
 }
-export default DisputeDetailPage
+export default DisputeDetailPage;

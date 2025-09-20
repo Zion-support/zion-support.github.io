@@ -1,33 +1,35 @@
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  Heart
+  Heart;
   Brain,
   Shield,
   Activity,
   Users,
   Zap,
-  ArrowRight
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Globe
-  Lock
-  Database
-  Cpu
-  Network
-  BarChart3
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-} from "lucide-react"
+  ArrowRight;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+}
+}
+ } from "lucide-react";
 export default function AIHealthcarePlatform() {
   const features = [
   {
@@ -84,30 +86,30 @@ export default function AIHealthcarePlatform() {
   tit,
   l: e: 'Hospital Management',descripti,
   o: n: 'Comprehensive hospital information system with AI-powered decision support',ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   tit,
   l: e: 'Telemedicine Platform',descripti,
   o: n: 'Virtual care delivery with AI-assisted diagnosis and treatment planning',ic,
-  o: n: Video
+  o: n: Video;
 },
   {
   tit,
   l: e: 'Medical Imaging',descripti,
   o: n: 'AI-enhanced radiology and pathology analysis for accurate diagnosis',ic,
-  o: n: Eye
+  o: n: Eye;
 },
   {
   tit,
   l: e: 'Patient Records',descripti,
   o: n: 'Intelligent electronic health records with predictive insights',ic,
-  o: n: FileText
+  o: n: FileText;
 },
   ]
   return (
     <>
-      <SEO 
+      <SEO;
         title="AI Healthcare Platform - Zion Tech Group"
         description="Revolutionary AI-powered healthcare platform with advanced diagnostics, patient monitoring, and predictive analytics. Transform healthcare delivery with cutting-edge technology."
         keywords="AI healthcare, medical AI, healthcare platform, patient monitoring, predictive analytics, medical diagnostics"
@@ -119,7 +121,7 @@ export default function AIHealthcarePlatform() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -133,26 +135,26 @@ export default function AIHealthcarePlatform() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">
                 <Heart className="w-4 h-4" />
-                Healthcare Innovation
+                Healthcare Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                AI-Powered
+                AI-Powered;
                 <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  Healthcare Platform
+                  Healthcare Platform;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform healthcare delivery with our revolutionary AI platform. 
-                Advanced diagnostics, predictive analytics, and intelligent patient monitoring 
+                Advanced diagnostics, predictive analytics, and intelligent patient monitoring;
                 that saves lives and improves outcomes.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -164,9 +166,9 @@ export default function AIHealthcarePlatform() {
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-red-500/25";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -177,7 +179,7 @@ export default function AIHealthcarePlatform() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Learn More
+                  Learn More;
                 </motion.button>
               </div>
             </motion.div>
@@ -195,7 +197,7 @@ export default function AIHealthcarePlatform() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -212,10 +214,10 @@ export default function AIHealthcarePlatform() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Revolutionary Healthcare Features
+                Revolutionary Healthcare Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform combines cutting-edge technology with healthcare expertise 
+                Our AI platform combines cutting-edge technology with healthcare expertise;
                 to deliver unprecedented accuracy and efficiency.
               </p>
             </motion.div>
@@ -224,7 +226,7 @@ export default function AIHealthcarePlatform() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -271,7 +273,7 @@ export default function AIHealthcarePlatform() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -287,19 +289,19 @@ export default function AIHealthcarePlatform() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your Healthcare Delivery
+                  Transform Your Healthcare Delivery;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our AI healthcare platform delivers measurable improvements in patient care
-                  operational efficiency, and cost reduction while maintaining the highest 
+                  Our AI healthcare platform delivers measurable improvements in patient care;
+                  operational efficiency, and cost reduction while maintaining the highest;
                   standards of security and compliance.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -324,7 +326,7 @@ export default function AIHealthcarePlatform() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -346,7 +348,7 @@ export default function AIHealthcarePlatform() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Proven Results
+                      Proven Results;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -378,7 +380,7 @@ export default function AIHealthcarePlatform() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -395,10 +397,10 @@ export default function AIHealthcarePlatform() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Healthcare Use Cases
+                Healthcare Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform adapts to various healthcare settings and requirements
+                Our AI platform adapts to various healthcare settings and requirements;
                 providing tailored solutions for different medical environments.
               </p>
             </motion.div>
@@ -406,7 +408,7 @@ export default function AIHealthcarePlatform() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -453,7 +455,7 @@ export default function AIHealthcarePlatform() {
   }
         <section className="py-20 bg-gradient-to-r from-red-500/10 to-pink-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -474,13 +476,13 @@ export default function AIHealthcarePlatform() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading healthcare institutions that are already using our AI platform 
+                Join leading healthcare institutions that are already using our AI platform;
                 to improve patient care and operational efficiency.
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -492,9 +494,9 @@ export default function AIHealthcarePlatform() {
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-red-500/25";"
                 >
-                  Get Started Today
+                  Get Started Today;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -505,7 +507,7 @@ export default function AIHealthcarePlatform() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Contact Sales
+                  Contact Sales;
                 </motion.button>
               </div>
             </motion.div>

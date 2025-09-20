@@ -1,49 +1,51 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  MessageCircle
+  MessageCircle;
   Users,
   Ticket,
   Clock,
   CheckCircle,
   AlertCircle,
   Search,
-  Filter
-  ArrowRight
-  Star
-  Globe
-  Cpu
-  Shield
-  Cloud
-  Zap
-  Target
-  Activity
-  BarChart3
-  Settings
-  Bell
-  Download
-  Upload
-  RefreshCw
-  Eye
-  Lock
-  Database
-  Network
-  Smartphone
-  Monitor
-  Headphones
-  Mail
-  Phone
-  Video
-  FileText
-  Calendar
-  Tag
-  UserCheck
-  UserX
-  TrendingUp
-  PieChart
-  LineChart
-} from "lucide-react"
+  Filter;
+  ArrowRight;
+  Star;
+  Globe;
+  Cpu;
+  Shield;
+  Cloud;
+  Zap;
+  Target;
+  Activity;
+  BarChart3;
+  Settings;
+  Bell;
+  Download;
+  Upload;
+  RefreshCw;
+  Eye;
+  Lock;
+  Database;
+  Network;
+  Smartphone;
+  Monitor;
+  Headphones;
+  Mail;
+  Phone;
+  Video;
+  FileText;
+  Calendar;
+  Tag;
+  UserCheck;
+  UserX;
+  TrendingUp;
+  PieChart;
+  LineChart;
+}
+}
+ } from "lucide-react";
 export default function Helpdesk() {
   const features = [
   {
@@ -138,7 +140,7 @@ export default function Helpdesk() {
   s: m: px-6,
   l: g:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -152,7 +154,7 @@ export default function Helpdesk() {
           >
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Helpdesk Platform
+              Helpdesk Platform;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Streamline customer support operations with our comprehensive helpdesk platform. 
@@ -160,7 +162,7 @@ export default function Helpdesk() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500,
   hove: r:from-cyan-600,
@@ -171,7 +173,7 @@ export default function Helpdesk() {
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30,
   hove: r:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hove,
@@ -191,7 +193,7 @@ export default function Helpdesk() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -208,7 +210,7 @@ export default function Helpdesk() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Powerful Helpdesk Features
+              Powerful Helpdesk Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our comprehensive helpdesk platform provides everything you need to deliver exceptional customer support.
@@ -219,7 +221,7 @@ export default function Helpdesk() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -256,7 +258,7 @@ export default function Helpdesk() {
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -273,7 +275,7 @@ export default function Helpdesk() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Platform Capabilities
+              Platform Capabilities;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover how our helpdesk platform can transform your customer support operations.
@@ -283,7 +285,7 @@ export default function Helpdesk() {
           <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-8">
             {capabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -331,7 +333,7 @@ export default function Helpdesk() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -348,7 +350,7 @@ export default function Helpdesk() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Seamless Integrations
+              Seamless Integrations;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Connect with your existing tools and workflows for maximum efficiency.
@@ -358,7 +360,7 @@ export default function Helpdesk() {
           <div className="grid grid-cols-2 m,
   d:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -393,7 +395,7 @@ export default function Helpdesk() {
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -412,12 +414,12 @@ export default function Helpdesk() {
               Ready to Transform Your Support?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join the customer support revolution with Zion Tech Group. Our helpdesk platform is designed to drive efficiency
+              Join the customer support revolution with Zion Tech Group. Our helpdesk platform is designed to drive efficiency;
               improve customer satisfaction, and scale your support operations.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500,
   hove: r:from-cyan-600,
@@ -428,7 +430,7 @@ export default function Helpdesk() {
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30,
   hove: r:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hove,

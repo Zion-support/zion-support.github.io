@@ -1,6 +1,6 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { ArrowRight, CheckCircle, ExternalLink } from "lucide-react"
+import { SEO   } from "@/components/SEO";
+import { ArrowRight, CheckCircle, ExternalLink   } from "lucide-react";
 const anchor = (u,
   r: l: string, label?: string) => (
   <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">
@@ -108,10 +108,10 @@ const,
   s://betterstack.com/status/pricing'],hr,
   e: f: '/services/status-incident-hub'
 },
-  ] as const
+  ] as const;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO
+      <SEO;
         title="AI, IT and Micro SaaS Services Advertising | Zion Tech Group"
         description="Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options."
       />
@@ -120,7 +120,7 @@ const,
         <div className="container mx-auto px-4 text-center max-w-5xl">
           <h1 className="text-4xl,
   s: m:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-            Services That Ship Outcomes
+            Services That Ship Outcomes;
           </h1>
           <p className="mt-4 text-lg text-slate-300">AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
           <div className="mt-8 flex flex-col,
@@ -201,4 +201,4 @@ const,
   )
 }
 
-export default ServicesAdvertising
+export default ServicesAdvertising;

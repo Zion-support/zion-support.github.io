@@ -1,7 +1,7 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
-import { motion } from "framer-motion"
-import { Workflow, Zap, Brain, Target, TrendingUp, Shield, Users, Clock, BarChart3, CheckCircle } from "lucide-react"
+import { SEO     } from "../../components/SEO";
+import { motion     } from "framer-motion";
+import { Workflow, Zap, Brain, Target, TrendingUp, Shield, Users, Clock, BarChart3, CheckCircle     } from "lucide-react";
 export default function AIWorkflowAutomation() {
   const features = [
   {
@@ -48,7 +48,7 @@ export default function AIWorkflowAutomation() {
 ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Workflow Automation - Zion Tech Group"
         description="Transform your business with intelligent AI-powered workflow automation. Reduce manual tasks, improve efficiency, and scale operations seamlessly."
       />
@@ -58,7 +58,7 @@ export default function AIWorkflowAutomation() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -72,11 +72,11 @@ export default function AIWorkflowAutomation() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
               <Workflow className="w-4 h-4 mr-2" />
-              AI-Powered Automation
+              AI-Powered Automation;
             </div>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Workflow Automation
+              AI Workflow Automation;
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
               Transform your business operations with intelligent, AI-powered workflow automation. 
@@ -88,11 +88,11 @@ export default function AIWorkflowAutomation() {
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/20">
-                Get Started
+                Get Started;
               </button>
               <button className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </motion.div>
@@ -103,7 +103,7 @@ export default function AIWorkflowAutomation() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -116,10 +116,10 @@ export default function AIWorkflowAutomation() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Automation Features
+              Intelligent Automation Features;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI workflow automation platform combines cutting-edge technology with intuitive design 
+              Our AI workflow automation platform combines cutting-edge technology with intuitive design;
               to deliver powerful automation capabilities.
             </p>
           </motion.div>
@@ -128,7 +128,7 @@ export default function AIWorkflowAutomation() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -162,7 +162,7 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="grid,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -174,7 +174,7 @@ export default function AIWorkflowAutomation() {
   }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Transform Your Business Operations
+                Transform Your Business Operations;
               </h2>
               <p className="text-lg text-slate-300 mb-8 leading-relaxed">
                 Our AI workflow automation delivers measurable results that directly impact your bottom line. 
@@ -190,7 +190,7 @@ export default function AIWorkflowAutomation() {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -214,7 +214,7 @@ export default function AIWorkflowAutomation() {
                   <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r: from-cyan-400 hove,
   r:to-blue-500 transition-all duration-200">
-                    Schedule Demo
+                    Schedule Demo;
                   </button>
                 </div>
               </div>
@@ -227,7 +227,7 @@ export default function AIWorkflowAutomation() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -251,11 +251,11 @@ export default function AIWorkflowAutomation() {
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/20">
-                Get Started Now
+                Get Started Now;
               </button>
               <button className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>

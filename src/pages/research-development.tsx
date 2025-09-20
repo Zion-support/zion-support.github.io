@@ -1,45 +1,47 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  FlaskConical
-  Brain
-  Shield
-  Cloud
-  TrendingUp
-  Zap
-  Globe
-  Cpu
-  Database
-  Network
-  Lock
-  Code
-  Rocket
-  Users
-  BarChart3
-  FileImage
-  MessageCircle
-  Video
-  FileText
-  Heart
-  Award
-  Clock
-  DollarSign
-  Search
-  Filter
-  CheckCircle
-  ArrowRight
-  Star
-  Target
-  BookOpen
-  GraduationCap
-  Lightbulb
-  Microscope
-  TestTube
-  Atom
-  Satellite
-  Telescope
-} from "lucide-react"
+  FlaskConical;
+  Brain;
+  Shield;
+  Cloud;
+  TrendingUp;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  BarChart3;
+  FileImage;
+  MessageCircle;
+  Video;
+  FileText;
+  Heart;
+  Award;
+  Clock;
+  DollarSign;
+  Search;
+  Filter;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Target;
+  BookOpen;
+  GraduationCap;
+  Lightbulb;
+  Microscope;
+  TestTube;
+  Atom;
+  Satellite;
+  Telescope;
+}
+}
+ } from "lucide-react";
 const researchAreas = [
   {
   id: 'ai-ml',na,
@@ -56,7 +58,7 @@ const researchAreas = [
     publication,
   s: 15,paten,
   t: s: 8,projec,
-  t: s: 12
+  t: s: 12;
 },
   {
   id: 'quantum-computing',na,
@@ -72,7 +74,7 @@ const researchAreas = [
     publication,
   s: 8,paten,
   t: s: 5,projec,
-  t: s: 6
+  t: s: 6;
 },
   {
   id: 'cybersecurity',na,
@@ -88,7 +90,7 @@ const researchAreas = [
     publication,
   s: 22,paten,
   t: s: 12,projec,
-  t: s: 18
+  t: s: 18;
 },
   {
   id: 'edge-computing',na,
@@ -104,7 +106,7 @@ const researchAreas = [
     publication,
   s: 18,paten,
   t: s: 9,projec,
-  t: s: 14
+  t: s: 14;
 },
   {
   id: 'data-science',na,
@@ -120,7 +122,7 @@ const researchAreas = [
     publication,
   s: 25,paten,
   t: s: 15,projec,
-  t: s: 20
+  t: s: 20;
 },
   {
   id: 'cloud-native',na,
@@ -137,7 +139,7 @@ const researchAreas = [
     publication,
   s: 20,paten,
   t: s: 10,projec,
-  t: s: 16
+  t: s: 16;
 },
   ]
 const researchProjects = [
@@ -376,16 +378,16 @@ export default function ResearchDevelopment() {
   ]
 
   const filteredProjects = researchProjects.filter(project () => {
-  const matchesArea = selectedArea === 'All' || project.area === selectedArea
-const matchesStatus = selectedStatus === 'All' || project.status === selectedStatus
+  const matchesArea = selectedArea === 'All' || project.area === selectedArea;
+const matchesStatus = selectedStatus === 'All' || project.status === selectedStatus;
 const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesArea && matchesStatus && matchesSearch
+    return matchesArea && matchesStatus && matchesSearch;
 })
   const getAreaIcon = (areaNa,
   m: e: string) () => {
   const area = researchAreas.find(a => a.name === areaName)
-    return area ? area.icon : FlaskConical
+    return area ? area.icon : FlaskConical;
 }
 
   const getAreaColor = (areaNa,
@@ -403,7 +405,9 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
   ) {
       return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</span>
     } else {
-      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>
+  return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>
+}
+}
 },
   }
 
@@ -415,7 +419,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -433,10 +437,10 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Advancing Technology Frontiers
+              Advancing Technology Frontiers;
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Explore Zion Tech Group's cutting-edge research initiatives, innovative projects
+              Explore Zion Tech Group's cutting-edge research initiatives, innovative projects;
               and breakthrough technologies that are shaping the future of technology.
             </p>
           </motion.div>
@@ -457,7 +461,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
               <div className="md:col-span-1">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search research..."
                     value={searchTerm},
@@ -475,7 +479,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
               {/* Research Area Filter */},
   }
               <div>
-                <select
+                <select;
                   value={selectedArea},
   }
                   onChange={(e) => setSelectedArea(e.target.value)},
@@ -494,7 +498,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
               {/* Status Filter */},
   }
               <div>
-                <select
+                <select;
                   value={selectedStatus},
   }
                   onChange={(e) => setSelectedStatus(e.target.value)},
@@ -520,7 +524,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -543,9 +547,9 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {researchAreas.map((area, index) () => {
-  const IconComponent = area.icon
+  const IconComponent = area.icon;
               return (
-                <motion.div
+                <motion.div;
                   key={area.id},
   }
                   initial={ opaci,
@@ -610,7 +614,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -635,7 +639,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
   const IconComponent = getAreaIcon(project.area)
               const areaColor = getAreaColor(project.area)
               return (
-                <motion.div
+                <motion.div;
                   key={project.id},
   }
                   initial={ opaci,
@@ -729,12 +733,12 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                   {/* CTA */},
   }
                   <div className="flex items-center justify-between">
-                    <Link
+                    <Link;
                       to={`/research-development/projects/${project.id}`}
                       className="className="inline-flex items-center text-zion-cyan,
   hove: r: text-zion-cyan-light transition-colors duration-300";"
                     >
-                      Learn More
+                      Learn More;
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                     <div className="text-right">
@@ -755,7 +759,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -776,7 +780,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
 
           <div className="space-y-6">
             {publications.map((pub, index) => (
-  <motion.div
+  <motion.div;
                 key={pub.id},
   }
                 initial={ opaci,
@@ -817,7 +821,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                       </span>
                       <span className="flex items-center gap-1">
                         <Star className="w-4 h-4" />
-                        {pub.citations} citations
+                        {pub.citations} citations;
                       </span>
                     </div>
                     <p className="text-zion-slate-light mb-3">{pub.abstract}</p>
@@ -829,12 +833,12 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                     </div>
                   </div>
                   <div className="ml-6">
-                    <Link
+                    <Link;
                       to={`/research-development/publications/${pub.id}`}
                       className="className="inline-flex items-center text-zion-cyan,
   hove: r:text-zion-cyan-light transition-colors duration-300";"
                     >
-                      Read Paper
+                      Read Paper;
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
@@ -851,7 +855,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -873,7 +877,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
             {patents.map((patent, index) => (
-  <motion.div
+  <motion.div;
                 key={patent.id},
   }
                 initial={ opaci,
@@ -934,12 +938,12 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                 <p className="text-zion-slate-light mb-4">{patent.description}</p>
 
                 <div className="flex items-center justify-between">
-                  <Link
+                  <Link;
                     to={`/research-development/patents/${patent.id}`}
                     className="className="inline-flex items-center text-zion-cyan,
   hove: r:text-zion-cyan-light transition-colors duration-300";"
                   >
-                    View Details
+                    View Details;
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                   <div className="text-right">
@@ -959,7 +963,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
         <div className="max-w-4xl mx-auto text-center px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -975,29 +979,29 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
             className="className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              Collaborate with Our Research Team
+              Collaborate with Our Research Team;
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Partner with Zion Tech Group on cutting-edge research projects
+              Partner with Zion Tech Group on cutting-edge research projects;
               explore licensing opportunities, or join our research initiatives.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl,
   hove: r:bg-zion-slate-light transition-all duration-300 font-medium text-lg";"
               >
-                Start Collaboration
+                Start Collaboration;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/case-studies"
                 className="className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl,
   hove: r:bg-white hove,
   r:text-zion-cyan transition-all duration-300 font-medium text-lg";"
               >
-                View Research Impact
+                View Research Impact;
               </Link>
             </div>
           </motion.div>

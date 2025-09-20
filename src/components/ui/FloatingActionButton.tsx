@@ -1,8 +1,13 @@
+import { useCallback    } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Plus, MessageCircle, Phone, Mail, ArrowUp, X } from "lucide-react"
+import { motion, AnimatePresence     } from "framer-motion";
+import { Plus, MessageCircle, Phone, Mail, ArrowUp, X     } from "lucide-react";
 interface FloatingActionButtonProps {
-  className?: string
+  className?: string;
+}
+}
+}
+}
 }
 
 export,
@@ -15,7 +20,7 @@ export,
   e: l: 'Live Chat',hr,
   e: f: '/chat',col,
   o: r: 'from-blue-500 to-cyan-500',del,
-  a: y: 0.1
+  a: y: 0.1;
 },
   {
   ic,
@@ -24,7 +29,7 @@ export,
   e: f: 'te,
   l:+1-800-ZION-TECH',col,
   o: r: 'from-green-500 to-emerald-500',del,
-  a: y: 0.2
+  a: y: 0.2;
 },
   {
   ic,
@@ -33,7 +38,7 @@ export,
   e: f: 'mailt,
   o:info@ziontechgroup.com',col,
   o: r: 'from-purple-500 to-pink-500',del,
-  a: y: 0.3
+  a: y: 0.3;
 },
   ]
   const scrollToTop = () () => {
@@ -46,7 +51,7 @@ export,
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
       {/* Scroll to top button */},
   }
-      <motion.button
+      <motion.button;
         initial={ opaci,
   t: y: 0, sca,
   l: e: 0 },
@@ -72,7 +77,7 @@ export,
 
       {/* Main floating action button */},
   }
-      <motion.button
+      <motion.button;
         initial={ opaci,
   t: y: 0, sca,
   l: e: 0 },
@@ -95,7 +100,7 @@ export,
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
-  <motion.div
+  <motion.div;
               key="close"
               initial={ rotat,
   e: -90, opaci,
@@ -116,7 +121,7 @@ export,
               <X className="w-8 h-8 text-white" />
             </motion.div>
           ) : (
-  <motion.div
+  <motion.div;
               key="plus"
               initial={ rota,
   t: e: 90, opaci,
@@ -146,7 +151,7 @@ export,
         {isOpen && (
   <div className="absolute bottom-20 right-0 space-y-3">
             {actions.map((action, index) => (
-  <motion.a
+  <motion.a;
                 key={action.label},
   }
                 href={action.href},
@@ -168,7 +173,7 @@ export,
   o: n: 0.3,del,
   a: y: action.delay,ty,
   p: e: "spring",stiffne,
-  s: s: 200
+  s: s: 200;
 },
   }
                 className="className="flex items-center space-x-3 w-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3,

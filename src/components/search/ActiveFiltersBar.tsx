@@ -1,10 +1,15 @@
+import { useCallback    } from "react";
 import React from "react"
-import { X } from "lucide-react"
+import { X     } from "lucide-react";
 interface Filter {
   k,
   e: y: string,val,
   u: e: string,lab,
-  e: l: string
+  e: l: string;
+}
+}
+}
+}
 }
 
 interface ActiveFiltersBarProps {
@@ -12,13 +17,17 @@ interface ActiveFiltersBarProps {
   r: s: Filter[],onRemoveFilt,
   e: r: (ke,
   y: string) => void,onClearA,
-  l: l: () => void
+  l: l: () => void;
+}
+}
+}
+}
 }
 
 export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: ActiveFiltersBarProps) {
   if (if (filters.length === 0) {
   ) {
-    return null
+    return null;
 }
 
   return (
@@ -27,13 +36,13 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
   filter: s:</span>
 
       {filters.map((filter) => (
-  <div
+  <div;
           key={filter.key},
   }
           className="className="inline-flex items-center gap-2 px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30";"
         >
           <span>{filter.label}: {filter.value}</span>
-          <button
+          <button;
             onClick={onClick={() => onRemoveFilter(filter.key)},
   },
   }
@@ -45,14 +54,14 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
         </div>
       ))}
 
-      <button
+      <button;
         onClick={onClick={onClearAll},
   },
   }
         className="className="text-sm text-zion-slate-light,
   hove: r: text-zion-cyan transition-colors underline";"
       >
-        Clear all
+        Clear all;
       </button>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
-import { Zap, GitFork, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { motion     } from "framer-motion";
+import { Zap, GitFork, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3     } from "lucide-react";
 const AIWorkflowAutomation = () () => {
     const features = [
   {
@@ -93,37 +93,37 @@ const AIWorkflowAutomation = () () => {
   na,
   m: e: "Machine Learning",descripti,
   o: n: "Advanced ML algorithms for process optimization and decision making",ic,
-  o: n: Brain
+  o: n: Brain;
 },
   {
   na,
   m: e: "Robotic Process Automation",descripti,
   o: n: "RPA tools for repetitive task automation",ic,
-  o: n: GitFork
+  o: n: GitFork;
 },
   {
   na,
   m: e: "Natural Language Processing",descripti,
   o: n: "AI-powered text analysis and document processing",ic,
-  o: n: Database
+  o: n: Database;
 },
   {
   na,
   m: e: "Workflow Engine",descripti,
   o: n: "Scalable workflow orchestration platform",ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   na,
   m: e: "Real-time Analytics",descripti,
   o: n: "Instant performance monitoring and optimization",ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   na,
   m: e: "API Integration",descripti,
   o: n: "Seamless integration with existing systems",ic,
-  o: n: Globe
+  o: n: Globe;
 },
   ]
     const benefits = [
@@ -131,25 +131,25 @@ const AIWorkflowAutomation = () () => {
   tit,
   l: e: "Increased Efficiency",descripti,
   o: n: "Automate repetitive tasks and improve process efficiency by 40-60%",ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "Cost Reduction",descripti,
   o: n: "Reduce operational costs by 25-35% through automation",ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   tit,
   l: e: "Error Reduction",descripti,
   o: n: "Minimize human errors and improve accuracy by 90%+",ic,
-  o: n: CheckCircle
+  o: n: CheckCircle;
 },
   {
   tit,
   l: e: "Scalability",descripti,
   o: n: "Scale operations without proportional increase in resources",ic,
-  o: n: Users
+  o: n: Users;
 },
   ]
     const const containerVariants = {
@@ -164,7 +164,7 @@ const AIWorkflowAutomation = () () => {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -182,7 +182,7 @@ const AIWorkflowAutomation = () () => {
   t: y: 1,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -209,23 +209,23 @@ const AIWorkflowAutomation = () () => {
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent">
-                AI Workflow Automation
+                AI Workflow Automation;
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business processes with intelligent automation that learns, adapts, and optimizes 
+              Transform your business processes with intelligent automation that learns, adapts, and optimizes;
               workflows for maximum efficiency and productivity.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/contact" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold,
   hove: r: from-orange-700,
   hove: r:to-red-700 transition-all duration-300">
-                Get Started
+                Get Started;
               </Link>
               <Link to="/services-showcase" className="border border-orange-400 text-orange-400 px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-orange-400 hove,
   r:text-white transition-all duration-300">
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -242,7 +242,7 @@ const AIWorkflowAutomation = () () => {
   } className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">Key Features</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI Workflow Automation platform combines artificial intelligence with advanced workflow 
+            Our AI Workflow Automation platform combines artificial intelligence with advanced workflow;
             management to create intelligent, adaptive business processes.
           </p>
         </motion.div>
@@ -293,7 +293,7 @@ const AIWorkflowAutomation = () () => {
   } className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Department</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored workflow automation solutions designed to address the unique challenges 
+              Tailored workflow automation solutions designed to address the unique challenges;
               and processes in different business departments.
             </p>
           </motion.div>
@@ -345,7 +345,7 @@ const AIWorkflowAutomation = () () => {
   } className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">Business Benefits</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            AI Workflow Automation delivers measurable results that directly impact your operational 
+            AI Workflow Automation delivers measurable results that directly impact your operational;
             efficiency, cost structure, and competitive position.
           </p>
         </motion.div>
@@ -390,7 +390,7 @@ const AIWorkflowAutomation = () () => {
   } className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge AI and workflow technologies to ensure scalability
+              Built on cutting-edge AI and workflow technologies to ensure scalability;
               performance, and reliability for enterprise automation.
             </p>
           </motion.div>
@@ -437,23 +437,23 @@ const AIWorkflowAutomation = () () => {
             Ready to Automate Your Workflows?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our AI workflow experts help you implement intelligent automation that will 
+            Let our AI workflow experts help you implement intelligent automation that will;
             transform your business processes and drive operational excellence.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold,
   hove: r: from-orange-700,
   hove: r:to-red-700 transition-all duration-300">
-              Schedule Consultation
+              Schedule Consultation;
             </Link>
             <Link to="/case-studies" className="border border-orange-400 text-orange-400 px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-orange-400 hove,
   r:text-white transition-all duration-300">
-              View Case Studies
+              View Case Studies;
             </Link>
           </div>
         </motion.div>
       </div>
     </div>)
 }
-export default AIWorkflowAutomation
+export default AIWorkflowAutomation;

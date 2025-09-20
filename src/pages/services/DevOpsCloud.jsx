@@ -1,7 +1,7 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { Link } from "react-router-dom"
-import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from "lucide-react"
+import { SEO     } from "@/components/SEO";
+import { Link     } from "react-router-dom";
+import { Check, Cloud, Zap, Shield, Database, Users, Target, Server     } from "lucide-react";
 export default function DevOpsCloudServices() {
   const devopsServices = [
   {
@@ -223,7 +223,7 @@ export default function DevOpsCloudServices() {
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">
-            DevOps & Cloud Services
+            DevOps & Cloud Services;
           </h1>
           <p className="text-xl m,
   d:text-2xl text-orange-100 max-w-4xl mx-auto leading-relaxed">
@@ -240,7 +240,7 @@ export default function DevOpsCloudServices() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our DevOps & Cloud Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              End-to-end DevOps and cloud solutions that help businesses modernize their software delivery 
+              End-to-end DevOps and cloud solutions that help businesses modernize their software delivery;
               processes and infrastructure for better performance and efficiency.
             </p>
           </div>
@@ -358,7 +358,7 @@ export default function DevOpsCloudServices() {
                 Why Choose Our DevOps Services?
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Our DevOps expertise combined with cloud-native technologies enables us to deliver 
+                Our DevOps expertise combined with cloud-native technologies enables us to deliver;
                 solutions that provide real business value and competitive advantage.
               </p>
               
@@ -373,7 +373,7 @@ export default function DevOpsCloudServices() {
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Free DevOps Assessment</h3>
               <p className="text-gray-600 mb-6">
-                Discover how DevOps can transform your business with our comprehensive 
+                Discover how DevOps can transform your business with our comprehensive;
                 DevOps maturity assessment and strategy session.
               </p>
               <div className="space-y-3 mb-6">
@@ -390,7 +390,7 @@ export default function DevOpsCloudServices() {
               </div>
               <Link to="/contact" className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hove,
   r:bg-orange-700 transition-colors inline-block w-full text-center">
-                Schedule Assessment
+                Schedule Assessment;
               </Link>
             </div>
           </div>
@@ -404,7 +404,7 @@ export default function DevOpsCloudServices() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our DevOps and cloud solutions are tailored to meet the unique challenges and opportunities 
+              Our DevOps and cloud solutions are tailored to meet the unique challenges and opportunities;
               across diverse industry sectors.
             </p>
           </div>
@@ -429,7 +429,7 @@ export default function DevOpsCloudServices() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">DevOps Technologies We Use</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We leverage cutting-edge DevOps and cloud technologies to build robust, scalable
+              We leverage cutting-edge DevOps and cloud technologies to build robust, scalable;
               and innovative solutions for our clients.
             </p>
           </div>
@@ -464,7 +464,7 @@ export default function DevOpsCloudServices() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Assessment</h3>
                 <p className="text-gray-600 text-sm">
-                  Evaluate current DevOps maturity
+                  Evaluate current DevOps maturity;
                 </p>
               </div>
 
@@ -474,7 +474,7 @@ export default function DevOpsCloudServices() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Strategy</h3>
                 <p className="text-gray-600 text-sm">
-                  Develop DevOps roadmap and goals
+                  Develop DevOps roadmap and goals;
                 </p>
               </div>
 
@@ -484,7 +484,7 @@ export default function DevOpsCloudServices() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Implementation</h3>
                 <p className="text-gray-600 text-sm">
-                  Build and deploy DevOps tools
+                  Build and deploy DevOps tools;
                 </p>
               </div>
 
@@ -494,7 +494,7 @@ export default function DevOpsCloudServices() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Training</h3>
                 <p className="text-gray-600 text-sm">
-                  Enable teams with new processes
+                  Enable teams with new processes;
                 </p>
               </div>
 
@@ -504,7 +504,7 @@ export default function DevOpsCloudServices() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Optimization</h3>
                 <p className="text-gray-600 text-sm">
-                  Continuous improvement and scaling
+                  Continuous improvement and scaling;
                 </p>
               </div>
 
@@ -514,7 +514,7 @@ export default function DevOpsCloudServices() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Support</h3>
                 <p className="text-gray-600 text-sm">
-                  Ongoing maintenance and support
+                  Ongoing maintenance and support;
                 </p>
               </div>
             </div>
@@ -528,19 +528,19 @@ export default function DevOpsCloudServices() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Accelerate Your Delivery?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our DevOps experts help you build faster, more reliable applications 
+            Let our DevOps experts help you build faster, more reliable applications;
             with modern cloud-native practices and automation.
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
             <Link to="/contact" className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-gray-100 transition-colors">
-              Start Your DevOps Journey
+              Start Your DevOps Journey;
             </Link>
             <Link to="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-orange-600 transition-colors">
-              Explore All Services
+              Explore All Services;
             </Link>
           </div>
         </div>

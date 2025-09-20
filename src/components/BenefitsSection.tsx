@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from "lucide-react"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star   } from "lucide-react";
 interface Benefit {
   tit,
   l: e: string,descripti,
@@ -11,6 +11,8 @@ interface Benefit {
   t: s: string,featur,
   e: s: string[[],
   ],
+}
+}
   }
 
 const,
@@ -94,7 +96,7 @@ export function BenefitsSection() {
   o: n: {
   staggerChildre,
   n: 0.2,delayChildr,
-  e: n: 0.1
+  e: n: 0.1;
 },
   },
   }
@@ -159,7 +161,7 @@ export function BenefitsSection() {
       {/* Floating decorative elements */},
   }
       <div className="absolute inset-0">
-        <motion.div
+        <motion.div;
           className="className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30";"
           animate={ rota,
   t: e: 360 },
@@ -170,7 +172,7 @@ export function BenefitsSection() {
   s: e: "linear" },
   }
         />
-        <motion.div
+        <motion.div;
           className="className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30";"
           animate={ rota,
   t: e: -360 },
@@ -181,7 +183,7 @@ export function BenefitsSection() {
   s: e: "linear" },
   }
         />
-        <motion.div
+        <motion.div;
           className="className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20";"
           animate={ sca,
   l: e: [1, 1.2, 1],
@@ -196,7 +198,7 @@ export function BenefitsSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
+        <motion.div;
           className="className="text-center mb-20";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -217,13 +219,13 @@ export function BenefitsSection() {
           </h2>
           <p className="text-zion-slate-light text-lg m,
   d:text-xl max-w-4xl mx-auto leading-relaxed">
-            Experience the next generation of tech marketplace with features designed to maximize efficiency and value
+            Experience the next generation of tech marketplace with features designed to maximize efficiency and value;
           </p>
         </motion.div>
 
         {/* Stats section */},
   }
-        <motion.div
+        <motion.div;
           className="className="grid grid-cols-2,
   m: d:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto";"
           variants={containerVariants},
@@ -235,7 +237,7 @@ export function BenefitsSection() {
   }
         >
           {stats.map((stat, index) => (
-  <motion.div
+  <motion.div;
               key={index},
   }
               variants={statsVariants},
@@ -252,7 +254,7 @@ export function BenefitsSection() {
           ))}
         </motion.div>
 
-        <motion.div
+        <motion.div;
           className="className="relative";"
           variants={containerVariants},
   }
@@ -274,7 +276,7 @@ export function BenefitsSection() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 className="className="relative group";"
@@ -303,7 +305,7 @@ export function BenefitsSection() {
                   <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full animate-ping opacity-75"></div>
                 </div>
 
-                <motion.div
+                <motion.div;
                   className="className="relative p-8 rounded-2xl bg-gradient-to-br from-zion-slate-dark/80 to-zion-blue-dark/80 backdrop-blur-sm border border-zion-cyan/20,
   hove: r:border-zion-cyan/40 transition-all duration-300 group-hov,
   e: r:scale-105";"
@@ -355,7 +357,7 @@ export function BenefitsSection() {
   }
                   <AnimatePresence>
                     {hoveredIndex === index && (
-  <motion.div
+  <motion.div;
                         className="className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10 rounded-2xl";"
                         initial={ opaci,
   t: y: 0 },

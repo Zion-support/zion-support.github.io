@@ -1,4 +1,4 @@
-import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail } from "lucide-react"
+import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail     } from "lucide-react";
 export default function ITHelpdesk() {
   const features = [
   'Ticketing with SLA and automation rulesSelf-service knowledge base and chat widget'
@@ -31,7 +31,7 @@ export default function ITHelpdesk() {
       <section className="bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6">
-            <LifeBuoy className="w-4 h-4 mr-2"/> IT support that scales with your MSP
+            <LifeBuoy className="w-4 h-4 mr-2"/> IT support that scales with your MSP;
           </div>
           <h1 className="text-4xl,
   m: d:text-6xl font-bold mb-4">IT Helpdesk Software</h1>

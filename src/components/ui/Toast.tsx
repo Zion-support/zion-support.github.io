@@ -1,20 +1,29 @@
+import { useCallback    } from "react";
 import React, { useState, useEffect } from "react"
-import { X, CheckCircle, AlertCircle, Info, XCircle } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { X, CheckCircle, AlertCircle, Info, XCircle     } from "lucide-react";
+import { motion, AnimatePresence     } from "framer-motion";
 export type ToastType = 'success' | 'error' | 'warning' | 'info'
 export interface Toast {
   id: string,ty,
   p: e: ToastType,tit,
-  l: e: string
+  l: e: string;
   message?: string,
-  duration?: number
+  duration?: number;
+}
+}
+}
+}
 }
 
 interface ToastProps {
   toa,
   s: t: Toast,onRemo,
   v: e: (i,
-  d: string) => void
+  d: string) => void;
+}
+}
+}
+}
 }
 
 const,
@@ -67,7 +76,7 @@ const getBgColor = () () => {
     },
   }
   return (
-    <motion.div
+    <motion.div;
       initial={ opaci,
   t: y: 0, y: -50, sca,
   l: e: 0.9 },
@@ -102,7 +111,7 @@ const getBgColor = () () => {
             </p>
           )}
         </div>
-        <button
+        <button;
           onClick={() () => {
             setIsVisible(false)
             setTimeout(() => onRemove(toast.id), 300),
@@ -132,11 +141,11 @@ const newToast = { ...toast, id }
 const removeToast = (id: string) () => {
     setToasts(prev => prev.filter(toast => toast.id !== id))
   }
-  // Expose addToast globally for easy access
+  // Expose addToast globally for easy access;
   useEffect(() () => {
     (window as any).showToast = addToast,
     return () () => {
-      delete (window as any).showToast
+      delete (window as any).showToast;
 },
   }, []),
 
@@ -144,7 +153,7 @@ const removeToast = (id: string) () => {
     <div className="fixed top-4 right-4 z-50 space-y-2">
       <AnimatePresence>
         {toasts.map(toast => (
-          <ToastItem
+          <ToastItem;
             key={toast.id}
             toast={toast}
             onRemove={removeToast}
@@ -155,8 +164,8 @@ const removeToast = (id: string) () => {
   )
 },
 
-// Utility function to show toasts
-export const showToast = (ty,
+// Utility function to show toasts;
+export const showToast = React.memo((ty,
   p: e: ToastType, tit,
   l: e: string, message?: string, duration?: number) () => {
   if (typeof window !== 'undefined' && (window as any).showToast) {

@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Search
+  Search;
   Filter,
   Star,
   Users,
@@ -10,19 +11,21 @@ import {
   Zap,
   Globe,
   Brain,
-  Rocket
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  ArrowRight
-  CheckCircle
-  Clock
-  DollarSign
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
-import { zionCuttingEdgeServices2029 } from "../../data/zion-2029-cutting-edge-services"
-import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech-services"
+  Rocket;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  ArrowRight;
+  CheckCircle;
+  Clock;
+  DollarSign;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+import { zionCuttingEdgeServices2029   } from "../../data/zion-2029-cutting-edge-services";
+import { zionEmergingTechServices2029   } from "../../data/zion-2029-emerging-tech-services";
 export default function ZionCuttingEdgeServices2029() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -39,21 +42,22 @@ const filteredServices = allServices.filter(service () => {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
     
-const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    
-let matchesPrice = true
+const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+let matchesPrice = true;
     if (if (priceRange !== 'all') {
   ) {
       const [min, max] = priceRange.split('-').map(Number)
       if (if (max) {
   ) {
-        matchesPrice = service.pricing.starter >= min && service.pricing.starter <= max
+        matchesPrice = service.pricing.starter >= min && service.pricing.starter <= max;
 } else {
-        matchesPrice = service.pricing.starter >= min
+  matchesPrice = service.pricing.starter >= min;
+}
+}
 },
   }
     
-    return matchesSearch && matchesCategory && matchesPrice
+    return matchesSearch && matchesCategory && matchesPrice;
 })
 
   const getPriceRangeLabel = (ran,
@@ -69,7 +73,7 @@ let matchesPrice = true
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
+      <SEO;
         title="Zion Tech Group 2029 Cutting-Edge Services | Revolutionary AI, IT & Micro SAAS Solutions"
         description="Discover Zion Tech Group's revolutionary 2029 cutting-edge services including AI-powered quantum computing, autonomous systems, space technology, biotechnology, and more. Transform your business with next-generation solutions."
         keywords="AI services, quantum computing, autonomous systems, space technology, biotechnology, renewable energy, robotics, cybersecurity, Zion Tech Group, cutting-edge technology"
@@ -81,7 +85,7 @@ let matchesPrice = true
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -95,7 +99,7 @@ let matchesPrice = true
             <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Zion Tech Group 2029
+                Zion Tech Group 2029;
               </span>
               <br />
               <span className="text-white">Cutting-Edge Services</span>
@@ -107,22 +111,22 @@ let matchesPrice = true
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="#services"
                 className="className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:from-blue-700,
   hove: r:to-purple-700 transition-all duration-300 flex items-center gap-2";"
               >
-                Explore Services
+                Explore Services;
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="#contact"
                 className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-white hove,
   r:text-slate-900 transition-all duration-300 flex items-center gap-2";"
               >
-                Contact Us
+                Contact Us;
                 <Phone className="w-5 h-5" />
               </a>
             </div>
@@ -167,7 +171,7 @@ let matchesPrice = true
   }
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm},
@@ -184,7 +188,7 @@ let matchesPrice = true
 
               {/* Category Filter */},
   }
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -205,7 +209,7 @@ let matchesPrice = true
 
               {/* Price Range Filter */},
   }
-              <select
+              <select;
                 value={priceRange},
   }
                 onChange={(e) => setPriceRange(e.target.value)},
@@ -236,10 +240,10 @@ let matchesPrice = true
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Revolutionary Services Portfolio
+              Revolutionary Services Portfolio;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive suite of cutting-edge services designed to transform industries 
+              Discover our comprehensive suite of cutting-edge services designed to transform industries;
               and accelerate your business growth with next-generation technology.
             </p>
           </div>
@@ -248,7 +252,7 @@ let matchesPrice = true
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -275,7 +279,7 @@ let matchesPrice = true
                   <div className="flex items-center justify-center gap-2 mb-4">
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
-  <Star
+  <Star;
                           key={i},
   }
                           className={`w-4 h-4 ${
@@ -306,7 +310,7 @@ let matchesPrice = true
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    Key Features
+                    Key Features;
                   </h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 3).map((feature, idx) => (
@@ -324,7 +328,7 @@ let matchesPrice = true
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                     <TrendingUp className="w-4 h-4 text-green-400" />
-                    Benefits
+                    Benefits;
                   </h4>
                   <ul className="space-y-2">
                     {service.benefits.slice(0, 2).map((benefit, idx) => (
@@ -382,7 +386,7 @@ let matchesPrice = true
                 {/* Action Buttons */},
   }
                 <div className="space-y-3">
-                  <a
+                  <a;
                     href={service.link},
   }
                     target="_blank"
@@ -391,17 +395,17 @@ let matchesPrice = true
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2";"
                   >
-                    Learn More
+                    Learn More;
                     <ExternalLink className="w-4 h-4" />
                   </a>
-                  <a
+                  <a;
                     href={`mailt,
   o:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                     className="className="w-full border-2 border-white/30 text-white py-3 px-4 rounded-lg font-semibold text-center,
   hove: r: bg-white hove,
   r:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2";"
                   >
-                    Get Quote
+                    Get Quote;
                     <Mail className="w-4 h-4" />
                   </a>
                 </div>
@@ -411,7 +415,7 @@ let matchesPrice = true
   {service.popular && (
   <div className="absolute top-4 right-4">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
-                      POPULAR
+                      POPULAR;
                     </span>
                   </div>
                 )}
@@ -422,7 +426,7 @@ let matchesPrice = true
           {filteredServices.length === 0 && (
   <div className="text-center py-12">
               <p className="text-gray-300 text-lg">No services found matching your criteria.</p>
-              <button
+              <button;
                 onClick={() () => {
                   setSearchTerm('')
                   setSelectedCategory('all')
@@ -432,7 +436,7 @@ let matchesPrice = true
                 className="className="mt-4 text-blue-400,
   hove: r:text-blue-300 underline";"
               >
-                Clear filters
+                Clear filters;
               </button>
             </div>
           )}
@@ -451,7 +455,7 @@ let matchesPrice = true
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're not just another technology company. We're pioneers, innovators, and visionaries 
+              We're not just another technology company. We're pioneers, innovators, and visionaries;
               who are building the future, one breakthrough at a time.
             </p>
           </div>
@@ -459,7 +463,7 @@ let matchesPrice = true
           <div className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-4 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -480,7 +484,7 @@ let matchesPrice = true
               </p>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -502,7 +506,7 @@ let matchesPrice = true
               </p>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -524,7 +528,7 @@ let matchesPrice = true
               </p>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -555,7 +559,7 @@ let matchesPrice = true
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -571,29 +575,29 @@ let matchesPrice = true
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the elite group of forward-thinking companies that are already leveraging 
+              Join the elite group of forward-thinking companies that are already leveraging;
               our revolutionary services to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
                 className="className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:from-blue-700,
   hove: r:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2";"
               >
-                Schedule Consultation
+                Schedule Consultation;
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-white hove,
   r:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2";"
               >
-                Call Now
+                Call Now;
                 <Phone className="w-5 h-5" />
               </a>
             </div>
@@ -612,7 +616,7 @@ let matchesPrice = true
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
               <p className="text-gray-300 mb-6">
-                Pioneering the future of technology with revolutionary AI, IT, and Micro SAAS solutions 
+                Pioneering the future of technology with revolutionary AI, IT, and Micro SAAS solutions;
                 that transform industries and accelerate business growth.
               </p>
               <div className="space-y-2 text-gray-300">

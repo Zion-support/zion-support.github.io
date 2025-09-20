@@ -18,13 +18,15 @@ export interface SpecializedService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 },
   }
 
 export,
   const: SPECIALIZED_SERVICES_2025: SpecializedService[] = [
-  // AI-Powered Education Platform
+  // AI-Powered Education Platform;
   {
   i,
   d: "ai-education-platform",tit,
@@ -86,7 +88,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // Quantum Cryptography Platform
+  // Quantum Cryptography Platform;
   {
   id: "quantum-cryptography-platform",tit,
   l: e: "Quantum Cryptography Platform",descripti,
@@ -146,7 +148,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // AI-Powered Manufacturing Platform
+  // AI-Powered Manufacturing Platform;
   {
   id: "ai-manufacturing-platform",tit,
   l: e: "AI Manufacturing Platform",descripti,
@@ -207,7 +209,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // Blockchain Identity Management
+  // Blockchain Identity Management;
   {
   id: "blockchain-identity-management",tit,
   l: e: "Blockchain Identity Management",descripti,
@@ -268,7 +270,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // AI-Powered Real Estate Platform
+  // AI-Powered Real Estate Platform;
   {
   id: "ai-real-estate-platform",tit,
   l: e: "AI Real Estate Platform",descripti,
@@ -329,7 +331,7 @@ export,
   s://ziontechgroup.com"
 },
   }
-  // Quantum Internet Infrastructure
+  // Quantum Internet Infrastructure;
   {
   id: "quantum-internet-infrastructure",tit,
   l: e: "Quantum Internet Infrastructure",descripti,
@@ -391,4 +393,4 @@ export,
 },
   },
   ]
-export default SPECIALIZED_SERVICES_2025
+export default SPECIALIZED_SERVICES_2025;

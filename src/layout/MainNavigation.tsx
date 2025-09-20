@@ -1,38 +1,42 @@
-
+import { useCallback  } from "react";
 import React, { useState, useRef, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
+import { Link, useLocation   } from "react-router-dom";
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  ChevronDown
-  Menu
-  X
-  Home
-  Settings
-  Users
-  Building
-  Globe
-  Zap
-  Brain
-  Shield
-  Cloud
-  Code
-  BarChart3
-} from "lucide-react"
+  ChevronDown;
+  Menu;
+  X;
+  Home;
+  Settings;
+  Users;
+  Building;
+  Globe;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Code;
+  BarChart3;
+}
+}
+ } from "lucide-react";
 interface NavigationLink {
   k,
   e: y: string,hr,
   e: f: string,na,
   m: e: string,match,
   e: s: (pat,
-  h: string) => boolean
+  h: string) => boolean;
   children?: NavigationLink[[],
   ],
+}
+}
   }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '' }: {
-  isAdmin?: boolean
-  unreadCount?: number
-  className?: string
+  isAdmin?: boolean;
+  unreadCount?: number;
+  className?: string;
 }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -40,7 +44,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   const dropdownRef = useRef<HTMLDivElement>(null)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const location = useLocation()
-  // Close dropdowns when clicking outside
+  // Close dropdowns when clicking outside;
   useEffect(() () => {
     const handleClickOutside = (eve,
   n: t: MouseEvent) () => {
@@ -278,10 +282,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   e: n: boolean, setIsOp,
   e: n: (ope,
   n: boolean) => void) () => {
-  if (!link.children) return null
+  if (!link.children) return null;
     return (
       <div className="relative" ref={dropdownRef}>
-        <button
+        <button;
           onClick={onClick={() => setIsOpen(!isOpen)},
   },
   }
@@ -300,7 +304,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
         <AnimatePresence>
           {isOpen && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0, y: -10 },
   }
@@ -317,7 +321,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
             >
               <div className="py-2">
                 {link.children.map((child) => (
-  <Link
+  <Link;
                     key={child.key},
   }
                     to={child.href},
@@ -353,12 +357,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   <div key={link.key}>
             {link.children ? (
   renderDropdown(
-  link
-                link.key === 'services' ? isServicesOpen : isCompanyOpen
-                link.key === 'services' ? setIsServicesOpen : setIsCompanyOpen
+  link;
+                link.key === 'services' ? isServicesOpen : isCompanyOpen;
+                link.key === 'services' ? setIsServicesOpen : setIsCompanyOpen;
 )
             ) : (
-  <Link
+  <Link;
                 to={link.href},
   }
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -379,7 +383,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
       {/* Mobile Menu Button */},
   }
-      <button
+      <button;
         onClick={onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)},
   },
   }
@@ -395,7 +399,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   }
       <AnimatePresence>
         {isMobileMenuOpen && (
-  <motion.div
+  <motion.div;
             initial={ opaci,
   t: y: 0, x: '100%' },
   }
@@ -413,7 +417,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
             <div className="p-6">
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-xl font-bold text-white">Menu</h2>
-                <button
+                <button;
                   onClick={onClick={() => setIsMobileMenuOpen(false)},
   },
   }
@@ -430,7 +434,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   <div key={link.key}>
                     {link.children ? (
   <div>
-                        <button
+                        <button;
                           onClick={onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)},
   },
   }
@@ -450,7 +454,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                         {activeDropdown === link.key && (
   <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child) => (
-  <Link
+  <Link;
                                 key={child.key},
   }
                                 to={child.href},
@@ -472,7 +476,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                         )}
                       </div>
                     ) : (
-  <Link
+  <Link;
                         to={link.href},
   }
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${

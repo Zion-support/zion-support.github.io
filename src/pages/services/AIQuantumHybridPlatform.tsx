@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Atom
+  Atom;
   Brain,
   Zap,
   Shield,
@@ -10,34 +10,38 @@ import {
   Database,
   Network,
   Globe,
-  Rocket
-  Star
-  CheckCircle
-  ArrowRight
-  BarChart3
-  Lock
-  Users
-  Target
-  Lightbulb
-  Code
-  Server
-  Chip
-  Satellite
-  Eye
-  Sparkles
-  Activity
-  Gauge
-  Workflow
-  Palette
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  DollarSign
-  Clock
-  ExternalLink
-} from "lucide-react"
+  Rocket;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  BarChart3;
+  Lock;
+  Users;
+  Target;
+  Lightbulb;
+  Code;
+  Server;
+  Chip;
+  Satellite;
+  Eye;
+  Sparkles;
+  Activity;
+  Gauge;
+  Workflow;
+  Palette;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  DollarSign;
+  Clock;
+  ExternalLink;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIQuantumHybridPlatform() {
   const features = [
   {
@@ -131,7 +135,7 @@ export default function AIQuantumHybridPlatform() {
         'Quantum security features'
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -162,7 +166,7 @@ export default function AIQuantumHybridPlatform() {
         </div>
         
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -181,7 +185,7 @@ export default function AIQuantumHybridPlatform() {
             
             <h1 className="text-5xl,
   m: d: text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent mb-6">
-              AI Quantum Hybrid Platform
+              AI Quantum Hybrid Platform;
             </h1>
             
             <p className="text-xl,
@@ -192,7 +196,7 @@ export default function AIQuantumHybridPlatform() {
             
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -204,9 +208,9 @@ export default function AIQuantumHybridPlatform() {
   hove: r:to-indigo-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-purple-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -217,7 +221,7 @@ export default function AIQuantumHybridPlatform() {
   hove: r: bg-purple-400 hove,
   r:text-gray-900 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -230,7 +234,7 @@ export default function AIQuantumHybridPlatform() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -244,17 +248,17 @@ export default function AIQuantumHybridPlatform() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Revolutionary Features
+              Revolutionary Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of computing with our groundbreaking AI-Quantum hybrid technology
+              Experience the future of computing with our groundbreaking AI-Quantum hybrid technology;
             </p>
           </motion.div>
 
           <div className="grid m,
   d:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -303,7 +307,7 @@ export default function AIQuantumHybridPlatform() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-purple-900/30 to-indigo-900/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -317,10 +321,10 @@ export default function AIQuantumHybridPlatform() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your industry with quantum-enhanced AI capabilities
+              Transform your industry with quantum-enhanced AI capabilities;
             </p>
           </motion.div>
 
@@ -328,7 +332,7 @@ export default function AIQuantumHybridPlatform() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -372,7 +376,7 @@ export default function AIQuantumHybridPlatform() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -386,17 +390,17 @@ export default function AIQuantumHybridPlatform() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Pricing Plans
+              Pricing Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your quantum computing needs
+              Choose the perfect plan for your quantum computing needs;
             </p>
           </motion.div>
 
           <div className="grid m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -410,7 +414,7 @@ export default function AIQuantumHybridPlatform() {
   a: y: index * 0.2 },
   }
                 className={`relative bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
-  plan.popular 
+  plan.popular;
                     ? 'border-purple-400/60 shadow-lg shadow-purple-500/25' 
                     : 'border-purple-500/20'
 } hov,
@@ -419,7 +423,7 @@ export default function AIQuantumHybridPlatform() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -443,7 +447,7 @@ export default function AIQuantumHybridPlatform() {
                   ))}
                 </ul>
                 
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.05 },
   }
@@ -451,7 +455,7 @@ export default function AIQuantumHybridPlatform() {
   l: e: 0.95 },
   }
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-indigo-600,
   hove: r: from-purple-700,
   hove: r:to-indigo-700'
@@ -459,7 +463,7 @@ export default function AIQuantumHybridPlatform() {
   r:bg-purple-600/30'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
               </motion.div>
             ))}
@@ -473,7 +477,7 @@ export default function AIQuantumHybridPlatform() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-purple-900/50 to-indigo-900/50">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -489,12 +493,12 @@ export default function AIQuantumHybridPlatform() {
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join the quantum revolution and transform your business with AI-Quantum hybrid computing
+              Join the quantum revolution and transform your business with AI-Quantum hybrid computing;
             </p>
             
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -506,9 +510,9 @@ export default function AIQuantumHybridPlatform() {
   hove: r:to-indigo-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-purple-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -519,14 +523,14 @@ export default function AIQuantumHybridPlatform() {
   hove: r: bg-purple-400,
   hove: r:text-gray-900 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -547,17 +551,17 @@ export default function AIQuantumHybridPlatform() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
               <p className="text-gray-300 mb-4">+1 302 464 0950</p>
-              <a 
+              <a;
                 href="t,
   e: l: +13024640950" 
                 className="className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors duration-300";"
               >
-                Call Now
+                Call Now;
               </a>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -578,17 +582,17 @@ export default function AIQuantumHybridPlatform() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
               <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
-              <a 
+              <a;
                 href="mail,
   t: o: kleber@ziontechgroup.com" 
                 className="className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors duration-300";"
               >
-                Send Email
+                Send Email;
               </a>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -609,7 +613,7 @@ export default function AIQuantumHybridPlatform() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>
               <p className="text-gray-300 mb-4">364 E Main St STE 1008, Middletown DE 19709</p>
-              <a 
+              <a;
                 href="htt,
   p: s: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
                 target="_blank" 
@@ -617,7 +621,7 @@ export default function AIQuantumHybridPlatform() {
                 className="className="text-cyan-400 hove,
   r:text-cyan-300 transition-colors duration-300";"
               >
-                View on Map
+                View on Map;
               </a>
             </motion.div>
           </div>

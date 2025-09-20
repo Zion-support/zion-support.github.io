@@ -1,42 +1,48 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Button   } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
 import {
-  Check
-  X
-  Star
-  Zap
-  Shield
-  Globe
-  TrendingUp
-  Users
-  Building
-  Smartphone
-  ShoppingCart
-  Heart
-  GraduationCap
-  Truck
-  Mail
-  Phone
-  MapPin
-  ExternalLink
-  DollarSign
-  Clock
-} from "lucide-react"
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices"
-// Group services by category for better organization
+  Check;
+  X;
+  Star;
+  Zap;
+  Shield;
+  Globe;
+  TrendingUp;
+  Users;
+  Building;
+  Smartphone;
+  ShoppingCart;
+  Heart;
+  GraduationCap;
+  Truck;
+  Mail;
+  Phone;
+  MapPin;
+  ExternalLink;
+  DollarSign;
+  Clock;
+}
+}
+ } from "lucide-react";
+import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS   } from "@/data/expandedServices";
+// Group services by category for better organization;
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) () => {
   if (if (!acc[service.category]) {
   ) {
     acc[service.category] = [],
   }
   acc[service.category].push(service)
-  return acc
-}, {} as { [k,
+  return acc;
+}, {} as {
+  [k,
+}
+}
   e: y: string]: typeof EXPANDED_SERVICES })
-// Pricing comparison features
+// Pricing comparison features;
 const pricingFeatures = [
   "AI-Powered Solutions"
   "24/7 Support"
@@ -51,7 +57,7 @@ export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = Object.keys(servicesByCategory)
   const filteredServices = selectedCategory === 'all'
-    ? EXPANDED_SERVICES
+    ? EXPANDED_SERVICES;
     : servicesByCategory[selectedCategory] || [[],
   ]
   const getCategoryIcon = (catego,
@@ -92,7 +98,7 @@ export default function ServicesPricingPage() {
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
           <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-            Services Pricing & Comparison
+            Services Pricing & Comparison;
           </h1>
           <p className="text-xl m,
   d:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">
@@ -160,7 +166,7 @@ export default function ServicesPricingPage() {
                       </div>
                     ))}
                   </div>
-                  <Button
+                  <Button;
                     className="className="w-full mt-6 bg-zion-purple,
   hove: r: bg-zion-purple-dark text-white";"
                     onClick={onClick={() => window.open('mailt,
@@ -168,7 +174,7 @@ export default function ServicesPricingPage() {
   },
   }
                   >
-                    Get Custom Quote
+                    Get Custom Quote;
                   </Button>
                 </CardContent>
               </Card>
@@ -184,7 +190,7 @@ export default function ServicesPricingPage() {
   m: d: grid-cols-4 l,
   g:grid-cols-6 bg-white/10 border-white/20">
               <TabsTrigger value="all" className="text-white data-[state=active]:bg-zion-purple">
-                All Services
+                All Services;
               </TabsTrigger>
               {categories.slice(0, 5).map(category => (
   <TabsTrigger key={category} value={category} className="text-white data-[state=active]:bg-zion-purple">
@@ -282,16 +288,16 @@ export default function ServicesPricingPage() {
                         {/* Action Buttons */},
   }
                         <div className="flex gap-2">
-                          <Button
+                          <Button;
                             className="className="flex-1 bg-zion-purple,
   hove: r: bg-zion-purple-dark text-white";"
                             onClick={() => window.open(`mailt,
   o:kleber@ziontechgroup.com?subject=Quote for ${service.title}`, '_blank')}
                           >
                             <Mail className="h-4 w-4 mr-2" />
-                            Get Quote
+                            Get Quote;
                           </Button>
-                          <Button
+                          <Button;
                             variant="outline"
                             className="className="border-zion-cyan text-zion-cyan,
   hove: r: bg-zion-cyan/10";"
@@ -365,7 +371,7 @@ export default function ServicesPricingPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  We offer flexible payment terms including upfront payment, milestone-based payments
+                  We offer flexible payment terms including upfront payment, milestone-based payments;
                   and monthly/annual subscription options for ongoing services.
                 </p>
               </CardContent>
@@ -376,7 +382,7 @@ export default function ServicesPricingPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  We offer a satisfaction guarantee. If you're not completely satisfied with our services
+                  We offer a satisfaction guarantee. If you're not completely satisfied with our services;
                   within the first 30 days, we'll work to make it right or provide a refund.
                 </p>
               </CardContent>
@@ -388,11 +394,11 @@ export default function ServicesPricingPage() {
         <div className="bg-gradient-to-r from-zion-purple to-zion-blue rounded-xl p-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl mb-6 text-zion-cyan-light">
-            Let's discuss your project requirements and find the perfect solution for your business
+            Let's discuss your project requirements and find the perfect solution for your business;
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-            <Button
+            <Button;
               size="lg"
               className="className="bg-white text-zion-purple,
   hove: r:bg-zion-cyan-light";"
@@ -402,9 +408,9 @@ export default function ServicesPricingPage() {
   }
             >
               <Mail className="h-5 w-5 mr-2" />
-              Schedule Consultation
+              Schedule Consultation;
             </Button>
-            <Button
+            <Button;
               size="lg"
               variant="outline"
               className="className="border-white text-white,
@@ -415,7 +421,7 @@ export default function ServicesPricingPage() {
   }
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call Now
+              Call Now;
             </Button>
           </div>
         </div>

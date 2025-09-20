@@ -21,7 +21,9 @@ export interface NewInnovativeService2026 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,7 +35,7 @@ export interface NewInnovativeService2026 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
   aiCapabilities?: string[]
   complianceFeatures?: string[]
   scalabilityFeatures?: string[],
@@ -41,7 +43,7 @@ export interface NewInnovativeService2026 {
 
 export,
   const: NEW_INNOVATIVE_SERVICES_2026: NewInnovativeService2026[] = [
-  // AI Project Management Platform
+  // AI Project Management Platform;
   {
   i,
   d: "ai-project-management-platform-2026",tit,
@@ -138,7 +140,7 @@ export,
   ],
   }
 
-  // AI Supply Chain Optimization
+  // AI Supply Chain Optimization;
   {
   id: "ai-supply-chain-optimization-2026",tit,
   l: e: "AI Supply Chain Optimization Platform 2026",descripti,
@@ -234,7 +236,7 @@ export,
   ],
   }
 
-  // AI Cybersecurity Platform
+  // AI Cybersecurity Platform;
   {
   id: "ai-cybersecurity-platform-2026",tit,
   l: e: "AI Cybersecurity Platform 2026",descripti,
@@ -330,7 +332,7 @@ export,
   ],
   }
 
-  // AI Customer Experience Platform
+  // AI Customer Experience Platform;
   {
   id: "ai-customer-experience-platform-2026",tit,
   l: e: "AI Customer Experience Platform 2026",descripti,
@@ -426,7 +428,7 @@ export,
   ],
   }
 
-  // AI FinTech Platform
+  // AI FinTech Platform;
   {
   id: "ai-fintech-platform-2026",tit,
   l: e: "AI FinTech Platform 2026",descripti,
@@ -523,4 +525,4 @@ export,
   },
   ]
 
-export default NEW_INNOVATIVE_SERVICES_2026
+export default NEW_INNOVATIVE_SERVICES_2026;

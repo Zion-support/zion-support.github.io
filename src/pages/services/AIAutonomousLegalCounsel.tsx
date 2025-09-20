@@ -1,29 +1,33 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Scale
+  Scale;
   Brain,
   Target,
   BarChart3,
-  CheckCircle
-  ArrowRight
-  Star
-  Globe
-  Cpu
-  Database
-  ChartBar
-  PieChart
-  Activity
-  Eye
-  Clock
-  Award
-  Users
-  Share2
-  TrendingUp
-  Zap
-  Shield
-  BookOpen
-} from "lucide-react"
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  ChartBar;
+  PieChart;
+  Activity;
+  Eye;
+  Clock;
+  Award;
+  Users;
+  Share2;
+  TrendingUp;
+  Zap;
+  Shield;
+  BookOpen;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AIAutonomousLegalCounse: l: React.FC = () () => {
   const features = [
@@ -78,7 +82,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -91,12 +95,12 @@ const,
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 text-amber-400 text-sm font-medium mb-6">
               <Scale className="w-4 h-4 mr-2" />
-              AI-Powered Autonomous Legal Counsel
+              AI-Powered Autonomous Legal Counsel;
             </div>
             
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Transform Your Legal Operations with
+              Transform Your Legal Operations with;
               <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
             
@@ -111,11 +115,11 @@ const,
   hove: r:from-amber-600,
   hove: r:to-orange-600 transition-all duration-300,
   transform: hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-amber-500/30 text-amber-400 rounded-lg font-semibold hove,
   r:bg-amber-500/10 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -128,7 +132,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -145,10 +149,10 @@ const,
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Advanced Legal Counsel Features
+              Advanced Legal Counsel Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive legal capabilities for modern businesses
+              Our AI platform provides comprehensive legal capabilities for modern businesses;
             </p>
           </motion.div>
           
@@ -156,7 +160,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -192,7 +196,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -212,13 +216,13 @@ const,
               Why Choose AI Autonomous Legal Counsel?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in legal efficiency and compliance
+              Experience measurable improvements in legal efficiency and compliance;
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -243,7 +247,7 @@ const,
               </div>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -265,7 +269,7 @@ const,
               <button className="w-full px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg font-semibold,
   hove: r: from-amber-600 hove,
   r:to-orange-600 transition-all duration-300">
-                Get Started Today
+                Get Started Today;
               </button>
             </motion.div>
           </div>
@@ -278,7 +282,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -304,11 +308,11 @@ const,
               <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg font-semibold,
   hove: r:from-amber-600,
   hove: r:to-orange-600 transition-all duration-300">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-amber-500/30 text-amber-400 rounded-lg font-semibold hove,
   r:bg-amber-500/10 transition-all duration-300">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -317,4 +321,4 @@ const,
     </div>
   )
 }
-export default AIAutonomousLegalCounsel
+export default AIAutonomousLegalCounsel;

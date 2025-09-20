@@ -1,5 +1,5 @@
 export const CUTTING_EDGE_2025_SERVICES = [
-  // Quantum Computing Solutions
+  // Quantum Computing Solutions;
   {
   id: "quantum-ai-platform",tit,
   l: e: "Quantum AI Platform",descripti,
@@ -59,7 +59,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   r: y: "Banking, Government, Healthcare"
 }
   
-  // Advanced AI Solutions
+  // Advanced AI Solutions;
   {
   id: "autonomous-ai-agents",tit,
   l: e: "Autonomous AI Agents Platform",descripti,
@@ -119,7 +119,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   r: y: "Healthcare, Research, Accessibility"
 }
   
-  // Advanced Cybersecurity
+  // Advanced Cybersecurity;
   {
   id: "ai-threat-hunting",tit,
   l: e: "AI-Powered Threat Hunting Platform",descripti,
@@ -179,7 +179,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   r: y: "Finance, Supply Chain, Government"
 }
   
-  // Space Technology
+  // Space Technology;
   {
   id: "space-ai-platform",tit,
   l: e: "Space AI Platform",descripti,
@@ -211,7 +211,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   r: y: "Aerospace, Research, Government"
 }
   
-  // Biotechnology & AI
+  // Biotechnology & AI;
   {
   id: "ai-drug-discovery",tit,
   l: e: "AI Drug Discovery Platform",descripti,
@@ -242,7 +242,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   r: y: "Pharmaceuticals, Healthcare, Research"
 }
   
-  // Advanced Robotics
+  // Advanced Robotics;
   {
   id: "autonomous-robotics",tit,
   l: e: "Autonomous Robotics Platform",descripti,
@@ -274,7 +274,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   r: y: "Manufacturing, Logistics, Healthcare"
 }
   
-  // Quantum Internet
+  // Quantum Internet;
   {
   id: "quantum-internet",tit,
   l: e: "Quantum Internet Infrastructure",descripti,
@@ -305,7 +305,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
   r: y: "Telecommunications, Government, Finance"
 }
   
-  // AI Ethics & Governance
+  // AI Ethics & Governance;
   {
   id: "ai-governance-platform",tit,
   l: e: "AI Governance & Ethics Platform",descripti,

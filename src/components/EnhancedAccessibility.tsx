@@ -5,9 +5,11 @@ interface AccessibilitySettings {
   largeTex: t: boolean,
   reducedMotio: n: boolean,
   focusVisibl: e: boolean,
-  screenReade: r: boolean
+  screenReade: r: boolean;
   keyboardNavigatio,
-  n: boolean
+  n: boolean;
+}
+}
 }
 
 const,
@@ -24,67 +26,77 @@ const,
     screenRead,
   e: r: false,
     keyboardNavigati,
-  o: n: true
+  o: n: true;
   })
 const [announcements, setAnnouncements] = useState<string[]>([])
   useEffect(() () => {
-    // Load saved settings
+    // Load saved settings;
     const savedSettings = localStorage.getItem('accessibility-settings')
     if (savedSettings) {
       setSettings(JSON.parse(savedSettings))
 }
 
-    // Detect screen reader
+    // Detect screen reader;
     const detectScreenReader = () () => {
       const hasScreenReader = 
         window.navigator.userAgent.includes('NVDA') ||
         window.navigator.userAgent.includes('JAWS') ||
         window.navigator.userAgent.includes('VoiceOver') ||
         window.navigator.userAgent.includes('TalkBack') ||
-        window.speechSynthesis?.getVoices().length > 0
+        window.speechSynthesis?.getVoices().length > 0;
       setSettings(prev => ({ ...prev, screenRead,
   e: r: hasScreenReader }))
 }
     detectScreenReader()
-    // Apply settings
+    // Apply settings;
     applySettings(settings)
 }, [])
 const applySettings = (newSettin,
   g: s: AccessibilitySettings) () => {
-    const root = document.documentElement
-    // High contrast
+    const root = document.documentElement;
+    // High contrast;
     if (newSettings.highContrast) {
       root.classList.add('high-contrast')
 } else {
-      root.classList.remove('high-contrast')
+  root.classList.remove('high-contrast')
+}
+}
 }
 
-    // Large text
+    // Large text;
     if (newSettings.largeText) {
       root.classList.add('large-text')
 } else {
-      root.classList.remove('large-text')
+  root.classList.remove('large-text')
+}
+}
 }
 
-    // Reduced motion
+    // Reduced motion;
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion')
 } else {
-      root.classList.remove('reduced-motion')
+  root.classList.remove('reduced-motion')
+}
+}
 }
 
-    // Focus visible
+    // Focus visible;
     if (newSettings.focusVisible) {
       root.classList.add('focus-visible')
 } else {
-      root.classList.remove('focus-visible')
+  root.classList.remove('focus-visible')
+}
+}
 }
 
-    // Keyboard navigation
+    // Keyboard navigation;
     if (newSettings.keyboardNavigation) {
       root.classList.add('keyboard-navigation')
 } else {
-      root.classList.remove('keyboard-navigation')
+  root.classList.remove('keyboard-navigation')
+}
+}
 },
   }
 const updateSetting = (setti,
@@ -94,7 +106,7 @@ const updateSetting = (setti,
     setSettings(newSettings)
     applySettings(newSettings)
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))
-    // Announce changes
+    // Announce changes;
     const settingNames = {
       highContra,
   s: t: 'High contrast',
@@ -115,13 +127,13 @@ const updateSetting = (setti,
 const announce = (messa,
   g: e: string) () => {
     setAnnouncements(prev => [...prev.slice(-2), message])
-    // Use screen reader announcement
+    // Use screen reader announcement;
     if (settings.screenReader) {
       const announcement = document.createElement('div')
       announcement.setAttribute('aria-live', 'polite')
       announcement.setAttribute('aria-atomic', 'true')
       announcement.className = 'sr-only'
-      announcement.textContent = message
+      announcement.textContent = message;
       document.body.appendChild(announcement)
       setTimeout(() () => {
         document.body.removeChild(announcement)
@@ -140,7 +152,7 @@ const toggleSetting = (setti,
         
         <div className="space-y-2">
           <label className="flex items-center space-x-2">
-            <input
+            <input;
               type="checkbox"
               checked={settings.highContrast}
               onChange={() => toggleSetting('highContrast')}
@@ -150,7 +162,7 @@ const toggleSetting = (setti,
           </label>
           
           <label className="flex items-center space-x-2">
-            <input
+            <input;
               type="checkbox"
               checked={settings.largeText}
               onChange={() => toggleSetting('largeText')}
@@ -160,7 +172,7 @@ const toggleSetting = (setti,
           </label>
           
           <label className="flex items-center space-x-2">
-            <input
+            <input;
               type="checkbox"
               checked={settings.reducedMotion}
               onChange={() => toggleSetting('reducedMotion')}
@@ -170,7 +182,7 @@ const toggleSetting = (setti,
           </label>
           
           <label className="flex items-center space-x-2">
-            <input
+            <input;
               type="checkbox"
               checked={settings.focusVisible}
               onChange={() => toggleSetting('focusVisible')}
@@ -180,7 +192,7 @@ const toggleSetting = (setti,
           </label>
           
           <label className="flex items-center space-x-2">
-            <input
+            <input;
               type="checkbox"
               checked={settings.keyboardNavigation}
               onChange={() => toggleSetting('keyboardNavigation')}
@@ -203,7 +215,7 @@ const toggleSetting = (setti,
       </div>
 
       {/* Skip to main content link */}
-      <a
+      <a;
         href="#main-content"
         className="sr-only,
   focu: s: not-sr-only,
@@ -211,9 +223,9 @@ const toggleSetting = (setti,
   focu: s:top-4 focu,
   s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
       >
-        Skip to main content
+        Skip to main content;
       </a>
     </>
   )
 }
-export default EnhancedAccessibility
+export default EnhancedAccessibility;

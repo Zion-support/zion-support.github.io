@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Users,
   MessageCircle,
@@ -63,8 +64,10 @@ import {
   Activity,
   Target,
   BarChart3,
-  PieChart
-} from "lucide-react"
+  PieChart;
+}
+}
+ } from "lucide-react";
 interface TeamMember {
   id: string,na,
   m: e: string,ro,
@@ -76,6 +79,8 @@ interface TeamMember {
   l: s: string[],projec,
   t: s: string[],availabili,
   t: y: 'available' | 'busy' | 'unavailable'
+}
+}
 }
 
 interface Project {
@@ -92,6 +97,8 @@ interface Project {
   e: t: number,clie,
   n: t: string,ta,
   g: s: string[],
+}
+}
   }
 
 interface Task {
@@ -107,6 +114,8 @@ interface Task {
   e: s: string[],ta,
   g: s: string[],commen,
   t: s: Comment[],
+}
+}
   }
 
 interface Comment {
@@ -116,6 +125,8 @@ interface Comment {
   m: p: string,lik,
   e: s: number,repli,
   e: s: Comment[],
+}
+}
   }
 
 interface Message {
@@ -128,10 +139,12 @@ interface Message {
   reactio,
   n: s: { typ,
   e: string, cou,
+}
+}
   n: t: number },
   []
   isRe,
-  a: d: boolean
+  a: d: boolean;
 }
 
 interface FileItem {
@@ -145,24 +158,28 @@ interface FileItem {
   g: s: string[],sharedWi,
   t: h: string[],permissio,
   n: s: 'view' | 'edit' | 'admin',versi,
-  o: n: string
+  o: n: string;
+}
+}
 }
 
 interface TeamCollaborationToolsProps {
-  showTeamMembers?: boolean
+  showTeamMembers?: boolean;
   showProjects?: boolean,
   showCommunication?: boolean,
   showFileSharing?: boolean,
   maxItems?: number,
 }
+}
+}
 
 export,
   const: TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
-  showTeamMembers = true
+  showTeamMembers = true;
   showProjects = true,
   showCommunication = true,
   showFileSharing = true,
-  maxItems = 20
+  maxItems = 20;
 }) () => {
   const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team'),
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]),
@@ -176,7 +193,7 @@ const [searchQuery, setSearchQuery] = useState('')
 const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),
   const [selectedStatus, setSelectedStatus] = useState<string>('all'),
 
-  // Sample data
+  // Sample data;
   useEffect(() () => {
     const,
   sampleTeamMember: s: TeamMember[] = [
@@ -307,7 +324,7 @@ const,
   n: t: 3 },
   ]
         isRe,
-  a: d: true
+  a: d: true;
       }, {
         id: '2',send,
   e: r: 'Michael Chen',conte,
@@ -319,7 +336,7 @@ const,
   n: t: 2 },
   ]
         isRe,
-  a: d: false
+  a: d: false;
       }, {
         id: '3',send,
   e: r: 'David Kim',conte,
@@ -331,7 +348,7 @@ const,
   n: t: 1 },
   ]
         isRe,
-  a: d: true
+  a: d: true;
       },
   ]
 const,
@@ -384,30 +401,45 @@ const,
     setFiles(sampleFiles)
 }, []),
 
-  // Get status color and icon
+  // Get status color and icon;
   const getStatusDisplay = (stat,
   u: s: string) () => {
     switch (status) {
-      case 'online': return { colo,
+      case 'online': return {
+  colo,
   r: 'text-green-400 bg-green-400/20', ic,
+}
+}
   o: n: <div className="w-2 h-2 bg-green-400 rounded-full"></div> }
-      case 'away': return { col,
+      case 'away': return {
+  col,
   o: r: 'text-yellow-400 bg-yellow-400/20', ic,
+}
+}
   o: n: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> }
-      case 'busy': return { col,
+      case 'busy': return {
+  col,
   o: r: 'text-red-400 bg-red-400/20', ic,
+}
+}
   o: n: <div className="w-2 h-2 bg-red-400 rounded-full"></div> }
-      case 'offline': return { col,
+      case 'offline': return {
+  col,
   o: r: 'text-zinc-400 bg-zinc-400/20', ic,
+}
+}
   o: n: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }
       defau,
-  l: t: return { colo,
+  l: t: return {
+  colo,
   r: 'text-zinc-400 bg-zinc-400/20', ic,
+}
+}
   o: n: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> },
   },
   },
 
-  // Get project status color
+  // Get project status color;
   const getProjectStatusColor = (stat,
   u: s: string) () => {
     switch (status) {
@@ -420,7 +452,7 @@ const,
   t: return 'text-zinc-400 bg-zinc-400/20'
     },
   }
-  // Get priority color
+  // Get priority color;
   const getPriorityColor = (priori,
   t: y: string) () => {
     switch (priority) {
@@ -432,7 +464,7 @@ const,
   t: return 'text-zinc-400 bg-zinc-400/20'
     },
   }
-  // Get file type icon
+  // Get file type icon;
   const getFileTypeIcon = (ty,
   p: e: string) () => {
     switch (type) {
@@ -445,7 +477,7 @@ const,
   t: return <File className="w-5 h-5" />
     },
   }
-  // Format file size
+  // Format file size;
   const formatFileSize = (si,
   z: e: number) () => {
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`
@@ -453,12 +485,12 @@ const,
     return `${(size / 1024).toFixed(1)} GB`
 },
 
-  // Handle project selection
+  // Handle project selection;
   const handleProjectSelect = (proje,
   c: t: Project) () => {
     setSelectedProject(project)
   }
-  // Handle message reactions
+  // Handle message reactions;
   const handleMessageReaction = (message,
   I: d: string, reactionTy,
   p: e: string) () => {
@@ -466,14 +498,16 @@ const,
       if (msg.id === messageId) {
         const existingReaction = msg.reactions.find(r => r.type === reactionType)
         if (existingReaction) {
-          existingReaction.count += 1
+          existingReaction.count += 1;
         } else {
-          msg.reactions.push({ ty,
+  msg.reactions.push({ ty,
   p: e: reactionType, cou,
+}
+}
   n: t: 1 })
 },
   }
-      return msg
+      return msg;
 })),
   },
 
@@ -499,11 +533,11 @@ const,
   e: l: 'File Sharing', ic,
   o: n: <FileText className="w-4 h-4" /> },
   ].map((tab) => (
-            <button
+            <button;
               key={tab.id}
               onClick={() => setActiveTab(tab.id as any)}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
-                activeTab === tab.id
+                activeTab === tab.id;
                   ? 'bg-zion-cyan text-white'
                   : 'text-zinc-400,
   hove: r: text-white hove,
@@ -519,7 +553,7 @@ const,
 
       {/* Team Members Tab */},
   {activeTab === 'team' && showTeamMembers && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -531,7 +565,7 @@ const,
           {/* Team Stats */}
           <div className="grid grid-cols-1,
   m: d: grid-cols-4 gap-6 mb-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -544,7 +578,7 @@ const,
               <div className="text-zinc-400">Total Members</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -562,7 +596,7 @@ const,
               <div className="text-zinc-400">Online Now</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -580,7 +614,7 @@ const,
               <div className="text-zinc-400">Available</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -604,7 +638,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {teamMembers.map((member, index) => (
-              <motion.div
+              <motion.div;
                 key={member.id}
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -654,7 +688,7 @@ const,
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Skills</h4>
                   <div className="flex flex-wrap gap-2">
                     {member.skills.slice(0, 3).map((skill) => (
-                      <span
+                      <span;
                         key={skill}
                         className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                       >
@@ -663,7 +697,7 @@ const,
                     ))},
   {member.skills.length > 3 && (
                       <span className="px-2 py-1 bg-zinc-800/50 text-zinc-400 text-xs rounded-full">
-                        +{member.skills.length - 3} more
+                        +{member.skills.length - 3} more;
                       </span>
                     )}
                   </div>
@@ -712,7 +746,7 @@ const,
       )},
   {/* Projects Tab */},
   {activeTab === 'projects' && showProjects && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -724,7 +758,7 @@ const,
           {/* Project Stats */}
           <div className="grid grid-cols-1,
   m: d: grid-cols-4 gap-6 mb-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -737,7 +771,7 @@ const,
               <div className="text-zinc-400">Total Projects</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -755,7 +789,7 @@ const,
               <div className="text-zinc-400">Active</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -773,7 +807,7 @@ const,
               <div className="text-zinc-400">Completed</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -786,7 +820,7 @@ const,
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-zion-cyan mb-2">
-                ${(projects.reduce((sum, p) => sum + p.budget, 0) / 1000000).toFixed(1)}M
+                ${(projects.reduce((sum, p) => sum + p.budget, 0) / 1000000).toFixed(1)}M;
               </div>
               <div className="text-zinc-400">Total Budget</div>
             </motion.div>
@@ -795,7 +829,7 @@ const,
           {/* Projects List */}
           <div className="space-y-6">
             {projects.map((project, index) => (
-              <motion.div
+              <motion.div;
                 key={project.id}
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -855,7 +889,7 @@ const,
                     <span className="text-sm font-medium text-zion-cyan">{project.progress}%</span>
                   </div>
                   <div className="w-full bg-zinc-700 rounded-full h-2">
-                    <motion.div
+                    <motion.div;
                       initial={ wid,
   t: h: 0 },
   }
@@ -895,7 +929,7 @@ const,
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span
+                    <span;
                       key={tag}
                       className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                     >
@@ -909,20 +943,20 @@ const,
 
           {/* Add Project Button */}
           <div className="text-center">
-            <button
+            <button;
               onClick={() => setShowProjectForm(true)}
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
             >
               <Plus className="w-5 h-5" />
-              Add New Project
+              Add New Project;
             </button>
           </div>
         </motion.div>
       )},
   {/* Communication Tab */},
   {activeTab === 'communication' && showCommunication && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -934,7 +968,7 @@ const,
           {/* Communication Stats */}
           <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-6 mb-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -947,7 +981,7 @@ const,
               <div className="text-zinc-400">Total Messages</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -965,7 +999,7 @@ const,
               <div className="text-zinc-400">Read</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -987,7 +1021,7 @@ const,
           {/* Messages */}
           <div className="space-y-4">
             {messages.map((message, index) => (
-              <motion.div
+              <motion.div;
                 key={message.id}
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -1014,7 +1048,7 @@ const,
                       <span className="text-xs text-zinc-500">{message.timestamp}</span>
                       {!message.isRead && (
                         <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                          New
+                          New;
                         </span>
                       )}
                     </div>
@@ -1024,7 +1058,7 @@ const,
                     {/* Reactions */}
                     <div className="flex items-center gap-2">
                       {message.reactions.map((reaction, idx) => (
-                        <button
+                        <button;
                           key={idx}
                           onClick={() => handleMessageReaction(message.id, reaction.type)}
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full,
@@ -1065,7 +1099,7 @@ const,
           <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
             <div className="flex items-center gap-3">
               <div className="flex-1">
-                <input
+                <input;
                   type="text"
                   placeholder="Type your message..."
                   className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400,
@@ -1084,7 +1118,7 @@ const,
               <button className="px-6 py-3 bg-zion-cyan text-white rounded-lg hove,
   r:bg-zion-cyan/80 transition-colors flex items-center gap-2">
                 <Send className="w-4 h-4" />
-                Send
+                Send;
               </button>
             </div>
           </div>
@@ -1092,7 +1126,7 @@ const,
       )},
   {/* File Sharing Tab */},
   {activeTab === 'files' && showFileSharing && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -1104,7 +1138,7 @@ const,
           {/* File Stats */}
           <div className="grid grid-cols-1,
   m: d: grid-cols-4 gap-6 mb-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -1117,7 +1151,7 @@ const,
               <div className="text-zinc-400">Total Files</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -1135,7 +1169,7 @@ const,
               <div className="text-zinc-400">Documents</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -1153,7 +1187,7 @@ const,
               <div className="text-zinc-400">Images</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -1175,7 +1209,7 @@ const,
           {/* Files List */}
           <div className="space-y-4">
             {files.map((file, index) => (
-              <motion.div
+              <motion.div;
                 key={file.id}
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -1210,7 +1244,7 @@ const,
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mt-2">
                       {file.tags.map((tag) => (
-                        <span
+                        <span;
                           key={tag}
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                         >
@@ -1250,7 +1284,7 @@ const,
               <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>
               <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors">
-                Choose Files
+                Choose Files;
               </button>
             </div>
           </div>

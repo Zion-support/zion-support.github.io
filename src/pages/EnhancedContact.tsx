@@ -1,28 +1,30 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Phone
+  Phone;
   Mail,
   MapPin,
   Clock,
   MessageSquare,
-  Send
-  Globe
-  Building
-  User
-  CheckCircle
-  ArrowRight
-  Star
-  Award
-  Shield
-  Zap
-  Brain
-  Cpu
-  Database
-  Network
-  Rocket
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  Send;
+  Globe;
+  Building;
+  User;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Award;
+  Shield;
+  Zap;
+  Brain;
+  Cpu;
+  Database;
+  Network;
+  Rocket;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 const,
   EnhancedContac: t: React.FC = () () => {
   const [formData, setFormData] = useState({
@@ -39,8 +41,8 @@ const,
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) () => {
   setFormData({
-  ...formData
-      [e.target.name]: e.target.value
+  ...formData;
+      [e.target.name]: e.target.value;
 })
   }
 
@@ -48,13 +50,13 @@ const,
   e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000))
     
     setIsSubmitted(true)
     setIsSubmitting(false)
     
-    // Reset form after 3 seconds
+    // Reset form after 3 seconds;
     setTimeout(() () => {
       setIsSubmitted(false)
       setFormData({
@@ -101,7 +103,7 @@ const,
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for innovative micro SAAS services. Contact us via phone, email, or visit our office in Middletown, DE."
       />
@@ -114,7 +116,7 @@ const,
   s: m: px-6,
   l: g:px-8 py-24">
           <div className="text-center">
-            <motion.h1 
+            <motion.h1;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -127,12 +129,12 @@ const,
               className="className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6";"
             >
-              Let's Build the Future
+              Let's Build the Future;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">
-                Together
+                Together;
               </span>
             </motion.h1>
-            <motion.p 
+            <motion.p;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -160,7 +162,7 @@ const,
           
           {/* Contact Information */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: -20 },
   }
@@ -262,7 +264,7 @@ const,
 
           {/* Contact Form */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -291,11 +293,11 @@ const,
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
-                    <input
+                    <input;
                       type="text"
                       id="name"
                       name="name"
-                      required
+                      required;
                       value={formData.name},
   }
                       onChange={handleInputChange},
@@ -312,11 +314,11 @@ const,
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
-                    <input
+                    <input;
                       type="email"
                       id="email"
                       name="email"
-                      required
+                      required;
                       value={formData.email},
   }
                       onChange={handleInputChange},
@@ -334,9 +336,9 @@ const,
   d:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
+                      Company;
                     </label>
-                    <input
+                    <input;
                       type="text"
                       id="company"
                       name="company"
@@ -354,9 +356,9 @@ const,
                   
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
+                      Phone Number;
                     </label>
-                    <input
+                    <input;
                       type="tel"
                       id="phone"
                       name="phone"
@@ -375,9 +377,9 @@ const,
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service of Interest
+                    Service of Interest;
                   </label>
-                  <select
+                  <select;
                     id="service"
                     name="service"
                     value={formData.service},
@@ -403,10 +405,10 @@ const,
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
-                  <textarea
+                  <textarea;
                     id="message"
                     name="message"
-                    required
+                    required;
                     rows={5},
   }
                     value={formData.message},
@@ -421,7 +423,7 @@ const,
                   />
                 </div>
 
-                <button
+                <button;
                   type="submit"
                   disabled={isSubmitting},
   }
@@ -439,7 +441,7 @@ const,
                     </>
                   ) : (
   <>
-                      Send Message
+                      Send Message;
                       <Send className="w-5 h-5 ml-2" />
                     </>
                   )}
@@ -451,7 +453,7 @@ const,
 
         {/* Call to Action */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -469,12 +471,12 @@ const,
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-              Don't wait to transform your business. Contact us today to discuss your project 
+              Don't wait to transform your business. Contact us today to discuss your project;
               and discover how our innovative solutions can drive your success.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg,
@@ -484,16 +486,16 @@ const,
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call,
-  No: w: +1 302 464 0950
+  No: w: +1 302 464 0950;
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/20 transition-all duration-300";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Send Email
+                Send Email;
               </a>
             </div>
           </div>
@@ -502,4 +504,4 @@ const,
     </div>
   )
 }
-export default EnhancedContact
+export default EnhancedContact;

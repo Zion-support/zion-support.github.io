@@ -1,39 +1,41 @@
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  Shield
+  Shield;
   Brain,
   Zap,
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Globe
-  Lock
-  Database
-  Cpu
-  Network
-  BarChart3
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-  AlertTriangle
-  Target
-  Users
-  ArrowRight
-  Key
-  Fingerprint
-  EyeOff
-  Server
-  Globe2
-  ShieldCheck
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  AlertTriangle;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+}
+}
+ } from "lucide-react";
 export default function AICybersecurity() {
   const features = [
   {
@@ -90,25 +92,25 @@ export default function AICybersecurity() {
   tit,
   l: e: 'Enterprise Security',descripti,
   o: n: 'Comprehensive cybersecurity for large organizations and corporations',ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   tit,
   l: e: 'Cloud Security',descripti,
   o: n: 'Protect cloud infrastructure and applications from cyber threats',ic,
-  o: n: Cloud
+  o: n: Cloud;
 },
   {
   tit,
   l: e: 'IoT Security',descripti,
   o: n: 'Secure connected devices and Internet of Things networks',ic,
-  o: n: Cpu
+  o: n: Cpu;
 },
   {
   tit,
   l: e: 'Financial Security',descripti,
   o: n: 'Protect financial systems and prevent fraud with AI',ic,
-  o: n: DollarSign
+  o: n: DollarSign;
 },
   ]
   const securityLayers = [
@@ -144,7 +146,7 @@ export default function AICybersecurity() {
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="AI Cybersecurity - Zion Tech Group"
         description="Revolutionary AI-powered cybersecurity platform with advanced threat detection, real-time response, and zero-day protection. Secure your digital assets with cutting-edge AI technology."
         keywords="AI cybersecurity, threat detection, cybersecurity platform, AI security, cyber defense, threat prevention, network security"
@@ -156,7 +158,7 @@ export default function AICybersecurity() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -170,26 +172,26 @@ export default function AICybersecurity() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
                 <Shield className="w-4 h-4" />
-                Cybersecurity Innovation
+                Cybersecurity Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                AI-Powered
+                AI-Powered;
                 <span className="block bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                  Cybersecurity
+                  Cybersecurity;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Protect your digital assets with our revolutionary AI cybersecurity platform. 
-                Advanced threat detection, real-time response, and zero-day protection 
+                Advanced threat detection, real-time response, and zero-day protection;
                 that keeps you one step ahead of cybercriminals.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -201,9 +203,9 @@ export default function AICybersecurity() {
   hove: r:to-emerald-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-green-500/25";"
                 >
-                  Get Protected
+                  Get Protected;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -214,7 +216,7 @@ export default function AICybersecurity() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Security Assessment
+                  Security Assessment;
                 </motion.button>
               </div>
             </motion.div>
@@ -232,7 +234,7 @@ export default function AICybersecurity() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -249,10 +251,10 @@ export default function AICybersecurity() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Revolutionary Cybersecurity Features
+                Revolutionary Cybersecurity Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform combines cutting-edge technology with cybersecurity expertise 
+                Our AI platform combines cutting-edge technology with cybersecurity expertise;
                 to deliver unprecedented protection and threat intelligence.
               </p>
             </motion.div>
@@ -261,7 +263,7 @@ export default function AICybersecurity() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -308,7 +310,7 @@ export default function AICybersecurity() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -324,19 +326,19 @@ export default function AICybersecurity() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your Security Posture
+                  Transform Your Security Posture;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our AI cybersecurity platform delivers measurable improvements in threat 
-                  detection, response time, and overall security effectiveness while 
+                  Our AI cybersecurity platform delivers measurable improvements in threat;
+                  detection, response time, and overall security effectiveness while;
                   reducing operational overhead and false positives.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -361,7 +363,7 @@ export default function AICybersecurity() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -383,7 +385,7 @@ export default function AICybersecurity() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Security Metrics
+                      Security Metrics;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -415,7 +417,7 @@ export default function AICybersecurity() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -432,10 +434,10 @@ export default function AICybersecurity() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Multi-Layer Security Architecture
+                Multi-Layer Security Architecture;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our defense-in-depth approach provides comprehensive protection across 
+                Our defense-in-depth approach provides comprehensive protection across;
                 all layers of your digital infrastructure.
               </p>
             </motion.div>
@@ -443,7 +445,7 @@ export default function AICybersecurity() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {securityLayers.map((layer, index) => (
-  <motion.div
+  <motion.div;
                   key={layer.name},
   }
                   initial={ opaci,
@@ -492,7 +494,7 @@ export default function AICybersecurity() {
   }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -509,10 +511,10 @@ export default function AICybersecurity() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Cybersecurity Use Cases
+                Cybersecurity Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform adapts to various security needs and industries
+                Our AI platform adapts to various security needs and industries;
                 providing tailored protection for different environments.
               </p>
             </motion.div>
@@ -520,7 +522,7 @@ export default function AICybersecurity() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -567,7 +569,7 @@ export default function AICybersecurity() {
   }
         <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -588,13 +590,13 @@ export default function AICybersecurity() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading organizations that are already using our AI cybersecurity 
+                Join leading organizations that are already using our AI cybersecurity;
                 platform to protect their critical infrastructure and data.
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -606,9 +608,9 @@ export default function AICybersecurity() {
   hove: r:to-emerald-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-green-500/25";"
                 >
-                  Get Protected Today
+                  Get Protected Today;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -619,7 +621,7 @@ export default function AICybersecurity() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Security Assessment
+                  Security Assessment;
                 </motion.button>
               </div>
             </motion.div>

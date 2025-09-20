@@ -1,7 +1,7 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: INNOVATIVE_MICRO_SAAS_SERVICES_2027: ProductListing[] = [
-  // AI-Powered Autonomous Business Operations
+  // AI-Powered Autonomous Business Operations;
   {
   i,
   d: "ai-autonomous-business-operations-suite",tit,
@@ -51,7 +51,7 @@ export,
   ],
   }
 
-  // Quantum-Resistant Cybersecurity Platform
+  // Quantum-Resistant Cybersecurity Platform;
   {
   id: "quantum-resistant-cybersecurity-platform",tit,
   l: e: "Quantum-Resistant Cybersecurity Platform",descripti,
@@ -100,7 +100,7 @@ export,
   ],
   }
 
-  // AI-Powered Healthcare Diagnostics Platform
+  // AI-Powered Healthcare Diagnostics Platform;
   {
   id: "ai-healthcare-diagnostics-platform",tit,
   l: e: "AI Healthcare Diagnostics Platform",descripti,
@@ -149,7 +149,7 @@ export,
   ],
   }
 
-  // Blockchain-Based Supply Chain Transparency
+  // Blockchain-Based Supply Chain Transparency;
   {
   id: "blockchain-supply-chain-transparency",tit,
   l: e: "Blockchain Supply Chain Transparency Platform",descripti,
@@ -198,7 +198,7 @@ export,
   ],
   }
 
-  // AI-Powered Legal Document Analysis
+  // AI-Powered Legal Document Analysis;
   {
   id: "ai-legal-document-analysis",tit,
   l: e: "AI Legal Document Analysis Platform",descripti,
@@ -247,7 +247,7 @@ export,
   ],
   }
 
-  // IoT Edge Computing Analytics Platform
+  // IoT Edge Computing Analytics Platform;
   {
   id: "iot-edge-computing-analytics",tit,
   l: e: "IoT Edge Computing Analytics Platform",descripti,
@@ -296,7 +296,7 @@ export,
   ],
   }
 
-  // AI-Powered Financial Trading Platform
+  // AI-Powered Financial Trading Platform;
   {
   id: "ai-financial-trading-platform",tit,
   l: e: "AI Financial Trading Platform",descripti,
@@ -345,7 +345,7 @@ export,
   ],
   }
 
-  // Sustainable Technology Optimization Platform
+  // Sustainable Technology Optimization Platform;
   {
   id: "sustainable-technology-optimization",tit,
   l: e: "Sustainable Technology Optimization Platform",descripti,
@@ -394,7 +394,7 @@ export,
   ],
   }
 
-  // AI-Powered Content Creation Studio
+  // AI-Powered Content Creation Studio;
   {
   id: "ai-content-creation-studio",tit,
   l: e: "AI Content Creation Studio",descripti,
@@ -443,7 +443,7 @@ export,
   ],
   }
 
-  // Quantum Machine Learning Platform
+  // Quantum Machine Learning Platform;
   {
   id: "quantum-machine-learning-platform",tit,
   l: e: "Quantum Machine Learning Platform",descripti,

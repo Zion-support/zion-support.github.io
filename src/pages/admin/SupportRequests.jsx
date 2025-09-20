@@ -1,14 +1,15 @@
+import { useCallback    } from "react";
 import React, { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/Input"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Badge } from "@/components/ui/badge"
-import { Search, Filter } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle     } from "@/components/ui/card";
+import { Input     } from "@/components/ui/Input";
+import { Button     } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger     } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue     } from "@/components/ui/select";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow     } from "@/components/ui/table";
+import { Badge     } from "@/components/ui/badge";
+import { Search, Filter     } from "lucide-react";
 import SEO from "@/components/SEO"
-// Mock data for support requests
+// Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [
   {
   id: "SR-1001",us,
@@ -121,37 +122,37 @@ export default function SupportRequests() {
     const [statusFilter, setStatusFilter] = useState(null)
     const [priorityFilter, setPriorityFilter] = useState(null)
     const [categoryFilter, setCategoryFilter] = useState(null)
-    // Apply filters to the request data
+    // Apply filters to the request data;
 const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request () => {
-  // Apply search query filter
+  // Apply search query filter;
         if (searchQuery &&
             !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-  return false
+  return false;
 }
-        // Apply status filter
+        // Apply status filter;
         if (if (statusFilter && request.status !== statusFilter) {
   ) {
-            return false
+            return false;
 }
-        // Apply priority filter
+        // Apply priority filter;
         if (if (priorityFilter && request.priority !== priorityFilter) {
   ) {
-            return false
+            return false;
 }
-        // Apply category filter
+        // Apply category filter;
         if (if (categoryFilter && request.category !== categoryFilter) {
   ) {
-            return false
+            return false;
 }
-        return true
+        return true;
 })
-    // Count by status for the summary dashboard
-const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length
-const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length
-const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length
-const totalCount = MOCK_SUPPORT_REQUESTS.length
+    // Count by status for the summary dashboard;
+const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
+const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+const totalCount = MOCK_SUPPORT_REQUESTS.length;
 const resetFilters = () () => {
         setSearchQuery("")
         setStatusFilter(null)
@@ -166,10 +167,10 @@ const resetFilters = () () => {
   m: d:items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Support Requests
+              Support Requests;
             </h1>
             <p className="text-zion-slate-light mt-2">
-              Manage and respond to user support requests and issues
+              Manage and respond to user support requests and issues;
             </p>
           </div>
           
@@ -177,7 +178,7 @@ const resetFilters = () () => {
   m: d:mt-0">
             <Button className="bg-zion-purple hove,
   r:bg-zion-purple-light">
-              New Support Case
+              New Support Case;
             </Button>
           </div>
         </div>
@@ -274,7 +275,7 @@ const resetFilters = () () => {
               </Select>
               
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-                <Filter className="h-4 w-4 mr-2"/> Reset Filters
+                <Filter className="h-4 w-4 mr-2"/> Reset Filters;
               </Button>
             </div>
             

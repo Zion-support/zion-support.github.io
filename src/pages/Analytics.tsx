@@ -1,8 +1,8 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  BarChart3
+  BarChart3;
   TrendingUp,
   PieChart,
   Activity,
@@ -11,35 +11,37 @@ import {
   Shield,
   Users,
   CheckCircle,
-  ArrowRight
-  Star
-  Globe
-  Target
-  Clock
-  Eye
-  Download
-  Filter
-  Search
-  Settings
-  RefreshCw
-  Calendar
-  DollarSign
-  ShoppingCart
-  Heart
-  MessageCircle
-  Bell
-  Wifi
-  Cpu
-  Server
-  Network
-  Lock
-  Key
-  FileText
-  BarChart
-  LineChart
-  AreaChart
-  ScatterPlot
-} from "lucide-react"
+  ArrowRight;
+  Star;
+  Globe;
+  Target;
+  Clock;
+  Eye;
+  Download;
+  Filter;
+  Search;
+  Settings;
+  RefreshCw;
+  Calendar;
+  DollarSign;
+  ShoppingCart;
+  Heart;
+  MessageCircle;
+  Bell;
+  Wifi;
+  Cpu;
+  Server;
+  Network;
+  Lock;
+  Key;
+  FileText;
+  BarChart;
+  LineChart;
+  AreaChart;
+  ScatterPlot;
+}
+}
+ } from "lucide-react";
 import SEO from "../components/SEO"
 const,
   Analytic: s: React.FC = () () => {
@@ -172,7 +174,7 @@ const,
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Analytics - Zion Tech Group"
         description="Transform your data into actionable insights with our comprehensive analytics solutions. Real-time monitoring, AI-powered analysis, and custom dashboards."
         keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group"
@@ -183,7 +185,7 @@ const,
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -204,9 +206,9 @@ const,
             
             <h2 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6 leading-tight">
-              Data-Driven
+              Data-Driven;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Insights
+                Insights;
               </span>
             </h2>
             
@@ -218,22 +220,22 @@ const,
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/25";"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                Explore Services
+                Explore Services;
               </Link>
             </div>
           </motion.div>
@@ -247,7 +249,7 @@ const,
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -278,7 +280,7 @@ const,
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -294,7 +296,7 @@ const,
               Powerful <span className="text-cyan-400">Analytics Features</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our analytics platform provides everything you need to understand your data 
+              Our analytics platform provides everything you need to understand your data;
               and make informed business decisions.
             </p>
           </motion.div>
@@ -303,7 +305,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {analyticsFeatures.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -336,7 +338,7 @@ const,
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -352,7 +354,7 @@ const,
               Analytics <span className="text-cyan-400">Solutions</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose from our comprehensive range of analytics solutions designed to meet 
+              Choose from our comprehensive range of analytics solutions designed to meet;
               every aspect of your business intelligence needs.
             </p>
           </motion.div>
@@ -360,7 +362,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {analyticsTypes.map((type, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -393,13 +395,13 @@ const,
                   ))}
                 </div>
                 
-                <Link
+                <Link;
                   to={type.path},
   }
                   className="className="inline-flex items-center text-cyan-400,
   hove: r:text-cyan-300 font-medium transition-colors";"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </motion.div>
@@ -412,7 +414,7 @@ const,
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -428,7 +430,7 @@ const,
               Seamless <span className="text-cyan-400">Integrations</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with your favorite tools and platforms to centralize all your data 
+              Connect with your favorite tools and platforms to centralize all your data;
               and get a complete view of your business.
             </p>
           </motion.div>
@@ -437,7 +439,7 @@ const,
   m: d: grid-cols-3 l,
   g:grid-cols-6 gap-6">
             {integrations.map((integration, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -469,7 +471,7 @@ const,
   }
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -490,22 +492,22 @@ const,
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/25";"
               >
-                Start Your Analytics Journey
+                Start Your Analytics Journey;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                Get Custom Quote
+                Get Custom Quote;
               </Link>
             </div>
           </motion.div>
@@ -514,4 +516,4 @@ const,
     </div>
   )
 }
-export default Analytics
+export default Analytics;

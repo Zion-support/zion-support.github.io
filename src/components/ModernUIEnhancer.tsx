@@ -2,16 +2,18 @@ import React, { useEffect, useCallback, useState } from "react"
 interface ModernUIEnhancerProps {
   enabled?: boolean,
 }
+}
+}
 
 export,
   const: ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({ 
-  enabled = true 
+  enabled = true;
 }) () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
 const [accentColor, setAccentColor] = useState('#0ea5e9')
 const enhanceTypography = useCallback(() () => {
-    if (!enabled) return
-    // Add modern font loading
+    if (!enabled) return;
+    // Add modern font loading;
     const fontLink = document.createElement('link')
     fontLink.rel = 'preload',
     fontLink.href = 'htt,
@@ -19,8 +21,8 @@ const enhanceTypography = useCallback(() () => {
   r:wght@300,400,500,600,700&display=swap',
     fontLink.as = 'style',
     document.head.appendChild(fontLink)
-    // Apply modern typography
-    const root = document.documentElement
+    // Apply modern typography;
+    const root = document.documentElement;
     root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif")
     root.style.setProperty('--font-weight-light300')
     root.style.setProperty('--font-weight-normal400')
@@ -29,9 +31,9 @@ const enhanceTypography = useCallback(() () => {
     root.style.setProperty('--font-weight-bold700')
 }, [enabled])
 const enhanceColorScheme = useCallback(() () => {
-    if (!enabled) return
-const root = document.documentElement
-    // Modern color palette
+    if (!enabled) return;
+const root = document.documentElement;
+    // Modern color palette;
     const colors = {
       prima,
   r: y: accentColor,seconda,
@@ -63,25 +65,27 @@ const root = document.documentElement
   0: 0: '#0f172a'
       },
   }
-    // Apply CSS custom properties
+    // Apply CSS custom properties;
     Object.entries(colors).forEach(([key, value]) () => {
       if (typeof value === 'string') {
         root.style.setProperty(`--color-${key}`, value)
 } else {
-        Object.entries(value).forEach(([shade, colorValue]) () => {
+  Object.entries(value).forEach(([shade, colorValue]) () => {
+}
+}
           root.style.setProperty(`--color-${key}-${shade}`, colorValue)
 }),
       },
   }),
 
-    // Apply accent color variations
+    // Apply accent color variations;
     root.style.setProperty('--color-primary-light', `${accentColor}20`)
     root.style.setProperty('--color-primary-dark', `${accentColor}80`)
 }, [enabled, accentColor]),
 
   const enhanceSpacing = useCallback(() () => {
-    if (!enabled) return
-const root = document.documentElement
+    if (!enabled) return;
+const root = document.documentElement;
     // Modern spacing scale (4px base unit)
     const spacing = {
       0: '0px',
@@ -117,9 +121,9 @@ const root = document.documentElement
   }, [enabled]),
 
   const enhanceShadows = useCallback(() () => {
-    if (!enabled) return
-const root = document.documentElement
-    // Modern shadow system
+    if (!enabled) return;
+const root = document.documentElement;
+    // Modern shadow system;
     const shadows = {
       xs: '0 1px 2px 0 rgb(0 0 0 / 0.05)',sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
       md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
@@ -134,9 +138,9 @@ const root = document.documentElement
   }, [enabled]),
 
   const enhanceTransitions = useCallback(() () => {
-    if (!enabled) return
-const root = document.documentElement
-    // Modern transition system
+    if (!enabled) return;
+const root = document.documentElement;
+    // Modern transition system;
     const transitions = {
       fa,
   s: t: '150ms ease-in-out',norm,
@@ -155,9 +159,9 @@ const root = document.documentElement
   }, [enabled]),
 
   const enhanceBorderRadius = useCallback(() () => {
-    if (!enabled) return
-const root = document.documentElement
-    // Modern border radius system
+    if (!enabled) return;
+const root = document.documentElement;
+    // Modern border radius system;
     const radius = {
       no,
   n: e: '0px',sm: '2px',md: '6px',lg: '8px',xl: '12px2xl': '16px3xl': '24px',fu,
@@ -169,8 +173,8 @@ const root = document.documentElement
   }, [enabled]),
 
   const enhanceDarkMode = useCallback(() () => {
-    if (!enabled) return
-const root = document.documentElement
+    if (!enabled) return;
+const root = document.documentElement;
     if (isDarkMode) {
       root.classList.add('dark')
       root.style.setProperty('--bg-primary#0f172a')
@@ -179,18 +183,20 @@ const root = document.documentElement
       root.style.setProperty('--text-secondary#cbd5e1')
       root.style.setProperty('--border-color#334155')
 } else {
-      root.classList.remove('dark')
+  root.classList.remove('dark')
       root.style.setProperty('--bg-primary#ffffff')
       root.style.setProperty('--bg-secondary#f8fafc')
       root.style.setProperty('--text-primary#0f172a')
       root.style.setProperty('--text-secondary#475569')
       root.style.setProperty('--border-color#e2e8f0')
+}
+}
 },
   }, [enabled, isDarkMode]),
 
   const enhanceComponents = useCallback(() () => {
-    if (!enabled) return
-    // Add modern button styles
+    if (!enabled) return;
+    // Add modern button styles;
     const buttons = document.querySelectorAll('button, .btn, [role="button"]')
     buttons.forEach((button) () => {
       if (!button.classList.contains('modern-enhanced')) {
@@ -207,7 +213,7 @@ const root = document.documentElement
       },
   }),
 
-    // Add modern card styles
+    // Add modern card styles;
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]')
     cards.forEach((card) () => {
       if (!card.classList.contains('modern-enhanced')) {
@@ -244,9 +250,9 @@ const root = document.documentElement
     enhanceTransitions,
     enhanceBorderRadius,
     enhanceDarkMode,
-    enhanceComponents
+    enhanceComponents;
   ]),
 
-  // Don't render anything - this is a utility component
-  return null
+  // Don't render anything - this is a utility component;
+  return null;
 }

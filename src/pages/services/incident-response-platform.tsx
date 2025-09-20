@@ -1,8 +1,8 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { motion } from "framer-motion"
+import { SEO     } from "@/components/SEO";
+import { motion     } from "framer-motion";
 import {
-  Shield
+  Shield;
   AlertTriangle,
   Clock,
   Users,
@@ -12,17 +12,21 @@ import {
   Brain,
   Cloud,
   BarChart3,
-  Lock
-  Activity
-  Eye
-  Cpu
-  Network
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-} from "lucide-react"
+  Lock;
+  Activity;
+  Eye;
+  Cpu;
+  Network;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function IncidentResponsePlatform() {
   const features = [
   {
@@ -103,25 +107,25 @@ export default function IncidentResponsePlatform() {
   na,
   m: e: 'AI-Powered Threat Detection',descripti,
   o: n: 'Machine learning algorithms that identify patterns and anomalies in real-time.',ic,
-  o: n: Brain
+  o: n: Brain;
 },
   {
   na,
   m: e: 'Automated Response Orchestration',descripti,
   o: n: 'Intelligent workflows that automatically contain and mitigate threats.',ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   na,
   m: e: 'Cloud-Native Architecture',descripti,
   o: n: 'Scalable platform that integrates with modern cloud environments.',ic,
-  o: n: Cloud
+  o: n: Cloud;
 },
   {
   na,
   m: e: 'Advanced Analytics',descripti,
   o: n: 'Comprehensive reporting and analytics for incident insights.',ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   ]
   const responseMetrics = [
@@ -148,7 +152,7 @@ export default function IncidentResponsePlatform() {
   ]
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="Incident Response Platform | Zion Tech Group" 
         description="Advanced cybersecurity incident response platform with AI-powered detection, automated response workflows, and expert incident management." 
       />
@@ -161,7 +165,7 @@ export default function IncidentResponsePlatform() {
   t: a: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
         
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -181,17 +185,17 @@ export default function IncidentResponsePlatform() {
             
             <h1 className="text-5xl,
   m: d: text-6xl font-bold bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent mb-6">
-              Incident Response Platform
+              Incident Response Platform;
             </h1>
             
             <p className="text-xl m,
   d:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Advanced cybersecurity incident response platform with AI-powered detection
+              Advanced cybersecurity incident response platform with AI-powered detection;
               automated response workflows, and expert incident management to protect your organization.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <motion.button;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -202,9 +206,9 @@ export default function IncidentResponsePlatform() {
   hove: r: from-red-600,
   hove: r:to-orange-700 transition-all duration-300";"
               >
-                Get Started
+                Get Started;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -214,7 +218,7 @@ export default function IncidentResponsePlatform() {
                 className="className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl,
   hove: r:bg-red-400/10 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -225,7 +229,7 @@ export default function IncidentResponsePlatform() {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -239,7 +243,7 @@ export default function IncidentResponsePlatform() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Incident Response</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our platform provides end-to-end incident response capabilities, from initial detection 
+              Our platform provides end-to-end incident response capabilities, from initial detection;
               through resolution and recovery, ensuring your organization stays protected.
             </p>
           </motion.div>
@@ -248,7 +252,7 @@ export default function IncidentResponsePlatform() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -288,7 +292,7 @@ export default function IncidentResponsePlatform() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -302,7 +306,7 @@ export default function IncidentResponsePlatform() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Platform Capabilities</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive incident response capabilities that cover the entire incident lifecycle
+              Comprehensive incident response capabilities that cover the entire incident lifecycle;
               from initial detection through recovery and lessons learned.
             </p>
           </motion.div>
@@ -310,7 +314,7 @@ export default function IncidentResponsePlatform() {
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {capabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                 key={capability.category},
   }
                 initial={ opaci,
@@ -349,7 +353,7 @@ export default function IncidentResponsePlatform() {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -363,7 +367,7 @@ export default function IncidentResponsePlatform() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Advanced Technologies</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our platform leverages cutting-edge technologies including AI, automation, and cloud-native 
+              Our platform leverages cutting-edge technologies including AI, automation, and cloud-native;
               architecture to deliver superior incident response capabilities.
             </p>
           </motion.div>
@@ -371,7 +375,7 @@ export default function IncidentResponsePlatform() {
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={tech.name},
   }
                 initial={ opaci,
@@ -404,7 +408,7 @@ export default function IncidentResponsePlatform() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -418,7 +422,7 @@ export default function IncidentResponsePlatform() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Performance Metrics</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our platform consistently delivers superior performance metrics, significantly improving 
+              Our platform consistently delivers superior performance metrics, significantly improving;
               incident response times and reducing the impact of security incidents.
             </p>
           </motion.div>
@@ -427,7 +431,7 @@ export default function IncidentResponsePlatform() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {responseMetrics.map((metric, index) => (
-  <motion.div
+  <motion.div;
                 key={metric.metric},
   }
                 initial={ opaci,
@@ -455,7 +459,7 @@ export default function IncidentResponsePlatform() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -470,11 +474,11 @@ export default function IncidentResponsePlatform() {
             <div className="bg-gradient-to-r from-red-900/50 to-orange-900/50 border border-red-400/30 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Enhance Your Incident Response?</h2>
               <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Protect your organization with our advanced incident response platform and 
+                Protect your organization with our advanced incident response platform and;
                 ensure rapid, effective response to security incidents.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.05 },
   }
@@ -485,9 +489,9 @@ export default function IncidentResponsePlatform() {
   hove: r: from-red-600,
   hove: r:to-orange-700 transition-all duration-300";"
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -497,7 +501,7 @@ export default function IncidentResponsePlatform() {
                   className="className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl,
   hove: r:bg-red-400/10 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </div>

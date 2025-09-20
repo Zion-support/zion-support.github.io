@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone } from "lucide-react"
-import { SEO } from "@/components/SEO"
+import { motion     } from "framer-motion";
+import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone     } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function AIPoweredSEO() {
   const features = [
   {
@@ -79,7 +79,7 @@ export default function AIPoweredSEO() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI-Powered SEO Services - Zion Tech Group"
         description="Revolutionary AI-powered SEO services that use machine learning to boost rankings, increase traffic, and drive conversions. Get ahead of the competition with predictive analytics and automated optimization."
       />
@@ -90,7 +90,7 @@ export default function AIPoweredSEO() {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -110,7 +110,7 @@ export default function AIPoweredSEO() {
             <h1 className="text-5xl,
   l: g: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                AI-Powered SEO
+                AI-Powered SEO;
               </span>
               <br />
               <span className="text-white">That Actually Works</span>
@@ -119,13 +119,13 @@ export default function AIPoweredSEO() {
             <p className="text-xl l,
   g:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize your search engine optimization with cutting-edge AI technology. 
-              Our machine learning algorithms predict trends, optimize content, and drive 
+              Our machine learning algorithms predict trends, optimize content, and drive;
               unprecedented organic growth.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -137,9 +137,9 @@ export default function AIPoweredSEO() {
   hove: r:to-blue-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <Rocket className="w-5 h-5 mr-2" />
-                Get Started Today
+                Get Started Today;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -150,7 +150,7 @@ export default function AIPoweredSEO() {
   hove: r:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Monitor className="w-5 h-5 mr-2" />
-                View Demo
+                View Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -161,7 +161,7 @@ export default function AIPoweredSEO() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -175,10 +175,10 @@ export default function AIPoweredSEO() {
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Powered by Advanced AI Technology
+              Powered by Advanced AI Technology;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO platform combines machine learning, natural language processing
+              Our AI-powered SEO platform combines machine learning, natural language processing;
               and predictive analytics to deliver results that traditional SEO methods can't match.
             </p>
           </motion.div>
@@ -187,7 +187,7 @@ export default function AIPoweredSEO() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -220,7 +220,7 @@ export default function AIPoweredSEO() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -234,10 +234,10 @@ export default function AIPoweredSEO() {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Proven Results & Benefits
+              Proven Results & Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO services deliver measurable results that directly impact 
+              Our AI-powered SEO services deliver measurable results that directly impact;
               your bottom line and competitive position.
             </p>
           </motion.div>
@@ -246,7 +246,7 @@ export default function AIPoweredSEO() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -273,7 +273,7 @@ export default function AIPoweredSEO() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -287,7 +287,7 @@ export default function AIPoweredSEO() {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Flexible Service Packages
+              Flexible Service Packages;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the AI-powered SEO solution that fits your business needs and budget. 
@@ -299,7 +299,7 @@ export default function AIPoweredSEO() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -321,7 +321,7 @@ export default function AIPoweredSEO() {
                 <button className="w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg,
   hove: r: from-cyan-600 hove,
   r:to-blue-600 transition-all duration-300">
-                  Get Started
+                  Get Started;
                 </button>
               </motion.div>
             ))}
@@ -333,7 +333,7 @@ export default function AIPoweredSEO() {
   }
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -354,7 +354,7 @@ export default function AIPoweredSEO() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -366,9 +366,9 @@ export default function AIPoweredSEO() {
   hove: r:to-blue-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
-                Start Your Free Consultation
+                Start Your Free Consultation;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -379,7 +379,7 @@ export default function AIPoweredSEO() {
   hove: r: bg-cyan-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </motion.button>
             </div>
           </motion.div>

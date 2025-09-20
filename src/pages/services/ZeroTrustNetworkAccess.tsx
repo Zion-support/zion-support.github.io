@@ -1,38 +1,42 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Shield
+  Shield;
   Lock,
   Eye,
   CheckCircle,
   Users,
   Clock,
-  ArrowRight
-  Play
-  Settings
-  Target
-  Cpu
-  Cloud
-  Activity
-  Sparkles
-  Search
-  Zap
-  Globe
-  Building
-  DollarSign
-  BarChart3
-  TrendingUp
-  Network
-  Key
-  Fingerprint
-  Monitor
-  AlertTriangle
-  ShieldCheck
-  Globe2
-  Server
-  Database
-  Smartphone
-} from "lucide-react"
+  ArrowRight;
+  Play;
+  Settings;
+  Target;
+  Cpu;
+  Cloud;
+  Activity;
+  Sparkles;
+  Search;
+  Zap;
+  Globe;
+  Building;
+  DollarSign;
+  BarChart3;
+  TrendingUp;
+  Network;
+  Key;
+  Fingerprint;
+  Monitor;
+  AlertTriangle;
+  ShieldCheck;
+  Globe2;
+  Server;
+  Database;
+  Smartphone;
+}
+}
+}
+}
+ } from "lucide-react";
 const ZeroTrustNetworkAccess = () () => {
   const features = [
   {
@@ -136,7 +140,7 @@ const ZeroTrustNetworkAccess = () () => {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -150,17 +154,17 @@ const ZeroTrustNetworkAccess = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
-              Zero Trust Security
+              Zero Trust Security;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Zero Trust
+              Zero Trust;
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent"> Network Access</span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your security posture with our Zero Trust Network Access solution 
+              Transform your security posture with our Zero Trust Network Access solution;
               that provides secure, seamless access to resources from anywhere in the world.
             </p>
             
@@ -170,12 +174,12 @@ const ZeroTrustNetworkAccess = () () => {
   hove: r:from-red-600,
   hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hove,
   r:bg-red-500/10 transition-all duration-200 flex items-center justify-center">
                 <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -188,7 +192,7 @@ const ZeroTrustNetworkAccess = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -201,10 +205,10 @@ const ZeroTrustNetworkAccess = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Zero Trust Security Features
+              Comprehensive Zero Trust Security Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform implements the core principles of Zero Trust architecture 
+              Our platform implements the core principles of Zero Trust architecture;
               to provide unmatched security and access control.
             </p>
           </motion.div>
@@ -213,7 +217,7 @@ const ZeroTrustNetworkAccess = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -246,7 +250,7 @@ const ZeroTrustNetworkAccess = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -259,10 +263,10 @@ const ZeroTrustNetworkAccess = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Multi-Layer Security Architecture
+              Multi-Layer Security Architecture;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Zero Trust solution implements security at every layer, ensuring 
+              Our Zero Trust solution implements security at every layer, ensuring;
               comprehensive protection for your digital assets.
             </p>
           </motion.div>
@@ -270,7 +274,7 @@ const ZeroTrustNetworkAccess = () () => {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {securityLayers.map((layer, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -307,7 +311,7 @@ const ZeroTrustNetworkAccess = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -320,7 +324,7 @@ const ZeroTrustNetworkAccess = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Security Posture
+              Transform Your Security Posture;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in security, compliance, and operational efficiency.
@@ -331,7 +335,7 @@ const ZeroTrustNetworkAccess = () () => {
   m: d:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -353,7 +357,7 @@ const ZeroTrustNetworkAccess = () () => {
             </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index + 3},
   }
                   initial={ opaci,
@@ -383,7 +387,7 @@ const ZeroTrustNetworkAccess = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -396,10 +400,10 @@ const ZeroTrustNetworkAccess = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Zero Trust solution adapts to various industries, providing tailored 
+              Our Zero Trust solution adapts to various industries, providing tailored;
               security for your specific compliance and security needs.
             </p>
           </motion.div>
@@ -408,7 +412,7 @@ const ZeroTrustNetworkAccess = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -441,7 +445,7 @@ const ZeroTrustNetworkAccess = () () => {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -453,10 +457,10 @@ const ZeroTrustNetworkAccess = () () => {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Secure Your Network Today
+              Secure Your Network Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our Zero Trust solution to protect 
+              Join organizations worldwide that use our Zero Trust solution to protect;
               their digital assets and enable secure remote work.
             </p>
             <div className="flex flex-col,
@@ -464,12 +468,12 @@ const ZeroTrustNetworkAccess = () () => {
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg,
   hove: r:from-red-600,
   hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hove,
   r:bg-red-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -478,4 +482,4 @@ const ZeroTrustNetworkAccess = () () => {
     </div>
   )
 }
-export default ZeroTrustNetworkAccess
+export default ZeroTrustNetworkAccess;

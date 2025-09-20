@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users     } from "lucide-react";
 export default function AIAnalytics() {
   const features = [
   {
@@ -33,25 +33,25 @@ export default function AIAnalytics() {
   tit,
   l: e: 'AI Strategy Consulting',descripti,
   o: n: 'Strategic planning and implementation of AI solutions',ic,
-  o: n: Brain
+  o: n: Brain;
 },
   {
   tit,
   l: e: 'Predictive Modeling',descripti,
   o: n: 'Build models to forecast business outcomes',ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: 'Natural Language Processing',descripti,
   o: n: 'Text analysis and language understanding systems',ic,
-  o: n: Database
+  o: n: Database;
 },
   {
   tit,
   l: e: 'Computer Vision',descripti,
   o: n: 'Image and video analysis with AI',ic,
-  o: n: Eye
+  o: n: Eye;
 },
   ]
   return (
@@ -61,7 +61,7 @@ export default function AIAnalytics() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -80,7 +80,7 @@ export default function AIAnalytics() {
 
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Intelligence Meets
+              Intelligence Meets;
               <span className="text-gradient"> Innovation</span>
             </h1>
 
@@ -92,11 +92,11 @@ export default function AIAnalytics() {
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
-                Start AI Project
+                Start AI Project;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
-                Learn More
+                Learn More;
               </button>
             </div>
           </motion.div>
@@ -107,7 +107,7 @@ export default function AIAnalytics() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -126,7 +126,7 @@ export default function AIAnalytics() {
               Why Choose AI & Analytics?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Unlock the power of data-driven decision making
+              Unlock the power of data-driven decision making;
             </p>
           </motion.div>
 
@@ -134,7 +134,7 @@ export default function AIAnalytics() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -169,7 +169,7 @@ export default function AIAnalytics() {
   }
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -185,17 +185,17 @@ export default function AIAnalytics() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our AI & Analytics Services
+              Our AI & Analytics Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive artificial intelligence and data analytics solutions
+              Comprehensive artificial intelligence and data analytics solutions;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.title},
   }
                 initial={ opaci,
@@ -234,7 +234,7 @@ export default function AIAnalytics() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -261,12 +261,12 @@ export default function AIAnalytics() {
   s: m: flex-row gap-4 justify-center">
                 <button className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold,
   hove: r:bg-gray-100 transition-colors duration-300">
-                  Start AI Project
+                  Start AI Project;
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold,
   hove: r:bg-white hove,
   r:text-indigo-600 transition-colors duration-300">
-                  Contact AI Team
+                  Contact AI Team;
                 </button>
               </div>
             </div>

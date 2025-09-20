@@ -1,39 +1,44 @@
+import { useCallback  } from "react";
 import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
-import { Helmet } from "react-helmet-async"
+import { motion   } from "framer-motion";
+import { Helmet   } from "react-helmet-async";
 import {
-  Search
+  Search;
     Filter,
   TrendingUp,
   Shield,
   Zap,
   Globe,
   Users,
-  BarChart3
-    DollarSign
-    Heart
-    GraduationCap
-    Target
-    Settings
-    Package
-    CheckCircle
-    Star
-    ArrowRight
-    Phone
-    Mail
-    MapPin
-    ExternalLink
-    Plus
-    Database
-    Layers
-} from "lucide-react"
+  BarChart3;
+    DollarSign;
+    Heart;
+    GraduationCap;
+    Target;
+    Settings;
+    Package;
+    CheckCircle;
+    Star;
+    ArrowRight;
+    Phone;
+    Mail;
+    MapPin;
+    ExternalLink;
+    Plus;
+    Database;
+    Layers;
+}
+}
+ } from "lucide-react";
 import {
-  comprehensiveServicesIndex2025
+  comprehensiveServicesIndex2025;
     getServiceStats,
-  getServicesByCategory
-    getServicesBySource
-    ServiceIndex 
-} from "../data/comprehensive-services-index-2025"
+  getServicesByCategory;
+    getServicesBySource;
+    ServiceIndex;
+}
+}
+ } from "../data/comprehensive-services-index-2025";
 const,
   ComprehensiveServicesDashboard202: 5: React.FC = () () => {
     const [searchTerm, setSearchTerm] = useState('')
@@ -42,9 +47,9 @@ const,
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
 
     const stats = getServiceStats()
-    const categories = stats.categoryBreakdown
+    const categories = stats.categoryBreakdown;
 const filteredServices = useMemo(() () => {
-        let filtered = comprehensiveServicesIndex2025
+        let filtered = comprehensiveServicesIndex2025;
         if (if (searchTerm) {
   ) {
             filtered = filtered.filter(service =>
@@ -64,7 +69,7 @@ const filteredServices = useMemo(() () => {
             filtered = filtered.filter(service => service.source === selectedSource)
         }
 
-        return filtered
+        return filtered;
 }, [searchTerm, selectedCategory, selectedSource])
 
     const getCategoryColor = (catego,
@@ -149,7 +154,7 @@ const filteredServices = useMemo(() () => {
   l: g:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800 opacity-90"></div>
                 <div className="relative max-w-7xl mx-auto text-center">
-                    <motion.div
+                    <motion.div;
                         initial={ opacit,
   y: 0, y: 20 },
   }
@@ -162,7 +167,7 @@ const filteredServices = useMemo(() () => {
                     >
                         <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-                            Comprehensive Services Dashboard 2025
+                            Comprehensive Services Dashboard 2025;
                         </h1>
                         <p className="text-xl m,
   d:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
@@ -210,7 +215,7 @@ const filteredServices = useMemo(() () => {
                                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
                             </div>
                         </div>
-                        <a
+                        <a;
                             href="htt,
   p: s: //ziontechgroup.com"
                             target="_blank"
@@ -235,7 +240,7 @@ const filteredServices = useMemo(() () => {
                     <div className="grid grid-cols-1,
   m: d:grid-cols-2,
   l: g:grid-cols-4 gap-6">
-                        <motion.div
+                        <motion.div;
                             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -257,7 +262,7 @@ const filteredServices = useMemo(() () => {
                             </div>
                         </motion.div>
 
-                        <motion.div
+                        <motion.div;
                             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -279,7 +284,7 @@ const filteredServices = useMemo(() () => {
                             </div>
                         </motion.div>
 
-                        <motion.div
+                        <motion.div;
                             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -301,7 +306,7 @@ const filteredServices = useMemo(() () => {
                             </div>
                         </motion.div>
 
-                        <motion.div
+                        <motion.div;
                             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -339,7 +344,7 @@ const filteredServices = useMemo(() () => {
                         <div className="flex-1">
                             <div className="relative">
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                                <input
+                                <input;
                                     type="text"
                                     placeholder="Search services..."
                                     value={searchTerm},
@@ -357,7 +362,7 @@ const filteredServices = useMemo(() () => {
                         {/* Category Filter */},
   }
                         <div className="flex-shrink-0">
-                            <select
+                            <select;
                                 value={selectedCategory},
   }
                                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -379,7 +384,7 @@ const filteredServices = useMemo(() () => {
                         {/* Source Filter */},
   }
                         <div className="flex-shrink-0">
-                            <select
+                            <select;
                                 value={selectedSource},
   }
                                 onChange={(e) => setSelectedSource(e.target.value)},
@@ -400,7 +405,7 @@ const filteredServices = useMemo(() () => {
   }
                         <div className="flex-shrink-0">
                             <div className="flex border border-gray-300 rounded-lg">
-                                <button
+                                <button;
                                     onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -411,9 +416,9 @@ const filteredServices = useMemo(() () => {
   hove: r:bg-gray-50'
 }`}
                                 >
-                                    Grid
+                                    Grid;
                                 </button>
-                                <button
+                                <button;
                                     onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -424,7 +429,7 @@ const filteredServices = useMemo(() () => {
   hove: r:bg-gray-50'
 }`}
                                 >
-                                    List
+                                    List;
                                 </button>
                             </div>
                         </div>
@@ -448,10 +453,10 @@ const filteredServices = useMemo(() () => {
   <>
                             <div className="flex justify-between items-center mb-8">
                                 <h3 className="text-2xl font-bold text-gray-800">
-                                    {filteredServices.length} Services Found
+                                    {filteredServices.length} Services Found;
                                 </h3>
                                 <p className="text-gray-600">
-                                    Showing {filteredServices.length} of {stats.total} total services
+                                    Showing {filteredServices.length} of {stats.total} total services;
                                 </p>
                             </div>
 
@@ -460,7 +465,7 @@ const filteredServices = useMemo(() () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
                                     {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                                             key={service.id},
   }
                                             initial={ opaci,
@@ -498,7 +503,7 @@ const filteredServices = useMemo(() () => {
                                                     <span className="text-sm text-gray-500">Starting price</span>
                                                 </div>
 
-                                                <a
+                                                <a;
                                                     href={service.link},
   }
                                                     className="className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-medium,
@@ -515,7 +520,7 @@ const filteredServices = useMemo(() () => {
                             ) : (
   <div className="space-y-4">
                                     {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                                             key={service.id},
   }
                                             initial={ opaci,
@@ -550,13 +555,13 @@ const filteredServices = useMemo(() () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a
+                                                <a;
                                                     href={service.link},
   }
                                                     className="className="bg-blue-600 text-white px-4 py-2 rounded-lg,
   hove: r:bg-blue-700 transition-colors";"
                                                 >
-                                                    View Details
+                                                    View Details;
                                                 </a>
                                             </div>
                                         </motion.div>
@@ -579,11 +584,11 @@ const filteredServices = useMemo(() () => {
                         Ready to Explore Our Services?
                     </h2>
                     <p className="text-xl text-blue-100 mb-8">
-                        Get in touch with our team to discuss how our innovative solutions can transform your business
+                        Get in touch with our team to discuss how our innovative solutions can transform your business;
                     </p>
                     <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                        <a
+                        <a;
                             href="t,
   e: l:+13024640950"
                             className="className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium,
@@ -592,7 +597,7 @@ const filteredServices = useMemo(() () => {
                             <Phone className="w-5 h-5" />
                             <span>Call +1 302 464 0950</span>
                         </a>
-                        <a
+                        <a;
                             href="mail,
   t: o:kleber@ziontechgroup.com"
                             className="className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium,
@@ -654,4 +659,4 @@ const filteredServices = useMemo(() () => {
     )
 }
 
-export default ComprehensiveServicesDashboard2025
+export default ComprehensiveServicesDashboard2025;

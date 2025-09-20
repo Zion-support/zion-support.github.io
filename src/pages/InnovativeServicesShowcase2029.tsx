@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Brain
+  Brain;
   Shield,
   Cloud,
   Zap,
@@ -9,44 +10,46 @@ import {
   Star,
   TrendingUp,
   CheckCircle,
-  ArrowRight
-  Globe
-  Cpu
-  Lock
-  Heart
-  Users
-  ShoppingCart
-  BookOpen
-  MessageCircle
-  HelpCircle
-  DollarSign
-  Gauge
-  Workflow
-  Atom
-  Target
-  Award
-  Code
-  Truck
-  Building
-  BarChart3
-  PenTool
-  Eye
-  Server
-  Smartphone
-  Database
-  Network
-  Clock
-  PanelLeft
-  Search
-  Filter
-  Grid
-  List
-  Play
-  Pause
-  Volume2
-  VolumeX
-} from "lucide-react"
-import { innovativeMicroSAASServices2029 } from "../../data/innovative-micro-saas-2029"
+  ArrowRight;
+  Globe;
+  Cpu;
+  Lock;
+  Heart;
+  Users;
+  ShoppingCart;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  Workflow;
+  Atom;
+  Target;
+  Award;
+  Code;
+  Truck;
+  Building;
+  BarChart3;
+  PenTool;
+  Eye;
+  Server;
+  Smartphone;
+  Database;
+  Network;
+  Clock;
+  PanelLeft;
+  Search;
+  Filter;
+  Grid;
+  List;
+  Play;
+  Pause;
+  Volume2;
+  VolumeX;
+}
+}
+ } from "lucide-react";
+import { innovativeMicroSAASServices2029   } from "../../data/innovative-micro-saas-2029";
 export default function InnovativeServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
@@ -58,11 +61,11 @@ export default function InnovativeServicesShowcase2029() {
   ]
 
   const filteredServices = innovativeMicroSAASServices2029.filter(service () => {
-  const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory
+  const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
 const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const togglePlayPause = () => setIsPlaying(!isPlaying)
@@ -80,7 +83,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
         <div className="absolute inset-0">
           {[...Array(50)].map((_, i) => (
-  <motion.div
+  <motion.div;
               key={i},
   }
               className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30";"
@@ -98,7 +101,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   durati,
   o: n: Math.random() * 10 + 10,repe,
   a: t: Infinity,del,
-  a: y: Math.random() * 5
+  a: y: Math.random() * 5;
 },
   }
               style={
@@ -118,7 +121,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
       <div className="relative z-10 pt-20 pb-16 px-4,
   s: m: px-6,
   l: g:px-8">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -130,7 +133,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
           className="className="max-w-7xl mx-auto text-center";"
         >
-          <motion.div
+          <motion.div;
             initial={ sca,
   l: e: 0.8 },
   }
@@ -144,10 +147,10 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
             className="className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6";"
           >
             <Star className="w-4 h-4 mr-2 text-yellow-400" />
-            Revolutionary 2029 Services
+            Revolutionary 2029 Services;
           </motion.div>
           
-          <motion.h1
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -162,13 +165,13 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   m: d: text-6xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Next-Generation
+              Next-Generation;
             </span>
             <br />
             <span className="text-white">Micro SAAS Solutions</span>
           </motion.h1>
           
-          <motion.p
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -187,7 +190,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
 
           {/* Audio Controls */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -200,7 +203,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
             className="className="flex items-center justify-center space-x-4 mb-8";"
           >
-            <button
+            <button;
               onClick={onClick={togglePlayPause},
   },
   }
@@ -212,7 +215,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
               {isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />},
   }
             </button>
-            <button
+            <button;
               onClick={onClick={toggleMute},
   },
   }
@@ -234,7 +237,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   s: m: px-6,
   l: g:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -253,7 +256,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search innovative services..."
                   value={searchQuery},
@@ -272,14 +275,14 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   }
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
-  <button
+  <button;
                     key={category},
   }
                     onClick={onClick={() => setSelectedCategory(category)},
   },
   }
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-  selectedCategory === category
+  selectedCategory === category;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
                         : 'bg-white/10 text-gray-300,
   hove: r:bg-white/20 border border-white/20'
@@ -294,7 +297,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
               {/* View Mode Toggle */},
   }
               <div className="flex bg-white/10 rounded-lg p-1 border border-white/20">
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -305,7 +308,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                 >
                   <Grid className="w-5 h-5" />
                 </button>
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -328,7 +331,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   s: m: px-6,
   l: g:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0 },
   }
@@ -349,7 +352,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
           >
             <AnimatePresence>
               {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -393,7 +396,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                         </div>
                         {service.popular && (
   <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full">
-                            Popular
+                            Popular;
                           </span>
                         )}
                       </div>
@@ -429,7 +432,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3 flex items-center">
                           <CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
-                          Key Features
+                          Key Features;
                         </h4>
                         <div className="grid grid-cols-1 gap-2">
                           {service.features.slice(0, 3).map((feature, idx) => (
@@ -465,7 +468,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                       {/* Action Buttons */},
   }
                       <div className="flex space-x-3">
-                        <a
+                        <a;
                           href={service.link},
   }
                           className="className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500,
@@ -473,7 +476,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   hove: r:to-purple-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300,
   transform: hover:scale-105 flex items-center justify-center group";"
                         >
-                          Learn More
+                          Learn More;
                           <ArrowRight className="w-4 h-4 ml-2 group-hov,
   e: r:translate-x-1 transition-transform duration-300" />
                         </a>
@@ -492,7 +495,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
           {/* No Results */},
   },
   {filteredServices.length === 0 && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0 },
   }
@@ -514,7 +517,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   s: m: px-6,
   l: g:px-8 pb-20">
         <div className="max-w-4xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -535,21 +538,21 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="className="bg-gradient-to-r from-cyan-500 to-purple-500,
   hove: r:from-cyan-600,
   hove: r:to-purple-600 text-white font-medium py-4 px-8 rounded-xl transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Contact Us
+                Contact Us;
               </a>
-              <a
+              <a;
                 href="/request-quote"
                 className="className="border border-white/20 text-white font-medium py-4 px-8 rounded-xl,
   hove: r:bg-white/10 transition-all duration-300";"
               >
-                Request Quote
+                Request Quote;
               </a>
             </div>
             <div className="mt-8 text-gray-400">

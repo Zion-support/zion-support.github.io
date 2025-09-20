@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap     } from "lucide-react";
 export default function CustomerExperience() {
   const features = [
   {
@@ -33,25 +33,25 @@ export default function CustomerExperience() {
   tit,
   l: e: 'Customer Journey Mapping',descripti,
   o: n: 'Visualize and optimize every touchpoint',ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   tit,
   l: e: 'Sentiment Analysis',descripti,
   o: n: 'Understand customer emotions and feedback',ic,
-  o: n: Heart
+  o: n: Heart;
 },
   {
   tit,
   l: e: 'Automated Engagement',descripti,
   o: n: 'Smart workflows for customer interactions',ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   tit,
   l: e: 'Performance Analytics',descripti,
   o: n: 'Track and improve customer experience metrics',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   ]
   return (
@@ -61,7 +61,7 @@ export default function CustomerExperience() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-pink-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -80,23 +80,23 @@ export default function CustomerExperience() {
 
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Delight Your
+              Delight Your;
               <span className="text-gradient"> Customers</span>
             </h1>
 
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Create exceptional customer experiences that drive loyalty, satisfaction
+              Create exceptional customer experiences that drive loyalty, satisfaction;
               and business growth with our comprehensive CX platform.
             </p>
 
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </motion.div>
@@ -107,7 +107,7 @@ export default function CustomerExperience() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -126,7 +126,7 @@ export default function CustomerExperience() {
               Why Choose Customer Experience?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Transform customer interactions into lasting relationships
+              Transform customer interactions into lasting relationships;
             </p>
           </motion.div>
 
@@ -134,7 +134,7 @@ export default function CustomerExperience() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -169,7 +169,7 @@ export default function CustomerExperience() {
   }
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -185,17 +185,17 @@ export default function CustomerExperience() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Platform Capabilities
+              Platform Capabilities;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Everything you need to create exceptional customer experiences
+              Everything you need to create exceptional customer experiences;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {capabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                 key={capability.title},
   }
                 initial={ opaci,
@@ -234,7 +234,7 @@ export default function CustomerExperience() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -261,12 +261,12 @@ export default function CustomerExperience() {
   s: m: flex-row gap-4 justify-center">
                 <button className="bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold,
   hove: r:bg-gray-100 transition-colors duration-300">
-                  Start Free Trial
+                  Start Free Trial;
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold,
   hove: r:bg-white hove,
   r:text-pink-600 transition-colors duration-300">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </div>

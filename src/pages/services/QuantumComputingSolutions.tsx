@@ -1,52 +1,56 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Atom
+  Atom;
   Zap,
   Brain,
   Cpu,
   TrendingUp,
   Shield,
   Globe,
-  Database
-  Cloud
-  Lock
-  Users
-  Rocket
-  CheckCircle
-  ArrowRight
-  BarChart3
-  LineChart
-  Activity
-  Target
-  Lightbulb
-  Search
-  Filter
-  Download
-  Share2
-  Play
-  Pause
-  Settings
-  Monitor
-  AlertCircle
-  CheckSquare
-  FileText
-  Calendar
-  Repeat
-  GitBranch
-  Code
-  Terminal
-  Network
-  Server
-  Smartphone
-  Tablet
-  Laptop
-  Globe2
-  Wifi
-  Bluetooth
-  Radio
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Database;
+  Cloud;
+  Lock;
+  Users;
+  Rocket;
+  CheckCircle;
+  ArrowRight;
+  BarChart3;
+  LineChart;
+  Activity;
+  Target;
+  Lightbulb;
+  Search;
+  Filter;
+  Download;
+  Share2;
+  Play;
+  Pause;
+  Settings;
+  Monitor;
+  AlertCircle;
+  CheckSquare;
+  FileText;
+  Calendar;
+  Repeat;
+  GitBranch;
+  Code;
+  Terminal;
+  Network;
+  Server;
+  Smartphone;
+  Tablet;
+  Laptop;
+  Globe2;
+  Wifi;
+  Bluetooth;
+  Radio;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function QuantumComputingSolutions() {
   const features = [
   {
@@ -162,7 +166,7 @@ export default function QuantumComputingSolutions() {
 ]
       ct,
   a: 'Start Free Trial',popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -178,7 +182,7 @@ export default function QuantumComputingSolutions() {
 ]
       ct,
   a: 'Start Free Trial',popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -194,7 +198,7 @@ export default function QuantumComputingSolutions() {
 ]
       ct,
   a: 'Contact Sales',popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const benefits = [
@@ -225,7 +229,7 @@ export default function QuantumComputingSolutions() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
-      <SEO 
+      <SEO;
         title="Quantum Computing Solutions - Zion Tech Group"
         description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions."
         keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
@@ -238,7 +242,7 @@ export default function QuantumComputingSolutions() {
   l: g:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 animate-pulse"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -251,19 +255,19 @@ export default function QuantumComputingSolutions() {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
               <Atom className="w-4 h-4 mr-2" />
-              Quantum Technology
+              Quantum Technology;
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Quantum Computing Solutions
+              Quantum Computing Solutions;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Experience the future of computing with quantum technology that solves complex problems 
+              Experience the future of computing with quantum technology that solves complex problems;
               1000x faster than classical computers. From AI enhancement to cryptography, unlock new possibilities.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -274,10 +278,10 @@ export default function QuantumComputingSolutions() {
   hove: r: from-indigo-700,
   hove: r:to-purple-700 transition-all duration-300 flex items-center justify-center";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -287,7 +291,7 @@ export default function QuantumComputingSolutions() {
                 className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg,
   hove: r:bg-gray-800 transition-all duration-300";"
               >
-                Quantum Assessment
+                Quantum Assessment;
               </motion.button>
             </div>
           </motion.div>
@@ -300,7 +304,7 @@ export default function QuantumComputingSolutions() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -314,7 +318,7 @@ export default function QuantumComputingSolutions() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Quantum Computing Features
+              Quantum Computing Features;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Cutting-edge quantum technology that revolutionizes computational capabilities.
@@ -325,7 +329,7 @@ export default function QuantumComputingSolutions() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -358,7 +362,7 @@ export default function QuantumComputingSolutions() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -372,7 +376,7 @@ export default function QuantumComputingSolutions() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Advanced Capabilities
+              Advanced Capabilities;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Comprehensive quantum computing solutions for enterprise applications.
@@ -382,7 +386,7 @@ export default function QuantumComputingSolutions() {
           <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-8">
             {capabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -428,7 +432,7 @@ export default function QuantumComputingSolutions() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -442,7 +446,7 @@ export default function QuantumComputingSolutions() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Transform your industry with quantum computing solutions.
@@ -453,7 +457,7 @@ export default function QuantumComputingSolutions() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -494,7 +498,7 @@ export default function QuantumComputingSolutions() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -508,7 +512,7 @@ export default function QuantumComputingSolutions() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Quantum Computing Pricing
+              Quantum Computing Pricing;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Access to quantum computing power at competitive prices. All plans include a 30-day free trial.
@@ -518,7 +522,7 @@ export default function QuantumComputingSolutions() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -532,7 +536,7 @@ export default function QuantumComputingSolutions() {
   a: y: index * 0.1 },
   }
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border rounded-xl p-8 ${
-  plan.popular 
+  plan.popular;
                     ? 'border-indigo-500/50 ring-2 ring-indigo-500/20' 
                     : 'border-gray-700,
   hove: r:border-indigo-500/50'
@@ -541,7 +545,7 @@ export default function QuantumComputingSolutions() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -565,7 +569,7 @@ export default function QuantumComputingSolutions() {
                   ))}
                 </ul>
 
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.02 },
   }
@@ -573,7 +577,7 @@ export default function QuantumComputingSolutions() {
   l: e: 0.98 },
   }
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white,
   hove: r: from-indigo-700,
   hove: r:to-purple-700'
@@ -596,7 +600,7 @@ export default function QuantumComputingSolutions() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -610,7 +614,7 @@ export default function QuantumComputingSolutions() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Quantum Computing Benefits
+              Quantum Computing Benefits;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Transform your business with the power of quantum computing.
@@ -621,7 +625,7 @@ export default function QuantumComputingSolutions() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -653,7 +657,7 @@ export default function QuantumComputingSolutions() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -673,7 +677,7 @@ export default function QuantumComputingSolutions() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -684,9 +688,9 @@ export default function QuantumComputingSolutions() {
   hove: r: from-indigo-700,
   hove: r:to-purple-700 transition-all duration-300";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -696,7 +700,7 @@ export default function QuantumComputingSolutions() {
                 className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg,
   hove: r: bg-gray-800 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
             <div className="mt-6 text-sm text-gray-400">

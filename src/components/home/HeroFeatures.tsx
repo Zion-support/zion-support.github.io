@@ -1,24 +1,32 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 interface HeroFeature {
   ic,
+}
+}
+}
+}
   o: n: React.ComponentType<{ className?: string }>
   tit,
   l: e: string,descripti,
   o: n: string,gradie,
-  n: t: string
+  n: t: string;
 }
 
 interface HeroFeaturesProps {
   featur,
   e: s: HeroFeature[[],
   ],
+}
+}
+}
+}
   }
 
 const,
   HeroFeature: s: React.FC<HeroFeaturesProps> = ({ features }) () => {
   return (
-    <motion.div
+    <motion.div;
       className="className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-4 gap-6 mt-20";"
@@ -34,7 +42,7 @@ const,
   }
     >
       {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
           key={feature.title},
   }
           className="className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center,
@@ -102,4 +110,4 @@ const,
   )
 }
 
-export default HeroFeatures
+export default HeroFeatures;

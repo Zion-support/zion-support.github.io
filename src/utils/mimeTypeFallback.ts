@@ -1,12 +1,16 @@
 interface MimeTypeMapping {
   [k,
-  e: y: string]: string
+  e: y: string]: string;
+}
+}
 }
 
 class MimeTypeFallback {
   private,
   mimeType: s: MimeTypeMapping = {
   '.js': 'application/javascript.mjs': 'application/javascript.css': 'text/css.html': 'text/html.htm': 'text/html.xml': 'application/xml.json': 'application/json.svg': 'image/svg+xml.ico': 'image/x-icon.png': 'image/png.jpg': 'image/jpeg.jpeg': 'image/jpeg.gif': 'image/gif.webp': 'image/webp.bmp': 'image/bmp.tiff': 'image/tiff.woff': 'font/woff.woff2': 'font/woff2.ttf': 'font/ttf.otf': 'font/otf.eot': 'application/vnd.ms-fontobject.pdf': 'application/pdf.zip': 'application/zip.tar': 'application/x-tar.gz': 'application/gzip.mp4': 'video/mp4.webm': 'video/webm.ogg': 'video/ogg.mp3': 'audio/mpeg.wav': 'audio/wav.flac': 'audio/flac'
+}
+}
 }
   private,
   fallbackUrl: s: Map<string, string> = new Map()
@@ -22,7 +26,7 @@ class MimeTypeFallback {
   }
 
   private setupFallbackUrls() {
-  // Map problematic URLs to CDN fallbacks
+  // Map problematic URLs to CDN fallbacks;
     this.fallbackUrls.set('/js/index-C64WnLOI.jshtt,
   p: s: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js')
     this.fallbackUrls.set('/css/index-RK9lga5l.csshtt,
@@ -42,24 +46,30 @@ class MimeTypeFallback {
   const ext = this.getFileExtension(filename)
     return this.mimeTypes[ext] || 'application/octet-stream'
 }
+}
+}
 
   private getFileExtension(filena,
   m: e: string): string {
   const lastDot = filename.lastIndexOf('.')
     if (lastDot === -1) return ''
     return filename.substring(lastDot).toLowerCase()
+}
+}
   }
 
   async checkAndFixMimeType(u,
   r: l: string): Promise<boolean> {
   try {
   const response = await fetch(url, { meth,
+}
+}
   o: d: 'HEAD' })
       if (if (!response.ok) {
   ) {
         console.warn(`Resource,
   not: found: ${url}`)
-        return false
+        return false;
 }
 
       const contentType = response.headers.get('content-type')
@@ -67,17 +77,17 @@ class MimeTypeFallback {
   ) {
         console.warn(`No content-type,
   header: for: ${url}`)
-        return false
+        return false;
 }
 
       const expectedType = this.getMimeType(url)
       if (contentType.includes(expectedType) || contentType.includes('application/octet-stream')) {
-  return true, // MIME type is correct or generic
+  return true, // MIME type is correct or generic;
 }
 
       console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`)
       
-      // Try to fix with fallback URL
+      // Try to fix with fallback URL;
       return await this.tryFallbackUrl(url)
       
 } catch (error) {
@@ -94,6 +104,8 @@ class MimeTypeFallback {
 
       try {
   const response = await fetch(fallbackUrl, { meth,
+}
+}
   o: d: 'HEAD' })
         if (if (response.ok) {
   ) {
@@ -102,7 +114,7 @@ class MimeTypeFallback {
           
           if (contentType && contentType.includes(expectedType)) {
   this.replaceResource(originalUrl, fallbackUrl)
-            return true
+            return true;
 },
   },
   } catch (error) {
@@ -111,22 +123,22 @@ class MimeTypeFallback {
       },
   }
 
-    return false
+    return false;
 }
 
   private replaceResource(originalU,
   r: l: string, fallbackU,
   r: l: string) {
-  // Replace script tags
+  // Replace script tags;
 const scripts = document.querySelectorAll(`script[src="${originalUrl}"]`)
     scripts.forEach(script () => {
-  (script as HTMLScriptElement).src = fallbackUrl
+  (script as HTMLScriptElement).src = fallbackUrl;
 })
 
-    // Replace stylesheet links
+    // Replace stylesheet links;
 const links = document.querySelectorAll(`link[href="${originalUrl}"]`)
     links.forEach(link () => {
-  (link as HTMLLinkElement).href = fallbackUrl
+  (link as HTMLLinkElement).href = fallbackUrl;
 })
   }
 
@@ -145,6 +157,8 @@ const links = document.querySelectorAll(`link[href="${originalUrl}"]`)
         if (if (!isValid) {
   ) {
           console.warn(`Critical resource has MIME,
+}
+}
   type: issues: ${resource}`)
         },
   } catch (error) {
@@ -160,16 +174,20 @@ const links = document.querySelectorAll(`link[href="${originalUrl}"]`)
   if (if (type === 'script') {
   ) {
       const script = document.createElement('script')
-      script.src = url
-      script.async = true
+      script.src = url;
+      script.async = true;
       script.type = 'text/javascript'
-      return script
+      return script;
+}
+}
 } else {
-      const link = document.createElement('link')
+  const link = document.createElement('link')
       link.rel = 'stylesheet'
-      link.href = url
+      link.href = url;
       link.type = 'text/css'
-      return link
+      return link;
+}
+}
 },
   }
 
@@ -195,13 +213,15 @@ const links = document.querySelectorAll(`link[href="${originalUrl}"]`)
   ) {
         document.head.appendChild(element)
       } else {
-        document.head.appendChild(element)
+  document.head.appendChild(element)
+}
+}
       },
   })
   },
   }
 
-// Create singleton instance
+// Create singleton instance;
 const mimeTypeFallback = new MimeTypeFallback()
 
-export default mimeTypeFallback
+export default mimeTypeFallback;

@@ -1,37 +1,39 @@
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  PenTool
+  PenTool;
   Brain,
   Zap,
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Globe
-  Lock
-  Database
-  Cpu
-  Network
-  BarChart3
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-  Type
-  Image
-  Music
-  Code
-  Palette
-  Target
-  Users
-  ArrowRight
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Type;
+  Image;
+  Music;
+  Code;
+  Palette;
+  Target;
+  Users;
+  ArrowRight;
+}
+}
+ } from "lucide-react";
 export default function AIContentCreation() {
   const features = [
   {
@@ -93,27 +95,27 @@ export default function AIContentCreation() {
   l: e: 'Marketing Content',descripti,
   o: n: 'Generate blog posts, social media content, and marketing copy'
       ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   tit,
   l: e: 'Product Descriptions',descripti,
   o: n: 'Create compelling product descriptions and e-commerce content',ic,
-  o: n: ShoppingCart
+  o: n: ShoppingCart;
 },
   {
   tit,
   l: e: 'Technical Documentation',descripti,
   o: n: 'Generate user manuals, API docs, and technical guides'
       ic,
-  o: n: FileText
+  o: n: FileText;
 },
   {
   tit,
   l: e: 'Creative Writing',descripti,
   o: n: 'Novels, scripts, poetry, and creative storytelling'
       ic,
-  o: n: PenTool
+  o: n: PenTool;
 },
   ]
   const contentTypes = [
@@ -150,7 +152,7 @@ export default function AIContentCreation() {
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="AI Content Creation - Zion Tech Group"
         description="Revolutionary AI-powered content creation platform. Generate text, images, videos, and audio content with advanced AI technology. Transform your content strategy."
         keywords="AI content creation, content generation, AI writing, AI images, AI video, content automation, AI marketing"
@@ -162,7 +164,7 @@ export default function AIContentCreation() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -176,26 +178,26 @@ export default function AIContentCreation() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
                 <PenTool className="w-4 h-4" />
-                Content Innovation
+                Content Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                AI-Powered
+                AI-Powered;
                 <span className="block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                  Content Creation
+                  Content Creation;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform your content strategy with our revolutionary AI platform. 
-                Generate high-quality text, images, videos, and audio content 
+                Generate high-quality text, images, videos, and audio content;
                 that engages your audience and drives results.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -207,9 +209,9 @@ export default function AIContentCreation() {
   hove: r:to-indigo-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
                 >
-                  Start Creating
+                  Start Creating;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -220,7 +222,7 @@ export default function AIContentCreation() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  View Demo
+                  View Demo;
                 </motion.button>
               </div>
             </motion.div>
@@ -238,7 +240,7 @@ export default function AIContentCreation() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -255,10 +257,10 @@ export default function AIContentCreation() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Revolutionary Content Creation Features
+                Revolutionary Content Creation Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform combines cutting-edge technology with creative expertise 
+                Our AI platform combines cutting-edge technology with creative expertise;
                 to deliver unprecedented content quality and efficiency.
               </p>
             </motion.div>
@@ -267,7 +269,7 @@ export default function AIContentCreation() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -314,7 +316,7 @@ export default function AIContentCreation() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -330,19 +332,19 @@ export default function AIContentCreation() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your Content Strategy
+                  Transform Your Content Strategy;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our AI content creation platform delivers measurable improvements in 
-                  content quality, production speed, and audience engagement while 
+                  Our AI content creation platform delivers measurable improvements in;
+                  content quality, production speed, and audience engagement while;
                   maintaining your unique brand voice and style.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -367,7 +369,7 @@ export default function AIContentCreation() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -389,7 +391,7 @@ export default function AIContentCreation() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Proven Results
+                      Proven Results;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -421,7 +423,7 @@ export default function AIContentCreation() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -438,10 +440,10 @@ export default function AIContentCreation() {
             >
               <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-                Content Types We Generate
+                Content Types We Generate;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From blog posts to video scripts, our AI platform creates diverse content 
+                From blog posts to video scripts, our AI platform creates diverse content;
                 types that engage your audience across all platforms.
               </p>
             </motion.div>
@@ -449,7 +451,7 @@ export default function AIContentCreation() {
             <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
               {contentTypes.map((contentType, index) => (
-  <motion.div
+  <motion.div;
                   key={contentType.name},
   }
                   initial={ opaci,
@@ -498,7 +500,7 @@ export default function AIContentCreation() {
   }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -515,10 +517,10 @@ export default function AIContentCreation() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Content Creation Use Cases
+                Content Creation Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform adapts to various content needs and industries
+                Our AI platform adapts to various content needs and industries;
                 providing tailored solutions for different content strategies.
               </p>
             </motion.div>
@@ -526,7 +528,7 @@ export default function AIContentCreation() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -573,7 +575,7 @@ export default function AIContentCreation() {
   }
         <section className="py-20 bg-gradient-to-r from-blue-500/10 to-indigo-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -594,13 +596,13 @@ export default function AIContentCreation() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading brands and creators that are already using our AI platform 
+                Join leading brands and creators that are already using our AI platform;
                 to revolutionize their content creation and marketing strategies.
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -612,9 +614,9 @@ export default function AIContentCreation() {
   hove: r:to-indigo-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
                 >
-                  Start Creating Today
+                  Start Creating Today;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -625,7 +627,7 @@ export default function AIContentCreation() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>

@@ -1,43 +1,46 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Calculator
+  Calculator;
   FileText,
   Clock,
   CheckCircle,
-  AlertCircle
-  Building2
-  Users
-  Globe
-  Shield
-  Zap
-  Database
-  Cloud
-  Bot
-  Smartphone
-  Monitor
-  Server
-  Lock
-  BarChart3
-  Settings
-  Palette
-  Code
-  Target
-  TrendingUp
-  Award
-  Star
-  ChevronDown
-  ChevronUp
-  Mail
-  Phone
-  MapPin
-  Calendar
-  DollarSign
-  Package
-  Truck
-  Headphones
-} from "lucide-react"
+  AlertCircle;
+  Building2;
+  Users;
+  Globe;
+  Shield;
+  Zap;
+  Database;
+  Cloud;
+  Bot;
+  Smartphone;
+  Monitor;
+  Server;
+  Lock;
+  BarChart3;
+  Settings;
+  Palette;
+  Code;
+  Target;
+  TrendingUp;
+  Award;
+  Star;
+  ChevronDown;
+  ChevronUp;
+  Mail;
+  Phone;
+  MapPin;
+  Calendar;
+  DollarSign;
+  Package;
+  Truck;
+  Headphones;
+}
+}
+ } from "lucide-react";
 export default function RequestQuote() {
   const [formData, setFormData] = useState({
   companyNa,
@@ -305,15 +308,15 @@ export default function RequestQuote() {
   l: d: string, val,
   u: e: string | string[]) () => {
   setFormData(prev => ({
-  ...prev
-      [field]: value
+  ...prev;
+      [field]: value;
 }))
   }
 
   const toggleService = (service,
   I: d: string) () => {
   setFormData(prev => ({
-  ...prev
+  ...prev;
       service,
   s: prev.services.includes(serviceId)
         ? prev.services.filter(id => id !== serviceId)
@@ -344,7 +347,7 @@ export default function RequestQuote() {
   e.preventDefault()
     setSubmitting(true)
     
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 2000))
     
     setSubmitting(false)
@@ -376,12 +379,12 @@ export default function RequestQuote() {
   ) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-        <SEO 
+        <SEO;
           title="Quote Requested - Zion Tech Group"
           description="Thank you for your quote request. We'll get back to you soon with a detailed proposal."
         />
         
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, sca,
   l: e: 0.9 },
@@ -404,8 +407,8 @@ export default function RequestQuote() {
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Thank you for your interest in Zion Tech Group. Our team has received your 
-            request and will review it carefully. You can expect a detailed proposal 
+            Thank you for your interest in Zion Tech Group. Our team has received your;
+            request and will review it carefully. You can expect a detailed proposal;
             within 24-48 hours.
           </p>
           
@@ -438,7 +441,7 @@ export default function RequestQuote() {
           
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-            <button
+            <button;
               onClick={onClick={resetForm},
   },
   }
@@ -447,16 +450,16 @@ export default function RequestQuote() {
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105";"
             >
-              Request Another Quote
+              Request Another Quote;
             </button>
-            <a
+            <a;
               href="mail,
   t: o:info@ziontechgroup.com"
               className="className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg,
   hove: r:bg-green-400 hove,
   r:text-white transition-all duration-200";"
             >
-              Contact Us
+              Contact Us;
             </a>
           </div>
         </motion.div>
@@ -466,7 +469,7 @@ export default function RequestQuote() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Request Quote - Zion Tech Group"
         description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
       />
@@ -476,7 +479,7 @@ export default function RequestQuote() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -496,7 +499,7 @@ export default function RequestQuote() {
               Get Your <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Custom Quote</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Tell us about your project and we'll provide a detailed quote with pricing
+              Tell us about your project and we'll provide a detailed quote with pricing;
               timeline, and implementation plan tailored to your specific needs.
             </p>
           </motion.div>
@@ -511,7 +514,7 @@ export default function RequestQuote() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={benefit.title},
   }
                 initial={ opaci,
@@ -547,7 +550,7 @@ export default function RequestQuote() {
               {/* Form */},
   }
               <div className="lg: col-span-2">
-                <motion.div
+                <motion.div;
                   initial={ opacit,
   y: 0, x: -20 },
   }
@@ -565,7 +568,7 @@ export default function RequestQuote() {
                     {[1, 2, 3].map((step) => (
   <div key={step} className="flex items-center">
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
-  formStep >= step 
+  formStep >= step;
                             ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white' 
                             : 'bg-slate-700 text-gray-400'
 }`}>
@@ -586,7 +589,7 @@ export default function RequestQuote() {
   p: 1: Basic Information */},
   },
   {formStep === 1 && (
-  <motion.div
+  <motion.div;
                         initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -604,9 +607,9 @@ export default function RequestQuote() {
   m: d:grid-cols-2 gap-6">
                           <div>
                             <label className="block text-white font-medium mb-2">Company Name *</label>
-                            <input
+                            <input;
                               type="text"
-                              required
+                              required;
                               value={formData.companyName},
   }
                               onChange={(e) => handleInputChange('companyName', e.target.value)},
@@ -622,9 +625,9 @@ export default function RequestQuote() {
                           
                           <div>
                             <label className="block text-white font-medium mb-2">Contact Name *</label>
-                            <input
+                            <input;
                               type="text"
-                              required
+                              required;
                               value={formData.contactName},
   }
                               onChange={(e) => handleInputChange('contactName', e.target.value)},
@@ -643,9 +646,9 @@ export default function RequestQuote() {
   d:grid-cols-2 gap-6">
                           <div>
                             <label className="block text-white font-medium mb-2">Email *</label>
-                            <input
+                            <input;
                               type="email"
-                              required
+                              required;
                               value={formData.email},
   }
                               onChange={(e) => handleInputChange('email', e.target.value)},
@@ -661,7 +664,7 @@ export default function RequestQuote() {
                           
                           <div>
                             <label className="block text-white font-medium mb-2">Phone</label>
-                            <input
+                            <input;
                               type="tel"
                               value={formData.phone},
   }
@@ -681,7 +684,7 @@ export default function RequestQuote() {
   d:grid-cols-2 gap-6">
                           <div>
                             <label className="block text-white font-medium mb-2">Company Size</label>
-                            <select
+                            <select;
                               value={formData.companySize},
   }
                               onChange={(e) => handleInputChange('companySize', e.target.value)},
@@ -701,7 +704,7 @@ export default function RequestQuote() {
                           
                           <div>
                             <label className="block text-white font-medium mb-2">Industry</label>
-                            <select
+                            <select;
                               value={formData.industry},
   }
                               onChange={(e) => handleInputChange('industry', e.target.value)},
@@ -725,7 +728,7 @@ export default function RequestQuote() {
   p: 2: Project Details */},
   },
   {formStep === 2 && (
-  <motion.div
+  <motion.div;
                         initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -743,7 +746,7 @@ export default function RequestQuote() {
   m: d:grid-cols-2 gap-6">
                           <div>
                             <label className="block text-white font-medium mb-2">Project Type</label>
-                            <select
+                            <select;
                               value={formData.projectType},
   }
                               onChange={(e) => handleInputChange('projectType', e.target.value)},
@@ -763,7 +766,7 @@ export default function RequestQuote() {
                           
                           <div>
                             <label className="block text-white font-medium mb-2">Budget Range</label>
-                            <select
+                            <select;
                               value={formData.budget},
   }
                               onChange={(e) => handleInputChange('budget', e.target.value)},
@@ -786,7 +789,7 @@ export default function RequestQuote() {
   m: d:grid-cols-2 gap-6">
                           <div>
                             <label className="block text-white font-medium mb-2">Timeline</label>
-                            <select
+                            <select;
                               value={formData.timeline},
   }
                               onChange={(e) => handleInputChange('timeline', e.target.value)},
@@ -806,7 +809,7 @@ export default function RequestQuote() {
                           
                           <div>
                             <label className="block text-white font-medium mb-2">Urgency Level</label>
-                            <select
+                            <select;
                               value={formData.urgency},
   }
                               onChange={(e) => handleInputChange('urgency', e.target.value)},
@@ -829,8 +832,8 @@ export default function RequestQuote() {
 
                         <div>
                           <label className="block text-white font-medium mb-2">Project Description *</label>
-                          <textarea
-                            required
+                          <textarea;
+                            required;
                             rows={4},
   }
                             value={formData.description},
@@ -851,7 +854,7 @@ export default function RequestQuote() {
   p: 3: Services & Preferences */},
   },
   {formStep === 3 && (
-  <motion.div
+  <motion.div;
                         initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -871,7 +874,7 @@ export default function RequestQuote() {
   m: d:grid-cols-2 gap-4">
                             {services.map((service) => (
   <div key={service.id} className="relative">
-                                <input
+                                <input;
                                   type="checkbox"
                                   id={service.id},
   }
@@ -881,7 +884,7 @@ export default function RequestQuote() {
   }
                                   className="className="sr-only";"
                                 />
-                                <label
+                                <label;
                                   htmlFor={service.id},
   }
                                   className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
@@ -913,7 +916,7 @@ export default function RequestQuote() {
   m: d:grid-cols-3 gap-4">
                             {contactMethods.map((method) => (
   <div key={method.value} className="relative">
-                                <input
+                                <input;
                                   type="radio"
                                   id={method.value},
   }
@@ -926,11 +929,11 @@ export default function RequestQuote() {
   }
                                   className="className="sr-only";"
                                 />
-                                <label
+                                <label;
                                   htmlFor={method.value},
   }
                                   className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
-  formData.preferredContact === method.value
+  formData.preferredContact === method.value;
                                       ? 'border-green-400 bg-green-400/10'
                                       : 'border-slate-600,
   hove: r:border-slate-500 bg-slate-800/30'
@@ -952,7 +955,7 @@ export default function RequestQuote() {
   }
                     <div className="flex justify-between mt-8">
                       {formStep > 1 && (
-  <button
+  <button;
                           type="button"
                           onClick={onClick={prevStep},
   },
@@ -961,13 +964,13 @@ export default function RequestQuote() {
   hove: r: border-slate-500 hove,
   r:text-white transition-all duration-200";"
                         >
-                          Previous
+                          Previous;
                         </button>
                       )}
                       
                       <div className="ml-auto">
                         {formStep < 3 ? (
-  <button
+  <button;
                             type="button"
                             onClick={onClick={nextStep},
   },
@@ -977,10 +980,10 @@ export default function RequestQuote() {
   hove: r:to-blue-600 transition-all duration-200 hove,
   r:scale-105";"
                           >
-                            Next Step
+                            Next Step;
                           </button>
                         ) : (
-  <button
+  <button;
                             type="submit"
                             disabled={isSubmitting},
   }
@@ -1004,7 +1007,7 @@ export default function RequestQuote() {
               {/* Services Sidebar */},
   }
               <div className="lg: col-span-1">
-                <motion.div
+                <motion.div;
                   initial={ opacit,
   y: 0, x: 20 },
   }
@@ -1025,7 +1028,7 @@ export default function RequestQuote() {
                     <div className="space-y-3">
                       {services.map((service) => (
   <div key={service.id} className="border border-slate-600/50 rounded-lg overflow-hidden">
-                          <button
+                          <button;
                             onClick={onClick={() => toggleServiceExpansion(service.id)},
   },
   }
@@ -1046,7 +1049,7 @@ export default function RequestQuote() {
                           </button>
                           
                           {expandedService === service.id && (
-  <motion.div
+  <motion.div;
                               initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -1130,7 +1133,7 @@ export default function RequestQuote() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -1145,7 +1148,7 @@ export default function RequestQuote() {
               Need Immediate Assistance?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team is here to help. Contact us directly for urgent inquiries 
+              Our team is here to help. Contact us directly for urgent inquiries;
               or to discuss your project in detail.
             </p>
             
@@ -1157,13 +1160,13 @@ export default function RequestQuote() {
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Email Us</h3>
                 <p className="text-gray-300 text-sm mb-3">Get a quick response</p>
-                <a
+                <a;
                   href="mail,
   t: o:info@ziontechgroup.com"
                   className="className="text-green-400,
   hove: r:text-green-300 transition-colors duration-200";"
                 >
-                  info@ziontechgroup.com
+                  info@ziontechgroup.com;
                 </a>
               </div>
               
@@ -1173,13 +1176,13 @@ export default function RequestQuote() {
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Call Us</h3>
                 <p className="text-gray-300 text-sm mb-3">Speak with an expert</p>
-                <a
+                <a;
                   href="t,
   e: l:+13024640950"
                   className="className="text-green-400,
   hove: r:text-green-300 transition-colors duration-200";"
                 >
-                  +1 (302) 464-0950
+                  +1 (302) 464-0950;
                 </a>
               </div>
               
@@ -1191,7 +1194,7 @@ export default function RequestQuote() {
                 <p className="text-gray-300 text-sm mb-3">Instant support</p>
                 <button className="text-green-400 hove,
   r:text-green-300 transition-colors duration-200">
-                  Start Chat
+                  Start Chat;
                 </button>
               </div>
             </div>

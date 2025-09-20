@@ -1,59 +1,62 @@
+import { useCallback  } from "react";
 import React, { useState, useMemo } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Brain
-  Cloud
-  Shield
-  Server
-  Zap
-  Globe
-  Cpu
-  Database
-  Network
-  Lock
-  Code
-  Rocket
-  Users
-  Search
-  Filter
-  Star
-  TrendingUp
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight
-  Play
-  BookOpen
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Globe as GlobeIcon
-  Atom
-  // Blockchain icon removed - not available in lucide-react
-  Heart
-  Scale
-  Factory
-  Satellite
-  ShoppingCart
-  Building
-  Truck
-  Eye
-  Download
-  ExternalLink
-  Award
-  Target
-  Lightbulb
-  BarChart3
-  PieChart
-  Activity
-  Gauge
-  ShieldCheck
-  X
-} from "lucide-react"
-// Import our existing service data
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "../data/ultimateInnovativeServices2026"
-import { comprehensiveServices } from "../data/comprehensiveServices"
+  Brain;
+  Cloud;
+  Shield;
+  Server;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  Search;
+  Filter;
+  Star;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Globe as GlobeIcon;
+  Atom;
+  // Blockchain icon removed - not available in lucide-react;
+  Heart;
+  Scale;
+  Factory;
+  Satellite;
+  ShoppingCart;
+  Building;
+  Truck;
+  Eye;
+  Download;
+  ExternalLink;
+  Award;
+  Target;
+  Lightbulb;
+  BarChart3;
+  PieChart;
+  Activity;
+  Gauge;
+  ShieldCheck;
+  X;
+}
+}
+ } from "lucide-react";
+// Import our existing service data;
+import { ULTIMATE_INNOVATIVE_SERVICES_2026   } from "../data/ultimateInnovativeServices2026";
+import { comprehensiveServices   } from "../data/comprehensiveServices";
 interface Service {
   id: string,na,
   m: e: string,catego,
@@ -67,7 +70,9 @@ interface Service {
   a: l: number,enterpri,
   s: e: number,curren,
   c: y: string,billingCyc,
-  l: e: string
+  l: e: string;
+}
+}
 }
   rati,
   n: g: number,reviewCou,
@@ -75,13 +80,13 @@ interface Service {
   t: e: string,stat,
   u: s: string,marketPri,
   c: e: string,estimatedDelive,
-  r: y: string
-  website?: string
+  r: y: string;
+  website?: string;
   contactInfo?: {
   phon,
   e: string,ema,
   i: l: string,addre,
-  s: s: string
+  s: s: string;
 },
   }
 
@@ -97,7 +102,7 @@ const,
     const service,
   s: Service[] = [[],
   ]
-    // Add services from ultimateInnovativeServices2026
+    // Add services from ultimateInnovativeServices2026;
     ultimateInnovativeServices2026.forEach(service () => {
   services.push({
   id: service.id,na,
@@ -112,7 +117,7 @@ const,
   a: l: service.pricing.professional,enterpri,
   s: e: service.pricing.enterprise,curren,
   c: y: service.pricing.currency,billingCyc,
-  l: e: service.pricing.billingCycle
+  l: e: service.pricing.billingCycle;
 }
         rati,
   n: g: service.rating,reviewCou,
@@ -122,11 +127,11 @@ const,
   c: e: service.marketPrice,estimatedDelive,
   r: y: service.estimatedDelivery,websi,
   t: e: service.website,contactIn,
-  f: o: service.contactInfo
+  f: o: service.contactInfo;
 })
     })
 
-    // Add services from comprehensiveServices
+    // Add services from comprehensiveServices;
     comprehensiveServices.forEach(service () => {
   services.push({
   id: service.id,na,
@@ -141,7 +146,7 @@ const,
   a: l: service.pricing.professional,enterpri,
   s: e: service.pricing.enterprise,curren,
   c: y: service.pricing.currency,billingCyc,
-  l: e: service.pricing.billingCycle
+  l: e: service.pricing.billingCycle;
 }
         rati,
   n: g: service.rating,reviewCou,
@@ -151,11 +156,11 @@ const,
   c: e: service.marketPrice,estimatedDelive,
   r: y: service.estimatedDelivery,websi,
   t: e: service.website,contactIn,
-  f: o: service.contactInfo
+  f: o: service.contactInfo;
 })
     })
 
-    return services
+    return services;
 }, [])
 
   const categories = useMemo(() () => {
@@ -169,27 +174,27 @@ const,
   const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory
-      return matchesSearch && matchesCategory
+      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+      return matchesSearch && matchesCategory;
 })
 
-    // Sort services
+    // Sort services;
     switch (sortBy) {
   case 'name':
         filtered.sort((a, b) => a.name.localeCompare(b.name))
-        break
+        break;
       case 'price':
         filtered.sort((a, b) => a.pricing.starter - b.pricing.starter)
-        break
+        break;
       case 'rating':
         filtered.sort((a, b) => b.rating - a.rating)
-        break
+        break;
       case 'newest':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
-        break
+        break;
 }
 
-    return filtered
+    return filtered;
 }, [allServices, searchTerm, selectedCategory, sortBy])
 
   const getCategoryIcon = (catego,
@@ -243,7 +248,7 @@ const,
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-24">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -257,7 +262,7 @@ const,
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-              Comprehensive Services 2027
+              Comprehensive Services 2027;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
@@ -266,7 +271,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -276,9 +281,9 @@ const,
                 className="className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2";"
               >
                 <Play className="w-5 h-5" />
-                Watch Demo
+                Watch Demo;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -288,7 +293,7 @@ const,
                 className="className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2";"
               >
                 <BookOpen className="w-5 h-5" />
-                View Documentation
+                View Documentation;
               </motion.button>
             </div>
           </motion.div>
@@ -308,7 +313,7 @@ const,
             <div className="flex-1">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm},
@@ -326,7 +331,7 @@ const,
             {/* Category Filter */},
   }
             <div className="flex-shrink-0">
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -345,7 +350,7 @@ const,
             {/* Sort */},
   }
             <div className="flex-shrink-0">
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value as any)},
@@ -375,7 +380,7 @@ const,
   g:grid-cols-3 gap-6">
           <AnimatePresence>
             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -446,7 +451,7 @@ const,
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
                     {service.features.slice(0, 3).map((feature, idx) => (
-  <span
+  <span;
                         key={idx},
   }
                         className="className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full";"
@@ -457,7 +462,7 @@ const,
                     ))},
   {service.features.length > 3 && (
   <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">
-                        +{service.features.length - 3} more
+                        +{service.features.length - 3} more;
                       </span>
                     )}
                   </div>
@@ -469,7 +474,7 @@ const,
                   <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-200">
-                    Get Started
+                    Get Started;
                   </button>
                   <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hove,
   r:bg-white/10 transition-all duration-200">
@@ -484,7 +489,7 @@ const,
         {/* No Results */},
   },
   {filteredServices.length === 0 && (
-  <motion.div
+  <motion.div;
             initial={ opaci,
   t: y: 0 },
   }
@@ -504,7 +509,7 @@ const,
   }
       <AnimatePresence>
         {selectedService && (
-  <motion.div
+  <motion.div;
             initial={ opaci,
   t: y: 0 },
   }
@@ -519,7 +524,7 @@ const,
   },
   }
           >
-            <motion.div
+            <motion.div;
               initial={ sca,
   l: e: 0.9, opaci,
   t: y: 0 },
@@ -550,7 +555,7 @@ const,
                       </span>
                     </div>
                   </div>
-                  <button
+                  <button;
                     onClick={onClick={() => setSelectedService(null)},
   },
   }
@@ -686,15 +691,15 @@ const,
                   <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-200">
-                    Get Started Now
+                    Get Started Now;
                   </button>
                   <button className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold,
   hove: r:bg-white/10 transition-all duration-200">
-                    Schedule Demo
+                    Schedule Demo;
                   </button>
                   <button className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold hove,
   r:bg-white/10 transition-all duration-200">
-                    Download Brochure
+                    Download Brochure;
                   </button>
                 </div>
               </div>
@@ -715,7 +720,7 @@ const,
           </p>
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-            <motion.button
+            <motion.button;
               whileHover={ scal,
   e: 1.05 },
   }
@@ -725,9 +730,9 @@ const,
               className="className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center";"
             >
               <Phone className="w-5 h-5" />
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </motion.button>
-            <motion.button
+            <motion.button;
               whileHover={ sca,
   l: e: 1.05 },
   }
@@ -737,7 +742,7 @@ const,
               className="className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center";"
             >
               <Mail className="w-5 h-5" />
-              Email kleber@ziontechgroup.com
+              Email kleber@ziontechgroup.com;
             </motion.button>
           </div>
           <div className="mt-6 text-gray-400">
@@ -753,4 +758,4 @@ const,
     </div>
   )
 }
-export default ComprehensiveServicesShowcase2027
+export default ComprehensiveServicesShowcase2027;

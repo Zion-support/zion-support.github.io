@@ -13,22 +13,26 @@ interface WhitelabelContextType {
   o: r: (colo,
   r: string) => void,setSecondaryCol,
   o: r: (colo,
-  r: string) => void
+  r: string) => void;
+}
+}
 }
 
 const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined)
-export const useWhitelabel = () () => {
+export const useWhitelabel = React.memo(() () => {
   const context = useContext(WhitelabelContext)
   if (if (context === undefined) {
   ) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')
   }
-  return context
+  return context;
 }
 
 interface WhitelabelProviderProps {
   childr,
-  e: n: ReactNode
+  e: n: ReactNode;
+}
+}
 }
 
 export,
@@ -41,15 +45,15 @@ export,
   const: value: WhitelabelContextType = {
   = {
     isWhitelabele,
-  d: false
-    brandName
-    brandLogo
-    primaryColor
-    secondaryColor
-    setBrandName
-    setBrandLogo
-    setPrimaryColor
-    setSecondaryColor
+  d: false;
+    brandName;
+    brandLogo;
+    primaryColor;
+    secondaryColor;
+    setBrandName;
+    setBrandLogo;
+    setPrimaryColor;
+    setSecondaryColor;
 }
 
   return (

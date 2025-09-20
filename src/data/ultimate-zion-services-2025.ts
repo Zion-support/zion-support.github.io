@@ -10,7 +10,9 @@ export interface UltimateZionService {
   l: y: string,enterpri,
   s: e: string,set,
   u: p: string,marketPri,
-  c: e: string
+  c: e: string;
+}
+}
 }
   featur,
   e: s: string[],benefi,
@@ -32,7 +34,7 @@ export interface UltimateZionService {
   e: string,ema,
   i: l: string,addre,
   s: s: string,websi,
-  t: e: string
+  t: e: string;
 }
   technicalSpecs?: {
   technolo,
@@ -44,7 +46,7 @@ export interface UltimateZionService {
   ],
   }
   marketSize?: string,
-  innovationLeve: l: string
+  innovationLeve: l: string;
 }
 
 const const contactInfo = {
@@ -58,7 +60,7 @@ const const contactInfo = {
 }
 export,
   const: ultimateZionServices2025: UltimateZionService[] = [
-  // QUANTUM COMPUTING & AI SERVICES
+  // QUANTUM COMPUTING & AI SERVICES;
   {
   i,
   d: 'quantum-ai-drug-discovery-platform',na,
@@ -194,7 +196,7 @@ export,
   z: e: '$23.4 billion by 2027',innovationLev,
   e: l: 'Revolutionary'
 }
-  // BLOCKCHAIN & WEB3 SERVICES
+  // BLOCKCHAIN & WEB3 SERVICES;
   {
   id: 'ai-powered-defi-protocol',na,
   m: e: 'AI-Powered DeFi Protocol',tagli,
@@ -328,7 +330,7 @@ export,
   z: e: '$13.6 billion by 2027',innovationLev,
   e: l: 'Advanced'
 }
-  // SPACE TECH SERVICES
+  // SPACE TECH SERVICES;
   {
   id: 'ai-satellite-constellation-management',na,
   m: e: 'AI Satellite Constellation Management',tagli,
@@ -396,7 +398,7 @@ export,
   z: e: '$469.8 billion by 2027',innovationLev,
   e: l: 'Revolutionary'
 }
-  // BIOTECH & AI SERVICES
+  // BIOTECH & AI SERVICES;
   {
   id: 'ai-biomedical-research-platform',na,
   m: e: 'AI Biomedical Research Platform',tagli,
@@ -464,7 +466,7 @@ export,
   z: e: '$67.8 billion by 2027',innovationLev,
   e: l: 'Revolutionary'
 }
-  // EMERGING TECH SERVICES
+  // EMERGING TECH SERVICES;
   {
   id: 'brain-computer-interface-platform',na,
   m: e: 'Brain-Computer Interface Platform',tagli,
@@ -532,7 +534,7 @@ export,
   z: e: '$3.7 billion by 2027',innovationLev,
   e: l: 'Revolutionary'
 }
-  // MICRO SAAS SERVICES
+  // MICRO SAAS SERVICES;
   {
   id: 'ai-autonomous-business-manager',na,
   m: e: 'AI Autonomous Business Manager',tagli,
@@ -666,7 +668,7 @@ export,
   z: e: '$376.3 billion by 2029',innovationLev,
   e: l: 'Revolutionary'
 }
-  // IT SERVICES
+  // IT SERVICES;
   {
   id: 'quantum-cloud-infrastructure',na,
   m: e: 'Quantum Cloud Infrastructure',tagli,
@@ -802,4 +804,4 @@ export,
   e: l: 'Revolutionary'
 },
   ]
-export default ultimateZionServices2025
+export default ultimateZionServices2025;

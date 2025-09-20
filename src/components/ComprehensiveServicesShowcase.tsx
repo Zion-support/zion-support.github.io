@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
   Brain,
   Cpu,
@@ -25,11 +26,13 @@ import {
   Phone,
   Mail,
   ExternalLink,
-  Search
-} from "lucide-react"
-import { Link } from "react-router-dom"
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025"
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025"
+  Search;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
+import { EXPANDED_INNOVATIVE_SERVICES_2025   } from "../data/expandedInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025   } from "../data/emergingTechServices2025";
 interface Service {
   id: string,tit,
   l: e: string,descripti,
@@ -53,7 +56,9 @@ interface Service {
     phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
   }
   technicalSpecs?: {
     technolo,
@@ -71,28 +76,28 @@ const,
   const [searchTerm, setSearchTerm] = useState<string>(''),
   // Combine all services,
   const: allServices: Service[] = [
-    ...EXPANDED_INNOVATIVE_SERVICES_2025
-    ...EMERGING_TECH_SERVICES_2025
+    ...EXPANDED_INNOVATIVE_SERVICES_2025;
+    ...EMERGING_TECH_SERVICES_2025;
   ],
-  // Get unique categories
+  // Get unique categories;
   const categories = useMemo(() () => {
     const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))],
-    return cats
+    return cats;
 }, [allServices]),
-  // Get unique innovation levels
+  // Get unique innovation levels;
   const innovationLevels = useMemo(() () => {
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))],
-    return levels
+    return levels;
 }, [allServices]),
-  // Filter services
+  // Filter services;
   const filteredServices = useMemo(() () => {
     return allServices.filter(service () => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      return matchesCategory && matchesInnovationLevel && matchesSearch
+      return matchesCategory && matchesInnovationLevel && matchesSearch;
 }),
   }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]),
   const getCategoryIcon = (catego,
@@ -160,29 +165,29 @@ const getInnovationLevelColor = (lev,
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl,
   m: d:text-6xl font-bold mb-6">
-              Innovative Technology Solutions
+              Innovative Technology Solutions;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Discover our comprehensive portfolio of cutting-edge micro SAAS services
+              Discover our comprehensive portfolio of cutting-edge micro SAAS services;
               AI solutions, and emerging technology platforms designed to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg,
   hove: r: bg-zion-cyan-light transition-colors"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg,
   hove: r:bg-white hove,
   r:text-zion-blue-dark transition-colors"
               >
-                Request Quote
+                Request Quote;
               </Link>
             </div>
           </div>
@@ -202,7 +207,7 @@ const getInnovationLevelColor = (lev,
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-5 w-5 text-zion-cyan" />
-              <a
+              <a;
                 href="htt,
   p: s: //ziontechgroup.com"
                 target="_blank"
@@ -210,7 +215,7 @@ const getInnovationLevelColor = (lev,
                 className="font-medium text-zion-blue hove,
   r:text-zion-cyan transition-colors"
               >
-                ziontechgroup.com
+                ziontechgroup.com;
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -227,7 +232,7 @@ const getInnovationLevelColor = (lev,
             {/* Search */}
             <div className="flex-1 max-w-md">
               <div className="relative">
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
@@ -244,7 +249,7 @@ const getInnovationLevelColor = (lev,
             <div className="flex items-center gap-2">
               <span className="text-gray-700 font-medium">Catego,
   r: y:</span>
-              <select
+              <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg,
@@ -263,7 +268,7 @@ const getInnovationLevelColor = (lev,
             <div className="flex items-center gap-2">
               <span className="text-gray-700 font-medium">Innovati,
   o: n:</span>
-              <select
+              <select;
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg,
@@ -288,7 +293,7 @@ const getInnovationLevelColor = (lev,
   l: g: grid-cols-2 x,
   l:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-              <motion.div
+              <motion.div;
                 key={service.id}
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -354,7 +359,7 @@ const getInnovationLevelColor = (lev,
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-green-500" />
-                      Key Features
+                      Key Features;
                     </h4>
                     <div className="grid grid-cols-1 gap-2">
                       {service.features.slice(0, 5).map((feature, idx) => (
@@ -365,7 +370,7 @@ const getInnovationLevelColor = (lev,
                       ))},
   {service.features.length > 5 && (
                         <div className="text-sm text-zion-cyan font-medium">
-                          +{service.features.length - 5} more features
+                          +{service.features.length - 5} more features;
                         </div>
                       )}
                     </div>
@@ -374,7 +379,7 @@ const getInnovationLevelColor = (lev,
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                       <TrendingUp className="h-5 w-5 text-blue-500" />
-                      Benefits
+                      Benefits;
                     </h4>
                     <div className="space-y-2">
                       {service.benefits.slice(0, 3).map((benefit, idx) => (
@@ -388,7 +393,7 @@ const getInnovationLevelColor = (lev,
                   <div className="mb-6">
                     <div className="flex flex-wrap gap-2">
                       {service.tags.slice(0, 5).map((tag, idx) => (
-                        <span
+                        <span;
                           key={idx}
                           className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
                         >
@@ -399,20 +404,20 @@ const getInnovationLevelColor = (lev,
                   </div>
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
-                    <Link
+                    <Link;
                       to={`/contact?service=${service.id}`}
                       className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg,
   hove: r: bg-zion-cyan-light transition-colors font-medium"
                     >
-                      Get Started
+                      Get Started;
                     </Link>
-                    <Link
+                    <Link;
                       to={`/services/${service.id}`}
                       className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg,
   hove: r: bg-zion-cyan hove,
   r:text-white transition-colors font-medium"
                     >
-                      Learn More
+                      Learn More;
                     </Link>
                   </div>
                 </div>
@@ -422,7 +427,7 @@ const getInnovationLevelColor = (lev,
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
-              <button
+              <button;
                 onClick={() () => {
                   setSelectedCategory('all')
                   setSelectedInnovationLevel('all')
@@ -432,7 +437,7 @@ const getInnovationLevelColor = (lev,
                 className="text-zion-cyan,
   hove: r: text-zion-cyan-light font-medium"
               >
-                Clear all filters
+                Clear all filters;
               </button>
             </div>
           )}
@@ -450,15 +455,15 @@ const getInnovationLevelColor = (lev,
             Contact us today to discuss how we can help you achieve your goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
+            <Link;
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg,
   hove: r:bg-gray-100 transition-colors"
             >
-              Contact Us
+              Contact Us;
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg,
@@ -466,7 +471,7 @@ const getInnovationLevelColor = (lev,
   r:text-zion-blue transition-colors"
             >
               <Phone className="mr-2 h-5 w-5" />
-              Call Now
+              Call Now;
             </a>
           </div>
         </div>
@@ -474,4 +479,4 @@ const getInnovationLevelColor = (lev,
     </div>
   )
 }
-export default ComprehensiveServicesShowcase
+export default ComprehensiveServicesShowcase;

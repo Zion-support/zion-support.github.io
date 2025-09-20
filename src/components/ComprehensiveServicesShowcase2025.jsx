@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { 
+import { motion, AnimatePresence   } from "framer-motion";
+import {
   Search,
   Filter, 
   Star, 
@@ -41,25 +42,27 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink
-} from "lucide-react"
-import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/cleanInnovativeMicroSaasServices2025"
-import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "../data/additionalInnovativeServices2025"
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025"
+  ExternalLink;
+}
+}
+ } from "lucide-react";
+import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025   } from "../data/cleanInnovativeMicroSaasServices2025";
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025   } from "../data/additionalInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025   } from "../data/emergingTechServices2025";
 const ComprehensiveServicesShowcase2025 = () () => {
   const [activeCategory, setActiveCategory] = useState('all')
 const [searchTerm, setSearchTerm] = useState('')
 const [sortBy, setSortBy] = useState('innovation')
 const [viewMode, setViewMode] = useState('grid')
 const [selectedService, setSelectedService] = useState(null)
-  // Combine all services
+  // Combine all services;
   const allServices = [
-    ...CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025
+    ...CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025;
     ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
-    ...EMERGING_TECH_SERVICES_2025
+    ...EMERGING_TECH_SERVICES_2025;
   ],
 
-  // Enhanced categories with new services
+  // Enhanced categories with new services;
   const categories = [
     { id: 'all', na,
   m: e: 'All Services', cou,
@@ -140,26 +143,26 @@ const [selectedService, setSelectedService] = useState(null)
   o: r: 'from-indigo-600 to-purple-500' },
   ]
 const filteredServices = allServices.filter(service () => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 }),
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
     switch (sortBy) {
       case 'innovation':
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
       case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'roi':
         return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0])
       case 'name':
         return a.title.localeCompare(b.title)
       defau,
-  l: t: return 0
+  l: t: return 0;
     },
   })
 const containerVariants = {
@@ -172,7 +175,7 @@ const containerVariants = {
   y: 1,transiti,
   o: n: {
         staggerChildre,
-  n: 0.1
+  n: 0.1;
       },
   },
   }
@@ -188,7 +191,7 @@ const itemVariants = {
   t: y: 1,transiti,
   o: n: {
         duratio,
-  n: 0.5
+  n: 0.5;
       },
   },
   }
@@ -213,7 +216,7 @@ const getCategoryIcon = (category) () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.h1 
+          <motion.h1;
             initial={ ,
   y: 30, opaci,
   t: y: 0 },
@@ -227,9 +230,9 @@ const getCategoryIcon = (category) () => {
             className="text-5xl,
   m: d: text-6xl font-bold mb-6"
           >
-            Revolutionary AI & Tech Services
+            Revolutionary AI & Tech Services;
           </motion.h1>
-          <motion.p 
+          <motion.p;
             initial={ ,
   y: 30, opaci,
   t: y: 0 },
@@ -244,9 +247,9 @@ const getCategoryIcon = (category) () => {
             className="text-xl,
   m: d:text-2xl mb-8 max-w-4xl mx-auto"
           >
-            Discover cutting-edge micro SAAS solutions, IT services, and AI innovations that transform businesses and drive exponential growth
+            Discover cutting-edge micro SAAS solutions, IT services, and AI innovations that transform businesses and drive exponential growth;
           </motion.p>
-          <motion.div 
+          <motion.div;
             initial={ y: 30, opaci,
   t: y: 0 },
   }
@@ -282,17 +285,17 @@ const getCategoryIcon = (category) () => {
   g:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            {allServices.length}+ Revolutionary Services
+            {allServices.length}+ Revolutionary Services;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From AI-powered business intelligence to quantum computing solutions, our comprehensive portfolio covers every aspect of modern technology needs
+            From AI-powered business intelligence to quantum computing solutions, our comprehensive portfolio covers every aspect of modern technology needs;
           </p>
         </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1,
   m: d: grid-cols-4 gap-8 mb-16">
-          <motion.div 
+          <motion.div;
             initial={ scal,
   e: 0.8, opaci,
   t: y: 0 },
@@ -309,7 +312,7 @@ const getCategoryIcon = (category) () => {
             <div className="text-4xl font-bold text-blue-600 mb-2">{allServices.length}+</div>
             <div className="text-gray-600">Innovative Services</div>
           </motion.div>
-          <motion.div 
+          <motion.div;
             initial={ sca,
   l: e: 0.8, opaci,
   t: y: 0 },
@@ -327,7 +330,7 @@ const getCategoryIcon = (category) () => {
             <div className="text-4xl font-bold text-purple-600 mb-2">25+</div>
             <div className="text-gray-600">Technology Categories</div>
           </motion.div>
-          <motion.div 
+          <motion.div;
             initial={ sca,
   l: e: 0.8, opaci,
   t: y: 0 },
@@ -345,7 +348,7 @@ const getCategoryIcon = (category) () => {
             <div className="text-4xl font-bold text-green-600 mb-2">99.9%</div>
             <div className="text-gray-600">Uptime Guarantee</div>
           </motion.div>
-          <motion.div 
+          <motion.div;
             initial={ sca,
   l: e: 0.8, opaci,
   t: y: 0 },
@@ -372,7 +375,7 @@ const getCategoryIcon = (category) () => {
             <div className="flex-1 max-w-md">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
@@ -386,7 +389,7 @@ const getCategoryIcon = (category) () => {
             </div>
             
             <div className="flex gap-4 items-center">
-              <select
+              <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg,
@@ -401,17 +404,17 @@ const getCategoryIcon = (category) () => {
               </select>
               
               <div className="flex border border-gray-300 rounded-lg">
-                <button
+                <button;
                   onClick={() => setViewMode('grid')}
                   className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
                 >
-                  Grid
+                  Grid;
                 </button>
-                <button
+                <button;
                   onClick={() => setViewMode('list')}
                   className={`px-3 py-2 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
                 >
-                  List
+                  List;
                 </button>
               </div>
             </div>
@@ -422,7 +425,7 @@ const getCategoryIcon = (category) () => {
         <div className="mb-8">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
-              <motion.button
+              <motion.button;
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 whileHover={ sca,
@@ -432,7 +435,7 @@ const getCategoryIcon = (category) () => {
   l: e: 0.95 },
   }
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category.id
+                  activeCategory === category.id;
                     ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                     : 'bg-white text-gray-700,
   hove: r:bg-gray-100 shadow-md'
@@ -446,7 +449,7 @@ const getCategoryIcon = (category) () => {
         </div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -455,7 +458,7 @@ const getCategoryIcon = (category) () => {
   g:grid-cols-3 gap-8' : 'space-y-6'}
         >
           {sortedServices.map((service, index) => (
-            <motion.div
+            <motion.div;
               key={service.id}
               variants={itemVariants}
               whileHover={ y: -5, sca,
@@ -508,13 +511,13 @@ const getCategoryIcon = (category) () => {
                     ))}
                   </div>
                   
-                  <button
+                  <button;
                     onClick={() => setSelectedService(service)}
                     className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 rounded-lg font-medium,
   hove: r: from-blue-700 hove,
   r:to-cyan-600 transition-all duration-300"
                   >
-                    View Details
+                    View Details;
                   </button>
                 </div>
               ) : (
@@ -562,13 +565,13 @@ const getCategoryIcon = (category) () => {
                         </span>
                       ))}
                     </div>
-                    <button
+                    <button;
                       onClick={() => setSelectedService(service)}
                       className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-lg font-medium,
   hove: r: from-blue-700 hove,
   r:to-cyan-600 transition-all duration-300"
                     >
-                      View Details
+                      View Details;
                     </button>
                   </div>
                 </div>
@@ -582,11 +585,11 @@ const getCategoryIcon = (category) () => {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Get in touch with our experts to discuss how our revolutionary services can drive your success
+              Get in touch with our experts to discuss how our revolutionary services can drive your success;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-medium,
@@ -595,7 +598,7 @@ const getCategoryIcon = (category) () => {
                 <Phone className="w-5 h-5" />
                 <span>+1 302 464 0950</span>
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-medium,
@@ -604,7 +607,7 @@ const getCategoryIcon = (category) () => {
                 <Mail className="w-5 h-5" />
                 <span>kleber@ziontechgroup.com</span>
               </a>
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com"
                 target="_blank"
@@ -623,7 +626,7 @@ const getCategoryIcon = (category) () => {
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0 },
   }
@@ -636,7 +639,7 @@ const getCategoryIcon = (category) () => {
             className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedService(null)}
           >
-            <motion.div
+            <motion.div;
               initial={ sca,
   l: e: 0.8, opaci,
   t: y: 0 },
@@ -661,7 +664,7 @@ const getCategoryIcon = (category) () => {
                       <p className="text-gray-600 text-lg">{selectedService.description}</p>
                     </div>
                   </div>
-                  <button
+                  <button;
                     onClick={() => setSelectedService(null)}
                     className="text-gray-400,
   hove: r: text-gray-600 text-2xl"
@@ -820,7 +823,7 @@ const getCategoryIcon = (category) () => {
 
                 <div className="mt-8 flex flex-col,
   s: m: flex-row gap-4">
-                  <a
+                  <a;
                     href="t,
   e: l:+13024640950"
                     className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 px-6 rounded-lg font-medium text-center,
@@ -828,9 +831,9 @@ const getCategoryIcon = (category) () => {
   hove: r:to-cyan-600 transition-all duration-300"
                   >
                     Call,
-  No: w: +1 302 464 0950
+  No: w: +1 302 464 0950;
                   </a>
-                  <a
+                  <a;
                     href="mail,
   t: o:kleber@ziontechgroup.com"
                     className="flex-1 bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 px-6 rounded-lg font-medium text-center,
@@ -838,7 +841,7 @@ const getCategoryIcon = (category) () => {
   hove: r:to-pink-600 transition-all duration-300"
                   >
                     Emai,
-  l: kleber@ziontechgroup.com
+  l: kleber@ziontechgroup.com;
                   </a>
                 </div>
               </div>
@@ -850,4 +853,4 @@ const getCategoryIcon = (category) () => {
   )
 },
 
-export default ComprehensiveServicesShowcase2025
+export default ComprehensiveServicesShowcase2025;

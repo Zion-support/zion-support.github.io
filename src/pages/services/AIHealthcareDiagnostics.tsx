@@ -1,36 +1,40 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   Heart,
   Eye,
   Stethoscope,
   CheckCircle,
   Star,
   Users,
-  Globe
-  Lock
-  Cpu
-  Database
-  Network
-  BarChart3
-  ArrowRight
-  Sparkles
-  Atom
-  Workflow
-  Target
-  Rocket
-  Shield
-  Zap
-  TrendingUp
-  Activity
-  Microscope
-  Pill
-  Syringe
-  Thermometer
-  BrainCircuit
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Globe;
+  Lock;
+  Cpu;
+  Database;
+  Network;
+  BarChart3;
+  ArrowRight;
+  Sparkles;
+  Atom;
+  Workflow;
+  Target;
+  Rocket;
+  Shield;
+  Zap;
+  TrendingUp;
+  Activity;
+  Microscope;
+  Pill;
+  Syringe;
+  Thermometer;
+  BrainCircuit;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function AIHealthcareDiagnostics() {
   const features = [
   {
@@ -65,7 +69,7 @@ export default function AIHealthcareDiagnostics() {
   e: s: ["X-ray Analysis", "MRI Interpretation", "CT Scan Review", "Ultrasound Assessment"]
       accura,
   c: y: "98.5%",ic,
-  o: n: Eye
+  o: n: Eye;
 },
   {
   catego,
@@ -73,7 +77,7 @@ export default function AIHealthcareDiagnostics() {
   e: s: ["ECG Analysis", "Heart Disease Detection", "Arrhythmia Detection", "Risk Assessment"]
       accura,
   c: y: "97.8%",ic,
-  o: n: Heart
+  o: n: Heart;
 },
   {
   catego,
@@ -81,7 +85,7 @@ export default function AIHealthcareDiagnostics() {
   e: s: ["Tumor Detection", "Cancer Screening", "Treatment Response", "Prognosis Analysis"]
       accura,
   c: y: "96.9%",ic,
-  o: n: Microscope
+  o: n: Microscope;
 },
   {
   catego,
@@ -89,7 +93,7 @@ export default function AIHealthcareDiagnostics() {
   e: s: ["Brain Scan Analysis", "Stroke Detection", "Alzheimer's Screening", "Seizure Detection"]
       accura,
   c: y: "97.2%",ic,
-  o: n: BrainCircuit
+  o: n: BrainCircuit;
 },
   ]
   const benefits = [
@@ -159,7 +163,7 @@ export default function AIHealthcareDiagnostics() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Healthcare Diagnostics - Zion Tech Group"
         description="Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support."
       />
@@ -171,7 +175,7 @@ export default function AIHealthcareDiagnostics() {
   l: g:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -186,7 +190,7 @@ export default function AIHealthcareDiagnostics() {
               <Stethoscope className="w-12 h-12 text-green-400 mr-3" />
               <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white">
-                AI Healthcare Diagnostics
+                AI Healthcare Diagnostics;
               </h1>
             </div>
             <p className="text-xl m,
@@ -196,7 +200,7 @@ export default function AIHealthcareDiagnostics() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -207,9 +211,9 @@ export default function AIHealthcareDiagnostics() {
   hove: r: shadow-lg,
   hove: r:shadow-green-500/25 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -219,7 +223,7 @@ export default function AIHealthcareDiagnostics() {
                 className="className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-green-400/10 transition-all duration-300";"
               >
-                Learn More
+                Learn More;
               </motion.button>
             </div>
           </motion.div>
@@ -232,7 +236,7 @@ export default function AIHealthcareDiagnostics() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -246,10 +250,10 @@ export default function AIHealthcareDiagnostics() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Advanced AI Diagnostic Capabilities
+              Advanced AI Diagnostic Capabilities;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform combines cutting-edge machine learning with medical expertise 
+              Our AI platform combines cutting-edge machine learning with medical expertise;
               to deliver unprecedented diagnostic accuracy and speed.
             </p>
           </motion.div>
@@ -258,7 +262,7 @@ export default function AIHealthcareDiagnostics() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -292,7 +296,7 @@ export default function AIHealthcareDiagnostics() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -306,10 +310,10 @@ export default function AIHealthcareDiagnostics() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Specialized Diagnostic Services
+              Specialized Diagnostic Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI-powered diagnostics across all major medical specialties 
+              Comprehensive AI-powered diagnostics across all major medical specialties;
               with industry-leading accuracy rates.
             </p>
           </motion.div>
@@ -317,7 +321,7 @@ export default function AIHealthcareDiagnostics() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {diagnosticCapabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -366,7 +370,7 @@ export default function AIHealthcareDiagnostics() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -380,10 +384,10 @@ export default function AIHealthcareDiagnostics() {
           >
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Transform Healthcare Delivery
+              Transform Healthcare Delivery;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI diagnostics platform delivers measurable improvements in healthcare outcomes
+              Our AI diagnostics platform delivers measurable improvements in healthcare outcomes;
               efficiency, and cost reduction.
             </p>
           </motion.div>
@@ -392,7 +396,7 @@ export default function AIHealthcareDiagnostics() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -421,7 +425,7 @@ export default function AIHealthcareDiagnostics() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -435,10 +439,10 @@ export default function AIHealthcareDiagnostics() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Security & Compliance
+              Enterprise-Grade Security & Compliance;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built with healthcare-grade security and compliance standards to protect 
+              Built with healthcare-grade security and compliance standards to protect;
               patient data and ensure regulatory adherence.
             </p>
           </motion.div>
@@ -447,7 +451,7 @@ export default function AIHealthcareDiagnostics() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {complianceFeatures.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -476,7 +480,7 @@ export default function AIHealthcareDiagnostics() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -490,10 +494,10 @@ export default function AIHealthcareDiagnostics() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+              Flexible Pricing Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your healthcare facility's needs. All plans include 
+              Choose the plan that fits your healthcare facility's needs. All plans include;
               our core AI diagnostic capabilities.
             </p>
           </motion.div>
@@ -501,7 +505,7 @@ export default function AIHealthcareDiagnostics() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -515,7 +519,7 @@ export default function AIHealthcareDiagnostics() {
   a: y: index * 0.1 },
   }
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
-  index === 1 
+  index === 1;
                     ? 'border-green-400/50 shadow-lg shadow-green-500/25' 
                     : 'border-slate-600/50'
 } relative`}
@@ -523,7 +527,7 @@ export default function AIHealthcareDiagnostics() {
                 {index === 1 && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -545,7 +549,7 @@ export default function AIHealthcareDiagnostics() {
                   ))}
                 </ul>
 
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.05 },
   }
@@ -553,7 +557,7 @@ export default function AIHealthcareDiagnostics() {
   l: e: 0.95 },
   }
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  index === 1
+  index === 1;
                       ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white,
   hove: r: shadow-lg,
   hove: r:shadow-green-500/25'
@@ -561,7 +565,7 @@ export default function AIHealthcareDiagnostics() {
   r:bg-green-400/10'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
               </motion.div>
             ))}
@@ -575,7 +579,7 @@ export default function AIHealthcareDiagnostics() {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-green-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -591,12 +595,12 @@ export default function AIHealthcareDiagnostics() {
               Ready to Transform Healthcare with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading healthcare facilities worldwide in adopting AI-powered diagnostics 
+              Join leading healthcare facilities worldwide in adopting AI-powered diagnostics;
               for better patient outcomes and operational efficiency.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -607,9 +611,9 @@ export default function AIHealthcareDiagnostics() {
   hove: r: shadow-lg,
   hove: r:shadow-green-500/25 transition-all duration-300";"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -619,7 +623,7 @@ export default function AIHealthcareDiagnostics() {
                 className="className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r: bg-green-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>

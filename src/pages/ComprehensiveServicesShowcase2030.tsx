@@ -1,63 +1,66 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
+  Brain;
   Cloud,
   Shield,
   Rocket,
   Zap,
   Users,
   Globe,
-  Cpu
-  Lock
-  Heart
-  Star
-  ArrowRight
-  CheckCircle
-  TrendingUp
-  Code
-  Database
-  Network
-  Smartphone
-  BarChart3
-  MessageSquare
-  FileText
-  ShoppingCart
-  Headphones
-  Mail
-  Search
-  HelpCircle
-  ShieldCheck
-  Globe2
-  Leaf
-  Sparkles
-  Target
-  DollarSign
-  Clock
-  Award
-  Phone
-  Mail as MailIcon
-  MapPin
-  Infinity
-  Car
-  Building2
-  Factory
-  Wheat
-  Zap as EnergyIcon
-  Stethoscope
-  Satellite
-  TrendingUp as ChartIcon
-  PenTool
-  UserCheck
-} from "lucide-react"
-import { SEO } from "../components/SEO"
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "../data/comprehensiveInnovativeServices2030"
+  Cpu;
+  Lock;
+  Heart;
+  Star;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  MessageSquare;
+  FileText;
+  ShoppingCart;
+  Headphones;
+  Mail;
+  Search;
+  HelpCircle;
+  ShieldCheck;
+  Globe2;
+  Leaf;
+  Sparkles;
+  Target;
+  DollarSign;
+  Clock;
+  Award;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
+  Infinity;
+  Car;
+  Building2;
+  Factory;
+  Wheat;
+  Zap as EnergyIcon;
+  Stethoscope;
+  Satellite;
+  TrendingUp as ChartIcon;
+  PenTool;
+  UserCheck;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030   } from "../data/comprehensiveInnovativeServices2030";
 export default function ComprehensiveServicesShowcase2030() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [sortBy, setSortBy] = useState('rating')
-  // Enhanced categories with new services
+  // Enhanced categories with new services;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', cou,
@@ -127,26 +130,26 @@ const categories = [
   },
   ]
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service () => {
-  const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'reviews':
-        return b.reviewCount - a.reviewCount
+        return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title)
       defau,
-  l: t: return b.rating - a.rating
+  l: t: return b.rating - a.rating;
 },
   })
   const getCategoryIcon = (catego,
@@ -176,7 +179,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Comprehensive AI Services Showcase 2030 - Zion Tech Group"
         description="Explore our cutting-edge AI-powered micro SAAS services and solutions for 2030. From autonomous operations to quantum computing, discover the future of technology."
       />
@@ -187,7 +190,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -200,7 +203,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              AI Services 2030
+              AI Services 2030;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -209,7 +212,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full,
   hove: r:from-cyan-600,
@@ -218,16 +221,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Contact,
-  U: s: +1 302 464 0950
+  U: s: +1 302 464 0950;
               </Link>
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full,
   hove: r:bg-cyan-400 hove,
   r:text-slate-900 transition-all duration-300";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Get Quote
+                Get Quote;
               </Link>
             </div>
           </motion.div>
@@ -267,7 +270,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -281,7 +284,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             className="className="text-center mb-12";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Revolutionary AI Services for 2030
+              Revolutionary AI Services for 2030;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our cutting-edge AI solutions are designed to transform industries and drive innovation. 
@@ -294,7 +297,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           <div className="mb-8">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setActiveCategory(category.id)},
@@ -302,7 +305,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-300,
   transform: hover: scale-105 ${
-  activeCategory === category.id
+  activeCategory === category.id;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
                       : 'bg-slate-800 text-gray-300 hove,
   r:bg-slate-700 border border-slate-600'
@@ -321,7 +324,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m:flex-row gap-4 mb-8 justify-center items-center">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -335,7 +338,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s:border-transparent";"
               />
             </div>
-            <select
+            <select;
               value={sortBy},
   }
               onChange={(e) => setSortBy(e.target.value)},
@@ -360,7 +363,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   g:grid-cols-3 gap-6">
             <AnimatePresence>
               {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -428,7 +431,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                       <span className="text-cyan-400 font-bold">{service.aiScore}/100</span>
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-2">
-                      <div 
+                      <div;
                         className="className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full transition-all duration-500";"
                         style={ wid,
   t: h: `${service.aiScore}%` },
@@ -439,7 +442,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                         key={tagIndex},
   }
                         className="className="px-2 py-1 bg-slate-700 text-cyan-300 text-xs rounded-full";"
@@ -451,21 +454,21 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   </div>
 
                   <div className="flex space-x-3">
-                    <Link
+                    <Link;
                       to={`/services/${service.id}`}
                       className="className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-2 px-4 rounded-lg font-medium,
   hove: r: from-cyan-600,
   hove: r:to-blue-700 transition-all duration-300";"
                     >
-                      Learn More
+                      Learn More;
                     </Link>
-                    <Link
+                    <Link;
                       to="/request-quote"
                       className="className="flex-1 border border-cyan-500 text-cyan-400 text-center py-2 px-4 rounded-lg font-medium,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-300";"
                     >
-                      Get Quote
+                      Get Quote;
                     </Link>
                   </div>
                 </motion.div>
@@ -481,7 +484,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -497,12 +500,12 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of companies already leveraging our AI-powered solutions to drive innovation
+              Join hundreds of companies already leveraging our AI-powered solutions to drive innovation;
               increase efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full,
   hove: r:from-cyan-600,
@@ -511,9 +514,9 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call,
-  U: s: +1 302 464 0950
+  U: s: +1 302 464 0950;
               </Link>
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full,
   hove: r:bg-cyan-400,
@@ -521,7 +524,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Emai,
-  l: kleber@ziontechgroup.com
+  l: kleber@ziontechgroup.com;
               </Link>
             </div>
           </motion.div>
@@ -534,7 +537,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -584,7 +587,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   o: n: "24/7 dedicated support team with deep technical expertise"
 },
   ].map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -612,7 +615,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   )
 }
 
-// Atom icon component for quantum computing
+// Atom icon component for quantum computing;
 const Atom = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <circle cx="12" cy="12" r="3" />

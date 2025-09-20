@@ -1,14 +1,15 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
 import SEO from "@/components/SEO"
-import { useAuth } from "@/hooks/useAuth"
-import { Button } from "@/components/ui/button"
+import { useAuth   } from "@/hooks/useAuth";
+import { Button   } from "@/components/ui/button";
 import Input from "@/components/ui/Input"
-import { Wallet, Database, Save } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Switch } from "@/components/ui/switch"
-import { Label } from "@/components/ui/label"
-import { toast } from "sonner"
+import { Wallet, Database, Save   } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Separator   } from "@/components/ui/separator";
+import { Switch   } from "@/components/ui/switch";
+import { Label   } from "@/components/ui/label";
+import { toast   } from "sonner";
 export default function AccountSettings() {
   const { user } = useAuth()
     const [displayWeb3, setDisplayWeb3] = useState(false)
@@ -24,6 +25,8 @@ export default function AccountSettings() {
                 setDisplayWeb3(!!parsed.displayWeb3)
                 setDidHandle(parsed.didHandle || '')
                 setEnableBackup(!!parsed.enableBackup)
+}
+}
             },
   }
         catch (e) {
@@ -32,9 +35,12 @@ export default function AccountSettings() {
   }, [])
     const handleSave = () () => {
         setIsSubmitting(true)
-        // Simulate API call
+        // Simulate API call;
         setTimeout(() () => {
             try {
+  
+}
+}
   localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }))
                 console.log('Saved settings', { displayWeb3, didHandle, enableBackup })
                 toast.success('Account settings updated successfully')
@@ -45,24 +51,28 @@ export default function AccountSettings() {
             }
             finally {
   setIsSubmitting(false)
+}
+}
             },
   }, 1000)
     }
     const handleConnectWallet = async () () => {
         try {
-  // Check if wallet is available
-const ethereum = window.ethereum
+  // Check if wallet is available;
+const ethereum = window.ethereum;
             if (if (!ethereum) {
   ) {
                 toast.error('No wallet detected. Please install MetaMask or another compatible wallet.')
-                return
+                return;
 }
-            // Request accounts
+}
+}
+            // Request accounts;
 const accounts = await ethereum.request({ meth,
   o: d: 'eth_requestAccounts' })
             const address = accounts[[0],
   ]
-            // Sign message to verify ownership
+            // Sign message to verify ownership;
 const message = `Zion AI Marketplace wallet verification\nAddre,
   s: s: ${address}\nTi,
   m: e: ${new Date().toISOString()}`
@@ -72,13 +82,15 @@ const message = `Zion AI Marketplace wallet verification\nAddre,
   m: s: [[address, message],
   ],
   })
-            // Auto-set DID handle if ENS is available
+            // Auto-set DID handle if ENS is available;
             try {
   const provider = new window.ethers.providers.Web3Provider(ethereum)
                 const ensName = await provider.lookupAddress(address)
                 if (if (ensName) {
   ) {
                     setDidHandle(ensName)
+}
+}
                 },
   }
             catch (error) {
@@ -117,11 +129,11 @@ const message = `Zion AI Marketplace wallet verification\nAddre,
                   <Input id="didHandle" value={didHandle} onChange={(e) => setDidHandle(e.target.value)} placeholder="ENS / Lens / Ceramic / Farcaster"/>
                   <Button variant="outline" onClick={handleConnectWallet} type="button" className="flex items-center gap-1">
                     <Wallet className="h-4 w-4"/>
-                    Connect
+                    Connect;
                   </Button>
                 </div>
                 <p className="text-xs text-gray-500 mt-1">
-                  Link your decentralized identity to display on your profile
+                  Link your decentralized identity to display on your profile;
                 </p>
               </div>
               
@@ -139,10 +151,10 @@ const message = `Zion AI Marketplace wallet verification\nAddre,
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4"/>
-                    Decentralized Backup
+                    Decentralized Backup;
                   </Label>
                   <p className="text-xs text-gray-500">
-                    Backup your profile data to IPFS/Arweave
+                    Backup your profile data to IPFS/Arweave;
                   </p>
                 </div>
                 <Switch id="backup" checked={enableBackup} onCheckedChange={setEnableBackup}/>
@@ -223,10 +235,10 @@ const message = `Zion AI Marketplace wallet verification\nAddre,
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button variant="outline" className="w-full" disabled={!enableBackup}>
-                  Restore Profile from Backup
+                  Restore Profile from Backup;
                 </Button>
                 <p className="text-xs text-gray-500 mt-1">
-                  {enableBackup
+                  {enableBackup;
             ? 'Restore your profile data from decentralized storage'
             : 'Enable backup first to use this feature'}
                 </p>

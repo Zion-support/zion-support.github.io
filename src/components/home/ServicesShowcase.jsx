@@ -1,12 +1,12 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices"
-import { ArrowRight, Star } from "lucide-react"
-import { FuturisticCard } from "@/components/ui/futuristic-card"
-import { NeonText } from "@/components/ui/neon-text"
+import { Link     } from "react-router-dom";
+import { Button     } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle     } from "@/components/ui/card";
+import { Badge     } from "@/components/ui/badge";
+import { COMPREHENSIVE_SERVICES     } from "@/data/comprehensiveServices";
+import { ArrowRight, Star     } from "lucide-react";
+import { FuturisticCard     } from "@/components/ui/futuristic-card";
+import { NeonText     } from "@/components/ui/neon-text";
 export function ServicesShowcase() {
   const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6)
     const emergingServices = [
@@ -58,7 +58,7 @@ export function ServicesShowcase() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight mb-4">
             <NeonText color="#00ffff" glowIntensity="high">
-              Micro SAAS Services
+              Micro SAAS Services;
             </NeonText>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -131,11 +131,11 @@ export function ServicesShowcase() {
                 <div className="space-y-2">
                   <Button className="w-full bg-zion-purple,
   hove: r:bg-zion-purple-dark">
-                    Get Started
+                    Get Started;
                   </Button>
                   <Link to={`/micro-saas-services#${service.id}`}>
                     <Button variant="outline" size="sm" className="w-full">
-                      Learn More
+                      Learn More;
                       <ArrowRight className="w-4 h-4 ml-1"/>
                     </Button>
                   </Link>
@@ -150,11 +150,11 @@ export function ServicesShowcase() {
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-4">
             <NeonText color="#ff00ff" glowIntensity="medium">
-              Emerging Technologies
+              Emerging Technologies;
             </NeonText>
           </h3>
           <p className="text-muted-foreground">
-            Stay ahead of the curve with cutting-edge technology solutions
+            Stay ahead of the curve with cutting-edge technology solutions;
           </p>
         </div>
 
@@ -195,7 +195,7 @@ export function ServicesShowcase() {
                 </div>
                 <Button asChild size="sm" className="w-full">
                   <Link to={service.link}>
-                    Learn More
+                    Learn More;
                   </Link>
                 </Button>
               </CardContent>
@@ -210,7 +210,7 @@ export function ServicesShowcase() {
               Ready to Transform Your Business?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth
+              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth;
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col,
@@ -219,13 +219,13 @@ export function ServicesShowcase() {
   hove: r:from-zion-purple-light,
   hove: r:to-zion-purple">
                 <Link to="/services">
-                  Explore All Services
+                  Explore All Services;
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10">
                 <Link to="/request-quote">
-                  Request Custom Quote
+                  Request Custom Quote;
                 </Link>
               </Button>
             </div>

@@ -1,40 +1,43 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Users
+  Users;
   MessageCircle,
   Search,
-  Filter
-  ArrowRight
-  Star
-  Bookmark
-  Share2
-  Copy
-  CheckCircle
-  Clock
-  Tag
-  Play
-  Terminal
-  FileText
-  Key
-  Lock
-  Eye
-  EyeOff
-  ChevronDown
-  ChevronRight
-  AlertCircle
-  Info
-  TrendingUp
-  Heart
-  MessageSquare
-  Award
-  Zap
-  Globe
-  Calendar
-  User
-  Plus
-} from "lucide-react"
+  Filter;
+  ArrowRight;
+  Star;
+  Bookmark;
+  Share2;
+  Copy;
+  CheckCircle;
+  Clock;
+  Tag;
+  Play;
+  Terminal;
+  FileText;
+  Key;
+  Lock;
+  Eye;
+  EyeOff;
+  ChevronDown;
+  ChevronRight;
+  AlertCircle;
+  Info;
+  TrendingUp;
+  Heart;
+  MessageSquare;
+  Award;
+  Zap;
+  Globe;
+  Calendar;
+  User;
+  Plus;
+}
+}
+ } from "lucide-react";
 export default function Community() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -54,7 +57,7 @@ export default function Community() {
   c: s: 1247,pos,
   t: s: 8934,lastActivi,
   t: y: '2 hours ago',featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 'ai-ml',na,
@@ -66,7 +69,7 @@ export default function Community() {
   c: s: 892,pos,
   t: s: 5678,lastActivi,
   t: y: '1 hour ago',featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 'cybersecurity',na,
@@ -78,7 +81,7 @@ export default function Community() {
   c: s: 456,pos,
   t: s: 2345,lastActivi,
   t: y: '3 hours ago',featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 'cloud-devops',na,
@@ -90,7 +93,7 @@ export default function Community() {
   c: s: 678,pos,
   t: s: 3456,lastActivi,
   t: y: '4 hours ago',featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: 'quantum',na,
@@ -102,7 +105,7 @@ export default function Community() {
   c: s: 234,pos,
   t: s: 1234,lastActivi,
   t: y: '6 hours ago',featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: 'blockchain',na,
@@ -114,7 +117,7 @@ export default function Community() {
   c: s: 345,pos,
   t: s: 1789,lastActivi,
   t: y: '8 hours ago',featur,
-  e: d: false
+  e: d: false;
 },
   ]
   const recentDiscussions = [
@@ -130,7 +133,7 @@ export default function Community() {
   g: s: ['AIEnterprise', 'Best Practices']
       featur,
   e: d: true,pinn,
-  e: d: false
+  e: d: false;
 },
   {
   id: 2,tit,
@@ -144,7 +147,7 @@ export default function Community() {
   g: s: ['SecurityZero Trust', 'Architecture']
       featur,
   e: d: false,pinn,
-  e: d: true
+  e: d: true;
 },
   {
   id: 3,tit,
@@ -158,7 +161,7 @@ export default function Community() {
   g: s: ['QuantumMachine Learning', 'Performance']
       featur,
   e: d: true,pinn,
-  e: d: false
+  e: d: false;
 },
   {
   id: 4,tit,
@@ -172,7 +175,7 @@ export default function Community() {
   g: s: ['DevOpsTransformation', 'Success Stories']
       featur,
   e: d: false,pinn,
-  e: d: false
+  e: d: false;
 },
   {
   id: 5,tit,
@@ -186,7 +189,7 @@ export default function Community() {
   g: s: ['BlockchainScalability', 'Enterprise']
       featur,
   e: d: false,pinn,
-  e: d: false
+  e: d: false;
 },
   ]
   const communityStats = [
@@ -218,23 +221,23 @@ export default function Community() {
   const filteredDiscussions = recentDiscussions.filter(discussion () => {
   const matchesSearch = discussion.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory;
+    return matchesSearch && matchesCategory;
 })
 
   const handleStartDiscussion = () () => {
-    // Navigate to create discussion page
+    // Navigate to create discussion page;
     console.log('Start new discussion')
   }
 
   const handleJoinCommunity = () () => {
-    // Handle community join logic
+    // Handle community join logic;
     console.log('Join community')
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Community - Zion Tech Group"
         description="Join our vibrant community of technology professionals. Connect, learn, and collaborate with experts in AI, cybersecurity, quantum computing, and more."
       />
@@ -243,7 +246,7 @@ export default function Community() {
   }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -257,7 +260,7 @@ export default function Community() {
           >
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Join Our Community
+              Join Our Community;
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Connect with thousands of technology professionals, share knowledge,
@@ -270,7 +273,7 @@ export default function Community() {
   m: d:flex-row gap-4 max-w-3xl mx-auto mb-8">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search discussions, topics, or members..."
                   value={searchQuery},
@@ -284,7 +287,7 @@ export default function Community() {
   s:border-transparent";"
                 />
               </div>
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -299,7 +302,7 @@ export default function Community() {
   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
-              <select
+              <select;
                 value={selectedSort},
   }
                 onChange={(e) => setSelectedSort(e.target.value)},
@@ -321,7 +324,7 @@ export default function Community() {
             <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-6 max-w-3xl mx-auto">
               {communityStats.map((stat, index) => (
-  <motion.div
+  <motion.div;
                   key={stat.label},
   }
                   initial={ opaci,
@@ -349,7 +352,7 @@ export default function Community() {
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -366,7 +369,7 @@ export default function Community() {
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Forum Categories</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Explore our organized discussion areas covering all aspects of technology and innovation
+              Explore our organized discussion areas covering all aspects of technology and innovation;
             </p>
           </motion.div>
 
@@ -374,7 +377,7 @@ export default function Community() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {forumCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
                 key={category.id},
   }
                 initial={ opaci,
@@ -402,7 +405,7 @@ export default function Community() {
                     </div>
                     {category.featured && (
   <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
-                        Featured
+                        Featured;
                       </span>
                     )}
                   </div>
@@ -426,7 +429,7 @@ export default function Community() {
   hove: r:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300,
   transform: hover:scale-105 shadow-lg hove,
   r:shadow-cyan-500/25">
-                    Browse Category
+                    Browse Category;
                   </button>
                 </div>
               </motion.div>
@@ -444,7 +447,7 @@ export default function Community() {
               <h2 className="text-3xl font-bold text-white mb-2">Recent Discussions</h2>
               <p className="text-gray-300">Join the conversation in our most active discussions</p>
             </div>
-            <button
+            <button;
               onClick={onClick={handleStartDiscussion},
   },
   }
@@ -455,13 +458,13 @@ export default function Community() {
   r:shadow-cyan-500/25 flex items-center gap-2";"
             >
               <Plus className="w-4 h-4" />
-              Start Discussion
+              Start Discussion;
             </button>
           </div>
 
           <div className="space-y-4">
             {filteredDiscussions.map((discussion, index) => (
-  <motion.div
+  <motion.div;
                 key={discussion.id},
   }
                 initial={ opaci,
@@ -496,12 +499,12 @@ export default function Community() {
                         </h3>
                         {discussion.pinned && (
   <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">
-                            Pinned
+                            Pinned;
                           </span>
                         )},
   {discussion.featured && (
   <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs rounded-full">
-                            Featured
+                            Featured;
                           </span>
                         )}
                       </div>
@@ -526,11 +529,11 @@ export default function Community() {
                       <div className="flex items-center gap-4 text-sm text-gray-400">
                         <span className="flex items-center gap-1">
                           <MessageCircle className="w-4 h-4" />
-                          {discussion.replies} replies
+                          {discussion.replies} replies;
                         </span>
                         <span className="flex items-center gap-1">
                           <Eye className="w-4 h-4" />
-                          {discussion.views} views
+                          {discussion.views} views;
                         </span>
                       </div>
 
@@ -556,7 +559,7 @@ export default function Community() {
           </div>
 
           {filteredDiscussions.length === 0 && (
-  <motion.div
+  <motion.div;
               initial={ opaci,
   t: y: 0 },
   }
@@ -568,7 +571,7 @@ export default function Community() {
               <div className="text-gray-400 text-lg mb-4">
                 No discussions found matching your criteria.
               </div>
-              <button
+              <button;
                 onClick={() () => {
                   setSearchQuery('')
                   setSelectedCategory('All')
@@ -577,7 +580,7 @@ export default function Community() {
                 className="className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors";"
               >
-                Clear filters
+                Clear filters;
               </button>
             </motion.div>
           )}
@@ -588,7 +591,7 @@ export default function Community() {
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -607,12 +610,12 @@ export default function Community() {
               Ready to Join the Community?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Connect with thousands of technology professionals, share your expertise
+              Connect with thousands of technology professionals, share your expertise;
               and learn from industry leaders. Join our community today!
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <button
+              <button;
                 onClick={onClick={handleJoinCommunity},
   },
   }
@@ -622,11 +625,11 @@ export default function Community() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-cyan-500/25";"
               >
-                Join Community
+                Join Community;
               </button>
               <button className="border border-cyan-400/50 text-cyan-400 hove,
   r:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">
-                View Guidelines
+                View Guidelines;
               </button>
             </div>
           </motion.div>

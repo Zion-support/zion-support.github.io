@@ -1,6 +1,6 @@
 import React from "react"
-import { Shield, Globe, ExternalLink, CheckCircle, Wrench, Mail, Phone } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Shield, Globe, ExternalLink, CheckCircle, Wrench, Mail, Phone     } from "lucide-react";
+import { Link     } from "react-router-dom";
 export default function SecurityHeadersCSPManager() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -9,7 +9,7 @@ export default function SecurityHeadersCSPManager() {
         <div className="max-w-3xl">
           <h1 className="text-3xl s,
   m:text-5xl font-bold flex items-center gap-3">
-            <Shield className="w-8 h-8 text-cyan-400" /> Security Headers & CSP Manager
+            <Shield className="w-8 h-8 text-cyan-400" /> Security Headers & CSP Manager;
           </h1>
           <p className="mt-4 text-slate-300">
             Centralize HSTS, CSP, Referrer-Policy, Permissions-Policy and Subresource Integrity management across domains with rollout checks and reporting.

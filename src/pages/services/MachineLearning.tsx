@@ -1,109 +1,113 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
-import { motion } from "framer-motion"
+import { SEO     } from "../../components/SEO";
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   Zap,
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Lock
-  Database
-  Cpu
-  Network
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-  Target
-  Users
-  ArrowRight
-  Key
-  Fingerprint
-  EyeOff
-  Server
-  Globe2
-  ShieldCheck
-  Wifi
-  Smartphone
-  Activity
-  Clock
-  BarChart
-  PieChart
-  GitBranch
-  Code
-  Package
-  Play
-  Settings
-  Monitor
-  Shield
-  Rocket
-  Globe
-  Factory
-  Car
-  Heart
-  LineChart
-  Scatter
-  Layers
-  Target as TargetIcon
-  Search
-  Filter
-  RefreshCw
-  Download
-  Upload
-  Bell
-  AlertCircle
-  CheckCircle2
-  XCircle
-  Info
-  Lightbulb
-  Cpu as CpuIcon
-  Database as DatabaseIcon
-  Network as NetworkIcon
-  FileText as FileTextIcon
-  MessageCircle as MessageCircleIcon
-  Phone as PhoneIcon
-  Mail as MailIcon
-  MapPin as MapPinIcon
-  Building as BuildingIcon
-  Video as VideoIcon
-  Eye as EyeIcon
-  Target as TargetIcon2
-  Users as UsersIcon
-  ArrowRight as ArrowRightIcon
-  Key as KeyIcon
-  Fingerprint as FingerprintIcon
-  EyeOff as EyeOffIcon
-  Server as ServerIcon
-  Globe2 as Globe2Icon
-  ShieldCheck as ShieldCheckIcon
-  Wifi as WifiIcon
-  Smartphone as SmartphoneIcon
-  Activity as ActivityIcon
-  Clock as ClockIcon
-  BarChart as BarChartIcon
-  PieChart as PieChartIcon
-  GitBranch as GitBranchIcon
-  Code as CodeIcon
-  Package as PackageIcon
-  Play as PlayIcon
-  Settings as SettingsIcon
-  Monitor as MonitorIcon
-  Shield as ShieldIcon
-  Rocket as RocketIcon
-  Globe as GlobeIcon
-  Factory as FactoryIcon
-  Car as CarIcon
-  Heart as HeartIcon
-  LineChart as LineChartIcon
-  Scatter as ScatterIcon
-  Layers as LayersIcon
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Wifi;
+  Smartphone;
+  Activity;
+  Clock;
+  BarChart;
+  PieChart;
+  GitBranch;
+  Code;
+  Package;
+  Play;
+  Settings;
+  Monitor;
+  Shield;
+  Rocket;
+  Globe;
+  Factory;
+  Car;
+  Heart;
+  LineChart;
+  Scatter;
+  Layers;
+  Target as TargetIcon;
+  Search;
+  Filter;
+  RefreshCw;
+  Download;
+  Upload;
+  Bell;
+  AlertCircle;
+  CheckCircle2;
+  XCircle;
+  Info;
+  Lightbulb;
+  Cpu as CpuIcon;
+  Database as DatabaseIcon;
+  Network as NetworkIcon;
+  FileText as FileTextIcon;
+  MessageCircle as MessageCircleIcon;
+  Phone as PhoneIcon;
+  Mail as MailIcon;
+  MapPin as MapPinIcon;
+  Building as BuildingIcon;
+  Video as VideoIcon;
+  Eye as EyeIcon;
+  Target as TargetIcon2;
+  Users as UsersIcon;
+  ArrowRight as ArrowRightIcon;
+  Key as KeyIcon;
+  Fingerprint as FingerprintIcon;
+  EyeOff as EyeOffIcon;
+  Server as ServerIcon;
+  Globe2 as Globe2Icon;
+  ShieldCheck as ShieldCheckIcon;
+  Wifi as WifiIcon;
+  Smartphone as SmartphoneIcon;
+  Activity as ActivityIcon;
+  Clock as ClockIcon;
+  BarChart as BarChartIcon;
+  PieChart as PieChartIcon;
+  GitBranch as GitBranchIcon;
+  Code as CodeIcon;
+  Package as PackageIcon;
+  Play as PlayIcon;
+  Settings as SettingsIcon;
+  Monitor as MonitorIcon;
+  Shield as ShieldIcon;
+  Rocket as RocketIcon;
+  Globe as GlobeIcon;
+  Factory as FactoryIcon;
+  Car as CarIcon;
+  Heart as HeartIcon;
+  LineChart as LineChartIcon;
+  Scatter as ScatterIcon;
+  Layers as LayersIcon;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function MachineLearning() {
   const features = [
   {
@@ -160,25 +164,25 @@ export default function MachineLearning() {
   tit,
   l: e: 'Customer Analytics',descripti,
   o: n: 'Predict customer behavior and preferences',ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: 'Fraud Detection',descripti,
   o: n: 'Identify suspicious activities in real-time',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: 'Recommendation Systems',descripti,
   o: n: 'Personalized product and content suggestions',ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   tit,
   l: e: 'Process Optimization',descripti,
   o: n: 'Streamline operations and reduce inefficiencies',ic,
-  o: n: Activity
+  o: n: Activity;
 },
   ]
   const mlCapabilities = [
@@ -253,7 +257,7 @@ export default function MachineLearning() {
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="Machine Learning - Zion Tech Group"
         description="Revolutionary machine learning solutions including deep learning, predictive analytics, NLP, and computer vision. Transform your business with AI-powered insights."
         keywords="machine learning, deep learning, AI, predictive analytics, natural language processing, computer vision, neural networks"
@@ -265,7 +269,7 @@ export default function MachineLearning() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -279,26 +283,26 @@ export default function MachineLearning() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-400 text-sm font-medium mb-6">
                 <Brain className="w-4 h-4" />
-                AI Innovation
+                AI Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                Machine
+                Machine;
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                  Learning
+                  Learning;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform your business with revolutionary machine learning technology. 
-                Deep learning, predictive analytics, NLP, and computer vision that 
+                Deep learning, predictive analytics, NLP, and computer vision that;
                 unlock insights and automate complex processes.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -310,9 +314,9 @@ export default function MachineLearning() {
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-purple-500/25";"
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -323,7 +327,7 @@ export default function MachineLearning() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  View Demo
+                  View Demo;
                 </motion.button>
               </div>
             </motion.div>
@@ -341,7 +345,7 @@ export default function MachineLearning() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -358,10 +362,10 @@ export default function MachineLearning() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Revolutionary ML Features
+                Revolutionary ML Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our machine learning platform combines cutting-edge algorithms with practical 
+                Our machine learning platform combines cutting-edge algorithms with practical;
                 applications to deliver unprecedented insights and automation capabilities.
               </p>
             </motion.div>
@@ -370,7 +374,7 @@ export default function MachineLearning() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -417,7 +421,7 @@ export default function MachineLearning() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -433,19 +437,19 @@ export default function MachineLearning() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your Business with ML
+                  Transform Your Business with ML;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our machine learning solutions deliver measurable improvements in decision 
-                  accuracy, operational efficiency, and customer experience while enabling 
+                  Our machine learning solutions deliver measurable improvements in decision;
+                  accuracy, operational efficiency, and customer experience while enabling;
                   new business opportunities.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -470,7 +474,7 @@ export default function MachineLearning() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -492,7 +496,7 @@ export default function MachineLearning() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      ML Impact
+                      ML Impact;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -524,7 +528,7 @@ export default function MachineLearning() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -541,10 +545,10 @@ export default function MachineLearning() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Machine Learning Capabilities
+                Machine Learning Capabilities;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform provides comprehensive machine learning capabilities that 
+                Our platform provides comprehensive machine learning capabilities that;
                 transform data into actionable insights and automated processes.
               </p>
             </motion.div>
@@ -552,7 +556,7 @@ export default function MachineLearning() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {mlCapabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                   key={capability.name},
   }
                   initial={ opaci,
@@ -601,7 +605,7 @@ export default function MachineLearning() {
   }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -618,10 +622,10 @@ export default function MachineLearning() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Industries We Transform
+                Industries We Transform;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our machine learning solutions are designed to revolutionize 
+                Our machine learning solutions are designed to revolutionize;
                 various industries with innovative AI applications and use cases.
               </p>
             </motion.div>
@@ -630,7 +634,7 @@ export default function MachineLearning() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
-  <motion.div
+  <motion.div;
                   key={industry.name},
   }
                   initial={ opaci,
@@ -677,7 +681,7 @@ export default function MachineLearning() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -694,10 +698,10 @@ export default function MachineLearning() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Machine Learning Use Cases
+                Machine Learning Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our ML platform adapts to various business needs and industries
+                Our ML platform adapts to various business needs and industries;
                 providing tailored solutions for different requirements.
               </p>
             </motion.div>
@@ -705,7 +709,7 @@ export default function MachineLearning() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -752,7 +756,7 @@ export default function MachineLearning() {
   }
         <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -773,13 +777,13 @@ export default function MachineLearning() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading organizations that are already using our machine learning 
+                Join leading organizations that are already using our machine learning;
                 solutions to unlock insights and automate complex processes.
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -791,9 +795,9 @@ export default function MachineLearning() {
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-purple-500/25";"
                 >
-                  Start Today
+                  Start Today;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -804,7 +808,7 @@ export default function MachineLearning() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>

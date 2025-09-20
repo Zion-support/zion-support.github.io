@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp     } from "lucide-react";
 export default function GovernmentSolutions() {
   const solutions = [
   {
@@ -88,11 +88,11 @@ export default function GovernmentSolutions() {
           <div className="text-center">
             <h1 className="text-4xl,
   m: d:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-              Government Solutions
+              Government Solutions;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Modernizing government with secure, compliant, and citizen-centric technology solutions
+              Modernizing government with secure, compliant, and citizen-centric technology solutions;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -100,11 +100,11 @@ export default function GovernmentSolutions() {
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300,
   transform: hover:scale-105">
-                Get Government Quote
+                Get Government Quote;
               </Link>
               <Link to="/services/ai-autonomous-systems" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/20 transition-all duration-300">
-                Explore AI Solutions
+                Explore AI Solutions;
               </Link>
             </div>
           </div>
@@ -128,10 +128,10 @@ export default function GovernmentSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-              Comprehensive Government Solutions
+              Comprehensive Government Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From digital transformation to security compliance, we provide end-to-end government technology solutions
+              From digital transformation to security compliance, we provide end-to-end government technology solutions;
             </p>
           </div>
 
@@ -139,7 +139,7 @@ export default function GovernmentSolutions() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {solutions.map((solution, index) () => {
-  const Icon = solution.icon
+  const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8,
   hove: r: border-cyan-500/50 transition-all duration-300,
   hove: r:transform hove,
@@ -171,10 +171,10 @@ export default function GovernmentSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-              Government Transformation Benefits
+              Government Transformation Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Measurable improvements in citizen services, operational efficiency, and compliance
+              Measurable improvements in citizen services, operational efficiency, and compliance;
             </p>
           </div>
 
@@ -200,10 +200,10 @@ export default function GovernmentSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Government Success Stories
+              Government Success Stories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real results from government agencies using our solutions
+              Real results from government agencies using our solutions;
             </p>
           </div>
 
@@ -234,7 +234,7 @@ export default function GovernmentSolutions() {
                 </div>
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400,
   hove: r:text-cyan-300 transition-colors duration-300">
-                  Read Full Case Study
+                  Read Full Case Study;
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
               </div>))}
@@ -253,7 +253,7 @@ export default function GovernmentSolutions() {
             Ready to Modernize Government?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our government solutions can improve citizen services, enhance security, and drive efficiency
+            Let's discuss how our government solutions can improve citizen services, enhance security, and drive efficiency;
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -261,11 +261,11 @@ export default function GovernmentSolutions() {
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300,
   transform: hover:scale-105">
-              Schedule Consultation
+              Schedule Consultation;
             </Link>
             <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/20 transition-all duration-300">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>

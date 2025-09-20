@@ -9,7 +9,7 @@ const,
         <header className="mb-10">
           <h1 className="text-4xl m,
   d:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-            Remote Meeting Summarizer
+            Remote Meeting Summarizer;
           </h1>
           <p className="mt-4 text-lg text-slate-300 max-w-3xl">
             Auto-transcribe calls, generate action items, and send summaries to Slack, Notion, and email.
@@ -84,4 +84,4 @@ const,
   )
 }
 
-export default RemoteMeetingSummarizer
+export default RemoteMeetingSummarizer;

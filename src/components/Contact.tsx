@@ -10,8 +10,8 @@ const Contact: React.FC = () => {
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(15)].map((_, i) => (
-            <div
-              key={i}
+              <div
+                key={i}
               className="absolute w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"
                 style={{
                   left: `${Math.random() * 100}%`,
@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
             <div className="max-w-6xl mx-auto text-center">
               <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Contact Us
+                Contact Us;
               </h1>
               <p className="text-xl m,
   d:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -75,4 +75,4 @@ const Contact: React.FC = () => {
     </div>
   )
 }
-export default Contact
+export default Contact;

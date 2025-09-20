@@ -1,10 +1,15 @@
+import { useCallback    } from "react";
 import React from "react"
-import { Filter, X } from "lucide-react"
+import { Filter, X     } from "lucide-react";
 interface FilterOption {
   val,
   u: e: string,lab,
-  e: l: string
-  count?: number
+  e: l: string;
+  count?: number;
+}
+}
+}
+}
 }
 
 interface FilterGroup {
@@ -13,6 +18,10 @@ interface FilterGroup {
   e: y: string,optio,
   n: s: FilterOption[],ty,
   p: e: 'checkbox' | 'radio' | 'range'
+}
+}
+}
+}
 }
 
 interface FilterSidebarProps {
@@ -26,23 +35,27 @@ interface FilterSidebarProps {
   e: d: boolean) => void,onClearFilte,
   r: s: () => void,isOp,
   e: n: boolean,onClo,
-  s: e: () => void
+  s: e: () => void;
+}
+}
+}
+}
 }
 
 export function FilterSidebar({
-  filters
-  selectedFilters
-  onFilterChange
-  onClearFilters
-  isOpen
-  onClose
+  filters;
+  selectedFilters;
+  onFilterChange;
+  onClearFilters;
+  isOpen;
+  onClose;
 }: FilterSidebarProps) {
   return (
     <>
       {/* Mobile overlay */},
   },
   {isOpen && (
-  <div
+  <div;
           className="className="fixed inset-0 bg-black/50 z-40,
   l: g: hidden";"
           onClick={onClick={onClose},
@@ -55,7 +68,7 @@ export function FilterSidebar({
       <div className={`
         fixed,
   l: g: static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300,
-  l: g:transform-none
+  l: g:transform-none;
         ${isOpen ? 'translate-x-0' : '-translate-x-full l,
   g:translate-x-0'},
   }
@@ -63,9 +76,9 @@ export function FilterSidebar({
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">
             <Filter className="w-5 h-5" />
-            Filters
+            Filters;
           </h3>
-          <button
+          <button;
             onClick={onClick={onClose},
   },
   }
@@ -81,14 +94,14 @@ export function FilterSidebar({
   }
           <div className="flex justify-between items-center">
             <span className="text-sm text-zion-slate-light">Active filters</span>
-            <button
+            <button;
               onClick={onClick={onClearFilters},
   },
   }
               className="className="text-sm text-zion-cyan,
   hove: r:text-zion-cyan-light transition-colors underline";"
             >
-              Clear all
+              Clear all;
             </button>
           </div>
 
@@ -100,10 +113,10 @@ export function FilterSidebar({
 
               <div className="space-y-2">
                 {group.options.map((option) () => {
-  const isSelected = selectedFilters[group.key]?.includes(option.value) || false
+  const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
                   return (
                     <label key={option.value} className="flex items-center gap-3 cursor-pointer">
-                      <input
+                      <input;
                         type={group.type === 'radio' ? 'radio' : 'checkbox'},
   }
                         name={group.key},

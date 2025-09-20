@@ -1,5 +1,5 @@
-// Expanded Services Pricing Guide 2027 - Zion Tech Group
-// Comprehensive pricing information for all expanded innovative services
+// Expanded Services Pricing Guide 2027 - Zion Tech Group;
+// Comprehensive pricing information for all expanded innovative services;
 export interface ExpandedServicePricing {
   service,
   I: d: string,serviceNa,
@@ -17,7 +17,9 @@ export interface ExpandedServicePricing {
   n: s: string[],bestF,
   o: r: string[],setupF,
   e: e: number,contractTe,
-  r: m: string
+  r: m: string;
+}
+}
 }
     profession,
   a: l: {
@@ -29,7 +31,7 @@ export interface ExpandedServicePricing {
   n: s: string[],bestF,
   o: r: string[],setupF,
   e: e: number,contractTe,
-  r: m: string
+  r: m: string;
 }
     enterpri,
   s: e: {
@@ -41,7 +43,7 @@ export interface ExpandedServicePricing {
   n: s: string[],bestF,
   o: r: string[],setupF,
   e: e: number,contractTe,
-  r: m: string
+  r: m: string;
 }
     cust,
   o: m: {
@@ -53,7 +55,7 @@ export interface ExpandedServicePricing {
   n: s: string[],bestF,
   o: r: string[],setupF,
   e: e: number,contractTe,
-  r: m: string
+  r: m: string;
 },
   }
   marketComparis,
@@ -62,7 +64,7 @@ export interface ExpandedServicePricing {
   s: string[],marketPositi,
   o: n: 'leader' | 'challenger' | 'niche' | 'emerging',priceAdvanta,
   g: e: string,valuePropositi,
-  o: n: string
+  o: n: string;
 }
   roiAnalys,
   i: s: {
@@ -90,11 +92,11 @@ export interface ExpandedServicePricing {
   e: string,ema,
   i: l: string,websi,
   t: e: string,addre,
-  s: s: string
+  s: s: string;
 },
   }
 
-// 1. CYBERSECURITY SERVICES PRICING
+// 1. CYBERSECURITY SERVICES PRICING;
 export,
   const: cybersecurityPricing: ExpandedServicePricing[] = [
   {
@@ -410,7 +412,7 @@ export,
 },
   },
   ]
-// 2. DATA ANALYTICS SERVICES PRICING
+// 2. DATA ANALYTICS SERVICES PRICING;
 export,
   const: dataAnalyticsPricing: ExpandedServicePricing[] = [
   {
@@ -568,7 +570,7 @@ export,
 },
   },
   ]
-// 3. CLOUD & DEVOPS SERVICES PRICING
+// 3. CLOUD & DEVOPS SERVICES PRICING;
 export,
   const: cloudDevOpsPricing: ExpandedServicePricing[] = [
   {
@@ -726,7 +728,7 @@ export,
 },
   },
   ]
-// 4. IOT & EDGE COMPUTING SERVICES PRICING
+// 4. IOT & EDGE COMPUTING SERVICES PRICING;
 export,
   const: iotEdgePricing: ExpandedServicePricing[] = [
   {
@@ -884,7 +886,7 @@ export,
 },
   },
   ]
-// 5. FINANCIAL TECHNOLOGY SERVICES PRICING
+// 5. FINANCIAL TECHNOLOGY SERVICES PRICING;
 export,
   const: finTechPricing: ExpandedServicePricing[] = [
   {
@@ -1042,7 +1044,7 @@ export,
 },
   },
   ]
-// 6. HEALTHCARE TECHNOLOGY SERVICES PRICING
+// 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
 export,
   const: healthcarePricing: ExpandedServicePricing[] = [
   {
@@ -1200,29 +1202,29 @@ export,
 },
   },
   ]
-// Export all pricing data
+// Export all pricing data;
 export const ALL_EXPANDED_SERVICES_PRICING = [
-  ...cybersecurityPricing
-  ...dataAnalyticsPricing
-  ...cloudDevOpsPricing
-  ...iotEdgePricing
-  ...finTechPricing
-  ...healthcarePricing
+  ...cybersecurityPricing;
+  ...dataAnalyticsPricing;
+  ...cloudDevOpsPricing;
+  ...iotEdgePricing;
+  ...finTechPricing;
+  ...healthcarePricing;
 ]
-// Helper functions
-export const getPricingByServiceId = (service,
+// Helper functions;
+export const getPricingByServiceId = React.memo((service,
   I: d: string): ExpandedServicePricing | undefined () => {
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)
 }
-export const getPricingByCategory = (catego,
+export const getPricingByCategory = React.memo((catego,
   r: y: string): ExpandedServicePricing[] () => {
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)
 }
-export const getPricingBySubcategory = (subcatego,
+export const getPricingBySubcategory = React.memo((subcatego,
   r: y: string): ExpandedServicePricing[] () => {
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)
 }
-export const searchPricing = (que,
+export const searchPricing = React.memo((que,
   r: y: string): ExpandedServicePricing[] () => {
   const lowercaseQuery = query.toLowerCase()
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>

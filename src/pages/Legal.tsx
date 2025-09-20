@@ -1,23 +1,25 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  FileText
+  FileText;
   Shield,
   Lock,
   Eye,
   Scale,
-  CheckCircle
-  ArrowRight
-  BookOpen
-  UserCheck
-  Globe
-  Database
-  Server
-  Mail
-  Phone
-} from "lucide-react"
+  CheckCircle;
+  ArrowRight;
+  BookOpen;
+  UserCheck;
+  Globe;
+  Database;
+  Server;
+  Mail;
+  Phone;
+}
+}
+ } from "lucide-react";
 const,
   Lega: l: React.FC = () () => {
   const legalDocuments = [
@@ -96,7 +98,7 @@ const,
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Legal & Privacy - Zion Tech Group"
         description="Access all legal documents, privacy policies, and terms of service for Zion Tech Group. Stay informed about your rights and our commitments."
       />
@@ -106,7 +108,7 @@ const,
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container-responsive py-20 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -120,7 +122,7 @@ const,
           >
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Legal & Privacy
+              Legal & Privacy;
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Access all legal documents, privacy policies, and terms of service. 
@@ -148,7 +150,7 @@ const,
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -164,7 +166,7 @@ const,
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              Legal Document Categories
+              Legal Document Categories;
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Our legal documents are organized into clear categories to help you find what you need quickly.
@@ -174,7 +176,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8 mb-16">
             {legalCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
                 key={category.name},
   }
                 initial={ opaci,
@@ -209,7 +211,7 @@ const,
   }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -225,7 +227,7 @@ const,
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              All Legal Documents
+              All Legal Documents;
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Browse and download all our legal documents, policies, and agreements.
@@ -236,7 +238,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {legalDocuments.map((document, index) => (
-  <motion.div
+  <motion.div;
                 key={document.title},
   }
                 initial={ opaci,
@@ -276,7 +278,7 @@ const,
   }
                 </p>
                 
-                <Link
+                <Link;
                   to={document.href},
   }
                   className="className="inline-flex items-center gap-2 text-cyan-400,
@@ -298,7 +300,7 @@ const,
         <div className="container-responsive">
           <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -313,7 +315,7 @@ const,
   }
             >
               <h2 className="text-3xl font-bold text-white mb-6">
-                Your Rights & Our Commitments
+                Your Rights & Our Commitments;
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -347,7 +349,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -364,7 +366,7 @@ const,
             >
               <h3 className="text-xl font-semibold text-white mb-4">Need Legal Assistance?</h3>
               <p className="text-gray-300 mb-6">
-                If you have questions about our legal documents or need clarification on any terms
+                If you have questions about our legal documents or need clarification on any terms;
                 our legal team is here to help.
               </p>
               <div className="space-y-3">
@@ -377,7 +379,7 @@ const,
                   <span>+1 302 464 0950</span>
                 </div>
               </div>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center gap-2 mt-6 text-cyan-400,
   hove: r:text-cyan-300 transition-colors";"
@@ -394,7 +396,7 @@ const,
   }
       <section className="py-16">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -410,7 +412,7 @@ const,
             className="className="max-w-3xl mx-auto";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              Stay Informed About Legal Updates
+              Stay Informed About Legal Updates;
             </h2>
             <p className="text-gray-300 mb-8">
               We regularly update our legal documents to ensure compliance and transparency. 
@@ -418,7 +420,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500,
   hove: r:from-cyan-600,
@@ -428,7 +430,7 @@ const,
                 <span>Contact Legal Team</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link
+              <Link;
                 to="/privacy"
                 className="className="inline-flex items-center gap-2 border border-cyan-500 text-cyan-400,
   hove: r:bg-cyan-500 hove,
@@ -444,4 +446,4 @@ const,
     </div>
   )
 }
-export default Legal
+export default Legal;

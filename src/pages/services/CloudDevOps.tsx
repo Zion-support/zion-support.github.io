@@ -1,7 +1,7 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
-import { Cloud, Code, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Docker, Kubernetes } from "lucide-react"
-import { Link } from "react-router-dom"
+import { SEO     } from "../../components/SEO";
+import { Cloud, Code, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Docker, Kubernetes     } from "lucide-react";
+import { Link     } from "react-router-dom";
 export default function CloudDevOps() {
   const services = [
   {
@@ -213,7 +213,7 @@ export default function CloudDevOps() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Cloud DevOps Services - Zion Tech Group"
         description="Transform your infrastructure with our comprehensive Cloud DevOps services including cloud migration, automation, containerization, and security solutions."
       />
@@ -226,7 +226,7 @@ export default function CloudDevOps() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Cloud
+              Cloud;
               <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-green-500 bg-clip-text text-transparent"> DevOps</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -234,7 +234,7 @@ export default function CloudDevOps() {
   and DevOps best practices that drive efficiency and innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600,
   hove: r: from-blue-600,
@@ -242,15 +242,15 @@ export default function CloudDevOps() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-blue-500/25";"
               >
-                Get Cloud Assessment
+                Get Cloud Assessment;
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 border border-blue-400 text-blue-400,
   hove: r:bg-blue-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </Link>
             </div>
           </div>
@@ -263,10 +263,10 @@ export default function CloudDevOps() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Cloud DevOps Solutions
+              Comprehensive Cloud DevOps Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From cloud migration to continuous deployment, we provide end-to-end solutions that 
+              From cloud migration to continuous deployment, we provide end-to-end solutions that;
               modernize your infrastructure and accelerate your development cycles.
             </p>
           </div>
@@ -275,7 +275,7 @@ export default function CloudDevOps() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {services.map((service, index) => (
-  <div
+  <div;
                 key={service.name},
   }
                 className="className="group p-8 rounded-2xl bg-slate-800/50,
@@ -318,12 +318,12 @@ export default function CloudDevOps() {
                   </ul>
                 </div>
 
-                <Link
+                <Link;
                   to="/request-quote"
                   className="className="inline-flex items-center gap-2 text-blue-400,
   hove: r:text-blue-300 font-medium transition-colors";"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -338,7 +338,7 @@ export default function CloudDevOps() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Technology Stack
+              Technology Stack;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We leverage cutting-edge technologies and tools to deliver robust, scalable, and secure solutions.
@@ -368,10 +368,10 @@ export default function CloudDevOps() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Success Stories
+              Success Stories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how we've transformed organizations with our Cloud DevOps solutions
+              See how we've transformed organizations with our Cloud DevOps solutions;
             </p>
           </div>
 
@@ -422,10 +422,10 @@ export default function CloudDevOps() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our Cloud DevOps Process
+              Our Cloud DevOps Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven methodology that ensures successful cloud transformation and DevOps implementation
+              A proven methodology that ensures successful cloud transformation and DevOps implementation;
             </p>
           </div>
 
@@ -437,28 +437,28 @@ export default function CloudDevOps() {
   p: '01',tit,
   l: e: 'Assessment & Planning',descripti,
   o: n: 'Evaluate current infrastructure and plan migration strategy',ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   st,
   e: p: '02',tit,
   l: e: 'Design & Architecture',descripti,
   o: n: 'Design scalable cloud architecture and DevOps workflows',ic,
-  o: n: Code
+  o: n: Code;
 },
   {
   st,
   e: p: '03',tit,
   l: e: 'Implementation',descripti,
   o: n: 'Execute migration and implement automation tools',ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   st,
   e: p: '04',tit,
   l: e: 'Optimization',descripti,
   o: n: 'Monitor performance and continuously optimize',ic,
-  o: n: RefreshCw
+  o: n: RefreshCw;
 },
   ].map((phase, index) => (
   <div key={index} className="text-center">
@@ -483,11 +483,11 @@ export default function CloudDevOps() {
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our Cloud DevOps solutions can modernize your infrastructure
+              Let's discuss how our Cloud DevOps solutions can modernize your infrastructure;
               accelerate your development cycles, and drive operational excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600,
   hove: r: from-blue-600,
@@ -495,15 +495,15 @@ export default function CloudDevOps() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-blue-500/25";"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 border border-blue-400 text-blue-400,
   hove: r:bg-blue-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Schedule Free Consultation
+                Schedule Free Consultation;
               </Link>
             </div>
           </div>

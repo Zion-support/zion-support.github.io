@@ -1,8 +1,8 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { Link } from "react-router-dom"
+import { SEO     } from "@/components/SEO";
+import { Link     } from "react-router-dom";
 import {
-  FileText
+  FileText;
   Brain,
   Shield,
   Zap,
@@ -11,42 +11,46 @@ import {
   DollarSign,
   Clock,
   Users,
-  BarChart3
-  Lock
-  Globe
-  Target
-  TrendingUp
-  Award
-  Phone
-  Mail
-  MapPin
-  Star
-  Eye
-  Search
-  AlertTriangle
-  FileCheck
-  Scale
-  Gavel
-  Building
-  Heart
-  BookOpen
-  Calendar
-  AlertCircle
-  CheckSquare
-  FileX
-  Download
-  Upload
-  Share2
-  Settings
-  Database
-  Cloud
-  Server
-  Wifi
-  ShieldCheck
-  UserCheck
-  Globe2
-  Zap as ZapIcon
-} from "lucide-react"
+  BarChart3;
+  Lock;
+  Globe;
+  Target;
+  TrendingUp;
+  Award;
+  Phone;
+  Mail;
+  MapPin;
+  Star;
+  Eye;
+  Search;
+  AlertTriangle;
+  FileCheck;
+  Scale;
+  Gavel;
+  Building;
+  Heart;
+  BookOpen;
+  Calendar;
+  AlertCircle;
+  CheckSquare;
+  FileX;
+  Download;
+  Upload;
+  Share2;
+  Settings;
+  Database;
+  Cloud;
+  Server;
+  Wifi;
+  ShieldCheck;
+  UserCheck;
+  Globe2;
+  Zap as ZapIcon;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIPoweredContractAnalysis() {
   const features = [
   {
@@ -299,7 +303,7 @@ export default function AIPoweredContractAnalysis() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="AI-Powered Contract Analysis Platform - Zion Tech Group"
         description="Transform your contract review process with AI-powered analysis, risk assessment, and compliance monitoring. 98% accuracy, real-time processing, and enterprise-grade security."
         keywords="AI contract analysis, legal tech, contract review, risk assessment, compliance monitoring, legal automation, contract management"
@@ -314,7 +318,7 @@ export default function AIPoweredContractAnalysis() {
           <div className="mb-8">
             <h1 className="text-5xl,
   m: d:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
-              AI-Powered Contract Analysis
+              AI-Powered Contract Analysis;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -325,7 +329,7 @@ export default function AIPoweredContractAnalysis() {
           
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-            <Link 
+            <Link;
               to="/request-quote"
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600,
   hove: r:from-blue-700,
@@ -334,17 +338,17 @@ export default function AIPoweredContractAnalysis() {
   hove: r:shadow-xl";"
             >
               <BookOpen className="w-5 h-5 mr-2" />
-              Get Started Today
+              Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link;
               to="/contact"
               className="className="inline-flex items-center px-8 py-4 border border-gray-600,
   hove: r:border-gray-500 text-gray-300 hove,
   r:text-white font-semibold rounded-lg transition-all duration-200";"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Schedule Demo
+              Schedule Demo;
             </Link>
           </div>
 
@@ -437,14 +441,14 @@ export default function AIPoweredContractAnalysis() {
   m: d:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
   <div key={index} className={`relative bg-slate-800/50 p-8 rounded-xl border-2 ${
-  plan.popular 
+  plan.popular;
                   ? 'border-blue-500 bg-gradient-to-b from-slate-800/50 to-blue-900/20' 
                   : 'border-slate-700'
 }`}>
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -470,10 +474,10 @@ export default function AIPoweredContractAnalysis() {
                   ))}
                 </ul>
                 
-                <Link 
+                <Link;
                   to="/request-quote"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600,
   hove: r: from-blue-700,
   hove: r:to-purple-700 text-white'
@@ -482,7 +486,7 @@ export default function AIPoweredContractAnalysis() {
   r:text-white'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             ))}
@@ -607,7 +611,7 @@ export default function AIPoweredContractAnalysis() {
           
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-            <Link 
+            <Link;
               to="/request-quote"
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600,
   hove: r:from-blue-700,
@@ -616,22 +620,22 @@ export default function AIPoweredContractAnalysis() {
   hove: r:shadow-xl";"
             >
               <BookOpen className="w-5 h-5 mr-2" />
-              Start Free Trial
+              Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link;
               to="/contact"
               className="className="inline-flex items-center px-8 py-4 border border-gray-600,
   hove: r:border-gray-500 text-gray-300 hove,
   r:text-white font-semibold rounded-lg transition-all duration-200";"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Contact Sales
+              Contact Sales;
             </Link>
           </div>
           
           <p className="text-sm text-gray-500 mt-6">
-            No credit card required • 14-day free trial • Cancel anytime
+            No credit card required • 14-day free trial • Cancel anytime;
           </p>
         </div>
       </section>
@@ -697,17 +701,17 @@ export default function AIPoweredContractAnalysis() {
                 <a href="htt,
   p: s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="block,
   hove: r:text-white transition-colors">
-                  Website
+                  Website;
                 </a>
                 <a href="htt,
   p: s://linkedin.com/company/zion-tech-group" target="_blank" rel="noopener noreferrer" className="block,
   hove: r:text-white transition-colors">
-                  LinkedIn
+                  LinkedIn;
                 </a>
                 <a href="htt,
   p: s://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="block hove,
   r:text-white transition-colors">
-                  Twitter
+                  Twitter;
                 </a>
               </div>
             </div>

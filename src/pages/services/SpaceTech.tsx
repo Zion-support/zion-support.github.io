@@ -1,80 +1,84 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Rocket
+  Rocket;
   Satellite,
   CheckCircle,
   Users,
   Clock,
-  ArrowRight
-  Play
-  Settings
-  Target
-  Activity
-  Sparkles
-  Search
-  Zap
-  Globe
-  Building
-  DollarSign
-  BarChart3
-  TrendingUp
-  Key
-  Fingerprint
-  Monitor
-  AlertTriangle
-  ShieldCheck
-  Globe2
-  Server
-  Database
-  Smartphone
-  Code
-  FileText
-  AlertCircle
-  CheckSquare
-  Calculator
-  PieChart
-  LineChart
-  Target2
-  Wallet
-  PiggyBank
-  CreditCard
-  Receipt
-  Cloud
-  Zap2
-  Gauge
-  BarChart4
-  TrendingUp2
-  Lightbulb
-  Briefcase
-  Strategy
-  Brain
-  Compass
-  Shield
-  RefreshCw
-  TrendingUp3
-  Layers
-  Workflow
-  Scale
-  Award
-  Lock
-  Wifi
-  Bluetooth
-  Radio
-  Sensor
-  Chip
-  Circuit
-  Orbit
-  Planet
-  Star
-  Telescope
-  Antenna
-  Signal
-  Navigation
-  Earth
-  Moon
-  Sun
-} from "lucide-react"
+  ArrowRight;
+  Play;
+  Settings;
+  Target;
+  Activity;
+  Sparkles;
+  Search;
+  Zap;
+  Globe;
+  Building;
+  DollarSign;
+  BarChart3;
+  TrendingUp;
+  Key;
+  Fingerprint;
+  Monitor;
+  AlertTriangle;
+  ShieldCheck;
+  Globe2;
+  Server;
+  Database;
+  Smartphone;
+  Code;
+  FileText;
+  AlertCircle;
+  CheckSquare;
+  Calculator;
+  PieChart;
+  LineChart;
+  Target2;
+  Wallet;
+  PiggyBank;
+  CreditCard;
+  Receipt;
+  Cloud;
+  Zap2;
+  Gauge;
+  BarChart4;
+  TrendingUp2;
+  Lightbulb;
+  Briefcase;
+  Strategy;
+  Brain;
+  Compass;
+  Shield;
+  RefreshCw;
+  TrendingUp3;
+  Layers;
+  Workflow;
+  Scale;
+  Award;
+  Lock;
+  Wifi;
+  Bluetooth;
+  Radio;
+  Sensor;
+  Chip;
+  Circuit;
+  Orbit;
+  Planet;
+  Star;
+  Telescope;
+  Antenna;
+  Signal;
+  Navigation;
+  Earth;
+  Moon;
+  Sun;
+}
+}
+}
+}
+ } from "lucide-react";
 const SpaceTech = () () => {
   const features = [
   {
@@ -177,7 +181,7 @@ const SpaceTech = () () => {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -191,17 +195,17 @@ const SpaceTech = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2" />
-              Space Technology Solutions
+              Space Technology Solutions;
             </div>
             
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Space
+              Space;
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Technology</span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Explore the final frontier with cutting-edge space technology solutions
+              Explore the final frontier with cutting-edge space technology solutions;
               that push the boundaries of innovation and discovery.
             </p>
             
@@ -211,12 +215,12 @@ const SpaceTech = () () => {
   hove: r:from-purple-600,
   hove: r:to-pink-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
-                Launch Space Project
+                Launch Space Project;
               </button>
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hove,
   r:bg-purple-500/10 transition-all duration-200 flex items-center justify-center">
                 <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -229,7 +233,7 @@ const SpaceTech = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -242,10 +246,10 @@ const SpaceTech = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Space Technology Features
+              Advanced Space Technology Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive space technology solutions designed to advance
+              Comprehensive space technology solutions designed to advance;
               exploration and innovation beyond Earth's atmosphere.
             </p>
           </motion.div>
@@ -254,7 +258,7 @@ const SpaceTech = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -287,7 +291,7 @@ const SpaceTech = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -300,10 +304,10 @@ const SpaceTech = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Core Space Technology Services
+              Core Space Technology Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge technologies and platforms to build robust
+              Cutting-edge technologies and platforms to build robust;
               reliable space systems and solutions.
             </p>
           </motion.div>
@@ -336,7 +340,7 @@ const SpaceTech = () () => {
                 Why Choose Space Technology?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Space technology provides unprecedented opportunities to explore
+                Space technology provides unprecedented opportunities to explore;
                 monitor, and understand our world and beyond.
               </p>
               <ul className="space-y-3">
@@ -354,7 +358,7 @@ const SpaceTech = () () => {
                 <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Space Innovation</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team has deep expertise in space technology and
+                  Our team has deep expertise in space technology and;
                   is committed to advancing the frontiers of exploration.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -379,7 +383,7 @@ const SpaceTech = () () => {
             Ready to Reach for the Stars?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how space technology can advance your mission
+            Let's discuss how space technology can advance your mission;
             and push the boundaries of what's possible.
           </p>
           <div className="flex flex-col,
@@ -388,11 +392,11 @@ const SpaceTech = () () => {
   hove: r:from-purple-700,
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Get Started
+              Get Started;
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-              View All Services
+              View All Services;
             </a>
           </div>
         </div>
@@ -404,7 +408,7 @@ const SpaceTech = () () => {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -416,10 +420,10 @@ const SpaceTech = () () => {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Launch Your Space Project Today
+              Launch Your Space Project Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our space technology solutions to 
+              Join organizations worldwide that use our space technology solutions to;
               explore new frontiers and solve global challenges.
             </p>
             <div className="flex flex-col,
@@ -427,12 +431,12 @@ const SpaceTech = () () => {
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg,
   hove: r:from-purple-600,
   hove: r:to-pink-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hove,
   r:bg-purple-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -441,4 +445,4 @@ const SpaceTech = () () => {
     </div>
   )
 }
-export default SpaceTech
+export default SpaceTech;

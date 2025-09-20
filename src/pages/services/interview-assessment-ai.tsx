@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy } from "lucide-react"
-import { SEO } from "@/components/SEO"
+import { motion     } from "framer-motion";
+import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy     } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 export default function InterviewAssessmentAI() {
   const features = [
   {
@@ -95,7 +95,7 @@ export default function InterviewAssessmentAI() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI-Powered Interview Assessment Services - Zion Tech Group"
         description="Revolutionary AI-powered interview assessment services that eliminate bias, improve hiring quality, and streamline recruitment processes. Get objective candidate evaluations with predictive analytics."
       />
@@ -106,7 +106,7 @@ export default function InterviewAssessmentAI() {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -126,7 +126,7 @@ export default function InterviewAssessmentAI() {
             <h1 className="text-5xl,
   l: g: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
-                AI-Powered
+                AI-Powered;
               </span>
               <br />
               <span className="text-white">Interview Assessment</span>
@@ -135,13 +135,13 @@ export default function InterviewAssessmentAI() {
             <p className="text-xl l,
   g:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your hiring process with AI-powered interview assessment technology. 
-              Eliminate bias, improve candidate quality, and make data-driven hiring decisions 
+              Eliminate bias, improve candidate quality, and make data-driven hiring decisions;
               with unprecedented accuracy.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -153,9 +153,9 @@ export default function InterviewAssessmentAI() {
   hove: r:to-pink-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <Rocket className="w-5 h-5 mr-2" />
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -166,7 +166,7 @@ export default function InterviewAssessmentAI() {
   hove: r:bg-purple-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Video className="w-5 h-5 mr-2" />
-                Watch Demo
+                Watch Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -177,7 +177,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -191,10 +191,10 @@ export default function InterviewAssessmentAI() {
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Advanced AI Technology for Better Hiring
+              Advanced AI Technology for Better Hiring;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered assessment platform combines natural language processing
+              Our AI-powered assessment platform combines natural language processing;
               computer vision, and machine learning to deliver objective candidate evaluations.
             </p>
           </motion.div>
@@ -203,7 +203,7 @@ export default function InterviewAssessmentAI() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -236,7 +236,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -250,10 +250,10 @@ export default function InterviewAssessmentAI() {
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Proven Results & Benefits
+              Proven Results & Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered interview assessment services deliver measurable improvements 
+              Our AI-powered interview assessment services deliver measurable improvements;
               in hiring efficiency, candidate quality, and organizational diversity.
             </p>
           </motion.div>
@@ -262,7 +262,7 @@ export default function InterviewAssessmentAI() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -289,7 +289,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -303,10 +303,10 @@ export default function InterviewAssessmentAI() {
           >
             <h2 className="text-4xl,
   l: g: text-5xl font-bold text-white mb-6">
-              Comprehensive Assessment Solutions
+              Comprehensive Assessment Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our range of AI-powered assessment types designed to evaluate 
+              Choose from our range of AI-powered assessment types designed to evaluate;
               different aspects of candidate suitability and potential.
             </p>
           </motion.div>
@@ -315,7 +315,7 @@ export default function InterviewAssessmentAI() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {assessmentTypes.map((assessment, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -342,7 +342,7 @@ export default function InterviewAssessmentAI() {
                 <button className="w-full py-3 px-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg,
   hove: r: from-purple-600 hove,
   r:to-pink-600 transition-all duration-300">
-                  Get Started
+                  Get Started;
                 </button>
               </motion.div>
             ))}
@@ -354,7 +354,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -368,10 +368,10 @@ export default function InterviewAssessmentAI() {
           >
             <h2 className="text-4xl,
   l: g:text-5xl font-bold text-white mb-6">
-              Trusted Across Industries
+              Trusted Across Industries;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered assessment technology is successfully deployed across 
+              Our AI-powered assessment technology is successfully deployed across;
               diverse industries, helping organizations make better hiring decisions.
             </p>
           </motion.div>
@@ -380,7 +380,7 @@ export default function InterviewAssessmentAI() {
   m: d: grid-cols-3 l,
   g:grid-cols-6 gap-6">
             {industries.map((industry, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -412,7 +412,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -428,12 +428,12 @@ export default function InterviewAssessmentAI() {
               Ready to Transform Your Hiring Process?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the AI revolution in recruitment and make better hiring decisions 
+              Join the AI revolution in recruitment and make better hiring decisions;
               with objective, data-driven candidate assessments.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -445,9 +445,9 @@ export default function InterviewAssessmentAI() {
   hove: r:to-pink-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
-                Start Your Free Trial
+                Start Your Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -458,7 +458,7 @@ export default function InterviewAssessmentAI() {
   hove: r: bg-purple-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </motion.button>
             </div>
           </motion.div>

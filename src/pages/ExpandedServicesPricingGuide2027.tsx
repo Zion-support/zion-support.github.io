@@ -1,71 +1,76 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Search
-  Filter
-  Grid3X3
-  List
-  ChevronDown
-  ChevronUp
-  Star
-  Users
-  Globe
-  Lock
-  Code
-  BarChart3
-  Target
-  Rocket
-  Lightbulb
-  Award
-  Clock
-  DollarSign
-  TrendingUp
-  Eye
-  Handshake
-  Building
-  ShieldCheck
-  Network2
-  Smartphone as Mobile
-  Server as Infrastructure
-  Monitor as Analytics
-  Zap as Lightning
-  Users2
-  Award as Trophy
-  Clock as Time
-  DollarSign as Money
-  TrendingUp as Growth
-  Eye as Vision
-  Handshake as Partnership
-  Building as Enterprise
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  CheckCircle
-  ArrowRight
-  Shield
-  Brain
-  Cloud
-  Database
-  Smartphone
-  Server
-  Monitor
-  Cpu
-  Network
-  Smartphone as IoT
-  Server as Edge
-  Monitor as Healthcare
-  Cpu as FinTech
-  ChevronRight
-  Info
-  AlertTriangle
-  Zap
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Search;
+  Filter;
+  Grid3X3;
+  List;
+  ChevronDown;
+  ChevronUp;
+  Star;
+  Users;
+  Globe;
+  Lock;
+  Code;
+  BarChart3;
+  Target;
+  Rocket;
+  Lightbulb;
+  Award;
+  Clock;
+  DollarSign;
+  TrendingUp;
+  Eye;
+  Handshake;
+  Building;
+  ShieldCheck;
+  Network2;
+  Smartphone as Mobile;
+  Server as Infrastructure;
+  Monitor as Analytics;
+  Zap as Lightning;
+  Users2;
+  Award as Trophy;
+  Clock as Time;
+  DollarSign as Money;
+  TrendingUp as Growth;
+  Eye as Vision;
+  Handshake as Partnership;
+  Building as Enterprise;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  CheckCircle;
+  ArrowRight;
+  Shield;
+  Brain;
+  Cloud;
+  Database;
+  Smartphone;
+  Server;
+  Monitor;
+  Cpu;
+  Network;
+  Smartphone as IoT;
+  Server as Edge;
+  Monitor as Healthcare;
+  Cpu as FinTech;
+  ChevronRight;
+  Info;
+  AlertTriangle;
+  Zap;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
 import {
-  ALL_EXPANDED_SERVICES_PRICING
-  type ExpandedServicePricing
-} from "@/data/expandedServicesPricing2027"
+  ALL_EXPANDED_SERVICES_PRICING;
+  type ExpandedServicePricing;
+}
+}
+ } from "@/data/expandedServicesPricing2027";
 const,
   ExpandedServicesPricingGuide202: 7: React.FC = () () => {
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -77,7 +82,7 @@ const,
   ]
 
   useEffect(() () => {
-    let pricing = ALL_EXPANDED_SERVICES_PRICING
+    let pricing = ALL_EXPANDED_SERVICES_PRICING;
     if (if (selectedCategory !== 'All') {
   ) {
       pricing = pricing.filter(p => p.category === selectedCategory)
@@ -97,19 +102,19 @@ const,
   r: y: string) () => {
   switch (category) {
   case 'Cybersecurity':
-        return Shield
+        return Shield;
       case 'Data Analytics':
-        return BarChart3
+        return BarChart3;
       case 'Cloud & DevOps':
-        return Cloud
+        return Cloud;
       case 'IoT & Edge Computing':
-        return IoT
+        return IoT;
       case 'Financial Technology':
-        return FinTech
+        return FinTech;
       case 'Healthcare Technology':
-        return Healthcare
+        return Healthcare;
       defaul,
-  t: return Rocket
+  t: return Rocket;
 },
   }
   const getCategoryColor = (catego,
@@ -152,7 +157,7 @@ const,
     const categoryColor = getCategoryColor(pricing.category)
 
     return (
-      <motion.div
+      <motion.div;
         key={pricing.serviceId},
   }
         initial={ opaci,
@@ -224,7 +229,7 @@ const,
                     </div>
                   ))},
   {pricing.pricingTiers.starter.features.length > 3 && (
-  <button
+  <button;
                       onClick={onClick={() => setExpandedService(expandedService === pricing.serviceId + '-starter' ? null : pricing.serviceId + '-starter')},
   },
   }
@@ -239,7 +244,7 @@ const,
 
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-starter' && (
-  <motion.div
+  <motion.div;
                       initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -300,7 +305,7 @@ const,
                     </div>
                   ))},
   {pricing.pricingTiers.professional.features.length > 3 && (
-  <button
+  <button;
                       onClick={onClick={() => setExpandedService(expandedService === pricing.serviceId + '-professional' ? null : pricing.serviceId + '-professional')},
   },
   }
@@ -315,7 +320,7 @@ const,
 
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-professional' && (
-  <motion.div
+  <motion.div;
                       initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -373,7 +378,7 @@ const,
                     </div>
                   ))},
   {pricing.pricingTiers.enterprise.features.length > 3 && (
-  <button
+  <button;
                       onClick={onClick={() => setExpandedService(expandedService === pricing.serviceId + '-enterprise' ? null : pricing.serviceId + '-enterprise')},
   },
   }
@@ -388,7 +393,7 @@ const,
 
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-enterprise' && (
-  <motion.div
+  <motion.div;
                       initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -538,7 +543,7 @@ const,
             </div>
 
             <div className="flex space-x-2">
-              <a
+              <a;
                 href={`mail,
   t: o:${pricing.contactInfo.email}`}
                 className="className="flex-1 bg-blue-600,
@@ -547,7 +552,7 @@ const,
                 <Mail className="w-4 h-4" />
                 <span>Get Pricing</span>
               </a>
-              <a
+              <a;
                 href={pricing.contactInfo.website},
   }
                 target="_blank"
@@ -573,7 +578,7 @@ const,
   dar: k: from-slate-900,
   dar: k:via-slate-800 dar,
   k:to-slate-900">
-      <SEO
+      <SEO;
         title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
         description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
@@ -586,7 +591,7 @@ const,
   s: m: px-6,
   l: g:px-8 py-24">
           <div className="text-center">
-            <motion.h1
+            <motion.h1;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -600,12 +605,12 @@ const,
   m: d: text-6xl font-bold text-gray-900,
   dar: k:text-white mb-6";"
             >
-              Expanded Services
+              Expanded Services;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                Pricing Guide 2027
+                Pricing Guide 2027;
               </span>
             </motion.h1>
-            <motion.p
+            <motion.p;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -625,7 +630,7 @@ const,
 
             {/* Contact Info */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -695,7 +700,7 @@ const,
             <div className="flex-1 max-w-md">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search pricing..."
                   value={searchQuery},
@@ -716,7 +721,7 @@ const,
             {/* Category Filter */},
   }
             <div className="flex items-center space-x-4">
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -745,7 +750,7 @@ const,
         <div className="mb-8">
           <p className="text-gray-600,
   dar: k:text-gray-300">
-            Showing {filteredPricing.length} of {ALL_EXPANDED_SERVICES_PRICING.length} pricing plans
+            Showing {filteredPricing.length} of {ALL_EXPANDED_SERVICES_PRICING.length} pricing plans;
           </p>
         </div>
 
@@ -767,7 +772,7 @@ const,
   dar: k:text-white mb-2">No pricing plans found</h3>
             <p className="text-gray-600 dar,
   k:text-gray-300">
-              Try adjusting your search criteria or category filter
+              Try adjusting your search criteria or category filter;
             </p>
           </div>
         )}
@@ -791,7 +796,7 @@ const,
   s: m:flex-row items-center justify-center space-y-4,
   s: m:space-y-0,
   s: m:space-x-4">
-            <a
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,
@@ -800,7 +805,7 @@ const,
               <Mail className="w-5 h-5" />
               <span>Get Custom Quote</span>
             </a>
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
@@ -816,4 +821,4 @@ const,
     </div>
   )
 }
-export default ExpandedServicesPricingGuide2027
+export default ExpandedServicesPricingGuide2027;

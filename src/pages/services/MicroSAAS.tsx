@@ -1,5 +1,5 @@
 import React from "react"
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from "lucide-react"
+import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings     } from "lucide-react";
 const MicroSAAS = () () => {
   const microsaasServices = [
   {
@@ -109,25 +109,25 @@ const MicroSAAS = () () => {
   tit,
   l: e: "Healthcare",descripti,
   o: n: "HIPAA-compliant patient management and telemedicine platforms",ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: "Finance",descripti,
   o: n: "Secure financial planning and investment management tools",ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "Education",descripti,
   o: n: "Learning management systems and educational technology platforms",ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "E-commerce",descripti,
   o: n: "Online marketplace and retail management solutions",ic,
-  o: n: Package
+  o: n: Package;
 },
   ]
   return (
@@ -141,15 +141,15 @@ const MicroSAAS = () () => {
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6">
               <Package className="w-4 h-4 mr-2"/>
-              MicroSAAS
+              MicroSAAS;
             </div>
             <h1 className="text-4xl m,
   d:text-6xl font-bold text-white mb-6">
-              Build Your
+              Build Your;
               <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"> SAAS Empire</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We help entrepreneurs and businesses build scalable, profitable software-as-a-service
+              We help entrepreneurs and businesses build scalable, profitable software-as-a-service;
               applications that generate recurring revenue and scale globally.
             </p>
             <div className="flex flex-col,
@@ -158,11 +158,11 @@ const MicroSAAS = () () => {
   hove: r:from-indigo-700,
   hove: r:to-purple-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-                Explore Services
+                Explore Services;
               </a>
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Get Started
+                Get Started;
               </a>
             </div>
           </div>
@@ -178,10 +178,10 @@ const MicroSAAS = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-              Our MicroSAAS Services
+              Our MicroSAAS Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive SAAS development services that help you build, launch
+              Comprehensive SAAS development services that help you build, launch;
               and scale profitable software businesses.
             </p>
           </div>
@@ -222,10 +222,10 @@ const MicroSAAS = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-              Technologies We Use
+              Technologies We Use;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Modern, scalable technologies to build robust and efficient
+              Modern, scalable technologies to build robust and efficient;
               SAAS applications.
             </p>
           </div>
@@ -263,10 +263,10 @@ const MicroSAAS = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Industries We Serve
+              Industries We Serve;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Specialized SAAS solutions for various industries with
+              Specialized SAAS solutions for various industries with;
               domain-specific expertise and compliance requirements.
             </p>
           </div>
@@ -302,7 +302,7 @@ const MicroSAAS = () () => {
                 Why Choose MicroSAAS?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                MicroSAAS solutions offer entrepreneurs and businesses a proven path
+                MicroSAAS solutions offer entrepreneurs and businesses a proven path;
                 to building profitable, scalable software businesses with recurring revenue.
               </p>
               <ul className="space-y-3">
@@ -320,7 +320,7 @@ const MicroSAAS = () () => {
                 <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">SAAS Success</h3>
                 <p className="text-gray-300 mb-6">
-                  We've helped numerous entrepreneurs build successful SAAS businesses
+                  We've helped numerous entrepreneurs build successful SAAS businesses;
                   that generate millions in recurring revenue.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -345,7 +345,7 @@ const MicroSAAS = () () => {
             Ready to Build Your SAAS Empire?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how we can help you build a profitable
+            Let's discuss how we can help you build a profitable;
             scalable software-as-a-service business.
           </p>
           <div className="flex flex-col,
@@ -354,11 +354,11 @@ const MicroSAAS = () () => {
   hove: r:from-indigo-700,
   hove: r:to-purple-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Get Started
+              Get Started;
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-              View All Services
+              View All Services;
             </a>
           </div>
         </div>
@@ -366,4 +366,4 @@ const MicroSAAS = () () => {
     </div>
   )
 }
-export default MicroSAAS
+export default MicroSAAS;

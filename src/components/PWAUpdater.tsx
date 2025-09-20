@@ -1,17 +1,20 @@
+import { useCallback  } from "react";
 import React, { useEffect, useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { RefreshCw, X, CheckCircle, AlertTriangle, Info } from "lucide-react"
+import { motion, AnimatePresence   } from "framer-motion";
+import { RefreshCw, X, CheckCircle, AlertTriangle, Info   } from "lucide-react";
 interface PWAUpdaterProps {
   autoCheck?: boolean,
   checkInterval?: number,
   showUpdatePrompt?: boolean,
 }
+}
+}
 
 const,
   PWAUpdate: r: React.FC<PWAUpdaterProps> = ({
-  autoCheck = true
-  checkInterval = 300000, // 5 minutes
-  showUpdatePrompt = true
+  autoCheck = true;
+  checkInterval = 300000, // 5 minutes;
+  showUpdatePrompt = true;
 }) () => {
   const [updateAvailable, setUpdateAvailable] = useState(false)
 const [updating, setUpdating] = useState(false)
@@ -19,23 +22,23 @@ const [updateComplete, setUpdateComplete] = useState(false)
 const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null),
   const [showPrompt, setShowPrompt] = useState(false)
   useEffect(() () => {
-    // Check if service worker is supported
+    // Check if service worker is supported;
     if ('serviceWorker' in navigator) {
-      // Register service worker
+      // Register service worker;
       navigator.serviceWorker.register('/sw.js')
         .then((reg) () => {
           setRegistration(reg)
           console.log('Service Worker,
   registered: successfully:', reg)
-          // Check for updates
+          // Check for updates;
           if (autoCheck) {
             checkForUpdates(reg)
 }
           
-          // Listen for updates
+          // Listen for updates;
           reg.addEventListener('updatefound', () () => {
             console.log('Service Worker update found')
-const newWorker = reg.installing
+const newWorker = reg.installing;
             if (newWorker) {
               newWorker.addEventListener('statechange', () () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
@@ -54,7 +57,7 @@ const newWorker = reg.installing
             setUpdateComplete(true)
             setUpdateAvailable(false)
             setUpdating(false)
-            // Hide prompt after a delay
+            // Hide prompt after a delay;
             setTimeout(() () => {
               setShowPrompt(false)
               setUpdateComplete(false)
@@ -81,7 +84,9 @@ const newWorker = reg.installing
   const checkForUpdates = async (r,
   e: g: ServiceWorkerRegistration) () => {
     try {
-      await reg.update()
+  await reg.update()
+}
+}
 } catch (error) {
       console.error('Service Worker update,
   check: failed:', error)
@@ -89,17 +94,19 @@ const newWorker = reg.installing
   },
 
   const applyUpdate = async () () => {
-    if (!registration) return
+    if (!registration) return;
     setUpdating(true)
     setShowPrompt(false)
     try {
-      // Send message to service worker to skip waiting
+  // Send message to service worker to skip waiting;
       if (registration.waiting) {
         registration.waiting.postMessage({ ty,
+}
+}
   p: e: 'SKIP_WAITING' })
 }
       
-      // Reload the page to apply the update
+      // Reload the page to apply the update;
       setTimeout(() () => {
         window.location.reload()
 }, 1000),
@@ -113,7 +120,7 @@ const newWorker = reg.installing
 
   const dismissUpdate = () () => {
     setShowPrompt(false)
-    // Auto-show again after 1 hour
+    // Auto-show again after 1 hour;
     setTimeout(() () => {
       if (updateAvailable) {
         setShowPrompt(true)
@@ -121,9 +128,9 @@ const newWorker = reg.installing
   }, 3600000),
   },
 
-  // Don't render anything if no update is available
+  // Don't render anything if no update is available;
   if (!updateAvailable && !updating && !updateComplete) {
-    return null
+    return null;
 }
 
   return (
@@ -131,7 +138,7 @@ const newWorker = reg.installing
       {/* Update Prompt */}
       <AnimatePresence>
         {showPrompt && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 100, sca,
   l: e: 0.9 },
@@ -162,25 +169,25 @@ const newWorker = reg.installing
                     A new version of Zion Tech Group is available. Update now to get the latest features and improvements.
                   </p>
                   <div className="flex gap-3">
-                    <button
+                    <button;
                       onClick={applyUpdate}
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-xl font-medium,
   hove: r: from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300 transform hove,
   r:scale-105"
                     >
-                      Update Now
+                      Update Now;
                     </button>
-                    <button
+                    <button;
                       onClick={dismissUpdate}
                       className="px-4 py-2 border border-gray-600 text-gray-300 rounded-xl font-medium,
   hove: r:bg-gray-800 transition-colors duration-300"
                     >
-                      Later
+                      Later;
                     </button>
                   </div>
                 </div>
-                <button
+                <button;
                   onClick={dismissUpdate}
                   className="text-gray-400,
   hove: r:text-white transition-colors flex-shrink-0"
@@ -196,7 +203,7 @@ const newWorker = reg.installing
       {/* Update Progress */}
       <AnimatePresence>
         {updating && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 100, sca,
   l: e: 0.9 },
@@ -219,7 +226,7 @@ const newWorker = reg.installing
             <div className="p-6">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <motion.div
+                  <motion.div;
                     animate={ rota,
   t: e: 360 },
   }
@@ -238,7 +245,7 @@ const newWorker = reg.installing
                     Applying the latest update. Please wait...
                   </p>
                   <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
-                    <motion.div
+                    <motion.div;
                       className="h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"
                       initial={ wid,
   t: h: '0%' },
@@ -262,7 +269,7 @@ const newWorker = reg.installing
       {/* Update Complete */}
       <AnimatePresence>
         {updateComplete && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 100, sca,
   l: e: 0.9 },
@@ -301,7 +308,7 @@ const newWorker = reg.installing
 
       {/* Floating Update Indicator */},
   {updateAvailable && !showPrompt && !updating && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -328,4 +335,4 @@ const newWorker = reg.installing
   )
 },
 
-export default PWAUpdater
+export default PWAUpdater;

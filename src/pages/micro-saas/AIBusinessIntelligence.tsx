@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target     } from "lucide-react";
 export default function AIBusinessIntelligence() {
   const features = [
   {
@@ -33,25 +33,25 @@ export default function AIBusinessIntelligence() {
   tit,
   l: e: 'Business Intelligence Dashboard',descripti,
   o: n: 'Comprehensive view of all business metrics and KPIs',ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: 'Predictive Modeling',descripti,
   o: n: 'AI algorithms to forecast business outcomes',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: 'Natural Language Query',descripti,
   o: n: 'Ask questions in plain English and get instant answers',ic,
-  o: n: Database
+  o: n: Database;
 },
   {
   tit,
   l: e: 'Automated Reporting',descripti,
   o: n: 'Generate reports automatically with AI insights',ic,
-  o: n: Target
+  o: n: Target;
 },
   ]
   return (
@@ -61,7 +61,7 @@ export default function AIBusinessIntelligence() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -80,23 +80,23 @@ export default function AIBusinessIntelligence() {
 
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Intelligence at Your
+              Intelligence at Your;
               <span className="text-gradient"> Fingertips</span>
             </h1>
 
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Transform your business data into actionable intelligence with our AI-powered
+              Transform your business data into actionable intelligence with our AI-powered;
               business intelligence platform. Make smarter decisions faster.
             </p>
 
             <div className="flex flex-col s,
   m:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </motion.div>
@@ -107,7 +107,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -126,7 +126,7 @@ export default function AIBusinessIntelligence() {
               Why Choose AI Business Intelligence?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Powerful insights that drive business growth and efficiency
+              Powerful insights that drive business growth and efficiency;
             </p>
           </motion.div>
 
@@ -134,7 +134,7 @@ export default function AIBusinessIntelligence() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -169,7 +169,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -185,17 +185,17 @@ export default function AIBusinessIntelligence() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Platform Capabilities
+              Platform Capabilities;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Everything you need to transform data into business intelligence
+              Everything you need to transform data into business intelligence;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {capabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                 key={capability.title},
   }
                 initial={ opaci,
@@ -234,7 +234,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -250,10 +250,10 @@ export default function AIBusinessIntelligence() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your business needs
+              Choose the plan that fits your business needs;
             </p>
           </motion.div>
 
@@ -261,7 +261,7 @@ export default function AIBusinessIntelligence() {
   m: d:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Starter Plan */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -283,15 +283,15 @@ export default function AIBusinessIntelligence() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-zion-slate-light">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
-                  Up to 5 users
+                  Up to 5 users;
                 </li>
                 <li className="flex items-center text-zion-slate-light">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
-                  Basic AI insights
+                  Basic AI insights;
                 </li>
                 <li className="flex items-center text-zion-slate-light">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
-                  Standard reports
+                  Standard reports;
                 </li>
               </ul>
               <button className="w-full btn-outline py-3">Get Started</button>
@@ -299,7 +299,7 @@ export default function AIBusinessIntelligence() {
 
             {/* Pro Plan */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -316,37 +316,37 @@ export default function AIBusinessIntelligence() {
               className="className="bg-gradient-to-br from-violet-600 to-violet-700 rounded-2xl p-8 border border-violet-500 relative";"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-black px-4 py-1 rounded-full text-sm font-semibold">
-                Most Popular
+                Most Popular;
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Pro</h3>
               <div className="text-4xl font-bold text-white mb-6">$79<span className="text-lg text-violet-200">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-violet-100">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Up to 25 users
+                  Up to 25 users;
                 </li>
                 <li className="flex items-center text-violet-100">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Advanced AI analytics
+                  Advanced AI analytics;
                 </li>
                 <li className="flex items-center text-violet-100">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Custom dashboards
+                  Custom dashboards;
                 </li>
                 <li className="flex items-center text-violet-100">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Priority support
+                  Priority support;
                 </li>
               </ul>
               <button className="w-full bg-white text-violet-600 py-3 rounded-xl font-semibold,
   hove: r:bg-gray-100 transition-colors duration-300">
-                Get Started
+                Get Started;
               </button>
             </motion.div>
 
             {/* Enterprise Plan */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -368,19 +368,19 @@ export default function AIBusinessIntelligence() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-zion-slate-light">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
-                  Unlimited users
+                  Unlimited users;
                 </li>
                 <li className="flex items-center text-zion-slate-light">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
-                  Custom AI models
+                  Custom AI models;
                 </li>
                 <li className="flex items-center text-zion-slate-light">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
-                  White-label solution
+                  White-label solution;
                 </li>
                 <li className="flex items-center text-zion-slate-light">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
-                  Dedicated support
+                  Dedicated support;
                 </li>
               </ul>
               <button className="w-full btn-outline py-3">Contact Sales</button>
@@ -393,7 +393,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -420,12 +420,12 @@ export default function AIBusinessIntelligence() {
   s: m: flex-row gap-4 justify-center">
                 <button className="bg-white text-violet-600 px-8 py-4 rounded-xl font-semibold,
   hove: r:bg-gray-100 transition-colors duration-300">
-                  Start Free Trial
+                  Start Free Trial;
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold,
   hove: r:bg-white hove,
   r:text-violet-600 transition-colors duration-300">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </div>
@@ -436,7 +436,7 @@ export default function AIBusinessIntelligence() {
   )
 }
 
-// Missing icon component
+// Missing icon component;
 const CheckCircle = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

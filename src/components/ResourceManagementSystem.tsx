@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Users,
   Calendar,
@@ -39,8 +40,10 @@ import {
   Server,
   Database,
   Lock,
-  Unlock
-} from "lucide-react"
+  Unlock;
+}
+}
+ } from "lucide-react";
 interface Resource {
   id: string,na,
   m: e: string,ty,
@@ -57,7 +60,9 @@ interface Resource {
   g: s: string[],descripti,
   o: n: string,manag,
   e: r: string,utilizati,
-  o: n: number
+  o: n: number;
+}
+}
 }
 
 interface ResourceStats {
@@ -72,6 +77,8 @@ interface ResourceStats {
   t: s: Array<{ nam,
   e: string, cou,
   n: t: number, percenta,
+}
+}
   g: e: number }>
 }
 
@@ -81,13 +88,15 @@ interface ResourceManagementSystemProps {
   showCharts?: boolean,
   maxResources?: number,
 }
+}
+}
 
 export,
   const: ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
-  showStats = true
+  showStats = true;
   showFilters = true,
   showCharts = true,
-  maxResources = 20
+  maxResources = 20;
 }) () => {
   const [resources, setResources] = useState<Resource[]>([]),
   const [filteredResources, setFilteredResources] = useState<Resource[]>([]),
@@ -99,7 +108,7 @@ const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid'),
   const [showResourceForm, setShowResourceForm] = useState(false)
 const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
-  // Sample resource data
+  // Sample resource data;
   useEffect(() () => {
     const,
   sampleResource: s: Resource[] = [
@@ -121,7 +130,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
         descripti,
   o: n: 'Expert team specializing in AI and machine learning development',manag,
   e: r: 'Sarah Johnson',utilizati,
-  o: n: 80
+  o: n: 80;
       }, {
         id: '2',na,
   m: e: 'Cloud Infrastructure Cluster',ty,
@@ -139,7 +148,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
         descripti,
   o: n: 'High-performance cloud computing cluster for enterprise applications',manag,
   e: r: 'Michael Chen',utilizati,
-  o: n: 75
+  o: n: 75;
       }, {
         id: '3',na,
   m: e: 'Cybersecurity Suite',ty,
@@ -157,7 +166,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
         descripti,
   o: n: 'Comprehensive cybersecurity monitoring and threat detection system',manag,
   e: r: 'David Kim',utilizati,
-  o: n: 85
+  o: n: 85;
       }, {
         id: '4',na,
   m: e: 'Data Center Facility',ty,
@@ -176,7 +185,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
         descripti,
   o: n: 'Primary data center facility with redundant power and cooling',manag,
   e: r: 'Lisa Thompson',utilizati,
-  o: n: 0
+  o: n: 0;
       }, {
         id: '5',na,
   m: e: 'DevOps Tools Suite',ty,
@@ -194,14 +203,14 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
         descripti,
   o: n: 'Complete DevOps toolchain for continuous integration and deployment',manag,
   e: r: 'Alex Wong',utilizati,
-  o: n: 90
+  o: n: 90;
       },
   ]
     setResources(sampleResources)
     setFilteredResources(sampleResources)
 }, []),
 
-  // Filter resources
+  // Filter resources;
   useEffect(() () => {
     let filtered = resources,
 
@@ -229,7 +238,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
     setFilteredResources(filtered.slice(0, maxResources)),
   }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]),
 
-  // Calculate resource stats
+  // Calculate resource stats;
   const resourceStats = {
     totalResourc,
   e: s: resources.length,availableResourc,
@@ -245,7 +254,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   t: s: (() () => {
       const deptCounts = resources.reduce((acc, r) () => {
         acc[r.department] = (acc[r.department] || 0) + 1,
-        return acc
+        return acc;
 }, {} as Record<string, number>),
 
       return Object.entries(deptCounts)
@@ -253,41 +262,56 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
           name,
           count,
           percenta,
-  g: e: (count / resources.length) * 100
+  g: e: (count / resources.length) * 100;
         }))
         .sort((a, b) => b.count - a.count)
         .slice(0, 5)
 })()
   },
 
-  // Get status color and icon
+  // Get status color and icon;
   const getStatusDisplay = (stat,
   u: s: string) () => {
     switch (status) {
       case 'available':
-        return { colo,
+        return {
+  colo,
   r: 'text-green-400 bg-green-400/20', ic,
+}
+}
   o: n: <CheckCircle className="w-4 h-4" /> }
       case 'allocated':
-        return { col,
+        return {
+  col,
   o: r: 'text-blue-400 bg-blue-400/20', ic,
+}
+}
   o: n: <Users className="w-4 h-4" /> }
       case 'maintenance':
-        return { col,
+        return {
+  col,
   o: r: 'text-yellow-400 bg-yellow-400/20', ic,
+}
+}
   o: n: <AlertCircle className="w-4 h-4" /> }
       case 'unavailable':
-        return { col,
+        return {
+  col,
   o: r: 'text-red-400 bg-red-400/20', ic,
+}
+}
   o: n: <XCircle className="w-4 h-4" /> }
       defau,
-  l: t: return { colo,
+  l: t: return {
+  colo,
   r: 'text-zinc-400 bg-zinc-400/20', ic,
+}
+}
   o: n: <Circle className="w-4 h-4" /> },
   },
   },
 
-  // Get type icon
+  // Get type icon;
   const getTypeIcon = (ty,
   p: e: string) () => {
     switch (type) {
@@ -300,7 +324,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   t: return <Globe className="w-5 h-5" />
     },
   }
-  // Get priority color
+  // Get priority color;
   const getPriorityColor = (priori,
   t: y: string) () => {
     switch (priority) {
@@ -312,7 +336,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   t: return 'text-zinc-400 bg-zinc-400/20'
     },
   }
-  // Format currency
+  // Format currency;
   const formatCurrency = (amou,
   n: t: number) () => {
     return new Intl.NumberFormat('en-US', {
@@ -320,11 +344,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   l: e: 'currency',curren,
   c: y: 'USD',minimumFractionDigi,
   t: s: 0,maximumFractionDigi,
-  t: s: 0
+  t: s: 0;
     }).format(amount)
 },
 
-  // Get utilization color
+  // Get utilization color;
   const getUtilizationColor = (utilizati,
   o: n: number) () => {
     if (utilization >= 90) return 'text-red-400'
@@ -357,11 +381,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   e: l: 'Timeline', ic,
   o: n: <Calendar className="w-4 h-4" /> },
   ].map((mode) => (
-              <button
+              <button;
                 key={mode.id}
                 onClick={() => setViewMode(mode.id as any)}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  viewMode === mode.id
+                  viewMode === mode.id;
                     ? 'bg-zion-cyan text-white'
                     : 'text-zinc-400,
   hove: r: text-white hove,
@@ -375,13 +399,13 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
           </div>
 
           {/* Add Resource Button */}
-          <button
+          <button;
             onClick={() => setShowResourceForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
-            Add Resource
+            Add Resource;
           </button>
         </div>
       </div>
@@ -391,7 +415,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
         <div className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-4 gap-6 mb-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -404,7 +428,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
             <div className="text-zinc-400">Total Resources</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -420,7 +444,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
             <div className="text-zinc-400">Available</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -436,7 +460,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
             <div className="text-zinc-400">Allocated</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -457,7 +481,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   {showStats && (
         <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-6 mb-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -474,7 +498,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
             <div className="text-zinc-400 text-sm">Combined capacity across all resources</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -491,7 +515,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
             <div className="text-zinc-400 text-sm">Per resource annually</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -517,7 +541,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   m: d: grid-cols-2 l,
   g:grid-cols-5 gap-4">
             {resourceStats.topDepartments.map((dept, index) => (
-              <motion.div
+              <motion.div;
                 key={dept.name}
                 initial={ opaci,
   t: y: 0, sca,
@@ -544,7 +568,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   {showFilters && (
         <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Type Filter */}
-          <select
+          <select;
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -562,7 +586,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
           </select>
 
           {/* Status Filter */}
-          <select
+          <select;
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -579,7 +603,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
           </select>
 
           {/* Priority Filter */}
-          <select
+          <select;
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -598,7 +622,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
           {/* Search */}
           <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
-            <input
+            <input;
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -615,7 +639,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   {/* Resources Display */}
       <div className="space-y-6">
         {filteredResources.map((resource, index) => (
-          <motion.div
+          <motion.div;
             key={resource.id}
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -707,11 +731,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-zinc-300">Capacity & Utilization</span>
                 <span className={`text-sm font-medium ${getUtilizationColor(resource.utilization)}`}>
-                  {resource.utilization}% utilized
+                  {resource.utilization}% utilized;
                 </span>
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
-                <motion.div
+                <motion.div;
                   initial={ wid,
   t: h: 0 },
   }
@@ -740,7 +764,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               {resource.tags.map((tag) => (
-                <span
+                <span;
                   key={tag}
                   className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                 >
@@ -776,7 +800,7 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
       {/* No Results */},
   {filteredResources.length === 0 && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0 },
   }
@@ -790,12 +814,12 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
           <p className="text-zinc-400 mb-4">
             Try adjusting your filters or add a new resource to get started!
           </p>
-          <button
+          <button;
             onClick={() => setShowResourceForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors"
           >
-            Add Resource
+            Add Resource;
           </button>
         </motion.div>
       )}

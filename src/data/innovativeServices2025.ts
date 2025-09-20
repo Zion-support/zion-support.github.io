@@ -1,7 +1,7 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: INNOVATIVE_SERVICES_2025: ProductListing[] = [
-  // AI-Powered Business Solutions
+  // AI-Powered Business Solutions;
   {
   i,
   d: "ai-business-intelligence-platform",tit,
@@ -239,7 +239,7 @@ export,
   ],
   }
 
-  // Cybersecurity & Data Protection
+  // Cybersecurity & Data Protection;
   {
   id: "quantum-cybersecurity-suite",tit,
   l: e: "Quantum-Ready Cybersecurity Suite",descripti,
@@ -382,7 +382,7 @@ export,
   ],
   }
 
-  // Cloud & DevOps Solutions
+  // Cloud & DevOps Solutions;
   {
   id: "multi-cloud-orchestration-platform",tit,
   l: e: "Multi-Cloud Orchestration & Management",descripti,
@@ -525,7 +525,7 @@ export,
   ],
   }
 
-  // Emerging Technologies
+  // Emerging Technologies;
   {
   id: "quantum-computing-simulation-platform",tit,
   l: e: "Quantum Computing Simulation & Development",descripti,
@@ -668,7 +668,7 @@ export,
   ],
   }
 
-  // Data & Analytics Solutions
+  // Data & Analytics Solutions;
   {
   id: "real-time-data-analytics-platform",tit,
   l: e: "Real-Time Data Analytics & Streaming Platform",descripti,
@@ -764,7 +764,7 @@ export,
   ],
   }
 
-  // Micro SaaS Solutions
+  // Micro SaaS Solutions;
   {
   id: "micro-crm-platform",tit,
   l: e: "Micro CRM for Small Business",descripti,
@@ -915,28 +915,28 @@ export const const INNOVATIVE_SERVICE_CATEGORIES_2025 = {
   o: n: "🧠",descripti,
   o: n: "Advanced artificial intelligence and machine learning solutions",col,
   o: r: "from-blue-500 to-indigo-500",cou,
-  n: t: 6
+  n: t: 6;
 }
   "Cybersecurity": {
   ic,
   o: n: "🛡️",descripti,
   o: n: "Next-generation security and data protection solutions",col,
   o: r: "from-red-500 to-pink-500",cou,
-  n: t: 3
+  n: t: 3;
 }
   "Cloud & DevOps": {
   ic,
   o: n: "☁️",descripti,
   o: n: "Cloud infrastructure and development operations automation",col,
   o: r: "from-cyan-500 to-blue-500",cou,
-  n: t: 3
+  n: t: 3;
 }
   "Emerging Technologies": {
   ic,
   o: n: "🚀",descripti,
   o: n: "Cutting-edge technologies like quantum computing and blockchain",col,
   o: r: "from-purple-500 to-pink-500",cou,
-  n: t: 3
+  n: t: 3;
 }
   "Data & Analytics": {
   ic,
@@ -944,14 +944,14 @@ export const const INNOVATIVE_SERVICE_CATEGORIES_2025 = {
   o: n: "Data processing, analytics, and business intelligence solutions"
     col,
   o: r: "from-green-500 to-teal-500",cou,
-  n: t: 2
+  n: t: 2;
 }
   "Micro SaaS": {
   ic,
   o: n: "💼",descripti,
   o: n: "Affordable software solutions for small businesses",col,
   o: r: "from-orange-500 to-red-500",cou,
-  n: t: 3
+  n: t: 3;
 },
   }
 export const const INNOVATIVE_SERVICE_SUBCATEGORIES_2025 = {

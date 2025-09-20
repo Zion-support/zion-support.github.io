@@ -1,5 +1,5 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
+import { SEO   } from "@/components/SEO";
 export function SitemapPage() {
   const sitemapData = [
   {
@@ -109,7 +109,7 @@ export function SitemapPage() {
   ]
   return (
     <div className="min-h-screen bg-slate-900 text-white py-16">
-      <SEO 
+      <SEO;
         title="Sitemap - Zion Tech Group" 
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
       />
@@ -117,7 +117,7 @@ export function SitemapPage() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Sitemap
+            Sitemap;
           </h1>
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
             Navigate through our comprehensive website structure to find the information and services you need.
@@ -136,7 +136,7 @@ export function SitemapPage() {
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
   <li key={linkIndex}>
-                    <a 
+                    <a;
                       href={link.url},
   }
                       className="className="text-zinc-300,
@@ -158,7 +158,7 @@ export function SitemapPage() {
   }
             <a href="/contact" className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors">
-              Contact us
+              Contact us;
             </a>{' '},
   }
             for assistance.

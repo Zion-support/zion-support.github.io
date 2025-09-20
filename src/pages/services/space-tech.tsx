@@ -1,8 +1,8 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { motion } from "framer-motion"
+import { SEO     } from "@/components/SEO";
+import { motion     } from "framer-motion";
 import {
-  Rocket
+  Rocket;
   Satellite,
   Globe,
   Zap,
@@ -11,21 +11,25 @@ import {
   Cloud,
   BarChart3,
   Users,
-  Target
-  Star
-  Atom
-  Network
-  Eye
-  Cpu
-  Lock
-  TrendingUp
-  Heart
-  Building
-  Activity
-  Phone
-  Mail
-  MapPin
-} from "lucide-react"
+  Target;
+  Star;
+  Atom;
+  Network;
+  Eye;
+  Cpu;
+  Lock;
+  TrendingUp;
+  Heart;
+  Building;
+  Activity;
+  Phone;
+  Mail;
+  MapPin;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function SpaceTechnology() {
   const features = [
   {
@@ -103,30 +107,30 @@ export default function SpaceTechnology() {
   na,
   m: e: 'Quantum Computing in Space',descripti,
   o: n: 'Leveraging quantum computing for complex space calculations and simulations.',ic,
-  o: n: Atom
+  o: n: Atom;
 },
   {
   na,
   m: e: 'AI-Powered Mission Control',descripti,
   o: n: 'Intelligent systems for autonomous space mission management.',ic,
-  o: n: Brain
+  o: n: Brain;
 },
   {
   na,
   m: e: 'Advanced Propulsion',descripti,
   o: n: 'Next-generation propulsion systems for efficient space travel.',ic,
-  o: n: Rocket
+  o: n: Rocket;
 },
   {
   na,
   m: e: 'Space Cybersecurity',descripti,
   o: n: 'Protecting space assets from cyber threats and attacks.',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   ]
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="Space Technology Services | Zion Tech Group" 
         description="Revolutionary space technology solutions including satellite systems, launch vehicles, AI-powered operations, and advanced space communications." 
       />
@@ -139,7 +143,7 @@ export default function SpaceTechnology() {
   t: a: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
         
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -159,7 +163,7 @@ export default function SpaceTechnology() {
             
             <h1 className="text-5xl,
   m: d: text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6">
-              Space Technology
+              Space Technology;
             </h1>
             
             <p className="text-xl m,
@@ -169,7 +173,7 @@ export default function SpaceTechnology() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <motion.button;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -180,9 +184,9 @@ export default function SpaceTechnology() {
   hove: r: from-blue-600,
   hove: r:to-purple-700 transition-all duration-300";"
               >
-                Explore Services
+                Explore Services;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -192,7 +196,7 @@ export default function SpaceTechnology() {
                 className="className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl,
   hove: r:bg-blue-400/10 transition-all duration-300";"
               >
-                Contact Us
+                Contact Us;
               </motion.button>
             </div>
           </motion.div>
@@ -203,7 +207,7 @@ export default function SpaceTechnology() {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -217,7 +221,7 @@ export default function SpaceTechnology() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Revolutionary Space Solutions</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our comprehensive space technology portfolio combines cutting-edge innovation with proven expertise 
+              Our comprehensive space technology portfolio combines cutting-edge innovation with proven expertise;
               to deliver next-generation space capabilities.
             </p>
           </motion.div>
@@ -226,7 +230,7 @@ export default function SpaceTechnology() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -266,7 +270,7 @@ export default function SpaceTechnology() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -280,7 +284,7 @@ export default function SpaceTechnology() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Space Applications</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              From commercial space ventures to scientific research and defense applications
+              From commercial space ventures to scientific research and defense applications;
               our space technology solutions serve diverse mission requirements.
             </p>
           </motion.div>
@@ -288,7 +292,7 @@ export default function SpaceTechnology() {
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {applications.map((app, index) => (
-  <motion.div
+  <motion.div;
                 key={app.category},
   }
                 initial={ opaci,
@@ -327,7 +331,7 @@ export default function SpaceTechnology() {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -349,7 +353,7 @@ export default function SpaceTechnology() {
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={tech.name},
   }
                 initial={ opaci,
@@ -382,7 +386,7 @@ export default function SpaceTechnology() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -397,11 +401,11 @@ export default function SpaceTechnology() {
             <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border border-blue-400/30 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Launch Your Space Mission?</h2>
               <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Partner with Zion Tech Group to access cutting-edge space technology solutions 
+                Partner with Zion Tech Group to access cutting-edge space technology solutions;
                 and turn your space ambitions into reality.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.05 },
   }
@@ -412,9 +416,9 @@ export default function SpaceTechnology() {
   hove: r: from-blue-600,
   hove: r:to-purple-700 transition-all duration-300";"
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -424,7 +428,7 @@ export default function SpaceTechnology() {
                   className="className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl,
   hove: r:bg-blue-400/10 transition-all duration-300";"
                 >
-                  Learn More
+                  Learn More;
                 </motion.button>
               </div>
             </div>

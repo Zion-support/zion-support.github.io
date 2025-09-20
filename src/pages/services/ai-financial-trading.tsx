@@ -1,30 +1,34 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  TrendingUp
+  TrendingUp;
   DollarSign,
   Brain,
   Zap,
   CheckCircle,
   Clock,
-  Shield
-  Users
-  BarChart3
-  Lock
-  Globe
-  Award
-  Star
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  TrendingUp
-  Target
-  Cpu
-  Activity
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Shield;
+  Users;
+  BarChart3;
+  Lock;
+  Globe;
+  Award;
+  Star;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  TrendingUp;
+  Target;
+  Cpu;
+  Activity;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function AIFinancialTrading() {
   const features = [
   {
@@ -79,7 +83,7 @@ export default function AIFinancialTrading() {
         "Basic risk management"
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -96,7 +100,7 @@ export default function AIFinancialTrading() {
         "Custom strategies"
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -114,7 +118,7 @@ export default function AIFinancialTrading() {
         "On-premise deployment"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const benefits = [
@@ -155,7 +159,7 @@ export default function AIFinancialTrading() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI-Powered Financial Trading Platform - Zion Tech Group"
         description="Revolutionary AI platform for financial trading, portfolio optimization, and risk management. Increase returns by 25-40% while reducing risks by 60%."
       />
@@ -166,7 +170,7 @@ export default function AIFinancialTrading() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -179,7 +183,7 @@ export default function AIFinancialTrading() {
           >
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI-Powered Financial Trading Platform
+              AI-Powered Financial Trading Platform;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -188,7 +192,7 @@ export default function AIFinancialTrading() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold rounded-lg,
@@ -196,16 +200,16 @@ export default function AIFinancialTrading() {
   hove: r:to-orange-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Start Trading with AI
+                Start Trading with AI;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="#demo"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-yellow-500 text-yellow-400 font-semibold rounded-lg,
   hove: r:bg-yellow-500 hove,
   r:text-white transition-all duration-300";"
               >
-                Watch Demo
+                Watch Demo;
               </a>
             </div>
           </motion.div>
@@ -231,7 +235,7 @@ export default function AIFinancialTrading() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -263,7 +267,7 @@ export default function AIFinancialTrading() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Trading Excellence
+              Powerful Features for Trading Excellence;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Everything you need to achieve superior trading performance and manage risk effectively.
@@ -274,7 +278,7 @@ export default function AIFinancialTrading() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -311,7 +315,7 @@ export default function AIFinancialTrading() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Trading Strategies
+              Advanced Trading Strategies;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               AI-powered trading strategies designed for consistent performance across market conditions.
@@ -321,7 +325,7 @@ export default function AIFinancialTrading() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {tradingStrategies.map((strategy, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -357,7 +361,7 @@ export default function AIFinancialTrading() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your trading volume and sophistication requirements.
@@ -367,7 +371,7 @@ export default function AIFinancialTrading() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -381,7 +385,7 @@ export default function AIFinancialTrading() {
   a: y: index * 0.1 },
   }
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
-  plan.popular 
+  plan.popular;
                     ? 'border-yellow-500 ring-2 ring-yellow-500/20' 
                     : 'border-slate-700'
 } hov,
@@ -390,7 +394,7 @@ export default function AIFinancialTrading() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -413,11 +417,11 @@ export default function AIFinancialTrading() {
                   ))}
                 </ul>
                 
-                <a
+                <a;
                   href="htt,
   p: s: //ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-yellow-600 to-orange-600 text-white,
   hove: r:from-yellow-700,
   hove: r:to-orange-700'
@@ -425,7 +429,7 @@ export default function AIFinancialTrading() {
   r:bg-slate-600'
 }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -441,7 +445,7 @@ export default function AIFinancialTrading() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -453,7 +457,7 @@ export default function AIFinancialTrading() {
   }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Market-Leading Trading Solution
+                Market-Leading Trading Solution;
               </h2>
               <div className="space-y-6">
                 <div className="flex items-center">
@@ -487,7 +491,7 @@ export default function AIFinancialTrading() {
               </div>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -529,7 +533,7 @@ export default function AIFinancialTrading() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -549,7 +553,7 @@ export default function AIFinancialTrading() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold rounded-lg,
@@ -557,10 +561,10 @@ export default function AIFinancialTrading() {
   hove: r:to-orange-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Start Trading Today
+                Start Trading Today;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-yellow-500 text-yellow-400 font-semibold rounded-lg,
@@ -568,7 +572,7 @@ export default function AIFinancialTrading() {
   r:text-white transition-all duration-300";"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </motion.div>
@@ -590,7 +594,7 @@ export default function AIFinancialTrading() {
               <a href="t,
   e: l:+13024640950" className="text-gray-300,
   hove: r:text-yellow-400 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -599,7 +603,7 @@ export default function AIFinancialTrading() {
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-gray-300,
   hove: r:text-yellow-400 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -607,18 +611,18 @@ export default function AIFinancialTrading() {
               <p className="text-white font-semibold mb-2">Address</p>
               <p className="text-gray-300">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </p>
             </div>
           </div>
           <div className="mt-8">
-            <a
+            <a;
               href="htt,
   p: s://ziontechgroup.com"
               className="className="inline-flex items-center text-yellow-400 hove,
   r:text-yellow-300 transition-colors";"
             >
-              Visit our website
+              Visit our website;
               <ExternalLink className="ml-2 w-4 h-4" />
             </a>
           </div>

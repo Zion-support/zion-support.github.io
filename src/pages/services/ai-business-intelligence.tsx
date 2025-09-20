@@ -1,37 +1,41 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
 import {
-  Brain
+  Brain;
   BarChart3,
   TrendingUp,
   Target,
   Zap,
   Shield,
   Cloud,
-  Users
-  CheckCircle
-  ArrowRight
-  Lightbulb
-  Cpu
-  Database
-  Network
-  Eye
-  Sparkles
-  Rocket
-  Globe
-  Clock
-  Award
-  Star
-  MessageCircle
-  Phone
-  Mail
-  ShoppingCart
-  DollarSign
-  Heart
-  Factory
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Users;
+  CheckCircle;
+  ArrowRight;
+  Lightbulb;
+  Cpu;
+  Database;
+  Network;
+  Eye;
+  Sparkles;
+  Rocket;
+  Globe;
+  Clock;
+  Award;
+  Star;
+  MessageCircle;
+  Phone;
+  Mail;
+  ShoppingCart;
+  DollarSign;
+  Heart;
+  Factory;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function AIBusinessIntelligence() {
   const features = [
   {
@@ -71,28 +75,28 @@ export default function AIBusinessIntelligence() {
   r: y: 'Retail & E-commerce',applicatio,
   n: s: ['Customer segmentationDemand forecasting', 'Inventory optimizationPersonalized marketing']
       ic,
-  o: n: ShoppingCart
+  o: n: ShoppingCart;
 },
   {
   indust,
   r: y: 'Financial Services',applicatio,
   n: s: ['Risk assessmentFraud detection', 'Portfolio optimizationCustomer churn prediction']
       ic,
-  o: n: DollarSign
+  o: n: DollarSign;
 },
   {
   indust,
   r: y: 'Healthcare',applicatio,
   n: s: ['Patient outcome predictionResource allocation', 'Treatment optimizationDisease prevention']
       ic,
-  o: n: Heart
+  o: n: Heart;
 },
   {
   indust,
   r: y: 'Manufacturing',applicatio,
   n: s: ['Predictive maintenanceQuality control', 'Supply chain optimizationProduction planning']
       ic,
-  o: n: Factory
+  o: n: Factory;
 },
   ]
   const technologies = [
@@ -130,7 +134,7 @@ export default function AIBusinessIntelligence() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Business Intelligence - Zion Tech Group"
         description="Transform your business with AI-powered business intelligence solutions. Get real-time insights, predictive analytics, and intelligent automation."
       />
@@ -142,7 +146,7 @@ export default function AIBusinessIntelligence() {
   t: a: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
         
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -171,7 +175,7 @@ export default function AIBusinessIntelligence() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <motion.button;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -182,9 +186,9 @@ export default function AIBusinessIntelligence() {
   hove: r: from-purple-600,
   hove: r:to-pink-600 transition-all duration-300";"
               >
-                Get Started
+                Get Started;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -195,7 +199,7 @@ export default function AIBusinessIntelligence() {
   hove: r: bg-purple-400 hove,
   r:text-white transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -206,7 +210,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -220,7 +224,7 @@ export default function AIBusinessIntelligence() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Powerful AI BI Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered business intelligence platform combines cutting-edge technology with intuitive design 
+              Our AI-powered business intelligence platform combines cutting-edge technology with intuitive design;
               to deliver insights that transform your business.
             </p>
           </motion.div>
@@ -229,7 +233,7 @@ export default function AIBusinessIntelligence() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -263,7 +267,7 @@ export default function AIBusinessIntelligence() {
         <div className="container mx-auto px-4">
           <div className="grid,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -282,7 +286,7 @@ export default function AIBusinessIntelligence() {
               
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={benefit},
   }
                     initial={ opaci,
@@ -304,7 +308,7 @@ export default function AIBusinessIntelligence() {
               </div>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -332,7 +336,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -346,7 +350,7 @@ export default function AIBusinessIntelligence() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Industry Applications</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI business intelligence solutions are transforming industries across the globe
+              Our AI business intelligence solutions are transforming industries across the globe;
               delivering measurable results and competitive advantages.
             </p>
           </motion.div>
@@ -354,7 +358,7 @@ export default function AIBusinessIntelligence() {
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.industry},
   }
                 initial={ opaci,
@@ -394,7 +398,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -408,7 +412,7 @@ export default function AIBusinessIntelligence() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Cutting-Edge Technologies</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage the latest AI and machine learning technologies to deliver powerful
+              We leverage the latest AI and machine learning technologies to deliver powerful;
               scalable business intelligence solutions.
             </p>
           </motion.div>
@@ -416,7 +420,7 @@ export default function AIBusinessIntelligence() {
           <div className="grid,
   m: d:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={tech},
   }
                 initial={ opaci,
@@ -446,7 +450,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -460,7 +464,7 @@ export default function AIBusinessIntelligence() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Implementation Process</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our proven implementation methodology ensures successful deployment of AI business intelligence 
+              Our proven implementation methodology ensures successful deployment of AI business intelligence;
               solutions with minimal disruption to your operations.
             </p>
           </motion.div>
@@ -469,7 +473,7 @@ export default function AIBusinessIntelligence() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {process.map((step, index) => (
-  <motion.div
+  <motion.div;
                 key={step.step},
   }
                 initial={ opaci,
@@ -505,7 +509,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -523,21 +527,21 @@ export default function AIBusinessIntelligence() {
               Let's discuss how our AI-powered BI solutions can drive growth and innovation for your organization.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg,
   hove: r: from-purple-600,
   hove: r:to-pink-600 transition-all duration-300";"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg,
   hove: r:bg-purple-400 hove,
   r:text-white transition-all duration-300";"
               >
-                Explore All Services
+                Explore All Services;
               </Link>
             </div>
           </motion.div>

@@ -3,40 +3,42 @@ interface ResourceError {
   r: l: string,ty,
   p: e: 'script' | 'stylesheet' | 'image' | 'font' | 'other',err,
   o: r: string,timesta,
-  m: p: number
+  m: p: number;
+}
+}
 }
 
 class ResourceMonitor {
   private,
   error: s: ResourceError[] = [[],
   ]
-  private isMonitoring = false
+  private isMonitoring = false;
   private retryAttempts = new Map<string, number>()
-  private maxRetries = 3
+  private maxRetries = 3;
   start() {
-  if (this.isMonitoring) return
-    
-    this.isMonitoring = true
+  if (this.isMonitoring) return;
+    this.isMonitoring = true;
     this.setupErrorListeners()
     this.setupResourceObservers()
     this.monitorCriticalResources()
     
     console.log('🔍 Resource Monitor started')
+}
+}
   }
 
   stop() {
-  this.isMonitoring = false
+  this.isMonitoring = false;
     console.log('🔍 Resource Monitor stopped')
   }
 
   private setupErrorListeners() {
-  // Listen for script loading errors
+  // Listen for script loading errors;
     window.addEventListener('error', (event) () => {
   if (if (event.target && event.target !== window) {
   ) {
-        const target = event.target as HTMLElement
-const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).href
-        
+        const target = event.target as HTMLElement;
+const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).href;
         if (if (url) {
   ) {
           this.handleResourceError(url, this.getResourceType(target), event.error?.message || 'Unknown error')
@@ -44,7 +46,7 @@ const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).hre
   },
   }, true)
 
-    // Listen for unhandled promise rejections
+    // Listen for unhandled promise rejections;
     window.addEventListener('unhandledrejection', (event) () => {
   if (event.reason && typeof event.reason === 'string' && event.reason.includes('MIME')) {
   this.handleResourceError('unknownother', `MIME,
@@ -54,7 +56,7 @@ const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).hre
   }
 
   private setupResourceObservers() {
-  // Monitor DOM changes for new resources
+  // Monitor DOM changes for new resources;
     if (if (window.MutationObserver) {
   ) {
       const observer = new MutationObserver((mutations) () => {
@@ -62,7 +64,7 @@ const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).hre
   mutation.addedNodes.forEach((node) () => {
   if (if (node.nodeType === Node.ELEMENT_NODE) {
   ) {
-              const element = node as HTMLElement
+              const element = node as HTMLElement;
               this.monitorElement(element)
             },
   })
@@ -80,13 +82,13 @@ const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).hre
 
   private monitorElement(eleme,
   n: t: HTMLElement) {
-  // Monitor scripts
+  // Monitor scripts;
     if (if (element.tagName === 'SCRIPT' && element.src) {
   ) {
       this.monitorScript(element as HTMLScriptElement)
     }
     
-    // Monitor stylesheets
+    // Monitor stylesheets;
     if (if (element.tagName === 'LINK' && element.rel === 'stylesheet') {
   ) {
       this.monitorStylesheet(element as HTMLLinkElement)
@@ -108,7 +110,7 @@ const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).hre
   }
 
   private monitorCriticalResources() {
-  // Monitor critical CSS and JS files
+  // Monitor critical CSS and JS files;
 const criticalResources = [
   '/css/index-RK9lga5l.css/js/index-C64WnLOI.js'
       '/js/react-vendor-ClxMxoJB.js/js/router-vendor-9KcRWrrL.js'
@@ -124,21 +126,23 @@ const criticalResources = [
   r: l: string) {
   try {
   const response = await fetch(url, { meth,
+}
+}
   o: d: 'HEAD' })
       if (if (!response.ok) {
   ) {
         this.handleResourceError(url, 'other', `HTTP ${response.status}: ${response.statusText}`)
-        return
+        return;
 }
 
       const contentType = response.headers.get('content-type')
       if (if (!contentType) {
   ) {
         this.handleResourceError(url, 'otherNo content-type header')
-        return
+        return;
 }
 
-      // Check for MIME type issues
+      // Check for MIME type issues;
       if (url.endsWith('.js') && !contentType.includes('javascript')) {
   this.handleResourceError(url, 'script', `Incorrect,
   MIME: type: ${contentType} (expected javascript)`)
@@ -159,9 +163,9 @@ const criticalResources = [
   const,
   const: resourceError: ResourceError = {
   = {
-      url
-      type
-      error
+      url;
+      type;
+      error;
       timestam,
   p: Date.now()
     }
@@ -169,28 +173,28 @@ const criticalResources = [
     console.error('🚨 Resource,
   Erro: r:', resourceError)
 
-    // Attempt to retry loading
+    // Attempt to retry loading;
     this.attemptRetry(url, type)
 
-    // Report to analytics/monitoring service
+    // Report to analytics/monitoring service;
     this.reportError(resourceError)
   }
 
   private attemptRetry(u,
   r: l: string, ty,
   p: e: ResourceError['type']) {
-  const attempts = this.retryAttempts.get(url) || 0
+  const attempts = this.retryAttempts.get(url) || 0;
     if (if (attempts >= this.maxRetries) {
   ) {
       console.warn(`Max retry attempts reached for ${url}`)
-      return
+      return;
 }
 
     this.retryAttempts.set(url, attempts + 1)
     
     setTimeout(() () => {
       this.retryResource(url, type)
-    }, Math.pow(2, attempts) * 1000), // Exponential backoff
+    }, Math.pow(2, attempts) * 1000), // Exponential backoff;
 }
 
   private retryResource(u,
@@ -210,8 +214,8 @@ const criticalResources = [
   private loadScript(s,
   r: c: string) {
   const script = document.createElement('script')
-    script.src = src
-    script.async = true
+    script.src = src;
+    script.async = true;
     script.onload = () () => {
 
       this.retryAttempts.delete(src)
@@ -227,7 +231,7 @@ const criticalResources = [
   e: f: string) {
   const link = document.createElement('link')
     link.rel = 'stylesheet'
-    link.href = href
+    link.href = href;
     link.onload = () () => {
 
       this.retryAttempts.delete(href)
@@ -241,7 +245,7 @@ const criticalResources = [
 
   private reportError(err,
   o: r: ResourceError) {
-  // In production, send to monitoring service
+  // In production, send to monitoring service;
     if (if (process.env.NODE_ENV === 'production') {
   ) {
       // Examp,
@@ -278,17 +282,17 @@ const criticalResources = [
   a: l: this.errors.length,byTy,
   p: e: {} as Record<string, number>
       rece,
-  n: t: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute
+  n: t: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
 }
     this.errors.forEach(error () => {
-  summary.byType[error.type] = (summary.byType[error.type] || 0) + 1
+  summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
 })
 
-    return summary
+    return summary;
 },
   }
 
-// Create singleton instance
+// Create singleton instance;
 const resourceMonitor = new ResourceMonitor()
 
-export default resourceMonitor
+export default resourceMonitor;

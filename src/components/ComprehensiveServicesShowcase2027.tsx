@@ -1,15 +1,15 @@
 import React, { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services"
-import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services"
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Button   } from "@/components/ui/button";
+import { cuttingEdgeComprehensiveServices2027   } from "../../data/2027-cutting-edge-comprehensive-services";
+import { specializedInnovativeServices2027   } from "../../data/2027-specialized-innovative-services";
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film   } from "lucide-react";
+import { Link   } from "react-router-dom";
 const,
   categoryIcon: s: { [ke,
   y: string]: React.ComponentType<any> } = {
-  'AI & Autonomous Systems': Brain
+  'AI & Autonomous Systems': Brain;
   'Quantum Computing & AI': Cpu,
   'Blockchain & Web3': Database,
   'Cybersecurity & Privacy': Shield,
@@ -30,7 +30,7 @@ const,
   'Legal Technology & Compliance': Gavel,
   'Real Estate & Property Technology': Home,
   'Sports Technology & Analytics': Trophy,
-  'Entertainment & Media Technology': Film
+  'Entertainment & Media Technology': Film;
 },
 
 const,
@@ -88,19 +88,19 @@ export function ComprehensiveServicesShowcase2027() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [searchQuery, setSearchQuery] = useState<string>(''),
 
-  // Combine all services
+  // Combine all services;
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027],
 
-  // Get unique categories
+  // Get unique categories;
   const categories = Array.from(new Set(allServices.map(service => service.category)))
-  // Filter services based on selection and search
+  // Filter services based on selection and search;
   const filteredServices = allServices.filter(service () => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 const matchesSearch = searchQuery === '' ||
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 const featuredServices = allServices.filter(service => service.popular).slice(0, 8)
   return (
@@ -110,7 +110,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
         <div className="text-center mb-16">
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-            Revolutionary 2027 Micro SAAS Solutions
+            Revolutionary 2027 Micro SAAS Solutions;
           </h2>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
             Transform your business with our cutting-edge micro SAAS services.
@@ -121,7 +121,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
               <Button size="lg" className="bg-white text-zion-blue,
   hove: r: bg-gray-100">
                 <Phone className="h-5 w-5 mr-2"/>
-                Get Free Consultation
+                Get Free Consultation;
               </Button>
             </Link>
             <Link to="/contact">
@@ -129,7 +129,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
   hove: r:bg-white hove,
   r:text-zion-blue">
                 <Mail className="h-5 w-5 mr-2"/>
-                Request Demo
+                Request Demo;
               </Button>
             </Link>
           </div>
@@ -161,7 +161,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
         <div className="mb-16">
           <div className="flex flex-col,
   m: d: flex-row gap-4 mb-6">
-            <input
+            <input;
               type="text"
               placeholder="Search services..."
               className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-zion-slate-light,
@@ -171,7 +171,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <select
+            <select;
               className="px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white,
   focu: s: outline-none,
   focu: s:ring-2 focu,
@@ -232,13 +232,13 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
                       <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
-                      {service.customers} customers
+                      {service.customers} customers;
                     </Badge>
                   </div>
                   <Link to={service.link} className="mt-4 w-full">
                     <Button className="w-full bg-zion-cyan text-white,
   hove: r:bg-zion-cyan-dark">
-                      Learn More
+                      Learn More;
                       <ArrowRight className="h-4 w-4 ml-2"/>
                     </Button>
                   </Link>
@@ -325,7 +325,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
                       <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
-                      {service.customers} customers
+                      {service.customers} customers;
                     </Badge>
                   </div>
 
@@ -334,7 +334,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
                     <Link to={service.link} className="w-full">
                       <Button className="w-full bg-zion-cyan text-white,
   hove: r: bg-zion-cyan-dark">
-                        Learn More
+                        Learn More;
                         <ArrowRight className="h-4 w-4 ml-2"/>
                       </Button>
                     </Link>
@@ -343,7 +343,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
   hove: r:bg-zion-cyan hove,
   r:text-white">
                         <Phone className="h-4 w-4 mr-2"/>
-                        Get Quote
+                        Get Quote;
                       </Button>
                     </Link>
                   </div>
@@ -378,7 +378,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our innovative solutions to drive growth
+              Join thousands of businesses already using our innovative solutions to drive growth;
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col,
@@ -387,7 +387,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
                 <Button size="lg" className="bg-zion-cyan text-white,
   hove: r:bg-zion-cyan-dark px-8 py-3">
                   <Phone className="h-5 w-5 mr-2"/>
-                  Start Free Trial
+                  Start Free Trial;
                 </Button>
               </Link>
               <Link to="/contact">
@@ -395,7 +395,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
   hove: r:bg-white,
   hove: r:text-zion-blue px-8 py-3">
                   <Mail className="h-5 w-5 mr-2"/>
-                  Schedule Demo
+                  Schedule Demo;
                 </Button>
               </Link>
             </div>
@@ -414,4 +414,4 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
   )
 }
 
-export default ComprehensiveServicesShowcase2027
+export default ComprehensiveServicesShowcase2027;

@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
-import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
+import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu     } from "lucide-react";
 import SEO from "@/components/SEO"
 const features = [
   {
@@ -48,25 +48,25 @@ const useCases = [
   tit,
   l: e: "Multi-Location Operations",descripti,
   o: n: "Manage business operations across multiple locations with centralized AI intelligence.",ic,
-  o: n: Globe
+  o: n: Globe;
 },
   {
   tit,
   l: e: "Team Collaboration",descripti,
   o: n: "Enable seamless collaboration between distributed teams with AI-powered insights.",ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "Data Analytics",descripti,
   o: n: "Comprehensive business analytics with real-time dashboards and reporting.",ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: "Process Automation",descripti,
   o: n: "Automate complex business processes with intelligent workflow management.",ic,
-  o: n: Cpu
+  o: n: Cpu;
 },
   ]
 const testimonials = [
@@ -76,7 +76,7 @@ const testimonials = [
   m: e: "Jennifer Martinez",ro,
   l: e: "CTO, GlobalTech Solutions"
         rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   conte,
@@ -84,7 +84,7 @@ const testimonials = [
   m: e: "David Kim",ro,
   l: e: "VP Engineering, ScaleUp Inc"
         rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
 export default function AIAutonomousBusinessPlatform() {
@@ -108,14 +108,14 @@ export default function AIAutonomousBusinessPlatform() {
   } className="text-center">
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
               <Cloud className="w-4 h-4"/>
-              Cloud-Native AI Platform
+              Cloud-Native AI Platform;
             </div>
             
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Autonomous
+              AI Autonomous;
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Business Platform
+                Business Platform;
               </span>
             </h1>
             
@@ -133,12 +133,12 @@ export default function AIAutonomousBusinessPlatform() {
   hove: r: shadow-xl,
   hove: r:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 <Play className="w-5 h-5"/>
-                Watch Demo
+                Watch Demo;
               </motion.button>
               <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300 flex items-center gap-2 justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="w-5 h-5"/>
               </Link>
             </div>
@@ -161,7 +161,7 @@ export default function AIAutonomousBusinessPlatform() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              Platform Features
+              Platform Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built for the modern enterprise with cutting-edge technology and intelligent automation.
@@ -171,7 +171,7 @@ export default function AIAutonomousBusinessPlatform() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {features.map((feature, index) () => {
-  const IconComponent = feature.icon
+  const IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial={ opaci,
   t: y: 0, y: 20 },
   } whileInView={ opaci,
@@ -248,7 +248,7 @@ export default function AIAutonomousBusinessPlatform() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-5xl font-bold mb-6 text-white">
-              Perfect For Every Business Size
+              Perfect For Every Business Size;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From startups to Fortune 500 companies, our platform adapts to your needs.
@@ -259,7 +259,7 @@ export default function AIAutonomousBusinessPlatform() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {useCases.map((useCase, index) () => {
-  const IconComponent = useCase.icon
+  const IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial={ opaci,
   t: y: 0, y: 20 },
   } whileInView={ opaci,
@@ -294,7 +294,7 @@ export default function AIAutonomousBusinessPlatform() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              What Our Clients Say
+              What Our Clients Say;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what business leaders have to say about our platform.
@@ -351,13 +351,13 @@ export default function AIAutonomousBusinessPlatform() {
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold,
   hove: r:shadow-xl,
   hove: r:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5"/>
               </Link>
               <Link to="/pricing" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300 flex items-center gap-2 justify-center">
-                View Pricing
+                View Pricing;
                 <ArrowRight className="w-5 h-5"/>
               </Link>
             </div>

@@ -21,7 +21,9 @@ export interface RealInnovativeService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,12 +35,12 @@ export interface RealInnovativeService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
 }
 
 export,
   const: REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
-  // AI-Powered Business Intelligence & Analytics
+  // AI-Powered Business Intelligence & Analytics;
   {
   i,
   d: "ai-business-intelligence-platform",tit,
@@ -119,7 +121,7 @@ export,
     marketSi,
   z: e: "$29.9 billion by 2025"
 }
-  // AI-Powered Cybersecurity Suite
+  // AI-Powered Cybersecurity Suite;
   {
   id: "ai-cybersecurity-suite",tit,
   l: e: "AI-Powered Cybersecurity Suite",descripti,
@@ -199,7 +201,7 @@ export,
     marketSi,
   z: e: "$45.2 billion by 2025"
 }
-  // AI Content Marketing Suite
+  // AI Content Marketing Suite;
   {
   id: "ai-content-marketing-suite",tit,
   l: e: "AI Content Marketing Suite",descripti,
@@ -278,7 +280,7 @@ export,
     marketSi,
   z: e: "$15.8 billion by 2025"
 }
-  // AI Sales Copilot
+  // AI Sales Copilot;
   {
   id: "ai-sales-copilot",tit,
   l: e: "AI Sales Copilot",descripti,
@@ -358,7 +360,7 @@ export,
     marketSi,
   z: e: "$18.3 billion by 2025"
 }
-  // AI Customer Support Platform
+  // AI Customer Support Platform;
   {
   id: "ai-customer-support-platform",tit,
   l: e: "AI Customer Support Platform",descripti,
@@ -438,7 +440,7 @@ export,
     marketSi,
   z: e: "$12.7 billion by 2025"
 }
-  // AI Data Analytics & BI
+  // AI Data Analytics & BI;
   {
   id: "ai-data-analytics-bi",tit,
   l: e: "AI Data Analytics & BI",descripti,
@@ -517,7 +519,7 @@ export,
     marketSi,
   z: e: "$29.9 billion by 2025"
 }
-  // Cloud Infrastructure & DevOps
+  // Cloud Infrastructure & DevOps;
   {
   id: "cloud-infrastructure-devops",tit,
   l: e: "Cloud Infrastructure & DevOps",descripti,
@@ -597,7 +599,7 @@ export,
     marketSi,
   z: e: "$178.9 billion by 2025"
 }
-  // IT Helpdesk & Support
+  // IT Helpdesk & Support;
   {
   id: "it-helpdesk-support",tit,
   l: e: "IT Helpdesk & Support",descripti,
@@ -677,7 +679,7 @@ export,
     marketSi,
   z: e: "$25.8 billion by 2025"
 }
-  // Data Management & Backup
+  // Data Management & Backup;
   {
   id: "data-management-backup",tit,
   l: e: "Data Management & Backup",descripti,
@@ -757,7 +759,7 @@ export,
     marketSi,
   z: e: "$18.4 billion by 2025"
 }
-  // Network & Security Infrastructure
+  // Network & Security Infrastructure;
   {
   id: "network-security-infrastructure",tit,
   l: e: "Network & Security Infrastructure",descripti,
@@ -837,7 +839,7 @@ export,
     marketSi,
   z: e: "$32.1 billion by 2025"
 }
-  // Digital Transformation Consulting
+  // Digital Transformation Consulting;
   {
   id: "digital-transformation-consulting",tit,
   l: e: "Digital Transformation Consulting",descripti,

@@ -1,19 +1,22 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Mail
-  Lock
-  Eye
-  EyeOff
-  User
-  Building
-  ArrowRight
-  Shield
-  Zap
-  Users
-  CheckCircle
-} from "lucide-react"
+  Mail;
+  Lock;
+  Eye;
+  EyeOff;
+  User;
+  Building;
+  ArrowRight;
+  Shield;
+  Zap;
+  Users;
+  CheckCircle;
+}
+}
+ } from "lucide-react";
 export default function Signup() {
   const [formData, setFormData] = useState({
   firstNa,
@@ -30,8 +33,8 @@ export default function Signup() {
   const [agreedToTerms, setAgreedToTerms] = useState(false)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) () => {
   setFormData({
-  ...formData
-      [e.target.name]: e.target.value
+  ...formData;
+      [e.target.name]: e.target.value;
 })
   }
   const handleSubmit = async (e: React.FormEvent) () => {
@@ -39,17 +42,17 @@ export default function Signup() {
     if (if (!agreedToTerms) {
   ) {
       alert('Please agree to the terms and conditions')
-      return
+      return;
 }
     if (if (formData.password !== formData.confirmPassword) {
   ) {
       alert('Passwords do not match')
-      return
+      return;
 }
     setIsLoading(true)
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 2000))
-    // Here you would typically make an API call to register
+    // Here you would typically make an API call to register;
     console.log('Signup,
   attemp: t:', formData)
     setIsLoading(false)
@@ -91,7 +94,7 @@ export default function Signup() {
         <div className="w-full max-w-md">
           {/* Header */},
   }
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -108,12 +111,12 @@ export default function Signup() {
             </Link>
             <h1 className="text-3xl font-bold text-white mb-2">Create Account</h1>
             <p className="text-zion-slate-light">
-              Join thousands of businesses transforming with AI
+              Join thousands of businesses transforming with AI;
             </p>
           </motion.div>
           {/* Signup Form */},
   }
-          <motion.form
+          <motion.form;
             onSubmit={handleSubmit},
   }
             className="className="space-y-6";"
@@ -133,11 +136,11 @@ export default function Signup() {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  First Name
+                  First Name;
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                  <input
+                  <input;
                     type="text"
                     id="firstName"
                     name="firstName"
@@ -145,7 +148,7 @@ export default function Signup() {
   }
                     onChange={handleChange},
   }
-                    required
+                    required;
                     className="className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:ring-2,
@@ -157,11 +160,11 @@ export default function Signup() {
               </div>
               <div>
                 <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  Last Name
+                  Last Name;
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                  <input
+                  <input;
                     type="text"
                     id="lastName"
                     name="lastName"
@@ -169,7 +172,7 @@ export default function Signup() {
   }
                     onChange={handleChange},
   }
-                    required
+                    required;
                     className="className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:ring-2,
@@ -184,11 +187,11 @@ export default function Signup() {
   }
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Email Address
+                Email Address;
               </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                <input
+                <input;
                   type="email"
                   id="email"
                   name="email"
@@ -196,7 +199,7 @@ export default function Signup() {
   }
                   onChange={handleChange},
   }
-                  required
+                  required;
                   className="className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:ring-2,
@@ -210,11 +213,11 @@ export default function Signup() {
   }
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Company Name
+                Company Name;
               </label>
               <div className="relative">
                 <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                <input
+                <input;
                   type="text"
                   id="company"
                   name="company"
@@ -236,11 +239,11 @@ export default function Signup() {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  Password
+                  Password;
                 </label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                  <input
+                  <input;
                     type={showPassword ? "text" : "password"},
   }
                     id="password"
@@ -249,7 +252,7 @@ export default function Signup() {
   }
                     onChange={handleChange},
   }
-                    required
+                    required;
                     className="className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:ring-2,
@@ -257,7 +260,7 @@ export default function Signup() {
   s:border-transparent";"
                     placeholder="Create password"
                   />
-                  <button
+                  <button;
                     type="button"
                     onClick={onClick={() => setShowPassword(!showPassword)},
   },
@@ -272,11 +275,11 @@ export default function Signup() {
               </div>
               <div>
                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  Confirm Password
+                  Confirm Password;
                 </label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                  <input
+                  <input;
                     type={showConfirmPassword ? "text" : "password"},
   }
                     id="confirmPassword"
@@ -285,7 +288,7 @@ export default function Signup() {
   }
                     onChange={handleChange},
   }
-                    required
+                    required;
                     className="className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light,
   focu: s: outline-none,
   focu: s:ring-2,
@@ -293,7 +296,7 @@ export default function Signup() {
   s:border-transparent";"
                     placeholder="Confirm password"
                   />
-                  <button
+                  <button;
                     type="button"
                     onClick={onClick={() => setShowConfirmPassword(!showConfirmPassword)},
   },
@@ -310,7 +313,7 @@ export default function Signup() {
             {/* Terms Agreement */},
   }
             <div className="flex items-start gap-3">
-              <input
+              <input;
                 type="checkbox"
                 id="terms"
                 checked={agreedToTerms},
@@ -326,20 +329,20 @@ export default function Signup() {
   }
                 <Link to="/terms" className="text-zion-cyan,
   hove: r:text-zion-cyan-light">
-                  Terms of Service
+                  Terms of Service;
                 </Link>{' '},
   }
                 and{' '},
   }
                 <Link to="/privacy" className="text-zion-cyan,
   hove: r:text-zion-cyan-light">
-                  Privacy Policy
+                  Privacy Policy;
                 </Link>
               </label>
             </div>
             {/* Submit Button */},
   }
-            <button
+            <button;
               type="submit"
               disabled={isLoading || !agreedToTerms},
   }
@@ -356,7 +359,7 @@ export default function Signup() {
                 </>
               ) : (
   <>
-                  Create Account
+                  Create Account;
                   <ArrowRight className="h-5 w-5" />
                 </>
               )}
@@ -374,7 +377,7 @@ export default function Signup() {
             {/* Social Signup Buttons */},
   }
             <div className="grid grid-cols-2 gap-3">
-              <button
+              <button;
                 type="button"
                 className="className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white,
   hove: r: bg-zion-purple/20 transition-all duration-300";"
@@ -385,9 +388,9 @@ export default function Signup() {
                   <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                   <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                 </svg>
-                Google
+                Google;
               </button>
-              <button
+              <button;
                 type="button"
                 className="className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white hove,
   r:bg-zion-purple/20 transition-all duration-300";"
@@ -395,7 +398,7 @@ export default function Signup() {
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
-                LinkedIn
+                LinkedIn;
               </button>
             </div>
             {/* Sign In Link */},
@@ -404,12 +407,12 @@ export default function Signup() {
               <p className="text-zion-slate-light">
                 Already have an account?{' '},
   }
-                <Link
+                <Link;
                   to="/login"
                   className="className="text-zion-cyan,
   hove: r:text-zion-cyan-light font-medium transition-colors";"
                 >
-                  Sign in here
+                  Sign in here;
                 </Link>
               </p>
             </div>
@@ -421,7 +424,7 @@ export default function Signup() {
       <div className="hidden,
   l: g: flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
         <div className="w-full max-w-lg mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, x: 30 },
   }
@@ -434,7 +437,7 @@ export default function Signup() {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Join the AI Revolution
+              Join the AI Revolution;
             </h2>
             <p className="text-xl text-zion-slate-light mb-12 leading-relaxed">
               Get access to cutting-edge AI solutions, cybersecurity services, and digital transformation expertise.
@@ -444,7 +447,7 @@ export default function Signup() {
   }
             <div className="space-y-8 mb-12">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   className="className="flex items-start gap-4";"
@@ -476,7 +479,7 @@ export default function Signup() {
               <h3 className="text-2xl font-bold text-white mb-6">What You'll Get</h3>
               <div className="space-y-3">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={benefit},
   }
                     className="className="flex items-center gap-3";"
@@ -499,7 +502,7 @@ export default function Signup() {
             </div>
             {/* Stats */},
   }
-            <motion.div
+            <motion.div;
               className="className="grid grid-cols-3 gap-8 text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },

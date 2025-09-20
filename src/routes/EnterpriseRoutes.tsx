@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes   } from "react-router-dom";
 import EnterprisePlans from "../pages/EnterprisePlans"
 import EnterpriseAdmin from "../pages/EnterpriseAdmin"
 import CompanyWorkspace from "../pages/CompanyWorkspace"

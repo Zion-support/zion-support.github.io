@@ -21,7 +21,9 @@ export interface HealthcareAIService2028 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,13 +35,13 @@ export interface HealthcareAIService2028 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
   regulatoryCompliance?: string[],
   }
 
 export,
   const: SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] = [
-  // AI-Powered Medical Imaging Analysis
+  // AI-Powered Medical Imaging Analysis;
   {
   i,
   d: "ai-medical-imaging-analysis-2028",tit,
@@ -123,7 +125,7 @@ export,
   ],
   }
 
-  // AI-Powered Drug Discovery Platform
+  // AI-Powered Drug Discovery Platform;
   {
   id: "ai-drug-discovery-platform-2028",tit,
   l: e: "AI-Powered Drug Discovery & Development Platform",descripti,
@@ -206,7 +208,7 @@ export,
   ],
   }
 
-  // AI-Powered Patient Monitoring System
+  // AI-Powered Patient Monitoring System;
   {
   id: "ai-patient-monitoring-2028",tit,
   l: e: "AI-Powered Patient Monitoring & Predictive Analytics System",descripti,
@@ -289,7 +291,7 @@ export,
   ],
   }
 
-  // AI-Powered Clinical Decision Support
+  // AI-Powered Clinical Decision Support;
   {
   id: "ai-clinical-decision-support-2028",tit,
   l: e: "AI-Powered Clinical Decision Support & Treatment Planning System",descripti,
@@ -372,7 +374,7 @@ export,
   ],
   }
 
-  // AI-Powered Population Health Management
+  // AI-Powered Population Health Management;
   {
   id: "ai-population-health-management-2028",tit,
   l: e: "AI-Powered Population Health Management & Analytics Platform",descripti,
@@ -456,4 +458,4 @@ export,
   },
   ]
 
-export default SPECIALIZED_HEALTHCARE_AI_SERVICES_2028
+export default SPECIALIZED_HEALTHCARE_AI_SERVICES_2028;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
+import { Link, useLocation   } from "react-router-dom";
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Menu
+  Menu;
   X,
   ChevronDown,
   Brain,
@@ -10,20 +10,22 @@ import {
   Cpu,
   Heart,
   Rocket,
-  Sparkles
-  BarChart3
-  Network
-  Globe
-  Users
-  FileText
-  Phone
-  Mail
-  MapPin
-  Search
-  Bell
-  User
-  Settings
-} from "lucide-react"
+  Sparkles;
+  BarChart3;
+  Network;
+  Globe;
+  Users;
+  FileText;
+  Phone;
+  Mail;
+  MapPin;
+  Search;
+  Bell;
+  User;
+  Settings;
+}
+}
+ } from "lucide-react";
 export function Header() {
   return (
 		<header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-lg">
@@ -32,7 +34,7 @@ export function Header() {
   l: g:px-8">
 				<div className="flex items-center justify-between h-16">
 					<Link to="/" className="text-white text-xl font-bold">
-						Zion Tech Group
+						Zion Tech Group;
 					</Link>
 					<div className="hidden,
   m: d:flex space-x-8">

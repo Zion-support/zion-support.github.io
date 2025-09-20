@@ -1,22 +1,25 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link   } from "react-router-dom";
 import {
-  Search
+  Search;
   BookOpen,
   MessageCircle,
-  Phone
-  Mail
-  Video
-  FileText
-  Users
-  Settings
-  CreditCard
-  Shield
-  Globe
-  ArrowRight
-  ChevronDown
-  ChevronUp
-} from "lucide-react"
+  Phone;
+  Mail;
+  Video;
+  FileText;
+  Users;
+  Settings;
+  CreditCard;
+  Shield;
+  Globe;
+  ArrowRight;
+  ChevronDown;
+  ChevronUp;
+}
+}
+ } from "lucide-react";
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('')
   const [openCategories, setOpenCategories] = useState([])
@@ -218,16 +221,16 @@ export default function Help() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-            Help Center
+            Help Center;
           </h1>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Find answers to your questions, learn how to use our services, and get the support you need
+            Find answers to your questions, learn how to use our services, and get the support you need;
           </p>
           {/* Search Bar */},
   }
           <div className="max-w-2xl mx-auto relative">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-            <input
+            <input;
               type="text"
               placeholder="Search for help articles, guides, or topics..."
               value={searchQuery},
@@ -247,7 +250,7 @@ export default function Help() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Popular Help Articles
+            Popular Help Articles;
           </h2>
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
@@ -277,12 +280,12 @@ export default function Help() {
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Browse Help Topics
+            Browse Help Topics;
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {filteredCategories.map((category) => (
   <div key={category.id} className="bg-zion-blue-dark/50 rounded-lg border border-zion-cyan/20 overflow-hidden">
-                <button
+                <button;
                   onClick={onClick={() => toggleCategory(category.id)},
   },
   }
@@ -307,7 +310,7 @@ export default function Help() {
   hove: r:bg-zion-cyan/10 transition-colors">
                           <h4 className="text-white font-medium mb-2">{article.title}</h4>
                           <p className="text-zion-slate-light text-sm mb-3">{article.description}</p>
-                          <Link 
+                          <Link;
                             to={article.url},
   }
                             className="className="inline-flex items-center space-x-2 text-zion-cyan,
@@ -340,7 +343,7 @@ export default function Help() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Video Tutorials
+            Video Tutorials;
           </h2>
           <div className="grid grid-cols-1,
   m: d: grid-cols-2,
@@ -403,41 +406,41 @@ export default function Help() {
               <MessageCircle className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
               <p className="text-zion-slate-light text-sm mb-4">
-                Chat with our support team in real-time
+                Chat with our support team in real-time;
               </p>
               <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium,
   hove: r:bg-zion-cyan-light transition-colors">
-                Start Chat
+                Start Chat;
               </button>
             </div>
             <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
               <Phone className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
               <p className="text-zion-slate-light text-sm mb-4">
-                Call us directly for immediate assistance
+                Call us directly for immediate assistance;
               </p>
-              <a 
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium,
   hove: r:bg-zion-cyan-light transition-colors inline-block";"
               >
-                Call Now
+                Call Now;
               </a>
             </div>
             <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
               <Mail className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
               <p className="text-zion-slate-light text-sm mb-4">
-                Send us a detailed message
+                Send us a detailed message;
               </p>
-              <a 
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hove,
   r:bg-zion-cyan-light transition-colors inline-block";"
               >
-                Send Email
+                Send Email;
               </a>
             </div>
           </div>

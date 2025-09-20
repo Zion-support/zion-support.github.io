@@ -1,30 +1,34 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Leaf
-  Zap
-  Shield
-  Globe
-  TrendingUp
-  Settings
-  Database
-  Cloud
-  Lock
-  Users
-  Rocket
-  CheckCircle
-  ArrowRight
-  Sun
-  Wind
-  Battery
-  Recycle
-  Tree
-  Lightbulb
-  Gauge
-  Target
-  Award
-  BarChart3
-} from "lucide-react"
+  Leaf;
+  Zap;
+  Shield;
+  Globe;
+  TrendingUp;
+  Settings;
+  Database;
+  Cloud;
+  Lock;
+  Users;
+  Rocket;
+  CheckCircle;
+  ArrowRight;
+  Sun;
+  Wind;
+  Battery;
+  Recycle;
+  Tree;
+  Lightbulb;
+  Gauge;
+  Target;
+  Award;
+  BarChart3;
+}
+}
+}
+}
+ } from "lucide-react";
 import SEO from "../../components/SEO"
 export default function GreenIT() {
   const features = [
@@ -152,7 +156,7 @@ export default function GreenIT() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+      <SEO;
         title="Green IT Services - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
       />
@@ -162,7 +166,7 @@ export default function GreenIT() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -176,11 +180,11 @@ export default function GreenIT() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-green-400/20 text-green-400 rounded-full text-sm font-medium mb-6">
               <Leaf className="w-4 h-4 mr-2" />
-              Sustainable Technology
+              Sustainable Technology;
             </div>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Green IT
+              Green IT;
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -192,12 +196,12 @@ export default function GreenIT() {
   hove: r: from-green-500,
   hove: r:to-emerald-600 transition-all duration-300,
   hove: r:scale-105">
-                Get Started
+                Get Started;
               </button>
               <button className="px-8 py-3 border border-green-400 text-green-400 rounded-lg font-semibold,
   hove: r:bg-green-400 hove,
   r:text-white transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </motion.div>
@@ -210,7 +214,7 @@ export default function GreenIT() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -225,8 +229,8 @@ export default function GreenIT() {
                 What is Green IT?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Green IT, or Green Information Technology, focuses on designing, manufacturing
-                using, and disposing of computers, servers, and associated subsystems efficiently
+                Green IT, or Green Information Technology, focuses on designing, manufacturing;
+                using, and disposing of computers, servers, and associated subsystems efficiently;
                 and effectively with minimal or no impact on the environment.
               </p>
               <div className="space-y-4">
@@ -254,7 +258,7 @@ export default function GreenIT() {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -305,7 +309,7 @@ export default function GreenIT() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -318,10 +322,10 @@ export default function GreenIT() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Key Features
+              Key Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Green IT platform provides comprehensive capabilities for sustainable
+              Our Green IT platform provides comprehensive capabilities for sustainable;
               technology implementation and environmental impact reduction.
             </p>
           </motion.div>
@@ -330,7 +334,7 @@ export default function GreenIT() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -362,7 +366,7 @@ export default function GreenIT() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -375,10 +379,10 @@ export default function GreenIT() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Core Solutions
+              Core Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive Green IT solutions designed to transform your technology
+              Comprehensive Green IT solutions designed to transform your technology;
               infrastructure into a sustainable, energy-efficient ecosystem.
             </p>
           </motion.div>
@@ -386,7 +390,7 @@ export default function GreenIT() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -429,7 +433,7 @@ export default function GreenIT() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -442,10 +446,10 @@ export default function GreenIT() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Industry Use Cases
+              Industry Use Cases;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Green IT solutions are transforming industries across the globe
+              Green IT solutions are transforming industries across the globe;
               enabling sustainable operations and environmental responsibility.
             </p>
           </motion.div>
@@ -453,7 +457,7 @@ export default function GreenIT() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -496,7 +500,7 @@ export default function GreenIT() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -509,10 +513,10 @@ export default function GreenIT() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Business Benefits
+              Business Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how Green IT solutions can transform your organization
+              Discover how Green IT solutions can transform your organization;
               and drive measurable business and environmental outcomes.
             </p>
           </motion.div>
@@ -521,7 +525,7 @@ export default function GreenIT() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -553,7 +557,7 @@ export default function GreenIT() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -566,7 +570,7 @@ export default function GreenIT() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Implementation Process
+              Implementation Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our proven methodology ensures successful Green IT deployment and rapid sustainability impact.
@@ -601,7 +605,7 @@ export default function GreenIT() {
   o: n: 'Monitor performance and continuously improve sustainability metrics'
 },
   ].map((phase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -632,7 +636,7 @@ export default function GreenIT() {
   }
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -647,7 +651,7 @@ export default function GreenIT() {
               Ready to Go Green with Your IT?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how Green IT solutions can transform your technology infrastructure
+              Discover how Green IT solutions can transform your technology infrastructure;
               reduce environmental impact, and drive cost savings.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -655,12 +659,12 @@ export default function GreenIT() {
   hove: r: from-green-500,
   hove: r:to-emerald-600 transition-all duration-300,
   hove: r:scale-105">
-                Start Your Green IT Journey
+                Start Your Green IT Journey;
               </button>
               <button className="px-8 py-4 border border-green-400 text-green-400 rounded-lg font-semibold,
   hove: r:bg-green-400 hove,
   r:text-white transition-all duration-300">
-                Schedule Consultation
+                Schedule Consultation;
               </button>
             </div>
           </motion.div>

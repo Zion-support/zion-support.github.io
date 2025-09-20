@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import SEO from "@/components/SEO"
-import { Link } from "react-router-dom"
-import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from "lucide-react"
+import { Link   } from "react-router-dom";
+import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2   } from "lucide-react";
 import ultimateInnovativeServices2025 from "../../data/2025-ultimate-innovative-services-expansion"
 export default function UltimateHomepage2025() {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0)
@@ -117,15 +117,15 @@ export default function UltimateHomepage2025() {
               <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-8 leading-tight">
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Revolutionary
+                  Revolutionary;
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI & Quantum
+                  AI & Quantum;
                 </span>
                 <br />
                 <span className="text-white">
-                  Solutions
+                  Solutions;
                 </span>
               </h1>
               <p className="text-xl m,
@@ -140,14 +140,14 @@ export default function UltimateHomepage2025() {
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105">
                   <Rocket className="w-5 h-5 mr-2"/>
-                  Explore Services
+                  Explore Services;
                 </Link>
                 <a href="t,
   e: l:+13024640950" className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg,
   hove: r:bg-blue-400 hove,
   r:text-white transition-all duration-300">
                   <Phone className="w-5 h-5 mr-2"/>
-                  Call Now
+                  Call Now;
                 </a>
               </div>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
@@ -170,7 +170,7 @@ export default function UltimateHomepage2025() {
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    Featured Service
+                    Featured Service;
                   </h3>
                   <p className="text-gray-400">Discover our revolutionary solutions</p>
                 </div>
@@ -194,7 +194,7 @@ export default function UltimateHomepage2025() {
                     <Link to={`/ultimate-services-showcase-2025`} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg,
   hove: r: from-blue-700 hove,
   r:to-purple-700 transition-all duration-300">
-                      Learn More
+                      Learn More;
                       <ChevronRight className="w-4 h-4 ml-2"/>
                     </Link>
                   </div>)}
@@ -219,7 +219,7 @@ export default function UltimateHomepage2025() {
                 <a href="t,
   e: l:+13024640950" className="text-blue-400 font-semibold,
   hove: r:text-blue-300">
-                  +1 302 464 0950
+                  +1 302 464 0950;
                 </a>
               </div>
             </div>
@@ -230,7 +230,7 @@ export default function UltimateHomepage2025() {
                 <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-purple-400 font-semibold hove,
   r:text-purple-300">
-                  kleber@ziontechgroup.com
+                  kleber@ziontechgroup.com;
                 </a>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function UltimateHomepage2025() {
               <div>
                 <p className="text-sm text-gray-300">Address</p>
                 <p className="text-pink-400 font-semibold">
-                  364 E Main St STE 1008<br />Middletown DE 19709
+                  364 E Main St STE 1008<br />Middletown DE 19709;
                 </p>
               </div>
             </div>
@@ -275,7 +275,7 @@ export default function UltimateHomepage2025() {
             Why Choose Zion Tech Group?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We combine cutting-edge technology with proven business expertise to deliver 
+            We combine cutting-edge technology with proven business expertise to deliver;
             solutions that transform industries and drive unprecedented growth.
           </p>
         </div>
@@ -300,7 +300,7 @@ export default function UltimateHomepage2025() {
   l: g:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Featured Services
+            Featured Services;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our most popular revolutionary solutions that are transforming businesses worldwide.
@@ -317,7 +317,7 @@ export default function UltimateHomepage2025() {
                   <span className="text-2xl">{service.icon}</span>
                 </div>
                 <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full">
-                  Popular
+                  Popular;
                 </span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4 group-hov,
@@ -346,7 +346,7 @@ export default function UltimateHomepage2025() {
               <Link to={`/ultimate-services-showcase-2025`} className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-300 group">
-                Learn More
+                Learn More;
                 <ArrowRight className="w-4 h-4 ml-2 group-hove,
   r:translate-x-1 transition-transform"/>
               </Link>
@@ -356,7 +356,7 @@ export default function UltimateHomepage2025() {
           <Link to="/ultimate-services-showcase-2025" className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg,
   hove: r: bg-blue-400 hove,
   r:text-white transition-all duration-300">
-            View All Services
+            View All Services;
             <ChevronRight className="w-5 h-5 ml-2"/>
           </Link>
         </div>
@@ -369,10 +369,10 @@ export default function UltimateHomepage2025() {
   l: g:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Industries We Transform
+            Industries We Transform;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our revolutionary solutions are designed to meet the unique challenges 
+            Our revolutionary solutions are designed to meet the unique challenges;
             and opportunities across diverse industries.
           </p>
         </div>
@@ -400,7 +400,7 @@ export default function UltimateHomepage2025() {
   g:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Complete Service Portfolio
+            Complete Service Portfolio;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our comprehensive range of AI-powered, quantum-secure, and autonomous solutions.
@@ -443,7 +443,7 @@ export default function UltimateHomepage2025() {
   hove: r:to-purple-700 transition-all duration-300 transform hove,
   r:scale-105">
             <Rocket className="w-5 h-5 mr-2"/>
-            Explore All Services
+            Explore All Services;
           </Link>
         </div>
       </div>
@@ -470,14 +470,14 @@ export default function UltimateHomepage2025() {
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105">
                 <Rocket className="w-5 h-5 mr-2"/>
-                Get Started Today
+                Get Started Today;
               </Link>
               <a href="t,
   e: l:+13024640950" className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg,
   hove: r:bg-blue-400 hove,
   r:text-white transition-all duration-300">
                 <Phone className="w-5 h-5 mr-2"/>
-                Speak with an Expert
+                Speak with an Expert;
               </a>
             </div>
           </div>

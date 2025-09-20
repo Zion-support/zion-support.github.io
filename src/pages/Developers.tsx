@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link   } from "react-router-dom";
 import {
-  Code
+  Code;
   Zap,
   Shield,
   Cloud,
@@ -13,33 +13,35 @@ import {
   Cpu,
   Lock,
   Heart,
-  Star
-  ArrowRight
-  CheckCircle
-  BarChart3
-  MessageCircle
-  BookOpen
-  ShoppingCart
-  DollarSign
-  Gauge
-  HelpCircle
-  Search
-  PenTool
-  GitFork
-  Atom
-  Truck
-  Building
-  Github
-  Terminal
-  Database
-  Server
-  Network
-  Key
-  Download
-  Play
-  ExternalLink
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  Star;
+  ArrowRight;
+  CheckCircle;
+  BarChart3;
+  MessageCircle;
+  BookOpen;
+  ShoppingCart;
+  DollarSign;
+  Gauge;
+  HelpCircle;
+  Search;
+  PenTool;
+  GitFork;
+  Atom;
+  Truck;
+  Building;
+  Github;
+  Terminal;
+  Database;
+  Server;
+  Network;
+  Key;
+  Download;
+  Play;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 export default function Developers() {
   const apis = [
   {
@@ -195,7 +197,7 @@ export default function Developers() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Developer Portal - Zion Tech Group"
         description="Access our APIs, SDKs, and developer resources. Build powerful applications with Zion Tech Group's AI and technology platforms."
       />
@@ -212,7 +214,7 @@ export default function Developers() {
             </div>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Developer
+              Developer;
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Portal</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
@@ -221,22 +223,22 @@ export default function Developers() {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/docs"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/20";"
               >
-                View Documentation
+                View Documentation;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/api-playground"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                Try API Playground
+                Try API Playground;
               </Link>
             </div>
           </div>
@@ -250,7 +252,7 @@ export default function Developers() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Get Started in Minutes
+              Get Started in Minutes;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Follow these simple steps to integrate Zion Tech Group's APIs into your applications.
@@ -269,7 +271,7 @@ export default function Developers() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
                 <p className="text-slate-300 mb-4 text-sm">{step.description}</p>
-                <Link
+                <Link;
                   to={step.href},
   }
                   className="className="inline-flex items-center px-4 py-2 bg-cyan-400/10 text-cyan-400 text-sm font-medium rounded-lg,
@@ -292,7 +294,7 @@ export default function Developers() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Available APIs
+              Available APIs;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Powerful, RESTful APIs that give you access to our AI and technology platforms.
@@ -334,21 +336,21 @@ export default function Developers() {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <Link
+                  <Link;
                     to={api.documentation},
   }
                     className="className="inline-flex items-center text-cyan-400,
   hove: r: text-cyan-300 text-sm font-medium transition-colors";"
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    Documentation
+                    Documentation;
                   </Link>
-                  <Link
+                  <Link;
                     to="/api-playground"
                     className="className="inline-flex items-center px-4 py-2 bg-cyan-400/10 text-cyan-400 text-sm font-medium rounded-lg hove,
   r:bg-cyan-400/20 transition-all duration-200";"
                   >
-                    Try API
+                    Try API;
                     <Play className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -365,7 +367,7 @@ export default function Developers() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Official SDKs
+              Official SDKs;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Choose from our official SDKs to integrate our APIs into your applications quickly and easily.
@@ -389,7 +391,7 @@ export default function Developers() {
                 </div>
 
                 <div className="space-y-3">
-                  <a
+                  <a;
                     href={sdk.repository},
   }
                     target="_blank"
@@ -398,16 +400,16 @@ export default function Developers() {
   hove: r:bg-slate-600/50 transition-all duration-200";"
                   >
                     <Github className="w-4 h-4 mr-2" />
-                    View on GitHub
+                    View on GitHub;
                   </a>
-                  <Link
+                  <Link;
                     to={sdk.documentation},
   }
                     className="className="flex items-center justify-center w-full px-4 py-2 bg-cyan-400/10 text-cyan-400 text-sm font-medium rounded-lg,
   hove: r:bg-cyan-400/20 transition-all duration-200";"
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    Documentation
+                    Documentation;
                   </Link>
                 </div>
               </div>
@@ -423,7 +425,7 @@ export default function Developers() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Developer Tools
+              Developer Tools;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Essential tools and resources to help you build and test your integrations.
@@ -434,7 +436,7 @@ export default function Developers() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {tools.map((tool, index) => (
-  <Link
+  <Link;
                 key={index},
   }
                 to={tool.href},
@@ -483,22 +485,22 @@ export default function Developers() {
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/signup"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/20";"
               >
-                Get API Keys
+                Get API Keys;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/docs"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                View Documentation
+                View Documentation;
               </Link>
             </div>
           </div>
@@ -526,12 +528,12 @@ export default function Developers() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>
               <p className="text-slate-300 mb-4">Comprehensive guides and API references</p>
-              <Link
+              <Link;
                 to="/docs"
                 className="className="inline-flex items-center text-cyan-400,
   hove: r:text-cyan-300 text-sm font-medium transition-colors";"
               >
-                Browse Docs
+                Browse Docs;
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
@@ -542,7 +544,7 @@ export default function Developers() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Community</h3>
               <p className="text-slate-300 mb-4">Connect with other developers</p>
-              <a
+              <a;
                 href="htt,
   p: s://github.com/ziontechgroup"
                 target="_blank"
@@ -550,7 +552,7 @@ export default function Developers() {
                 className="className="inline-flex items-center text-cyan-400,
   hove: r:text-cyan-300 text-sm font-medium transition-colors";"
               >
-                Join Community
+                Join Community;
                 <ExternalLink className="ml-2 w-4 h-4" />
               </a>
             </div>
@@ -561,12 +563,12 @@ export default function Developers() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Support</h3>
               <p className="text-slate-300 mb-4">Get help from our technical team</p>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center text-cyan-400 hove,
   r:text-cyan-300 text-sm font-medium transition-colors";"
               >
-                Contact Support
+                Contact Support;
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>

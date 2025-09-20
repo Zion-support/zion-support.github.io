@@ -1,40 +1,44 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  BarChart3
+  BarChart3;
   TrendingUp,
   Brain,
   Zap,
   Shield,
   Globe,
   Users,
-  DollarSign
-  PieChart
-  LineChart
-  Activity
-  Target
-  CheckCircle
-  Star
-  ArrowRight
-  Eye
-  Lock
-  Cloud
-  Smartphone
-  Monitor
-  Play
-  Phone
-  Mail
-  MapPin
-  Calculator
-  AlertTriangle
-  FileText
-  Calendar
-  UserCheck
-  TrendingDown
-  Percent
-  Clock
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  DollarSign;
+  PieChart;
+  LineChart;
+  Activity;
+  Target;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Eye;
+  Lock;
+  Cloud;
+  Smartphone;
+  Monitor;
+  Play;
+  Phone;
+  Mail;
+  MapPin;
+  Calculator;
+  AlertTriangle;
+  FileText;
+  Calendar;
+  UserCheck;
+  TrendingDown;
+  Percent;
+  Clock;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 const AIFinancialAnalytics = () () => {
   const features = [
   {
@@ -92,7 +96,7 @@ const AIFinancialAnalytics = () () => {
         "Monthly analytics"
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -112,7 +116,7 @@ const AIFinancialAnalytics = () () => {
         "Risk management"
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -133,7 +137,7 @@ const AIFinancialAnalytics = () () => {
         "Regulatory compliance"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const useCases = [
@@ -142,28 +146,28 @@ const AIFinancialAnalytics = () () => {
   l: e: "Investment Portfolio Management",descripti,
   o: n: "AI-powered portfolio optimization, risk assessment, and performance tracking for investment professionals"
       ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "Business Financial Planning",descripti,
   o: n: "Budget forecasting, cash flow analysis, and financial planning with predictive AI insights"
       ic,
-  o: n: Calculator
+  o: n: Calculator;
 },
   {
   tit,
   l: e: "Risk Management & Compliance",descripti,
   o: n: "Automated risk assessment, regulatory compliance monitoring, and audit trail management"
       ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   tit,
   l: e: "Trading & Market Analysis",descripti,
   o: n: "Real-time market data analysis, trading signals, and algorithmic trading recommendations"
       ic,
-  o: n: Activity
+  o: n: Activity;
 },
   ]
   const benefits = [
@@ -203,7 +207,7 @@ const AIFinancialAnalytics = () () => {
   l: e: "CFO",compa,
   n: y: "TechGrowth Capital",conte,
   n: t: "The AI financial analytics have transformed our decision-making process. We've improved returns by 22% while reducing risk exposure.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -211,7 +215,7 @@ const AIFinancialAnalytics = () () => {
   l: e: "Portfolio Manager",compa,
   n: y: "Global Investments Ltd",conte,
   n: t: "Real-time AI insights help us make better trading decisions. The risk assessment tools are incredibly accurate.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -219,7 +223,7 @@ const AIFinancialAnalytics = () () => {
   l: e: "Financial Controller",compa,
   n: y: "InnovateCorp",conte,
   n: t: "Automated reporting saves us 20+ hours per week. The compliance features ensure we never miss regulatory deadlines.",rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
   const integrations = [
@@ -256,7 +260,7 @@ const AIFinancialAnalytics = () () => {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="AI-Powered Financial Analytics - Zion Tech Group"
         description="Transform financial decision-making with AI analytics. Real-time insights, predictive forecasting, and risk management. Start from $399/month."
       />
@@ -267,7 +271,7 @@ const AIFinancialAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -281,13 +285,13 @@ const AIFinancialAnalytics = () () => {
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
               <Brain className="w-4 h-4 mr-2 text-cyan-400" />
-              AI-Powered Financial Analytics
+              AI-Powered Financial Analytics;
             </div>
             
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Financial Analytics
+                Financial Analytics;
               </span>
               <br />
               <span className="text-white">Powered by AI</span>
@@ -295,30 +299,30 @@ const AIFinancialAnalytics = () () => {
             
             <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your financial decision-making with AI-powered analytics that provide real-time insights
+              Transform your financial decision-making with AI-powered analytics that provide real-time insights;
               predictive forecasting, and intelligent risk management for better returns and compliance.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300 flex items-center group";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5 group-hov,
   e: r:translate-x-1 transition-transform" />
               </a>
-              <a
+              <a;
                 href="#demo"
                 className="className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hove,
   r:bg-cyan-400/10 transition-all duration-300 flex items-center group";"
               >
                 <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+                Watch Demo;
               </a>
             </div>
           </motion.div>
@@ -338,7 +342,7 @@ const AIFinancialAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -356,11 +360,11 @@ const AIFinancialAnalytics = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Proven Results
+                Proven Results;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the measurable impact AI analytics can have on your financial performance
+              See the measurable impact AI analytics can have on your financial performance;
             </p>
           </motion.div>
           
@@ -368,7 +372,7 @@ const AIFinancialAnalytics = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -410,7 +414,7 @@ const AIFinancialAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -428,11 +432,11 @@ const AIFinancialAnalytics = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Powerful Features
+                Powerful Features;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to transform your financial analysis with AI
+              Everything you need to transform your financial analysis with AI;
             </p>
           </motion.div>
           
@@ -440,7 +444,7 @@ const AIFinancialAnalytics = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -488,7 +492,7 @@ const AIFinancialAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -506,18 +510,18 @@ const AIFinancialAnalytics = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Use Cases
+                Use Cases;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how different industries are transforming financial analysis with AI
+              See how different industries are transforming financial analysis with AI;
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -565,7 +569,7 @@ const AIFinancialAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -583,11 +587,11 @@ const AIFinancialAnalytics = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Seamless Integrations
+                Seamless Integrations;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your existing financial tools and workflows
+              Connect with your existing financial tools and workflows;
             </p>
           </motion.div>
           
@@ -595,7 +599,7 @@ const AIFinancialAnalytics = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {integrations.map((integration, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -643,7 +647,7 @@ const AIFinancialAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -661,7 +665,7 @@ const AIFinancialAnalytics = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Pricing Plans
+                Pricing Plans;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -672,7 +676,7 @@ const AIFinancialAnalytics = () () => {
           <div className="grid grid-cols-1 l,
   g:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -693,13 +697,13 @@ const AIFinancialAnalytics = () () => {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </div>
                   </div>
                 )}
                 
                 <div className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
-  plan.popular 
+  plan.popular;
                     ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
                     : 'border-white/20,
   hove: r:border-cyan-400/40'
@@ -723,11 +727,11 @@ const AIFinancialAnalytics = () () => {
                     ))}
                   </ul>
                   
-                  <a
+                  <a;
                     href="htt,
   p: s: //ziontechgroup.com/contact"
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
-  plan.popular
+  plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white,
   hove: r:from-cyan-400,
   hove: r:to-blue-400'
@@ -735,7 +739,7 @@ const AIFinancialAnalytics = () () => {
   r:bg-cyan-400/10'
 }`}
                   >
-                    Start Free Trial
+                    Start Free Trial;
                   </a>
                 </div>
               </motion.div>
@@ -750,7 +754,7 @@ const AIFinancialAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -768,7 +772,7 @@ const AIFinancialAnalytics = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                What Our Clients Say
+                What Our Clients Say;
               </span>
             </h2>
           </motion.div>
@@ -776,7 +780,7 @@ const AIFinancialAnalytics = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -822,7 +826,7 @@ const AIFinancialAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -845,25 +849,25 @@ const AIFinancialAnalytics = () () => {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300 flex items-center group";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5 group-hov,
   e: r:translate-x-1 transition-transform" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hove,
   r:bg-cyan-400/10 transition-all duration-300 flex items-center group";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </a>
             </div>
           </motion.div>
@@ -885,7 +889,7 @@ const AIFinancialAnalytics = () () => {
               <a href="t,
   e: l:+13024640950" className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -894,7 +898,7 @@ const AIFinancialAnalytics = () () => {
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-cyan-400 hove,
   r:text-cyan-300 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -902,7 +906,7 @@ const AIFinancialAnalytics = () () => {
               <div className="text-white font-semibold">Address</div>
               <div className="text-gray-300 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </div>
             </div>
           </div>
@@ -911,4 +915,4 @@ const AIFinancialAnalytics = () () => {
     </div>
   )
 }
-export default AIFinancialAnalytics
+export default AIFinancialAnalytics;

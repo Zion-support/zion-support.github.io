@@ -1,5 +1,5 @@
 import React from "react"
-import { cn } from "../../utils/cn"
+import { cn     } from "../../utils/cn";
 interface SkeletonProps {
   className?: string,
   width?: string | number,
@@ -7,11 +7,15 @@ interface SkeletonProps {
   variant?: 'text' | 'circular' | 'rectangular' | 'rounded',
   animation?: 'pulse' | 'wave' | 'none',
 }
+}
+}
+}
+}
 
 export function Skeleton({ 
   className,
-  width
-  height
+  width;
+  height;
   variant = 'rectangular'
   animation = 'pulse' 
 }: SkeletonProps) {
@@ -36,28 +40,28 @@ const animationClasses = {
 const style = {
     wid,
   t: h: typeof width === 'number' ? `${width}px` : width,
-  heigh: t: typeof height === 'number' ? `${height}px` : height
+  heigh: t: typeof height === 'number' ? `${height}px` : height;
   }
   return (
-    <div
+    <div;
       className={cn(
-        baseClasses
+        baseClasses;
         variantClasses[variant],
         animationClasses[animation],
-        className
+        className;
       )}
       style={style}
     />
   ),
 }
 
-// Predefined skeleton components for common use cases
+// Predefined skeleton components for common use cases;
 export function SkeletonText({ lines = 3, className }: { lines?: number, className?: string }) {
   return (
     <div className={cn('space-y-2', className)}>
       {Array.from({ leng,
   t: h: lines }).map((_, i) => (
-        <Skeleton
+        <Skeleton;
           key={i}
           variant="text"
           width={i === lines - 1 ? '75%' : '100%'}
@@ -90,7 +94,7 @@ export function SkeletonCard({ className }: { className?: string }) {
 export function SkeletonTable({ rows = 5, columns = 4, className }: { 
   rows?: number, 
   columns?: number, 
-  className?: string 
+  className?: string;
 }) {
   return (
     <div className={cn('space-y-3', className)}>
@@ -108,7 +112,7 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
         <div key={rowIndex} className="flex space-x-4">
           {Array.from({ leng,
   t: h: columns }).map((_, colIndex) => (
-            <Skeleton
+            <Skeleton;
               key={colIndex}
               variant="text"
               width={colIndex === 0 ? 150 : 100}
@@ -124,11 +128,11 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
 export function SkeletonGrid({ 
   items = 6, 
   columns = 3, 
-  className 
+  className;
 }: { 
   items?: number, 
-  columns?: number
-  className?: string 
+  columns?: number;
+  className?: string;
 }) {
   return (
     <div className={cn(
@@ -142,7 +146,7 @@ export function SkeletonGrid({
       columns === 4 && 'grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-4'
-      className
+      className;
     )}>
       {Array.from({ leng,
   t: h: items }).map((_, i) => (

@@ -8,11 +8,11 @@ const,
   }
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            📰 REVOLUTIONARY INSIGHTS • JANUARY 2025
+            📰 REVOLUTIONARY INSIGHTS • JANUARY 2025;
           </div>
           <h1 className="text-6xl font-bold mb-6">Revolutionary Tech Blog 2025</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Stay ahead of the curve with the latest insights, breakthroughs, and innovations in cutting-edge technology
+            Stay ahead of the curve with the latest insights, breakthroughs, and innovations in cutting-edge technology;
           </p>
         </div>
 
@@ -211,7 +211,7 @@ const,
             <p className="text-xl mb-8 opacity-90">Get the latest articles, breakthroughs, and technology insights delivered to your inbox</p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center max-w-md mx-auto">
-              <input 
+              <input;
                 type="email" 
                 placeholder="Enter your email" 
                 className="className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400,
@@ -222,7 +222,7 @@ const,
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-bold,
   hove: r:from-purple-700 hove,
   r:to-pink-700 transition-all duration-300">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </div>
@@ -252,11 +252,11 @@ const,
   s: m: flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold,
   hove: r:bg-purple-50 transition-colors">
-                Browse All Articles
+                Browse All Articles;
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hove,
   r:bg-white/10 transition-colors">
-                Follow Us
+                Follow Us;
               </button>
             </div>
           </div>
@@ -265,4 +265,4 @@ const,
     </div>
   )
   }
-export default RevolutionaryTechBlog2025
+export default RevolutionaryTechBlog2025;

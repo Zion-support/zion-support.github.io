@@ -21,7 +21,9 @@ export interface EnhancedMicroSaasService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -42,7 +44,7 @@ export interface EnhancedMicroSaasService {
 
 export,
   const: ENHANCED_MICRO_SAAS_SERVICES_2025: EnhancedMicroSaasService[] = [
-  // AI-Powered Business Intelligence & Analytics
+  // AI-Powered Business Intelligence & Analytics;
   {
   i,
   d: "ai-business-intelligence-platform",tit,

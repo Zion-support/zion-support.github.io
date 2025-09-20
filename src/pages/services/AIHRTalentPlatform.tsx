@@ -1,4 +1,4 @@
-import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award } from "lucide-react"
+import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award     } from "lucide-react";
 export default function AIHRTalentPlatform() {
   const features = [
   'AI-powered candidate screening and matchingAutomated resume parsing and skill assessment'
@@ -19,7 +19,7 @@ export default function AIHRTalentPlatform() {
   c: e: '$149/mo',featur,
   e: s: ['Up to 50 employeesBasic AI screening', 'Standard reportingEmail support']
       popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -27,7 +27,7 @@ export default function AIHRTalentPlatform() {
   c: e: '$399/mo',featur,
   e: s: ['Up to 200 employeesAdvanced AI analytics', 'Custom workflowsPriority support', 'Integration APIs']
       popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -35,7 +35,7 @@ export default function AIHRTalentPlatform() {
   c: e: '$999/mo',featur,
   e: s: ['Unlimited employeesFull AI suite', 'Custom AI trainingDedicated support', 'White-label solutionsAdvanced compliance']
       popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const useCases = [
@@ -57,7 +57,7 @@ export default function AIHRTalentPlatform() {
       <section className="bg-gradient-to-br from-orange-600 via-orange-700 to-red-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Sparkles className="w-4 h-4 mr-2" /> AI-Powered HR & Talent Management
+            <Sparkles className="w-4 h-4 mr-2" /> AI-Powered HR & Talent Management;
           </div>
           <h1 className="text-4xl,
   m: d:text-6xl font-bold mb-6">AI HR & Talent Platform</h1>
@@ -69,12 +69,12 @@ export default function AIHRTalentPlatform() {
   s: m: flex-row gap-4 justify-center">
             <a href="#pricing" className="px-8 py-4 bg-white text-orange-600 rounded-lg font-semibold,
   hove: r:bg-orange-50 transition-colors">
-              View Pricing
+              View Pricing;
             </a>
             <a href="htt,
   p: s://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-8 py-4 border border-white/30 text-white rounded-lg hove,
   r:bg-white/10 transition-colors">
-              Learn More
+              Learn More;
             </a>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function AIHRTalentPlatform() {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -225,13 +225,13 @@ export default function AIHRTalentPlatform() {
                 </ul>
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-  plan.popular 
+  plan.popular;
                     ? 'bg-orange-600 text-white,
   hove: r: bg-orange-700' 
                     : 'bg-gray-100 text-gray-900 hove,
   r:bg-gray-200'
 }`}>
-                  Get Started
+                  Get Started;
                 </button>
               </div>
             ))}
@@ -242,7 +242,7 @@ export default function AIHRTalentPlatform() {
             <a href="mail,
   t: o: kleber@ziontechgroup.com" className="text-orange-600 hove,
   r:text-orange-700 font-semibold">
-              Contact Sales Team
+              Contact Sales Team;
             </a>
           </div>
         </div>
@@ -284,12 +284,12 @@ export default function AIHRTalentPlatform() {
             <a href="mail,
   t: o:kleber@ziontechgroup.com" className="px-8 py-4 bg-orange-600 text-white rounded-lg font-semibold,
   hove: r:bg-orange-700 transition-colors">
-              Start Free Trial
+              Start Free Trial;
             </a>
             <a href="t,
   e: l:+13024640950" className="px-8 py-4 border border-white/30 text-white rounded-lg hove,
   r:bg-white/10 transition-colors">
-              Call Us
+              Call Us;
             </a>
           </div>
         </div>
@@ -308,7 +308,7 @@ export default function AIHRTalentPlatform() {
             <a href="t,
   e: l:+13024640950" className="text-orange-600,
   hove: r:text-orange-700 font-semibold">
-              +1 302 464 0950
+              +1 302 464 0950;
             </a>
           </div>
           
@@ -319,7 +319,7 @@ export default function AIHRTalentPlatform() {
             <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-orange-600,
   hove: r:text-orange-700 font-semibold">
-              kleber@ziontechgroup.com
+              kleber@ziontechgroup.com;
             </a>
           </div>
         </div>
@@ -327,9 +327,9 @@ export default function AIHRTalentPlatform() {
         <div className="mt-12 p-6 bg-gray-50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>
           <p className="text-gray-600 mb-4">
-            Learn more about our complete suite of AI-powered business solutions
+            Learn more about our complete suite of AI-powered business solutions;
           </p>
-          <a 
+          <a;
             href="htt,
   p: s://ziontechgroup.com" 
             target="_blank" 

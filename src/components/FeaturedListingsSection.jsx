@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Star, Eye, Heart, ArrowRight, Clock, Users, Award, Zap, Shield, Rocket, Brain, TrendingUp, Phone, CheckCircle } from "lucide-react"
-import { Link } from "react-router-dom"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Star, Eye, Heart, ArrowRight, Clock, Users, Award, Zap, Shield, Rocket, Brain, TrendingUp, Phone, CheckCircle   } from "lucide-react";
+import { Link   } from "react-router-dom";
+import { Badge   } from "@/components/ui/badge";
+import { Button   } from "@/components/ui/button";
 const featuredListings = [
   {
   id: 1,tit,
@@ -146,7 +146,7 @@ export function FeaturedListingsSection() {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -164,7 +164,7 @@ export function FeaturedListingsSection() {
   t: y: 1,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -172,7 +172,7 @@ export function FeaturedListingsSection() {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -185,9 +185,9 @@ export function FeaturedListingsSection() {
             className="className="text-4xl,
   m: d: text-5xl font-bold text-gray-900 mb-6";"
           >
-            Featured Solutions
+            Featured Solutions;
           </motion.h2>
-          <motion.p 
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -200,11 +200,11 @@ export function FeaturedListingsSection() {
   }
             className="className="text-xl text-gray-600 max-w-3xl mx-auto";"
           >
-            Discover our most popular and innovative solutions that are transforming businesses worldwide
+            Discover our most popular and innovative solutions that are transforming businesses worldwide;
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div;
           variants={containerVariants},
   }
           initial="hidden"
@@ -217,7 +217,7 @@ export function FeaturedListingsSection() {
   g:grid-cols-3 gap-8";"
         >
           {featuredListings.map((listing, index) => (
-  <motion.div
+  <motion.div;
               key={listing.id},
   }
               variants={itemVariants},
@@ -232,7 +232,7 @@ export function FeaturedListingsSection() {
               {/* Image */},
   }
               <div className="relative h-48 overflow-hidden">
-                <img
+                <img;
                   src={listing.image},
   }
                   alt={listing.title},
@@ -243,7 +243,7 @@ export function FeaturedListingsSection() {
                 {listing.featured && (
   <div className="absolute top-4 left-4">
                     <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0">
-                      Featured
+                      Featured;
                     </Badge>
                   </div>
                 )}
@@ -302,7 +302,7 @@ export function FeaturedListingsSection() {
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-gray-900">{listing.price}</div>
                   <div className="text-sm text-gray-500">
-                    {listing.reviews} reviews
+                    {listing.reviews} reviews;
                   </div>
                 </div>
 
@@ -318,7 +318,7 @@ export function FeaturedListingsSection() {
                     ))},
   {listing.technologies.length > 3 && (
   <Badge variant="outline" className="text-xs">
-                        +{listing.technologies.length - 3} more
+                        +{listing.technologies.length - 3} more;
                       </Badge>
                     )}
                   </div>
@@ -347,7 +347,7 @@ export function FeaturedListingsSection() {
   hove: r: from-blue-700 hove,
   r:to-purple-700 text-white">
                     <Link to={listing.link} className="flex items-center gap-2">
-                      View Details
+                      View Details;
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </Button>
@@ -363,7 +363,7 @@ export function FeaturedListingsSection() {
   }
               <AnimatePresence>
                 {hoveredListing === listing.id && (
-  <motion.div
+  <motion.div;
                     initial={ opaci,
   t: y: 0 },
   }
@@ -381,7 +381,7 @@ export function FeaturedListingsSection() {
                       <Button className="bg-white text-blue-600,
   hove: r:bg-gray-100">
                         <Link to={listing.link} className="flex items-center gap-2">
-                          Explore Now
+                          Explore Now;
                           <ArrowRight className="w-4 h-4" />
                         </Link>
                       </Button>
@@ -395,7 +395,7 @@ export function FeaturedListingsSection() {
 
         {/* CTA Section */},
   }
-        <motion.div 
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -411,7 +411,7 @@ export function FeaturedListingsSection() {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-xl mb-6 opacity-90">
-              Join thousands of businesses already using our solutions
+              Join thousands of businesses already using our solutions;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -419,7 +419,7 @@ export function FeaturedListingsSection() {
   hove: r:bg-gray-100">
                 <Link to="/contact" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Contact Sales
+                  Contact Sales;
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white,
@@ -427,7 +427,7 @@ export function FeaturedListingsSection() {
   r:text-blue-600">
                 <Link to="/services" className="flex items-center gap-2">
                   <Rocket className="w-5 h-5" />
-                  Browse All Services
+                  Browse All Services;
                 </Link>
               </Button>
             </div>

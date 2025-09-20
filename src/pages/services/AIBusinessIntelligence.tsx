@@ -1,31 +1,35 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   BarChart3,
   TrendingUp,
   Zap,
   Shield,
   Globe,
-  Database
-  Cloud
-  Lock
-  Users
-  Rocket
-  CheckCircle
-  ArrowRight
-  PieChart
-  LineChart
-  Activity
-  Target
-  Lightbulb
-  Eye
-  Search
-  Filter
-  Download
-  Share2
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Database;
+  Cloud;
+  Lock;
+  Users;
+  Rocket;
+  CheckCircle;
+  ArrowRight;
+  PieChart;
+  LineChart;
+  Activity;
+  Target;
+  Lightbulb;
+  Eye;
+  Search;
+  Filter;
+  Download;
+  Share2;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 export default function AIBusinessIntelligence() {
   const features = [
   {
@@ -158,7 +162,7 @@ export default function AIBusinessIntelligence() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Business Intelligence Services - Zion Tech Group"
         description="Transform your business data into actionable insights with our AI-powered Business Intelligence solutions. Real-time analytics, predictive modeling, and automated reporting."
       />
@@ -168,7 +172,7 @@ export default function AIBusinessIntelligence() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -182,11 +186,11 @@ export default function AIBusinessIntelligence() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-400/20 text-cyan-400 rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Intelligence
+              AI-Powered Intelligence;
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI Business
+              AI Business;
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Intelligence</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -198,12 +202,12 @@ export default function AIBusinessIntelligence() {
   hove: r:from-cyan-500,
   hove: r:to-blue-600 transition-all duration-300,
   hove: r:scale-105">
-                Get Started
+                Get Started;
               </button>
               <button className="px-8 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -216,7 +220,7 @@ export default function AIBusinessIntelligence() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -231,8 +235,8 @@ export default function AIBusinessIntelligence() {
                 What is AI Business Intelligence?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                AI Business Intelligence combines traditional BI tools with artificial intelligence 
-                and machine learning to provide deeper insights, predictive capabilities, and 
+                AI Business Intelligence combines traditional BI tools with artificial intelligence;
+                and machine learning to provide deeper insights, predictive capabilities, and;
                 automated decision-making support.
               </p>
               <div className="space-y-4">
@@ -260,7 +264,7 @@ export default function AIBusinessIntelligence() {
               </div>
             </motion.div>
             
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -311,7 +315,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -324,10 +328,10 @@ export default function AIBusinessIntelligence() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Key Features
+              Key Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Business Intelligence platform provides comprehensive capabilities for 
+              Our AI Business Intelligence platform provides comprehensive capabilities for;
               data analysis, visualization, and decision-making support.
             </p>
           </motion.div>
@@ -336,7 +340,7 @@ export default function AIBusinessIntelligence() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -368,7 +372,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -381,7 +385,7 @@ export default function AIBusinessIntelligence() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Core Capabilities
+              Core Capabilities;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive tools and features to transform your business data into actionable intelligence.
@@ -391,7 +395,7 @@ export default function AIBusinessIntelligence() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {capabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -434,7 +438,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -447,10 +451,10 @@ export default function AIBusinessIntelligence() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Industry Use Cases
+              Industry Use Cases;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI Business Intelligence is transforming industries across the globe
+              AI Business Intelligence is transforming industries across the globe;
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
@@ -458,7 +462,7 @@ export default function AIBusinessIntelligence() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -501,7 +505,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -514,10 +518,10 @@ export default function AIBusinessIntelligence() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Business Benefits
+              Business Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI Business Intelligence can transform your organization 
+              Discover how AI Business Intelligence can transform your organization;
               and drive measurable business outcomes.
             </p>
           </motion.div>
@@ -526,7 +530,7 @@ export default function AIBusinessIntelligence() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -558,7 +562,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -571,7 +575,7 @@ export default function AIBusinessIntelligence() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Implementation Process
+              Implementation Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our proven methodology ensures successful AI BI deployment and rapid value realization.
@@ -606,7 +610,7 @@ export default function AIBusinessIntelligence() {
   o: n: 'Launch your solution and provide training and ongoing support'
 },
   ].map((phase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -637,7 +641,7 @@ export default function AIBusinessIntelligence() {
   }
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -652,7 +656,7 @@ export default function AIBusinessIntelligence() {
               Ready to Transform Your Business Intelligence?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how AI-powered Business Intelligence can revolutionize your decision-making 
+              Discover how AI-powered Business Intelligence can revolutionize your decision-making;
               process and drive unprecedented business growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -660,12 +664,12 @@ export default function AIBusinessIntelligence() {
   hove: r: from-cyan-500,
   hove: r:to-blue-600 transition-all duration-300,
   hove: r:scale-105">
-                Start Your AI BI Journey
+                Start Your AI BI Journey;
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300">
-                Schedule Consultation
+                Schedule Consultation;
               </button>
             </div>
           </motion.div>

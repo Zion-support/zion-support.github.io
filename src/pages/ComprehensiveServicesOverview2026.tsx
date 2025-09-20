@@ -1,89 +1,92 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
-  Cloud
-  Shield
-  Server
-  Zap
-  Globe
-  Cpu
-  Database
-  Network
-  Lock
-  Code
-  Rocket
-  Users
-  Search
-  Filter
-  Star
-  TrendingUp
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight
-  Play
-  BookOpen
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Globe as GlobeIcon
-  Atom
-  Blockchain
-  Heart
-  Scale
-  Factory
-  Satellite
-  ShoppingCart
-  Building
-  Truck
-  Eye
-  EyeOff
-  ExternalLink
-  Award
-  Target
-  Lightbulb
-  Sparkles
-  Zap as ZapIcon
-  Brain as BrainIcon
-  Dna
-  Space
-  Layers
-  Monitor
-  Smartphone
-  Globe2
-  Leaf
-  BarChart3
-  PieChart
-  TrendingDown
-  Activity
-  Shield as ShieldIcon
-  Lock as LockIcon
-  Key
-  Database as DatabaseIcon
-  Server as ServerIcon
-  Wifi
-  Smartphone as SmartphoneIcon
-  Monitor as MonitorIcon
-  Globe as GlobeIcon2
-  Cpu as CpuIcon
-  Brain as BrainIcon2
-  Atom as AtomIcon
-  Rocket as RocketIcon
-  Satellite as SatelliteIcon
-  Dna as DnaIcon
-  Layers as LayersIcon
-  Monitor as MonitorIcon2
-  Smartphone as SmartphoneIcon2
-  Globe as GlobeIcon3
-  Cpu as CpuIcon2
-  Network as NetworkIcon
-  Leaf as LeafIcon
-} from "lucide-react"
+  Brain;
+  Cloud;
+  Shield;
+  Server;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  Search;
+  Filter;
+  Star;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Globe as GlobeIcon;
+  Atom;
+  Blockchain;
+  Heart;
+  Scale;
+  Factory;
+  Satellite;
+  ShoppingCart;
+  Building;
+  Truck;
+  Eye;
+  EyeOff;
+  ExternalLink;
+  Award;
+  Target;
+  Lightbulb;
+  Sparkles;
+  Zap as ZapIcon;
+  Brain as BrainIcon;
+  Dna;
+  Space;
+  Layers;
+  Monitor;
+  Smartphone;
+  Globe2;
+  Leaf;
+  BarChart3;
+  PieChart;
+  TrendingDown;
+  Activity;
+  Shield as ShieldIcon;
+  Lock as LockIcon;
+  Key;
+  Database as DatabaseIcon;
+  Server as ServerIcon;
+  Wifi;
+  Smartphone as SmartphoneIcon;
+  Monitor as MonitorIcon;
+  Globe as GlobeIcon2;
+  Cpu as CpuIcon;
+  Brain as BrainIcon2;
+  Atom as AtomIcon;
+  Rocket as RocketIcon;
+  Satellite as SatelliteIcon;
+  Dna as DnaIcon;
+  Layers as LayersIcon;
+  Monitor as MonitorIcon2;
+  Smartphone as SmartphoneIcon2;
+  Globe as GlobeIcon3;
+  Cpu as CpuIcon2;
+  Network as NetworkIcon;
+  Leaf as LeafIcon;
+}
+}
+ } from "lucide-react";
 import SEO from "@/components/SEO"
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026"
+import { ULTIMATE_INNOVATIVE_SERVICES_2026   } from "@/data/ultimateInnovativeServices2026";
 export default function ComprehensiveServicesOverview2026() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
@@ -212,19 +215,19 @@ export default function ComprehensiveServicesOverview2026() {
 },
   ]
   const filteredCategories = selectedCategory === 'all'
-    ? serviceCategories
+    ? serviceCategories;
     : serviceCategories.filter(cat => cat.id === selectedCategory)
 
   const toggleCategoryExpansion = (category,
   I: d: string) () => {
   setExpandedCategory(expandedCategory === categoryId ? null : categoryId)
   }
-  const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length
+  const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length;
 const totalMarketSize = '$3.2+ trillion'
 const avgROI = '400-1500%'
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO
+      <SEO;
         title="Comprehensive Services Overview 2026 | Zion Tech Group"
         description="Explore our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. From Quantum AI to Sustainable Technology."
         keywords="comprehensive services, quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
@@ -237,7 +240,7 @@ const avgROI = '400-1500%'
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -250,10 +253,10 @@ const avgROI = '400-1500%'
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
-              Comprehensive Services
+              Comprehensive Services;
               <span className="block text-6xl,
   m: d:text-8xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                Overview 2026
+                Overview 2026;
               </span>
             </h1>
             <p className="text-xl m,
@@ -266,7 +269,7 @@ const avgROI = '400-1500%'
   }
             <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <motion.div
+              <motion.div;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -275,7 +278,7 @@ const avgROI = '400-1500%'
                 <div className="text-4xl font-bold text-white mb-2">{totalServices}</div>
                 <div className="text-white/80">Revolutionary Services</div>
               </motion.div>
-              <motion.div
+              <motion.div;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -284,7 +287,7 @@ const avgROI = '400-1500%'
                 <div className="text-4xl font-bold text-white mb-2">{totalMarketSize}</div>
                 <div className="text-white/80">Total Market Size</div>
               </motion.div>
-              <motion.div
+              <motion.div;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -310,7 +313,7 @@ const avgROI = '400-1500%'
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <button
+            <button;
               onClick={onClick={() => setSelectedCategory('all')},
   },
   }
@@ -321,17 +324,17 @@ const avgROI = '400-1500%'
   hove: r:bg-white/20'
 }`}
             >
-              All Categories
+              All Categories;
             </button>
             {serviceCategories.map(category => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                 className={`px-6 py-3 rounded-lg transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                     ? 'bg-zion-cyan text-white'
                     : 'bg-white/10 text-zion-slate-300,
   hove: r:bg-white/20'
@@ -354,17 +357,17 @@ const avgROI = '400-1500%'
           <div className="text-center mb-12">
             <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-              {filteredCategories.length} Technology Categories
+              {filteredCategories.length} Technology Categories;
             </h2>
             <p className="text-zion-slate-300 text-lg">
-              Each category represents a breakthrough in technology innovation
+              Each category represents a breakthrough in technology innovation;
             </p>
           </div>
 
           <div className="space-y-8">
             <AnimatePresence>
               {filteredCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
                   key={category.id},
   }
                   initial={ opaci,
@@ -454,7 +457,7 @@ const avgROI = '400-1500%'
 
                   {/* Expand/Collapse Button */},
   }
-                  <button
+                  <button;
                     onClick={onClick={() => toggleCategoryExpansion(category.id)},
   },
   }
@@ -464,12 +467,12 @@ const avgROI = '400-1500%'
                     {expandedCategory === category.id ? (
   <>
                         <EyeOff className="w-4 h-4" />
-                        Show Less
+                        Show Less;
                       </>
                     ) : (
   <>
                         <Eye className="w-4 h-4" />
-                        View All Services
+                        View All Services;
                       </>
                     )}
                   </button>
@@ -478,7 +481,7 @@ const avgROI = '400-1500%'
   }
                   <AnimatePresence>
                     {expandedCategory === category.id && (
-  <motion.div
+  <motion.div;
                         initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -536,7 +539,7 @@ const avgROI = '400-1500%'
 
                               <div className="flex flex-wrap gap-2 mb-4">
                                 {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                                     key={tagIndex},
   }
                                     className="className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md";"
@@ -547,14 +550,14 @@ const avgROI = '400-1500%'
                                 ))}
                               </div>
 
-                              <Link
+                              <Link;
                                 to="/contact"
                                 className="className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r: from-zion-blue hove,
   r:to-zion-cyan transition-all duration-200 font-semibold text-sm";"
                               >
                                 <MessageCircle className="w-4 h-4" />
-                                Get Started
+                                Get Started;
                               </Link>
                             </div>
                           ))}
@@ -575,7 +578,7 @@ const avgROI = '400-1500%'
         <div className="max-w-4xl mx-auto text-center px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -599,23 +602,23 @@ const avgROI = '400-1500%'
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r:from-zion-blue,
   hove: r:to-zion-cyan transition-all duration-200 font-semibold text-lg";"
               >
                 <MessageCircle className="w-5 h-5" />
-                Start Your Journey
+                Start Your Journey;
               </Link>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg,
   hove: r:bg-white/20 transition-all duration-200 font-semibold text-lg";"
               >
                 <Phone className="w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
             <div className="mt-8 text-zion-slate-400">

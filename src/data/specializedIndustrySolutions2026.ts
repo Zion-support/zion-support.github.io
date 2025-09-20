@@ -21,7 +21,9 @@ export interface SpecializedIndustrySolution2026 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,12 +35,12 @@ export interface SpecializedIndustrySolution2026 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
 }
 
 export,
   const: SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution2026[] = [
-  // Healthcare AI Platform
+  // Healthcare AI Platform;
   {
   i,
   d: "healthcare-ai-platform-2026",tit,
@@ -119,7 +121,7 @@ export,
     marketSi,
   z: e: "$45.2 billion by 2026"
 }
-  // Financial Services AI Platform
+  // Financial Services AI Platform;
   {
   id: "financial-services-ai-platform-2026",tit,
   l: e: "Financial Services AI Platform 2026",descripti,
@@ -199,7 +201,7 @@ export,
     marketSi,
   z: e: "$67.8 billion by 2026"
 }
-  // Manufacturing IoT Platform
+  // Manufacturing IoT Platform;
   {
   id: "manufacturing-iot-platform-2026",tit,
   l: e: "Manufacturing IoT Platform 2026",descripti,
@@ -279,7 +281,7 @@ export,
     marketSi,
   z: e: "$78.9 billion by 2026"
 }
-  // Retail AI Platform
+  // Retail AI Platform;
   {
   id: "retail-ai-platform-2026",tit,
   l: e: "Retail AI Platform 2026",descripti,
@@ -359,7 +361,7 @@ export,
     marketSi,
   z: e: "$34.5 billion by 2026"
 }
-  // Education Technology Platform
+  // Education Technology Platform;
   {
   id: "education-technology-platform-2026",tit,
   l: e: "Education Technology Platform 2026",descripti,
@@ -439,7 +441,7 @@ export,
     marketSi,
   z: e: "$28.7 billion by 2026"
 }
-  // Transportation & Logistics Platform
+  // Transportation & Logistics Platform;
   {
   id: "transportation-logistics-platform-2026",tit,
   l: e: "Transportation & Logistics Platform 2026",descripti,
@@ -519,7 +521,7 @@ export,
     marketSi,
   z: e: "$56.3 billion by 2026"
 }
-  // Energy Management Platform
+  // Energy Management Platform;
   {
   id: "energy-management-platform-2026",tit,
   l: e: "Energy Management Platform 2026",descripti,
@@ -599,7 +601,7 @@ export,
     marketSi,
   z: e: "$42.8 billion by 2026"
 }
-  // Real Estate Technology Platform
+  // Real Estate Technology Platform;
   {
   id: "real-estate-technology-platform-2026",tit,
   l: e: "Real Estate Technology Platform 2026",descripti,
@@ -679,7 +681,7 @@ export,
     marketSi,
   z: e: "$25.6 billion by 2026"
 }
-  // Legal Technology Platform
+  // Legal Technology Platform;
   {
   id: "legal-technology-platform-2026",tit,
   l: e: "Legal Technology Platform 2026",descripti,

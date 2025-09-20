@@ -1,21 +1,25 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
+import { SEO     } from "../../components/SEO";
 import {
-  MessageCircle
+  MessageCircle;
   Brain,
   Zap,
   Users,
   TrendingUp,
   Shield,
-  Clock
-  BarChart3
-  Headphones
-  Bot
-} from "lucide-react"
+  Clock;
+  BarChart3;
+  Headphones;
+  Bot;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AICustomerSupport() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Customer Support - Zion Tech Group"
         description="Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation."
       />
@@ -33,7 +37,7 @@ export default function AICustomerSupport() {
               <h1 className="text-4xl,
   m: d:text-5xl,
   l: g:text-6xl font-bold text-white mb-6 leading-tight">
-                AI Customer Support
+                AI Customer Support;
               </h1>
               <p className="text-xl,
   m: d:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -41,14 +45,14 @@ export default function AICustomerSupport() {
               </p>
             </div>
             <div className="mb-16">
-              <a
+              <a;
                 href="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl,
   hove: r:from-blue-700,
   hove: r:to-purple-700 transition-all duration-300 shadow-2xl hove,
   r:shadow-blue-500/25";"
               >
-                Get Started with AI Customer Support
+                Get Started with AI Customer Support;
               </a>
             </div>
           </div>
@@ -64,10 +68,10 @@ export default function AICustomerSupport() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Revolutionary AI-Powered Support
+              Revolutionary AI-Powered Support;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your customer support with our advanced AI automation
+              Transform your customer support with our advanced AI automation;
             </p>
           </div>
           
@@ -80,7 +84,7 @@ export default function AICustomerSupport() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Intelligent Chatbots</h3>
               <p className="text-gray-300">
-                Advanced AI chatbots that understand natural language and provide accurate responses
+                Advanced AI chatbots that understand natural language and provide accurate responses;
               </p>
             </div>
             
@@ -90,7 +94,7 @@ export default function AICustomerSupport() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">24/7 Availability</h3>
               <p className="text-gray-300">
-                Provide instant customer support anytime, anywhere, without human limitations
+                Provide instant customer support anytime, anywhere, without human limitations;
               </p>
             </div>
             
@@ -100,7 +104,7 @@ export default function AICustomerSupport() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Smart Issue Resolution</h3>
               <p className="text-gray-300">
-                AI that learns from customer interactions to provide better solutions over time
+                AI that learns from customer interactions to provide better solutions over time;
               </p>
             </div>
             
@@ -110,7 +114,7 @@ export default function AICustomerSupport() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Personalized Support</h3>
               <p className="text-gray-300">
-                Tailored responses based on customer history and preferences
+                Tailored responses based on customer history and preferences;
               </p>
             </div>
             
@@ -120,7 +124,7 @@ export default function AICustomerSupport() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Performance Analytics</h3>
               <p className="text-gray-300">
-                Comprehensive insights into support performance and customer satisfaction
+                Comprehensive insights into support performance and customer satisfaction;
               </p>
             </div>
             
@@ -130,7 +134,7 @@ export default function AICustomerSupport() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Secure & Compliant</h3>
               <p className="text-gray-300">
-                Enterprise-grade security with compliance for data protection regulations
+                Enterprise-grade security with compliance for data protection regulations;
               </p>
             </div>
           </div>
@@ -148,16 +152,16 @@ export default function AICustomerSupport() {
             Ready to Transform Your Customer Support?
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Start providing intelligent, 24/7 customer assistance today
+            Start providing intelligent, 24/7 customer assistance today;
           </p>
-          <a
+          <a;
             href="/contact"
             className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-300 shadow-2xl hove,
   r:shadow-blue-500/25";"
           >
-            Get Started with AI Customer Support
+            Get Started with AI Customer Support;
           </a>
         </div>
       </section>

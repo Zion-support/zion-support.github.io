@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../../components/SEO"
-import { motion } from "framer-motion"
-import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database     } from "lucide-react";
 const,
   SustainableTechnolog: y: React.FC = () () => {
   const features = [
@@ -64,7 +64,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Sustainable Technology Services - Zion Tech Group"
         description="Transform your business with sustainable technology solutions. Reduce environmental impact while improving efficiency and cost savings."
       />
@@ -73,7 +73,7 @@ const,
   }
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -92,14 +92,14 @@ const,
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Sustainable
+              Sustainable;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400">
-                Technology
+                Technology;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with sustainable technology solutions that reduce environmental impact 
+              Transform your business with sustainable technology solutions that reduce environmental impact;
               while improving efficiency, cost savings, and brand reputation.
             </p>
             
@@ -109,11 +109,11 @@ const,
   hove: r:from-green-400,
   hove: r:to-emerald-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-green-500/20">
-                Go Green
+                Go Green;
               </button>
               <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hove,
   r:bg-green-400/10 transition-all duration-200">
-                Learn More
+                Learn More;
               </button>
             </div>
           </motion.div>
@@ -124,7 +124,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -137,10 +137,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Sustainable Technology Features
+              Sustainable Technology Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Eco-friendly solutions for a greener future
+              Eco-friendly solutions for a greener future;
             </p>
           </motion.div>
 
@@ -148,7 +148,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -180,7 +180,7 @@ const,
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -193,17 +193,17 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Sustainable Solutions
+              Sustainable Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive green technology implementations
+              Comprehensive green technology implementations;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
                 key={solution.title},
   }
                 initial={ opaci,
@@ -236,7 +236,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -252,13 +252,13 @@ const,
               Why Choose Sustainable Technology?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Benefits for your business and the planet
+              Benefits for your business and the planet;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d: grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -281,7 +281,7 @@ const,
               </ul>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -295,14 +295,14 @@ const,
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Go Green Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to make your business more sustainable? Our green technology experts can help you 
+                Ready to make your business more sustainable? Our green technology experts can help you;
                 implement eco-friendly solutions that benefit both your bottom line and the environment.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg,
   hove: r: from-green-400,
   hove: r:to-emerald-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-green-500/20">
-                Start Sustainability Journey
+                Start Sustainability Journey;
               </button>
             </motion.div>
           </div>
@@ -313,7 +313,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -328,7 +328,7 @@ const,
               Ready to Go Green?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your business with sustainable technology solutions
+              Transform your business with sustainable technology solutions;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -336,11 +336,11 @@ const,
   hove: r:from-green-400,
   hove: r:to-emerald-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-green-500/20">
-                Start Green Transformation
+                Start Green Transformation;
               </button>
               <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hove,
   r:bg-green-400/10 transition-all duration-200">
-                Schedule Consultation
+                Schedule Consultation;
               </button>
             </div>
           </motion.div>
@@ -349,4 +349,4 @@ const,
     </div>
   )
 }
-export default SustainableTechnology
+export default SustainableTechnology;

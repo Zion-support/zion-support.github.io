@@ -1,30 +1,33 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import SEO from "../components/SEOHead"
-import { INNOVATIVE_SERVICES_2027 } from "@/data/innovativeServices2027"
+import { INNOVATIVE_SERVICES_2027   } from "@/data/innovativeServices2027";
 import {
-  Brain
-  Shield
-  Zap
-  Code
-  Signal
-  Users
-  Truck
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  CheckCircle
-  TrendingUp
-  Globe
-  Cpu
-  Database
-  Network
-  Lock
-  Cloud
-  Rocket
-} from "lucide-react"
+  Brain;
+  Shield;
+  Zap;
+  Code;
+  Signal;
+  Users;
+  Truck;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  CheckCircle;
+  TrendingUp;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Cloud;
+  Rocket;
+}
+}
+ } from "lucide-react";
 const,
   AllServices202: 7: React.FC = () () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
@@ -62,7 +65,7 @@ const,
   },
   ]
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
-    selectedCategory === 'All' || service.category === selectedCategory
+    selectedCategory === 'All' || service.category === selectedCategory;
 )
 
   const getCategoryStats = (category,
@@ -74,7 +77,9 @@ const,
   t: INNOVATIVE_SERVICES_2027.length,avgPri,
   c: e: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length)
         avgRati,
-  n: g: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10
+  n: g: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
+}
+}
 },
   }
     const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId)
@@ -83,7 +88,9 @@ const,
   n: t: services.length,avgPri,
   c: e: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length)
       avgRati,
-  n: g: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
+  n: g: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10;
+}
+}
 },
   }
 
@@ -99,7 +106,7 @@ const,
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -117,13 +124,13 @@ const,
   t: y: 1,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
   return (
     <>
-      <SEOHead
+      <SEOHead;
         title="All Services 2027 - Zion Tech Group"
         description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed."
         canonical="/all-services-2027"
@@ -137,7 +144,7 @@ const,
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -150,7 +157,7 @@ const,
           >
             <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              All Services 2027
+              All Services 2027;
             </h1>
             <p className="text-xl,
   m: d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -159,22 +166,22 @@ const,
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/comprehensive-pricing-2027"
                 className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                View Pricing
+                View Pricing;
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-300";"
               >
-                Get Started
+                Get Started;
               </Link>
             </div>
           </motion.div>
@@ -211,10 +218,10 @@ const,
           <div className="text-center mb-16">
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Service Categories
+              Service Categories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology services, each designed to address
+              Explore our comprehensive range of technology services, each designed to address;
               specific business challenges and drive innovation.
             </p>
           </div>
@@ -223,9 +230,9 @@ const,
   g:grid-cols-3 gap-8">
             {categories.map((category) () => {
   const stats = getCategoryStats(category.id)
-              const IconComponent = category.icon
+              const IconComponent = category.icon;
               return (
-                <motion.div
+                <motion.div;
                   key={category.id},
   }
                   variants={itemVariants},
@@ -276,11 +283,11 @@ const,
               {selectedCategory === 'All' ? 'All Services' : `${selectedCategory} Services`}
             </h2>
             <div className="text-gray-400">
-              {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} available
+              {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} available;
             </div>
           </div>
 
-          <motion.div
+          <motion.div;
             variants={containerVariants},
   }
             initial="hidden"
@@ -313,7 +320,7 @@ const,
               Why Choose Our Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Each service category is designed with specific business needs in mind
+              Each service category is designed with specific business needs in mind;
               providing targeted solutions that deliver measurable results.
             </p>
           </div>
@@ -322,7 +329,7 @@ const,
   g:grid-cols-2 gap-12">
             {/* AI Services */},
   }
-            <motion.div
+            <motion.div;
               variants={itemVariants},
   }
               className="className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light";"
@@ -335,7 +342,7 @@ const,
               </div>
               <p className="text-gray-300 mb-6">
                 Transform your business with cutting-edge artificial intelligence solutions.
-                From predictive analytics to autonomous systems, our AI services drive innovation
+                From predictive analytics to autonomous systems, our AI services drive innovation;
                 and efficiency across all business operations.
               </p>
               <div className="space-y-3">
@@ -356,7 +363,7 @@ const,
 
             {/* Cybersecurity */},
   }
-            <motion.div
+            <motion.div;
               variants={itemVariants},
   }
               className="className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light";"
@@ -369,7 +376,7 @@ const,
               </div>
               <p className="text-gray-300 mb-6">
                 Protect your digital assets with enterprise-grade security solutions.
-                Our cybersecurity services provide comprehensive protection against evolving threats
+                Our cybersecurity services provide comprehensive protection against evolving threats;
                 while ensuring compliance with industry standards.
               </p>
               <div className="space-y-3">
@@ -390,7 +397,7 @@ const,
 
             {/* Emerging Technology */},
   }
-            <motion.div
+            <motion.div;
               variants={itemVariants},
   }
               className="className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light";"
@@ -402,8 +409,8 @@ const,
                 <h3 className="text-2xl font-bold text-white">Emerging Technology</h3>
               </div>
               <p className="text-gray-300 mb-6">
-                Stay ahead of the curve with next-generation technologies. From quantum computing
-                to blockchain solutions, we help you explore and implement cutting-edge innovations
+                Stay ahead of the curve with next-generation technologies. From quantum computing;
+                to blockchain solutions, we help you explore and implement cutting-edge innovations;
                 that give you a competitive advantage.
               </p>
               <div className="space-y-3">
@@ -424,7 +431,7 @@ const,
 
             {/* IT Services */},
   }
-            <motion.div
+            <motion.div;
               variants={itemVariants},
   }
               className="className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light";"
@@ -437,7 +444,7 @@ const,
               </div>
               <p className="text-gray-300 mb-6">
                 Streamline your IT operations with our comprehensive technology services.
-                From DevOps automation to infrastructure management, we help you build
+                From DevOps automation to infrastructure management, we help you build;
                 robust, scalable, and efficient technology systems.
               </p>
               <div className="space-y-3">
@@ -463,7 +470,7 @@ const,
   }
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -482,26 +489,26 @@ const,
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-              Choose from our comprehensive portfolio of services and start your digital
+              Choose from our comprehensive portfolio of services and start your digital;
               transformation journey today. Our experts are ready to help you succeed.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold,
   hove: r:bg-gray-100 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/comprehensive-pricing-2027"
                 className="className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-cyan-600 transition-all duration-300";"
               >
-                View Pricing
+                View Pricing;
               </Link>
             </div>
           </motion.div>
@@ -531,7 +538,7 @@ const,
     },
   }
   return (
-    <motion.div
+    <motion.div;
       variants={itemVariants},
   }
       className="className="bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden,
@@ -540,7 +547,7 @@ const,
       {/* Service Image */},
   }
       <div className="relative h-48 overflow-hidden">
-        <img
+        <img;
           src={service.images[0],
   },
   }
@@ -579,7 +586,7 @@ const,
             {service.features.slice(0, 2).map((featu,
   r: e: string, ind,
   e: x: number) => (
-  <span
+  <span;
                 key={index},
   }
                 className="className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300";"
@@ -609,7 +616,7 @@ const,
         {/* Action Buttons */},
   }
         <div className="flex space-x-3">
-          <Link
+          <Link;
             to={service.website},
   }
             className="className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium,
@@ -619,17 +626,17 @@ const,
             <span>Learn More</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
-          <Link
+          <Link;
             to="/contact"
             className="className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-300";"
           >
-            Contact
+            Contact;
           </Link>
         </div>
       </div>
     </motion.div>
   )
 }
-export default AllServices2027
+export default AllServices2027;

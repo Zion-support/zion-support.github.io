@@ -1,9 +1,9 @@
 
 
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
-import { FileText, Download, Calendar, User, ArrowRight, BookOpen, TrendingUp, Target, Brain, Cloud, Shield, Zap } from "lucide-react"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
+import { FileText, Download, Calendar, User, ArrowRight, BookOpen, TrendingUp, Target, Brain, Cloud, Shield, Zap   } from "lucide-react";
 export,
   const: WhitePapers: React.FC = () () => {
   const whitePapers = [
@@ -128,7 +128,7 @@ export,
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="White Papers - Zion Tech Group"
         description="Access our comprehensive collection of white papers covering AI, quantum computing, cybersecurity, and emerging technologies."
       />
@@ -137,7 +137,7 @@ export,
   }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -151,14 +151,14 @@ export,
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <BookOpen className="w-4 h-4" />
-              Research & Insights
+              Research & Insights;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
               White Papers &
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Research
+                Research;
               </span>
             </h1>
             
@@ -198,11 +198,11 @@ export,
         <div className="container-responsive">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
-  <button
+  <button;
                 key={category.name},
   }
                 className={`px-6 py-3 rounded-full border transition-all duration-300 ${
-  category.active
+  category.active;
                     ? 'border-cyan-400 bg-cyan-400/20 text-cyan-400'
                     : 'border-slate-600 text-gray-400,
   hove: r: border-slate-500 hove,
@@ -231,7 +231,7 @@ export,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {whitePapers.filter(wp => wp.featured).map((paper) => (
-  <motion.div
+  <motion.div;
                 key={paper.id},
   }
                 initial={ opaci,
@@ -285,7 +285,7 @@ export,
   hove: r: from-cyan-600,
   hove: r:to-blue-700 text-white text-sm font-medium rounded-lg transition-all duration-300 transform hove,
   r:scale-105">
-                    Download
+                    Download;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -306,7 +306,7 @@ export,
           
           <div className="space-y-6">
             {whitePapers.map((paper) => (
-  <motion.div
+  <motion.div;
                 key={paper.id},
   }
                 initial={ opaci,
@@ -340,7 +340,7 @@ export,
                       </span>
                       {paper.featured && (
   <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-400/30">
-                          Featured
+                          Featured;
                         </span>
                       )}
                     </div>
@@ -369,7 +369,7 @@ export,
                       </span>
                       <span className="flex items-center gap-2">
                         <Download className="w-4 h-4" />
-                        {paper.downloadCount.toLocaleString()} downloads
+                        {paper.downloadCount.toLocaleString()} downloads;
                       </span>
                     </div>
                   </div>
@@ -380,7 +380,7 @@ export,
   hove: r:to-blue-700 text-white font-medium rounded-lg transition-all duration-300,
   transform: hover:scale-105 shadow-lg hove,
   r:shadow-cyan-500/25">
-                      Download PDF
+                      Download PDF;
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -395,7 +395,7 @@ export,
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -410,7 +410,7 @@ export,
   }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Updated with Latest Research
+              Stay Updated with Latest Research;
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Get notified when we publish new white papers and research insights. 
@@ -419,7 +419,7 @@ export,
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="className="flex-1 px-6 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400,
@@ -432,7 +432,7 @@ export,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hove,
   r:scale-105">
-                Subscribe
+                Subscribe;
               </button>
             </div>
             
@@ -445,4 +445,4 @@ export,
     </div>
   )
 }
-export default WhitePapers
+export default WhitePapers;

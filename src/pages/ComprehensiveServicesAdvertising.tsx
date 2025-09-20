@@ -1,94 +1,97 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Brain
+  Brain;
   Cloud,
   Shield,
   Rocket,
   Zap,
   Users,
   Globe,
-  Cpu
-  Lock
-  Heart
-  Star
-  ArrowRight
-  CheckCircle
-  TrendingUp
-  Code
-  Database
-  Network
-  Smartphone
-  BarChart3
-  MessageSquare
-  FileText
-  ShoppingCart
-  Headphones
-  Mail
-  Search
-  HelpCircle
-  ShieldCheck
-  Globe2
-  Leaf
-  Sparkles
-  Target
-  DollarSign
-  Clock
-  Award
-  Phone
-  Mail as MailIcon
-  MapPin
-  Infinity
-  Bot
-  CircuitBoard
-  Satellite
-  Atom
-  Blockchain
-  CpuIcon
-  DatabaseIcon
-  BrainCircuit
-  RocketIcon
-  ShieldIcon
-  ZapIcon
-  UsersIcon
-  GlobeIcon
-  LockIcon
-  HeartIcon
-  StarIcon
-  ArrowRightIcon
-  CheckCircleIcon
-  TrendingUpIcon
-  CodeIcon
-  DatabaseIcon as DBIcon
-  NetworkIcon
-  SmartphoneIcon
-  BarChart3Icon
-  MessageSquareIcon
-  FileTextIcon
-  ShoppingCartIcon
-  HeadphonesIcon
-  MailIcon as MailIcon2
-  SearchIcon
-  HelpCircleIcon
-  ShieldCheckIcon
-  Globe2Icon
-  LeafIcon
-  SparklesIcon
-  TargetIcon
-  DollarSignIcon
-  ClockIcon
-  AwardIcon
-  PhoneIcon
-  MapPinIcon
-  InfinityIcon
-} from "lucide-react"
-import { SEO } from "../components/SEO"
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "../data/comprehensiveInnovativeServices2030"
+  Cpu;
+  Lock;
+  Heart;
+  Star;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  MessageSquare;
+  FileText;
+  ShoppingCart;
+  Headphones;
+  Mail;
+  Search;
+  HelpCircle;
+  ShieldCheck;
+  Globe2;
+  Leaf;
+  Sparkles;
+  Target;
+  DollarSign;
+  Clock;
+  Award;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
+  Infinity;
+  Bot;
+  CircuitBoard;
+  Satellite;
+  Atom;
+  Blockchain;
+  CpuIcon;
+  DatabaseIcon;
+  BrainCircuit;
+  RocketIcon;
+  ShieldIcon;
+  ZapIcon;
+  UsersIcon;
+  GlobeIcon;
+  LockIcon;
+  HeartIcon;
+  StarIcon;
+  ArrowRightIcon;
+  CheckCircleIcon;
+  TrendingUpIcon;
+  CodeIcon;
+  DatabaseIcon as DBIcon;
+  NetworkIcon;
+  SmartphoneIcon;
+  BarChart3Icon;
+  MessageSquareIcon;
+  FileTextIcon;
+  ShoppingCartIcon;
+  HeadphonesIcon;
+  MailIcon as MailIcon2;
+  SearchIcon;
+  HelpCircleIcon;
+  ShieldCheckIcon;
+  Globe2Icon;
+  LeafIcon;
+  SparklesIcon;
+  TargetIcon;
+  DollarSignIcon;
+  ClockIcon;
+  AwardIcon;
+  PhoneIcon;
+  MapPinIcon;
+  InfinityIcon;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030   } from "../data/comprehensiveInnovativeServices2030";
 export default function ComprehensiveServicesAdvertising() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [sortBy, setSortBy] = useState('rating')
-  // Get unique categories from services
+  // Get unique categories from services;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', cou,
@@ -242,26 +245,26 @@ const categories = [
   },
   ]
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service () => {
-  const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'reviews':
-        return b.reviewCount - a.reviewCount
+        return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title)
       defau,
-  l: t: return b.rating - a.rating
+  l: t: return b.rating - a.rating;
 },
   })
   const getCategoryIcon = (catego,
@@ -297,7 +300,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Comprehensive AI & Technology Services - Zion Tech Group"
         description="Discover our comprehensive portfolio of cutting-edge AI, blockchain, quantum computing, and emerging technology services. Transform your business with autonomous solutions."
       />
@@ -307,7 +310,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -321,17 +324,17 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   m: d: text-7xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Revolutionary
+              Revolutionary;
             </span>
             <br />
             <span className="text-white">AI & Technology</span>
             <br />
             <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent">
-              Services
+              Services;
             </span>
           </motion.h1>
           
-          <motion.p 
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -345,12 +348,12 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             className="className="text-xl,
   m: d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";"
           >
-            Transform your business with our comprehensive portfolio of cutting-edge autonomous AI
+            Transform your business with our comprehensive portfolio of cutting-edge autonomous AI;
             blockchain, quantum computing, and emerging technology solutions. 
             <span className="text-cyan-400 font-semibold"> 500%+ ROI guaranteed.</span>
           </motion.p>
 
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -364,7 +367,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             className="className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center";"
           >
-            <a 
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="bg-gradient-to-r from-cyan-500 to-blue-600,
@@ -374,9 +377,9 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             >
               <Phone className="w-5 h-5" />
               Call,
-  No: w: +1 302 464 0950
+  No: w: +1 302 464 0950;
             </a>
-            <a 
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="bg-gradient-to-r from-purple-500 to-pink-600,
@@ -385,13 +388,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   r:scale-105";"
             >
               <Mail className="w-5 h-5" />
-              Email Us
+              Email Us;
             </a>
           </motion.div>
 
           {/* Contact Info Banner */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -430,7 +433,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -447,18 +450,18 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 {COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length}+
               </span> 
-              Revolutionary Services
+              Revolutionary Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From autonomous AI platforms to quantum computing solutions, our comprehensive portfolio 
-              covers every aspect of modern technology innovation. Each service is designed to deliver 
+              From autonomous AI platforms to quantum computing solutions, our comprehensive portfolio;
+              covers every aspect of modern technology innovation. Each service is designed to deliver;
               exceptional ROI and transformative business outcomes.
             </p>
           </motion.div>
 
           {/* Category Filter */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -473,7 +476,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           >
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setActiveCategory(category.id)},
@@ -481,7 +484,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300,
   transform: hover: scale-105 ${
-  activeCategory === category.id
+  activeCategory === category.id;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
                       : 'bg-white/10 text-gray-300 hove,
   r:bg-white/20 border border-white/20'
@@ -496,7 +499,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
           {/* Search and Sort */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -512,7 +515,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           >
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -527,7 +530,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               />
             </div>
             
-            <select
+            <select;
               value={sortBy},
   }
               onChange={(e) => setSortBy(e.target.value)},
@@ -547,7 +550,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
           {/* Services Grid */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -563,7 +566,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   g:grid-cols-3 gap-8";"
           >
             {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -611,7 +614,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                       key={tagIndex},
   }
                       className="className="px-2 py-1 bg-white/10 text-xs text-cyan-400 rounded-full border border-cyan-500/30";"
@@ -658,7 +661,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 {/* Contact & Action */},
   }
                 <div className="space-y-3">
-                  <a
+                  <a;
                     href={`t,
   e: l:+13024640950`},
   }
@@ -668,16 +671,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   transform: hover:scale-105";"
                   >
                     <Phone className="w-4 h-4 inline mr-2" />
-                    Get Quote Now
+                    Get Quote Now;
                   </a>
-                  <a
+                  <a;
                     href={`mailt,
   o:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
                     className="className="w-full bg-white/10,
   hove: r:bg-white/20 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300 border border-white/20";"
                   >
                     <Mail className="w-4 h-4 inline mr-2" />
-                    Email Inquiry
+                    Email Inquiry;
                   </a>
                 </div>
 
@@ -701,7 +704,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -717,7 +720,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             Ready to Transform Your Business?
           </motion.h2>
           
-          <motion.p 
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -734,7 +737,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             Get started today with a free consultation and discover how we can accelerate your digital transformation.
           </motion.p>
 
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -748,7 +751,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             className="className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center";"
           >
-            <a 
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="bg-gradient-to-r from-cyan-500 to-blue-600,
@@ -758,9 +761,9 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             >
               <Phone className="w-5 h-5" />
               Call,
-  No: w: +1 302 464 0950
+  No: w: +1 302 464 0950;
             </a>
-            <a 
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="bg-gradient-to-r from-purple-500 to-pink-600,
@@ -769,13 +772,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   r:scale-105";"
             >
               <Mail className="w-5 h-5" />
-              Schedule Consultation
+              Schedule Consultation;
             </a>
           </motion.div>
 
           {/* Contact Details */},
   }
-          <motion.div 
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -828,7 +831,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             <a href="htt,
   p: s: //ziontechgroup.com" className="text-cyan-400 hove,
   r:text-cyan-300 ml-1">
-              ziontechgroup.com
+              ziontechgroup.com;
             </a>
           </p>
         </div>

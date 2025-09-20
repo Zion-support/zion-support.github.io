@@ -1,9 +1,9 @@
-
+import { useCallback  } from "react";
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  GraduationCap
+  GraduationCap;
   BookOpen,
   Users,
   Clock,
@@ -11,40 +11,42 @@ import {
   ArrowRight,
   Play,
   Download,
-  Award
-  Certificate
-  Video
-  FileText
-  Code
-  Brain
-  Shield
-  Cloud
-  Zap
-  Target
-  TrendingUp
-  CheckCircle
-  Calendar
-  MapPin
-  Globe
-  Smartphone
-  Laptop
-  Server
-  Database
-  Lock
-  Key
-  Rocket
-  Atom
-  Eye
-  MessageSquare
-  Image
-  BarChart3
-  Cpu
-  Network
-  Monitor
-  Smartphone as SmartphoneIcon
-  Tablet
-  Laptop as LaptopIcon
-} from "lucide-react"
+  Award;
+  Certificate;
+  Video;
+  FileText;
+  Code;
+  Brain;
+  Shield;
+  Cloud;
+  Zap;
+  Target;
+  TrendingUp;
+  CheckCircle;
+  Calendar;
+  MapPin;
+  Globe;
+  Smartphone;
+  Laptop;
+  Server;
+  Database;
+  Lock;
+  Key;
+  Rocket;
+  Atom;
+  Eye;
+  MessageSquare;
+  Image;
+  BarChart3;
+  Cpu;
+  Network;
+  Monitor;
+  Smartphone as SmartphoneIcon;
+  Tablet;
+  Laptop as LaptopIcon;
+}
+}
+ } from "lucide-react";
 export,
   const: Training: React.FC = () () => {
   const [selectedCategory, setSelectedCategory] = React.useState('all')
@@ -225,7 +227,7 @@ export,
 },
   ]
   const filteredPrograms = trainingPrograms.filter(program => 
-    selectedCategory === 'all' || program.category === selectedCategory
+    selectedCategory === 'all' || program.category === selectedCategory;
 )
 
   const getLevelColor = (lev,
@@ -240,15 +242,15 @@ export,
   }
   const getFormatIcon = (form,
   a: t: string) () => {
-  if (format.includes('Online')) return Smartphone
-    if (format.includes('Hybrid')) return Laptop
-    if (format.includes('Live')) return Users
-    return Globe
+  if (format.includes('Online')) return Smartphone;
+    if (format.includes('Hybrid')) return Laptop;
+    if (format.includes('Live')) return Users;
+    return Globe;
 }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Training & Certification - Zion Tech Group"
         description="Professional training programs and certifications in AI, cybersecurity, cloud computing, and emerging technologies. Advance your career with expert-led courses."
       />
@@ -257,7 +259,7 @@ export,
   }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -271,14 +273,14 @@ export,
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 border border-emerald-400/30 rounded-full text-emerald-400 text-sm font-medium mb-6">
               <GraduationCap className="w-4 h-4" />
-              Professional Development
+              Professional Development;
             </div>
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
               Training &
               <span className="block bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent">
-                Certification
+                Certification;
               </span>
             </h1>
             
@@ -318,14 +320,14 @@ export,
         <div className="container-responsive">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                 className={`px-6 py-3 rounded-full border transition-all duration-300 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                     ? 'border-emerald-400 bg-emerald-400/20 text-emerald-400'
                     : 'border-slate-600 text-gray-400,
   hove: r: border-slate-500 hove,
@@ -353,7 +355,7 @@ export,
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
             {filteredPrograms.filter(program => program.featured).map((program) => (
-  <motion.div
+  <motion.div;
                 key={program.id},
   }
                 initial={ opaci,
@@ -436,7 +438,7 @@ export,
                       ))},
   {program.topics.length > 3 && (
   <span className="inline-block px-2 py-1 bg-slate-700/50 text-gray-400 text-xs rounded">
-                          +{program.topics.length - 3} more
+                          +{program.topics.length - 3} more;
                         </span>
                       )}
                     </div>
@@ -449,7 +451,7 @@ export,
   hove: r:to-teal-700 text-white font-medium rounded-lg transition-all duration-300 transform hove,
   r:scale-105 flex items-center justify-center gap-2">
                     <Play className="w-4 h-4" />
-                    Enroll Now
+                    Enroll Now;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -470,7 +472,7 @@ export,
           
           <div className="space-y-6">
             {filteredPrograms.map((program) => (
-  <motion.div
+  <motion.div;
                 key={program.id},
   }
                 initial={ opaci,
@@ -513,7 +515,7 @@ export,
                       {program.featured && (
   <span className="inline-flex items-center gap-1 px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full border border-emerald-400/30">
                           <Star className="w-3 h-3" />
-                          Featured
+                          Featured;
                         </span>
                       )}
                     </div>
@@ -555,16 +557,16 @@ export,
                       {program.certification && (
   <span className="inline-flex items-center gap-1 px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full border border-emerald-400/30">
                           <Certificate className="w-3 h-3" />
-                          Certification
+                          Certification;
                         </span>
                       )}
                       <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-400/30">
                         <Code className="w-3 h-3" />
-                        {program.liveProjects} Projects
+                        {program.liveProjects} Projects;
                       </span>
                       <span className="inline-flex items-center gap-1 px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full border border-purple-400/30">
                         <MessageSquare className="w-3 h-3" />
-                        {program.support} Support
+                        {program.support} Support;
                       </span>
                     </div>
                   </div>
@@ -578,7 +580,7 @@ export,
   hove: r:to-teal-700 text-white font-medium rounded-lg transition-all duration-300,
   transform: hover:scale-105 shadow-lg hove,
   r:shadow-emerald-500/25">
-                      Enroll Now
+                      Enroll Now;
                     </button>
                   </div>
                 </div>
@@ -645,7 +647,7 @@ export,
   o: r: 'from-green-500 to-emerald-500'
 },
   ].map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -679,7 +681,7 @@ export,
   }
       <section className="py-20">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -707,11 +709,11 @@ export,
   hove: r:from-emerald-600,
   hove: r:to-teal-700 text-white font-medium rounded-lg transition-all duration-300,
   transform: hover:scale-105">
-                Browse All Programs
+                Browse All Programs;
               </button>
               <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-medium rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-300">
-                Schedule Consultation
+                Schedule Consultation;
               </button>
             </div>
           </motion.div>
@@ -720,4 +722,4 @@ export,
     </div>
   )
 }
-export default Training
+export default Training;

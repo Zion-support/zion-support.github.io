@@ -1,14 +1,16 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Globe
-  MapPin
-  Users
-  Clock
-  Star
-  Award
-  CheckCircle
-} from "lucide-react"
+  Globe;
+  MapPin;
+  Users;
+  Clock;
+  Star;
+  Award;
+  CheckCircle;
+}
+}
+ } from "lucide-react";
 const globalOffices = [
   {
   ci,
@@ -70,7 +72,7 @@ export function GlobalPresenceSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="className="text-center mb-16";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -87,7 +89,7 @@ export function GlobalPresenceSection() {
         >
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-4">
-            Global Presence
+            Global Presence;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Serving clients worldwide with local expertise and global reach.
@@ -97,7 +99,7 @@ export function GlobalPresenceSection() {
 
         {/* Global Statistics */},
   }
-        <motion.div 
+        <motion.div;
           className="className="grid grid-cols-2,
   m: d: grid-cols-4 gap-8 mb-16";"
           initial={ opacit,
@@ -127,7 +129,7 @@ export function GlobalPresenceSection() {
 
         {/* Global Offices */},
   }
-        <motion.div 
+        <motion.div;
           className="className="mb-16";"
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -144,14 +146,14 @@ export function GlobalPresenceSection() {
   }
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Strategic Global Locations
+            Strategic Global Locations;
           </h3>
           
           <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {globalOffices.map((office, index) => (
-  <motion.div
+  <motion.div;
                 key={office.city},
   }
                 className="className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center,
@@ -194,7 +196,7 @@ export function GlobalPresenceSection() {
 
         {/* Global Map Visualization */},
   }
-        <motion.div 
+        <motion.div;
           className="className="text-center mb-12";"
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -216,13 +218,13 @@ export function GlobalPresenceSection() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Worldwide Coverage</h3>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Our distributed team and cloud infrastructure ensure seamless service delivery 
+              Our distributed team and cloud infrastructure ensure seamless service delivery;
               across all time zones and regions, with local expertise and global capabilities.
             </p>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div;
           className="className="text-center";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -243,20 +245,20 @@ export function GlobalPresenceSection() {
               Ready to Go Global?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Whether you're expanding internationally or need local expertise
+              Whether you're expanding internationally or need local expertise;
               our global presence ensures you get the support you need, when you need it.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600,
   hove: r:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Find Your Local Team
+                Find Your Local Team;
                 <MapPin className="ml-2 h-5 w-5" />
               </button>
               <button className="inline-flex items-center px-6 py-3 border border-white text-white,
   hove: r:bg-white hove,
   r:text-blue-600 rounded-lg font-medium transition-colors duration-200">
-                Global Services
+                Global Services;
                 <Globe className="ml-2 h-5 w-5" />
               </button>
             </div>

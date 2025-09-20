@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
+import { Link, useLocation   } from "react-router-dom";
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Menu,
   X,
@@ -217,8 +218,10 @@ import {
   Phi,
   Chi,
   Psi,
-  Omega
-} from "lucide-react"
+  Omega;
+}
+}
+ } from "lucide-react";
 export,
   const: EnhancedFuturisticNavigation: React.FC = () () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -256,7 +259,7 @@ const navigationItems = [
   e: f: '/',ic,
   o: n: Home,col,
   o: r: 'from-zion-cyan to-zion-blue',isMa,
-  i: n: true
+  i: n: true;
     }, {
       na,
   m: e: 'AI & Consciousness',hr,
@@ -461,14 +464,14 @@ const navigationItems = [
   e: f: '/about',ic,
   o: n: Info,col,
   o: r: 'from-zion-blue to-zion-cyan',isMa,
-  i: n: true
+  i: n: true;
     }, {
       na,
   m: e: 'Contact',hr,
   e: f: '/contact',ic,
   o: n: Phone,col,
   o: r: 'from-zion-cyan to-zion-purple',isMa,
-  i: n: true
+  i: n: true;
     },
   ]
   return (
@@ -476,7 +479,7 @@ const navigationItems = [
       {/* Desktop Navigation */}
       <nav className={`hidden,
   l: g:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+        scrolled;
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
           : 'bg-transparent'
       }`}>
@@ -494,7 +497,7 @@ const navigationItems = [
               </div>
               <div>
                 <div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                  ZION
+                  ZION;
                 </div>
                 <div className="text-xs text-zion-cyan font-medium">TECH GROUP</div>
               </div>
@@ -505,10 +508,10 @@ const navigationItems = [
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
-                    <button
+                    <button;
                       onClick={() => toggleDropdown(item.name)}
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-                        location.pathname === item.href
+                        location.pathname === item.href;
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                           : 'text-gray-300,
   hove: r: text-white hove,
@@ -522,10 +525,10 @@ const navigationItems = [
                       }`} />
                     </button>
                   ) : (
-                    <Link
+                    <Link;
                       to={item.href}
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-                        location.pathname === item.href
+                        location.pathname === item.href;
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                           : 'text-gray-300,
   hove: r: text-white hove,
@@ -540,7 +543,7 @@ const navigationItems = [
   {item.dropdown && (
                     <AnimatePresence>
                       {activeDropdown === item.name && (
-                        <motion.div
+                        <motion.div;
                           initial={ opaci,
   t: y: 0, y: 10, sca,
   l: e: 0.95 },
@@ -561,7 +564,7 @@ const navigationItems = [
                           <div className="p-4">
                             <div className="grid grid-cols-1 gap-2">
                               {item.dropdown.map((dropdownItem) => (
-                                <Link
+                                <Link;
                                   key={dropdownItem.name}
                                   to={dropdownItem.href}
                                   className="flex items-start space-x-3 p-3 rounded-lg,
@@ -597,7 +600,7 @@ const navigationItems = [
               {/* Search */}
               <form onSubmit={handleSearch} className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
@@ -631,7 +634,7 @@ const navigationItems = [
       {/* Mobile Navigation */}
       <nav className="lg:hidden fixed top-0 left-0 right-0 z-50">
         <div className={`transition-all duration-500 ${
-          scrolled
+          scrolled;
             ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
             : 'bg-transparent'
         }`}>
@@ -644,14 +647,14 @@ const navigationItems = [
                 </div>
                 <div>
                   <div className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                    ZION
+                    ZION;
                   </div>
                   <div className="text-xs text-zion-cyan font-medium">TECH GROUP</div>
                 </div>
               </Link>
 
               {/* Mobile Menu Button */}
-              <button
+              <button;
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 text-gray-400,
   hove: r: text-white hove,
@@ -666,7 +669,7 @@ const navigationItems = [
         {/* Mobile Menu */}
         <AnimatePresence>
           {mobileMenuOpen && (
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -688,7 +691,7 @@ const navigationItems = [
                 {/* Search */}
                 <form onSubmit={handleSearch} className="relative mb-6">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
@@ -707,10 +710,10 @@ const navigationItems = [
                     <div key={item.name}>
                       {item.dropdown ? (
                         <div>
-                          <button
+                          <button;
                             onClick={() => toggleDropdown(item.name)}
                             className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-between ${
-                              location.pathname === item.href
+                              location.pathname === item.href;
                                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
                                 : 'text-gray-300,
   hove: r: text-white hove,
@@ -729,7 +732,7 @@ const navigationItems = [
                           {/* Mobile Dropdown */}
                           <AnimatePresence>
                             {activeDropdown === item.name && (
-                              <motion.div
+                              <motion.div;
                                 initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -748,7 +751,7 @@ const navigationItems = [
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
                               >
                                 {item.dropdown.map((dropdownItem) => (
-                                  <Link
+                                  <Link;
                                     key={dropdownItem.name}
                                     to={dropdownItem.href}
                                     className="block px-4 py-2 text-gray-400,
@@ -763,10 +766,10 @@ const navigationItems = [
                           </AnimatePresence>
                         </div>
                       ) : (
-                        <Link
+                        <Link;
                           to={item.href}
                           className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                            location.pathname === item.href
+                            location.pathname === item.href;
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
                               : 'text-gray-300,
   hove: r: text-white hove,

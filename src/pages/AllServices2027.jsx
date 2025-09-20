@@ -1,30 +1,32 @@
 import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Input } from "@/components/ui/input"
+import { Button   } from "@/components/ui/button";
+import { Badge   } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { Input   } from "@/components/ui/input";
 import {
   Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart,
   ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe,
-  CheckCircle, Star, TrendingUp, Zap, Users, Search, Filter
-    ArrowRight, Award, Clock, Target, Rocket, Lightbulb
-} from "lucide-react"
-import { Link } from "react-router-dom"
-// Import all service data
-import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices"
-import { CUTTING_EDGE_2025_SERVICES } from "@/data/2025-cutting-edge-innovations.jsx"
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/2025-specialized-industry-solutions.jsx"
-import { INNOVATIVE_MICRO_SAAS_2025 } from "@/data/2025-innovative-micro-saas-expansion.jsx"
-// Combine all services
+  CheckCircle, Star, TrendingUp, Zap, Users, Search, Filter;
+    ArrowRight, Award, Clock, Target, Rocket, Lightbulb;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
+// Import all service data;
+import { MICRO_SAAS_SERVICES   } from "@/data/microSaasServices";
+import { CUTTING_EDGE_2025_SERVICES   } from "@/data/2025-cutting-edge-innovations.jsx";
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025   } from "@/data/2025-specialized-industry-solutions.jsx";
+import { INNOVATIVE_MICRO_SAAS_2025   } from "@/data/2025-innovative-micro-saas-expansion.jsx";
+// Combine all services;
 const ALL_SERVICES = [
-  ...MICRO_SAAS_SERVICES
-    ...CUTTING_EDGE_2025_SERVICES
-    ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025
-    ...INNOVATIVE_MICRO_SAAS_2025
+  ...MICRO_SAAS_SERVICES;
+    ...CUTTING_EDGE_2025_SERVICES;
+    ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
+    ...INNOVATIVE_MICRO_SAAS_2025;
 ]
 
-// Service categories
+// Service categories;
 const SERVICE_CATEGORIES = [
   { id: 'all', na,
   m: e: 'All Services', ic,
@@ -62,7 +64,7 @@ const SERVICE_CATEGORIES = [
   },
   ]
 
-// Contact information
+// Contact information;
 const const CONTACT_INFO = {
   = {
     pho,
@@ -75,7 +77,7 @@ const const CONTACT_INFO = {
   r: s: "24/7",responseTi,
   m: e: "< 2 hours"
 }
-// Benefits section
+// Benefits section;
 const BENEFITS = [
   {
   ic,
@@ -107,7 +109,7 @@ export default function AllServices2027() {
     const [searchQuery, setSearchQuery] = useState('')
     const [sortBy, setSortBy] = useState('featured')
 
-    // Filter services based on category and search
+    // Filter services based on category and search;
 const filteredServices = ALL_SERVICES.filter(service () => {
   const matchesCategory = selectedCategory === 'all' || 
             service.category.toLowerCase().includes(selectedCategory.replace('- ')) ||
@@ -118,23 +120,23 @@ const matchesSearch = searchQuery === '' ||
             service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
         
-        return matchesCategory && matchesSearch
+        return matchesCategory && matchesSearch;
 })
 
-    // Sort services
+    // Sort services;
 const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'featured':
-                return b.featured - a.featured
+                return b.featured - a.featured;
             case 'rating':
-                return b.rating - a.rating
+                return b.rating - a.rating;
             case 'price-low':
-                return a.price - b.price
+                return a.price - b.price;
             case 'price-high':
-                return b.price - a.price
+                return b.price - a.price;
             case 'ai-score':
                 return b.aiScore - a.aiScore,
-  defaul: t: return 0
+  defaul: t: return 0;
 },
   })
     return (
@@ -145,25 +147,25 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-4xl,
   m: d: text-6xl font-bold mb-6">
-                        Complete Micro SAAS Solutions Portfolio
+                        Complete Micro SAAS Solutions Portfolio;
                     </h1>
                     <p className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
                         Discover our comprehensive suite of 100+ AI-powered micro SAAS services. 
-                        From cutting-edge quantum computing to industry-specific solutions
+                        From cutting-edge quantum computing to industry-specific solutions;
                         we provide enterprise-grade technology at startup prices.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Button size="lg" className="bg-white text-zion-blue,
   hove: r:bg-gray-100">
                             <Globe className="h-5 w-5 mr-2"/>
-                            Explore All Services
+                            Explore All Services;
                         </Button>
                         <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-zion-blue">
                             <Phone className="h-5 w-5 mr-2"/>
-                            Contact Sales
+                            Contact Sales;
                         </Button>
                     </div>
                 </div>
@@ -205,7 +207,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                             Why Choose Zion Tech Group?
                         </h2>
                         <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-                            We deliver enterprise-grade solutions with startup agility and proven results
+                            We deliver enterprise-grade solutions with startup agility and proven results;
                         </p>
                     </div>
                     
@@ -241,7 +243,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   m: d:flex-row gap-4 mb-6">
                             <div className="relative flex-1">
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                                <Input
+                                <Input;
                                     placeholder="Search services..."
                                     value={searchQuery},
   }
@@ -250,7 +252,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                                     className="className="pl-10";"
                                 />
                             </div>
-                            <select
+                            <select;
                                 value={sortBy},
   }
                                 onChange={(e) => setSortBy(e.target.value)},
@@ -382,13 +384,13 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                                         <div className="flex gap-2">
                                             <Button className="flex-1" size="sm">
                                                 <Link to={service.website} target="_blank" className="flex items-center">
-                                                    Learn More
+                                                    Learn More;
                                                     <ArrowRight className="h-4 w-4 ml-1" />
                                                 </Link>
                                             </Button>
                                             <Button variant="outline" size="sm">
                                                 <Mail className="h-4 w-4 mr-1" />
-                                                Contact
+                                                Contact;
                                             </Button>
                                         </div>
                                     </div>
@@ -419,7 +421,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                             Ready to Transform Your Business?
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Get in touch with our team to discuss your specific needs and discover 
+                            Get in touch with our team to discuss your specific needs and discover;
                             how our micro SAAS solutions can drive your success.
                         </p>
                     </div>
@@ -501,7 +503,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                                     <option>Industry Solutions</option>
                                     <option>Emerging Tech</option>
                                 </select>
-                                <textarea 
+                                <textarea;
                                     placeholder="Tell us about your project or requirements..."
                                     className="className="w-full px-3 py-2 border border-gray-300 rounded-md,
   focu: s:outline-none,
@@ -512,7 +514,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                                 />
                                 <Button className="w-full" size="lg">
                                     <Mail className="h-5 w-5 mr-2" />
-                                    Send Message
+                                    Send Message;
                                 </Button>
                             </form>
                         </div>
@@ -526,23 +528,23 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl,
   m: d:text-4xl font-bold mb-6">
-                        Start Your Digital Transformation Journey
+                        Start Your Digital Transformation Journey;
                     </h2>
                     <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                        Join thousands of businesses already leveraging our micro SAAS solutions 
+                        Join thousands of businesses already leveraging our micro SAAS solutions;
                         to accelerate growth, reduce costs, and gain competitive advantages.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Button size="lg" className="bg-white text-zion-blue,
   hove: r: bg-gray-100">
                             <Rocket className="h-5 w-5 mr-2" />
-                            Explore Services
+                            Explore Services;
                         </Button>
                         <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-zion-blue">
                             <Phone className="h-5 w-5 mr-2" />
-                            Schedule Demo
+                            Schedule Demo;
                         </Button>
                     </div>
                 </div>

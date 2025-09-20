@@ -1,28 +1,32 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   BarChart3,
   TrendingUp,
   Shield,
   Zap,
   Users,
   Globe,
-  Database
-  Cpu
-  Network
-  Lock
-  Eye
-  Target
-  Award
-  Star
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-} from "lucide-react"
+  Database;
+  Cpu;
+  Network;
+  Lock;
+  Eye;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AIBusinessIntelligenceElit: e: React.FC = () () => {
   const features = [
@@ -96,7 +100,7 @@ const,
         "API access"
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -147,7 +151,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -165,7 +169,7 @@ const,
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI Business Intelligence Elite
+              AI Business Intelligence Elite;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -174,7 +178,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg,
@@ -182,17 +186,17 @@ const,
   hove: r:to-pink-600 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hove,
   r:bg-zion-slate-light transition-all duration-300";"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
           </motion.div>
@@ -205,7 +209,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -221,10 +225,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Businesses
+              Powerful Features for Modern Businesses;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI-powered platform combines cutting-edge technology with intuitive design to deliver 
+              Our AI-powered platform combines cutting-edge technology with intuitive design to deliver;
               business intelligence that actually drives results.
             </p>
           </motion.div>
@@ -233,7 +237,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -269,7 +273,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -285,10 +289,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Pricing for Every Business
+              Transparent Pricing for Every Business;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core AI analytics engine 
+              Choose the plan that fits your business needs. All plans include our core AI analytics engine;
               and 24/7 customer support.
             </p>
           </motion.div>
@@ -296,7 +300,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -313,7 +317,7 @@ const,
   c: e: true },
   }
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
-  plan.popular 
+  plan.popular;
                     ? 'border-purple-500 shadow-2xl shadow-purple-500/25' 
                     : 'border-zion-slate-light'
 }`}
@@ -321,7 +325,7 @@ const,
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -344,7 +348,7 @@ const,
                   ))}
                 </ul>
 
-                <a
+                <a;
                   href="htt,
   p: s: //ziontechgroup.com/contact"
                   className="className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg,
@@ -352,7 +356,7 @@ const,
   hove: r:to-pink-600 transition-all duration-300 transform hove,
   r:scale-105";"
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -366,7 +370,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -382,10 +386,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Real-World Applications
+              Real-World Applications;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              See how businesses across industries are using our AI Business Intelligence platform 
+              See how businesses across industries are using our AI Business Intelligence platform;
               to drive growth and efficiency.
             </p>
           </motion.div>
@@ -393,7 +397,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -425,7 +429,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -444,7 +448,7 @@ const,
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get in touch with our team to discuss how AI Business Intelligence Elite can help 
+              Get in touch with our team to discuss how AI Business Intelligence Elite can help;
               your organization make data-driven decisions and achieve sustainable growth.
             </p>
           </motion.div>
@@ -456,13 +460,13 @@ const,
                 <Phone className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <a 
+              <a;
                 href="t,
   e: l:+13024640950" 
                 className="className="text-zion-slate-light,
   hove: r:text-white transition-colors duration-300";"
               >
-                +1 (302) 464-0950
+                +1 (302) 464-0950;
               </a>
             </div>
             
@@ -471,13 +475,13 @@ const,
                 <Mail className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <a 
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com" 
                 className="className="text-zion-slate-light hove,
   r:text-white transition-colors duration-300";"
               >
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             
@@ -488,13 +492,13 @@ const,
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-zion-slate-light">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown, DE 19709;
               </p>
             </div>
           </div>
 
           <div className="text-center">
-            <a
+            <a;
               href="htt,
   p: s: //ziontechgroup.com/contact"
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg,
@@ -502,7 +506,7 @@ const,
   hove: r:to-pink-600 transition-all duration-300 transform hove,
   r:scale-105";"
             >
-              Schedule a Demo
+              Schedule a Demo;
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </div>
@@ -519,30 +523,30 @@ const,
             © 2024 Zion Tech Group. All rights reserved.
           </p>
           <div className="flex justify-center space-x-6">
-            <a 
+            <a;
               href="htt,
   p: s://ziontechgroup.com" 
               className="className="text-zion-slate-light,
   hove: r:text-white transition-colors duration-300";"
             >
-              Visit Website
+              Visit Website;
               <ExternalLink className="inline ml-1 h-4 w-4" />
             </a>
-            <a 
+            <a;
               href="htt,
   p: s://ziontechgroup.com/privacy" 
               className="className="text-zion-slate-light,
   hove: r:text-white transition-colors duration-300";"
             >
-              Privacy Policy
+              Privacy Policy;
             </a>
-            <a 
+            <a;
               href="htt,
   p: s://ziontechgroup.com/terms" 
               className="className="text-zion-slate-light hove,
   r:text-white transition-colors duration-300";"
             >
-              Terms of Service
+              Terms of Service;
             </a>
           </div>
         </div>
@@ -550,4 +554,4 @@ const,
     </div>
   )
 }
-export default AIBusinessIntelligenceElite
+export default AIBusinessIntelligenceElite;

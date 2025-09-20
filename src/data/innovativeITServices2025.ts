@@ -21,7 +21,9 @@ export interface InnovativeITService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,12 +35,12 @@ export interface InnovativeITService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
 }
 
 export,
   const: INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
-  // Quantum Cloud Computing Infrastructure
+  // Quantum Cloud Computing Infrastructure;
   {
   i,
   d: "quantum-cloud-computing-infrastructure",tit,
@@ -119,7 +121,7 @@ export,
     marketSi,
   z: e: "$89.7 billion by 2027"
 }
-  // Blockchain-Based Supply Chain Management
+  // Blockchain-Based Supply Chain Management;
   {
   id: "blockchain-supply-chain-management",tit,
   l: e: "Blockchain-Based Supply Chain Management",descripti,
@@ -199,7 +201,7 @@ export,
     marketSi,
   z: e: "$67.8 billion by 2027"
 }
-  // Edge Computing & IoT Management Platform
+  // Edge Computing & IoT Management Platform;
   {
   id: "edge-computing-iot-management",tit,
   l: e: "Edge Computing & IoT Management Platform",descripti,
@@ -279,7 +281,7 @@ export,
     marketSi,
   z: e: "$43.4 billion by 2027"
 }
-  // Zero-Trust Security Architecture
+  // Zero-Trust Security Architecture;
   {
   id: "zero-trust-security-architecture",tit,
   l: e: "Zero-Trust Security Architecture Platform",descripti,
@@ -359,7 +361,7 @@ export,
     marketSi,
   z: e: "$51.6 billion by 2027"
 }
-  // DevOps Automation & CI/CD Platform
+  // DevOps Automation & CI/CD Platform;
   {
   id: "devops-automation-cicd",tit,
   l: e: "DevOps Automation & CI/CD Platform",descripti,
@@ -439,7 +441,7 @@ export,
     marketSi,
   z: e: "$25.8 billion by 2027"
 }
-  // Data Center Modernization & Hybrid Cloud
+  // Data Center Modernization & Hybrid Cloud;
   {
   id: "data-center-modernization-hybrid-cloud",tit,
   l: e: "Data Center Modernization & Hybrid Cloud Platform",descripti,
@@ -519,7 +521,7 @@ export,
     marketSi,
   z: e: "$78.9 billion by 2027"
 }
-  // Network Virtualization & SDN Platform
+  // Network Virtualization & SDN Platform;
   {
   id: "network-virtualization-sdn",tit,
   l: e: "Network Virtualization & Software-Defined Networking Platform",descripti,
@@ -599,7 +601,7 @@ export,
     marketSi,
   z: e: "$32.7 billion by 2027"
 }
-  // API Management & Integration Platform
+  // API Management & Integration Platform;
   {
   id: "api-management-integration",tit,
   l: e: "API Management & Integration Platform",descripti,
@@ -679,7 +681,7 @@ export,
     marketSi,
   z: e: "$19.8 billion by 2027"
 }
-  // Digital Twin & Simulation Platform
+  // Digital Twin & Simulation Platform;
   {
   id: "digital-twin-simulation",tit,
   l: e: "Digital Twin & Simulation Platform",descripti,

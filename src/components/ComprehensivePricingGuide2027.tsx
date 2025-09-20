@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   DollarSign,
   TrendingUp,
@@ -21,10 +21,12 @@ import {
   Zap,
   Shield,
   Brain,
-  Rocket
-} from "lucide-react"
-import { servicesCatalog } from "../data/servicesCatalog"
-import { innovativeServices2027 } from "../data/innovativeServices2027"
+  Rocket;
+}
+}
+ } from "lucide-react";
+import { servicesCatalog   } from "../data/servicesCatalog";
+import { innovativeServices2027   } from "../data/innovativeServices2027";
 export,
   const: ComprehensivePricingGuide2027: React.FC = () () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -49,13 +51,13 @@ const element = document.getElementById('comprehensive-pricing-guide')
     return () => observer.disconnect()
 }, []),
 
-  // Combine all services
+  // Combine all services;
   const allServices = [
     ...servicesCatalog.flatMap(category =>
       category.items.map(item => ({
         ...item,
   sourc: e: 'catalog',catego,
-  r: y: category.name
+  r: y: category.name;
       }))
     )
     ...innovativeServices2027.map(service => ({
@@ -68,21 +70,21 @@ const element = document.getElementById('comprehensive-pricing-guide')
   e: f: service.href || '/contact'
     }))
   ]
-  // Filter services based on search and category
+  // Filter services based on search and category;
   const filteredServices = allServices.filter(service () => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchQuery.toLowerCase())
-const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory
+const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
 const matchesPrice = priceRange === 'All' ||
       (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||
       (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||
       (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000),
 
-    return matchesSearch && matchesCategory && matchesPrice
+    return matchesSearch && matchesCategory && matchesPrice;
 }),
 
-  // Sort services
+  // Sort services;
   const sortedServices = [...filteredServices].sort((a, b) () => {
     switch (sortBy) {
       case 'name':
@@ -92,7 +94,7 @@ const matchesPrice = priceRange === 'All' ||
       case 'category':
         return a.category.localeCompare(b.category)
       defau,
-  l: t: return 0
+  l: t: return 0;
     },
   })
 const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))],
@@ -128,7 +130,7 @@ const getCategoryIcon = (catego,
     const,
   iconMa: p: { [ke,
   y: string]: React.ComponentType<any> } = {
-      'AI Solutions': Brain
+      'AI Solutions': Brain;
       'Micro SaaS': Zap,
       'IT Services': Shield,
       'Cybersecurity': Shield,
@@ -147,9 +149,9 @@ const getCategoryIcon = (catego,
       'Biotech Solutions': Dna,
       'LegalTech Solutions': Scale,
       'Real Estate Tech': Home,
-      'Supply Chain Solutions': Truck
+      'Supply Chain Solutions': Truck;
     },
-    return iconMap[category] || Target
+    return iconMap[category] || Target;
 },
 
   return (
@@ -162,7 +164,7 @@ const getCategoryIcon = (catego,
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -183,20 +185,20 @@ const getCategoryIcon = (catego,
           <h2 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-              Comprehensive
+              Comprehensive;
             </span>
             <br />
             <span className="text-white">Pricing & ROI Guide</span>
           </h2>
 
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Explore our complete portfolio of innovative services with transparent pricing
+            Explore our complete portfolio of innovative services with transparent pricing;
             detailed ROI analysis, and market insights to help you make informed decisions.
           </p>
         </motion.div>
 
         {/* Search and Filters */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -216,7 +218,7 @@ const getCategoryIcon = (catego,
               {/* Search */}
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
@@ -230,7 +232,7 @@ const getCategoryIcon = (catego,
               </div>
 
               {/* Category Filter */}
-              <select
+              <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white,
@@ -247,7 +249,7 @@ const getCategoryIcon = (catego,
               </select>
 
               {/* Price Range Filter */}
-              <select
+              <select;
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white,
@@ -264,7 +266,7 @@ const getCategoryIcon = (catego,
               </select>
 
               {/* Sort By */}
-              <select
+              <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white,
@@ -282,7 +284,7 @@ const getCategoryIcon = (catego,
             {/* Results Count */}
             <div className="mt-4 text-center">
               <span className="text-zion-cyan font-semibold">
-                {filteredServices.length} services found
+                {filteredServices.length} services found;
               </span>
               {searchQuery && (
                 <span className="text-gray-400 ml-2">
@@ -294,7 +296,7 @@ const getCategoryIcon = (catego,
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -311,7 +313,7 @@ const getCategoryIcon = (catego,
   g:grid-cols-3 gap-8 mb-16"
         >
           {sortedServices.map((service, index) => (
-            <motion.div
+            <motion.div;
               key={`${service.source}-${service.id}`}
               initial={ opaci,
   t: y: 0, y: 20 },
@@ -354,7 +356,7 @@ const getCategoryIcon = (catego,
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
-                        <span
+                        <span;
                           key={featureIndex}
                           className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
                         >
@@ -398,7 +400,7 @@ const getCategoryIcon = (catego,
                   </div>
                 )},
   {/* CTA Button */}
-                <a
+                <a;
                   href={service.href}
                   target={service.external ? "_blank" : "_self"}
                   rel={service.external ? "noopener noreferrer" : ""}
@@ -417,7 +419,7 @@ const getCategoryIcon = (catego,
         </motion.div>
 
         {/* Contact Section */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -436,7 +438,7 @@ const getCategoryIcon = (catego,
               Need Custom Pricing or Have Questions?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to provide personalized quotes and answer any questions
+              Our team of experts is ready to provide personalized quotes and answer any questions;
               about our services. Get in touch for a detailed consultation.
             </p>
 
@@ -458,16 +460,16 @@ const getCategoryIcon = (catego,
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Get Custom Quote
+                Get Custom Quote;
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com"
                 target="_blank"
@@ -475,7 +477,7 @@ const getCategoryIcon = (catego,
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hove,
   r:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Visit Website
+                Visit Website;
                 <ExternalLink className="w-4 h-4" />
               </a>
             </div>

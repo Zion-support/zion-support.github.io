@@ -1,29 +1,31 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Shield
-  Lock
-  Eye
-  Database
-  Users
-  Globe
-  CheckCircle
-  AlertTriangle
-  FileText
-  Mail
-  Phone
-  MapPin
-  Calendar
-  CheckCircle
-  AlertTriangle
-} from "lucide-react"
+  Shield;
+  Lock;
+  Eye;
+  Database;
+  Users;
+  Globe;
+  CheckCircle;
+  AlertTriangle;
+  FileText;
+  Mail;
+  Phone;
+  MapPin;
+  Calendar;
+  CheckCircle;
+  AlertTriangle;
+}
+}
+ } from "lucide-react";
 import SEO from "../components/SEO"
 const,
   Privac: y: React.FC = () () => {
   const currentYear = new Date().getFullYear()
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+      <SEO;
         title="Privacy Policy - Zion Tech Group"
         description="Learn how Zion Tech Group protects your privacy and handles your personal data. Our comprehensive privacy policy ensures transparency and data protection."
       />
@@ -35,7 +37,7 @@ const,
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -53,10 +55,10 @@ const,
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-              Privacy Policy
+              Privacy Policy;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Your privacy is important to us. This policy explains how we collect, use
+              Your privacy is important to us. This policy explains how we collect, use;
               and protect your personal information.
             </p>
           </motion.div>
@@ -67,7 +69,7 @@ const,
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -80,10 +82,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Our Privacy Principles
+              Our Privacy Principles;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We are committed to protecting your privacy and ensuring transparency
+              We are committed to protecting your privacy and ensuring transparency;
               in how we handle your personal information.
             </p>
           </motion.div>
@@ -92,7 +94,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {privacyPrinciples.map((principle, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -124,7 +126,7 @@ const,
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -137,10 +139,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Information We Collect
+              Information We Collect;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We collect only the information necessary to provide our services
+              We collect only the information necessary to provide our services;
               and improve your experience.
             </p>
           </motion.div>
@@ -148,7 +150,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {dataCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -186,7 +188,7 @@ const,
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -199,10 +201,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              How We Use Your Information
+              How We Use Your Information;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We use your information only for legitimate business purposes
+              We use your information only for legitimate business purposes;
               and with your consent where required.
             </p>
           </motion.div>
@@ -210,7 +212,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {dataUses.map((use, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -239,7 +241,7 @@ const,
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -252,7 +254,7 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Your Privacy Rights
+              Your Privacy Rights;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               You have important rights regarding your personal data.
@@ -264,7 +266,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {userRights.map((right, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -295,7 +297,7 @@ const,
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -315,7 +317,7 @@ const,
                 <span>Last Updated</span>
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                We implement comprehensive security measures to protect your personal information
+                We implement comprehensive security measures to protect your personal information;
                 from unauthorized access, alteration, disclosure, or destruction.
               </p>
               <div className="space-y-4">
@@ -343,7 +345,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -388,7 +390,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -440,7 +442,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -485,7 +487,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -530,7 +532,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -582,7 +584,7 @@ const,
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -636,7 +638,7 @@ const,
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -649,10 +651,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Contact Us
+              Contact Us;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about this privacy policy or want to exercise your rights
+              If you have questions about this privacy policy or want to exercise your rights;
               please contact our privacy team.
             </p>
           </motion.div>
@@ -684,7 +686,7 @@ const,
   }
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -699,11 +701,11 @@ const,
               Questions About Privacy?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We're here to help. Contact our privacy team for any questions
+              We're here to help. Contact our privacy team for any questions;
               about your data or this privacy policy.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <a;
                 href="mail,
   t: o: privacy@ziontechgroup.com"
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold,
@@ -711,15 +713,15 @@ const,
   hove: r:to-purple-600 transition-all duration-300,
   hove: r:scale-105";"
               >
-                Contact Privacy Team
+                Contact Privacy Team;
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold,
   hove: r:bg-blue-400 hove,
   r:text-white transition-all duration-300";"
               >
-                General Contact
+                General Contact;
               </a>
             </div>
           </motion.div>
@@ -728,4 +730,4 @@ const,
     </div>
   )
 }
-export default Privacy
+export default Privacy;

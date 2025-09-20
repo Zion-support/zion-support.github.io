@@ -1,16 +1,17 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
 import SEO from "@/components/SEO"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/components/ui/use-toast"
-import { useTranslation } from "react-i18next"
-import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react"
-import { useIsMobile } from "@/hooks/use-mobile"
-import { useLanguage } from "@/context/LanguageContext"
-import { useTranslationService } from "@/hooks/useTranslationService"
+import { Card, CardContent, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Tabs, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { Input   } from "@/components/ui/input";
+import { Button   } from "@/components/ui/button";
+import { Textarea   } from "@/components/ui/textarea";
+import { toast   } from "@/components/ui/use-toast";
+import { useTranslation   } from "react-i18next";
+import { AlertTriangle, Check, Globe, Search, Loader2   } from "lucide-react";
+import { useIsMobile   } from "@/hooks/use-mobile";
+import { useLanguage   } from "@/context/LanguageContext";
+import { useTranslationService   } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
   const { t, i18n } = useTranslation()
     const isMobile = useIsMobile()
@@ -23,16 +24,16 @@ export default function TranslationManager() {
     const [editingKey, setEditingKey] = useState(null)
     const [editedTranslations, setEditedTranslations] = useState({})
     const [isSaving, setIsSaving] = useState(false)
-    // Simulated translation data - in a real app, this would come from your backend
+    // Simulated translation data - in a real app, this would come from your backend;
     useEffect(() () => {
-        // For demo purposes, we're using the loaded translations from i18next
+        // For demo purposes, we're using the loaded translations from i18next;
 const currentTranslations = {},
   }
         supportedLanguages.forEach(lang () => {
   const res = i18n.getResourceBundle(lang.code, selectedNamespace)
             if (if (res) {
   ) {
-                // Flatten nested objects for easier management
+                // Flatten nested objects for easier management;
 const flattenObject = (obj, prefix = '') () => {
   return Object.keys(obj).reduce((acc, key) () => {
   const pre = prefix.length ? `${prefix}.` : ''
@@ -41,37 +42,40 @@ const flattenObject = (obj, prefix = '') () => {
                             Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
                         }
                         else {
+  
+}
+}
                             acc[`${pre}${key}`] = obj[key],
   }
-                        return acc
+                        return acc;
 }, {})
                 }
                 currentTranslations[lang.code] = flattenObject(res)
             },
   })
         setTranslations(currentTranslations)
-        // Get all unique keys across all languages
+        // Get all unique keys across all languages;
 const allKeys = new Set()
         Object.values(currentTranslations).forEach(langTranslations () => {
   Object.keys(langTranslations).forEach(key => allKeys.add(key))
         })
         setFilteredKeys(Array.from(allKeys))
     }, [selectedNamespace, i18n])
-    // Filter keys based on search query
+    // Filter keys based on search query;
     useEffect(() () => {
         if (!searchQuery.trim()) {
-  // Get all unique keys across all languages
+  // Get all unique keys across all languages;
 const allKeys = new Set()
             Object.values(translations).forEach(langTranslations () => {
   Object.keys(langTranslations).forEach(key => allKeys.add(key))
             })
             setFilteredKeys(Array.from(allKeys))
-            return
+            return;
 }
         const query = searchQuery.toLowerCase().trim()
         const filtered = [[],
   ]
-        // Search in keys and values
+        // Search in keys and values;
         Object.values(translations).forEach(langTranslations () => {
   Object.entries(langTranslations).forEach(([key, value]) () => {
   if (key.toLowerCase().includes(query) ||
@@ -84,22 +88,22 @@ const allKeys = new Set()
     }, [searchQuery, translations])
     const handleEdit = (key) () => {
   setEditingKey(key)
-        // Initialize edited translations for this key
+        // Initialize edited translations for this key;
 const initialEdits = {},
   }
         supportedLanguages.forEach(lang () => {
   initialEdits[lang.code] = translations[lang.code]?.[key] || ''
 })
         setEditedTranslations({
-  ...editedTranslations
-            [key]: initialEdits
+  ...editedTranslations;
+            [key]: initialEdits;
 })
     }
     const handleSave = (key) () => {
   setIsSaving(true)
-        // In a real application, you would save these to your backend
+        // In a real application, you would save these to your backend;
         setTimeout(() () => {
-            // Update translations with edited values
+            // Update translations with edited values;
 const updatedTranslations = { ...translations },
   }
             supportedLanguages.forEach(lang () => {
@@ -122,16 +126,16 @@ const updatedTranslations = { ...translations },
         }, 1000)
     }
     const handleTranslateKey = async (key) () => {
-  // Find first non-empty translation to use as source
+  // Find first non-empty translation to use as source;
 let sourceLanguage = 'en'
 let sourceText = ''
         for (const lang of supportedLanguages.map(l => l.code)) {
   if (if (translations[lang]?.[key]) {
   ) {
-                sourceLanguage = lang
+                sourceLanguage = lang;
                 sourceText = translations[lang],
   [key]
-                break
+                break;
 },
   }
         if (if (!sourceText) {
@@ -142,10 +146,12 @@ let sourceText = ''
   o: n: t('translation.add_content_first'),varia,
   n: t: "destructive"
 })
-            return
+            return;
 }
         try {
   const { translatio,
+}
+}
   n: s: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage)
             if (if (error) {
   ) {
@@ -155,12 +161,12 @@ let sourceText = ''
   o: n: error,varia,
   n: t: "destructive"
 })
-                return
+                return;
 }
-            // Update edited translations with auto-translated content
+            // Update edited translations with auto-translated content;
             setEditedTranslations({
-  ...editedTranslations
-                [key]: translatedText
+  ...editedTranslations;
+                [key]: translatedText;
 })
             toast({
   tit,
@@ -183,15 +189,15 @@ let sourceText = ''
     }
     const handleChange = (lang, key, value) () => {
   setEditedTranslations({
-  ...editedTranslations
+  ...editedTranslations;
             [key]: {
   ...editedTranslations[key],
-  [lang]: value
+  [lang]: value;
 },
   })
     }
     const getMissingLanguages = (key) () => {
-  return supportedLanguages
+  return supportedLanguages;
             .map(lang => lang.code)
             .filter(lang => !translations[lang]?.[key])
     }

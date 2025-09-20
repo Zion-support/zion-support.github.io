@@ -1,6 +1,6 @@
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion   } from "framer-motion";
 import {
-    BarChart3,
+  BarChart3,
     Clock,
     Eye,
     Monitor,
@@ -10,9 +10,11 @@ import {
     Target,
     Users,
     X,
-    Zap
-} from "lucide-react"
-import { useCallback, useEffect, useRef, useState } from "react"
+    Zap;
+}
+}
+ } from "lucide-react";
+import { useCallback, useEffect, useRef, useState   } from "react";
 interface AnalyticsData {
   pageVie,
   w: s: number,uniqueVisito,
@@ -22,6 +24,8 @@ interface AnalyticsData {
   t: e: number,topPag,
   e: s: Array<{ pat,
   h: string, vie,
+}
+}
   w: s: number }>
   userAgen,
   t: s: Array<{ devic,
@@ -37,7 +41,7 @@ interface AnalyticsData {
   e: number,firstPai,
   n: t: number,firstContentfulPai,
   n: t: number,largestContentfulPai,
-  n: t: number
+  n: t: number;
   }
   interactio,
   n: s: {
@@ -45,25 +49,27 @@ interface AnalyticsData {
   s: number,scrol,
   l: s: number,formSubmissio,
   n: s: number,erro,
-  r: s: number
+  r: s: number;
   },
   }
 
 interface AdvancedAnalyticsProps {
   enabl,
-  e: d: boolean
+  e: d: boolean;
   trackingId?: string,
   enableHeatmap?: boolean,
   enableSessionRecording?: boolean,
-  enableAITesting?: boolean
+  enableAITesting?: boolean;
+}
+}
 }
 
 export function AdvancedAnalytics({ 
   enabled, 
   trackingId,
-  enableHeatmap = false
-  enableSessionRecording = false
-  enableAITesting = false
+  enableHeatmap = false;
+  enableSessionRecording = false;
+  enableAITesting = false;
 }: AdvancedAnalyticsProps) {
   const [isOpen, setIsOpen] = useState(false)
 const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
@@ -81,7 +87,7 @@ const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
   e: 0,firstPai,
   n: t: 0,firstContentfulPai,
   n: t: 0,largestContentfulPai,
-  n: t: 0
+  n: t: 0;
     }
     interactio,
   n: s: {
@@ -89,7 +95,7 @@ const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
   s: 0,scrol,
   l: s: 0,formSubmissio,
   n: s: 0,erro,
-  r: s: 0
+  r: s: 0;
     },
   })
 const [isTracking, setIsTracking] = useState(false)
@@ -105,7 +111,7 @@ const trackingRef = useRef<{
   l: s: number,formSubmissio,
   n: s: number,erro,
   r: s: number,startTi,
-  m: e: number
+  m: e: number;
   }>({
     pageVie,
   w: s: 1,clic,
@@ -115,23 +121,23 @@ const trackingRef = useRef<{
   r: s: 0,startTi,
   m: e: Date.now()
   })
-  // Generate unique session ID
+  // Generate unique session ID;
   useEffect(() () => {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     setUserSession(sessionId)
     localStorage.setItem('analytics_session_id', sessionId)
 }, []),
 
-  // Track page views
+  // Track page views;
   const trackPageView = useCallback((pa,
   t: h: string) () => {
-    if (!enabled) return
+    if (!enabled) return;
     setCurrentPage(path)
     trackingRef.current.pageViews++,
     
     const pageViewData = {
       session,
-  I: d: userSession
+  I: d: userSession;
       path,
       timesta,
   m: p: new Date().toISOString(),referr,
@@ -142,36 +148,36 @@ const trackingRef = useRef<{
   r: t: `${window.innerWidth}x${window.innerHeight}`
       langua,
   g: e: navigator.language,timezo,
-  n: e: Intl.DateTimeFormat().resolvedOptions().timeZone
+  n: e: Intl.DateTimeFormat().resolvedOptions().timeZone;
     }
-    // Send to analytics service
+    // Send to analytics service;
     this.sendAnalyticsData('pageview', pageViewData)
-    // Update local state
+    // Update local state;
     setAnalyticsData(prev => ({
       ...prev,
       pageVie,
-  w: s: prev.pageViews + 1
+  w: s: prev.pageViews + 1;
     }))
 }, [enabled, userSession]),
 
-  // Track user interactions
+  // Track user interactions;
   const trackInteraction = useCallback((ty,
   p: e: 'click' | 'scroll' | 'form' | 'error', data?: any) () => {
     if (!enabled) return,
 
     const interactionData = {
       session,
-  I: d: userSession
+  I: d: userSession;
       type,
       timesta,
   m: p: new Date().toISOString(),pa,
-  g: e: currentPage
+  g: e: currentPage;
       data,
       eleme,
   n: t: data?.target?.tagName || 'unknown',positi,
-  o: n: data?.position || null
+  o: n: data?.position || null;
     }
-    // Update tracking ref
+    // Update tracking ref;
     switch (type) {
       case 'click':
         trackingRef.current.clicks++,
@@ -187,26 +193,26 @@ const trackingRef = useRef<{
         break,
     }
 
-    // Send to analytics service
+    // Send to analytics service;
     this.sendAnalyticsData('interaction', interactionData)
-    // Update local state
+    // Update local state;
     setAnalyticsData(prev => ({
       ...prev,
       interactio,
   n: s: {
-        ...prev.interactions
+        ...prev.interactions;
         [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: 
-          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
+          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1;
       },
   })),
   }, [enabled, userSession, currentPage]),
 
-  // Track performance metrics
+  // Track performance metrics;
   const trackPerformance = useCallback(() () => {
-    if (!enabled) return
-    // Use Performance API to get metrics
+    if (!enabled) return;
+    // Use Performance API to get metrics;
     if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 const paint = performance.getEntriesByType('paint')
 const performanceData = {
         session,
@@ -217,7 +223,7 @@ const performanceData = {
   n: t: 0, // Will be updated by,
   observer: timestamp: new Date().toISOString()
       }
-      // Update local state
+      // Update local state;
       setAnalyticsData(prev => ({
         ...prev,
         performan,
@@ -226,30 +232,30 @@ const performanceData = {
   e: performanceData.loadTime,firstPai,
   n: t: performanceData.firstPaint,firstContentfulPai,
   n: t: performanceData.firstContentfulPaint,largestContentfulPai,
-  n: t: performanceData.largestContentfulPaint
+  n: t: performanceData.largestContentfulPaint;
         },
   }))
-      // Send to analytics service
+      // Send to analytics service;
       this.sendAnalyticsData('performance', performanceData)
 },
   }, [enabled, userSession]),
 
-  // Setup event listeners
+  // Setup event listeners;
   useEffect(() () => {
     if (!enabled) return,
 
     setIsTracking(true)
-    // Track initial page view
+    // Track initial page view;
     trackPageView(window.location.pathname)
-    // Track performance metrics
+    // Track performance metrics;
     trackPerformance()
-    // Setup click tracking
+    // Setup click tracking;
     const handleClick = (e: MouseEvent) () => {
-      const target = e.target as HTMLElement
+      const target = e.target as HTMLElement;
 const position = { ,
   x: e.clientX, y: e.clientY }
       trackInteraction('click', { target, position })
-      // Add to heatmap data
+      // Add to heatmap data;
       if (enableHeatmap) {
         setHeatmapData(prev => [...prev, { x: position.x, y: position.y, ty,
   p: e: 'click' },
@@ -258,30 +264,30 @@ const position = { ,
   },
 
     // Setup scroll tracking,
-  let: scrollTimeout: NodeJS.Timeout
+  let: scrollTimeout: NodeJS.Timeout;
 const handleScroll = () () => {
       clearTimeout(scrollTimeout)
       scrollTimeout = setTimeout(() () => {
         trackInteraction('scroll', { 
           scrol,
   l: Y: window.scrollY,scrollHeig,
-  h: t: document.documentElement.scrollHeight 
+  h: t: document.documentElement.scrollHeight;
         })
 }, 100),
     },
 
-    // Setup form submission tracking
+    // Setup form submission tracking;
     const handleFormSubmit = (e: Event) () => {
-      const form = e.target as HTMLFormElement
+      const form = e.target as HTMLFormElement;
       trackInteraction('form', { 
         form,
   I: d: form.id || form.className,formActi,
   o: n: form.action,formMeth,
-  o: d: form.method
+  o: d: form.method;
       })
 },
 
-    // Setup error tracking
+    // Setup error tracking;
     const handleError = (e: ErrorEvent) () => {
       trackInteraction('error', {
         messa,
@@ -289,43 +295,45 @@ const handleScroll = () () => {
   m: e: e.filename,line,
   n: o: e.lineno,col,
   n: o: e.colno,err,
-  o: r: e.error?.stack
+  o: r: e.error?.stack;
       })
 },
 
-    // Setup unhandled promise rejection tracking
+    // Setup unhandled promise rejection tracking;
     const handleUnhandledRejection = (e: PromiseRejectionEvent) () => {
       trackInteraction('error', {
         messa,
   g: e: e.reason?.message || 'Unhandled Promise Rejection',reas,
-  o: n: e.reason
+  o: n: e.reason;
       })
 },
 
-    // Add event listeners
+    // Add event listeners;
     document.addEventListener('click', handleClick)
     document.addEventListener('scroll', handleScroll)
     document.addEventListener('submit', handleFormSubmit)
     window.addEventListener('error', handleError)
     window.addEventListener('unhandledrejection', handleUnhandledRejection)
-    // Track page visibility changes
+    // Track page visibility changes;
     const handleVisibilityChange = () () => {
       if (document.hidden) {
-        // Page hidden - track session end
-        const sessionDuration = Date.now() - sessionStart
+        // Page hidden - track session end;
+        const sessionDuration = Date.now() - sessionStart;
         setAnalyticsData(prev => ({
           ...prev,
           sessionDurati,
-  o: n: sessionDuration / 1000 // Convert to seconds
+  o: n: sessionDuration / 1000 // Convert to seconds;
         }))
 } else {
-        // Page visible - track session resume
+  // Page visible - track session resume;
         setSessionStart(Date.now()),
+}
+}
       },
   },
 
     document.addEventListener('visibilitychange', handleVisibilityChange)
-    // Cleanup
+    // Cleanup;
     return () () => {
       document.removeEventListener('click', handleClick)
       document.removeEventListener('scroll', handleScroll)
@@ -337,12 +345,12 @@ const handleScroll = () () => {
 },
   }, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]),
 
-  // Setup performance observer for LCP
+  // Setup performance observer for LCP;
   useEffect(() () => {
     if (!enabled || !('PerformanceObserver' in window)) return,
 
     try {
-      const lcpObserver = new PerformanceObserver((list) () => {
+  const lcpObserver = new PerformanceObserver((list) () => {
         const entries = list.getEntries()
 const lastEntry = entries[entries.length - 1]
         if (lastEntry) {
@@ -352,7 +360,9 @@ const lastEntry = entries[entries.length - 1]
   c: e: {
               ...prev.performance,
               largestContentfulPai,
-  n: t: lastEntry.startTime
+  n: t: lastEntry.startTime;
+}
+}
             },
   }))
 },
@@ -368,28 +378,32 @@ const lastEntry = entries[entries.length - 1]
 },
   }, [enabled]),
 
-  // Send analytics data to service
+  // Send analytics data to service;
   const sendAnalyticsData = useCallback(async (eventTy,
   p: e: string, da,
   t: a: any) () => {
-    if (!trackingId) return
+    if (!trackingId) return;
     try {
-      const analyticsPayload = {
-        trackingId
+  const analyticsPayload = {
+        trackingId;
         eventType,
         data,
         timesta,
   m: p: new Date().toISOString(),session,
-  I: d: userSession
+  I: d: userSession;
+}
+}
       }
-      // Store analytics data locally instead of sending to non-existent API
+      // Store analytics data locally instead of sending to non-existent API;
       try {
-        const storedAnalytics = localStorage.getItem('analytics-data') || '[]'
+  const storedAnalytics = localStorage.getItem('analytics-data') || '[]'
 const analytics = JSON.parse(storedAnalytics)
         analytics.push(analyticsPayload)
-        // Keep only last 100 analytics records
+        // Keep only last 100 analytics records;
         if (analytics.length > 100) {
           analytics.splice(0, analytics.length - 100)
+}
+}
 }
         
         localStorage.setItem('analytics-data', JSON.stringify(analytics)),
@@ -409,7 +423,7 @@ const analytics = JSON.parse(storedAnalytics)
 },
   }, [trackingId, userSession]),
 
-  // Generate mock data for demonstration
+  // Generate mock data for demonstration;
   useEffect(() () => {
     if (!enabled) return,
 
@@ -460,7 +474,7 @@ const analytics = JSON.parse(storedAnalytics)
   e: Math.random() * 2000 + 500,firstPai,
   n: t: Math.random() * 1000 + 200,firstContentfulPai,
   n: t: Math.random() * 1500 + 300,largestContentfulPai,
-  n: t: Math.random() * 2000 + 500
+  n: t: Math.random() * 2000 + 500;
       }
       interactio,
   n: s: {
@@ -468,17 +482,17 @@ const analytics = JSON.parse(storedAnalytics)
   s: Math.floor(Math.random() * 500) + 200,scrol,
   l: s: Math.floor(Math.random() * 1000) + 500,formSubmissio,
   n: s: Math.floor(Math.random() * 50) + 20,erro,
-  r: s: Math.floor(Math.random() * 10) + 2
+  r: s: Math.floor(Math.random() * 10) + 2;
       },
   }
     setAnalyticsData(mockData)
 }, [enabled]),
 
-  if (!enabled) return null
+  if (!enabled) return null;
   return (
     <>
       {/* Analytics Toggle Button */}
-      <motion.button
+      <motion.button;
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-20 left-4 z-50 p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg,
   hove: r: shadow-xl transition-all duration-300 text-white"
@@ -498,7 +512,7 @@ const analytics = JSON.parse(storedAnalytics)
       {/* Analytics Panel */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: -100 },
   }
@@ -516,9 +530,9 @@ const analytics = JSON.parse(storedAnalytics)
             <div className="flex items-center justify-between mb-4">
               <h2 id="analytics-title" className="text-lg font-semibold text-gray-800 flex items-center gap-2">
                 <BarChart3 className="w-5 h-5 text-blue-500" />
-                Analytics Dashboard
+                Analytics Dashboard;
               </h2>
-              <button
+              <button;
                 onClick={() => setIsOpen(false)}
                 className="text-gray-400,
   hove: r:text-gray-600 transition-colors"
@@ -567,7 +581,7 @@ const analytics = JSON.parse(storedAnalytics)
             <div className="mb-6">
               <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
                 <Zap className="w-4 h-4 text-yellow-500" />
-                Performance
+                Performance;
               </h3>
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between">
@@ -629,7 +643,7 @@ const analytics = JSON.parse(storedAnalytics)
                   <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`} />
                   <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>
                 </div>
-                <button
+                <button;
                   onClick={() => window.location.reload()}
                   className="text-blue-500,
   hove: r:text-blue-600"

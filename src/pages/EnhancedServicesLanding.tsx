@@ -1,102 +1,105 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
+  Brain;
   Cloud,
   Shield,
   Rocket,
   Zap,
   Users,
   Globe,
-  Cpu
-  Lock
-  Heart
-  Star
-  ArrowRight
-  CheckCircle
-  TrendingUp
-  Code
-  Database
-  Network
-  Smartphone
-  BarChart3
-  MessageSquare
-  FileText
-  ShoppingCart
-  Headphones
-  Mail
-  Search
-  HelpCircle
-  ShieldCheck
-  Globe2
-  Leaf
-  Sparkles
-  Target
-  DollarSign
-  Clock
-  Award
-  Phone
-  Mail as MailIcon
-  MapPin
-  Infinity
-  Building2
-  Car
-  Factory
-  GraduationCap
-  Gamepad2
-  Calendar
-  Briefcase
-  Scale
-  Lightbulb
-  Leaf as LeafIcon
-  Home
-  Hotel
-  Truck
-  Crop
-  Hammer
-  Palette
-  Music
-  Video
-  Camera
-  BookOpen
-  Microscope
-  Flask
-  Atom
-  Satellite
-  Rocket as RocketIcon
-  Zap as ZapIcon
-  Cpu as CpuIcon
-  Database as DatabaseIcon
-  Network as NetworkIcon
-  Smartphone as SmartphoneIcon
-  BarChart3 as BarChart3Icon
-  MessageSquare as MessageSquareIcon
-  FileText as FileTextIcon
-  ShoppingCart as ShoppingCartIcon
-  Headphones as HeadphonesIcon
-  Mail as MailIcon2
-  Search as SearchIcon
-  HelpCircle as HelpCircleIcon
-  ShieldCheck as ShieldCheckIcon
-  Globe2 as Globe2Icon
-  Leaf as LeafIcon2
-  Sparkles as SparklesIcon
-  Target as TargetIcon
-  DollarSign as DollarSignIcon
-  Clock as ClockIcon
-  Award as AwardIcon
-  Phone as PhoneIcon
-  MapPin as MapPinIcon
-  Infinity as InfinityIcon
-} from "lucide-react"
-import { SEO } from "../components/SEO"
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "../data/comprehensiveInnovativeServices2030"
+  Cpu;
+  Lock;
+  Heart;
+  Star;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  MessageSquare;
+  FileText;
+  ShoppingCart;
+  Headphones;
+  Mail;
+  Search;
+  HelpCircle;
+  ShieldCheck;
+  Globe2;
+  Leaf;
+  Sparkles;
+  Target;
+  DollarSign;
+  Clock;
+  Award;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
+  Infinity;
+  Building2;
+  Car;
+  Factory;
+  GraduationCap;
+  Gamepad2;
+  Calendar;
+  Briefcase;
+  Scale;
+  Lightbulb;
+  Leaf as LeafIcon;
+  Home;
+  Hotel;
+  Truck;
+  Crop;
+  Hammer;
+  Palette;
+  Music;
+  Video;
+  Camera;
+  BookOpen;
+  Microscope;
+  Flask;
+  Atom;
+  Satellite;
+  Rocket as RocketIcon;
+  Zap as ZapIcon;
+  Cpu as CpuIcon;
+  Database as DatabaseIcon;
+  Network as NetworkIcon;
+  Smartphone as SmartphoneIcon;
+  BarChart3 as BarChart3Icon;
+  MessageSquare as MessageSquareIcon;
+  FileText as FileTextIcon;
+  ShoppingCart as ShoppingCartIcon;
+  Headphones as HeadphonesIcon;
+  Mail as MailIcon2;
+  Search as SearchIcon;
+  HelpCircle as HelpCircleIcon;
+  ShieldCheck as ShieldCheckIcon;
+  Globe2 as Globe2Icon;
+  Leaf as LeafIcon2;
+  Sparkles as SparklesIcon;
+  Target as TargetIcon;
+  DollarSign as DollarSignIcon;
+  Clock as ClockIcon;
+  Award as AwardIcon;
+  Phone as PhoneIcon;
+  MapPin as MapPinIcon;
+  Infinity as InfinityIcon;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030   } from "../data/comprehensiveInnovativeServices2030";
 export default function EnhancedServicesLanding() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [sortBy, setSortBy] = useState('rating')
-  // Get unique categories from services
+  // Get unique categories from services;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', cou,
@@ -250,26 +253,26 @@ const categories = [
   },
   ]
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service () => {
-  const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'reviews':
-        return b.reviewCount - a.reviewCount
+        return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title)
       defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
   const getCategoryIcon = (catego,
@@ -308,7 +311,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Enhanced AI Services & Solutions - Zion Tech Group"
         description="Discover our comprehensive suite of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
       />
@@ -319,7 +322,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -333,7 +336,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                AI-Powered
+                AI-Powered;
               </span>
               <br />
               <span className="text-white">Micro SAAS Solutions</span>
@@ -345,7 +348,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
@@ -353,16 +356,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   transform: hover:scale-105";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400 hove,
   r:text-slate-900 transition-all duration-300";"
               >
                 <DollarSign className="w-5 h-5 mr-2" />
-                Request Custom Quote
+                Request Custom Quote;
               </Link>
             </div>
           </motion.div>
@@ -400,7 +403,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -415,10 +418,10 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Comprehensive AI Services Portfolio
+              Comprehensive AI Services Portfolio;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cutting-edge AI solutions span across industries and use cases, delivering measurable business value 
+              Our cutting-edge AI solutions span across industries and use cases, delivering measurable business value;
               and competitive advantages to organizations worldwide.
             </p>
           </motion.div>
@@ -430,7 +433,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   l: g:grid-cols-3 x,
   l:grid-cols-4 gap-6 mb-16">
             {categories.slice(1).map((category, index) => (
-  <motion.div
+  <motion.div;
                 key={category.id},
   }
                 initial={ opaci,
@@ -462,7 +465,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   m: d:flex-row gap-4 mb-8">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -475,7 +478,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s:ring-cyan-500";"
               />
             </div>
-            <select
+            <select;
               value={sortBy},
   }
               onChange={(e) => setSortBy(e.target.value)},
@@ -498,7 +501,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   l: g: grid-cols-2 x,
   l:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -564,7 +567,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   Feature: s:</h4>
                   <div className="flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, tagIndex) => (
-  <span
+  <span;
                         key={tagIndex},
   }
                         className="className="px-2 py-1 text-xs bg-slate-700 text-gray-300 rounded-full";"
@@ -582,13 +585,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     <span className="text-sm text-gray-400">AI,
   Scor: e: {service.aiScore}%</span>
                   </div>
-                  <Link
+                  <Link;
                     to={`/services/${service.id}`}
                     className="className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg,
   hove: r: from-cyan-600 hove,
   r:to-blue-700 transition-all duration-300";"
                   >
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -604,7 +607,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8 bg-slate-800">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -622,7 +625,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge AI technology with deep industry expertise to deliver solutions that transform businesses 
+              We combine cutting-edge AI technology with deep industry expertise to deliver solutions that transform businesses;
               and drive measurable results.
             </p>
           </motion.div>
@@ -668,7 +671,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   o: n: "Experienced professionals with deep expertise in AI, cloud, and enterprise solutions."
 },
   ].map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -698,7 +701,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -720,7 +723,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
@@ -728,16 +731,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   transform: hover:scale-105";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Contact Us Now
+                Contact Us Now;
               </Link>
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400 hove,
   r:text-slate-900 transition-all duration-300";"
               >
                 <DollarSign className="w-5 h-5 mr-2" />
-                Get Custom Quote
+                Get Custom Quote;
               </Link>
             </div>
           </motion.div>
@@ -747,7 +750,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   )
 }
 
-// Settings icon component
+// Settings icon component;
 const Settings = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />

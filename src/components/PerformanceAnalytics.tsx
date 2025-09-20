@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react"
-import { motion } from "framer-motion"
-import { 
+import { motion   } from "framer-motion";
+import {
   Activity,
   TrendingUp, 
   TrendingDown, 
@@ -12,8 +12,10 @@ import {
   Cpu,
   HardDrive,
   Network,
-  Monitor
-} from "lucide-react"
+  Monitor;
+}
+}
+ } from "lucide-react";
 interface PerformanceMetric {
   na,
   m: e: string,val,
@@ -23,6 +25,8 @@ interface PerformanceMetric {
   u: s: 'good' | 'warning' | 'critical',ic,
   o: n: React.ComponentType<any>
 }
+}
+}
 
 interface PerformanceData {
   timesta,
@@ -30,6 +34,8 @@ interface PerformanceData {
   c: s: PerformanceMetric[],aler,
   t: s: string[],recommendatio,
   n: s: string[],
+}
+}
   }
 
 const,
@@ -38,7 +44,7 @@ const,
   const [isMonitoring, setIsMonitoring] = useState(false)
 const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h'),
 
-  // Simulated performance data
+  // Simulated performance data;
   const generatePerformanceData = useCallback((): PerformanceData () => {
     const now = Date.now()
 const,
@@ -50,7 +56,7 @@ const,
   i: t: 'ms',tre,
   n: d: Math.random() > 0.5 ? 'up' : 'down',stat,
   u: s: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',ic,
-  o: n: Clock
+  o: n: Clock;
       }, {
         na,
   m: e: 'Memory Usage',val,
@@ -58,7 +64,7 @@ const,
   i: t: '%',tre,
   n: d: Math.random() > 0.5 ? 'up' : 'down',stat,
   u: s: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical',ic,
-  o: n: HardDrive
+  o: n: HardDrive;
       }, {
         na,
   m: e: 'CPU Usage',val,
@@ -66,7 +72,7 @@ const,
   i: t: '%',tre,
   n: d: Math.random() > 0.5 ? 'up' : 'down',stat,
   u: s: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',ic,
-  o: n: Cpu
+  o: n: Cpu;
       }, {
         na,
   m: e: 'Network Latency',val,
@@ -74,7 +80,7 @@ const,
   i: t: 'ms',tre,
   n: d: Math.random() > 0.5 ? 'up' : 'down',stat,
   u: s: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical',ic,
-  o: n: Network
+  o: n: Network;
       }, {
         na,
   m: e: 'Error Rate',val,
@@ -82,7 +88,7 @@ const,
   i: t: '%',tre,
   n: d: Math.random() > 0.5 ? 'up' : 'down',stat,
   u: s: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',ic,
-  o: n: AlertTriangle
+  o: n: AlertTriangle;
       }, {
         na,
   m: e: 'Response Time',val,
@@ -90,7 +96,7 @@ const,
   i: t: 'ms',tre,
   n: d: Math.random() > 0.5 ? 'up' : 'down',stat,
   u: s: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',ic,
-  o: n: Zap
+  o: n: Zap;
       },
   ]
 const alerts = [
@@ -104,11 +110,13 @@ const recommendations = [
     ].filter(() => Math.random() > 0.6),
 
     return {
-      timesta,
-  m: p: now
+  timesta,
+  m: p: now;
       metrics,
       alerts,
-      recommendations
+      recommendations;
+}
+}
     },
   }, []),
 
@@ -166,7 +174,7 @@ const formatValue = (val,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -179,24 +187,24 @@ const formatValue = (val,
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Monitor className="w-4 h-4 mr-2" />
-              Performance Analytics
+              Performance Analytics;
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Real-Time
+              Real-Time;
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                {' '}Performance
+                {' '}Performance;
               </span>
-              {' '}Monitoring
+              {' '}Monitoring;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Monitor your application's performance in real-time with advanced analytics
+              Monitor your application's performance in real-time with advanced analytics;
               automated alerts, and intelligent recommendations.
             </p>
           </motion.div>
 
           {/* Controls */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -210,10 +218,10 @@ const formatValue = (val,
             className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center mb-12"
           >
-            <button
+            <button;
               onClick={() => setIsMonitoring(!isMonitoring)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
-                isMonitoring
+                isMonitoring;
                   ? 'bg-red-600,
   hove: r: bg-red-700 text-white'
                   : 'bg-green-600 hove,
@@ -223,17 +231,17 @@ const formatValue = (val,
               {isMonitoring ? (
                 <>
                   <AlertTriangle className="w-4 h-4 mr-2" />
-                  Stop Monitoring
+                  Stop Monitoring;
                 </>
               ) : (
                 <>
                   <Activity className="w-4 h-4 mr-2" />
-                  Start Monitoring
+                  Start Monitoring;
                 </>
               )}
             </button>
 
-            <select
+            <select;
               value={selectedTimeframe}
               onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white,
@@ -256,7 +264,7 @@ const formatValue = (val,
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0 },
   }
@@ -271,7 +279,7 @@ const formatValue = (val,
   g:grid-cols-3 gap-8 mb-12"
             >
               {performanceData.metrics.map((metric, index) => (
-                <motion.div
+                <motion.div;
                   key={metric.name}
                   initial={ opaci,
   t: y: 0, y: 20 },
@@ -308,7 +316,7 @@ const formatValue = (val,
                       {metric.trend === 'up' ? 'Increasing' : metric.trend === 'down' ? 'Decreasing' : 'Stable'}
                     </span>
                     <div className="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
-                      <div 
+                      <div;
                         className={`h-full transition-all duration-300 ${
                           metric.status === 'good' ? 'bg-green-500' : 
                           metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
@@ -327,7 +335,7 @@ const formatValue = (val,
             <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
               {/* Alerts */}
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: -20 },
   }
@@ -342,7 +350,7 @@ const formatValue = (val,
               >
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                   <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2" />
-                  Active Alerts
+                  Active Alerts;
                 </h3>
                 {performanceData.alerts.length > 0 ? (
                   <div className="space-y-3">
@@ -362,7 +370,7 @@ const formatValue = (val,
               </motion.div>
 
               {/* Recommendations */}
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -377,7 +385,7 @@ const formatValue = (val,
               >
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                   <BarChart3 className="w-5 h-5 text-blue-400 mr-2" />
-                  Recommendations
+                  Recommendations;
                 </h3>
                 {performanceData.recommendations.length > 0 ? (
                   <div className="space-y-3">
@@ -404,7 +412,7 @@ const formatValue = (val,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -420,10 +428,10 @@ const formatValue = (val,
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-              Optimize Your Application Performance
+              Optimize Your Application Performance;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get real-time insights into your application's performance and receive 
+              Get real-time insights into your application's performance and receive;
               intelligent recommendations for optimization.
             </p>
             <div className="flex flex-col,
@@ -432,7 +440,7 @@ const formatValue = (val,
   hove: r:from-purple-700 hove,
   r:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center mx-auto">
                 <Zap className="w-5 h-5 mr-2" />
-                Start Performance Monitoring
+                Start Performance Monitoring;
               </button>
             </div>
           </motion.div>
@@ -441,4 +449,4 @@ const formatValue = (val,
     </div>
   )
 }
-export default PerformanceAnalytics
+export default PerformanceAnalytics;

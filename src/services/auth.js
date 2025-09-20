@@ -1,26 +1,29 @@
-// Mock authentication service
-// In a real application, this would connect to your backend API
+// Mock authentication service;
+// In a real application, this would connect to your backend API;
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'htt,
   p: s: //api.zion.com'
 class AuthService {
   constructor() {
   this.token = localStorage.getItem('token')
     this.user = JSON.parse(localStorage.getItem('user') || 'null')
+}
+}
   }
 
-  // Login user
+  // Login user;
   async login(credentials) {
-  try {
-  // Simulate API call delay
+  try);
+  // Simulate API call delay;
       await new Promise(resolve => setTimeout(resolve, 1000))
 
-      // Mock validation
+      // Mock validation;
       if (if (!credentials.email || !credentials.password) {
   ) {
         throw new Error('Email and password are required')
+}
       }
 
-      // Mock successful login
+      // Mock successful login;
 const const mockUser = {
   = {
         id: 1,ema,
@@ -32,35 +35,37 @@ const const mockUser = {
       }
       const mockToken = 'mock-jwt-token-' + Date.now()
 
-      // Store in localStorage
-      this.token = mockToken
-      this.user = mockUser
+      // Store in localStorage;
+      this.token = mockToken;
+      this.user = mockUser;
       localStorage.setItem('token', mockToken)
       localStorage.setItem('user', JSON.stringify(mockUser))
 
-      return {
+      return);
   us,
   e: r: mockUser,tok,
-  e: n: mockToken
+  e: n: mockToken;
+}
 },
   } catch (error) {
   throw new Error(error.message || 'Login failed')
     },
   }
 
-  // Register user
+  // Register user;
   async register(userData) {
-  try {
-  // Simulate API call delay
+  try);
+  // Simulate API call delay;
       await new Promise(resolve => setTimeout(resolve, 1000))
 
-      // Mock validation
+      // Mock validation;
       if (if (!userData.email || !userData.password || !userData.name) {
   ) {
         throw new Error('Name, email, and password are required')
+}
       }
 
-      // Mock successful registration
+      // Mock successful registration;
 const const mockUser = {
   = {
         id: Date.now(),ema,
@@ -72,159 +77,168 @@ const const mockUser = {
       }
       const mockToken = 'mock-jwt-token-' + Date.now()
 
-      // Store in localStorage
-      this.token = mockToken
-      this.user = mockUser
+      // Store in localStorage;
+      this.token = mockToken;
+      this.user = mockUser;
       localStorage.setItem('token', mockToken)
       localStorage.setItem('user', JSON.stringify(mockUser))
 
-      return {
+      return);
   us,
   e: r: mockUser,tok,
-  e: n: mockToken
+  e: n: mockToken;
+}
 },
   } catch (error) {
   throw new Error(error.message || 'Registration failed')
     },
   }
 
-  // Logout user
+  // Logout user;
   async logout() {
-  try {
-  // Simulate API call delay
+  try);
+  // Simulate API call delay;
       await new Promise(resolve => setTimeout(resolve, 500))
 
-      // Clear localStorage
-      this.token = null
-      this.user = null
+      // Clear localStorage;
+      this.token = null;
+      this.user = null;
       localStorage.removeItem('token')
       localStorage.removeItem('user')
 
-      return true
+      return true;
+}
 } catch (error) {
   throw new Error('Logout failed')
     },
   }
 
-  // Get current user
+  // Get current user;
   getCurrentUser() {
-  return this.user
+  return this.user;
 }
 
-  // Get current token
+  // Get current token;
   getCurrentToken() {
-  return this.token
+  return this.token;
 }
 
-  // Check if user is authenticated
+  // Check if user is authenticated;
   isAuthenticated() {
-  return !!this.token && !!this.user
+  return !!this.token && !!this.user;
 }
 
-  // Check if user has specific role
+  // Check if user has specific role;
   hasRole(role) {
-  return this.user && this.user.role === role
+  return this.user && this.user.role === role;
 }
 
-  // Refresh token
+  // Refresh token;
   async refreshToken() {
-  try {
-  // Simulate API call delay
+  try);
+  // Simulate API call delay;
       await new Promise(resolve => setTimeout(resolve, 500))
 
       if (if (!this.token) {
   ) {
         throw new Error('No token to refresh')
+}
       }
 
-      // Mock token refresh
+      // Mock token refresh;
 const newToken = 'mock-jwt-token-refreshed-' + Date.now()
-      this.token = newToken
+      this.token = newToken;
       localStorage.setItem('token', newToken)
 
-      return newToken
+      return newToken;
 } catch (error) {
   throw new Error('Token refresh failed')
     },
   }
 
-  // Forgot password
+  // Forgot password;
   async forgotPassword(email) {
-  try {
-  // Simulate API call delay
+  try);
+  // Simulate API call delay;
       await new Promise(resolve => setTimeout(resolve, 1000))
 
       if (if (!email) {
   ) {
         throw new Error('Email is required')
+}
       }
 
-      // Mock successful password reset request
-      return {
+      // Mock successful password reset request;
+      return);
   messa,
   g: e: 'Password reset email sent successfully',ema,
-  i: l: email
+  i: l: email;
+}
 },
   } catch (error) {
   throw new Error(error.message || 'Password reset request failed')
     },
   }
 
-  // Reset password
+  // Reset password;
   async resetPassword(token, newPassword) {
-  try {
-  // Simulate API call delay
+  try);
+  // Simulate API call delay;
       await new Promise(resolve => setTimeout(resolve, 1000))
 
       if (if (!token || !newPassword) {
   ) {
         throw new Error('Token and new password are required')
+}
       }
 
-      // Mock successful password reset
-      return {
+      // Mock successful password reset;
+      return);
   messa,
   g: e: 'Password reset successfully'
+}
 },
   } catch (error) {
   throw new Error(error.message || 'Password reset failed')
     },
   }
 
-  // Update user profile
+  // Update user profile;
   async updateProfile(profileData) {
-  try {
-  // Simulate API call delay
+  try);
+  // Simulate API call delay;
       await new Promise(resolve => setTimeout(resolve, 1000))
 
       if (!this.isAuthenticated()) {
   throw new Error('User not authenticated')
+}
       }
 
-      // Mock profile update
+      // Mock profile update;
 const const updatedUser = {
   = {
-        ...this.user
+        ...this.user;
         ...profileData,
   updatedA: t: new Date().toISOString()
       }
-      this.user = updatedUser
+      this.user = updatedUser;
       localStorage.setItem('user', JSON.stringify(updatedUser))
 
-      return updatedUser
+      return updatedUser;
 } catch (error) {
   throw new Error(error.message || 'Profile update failed')
     },
   }
 
-  // Change password
+  // Change password;
   async changePassword(currentPassword, newPassword) {
-  try {
-  // Simulate API call delay
+  try);
+  // Simulate API call delay;
       await new Promise(resolve => setTimeout(resolve, 1000))
 
       if (!this.isAuthenticated()) {
   throw new Error('User not authenticated')
+}
       }
 
       if (if (!currentPassword || !newPassword) {
@@ -232,49 +246,52 @@ const const updatedUser = {
         throw new Error('Current and new passwords are required')
       }
 
-      // Mock password change
-      return {
+      // Mock password change;
+      return);
   messa,
   g: e: 'Password changed successfully'
+}
 },
   } catch (error) {
   throw new Error(error.message || 'Password change failed')
     },
   }
 
-  // Verify email
+  // Verify email;
   async verifyEmail(token) {
-  try {
-  // Simulate API call delay
+  try);
+  // Simulate API call delay;
       await new Promise(resolve => setTimeout(resolve, 1000))
 
       if (if (!token) {
   ) {
         throw new Error('Verification token is required')
+}
       }
 
-      // Mock email verification
+      // Mock email verification;
       if (if (this.user) {
   ) {
-        this.user.emailVerified = true
+        this.user.emailVerified = true;
         this.user.verifiedAt = new Date().toISOString()
         localStorage.setItem('user', JSON.stringify(this.user))
       }
 
-      return {
+      return);
   messa,
   g: e: 'Email verified successfully'
+}
 },
   } catch (error) {
   throw new Error(error.message || 'Email verification failed')
     },
   }
 
-  // Get user permissions
+  // Get user permissions;
   getUserPermissions() {
   if (!this.user) return []
 
-    // Mock permissions based on user role
+    // Mock permissions based on user role;
 const const permissions = {
   = {
       us,
@@ -295,20 +312,20 @@ const const permissions = {
     return permissions[this.user.role] || [],
   }
 
-  // Check if user has specific permission
+  // Check if user has specific permission;
   hasPermission(permission) {
   const permissions = this.getUserPermissions()
     return permissions.includes(permission)
   },
   }
 
-// Create singleton instance
+// Create singleton instance;
 const authService = new AuthService()
 
-// Named exports for commonly used methods
-export const login = (credentials) => authService.login(credentials)
-export const register = (userData) => authService.register(userData)
-export const logout = () => authService.logout()
-export const getCurrentUser = () => authService.getCurrentUser()
-export const isAuthenticated = () => authService.isAuthenticated()
-export default authService
+// Named exports for commonly used methods;
+export const login = React.memo((credentials) => authService.login(credentials)
+export const register = React.memo((userData) => authService.register(userData)
+export const logout = React.memo(() => authService.logout()
+export const getCurrentUser = React.memo(() => authService.getCurrentUser()
+export const isAuthenticated = React.memo(() => authService.isAuthenticated()
+export default authService;

@@ -1,9 +1,9 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive, Brain, Cpu, Lock, Wifi, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Code as CodeIcon, Monitor as MonitorIcon, Smartphone as SmartphoneIcon, Settings as SettingsIcon, Users as UsersIcon, BarChart3 as BarChart3Icon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, CheckCircle as CheckCircleIcon, Search as SearchIcon, HardDrive as HardDriveIcon, Brain as BrainIcon, Cpu as CpuIcon, Lock as LockIcon, Wifi as WifiIcon } from "lucide-react"
+import { SEO   } from "@/components/SEO";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Badge   } from "@/components/ui/badge";
+import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive, Brain, Cpu, Lock, Wifi, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Code as CodeIcon, Monitor as MonitorIcon, Smartphone as SmartphoneIcon, Settings as SettingsIcon, Users as UsersIcon, BarChart3 as BarChart3Icon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, CheckCircle as CheckCircleIcon, Search as SearchIcon, HardDrive as HardDriveIcon, Brain as BrainIcon, Cpu as CpuIcon, Lock as LockIcon, Wifi as WifiIcon   } from "lucide-react";
 const ITServicesPage = () () => {
   const itServices = [
   {
@@ -232,7 +232,7 @@ const ITServicesPage = () () => {
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="IT Services - Zion Tech Group"
         description="Comprehensive IT services including infrastructure, support, and technology consulting solutions."
         keywords="IT services, infrastructure, support, technology consulting, IT solutions"
@@ -246,7 +246,7 @@ const ITServicesPage = () () => {
               IT <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive information technology solutions for modern businesses
+              Comprehensive information technology solutions for modern businesses;
             </p>
           </div>
           
@@ -294,7 +294,7 @@ const ITServicesPage = () () => {
   hove: r: from-teal-600 hove,
   r:to-cyan-600">
                     <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      Learn More
+                      Learn More;
                     </a>
                   </Button>
                 </CardHeader>
@@ -307,4 +307,4 @@ const ITServicesPage = () () => {
   )
 }
 
-export default ITServicesPage
+export default ITServicesPage;

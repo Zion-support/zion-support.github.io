@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { Shield, Database, Monitor } from "lucide-react"
+import { Shield, Database, Monitor     } from "lucide-react";
 const ITSolutions = () () => {
     const features = [
   {
@@ -52,9 +52,9 @@ const ITSolutions = () () => {
   } transition={ durati,
   o: n: 0.8 },
   }>
-            IT Solutions for
+            IT Solutions for;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
-              {" "}Modern Business
+              {" "}Modern Business;
             </span>
           </motion.h1>
           <motion.p className="text-xl,
@@ -66,7 +66,7 @@ const ITSolutions = () () => {
   o: n: 0.8, del,
   a: y: 0.2 },
   }>
-            Optimize your IT infrastructure with our comprehensive solutions designed to improve 
+            Optimize your IT infrastructure with our comprehensive solutions designed to improve;
             efficiency, security, and performance across your organization.
           </motion.p>
           <motion.div initial={ opaci,
@@ -81,7 +81,7 @@ const ITSolutions = () () => {
   hove: r: from-teal-700,
   hove: r:to-cyan-700 transition-all duration-300 transform hove,
   r:scale-105">
-              Optimize Your IT
+              Optimize Your IT;
             </button>
           </motion.div>
         </div>
@@ -94,7 +94,7 @@ const ITSolutions = () () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our IT Capabilities</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              End-to-end IT solutions to modernize your business operations
+              End-to-end IT solutions to modernize your business operations;
             </p>
           </div>
 
@@ -130,7 +130,7 @@ const ITSolutions = () () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Solutions?</h2>
               <p className="text-xl text-gray-600">
-                Experience the benefits of optimized IT infrastructure
+                Experience the benefits of optimized IT infrastructure;
               </p>
             </div>
 
@@ -165,10 +165,10 @@ const ITSolutions = () () => {
           </p>
           <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold,
   hove: r: bg-gray-100 transition-colors">
-            Schedule a Consultation
+            Schedule a Consultation;
           </button>
         </div>
       </section>
     </div>)
 }
-export default ITSolutions
+export default ITSolutions;

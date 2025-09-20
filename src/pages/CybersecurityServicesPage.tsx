@@ -1,41 +1,44 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { SEOHead } from "../components/seo/SEOHead"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { Link   } from "react-router-dom";
+import { SEOHead   } from "../components/seo/SEOHead";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Badge   } from "@/components/ui/badge";
 import {
-  Shield
-  Lock
-  Eye
-  AlertTriangle
-  Users
-  Globe
-  Phone
-  Mail
-  MapPin
-  Star
-  CheckCircle
-  ArrowRight
-  Zap
-  Brain
-  Network
-  Server
-  Database
-  Key
-  Monitor
-  TrendingUp
-  ShieldCheck
-  FileText
-  Clock
-  DollarSign
-  Code
-} from "lucide-react"
-import { ENHANCED_SERVICES } from "@/data/enhancedServices"
-import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices"
-import { TrustedBySection } from "@/components/TrustedBySection"
-import { QuoteFormSection } from "@/components/QuoteFormSection"
-// Filter cybersecurity services
+  Shield;
+  Lock;
+  Eye;
+  AlertTriangle;
+  Users;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Zap;
+  Brain;
+  Network;
+  Server;
+  Database;
+  Key;
+  Monitor;
+  TrendingUp;
+  ShieldCheck;
+  FileText;
+  Clock;
+  DollarSign;
+  Code;
+}
+}
+ } from "lucide-react";
+import { ENHANCED_SERVICES   } from "@/data/enhancedServices";
+import { COMPREHENSIVE_SERVICES   } from "@/data/comprehensiveServices";
+import { TrustedBySection   } from "@/components/TrustedBySection";
+import { QuoteFormSection   } from "@/components/QuoteFormSection";
+// Filter cybersecurity services;
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
 )
@@ -58,7 +61,7 @@ const SECURITY_SERVICE_CATEGORIES = [
 export default function CybersecurityServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   
-  // Data arrays
+  // Data arrays;
 const securityTechnologies = [
   'SIEM PlatformsEDR Solutions'
     'Zero Trust NetworkIdentity Management'
@@ -120,7 +123,7 @@ const securityTechnologies = [
   const getCategoryIcon = (catego,
   r: y: string) () => {
   const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category)
-    return categoryData?.icon || Shield
+    return categoryData?.icon || Shield;
 }
   const getPricingModelLabel = (mod,
   e: l: string) () => {
@@ -130,12 +133,12 @@ const securityTechnologies = [
       case 'hourly': return 'Hourly'
       case 'project-based': return 'Project-based'
       defaul,
-  t: return model
+  t: return model;
 },
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
-      <SEOHead
+      <SEOHead;
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
         keywords={['cybersecuritysecurity services', 'threat detectioncompliance', 'zero trust'],
@@ -174,35 +177,35 @@ const securityTechnologies = [
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent">
-                Cybersecurity
+                Cybersecurity;
               </span>
               <br />
               <span className="text-white">That Never Sleeps</span>
             </h1>
             <p className="text-xl,
   m: d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security
+              Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security;
               platform provides 24/7 protection against evolving cyber threats.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold,
   hove: r:from-red-600,
   hove: r:to-orange-600 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Get Security Assessment
+                Get Security Assessment;
                 <ArrowRight className="inline ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/case-studies"
                 className="className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold,
   hove: r:bg-white hove,
   r:text-gray-900 transition-all duration-300";"
               >
-                View Case Studies
+                View Case Studies;
               </Link>
             </div>
           </div>
@@ -215,13 +218,13 @@ const securityTechnologies = [
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4 text-white">Security Service Categories</h2>
               <p className="text-zion-slate-light max-w-3xl mx-auto">
-                Comprehensive cybersecurity solutions designed to protect your business from all angles
+                Comprehensive cybersecurity solutions designed to protect your business from all angles;
               </p>
             </div>
             <div className="grid gap-6 m,
   d:grid-cols-2">
               {SECURITY_SERVICE_CATEGORIES.map((category) () => {
-  const IconComponent = category.icon
+  const IconComponent = category.icon;
                 return (
                   <Card key={category.id} className="text-center,
   hove: r: shadow-lg transition-shadow cursor-pointer border-red-500/20">
@@ -234,7 +237,7 @@ const securityTechnologies = [
                     </CardHeader>
                     <CardContent>
                       <Badge variant="secondary" className="bg-red-500/20 text-red-600">
-                        {category.services.length} Services
+                        {category.services.length} Services;
                       </Badge>
                     </CardContent>
                   </Card>
@@ -251,7 +254,7 @@ const securityTechnologies = [
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4 text-white">Security Services Showcase</h2>
               <p className="text-zion-slate-light max-w-3xl mx-auto">
-                Discover how our cybersecurity solutions can protect your business and ensure compliance
+                Discover how our cybersecurity solutions can protect your business and ensure compliance;
               </p>
             </div>
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
@@ -295,7 +298,7 @@ const securityTechnologies = [
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4">Why Choose Our Security Solutions?</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto">
-                Enterprise-grade protection with the agility and pricing of a startup
+                Enterprise-grade protection with the agility and pricing of a startup;
               </p>
             </div>
             <div className="grid gap-8,
@@ -307,7 +310,7 @@ const securityTechnologies = [
                 </div>
                 <h3 className="font-semibold mb-2">24/7 Monitoring</h3>
                 <p className="text-muted-foreground text-sm">
-                  Round-the-clock security monitoring and threat detection
+                  Round-the-clock security monitoring and threat detection;
                 </p>
               </div>
               <div className="text-center">
@@ -316,7 +319,7 @@ const securityTechnologies = [
                 </div>
                 <h3 className="font-semibold mb-2">AI-Powered Detection</h3>
                 <p className="text-muted-foreground text-sm">
-                  Advanced AI algorithms for faster threat identification
+                  Advanced AI algorithms for faster threat identification;
                 </p>
               </div>
               <div className="text-center">
@@ -325,7 +328,7 @@ const securityTechnologies = [
                 </div>
                 <h3 className="font-semibold mb-2">Compliance Ready</h3>
                 <p className="text-muted-foreground text-sm">
-                  Meet SOC2, GDPR, HIPAA, and other compliance requirements
+                  Meet SOC2, GDPR, HIPAA, and other compliance requirements;
                 </p>
               </div>
               <div className="text-center">
@@ -334,7 +337,7 @@ const securityTechnologies = [
                 </div>
                 <h3 className="font-semibold mb-2">Rapid Response</h3>
                 <p className="text-muted-foreground text-sm">
-                  Automated incident response and threat mitigation
+                  Automated incident response and threat mitigation;
                 </p>
               </div>
             </div>
@@ -348,45 +351,45 @@ const securityTechnologies = [
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4">Security Implementation Process</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto">
-                Our proven methodology ensures comprehensive security implementation and ongoing protection
+                Our proven methodology ensures comprehensive security implementation and ongoing protection;
               </p>
             </div>
             <div className="grid gap-8 m,
   d:grid-cols-4">
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                  1
+                  1;
                 </div>
                 <h3 className="font-semibold mb-2">Assessment</h3>
                 <p className="text-muted-foreground text-sm">
-                  Comprehensive security audit and vulnerability assessment
+                  Comprehensive security audit and vulnerability assessment;
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                  2
+                  2;
                 </div>
                 <h3 className="font-semibold mb-2">Strategy</h3>
                 <p className="text-muted-foreground text-sm">
-                  Develop security roadmap and compliance strategy
+                  Develop security roadmap and compliance strategy;
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                  3
+                  3;
                 </div>
                 <h3 className="font-semibold mb-2">Implementation</h3>
                 <p className="text-muted-foreground text-sm">
-                  Deploy security solutions and monitoring systems
+                  Deploy security solutions and monitoring systems;
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                  4
+                  4;
                 </div>
                 <h3 className="font-semibold mb-2">Monitoring</h3>
                 <p className="text-muted-foreground text-sm">
-                  24/7 security monitoring and ongoing support
+                  24/7 security monitoring and ongoing support;
                 </p>
               </div>
             </div>
@@ -400,7 +403,7 @@ const securityTechnologies = [
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4">Compliance & Standards</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto">
-                Our security solutions help you meet industry standards and regulatory requirements
+                Our security solutions help you meet industry standards and regulatory requirements;
               </p>
             </div>
             <div className="grid gap-6,
@@ -470,7 +473,7 @@ const securityTechnologies = [
                     <Button className="w-full bg-gradient-to-r from-red-500 to-orange-500,
   hove: r: from-red-600 hove,
   r:to-orange-600">
-                      Get Started
+                      Get Started;
                     </Button>
                   </CardContent>
                 </Card>
@@ -491,23 +494,23 @@ const securityTechnologies = [
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold,
   hove: r:from-red-600,
   hove: r:to-orange-600 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Schedule Security Assessment
+                Schedule Security Assessment;
                 <ArrowRight className="inline ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/case-studies"
                 className="className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold,
   hove: r:bg-white hove,
   r:text-gray-900 transition-all duration-300";"
               >
-                View Security Case Studies
+                View Security Case Studies;
               </Link>
             </div>
           </div>
@@ -522,25 +525,25 @@ const securityTechnologies = [
             </div>
             <h1 className="text-4xl,
   m: d: text-6xl font-bold mb-6">
-              Cybersecurity Solutions
+              Cybersecurity Solutions;
             </h1>
             <p className="text-xl,
   m: d:text-2xl mb-8 text-red-100">
-              Protect your business with enterprise-grade cybersecurity services and threat intelligence
+              Protect your business with enterprise-grade cybersecurity services and threat intelligence;
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
               <Link to="/request-quote">
                 <Button size="lg" className="bg-white,
   hove: r:bg-gray-100 text-red-600 font-semibold">
-                  Get Security Assessment
+                  Get Security Assessment;
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="border-white text-white hove,
   r:bg-white/10">
-                  Contact Security Team
+                  Contact Security Team;
                 </Button>
               </Link>
             </div>
@@ -569,7 +572,7 @@ const securityTechnologies = [
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-red-600" />
-              <a
+              <a;
                 href="htt,
   p: s: //ziontechgroup.com"
                 target="_blank"
@@ -577,7 +580,7 @@ const securityTechnologies = [
                 className="className="text-red-600 hove,
   r:underline font-medium";"
               >
-                ziontechgroup.com
+                ziontechgroup.com;
               </a>
             </div>
           </div>
@@ -590,10 +593,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-gray-900 mb-4">
-              Modern Security Threats
+              Modern Security Threats;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay protected against evolving cyber threats with our comprehensive security solutions
+              Stay protected against evolving cyber threats with our comprehensive security solutions;
             </p>
           </div>
           <div className="grid,
@@ -637,10 +640,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-gray-900 mb-4">
-              Cybersecurity Services
+              Cybersecurity Services;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive security solutions to protect your business from all angles
+              Comprehensive security solutions to protect your business from all angles;
             </p>
           </div>
           <div className="grid,
@@ -651,7 +654,7 @@ const securityTechnologies = [
   e: r: shadow-xl transition-all duration-300 border-2 hove,
   r:border-red-500/20">
                 <div className="relative">
-                  <img
+                  <img;
                     src={service.images[0],
   },
   }
@@ -661,7 +664,7 @@ const securityTechnologies = [
                   />
                   {service.featured && (
   <Badge className="absolute top-4 right-4 bg-red-600 text-white">
-                      Featured
+                      Featured;
                     </Badge>
                   )}
                 </div>
@@ -712,7 +715,7 @@ const securityTechnologies = [
                     <Link to={`/services/${service.id}`}>
                       <Button size="sm" className="bg-red-600,
   hove: r:bg-red-700">
-                        Learn More
+                        Learn More;
                       </Button>
                     </Link>
                   </div>
@@ -730,7 +733,7 @@ const securityTechnologies = [
                 setPriceRange('all')
               },
   }>
-                Clear Filters
+                Clear Filters;
               </Button>
             </div>
           )}
@@ -743,7 +746,7 @@ const securityTechnologies = [
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Security by the Numbers</h2>
             <p className="text-zion-slate-light text-lg">
-              Our security solutions protect businesses worldwide
+              Our security solutions protect businesses worldwide;
             </p>
           </div>
           <div className="grid grid-cols-1,
@@ -779,10 +782,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Comprehensive Security Services
+              Comprehensive Security Services;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Choose from our range of cybersecurity services designed to address specific
+              Choose from our range of cybersecurity services designed to address specific;
               security challenges and protect your business assets.
             </p>
           </div>
@@ -836,7 +839,7 @@ const securityTechnologies = [
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark,
   hove: r: from-zion-purple-light hove,
   r:to-zion-purple text-white">
-                    Get Quote
+                    Get Quote;
                   </Button>
                 </Link>
               </div>
@@ -851,10 +854,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Advanced Security Technologies
+              Advanced Security Technologies;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              We leverage cutting-edge security technologies and tools to deliver
+              We leverage cutting-edge security technologies and tools to deliver;
               comprehensive protection for your business.
             </p>
           </div>
@@ -879,10 +882,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Compliance & Standards
+              Compliance & Standards;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our security solutions help you meet industry standards and regulatory
+              Our security solutions help you meet industry standards and regulatory;
               requirements across multiple sectors.
             </p>
           </div>
@@ -907,10 +910,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Threat Intelligence & Monitoring
+              Threat Intelligence & Monitoring;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Stay ahead of emerging threats with our comprehensive threat intelligence
+              Stay ahead of emerging threats with our comprehensive threat intelligence;
               and 24/7 security monitoring services.
             </p>
           </div>
@@ -938,7 +941,7 @@ const securityTechnologies = [
               Why Choose ZionTech Group for Cybersecurity?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              We combine deep security expertise with industry knowledge to deliver
+              We combine deep security expertise with industry knowledge to deliver;
               solutions that protect your business and build customer trust.
             </p>
           </div>
@@ -950,7 +953,7 @@ const securityTechnologies = [
               </div>
               <h3 className="text-white text-xl font-bold mb-3">Certified Experts</h3>
               <p className="text-zion-slate-light">
-                CISSP, CISM, and CEH certified security professionals with
+                CISSP, CISM, and CEH certified security professionals with;
                 extensive experience in enterprise security.
               </p>
             </div>
@@ -960,7 +963,7 @@ const securityTechnologies = [
               </div>
               <h3 className="text-white text-xl font-bold mb-3">Proven Track Record</h3>
               <p className="text-zion-slate-light">
-                Successfully protected over 500+ businesses from cyber threats
+                Successfully protected over 500+ businesses from cyber threats;
                 with zero major security breaches.
               </p>
             </div>
@@ -970,7 +973,7 @@ const securityTechnologies = [
               </div>
               <h3 className="text-white text-xl font-bold mb-3">24/7 Support</h3>
               <p className="text-zion-slate-light">
-                Round-the-clock security monitoring and incident response
+                Round-the-clock security monitoring and incident response;
                 to protect your business at all times.
               </p>
             </div>
@@ -984,10 +987,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Transparent Security Pricing
+              Transparent Security Pricing;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Competitive pricing for enterprise-grade security solutions with
+              Competitive pricing for enterprise-grade security solutions with;
               flexible payment options and comprehensive protection.
             </p>
           </div>
@@ -1008,14 +1011,14 @@ const securityTechnologies = [
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark,
   hove: r: from-zion-purple-light hove,
   r:to-zion-purple text-white">
-                  Get Started
+                  Get Started;
                 </Button>
               </Link>
             </div>
             <div className="bg-gradient-to-br from-zion-purple to-zion-purple-dark border border-zion-purple rounded-lg p-8 text-center relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-zion-cyan text-zion-blue px-4 py-2 rounded-full text-sm font-bold">
-                  Most Popular
+                  Most Popular;
                 </span>
               </div>
               <h3 className="text-white text-2xl font-bold mb-4">Professional Security</h3>
@@ -1031,7 +1034,7 @@ const securityTechnologies = [
               <Link to="/request-quote">
                 <Button className="w-full bg-white text-zion-purple,
   hove: r:bg-zion-slate-light">
-                  Get Started
+                  Get Started;
                 </Button>
               </Link>
             </div>
@@ -1050,7 +1053,7 @@ const securityTechnologies = [
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark,
   hove: r: from-zion-purple-light hove,
   r:to-zion-purple text-white">
-                  Contact Sales
+                  Contact Sales;
                 </Button>
               </Link>
             </div>
@@ -1066,7 +1069,7 @@ const securityTechnologies = [
             Ready to Secure Your Business?
           </h2>
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-            Contact our cybersecurity experts today to discuss how we can help you
+            Contact our cybersecurity experts today to discuss how we can help you;
             protect your business from evolving threats.
           </p>
           <div className="grid grid-cols-1,
@@ -1078,7 +1081,7 @@ const securityTechnologies = [
               <h3 className="text-white font-bold mb-2">Visit Us</h3>
               <p className="text-zion-slate-light text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </p>
             </div>
             <div className="text-center p-6">
@@ -1087,7 +1090,7 @@ const securityTechnologies = [
               </div>
               <h3 className="text-white font-bold mb-2">Call Us</h3>
               <p className="text-zion-cyan font-semibold">
-                +1 302 464 0950
+                +1 302 464 0950;
               </p>
             </div>
             <div className="text-center p-6">
@@ -1096,7 +1099,7 @@ const securityTechnologies = [
               </div>
               <h3 className="text-white font-bold mb-2">Email Us</h3>
               <p className="text-zion-cyan font-semibold">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </p>
             </div>
           </div>
@@ -1105,13 +1108,13 @@ const securityTechnologies = [
               <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark,
   hove: r:from-zion-purple-light,
   hove: r:to-zion-purple text-white px-8 py-3">
-                Request Security Quote
+                Request Security Quote;
               </Button>
             </Link>
             <Link to="/contact">
               <Button variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10 px-8 py-3">
-                Schedule Security Consultation
+                Schedule Security Consultation;
               </Button>
             </Link>
           </div>
@@ -1126,10 +1129,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-gray-900 mb-4">
-              Security Framework & Standards
+              Security Framework & Standards;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our security approach follows industry best practices and compliance standards
+              Our security approach follows industry best practices and compliance standards;
             </p>
           </div>
           <div className="grid,
@@ -1173,10 +1176,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-gray-900 mb-4">
-              Our Security Process
+              Our Security Process;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Systematic approach to identifying, assessing, and mitigating security risks
+              Systematic approach to identifying, assessing, and mitigating security risks;
             </p>
           </div>
           <div className="grid,
@@ -1184,28 +1187,28 @@ const securityTechnologies = [
   g:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                1
+                1;
               </div>
               <h3 className="text-xl font-semibold mb-2">Assessment</h3>
               <p className="text-gray-600">Comprehensive security audit and vulnerability assessment</p>
             </div>
             <div className="text-center">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                2
+                2;
               </div>
               <h3 className="text-xl font-semibold mb-2">Strategy</h3>
               <p className="text-gray-600">Develop security roadmap and prioritize remediation efforts</p>
             </div>
             <div className="text-center">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                3
+                3;
               </div>
               <h3 className="text-xl font-semibold mb-2">Implementation</h3>
               <p className="text-gray-600">Deploy security controls and monitoring solutions</p>
             </div>
             <div className="text-center">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                4
+                4;
               </div>
               <h3 className="text-xl font-semibold mb-2">Monitoring</h3>
               <p className="text-gray-600">Continuous threat monitoring and incident response</p>
@@ -1220,10 +1223,10 @@ const securityTechnologies = [
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-gray-900 mb-4">
-              Security Tools & Technologies
+              Security Tools & Technologies;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              State-of-the-art security tools and platforms for comprehensive protection
+              State-of-the-art security tools and platforms for comprehensive protection;
             </p>
           </div>
           <div className="grid,
@@ -1388,10 +1391,10 @@ const securityTechnologies = [
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl,
   m: d: text-4xl font-bold mb-6">
-            Secure Your Business Today
+            Secure Your Business Today;
           </h2>
           <p className="text-xl mb-8 text-red-100 max-w-3xl mx-auto">
-            Don't wait until it's too late. Our cybersecurity experts are ready to help you build
+            Don't wait until it's too late. Our cybersecurity experts are ready to help you build;
             a robust security posture and protect your valuable assets.
           </p>
           <div className="flex flex-col,
@@ -1399,14 +1402,14 @@ const securityTechnologies = [
             <Link to="/request-quote">
               <Button size="lg" className="bg-white,
   hove: r:bg-gray-100 text-red-600 font-semibold">
-                Get Security Assessment
+                Get Security Assessment;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-white text-white hove,
   r:bg-white/10">
-                Contact Security Team
+                Contact Security Team;
               </Button>
             </Link>
           </div>
@@ -1421,7 +1424,7 @@ const securityTechnologies = [
             <div>
               <h3 className="text-2xl font-bold mb-6 text-red-400">ZionTech Group</h3>
               <p className="text-gray-300 mb-6">
-                Your trusted cybersecurity partner. We help businesses protect their digital assets
+                Your trusted cybersecurity partner. We help businesses protect their digital assets;
                 with comprehensive security solutions and expert guidance.
               </p>
               <div className="flex space-x-4">

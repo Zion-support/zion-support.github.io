@@ -1,7 +1,7 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { Link } from "react-router-dom"
-import { Server, Shield, Cloud, Network, Wrench, Headphones } from "lucide-react"
+import { SEO   } from "@/components/SEO";
+import { Link   } from "react-router-dom";
+import { Server, Shield, Cloud, Network, Wrench, Headphones   } from "lucide-react";
 export default function ITServices() {
   const offerings = [
   { ic,
@@ -54,7 +54,7 @@ export default function ITServices() {
 
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO 
+      <SEO;
         title="IT Services - Zion Tech Group"
         description="Managed IT, Cloud & DevOps, Cybersecurity, Networking, Helpdesk, and Onsite services."
       />

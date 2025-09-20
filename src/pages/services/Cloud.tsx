@@ -1,5 +1,5 @@
 import React from "react"
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 } from "lucide-react"
+import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3     } from "lucide-react";
 const CloudServices = () () => {
   const cloudServices = [
   {
@@ -10,7 +10,7 @@ const CloudServices = () () => {
       featur,
   e: s: ["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"]
       ic,
-  o: n: Cloud
+  o: n: Cloud;
 },
   {
   tit,
@@ -20,7 +20,7 @@ const CloudServices = () () => {
       featur,
   e: s: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]
       ic,
-  o: n: Server
+  o: n: Server;
 },
   {
   tit,
@@ -30,7 +30,7 @@ const CloudServices = () () => {
       featur,
   e: s: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
       ic,
-  o: n: Shield
+  o: n: Shield;
 },
   ]
   const cloudPlatforms = [
@@ -80,15 +80,15 @@ const CloudServices = () () => {
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Cloud className="w-4 h-4 mr-2"/>
-              Cloud & DevOps
+              Cloud & DevOps;
             </div>
             <h1 className="text-4xl m,
   d:text-6xl font-bold text-white mb-6">
-              Cloud & DevOps
+              Cloud & DevOps;
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Accelerate your digital transformation with modern cloud infrastructure
+              Accelerate your digital transformation with modern cloud infrastructure;
               DevOps practices, and scalable solutions.
             </p>
             <div className="flex flex-col,
@@ -97,11 +97,11 @@ const CloudServices = () () => {
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-                Explore Services
+                Explore Services;
               </a>
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Get Started
+                Get Started;
               </a>
             </div>
           </div>
@@ -117,10 +117,10 @@ const CloudServices = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our Cloud Services
+              Our Cloud Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              End-to-end cloud solutions designed to modernize your infrastructure
+              End-to-end cloud solutions designed to modernize your infrastructure;
               and accelerate your business growth.
             </p>
           </div>
@@ -161,10 +161,10 @@ const CloudServices = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Cloud Platforms We Work With
+              Cloud Platforms We Work With;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Expertise across all major cloud providers to ensure you get the best
+              Expertise across all major cloud providers to ensure you get the best;
               solutions for your specific needs.
             </p>
           </div>
@@ -207,7 +207,7 @@ const CloudServices = () () => {
                 Why Choose Cloud Solutions?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Cloud computing provides numerous advantages that can transform
+                Cloud computing provides numerous advantages that can transform;
                 your business operations and drive innovation.
               </p>
               <ul className="space-y-3">
@@ -225,7 +225,7 @@ const CloudServices = () () => {
                 <Zap className="w-24 h-24 text-blue-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Cloud Expertise</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team has extensive experience with cloud platforms and
+                  Our team has extensive experience with cloud platforms and;
                   can help you navigate the complex cloud landscape.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -258,11 +258,11 @@ const CloudServices = () () => {
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Get Started
+              Get Started;
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-              View All Services
+              View All Services;
             </a>
           </div>
         </div>
@@ -270,4 +270,4 @@ const CloudServices = () () => {
     </div>
   )
 }
-export default CloudServices
+export default CloudServices;

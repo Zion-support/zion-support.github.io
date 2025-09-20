@@ -1,61 +1,64 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Brain
-  Globe
-  Zap
-  Shield
-  Cloud
-  ArrowRight
-  CheckCircle
-  Star
-  Code
-  Lock
-  Rocket
-  Leaf
-  Waves
-  Factory
-  Building2
-  Cpu
-  Network
-  Eye
-  Heart
-  Lightbulb
-  TrendingUp
-  Users
-  Target
-  Award
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  CheckCircle
-  Clock
-  Users
-  Target
-  BarChart3
-  Rocket
-  Cpu
-  Network
-  Database
-  Lock
-  Leaf
-  Scale
-  Stethoscope
-  Car
-  Building2
-  DollarSign
-  Award
-  Lightbulb
-  ArrowRight
-  ChevronRight
-  ChevronLeft
-  Play
-  Eye
-  X
-  Beaker
-} from "lucide-react"
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027"
+  Brain;
+  Globe;
+  Zap;
+  Shield;
+  Cloud;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Code;
+  Lock;
+  Rocket;
+  Leaf;
+  Waves;
+  Factory;
+  Building2;
+  Cpu;
+  Network;
+  Eye;
+  Heart;
+  Lightbulb;
+  TrendingUp;
+  Users;
+  Target;
+  Award;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  CheckCircle;
+  Clock;
+  Users;
+  Target;
+  BarChart3;
+  Rocket;
+  Cpu;
+  Network;
+  Database;
+  Lock;
+  Leaf;
+  Scale;
+  Stethoscope;
+  Car;
+  Building2;
+  DollarSign;
+  Award;
+  Lightbulb;
+  ArrowRight;
+  ChevronRight;
+  ChevronLeft;
+  Play;
+  Eye;
+  X;
+  Beaker;
+}
+}
+ } from "lucide-react";
+import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027   } from "../data/enhancedInnovativeServices2027";
 const,
   EnhancedInnovativeServicesShowcase202: 7: React.FC = () () => {
   const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027)
@@ -75,16 +78,15 @@ const,
   const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel
-    
-    return matchesSearch && matchesCategory && matchesInnovation
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
+    return matchesSearch && matchesCategory && matchesInnovation;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'innovation':
 const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 },
   }
@@ -150,7 +152,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-16">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -164,14 +166,14 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
           >
             <h1 className="text-5xl,
   m: d:text-6xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-6">
-              Enhanced Innovative Services 2027
+              Enhanced Innovative Services 2027;
             </h1>
             <p className="text-xl text-zion-gray-light mb-8 max-w-3xl mx-auto">
               Discover the future of technology with our comprehensive suite of AI, quantum computing,
   and cutting-edge innovative services designed to revolutionize your business.
             </p>
             <div className="flex justify-center space-x-4">
-              <motion.button
+              <motion.button;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -185,7 +187,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                 <Eye className="w-5 h-5" />
                 <span>Explore Services</span>
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -215,7 +217,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
   }
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-gray-light w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -230,7 +232,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
 
             {/* Category Filter */},
   }
-            <select
+            <select;
               value={selectedCategory},
   }
               onChange={(e) => setSelectedCategory(e.target.value)},
@@ -249,7 +251,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
 
             {/* Innovation Level Filter */},
   }
-            <select
+            <select;
               value={selectedInnovationLevel},
   }
               onChange={(e) => setSelectedInnovationLevel(e.target.value)},
@@ -268,7 +270,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
 
             {/* Sort By */},
   }
-            <select
+            <select;
               value={sortBy},
   }
               onChange={(e) => setSortBy(e.target.value)},
@@ -293,7 +295,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={service.id},
   }
               initial={ opaci,
@@ -347,7 +349,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
 
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                     key={tagIndex},
   }
                     className="className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full";"
@@ -381,7 +383,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
   },
   {selectedService && (
   <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, sca,
   l: e: 0.9 },
@@ -408,7 +410,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                     <p className="text-zion-gray-light">{selectedService.category}</p>
                   </div>
                 </div>
-                <button
+                <button;
                   onClick={onClick={() => setSelectedService(null)},
   },
   }
@@ -423,14 +425,14 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
   }
               <div className="flex space-x-4 mb-6 border-b border-zion-gray-dark">
                 {['OverviewFeatures', 'Technical SpecsContact'].map((tab, index) => (
-  <button
+  <button;
                     key={tab},
   }
                     onClick={onClick={() => setCurrentSlide(index)},
   },
   }
                     className={`pb-2 px-4 transition-colors ${
-  currentSlide === index
+  currentSlide === index;
                         ? 'text-zion-cyan border-b-2 border-zion-cyan'
                         : 'text-zion-gray-light,
   hove: r:text-white'
@@ -448,7 +450,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                 {/* Overview Slide */},
   },
   {currentSlide === 0 && (
-  <motion.div
+  <motion.div;
                     initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -486,7 +488,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.targetAudience.map((audience, index) => (
-  <span
+  <span;
                               key={index},
   }
                               className="className="px-3 py-1 bg-zion-slate-light text-zion-gray-light text-sm rounded-full";"
@@ -503,7 +505,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
   {/* Features Slide */},
   },
   {currentSlide === 1 && (
-  <motion.div
+  <motion.div;
                     initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -549,7 +551,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
   {/* Technical Specs Slide */},
   },
   {currentSlide === 2 && selectedService.technicalSpecs && (
-  <motion.div
+  <motion.div;
                     initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -567,7 +569,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.technology.map((tech, index) => (
-  <span
+  <span;
                               key={index},
   }
                               className="className="px-3 py-1 bg-blue-400/20 text-blue-300 text-sm rounded-full";"
@@ -586,7 +588,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.integrations.map((integration, index) => (
-  <span
+  <span;
                               key={index},
   }
                               className="className="px-3 py-1 bg-green-400/20 text-green-300 text-sm rounded-full";"
@@ -621,7 +623,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                         <h4 className="text-lg font-semibold text-white mb-4">Security</h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.security.map((security, index) => (
-  <span
+  <span;
                               key={index},
   }
                               className="className="px-2 py-1 bg-red-400/20 text-red-300 text-xs rounded-full";"
@@ -637,7 +639,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                         <h4 className="text-lg font-semibold text-white mb-4">Compliance</h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.compliance.map((compliance, index) => (
-  <span
+  <span;
                               key={index},
   }
                               className="className="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded-full";"
@@ -654,7 +656,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
   {/* Contact Slide */},
   },
   {currentSlide === 3 && (
-  <motion.div
+  <motion.div;
                     initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -714,7 +716,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                             </div>
                             <div className="flex items-center space-x-3">
                               <ExternalLink className="w-5 h-5 text-zion-cyan" />
-                              <a
+                              <a;
                                 href={selectedService.contactInfo.website},
   }
                                 target="_blank"
@@ -722,7 +724,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                                 className="className="text-zion-cyan,
   hove: r: text-white transition-colors";"
                               >
-                                Visit Website
+                                Visit Website;
                               </a>
                             </div>
                           </div>
@@ -730,7 +732,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                       </div>
 
                       <div className="flex justify-center space-x-4">
-                        <motion.button
+                        <motion.button;
                           whileHover={ scal,
   e: 1.05 },
   }
@@ -744,7 +746,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                           <Phone className="w-5 h-5" />
                           <span>Call Now</span>
                         </motion.button>
-                        <motion.button
+                        <motion.button;
                           whileHover={ sca,
   l: e: 1.05 },
   }
@@ -767,7 +769,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
               {/* Navigation Arrows */},
   }
               <div className="flex items-center justify-between mt-8">
-                <button
+                <button;
                   onClick={onClick={prevSlide},
   },
   }
@@ -780,7 +782,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
 
                 <div className="flex space-x-2">
                   {[0, 1, 2, 3].map((index) => (
-  <button
+  <button;
                       key={index},
   }
                       onClick={onClick={() => setCurrentSlide(index)},
@@ -793,7 +795,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
                   ))}
                 </div>
 
-                <button
+                <button;
                   onClick={onClick={nextSlide},
   },
   }
@@ -838,7 +840,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
             </div>
           </div>
 
-          <motion.button
+          <motion.button;
             whileHover={ scal,
   e: 1.05 },
   }
@@ -860,4 +862,4 @@ const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, '
   )
 }
 
-export default EnhancedInnovativeServicesShowcase2027
+export default EnhancedInnovativeServicesShowcase2027;

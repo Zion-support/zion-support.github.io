@@ -21,7 +21,9 @@ export interface AdditionalInnovativeService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,12 +35,12 @@ export interface AdditionalInnovativeService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
+  marketSize?: string;
 }
 
 export,
   const: ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService[] = [
-  // AI-Powered Quantum Financial Modeling Platform
+  // AI-Powered Quantum Financial Modeling Platform;
   {
   i,
   d: "ai-quantum-financial-modeling-platform",tit,
@@ -119,7 +121,7 @@ export,
     marketSi,
   z: e: "$12.8 billion by 2026"
 }
-  // AI-Powered Autonomous Drone Fleet Management
+  // AI-Powered Autonomous Drone Fleet Management;
   {
   id: "ai-autonomous-drone-fleet-management",tit,
   l: e: "AI Autonomous Drone Fleet Management",descripti,
@@ -199,7 +201,7 @@ export,
     marketSi,
   z: e: "$18.9 billion by 2027"
 }
-  // AI-Powered Predictive Healthcare Analytics
+  // AI-Powered Predictive Healthcare Analytics;
   {
   id: "ai-predictive-healthcare-analytics",tit,
   l: e: "AI Predictive Healthcare Analytics",descripti,
@@ -280,4 +282,4 @@ export,
   z: e: "$67.8 billion by 2027"
 },
   ]
-export default ADDITIONAL_INNOVATIVE_SERVICES_2025
+export default ADDITIONAL_INNOVATIVE_SERVICES_2025;

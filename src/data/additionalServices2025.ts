@@ -3,23 +3,25 @@ export interface AdditionalService {
   l: e: string,descripti,
   o: n: string,catego,
   r: y: string,pri,
-  c: e: number
-  currency?: string
-  pricingModel?: string
+  c: e: number;
+  currency?: string;
+  pricingModel?: string;
   features?: string[]
   benefits?: string[]
   useCases?: string[]
   tags?: string[]
-  estimatedDelivery?: string
+  estimatedDelivery?: string;
   supportLevel?: string,
-  marketPric: e: string
-  roi?: string
-  innovationLevel?: string
+  marketPric: e: string;
+  roi?: string;
+  innovationLevel?: string;
   contactInfo?: {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 },
   }
 

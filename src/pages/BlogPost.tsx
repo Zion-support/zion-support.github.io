@@ -1,32 +1,34 @@
 
 import React from "react"
-import { useParams, Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { useParams, Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Calendar
+  Calendar;
   User,
   Clock,
   Tag,
-  ArrowLeft
-  ArrowRight
-  Share2
-  Bookmark
-  Heart
-  MessageCircle
-  Eye
-  TrendingUp
-  Brain
-  Cloud
-  Shield
-  Zap
-  Cpu
-  Network
-  BookOpen
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  ArrowLeft;
+  ArrowRight;
+  Share2;
+  Bookmark;
+  Heart;
+  MessageCircle;
+  Eye;
+  TrendingUp;
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Cpu;
+  Network;
+  BookOpen;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 export default function BlogPost() {
   const { slug } = useParams()
-  // Mock blog post data - in a real app, this would come from an API
+  // Mock blog post data - in a real app, this would come from an API;
 const const blogPost = {
   = {
     id: slug,tit,
@@ -35,7 +37,7 @@ const const blogPost = {
   n: t: `
       <p class="mb-6 text-lg text-gray-300 leading-relaxed">
         Artificial Intelligence has fundamentally transformed how businesses approach data analysis and decision-making. 
-        In 2024, we're witnessing an unprecedented acceleration in AI-powered business intelligence capabilities that 
+        In 2024, we're witnessing an unprecedented acceleration in AI-powered business intelligence capabilities that;
         are reshaping entire industries.
       </p>
 
@@ -50,15 +52,15 @@ const const blogPost = {
       
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">1. Natural Language Processing (NLP)</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        Modern BI platforms now understand natural language queries, allowing business users to ask questions 
+        Modern BI platforms now understand natural language queries, allowing business users to ask questions;
         in plain English and receive instant insights. This democratizes data access across organizations,
   reducing dependency on data scientists for routine queries.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">2. Predictive Analytics</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        AI algorithms can now forecast trends, identify potential risks, and suggest optimal courses of action 
-        based on historical patterns and current market conditions. This predictive capability is revolutionizing 
+        AI algorithms can now forecast trends, identify potential risks, and suggest optimal courses of action;
+        based on historical patterns and current market conditions. This predictive capability is revolutionizing;
         strategic planning and risk management.
       </p>
 
@@ -73,21 +75,21 @@ const const blogPost = {
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Retail and E-commerce</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
         AI-powered BI systems help retailers optimize inventory management, personalize customer experiences,
-  and predict demand patterns with remarkable accuracy. Companies like Amazon and Walmart have seen 
+  and predict demand patterns with remarkable accuracy. Companies like Amazon and Walmart have seen;
         significant improvements in operational efficiency and customer satisfaction.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Financial Services</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        Banks and financial institutions use AI BI for fraud detection, credit risk assessment, and 
-        investment portfolio optimization. The real-time processing capabilities enable immediate 
+        Banks and financial institutions use AI BI for fraud detection, credit risk assessment, and;
+        investment portfolio optimization. The real-time processing capabilities enable immediate;
         response to market changes and emerging risks.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Healthcare</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
         Healthcare providers leverage AI BI for patient outcome prediction, resource allocation optimization,
-  and treatment effectiveness analysis. This leads to better patient care and more efficient 
+  and treatment effectiveness analysis. This leads to better patient care and more efficient;
         healthcare delivery systems.
       </p>
 
@@ -95,49 +97,49 @@ const const blogPost = {
       
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Data Quality and Integration</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        The success of AI-powered BI depends heavily on data quality. Organizations must invest in 
+        The success of AI-powered BI depends heavily on data quality. Organizations must invest in;
         data governance frameworks and ensure seamless integration across disparate data sources. 
         Modern data platforms like Snowflake and Databricks are making this easier than ever.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Change Management</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        Implementing AI BI requires cultural change within organizations. Teams must be trained to 
-        trust and effectively use AI-generated insights. Successful implementations often include 
+        Implementing AI BI requires cultural change within organizations. Teams must be trained to;
+        trust and effectively use AI-generated insights. Successful implementations often include;
         comprehensive training programs and change management strategies.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Ethical Considerations</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        As AI systems make more decisions, organizations must ensure transparency, fairness, and 
-        accountability. This includes regular audits of AI models and clear documentation of 
+        As AI systems make more decisions, organizations must ensure transparency, fairness, and;
+        accountability. This includes regular audits of AI models and clear documentation of;
         decision-making processes.
       </p>
 
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Looking,
   Ahea: d: The Future of AI-Powered BI</h2>
       <p class="mb-6 text-gray-300 leading-relaxed">
-        As we move further into 2024 and beyond, we can expect AI-powered BI to become even more 
+        As we move further into 2024 and beyond, we can expect AI-powered BI to become even more;
         sophisticated. We'll see increased adoption of edge computing for real-time processing,
   enhanced natural language capabilities, and more advanced predictive models.
       </p>
 
       <p class="mb-6 text-gray-300 leading-relaxed">
-        The organizations that successfully implement and leverage these AI-powered BI capabilities 
-        will gain significant competitive advantages. They'll be able to make faster, more informed 
+        The organizations that successfully implement and leverage these AI-powered BI capabilities;
+        will gain significant competitive advantages. They'll be able to make faster, more informed;
         decisions, identify opportunities before competitors, and optimize operations with unprecedented precision.
       </p>
 
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Conclusion</h2>
       <p class="mb-6 text-gray-300 leading-relaxed">
-        AI-powered business intelligence represents a fundamental shift in how organizations approach 
-        data-driven decision-making. While implementation challenges exist, the benefits far outweigh 
+        AI-powered business intelligence represents a fundamental shift in how organizations approach;
+        data-driven decision-making. While implementation challenges exist, the benefits far outweigh;
         the costs for most organizations.
       </p>
 
       <p class="mb-6 text-gray-300 leading-relaxed">
-        The key to success lies in starting with a clear strategy, investing in the right technology 
-        stack, and ensuring proper change management. Organizations that take these steps will be 
+        The key to success lies in starting with a clear strategy, investing in the right technology;
+        stack, and ensuring proper change management. Organizations that take these steps will be;
         well-positioned to thrive in an increasingly data-driven business landscape.
       </p>
     `
@@ -209,9 +211,9 @@ const const blogPost = {
   u: d: Cloud,busine,
   s: s: TrendingUp,i,
   o: t: Network,emergi,
-  n: g: Zap
+  n: g: Zap;
 }
-    return categoryIcons[category] || BookOpen
+    return categoryIcons[category] || BookOpen;
 }
 
   const getCategoryName = (catego,
@@ -232,7 +234,7 @@ const const blogPost = {
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title={`${blogPost.title} - Zion Tech Group Blog`}
         description={blogPost.excerpt},
   }
@@ -242,7 +244,7 @@ const const blogPost = {
   }
       <section className="py-6 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <Link
+          <Link;
             to="/blog"
             className="className="inline-flex items-center space-x-2 text-cyan-400,
   hove: r:text-cyan-300 transition-colors duration-200";"
@@ -257,7 +259,7 @@ const const blogPost = {
   }
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -279,7 +281,7 @@ const const blogPost = {
                 </span>
               {blogPost.featured && (
   <span className="px-4 py-2 bg-yellow-500/20 text-yellow-400 text-sm rounded-full font-medium">
-                  Featured Article
+                  Featured Article;
                 </span>
               )}
             </div>
@@ -345,7 +347,7 @@ const const blogPost = {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -368,7 +370,7 @@ const const blogPost = {
 
               {/* Article Content */},
   }
-              <div 
+              <div;
                 className="className="text-gray-300 leading-relaxed";"
                 dangerouslySetInnerHTML={ __ht,
   m: l: blogPost.content },
@@ -390,7 +392,7 @@ const const blogPost = {
   g: s:</span>
               <div className="flex flex-wrap gap-2">
                 {blogPost.tags.map((tag) => (
-  <span
+  <span;
                     key={tag},
   }
                     className="className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50,
@@ -411,7 +413,7 @@ const const blogPost = {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -443,7 +445,7 @@ const const blogPost = {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -457,14 +459,14 @@ const const blogPost = {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Related Articles</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Continue exploring insights and analysis on related topics
+              Continue exploring insights and analysis on related topics;
             </p>
           </motion.div>
           
           <div className="grid,
   m: d:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {blogPost.relatedPosts.map((post, index) => (
-  <motion.article
+  <motion.article;
                 key={post.id},
   }
                 initial={ opaci,
@@ -524,7 +526,7 @@ const const blogPost = {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -541,21 +543,21 @@ const const blogPost = {
               Let's discuss how our AI-powered solutions can drive innovation and growth for your organization.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg,
   hove: r: from-cyan-600,
   hove: r:to-blue-600 transition-all duration-300";"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300";"
               >
-                Explore Our Services
+                Explore Our Services;
               </Link>
             </div>
           </motion.div>

@@ -1,8 +1,10 @@
 import React from 'react'
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'
-  text?: string
-  className?: string
+  text?: string;
+  className?: string;
+}
+}
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
@@ -22,4 +24,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   )
 }
-export default LoadingSpinner
+export default LoadingSpinner;

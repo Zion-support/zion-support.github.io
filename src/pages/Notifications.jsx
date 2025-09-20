@@ -1,14 +1,15 @@
+import { useCallback  } from "react";
 import React from "react"
-import { useNotifications } from "@/context/notifications/NotificationContext"
-import { formatDistanceToNow } from "date-fns"
-import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import { Badge } from "@/components/ui/badge"
-import { Skeleton } from "@/components/ui/skeleton"
+import { useNotifications   } from "@/context/notifications/NotificationContext";
+import { formatDistanceToNow   } from "date-fns";
+import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings   } from "lucide-react";
+import { Button   } from "@/components/ui/button";
+import { Tabs, TabsList, TabsTrigger, TabsContent   } from "@/components/ui/tabs";
+import { Badge   } from "@/components/ui/badge";
+import { Skeleton   } from "@/components/ui/skeleton";
 import SEO from "@/components/SEO"
-import { useNavigate } from "react-router-dom"
-import { cn } from "@/lib/utils"
+import { useNavigate   } from "react-router-dom";
+import { cn   } from "@/lib/utils";
 const getNotificationIcon = (type, className = "h-5 w-5") () => {
   switch (type) {
   case 'message':
@@ -114,7 +115,7 @@ export default function NotificationsPage() {
         <div className="flex justify-between items-center mb-6">
           <div>
             <h1 className="text-3xl font-bold flex items-center">
-              <Bell className="mr-3 h-7 w-7"/> Notifications
+              <Bell className="mr-3 h-7 w-7"/> Notifications;
               {unreadCount > 0 && (<Badge className="ml-3 bg-zion-cyan">{unreadCount} unread</Badge>)}
             </h1>
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>
@@ -122,7 +123,7 @@ export default function NotificationsPage() {
           
           {unreadCount > 0 && (<Button variant="outline" onClick={() => markAllAsRead()}>
               <Check className="mr-2 h-4 w-4"/>
-              Mark all as read
+              Mark all as read;
             </Button>)}
         </div>
         

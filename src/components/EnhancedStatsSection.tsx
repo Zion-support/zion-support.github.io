@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import { motion, useAnimation   } from "framer-motion";
+import { useInView   } from "react-intersection-observer";
 import {
   Users,
   Globe,
@@ -9,8 +9,10 @@ import {
   Zap,
   Shield,
   Award,
-  Rocket
-} from "lucide-react"
+  Rocket;
+}
+}
+ } from "lucide-react";
 interface Stat {
   id: string,ic,
   o: n: React.ComponentType<any>,val,
@@ -18,7 +20,9 @@ interface Stat {
   e: l: string,descripti,
   o: n: string,col,
   o: r: string,gradie,
-  n: t: string
+  n: t: string;
+}
+}
 }
 
 const,
@@ -81,7 +85,7 @@ const controls = useAnimation()
 const [ref, inView] = useInView({
     thresho,
   l: d: 0.3,triggerOn,
-  c: e: true
+  c: e: true;
   })
   useEffect(() () => {
     if (inView) {
@@ -93,12 +97,11 @@ const [ref, inView] = useInView({
   e: t: string, durati,
   o: n: number = 2000) () => {
     const numericValue = parseInt(target.replace(/[^0-9]/g, '')),
-    const start = 0
-const increment = numericValue / (duration / 16), // 60fps
-
+    const start = 0;
+const increment = numericValue / (duration / 16), // 60fps;
     let current = start,
     const timer = setInterval(() () => {
-      current += increment
+      current += increment;
       if (current >= numericValue) {
         current = numericValue,
         clearInterval(timer)
@@ -109,7 +112,7 @@ const increment = numericValue / (duration / 16), // 60fps
       })),
     }, 16),
 
-    return timer
+    return timer;
 },
 
   useEffect(() () => {
@@ -136,7 +139,7 @@ const increment = numericValue / (duration / 16), // 60fps
   s: m: px-6 l,
   g:px-8 relative z-10">
         {/* Section Header */}
-        <motion.div
+        <motion.div;
           ref={ref}
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -149,7 +152,7 @@ const increment = numericValue / (duration / 16), // 60fps
   y: 1,y: 0,transiti,
   o: n: {
                 duratio,
-  n: 0.6
+  n: 0.6;
               },
   },
   },
@@ -158,10 +161,10 @@ const increment = numericValue / (duration / 16), // 60fps
         >
           <h2 className="text-4xl,
   s: m:text-5xl font-bold text-white mb-6">
-            Proven Results & Global Impact
+            Proven Results & Global Impact;
           </h2>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
-            Our track record speaks for itself - delivering exceptional value and innovation to businesses worldwide
+            Our track record speaks for itself - delivering exceptional value and innovation to businesses worldwide;
           </p>
         </motion.div>
 
@@ -170,7 +173,7 @@ const increment = numericValue / (duration / 16), // 60fps
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
-            <motion.div
+            <motion.div;
               key={stat.id}
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -184,14 +187,14 @@ const increment = numericValue / (duration / 16), // 60fps
   o: n: {
                     duratio,
   n: 0.6,del,
-  a: y: index * 0.1
+  a: y: index * 0.1;
                   },
   },
   },
   }
               className="group relative"
             >
-              <motion.div
+              <motion.div;
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden"
                 whileHover={
                   y: -10,sca,
@@ -208,12 +211,12 @@ const increment = numericValue / (duration / 16), // 60fps
   e: r:opacity-10 transition-opacity duration-300`}></div>
 
                 {/* Icon */}
-                <motion.div
+                <motion.div;
                   className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
                   whileHover={
                     rota,
   t: e: 360,sca,
-  l: e: 1.1
+  l: e: 1.1;
                   },
   }
                   transition={ durati,
@@ -225,7 +228,7 @@ const increment = numericValue / (duration / 16), // 60fps
                 </motion.div>
 
                 {/* Value */}
-                <motion.div
+                <motion.div;
                   className="mb-4 relative z-10"
                   initial={ sca,
   l: e: 0.8 },
@@ -257,7 +260,7 @@ const increment = numericValue / (duration / 16), // 60fps
                 </p>
 
                 {/* Hover effect overlay */}
-                <motion.div
+                <motion.div;
                   className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hov,
   e: r:opacity-100 transition-opacity duration-300"
                   initial={false}
@@ -268,7 +271,7 @@ const increment = numericValue / (duration / 16), // 60fps
         </div>
 
         {/* Bottom Achievement Section */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -281,7 +284,7 @@ const increment = numericValue / (duration / 16), // 60fps
   o: n: {
                 duratio,
   n: 0.6,del,
-  a: y: 0.6
+  a: y: 0.6;
               },
   },
   },
@@ -290,7 +293,7 @@ const increment = numericValue / (duration / 16), // 60fps
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8,
   l: g: p-12 text-center">
-            <motion.div
+            <motion.div;
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
               whileHover={ rotat,
   e: 360 },
@@ -303,7 +306,7 @@ const increment = numericValue / (duration / 16), // 60fps
             </motion.div>
 
             <h3 className="text-3xl font-bold text-white mb-4">
-              Industry Recognition & Awards
+              Industry Recognition & Awards;
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.

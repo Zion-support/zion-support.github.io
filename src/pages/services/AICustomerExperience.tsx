@@ -1,14 +1,14 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
-import { Button } from "../../components/ui/Button"
-import { Card } from "../../components/ui/Card"
-import { Badge } from "../../components/ui/Badge"
-import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail, MessageCircle, Heart, Star, Target, BarChart3, Headphones, ShoppingBag } from "lucide-react"
+import { SEO     } from "../../components/SEO";
+import { Button     } from "../../components/ui/Button";
+import { Card     } from "../../components/ui/Card";
+import { Badge     } from "../../components/ui/Badge";
+import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail, MessageCircle, Heart, Star, Target, BarChart3, Headphones, ShoppingBag     } from "lucide-react";
 const,
   AICustomerExperienc: e: React.FC = () () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Customer Experience Platform - Zion Tech Group"
         description="Revolutionary AI-powered customer experience platform that personalizes interactions, predicts customer needs, and delivers exceptional service with 95% customer satisfaction rates."
       />
@@ -22,11 +22,11 @@ const,
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered CX Platform
+              AI-Powered CX Platform;
             </Badge>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent">
-              AI Customer Experience Platform
+              AI Customer Experience Platform;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -40,12 +40,12 @@ const,
             <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600,
   hove: r:from-pink-700,
   hove: r:to-purple-700">
-              Start Free Trial
+              Start Free Trial;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-slate-900">
-              Schedule Demo
+              Schedule Demo;
             </Button>
           </div>
         </div>
@@ -108,7 +108,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Advanced AI Features
+            Advanced AI Features;
           </h2>
           
           <div className="grid grid-cols-1 m,
@@ -192,7 +192,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Industry Applications
+            Industry Applications;
           </h2>
           
           <div className="grid grid-cols-1,
@@ -257,7 +257,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Competitive Pricing
+            Competitive Pricing;
           </h2>
           
           <div className="grid grid-cols-1 m,
@@ -274,24 +274,24 @@ const,
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Up to 10,000 customers
+                  Up to 10,000 customers;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic AI personalization
+                  Basic AI personalization;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard chatbots
+                  Standard chatbots;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Email support
+                  Email support;
                 </li>
               </ul>
               <Button className="w-full bg-pink-600,
   hove: r:bg-pink-700">
-                Start Free Trial
+                Start Free Trial;
               </Button>
             </Card>
             
@@ -307,28 +307,28 @@ const,
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Up to 100,000 customers
+                  Up to 100,000 customers;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Advanced AI features
+                  Advanced AI features;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Custom dashboards
+                  Custom dashboards;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Priority support
+                  Priority support;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  API access
+                  API access;
                 </li>
               </ul>
               <Button className="w-full bg-white text-pink-600,
   hove: r:bg-gray-100">
-                Get Started
+                Get Started;
               </Button>
             </Card>
             
@@ -344,28 +344,28 @@ const,
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Unlimited customers
+                  Unlimited customers;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Full AI capabilities
+                  Full AI capabilities;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom integrations
+                  Custom integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  24/7 dedicated support
+                  24/7 dedicated support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  White-label options
+                  White-label options;
                 </li>
               </ul>
               <Button className="w-full bg-purple-600,
   hove: r: bg-purple-700">
-                Contact Sales
+                Contact Sales;
               </Button>
             </Card>
           </div>
@@ -380,7 +380,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Market Analysis & ROI
+            Market Analysis & ROI;
           </h2>
           
           <div className="grid grid-cols-1,
@@ -441,17 +441,17 @@ const,
             <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600,
   hove: r:from-pink-700,
   hove: r:to-purple-700">
-              Start Free Trial
+              Start Free Trial;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white,
   hove: r:text-slate-900">
-              Schedule Demo
+              Schedule Demo;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-slate-900">
-              Download CX Guide
+              Download CX Guide;
             </Button>
           </div>
         </div>
@@ -459,4 +459,4 @@ const,
     </div>
   )
 }
-export default AICustomerExperience
+export default AICustomerExperience;

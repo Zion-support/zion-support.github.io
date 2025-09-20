@@ -1,9 +1,9 @@
 import React from "react"
-import { Header } from "@/components/Header"
-import { Footer } from "@/components/Footer"
+import { Header     } from "@/components/Header";
+import { Footer     } from "@/components/Footer";
 import SEO from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
+import { GradientHeading     } from "@/components/GradientHeading";
+import { Button     } from "@/components/ui/button";
 import Link from "next/link"
 export default function TalentMarketplace() {
   const const schema = {

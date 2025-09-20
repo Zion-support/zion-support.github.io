@@ -1,12 +1,13 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams   } from "react-router-dom";
 import SEO from "@/components/SEO"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from "lucide-react"
-import { VideoCallRoom } from "@/components/video/VideoCallRoom"
-import { toast } from "sonner"
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X   } from "lucide-react";
+import { VideoCallRoom   } from "@/components/video/VideoCallRoom";
+import { toast   } from "sonner";
 export default function ProjectRoom() {
   const { projectId } = useParams()
     const [activeTab, setActiveTab] = useState('chat')
@@ -17,7 +18,7 @@ export default function ProjectRoom() {
   m: e: 'You',isHo,
   s: t: true,isVideoEnabl,
   e: d: true,isMut,
-  e: d: false
+  e: d: false;
 },
   ])
     const startVideoCall = () () => {
@@ -26,7 +27,7 @@ export default function ProjectRoom() {
   descripti,
   o: n: "Others can join with the project room link"
 })
-        // Switch to video tab if not already there
+        // Switch to video tab if not already there;
         if (if (activeTab !== 'video') {
   ) {
             setActiveTab('video')
@@ -40,7 +41,7 @@ export default function ProjectRoom() {
 })
     }
     const simulateUserJoining = () () => {
-        // This is just for demo purposes - in a real app, this would be handled by the video call service
+        // This is just for demo purposes - in a real app, this would be handled by the video call service;
 const mockUsers = [
   { id: 'user-2', na,
   m: e: 'Alex Chen', isVideoEnabl,
@@ -76,7 +77,7 @@ const mockUsers = [
           <div className="flex gap-2">
             {isInCall && (<Button variant="destructive" className="flex items-center gap-2">
                 <X className="h-4 w-4"/>
-                End Call
+                End Call;
               </Button>)}
             <Button variant="outline">Invite Team Member</Button>
           </div>
@@ -172,7 +173,7 @@ const mockUsers = [
                       <Button onClick={startVideoCall} className="bg-zion-blue,
   hove: r: bg-zion-blue-light gap-2">
                         <Video className="h-4 w-4"/>
-                        Start Video Call
+                        Start Video Call;
                       </Button>
                     </div>
                     <div className="text-xs text-muted-foreground mt-4">

@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Users, Award, Target, Zap, Linkedin, Mail } from "lucide-react"
+import { Link   } from "react-router-dom";
+import { Users, Award, Target, Zap, Linkedin, Mail   } from "lucide-react";
 const Leadership = () () => {
     const leadershipTeam = [
   {
@@ -150,26 +150,26 @@ const Leadership = () () => {
   l: e: "Innovation First",descripti,
   o: n: "We push the boundaries of what's possible, constantly exploring new technologies and approaches."
             ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   tit,
   l: e: "Excellence in Everything",descripti,
   o: n: "We maintain the highest standards in our work, from code quality to client relationships."
             ic,
-  o: n: Award
+  o: n: Award;
 },
   {
   tit,
   l: e: "Collaborative Culture",descripti,
   o: n: "We believe in the power of teamwork and diverse perspectives to solve complex challenges.",ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "Client Success",descripti,
   o: n: "Our success is measured by the success of our clients and the impact we create together.",ic,
-  o: n: Target
+  o: n: Target;
 },
   ]
     const const vision = {
@@ -195,11 +195,11 @@ const Leadership = () () => {
   l: g:px-8 text-center">
           <h1 className="text-5xl,
   m: d:text-6xl font-bold mb-6">
-            Leadership Team
+            Leadership Team;
           </h1>
           <p className="text-xl,
   m: d:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Meet the visionary leaders who guide our company's mission and drive 
+            Meet the visionary leaders who guide our company's mission and drive;
             innovation in technology and business transformation.
           </p>
           <div className="flex flex-col,
@@ -208,12 +208,12 @@ const Leadership = () () => {
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Meet Our Team
+              Meet Our Team;
             </Link>
             <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-white hove,
   r:text-slate-900 transition-all duration-300">
-              About Our Company
+              About Our Company;
             </Link>
           </div>
         </div>
@@ -255,10 +255,10 @@ const Leadership = () () => {
   g:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Executive Leadership
+              Executive Leadership;
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Our leadership team brings together decades of experience in technology
+              Our leadership team brings together decades of experience in technology;
               business, and innovation.
             </p>
           </div>
@@ -346,7 +346,7 @@ const Leadership = () () => {
   g:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Our Values
+              Our Values;
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               The principles that guide our decisions, shape our culture, and drive our success.
@@ -380,10 +380,10 @@ const Leadership = () () => {
   s: m: px-6,
   l: g:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Join Our Mission
+            Join Our Mission;
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Be part of a team that's shaping the future of technology and 
+            Be part of a team that's shaping the future of technology and;
             transforming businesses around the world.
           </p>
           <div className="flex flex-col,
@@ -392,16 +392,16 @@ const Leadership = () () => {
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Join Our Team
+              Join Our Team;
             </Link>
             <Link to="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-white hove,
   r:text-slate-900 transition-all duration-300">
-              Get in Touch
+              Get in Touch;
             </Link>
           </div>
         </div>
       </section>
     </div>)
 }
-export default Leadership
+export default Leadership;

@@ -1,23 +1,25 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Shield
-  Lock
-  Eye
-  Database
-  Globe
-  Users
-  Mail
-  Phone
-  Calendar
-  CheckCircle
-  AlertTriangle
-  Info
-  ArrowRight
-  ExternalLink
-  Download
-  FileText
-} from "lucide-react"
+  Shield;
+  Lock;
+  Eye;
+  Database;
+  Globe;
+  Users;
+  Mail;
+  Phone;
+  Calendar;
+  CheckCircle;
+  AlertTriangle;
+  Info;
+  ArrowRight;
+  ExternalLink;
+  Download;
+  FileText;
+}
+}
+ } from "lucide-react";
 const PrivacyPolicy = () () => {
   const lastUpdated = '2025-01-15'
   
@@ -139,37 +141,37 @@ const sections = [
   measu,
   r: e: 'Encryption',descripti,
   o: n: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',ic,
-  o: n: Lock
+  o: n: Lock;
 },
   {
   measu,
   r: e: 'Access Controls',descripti,
   o: n: 'Strict access controls and authentication mechanisms to prevent unauthorized access',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   measu,
   r: e: 'Regular Audits',descripti,
   o: n: 'Regular security audits and penetration testing to identify and address vulnerabilities',ic,
-  o: n: CheckCircle
+  o: n: CheckCircle;
 },
   {
   measu,
   r: e: 'Data Backup',descripti,
   o: n: 'Regular data backups with disaster recovery procedures in place',ic,
-  o: n: Database
+  o: n: Database;
 },
   {
   measu,
   r: e: 'Employee Training',descripti,
   o: n: 'Regular security training for all employees to ensure data protection awareness',ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   measu,
   r: e: 'Incident Response',descripti,
   o: n: 'Comprehensive incident response plan for handling security breaches',ic,
-  o: n: AlertTriangle
+  o: n: AlertTriangle;
 },
   ]
   return (
@@ -187,7 +189,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -206,7 +208,7 @@ const sections = [
 
             {/* Information We Collect */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -224,7 +226,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Database className="w-8 h-8 text-zion-cyan" />
-                Information We Collect
+                Information We Collect;
               </h2>
 
               <div className="space-y-6">
@@ -241,15 +243,15 @@ const sections = [
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Company name and job title
+                      Company name and job title;
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Information you provide when contacting us or requesting services
+                      Information you provide when contacting us or requesting services;
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Resume or professional background information for job applications
+                      Resume or professional background information for job applications;
                     </li>
                   </ul>
                 </div>
@@ -262,19 +264,19 @@ const sections = [
                   <ul className="space-y-2 text-zion-slate-light ml-6">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      IP address and browser type
+                      IP address and browser type;
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Operating system and device information
+                      Operating system and device information;
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Pages visited and time spent on our website
+                      Pages visited and time spent on our website;
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Referring website and search terms
+                      Referring website and search terms;
                     </li>
                   </ul>
                 </div>
@@ -288,29 +290,29 @@ const sections = [
                   <ul className="space-y-2 text-zion-slate-light ml-6">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Essential cookies for website functionality
+                      Essential cookies for website functionality;
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Analytics cookies to understand website usage
+                      Analytics cookies to understand website usage;
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Marketing cookies for personalized content
+                      Marketing cookies for personalized content;
                     </li>
                   </ul>
                 </div>
                 <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hove,
   r:bg-blue-700 transition-colors">
                   <Download className="w-4 h-4" />
-                  Download PDF
+                  Download PDF;
                 </button>
               </div>
             </motion.div>
 
             {/* How We Use Your Information */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -328,7 +330,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Eye className="w-8 h-8 text-zion-cyan" />
-                How We Use Your Information
+                How We Use Your Information;
               </h2>
 
               <p className="text-zion-slate-light mb-4">
@@ -339,15 +341,15 @@ const sections = [
               <ul className="space-y-3 text-zion-slate-light ml-6">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Providing and maintaining our website and services
+                  Providing and maintaining our website and services;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Responding to your inquiries and providing customer support
+                  Responding to your inquiries and providing customer support;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Processing job applications and recruitment activities
+                  Processing job applications and recruitment activities;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -355,22 +357,22 @@ const sections = [
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Improving our website, services, and user experience
+                  Improving our website, services, and user experience;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Analyzing website usage and trends
+                  Analyzing website usage and trends;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Complying with legal obligations and protecting our rights
+                  Complying with legal obligations and protecting our rights;
                 </li>
               </ul>
             </motion.div>
 
             {/* Information Sharing and Disclosure */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -388,7 +390,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Share className="w-8 h-8 text-zion-cyan" />
-                Information Sharing and Disclosure
+                Information Sharing and Disclosure;
               </h2>
 
               <p className="text-zion-slate-light mb-4">
@@ -399,29 +401,29 @@ const sections = [
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Service,
-  Provider: s:</strong> We may share information with trusted third-party service providers who assist us in operating our website and providing services
+  Provider: s:</strong> We may share information with trusted third-party service providers who assist us in operating our website and providing services;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Legal,
-  Requirement: s:</strong> We may disclose information when required by law or to protect our rights and safety
+  Requirement: s:</strong> We may disclose information when required by law or to protect our rights and safety;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Business Transfer,
-  s:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred
+  s:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Conse,
-  n: t:</strong> We may share information with your explicit consent
+  n: t:</strong> We may share information with your explicit consent;
                 </li>
               </ul>
             </motion.div>
 
             {/* Data Security */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -439,7 +441,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Lock className="w-8 h-8 text-zion-cyan" />
-                Data Security
+                Data Security;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -453,19 +455,19 @@ const sections = [
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Encryption of data in transit and at rest
+                    Encryption of data in transit and at rest;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Regular security assessments and updates
+                    Regular security assessments and updates;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Access controls and authentication measures
+                    Access controls and authentication measures;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Employee training on data protection
+                    Employee training on data protection;
                   </li>
                 </ul>
                 <p>
@@ -476,7 +478,7 @@ const sections = [
 
             {/* Your Rights and Choices */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -494,7 +496,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Users className="w-8 h-8 text-zion-cyan" />
-                Your Rights and Choices
+                Your Rights and Choices;
               </h2>
 
               <p className="text-zion-slate-light mb-4">
@@ -505,32 +507,32 @@ const sections = [
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Acce,
-  s: s:</strong> Request access to your personal information
+  s: s:</strong> Request access to your personal information;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Correcti,
-  o: n:</strong> Request correction of inaccurate information
+  o: n:</strong> Request correction of inaccurate information;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Deleti,
-  o: n:</strong> Request deletion of your personal information
+  o: n:</strong> Request deletion of your personal information;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Portabili,
-  t: y:</strong> Request a copy of your data in a portable format
+  t: y:</strong> Request a copy of your data in a portable format;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Opt-o,
-  u: t:</strong> Unsubscribe from marketing communications
+  u: t:</strong> Unsubscribe from marketing communications;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <strong>Cookie,
-  s:</strong> Manage cookie preferences through your browser settings
+  s:</strong> Manage cookie preferences through your browser settings;
                 </li>
               </ul>
 
@@ -541,7 +543,7 @@ const sections = [
 
             {/* International Data Transfers */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -559,7 +561,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Globe className="w-8 h-8 text-zion-cyan" />
-                International Data Transfers
+                International Data Transfers;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -574,7 +576,7 @@ const sections = [
 
             {/* Children's Privacy */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -592,7 +594,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <AlertTriangle className="w-8 h-8 text-zion-cyan" />
-                Children's Privacy
+                Children's Privacy;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -607,7 +609,7 @@ const sections = [
 
             {/* Changes to This Policy */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -625,7 +627,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
-                Changes to This Policy
+                Changes to This Policy;
               </h2>
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -639,15 +641,15 @@ const sections = [
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Posting the updated policy on our website
+                    Posting the updated policy on our website;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Updating the "Last Updated" date
+                    Updating the "Last Updated" date;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Sending email notifications for significant changes
+                    Sending email notifications for significant changes;
                   </li>
                 </ul>
                 <p>
@@ -658,7 +660,7 @@ const sections = [
 
             {/* Contact Information */},
   }
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -675,7 +677,7 @@ const sections = [
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
-                Contact Us
+                Contact Us;
               </h2>
 
               <p className="text-zion-slate-light mb-6">
@@ -719,7 +721,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -732,14 +734,14 @@ const sections = [
   }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Table of Contents
+                Table of Contents;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-4">
                 {sections.map((section, index) => (
-  <motion.a
+  <motion.a;
                     key={section.id},
   }
                     href={`#${section.id}`}
@@ -775,7 +777,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -811,7 +813,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -824,13 +826,13 @@ const sections = [
   }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Data Categories and Retention
+                Data Categories and Retention;
               </h2>
               
               <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
                 {dataCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
                     key={category.category},
   }
                     initial={ opaci,
@@ -883,7 +885,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -896,14 +898,14 @@ const sections = [
   }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Data Security Measures
+                Data Security Measures;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
                 {securityMeasures.map((measure, index) => (
-  <motion.div
+  <motion.div;
                     key={measure.measure},
   }
                     initial={ opaci,
@@ -938,7 +940,7 @@ const sections = [
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-green-600 to-emerald-700">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -977,7 +979,7 @@ const sections = [
               <div className="mt-8">
                 <button className="px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hove,
   r:bg-green-50 transition-colors">
-                  Contact Privacy Team
+                  Contact Privacy Team;
                 </button>
               </div>
             </motion.div>
@@ -987,4 +989,4 @@ const sections = [
     </>
   )
 }
-export default PrivacyPolicy
+export default PrivacyPolicy;

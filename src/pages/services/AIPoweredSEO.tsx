@@ -1,8 +1,8 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../../components/SEO"
+import { motion     } from "framer-motion";
+import { SEO     } from "../../components/SEO";
 import {
-  Search
+  Search;
   TrendingUp,
   Target,
   Zap,
@@ -11,18 +11,22 @@ import {
   Users,
   Clock,
   Award,
-  Star
-  Cpu
-  Database
-  Filter
-  Download
-  Share2
-  CheckCircle
-  Eye
-  MousePointer
-  Smartphone
-  Monitor
-} from "lucide-react"
+  Star;
+  Cpu;
+  Database;
+  Filter;
+  Download;
+  Share2;
+  CheckCircle;
+  Eye;
+  MousePointer;
+  Smartphone;
+  Monitor;
+}
+}
+}
+}
+ } from "lucide-react";
 const AIPoweredSEO = () () => {
   const features = [
   {
@@ -77,38 +81,38 @@ const AIPoweredSEO = () () => {
   g: e: "Research & Analysis",descripti,
   o: n: "AI-powered keyword research, competitor analysis, and technical audits"
       ic,
-  o: n: Search
+  o: n: Search;
 },
   {
   sta,
   g: e: "Strategy Development",descripti,
   o: n: "Data-driven SEO strategy and content planning",ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   sta,
   g: e: "Implementation",descripti,
   o: n: "Technical optimization, content creation, and on-page improvements"
       ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   sta,
   g: e: "Monitoring",descripti,
   o: n: "Real-time performance tracking and analytics",ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   sta,
   g: e: "Optimization",descripti,
   o: n: "Continuous improvement based on AI insights and data",ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   sta,
   g: e: "Reporting",descripti,
   o: n: "Comprehensive reporting and ROI measurement",ic,
-  o: n: Eye
+  o: n: Eye;
 },
   ]
   const useCases = [
@@ -141,7 +145,7 @@ const AIPoweredSEO = () () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI-Powered SEO - Zion Tech Group"
         description="Transform your search rankings with AI-driven SEO optimization, intelligent keyword research, and data-driven digital marketing strategies."
       />
@@ -152,7 +156,7 @@ const AIPoweredSEO = () () => {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -171,20 +175,20 @@ const AIPoweredSEO = () () => {
             
             <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-              Dominate Search Rankings with
+              Dominate Search Rankings with;
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
-                {" "}AI-Driven SEO
+                {" "}AI-Driven SEO;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your search engine optimization with artificial intelligence that 
+              Revolutionize your search engine optimization with artificial intelligence that;
               analyzes, optimizes, and scales your SEO efforts for maximum visibility and results.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -196,9 +200,9 @@ const AIPoweredSEO = () () => {
   hove: r:to-pink-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-purple-500/25";"
               >
-                Start SEO Audit
+                Start SEO Audit;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -208,7 +212,7 @@ const AIPoweredSEO = () () => {
                 className="className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg,
   hove: r:bg-purple-400/10 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -219,7 +223,7 @@ const AIPoweredSEO = () () => {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -233,10 +237,10 @@ const AIPoweredSEO = () () => {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Advanced SEO Features
+              Advanced SEO Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO platform combines cutting-edge artificial intelligence with 
+              Our AI-powered SEO platform combines cutting-edge artificial intelligence with;
               proven optimization strategies to deliver exceptional search results.
             </p>
           </motion.div>
@@ -245,7 +249,7 @@ const AIPoweredSEO = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -278,7 +282,7 @@ const AIPoweredSEO = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -292,10 +296,10 @@ const AIPoweredSEO = () () => {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Measurable SEO Results
+              Measurable SEO Results;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See real results with our AI-powered SEO solutions that deliver quantifiable 
+              See real results with our AI-powered SEO solutions that deliver quantifiable;
               improvements in search rankings, traffic, and conversions.
             </p>
           </motion.div>
@@ -306,7 +310,7 @@ const AIPoweredSEO = () () => {
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -361,7 +365,7 @@ const AIPoweredSEO = () () => {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -375,10 +379,10 @@ const AIPoweredSEO = () () => {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Comprehensive SEO Process
+              Comprehensive SEO Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO methodology covers every aspect of search engine optimization
+              Our AI-powered SEO methodology covers every aspect of search engine optimization;
               from initial research to ongoing optimization and reporting.
             </p>
           </motion.div>
@@ -387,7 +391,7 @@ const AIPoweredSEO = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {seoProcess.map((stage, index) => (
-  <motion.div
+  <motion.div;
                 key={stage.stage},
   }
                 initial={ opaci,
@@ -420,7 +424,7 @@ const AIPoweredSEO = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -434,10 +438,10 @@ const AIPoweredSEO = () () => {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO solutions are designed to work across industries, providing 
+              Our AI-powered SEO solutions are designed to work across industries, providing;
               tailored optimization strategies for your specific business needs.
             </p>
           </motion.div>
@@ -446,7 +450,7 @@ const AIPoweredSEO = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.industry},
   }
                 initial={ opaci,
@@ -479,7 +483,7 @@ const AIPoweredSEO = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -496,12 +500,12 @@ const AIPoweredSEO = () () => {
               Ready to Dominate Search Rankings?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of businesses that have already transformed their search visibility 
+              Join hundreds of businesses that have already transformed their search visibility;
               with our AI-powered SEO solutions.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -513,9 +517,9 @@ const AIPoweredSEO = () () => {
   hove: r:to-pink-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-purple-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -525,7 +529,7 @@ const AIPoweredSEO = () () => {
                 className="className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg,
   hove: r: bg-purple-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>
@@ -534,4 +538,4 @@ const AIPoweredSEO = () () => {
     </div>
   )
 }
-export default AIPoweredSEO
+export default AIPoweredSEO;

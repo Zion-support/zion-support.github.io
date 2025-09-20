@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes   } from "react-router-dom";
 import NotFound from "@/pages/NotFound"
 const ErrorRoutes = () () => {
   return (
@@ -8,4 +8,4 @@ const ErrorRoutes = () () => {
   )
 }
 
-export default ErrorRoutes
+export default ErrorRoutes;

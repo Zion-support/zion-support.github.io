@@ -1,29 +1,31 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
-  Zap
-  Shield
-  TrendingUp
-  Users
-  Globe
-  ArrowRight
-  CheckCircle
-  Play
-  BarChart3
-  Cpu
-  Eye
-  MessageSquare
-  Database
-  Network
-  Rocket
-  Target
-  Award
-  Clock
-  Star
-  Heart
-} from "lucide-react"
+  Brain;
+  Zap;
+  Shield;
+  TrendingUp;
+  Users;
+  Globe;
+  ArrowRight;
+  CheckCircle;
+  Play;
+  BarChart3;
+  Cpu;
+  Eye;
+  MessageSquare;
+  Database;
+  Network;
+  Rocket;
+  Target;
+  Award;
+  Clock;
+  Star;
+  Heart;
+}
+}
+ } from "lucide-react";
 import SEO from "../components/SEO"
 const AIServicesPage = () () => {
   const aiServices = [
@@ -69,7 +71,7 @@ const AIServicesPage = () () => {
   t: e: '300% annual growth',rati,
   n: g: 4.9,revie,
   w: s: 18,custome,
-  r: s: 25
+  r: s: 25;
 },
   {
   id: 'quantum-emotion-processor',na,
@@ -112,7 +114,7 @@ const AIServicesPage = () () => {
   t: e: '180% annual growth',rati,
   n: g: 4.8,revie,
   w: s: 32,custome,
-  r: s: 67
+  r: s: 67;
 },
   ]
   const aiSolutions = [
@@ -178,7 +180,7 @@ const AIServicesPage = () () => {
 
   return (
     <>
-      <SEO
+      <SEO;
         title="AI Services - Zion Tech Group"
         description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."
         keywords="AI services, machine learning, natural language processing, intelligent automation"
@@ -192,7 +194,7 @@ const AIServicesPage = () () => {
               AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive artificial intelligence solutions for modern businesses
+              Comprehensive artificial intelligence solutions for modern businesses;
             </p>
           </div>
 
@@ -226,7 +228,7 @@ const AIServicesPage = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
               {aiSolutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -265,7 +267,7 @@ const AIServicesPage = () () => {
             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -321,22 +323,22 @@ const AIServicesPage = () () => {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link 
+              <Link;
                 to="/contact" 
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold,
   hove: r:from-purple-700,
   hove: r:to-pink-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link 
+              <Link;
                 to="/services" 
                 className="className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold,
   hove: r:bg-purple-400 hove,
   r:text-white transition-all duration-300";"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </div>
@@ -345,4 +347,4 @@ const AIServicesPage = () () => {
     </>
   )
 }
-export default AIServicesPage
+export default AIServicesPage;

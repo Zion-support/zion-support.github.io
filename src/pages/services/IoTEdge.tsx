@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone     } from "lucide-react";
 export default function IoTEdge() {
   const features = [
   {
@@ -33,25 +33,25 @@ export default function IoTEdge() {
   tit,
   l: e: 'IoT Device Management',descripti,
   o: n: 'Centralized management and monitoring of connected devices',ic,
-  o: n: Smartphone
+  o: n: Smartphone;
 },
   {
   tit,
   l: e: 'Edge Analytics',descripti,
   o: n: 'Real-time data processing and analytics at the edge',ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: '5G Integration',descripti,
   o: n: 'High-speed connectivity for IoT applications',ic,
-  o: n: Wifi
+  o: n: Wifi;
 },
   {
   tit,
   l: e: 'Security & Compliance',descripti,
   o: n: 'End-to-end security for IoT ecosystems',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   ]
   return (
@@ -61,7 +61,7 @@ export default function IoTEdge() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -80,23 +80,23 @@ export default function IoTEdge() {
 
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Connect, Process
+              Connect, Process;
               <span className="text-gradient"> Transform</span>
             </h1>
 
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Harness the power of IoT and edge computing to create intelligent
+              Harness the power of IoT and edge computing to create intelligent;
               connected systems that process data faster and more efficiently.
             </p>
 
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
-                Start IoT Project
+                Start IoT Project;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
-                Learn More
+                Learn More;
               </button>
             </div>
           </motion.div>
@@ -107,7 +107,7 @@ export default function IoTEdge() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -126,7 +126,7 @@ export default function IoTEdge() {
               Why Choose IoT & Edge Computing?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Faster processing, reduced latency, and intelligent automation
+              Faster processing, reduced latency, and intelligent automation;
             </p>
           </motion.div>
 
@@ -134,7 +134,7 @@ export default function IoTEdge() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -169,7 +169,7 @@ export default function IoTEdge() {
   }
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -185,17 +185,17 @@ export default function IoTEdge() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our IoT & Edge Services
+              Our IoT & Edge Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive solutions for connected device ecosystems
+              Comprehensive solutions for connected device ecosystems;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.title},
   }
                 initial={ opaci,
@@ -234,7 +234,7 @@ export default function IoTEdge() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -261,12 +261,12 @@ export default function IoTEdge() {
   s: m: flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold,
   hove: r:bg-gray-100 transition-colors duration-300">
-                  Start IoT Project
+                  Start IoT Project;
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold,
   hove: r:bg-white hove,
   r:text-blue-600 transition-colors duration-300">
-                  Contact IoT Team
+                  Contact IoT Team;
                 </button>
               </div>
             </div>

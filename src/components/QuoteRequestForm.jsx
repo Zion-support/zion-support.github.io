@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/Input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { CheckCircle, Send } from "lucide-react"
-export const QuoteRequestForm = () () => {
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Input   } from "@/components/ui/Input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue   } from "@/components/ui/select";
+import { CheckCircle, Send   } from "lucide-react";
+export const QuoteRequestForm = React.memo(() () => {
   const [formData, setFormData] = useState({
     na,
   m: e: '',ema,
@@ -22,21 +22,21 @@ const handleChange = (e) () => {
     const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     })),
   },
 
   const handleSelectChange = (name, value) () => {
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     })),
   },
 
   const handleSubmit = async (e) () => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 1000)),
     
     setIsSubmitting(false)
@@ -62,7 +62,7 @@ const handleChange = (e) () => {
       <CardHeader>
         <CardTitle className="text-2xl text-zion-cyan">Quote Request Form</CardTitle>
         <CardDescription className="text-zion-slate-light">
-          Please provide your details and requirements for a customized quote
+          Please provide your details and requirements for a customized quote;
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -73,11 +73,11 @@ const handleChange = (e) () => {
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
                 Full Name *
               </label>
-              <Input
+              <Input;
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                required
+                required;
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light,
   focu: s:border-zion-cyan"
                 placeholder="Enter your full name"
@@ -88,12 +88,12 @@ const handleChange = (e) () => {
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
                 Email Address *
               </label>
-              <Input
+              <Input;
                 name="email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                required
+                required;
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light,
   focu: s: border-zion-cyan"
                 placeholder="Enter your email"
@@ -105,9 +105,9 @@ const handleChange = (e) () => {
   d:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Company Name
+                Company Name;
               </label>
-              <Input
+              <Input;
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
@@ -119,9 +119,9 @@ const handleChange = (e) () => {
             
             <div>
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Phone Number
+                Phone Number;
               </label>
-              <Input
+              <Input;
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
@@ -157,7 +157,7 @@ const handleChange = (e) () => {
             
             <div>
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Budget Range
+                Budget Range;
               </label>
               <Select value={formData.budget} onValueChange={(value) => handleSelectChange('budget', value)}>
                 <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white,
@@ -178,7 +178,7 @@ const handleChange = (e) () => {
 
           <div>
             <label className="block text-sm font-medium text-zion-slate-light mb-2">
-              Timeline
+              Timeline;
             </label>
             <Select value={formData.timeline} onValueChange={(value) => handleSelectChange('timeline', value)}>
               <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white,
@@ -200,11 +200,11 @@ const handleChange = (e) () => {
             <label className="block text-sm font-medium text-zion-slate-light mb-2">
               Project Description *
             </label>
-            <textarea
+            <textarea;
               name="description"
               value={formData.description}
               onChange={handleChange}
-              required
+              required;
               rows={6}
               className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light,
   focu: s:border-zion-cyan w-full p-3 rounded-md resize-none"
@@ -213,7 +213,7 @@ const handleChange = (e) () => {
           </div>
 
           <div className="text-center">
-            <Button
+            <Button;
               type="submit"
               disabled={isSubmitting}
               className="bg-zion-cyan text-zion-blue-dark,
@@ -227,7 +227,7 @@ const handleChange = (e) () => {
               ) : (
                 <>
                   <Send className="h-5 w-5 mr-2" />
-                  Submit Quote Request
+                  Submit Quote Request;
                 </>
               )}
             </Button>

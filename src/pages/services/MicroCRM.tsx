@@ -1,11 +1,15 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Users
+  Users;
   Target,
   CheckCircle,
-  ArrowRight 
-} from "lucide-react"
+  ArrowRight;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function MicroCRM() {
   const services = [
   {
@@ -52,14 +56,14 @@ export default function MicroCRM() {
   ]
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO
+      <SEO;
         title="Micro CRM for Local Businesses"
         description="Lightweight customer tracking, reminders, invoices, and reviews for local SMBs."
       />
       <section className="container-responsive section-padding">
         <h1 className="heading-responsive text-gradient">Micro CRM</h1>
         <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
-          Essential CRM without bloat. Track customers, appointments, jobs, and invoices with
+          Essential CRM without bloat. Track customers, appointments, jobs, and invoices with;
           SMS reminders, online payments, and review requests to grow word‑of‑mouth.
         </p>
         <div className="grid-futuristic mt-10">
@@ -94,7 +98,7 @@ export default function MicroCRM() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -107,10 +111,10 @@ export default function MicroCRM() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Core CRM Services
+              Core CRM Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From contact management to sales tracking, we provide 
+              From contact management to sales tracking, we provide;
               comprehensive CRM capabilities for your business.
             </p>
           </motion.div>
@@ -118,7 +122,7 @@ export default function MicroCRM() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -155,7 +159,7 @@ export default function MicroCRM() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -168,7 +172,7 @@ export default function MicroCRM() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              CRM Benefits
+              CRM Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in sales performance, customer relationships, and business growth.
@@ -179,7 +183,7 @@ export default function MicroCRM() {
   m: d:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -201,7 +205,7 @@ export default function MicroCRM() {
             </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index + 3},
   }
                   initial={ opaci,
@@ -231,7 +235,7 @@ export default function MicroCRM() {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -244,10 +248,10 @@ export default function MicroCRM() {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Micro CRM adapts to various industries, providing 
+              Our Micro CRM adapts to various industries, providing;
               tailored solutions for customer relationship management.
             </p>
           </motion.div>
@@ -256,7 +260,7 @@ export default function MicroCRM() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -289,7 +293,7 @@ export default function MicroCRM() {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -301,10 +305,10 @@ export default function MicroCRM() {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Start Managing Your Customers Today
+              Start Managing Your Customers Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join businesses worldwide that use our Micro CRM to 
+              Join businesses worldwide that use our Micro CRM to;
               build stronger customer relationships and grow sales.
             </p>
             <div className="flex flex-col,
@@ -312,12 +316,12 @@ export default function MicroCRM() {
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg,
   hove: r:from-blue-600,
   hove: r:to-cyan-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hove,
   r:bg-blue-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -326,4 +330,4 @@ export default function MicroCRM() {
     </div>
   )
 }
-export default MicroCRM
+export default MicroCRM;

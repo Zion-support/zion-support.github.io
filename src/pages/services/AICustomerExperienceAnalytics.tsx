@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Brain
+  Brain;
   Users,
   BarChart3,
   Heart,
@@ -9,20 +9,24 @@ import {
   TrendingUp,
   Eye,
   Target,
-  Zap
-  CheckCircle
-  Star
-  ArrowRight
-  Play
-  Settings
-  Brain
-  Globe
-  Lock
-  Shield
-  Activity
-  PieChart
-  LineChart
-} from "lucide-react"
+  Zap;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Play;
+  Settings;
+  Brain;
+  Globe;
+  Lock;
+  Shield;
+  Activity;
+  PieChart;
+  LineChart;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AICustomerExperienceAnalytic: s: React.FC = () () => {
   const features = [
@@ -69,7 +73,7 @@ const,
 ]
       c,
   t: a: 'Get Started',popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -84,7 +88,7 @@ const,
 ]
       c,
   t: a: 'Start Free Trial',popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -99,7 +103,7 @@ const,
 ]
       ct,
   a: 'Contact Sales',popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const benefits = [
@@ -127,7 +131,7 @@ const,
       <div className="relative z-10">
         {/* Header Section */},
   }
-        <motion.header 
+        <motion.header;
           className="className="pt-20 pb-16 text-center";"
           initial={ opaci,
   t: y: 0, y: -50 },
@@ -140,7 +144,7 @@ const,
   }
         >
           <div className="max-w-4xl mx-auto px-6">
-            <motion.div 
+            <motion.div;
               className="className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-300 mb-6";"
               initial={ sca,
   l: e: 0.8, opaci,
@@ -156,12 +160,12 @@ const,
   }
             >
               <Users className="w-4 h-4" />
-              AI-Powered Customer Analytics
+              AI-Powered Customer Analytics;
             </motion.div>
             
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent">
-              AI Customer Experience Analytics
+              AI Customer Experience Analytics;
             </h1>
             
             <p className="text-xl m,
@@ -171,7 +175,7 @@ const,
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl,
   hove: r:from-emerald-700,
   hove: r:to-teal-700 transition-all duration-300 shadow-lg,
@@ -184,9 +188,9 @@ const,
   }
               >
                 <Play className="w-5 h-5" />
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 border border-emerald-500/30 text-emerald-300 font-semibold rounded-xl,
   hove: r: bg-emerald-500/10 transition-all duration-300 flex items-center gap-2";"
                 whileHover={ scal,
@@ -197,7 +201,7 @@ const,
   }
               >
                 <Settings className="w-5 h-5" />
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </div>
@@ -205,7 +209,7 @@ const,
 
         {/* Features Grid */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -224,7 +228,7 @@ const,
             <div className="text-center mb-16">
               <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                Advanced Analytics Features
+                Advanced Analytics Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI-powered platform provides comprehensive customer experience analytics designed to drive business growth.
@@ -235,7 +239,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   className="className="group relative p-6 rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm,
@@ -290,7 +294,7 @@ const,
 
         {/* Analytics Capabilities */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6 bg-gradient-to-br from-emerald-900/20 via-slate-900/50 to-teal-900/20";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -309,7 +313,7 @@ const,
             <div className="text-center mb-16">
               <h2 className="text-4xl,
   m: d:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                Comprehensive Analytics Capabilities
+                Comprehensive Analytics Capabilities;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 From real-time sentiment analysis to predictive modeling, our platform provides everything you need to understand your customers.
@@ -320,7 +324,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
               {analyticsCapabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                   key={capability},
   }
                   className="className="flex items-start gap-4 p-4 rounded-xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10";"
@@ -350,7 +354,7 @@ const,
 
         {/* Pricing Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -369,7 +373,7 @@ const,
             <div className="text-center mb-16">
               <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                Transparent Pricing Plans
+                Transparent Pricing Plans;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your customer analytics needs. All plans include our core AI capabilities and expert support.
@@ -379,11 +383,11 @@ const,
             <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                   key={plan.name},
   }
                   className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
-  plan.popular 
+  plan.popular;
                       ? 'border-emerald-500 bg-gradient-to-br from-emerald-500/20 to-teal-500/20' 
                       : 'border-emerald-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
 }`}
@@ -407,7 +411,7 @@ const,
                   {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -430,9 +434,9 @@ const,
                     ))}
                   </ul>
                   
-                  <motion.button 
+                  <motion.button;
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                         ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white,
   hove: r: from-emerald-700,
   hove: r:to-teal-700'
@@ -446,7 +450,7 @@ const,
   l: e: 0.98 },
   }
                   >
-                    Get Started
+                    Get Started;
                   </motion.button>
                 </motion.div>
               ))}
@@ -456,7 +460,7 @@ const,
 
         {/* Benefits Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6 bg-gradient-to-br from-emerald-900/20 via-slate-900/50 to-teal-900/20";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -486,7 +490,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={benefit},
   }
                   className="className="flex items-start gap-4 p-6 rounded-xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10";"
@@ -516,7 +520,7 @@ const,
 
         {/* CTA Section */},
   }
-        <motion.section 
+        <motion.section;
           className="className="py-20 px-6 text-center";"
           initial={ opaci,
   t: y: 0, y: 50 },
@@ -541,7 +545,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl,
   hove: r:from-emerald-700,
   hove: r:to-teal-700 transition-all duration-300 shadow-lg,
@@ -553,10 +557,10 @@ const,
   l: e: 0.95 },
   }
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
-              <motion.button 
+              <motion.button;
                 className="className="px-8 py-4 border border-emerald-500/30 text-emerald-300 font-semibold rounded-xl,
   hove: r: bg-emerald-500/10 transition-all duration-300 flex items-center gap-2";"
                 whileHover={ scal,
@@ -567,7 +571,7 @@ const,
   }
               >
                 <Users className="w-5 h-5" />
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </div>
@@ -577,4 +581,4 @@ const,
   )
 }
 
-export default AICustomerExperienceAnalytics
+export default AICustomerExperienceAnalytics;

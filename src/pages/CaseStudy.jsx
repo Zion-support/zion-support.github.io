@@ -1,12 +1,12 @@
 import Link from "next/link"
-import { useRouter } from "next/router"
-import { CASE_STUDIES } from "@/data/case-studies"
+import { useRouter   } from "next/router";
+import { CASE_STUDIES   } from "@/data/case-studies";
 import SEO from "@/components/SEO"
-import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
+import { Button   } from "@/components/ui/button";
+import { ArrowLeft   } from "lucide-react";
 export default function CaseStudy() {
   const router = useRouter()
-    const { slug } = router.query
+    const { slug } = router.query;
 const study = CASE_STUDIES.find((s) => s.slug === slug)
     if (if (!study) {
   ) {
@@ -22,7 +22,7 @@ const study = CASE_STUDIES.find((s) => s.slug === slug)
   hove: r: bg-zion-blue-light hove,
   r:text-white" asChild>
             <Link to="/case-studies">
-              <ArrowLeft className="mr-2 h-4 w-4"/> Back to Case Studies
+              <ArrowLeft className="mr-2 h-4 w-4"/> Back to Case Studies;
             </Link>
           </Button>
           <img loading="lazy" src={study.companyLogo} alt={`${study.company} logo`} className="h-12 mb-4"/>

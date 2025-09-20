@@ -1,10 +1,10 @@
 import React from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Badge   } from "@/components/ui/badge";
 import SEO from "@/components/SEO"
-import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3   } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function CloudMigrationServices() {
   const services = [
   {
@@ -86,7 +86,7 @@ export default function CloudMigrationServices() {
                 "30 days support"
 ]
             popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -104,7 +104,7 @@ export default function CloudMigrationServices() {
                 "Training & documentation"
 ]
             popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -122,7 +122,7 @@ export default function CloudMigrationServices() {
                 "Custom integrations"
 ]
             popula,
-  r: false
+  r: false;
 },
   ]
     const testimonials = [
@@ -132,7 +132,7 @@ export default function CloudMigrationServices() {
   l: e: "CTO, RetailTech Solutions"
             conte,
   n: t: "Zion's cloud migration team transformed our infrastructure. We reduced costs by 40% and improved performance significantly.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -140,7 +140,7 @@ export default function CloudMigrationServices() {
   l: e: "IT Director, HealthTech Innovations"
             conte,
   n: t: "The migration was seamless with zero downtime. Zion's expertise in healthcare compliance made all the difference.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -148,7 +148,7 @@ export default function CloudMigrationServices() {
   l: e: "VP Engineering, FinTech Startup"
             conte,
   n: t: "From on-premise to AWS in 6 weeks. Zion's team delivered beyond our expectations with excellent documentation.",rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
@@ -161,15 +161,15 @@ export default function CloudMigrationServices() {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
         <div className="container mx-auto relative z-10 text-center">
           <Badge className="mb-6 bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
-            ☁️ Cloud Migration Experts
+            ☁️ Cloud Migration Experts;
           </Badge>
           <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-            Cloud Migration Services
+            Cloud Migration Services;
           </h1>
           <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Transform your business with expert cloud migration services. We specialize in seamless migrations to AWS, Azure
+            Transform your business with expert cloud migration services. We specialize in seamless migrations to AWS, Azure;
             and Google Cloud with zero downtime and guaranteed cost optimization.
           </p>
           <div className="flex flex-col,
@@ -178,14 +178,14 @@ export default function CloudMigrationServices() {
   hove: r:from-zion-purple-light,
   hove: r:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
-                Get Migration Assessment
+                Get Migration Assessment;
                 <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10 px-8 py-4 text-lg">
               <Link to="/contact">
-                Free Consultation
+                Free Consultation;
               </Link>
             </Button>
           </div>
@@ -198,7 +198,7 @@ export default function CloudMigrationServices() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Migration Services
+              Comprehensive Migration Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our expert team handles every aspect of your cloud migration journey, from assessment to optimization.
@@ -240,7 +240,7 @@ export default function CloudMigrationServices() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Cloud Platform Expertise
+              Cloud Platform Expertise;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               We specialize in all major cloud platforms and can help you choose the best solution for your business needs.
@@ -348,7 +348,7 @@ export default function CloudMigrationServices() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Migration Pricing
+              Transparent Migration Pricing;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Choose the migration package that fits your business needs. All packages include our comprehensive migration services.
@@ -360,7 +360,7 @@ export default function CloudMigrationServices() {
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300,
   hove: r:shadow-2xl`}>
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
-                    Most Popular
+                    Most Popular;
                   </Badge>)}
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-white mb-2">{plan.name}</CardTitle>
@@ -385,7 +385,7 @@ export default function CloudMigrationServices() {
   hove: r: from-zion-purple-light hove,
   r:to-zion-purple text-white">
                     <Link to="/contact">
-                      Get Started
+                      Get Started;
                     </Link>
                   </Button>
                 </CardContent>
@@ -400,7 +400,7 @@ export default function CloudMigrationServices() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Industry Leaders;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               See what our clients say about our cloud migration expertise and commitment to successful transitions.
@@ -442,14 +442,14 @@ export default function CloudMigrationServices() {
   hove: r:from-zion-purple-light,
   hove: r:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
-                Start Migration Assessment
+                Start Migration Assessment;
                 <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10 px-8 py-4 text-lg">
               <Link to="/contact">
-                Contact Migration Team
+                Contact Migration Team;
               </Link>
             </Button>
           </div>

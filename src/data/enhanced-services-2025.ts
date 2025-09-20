@@ -9,7 +9,9 @@ export interface EnhancedService {
   y: string,year,
   l: y: string,enterpri,
   s: e: string,set,
-  u: p: string
+  u: p: string;
+}
+}
 }
     featur,
   e: s: string[],benefi,
@@ -19,12 +21,12 @@ export interface EnhancedService {
   m: e: string,ic,
   o: n: string,col,
   o: r: string,li,
-  n: k: string
+  n: k: string;
     technology?: string[]
     integrations?: string[]
     useCases?: string[]
-    targetAudience?: string
-    marketPosition?: string
+    targetAudience?: string;
+    marketPosition?: string;
     competitors?: string[]
     contactIn,
   f: o: {
@@ -32,7 +34,7 @@ export interface EnhancedService {
   e: string,ema,
   i: l: string,addre,
   s: s: string,websi,
-  t: e: string
+  t: e: string;
 },
   }
 
@@ -91,7 +93,7 @@ export,
   o: n: 'AI-first code review companion',competito,
   r: s: ['SonarQubeCodeClimate', 'Snyk Code']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'intelligent-incident-response-platform',na,
@@ -125,7 +127,7 @@ export,
   g: y: ['AI/MLAutomation'],integratio,
   n: s: ['SIEMEDR', 'SlackTeams', 'Jira']
         contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'smart-invoice-management-system',na,
@@ -152,7 +154,7 @@ export,
   o: n: '📄',col,
   o: r: 'from-green-600 to-emerald-700',li,
   n: k: '/services/invoice-management',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'ai-customer-success-automation',na,
@@ -180,7 +182,7 @@ export,
   o: n: '🎯',col,
   o: r: 'from-purple-600 to-violet-700',li,
   n: k: '/services/customer-success-automation',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'intelligent-data-analytics-dashboard',na,
@@ -205,9 +207,9 @@ export,
   o: n: '📊',col,
   o: r: 'from-cyan-600 to-blue-700',li,
   n: k: '/services/analytics-dashboard',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // IT services
+    // IT services;
     {
   id: 'network-security-monitoring',na,
   m: e: 'Network Security Monitoring',tagli,
@@ -231,7 +233,7 @@ export,
   o: n: '🛡️',col,
   o: r: 'from-red-600 to-orange-700',li,
   n: k: '/services/network-security-monitoring',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'data-backup-recovery-solutions',na,
@@ -256,7 +258,7 @@ export,
   o: n: '💾',col,
   o: r: 'from-blue-600 to-indigo-700',li,
   n: k: '/services/backup-recovery',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'it-asset-management-platform',na,
@@ -282,9 +284,9 @@ export,
   o: n: '🏷️',col,
   o: r: 'from-green-600 to-emerald-700',li,
   n: k: '/services/asset-management',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // AI services
+    // AI services;
     {
   id: 'ai-chatbot-development',na,
   m: e: 'AI Chatbot Development',tagli,
@@ -308,7 +310,7 @@ export,
   o: n: '🤖',col,
   o: r: 'from-purple-600 to-violet-700',li,
   n: k: '/services/ai-chatbot',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'predictive-analytics-platform',na,
@@ -332,7 +334,7 @@ export,
   o: n: '🔮',col,
   o: r: 'from-indigo-600 to-purple-700',li,
   n: k: '/services/predictive-analytics',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'computer-vision-solutions',na,
@@ -358,9 +360,9 @@ export,
   o: n: '👁️',col,
   o: r: 'from-cyan-600 to-blue-700',li,
   n: k: '/services/computer-vision',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // Emerging tech
+    // Emerging tech;
     {
   id: 'quantum-computing-solutions',na,
   m: e: 'Quantum Computing Solutions',tagli,
@@ -382,7 +384,7 @@ export,
   o: n: '⚛️',col,
   o: r: 'from-violet-600 to-purple-700',li,
   n: k: '/services/quantum-computing',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'blockchain-web3-solutions',na,
@@ -408,9 +410,9 @@ export,
   o: n: '🔗',col,
   o: r: 'from-orange-600 to-red-700',li,
   n: k: '/services/blockchain-web3',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 }
-    // New additions
+    // New additions;
     {
   id: 'seo-content-optimizer',na,
   m: e: 'SEO Content Optimizer',tagli,
@@ -434,7 +436,7 @@ export,
   o: n: '🧭',col,
   o: r: 'from-emerald-600 to-teal-700',li,
   n: k: '/services/seo-content-optimizer',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'ai-sales-email-copilot',na,
@@ -459,7 +461,7 @@ export,
   o: n: '✉️',col,
   o: r: 'from-sky-600 to-blue-700',li,
   n: k: '/services/ai-sales-email-copilot',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'cloud-cost-optimizer',na,
@@ -484,7 +486,7 @@ export,
   o: n: '☁️',col,
   o: r: 'from-slate-600 to-gray-700',li,
   n: k: '/services/cloud-cost-optimizer',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'data-governance-suite',na,
@@ -509,7 +511,7 @@ export,
   o: n: '🧭',col,
   o: r: 'from-amber-600 to-yellow-700',li,
   n: k: '/services/data-governance-suite',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'ai-rag-knowledge-base',na,
@@ -533,7 +535,7 @@ export,
   o: n: '📚',col,
   o: r: 'from-fuchsia-600 to-rose-700',li,
   n: k: '/services/ai-rag-knowledge-base',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   {
   id: 'edge-iot-observability',na,
@@ -557,7 +559,7 @@ export,
   o: n: '📡',col,
   o: r: 'from-lime-600 to-green-700',li,
   n: k: '/services/edge-iot-observability',contactIn,
-  f: o: CONTACT
+  f: o: CONTACT;
 },
   ]
-export default enhancedServices2025
+export default enhancedServices2025;

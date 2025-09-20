@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Box, Cpu, Zap, Globe, Rocket, Shield } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Box, Cpu, Zap, Globe, Rocket, Shield     } from "lucide-react";
 const QuantumTechnology = () () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */},
@@ -17,7 +17,7 @@ const QuantumTechnology = () () => {
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Quantum Technology
+              Quantum Technology;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Harness the power of quantum computing to solve complex problems that are impossible for classical computers. 
@@ -28,12 +28,12 @@ const QuantumTechnology = () () => {
               <Link to="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:from-purple-700,
   hove: r:to-pink-700 transition-all duration-300 text-lg">
-                Get Started
+                Get Started;
               </Link>
               <Link to="/quantum-services" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold,
   hove: r:border-gray-500 hove,
   r:text-white transition-all duration-300 text-lg">
-                Explore Services
+                Explore Services;
               </Link>
             </div>
           </div>
@@ -54,8 +54,8 @@ const QuantumTechnology = () () => {
                 What is Quantum Computing?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Quantum computing leverages the principles of quantum mechanics to process information in ways that 
-                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously
+                Quantum computing leverages the principles of quantum mechanics to process information in ways that;
+                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously;
                 quantum computers can solve complex problems exponentially faster.
               </p>
               <div className="space-y-4">
@@ -78,7 +78,7 @@ const QuantumTechnology = () () => {
                 <CpuChipIcon className="h-24 w-24 text-purple-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold mb-2">Quantum Advantage</h3>
                 <p className="text-gray-300">
-                  Solve problems in minutes that would take classical computers thousands of years
+                  Solve problems in minutes that would take classical computers thousands of years;
                 </p>
               </div>
             </div>
@@ -94,7 +94,7 @@ const QuantumTechnology = () () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-center mb-16">
-            Our Quantum Services
+            Our Quantum Services;
           </h2>
           <div className="grid grid-cols-1,
   m: d:grid-cols-2,
@@ -176,7 +176,7 @@ const QuantumTechnology = () () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-center mb-16">
-            Quantum Computing Applications
+            Quantum Computing Applications;
           </h2>
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
@@ -340,16 +340,16 @@ const QuantumTechnology = () () => {
             <Link to="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:from-purple-700,
   hove: r:to-pink-700 transition-all duration-300 text-lg">
-              Schedule a Consultation
+              Schedule a Consultation;
             </Link>
             <Link to="/quantum-services" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold,
   hove: r:border-gray-500 hove,
   r:text-white transition-all duration-300 text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
       </section>
     </div>)
 }
-export default QuantumTechnology
+export default QuantumTechnology;

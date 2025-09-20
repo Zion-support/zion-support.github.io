@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 const pricingTiers = [
   {
     na,
@@ -70,7 +70,7 @@ export function PricingSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="text-center mb-16"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -87,7 +87,7 @@ export function PricingSection() {
         >
           <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-4">
-            Transparent Pricing
+            Transparent Pricing;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Flexible pricing options designed to scale with your business.
@@ -98,7 +98,7 @@ export function PricingSection() {
         <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
-            <motion.div
+            <motion.div;
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
               initial={ opaci,
@@ -118,7 +118,7 @@ export function PricingSection() {
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    Most Popular
+                    Most Popular;
                   </span>
                 </div>
               )}
@@ -146,13 +146,13 @@ export function PricingSection() {
                     ))}
                   </ul>
                   
-                  <Link
+                  <Link;
                     to="/contact"
                     className={`w-full py-3 px-6 bg-gradient-to-r ${tier.color} text-white font-semibold rounded-lg,
   hove: r: shadow-lg transition-all duration-300 hove,
   r:scale-105 text-center block`}
                   >
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               </div>
@@ -160,7 +160,7 @@ export function PricingSection() {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div;
           className="mt-16 text-center"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -179,13 +179,13 @@ export function PricingSection() {
           <p className="text-gray-400 mb-6">
             Need a custom solution? Contact us for a personalized quote.
           </p>
-          <Link
+          <Link;
             to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg,
   hove: r: bg-blue-500 hove,
   r:text-white transition-all duration-200"
           >
-            Contact Sales Team
+            Contact Sales Team;
             <span className="text-sm">→</span>
           </Link>
         </motion.div>

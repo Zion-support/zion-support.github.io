@@ -103,25 +103,25 @@ export const blogPosts = [
   u: g: "integration-strategies-it-asset-management-systems"
 },
   ]
-export const getBlogPostBySlug = (slug) () => {
+export const getBlogPostBySlug = React.memo((slug) () => {
   return blogPosts.find(post => post.slug === slug)
 }
 
-export const getBlogPostsByCategory = (category) () => {
+export const getBlogPostsByCategory = React.memo((category) () => {
   return blogPosts.filter(post => post.category === category)
 }
 
-export const getFeaturedBlogPosts = () () => {
+export const getFeaturedBlogPosts = React.memo(() () => {
   return blogPosts.filter(post => post.featured)
 }
 
-export const getRecentBlogPosts = (limit = 3) () => {
-  return blogPosts
+export const getRecentBlogPosts = React.memo((limit = 3) () => {
+  return blogPosts;
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
     .slice(0, limit)
 }
 
-export const searchBlogPosts = (query) () => {
+export const searchBlogPosts = React.memo((query) () => {
   const searchTerm = query.toLowerCase()
   return blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchTerm) ||
@@ -130,25 +130,25 @@ export const searchBlogPosts = (query) () => {
     post.tags.some(tag => tag.toLowerCase().includes(searchTerm))
   )
 }
-export const getBlogCategories = () () => {
+export const getBlogCategories = React.memo(() () => {
   const categories = [[...new Set(blogPosts.map(post => post.category))],
   ]
   return categories.map(category => ({
   na,
   m: e: category,cou,
-  n: t: blogPosts.filter(post => post.category === category).length
+  n: t: blogPosts.filter(post => post.category === category).length;
 }))
 }
 
-export const getBlogTags = () () => {
+export const getBlogTags = React.memo(() () => {
   const allTags = blogPosts.flatMap(post => post.tags)
   const uniqueTags = [[...new Set(allTags)],
   ]
   return uniqueTags.map(tag => ({
   na,
   m: e: tag,cou,
-  n: t: allTags.filter(t => t === tag).length
+  n: t: allTags.filter(t => t === tag).length;
 }))
 }
 
-export const BLOG_POSTS = blogPosts
+export const BLOG_POSTS = blogPosts;

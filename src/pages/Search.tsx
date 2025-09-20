@@ -1,9 +1,10 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
+import { Link   } from "react-router-dom";
 import {
-  Search
+  Search;
   Filter,
   Grid,
   List,
@@ -30,156 +31,158 @@ import {
   CheckCircle,
   ArrowRight,
   ChevronDown,
-  ChevronUp
-  Zap
-  Globe
-  Target
-  BarChart3
-  Settings
-  Palette
-  Cpu
-  HardDrive
-  Network
-  Lightbulb
-  Settings as Cog
-  BookOpen
-  Video
-  Headphones
-  DollarSign
-  Percent
-  X
-  Plus
-  Minus
-  RefreshCw
-  RotateCcw
-  Maximize2
-  Minimize2
-  Volume2
-  VolumeX
-  Power
-  PowerOff
-  Battery
-  BatteryCharging
-  BatteryFull
-  BatteryLow
-  BatteryMedium
-  BatteryEmpty
-  Wifi
-  WifiOff
-  Signal
-  SignalOff
-  Bluetooth
-  BluetoothOff
-  Lock
-  Unlock
-  Key
-  Fingerprint
-  QrCode
-  Barcode
-  Camera
-  Image
-  File
-  Folder
-  Archive
-  Trash2
-  Edit
-  Copy
-  Share
-  Link as LinkIcon
-  Bookmark
-  BookmarkPlus
-  BookmarkMinus
-  Flag
-  Report
-  ThumbsUp
-  ThumbsDown
-  Smile
-  Frown
-  Meh
-  Heart
-  HeartOff
-  HeartHandshake
-  Gift
-  CreditCard
-  Wallet
-  Receipt
-  Calculator
-  TrendingDown
-  Activity
-  PieChart
-  LineChart
-  BarChart
-  ScatterChart
-  Radar
-  Gauge
-  Thermometer
-  Droplets
-  Sun
-  Moon
-  Cloud as CloudIcon
-  CloudRain
-  CloudLightning
-  CloudSnow
-  Wind
-  Umbrella
-  Snowflake
-  Fire
-  Leaf
-  Tree
-  Flower
-  Seedling
-  Sprout
-  Plant
-  TreePine
-  Mountain
-  MountainSnow
-  Volcano
-  Island
-  Beach
-  Desert
-  Forest
-  Jungle
-  Ocean
-  River
-  Lake
-  Water
-  Fish
-  Bird
-  Cat
-  Dog
-  Horse
-  Cow
-  Pig
-  Sheep
-  Goat
-  Chicken
-  Duck
-  Turkey
-  Eagle
-  Hawk
-  Owl
-  Crow
-  Sparrow
-  Robin
-  Bluebird
-  Cardinal
-  Goldfinch
-  Hummingbird
-  Woodpecker
-  Seagull
-  Pelican
-  Flamingo
-  Penguin
-  Ostrich
-  Emu
-  Kiwi
-  Toucan
-  Parrot
-  Macaw
-  Cockatoo
-  Canary
-  Finch
-} from "lucide-react"
+  ChevronUp;
+  Zap;
+  Globe;
+  Target;
+  BarChart3;
+  Settings;
+  Palette;
+  Cpu;
+  HardDrive;
+  Network;
+  Lightbulb;
+  Settings as Cog;
+  BookOpen;
+  Video;
+  Headphones;
+  DollarSign;
+  Percent;
+  X;
+  Plus;
+  Minus;
+  RefreshCw;
+  RotateCcw;
+  Maximize2;
+  Minimize2;
+  Volume2;
+  VolumeX;
+  Power;
+  PowerOff;
+  Battery;
+  BatteryCharging;
+  BatteryFull;
+  BatteryLow;
+  BatteryMedium;
+  BatteryEmpty;
+  Wifi;
+  WifiOff;
+  Signal;
+  SignalOff;
+  Bluetooth;
+  BluetoothOff;
+  Lock;
+  Unlock;
+  Key;
+  Fingerprint;
+  QrCode;
+  Barcode;
+  Camera;
+  Image;
+  File;
+  Folder;
+  Archive;
+  Trash2;
+  Edit;
+  Copy;
+  Share;
+  Link as LinkIcon;
+  Bookmark;
+  BookmarkPlus;
+  BookmarkMinus;
+  Flag;
+  Report;
+  ThumbsUp;
+  ThumbsDown;
+  Smile;
+  Frown;
+  Meh;
+  Heart;
+  HeartOff;
+  HeartHandshake;
+  Gift;
+  CreditCard;
+  Wallet;
+  Receipt;
+  Calculator;
+  TrendingDown;
+  Activity;
+  PieChart;
+  LineChart;
+  BarChart;
+  ScatterChart;
+  Radar;
+  Gauge;
+  Thermometer;
+  Droplets;
+  Sun;
+  Moon;
+  Cloud as CloudIcon;
+  CloudRain;
+  CloudLightning;
+  CloudSnow;
+  Wind;
+  Umbrella;
+  Snowflake;
+  Fire;
+  Leaf;
+  Tree;
+  Flower;
+  Seedling;
+  Sprout;
+  Plant;
+  TreePine;
+  Mountain;
+  MountainSnow;
+  Volcano;
+  Island;
+  Beach;
+  Desert;
+  Forest;
+  Jungle;
+  Ocean;
+  River;
+  Lake;
+  Water;
+  Fish;
+  Bird;
+  Cat;
+  Dog;
+  Horse;
+  Cow;
+  Pig;
+  Sheep;
+  Goat;
+  Chicken;
+  Duck;
+  Turkey;
+  Eagle;
+  Hawk;
+  Owl;
+  Crow;
+  Sparrow;
+  Robin;
+  Bluebird;
+  Cardinal;
+  Goldfinch;
+  Hummingbird;
+  Woodpecker;
+  Seagull;
+  Pelican;
+  Flamingo;
+  Penguin;
+  Ostrich;
+  Emu;
+  Kiwi;
+  Toucan;
+  Parrot;
+  Macaw;
+  Cockatoo;
+  Canary;
+  Finch;
+}
+}
+ } from "lucide-react";
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [searchResults, setSearchResults] = useState<any[]>([])
@@ -262,9 +265,9 @@ export default function SearchPage() {
   n: t: 0 },
   },
   ]
-  // Mock search data - in a real app, this would come from an API
+  // Mock search data - in a real app, this would come from an API;
 const mockSearchData = [
-  // AI & Machine Learning
+  // AI & Machine Learning;
     {
   id: 'ai-chatbot',tit,
   l: e: 'AI Chatbot Platform',catego,
@@ -301,7 +304,7 @@ const mockSearchData = [
   o: r: 'AI Team',readTi,
   m: e: '8 min read'
 }
-    // Cloud Solutions
+    // Cloud Solutions;
     {
   id: 'cloud-migration',tit,
   l: e: 'Cloud Migration Service',catego,
@@ -320,7 +323,7 @@ const mockSearchData = [
   o: r: 'Cloud Team',readTi,
   m: e: '12 min read'
 }
-    // Security & Compliance
+    // Security & Compliance;
     {
   id: 'threat-detection',tit,
   l: e: 'Advanced Threat Detection System',catego,
@@ -338,7 +341,7 @@ const mockSearchData = [
   o: r: 'Security Team',readTi,
   m: e: '10 min read'
 }
-    // Data & Analytics
+    // Data & Analytics;
     {
   id: 'data-warehouse',tit,
   l: e: 'Enterprise Data Warehouse Solution',catego,
@@ -357,7 +360,7 @@ const mockSearchData = [
   o: r: 'Data Team',readTi,
   m: e: '15 min read'
 }
-    // Development Tools
+    // Development Tools;
     {
   id: 'code-generator',tit,
   l: e: 'AI-Powered Code Generator',catego,
@@ -376,7 +379,7 @@ const mockSearchData = [
   o: r: 'Dev Team',readTi,
   m: e: '6 min read'
 }
-    // Blog Posts
+    // Blog Posts;
     {
   id: 'ai-trends-2024',tit,
   l: e: 'Top AI Trends to Watch in 2024',catego,
@@ -412,7 +415,7 @@ const mockSearchData = [
   o: r: 'Security Team',readTi,
   m: e: '18 min read'
 }
-    // Case Studies
+    // Case Studies;
     {
   id: 'manufacturing-ai-case-study',tit,
   l: e: 'AI Transformation in Manufacturin,
@@ -434,14 +437,14 @@ const mockSearchData = [
 },
   ]
   useEffect(() () => {
-    // Load recent searches from localStorage
+    // Load recent searches from localStorage;
 const saved = localStorage.getItem('recentSearches')
     if (if (saved) {
   ) {
       setRecentSearches(JSON.parse(saved))
     }
 
-    // Set popular searches
+    // Set popular searches;
     setPopularSearches([
   'AI solutionsCloud migration'
       'CybersecurityData analytics'
@@ -454,15 +457,15 @@ const saved = localStorage.getItem('recentSearches')
   r: y: string) () => {
   if (!query.trim()) {
   setSearchResults([])
-      return
+      return;
 }
 
     setIsSearching(true)
     
-    // Simulate API delay
+    // Simulate API delay;
     await new Promise(resolve => setTimeout(resolve, 500))
     
-    // Filter mock data based on search query
+    // Filter mock data based on search query;
 const filtered = mockSearchData.filter(item () => {
   const searchTerm = query.toLowerCase()
       return (
@@ -473,8 +476,8 @@ const filtered = mockSearchData.filter(item () => {
       )
     })
 
-    // Apply category and type filters
-let results = filtered
+    // Apply category and type filters;
+let results = filtered;
     if (if (selectedCategory !== 'all') {
   ) {
       results = results.filter(item => item.category === selectedCategory)
@@ -487,7 +490,7 @@ let results = filtered
     setSearchResults(results)
     setIsSearching(false)
 
-    // Save to recent searches
+    // Save to recent searches;
     if (query.trim() && !recentSearches.includes(query.trim())) {
   const newRecent = [[query.trim(), ...recentSearches.slice(0, 4)],
   ]
@@ -545,8 +548,7 @@ let results = filtered
   const stars = [[],
   ]
     const fullStars = Math.floor(rating)
-    const hasHalfStar = rating % 1 !== 0
-    
+    const hasHalfStar = rating % 1 !== 0;
     for (let i = 0, i < fullStars, i++) {
   stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />)
     }
@@ -561,7 +563,7 @@ const emptyStars = 5 - Math.ceil(rating)
   stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />)
     }
     
-    return stars
+    return stars;
 }
 
   const formatDate = (dateStri,
@@ -576,7 +578,7 @@ const emptyStars = 5 - Math.ceil(rating)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Search - Zion Tech Group"
         description="Search our comprehensive collection of technology solutions, services, articles, and resources. Find exactly what you need to accelerate your digital transformation."
       />
@@ -586,7 +588,7 @@ const emptyStars = 5 - Math.ceil(rating)
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -621,7 +623,7 @@ const emptyStars = 5 - Math.ceil(rating)
             <form onSubmit={handleSearch} className="relative">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search for solutions, services, articles, or resources..."
                   value={searchQuery},
@@ -634,14 +636,14 @@ const emptyStars = 5 - Math.ceil(rating)
   focu: s:ring-2,
   focu: s:ring-green-400/20 transition-all duration-200 text-lg";"
                 />
-                <button
+                <button;
                   type="submit"
                   className="className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg,
   hove: r:from-green-500,
   hove: r:to-blue-600 transition-all duration-200 hove,
   r:scale-105";"
                 >
-                  Search
+                  Search;
                 </button>
               </div>
             </form>
@@ -662,7 +664,7 @@ const emptyStars = 5 - Math.ceil(rating)
                   <h3 className="text-xl font-bold text-white mb-6">Recent Searches</h3>
                   <div className="flex flex-wrap gap-3">
                     {recentSearches.map((search, index) => (
-  <button
+  <button;
                         key={index},
   }
                         onClick={onClick={() => handleQuickSearch(search)},
@@ -685,7 +687,7 @@ const emptyStars = 5 - Math.ceil(rating)
                 <h3 className="text-xl font-bold text-white mb-6">Popular Searches</h3>
                 <div className="flex flex-wrap gap-3">
                   {popularSearches.map((search, index) => (
-  <button
+  <button;
                       key={index},
   }
                       onClick={onClick={() => handleQuickSearch(search)},
@@ -711,7 +713,7 @@ const emptyStars = 5 - Math.ceil(rating)
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
                   {categories.slice(1).map((category) => (
-  <button
+  <button;
                       key={category.id},
   }
                       onClick={() () => {
@@ -761,7 +763,7 @@ const emptyStars = 5 - Math.ceil(rating)
   l: g:mt-0">
                   {/* Category Filter */},
   }
-                  <select
+                  <select;
                     value={selectedCategory},
   }
                     onChange={(e) () => {
@@ -785,7 +787,7 @@ const emptyStars = 5 - Math.ceil(rating)
 
                   {/* Type Filter */},
   }
-                  <select
+                  <select;
                     value={selectedType},
   }
                     onChange={(e) () => {
@@ -810,7 +812,7 @@ const emptyStars = 5 - Math.ceil(rating)
                   {/* View Mode Toggle */},
   }
                   <div className="flex items-center gap-2">
-                    <button
+                    <button;
                       onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -823,7 +825,7 @@ const emptyStars = 5 - Math.ceil(rating)
                     >
                       <Grid className="w-5 h-5" />
                     </button>
-                    <button
+                    <button;
                       onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -861,7 +863,7 @@ const emptyStars = 5 - Math.ceil(rating)
                   <p className="text-gray-300 mb-6">
                     Try adjusting your search terms or browse our categories instead.
                   </p>
-                  <button
+                  <button;
                     onClick={onClick={() => setSearchQuery('')},
   },
   }
@@ -870,7 +872,7 @@ const emptyStars = 5 - Math.ceil(rating)
   hove: r:to-blue-600 transition-all duration-200 hove,
   r:scale-105";"
                   >
-                    Start New Search
+                    Start New Search;
                   </button>
                 </div>
               )},
@@ -883,7 +885,7 @@ const emptyStars = 5 - Math.ceil(rating)
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
                       {searchResults.map((item, index) => (
-  <motion.div
+  <motion.div;
                           key={item.id},
   }
                           initial={ opaci,
@@ -962,7 +964,7 @@ const emptyStars = 5 - Math.ceil(rating)
                                 ))}
                               </div>
                               
-                              <Link
+                              <Link;
                                 to={item.url},
   }
                                 className="className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg,
@@ -970,7 +972,7 @@ const emptyStars = 5 - Math.ceil(rating)
   hove: r:to-blue-600 transition-all duration-200 hove,
   r:scale-105 text-center block";"
                               >
-                                View Details
+                                View Details;
                               </Link>
                             </div>
                           </div>
@@ -980,7 +982,7 @@ const emptyStars = 5 - Math.ceil(rating)
                   ) : (
   <div className="space-y-4">
                       {searchResults.map((item, index) => (
-  <motion.div
+  <motion.div;
                           key={item.id},
   }
                           initial={ opaci,
@@ -1056,7 +1058,7 @@ const emptyStars = 5 - Math.ceil(rating)
                                     <Eye className="w-5 h-5" />
                                   </button>
                                 </div>
-                                <Link
+                                <Link;
                                   to={item.url},
   }
                                   className="className="px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg,
@@ -1064,7 +1066,7 @@ const emptyStars = 5 - Math.ceil(rating)
   hove: r:to-blue-600 transition-all duration-200 hove,
   r:scale-105";"
                                 >
-                                  View Details
+                                  View Details;
                                 </Link>
                               </div>
                             </div>

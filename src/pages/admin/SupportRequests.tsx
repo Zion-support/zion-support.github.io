@@ -1,15 +1,16 @@
+import { useCallback    } from "react";
 import React, { useState } from "react"
-import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/Input"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Badge } from "@/components/ui/badge"
-import { Search, Filter } from "lucide-react"
+import { useState     } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle     } from "@/components/ui/card";
+import { Input     } from "@/components/ui/Input";
+import { Button     } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger     } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue     } from "@/components/ui/select";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow     } from "@/components/ui/table";
+import { Badge     } from "@/components/ui/badge";
+import { Search, Filter     } from "lucide-react";
 import SEO from "@/components/SEO"
-// Mock data for support requests
+// Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [
   {
   id: "SR-1001",us,
@@ -123,42 +124,42 @@ export default function SupportRequests() {
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null)
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null)
 
-  // Apply filters to the request data
+  // Apply filters to the request data;
 const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request () => {
-  // Apply search query filter
+  // Apply search query filter;
     if (searchQuery &&
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-  return false
+  return false;
 }
 
-    // Apply status filter
+    // Apply status filter;
     if (if (statusFilter && request.status !== statusFilter) {
   ) {
-      return false
+      return false;
 }
 
-    // Apply priority filter
+    // Apply priority filter;
     if (if (priorityFilter && request.priority !== priorityFilter) {
   ) {
-      return false
+      return false;
 }
 
-    // Apply category filter
+    // Apply category filter;
     if (if (categoryFilter && request.category !== categoryFilter) {
   ) {
-      return false
+      return false;
 }
 
-    return true
+    return true;
 })
 
-  // Count by status for the summary dashboard
-const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length
-const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length
-const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length
-const totalCount = MOCK_SUPPORT_REQUESTS.length
+  // Count by status for the summary dashboard;
+const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
+const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+const totalCount = MOCK_SUPPORT_REQUESTS.length;
 const resetFilters = () () => {
     setSearchQuery("")
     setStatusFilter(null)
@@ -167,7 +168,7 @@ const resetFilters = () () => {
   }
   return (
     <>
-      <SEO
+      <SEO;
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />
@@ -177,10 +178,10 @@ const resetFilters = () () => {
   m: d:items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Support Requests
+              Support Requests;
             </h1>
             <p className="text-zion-slate-light mt-2">
-              Manage and respond to user support requests and issues
+              Manage and respond to user support requests and issues;
             </p>
           </div>
 
@@ -188,7 +189,7 @@ const resetFilters = () () => {
   m: d:mt-0">
             <Button className="bg-zion-purple hove,
   r:bg-zion-purple-light">
-              New Support Case
+              New Support Case;
             </Button>
           </div>
         </div>
@@ -242,7 +243,7 @@ const resetFilters = () () => {
   m: d:flex-row gap-4 mb-6">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <Input
+                <Input;
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery},
   }
@@ -295,7 +296,7 @@ const resetFilters = () () => {
               </Select>
 
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-                <Filter className="h-4 w-4 mr-2" /> Reset Filters
+                <Filter className="h-4 w-4 mr-2" /> Reset Filters;
               </Button>
             </div>
 

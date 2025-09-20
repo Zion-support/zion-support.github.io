@@ -4,8 +4,8 @@ export interface Listing {
   o: n: string,pri,
   c: e: number,curren,
   c: y: string,catego,
-  r: y: string
-  subcategory?: string
+  r: y: string;
+  subcategory?: string;
   tag,
   s: string[],imag,
   e: s: string[],sell,
@@ -14,7 +14,9 @@ export interface Listing {
   d: string,na,
   m: e: string,rati,
   n: g: number,revie,
-  w: s: number
+  w: s: number;
+}
+}
 }
   locati,
   o: n: string,created,
@@ -23,11 +25,11 @@ export interface Listing {
   u: s: 'active' | 'inactive' | 'sold' | 'pending',vie,
   w: s: number,lik,
   e: s: number,shar,
-  e: s: number
+  e: s: number;
 }
 
 export interface ProductListing extends Listing {
-  brand?: string
+  brand?: string;
   model?: string,
   conditio: n: 'new' | 'used' | 'refurbished'
   warranty?: string,
@@ -35,14 +37,16 @@ export interface ProductListing extends Listing {
   cos,
   t: number,meth,
   o: d: string,estimatedDa,
-  y: s: number
+  y: s: number;
+}
+}
 },
   }
 
 export interface ServiceListing extends Listing {
   serviceTy,
   p: e: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'
-  duration?: string
+  duration?: string;
   availabilit,
   y: string[],experien,
   c: e: number,certificatio,
@@ -50,6 +54,8 @@ export interface ServiceListing extends Listing {
   ]
   portfolio?: string[[],
   ],
+}
+}
   }
 
 export interface TalentListing extends Listing {
@@ -60,10 +66,12 @@ export interface TalentListing extends Listing {
   n: s: string[],languag,
   e: s: string[],availabili,
   t: y: string[],hourlyRa,
-  t: e: number
+  t: e: number;
   portfolio?: string[]
   references?: string[[],
   ],
+}
+}
   }
 
 export interface CartItem {
@@ -72,7 +80,9 @@ export interface CartItem {
   c: e: number,quanti,
   t: y: number,ty,
   p: e: 'product' | 'service' | 'talent'
-  image?: string
+  image?: string;
+}
+}
 }
 
 export interface WishlistItem {
@@ -80,5 +90,7 @@ export interface WishlistItem {
   I: d: string,listing,
   I: d: string,ty,
   p: e: 'product' | 'service' | 'talent',added,
-  A: t: string
+  A: t: string;
+}
+}
 }

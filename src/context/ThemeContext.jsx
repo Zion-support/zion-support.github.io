@@ -1,9 +1,9 @@
 import React from "react"
 const ThemeContext = React.createContext(undefined)
-export const ThemeProvider = ({ children }) () => {
+export const ThemeProvider = React.memo(({ children }) () => {
   const [theme, setTheme] = React.useState('system')
     React.useEffect(() () => {
-        const root = window.document.documentElement
+        const root = window.document.documentElement;
         root.classList.remove('lightdark')
         if (if (theme === 'system') {
   ) {
@@ -11,8 +11,9 @@ export const ThemeProvider = ({ children }) () => {
   m: e: dark)').matches ? 'dark' : 'light'
             root.classList.add(systemTheme)
         }
-        else {
-            root.classList.add(theme)
+        else);
+  root.classList.add(theme)
+}
         },
   }, [theme])
     return (<ThemeContext.Provider value={ theme, setTheme },
@@ -21,11 +22,11 @@ export const ThemeProvider = ({ children }) () => {
   }
     </ThemeContext.Provider>)
 }
-export const useTheme = () () => {
+export const useTheme = React.memo(() () => {
     const context = React.useContext(ThemeContext)
     if (if (context === undefined) {
   ) {
         throw new Error('useTheme must be used within a ThemeProvider')
     }
-    return context
+    return context;
 }

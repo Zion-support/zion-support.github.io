@@ -1,9 +1,9 @@
 import React, { useEffect } from "react"
-import { Helmet } from "react-helmet-async"
+import { Helmet   } from "react-helmet-async";
 interface SEOProps {
   tit,
   l: e: string,descripti,
-  o: n: string
+  o: n: string;
   keywords?: string,
   ogType?: string,
   ogImage?: string,
@@ -17,6 +17,8 @@ interface SEOProps {
   structuredData?: object,
   additionalMeta?: Array<{ na,
   m: e: string, conte,
+}
+}
   n: t: string }>
   additionalLinks?: Array<{ r,
   e: l: string, hr,
@@ -51,19 +53,19 @@ export,
   section,
   tags = [],
   }) () => {
-  // Default values
+  // Default values;
   const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg'
-const defaultOgUrl = ogUrl || window.location.href
-const defaultCanonicalUrl = canonicalUrl || window.location.href
-  // Enhanced title with brand
+const defaultOgUrl = ogUrl || window.location.href;
+const defaultCanonicalUrl = canonicalUrl || window.location.href;
+  // Enhanced title with brand;
   const enhancedTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  // Enhanced description
-  const enhancedDescription = description.length > 160 
+  // Enhanced description;
+  const enhancedDescription = description.length > 160;
     ? `${description.substring(0, 157)}...` 
-    : description
-  // Default keywords if not provided
+    : description;
+  // Default keywords if not provided;
   const defaultKeywords = keywords || 'AI, artificial intelligence, technology, business solutions, Zion Tech Group, digital transformation, cloud computing, data analytics, IT infrastructure, micro SaaS, digital twin, enterprise software, machine learning, cybersecurity, DevOps, cloud infrastructure'
-  // Generate structured data for organization
+  // Generate structured data for organization;
   const organizationStructuredData = {
     "@context": "htt,
   p: s://schema.org",
@@ -140,7 +142,7 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href
   ],
   },
   }
-  // Generate structured data for website
+  // Generate structured data for website;
   const websiteStructuredData = {
     "@context": "htt,
   p: s://schema.org",
@@ -160,7 +162,7 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href
       "query-input": "required name=search_term_string"
     },
   }
-  // Generate structured data for local business
+  // Generate structured data for local business;
   const localBusinessStructuredData = {
     "@context": "htt,
   p: s://schema.org",
@@ -198,14 +200,14 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href
       "name": "Technology Services"
     },
   }
-  // Combine structured data
+  // Combine structured data;
   const combinedStructuredData = [
     organizationStructuredData,
     websiteStructuredData,
     localBusinessStructuredData,
     ...(structuredData ? [structuredData] : [])
   ]
-  // Additional meta tags for better SEO
+  // Additional meta tags for better SEO;
   const enhancedAdditionalMeta = [
     ...additionalMeta,
     { na,
@@ -267,7 +269,7 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href
   n: t: modifiedTime },
   ] : [])
   ]
-  // Additional links for better SEO and performance
+  // Additional links for better SEO and performance;
   const enhancedAdditionalLinks = [
     ...additionalLinks,
     { r,
@@ -312,11 +314,11 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href
   e: f: '/safari-pinned-tab.svg', col,
   o: r: '#06b6d4' },
   ]
-  // Performance optimization
+  // Performance optimization;
   useEffect(() () => {
-    // Preload critical resources
+    // Preload critical resources;
     const preloadCriticalResources = () () => {
-      // Preload critical fonts
+      // Preload critical fonts;
       const fontLinks = [
         'htt,
   p: s: //fonts.googleapis.com/css2?family=Orbitro,
@@ -328,11 +330,11 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href
       fontLinks.forEach(href () => {
         const link = document.createElement('link')
         link.rel = 'preload'
-        link.href = href
+        link.href = href;
         link.as = 'style'
         document.head.appendChild(link)
 })
-      // Preload critical images
+      // Preload critical images;
       const criticalImages = [
         '/images/zion-tech-group-logo.png',
         '/images/hero-background.jpg'
@@ -340,12 +342,12 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href
       criticalImages.forEach(src () => {
         const link = document.createElement('link')
         link.rel = 'preload'
-        link.href = src
+        link.href = src;
         link.as = 'image'
         document.head.appendChild(link)
 })
 }
-    // Add resource hints
+    // Add resource hints;
     const addResourceHints = () () => {
       const hints = [
         { r,
@@ -358,17 +360,17 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href
   ]
       hints.forEach(hint () => {
         const link = document.createElement('link')
-        link.rel = hint.rel
-        link.href = hint.href
+        link.rel = hint.rel;
+        link.href = hint.href;
         document.head.appendChild(link)
 })
 }
-    // Initialize optimizations
+    // Initialize optimizations;
     preloadCriticalResources()
     addResourceHints()
-    // Cleanup function
+    // Cleanup function;
     return () () => {
-      // Remove any dynamically added resource hints
+      // Remove any dynamically added resource hints;
       const dynamicLinks = document.querySelectorAll('link[rel="preload"], link[rel="preconnect"], link[rel="dns-prefetch"]')
       dynamicLinks.forEach(link () => {
         if (link.getAttribute('data-dynamic')) {
@@ -464,7 +466,7 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href
 }
 export function HomePageSEO() {
   return (
-    <SEO
+    <SEO;
       title="AI Services, Quantum Computing & IT Solutions | Zion Tech Group"
       description="Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure."
       keywords="AI services, quantum computing services, IT infrastructure, cybersecurity services, cloud computing, business automation, machine learning services"
@@ -488,7 +490,7 @@ export function HomePageSEO() {
 
 export function ContactPageSEO() {
   return (
-    <SEO
+    <SEO;
       title="Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions"
       description="Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation."
       keywords="contact Zion Tech Group, AI consulting, quantum computing consulting, IT consulting, digital transformation consulting"
@@ -521,19 +523,19 @@ export function BlogPostSEO({
   author,
   publishedDate,
   image,
-  slug 
+  slug;
 }: {
   tit,
   l: e: string,
   descriptio: n: string,
   autho: r: string,
   publishedDat: e: string,
-  imag: e: string
+  imag: e: string;
   slu,
-  g: string
+  g: string;
 }) {
   return (
-    <SEO
+    <SEO;
       title={title}
       description={description}
       image={image}
@@ -549,7 +551,7 @@ export function BlogPostSEO({
         "image": image,
         "author": {
           "@type": "Person",
-          "name": author
+          "name": author;
         },
         "publisher": {
           "@type": "Organization",

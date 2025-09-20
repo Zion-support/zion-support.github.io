@@ -1,4 +1,4 @@
-import { MarketplaceItem } from "@/data/marketplaceData"
+import { MarketplaceItem   } from "@/data/marketplaceData";
 const sampleTitles = [
   'AI-Powered Analytics PlatformCybersecurity Assessment Tool'
   'Cloud Migration ServiceIoT Edge Computing Solution'
@@ -71,6 +71,8 @@ export function generateRandomListing(): MarketplaceItem {
   const sellerName = sellerNames[[Math.floor(Math.random() * sellerNames.length)],
   ]
   return {
+}
+}
   id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     tit,
   l: e: sampleTitles[randomIndex] || 'Default Title',catego,
@@ -90,7 +92,7 @@ export function generateRandomListing(): MarketplaceItem {
   nam,
   e: sellerName || 'Default Seller',rati,
   n: g: 4.0 + Math.random() * 1.0,verifi,
-  e: d: Math.random() > 0.3
+  e: d: Math.random() > 0.3;
 }
     locati,
   o: n: location || 'Remote',availabili,
@@ -110,5 +112,5 @@ export function generateRandomListings(cou,
   for (let i = 0, i < count, i++) {
   listings.push(generateRandomListing())
   }
-  return listings
+  return listings;
 }

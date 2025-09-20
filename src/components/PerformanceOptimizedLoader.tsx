@@ -1,5 +1,5 @@
 import React, { memo } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 interface LoaderProps {
   size?: 'sm' | 'md' | 'lg',
   color?: 'primary' | 'secondary' | 'white',
@@ -7,11 +7,13 @@ interface LoaderProps {
   fullScreen?: boolean,
   showLogo?: boolean,
 }
+}
+}
 export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   size = 'md'
   color = 'primary'
-  text
-  fullScreen = false
+  text;
+  fullScreen = false;
 }: LoaderProps) () => {
   const sizeClasses = {
     sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16'
@@ -19,8 +21,7 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
 const textSizes = {
     sm: 'text-xs',md: 'text-sm',lg: 'text-base'
   }
-const showLogo = true, // Add this variable
-
+const showLogo = true, // Add this variable;
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="relative">
@@ -28,7 +29,7 @@ const showLogo = true, // Add this variable
         <div className={`${sizeClasses[size],
   } border-4 border-zion-cyan/20 rounded-full`}></div>
         {/* Spinning ring */}
-        <motion.div
+        <motion.div;
           className={`absolute top-0 left-0 ${sizeClasses[size],
   } border-4 border-zion-cyan border-t-transparent rounded-full`}
           animate={ rota,
@@ -45,12 +46,12 @@ const showLogo = true, // Add this variable
         {/* Logo text */},
   {showLogo && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
-            ZION
+            ZION;
           </div>
         )},
   {/* Loading text */}
         <div className="mt-4 text-center">
-          <motion.div
+          <motion.div;
             className={`text-zion-cyan ${textSizes[size],
   } animate-pulse`}
             animate={ opaci,
@@ -71,21 +72,21 @@ const showLogo = true, // Add this variable
 }),
 
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader',
-// Skeleton loader for content
+// Skeleton loader for content;
 export function SkeletonLoader({
   className = "",
   lines = 3,
   height = "h-4"
 }: {
-  className?: string
-  lines?: number
-  height?: string
+  className?: string;
+  lines?: number;
+  height?: string;
 }) {
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ leng,
   t: h: lines }).map((_, index) => (
-        <motion.div
+        <motion.div;
           key={index}
           initial={ opaci,
   t: y: 0 },
@@ -107,7 +108,7 @@ export function SkeletonLoader({
     </div>
   )
 }
-// Card skeleton loader
+// Card skeleton loader;
 export function CardSkeleton({ className = "" }: { className?: string }) {
   return (
     <div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${className}`}>
@@ -129,15 +130,15 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
     </div>
   )
 }
-// Grid skeleton loader
+// Grid skeleton loader;
 export function GridSkeleton({
   columns = 3,
   rows = 2,
   className = ""
 }: {
   columns?: number,
-  rows?: number
-  className?: string
+  rows?: number;
+  className?: string;
 }) {
   return (
     <div className={`grid grid-cols-1,
@@ -150,7 +151,7 @@ export function GridSkeleton({
     </div>
   )
 }
-// Page skeleton loader
+// Page skeleton loader;
 export function PageSkeleton({ className = "" }: { className?: string }) {
   return (
     <div className={`space-y-8 ${className}`}>

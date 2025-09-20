@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
   ArrowRight,
   Play,
@@ -21,8 +21,10 @@ import {
   Lock,
   Users,
   BarChart3,
-  Lightbulb
-} from "lucide-react"
+  Lightbulb;
+}
+}
+ } from "lucide-react";
 interface HeroSlide {
   id: string,tit,
   l: e: string,subtit,
@@ -37,6 +39,8 @@ interface HeroSlide {
   t: s: { labe,
   l: string, val,
   u: e: string, ic,
+}
+}
   o: n: React.ComponentType<any> },
   [],
   }
@@ -162,37 +166,37 @@ const slideVariants = {
   o: n: number) => ({
     ,
   x: direction > 0 ? 1000 : -1000,opaci,
-  t: y: 0
+  t: y: 0;
   })
   cent,
   e: r: {
     zInde,
   x: 1,x: 0,opaci,
-  t: y: 1
+  t: y: 1;
   }
   ex,
   i: t: (directi,
   o: n: number) => ({
     zInde,
   x: 0,x: direction < 0 ? 1000 : -1000,opaci,
-  t: y: 0
+  t: y: 0;
   })
 }
-const swipeConfidenceThreshold = 10000
+const swipeConfidenceThreshold = 10000;
 const swipePower = (offs,
   e: t: number, veloci,
   t: y: number) () => {
-  return Math.abs(offset) * velocity
+  return Math.abs(offset) * velocity;
 }
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
 const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 const [direction, setDirection] = useState(0)
 const [isLoading, setIsLoading] = useState(true)
-  // Memoize slides to prevent unnecessary re-renders
+  // Memoize slides to prevent unnecessary re-renders;
   const memoizedSlides = useMemo(() => heroSlides, []),
 
-  // Optimized slide navigation with useCallback
+  // Optimized slide navigation with useCallback;
   const nextSlide = useCallback(() () => {
     setDirection(1)
     setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),
@@ -211,7 +215,7 @@ const goToSlide = useCallback((ind,
     setIsAutoPlaying(false)
   }, [currentSlide]),
 
-  // Auto-play functionality with pause on hover
+  // Auto-play functionality with pause on hover;
   useEffect(() () => {
     if (!isAutoPlaying) return,
 
@@ -223,7 +227,7 @@ const goToSlide = useCallback((ind,
     return () => clearInterval(interval)
 }, [isAutoPlaying, memoizedSlides.length]),
 
-  // Handle keyboard navigation
+  // Handle keyboard navigation;
   useEffect(() () => {
     const handleKeyDown = (e: KeyboardEvent) () => {
       if (e.key === 'ArrowLeft') prevSlide()
@@ -238,7 +242,7 @@ const goToSlide = useCallback((ind,
     return () => window.removeEventListener('keydown', handleKeyDown)
 }, [prevSlide, nextSlide, isAutoPlaying]),
 
-  // Handle image loading
+  // Handle image loading;
   useEffect(() () => {
     const preloadImages = async () () => {
       const imagePromises = memoizedSlides.map(slide () => {
@@ -279,7 +283,7 @@ const goToSlide = useCallback((ind,
 
       {/* Navigation Controls */}
       <div className="absolute top-1/2 left-4 z-20 transform -translate-y-1/2">
-        <motion.button
+        <motion.button;
           whileHover={ sca,
   l: e: 1.1 },
   }
@@ -295,7 +299,7 @@ const goToSlide = useCallback((ind,
       </div>
 
       <div className="absolute top-1/2 right-4 z-20 transform -translate-y-1/2">
-        <motion.button
+        <motion.button;
           whileHover={ scal,
   e: 1.1 },
   }
@@ -312,7 +316,7 @@ const goToSlide = useCallback((ind,
 
       {/* Auto-play Toggle */}
       <div className="absolute top-4 right-4 z-20">
-        <motion.button
+        <motion.button;
           whileHover={ sca,
   l: e: 1.1 },
   }
@@ -330,7 +334,7 @@ const goToSlide = useCallback((ind,
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
         {memoizedSlides.map((_, index) => (
-          <motion.button
+          <motion.button;
             key={index}
             whileHover={ sca,
   l: e: 1.2 },
@@ -340,7 +344,7 @@ const goToSlide = useCallback((ind,
   }
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide 
+              index === currentSlide;
                 ? 'bg-cyan-400 scale-125' 
                 : 'bg-white/30,
   hove: r:bg-white/50'
@@ -354,7 +358,7 @@ const goToSlide = useCallback((ind,
   s: m: px-6 l,
   g:px-8">
         <AnimatePresence mode="wait" custom={direction}>
-          <motion.div
+          <motion.div;
             key={currentSlide}
             custom={direction}
             variants={slideVariants}
@@ -391,7 +395,7 @@ const goToSlide = useCallback((ind,
             <div className="grid,
   l: g:grid-cols-2 gap-12 items-center">
               {/* Content */}
-              <motion.div 
+              <motion.div;
                 initial={ opaci,
   t: y: 0, y: 50 },
   }
@@ -405,7 +409,7 @@ const goToSlide = useCallback((ind,
                 className="space-y-8"
               >
                 <div className="space-y-4">
-                  <motion.div
+                  <motion.div;
                     initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -424,7 +428,7 @@ const goToSlide = useCallback((ind,
                     {currentSlideData.subtitle}
                   </motion.div>
 
-                  <motion.h1
+                  <motion.h1;
                     initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -442,7 +446,7 @@ const goToSlide = useCallback((ind,
                     {currentSlideData.title}
                   </motion.h1>
 
-                  <motion.p
+                  <motion.p;
                     initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -460,7 +464,7 @@ const goToSlide = useCallback((ind,
                 </div>
 
                 {/* Features */}
-                <motion.div
+                <motion.div;
                   initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -482,7 +486,7 @@ const goToSlide = useCallback((ind,
                 </motion.div>
 
                 {/* CTA Button */}
-                <motion.div
+                <motion.div;
                   initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -494,7 +498,7 @@ const goToSlide = useCallback((ind,
   a: y: 1 },
   }
                 >
-                  <Link
+                  <Link;
                     to={currentSlideData.path}
                     className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg,
   hove: r: from-cyan-600,
@@ -509,7 +513,7 @@ const goToSlide = useCallback((ind,
               </motion.div>
 
               {/* Visual Content */}
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 50 },
   }
@@ -532,7 +536,7 @@ const goToSlide = useCallback((ind,
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-4 mt-8">
                       {currentSlideData.stats.map((stat, index) => (
-                        <motion.div
+                        <motion.div;
                           key={index}
                           initial={ opaci,
   t: y: 0, sca,

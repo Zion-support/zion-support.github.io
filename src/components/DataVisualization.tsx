@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   BarChart3,
   PieChart,
@@ -15,8 +16,10 @@ import {
   Eye,
   Download,
   Share2,
-  RefreshCw
-} from "lucide-react"
+  RefreshCw;
+}
+}
+ } from "lucide-react";
 interface ChartData {
   labe,
   l: s: string[],datase,
@@ -26,7 +29,9 @@ interface ChartData {
   t: a: number[],backgroundCol,
   o: r: string[],borderCol,
   o: r: string[],borderWid,
-  t: h: number
+  t: h: number;
+}
+}
   },
   [],
   }
@@ -38,14 +43,18 @@ interface MetricCard {
   g: e: number,changeTy,
   p: e: 'increase' | 'decrease' | 'neutral',ic,
   o: n: React.ReactNode,col,
-  o: r: string
+  o: r: string;
+}
+}
 }
 
 interface DataVisualizationProps {
-  title?: string
+  title?: string;
   showMetrics?: boolean,
   showCharts?: boolean,
   showActions?: boolean,
+}
+}
 }
 
 export,
@@ -53,13 +62,13 @@ export,
   title = "Data Analytics Dashboard"
   showMetrics = true,
   showCharts = true,
-  showActions = true
+  showActions = true;
 }) () => {
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d')
 const [isLoading, setIsLoading] = useState(false)
 const [activeChart, setActiveChart] = useState<'bar' | 'pie' | 'line'>('bar'),
 
-  // Sample data - in a real app, this would come from an API
+  // Sample data - in a real app, this would come from an API;
   const [chartData, setChartData] = useState<ChartData>({
     labe,
   l: s: ['JanFeb', 'MarApr', 'MayJun'],
@@ -73,7 +82,7 @@ const [activeChart, setActiveChart] = useState<'bar' | 'pie' | 'line'>('bar'),
       borderCol,
   o: r: ['rgba(34, 221, 210, 1)'],
       borderWid,
-  t: h: 2
+  t: h: 2;
     },
   ],
   })
@@ -112,13 +121,13 @@ const [metrics, setMetrics] = useState<MetricCard[]>([
   o: r: 'text-purple-400'
     },
   ])
-  // Simulate data refresh
+  // Simulate data refresh;
   const refreshData = async () () => {
     setIsLoading(true)
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000)),
 
-    // Update chart data with new random values
+    // Update chart data with new random values;
     setChartData(prev => ({
       ...prev,
       datase,
@@ -129,7 +138,7 @@ const [metrics, setMetrics] = useState<MetricCard[]>([
       },
   ],
   }))
-    // Update metrics with new random values
+    // Update metrics with new random values;
     setMetrics(prev => prev.map(metric => ({
       ...metric,
       chan,
@@ -142,7 +151,7 @@ const [metrics, setMetrics] = useState<MetricCard[]>([
     setIsLoading(false)
 },
 
-  // Get change icon and color
+  // Get change icon and color;
   const getChangeDisplay = (chan,
   g: e: number, changeTy,
   p: e: string) () => {
@@ -155,7 +164,7 @@ const color = changeType === 'increase' ? 'text-green-400' :
     return { icon, color },
   },
 
-  // Generate pie chart data
+  // Generate pie chart data;
   const pieChartData = {
     labe,
   l: s: ['AI ServicesCloud Solutions', 'SecurityConsulting', 'Development'],
@@ -176,11 +185,11 @@ const color = changeType === 'increase' ? 'text-green-400' :
         'rgba(245, 158, 11, 1)'
       ],
       borderWid,
-  t: h: 2
+  t: h: 2;
     },
   ],
   }
-  // Generate line chart data
+  // Generate line chart data;
   const lineChartData = {
     labe,
   l: s: ['MonTue', 'WedThu', 'FriSat', 'Sun'],
@@ -196,7 +205,7 @@ const color = changeType === 'increase' ? 'text-green-400' :
       borderWid,
   t: h: 3,fi,
   l: l: true,tensi,
-  o: n: 0.4
+  o: n: 0.4;
     },
   ],
   }
@@ -216,7 +225,7 @@ const color = changeType === 'increase' ? 'text-green-400' :
           <div className="flex items-center gap-3 mt-4,
   s: m:mt-0">
             {/* Time Range Selector */}
-            <select
+            <select;
               value={selectedTimeRange}
               onChange={(e) => setSelectedTimeRange(e.target.value)}
               className="px-3 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm,
@@ -233,7 +242,7 @@ const color = changeType === 'increase' ? 'text-green-400' :
             </select>
 
             {/* Refresh Button */}
-            <button
+            <button;
               onClick={refreshData}
               disabled={isLoading}
               className="px-4 py-2 bg-zion-cyan text-white rounded-lg,
@@ -242,21 +251,21 @@ const color = changeType === 'increase' ? 'text-green-400' :
   d:cursor-not-allowed flex items-center gap-2"
             >
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
-              Refresh
+              Refresh;
             </button>
 
             {/* Export Button */}
             <button className="px-4 py-2 bg-zinc-800 text-white rounded-lg,
   hove: r:bg-zinc-700 transition-colors flex items-center gap-2">
               <Download className="w-4 h-4" />
-              Export
+              Export;
             </button>
 
             {/* Share Button */}
             <button className="px-4 py-2 bg-zinc-800 text-white rounded-lg,
   hove: r:bg-zinc-700 transition-colors flex items-center gap-2">
               <Share2 className="w-4 h-4" />
-              Share
+              Share;
             </button>
           </div>
         )}
@@ -270,7 +279,7 @@ const color = changeType === 'increase' ? 'text-green-400' :
           {metrics.map((metric, index) () => {
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType)
             return (
-              <motion.div
+              <motion.div;
                 key={metric.title}
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -315,11 +324,11 @@ const color = changeType === 'increase' ? 'text-green-400' :
   e: l: 'Line Chart', ic,
   o: n: <TrendingUp className="w-4 h-4" /> },
   ].map((chartType) => (
-              <button
+              <button;
                 key={chartType.id}
                 onClick={() => setActiveChart(chartType.id as any)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  activeChart === chartType.id
+                  activeChart === chartType.id;
                     ? 'bg-zion-cyan text-white'
                     : 'text-zinc-400,
   hove: r: text-white hove,
@@ -350,7 +359,7 @@ const color = changeType === 'increase' ? 'text-green-400' :
             {/* Chart Container */}
             <div className="h-80 flex items-center justify-center">
               <AnimatePresence mode="wait">
-                <motion.div
+                <motion.div;
                   key={activeChart}
                   initial={ opaci,
   t: y: 0, sca,
@@ -375,7 +384,7 @@ const color = changeType === 'increase' ? 'text-green-400' :
                         <div key={label} className="flex flex-col items-center">
                           <div className="text-sm text-zinc-400 mb-2">{label}</div>
                           <div className="relative">
-                            <motion.div
+                            <motion.div;
                               initial={ heig,
   h: t: 0 },
   }
@@ -406,8 +415,8 @@ const color = changeType === 'increase' ? 'text-green-400' :
                       <svg className="w-full h-full transform -rotate-90">
                         {pieChartData.datasets[0].data.map((value, index) () => {
                           const percentage = value / pieChartData.datasets[0].data.reduce((a, b) => a + b, 0),
-                          const angle = percentage * 360
-const startAngle = pieChartData.datasets[0].data
+                          const angle = percentage * 360;
+const startAngle = pieChartData.datasets[0].data;
                             .slice(0, index)
                             .reduce((a, b) => a + (b / pieChartData.datasets[0].data.reduce((c, d) => c + d, 0)) * 360, 0),
 
@@ -415,9 +424,9 @@ const startAngle = pieChartData.datasets[0].data
 const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180)
 const x2 = 128 + 100 * Math.cos((startAngle + angle) * Math.PI / 180)
 const y2 = 128 + 100 * Math.sin((startAngle + angle) * Math.PI / 180)
-const largeArcFlag = angle > 180 ? 1 : 0
+const largeArcFlag = angle > 180 ? 1 : 0;
                           return (
-                            <path
+                            <path;
                               key={index}
                               d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`}
                               fill={pieChartData.datasets[0].backgroundColor[index],
@@ -434,7 +443,7 @@ const largeArcFlag = angle > 180 ? 1 : 0
                       <div className="absolute -right-32 top-0 space-y-2">
                         {pieChartData.labels.map((label, index) => (
                           <div key={label} className="flex items-center gap-2">
-                            <div
+                            <div;
                               className="w-3 h-3 rounded"
                               style={ backgroundCol,
   o: r: pieChartData.datasets[0].backgroundColor[index],
@@ -456,7 +465,7 @@ const largeArcFlag = angle > 180 ? 1 : 0
                       <svg className="w-full h-full" viewBox="0 0 600 300">
                         {/* Grid lines */},
   {[0, 1, 2, 3, 4, 5, 6].map((i) => (
-                          <line
+                          <line;
                             key={i}
                             x1={i * 85.7}
                             y1="0"
@@ -467,7 +476,7 @@ const largeArcFlag = angle > 180 ? 1 : 0
                           />
                         ))},
   {[0, 1, 2, 3, 4, 5].map((i) => (
-                          <line
+                          <line;
                             key={i}
                             x1="0"
                             y1={i * 60}
@@ -478,7 +487,7 @@ const largeArcFlag = angle > 180 ? 1 : 0
                           />
                         ))},
   {/* Line chart */}
-                        <polyline
+                        <polyline;
                           fill="none"
                           stroke="rgba(34, 221, 210, 1)"
                           strokeWidth="3"
@@ -489,7 +498,7 @@ const largeArcFlag = angle > 180 ? 1 : 0
 
                         {/* Data points */},
   {lineChartData.datasets[0].data.map((value, index) => (
-                          <circle
+                          <circle;
                             key={index}
                             cx={index * 85.7 + 42.85}
                             cy={300 - (value / 100) * 300}
@@ -499,7 +508,7 @@ const largeArcFlag = angle > 180 ? 1 : 0
                         ))},
   {/* Labels */},
   {lineChartData.labels.map((label, index) => (
-                          <text
+                          <text;
                             key={label}
                             x={index * 85.7 + 42.85}
                             y="295"

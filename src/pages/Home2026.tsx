@@ -1,135 +1,137 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion, useScroll, useTransform   } from "framer-motion";
 import {
-  ArrowRight
-  Brain
-  Zap
-  Shield
-  Cloud
-  Cpu
-  Rocket
-  Heart
-  Users
-  BarChart3
-  Star
-  CheckCircle
-  Phone
-  Mail
-  MapPin
-  Globe
-  TrendingUp
-  Award
-  Target
-  Lightbulb
-  Code
-  Database
-  Network
-  Lock
-  Eye
-  Zap as Lightning
-  Palette
-  Layers
-  Cpu as Chip
-  Wifi
-  Server
-  Smartphone
-  Monitor
-  Laptop
-  Tablet
-  Watch
-  Camera
-  Speaker
-  Headphones
-  Keyboard
-  Mouse
-  Gamepad
-  Controller
-  Joystick
-  Wheel
-  Pedal
-  Gear
-  Cog
-  Settings
-  Tool
-  Wrench
-  Screwdriver
-  Hammer
-  Saw
-  Drill
-  Welder
-  Crane
-  Forklift
-  Tractor
-  Car
-  Truck
-  Bus
-  Train
-  Plane
-  Helicopter
-  Ship
-  Submarine
-  Rocket as SpaceRocket
-  Satellite
-  Telescope
-  Microscope
-  Beaker
-  Flask
-  TestTube
-  PetriDish
-  Syringe
-  Pill
-  Stethoscope
-  Heartbeat
-  Pulse
-  Thermometer
-  Scale
-  Calculator
-  Abacus
-  Ruler
-  Compass
-  Protractor
-  Triangle
-  Square
-  Circle
-  Hexagon
-  Octagon
-  Pentagon
-  Diamond
-  Star as StarShape
-  Moon
-  Sun
-  Planet
-  Galaxy
-  Universe
-  Infinity
-  Alpha
-  Beta
-  Gamma
-  Delta
-  Epsilon
-  Zeta
-  Eta
-  Theta
-  Iota
-  Kappa
-  Lambda
-  Mu
-  Nu
-  Xi
-  Omicron
-  Pi
-  Rho
-  Sigma
-  Tau
-  Upsilon
-  Phi
-  Chi
-  Psi
-  Omega
-} from "lucide-react"
+  ArrowRight;
+  Brain;
+  Zap;
+  Shield;
+  Cloud;
+  Cpu;
+  Rocket;
+  Heart;
+  Users;
+  BarChart3;
+  Star;
+  CheckCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  TrendingUp;
+  Award;
+  Target;
+  Lightbulb;
+  Code;
+  Database;
+  Network;
+  Lock;
+  Eye;
+  Zap as Lightning;
+  Palette;
+  Layers;
+  Cpu as Chip;
+  Wifi;
+  Server;
+  Smartphone;
+  Monitor;
+  Laptop;
+  Tablet;
+  Watch;
+  Camera;
+  Speaker;
+  Headphones;
+  Keyboard;
+  Mouse;
+  Gamepad;
+  Controller;
+  Joystick;
+  Wheel;
+  Pedal;
+  Gear;
+  Cog;
+  Settings;
+  Tool;
+  Wrench;
+  Screwdriver;
+  Hammer;
+  Saw;
+  Drill;
+  Welder;
+  Crane;
+  Forklift;
+  Tractor;
+  Car;
+  Truck;
+  Bus;
+  Train;
+  Plane;
+  Helicopter;
+  Ship;
+  Submarine;
+  Rocket as SpaceRocket;
+  Satellite;
+  Telescope;
+  Microscope;
+  Beaker;
+  Flask;
+  TestTube;
+  PetriDish;
+  Syringe;
+  Pill;
+  Stethoscope;
+  Heartbeat;
+  Pulse;
+  Thermometer;
+  Scale;
+  Calculator;
+  Abacus;
+  Ruler;
+  Compass;
+  Protractor;
+  Triangle;
+  Square;
+  Circle;
+  Hexagon;
+  Octagon;
+  Pentagon;
+  Diamond;
+  Star as StarShape;
+  Moon;
+  Sun;
+  Planet;
+  Galaxy;
+  Universe;
+  Infinity;
+  Alpha;
+  Beta;
+  Gamma;
+  Delta;
+  Epsilon;
+  Zeta;
+  Eta;
+  Theta;
+  Iota;
+  Kappa;
+  Lambda;
+  Mu;
+  Nu;
+  Xi;
+  Omicron;
+  Pi;
+  Rho;
+  Sigma;
+  Tau;
+  Upsilon;
+  Phi;
+  Chi;
+  Psi;
+  Omega;
+}
+}
+ } from "lucide-react";
 import SEO from "@/components/SEO"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026"
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026   } from "../data/innovativeMicroSaasServices2026";
 const,
   Home202: 6: React.FC = () () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0)
@@ -146,7 +148,7 @@ const,
   o: n: Brain,descripti,
   o: n: "Revolutionary AI-powered business intelligence and analytics platforms",col,
   o: r: "from-cyan-500 to-blue-600",servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'AI & Analytics').length
+  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'AI & Analytics').length;
 },
   {
   tit,
@@ -154,7 +156,7 @@ const,
   o: n: Zap,descripti,
   o: n: "Next-generation quantum computing solutions for complex problems",col,
   o: r: "from-purple-500 to-pink-600",servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Quantum Computing').length
+  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Quantum Computing').length;
 },
   {
   tit,
@@ -162,7 +164,7 @@ const,
   o: n: Shield,descripti,
   o: n: "AI-powered cybersecurity with zero false positives",col,
   o: r: "from-red-500 to-orange-600",servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Cybersecurity').length
+  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Cybersecurity').length;
 },
   {
   tit,
@@ -170,7 +172,7 @@ const,
   o: n: Cpu,descripti,
   o: n: "Real-time edge computing and IoT solutions",col,
   o: r: "from-green-500 to-emerald-600",servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'IoT & Edge Computing').length
+  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'IoT & Edge Computing').length;
 },
   {
   tit,
@@ -178,7 +180,7 @@ const,
   o: n: Rocket,descripti,
   o: n: "3D digital twin platforms for asset optimization",col,
   o: r: "from-yellow-500 to-amber-600",servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Digital Twin').length
+  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Digital Twin').length;
 },
   {
   tit,
@@ -186,7 +188,7 @@ const,
   o: n: Heart,descripti,
   o: n: "Green technology and ESG compliance solutions",col,
   o: r: "from-teal-500 to-cyan-600",servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length
+  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length;
 },
   ]
   const stats = [
@@ -220,7 +222,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
-      <SEO
+      <SEO;
         title="Zion Tech Group - Revolutionary AI, Quantum Computing & Micro SaaS Solutions 2026"
         description="Transform your business with cutting-edge AI, Quantum Computing, Cybersecurity, IoT, and Micro SaaS solutions. Leading the future of technology innovation."
       />
@@ -241,7 +243,7 @@ const,
   }
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(20)].map((_, i) => (
-  <motion.div
+  <motion.div;
               key={i},
   }
               className="className="absolute text-cyan-400/20";"
@@ -284,7 +286,7 @@ const,
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -303,11 +305,11 @@ const,
               </div>
               <h1 className="text-6xl,
   s: m: text-8xl font-black tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-                Zion Tech Group
+                Zion Tech Group;
               </h1>
               <p className="text-2xl s,
   m:text-3xl text-slate-300 font-light max-w-4xl mx-auto leading-relaxed">
-                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions
+                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions;
               </p>
             </div>
 
@@ -335,26 +337,26 @@ const,
             {/* CTA Buttons */},
   }
             <div className="flex flex-wrap justify-center gap-6 mb-16">
-              <Link
+              <Link;
                 to="/services2026"
                 className="className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl,
   hove: r: from-cyan-400,
   hove: r:to-blue-500 transition-all duration-300,
   hove: r:scale-105 shadow-2xl shadow-cyan-500/30";"
               >
-                Explore Services
+                Explore Services;
                 <ArrowRight className="ml-2 w-6 h-6 group-hov,
   e: r:translate-x-1 transition-transform" />
               </Link>
 
-              <Link
+              <Link;
                 to="/contact"
                 className="className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400/40 text-cyan-300 font-bold text-lg rounded-2xl,
   hove: r:bg-cyan-400/10,
   hove: r:border-cyan-400 transition-all duration-300,
   hove: r:scale-105";"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 w-6 h-6 group-hove,
   r:translate-x-1 transition-transform" />
               </Link>
@@ -368,7 +370,7 @@ const,
                 <a href="t,
   e: l: +13024640950" className="hov,
   e: r:text-cyan-300 transition-colors">
-                  +1 302 464 0950
+                  +1 302 464 0950;
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -376,7 +378,7 @@ const,
                 <a href="mail,
   t: o:kleber@ziontechgroup.com" className="hove,
   r:text-blue-300 transition-colors">
-                  kleber@ziontechgroup.com
+                  kleber@ziontechgroup.com;
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -389,7 +391,7 @@ const,
 
         {/* Scroll Indicator */},
   }
-        <motion.div
+        <motion.div;
           className="className="absolute bottom-8 left-1/2 transform -translate-x-1/2";"
           animate={ y: [0, 10, 0],
   },
@@ -400,7 +402,7 @@ const,
   }
         >
           <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
-            <motion.div
+            <motion.div;
               className="className="w-1 h-3 bg-cyan-400 rounded-full mt-2";"
               animate={ y: [0, 12, 0],
   },
@@ -421,7 +423,7 @@ const,
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-  <motion.div
+  <motion.div;
                 key={stat.label},
   }
                 initial={ opaci,
@@ -451,7 +453,7 @@ const,
   }
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -465,10 +467,10 @@ const,
           >
             <h2 className="text-4xl,
   s: m: text-5xl font-bold text-white mb-6">
-              Revolutionary Service Categories
+              Revolutionary Service Categories;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Explore our comprehensive portfolio of cutting-edge solutions designed to transform industries and drive innovation
+              Explore our comprehensive portfolio of cutting-edge solutions designed to transform industries and drive innovation;
             </p>
           </motion.div>
 
@@ -476,7 +478,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3">
             {serviceCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
                 key={category.title},
   }
                 initial={ opaci,
@@ -513,16 +515,16 @@ const,
 
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-semibold">
-                    {category.services} Services
+                    {category.services} Services;
                   </span>
 
-                  <Link
+                  <Link;
                     to="/services2026"
                     className="className="inline-flex items-center text-cyan-400,
   hove: r: text-cyan-300 font-medium group-hov,
   e: r:underline";"
                   >
-                    Explore
+                    Explore;
                     <ArrowRight className="ml-1 w-4 h-4 group-hove,
   r:translate-x-1 transition-transform" />
                   </Link>
@@ -537,7 +539,7 @@ const,
   }
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -551,10 +553,10 @@ const,
           >
             <h2 className="text-4xl,
   s: m: text-5xl font-bold text-white mb-6">
-              Revolutionary Services
+              Revolutionary Services;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our most innovative and cutting-edge solutions that are reshaping industries
+              Our most innovative and cutting-edge solutions that are reshaping industries;
             </p>
           </motion.div>
 
@@ -563,7 +565,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3">
               {featuredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -625,13 +627,13 @@ const,
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <Link
+                    <Link;
                       to={`/services/${service.id}`}
                       className="className="inline-flex items-center text-cyan-400,
   hove: r: text-cyan-300 font-medium text-sm group-hov,
   e: r:underline";"
                     >
-                      Learn More
+                      Learn More;
                       <ArrowRight className="ml-1 w-4 h-4 group-hov,
   e: r:translate-x-1 transition-transform" />
                     </Link>
@@ -653,7 +655,7 @@ const,
   }
       <section className="py-20 bg-gradient-to-r from-slate-900/50 to-slate-800/50 relative">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -670,7 +672,7 @@ const,
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              We're not just a technology company – we're your innovation partner for the future
+              We're not just a technology company – we're your innovation partner for the future;
             </p>
           </motion.div>
 
@@ -724,7 +726,7 @@ const,
   o: r: "from-red-500 to-pink-600"
 },
   ].map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -764,7 +766,7 @@ const,
   }
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -781,30 +783,30 @@ const,
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto">
-              Join the revolution and discover how our cutting-edge solutions can propel your organization into the future
+              Join the revolution and discover how our cutting-edge solutions can propel your organization into the future;
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 mb-12">
-              <Link
+              <Link;
                 to="/services2026"
                 className="className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-300,
   hove: r:scale-105 shadow-2xl shadow-cyan-500/30";"
               >
-                Explore All Services
+                Explore All Services;
                 <ArrowRight className="ml-2 w-6 h-6 group-hov,
   e: r:translate-x-1 transition-transform" />
               </Link>
 
-              <Link
+              <Link;
                 to="/contact"
                 className="className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400/40 text-cyan-300 font-bold text-lg rounded-2xl,
   hove: r:bg-cyan-400/10,
   hove: r:border-cyan-400 transition-all duration-300,
   hove: r:scale-105";"
               >
-                Schedule a Consultation
+                Schedule a Consultation;
                 <ArrowRight className="ml-2 w-6 h-6 group-hov,
   e: r:translate-x-1 transition-transform" />
               </Link>
@@ -822,7 +824,7 @@ const,
                   <a href="t,
   e: l:+13024640950" className="text-cyan-400,
   hove: r:text-cyan-300 text-sm">
-                    +1 302 464 0950
+                    +1 302 464 0950;
                   </a>
                 </div>
 
@@ -834,7 +836,7 @@ const,
                   <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-blue-400,
   hove: r:text-blue-300 text-sm">
-                    kleber@ziontechgroup.com
+                    kleber@ziontechgroup.com;
                   </a>
                 </div>
 
@@ -846,7 +848,7 @@ const,
                   <a href="htt,
   p: s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hove,
   r:text-purple-300 text-sm">
-                    ziontechgroup.com
+                    ziontechgroup.com;
                   </a>
                 </div>
               </div>
@@ -857,4 +859,4 @@ const,
     </div>
   )
 }
-export default Home2026
+export default Home2026;

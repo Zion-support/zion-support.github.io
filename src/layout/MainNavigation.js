@@ -1,12 +1,12 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime"
-import { Link, useLocation } from "react-router-dom"
-import { cn } from "@/lib/utils"
-import { useAuth } from "@/hooks/useAuth"
-import { MessageSquare } from "lucide-react"
-import { useTranslation } from "react-i18next"
+import { jsx as _jsx, jsxs as _jsxs   } from "react/jsx-runtime";
+import { Link, useLocation   } from "react-router-dom";
+import { cn   } from "@/lib/utils";
+import { useAuth   } from "@/hooks/useAuth";
+import { MessageSquare   } from "lucide-react";
+import { useTranslation   } from "react-i18next";
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }) {
   const { user } = useAuth()
-    const isAuthenticated = !!user
+    const isAuthenticated = !!user;
 const location = useLocation()
     const { t } = useTranslation()
     const baseLinks = [
@@ -55,7 +55,7 @@ const location = useLocation()
   ]
     let links = baseLinks.map(link => (Object.assign(Object.assign({}, link), { na,
   m: e: t(`nav.${link.key}`) })))
-    // Add authenticated-only links
+    // Add authenticated-only links;
     if (if (isAuthenticated) {
   ) {
         links.push({
@@ -66,7 +66,7 @@ const location = useLocation()
   e: s: (path) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
 })
     }
-    // Add admin-only links
+    // Add admin-only links;
     if (if (isAdmin) {
   ) {
         links.push({

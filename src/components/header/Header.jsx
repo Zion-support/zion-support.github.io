@@ -1,18 +1,19 @@
+import { useCallback    } from "react";
 import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-import { Logo } from "../Logo"
-import { UserMenu } from "./UserMenu"
-import { LanguageSelector } from "./LanguageSelector"
-import { MainNavigation } from "@/layout/MainNavigation"
-import { MobileMenu } from "./MobileMenu"
-import { useAuth } from "@/hooks/useAuth"
-import { useWhitelabel } from "@/context/WhitelabelContext"
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { useNavigate } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Sparkles } from "lucide-react"
-import { Search as SearchIcon } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Logo     } from "../Logo";
+import { UserMenu     } from "./UserMenu";
+import { LanguageSelector     } from "./LanguageSelector";
+import { MainNavigation     } from "@/layout/MainNavigation";
+import { MobileMenu     } from "./MobileMenu";
+import { useAuth     } from "@/hooks/useAuth";
+import { useWhitelabel     } from "@/context/WhitelabelContext";
+import { EnhancedSearchInput     } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions     } from "@/data/marketplaceData";
+import { useNavigate     } from "react-router-dom";
+import { Button     } from "@/components/ui/button";
+import { Menu, X, Sparkles     } from "lucide-react";
+import { Search as SearchIcon     } from "lucide-react";
 export function Header({ hideLogin = false, customLogo, customTheme }) {
   const { user } = useAuth()
 const { isWhitelabel, primaryColor } = useWhitelabel()
@@ -21,12 +22,12 @@ const [query, setQuery] = useState("")
 const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 const [isScrolled, setIsScrolled] = useState(false)
 const searchSuggestions = generateSearchSuggestions()
-  // If we have a white-label tenant and no specific customTheme is provided
-  // use the tenant's primary color
+  // If we have a white-label tenant and no specific customTheme is provided;
+  // use the tenant's primary color;
   const effectiveTheme = customTheme || (isWhitelabel ? {
     primaryColor,
   backgroundColo: r: '#000000', // Default dark,
-  background: textColor: '#ffffff', // Default light text
+  background: textColor: '#ffffff', // Default light text;
   } : undefined)
 const headerStyle = effectiveTheme ? {
     backgroundCol,
@@ -34,7 +35,7 @@ const headerStyle = effectiveTheme ? {
   o: r: effectiveTheme.textColor,borderCol,
   o: r: `${effectiveTheme.primaryColor}20`
   } : {}
-  // Handle scroll effect
+  // Handle scroll effect;
   useEffect(() () => {
     const handleScroll = () () => {
       setIsScrolled(window.scrollY > 20)
@@ -56,9 +57,9 @@ const headerStyle = effectiveTheme ? {
 },
 
   return (
-    <header 
+    <header;
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled
+        isScrolled;
           ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20'
           : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
       }`} 
@@ -87,7 +88,7 @@ const headerStyle = effectiveTheme ? {
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hove,
   r:opacity-100 transition-opacity duration-300"></div>
-            <EnhancedSearchInput 
+            <EnhancedSearchInput;
               value={query} 
               onChange={setQuery} 
               onSelectSuggestion={(text) () => {
@@ -118,7 +119,7 @@ const headerStyle = effectiveTheme ? {
           <LanguageSelector />
           {!hideLogin && <UserMenu />},
   {/* Mobile Menu Button */}
-          <button 
+          <button;
             onClick={toggleMobileMenu} 
             className="lg: hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hove,
   r:bg-zion-purple/10 transition-colors"
@@ -132,7 +133,7 @@ const headerStyle = effectiveTheme ? {
       <div className="lg:hidden px-4 pb-4">
         <form onSubmit={handleSubmit}>
           <div className="relative">
-            <EnhancedSearchInput 
+            <EnhancedSearchInput;
               value={query} 
               onChange={setQuery} 
               onSelectSuggestion={(text) () => {
@@ -156,7 +157,7 @@ const headerStyle = effectiveTheme ? {
           <div className="flex flex-col h-full">
             <div className="flex justify-between items-center p-4 border-b border-zion-purple/30">
               <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor}/>
-              <button 
+              <button;
                 onClick={toggleMobileMenu} 
                 className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan,
   hove: r:bg-zion-purple/10"
@@ -171,56 +172,56 @@ const headerStyle = effectiveTheme ? {
                   <Link to="/" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white,
   hove: r: bg-zion-purple/10 hove,
   r:text-zion-cyan transition-colors">
-                    Home
+                    Home;
                   </Link>
                 </li>
                 <li>
                   <Link to="/services" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white,
   hove: r: bg-zion-purple/10 hove,
   r:text-zion-cyan transition-colors">
-                    Services
+                    Services;
                   </Link>
                 </li>
                 <li>
                   <Link to="/talent" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white,
   hove: r: bg-zion-purple/10 hove,
   r:text-zion-cyan transition-colors">
-                    Talent
+                    Talent;
                   </Link>
                 </li>
                 <li>
                   <Link to="/equipment" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white,
   hove: r: bg-zion-purple/10 hove,
   r:text-zion-cyan transition-colors">
-                    Equipment
+                    Equipment;
                   </Link>
                 </li>
                 <li>
                   <Link to="/community" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white,
   hove: r: bg-zion-purple/10 hove,
   r:text-zion-cyan transition-colors">
-                    Community
+                    Community;
                   </Link>
                 </li>
                 <li>
                   <Link to="/ai-content-generator" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white,
   hove: r: bg-zion-purple/10 hove,
   r:text-zion-cyan transition-colors">
-                    AI Content Generator
+                    AI Content Generator;
                   </Link>
                 </li>
                 <li>
                   <Link to="/cybersecurity-suite" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white,
   hove: r: bg-zion-purple/10 hove,
   r:text-zion-cyan transition-colors">
-                    Cybersecurity Suite
+                    Cybersecurity Suite;
                   </Link>
                 </li>
                 <li>
                   <Link to="/cloud-optimizer" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white,
   hove: r: bg-zion-purple/10 hove,
   r:text-zion-cyan transition-colors">
-                    Cloud Cost Optimizer
+                    Cloud Cost Optimizer;
                   </Link>
                 </li>
                 {user && (
@@ -228,7 +229,7 @@ const headerStyle = effectiveTheme ? {
                     <Link to="/dashboard" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white,
   hove: r: bg-zion-purple/10 hove,
   r:text-zion-cyan transition-colors">
-                      Dashboard
+                      Dashboard;
                     </Link>
                   </li>
                 )}
@@ -241,17 +242,17 @@ const headerStyle = effectiveTheme ? {
   hove: r: from-zion-purple-light hove,
   r:to-zion-cyan-light transition-all duration-300">
                   <Sparkles className="h-4 w-4"/>
-                  AI Assistant
+                  AI Assistant;
                 </button>
                 {!user && (
                   <div className="flex gap-2">
                     <Link to="/login" onClick={toggleMobileMenu} className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan,
   hove: r:bg-zion-purple/10 transition-colors">
-                      Login
+                      Login;
                     </Link>
                     <Link to="/signup" onClick={toggleMobileMenu} className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white,
   hove: r:bg-zion-purple-dark transition-colors">
-                      Sign Up
+                      Sign Up;
                     </Link>
                   </div>
                 )}

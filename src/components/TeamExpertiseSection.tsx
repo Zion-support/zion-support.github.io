@@ -1,5 +1,5 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
   Award,
   Users,
@@ -10,8 +10,10 @@ import {
   Star,
   CheckCircle,
   Globe,
-  Rocket
-} from "lucide-react"
+  Rocket;
+}
+}
+ } from "lucide-react";
 const teamExpertise = [
   {
     ic,
@@ -69,7 +71,7 @@ export function TeamExpertiseSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="text-center mb-16"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -86,10 +88,10 @@ export function TeamExpertiseSection() {
         >
           <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-4">
-            Team Expertise
+            Team Expertise;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our team of certified professionals brings decades of combined experience
+            Our team of certified professionals brings decades of combined experience;
             in cutting-edge technologies and proven methodologies.
           </p>
         </motion.div>
@@ -98,7 +100,7 @@ export function TeamExpertiseSection() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8 mb-16">
           {teamExpertise.map((expertise, index) => (
-            <motion.div
+            <motion.div;
               key={expertise.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center,
   hove: r: border-blue-500/50 transition-all duration-300,
@@ -140,7 +142,7 @@ export function TeamExpertiseSection() {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div;
           className="text-center mb-12"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -161,20 +163,20 @@ export function TeamExpertiseSection() {
               Ready to Work with Experts?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our certified professionals are ready to bring their expertise
+              Our certified professionals are ready to bring their expertise;
               to your project and help you achieve exceptional results.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600,
   hove: r:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Schedule Consultation
+                Schedule Consultation;
                 <Rocket className="ml-2 h-5 w-5" />
               </button>
               <button className="inline-flex items-center px-6 py-3 border border-white text-white,
   hove: r:bg-white hove,
   r:text-blue-600 rounded-lg font-medium transition-colors duration-200">
-                View Team Profiles
+                View Team Profiles;
                 <Users className="ml-2 h-5 w-5" />
               </button>
             </div>

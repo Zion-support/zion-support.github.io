@@ -1,19 +1,22 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star
-  Server, Cloud, Database, Network, Lock, Code, Rocket, Building
-  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth
-  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign
-  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown
-  Lightbulb, Globe2, FileText, Image, Video, Palette, ShoppingCart
-  MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth, Pill, Bandage
-  Thermometer, Scale, Calculator, ChartBar, PieChart, LineChart
-  Activity, TrendingDown, Minus, Plus, Equal, Divide, Percent
-  Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank
-  Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode
-  Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
-} from "lucide-react"
+  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star;
+  Server, Cloud, Database, Network, Lock, Code, Rocket, Building;
+  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth;
+  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign;
+  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown;
+  Lightbulb, Globe2, FileText, Image, Video, Palette, ShoppingCart;
+  MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth, Pill, Bandage;
+  Thermometer, Scale, Calculator, ChartBar, PieChart, LineChart;
+  Activity, TrendingDown, Minus, Plus, Equal, Divide, Percent;
+  Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank;
+  Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode;
+  Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp;
+}
+}
+ } from "lucide-react";
 const const pricingData2028 = {
   = {
   aiServic,
@@ -229,11 +232,11 @@ const,
       service.type.toLowerCase().includes(selectedCategory.replace('- '))
 
     const price = parseInt(service.price.replace(/[^0-9]/g, ''))
-    let matchesPrice = true
-    if (priceRange === 'low') matchesPrice = price < 500
-    else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000
-    else if (priceRange === 'high') matchesPrice = price > 10000
-    return matchesCategory && matchesPrice
+    let matchesPrice = true;
+    if (priceRange === 'low') matchesPrice = price < 500;
+    else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;
+    else if (priceRange === 'high') matchesPrice = price > 10000;
+    return matchesCategory && matchesPrice;
 })
 
   const calculateROI = (r,
@@ -250,7 +253,7 @@ const,
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -263,9 +266,9 @@ const,
             className="className="text-5xl,
   m: d: text-7xl font-bold mb-6 text-gradient";"
           >
-            Comprehensive Pricing Guide 2028
+            Comprehensive Pricing Guide 2028;
           </motion.h1>
-          <motion.p
+          <motion.p;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -279,9 +282,9 @@ const,
             className="className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto";"
           >
-            Complete pricing analysis, ROI calculations, and market positioning for all our innovative services
+            Complete pricing analysis, ROI calculations, and market positioning for all our innovative services;
           </motion.p>
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -295,13 +298,13 @@ const,
             className="className="flex flex-wrap justify-center gap-4";"
           >
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
-              💰 Transparent Pricing
+              💰 Transparent Pricing;
             </div>
             <div className="bg-zion-purple/20 backdrop-blur-sm border border-zion-purple/30 rounded-full px-6 py-3 text-zion-purple font-semibold">
-              📊 ROI Analysis
+              📊 ROI Analysis;
             </div>
             <div className="bg-zion-blue/20 backdrop-blur-sm border border-zion-blue/30 rounded-full px-6 py-3 text-zion-blue font-semibold">
-              🎯 Market Positioning
+              🎯 Market Positioning;
             </div>
           </motion.div>
         </div>
@@ -311,7 +314,7 @@ const,
   }
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
-          <motion.h2
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -323,11 +326,11 @@ const,
   }
             className="className="text-4xl font-bold text-center mb-12 text-gradient";"
           >
-            Market Overview & Growth Potential
+            Market Overview & Growth Potential;
           </motion.h2>
           <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -347,7 +350,7 @@ const,
               <p className="text-4xl font-bold text-zion-cyan mb-2">$89.2B</p>
               <p className="text-zion-slate-light">Combined market value across all service categories</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -367,7 +370,7 @@ const,
               <p className="text-4xl font-bold text-zion-purple mb-2">320%</p>
               <p className="text-zion-slate-light">Annual growth rate across all service categories</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -401,7 +404,7 @@ const,
   }
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
-  <motion.button
+  <motion.button;
                   key={category.id},
   }
                   whileHover={ sca,
@@ -414,7 +417,7 @@ const,
   },
   }
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light,
   hove: r:bg-zion-slate/70'
@@ -431,7 +434,7 @@ const,
   }
             <div className="flex flex-wrap gap-3">
               {priceRanges.map((range) => (
-  <motion.button
+  <motion.button;
                   key={range.id},
   }
                   whileHover={ sca,
@@ -444,7 +447,7 @@ const,
   },
   }
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-  priceRange === range.id
+  priceRange === range.id;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light,
   hove: r:bg-zion-slate/70'
@@ -466,7 +469,7 @@ const,
           <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8">
             {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={`${service.type}-${service.name}`}
                 initial={ opaci,
   t: y: 0, y: 30 },
@@ -564,7 +567,7 @@ const,
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold group-hov,
   e: r: shadow-lg group-hov,
   e: r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
-                    Get Started
+                    Get Started;
                     <ArrowRight className="w-4 h-4 group-hove,
   r:translate-x-1 transition-transform duration-300" />
                   </button>
@@ -579,7 +582,7 @@ const,
   }
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
-          <motion.h2
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -591,7 +594,7 @@ const,
   }
             className="className="text-4xl font-bold text-center mb-12 text-gradient";"
           >
-            ROI Calculator
+            ROI Calculator;
           </motion.h2>
           <div className="max-w-4xl mx-auto bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8">
             <div className="grid grid-cols-1,
@@ -612,7 +615,7 @@ const,
                   </div>
                   <div>
                     <label className="block text-zion-slate-light mb-2">Current Monthly Cost</label>
-                    <input
+                    <input;
                       type="number"
                       placeholder="$0"
                       className="className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white,
@@ -623,7 +626,7 @@ const,
                   </div>
                   <div>
                     <label className="block text-zion-slate-light mb-2">Expected Efficiency Gain (%)</label>
-                    <input
+                    <input;
                       type="number"
                       placeholder="25"
                       className="className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white,
@@ -668,7 +671,7 @@ const,
   }
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -683,7 +686,7 @@ const,
           >
             Ready to Maximize Your ROI?
           </motion.h2>
-          <motion.p
+          <motion.p;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -696,9 +699,9 @@ const,
   }
             className="className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto";"
           >
-            Contact our team to discuss how our innovative services can deliver exceptional returns on your investment
+            Contact our team to discuss how our innovative services can deliver exceptional returns on your investment;
           </motion.p>
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -712,7 +715,7 @@ const,
             className="className="flex flex-col,
   s: m: flex-row gap-4 justify-center";"
           >
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg,
@@ -720,9 +723,9 @@ const,
   hove: r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";"
             >
               <Phone className="w-5 h-5" />
-              +1 302 464 0950
+              +1 302 464 0950;
             </a>
-            <a
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg,
@@ -730,7 +733,7 @@ const,
   r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";"
             >
               <Mail className="w-5 h-5" />
-              kleber@ziontechgroup.com
+              kleber@ziontechgroup.com;
             </a>
           </motion.div>
         </div>
@@ -738,4 +741,4 @@ const,
     </div>
   )
 }
-export default ComprehensivePricingGuide2028
+export default ComprehensivePricingGuide2028;

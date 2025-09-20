@@ -1,93 +1,96 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Search
-  Filter
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Brain
-  Globe
-  Atom
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  CheckCircle
-  Clock
-  Users
-  Target
-  BarChart3
-  Rocket
-  Cpu
-  Network
-  Database
-  Lock
-  Leaf
-  Scale
-  Stethoscope
-  Car
-  Building2
-  DollarSign
-  Award
-  Lightbulb
-  ArrowRight
-  ChevronRight
-  ChevronLeft
-  Play
-  Eye
-  X
-  Flask
-  Calculator
-  TrendingDown
-  Minus
-  Plus
-  Equal
-  Divide
-  Percent
-  Euro
-  Pound
-  Yen
-  Bitcoin
-  Ethereum
-  CreditCard
-  Wallet
-  Banknote
-  Coins
-  PiggyBank
-  Safe
-  Vault
-  LockKeyhole
-  Key
-  Fingerprint
-  QrCode
-  Barcode
-  Scan
-  Camera
-  VideoOff
-  Mic
-  MicOff
-  Volume2
-  VolumeX
-  Pause
-  Stop
-  SkipBack
-  SkipForward
-  Rewind
-  FastForward
-  Shuffle
-  Repeat
-  Repeat1
-  Shuffle2
-  SkipBack2
-  SkipForward2
-  PlayCircle
-  PauseCircle
-} from "lucide-react"
-import { revolutionary2025AdvancedMicroSaasServices } from "../data/revolutionary-2025-advanced-micro-saas-v2"
-import { revolutionary2025SpecializedITAIServices } from "../data/revolutionary-2025-specialized-it-ai-services"
-// Combine all services
+  Search;
+  Filter;
+  Star;
+  TrendingUp;
+  Zap;
+  Shield;
+  Brain;
+  Globe;
+  Atom;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  CheckCircle;
+  Clock;
+  Users;
+  Target;
+  BarChart3;
+  Rocket;
+  Cpu;
+  Network;
+  Database;
+  Lock;
+  Leaf;
+  Scale;
+  Stethoscope;
+  Car;
+  Building2;
+  DollarSign;
+  Award;
+  Lightbulb;
+  ArrowRight;
+  ChevronRight;
+  ChevronLeft;
+  Play;
+  Eye;
+  X;
+  Flask;
+  Calculator;
+  TrendingDown;
+  Minus;
+  Plus;
+  Equal;
+  Divide;
+  Percent;
+  Euro;
+  Pound;
+  Yen;
+  Bitcoin;
+  Ethereum;
+  CreditCard;
+  Wallet;
+  Banknote;
+  Coins;
+  PiggyBank;
+  Safe;
+  Vault;
+  LockKeyhole;
+  Key;
+  Fingerprint;
+  QrCode;
+  Barcode;
+  Scan;
+  Camera;
+  VideoOff;
+  Mic;
+  MicOff;
+  Volume2;
+  VolumeX;
+  Pause;
+  Stop;
+  SkipBack;
+  SkipForward;
+  Rewind;
+  FastForward;
+  Shuffle;
+  Repeat;
+  Repeat1;
+  Shuffle2;
+  SkipBack2;
+  SkipForward2;
+  PlayCircle;
+  PauseCircle;
+}
+}
+ } from "lucide-react";
+import { revolutionary2025AdvancedMicroSaasServices   } from "../data/revolutionary-2025-advanced-micro-saas-v2";
+import { revolutionary2025SpecializedITAIServices   } from "../data/revolutionary-2025-specialized-it-ai-services";
+// Combine all services;
 const ALL_SERVICES = [[...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices],
   ]
 const,
@@ -100,9 +103,9 @@ const,
   const [sortBy, setSortBy] = useState('title')
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'comparison'>('grid')
   const [selectedServices, setSelectedServices] = useState<string[]>([])
-  // Filter services based on search and filters
+  // Filter services based on search and filters;
   useEffect(() () => {
-    let filtered = ALL_SERVICES
+    let filtered = ALL_SERVICES;
     if (if (searchTerm) {
   ) {
       filtered = filtered.filter(service =>
@@ -122,9 +125,9 @@ const,
   const price = parseInt(service.price.replace(/[^0-9]/g, ''))
         if (if (max) {
   ) {
-          return price >= min && price <= max
+          return price >= min && price <= max;
 }
-        return price >= min
+        return price >= min;
 })
     }
     if (if (selectedROI !== 'all') {
@@ -134,18 +137,18 @@ const,
   const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0')
         if (if (max) {
   ) {
-          return roi >= min && roi <= max
+          return roi >= min && roi <= max;
 }
-        return roi >= min
+        return roi >= min;
 })
     }
-    // Sort services
+    // Sort services;
     filtered.sort((a, b) () => {
   switch (sortBy) {
   case 'price':
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''))
         case 'rating':
-          return b.rating - a.rating
+          return b.rating - a.rating;
         case 'customers':
           return b.customers - a.customers,
   defaul: t: return a.name.localeCompare(b.name)
@@ -170,7 +173,7 @@ const,
   }
       <section className="pt-24 pb-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -184,14 +187,14 @@ const,
           >
             <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Revolutionary 2025 Services
+              Revolutionary 2025 Services;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Cutting-edge AI, Quantum Computing, and Autonomous Technology Solutions
+              Cutting-edge AI, Quantum Computing, and Autonomous Technology Solutions;
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Discover our revolutionary micro SAAS services that combine the power of artificial intelligence
+              Discover our revolutionary micro SAAS services that combine the power of artificial intelligence;
               quantum computing, and autonomous operations to transform your business.
             </p>
           </motion.div>
@@ -207,7 +210,7 @@ const,
   }
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -222,7 +225,7 @@ const,
             {/* Filters */},
   }
             <div className="flex flex-wrap gap-4">
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -236,7 +239,7 @@ const,
   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
-              <select
+              <select;
                 value={selectedPriceRange},
   }
                 onChange={(e) => setSelectedPriceRange(e.target.value)},
@@ -251,7 +254,7 @@ const,
                 <option value="1000-1500">$1,000 - $1,500</option>
                 <option value="1500-9999">Over $1,500</option>
               </select>
-              <select
+              <select;
                 value={selectedROI},
   }
                 onChange={(e) => setSelectedROI(e.target.value)},
@@ -266,7 +269,7 @@ const,
                 <option value="700-800">700% - 800%</option>
                 <option value="800-999">800%+</option>
               </select>
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -284,7 +287,7 @@ const,
             {/* View Mode Toggle */},
   }
             <div className="flex gap-2">
-              <button
+              <button;
                 onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -297,7 +300,7 @@ const,
               >
                 <Grid className="w-5 h-5" />
               </button>
-              <button
+              <button;
                 onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -310,7 +313,7 @@ const,
               >
                 <List className="w-5 h-5" />
               </button>
-              <button
+              <button;
                 onClick={onClick={() => setViewMode('comparison')},
   },
   }
@@ -331,7 +334,7 @@ const,
   }
       <section className="py-16 bg-gradient-to-r from-slate-900/40 to-gray-900/40">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-12";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -348,16 +351,16 @@ const,
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-              AI-Powered Service Recommendations
+              AI-Powered Service Recommendations;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Let our intelligent system find the perfect services for your business needs
+              Let our intelligent system find the perfect services for your business needs;
             </p>
           </motion.div>
           <div className="grid grid-cols-1,
   m: d:grid-cols-2,
   l: g:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -386,7 +389,7 @@ const,
                 <option>Enterprise (200+ employees)</option>
               </select>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-6 rounded-xl border border-purple-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -418,7 +421,7 @@ const,
                 <option>Education</option>
               </select>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -455,7 +458,7 @@ const,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-300 transform hove,
   r:scale-105">
-              Get AI Recommendations
+              Get AI Recommendations;
             </button>
           </div>
         </div>
@@ -464,7 +467,7 @@ const,
   }
       <section className="py-16 bg-gradient-to-r from-violet-900/20 to-fuchsia-900/20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-12";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -481,16 +484,16 @@ const,
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-              Seamless Service Integration
+              Seamless Service Integration;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our revolutionary services work together to create a comprehensive AI-powered ecosystem
+              Our revolutionary services work together to create a comprehensive AI-powered ecosystem;
             </p>
           </motion.div>
           <div className="grid grid-cols-1,
   m: d:grid-cols-2,
   l: g:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-violet-600/20 to-purple-700/20 p-6 rounded-xl border border-violet-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -513,19 +516,19 @@ const,
               <div className="space-y-2 text-sm text-gray-300">
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
-                  Business Process Automation
+                  Business Process Automation;
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
-                  Intelligent Resource Management
+                  Intelligent Resource Management;
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
-                  Predictive Analytics
+                  Predictive Analytics;
                 </div>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -549,19 +552,19 @@ const,
               <div className="space-y-2 text-sm text-gray-300">
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                  Quantum Cryptography
+                  Quantum Cryptography;
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                  Neural Network Optimization
+                  Neural Network Optimization;
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                  Financial Modeling
+                  Financial Modeling;
                 </div>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -585,15 +588,15 @@ const,
               <div className="space-y-2 text-sm text-gray-300">
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  AI-Powered Threat Detection
+                  AI-Powered Threat Detection;
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Zero-Trust Architecture
+                  Zero-Trust Architecture;
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Compliance Automation
+                  Compliance Automation;
                 </div>
               </div>
             </motion.div>
@@ -603,7 +606,7 @@ const,
             <button className="px-8 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-600 rounded-lg font-semibold text-white,
   hove: r: from-violet-600 hove,
   r:to-fuchsia-700 transition-all duration-300">
-              View Integration Guide
+              View Integration Guide;
             </button>
           </div>
         </div>
@@ -612,7 +615,7 @@ const,
   }
       <section className="py-16 bg-gradient-to-r from-slate-800/40 to-gray-800/40">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-12";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -629,10 +632,10 @@ const,
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-              Service Comparison Matrix
+              Service Comparison Matrix;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Compare our revolutionary services side by side to find the perfect fit
+              Compare our revolutionary services side by side to find the perfect fit;
             </p>
           </motion.div>
           <div className="overflow-x-auto">
@@ -703,7 +706,7 @@ const,
             <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white,
   hove: r: from-cyan-600 hove,
   r:to-blue-700 transition-all duration-300">
-              Download Full Comparison
+              Download Full Comparison;
             </button>
           </div>
         </div>
@@ -715,10 +718,10 @@ const,
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              {services.length} Revolutionary Services Found
+              {services.length} Revolutionary Services Found;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our cutting-edge solutions designed to transform your business operations
+              Explore our cutting-edge solutions designed to transform your business operations;
             </p>
           </div>
           {viewMode === 'grid' && (
@@ -726,7 +729,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   className="className="bg-slate-800/50 p-8 rounded-xl border border-slate-700,
@@ -774,7 +777,7 @@ const,
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">{service.category}</span>
-                    <a
+                    <a;
                       href={service.link},
   }
                       target="_blank"
@@ -792,7 +795,7 @@ const,
   {viewMode === 'list' && (
   <div className="space-y-6">
               {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700,
@@ -845,7 +848,7 @@ const,
                             </span>
                           ))}
                         </div>
-                        <a
+                        <a;
                           href={service.link},
   }
                           target="_blank"
@@ -944,14 +947,14 @@ const,
               ) : (
   <div className="text-center py-12">
                   <p className="text-gray-400 mb-4">Select services from the grid or list view to compare</p>
-                  <button
+                  <button;
                     onClick={onClick={() => setViewMode('grid')},
   },
   }
                     className="className="px-6 py-3 bg-cyan-500 text-white rounded-lg,
   hove: r:bg-cyan-600 transition-colors";"
                   >
-                    View Services
+                    View Services;
                   </button>
                 </div>
               )}
@@ -965,14 +968,14 @@ const,
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-            Competitive Pricing Plans
+            Competitive Pricing Plans;
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Choose the perfect plan for your business needs with transparent pricing and unmatched value
+            Choose the perfect plan for your business needs with transparent pricing and unmatched value;
           </p>
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -993,27 +996,27 @@ const,
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic AI Integration
+                  Basic AI Integration;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard Support
+                  Standard Support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Core Features
+                  Core Features;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Monthly Updates
+                  Monthly Updates;
                 </li>
               </ul>
               <button className="w-full px-6 py-3 bg-green-500 text-white rounded-lg,
   hove: r: bg-green-600 transition-colors">
-                Get Started
+                Get Started;
               </button>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-8 rounded-xl border-2 border-blue-500/50 transform scale-105";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -1030,7 +1033,7 @@ const,
   }
             >
               <div className="bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded-full mb-4 inline-block">
-                MOST POPULAR
+                MOST POPULAR;
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional Plan</h3>
               <div className="text-4xl font-bold text-blue-400 mb-2">$7,999</div>
@@ -1038,31 +1041,31 @@ const,
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                  Advanced AI Features
+                  Advanced AI Features;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                  Priority Support
+                  Priority Support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                  Custom Integrations
+                  Custom Integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                  Weekly Updates
+                  Weekly Updates;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                  Dedicated Account Manager
+                  Dedicated Account Manager;
                 </li>
               </ul>
               <button className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg,
   hove: r: bg-blue-600 transition-colors">
-                Get Started
+                Get Started;
               </button>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -1084,32 +1087,32 @@ const,
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  Full AI Suite
+                  Full AI Suite;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  24/7 Premium Support
+                  24/7 Premium Support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  Custom Development
+                  Custom Development;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  Daily Updates
+                  Daily Updates;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  White-label Solutions
+                  White-label Solutions;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
-                  SLA Guarantee
+                  SLA Guarantee;
                 </li>
               </ul>
               <button className="w-full px-6 py-3 bg-purple-500 text-white rounded-lg,
   hove: r: bg-purple-600 transition-colors">
-                Get Started
+                Get Started;
               </button>
             </motion.div>
           </div>
@@ -1119,19 +1122,19 @@ const,
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
               <span className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                Free Setup & Migration
+                Free Setup & Migration;
               </span>
               <span className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                45-Day Money-Back Guarantee
+                45-Day Money-Back Guarantee;
               </span>
               <span className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                No Hidden Fees
+                No Hidden Fees;
               </span>
               <span className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                Flexible Billing
+                Flexible Billing;
               </span>
             </div>
           </div>
@@ -1143,14 +1146,14 @@ const,
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-            Real-Time Service Performance
+            Real-Time Service Performance;
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Monitor live performance metrics and system health across all our revolutionary services
+            Monitor live performance metrics and system health across all our revolutionary services;
           </p>
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -1171,7 +1174,7 @@ const,
                 <div className="w-15 h-2 bg-indigo-500 rounded-full"></div>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1193,7 +1196,7 @@ const,
                 <div className="w-14 h-2 bg-purple-500 rounded-full"></div>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1215,7 +1218,7 @@ const,
                 <div className="w-16 h-2 bg-cyan-500 rounded-full"></div>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1240,7 +1243,7 @@ const,
           </div>
           <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-indigo-600/20 to-purple-700/20 p-6 rounded-xl border border-indigo-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -1271,7 +1274,7 @@ const,
                 </div>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-purple-600/20 to-pink-700/20 p-6 rounded-xl border border-purple-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1303,7 +1306,7 @@ const,
                 </div>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-pink-600/20 to-red-700/20 p-6 rounded-xl border border-pink-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1340,7 +1343,7 @@ const,
             <button className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold text-white,
   hove: r: from-indigo-600 hove,
   r:to-purple-700 transition-all duration-300">
-              View Live Dashboard
+              View Live Dashboard;
             </button>
           </div>
         </div>
@@ -1351,14 +1354,14 @@ const,
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-            Proven Customer Success
+            Proven Customer Success;
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Real results from real businesses using our revolutionary services
+            Real results from real businesses using our revolutionary services;
           </p>
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -1376,7 +1379,7 @@ const,
               <div className="text-4xl font-bold text-emerald-400 mb-2">$2.4B</div>
               <p className="text-gray-300 text-sm">Total Revenue Generated</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1395,7 +1398,7 @@ const,
               <div className="text-4xl font-bold text-teal-400 mb-2">1,500+</div>
               <p className="text-gray-300 text-sm">Happy Clients</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1414,7 +1417,7 @@ const,
               <div className="text-4xl font-bold text-cyan-400 mb-2">800%</div>
               <p className="text-gray-300 text-sm">Average ROI</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1436,7 +1439,7 @@ const,
           </div>
           <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-emerald-600/20 to-teal-700/20 p-6 rounded-xl border border-emerald-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -1455,7 +1458,7 @@ const,
               <p className="text-gray-300 text-sm mb-4">"Zion Tech Group's AI services increased our operational efficiency by 300% and reduced costs by 40%."</p>
               <div className="text-emerald-400 text-sm">- Global Manufacturing Corp</div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-teal-600/20 to-cyan-700/20 p-6 rounded-xl border border-teal-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1475,7 +1478,7 @@ const,
               <p className="text-gray-300 text-sm mb-4">"Their quantum-enhanced solutions helped us scale from 10 to 1000 customers in just 6 months."</p>
               <div className="text-teal-400 text-sm">- TechStart Inc</div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-cyan-600/20 to-blue-700/20 p-6 rounded-xl border border-cyan-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1504,14 +1507,14 @@ const,
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-            Global Presence & Impact
+            Global Presence & Impact;
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Serving clients worldwide with revolutionary technology solutions
+            Serving clients worldwide with revolutionary technology solutions;
           </p>
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -1529,7 +1532,7 @@ const,
               <div className="text-4xl font-bold text-amber-400 mb-2">50+</div>
               <p className="text-gray-300 text-sm">Countries</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1548,7 +1551,7 @@ const,
               <div className="text-4xl font-bold text-orange-400 mb-2">200+</div>
               <p className="text-gray-300 text-sm">Cities</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1567,7 +1570,7 @@ const,
               <div className="text-4xl font-bold text-red-400 mb-2">24/7</div>
               <p className="text-gray-300 text-sm">Support</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1589,7 +1592,7 @@ const,
           </div>
           <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-amber-600/20 to-orange-700/20 p-6 rounded-xl border border-amber-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -1608,7 +1611,7 @@ const,
               <p className="text-gray-300 text-sm mb-4">Headquarters in Delaware, serving Fortune 500 companies across the continent</p>
               <div className="text-amber-400 text-sm">United States • Canada • Mexico</div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-orange-600/20 to-red-700/20 p-6 rounded-xl border border-orange-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1628,7 +1631,7 @@ const,
               <p className="text-gray-300 text-sm mb-4">Strategic partnerships and regional offices serving global enterprises</p>
               <div className="text-orange-400 text-sm">UK • Germany • Japan • Singapore</div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1654,7 +1657,7 @@ const,
             <button className="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg font-semibold text-white,
   hove: r: from-amber-600 hove,
   r:to-orange-700 transition-all duration-300">
-              Explore Global Solutions
+              Explore Global Solutions;
             </button>
           </div>
         </div>
@@ -1663,7 +1666,7 @@ const,
   }
       <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -1682,11 +1685,11 @@ const,
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already transforming their operations with our revolutionary AI, Quantum, and Autonomous technology solutions
+              Join thousands of businesses already transforming their operations with our revolutionary AI, Quantum, and Autonomous technology solutions;
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center mb-8">
-              <button
+              <button;
                 onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -1695,16 +1698,16 @@ const,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Explore All Services
+                Explore All Services;
               </button>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com?subject=Revolutionary 2025 Services Consultation"
                 className="className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-300";"
               >
-                Get Free Consultation
+                Get Free Consultation;
               </a>
             </div>
             <div className="text-gray-400 text-sm">
@@ -1719,10 +1722,10 @@ const,
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-6">
-            Service Evolution Roadmap
+            Service Evolution Roadmap;
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            See how our services evolve and improve over time with cutting-edge technology
+            See how our services evolve and improve over time with cutting-edge technology;
           </p>
           <div className="relative max-w-6xl mx-auto">
             {/* Timeline Line */},
@@ -1731,7 +1734,7 @@ const,
             {/* Timeline Items */},
   }
             <div className="space-y-16">
-              <motion.div
+              <motion.div;
                 className="className="relative flex items-center";"
                 initial={ opaci,
   t: y: 0, x: -50 },
@@ -1760,7 +1763,7 @@ const,
                   <div className="text-amber-400 font-bold">Q4 2024</div>
                 </div>
               </motion.div>
-              <motion.div
+              <motion.div;
                 className="className="relative flex items-center";"
                 initial={ opaci,
   t: y: 0, x: 50 },
@@ -1790,7 +1793,7 @@ const,
                   </div>
                 </div>
               </motion.div>
-              <motion.div
+              <motion.div;
                 className="className="relative flex items-center";"
                 initial={ opaci,
   t: y: 0, x: -50 },
@@ -1820,7 +1823,7 @@ const,
                   <div className="text-red-400 font-bold">Q4 2026</div>
                 </div>
               </motion.div>
-              <motion.div
+              <motion.div;
                 className="className="relative flex items-center";"
                 initial={ opaci,
   t: y: 0, x: 50 },
@@ -1860,14 +1863,14 @@ const,
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-6">
-            Cutting-Edge Technology Stack
+            Cutting-Edge Technology Stack;
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Built with the latest AI, Quantum Computing, and Autonomous technologies
+            Built with the latest AI, Quantum Computing, and Autonomous technologies;
           </p>
           <div className="grid grid-cols-2,
   m: d: grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <motion.div
+            <motion.div;
               className="className="text-center group";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -1889,7 +1892,7 @@ const,
                 <p className="text-gray-300 text-sm">Advanced Neural Networks, Deep Learning, NLP</p>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center group";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1912,7 +1915,7 @@ const,
                 <p className="text-gray-300 text-sm">Quantum Algorithms, Superposition, Entanglement</p>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center group";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1935,7 +1938,7 @@ const,
                 <p className="text-gray-300 text-sm">Self-Driving Operations, Auto-Scaling, ML-Ops</p>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center group";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -1986,11 +1989,11 @@ const,
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-12">
-            Revolutionary Impact by the Numbers
+            Revolutionary Impact by the Numbers;
           </h2>
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -2009,7 +2012,7 @@ const,
   m: d: text-5xl font-bold text-cyan-400 mb-2">800%</div>
               <p className="text-gray-300">Average ROI</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -2029,7 +2032,7 @@ const,
   m: d: text-5xl font-bold text-purple-400 mb-2">90%</div>
               <p className="text-gray-300">Time Reduction</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -2049,7 +2052,7 @@ const,
   m: d:text-5xl font-bold text-green-400 mb-2">1,500+</div>
               <p className="text-gray-300">Happy Clients</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="text-center";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -2078,14 +2081,14 @@ const,
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-6">
-            What Our Clients Say
+            What Our Clients Say;
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Discover how our revolutionary services are transforming businesses across industries
+            Discover how our revolutionary services are transforming businesses across industries;
           </p>
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30";"
               initial={ opacit,
   y: 0, y: 30 },
@@ -2113,7 +2116,7 @@ const,
                 <p className="text-gray-400 text-sm">CTO, TechCorp Solutions</p>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-cyan-600/20 to-blue-700/20 p-8 rounded-xl border border-cyan-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -2142,7 +2145,7 @@ const,
                 <p className="text-gray-400 text-sm">CISO, GlobalBank Inc.</p>
               </div>
             </motion.div>
-            <motion.div
+            <motion.div;
               className="className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -2183,7 +2186,7 @@ const,
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Contact us to learn more about our revolutionary services and how they can drive your success
+            Contact us to learn more about our revolutionary services and how they can drive your success;
           </p>
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
@@ -2205,7 +2208,7 @@ const,
           </div>
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white,
@@ -2213,9 +2216,9 @@ const,
   hove: r:to-blue-700 transition-all duration-300,
   transform: hover:scale-105";"
             >
-              Get Started
+              Get Started;
             </a>
-            <a
+            <a;
               href="htt,
   p: s://ziontechgroup.com"
               target="_blank"
@@ -2224,7 +2227,7 @@ const,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-300";"
             >
-              Visit Website
+              Visit Website;
             </a>
           </div>
         </div>
@@ -2232,7 +2235,7 @@ const,
     </div>
   )
 }
-// Grid and List icons for the view mode toggle
+// Grid and List icons for the view mode toggle;
 const Grid = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -2243,4 +2246,4 @@ const List = ({ className }: { className?: string }) => (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
   </svg>
 )
-export default Revolutionary2025ServicesShowcase
+export default Revolutionary2025ServicesShowcase;

@@ -5,35 +5,37 @@ export interface CartItem {
   t: y: number,ty,
   p: e: 'equipment' | 'service' | 'talent'
 }
+}
+}
 
-export const calculateCartTotal = (ite,
+export const calculateCartTotal = React.memo((ite,
   m: s: CartItem[]): number () => {
   return items.reduce((total, item) => total + (item.price * item.quantity), 0)
 }
-export const addToCart = (ca,
+export const addToCart = React.memo((ca,
   r: t: CartItem[], it,
   e: m: CartItem): CartItem[] () => {
   const existingItem = cart.find(cartItem => cartItem.id === item.id)
   if (if (existingItem) {
   ) {
     return cart.map(cartItem =>
-      cartItem.id === item.id
+      cartItem.id === item.id;
         ? { ...cartItem, quanti,
   t: y: cartItem.quantity + item.quantity },
   }
-        : cartItem
+        : cartItem;
 )
   }
 
   return [...cart, item],
   }
 
-export const removeFromCart = (ca,
+export const removeFromCart = React.memo((ca,
   r: t: CartItem[], item,
   I: d: string): CartItem[] () => {
   return cart.filter(item => item.id !== itemId)
 }
-export const updateQuantity = (ca,
+export const updateQuantity = React.memo((ca,
   r: t: CartItem[], item,
   I: d: string, quanti,
   t: y: number): CartItem[] () => {
@@ -43,19 +45,19 @@ export const updateQuantity = (ca,
   }
 
   return cart.map(item =>
-    item.id === itemId ? { ...item, quantity } : item
+    item.id === itemId ? { ...item, quantity } : item;
 )
 }
-export const clearCart = (): CartItem[] () => {
+export const clearCart = React.memo((): CartItem[] () => {
   return [[],
   ],
   }
-export const getCartKey = (user,
+export const getCartKey = React.memo((user,
   I: d: string): string () => {
   return `cart_${userId}`
 }
 
-export const mergeCartItems = (existingIte,
+export const mergeCartItems = React.memo((existingIte,
   m: s: CartItem[], newIte,
   m: s: CartItem[]): CartItem[] () => {
   const merged = [[...existingItems],
@@ -64,11 +66,13 @@ export const mergeCartItems = (existingIte,
   const existingIndex = merged.findIndex(item => item.id === newItem.id)
     if (if (existingIndex >= 0 && merged[existingIndex]) {
   ) {
-      merged[existingIndex].quantity += newItem.quantity
+      merged[existingIndex].quantity += newItem.quantity;
 } else {
-      merged.push(newItem)
+  merged.push(newItem)
+}
+}
     },
   })
 
-  return merged
+  return merged;
 }

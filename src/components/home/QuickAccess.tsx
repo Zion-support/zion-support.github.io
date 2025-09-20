@@ -1,97 +1,101 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
 import {
-  Brain
-  Shield
-  Cloud
-  Zap
-  Globe
-  Cpu
-  Database
-  Network
-  Lock
-  Code
-  Rocket
-  Users
-  BarChart3
-  FileImage
-  TrendingUp
-  MessageCircle
-  Video
-  FileText
-  Heart
-  ShoppingCart
-  Settings
-  HelpCircle
-  BookOpen
-  Briefcase
-  Award
-  Target
-  Lightbulb
-  ShieldCheck
-  Server
-  Smartphone
-  Monitor
-  Wifi
-  Bluetooth
-  Satellite
-  Atom
-  Dna
-  Microscope
-  Flask
-  TestTube
-  Syringe
-  Stethoscope
-  HeartPulse
-  BrainCircuit
-  Eye
-  Ear
-  Hand
-  Foot
-  Bone
-  Tooth
-  Pill
-  Bandage
-  Thermometer
-  Scale
-  Calculator
-  ChartBar
-  PieChart
-  LineChart
-  Activity
-  TrendingDown
-  Minus
-  Plus
-  Equal
-  Divide
-  Percent
-  DollarSign
-  Euro
-  Pound
-  Yen
-  Bitcoin
-  Ethereum
-  CreditCard
-  Wallet
-  Banknote
-  Coins
-  PiggyBank
-  Safe
-  Vault
-  LockKeyhole
-  Key
-  Fingerprint
-  QrCode
-  Barcode
-  Scan
-  Camera
-  VideoOff
-  Mic
-  MicOff
-  Volume2
-  VolumeX
-} from "lucide-react"
+  Brain;
+  Shield;
+  Cloud;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  BarChart3;
+  FileImage;
+  TrendingUp;
+  MessageCircle;
+  Video;
+  FileText;
+  Heart;
+  ShoppingCart;
+  Settings;
+  HelpCircle;
+  BookOpen;
+  Briefcase;
+  Award;
+  Target;
+  Lightbulb;
+  ShieldCheck;
+  Server;
+  Smartphone;
+  Monitor;
+  Wifi;
+  Bluetooth;
+  Satellite;
+  Atom;
+  Dna;
+  Microscope;
+  Flask;
+  TestTube;
+  Syringe;
+  Stethoscope;
+  HeartPulse;
+  BrainCircuit;
+  Eye;
+  Ear;
+  Hand;
+  Foot;
+  Bone;
+  Tooth;
+  Pill;
+  Bandage;
+  Thermometer;
+  Scale;
+  Calculator;
+  ChartBar;
+  PieChart;
+  LineChart;
+  Activity;
+  TrendingDown;
+  Minus;
+  Plus;
+  Equal;
+  Divide;
+  Percent;
+  DollarSign;
+  Euro;
+  Pound;
+  Yen;
+  Bitcoin;
+  Ethereum;
+  CreditCard;
+  Wallet;
+  Banknote;
+  Coins;
+  PiggyBank;
+  Safe;
+  Vault;
+  LockKeyhole;
+  Key;
+  Fingerprint;
+  QrCode;
+  Barcode;
+  Scan;
+  Camera;
+  VideoOff;
+  Mic;
+  MicOff;
+  Volume2;
+  VolumeX;
+}
+}
+}
+}
+ } from "lucide-react";
 const quickLinks = [
   {
   tit,
@@ -163,7 +167,7 @@ export function QuickAccess() {
     <section className="py-16 bg-gradient-to-br from-slate-800 via-slate-900 to-black">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <motion.h2
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -176,9 +180,9 @@ export function QuickAccess() {
             className="className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4";"
           >
-            Quick Access to Our Services
+            Quick Access to Our Services;
           </motion.h2>
-          <motion.p
+          <motion.p;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -191,7 +195,7 @@ export function QuickAccess() {
   }
             className="className="text-lg text-gray-300 max-w-2xl mx-auto";"
           >
-            Find the perfect solution for your business needs with our organized service categories
+            Find the perfect solution for your business needs with our organized service categories;
           </motion.p>
         </div>
 
@@ -199,7 +203,7 @@ export function QuickAccess() {
   s: m: grid-cols-2 l,
   g:grid-cols-4 gap-6">
           {quickLinks.map((link, index) => (
-  <motion.div
+  <motion.div;
               key={link.title},
   }
               initial={ opaci,
@@ -216,7 +220,7 @@ export function QuickAccess() {
   a: y: index * 0.1 },
   }
             >
-              <Link 
+              <Link;
                 to={link.link},
   }
                 className="className="block group";"
@@ -244,7 +248,7 @@ export function QuickAccess() {
 
                   <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hov,
   e: r: text-cyan-300 transition-colors duration-300">
-                    Learn More
+                    Learn More;
                     <span className="ml-2 group-hove,
   r:translate-x-1 transition-transform duration-200">→</span>
                   </div>
@@ -256,7 +260,7 @@ export function QuickAccess() {
 
         {/* Service Categories Overview */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -280,7 +284,7 @@ export function QuickAccess() {
   m: d: grid-cols-3 l,
   g:grid-cols-6 gap-4">
             {serviceCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -313,7 +317,7 @@ export function QuickAccess() {
 
         {/* CTA Section */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -329,11 +333,11 @@ export function QuickAccess() {
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
+              Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full,
   hove: r:from-cyan-600,
@@ -342,15 +346,15 @@ export function QuickAccess() {
   hove: r:shadow-lg,
   hove: r:shadow-cyan-500/25";"
               >
-                Contact Our Team
+                Contact Our Team;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-300";"
               >
-                Browse All Services
+                Browse All Services;
               </Link>
             </div>
           </div>

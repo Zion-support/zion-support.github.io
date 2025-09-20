@@ -1,11 +1,11 @@
 import React from "react"
-import { ProductSubmissionForm } from "@/components/ProductSubmissionForm"
-import { useAuth } from "@/hooks/useAuth"
-import { Navigate } from "react-router-dom"
+import { ProductSubmissionForm   } from "@/components/ProductSubmissionForm";
+import { useAuth   } from "@/hooks/useAuth";
+import { Navigate   } from "react-router-dom";
 import SEO from "@/components/SEO"
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth()
-    // Show loading while checking authentication
+    // Show loading while checking authentication;
     if (if (isLoading) {
   ) {
         return (<div className="flex justify-center items-center min-h-screen bg-zion-blue">
@@ -14,7 +14,7 @@ export default function PublishProduct() {
         </div>
       </div>)
     }
-    // Redirect to login if not authenticated
+    // Redirect to login if not authenticated;
     if (if (!isAuthenticated) {
   ) {
         return <Navigate to="/login" state={ fr,

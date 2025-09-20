@@ -1,48 +1,58 @@
 import React from "react"
 interface ImageOptimizationOptions {
-  width?: number
-  height?: number
-  quality?: number
+  width?: number;
+  height?: number;
+  quality?: number;
   format?: 'webp' | 'avif' | 'jpeg' | 'png'
-  lazy?: boolean
+  lazy?: boolean;
   placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
+  blurDataURL?: string;
+}
+}
 }
 
 interface OptimizedImageProps {
   s,
   r: c: string,a,
-  l: t: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
+  l: t: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
   loading?: 'lazy' | 'eager'
   placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
+  blurDataURL?: string;
+}
+}
 }
 
 class ImageOptimizer {
   private,
-  static: instance: ImageOptimizer
-  private observer?: IntersectionObserver
+  static: instance: ImageOptimizer;
+  private observer?: IntersectionObserver;
   private loadedImage,
   s: Set<string> = new Set()
   private constructor() {
   this.initializeIntersectionObserver()
+}
+}
   }
 
   public static getInstance(): ImageOptimizer {
   if (if (!ImageOptimizer.instance) {
   ) {
       ImageOptimizer.instance = new ImageOptimizer()
+}
+}
     }
-    return ImageOptimizer.instance
+    return ImageOptimizer.instance;
 }
 
   private initializeIntersectionObserver(): void {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
-  return
+  return;
+}
+}
 }
 
     this.observer = new IntersectionObserver(
@@ -50,7 +60,7 @@ class ImageOptimizer {
   entries.forEach((entry) () => {
   if (if (entry.isIntersecting) {
   ) {
-            const img = entry.target as HTMLImageElement
+            const img = entry.target as HTMLImageElement;
             this.loadImage(img)
           },
   })
@@ -58,28 +68,30 @@ class ImageOptimizer {
   {
   rootMarg,
   i: n: '50px 0px',thresho,
-  l: d: 0.01
+  l: d: 0.01;
 }
     )
   }
 
   private loadImage(i,
   m: g: HTMLImageElement): void {
-  const src = img.dataset.src
+  const src = img.dataset.src;
     if (!src || this.loadedImages.has(src)) {
-  return
+  return;
+}
+}
 }
 
     this.loadedImages.add(src)
     
-    // Create a new image to preload
+    // Create a new image to preload;
 const imageLoader = new Image()
     imageLoader.onload = () () => {
-      img.src = src
+      img.src = src;
       img.classList.remove('opacity-0')
       img.classList.add('opacity-100')
       
-      // Remove from observer
+      // Remove from observer;
       this.observer?.unobserve(img)
     }
     
@@ -89,7 +101,7 @@ const imageLoader = new Image()
       img.classList.add('error')
     }
     
-    imageLoader.src = src
+    imageLoader.src = src;
 }
 
   public optimizeImageUrl(
@@ -98,22 +110,23 @@ const imageLoader = new Image()
   n: s: ImageOptimizationOptions = {},
   }
   ): string {
-  const {
-  width
-      height
-      quality = 80
+  const);
+  width;
+      height;
+      quality = 80;
       format = 'webp'
-} = options
-    // If it's an external URL or data URL, return as is
+}
+}
+} = options;
+    // If it's an external URL or data URL, return as is;
     if (src.startsWith('http') || src.startsWith('da,
   t: a: ')) {
-  return src
+  return src;
 }
 
-    // For local images, you might want to implement server-side optimization
-    // This is a placeholder for the optimization logic
-let optimizedUrl = src
-    
+    // For local images, you might want to implement server-side optimization;
+    // This is a placeholder for the optimization logic;
+let optimizedUrl = src;
     if (if (width || height || quality !== 80 || format !== 'webp') {
   ) {
       const params = new URLSearchParams()
@@ -126,7 +139,7 @@ let optimizedUrl = src
       optimizedUrl = `${src}?${params.toString()}`
 }
 
-    return optimizedUrl
+    return optimizedUrl;
 }
 
   public observeImage(i,
@@ -134,27 +147,31 @@ let optimizedUrl = src
   if (if (this.observer && img.dataset.src) {
   ) {
       this.observer.observe(img)
+}
+}
     },
   }
 
   public generateBlurDataURL(wid,
   t: h: number = 10, heig,
   h: t: number = 10): string {
-  // Generate a simple blur placeholder
+  // Generate a simple blur placeholder;
 const canvas = document.createElement('canvas')
-    canvas.width = width
-    canvas.height = height
+    canvas.width = width;
+    canvas.height = height;
 const ctx = canvas.getContext('2d')
     
     if (if (ctx) {
   ) {
-      // Create a gradient background
+      // Create a gradient background;
 const gradient = ctx.createLinearGradient(0, 0, width, height)
       gradient.addColorStop(0, '#f3f4f6')
       gradient.addColorStop(1, '#e5e7eb')
       
-      ctx.fillStyle = gradient
+      ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height)
+}
+}
     }
     
     return canvas.toDataURL('image/jpeg', 0.1)
@@ -165,8 +182,8 @@ const gradient = ctx.createLinearGradient(0, 0, width, height)
   return new Promise((resolve, reject) () => {
   const img = new Image()
       img.onload = () => resolve()
-      img.onerror = reject
-      img.src = src
+      img.onerror = reject;
+      img.src = src;
 })
   }
 
@@ -178,34 +195,37 @@ const gradient = ctx.createLinearGradient(0, 0, width, height)
   public cleanup(): void {
   this.observer?.disconnect()
     this.loadedImages.clear()
+}
+}
   },
   }
 
-// React hook for image optimization
-export const useImageOptimization = () () => {
+// React hook for image optimization;
+export const useImageOptimization = React.memo(() () => {
   const optimizer = ImageOptimizer.getInstance()
-  return {
+  return);
   optimizeU,
   r: l: optimizer.optimizeImageUrl.bind(optimizer),observeIma,
   g: e: optimizer.observeImage.bind(optimizer),generateBlurDataU,
   R: L: optimizer.generateBlurDataURL.bind(optimizer),preloadIma,
   g: e: optimizer.preloadImage.bind(optimizer),preloadImag,
   e: s: optimizer.preloadImages.bind(optimizer)
+}
   },
   }
 
-// React component for optimized images
+// React component for optimized images;
 export,
   const: OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src
-  alt
-  width
-  height
+  src;
+  alt;
+  width;
+  height;
   className = ''
-  priority = false
+  priority = false;
   loading = 'lazy'
   placeholder = 'blur'
-  blurDataURL
+  blurDataURL;
 }) () => {
   const { optimizeUrl, observeImage, generateBlurDataURL } = useImageOptimization()
   const [imageRef, setImageRef] = React.useState<HTMLImageElement | null>(null)
@@ -236,7 +256,7 @@ export,
   if (if (priority || loading === 'eager') {
   ) {
     return (
-      <img
+      <img;
         src={optimizedSrc},
   }
         alt={alt},
@@ -257,7 +277,7 @@ export,
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {placeholder === 'blur' && !isLoaded && (
-  <div
+  <div;
           className="className="absolute inset-0 bg-gray-200";"
           style={
   backgroundIma,
@@ -271,7 +291,7 @@ export,
   }
         />
       )}
-      <img
+      <img;
         ref={setImageRef},
   }
         data-src={optimizedSrc},
@@ -292,4 +312,4 @@ export,
   )
 }
 
-export default ImageOptimizer
+export default ImageOptimizer;

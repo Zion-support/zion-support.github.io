@@ -1,54 +1,58 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  DollarSign
+  DollarSign;
   TrendingDown,
   CheckCircle,
   Users,
   Clock,
-  ArrowRight
-  Play
-  Settings
-  Target
-  Cpu
-  Activity
-  Sparkles
-  Search
-  Zap
-  Globe
-  Building
-  BarChart3
-  TrendingUp
-  Network
-  Key
-  Fingerprint
-  Monitor
-  AlertTriangle
-  ShieldCheck
-  Globe2
-  Server
-  Database
-  Smartphone
-  Code
-  FileText
-  AlertCircle
-  CheckSquare
-  Calculator
-  PieChart
-  LineChart
-  Target2
-  Wallet
-  PiggyBank
-  CreditCard
-  Receipt
-  Cloud
-  Zap
-  Gauge
-  BarChart4
-  TrendingUp
-  Lightbulb
-  Rocket
-} from "lucide-react"
+  ArrowRight;
+  Play;
+  Settings;
+  Target;
+  Cpu;
+  Activity;
+  Sparkles;
+  Search;
+  Zap;
+  Globe;
+  Building;
+  BarChart3;
+  TrendingUp;
+  Network;
+  Key;
+  Fingerprint;
+  Monitor;
+  AlertTriangle;
+  ShieldCheck;
+  Globe2;
+  Server;
+  Database;
+  Smartphone;
+  Code;
+  FileText;
+  AlertCircle;
+  CheckSquare;
+  Calculator;
+  PieChart;
+  LineChart;
+  Target2;
+  Wallet;
+  PiggyBank;
+  CreditCard;
+  Receipt;
+  Cloud;
+  Zap;
+  Gauge;
+  BarChart4;
+  TrendingUp;
+  Lightbulb;
+  Rocket;
+}
+}
+}
+}
+ } from "lucide-react";
 const CloudFinOpsOptimizer = () () => {
   const features = [
   {
@@ -151,7 +155,7 @@ const CloudFinOpsOptimizer = () () => {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -165,17 +169,17 @@ const CloudFinOpsOptimizer = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
               <Cloud className="w-4 h-4 mr-2" />
-              Cloud Financial Optimization
+              Cloud Financial Optimization;
             </div>
             
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Cloud
+              Cloud;
               <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"> FinOps Optimizer</span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Automate cloud cost optimization with our intelligent FinOps platform 
+              Automate cloud cost optimization with our intelligent FinOps platform;
               that maximizes efficiency while maintaining performance and reliability.
             </p>
             
@@ -185,12 +189,12 @@ const CloudFinOpsOptimizer = () () => {
   hove: r:from-amber-600,
   hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hove,
   r:bg-amber-500/10 transition-all duration-200 flex items-center justify-center">
                 <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -203,7 +207,7 @@ const CloudFinOpsOptimizer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -216,10 +220,10 @@ const CloudFinOpsOptimizer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Optimization Features
+              Intelligent Optimization Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides advanced automation and intelligence to 
+              Our platform provides advanced automation and intelligence to;
               optimize your cloud costs and performance.
             </p>
           </motion.div>
@@ -228,7 +232,7 @@ const CloudFinOpsOptimizer = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -261,7 +265,7 @@ const CloudFinOpsOptimizer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -274,10 +278,10 @@ const CloudFinOpsOptimizer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Core Optimization Services
+              Core Optimization Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From intelligent analysis to automated optimization, we provide 
+              From intelligent analysis to automated optimization, we provide;
               comprehensive solutions for cloud cost management.
             </p>
           </motion.div>
@@ -285,7 +289,7 @@ const CloudFinOpsOptimizer = () () => {
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -322,7 +326,7 @@ const CloudFinOpsOptimizer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -335,7 +339,7 @@ const CloudFinOpsOptimizer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Cloud Economics
+              Transform Your Cloud Economics;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in cost efficiency, automation, and ROI optimization.
@@ -346,7 +350,7 @@ const CloudFinOpsOptimizer = () () => {
   m: d:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -368,7 +372,7 @@ const CloudFinOpsOptimizer = () () => {
             </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index + 3},
   }
                   initial={ opaci,
@@ -398,7 +402,7 @@ const CloudFinOpsOptimizer = () () => {
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -411,10 +415,10 @@ const CloudFinOpsOptimizer = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our optimization solutions adapt to various industries, providing 
+              Our optimization solutions adapt to various industries, providing;
               tailored automation for your specific cloud needs.
             </p>
           </motion.div>
@@ -423,7 +427,7 @@ const CloudFinOpsOptimizer = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -456,7 +460,7 @@ const CloudFinOpsOptimizer = () () => {
         <div className="max-w-4xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -468,10 +472,10 @@ const CloudFinOpsOptimizer = () () => {
   }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Optimize Your Cloud Costs Today
+              Optimize Your Cloud Costs Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our optimization platform to 
+              Join organizations worldwide that use our optimization platform to;
               achieve maximum cloud efficiency and cost savings.
             </p>
             <div className="flex flex-col,
@@ -479,12 +483,12 @@ const CloudFinOpsOptimizer = () () => {
               <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg,
   hove: r:from-amber-600,
   hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hove,
   r:bg-amber-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -493,4 +497,4 @@ const CloudFinOpsOptimizer = () () => {
     </div>
   )
 }
-export default CloudFinOpsOptimizer
+export default CloudFinOpsOptimizer;

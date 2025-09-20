@@ -8,4 +8,4 @@ const,
 		</div>
 	</div>
 )
-export default Talent
+export default Talent;

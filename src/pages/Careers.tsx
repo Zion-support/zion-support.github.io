@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Briefcase
+  Briefcase;
   Users,
   Heart,
   Zap,
@@ -11,10 +12,12 @@ import {
   Mail,
   MapPin,
   Clock,
-  DollarSign
-  ChevronDown
-  ExternalLink
-} from "lucide-react"
+  DollarSign;
+  ChevronDown;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
 const,
   Career: s: React.FC = () () => {
   const [expandedJob, setExpandedJob] = useState<string | null>(null)
@@ -189,12 +192,12 @@ const,
 },
   ]
   const filteredJobs = selectedDepartment === 'all' 
-    ? jobListings 
+    ? jobListings;
     : jobListings.filter(job => job.department === selectedDepartment)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Careers - Zion Tech Group"
         description="Join our team of technology experts and help shape the future of AI-powered business solutions. Explore exciting career opportunities in AI, engineering, sales, and more."
       />
@@ -205,7 +208,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -218,7 +221,7 @@ const,
           >
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Join Our
+              Join Our;
               <span className="text-zion-cyan"> Mission</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -249,7 +252,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -274,7 +277,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {companyValues.map((value, index) => (
-  <motion.div
+  <motion.div;
                 key={value.title},
   }
                 initial={ opaci,
@@ -311,7 +314,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -336,14 +339,14 @@ const,
   }
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {departments.map((dept) => (
-  <button
+  <button;
                 key={dept.id},
   }
                 onClick={onClick={() => setSelectedDepartment(dept.id)},
   },
   }
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-  selectedDepartment === dept.id
+  selectedDepartment === dept.id;
                     ? 'bg-zion-cyan text-slate-900'
                     : 'bg-slate-800 text-gray-300,
   hove: r:bg-slate-700'
@@ -358,7 +361,7 @@ const,
   }
           <div className="space-y-6">
             {filteredJobs.map((job, index) => (
-  <motion.div
+  <motion.div;
                 key={job.id},
   }
                 initial={ opaci,
@@ -402,7 +405,7 @@ const,
                       </div>
                     </div>
                   </div>
-                  <button
+                  <button;
                     onClick={onClick={() => setExpandedJob(expandedJob === job.id ? null : job.id)},
   },
   }
@@ -412,7 +415,7 @@ const,
                   >
                     {expandedJob === job.id ? 'Show Less' : 'View Details'},
   }
-                    <ChevronDown 
+                    <ChevronDown;
                       className={`w-4 h-4 transition-transform ${
   expandedJob === job.id ? 'rotate-180' : ''
 }`} 
@@ -423,7 +426,7 @@ const,
                 <p className="text-gray-300 mb-4">{job.description}</p>
 
                 {expandedJob === job.id && (
-  <motion.div
+  <motion.div;
                     initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -485,11 +488,11 @@ const,
   s: m: flex-row gap-3">
                       <button className="px-6 py-3 bg-zion-cyan text-slate-900 rounded-lg,
   hove: r:bg-zion-cyan/90 transition-colors font-medium">
-                        Apply Now
+                        Apply Now;
                       </button>
                       <button className="px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg hove,
   r:bg-zion-cyan/10 transition-colors font-medium">
-                        Save Job
+                        Save Job;
                       </button>
                     </div>
                   </motion.div>
@@ -513,7 +516,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -563,7 +566,7 @@ const,
   o: n: 'Receive your offer and join the Zion Tech family'
 },
   ].map((step, index) => (
-  <motion.div
+  <motion.div;
                 key={step.step},
   }
                 initial={ opaci,
@@ -599,7 +602,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -624,12 +627,12 @@ const,
               <button className="px-8 py-4 bg-zion-cyan text-slate-900 rounded-lg,
   hove: r:bg-zion-cyan/90 transition-colors font-medium flex items-center justify-center gap-2">
                 <Mail className="w-5 h-5" />
-                Send Resume
+                Send Resume;
               </button>
               <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg hove,
   r:bg-zion-cyan/10 transition-colors font-medium flex items-center justify-center gap-2">
                 <ExternalLink className="w-5 h-5" />
-                Contact HR
+                Contact HR;
               </button>
             </div>
           </motion.div>
@@ -638,4 +641,4 @@ const,
     </div>
   )
 }
-export default Careers
+export default Careers;

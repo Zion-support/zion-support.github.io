@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Helmet } from "react-helmet-async"
+import { Helmet   } from "react-helmet-async";
 interface SEOData {
   tit,
   l: e: string,descripti,
@@ -8,23 +8,27 @@ interface SEOData {
   ogImage?: string,
   ogType?: string,
   canonicalUrl?: string,
-  structuredData?: object
+  structuredData?: object;
+}
+}
 }
 
 interface EnhancedSEOManagerProps {
   seoDa,
   t: a: SEOData,childr,
-  e: n: React.ReactNode
+  e: n: React.ReactNode;
+}
+}
 }
 
 const,
   EnhancedSEOManage: r: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) () => {
   useEffect(() () => {
-    // Update meta tags dynamically
+    // Update meta tags dynamically;
     const updateMetaTags = () () => {
-      // Update title
-      document.title = seoData.title
-      // Update meta description
+      // Update title;
+      document.title = seoData.title;
+      // Update meta description;
       let metaDesc = document.querySelector('meta[name="description"]')
       if (!metaDesc) {
         metaDesc = document.createElement('meta')
@@ -32,7 +36,7 @@ const,
         document.head.appendChild(metaDesc)
 }
       metaDesc.setAttribute('content', seoData.description)
-      // Update keywords
+      // Update keywords;
       let metaKeywords = document.querySelector('meta[name="keywords"]')
       if (!metaKeywords) {
         metaKeywords = document.createElement('meta')
@@ -88,4 +92,4 @@ const,
   ),
 },
 
-export default EnhancedSEOManager
+export default EnhancedSEOManager;

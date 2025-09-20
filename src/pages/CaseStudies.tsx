@@ -1,35 +1,37 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
+import { Link   } from "react-router-dom";
 import {
-  Target
+  Target;
   TrendingUp,
   Users,
   DollarSign,
   Clock,
-  ArrowRight
-  Star
-  CheckCircle
-  Building
-  Heart
-  Scale
-  Rocket
-  Globe
-  Leaf
-  Shield
-  Brain
-  Cloud
-  Database
-  Network
-  Zap
-  Award
-  BarChart3
-  Eye
-  Lock
-  Cpu
-  Car
-} from "lucide-react"
+  ArrowRight;
+  Star;
+  CheckCircle;
+  Building;
+  Heart;
+  Scale;
+  Rocket;
+  Globe;
+  Leaf;
+  Shield;
+  Brain;
+  Cloud;
+  Database;
+  Network;
+  Zap;
+  Award;
+  BarChart3;
+  Eye;
+  Lock;
+  Cpu;
+  Car;
+}
+}
+ } from "lucide-react";
 export default function CaseStudies() {
   const caseStudies = [
   {
@@ -210,7 +212,7 @@ export default function CaseStudies() {
   l: e: 'CTO',compa,
   n: y: 'TechCorp Inc.',conte,
   n: t: 'Zion Tech Group transformed our entire IT infrastructure. The AI-powered automation alone saved us $2M annually.',rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -218,7 +220,7 @@ export default function CaseStudies() {
   l: e: 'Medical Director',compa,
   n: y: 'HealthPlus Systems',conte,
   n: t: 'The AI diagnostic tools have improved our accuracy by 30% and reduced patient wait times significantly.',rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -226,7 +228,7 @@ export default function CaseStudies() {
   l: e: 'Founder & CEO',compa,
   n: y: 'StartupXYZ',conte,
   n: t: 'Their startup solutions helped us validate our product 10x faster and secure our Series A funding.',rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
   const metrics = [
@@ -253,7 +255,7 @@ export default function CaseStudies() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Case Studies - Zion Tech Group"
         description="Explore real-world success stories from our clients across industries. See how our technology solutions have transformed businesses and delivered measurable results."
       />
@@ -266,15 +268,15 @@ export default function CaseStudies() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Success
+              Success;
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent"> Stories</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Discover how our technology solutions have transformed businesses across industries
+              Discover how our technology solutions have transformed businesses across industries;
               delivering measurable results and driving innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600,
   hove: r:from-blue-600,
@@ -282,15 +284,15 @@ export default function CaseStudies() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-blue-500/25";"
               >
-                Start Your Success Story
+                Start Your Success Story;
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 border border-blue-400 text-blue-400,
   hove: r:bg-blue-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </Link>
             </div>
           </div>
@@ -303,10 +305,10 @@ export default function CaseStudies() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industries We Transform
+              Industries We Transform;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From manufacturing to healthcare, we've successfully delivered solutions across diverse industries
+              From manufacturing to healthcare, we've successfully delivered solutions across diverse industries;
             </p>
           </div>
 
@@ -331,7 +333,7 @@ export default function CaseStudies() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -348,17 +350,17 @@ export default function CaseStudies() {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Featured Case Studies
+              Featured Case Studies;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our most impactful success stories showcasing the transformative power 
+              Our most impactful success stories showcasing the transformative power;
               of AI and technology solutions.
             </p>
           </motion.div>
 
           <div className="space-y-12">
             {caseStudies.filter(cs => cs.featured).map((caseStudy, index) => (
-  <motion.div
+  <motion.div;
                 key={caseStudy.id},
   }
                 initial={ opaci,
@@ -417,12 +419,12 @@ export default function CaseStudies() {
                       </div>
                     </div>
                     
-                    <Link
+                    <Link;
                       to="/request-quote"
                       className="className="inline-flex items-center gap-2 text-cyan-400,
   hove: r:text-cyan-300 transition-colors font-medium";"
                     >
-                      Read Full Case Study
+                      Read Full Case Study;
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -444,7 +446,7 @@ export default function CaseStudies() {
                     <h4 className="text-lg font-semibold text-white mb-4">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
                       {caseStudy.technologies.map((tech, techIndex) => (
-  <span
+  <span;
                           key={techIndex},
   }
                           className="className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
@@ -466,7 +468,7 @@ export default function CaseStudies() {
   }
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -483,10 +485,10 @@ export default function CaseStudies() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Success Across Industries
+              Success Across Industries;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We've helped businesses in diverse industries achieve remarkable results 
+              We've helped businesses in diverse industries achieve remarkable results;
               through technology transformation.
             </p>
           </motion.div>
@@ -495,7 +497,7 @@ export default function CaseStudies() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {industries.map((industry, index) => (
-  <motion.div
+  <motion.div;
                 key={industry.name},
   }
                 initial={ opaci,
@@ -520,12 +522,12 @@ export default function CaseStudies() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{industry.name}</h3>
                 <p className="text-gray-400 text-sm mb-4">{industry.count} success stories</p>
-                <Link
+                <Link;
                   to="/request-quote"
                   className="className="inline-flex items-center gap-2 text-cyan-400,
   hove: r:text-cyan-300 transition-colors text-sm font-medium";"
                 >
-                  View Stories
+                  View Stories;
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
@@ -538,7 +540,7 @@ export default function CaseStudies() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -555,10 +557,10 @@ export default function CaseStudies() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              All Case Studies
+              All Case Studies;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Browse our complete collection of success stories and learn how we can 
+              Browse our complete collection of success stories and learn how we can;
               help transform your business.
             </p>
           </motion.div>
@@ -567,7 +569,7 @@ export default function CaseStudies() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {caseStudies.map((caseStudy, index) => (
-  <motion.div
+  <motion.div;
                 key={caseStudy.id},
   }
                 initial={ opaci,
@@ -621,7 +623,7 @@ export default function CaseStudies() {
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {caseStudy.technologies.slice(0, 3).map((tech, techIndex) => (
-  <span
+  <span;
                         key={techIndex},
   }
                         className="className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-md";"
@@ -633,12 +635,12 @@ export default function CaseStudies() {
                   </div>
                 </div>
 
-                <Link
+                <Link;
                   to="/request-quote"
                   className="className="inline-flex items-center gap-2 text-blue-400,
   hove: r:text-blue-300 font-medium transition-colors";"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
@@ -653,10 +655,10 @@ export default function CaseStudies() {
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Client Testimonials
+              Client Testimonials;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Hear directly from our clients about their transformation journey
+              Hear directly from our clients about their transformation journey;
             </p>
           </div>
 
@@ -685,7 +687,7 @@ export default function CaseStudies() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -704,12 +706,12 @@ export default function CaseStudies() {
               Ready to Create Your Success Story?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our AI-powered technology solutions can transform your business 
+              Let's discuss how our AI-powered technology solutions can transform your business;
               and deliver measurable results like the success stories you've seen.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600,
   hove: r:from-cyan-600,
@@ -717,16 +719,16 @@ export default function CaseStudies() {
   transform: hover:scale-105 shadow-lg,
   hove: r:shadow-cyan-500/25";"
               >
-                Start Your Project
+                Start Your Project;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400,
   hove: r:bg-cyan-400 hove,
   r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </Link>
             </div>
           </motion.div>

@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Shield, BarChart3, AlertTriangle, TrendingUp, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Shield, BarChart3, AlertTriangle, TrendingUp, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon     } from "lucide-react";
 const AIFinancialRiskManagement = () () => {
   const features = [
   {
@@ -71,7 +71,7 @@ const AIFinancialRiskManagement = () () => {
 ]
       ct,
   a: 'Get Started',popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -88,7 +88,7 @@ const AIFinancialRiskManagement = () () => {
 ]
       ct,
   a: 'Start Free Trial',popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -105,7 +105,7 @@ const AIFinancialRiskManagement = () () => {
 ]
       ct,
   a: 'Contact Sales',popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const useCases = [
@@ -191,7 +191,7 @@ const AIFinancialRiskManagement = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -205,22 +205,22 @@ const AIFinancialRiskManagement = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Financial Risk Management
+              AI-Powered Financial Risk Management;
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Intelligent Financial
+              Intelligent Financial;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
-                Risk Management
+                Risk Management;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your financial assets with AI-driven risk management that provides real-time 
+              Protect your financial assets with AI-driven risk management that provides real-time;
               insights, predictive analytics, and automated compliance monitoring across all risk types.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -231,10 +231,10 @@ const AIFinancialRiskManagement = () () => {
   hove: r: from-red-600,
   hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -244,7 +244,7 @@ const AIFinancialRiskManagement = () () => {
                 className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg,
   hove: r:bg-gray-800 transition-all duration-200 flex items-center justify-center";"
               >
-                Schedule Demo
+                Schedule Demo;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
             </div>
@@ -258,7 +258,7 @@ const AIFinancialRiskManagement = () () => {
   s: m: px-6,
   l: g:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -272,10 +272,10 @@ const AIFinancialRiskManagement = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Comprehensive Risk Coverage
+              Comprehensive Risk Coverage;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform covers all major types of financial risk with AI-powered analysis 
+              Our platform covers all major types of financial risk with AI-powered analysis;
               and real-time monitoring capabilities.
             </p>
           </motion.div>
@@ -283,7 +283,7 @@ const AIFinancialRiskManagement = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {riskTypes.map((riskType, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -333,7 +333,7 @@ const AIFinancialRiskManagement = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -347,10 +347,10 @@ const AIFinancialRiskManagement = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Advanced AI-Powered Features
+              Advanced AI-Powered Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI with comprehensive risk management to deliver 
+              Our platform combines cutting-edge AI with comprehensive risk management to deliver;
               actionable insights and automated compliance.
             </p>
           </motion.div>
@@ -359,7 +359,7 @@ const AIFinancialRiskManagement = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -401,7 +401,7 @@ const AIFinancialRiskManagement = () () => {
   s: m: px-6,
   l: g:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -415,7 +415,7 @@ const AIFinancialRiskManagement = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your financial risk management needs. 
@@ -426,7 +426,7 @@ const AIFinancialRiskManagement = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -440,7 +440,7 @@ const AIFinancialRiskManagement = () () => {
   a: y: index * 0.1 },
   }
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-  plan.popular 
+  plan.popular;
                     ? 'border-red-500/50 ring-2 ring-red-500/20' 
                     : 'border-gray-700'
 } hov,
@@ -449,7 +449,7 @@ const AIFinancialRiskManagement = () () => {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -473,7 +473,7 @@ const AIFinancialRiskManagement = () () => {
                   ))}
                 </ul>
 
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.02 },
   }
@@ -481,7 +481,7 @@ const AIFinancialRiskManagement = () () => {
   l: e: 0.98 },
   }
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-  plan.popular
+  plan.popular;
                       ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white,
   hove: r: from-red-600,
   hove: r:to-orange-600'
@@ -504,7 +504,7 @@ const AIFinancialRiskManagement = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -518,10 +518,10 @@ const AIFinancialRiskManagement = () () => {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Industry Use Cases
+              Industry Use Cases;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Financial Risk Management platform is trusted across the financial 
+              Our AI Financial Risk Management platform is trusted across the financial;
               industry to protect assets and ensure regulatory compliance.
             </p>
           </motion.div>
@@ -529,7 +529,7 @@ const AIFinancialRiskManagement = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -575,7 +575,7 @@ const AIFinancialRiskManagement = () () => {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-red-900/20 to-orange-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -591,12 +591,12 @@ const AIFinancialRiskManagement = () () => {
               Ready to Protect Your Financial Assets?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading financial institutions that trust our AI-powered platform to 
+              Join leading financial institutions that trust our AI-powered platform to;
               manage risk and ensure compliance at scale.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -607,10 +607,10 @@ const AIFinancialRiskManagement = () () => {
   hove: r: from-red-600,
   hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -620,7 +620,7 @@ const AIFinancialRiskManagement = () () => {
                 className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg,
   hove: r: bg-gray-800 transition-all duration-200 flex items-center justify-center";"
               >
-                Contact Sales
+                Contact Sales;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
             </div>
@@ -630,4 +630,4 @@ const AIFinancialRiskManagement = () () => {
     </div>
   )
 }
-export default AIFinancialRiskManagement
+export default AIFinancialRiskManagement;

@@ -1,28 +1,32 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../../components/SEO"
+import { motion     } from "framer-motion";
+import { SEO     } from "../../components/SEO";
 import {
-  Users
+  Users;
   Brain,
   Target,
   Zap,
   BarChart3,
   Clock,
   Award,
-  Star
-  Globe
-  Cpu
-  Database
-  CheckCircle
-  Eye
-  MessageCircle
-  FileText
-  Shield
-  TrendingUp
-  UserCheck
-  Calendar
-  Video
-} from "lucide-react"
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  CheckCircle;
+  Eye;
+  MessageCircle;
+  FileText;
+  Shield;
+  TrendingUp;
+  UserCheck;
+  Calendar;
+  Video;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function InterviewAssessmentAI() {
   const features = [
   {
@@ -77,41 +81,41 @@ export default function InterviewAssessmentAI() {
   p: e: "Technical Skills",descripti,
   o: n: "Programming tests, problem-solving, and technical knowledge assessment"
       ic,
-  o: n: Cpu
+  o: n: Cpu;
 },
   {
   ty,
   p: e: "Personality Assessment",descripti,
   o: n: "Behavioral analysis, cultural fit, and work style evaluation"
       ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   ty,
   p: e: "Communication Skills",descripti,
   o: n: "Verbal and written communication, presentation, and interpersonal skills"
       ic,
-  o: n: MessageCircle
+  o: n: MessageCircle;
 },
   {
   ty,
   p: e: "Cognitive Ability",descripti,
   o: n: "Problem-solving, critical thinking, and analytical reasoning tests"
       ic,
-  o: n: Brain
+  o: n: Brain;
 },
   {
   ty,
   p: e: "Situational Judgment",descripti,
   o: n: "Real-world scenarios and decision-making assessment",ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   ty,
   p: e: "Cultural Fit",descripti,
   o: n: "Values alignment, team dynamics, and organizational culture match"
       ic,
-  o: n: Globe
+  o: n: Globe;
 },
   ]
   const useCases = [
@@ -143,7 +147,7 @@ export default function InterviewAssessmentAI() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Interview Assessment AI - Zion Tech Group"
         description="Transform your hiring process with AI-powered candidate evaluation, automated assessments, and bias-free recruitment solutions."
       />
@@ -154,7 +158,7 @@ export default function InterviewAssessmentAI() {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -173,20 +177,20 @@ export default function InterviewAssessmentAI() {
             
             <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-              Revolutionize Hiring with
+              Revolutionize Hiring with;
               <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent">
-                {" "}AI-Powered Assessment
+                {" "}AI-Powered Assessment;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your recruitment process with intelligent candidate evaluation, automated 
+              Transform your recruitment process with intelligent candidate evaluation, automated;
               assessments, and data-driven hiring decisions that improve quality and reduce bias.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -198,9 +202,9 @@ export default function InterviewAssessmentAI() {
   hove: r:to-teal-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-emerald-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -210,7 +214,7 @@ export default function InterviewAssessmentAI() {
                 className="className="px-8 py-4 border border-emerald-400/30 text-emerald-300 font-semibold rounded-lg,
   hove: r:bg-emerald-400/10 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -221,7 +225,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -235,10 +239,10 @@ export default function InterviewAssessmentAI() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Advanced Assessment Features
+              Advanced Assessment Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered interview assessment platform combines cutting-edge artificial intelligence 
+              Our AI-powered interview assessment platform combines cutting-edge artificial intelligence;
               with proven hiring methodologies to deliver exceptional recruitment results.
             </p>
           </motion.div>
@@ -247,7 +251,7 @@ export default function InterviewAssessmentAI() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -280,7 +284,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -294,10 +298,10 @@ export default function InterviewAssessmentAI() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Measurable Hiring Impact
+              Measurable Hiring Impact;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See real results with our AI-powered assessment solutions that deliver quantifiable 
+              See real results with our AI-powered assessment solutions that deliver quantifiable;
               improvements across all aspects of your recruitment process.
             </p>
           </motion.div>
@@ -308,7 +312,7 @@ export default function InterviewAssessmentAI() {
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -363,7 +367,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -377,10 +381,10 @@ export default function InterviewAssessmentAI() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Comprehensive Assessment Types
+              Comprehensive Assessment Types;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform provides a wide range of assessment types to evaluate every aspect 
+              Our AI platform provides a wide range of assessment types to evaluate every aspect;
               of candidate suitability and potential.
             </p>
           </motion.div>
@@ -389,7 +393,7 @@ export default function InterviewAssessmentAI() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {assessmentTypes.map((assessment, index) => (
-  <motion.div
+  <motion.div;
                 key={assessment.type},
   }
                 initial={ opaci,
@@ -422,7 +426,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -436,10 +440,10 @@ export default function InterviewAssessmentAI() {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered assessment solutions are designed to work across industries, providing 
+              Our AI-powered assessment solutions are designed to work across industries, providing;
               tailored evaluation strategies for your specific hiring needs.
             </p>
           </motion.div>
@@ -448,7 +452,7 @@ export default function InterviewAssessmentAI() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.industry},
   }
                 initial={ opaci,
@@ -481,7 +485,7 @@ export default function InterviewAssessmentAI() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -498,12 +502,12 @@ export default function InterviewAssessmentAI() {
               Ready to Transform Your Hiring?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies that have already revolutionized their recruitment 
+              Join hundreds of companies that have already revolutionized their recruitment;
               process with our AI-powered assessment solutions.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -515,9 +519,9 @@ export default function InterviewAssessmentAI() {
   hove: r:to-teal-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-emerald-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -527,7 +531,7 @@ export default function InterviewAssessmentAI() {
                 className="className="px-8 py-4 border border-emerald-400/30 text-emerald-300 font-semibold rounded-lg,
   hove: r: bg-emerald-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>

@@ -1,11 +1,12 @@
+import { useCallback    } from "react";
 import React, { useState } from "react"
-import { Search, X } from "lucide-react"
+import { Search, X     } from "lucide-react";
 export function EnhancedSearchInput({ 
   placeholder = "Search services, solutions...",
   className = "",
   onSearch,
   showClear = true,
-  compact = false
+  compact = false;
 }) {
   const [query, setQuery] = useState('')
 const [isFocused, setIsFocused] = useState(false)
@@ -33,7 +34,7 @@ const handleSearch = (e) () => {
       <form onSubmit={handleSearch} className="relative">
         <div className={`relative flex items-center ${compact ? 'h-10' : 'h-12'}`}>
           <Search className={`absolute left-3 text-gray-400 ${compact ? 'w-4 h-4' : 'w-5 h-5'}`} />
-          <input
+          <input;
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -42,17 +43,17 @@ const handleSearch = (e) () => {
             onBlur={() => setIsFocused(false)}
             placeholder={placeholder}
             className={`
-              w-full pl-10 pr-10 py-2 bg-white/10 border border-white/20 rounded-lg
+              w-full pl-10 pr-10 py-2 bg-white/10 border border-white/20 rounded-lg;
               text-white placeholder-gray-400,
   focu: s: outline-none,
   focu: s:ring-2 focu,
-  s:ring-cyan-400/50
+  s:ring-cyan-400/50;
               transition-all duration-200 ${compact ? 'text-sm' : 'text-base'}
               ${isFocused ? 'bg-white/20 border-cyan-400/50' : ''}
             `}
           />
           {showClear && query && (
-            <button
+            <button;
               type="button"
               onClick={handleClear}
               className="absolute right-3 text-gray-400,
@@ -69,10 +70,10 @@ const handleSearch = (e) () => {
         <div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark border border-zion-blue-light/20 rounded-lg shadow-xl z-50 max-h-64 overflow-y-auto">
           <div className="py-2">
             <div className="px-4 py-2 text-sm text-gray-400 border-b border-zion-blue-light/20">
-              Quick suggestions
+              Quick suggestions;
             </div>
             {['AI ServicesCloud Solutions', 'CybersecurityIT Consulting'].map((suggestion, index) => (
-              <button
+              <button;
                 key={index}
                 onClick={() () => {
                   setQuery(suggestion)

@@ -1,11 +1,11 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings } from "lucide-react"
-import { Link } from "react-router-dom"
+import { GradientHeading   } from "@/components/GradientHeading";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Button   } from "@/components/ui/button";
+import { Input   } from "@/components/ui/input";
+import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings   } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function HelpCenterPage() {
   const helpCategories = [
   {
@@ -177,11 +177,11 @@ export default function HelpCenterPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-zion-slate-light mb-4">
-                    Chat with our support team in real-time
+                    Chat with our support team in real-time;
                   </p>
                   <Button className="bg-zion-cyan,
   hove: r:bg-zion-cyan/80 text-zion-blue-dark">
-                    Start Chat
+                    Start Chat;
                   </Button>
                 </CardContent>
               </Card>
@@ -195,11 +195,11 @@ export default function HelpCenterPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-zion-slate-light mb-4">
-                    Send us an email and we'll respond within 2 hours
+                    Send us an email and we'll respond within 2 hours;
                   </p>
                   <Button variant="outline" className="border-zion-purple text-zion-purple,
   hove: r:bg-zion-purple/10">
-                    Send Email
+                    Send Email;
                   </Button>
                 </CardContent>
               </Card>
@@ -213,11 +213,11 @@ export default function HelpCenterPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-zion-slate-light mb-4">
-                    Call us directly for immediate assistance
+                    Call us directly for immediate assistance;
                   </p>
                   <Button className="bg-zion-cyan hove,
   r:bg-zion-cyan/80 text-zion-blue-dark">
-                    Call Now
+                    Call Now;
                   </Button>
                 </CardContent>
               </Card>
@@ -231,7 +231,7 @@ export default function HelpCenterPage() {
               <CardHeader>
                 <CardTitle className="text-2xl text-zion-cyan">Additional Resources</CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  Explore our comprehensive guides and documentation
+                  Explore our comprehensive guides and documentation;
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -241,14 +241,14 @@ export default function HelpCenterPage() {
                     <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan/10">
                       <FileText className="w-4 h-4 mr-2"/>
-                      API Documentation
+                      API Documentation;
                     </Button>
                   </Link>
                   <Link to="/developers">
                     <Button variant="outline" className="w-full border-zion-purple text-zion-purple hove,
   r:bg-zion-purple/10">
                       <Users className="w-4 h-4 mr-2"/>
-                      Developer Portal
+                      Developer Portal;
                     </Button>
                   </Link>
                 </div>

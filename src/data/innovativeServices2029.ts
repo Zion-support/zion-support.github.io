@@ -11,7 +11,9 @@ export interface Service {
   y: string,year,
   l: y: string,enterpri,
   s: e: string,set,
-  u: p: string
+  u: p: string;
+}
+}
 }
   targetMark,
   e: t: string,useCas,
@@ -28,13 +30,13 @@ export interface Service {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
 },
   }
 
 export,
   const: innovativeServices2029: Service[] = [
-  // AI-Powered Micro SAAS Services
+  // AI-Powered Micro SAAS Services;
   {
   i,
   d: 'ai-autonomous-code-reviewer',na,
@@ -208,7 +210,7 @@ export,
   s://ziontechgroup.com/services/interview-assessment-ai'
 },
   }
-  // IT Infrastructure & Security Services
+  // IT Infrastructure & Security Services;
   {
   id: 'zero-trust-network-access',na,
   m: e: 'Zero Trust Network Access Platform',catego,
@@ -322,7 +324,7 @@ export,
   s://ziontechgroup.com/services/ai-cybersecurity-threat-intelligence'
 },
   }
-  // Cloud & DevOps Services
+  // Cloud & DevOps Services;
   {
   id: 'cloud-finops-optimizer',na,
   m: e: 'Cloud FinOps Optimizer',catego,
@@ -379,7 +381,7 @@ export,
   s://ziontechgroup.com/services/cloud-finops-optimizer'
 },
   }
-  // Data & Analytics Services
+  // Data & Analytics Services;
   {
   id: 'ai-business-intelligence-platform',na,
   m: e: 'AI Business Intelligence Platform',catego,
@@ -437,7 +439,7 @@ export,
   s://ziontechgroup.com/services/ai-business-intelligence'
 },
   }
-  // Automation & Integration Services
+  // Automation & Integration Services;
   {
   id: 'ai-workflow-orchestrator',na,
   m: e: 'AI Workflow Orchestrator',catego,
@@ -502,35 +504,35 @@ export const serviceCategories = [
   m: e: 'AI & Machine Learning',descripti,
   o: n: 'Cutting-edge artificial intelligence solutions that transform business operations',ic,
   o: n: '🤖',cou,
-  n: t: 4
+  n: t: 4;
 },
   {
   id: 'cybersecurity',na,
   m: e: 'Cybersecurity',descripti,
   o: n: 'Advanced security solutions to protect your digital assets',ic,
   o: n: '🔒',cou,
-  n: t: 2
+  n: t: 2;
 },
   {
   id: 'cloud',na,
   m: e: 'Cloud & DevOps',descripti,
   o: n: 'Scalable cloud solutions and DevOps automation',ic,
   o: n: '☁️',cou,
-  n: t: 1
+  n: t: 1;
 },
   {
   id: 'data',na,
   m: e: 'Data & Analytics',descripti,
   o: n: 'Intelligent data analysis and business intelligence',ic,
   o: n: '📊',cou,
-  n: t: 1
+  n: t: 1;
 },
   {
   id: 'automation',na,
   m: e: 'Automation & Integration',descripti,
   o: n: 'Streamline operations with intelligent automation',ic,
   o: n: '⚡',cou,
-  n: t: 1
+  n: t: 1;
 },
   ]
 export const const pricingTiers = {

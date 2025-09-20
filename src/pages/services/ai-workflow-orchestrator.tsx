@@ -1,29 +1,33 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Helmet } from "react-helmet-async"
+import { motion     } from "framer-motion";
+import { Helmet     } from "react-helmet-async";
 import {
-  Workflow
+  Workflow;
   Brain,
   Zap,
   Shield,
   Cloud,
   BarChart3,
   Users,
-  Clock
-  CheckCircle
-  ArrowRight
-  Play
-  Pause
-  Settings
-  Monitor
-  AlertTriangle
-  TrendingUp
-  Database
-  Network
-  Cpu
-  Server
-  ShoppingCart
-} from "lucide-react"
+  Clock;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  Pause;
+  Settings;
+  Monitor;
+  AlertTriangle;
+  TrendingUp;
+  Database;
+  Network;
+  Cpu;
+  Server;
+  ShoppingCart;
+}
+}
+}
+}
+ } from "lucide-react";
 const AIWorkflowOrchestrator = () () => {
   const features = [
   {
@@ -78,25 +82,25 @@ const AIWorkflowOrchestrator = () () => {
   l: e: "Financial Services",descripti,
   o: n: "Automate loan processing, fraud detection, and compliance workflows"
       ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: "Healthcare",descripti,
   o: n: "Streamline patient care coordination and medical record management",ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "Manufacturing",descripti,
   o: n: "Optimize production scheduling and quality control processes",ic,
-  o: n: Settings
+  o: n: Settings;
 },
   {
   tit,
   l: e: "Retail",descripti,
   o: n: "Automate inventory management and customer service workflows",ic,
-  o: n: ShoppingCart
+  o: n: ShoppingCart;
 },
   ]
   const pricing = [
@@ -131,7 +135,7 @@ const AIWorkflowOrchestrator = () () => {
         "Custom integrations"
 ]
       popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -165,7 +169,7 @@ const AIWorkflowOrchestrator = () () => {
   s: m: px-6,
   l: g:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -183,7 +187,7 @@ const AIWorkflowOrchestrator = () () => {
               
               <h1 className="text-4xl,
   m: d:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
-                AI Workflow Orchestrator
+                AI Workflow Orchestrator;
               </h1>
               
               <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
@@ -194,12 +198,12 @@ const AIWorkflowOrchestrator = () () => {
   s: m: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg,
   hove: r:bg-blue-700 transition-colors flex items-center gap-2">
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="px-8 py-4 border border-blue-600 text-blue-600 font-semibold rounded-lg hove,
   r:bg-blue-50 transition-colors">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </motion.div>
@@ -212,7 +216,7 @@ const AIWorkflowOrchestrator = () () => {
   s: m: px-6,
   l: g:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -225,14 +229,14 @@ const AIWorkflowOrchestrator = () () => {
   }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Powerful Features for Modern Workflows
+                Powerful Features for Modern Workflows;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                     key={feature.title},
   }
                     initial={ opaci,
@@ -267,7 +271,7 @@ const AIWorkflowOrchestrator = () () => {
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -286,7 +290,7 @@ const AIWorkflowOrchestrator = () () => {
               <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-6">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={benefit},
   }
                     initial={ opaci,
@@ -316,7 +320,7 @@ const AIWorkflowOrchestrator = () () => {
   s: m: px-6,
   l: g:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -329,14 +333,14 @@ const AIWorkflowOrchestrator = () () => {
   }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Industry Applications
+                Industry Applications;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
                 {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                     key={useCase.title},
   }
                     initial={ opaci,
@@ -369,7 +373,7 @@ const AIWorkflowOrchestrator = () () => {
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -382,13 +386,13 @@ const AIWorkflowOrchestrator = () () => {
   }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Simple, Transparent Pricing
+                Simple, Transparent Pricing;
               </h2>
               
               <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
                 {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                     key={plan.name},
   }
                     initial={ opaci,
@@ -403,7 +407,7 @@ const AIWorkflowOrchestrator = () () => {
   }
                     className={`relative bg-white rounded-xl p-6 shadow-sm,
   hove: r: shadow-lg transition-all duration-300 border ${
-  plan.popular 
+  plan.popular;
                         ? 'border-blue-500 ring-2 ring-blue-500/20' 
                         : 'border-slate-100 hove,
   r:border-blue-200'
@@ -412,7 +416,7 @@ const AIWorkflowOrchestrator = () () => {
                     {plan.popular && (
   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                         <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                          Most Popular
+                          Most Popular;
                         </span>
                       </div>
                     )}
@@ -436,7 +440,7 @@ const AIWorkflowOrchestrator = () () => {
                     </ul>
                     
                     <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${
-  plan.popular
+  plan.popular;
                         ? 'bg-blue-600 text-white,
   hove: r: bg-blue-700'
                         : 'bg-slate-100 text-slate-700 hove,
@@ -458,7 +462,7 @@ const AIWorkflowOrchestrator = () () => {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -482,12 +486,12 @@ const AIWorkflowOrchestrator = () () => {
   s: m:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg,
   hove: r:bg-blue-50 transition-colors">
-                  Start Free Trial
+                  Start Free Trial;
                 </button>
                 <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg,
   hove: r:bg-white hove,
   r:text-blue-600 transition-colors">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </motion.div>
@@ -497,4 +501,4 @@ const AIWorkflowOrchestrator = () () => {
     </>
   )
 }
-export default AIWorkflowOrchestrator
+export default AIWorkflowOrchestrator;

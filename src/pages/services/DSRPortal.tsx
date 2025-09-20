@@ -1,30 +1,34 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../../components/SEO"
+import { motion     } from "framer-motion";
+import { SEO     } from "../../components/SEO";
 import {
-  Shield
+  Shield;
   FileText,
   Target,
   Zap,
   BarChart3,
   Clock,
   Award,
-  Star
-  Globe
-  Cpu
-  Database
-  CheckCircle
-  Eye
-  Users
-  Lock
-  TrendingUp
-  Search
-  Download
-  Upload
-  Calendar
-  AlertTriangle
-  Trash
-} from "lucide-react"
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  CheckCircle;
+  Eye;
+  Users;
+  Lock;
+  TrendingUp;
+  Search;
+  Download;
+  Upload;
+  Calendar;
+  AlertTriangle;
+  Trash;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function DSRPortal() {
   const features = [
   {
@@ -78,38 +82,38 @@ export default function DSRPortal() {
   rig,
   h: t: "Right to Access",descripti,
   o: n: "Provide individuals with access to their personal data",ic,
-  o: n: Eye
+  o: n: Eye;
 },
   {
   rig,
   h: t: "Right to Rectification",descripti,
   o: n: "Allow individuals to correct inaccurate personal data",ic,
-  o: n: FileText
+  o: n: FileText;
 },
   {
   rig,
   h: t: "Right to Erasure",descripti,
   o: n: "Process requests to delete personal data (right to be forgotten)",ic,
-  o: n: Trash
+  o: n: Trash;
 },
   {
   rig,
   h: t: "Right to Portability",descripti,
   o: n: "Provide personal data in a structured, machine-readable format"
       ic,
-  o: n: Download
+  o: n: Download;
 },
   {
   rig,
   h: t: "Right to Restriction",descripti,
   o: n: "Limit processing of personal data in certain circumstances",ic,
-  o: n: Lock
+  o: n: Lock;
 },
   {
   rig,
   h: t: "Right to Object",descripti,
   o: n: "Allow individuals to object to processing of their data",ic,
-  o: n: AlertTriangle
+  o: n: AlertTriangle;
 },
   ]
   const useCases = [
@@ -141,7 +145,7 @@ export default function DSRPortal() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="DSR Portal - Zion Tech Group"
         description="Ensure GDPR and CCPA compliance with our AI-powered Data Subject Rights portal. Automate privacy request processing and data management."
       />
@@ -152,7 +156,7 @@ export default function DSRPortal() {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -171,20 +175,20 @@ export default function DSRPortal() {
             
             <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-              Ensure Privacy Compliance with
+              Ensure Privacy Compliance with;
               <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
-                {" "}AI-Powered DSR Management
+                {" "}AI-Powered DSR Management;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your data privacy compliance with intelligent automation, comprehensive 
+              Transform your data privacy compliance with intelligent automation, comprehensive;
               data subject rights management, and AI-powered insights for GDPR and CCPA compliance.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -196,9 +200,9 @@ export default function DSRPortal() {
   hove: r:to-purple-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-indigo-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -208,7 +212,7 @@ export default function DSRPortal() {
                 className="className="px-8 py-4 border border-indigo-400/30 text-indigo-300 font-semibold rounded-lg,
   hove: r:bg-indigo-400/10 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -219,7 +223,7 @@ export default function DSRPortal() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -233,10 +237,10 @@ export default function DSRPortal() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Advanced Privacy Features
+              Advanced Privacy Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered DSR portal combines cutting-edge artificial intelligence 
+              Our AI-powered DSR portal combines cutting-edge artificial intelligence;
               with comprehensive privacy compliance methodologies to ensure regulatory adherence.
             </p>
           </motion.div>
@@ -245,7 +249,7 @@ export default function DSRPortal() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -278,7 +282,7 @@ export default function DSRPortal() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -292,10 +296,10 @@ export default function DSRPortal() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Measurable Compliance Impact
+              Measurable Compliance Impact;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See real results with our AI-powered DSR solutions that deliver quantifiable 
+              See real results with our AI-powered DSR solutions that deliver quantifiable;
               improvements across all aspects of your privacy compliance operations.
             </p>
           </motion.div>
@@ -306,7 +310,7 @@ export default function DSRPortal() {
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -361,7 +365,7 @@ export default function DSRPortal() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -375,10 +379,10 @@ export default function DSRPortal() {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Comprehensive Data Subject Rights
+              Comprehensive Data Subject Rights;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our DSR portal supports all major privacy regulation rights, ensuring 
+              Our DSR portal supports all major privacy regulation rights, ensuring;
               comprehensive compliance with GDPR, CCPA, and other privacy laws.
             </p>
           </motion.div>
@@ -387,7 +391,7 @@ export default function DSRPortal() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {dataRights.map((right, index) => (
-  <motion.div
+  <motion.div;
                 key={right.right},
   }
                 initial={ opaci,
@@ -420,7 +424,7 @@ export default function DSRPortal() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -434,10 +438,10 @@ export default function DSRPortal() {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered DSR solutions are designed to work across industries, providing 
+              Our AI-powered DSR solutions are designed to work across industries, providing;
               tailored privacy compliance strategies for your specific data handling needs.
             </p>
           </motion.div>
@@ -446,7 +450,7 @@ export default function DSRPortal() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.industry},
   }
                 initial={ opaci,
@@ -479,7 +483,7 @@ export default function DSRPortal() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -496,12 +500,12 @@ export default function DSRPortal() {
               Ready to Ensure Privacy Compliance?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of organizations that have already transformed their privacy 
+              Join hundreds of organizations that have already transformed their privacy;
               compliance with our AI-powered DSR solutions.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -513,9 +517,9 @@ export default function DSRPortal() {
   hove: r:to-purple-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-indigo-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -525,7 +529,7 @@ export default function DSRPortal() {
                 className="className="px-8 py-4 border border-indigo-400/30 text-indigo-300 font-semibold rounded-lg,
   hove: r: bg-indigo-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>

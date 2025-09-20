@@ -32,8 +32,8 @@ export type AdvancedService = {
   l: e: string,catego,
   r: y: string,pricingTi,
   e: r: PricingTier['id'],descripti,
-  o: n: string
-  link?: string
+  o: n: string;
+  link?: string;
 }
 
 export,

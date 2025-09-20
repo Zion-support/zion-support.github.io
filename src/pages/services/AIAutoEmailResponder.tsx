@@ -3,17 +3,17 @@ import SEO from "@/components/SEO"
 export default function AIAutoEmailResponder() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO
+      <SEO;
         title="AI Auto Email Responder | Zion Tech Group"
         description="Automate customer email replies with secure AI, sentiment detection, intent routing, and CRM logging."
       />
       <section className="container-responsive py-16">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-          AI Auto Email Responder
+          AI Auto Email Responder;
         </h1>
         <p className="text-zion-slate-light max-w-3xl">
-          Reduce response times and improve CSAT with an AI responder that drafts context-aware replies
-          classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options
+          Reduce response times and improve CSAT with an AI responder that drafts context-aware replies;
+          classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options;
           (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
         </p>
 

@@ -6,7 +6,9 @@ export interface EquipmentItem {
   r: y: string,ima,
   g: e: string,spe,
   c: s: string[],availabili,
-  t: y: boolean
+  t: y: boolean;
+}
+}
 }
 
 export,
@@ -22,7 +24,7 @@ export,
   s://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",spe,
   c: s: ["NVIDIA RTX 4090", "64GB RAM", "2TB SSD", "Intel i9-13900K"]
     availabili,
-  t: y: true
+  t: y: true;
 },
   {
   id: "2",na,
@@ -34,7 +36,7 @@ export,
   s://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop",spe,
   c: s: ["100+ qubit simulation", "Real-time visualization", "API integration"]
     availabili,
-  t: y: true
+  t: y: true;
 },
   {
   id: "3",na,
@@ -46,6 +48,6 @@ export,
   s://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",spe,
   c: s: ["ARM Cortex-A72", "4GB RAM", "32GB eMMC", "WiFi 6"]
     availabili,
-  t: y: true
+  t: y: true;
 },
   ]

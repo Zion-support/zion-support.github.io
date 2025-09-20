@@ -1,15 +1,15 @@
-import { useState } from "react"
-import { useParams, Link } from "react-router-dom"
-import { Suspense } from "react"
+import { useState   } from "react";
+import { useParams, Link   } from "react-router-dom";
+import { Suspense   } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton"
-import { Input } from "@/components/ui/input"
+import { Input   } from "@/components/ui/input";
 import SEO from "@/components/SEO"
 import PostCard from "@/components/community/PostCard"
-import { usePostsByCategory } from "@/hooks/usePostsByCategory"
+import { usePostsByCategory   } from "@/hooks/usePostsByCategory";
 import NotFound from "./NotFound"
-import { useAuth } from "@/hooks/useAuth"
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "@/components/icons"
-// Mock category data
+import { useAuth   } from "@/hooks/useAuth";
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search   } from "@/components/icons";
+// Mock category data;
 const const categoriesInfo = {
   = {
     "getting-hired": {
@@ -57,27 +57,27 @@ const const categoriesInfo = {
   }
 const const iconMap = {
   = {
-    "Briefcase": Briefcase
-    "MessageSquare": MessageSquare
-    "Code": Code
-    "FileText": FileText
-    "Megaphone": Megaphone
+    "Briefcase": Briefcase;
+    "MessageSquare": MessageSquare;
+    "Code": Code;
+    "FileText": FileText;
+    "Megaphone": Megaphone;
 }
 function CategoryContent({ categoryId, category, IconComponent, user }) {
   const [searchQuery, setSearchQuery] = useState("")
     const { posts = [], loading } = usePostsByCategory(categoryId)
-    const errorMessage = null
-const filteredPosts = searchQuery
+    const errorMessage = null;
+const filteredPosts = searchQuery;
         ? posts.filter((post) => post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-        : posts
+        : posts;
 const canCreatePost = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin")
     return (<div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
         <Link to="/community" className="text-sm text-muted-foreground,
   hove: r: text-foreground">
-          Forum
+          Forum;
         </Link>
         <span className="text-muted-foreground">/</span>
         <span className="font-medium">{category.name}</span>
@@ -125,7 +125,7 @@ export default function ForumCategoryPage() {
     }
     const category = categoriesInfo[[categoryId],
   ]
-    const IconComponent = iconMap[category.icon] || MessageSquare
+    const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
       <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`htt,
   p: s://ziontechgroup.com/community/category/${categoryId}`}/>

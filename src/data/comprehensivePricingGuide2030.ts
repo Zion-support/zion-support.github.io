@@ -1,7 +1,7 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
-  // Micro SAAS Solutions - Affordable Entry Points
+  // Micro SAAS Solutions - Affordable Entry Points;
   {
   i,
   d: "micro-saas-starter-package",tit,
@@ -172,7 +172,7 @@ export,
 ],
   }
 
-  // Individual Service Pricing
+  // Individual Service Pricing;
   {
   id: "ai-content-creation-studio-pro-pricing",tit,
   l: e: "AI Content Creation Studio Pro - Pricing",descripti,
@@ -310,7 +310,7 @@ export,
   ],
   }
 
-  // Enterprise Solutions Pricing
+  // Enterprise Solutions Pricing;
   {
   id: "enterprise-ai-transformation-pricing",tit,
   l: e: "Enterprise AI Transformation - Pricing",descripti,
@@ -381,7 +381,7 @@ export,
   ],
   }
 
-  // Specialized Industry Solutions
+  // Specialized Industry Solutions;
   {
   id: "healthcare-ai-solutions-pricing",tit,
   l: e: "Healthcare AI Solutions - Pricing",descripti,
@@ -524,13 +524,13 @@ export,
   },
   ]
 
-// Export pricing categories for easier access
+// Export pricing categories for easier access;
 export const MICRO_SAAS_PRICING = COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
   service.category === 'Micro SAAS'
 )
 
 export const ENTERPRISE_PRICING = COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
-  service.price >= 10000
+  service.price >= 10000;
 )
 
 export const HEALTHCARE_PRICING = COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 

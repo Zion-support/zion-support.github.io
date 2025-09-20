@@ -1,44 +1,46 @@
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  Cpu
+  Cpu;
   Brain,
   Zap,
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Globe
-  Lock
-  Database
-  Network
-  BarChart3
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-  Target
-  Users
-  ArrowRight
-  Key
-  Fingerprint
-  EyeOff
-  Server
-  Globe2
-  ShieldCheck
-  Wifi
-  Smartphone
-  Cloud
-  Activity
-  Clock
-  BarChart
-  PieChart
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Wifi;
+  Smartphone;
+  Cloud;
+  Activity;
+  Clock;
+  BarChart;
+  PieChart;
+}
+}
+ } from "lucide-react";
 export default function IoTEdgeComputing() {
   const features = [
   {
@@ -95,25 +97,25 @@ export default function IoTEdgeComputing() {
   tit,
   l: e: 'Smart Cities',descripti,
   o: n: 'Intelligent urban infrastructure with real-time monitoring',ic,
-  o: n: Building
+  o: n: Building;
 },
   {
   tit,
   l: e: 'Industrial IoT',descripti,
   o: n: 'Predictive maintenance and process optimization',ic,
-  o: n: Factory
+  o: n: Factory;
 },
   {
   tit,
   l: e: 'Connected Vehicles',descripti,
   o: n: 'Autonomous driving and traffic management',ic,
-  o: n: Car
+  o: n: Car;
 },
   {
   tit,
   l: e: 'Healthcare IoT',descripti,
   o: n: 'Remote patient monitoring and medical device management',ic,
-  o: n: Heart
+  o: n: Heart;
 },
   ]
   const edgeCapabilities = [
@@ -149,7 +151,7 @@ export default function IoTEdgeComputing() {
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="IoT Edge Computing - Zion Tech Group"
         description="Revolutionary IoT edge computing platform with real-time processing, AI at the edge, and seamless device connectivity. Transform your IoT infrastructure with cutting-edge edge technology."
         keywords="IoT edge computing, edge processing, IoT connectivity, edge AI, real-time analytics, smart devices, edge security"
@@ -161,7 +163,7 @@ export default function IoTEdgeComputing() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -175,26 +177,26 @@ export default function IoTEdgeComputing() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
                 <Cpu className="w-4 h-4" />
-                Edge Innovation
+                Edge Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                IoT
+                IoT;
                 <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-                  Edge Computing
+                  Edge Computing;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform your IoT infrastructure with our revolutionary edge computing platform. 
-                Real-time processing, AI at the edge, and seamless connectivity that brings 
+                Real-time processing, AI at the edge, and seamless connectivity that brings;
                 intelligence closer to your data sources.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -206,9 +208,9 @@ export default function IoTEdgeComputing() {
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -219,7 +221,7 @@ export default function IoTEdgeComputing() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  View Demo
+                  View Demo;
                 </motion.button>
               </div>
             </motion.div>
@@ -237,7 +239,7 @@ export default function IoTEdgeComputing() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -254,10 +256,10 @@ export default function IoTEdgeComputing() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Revolutionary Edge Computing Features
+                Revolutionary Edge Computing Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our IoT edge platform combines cutting-edge technology with practical 
+                Our IoT edge platform combines cutting-edge technology with practical;
                 applications to deliver unprecedented performance and efficiency.
               </p>
             </motion.div>
@@ -266,7 +268,7 @@ export default function IoTEdgeComputing() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -313,7 +315,7 @@ export default function IoTEdgeComputing() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -329,19 +331,19 @@ export default function IoTEdgeComputing() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your IoT Infrastructure
+                  Transform Your IoT Infrastructure;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our IoT edge computing platform delivers measurable improvements in 
-                  performance, efficiency, and cost while enabling real-time decision 
+                  Our IoT edge computing platform delivers measurable improvements in;
+                  performance, efficiency, and cost while enabling real-time decision;
                   making and advanced analytics.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -366,7 +368,7 @@ export default function IoTEdgeComputing() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -388,7 +390,7 @@ export default function IoTEdgeComputing() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Edge Performance
+                      Edge Performance;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -420,7 +422,7 @@ export default function IoTEdgeComputing() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -437,10 +439,10 @@ export default function IoTEdgeComputing() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Edge Computing Capabilities
+                Edge Computing Capabilities;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform provides comprehensive edge computing capabilities that 
+                Our platform provides comprehensive edge computing capabilities that;
                 bring intelligence and processing power closer to your data sources.
               </p>
             </motion.div>
@@ -448,7 +450,7 @@ export default function IoTEdgeComputing() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {edgeCapabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                   key={capability.name},
   }
                   initial={ opaci,
@@ -497,7 +499,7 @@ export default function IoTEdgeComputing() {
   }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -514,10 +516,10 @@ export default function IoTEdgeComputing() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                IoT Edge Computing Use Cases
+                IoT Edge Computing Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our edge platform adapts to various industries and applications
+                Our edge platform adapts to various industries and applications;
                 providing tailored solutions for different IoT environments.
               </p>
             </motion.div>
@@ -525,7 +527,7 @@ export default function IoTEdgeComputing() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -572,7 +574,7 @@ export default function IoTEdgeComputing() {
   }
         <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -593,13 +595,13 @@ export default function IoTEdgeComputing() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading organizations that are already using our IoT edge computing 
+                Join leading organizations that are already using our IoT edge computing;
                 platform to revolutionize their connected device infrastructure.
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -611,9 +613,9 @@ export default function IoTEdgeComputing() {
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
                 >
-                  Start Today
+                  Start Today;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -624,7 +626,7 @@ export default function IoTEdgeComputing() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>

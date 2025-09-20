@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export interface PricingTier {
   id: string,na,
   m: e: string,pri,
@@ -16,6 +16,8 @@ export interface PricingTier {
   ]
   limitations?: string[[],
   ],
+}
+}
   }
 
 export interface ServiceCategory {
@@ -26,6 +28,8 @@ export interface ServiceCategory {
   e: s: ProductListing[],pricingTie,
   r: s: PricingTier[[],
   ],
+}
+}
   }
 
 export,
@@ -865,4 +869,4 @@ export,
   ],
   },
   ]
-export default COMPREHENSIVE_PRICING_GUIDE_2029
+export default COMPREHENSIVE_PRICING_GUIDE_2029;

@@ -1,5 +1,5 @@
 import React from "react"
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe } from "lucide-react"
+import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe     } from "lucide-react";
 const IoTServices = () () => {
   const iotServices = [
   {
@@ -10,7 +10,7 @@ const IoTServices = () () => {
       featur,
   e: s: ["Hardware design", "Firmware development", "Sensor integration", "Power management"]
       ic,
-  o: n: Cog
+  o: n: Cog;
 },
   {
   tit,
@@ -20,7 +20,7 @@ const IoTServices = () () => {
       featur,
   e: s: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"]
       ic,
-  o: n: Wifi
+  o: n: Wifi;
 },
   {
   tit,
@@ -31,7 +31,7 @@ const IoTServices = () () => {
       featur,
   e: s: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"]
       ic,
-  o: n: Database
+  o: n: Database;
 },
   ]
   const iotTechnologies = [
@@ -81,15 +81,15 @@ const IoTServices = () () => {
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Cog className="w-4 h-4 mr-2"/>
-              IoT Services
+              IoT Services;
             </div>
             <h1 className="text-4xl m,
   d:text-6xl font-bold text-white mb-6">
-              Internet of Things
+              Internet of Things;
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Services</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Connect, monitor, and control your world with cutting-edge IoT solutions
+              Connect, monitor, and control your world with cutting-edge IoT solutions;
               that drive innovation and operational excellence.
             </p>
             <div className="flex flex-col,
@@ -98,11 +98,11 @@ const IoTServices = () () => {
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-                Explore Services
+                Explore Services;
               </a>
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Get Started
+                Get Started;
               </a>
             </div>
           </div>
@@ -118,10 +118,10 @@ const IoTServices = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our IoT Services
+              Our IoT Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              End-to-end IoT solutions designed to transform your business
+              End-to-end IoT solutions designed to transform your business;
               operations and unlock new possibilities.
             </p>
           </div>
@@ -162,10 +162,10 @@ const IoTServices = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              IoT Technologies We Use
+              IoT Technologies We Use;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge technologies and platforms to build robust
+              Cutting-edge technologies and platforms to build robust;
               scalable IoT solutions.
             </p>
           </div>
@@ -208,7 +208,7 @@ const IoTServices = () () => {
                 Why Choose IoT Solutions?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                IoT technology provides unprecedented opportunities to monitor
+                IoT technology provides unprecedented opportunities to monitor;
                 control, and optimize your business operations.
               </p>
               <ul className="space-y-3">
@@ -226,7 +226,7 @@ const IoTServices = () () => {
                 <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">IoT Expertise</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team has extensive experience building and deploying
+                  Our team has extensive experience building and deploying;
                   IoT solutions across various industries.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -251,7 +251,7 @@ const IoTServices = () () => {
             Ready to Connect Your World?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how IoT solutions can transform your business
+            Let's discuss how IoT solutions can transform your business;
             operations and unlock new opportunities.
           </p>
           <div className="flex flex-col,
@@ -260,11 +260,11 @@ const IoTServices = () () => {
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Get Started
+              Get Started;
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-              View All Services
+              View All Services;
             </a>
           </div>
         </div>
@@ -272,4 +272,4 @@ const IoTServices = () () => {
     </div>
   )
 }
-export default IoTServices
+export default IoTServices;

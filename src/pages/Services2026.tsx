@@ -1,36 +1,39 @@
+import { useCallback  } from "react";
 import React, { useMemo, useState } from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Search
-  ArrowRight
-  DollarSign
-  ExternalLink
-  Workflow
-  MessageSquare
-  Globe
-  Brain
-  Shield
-  Cloud
-  Cpu
-  Zap
-  Rocket
-  Heart
-  Lock
-  Users
-  BarChart3
-  Target
-  TrendingUp
-  Award
-  Star
-  CheckCircle
-  Clock
-  Phone
-  Mail
-  MapPin
-} from "lucide-react"
+  Search;
+  ArrowRight;
+  DollarSign;
+  ExternalLink;
+  Workflow;
+  MessageSquare;
+  Globe;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Zap;
+  Rocket;
+  Heart;
+  Lock;
+  Users;
+  BarChart3;
+  Target;
+  TrendingUp;
+  Award;
+  Star;
+  CheckCircle;
+  Clock;
+  Phone;
+  Mail;
+  MapPin;
+}
+}
+ } from "lucide-react";
 import SEO from "@/components/SEO"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026"
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026   } from "../data/innovativeMicroSaasServices2026";
 const,
   Services202: 6: React.FC = () () => {
   const [query, setQuery] = useState('')
@@ -93,8 +96,8 @@ const,
   },
   ]
   const filteredAndSorted = useMemo(() () => {
-    let filtered = allServices
-    // Filter by search query
+    let filtered = allServices;
+    // Filter by search query;
     if (query.trim()) {
   const q = query.trim().toLowerCase()
       filtered = filtered.filter(s =>
@@ -105,13 +108,13 @@ const,
       )
     }
 
-    // Filter by category
+    // Filter by category;
     if (if (selectedCategory !== 'all') {
   ) {
       filtered = filtered.filter(s => s.category === selectedCategory)
     }
 
-    // Sort services
+    // Sort services;
     switch (sortBy) {
   case 'price':
         return filtered.sort((a, b) => a.price - b.price)
@@ -125,10 +128,10 @@ const,
         return filtered.sort((a, b) () => {
   const aROI = parseInt(a.roi.split('-')[0])
           const bROI = parseInt(b.roi.split('-')[0])
-          return bROI - aROI
+          return bROI - aROI;
 })
       defau,
-  l: t: return filtered
+  l: t: return filtered;
 },
   }, [query, selectedCategory, sortBy, allServices])
 
@@ -136,7 +139,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO
+      <SEO;
         title="2026 Services - Zion Tech Group"
         description="Cutting-edge AI, Quantum Computing, Cybersecurity, IoT, and Micro SaaS solutions for 2026. Transform your business with revolutionary technology."
       />
@@ -156,7 +159,7 @@ const,
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -169,11 +172,11 @@ const,
             >
               <h1 className="text-5xl,
   s: m: text-7xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                2026 Services
+                2026 Services;
               </h1>
               <p className="mt-6 text-xl s,
   m:text-2xl text-slate-300 leading-relaxed">
-                Revolutionary AI, Quantum Computing, and Micro SaaS solutions that will transform your business in 2026 and beyond
+                Revolutionary AI, Quantum Computing, and Micro SaaS solutions that will transform your business in 2026 and beyond;
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-cyan-400/30">
@@ -203,7 +206,7 @@ const,
   }
             <div className="relative mb-8">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-6 w-6 text-slate-400" />
-              <input
+              <input;
                 value={query},
   }
                 onChange={(e) => setQuery(e.target.value)},
@@ -220,14 +223,14 @@ const,
   }
             <div className="flex flex-wrap gap-3 mb-8">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all duration-200 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300'
                       : 'bg-slate-800/50 border-slate-600/50 text-slate-300,
   hove: r: border-cyan-400/50 hove,
@@ -246,7 +249,7 @@ const,
             <div className="flex items-center gap-4 mb-8">
               <span className="text-slate-400 font-medium">Sort,
   b: y:</span>
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -273,10 +276,10 @@ const,
             <div className="text-center mb-12">
               <h2 className="text-3xl,
   s: m: text-4xl font-bold text-white mb-4">
-                Revolutionary Services
+                Revolutionary Services;
               </h2>
               <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-                Our most innovative and cutting-edge solutions that are reshaping industries
+                Our most innovative and cutting-edge solutions that are reshaping industries;
               </p>
             </div>
 
@@ -284,7 +287,7 @@ const,
   m: d:grid-cols-2 l,
   g:grid-cols-3">
               {featuredServices.map((service) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -343,13 +346,13 @@ const,
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <Link
+                    <Link;
                       to={`/services/${service.id}`}
                       className="className="inline-flex items-center text-cyan-400,
   hove: r: text-cyan-300 font-medium text-sm group-hov,
   e: r:underline";"
                     >
-                      Learn More
+                      Learn More;
                       <ArrowRight className="ml-1 w-4 h-4 group-hov,
   e: r:translate-x-1 transition-transform" />
                     </Link>
@@ -376,7 +379,7 @@ const,
               All Services ({filteredAndSorted.length})
             </h2>
             <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Explore our comprehensive portfolio of innovative solutions
+              Explore our comprehensive portfolio of innovative solutions;
             </p>
           </div>
 
@@ -384,7 +387,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3">
             {filteredAndSorted.map((service) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -444,13 +447,13 @@ const,
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <Link
+                  <Link;
                     to={`/services/${service.id}`}
                     className="className="inline-flex items-center text-cyan-400,
   hove: r: text-cyan-300 font-medium text-sm group-hov,
   e: r:underline";"
                   >
-                    View Details
+                    View Details;
                     <ArrowRight className="ml-1 w-4 h-4 group-hove,
   r:translate-x-1 transition-transform" />
                   </Link>
@@ -485,13 +488,13 @@ const,
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300 text-sm mb-3">Speak directly with our experts</p>
-                <a
+                <a;
                   href="t,
   e: l:+13024640950"
                   className="className="text-cyan-400,
   hove: r:text-cyan-300 font-medium text-sm";"
                 >
-                  +1 302 464 0950
+                  +1 302 464 0950;
                 </a>
               </div>
 
@@ -501,13 +504,13 @@ const,
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300 text-sm mb-3">Get detailed information and quotes</p>
-                <a
+                <a;
                   href="mail,
   t: o:kleber@ziontechgroup.com"
                   className="className="text-blue-400,
   hove: r:text-blue-300 font-medium text-sm";"
                 >
-                  kleber@ziontechgroup.com
+                  kleber@ziontechgroup.com;
                 </a>
               </div>
 
@@ -519,7 +522,7 @@ const,
                 <p className="text-slate-300 text-sm mb-3">Our headquarters location</p>
                 <p className="text-purple-400 font-medium text-sm">
                   364 E Main St STE 1008<br />
-                  Middletown DE 19709
+                  Middletown DE 19709;
                 </p>
               </div>
             </div>
@@ -571,23 +574,23 @@ const,
                   All services include enterprise support, custom integrations, and dedicated implementation teams.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
-                  <Link
+                  <Link;
                     to="/contact"
                     className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl,
   hove: r: from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105";"
                   >
-                    Get Started
+                    Get Started;
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
 
-                  <Link
+                  <Link;
                     to="/request-quote"
                     className="className="inline-flex items-center px-6 py-3 border border-cyan-400/40 text-cyan-300 font-semibold rounded-xl hove,
   r:bg-cyan-400/10 transition-all duration-200";"
                   >
-                    Request Quote
+                    Request Quote;
                   </Link>
                 </div>
               </div>
@@ -618,4 +621,4 @@ const,
     </div>
   )
 }
-export default Services2026
+export default Services2026;

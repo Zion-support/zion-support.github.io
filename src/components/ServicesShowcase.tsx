@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
-import { 
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
+import {
   Brain,
   Cloud, 
   Shield, 
@@ -37,8 +38,10 @@ import {
   TrendingUp,
   Star,
   CheckCircle,
-  ArrowRight
-} from "lucide-react"
+  ArrowRight;
+}
+}
+ } from "lucide-react";
 interface Service {
   ic,
   o: n: React.ComponentType<any>,tit,
@@ -49,7 +52,9 @@ interface Service {
   o: r: string,featur,
   e: s: string[]
   pricing?: string,
-  badge?: string
+  badge?: string;
+}
+}
 }
 
 export function ServicesShowcase() {
@@ -256,7 +261,7 @@ const,
   o: n: Monitor },
   ]
 const filteredServices = selectedCategory === 'all' 
-    ? services 
+    ? services;
     : services.filter(service => service.category === selectedCategory)
 const containerVariants = {
     hidd,
@@ -268,7 +273,7 @@ const containerVariants = {
   y: 1,transiti,
   o: n: {
         staggerChildre,
-  n: 0.1
+  n: 0.1;
       },
   },
   }
@@ -282,7 +287,7 @@ const itemVariants = {
   y: 1,y: 0,transiti,
   o: n: {
         duratio,
-  n: 0.5
+  n: 0.5;
       },
   },
   }
@@ -292,7 +297,7 @@ const itemVariants = {
   s: m: px-6 l,
   g:px-8">
         {/* Header */}
-        <motion.div 
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -309,17 +314,17 @@ const itemVariants = {
         >
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-            Comprehensive Technology Solutions
+            Comprehensive Technology Solutions;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Zion Tech Group delivers cutting-edge solutions across all aspects of modern technology. 
-            From AI and cloud infrastructure to sustainable IT practices, we're your strategic partner 
+            From AI and cloud infrastructure to sustainable IT practices, we're your strategic partner;
             for digital transformation.
           </p>
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div 
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -335,13 +340,13 @@ const itemVariants = {
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) () => {
-            const IconComponent = category.icon
+            const IconComponent = category.icon;
             return (
-              <button
+              <button;
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
+                  selectedCategory === category.id;
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
                     : 'bg-white/10 text-gray-300,
   hove: r:bg-white/20 border border-white/20'
@@ -355,7 +360,7 @@ const itemVariants = {
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -367,7 +372,7 @@ const itemVariants = {
   g:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
-            <motion.div
+            <motion.div;
               key={service.title}
               variants={itemVariants}
               whileHover={ y: -10, sca,
@@ -415,13 +420,13 @@ const itemVariants = {
                 </div>
               )},
   {/* CTA */}
-              <Link
+              <Link;
                 to={service.href}
                 className="inline-flex items-center text-cyan-400,
   hove: r: text-cyan-300 font-medium group-hove,
   r:translate-x-1 transition-all duration-300"
               >
-                Learn More
+                Learn More;
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </motion.div>
@@ -429,7 +434,7 @@ const itemVariants = {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -449,27 +454,27 @@ const itemVariants = {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let's discuss how Zion Tech Group can help you achieve your digital transformation goals 
+              Let's discuss how Zion Tech Group can help you achieve your digital transformation goals;
               with our comprehensive technology solutions.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full,
   hove: r:from-cyan-600,
   hove: r:to-blue-600,
   transform: hover:scale-105 transition-all duration-300"
               >
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hove,
   r:bg-cyan-500/10 transition-all duration-300"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </div>

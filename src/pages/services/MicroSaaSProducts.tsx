@@ -1,7 +1,7 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { Link } from "react-router-dom"
-import { CheckCircle2, ArrowRight, DollarSign, Globe, Shield, Rocket, Zap, Bot, Mail, BarChart3 } from "lucide-react"
+import { SEO     } from "@/components/SEO";
+import { Link     } from "react-router-dom";
+import { CheckCircle2, ArrowRight, DollarSign, Globe, Shield, Rocket, Zap, Bot, Mail, BarChart3     } from "lucide-react";
 type Plan = {
   na,
   m: e: string,pri,
@@ -238,7 +238,7 @@ export default function MicroSaaSProducts() {
           <Link to="/request-quote" className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-white,
   hove: r: from-cyan-400 hove,
   r:to-blue-500">
-            Request a Quote
+            Request a Quote;
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

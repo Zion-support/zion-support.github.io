@@ -1,12 +1,12 @@
 import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from "lucide-react"
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp   } from "lucide-react";
 import SEO from "@/components/SEO"
-import { PRICING_TIERS } from "@/data/advancedServices"
-// Service comparison data
+import { PRICING_TIERS   } from "@/data/advancedServices";
+// Service comparison data;
 const SERVICE_COMPARISONS = [
   {
   catego,
@@ -197,7 +197,7 @@ export default function ServicesComparisonPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-            Services Comparison & Pricing
+            Services Comparison & Pricing;
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Compare our comprehensive AI and IT services to find the perfect solution for your business. 
@@ -230,7 +230,7 @@ export default function ServicesComparisonPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
             <p className="text-zion-slate-light text-lg">
-              Flexible pricing designed to grow with your business
+              Flexible pricing designed to grow with your business;
             </p>
           </div>
           
@@ -254,7 +254,7 @@ export default function ServicesComparisonPage() {
                   </ul>
                   <Button className="w-full mt-6 bg-zion-cyan,
   hove: r:bg-zion-cyan-dark text-zion-blue font-semibold">
-                    Get Started
+                    Get Started;
                   </Button>
                 </CardContent>
               </Card>))}
@@ -269,7 +269,7 @@ export default function ServicesComparisonPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue mb-4">Detailed Service Comparisons</h2>
             <p className="text-zion-slate text-lg">
-              Compare features, capabilities, and pricing across all our services
+              Compare features, capabilities, and pricing across all our services;
             </p>
           </div>
 
@@ -288,7 +288,7 @@ export default function ServicesComparisonPage() {
                       <CardHeader>
                         <CardTitle className="text-2xl text-zion-blue">{service.name}</CardTitle>
                         <CardDescription>
-                          Compare features and pricing across different service tiers
+                          Compare features and pricing across different service tiers;
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
@@ -307,7 +307,7 @@ export default function ServicesComparisonPage() {
                             </ul>
                             <Button className="w-full mt-4 bg-zion-cyan,
   hove: r:bg-zion-cyan-dark text-zion-blue">
-                              Choose Starter
+                              Choose Starter;
                             </Button>
                           </div>
 
@@ -325,7 +325,7 @@ export default function ServicesComparisonPage() {
                             </ul>
                             <Button className="w-full mt-4 bg-zion-cyan,
   hove: r:bg-zion-cyan-dark text-zion-blue">
-                              Choose Professional
+                              Choose Professional;
                             </Button>
                           </div>
 
@@ -342,7 +342,7 @@ export default function ServicesComparisonPage() {
                             </ul>
                             <Button className="w-full mt-4 bg-zion-cyan,
   hove: r:bg-zion-cyan-dark text-zion-blue">
-                              Contact Sales
+                              Contact Sales;
                             </Button>
                           </div>
                         </div>
@@ -361,7 +361,7 @@ export default function ServicesComparisonPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-zion-slate-light text-lg">
-              Proven expertise and results that speak for themselves
+              Proven expertise and results that speak for themselves;
             </p>
           </div>
           
@@ -416,13 +416,13 @@ export default function ServicesComparisonPage() {
             <Button size="lg" className="bg-zion-cyan,
   hove: r: bg-zion-cyan-dark text-zion-blue font-semibold">
               <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan,
   hove: r:text-zion-blue">
               <Mail className="w-5 h-5 mr-2"/>
-              Email kleber@ziontechgroup.com
+              Email kleber@ziontechgroup.com;
             </Button>
           </div>
           

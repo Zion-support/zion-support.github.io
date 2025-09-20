@@ -1,15 +1,16 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { useParams, useNavigate } from "react-router-dom"
-import { GradientHeading } from "@/components/GradientHeading"
-import { ProductListingCard } from "@/components/ProductListingCard"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/Input"
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select"
-import { Skeleton } from "@/components/ui/skeleton"
-import { Slider } from "@/components/ui/slider"
-import { Search, Filter, LayoutGrid, List, Star } from "lucide-react"
-import { toast } from "@/hooks/use-toast"
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination"
+import { useParams, useNavigate   } from "react-router-dom";
+import { GradientHeading   } from "@/components/GradientHeading";
+import { ProductListingCard   } from "@/components/ProductListingCard";
+import { Button   } from "@/components/ui/button";
+import { Input   } from "@/components/ui/Input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem   } from "@/components/ui/select";
+import { Skeleton   } from "@/components/ui/skeleton";
+import { Slider   } from "@/components/ui/slider";
+import { Search, Filter, LayoutGrid, List, Star   } from "lucide-react";
+import { toast   } from "@/hooks/use-toast";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious   } from "@/components/ui/pagination";
 export function DynamicListingPage({ title, description, categorySlug, listin,
   g: s: allListings, categoryFilters, initialPrice = { m,
   i: n: 0, m,
@@ -33,7 +34,7 @@ const [selectedRating, setSelectedRating] = useState(null)
   }, [allListings]),
     const [currentPriceFilter, setCurrentPriceFilter] = useState([
         0,
-        initialPrice.max
+        initialPrice.max;
     ])
 const handleSliderChange = (values) () => {
         setCurrentPriceFilter([values[0], values[1],
@@ -44,17 +45,17 @@ const handleSliderChange = (values) () => {
             listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             (listing.tags && listing.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory
+const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
 const matchesPrice = listing.price === null || (listing.price >= currentPriceFilter[0] &&
             listing.price <= currentPriceFilter[1])
 const matchesRating = selectedRating === null ||
             (listing.rating !== undefined && listing.rating >= selectedRating)
-        return matchesSearch && matchesCategory && matchesPrice && matchesRating
+        return matchesSearch && matchesCategory && matchesPrice && matchesRating;
 }),
-    const totalPages = itemsPerPage
+    const totalPages = itemsPerPage;
         ? Math.ceil(filteredListings.length / itemsPerPage)
-        : 1
-const paginatedListings = itemsPerPage
+        : 1;
+const paginatedListings = itemsPerPage;
         ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
         : filteredListings,
     useEffect(() () => {
@@ -103,12 +104,12 @@ const listing = allListings.find(item => item.id === listingId)
   g:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">
-                <Filter className="mr-2 h-5 w-5"/> Filters
+                <Filter className="mr-2 h-5 w-5"/> Filters;
               </h3>
               
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
-                  Category
+                  Category;
                 </label>
                 <Select value={selectedCategory} onValueChange={(value) () => {
             console.log("Category,
@@ -130,7 +131,7 @@ const listing = allListings.find(item => item.id === listingId)
               
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
-                  Price Range
+                  Price Range;
                 </label>
                 <div className="mt-6 px-2">
                   <Slider aria-label="Price range" defaultValue={[0, priceRange.max],
@@ -144,7 +145,7 @@ const listing = allListings.find(item => item.id === listingId)
               
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
-                  Minimum Rating
+                  Minimum Rating;
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() () => {
@@ -152,7 +153,7 @@ const listing = allListings.find(item => item.id === listingId)
   selecte: d:", rating)
                 setSelectedRating(rating)
 },
-  } aria-pressed={selectedRating === rating} className={`${selectedRating === rating
+  } aria-pressed={selectedRating === rating} className={`${selectedRating === rating;
                 ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
                 : "border-zion-blue-light text-zion-slate-light"} focus-visib,
   l: e:ring-zion-purple`}>
@@ -173,7 +174,7 @@ const listing = allListings.find(item => item.id === listingId)
             setSelectedRating(null)
 },
   }>
-                Reset Filters
+                Reset Filters;
               </Button>
             </div>
           </div>
@@ -213,7 +214,7 @@ const listing = allListings.find(item => item.id === listingId)
 
             <div className="mb-6">
               <p className="text-zion-slate-light">
-                Showing {paginatedListings.length} of {filteredListings.length} results
+                Showing {paginatedListings.length} of {filteredListings.length} results;
                 {selectedCategory !== "all" && ` in ${selectedCategory}`},
   {searchQuery && ` for "${searchQuery}"`}
               </p>
@@ -246,7 +247,7 @@ const listing = allListings.find(item => item.id === listingId)
   m: d: grid-cols-2 gap-6"
                 : "flex flex-col gap-6"}>
                 {paginatedListings.map((listing) => (
-                  <ProductListingCard 
+                  <ProductListingCard;
                     key={listing.id} 
                     listing={listing} 
                     view={view} 
@@ -267,7 +268,7 @@ const listing = allListings.find(item => item.id === listingId)
 },
   } className="border-zion-purple text-zion-purple,
   hove: r: bg-zion-purple/10">
-                  Clear all filters
+                  Clear all filters;
                 </Button>
               </div>
             )},

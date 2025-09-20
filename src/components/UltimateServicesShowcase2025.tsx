@@ -1,13 +1,16 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle } from "lucide-react"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle   } from "lucide-react";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025   } from "../data/innovativeMicroSaasServices2025";
 interface ServiceContact {
   mobi,
   l: e: string,ema,
   i: l: string,addre,
   s: s: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
 
 const,
@@ -18,7 +21,7 @@ const [selectedService, setSelectedService] = useState<any>(null),
   const [sortBy, setSortBy] = useState('rating')
 const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
+  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 const categories = [
     { id: 'all', na,
   m: e: 'All Services', cou,
@@ -77,26 +80,26 @@ const categories = [
   o: n: '🌍' },
   ]
 const filteredServices = allServices.filter(service () => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 }),
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
     switch (sortBy) {
       case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'reviews':
-        return b.reviews - a.reviews
+        return b.reviews - a.reviews;
       case 'name':
         return a.name.localeCompare(b.name)
       defau,
-  l: t: return 0
+  l: t: return 0;
     },
   })
 const handleServiceClick = (servi,
@@ -117,7 +120,7 @@ const closeModal = () () => {
   y: 1,transiti,
   o: n: {
         staggerChildre,
-  n: 0.1
+  n: 0.1;
       },
   },
   }
@@ -144,7 +147,7 @@ const itemVariants = {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Ultimate Services Showcase 2025
+            Ultimate Services Showcase 2025;
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             Discover our comprehensive portfolio of innovative micro SAAS services, IT solutions, and AI-powered platforms. 
@@ -177,7 +180,7 @@ const itemVariants = {
   hove: r:from-cyan-600,
   hove: r:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hove,
   r:scale-105">
-                Visit Our Website
+                Visit Our Website;
               </a>
             </div>
           </div>
@@ -189,7 +192,7 @@ const itemVariants = {
           <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-600/30">
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI & Machine Learning</h3>
             <p className="text-gray-300 mb-4">
-              Advanced artificial intelligence solutions for business automation and insights
+              Advanced artificial intelligence solutions for business automation and insights;
             </p>
             <ul className="text-gray-400 space-y-2">
               <li>• Predictive Analytics</li>
@@ -202,7 +205,7 @@ const itemVariants = {
           <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-600/30">
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cloud & DevOps</h3>
             <p className="text-gray-300 mb-4">
-              Scalable cloud infrastructure and modern development practices
+              Scalable cloud infrastructure and modern development practices;
             </p>
             <ul className="text-gray-400 space-y-2">
               <li>• Cloud Migration</li>
@@ -215,7 +218,7 @@ const itemVariants = {
           <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-600/30">
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cybersecurity</h3>
             <p className="text-gray-300 mb-4">
-              Comprehensive security solutions to protect your digital assets
+              Comprehensive security solutions to protect your digital assets;
             </p>
             <ul className="text-gray-400 space-y-2">
               <li>• Threat Detection</li>
@@ -228,7 +231,7 @@ const itemVariants = {
 
         {/* CTA Section */}
         <div className="text-center mt-12">
-          <a 
+          <a;
             href="/contact" 
             className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500,
   hove: r: from-cyan-600,
@@ -236,7 +239,7 @@ const itemVariants = {
   transform: hover:scale-105 shadow-lg hove,
   r:shadow-cyan-500/25"
           >
-            Get Started Today
+            Get Started Today;
           </a>
         </div>
       </div>
@@ -246,7 +249,7 @@ const itemVariants = {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -259,20 +262,20 @@ const itemVariants = {
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-              Zion Tech Group
+              Zion Tech Group;
               <span className="block text-4xl,
   m: d:text-5xl mt-2">
-                Ultimate Services 2025
+                Ultimate Services 2025;
               </span>
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
-              Discover our revolutionary portfolio of cutting-edge micro SAAS solutions, AI-powered innovations, and quantum computing services designed to transform your business and drive competitive advantage in the digital age
+              Discover our revolutionary portfolio of cutting-edge micro SAAS solutions, AI-powered innovations, and quantum computing services designed to transform your business and drive competitive advantage in the digital age;
             </p>
           </motion.div>
 
           {/* Key Statistics */}
-          <motion.div
+          <motion.div;
             className="grid grid-cols-2,
   m: d:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12"
             variants={containerVariants}
@@ -306,7 +309,7 @@ const itemVariants = {
           </motion.div>
 
           {/* Search and Filter */}
-          <motion.div
+          <motion.div;
             className="max-w-4xl mx-auto mb-8"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -323,11 +326,11 @@ const itemVariants = {
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
-              Ultimate Services Showcase 2025
+              Ultimate Services Showcase 2025;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive portfolio of 40+ cutting-edge AI, quantum computing, and emerging technology solutions designed to transform your business and drive unprecedented growth
+              Discover our comprehensive portfolio of 40+ cutting-edge AI, quantum computing, and emerging technology solutions designed to transform your business and drive unprecedented growth;
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -382,7 +385,7 @@ const itemVariants = {
   s: m: px-6,
   l: g:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="max-w-4xl mx-auto"
             initial={ opacit,
   y: 0, y: 20 },
@@ -398,7 +401,7 @@ const itemVariants = {
   }
           >
             <div className="relative mb-6">
-              <input
+              <input;
                 type="text"
                 placeholder="Search services, features, or technologies..."
                 value={searchTerm}
@@ -417,7 +420,7 @@ const itemVariants = {
               <div className="flex items-center gap-2">
                 <label className="text-sm text-gray-300">Sort,
   b: y:</label>
-                <select
+                <select;
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="glass border border-zion-cyan/20 rounded-lg px-3 py-2 text-white,
@@ -432,7 +435,7 @@ const itemVariants = {
               </div>
 
               <div className="flex items-center gap-2">
-                <button
+                <button;
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'glass text-gray-300,
   hove: r:text-white'}`}
@@ -441,7 +444,7 @@ const itemVariants = {
                     <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                   </svg>
                 </button>
-                <button
+                <button;
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'glass text-gray-300,
   hove: r:text-white'}`}
@@ -455,7 +458,7 @@ const itemVariants = {
           </motion.div>
 
           {/* Category Filter */}
-          <motion.div
+          <motion.div;
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -469,11 +472,11 @@ const itemVariants = {
   }
           >
             {categories.map((category) => (
-              <motion.button
+              <motion.button;
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 ${
-                  activeCategory === category.id
+                  activeCategory === category.id;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'glass border border-white/20 text-gray-300,
   hove: r: bg-white/10 hove,
@@ -499,7 +502,7 @@ const itemVariants = {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             className={viewMode === 'grid'
               ? "grid grid-cols-1,
   m: d:grid-cols-2 l,
@@ -511,7 +514,7 @@ const itemVariants = {
             animate="visible"
           >
             {sortedServices.map((service, index) => (
-              <motion.div
+              <motion.div;
                 key={service.id}
                 variants={itemVariants}
                 className={viewMode === 'grid'
@@ -569,7 +572,7 @@ const itemVariants = {
   {service.features.length > 3 && (
                       <li className="text-sm text-gray-400 flex items-center">
                         <span className="w-3 h-3 bg-gray-400 rounded-full mr-2 flex-shrink-0"></span>
-                        +{service.features.length - 3} more features
+                        +{service.features.length - 3} more features;
                       </li>
                     )}
                   </ul>
@@ -597,7 +600,7 @@ const itemVariants = {
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             className="text-center mb-16"
             initial={ opacit,
   y: 0, y: 30 },
@@ -617,11 +620,11 @@ const itemVariants = {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results and competitive advantage
+              We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results and competitive advantage;
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8"
@@ -662,7 +665,7 @@ const itemVariants = {
       {/* Service Modal */}
       <AnimatePresence>
         {selectedService && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0 },
   }
@@ -675,7 +678,7 @@ const itemVariants = {
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
-            <motion.div
+            <motion.div;
               initial={ sca,
   l: e: 0.8, opaci,
   t: y: 0 },
@@ -693,7 +696,7 @@ const itemVariants = {
             >
               <div className="flex items-start justify-between mb-6">
                 <div className="text-6xl">{selectedService.icon}</div>
-                <button
+                <button;
                   onClick={closeModal}
                   className="text-gray-400,
   hove: r:text-white transition-colors duration-300"
@@ -763,11 +766,11 @@ const itemVariants = {
                 <button className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-lg font-semibold,
   hove: r:from-zion-cyan-dark,
   hove: r:to-zion-purple-dark transition-all duration-300">
-                  Get Started
+                  Get Started;
                 </button>
                 <button className="flex-1 glass border border-zion-cyan/30 text-zion-cyan px-6 py-3 rounded-lg font-semibold hove,
   r:bg-zion-cyan/10 transition-all duration-300">
-                  Contact Sales
+                  Contact Sales;
                 </button>
               </div>
             </motion.div>
@@ -778,4 +781,4 @@ const itemVariants = {
   )
 },
 
-export default UltimateServicesShowcase2025
+export default UltimateServicesShowcase2025;

@@ -1,4 +1,4 @@
-import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, Mail } from "lucide-react"
+import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, Mail     } from "lucide-react";
 export default function MobileSurvey() {
   const features = [
   'Mobile-first NPS/CSAT/CES templatesQR code and link campaigns'
@@ -30,7 +30,7 @@ export default function MobileSurvey() {
       <section className="bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6">
-            <Smartphone className="w-4 h-4 mr-2"/> Capture feedback anywhere, anytime
+            <Smartphone className="w-4 h-4 mr-2"/> Capture feedback anywhere, anytime;
           </div>
           <h1 className="text-4xl,
   m: d:text-6xl font-bold mb-4">Mobile Feedback Surveys</h1>

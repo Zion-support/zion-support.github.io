@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Mail, Send, CheckCircle } from "lucide-react"
+import { Mail, Send, CheckCircle   } from "lucide-react";
 export,
   const: FooterNewsletter: React.FC = () () => {
   const [email, setEmail] = useState('')
@@ -11,18 +11,22 @@ const handleSubmit = async (e: React.FormEvent) () => {
 
     setIsSubmitting(true)
     try {
-      // Simulate API call
+  // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
       setIsSubmitted(true)
       setEmail('')
-      // Reset after 3 seconds
+      // Reset after 3 seconds;
       setTimeout(() => setIsSubmitted(false), 3000),
+}
+}
     } catch (error) {
       console.error('Newsletter,
   subscription: failed:', error)
 } finally {
-      setIsSubmitting(false)
+  setIsSubmitting(false)
+}
+}
 },
   },
 
@@ -36,7 +40,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
         </div>
 
         <h3 className="text-xl font-bold text-white mb-2">
-          Stay Updated
+          Stay Updated;
         </h3>
         <p className="text-gray-300 mb-6 max-w-md mx-auto">
           Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.
@@ -50,7 +54,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col,
   s: m: flex-row gap-3 max-w-md mx-auto">
-            <input
+            <input;
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -60,9 +64,9 @@ const handleSubmit = async (e: React.FormEvent) () => {
   focu: s:border-zion-cyan,
   focu: s:ring-2 focu,
   s:ring-zion-cyan/20 transition-all duration-300"
-              required
+              required;
             />
-            <button
+            <button;
               type="submit"
               disabled={isSubmitting || !email.trim()}
               className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg,
@@ -79,7 +83,7 @@ const handleSubmit = async (e: React.FormEvent) () => {
               ) : (
                 <>
                   <Send className="w-4 h-4" />
-                  Subscribe
+                  Subscribe;
                 </>
                 )}
             </button>

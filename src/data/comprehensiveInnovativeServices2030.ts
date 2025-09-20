@@ -1,7 +1,7 @@
-import { ProductListing } from "@/types/listings"
+import { ProductListing   } from "@/types/listings";
 export,
   const: COMPREHENSIVE_INNOVATIVE_SERVICES_2030: ProductListing[] = [
-  // AI & Business Intelligence
+  // AI & Business Intelligence;
   {
     i,
   d: "ai-powered-business-intelligence-suite",
@@ -68,7 +68,7 @@ export,
   n: s: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Microsoft Azure"],
   },
 
-  // NEW INNOVATIVE SERVICES - AI & Autonomous Systems
+  // NEW INNOVATIVE SERVICES - AI & Autonomous Systems;
   {
     id: "ai-autonomous-supply-chain-orchestrator",tit,
   l: e: "AI Autonomous Supply Chain Orchestrator",descripti,
@@ -804,7 +804,7 @@ export,
   n: s: ["IoT Sensors", "Energy Management", "Weather Systems", "Compliance Tools", "Analytics Platforms"],
   },
 
-  // Advanced Cybersecurity Solutions
+  // Advanced Cybersecurity Solutions;
   {
     id: "zero-trust-cybersecurity-platform",tit,
   l: e: "Zero-Trust Cybersecurity Platform",descripti,
@@ -851,7 +851,7 @@ export,
   n: s: ["Active Directory", "Okta", "Duo", "CrowdStrike", "Splunk", "Jira", "ServiceNow"],
   },
 
-  // Cloud Infrastructure & DevOps
+  // Cloud Infrastructure & DevOps;
   {
     id: "intelligent-cloud-infrastructure-platform",tit,
   l: e: "Intelligent Cloud Infrastructure Platform",descripti,
@@ -898,7 +898,7 @@ export,
   n: s: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Jenkins", "GitLab"],
   },
 
-  // AI-Powered Marketing Automation
+  // AI-Powered Marketing Automation;
   {
     id: "ai-marketing-automation-suite",tit,
   l: e: "AI Marketing Automation Suite",descripti,
@@ -945,7 +945,7 @@ export,
   n: s: ["Salesforce", "HubSpot", "Mailchimp", "Google Analytics", "Facebook Ads", "Google Ads", "Shopify"],
   },
 
-  // Quantum Computing Solutions
+  // Quantum Computing Solutions;
   {
     id: "quantum-computing-optimization-platform",tit,
   l: e: "Quantum Computing Optimization Platform",descripti,
@@ -992,7 +992,7 @@ export,
   n: s: ["IBM Quantum", "AWS Braket", "Azure Quantum", "Python", "Qiskit", "Cirq", "PennyLane"],
   },
 
-  // IoT & Edge Computing
+  // IoT & Edge Computing;
   {
     id: "iot-edge-computing-platform",tit,
   l: e: "IoT Edge Computing Platform",descripti,
@@ -1039,7 +1039,7 @@ export,
   n: s: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "HTTP", "Modbus"],
   },
 
-  // Blockchain & Web3 Solutions
+  // Blockchain & Web3 Solutions;
   {
     id: "enterprise-blockchain-platform",tit,
   l: e: "Enterprise Blockchain Platform",descripti,
@@ -1086,7 +1086,7 @@ export,
   n: s: ["Ethereum", "Hyperledger", "Corda", "Web3.js", "MetaMask", "WalletConnect", "IPFS"],
   },
 
-  // AI-Powered Healthcare Solutions
+  // AI-Powered Healthcare Solutions;
   {
     id: "ai-healthcare-diagnostic-platform",tit,
   l: e: "AI Healthcare Diagnostic Platform",descripti,
@@ -1133,7 +1133,7 @@ export,
   n: s: ["Epic", "Cerner", "PACS", "DICOM", "HL7", "FHIR", "HIPAA"],
   },
 
-  // Financial Technology Solutions
+  // Financial Technology Solutions;
   {
     id: "ai-powered-fintech-platform",tit,
   l: e: "AI-Powered FinTech Platform",descripti,
@@ -1180,7 +1180,7 @@ export,
   n: s: ["Stripe", "Plaid", "Square", "PayPal", "Bank APIs", "Trading APIs", "Compliance Tools"],
   },
 
-  // Digital Twin Solutions
+  // Digital Twin Solutions;
   {
     id: "digital-twin-platform",tit,
   l: e: "Digital Twin Platform",descripti,
@@ -1227,7 +1227,7 @@ export,
   n: s: ["Siemens", "GE Digital", "PTC", "Unity", "Unreal Engine", "CAD Software", "IoT Platforms"],
   },
 
-  // Space Technology Solutions
+  // Space Technology Solutions;
   {
     id: "space-tech-analytics-platform",tit,
   l: e: "Space Technology Analytics Platform",descripti,
@@ -1274,7 +1274,7 @@ export,
   n: s: ["NASA APIs", "ESA APIs", "Satellite APIs", "Ground Station APIs", "Space Weather APIs", "Orbital Mechanics"],
   },
 
-  // Sustainable Technology Solutions
+  // Sustainable Technology Solutions;
   {
     id: "sustainable-tech-platform",tit,
   l: e: "Sustainable Technology Platform",descripti,
@@ -1321,7 +1321,7 @@ export,
   n: s: ["ERP Systems", "Energy Management", "Building Management", "Fleet Management", "Supply Chain", "ESG Reporting"],
   },
 
-  // AI-Powered Content Creation
+  // AI-Powered Content Creation;
   {
     id: "ai-content-creation-suite",tit,
   l: e: "AI Content Creation Suite",descripti,
@@ -1368,7 +1368,7 @@ export,
   n: s: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media APIs", "SEO Tools", "CMS Platforms"],
   },
 
-  // AI-Powered Customer Support
+  // AI-Powered Customer Support;
   {
     id: "ai-customer-support-platform",tit,
   l: e: "AI Customer Support Platform",descripti,
@@ -1415,7 +1415,7 @@ export,
   n: s: ["Zendesk", "Intercom", "Slack", "Microsoft Teams", "CRM Systems", "Knowledge Base", "Social Media"],
   },
 
-  // AI-Powered HR Solutions
+  // AI-Powered HR Solutions;
   {
     id: "ai-hr-management-platform",tit,
   l: e: "AI HR Management Platform",descripti,
@@ -1462,7 +1462,7 @@ export,
   n: s: ["LinkedIn", "Indeed", "Glassdoor", "Slack", "Microsoft Teams", "Google Workspace", "Payroll Systems"],
   },
 
-  // AI-Powered Legal Tech Platform
+  // AI-Powered Legal Tech Platform;
   {
     id: "ai-legal-tech-platform",tit,
   l: e: "AI Legal Tech Platform",descripti,
@@ -1509,7 +1509,7 @@ export,
   n: s: ["DocuSign", "Clio", "PracticePanther", "Microsoft Office", "Adobe Acrobat", "Legal Databases"],
   },
 
-  // AI-Powered Healthcare Diagnostics
+  // AI-Powered Healthcare Diagnostics;
   {
     id: "ai-healthcare-diagnostics-platform",tit,
   l: e: "AI Healthcare Diagnostics Platform",descripti,
@@ -1556,7 +1556,7 @@ export,
   n: s: ["Epic", "Cerner", "PACS Systems", "EHR Platforms", "Medical Devices", "Research Databases"],
   },
 
-  // AI-Powered Research & Discovery
+  // AI-Powered Research & Discovery;
   {
     id: "ai-research-discovery-platform",tit,
   l: e: "AI Research & Discovery Platform",descripti,
@@ -1603,7 +1603,7 @@ export,
   n: s: ["PubMed", "arXiv", "ResearchGate", "Google Scholar", "Academic Databases", "Lab Management Systems"],
   },
 
-  // AI-Powered Green Technology
+  // AI-Powered Green Technology;
   {
     id: "ai-green-tech-platform",tit,
   l: e: "AI Green Technology Platform",descripti,
@@ -1650,7 +1650,7 @@ export,
   n: s: ["Solar Panels", "Wind Turbines", "Smart Meters", "IoT Sensors", "Energy Management Systems", "Carbon Tracking"],
   },
 
-  // AI-Powered Metaverse Platform
+  // AI-Powered Metaverse Platform;
   {
     id: "ai-metaverse-platform",tit,
   l: e: "AI Metaverse Platform",descripti,
@@ -1697,7 +1697,7 @@ export,
   n: s: ["VR Headsets", "AR Devices", "Unity", "Unreal Engine", "Blockchain", "NFT Platforms", "Social Media"],
   },
 
-  // AI-Powered Space Technology
+  // AI-Powered Space Technology;
   {
     id: "ai-space-tech-platform",tit,
   l: e: "AI Space Technology Platform",descripti,
@@ -1744,7 +1744,7 @@ export,
   n: s: ["Satellite Systems", "Ground Stations", "Mission Control", "Space Data APIs", "Astronomical Databases", "Launch Systems"],
   },
 
-  // AI-Powered Financial Technology
+  // AI-Powered Financial Technology;
   {
     id: "ai-fintech-platform",tit,
   l: e: "AI FinTech Platform",descripti,
@@ -1791,7 +1791,7 @@ export,
   n: s: ["Banking APIs", "Payment Processors", "Trading Platforms", "CRM Systems", "Accounting Software", "Regulatory Compliance"],
   },
 
-  // AI-Powered Supply Chain Optimization
+  // AI-Powered Supply Chain Optimization;
   {
     id: "ai-supply-chain-platform",tit,
   l: e: "AI Supply Chain Optimization Platform",descripti,
@@ -1838,7 +1838,7 @@ export,
   n: s: ["ERP Systems", "WMS", "TMS", "E-commerce Platforms", "Supplier Networks", "Logistics Providers"],
   },
 
-  // AI-Powered Quality Assurance
+  // AI-Powered Quality Assurance;
   {
     id: "ai-quality-assurance-platform",tit,
   l: e: "AI Quality Assurance Platform",descripti,
@@ -1885,7 +1885,7 @@ export,
   n: s: ["CI/CD Pipelines", "Jira", "TestRail", "GitHub", "Azure DevOps", "Jenkins", "Testing Frameworks"],
   },
 
-  // AI-Powered Legal Document Analysis
+  // AI-Powered Legal Document Analysis;
   {
     id: "ai-legal-document-analyzer",tit,
   l: e: "AI Legal Document Analyzer",descripti,
@@ -1932,7 +1932,7 @@ export,
   n: s: ["Legal Management Systems", "Document Management", "E-signature Platforms", "Compliance Tools", "Case Management"],
   },
 
-  // AI-Powered Real Estate Analytics
+  // AI-Powered Real Estate Analytics;
   {
     id: "ai-real-estate-analytics-platform",tit,
   l: e: "AI Real Estate Analytics Platform",descripti,
@@ -1979,7 +1979,7 @@ export,
   n: s: ["MLS Systems", "Property Databases", "Financial Calculators", "CRM Systems", "Marketing Platforms"],
   },
 
-  // AI-Powered Energy Management
+  // AI-Powered Energy Management;
   {
     id: "ai-energy-management-platform",tit,
   l: e: "AI Energy Management Platform",descripti,
@@ -2026,7 +2026,7 @@ export,
   n: s: ["Smart Meters", "Solar Panels", "Battery Systems", "Building Management", "IoT Sensors"],
   },
 
-  // AI-Powered Education Platform
+  // AI-Powered Education Platform;
   {
     id: "ai-education-platform",tit,
   l: e: "AI Education Platform",descripti,
@@ -2073,7 +2073,7 @@ export,
   n: s: ["LMS Systems", "Video Platforms", "Assessment Tools", "Student Information Systems", "Payment Gateways"],
   },
 
-  // AI-Powered Manufacturing Optimization
+  // AI-Powered Manufacturing Optimization;
   {
     id: "ai-manufacturing-optimization",tit,
   l: e: "AI Manufacturing Optimization Platform",descripti,
@@ -2120,7 +2120,7 @@ export,
   n: s: ["ERP Systems", "MES", "SCADA", "IoT Devices", "Quality Management", "Maintenance Systems"],
   },
 
-  // AI-Powered Retail Analytics
+  // AI-Powered Retail Analytics;
   {
     id: "ai-retail-analytics-platform",tit,
   l: e: "AI Retail Analytics Platform",descripti,
@@ -2167,7 +2167,7 @@ export,
   n: s: ["POS Systems", "E-commerce Platforms", "CRM Systems", "Inventory Management", "Marketing Tools"],
   },
 
-  // AI-Powered Transportation Optimization
+  // AI-Powered Transportation Optimization;
   {
     id: "ai-transportation-optimization",tit,
   l: e: "AI Transportation Optimization Platform",descripti,
@@ -2214,7 +2214,7 @@ export,
   n: s: ["GPS Systems", "Fleet Management", "TMS", "Fuel Cards", "Maintenance Systems"],
   },
 
-  // AI-Powered Agriculture Platform
+  // AI-Powered Agriculture Platform;
   {
     id: "ai-agriculture-platform",tit,
   l: e: "AI Agriculture Platform",descripti,
@@ -2261,7 +2261,7 @@ export,
   n: s: ["IoT Sensors", "Drone Systems", "Weather APIs", "Soil Analysis", "Irrigation Systems"],
   },
 
-  // AI-Powered Construction Management
+  // AI-Powered Construction Management;
   {
     id: "ai-construction-management",tit,
   l: e: "AI Construction Management Platform",descripti,
@@ -2308,7 +2308,7 @@ export,
   n: s: ["BIM Software", "Project Management", "Safety Systems", "IoT Sensors", "Drones"],
   },
 
-  // AI-Powered Hospitality Management
+  // AI-Powered Hospitality Management;
   {
     id: "ai-hospitality-management",tit,
   l: e: "AI Hospitality Management Platform",descripti,
@@ -2355,7 +2355,7 @@ export,
   n: s: ["PMS", "Booking Engines", "CRM Systems", "Payment Gateways", "Review Platforms"],
   },
 
-  // AI-Powered Insurance Platform
+  // AI-Powered Insurance Platform;
   {
     id: "ai-insurance-platform",tit,
   l: e: "AI Insurance Platform",descripti,
@@ -2402,7 +2402,7 @@ export,
   n: s: ["Core Systems", "Claims Management", "Policy Management", "Billing Systems", "CRM"],
   },
 
-  // AI-Powered Media Analytics
+  // AI-Powered Media Analytics;
   {
     id: "ai-media-analytics-platform",tit,
   l: e: "AI Media Analytics Platform",descripti,
@@ -2449,7 +2449,7 @@ export,
   n: s: ["Social Media", "Video Platforms", "Content Management", "Analytics Tools", "Marketing Platforms"],
   },
 
-  // AI-Powered Gaming Analytics
+  // AI-Powered Gaming Analytics;
   {
     id: "ai-gaming-analytics-platform",tit,
   l: e: "AI Gaming Analytics Platform",descripti,
@@ -2496,7 +2496,7 @@ export,
   n: s: ["Game Engines", "Analytics Platforms", "Payment Gateways", "Social Platforms", "Advertising Networks"],
   },
 
-  // AI-Powered Event Management
+  // AI-Powered Event Management;
   {
     id: "ai-event-management-platform",tit,
   l: e: "AI Event Management Platform",descripti,
@@ -2543,7 +2543,7 @@ export,
   n: s: ["Ticketing Systems", "CRM Platforms", "Marketing Tools", "Payment Gateways", "Social Media"],
   },
 
-  // AI-Powered Talent Acquisition
+  // AI-Powered Talent Acquisition;
   {
     id: "ai-talent-acquisition-platform",tit,
   l: e: "AI Talent Acquisition Platform",descripti,
@@ -2590,7 +2590,7 @@ export,
   n: s: ["ATS Systems", "Job Boards", "Social Media", "Assessment Tools", "Background Check Services"],
   },
 
-  // AI-Powered Compliance Management
+  // AI-Powered Compliance Management;
   {
     id: "ai-compliance-management-platform",tit,
   l: e: "AI Compliance Management Platform",descripti,
@@ -2637,7 +2637,7 @@ export,
   n: s: ["Regulatory Databases", "Risk Management", "Document Management", "Reporting Tools", "Audit Systems"],
   },
 
-  // AI-Powered Innovation Management
+  // AI-Powered Innovation Management;
   {
     id: "ai-innovation-management-platform",tit,
   l: e: "AI Innovation Management Platform",descripti,
@@ -2684,7 +2684,7 @@ export,
   n: s: ["Project Management", "Collaboration Tools", "Analytics Platforms", "Patent Databases", "Research Tools"],
   },
 
-  // AI-Powered Contract Analysis
+  // AI-Powered Contract Analysis;
   {
     id: "ai-powered-contract-analysis",tit,
   l: e: "AI-Powered Contract Analysis Platform",descripti,
@@ -2731,7 +2731,7 @@ export,
   n: s: ["Document Management", "Legal Practice Management", "E-signature Platforms", "Compliance Tools", "Analytics Platforms"],
   },
 
-  // AI-Powered Supply Chain Optimization
+  // AI-Powered Supply Chain Optimization;
   {
     id: "ai-supply-chain-optimization",tit,
   l: e: "AI-Powered Supply Chain Optimization Platform",descripti,
@@ -2778,7 +2778,7 @@ export,
   n: s: ["ERP Systems", "WMS", "TMS", "E-commerce Platforms", "3PL Systems", "IoT Devices"],
   },
 
-  // AI-Powered Cybersecurity Threat Intelligence
+  // AI-Powered Cybersecurity Threat Intelligence;
   {
     id: "ai-cybersecurity-threat-intelligence",tit,
   l: e: "AI-Powered Cybersecurity Threat Intelligence Platform",descripti,
@@ -2825,7 +2825,7 @@ export,
   n: s: ["SIEM Systems", "EDR Platforms", "Firewall Management", "Vulnerability Scanners", "Compliance Tools"],
   },
 
-  // AI-Powered Healthcare Diagnostics
+  // AI-Powered Healthcare Diagnostics;
   {
     id: "ai-healthcare-diagnostics",tit,
   l: e: "AI-Powered Healthcare Diagnostics Platform",descripti,
@@ -2872,4 +2872,4 @@ export,
   n: s: ["PACS Systems", "RIS", "EHR", "DICOM", "HL7", "Medical Devices"],
   },
   ]
-export default COMPREHENSIVE_INNOVATIVE_SERVICES_2030
+export default COMPREHENSIVE_INNOVATIVE_SERVICES_2030;

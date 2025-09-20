@@ -1,22 +1,25 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Newspaper
-  Calendar
-  User
-  ArrowRight
-  Download
-  Mail
-  Phone
-  Globe
-  Award
-  TrendingUp
-  Users
-  Zap
-  Shield
-  Brain
-  Rocket
-} from "lucide-react"
+  Newspaper;
+  Calendar;
+  User;
+  ArrowRight;
+  Download;
+  Mail;
+  Phone;
+  Globe;
+  Award;
+  TrendingUp;
+  Users;
+  Zap;
+  Shield;
+  Brain;
+  Rocket;
+}
+}
+ } from "lucide-react";
 export default function Press() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
@@ -163,7 +166,7 @@ export default function Press() {
   p: t: "In-depth feature on Zion Tech Group's innovative approach to combining quantum computing with artificial intelligence to solve complex business problems.",u,
   r: l: "http,
   s://techcrunch.com/zion-tech-group-quantum-ai",featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 2,tit,
@@ -176,7 +179,7 @@ export default function Press() {
   p: t: "Expert analysis of how autonomous business operations are transforming enterprise efficiency and decision-making processes.",u,
   r: l: "http,
   s://hbr.org/autonomous-business-operations",featur,
-  e: d: true
+  e: d: true;
 },
   {
   id: 3,tit,
@@ -189,7 +192,7 @@ export default function Press() {
   p: t: "Comprehensive coverage of Zion Tech Group's AI-powered cybersecurity solutions and their effectiveness against modern threats.",u,
   r: l: "http,
   s://wired.com/ai-cybersecurity-zion",featur,
-  e: d: false
+  e: d: false;
 },
   {
   id: 4,tit,
@@ -202,7 +205,7 @@ export default function Press() {
   p: t: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",u,
   r: l: "http,
   s://venturebeat.com/zion-tech-group-startup",featur,
-  e: d: false
+  e: d: false;
 },
   ]
   const awards = [
@@ -251,7 +254,7 @@ export default function Press() {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -281,7 +284,7 @@ export default function Press() {
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -303,12 +306,12 @@ export default function Press() {
               Press &{' '},
   }
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Media
+                Media;
               </span>
             </h1>
             <p className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Stay updated with the latest news, press releases, and media coverage about Zion Tech Group's
+              Stay updated with the latest news, press releases, and media coverage about Zion Tech Group's;
               innovations, achievements, and industry leadership.
             </p>
           </motion.div>
@@ -321,14 +324,14 @@ export default function Press() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category) => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/50 text-zion-slate-light border border-zion-cyan/20,
   hove: r: border-zion-cyan/40 hove,
@@ -346,7 +349,7 @@ export default function Press() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -363,14 +366,14 @@ export default function Press() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Latest News & Updates
+              Latest News & Updates;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Stay informed about Zion Tech Group's latest developments, achievements, and industry insights.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8";"
             variants={containerVariants},
@@ -382,7 +385,7 @@ export default function Press() {
   }
           >
             {filteredContent.filter(item => item.featured).map((item) => (
-  <motion.article
+  <motion.article;
                 key={item.id},
   }
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden,
@@ -433,7 +436,7 @@ export default function Press() {
 
                   <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium,
   hove: r:scale-105 transition-all duration-300 flex items-center gap-2">
-                    Read Full Article
+                    Read Full Article;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -447,7 +450,7 @@ export default function Press() {
   }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -464,14 +467,14 @@ export default function Press() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              All Press & Media
+              All Press & Media;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Browse our complete collection of press releases, media coverage, and company updates.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8";"
@@ -484,7 +487,7 @@ export default function Press() {
   }
           >
             {filteredContent.filter(item => !item.featured).map((item) => (
-  <motion.article
+  <motion.article;
                 key={item.id},
   }
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden,
@@ -525,7 +528,7 @@ export default function Press() {
                   <button className="w-full px-4 py-2 border border-zion-cyan text-zion-cyan rounded-lg font-medium,
   hove: r: bg-zion-cyan hove,
   r:text-white transition-all duration-300 flex items-center justify-center gap-2">
-                    Read More
+                    Read More;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -539,7 +542,7 @@ export default function Press() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -556,14 +559,14 @@ export default function Press() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Media Resources
+              Media Resources;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Access our media kit, company information, and resources for journalists and media professionals.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8";"
@@ -575,7 +578,7 @@ export default function Press() {
   c: e: true },
   }
           >
-            <motion.div
+            <motion.div;
               className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6,
   hove: r:border-zion-cyan/40 transition-all duration-300 group text-center";"
               variants={itemVariants},
@@ -592,11 +595,11 @@ export default function Press() {
               <p className="text-zion-slate-light text-sm mb-6">Download our comprehensive media kit with company information, logos, and press materials.</p>
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium,
   hove: r: scale-105 transition-all duration-300">
-                Download
+                Download;
               </button>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hove,
   r:border-zion-cyan/40 transition-all duration-300 group text-center";"
               variants={itemVariants},
@@ -613,11 +616,11 @@ export default function Press() {
               <p className="text-zion-slate-light text-sm mb-6">Key facts, statistics, and company information for media reference.</p>
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium,
   hove: r: scale-105 transition-all duration-300">
-                Download
+                Download;
               </button>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hove,
   r:border-zion-cyan/40 transition-all duration-300 group text-center";"
               variants={itemVariants},
@@ -634,11 +637,11 @@ export default function Press() {
               <p className="text-zion-slate-light text-sm mb-6">High-resolution logos and brand assets for media use.</p>
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium,
   hove: r:scale-105 transition-all duration-300">
-                Download
+                Download;
               </button>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hove,
   r:border-zion-cyan/40 transition-all duration-300 group text-center";"
               variants={itemVariants},
@@ -655,7 +658,7 @@ export default function Press() {
               <p className="text-zion-slate-light text-sm mb-6">Biographies and photos of our executive leadership team.</p>
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hove,
   r:scale-105 transition-all duration-300">
-                Download
+                Download;
               </button>
             </motion.div>
           </motion.div>
@@ -666,7 +669,7 @@ export default function Press() {
   }
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -682,10 +685,10 @@ export default function Press() {
           >
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Contact Our Media Team
+              Contact Our Media Team;
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              For media inquiries, interview requests, or additional information
+              For media inquiries, interview requests, or additional information;
               our media relations team is here to help.
             </p>
 
@@ -716,7 +719,7 @@ export default function Press() {
               </div>
             </div>
 
-            <motion.button
+            <motion.button;
               className="className="mt-8 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25";"
@@ -727,7 +730,7 @@ export default function Press() {
   l: e: 0.95 },
   }
             >
-              Contact Media Team
+              Contact Media Team;
             </motion.button>
           </motion.div>
         </div>

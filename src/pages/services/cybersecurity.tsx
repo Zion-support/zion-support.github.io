@@ -1,21 +1,25 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
+import { SEO     } from "../../components/SEO";
 import {
-  Shield
+  Shield;
   Brain,
   Zap,
   Users,
   TrendingUp,
   Lock,
-  Clock
-  BarChart3
-  AlertTriangle
-  Eye
-} from "lucide-react"
+  Clock;
+  BarChart3;
+  AlertTriangle;
+  Eye;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function Cybersecurity() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-      <SEO 
+      <SEO;
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive security solutions that protect your digital assets and ensure business continuity. Advanced AI-powered threat detection and zero trust security."
       />
@@ -33,7 +37,7 @@ export default function Cybersecurity() {
               <h1 className="text-4xl,
   m: d:text-5xl,
   l: g:text-6xl font-bold text-white mb-6 leading-tight">
-                Cybersecurity Services
+                Cybersecurity Services;
               </h1>
               <p className="text-xl,
   m: d:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -41,14 +45,14 @@ export default function Cybersecurity() {
               </p>
             </div>
             <div className="mb-16">
-              <a
+              <a;
                 href="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg rounded-xl,
   hove: r:from-red-700,
   hove: r:to-orange-700 transition-all duration-300 shadow-2xl hove,
   r:shadow-red-500/25";"
               >
-                Get Started with Cybersecurity
+                Get Started with Cybersecurity;
               </a>
             </div>
           </div>
@@ -64,10 +68,10 @@ export default function Cybersecurity() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Comprehensive Security Solutions
+              Comprehensive Security Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your organization with our advanced cybersecurity services
+              Protect your organization with our advanced cybersecurity services;
             </p>
           </div>
           
@@ -80,7 +84,7 @@ export default function Cybersecurity() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">AI-Powered Threat Detection</h3>
               <p className="text-gray-300">
-                Advanced artificial intelligence that identifies and responds to threats in real-time
+                Advanced artificial intelligence that identifies and responds to threats in real-time;
               </p>
             </div>
             
@@ -90,7 +94,7 @@ export default function Cybersecurity() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Zero Trust Security</h3>
               <p className="text-gray-300">
-                Implement zero trust architecture to verify every user and device access attempt
+                Implement zero trust architecture to verify every user and device access attempt;
               </p>
             </div>
             
@@ -100,7 +104,7 @@ export default function Cybersecurity() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Data Protection & Encryption</h3>
               <p className="text-gray-300">
-                Comprehensive data security with advanced encryption and access controls
+                Comprehensive data security with advanced encryption and access controls;
               </p>
             </div>
             
@@ -110,7 +114,7 @@ export default function Cybersecurity() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Incident Response</h3>
               <p className="text-gray-300">
-                Rapid response and recovery services to minimize damage from security incidents
+                Rapid response and recovery services to minimize damage from security incidents;
               </p>
             </div>
             
@@ -120,7 +124,7 @@ export default function Cybersecurity() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Security Analytics</h3>
               <p className="text-gray-300">
-                Advanced analytics and reporting to monitor security posture and compliance
+                Advanced analytics and reporting to monitor security posture and compliance;
               </p>
             </div>
             
@@ -130,7 +134,7 @@ export default function Cybersecurity() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Security Training</h3>
               <p className="text-gray-300">
-                Comprehensive security awareness training for your organization
+                Comprehensive security awareness training for your organization;
               </p>
             </div>
           </div>
@@ -148,16 +152,16 @@ export default function Cybersecurity() {
             Ready to Secure Your Organization?
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Start protecting your digital assets with our comprehensive cybersecurity services
+            Start protecting your digital assets with our comprehensive cybersecurity services;
           </p>
-          <a
+          <a;
             href="/contact"
             className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg rounded-xl,
   hove: r:from-red-700,
   hove: r:to-orange-700 transition-all duration-300 shadow-2xl hove,
   r:shadow-red-500/25";"
           >
-            Get Started with Cybersecurity
+            Get Started with Cybersecurity;
           </a>
         </div>
       </section>

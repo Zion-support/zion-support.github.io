@@ -1,9 +1,9 @@
 import SEO from "@/components/SEO"
-import { ApplicationsTracker } from "@/components/jobs/applications"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Inbox } from "lucide-react"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import { useIsMobile } from "@/hooks/use-mobile"
+import { ApplicationsTracker   } from "@/components/jobs/applications";
+import { Card, CardHeader, CardTitle, CardContent   } from "@/components/ui/card";
+import { Inbox   } from "lucide-react";
+import { ProtectedRoute   } from "@/components/ProtectedRoute";
+import { useIsMobile   } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile()
     return (<>
@@ -23,7 +23,7 @@ function ApplicationStatusTrackerContent() {
           <Card>
             <CardHeader className="border-b bg-muted/50">
               <CardTitle className="flex items-center text-lg">
-                <Inbox className="mr-2 h-5 w-5"/> Your Applications
+                <Inbox className="mr-2 h-5 w-5"/> Your Applications;
               </CardTitle>
             </CardHeader>
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>

@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from "lucide-react"
+import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon   } from "lucide-react";
 export default function Research() {
   const [searchQuery, setSearchQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('all')
@@ -117,7 +118,7 @@ export default function Research() {
   a: l: 'Nature Quantum Information',ye,
   a: r: 2024,d,
   o: i: '10.1038/s41534-024-00800-5',citatio,
-  n: s: 23
+  n: s: 23;
 },
   ]
       ta,
@@ -153,7 +154,7 @@ export default function Research() {
   a: l: 'Nature Machine Intelligence',ye,
   a: r: 2024,d,
   o: i: '10.1038/s42256-024-00789-8',citatio,
-  n: s: 45
+  n: s: 45;
 },
   {
   tit,
@@ -161,7 +162,7 @@ export default function Research() {
   a: l: 'IEEE Transactions on Medical Imaging',ye,
   a: r: 2024,d,
   o: i: '10.1109/TMI.2024.001234',citatio,
-  n: s: 18
+  n: s: 18;
 },
   ]
       ta,
@@ -197,7 +198,7 @@ export default function Research() {
   a: l: 'IEEE Security & Privacy',ye,
   a: r: 2024,d,
   o: i: '10.1109/MSEC.2024.001234',citatio,
-  n: s: 12
+  n: s: 12;
 },
   ]
       ta,
@@ -259,7 +260,7 @@ export default function Research() {
   a: l: 'Journal of Supply Chain Management',ye,
   a: r: 2024,d,
   o: i: '10.1111/jscm.12345',citatio,
-  n: s: 28
+  n: s: 28;
 },
   ]
       ta,
@@ -295,7 +296,7 @@ export default function Research() {
   a: l: 'Nature Electronics',ye,
   a: r: 2024,d,
   o: i: '10.1038/s41928-024-01123-4',citatio,
-  n: s: 19
+  n: s: 19;
 },
   ]
       ta,
@@ -306,17 +307,17 @@ export default function Research() {
   c: t: 'high'
 },
   ]
-  // Update counts
+  // Update counts;
   categories.forEach(cat () => {
-  cat.count = researchProjects.filter(p => p.category === cat.id).length
+  cat.count = researchProjects.filter(p => p.category === cat.id).length;
 })
 
   statuses.forEach(status () => {
-  status.count = researchProjects.filter(p => p.status === status.id).length
+  status.count = researchProjects.filter(p => p.status === status.id).length;
 })
 
   types.forEach(type () => {
-  type.count = researchProjects.filter(p => p.type === type.id).length
+  type.count = researchProjects.filter(p => p.type === type.id).length;
 })
 
   const filteredProjects = researchProjects.filter(project () => {
@@ -324,10 +325,10 @@ export default function Research() {
                          project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
 
-    const matchesCategory = activeCategory === 'all' || project.category === activeCategory
-const matchesStatus = activeStatus === 'all' || project.status === activeStatus
-const matchesType = activeType === 'all' || project.type === activeType
-    return matchesSearch && matchesCategory && matchesStatus && matchesType
+    const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
+const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
+const matchesType = activeType === 'all' || project.type === activeType;
+    return matchesSearch && matchesCategory && matchesStatus && matchesType;
 })
 
   const getCategoryIcon = (category,
@@ -388,7 +389,7 @@ const matchesType = activeType === 'all' || project.type === activeType
             </div>
           </div>
           <h1 className="text-5xl font-bold text-white mb-6">
-            Research & Innovation
+            Research & Innovation;
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships.
@@ -405,7 +406,7 @@ const matchesType = activeType === 'all' || project.type === activeType
   }
             <div className="relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 value={searchQuery},
   }
@@ -430,14 +431,14 @@ const matchesType = activeType === 'all' || project.type === activeType
                 <label className="text-white font-medium">Category</label>
                 <div className="flex flex-wrap gap-2">
                   {categories.slice(0, 4).map((category) => (
-  <button
+  <button;
                       key={category.id},
   }
                       onClick={onClick={() => setActiveCategory(category.id)},
   },
   }
                       className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-  activeCategory === category.id
+  activeCategory === category.id;
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light,
   hove: r: bg-zion-slate-light hove,
@@ -459,14 +460,14 @@ const matchesType = activeType === 'all' || project.type === activeType
                 <label className="text-white font-medium">Status</label>
                 <div className="flex flex-wrap gap-2">
                   {statuses.map((status) => (
-  <button
+  <button;
                       key={status.id},
   }
                       onClick={onClick={() => setActiveStatus(status.id)},
   },
   }
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-  activeStatus === status.id
+  activeStatus === status.id;
                           ? 'bg-zion-purple text-white'
                           : 'bg-zion-slate text-zion-slate-light,
   hove: r: bg-zion-slate-light hove,
@@ -485,14 +486,14 @@ const matchesType = activeType === 'all' || project.type === activeType
                 <label className="text-white font-medium">Type</label>
                 <div className="flex flex-wrap gap-2">
                   {types.map((type) => (
-  <button
+  <button;
                       key={type.id},
   }
                       onClick={onClick={() => setActiveType(type.id)},
   },
   }
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-  activeType === type.id
+  activeType === type.id;
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light,
   hove: r: bg-zion-slate-light hove,
@@ -515,12 +516,12 @@ const matchesType = activeType === 'all' || project.type === activeType
   <div className="py-12 bg-zion-slate-dark">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
-              Featured Research Projects
+              Featured Research Projects;
             </h2>
             <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {researchProjects.filter(p => p.featured).map((project) => (
-  <div
+  <div;
                   key={project.id},
   }
                   className="className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden,
@@ -530,7 +531,7 @@ const matchesType = activeType === 'all' || project.type === activeType
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                        Featured
+                        Featured;
                       </span>
                     </div>
                     <div className="absolute top-4 right-4">
@@ -575,17 +576,17 @@ const matchesType = activeType === 'all' || project.type === activeType
                     <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
-                        {project.team.length} researchers
+                        {project.team.length} researchers;
                       </div>
                       <div className="flex items-center gap-1">
                         <FileText className="w-4 h-4" />
-                        {project.publications.length} publications
+                        {project.publications.length} publications;
                       </div>
                     </div>
 
                     <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold,
   hove: r:bg-zion-cyan-light transition-colors">
-                      Learn More
+                      Learn More;
                     </button>
                   </div>
                 </div>
@@ -599,14 +600,14 @@ const matchesType = activeType === 'all' || project.type === activeType
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
-            All Research Projects
+            All Research Projects;
           </h2>
 
           {filteredProjects.length > 0 ? (
   <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredProjects.map((project) => (
-  <div
+  <div;
                   key={project.id},
   }
                   className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6,
@@ -622,7 +623,7 @@ const matchesType = activeType === 'all' || project.type === activeType
                       </span>
                       {project.featured && (
   <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                          Featured
+                          Featured;
                         </span>
                       )}
                     </div>
@@ -632,7 +633,7 @@ const matchesType = activeType === 'all' || project.type === activeType
   }
                       </div>
                       <div className={`text-xs font-medium ${getImpactColor(project.impact)}`}>
-                        {project.impact.replace('- ').toUpperCase()} Impact
+                        {project.impact.replace('- ').toUpperCase()} Impact;
                       </div>
                     </div>
                   </div>
@@ -642,7 +643,7 @@ const matchesType = activeType === 'all' || project.type === activeType
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.slice(0, 4).map((tag, index) => (
-  <span
+  <span;
                         key={index},
   }
                         className="className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full";"
@@ -678,7 +679,7 @@ const matchesType = activeType === 'all' || project.type === activeType
                       <span>{project.progress}%</span>
                     </div>
                     <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
-                      <div
+                      <div;
                         className="className="bg-zion-cyan h-2 rounded-full transition-all duration-300";"
                         style={ wid,
   t: h: `${project.progress}%` },
@@ -706,12 +707,12 @@ const matchesType = activeType === 'all' || project.type === activeType
                       <button className="bg-zion-purple text-white px-4 py-2 rounded-lg font-semibold,
   hove: r: bg-zion-purple-light transition-colors inline-flex items-center gap-2">
                         <FileText className="w-4 h-4" />
-                        Details
+                        Details;
                       </button>
                       {project.publications.length > 0 && (
   <button className="bg-zion-cyan text-zion-slate-dark px-4 py-2 rounded-lg font-semibold hove,
   r:bg-zion-cyan-light transition-colors">
-                          Papers
+                          Papers;
                         </button>
                       )}
                     </div>
@@ -724,7 +725,7 @@ const matchesType = activeType === 'all' || project.type === activeType
               <FlaskConical className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No research projects found</h3>
               <p className="text-zion-slate-light">
-                Try adjusting your search terms or browse all categories
+                Try adjusting your search terms or browse all categories;
               </p>
             </div>
           )}
@@ -736,7 +737,7 @@ const matchesType = activeType === 'all' || project.type === activeType
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Join Our Research Community
+            Join Our Research Community;
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Collaborate with leading researchers, access cutting-edge technology, and contribute to breakthrough innovations.
@@ -745,12 +746,12 @@ const matchesType = activeType === 'all' || project.type === activeType
   s: m: flex-row gap-4 justify-center max-w-md mx-auto">
             <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-zion-cyan-light transition-colors">
-              Explore Collaborations
+              Explore Collaborations;
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-zion-slate-dark transition-colors">
-              Contact Research Team
+              Contact Research Team;
             </button>
           </div>
         </div>

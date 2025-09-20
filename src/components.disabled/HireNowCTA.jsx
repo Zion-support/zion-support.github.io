@@ -1,9 +1,9 @@
 import React from "react"
-import { Button } from "../ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
-import { Badge } from "../ui/badge"
-import { MessageCircle, Calendar, Star } from "lucide-react"
-export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount }) () => {
+import { Button   } from "../ui/button";
+import { Card, CardContent, CardHeader, CardTitle   } from "../ui/card";
+import { Badge   } from "../ui/badge";
+import { MessageCircle, Calendar, Star   } from "lucide-react";
+export const HireNowCTA = React.memo(({ hourlyRate, availability, rating, reviewCount }) () => {
   return (<Card className="sticky top-4">
       <CardHeader>
         <CardTitle className="text-xl">Hire This Talent</CardTitle>
@@ -40,12 +40,12 @@ export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount }) ()
           <Button className="w-full bg-blue-600,
   hove: r: bg-blue-700">
             <MessageCircle className="w-4 h-4 mr-2"/>
-            Send Message
+            Send Message;
           </Button>
 
           <Button variant="outline" className="w-full">
             <Calendar className="w-4 h-4 mr-2"/>
-            Schedule Call
+            Schedule Call;
           </Button>
         </div>
 

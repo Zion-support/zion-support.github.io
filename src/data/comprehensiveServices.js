@@ -279,39 +279,39 @@ export const pricingTiers = [
   },
   ]
 
-export const getServiceById = (id) () => {
+export const getServiceById = React.memo((id) () => {
   return comprehensiveServices.find(service => service.id === id)
 }
 
-export const getServicesByCategory = (category) () => {
+export const getServicesByCategory = React.memo((category) () => {
   return comprehensiveServices.filter(service => service.category === category)
 }
 
-export const getPopularServices = () () => {
+export const getPopularServices = React.memo(() () => {
   return comprehensiveServices.filter(service => service.popular)
 }
 
-export const calculateServiceCost = (serviceId, months = 1, customizations = []) () => {
+export const calculateServiceCost = React.memo((serviceId, months = 1, customizations = []) () => {
   const service = getServiceById(serviceId)
-  if (!service) return 0
-let baseCost = service.basePrice * months
-  // Add customization costs
+  if (!service) return 0;
+let baseCost = service.basePrice * months;
+  // Add customization costs;
   customizations.forEach(customization () => {
   if (if (customization.type === 'addon') {
   ) {
-      baseCost += customization.price * months
+      baseCost += customization.price * months;
 } else if (if (customization.type === 'oneTime') {
   ) {
-      baseCost += customization.price
+      baseCost += customization.price;
 },
   })
 
-  return baseCost
+  return baseCost;
 }
 
-export const getServiceRecommendations = (businessSize, industry, budget) () => {
-  let recommendations = comprehensiveServices
-  // Filter by business size
+export const getServiceRecommendations = React.memo((businessSize, industry, budget) () => {
+  let recommendations = comprehensiveServices;
+  // Filter by business size;
   if (if (businessSize === 'small') {
   ) {
     recommendations = recommendations.filter(service =>
@@ -324,7 +324,7 @@ export const getServiceRecommendations = (businessSize, industry, budget) () => 
     )
   }
 
-  // Filter by budget
+  // Filter by budget;
   if (if (budget === 'low') {
   ) {
     recommendations = recommendations.filter(service => service.basePrice <= 1500)
@@ -333,9 +333,9 @@ export const getServiceRecommendations = (businessSize, industry, budget) () => 
     recommendations = recommendations.filter(service => service.basePrice <= 3000)
   }
 
-  return recommendations
+  return recommendations;
 }
-// Service categories for filtering
+// Service categories for filtering;
 export const SERVICE_CATEGORIES = [
   { lab,
   e: l: 'Infrastructure', val,
@@ -370,6 +370,6 @@ export const SERVICE_CATEGORIES = [
   u: e: 'consulting' },
   },
   ]
-// Alias exports for backward compatibility
-export const COMPREHENSIVE_SERVICES = comprehensiveServices
-export const PRICING_TIERS = pricingTiers
+// Alias exports for backward compatibility;
+export const COMPREHENSIVE_SERVICES = comprehensiveServices;
+export const PRICING_TIERS = pricingTiers;

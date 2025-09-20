@@ -1,11 +1,13 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 interface SkeletonProps {
   className?: string,
   height?: string,
   width?: string,
   rounded?: boolean,
   animated?: boolean,
+}
+}
 }
 
 const,
@@ -14,7 +16,7 @@ const,
   height = 'h-4', 
   width = 'w-full', 
   rounded = true,
-  animated = true 
+  animated = true;
 }) () => {
   const baseClasses = `${height} ${width} bg-gray-200,
   dar: k: bg-gray-700 ${rounded ? 'rounded' : ''}`
@@ -24,7 +26,7 @@ const classes = `${baseClasses} ${className}`
 }
   
   return (
-    <motion.div
+    <motion.div;
       className={classes}
       animate={
         opaci,
@@ -46,6 +48,8 @@ interface LoadingSkeletonProps {
   type?: 'card' | 'list' | 'hero' | 'table' | 'form',
   count?: number,
   className?: string,
+}
+}
 }
 
 export,
@@ -155,7 +159,7 @@ export,
   )
 },
 
-// Specialized skeleton components
+// Specialized skeleton components;
 export,
   const: HeroSkeleton: React.FC = () => (
   <LoadingSkeleton type="hero" />
@@ -179,4 +183,4 @@ export,
   const: FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => (
   <LoadingSkeleton type="form" count={count} />
 )
-export default LoadingSkeleton
+export default LoadingSkeleton;

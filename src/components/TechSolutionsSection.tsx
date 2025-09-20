@@ -1,6 +1,6 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
   Brain,
   Shield,
@@ -13,8 +13,10 @@ import {
   Lock,
   Network,
   Code,
-  Server
-} from "lucide-react"
+  Server;
+}
+}
+ } from "lucide-react";
 const techSolutions = [
   {
     ic,
@@ -82,7 +84,7 @@ export function TechSolutionsSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="text-center mb-16"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -99,10 +101,10 @@ export function TechSolutionsSection() {
         >
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-4">
-            Technology Solutions
+            Technology Solutions;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to drive innovation
+            Comprehensive technology solutions designed to drive innovation;
             enhance security, and accelerate your digital transformation journey.
           </p>
         </motion.div>
@@ -111,7 +113,7 @@ export function TechSolutionsSection() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {techSolutions.map((solution, index) => (
-            <motion.div
+            <motion.div;
               key={solution.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6,
   hove: r: border-blue-500/50 transition-all duration-300,
@@ -164,7 +166,7 @@ export function TechSolutionsSection() {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div;
           className="mt-16 text-center"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -185,25 +187,25 @@ export function TechSolutionsSection() {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Let's discuss how our technology solutions can help you achieve
+              Let's discuss how our technology solutions can help you achieve;
               your business goals and stay ahead of the competition.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600,
   hove: r:bg-blue-700 transition-colors duration-200"
               >
-                Get Started
+                Get Started;
                 <Rocket className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hove,
   r:bg-gray-50 transition-colors duration-200"
               >
-                View All Services
+                View All Services;
                 <Code className="ml-2 h-5 w-5" />
               </Link>
             </div>

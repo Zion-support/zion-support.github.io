@@ -22,7 +22,9 @@ export interface ComprehensiveITService2028 {
   e: string,ema,
   i: l: string,websi,
   t: e: string,addre,
-  s: s: string
+  s: s: string;
+}
+}
 }
   technicalSpe,
   c: s: {
@@ -40,12 +42,12 @@ export interface ComprehensiveITService2028 {
   t: e: string,rati,
   n: g: number,revie,
   w: s: number,custome,
-  r: s: number
+  r: s: number;
 }
 
 export,
   const: COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
-  // Cloud Infrastructure & DevOps
+  // Cloud Infrastructure & DevOps;
   {
   i,
   d: "cloud-infrastructure-devops-2028",tit,
@@ -129,9 +131,9 @@ export,
   t: e: "17.5% annually",rati,
   n: g: 4.9,revie,
   w: s: 445,custome,
-  r: s: 298
+  r: s: 298;
 }
-  // Data Analytics & Business Intelligence
+  // Data Analytics & Business Intelligence;
   {
   id: "data-analytics-business-intelligence-2028",tit,
   l: e: "Data Analytics & Business Intelligence 2028",descripti,
@@ -214,9 +216,9 @@ export,
   t: e: "23.4% annually",rati,
   n: g: 4.8,revie,
   w: s: 334,custome,
-  r: s: 223
+  r: s: 223;
 }
-  // Cybersecurity & Compliance
+  // Cybersecurity & Compliance;
   {
   id: "cybersecurity-compliance-2028",tit,
   l: e: "Cybersecurity & Compliance 2028",descripti,
@@ -299,9 +301,9 @@ export,
   t: e: "13.4% annually",rati,
   n: g: 4.9,revie,
   w: s: 456,custome,
-  r: s: 312
+  r: s: 312;
 }
-  // Digital Transformation Consulting
+  // Digital Transformation Consulting;
   {
   id: "digital-transformation-consulting-2028",tit,
   l: e: "Digital Transformation Consulting 2028",descripti,
@@ -384,9 +386,9 @@ export,
   t: e: "18.9% annually",rati,
   n: g: 4.8,revie,
   w: s: 234,custome,
-  r: s: 156
+  r: s: 156;
 }
-  // Enterprise Software Development
+  // Enterprise Software Development;
   {
   id: "enterprise-software-development-2028",tit,
   l: e: "Enterprise Software Development 2028",descripti,
@@ -469,9 +471,9 @@ export,
   t: e: "22.3% annually",rati,
   n: g: 4.9,revie,
   w: s: 378,custome,
-  r: s: 245
+  r: s: 245;
 }
-  // IT Infrastructure Management
+  // IT Infrastructure Management;
   {
   id: "it-infrastructure-management-2028",tit,
   l: e: "IT Infrastructure Management 2028",descripti,
@@ -554,9 +556,9 @@ export,
   t: e: "8.9% annually",rati,
   n: g: 4.7,revie,
   w: s: 289,custome,
-  r: s: 198
+  r: s: 198;
 }
-  // Managed IT Services
+  // Managed IT Services;
   {
   id: "managed-it-services-2028",tit,
   l: e: "Managed IT Services 2028",descripti,
@@ -639,9 +641,9 @@ export,
   t: e: "12.4% annually",rati,
   n: g: 4.8,revie,
   w: s: 445,custome,
-  r: s: 312
+  r: s: 312;
 }
-  // Cloud Migration Services
+  // Cloud Migration Services;
   {
   id: "cloud-migration-services-2028",tit,
   l: e: "Cloud Migration Services 2028",descripti,
@@ -723,9 +725,9 @@ export,
   t: e: "28.7% annually",rati,
   n: g: 4.9,revie,
   w: s: 234,custome,
-  r: s: 167
+  r: s: 167;
 }
-  // IT Project Management
+  // IT Project Management;
   {
   id: "it-project-management-2028",tit,
   l: e: "IT Project Management 2028",descripti,
@@ -808,7 +810,7 @@ export,
   t: e: "10.8% annually",rati,
   n: g: 4.8,revie,
   w: s: 198,custome,
-  r: s: 134
+  r: s: 134;
 },
   ]
-export default COMPREHENSIVE_IT_SERVICES_2028
+export default COMPREHENSIVE_IT_SERVICES_2028;

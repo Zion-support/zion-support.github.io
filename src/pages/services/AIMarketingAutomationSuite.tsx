@@ -1,4 +1,4 @@
-import { BarChart3, Target, Users, Check, ExternalLink, Phone, Mail, Zap, Brain, TrendingUp, MessageSquare, Mail as MailIcon } from "lucide-react"
+import { BarChart3, Target, Users, Check, ExternalLink, Phone, Mail, Zap, Brain, TrendingUp, MessageSquare, Mail as MailIcon     } from "lucide-react";
 export default function AIMarketingAutomationSuite() {
   const features = [
   'AI-powered audience segmentation and targetingPredictive customer behavior modeling'
@@ -59,7 +59,7 @@ export default function AIMarketingAutomationSuite() {
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing
+            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing;
           </div>
           <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-4">AI Marketing Automation Suite</h1>
@@ -196,11 +196,11 @@ export default function AIMarketingAutomationSuite() {
   s: m:flex-row gap-4 justify-center">
             <a href="t,
   e: l:+13024640950" className="inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg">
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950;
             </a>
             <a href="mail,
   t: o:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg">
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
+              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com;
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">

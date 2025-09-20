@@ -1,12 +1,12 @@
-import { Link, useNavigate, useSearchParams } from "react-router-dom"
+import { Link, useNavigate, useSearchParams   } from "react-router-dom";
 import SEO from "@/components/SEO"
 import PostForm from "@/components/community/PostForm"
-import { useToast } from "@/hooks/use-toast"
+import { useToast   } from "@/hooks/use-toast";
 export default function CreatePostPage() {
   const navigate = useNavigate()
     const { toast } = useToast()
     const [searchParams] = useSearchParams()
-    // Get category from URL query params if available
+    // Get category from URL query params if available;
 const initialCategory = searchParams.get("category")
     const const initialValues = {
   = {
@@ -15,16 +15,18 @@ const initialCategory = searchParams.get("category")
 }
     const handleSubmit = async (values) () => {
   try {
-  // Here we would normally save to the database
-            // For now, we'll just simulate a successful post creation
-            // Parse tags into an array
+  // Here we would normally save to the database;
+            // For now, we'll just simulate a successful post creation;
+            // Parse tags into an array;
 const tagsArray = values.tags.split(",").map(tag => tag.trim())
             toast({
   tit,
   l: e: "Post created",descripti,
   o: n: "Your post has been published successfully"
+}
+}
 })
-            // Redirect to the forum category
+            // Redirect to the forum category;
             navigate(`/community/category/${values.categoryId}`)
         }
         catch (error) {
@@ -42,7 +44,7 @@ const tagsArray = values.tags.split(",").map(tag => tag.trim())
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground,
   hove: r:text-foreground">
-            Forum
+            Forum;
           </Link>
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Create Post</span>

@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  ArrowRight
+  ArrowRight;
   CheckCircle,
   Cloud,
   Cpu,
@@ -9,12 +9,14 @@ import {
   Zap,
   Brain,
   Globe,
-  Lock
-  BarChart3
-  Users
-  Rocket
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  Lock;
+  BarChart3;
+  Users;
+  Rocket;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 const featuredServices = [
   {
   na,
@@ -118,7 +120,7 @@ const emergingTechnologies = [
 export default function InnovativeServicesLanding2025() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO
+      <SEO;
         title="2025 Innovative Services Landing - Zion Tech Group"
         description="Discover our revolutionary AI, cloud, and emerging technology services designed to transform your business in 2025 and beyond."
         keywords="AI services, cloud infrastructure, cybersecurity, performance optimization, data management, emerging technologies"
@@ -132,7 +134,7 @@ export default function InnovativeServicesLanding2025() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -146,7 +148,7 @@ export default function InnovativeServicesLanding2025() {
             <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                2025 Innovative
+                2025 Innovative;
               </span>
               <br />
               <span className="text-white">Services Landing</span>
@@ -161,12 +163,12 @@ export default function InnovativeServicesLanding2025() {
   hove: r:from-blue-600,
   hove: r:to-purple-700 transition-all duration-300,
   transform: hover:scale-105">
-                Explore Services
+                Explore Services;
               </button>
               <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-gray-900 transition-all duration-300">
-                Get Started
+                Get Started;
               </button>
             </div>
           </motion.div>
@@ -179,7 +181,7 @@ export default function InnovativeServicesLanding2025() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -194,7 +196,7 @@ export default function InnovativeServicesLanding2025() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Featured Services
+              Featured Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our most popular and innovative services that are transforming businesses across industries.
@@ -205,7 +207,7 @@ export default function InnovativeServicesLanding2025() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.name},
   }
                 initial={ opaci,
@@ -244,7 +246,7 @@ export default function InnovativeServicesLanding2025() {
                   ))}
                 </div>
                 
-                <a
+                <a;
                   href={service.href},
   }
                   className="className="inline-flex items-center text-blue-400,
@@ -277,12 +279,12 @@ export default function InnovativeServicesLanding2025() {
   s: m:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold,
   hove: r:bg-gray-100 transition-all duration-300">
-                Schedule Consultation
+                Schedule Consultation;
               </button>
               <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold,
   hove: r:bg-white hove,
   r:text-blue-600 transition-all duration-300">
-                View Case Studies
+                View Case Studies;
               </button>
             </div>
           </div>
@@ -295,7 +297,7 @@ export default function InnovativeServicesLanding2025() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -310,7 +312,7 @@ export default function InnovativeServicesLanding2025() {
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Emerging Technologies
+              Emerging Technologies;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Stay ahead of the curve with cutting-edge technologies that are shaping the future of business.
@@ -321,7 +323,7 @@ export default function InnovativeServicesLanding2025() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {emergingTechnologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={tech.name},
   }
                 initial={ opaci,
@@ -354,7 +356,7 @@ export default function InnovativeServicesLanding2025() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -368,7 +370,7 @@ export default function InnovativeServicesLanding2025() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Start Your Digital Transformation Today
+              Start Your Digital Transformation Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join hundreds of businesses that have already transformed their operations with our innovative services.
@@ -377,7 +379,7 @@ export default function InnovativeServicesLanding2025() {
   hove: r:from-blue-600,
   hove: r:to-purple-700 transition-all duration-300 transform hove,
   r:scale-105">
-              Get Started Now
+              Get Started Now;
             </button>
           </motion.div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react"
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight } from "lucide-react"
+import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight     } from "lucide-react";
 const DigitalTransformation = () () => {
   const transformationServices = [
   {
@@ -10,7 +10,7 @@ const DigitalTransformation = () () => {
       featur,
   e: s: ["Workflow automation", "AI-powered decision making", "Process optimization", "Performance monitoring"]
       ic,
-  o: n: Zap
+  o: n: Zap;
 },
   {
   tit,
@@ -20,7 +20,7 @@ const DigitalTransformation = () () => {
       featur,
   e: s: ["System assessment", "Modernization planning", "Data migration", "Integration services"]
       ic,
-  o: n: RefreshCw
+  o: n: RefreshCw;
 },
   {
   tit,
@@ -30,7 +30,7 @@ const DigitalTransformation = () () => {
       featur,
   e: s: ["Change strategy", "Training programs", "Communication plans", "Success measurement"]
       ic,
-  o: n: Users
+  o: n: Users;
 },
   ]
   const transformationAreas = [
@@ -80,15 +80,15 @@ const DigitalTransformation = () () => {
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6">
               <RefreshCw className="w-4 h-4 mr-2"/>
-              Digital Transformation
+              Digital Transformation;
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Digital
+              Digital;
               <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"> Transformation</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Modernize your business processes and operations with cutting-edge
+              Modernize your business processes and operations with cutting-edge;
               technology solutions that drive growth and innovation.
             </p>
             <div className="flex flex-col,
@@ -97,11 +97,11 @@ const DigitalTransformation = () () => {
   hove: r:from-indigo-700,
   hove: r:to-purple-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-                Explore Services
+                Explore Services;
               </a>
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Get Started
+                Get Started;
               </a>
             </div>
           </div>
@@ -117,10 +117,10 @@ const DigitalTransformation = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our Transformation Services
+              Our Transformation Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive digital transformation solutions designed to modernize
+              Comprehensive digital transformation solutions designed to modernize;
               your business and drive sustainable growth.
             </p>
           </div>
@@ -161,10 +161,10 @@ const DigitalTransformation = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Areas of Transformation
+              Areas of Transformation;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We help transform every aspect of your business to create a
+              We help transform every aspect of your business to create a;
               comprehensive digital-first organization.
             </p>
           </div>
@@ -207,7 +207,7 @@ const DigitalTransformation = () () => {
                 Why Choose Digital Transformation?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Digital transformation is essential for businesses to remain
+                Digital transformation is essential for businesses to remain;
                 competitive and meet evolving customer expectations.
               </p>
               <ul className="space-y-3">
@@ -225,7 +225,7 @@ const DigitalTransformation = () () => {
                 <Lightbulb className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Transformation Expertise</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team has successfully guided hundreds of organizations
+                  Our team has successfully guided hundreds of organizations;
                   through their digital transformation journey.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -247,10 +247,10 @@ const DigitalTransformation = () () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-6">
-            Transform Your Business
+            Transform Your Business;
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Ready to modernize your business and unlock new opportunities
+            Ready to modernize your business and unlock new opportunities;
             for growth and innovation?
           </p>
           <div className="flex flex-col,
@@ -259,11 +259,11 @@ const DigitalTransformation = () () => {
   hove: r:from-indigo-700,
   hove: r:to-purple-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Get Started
+              Get Started;
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-              View All Services
+              View All Services;
             </a>
           </div>
         </div>
@@ -271,4 +271,4 @@ const DigitalTransformation = () () => {
     </div>
   )
 }
-export default DigitalTransformation
+export default DigitalTransformation;

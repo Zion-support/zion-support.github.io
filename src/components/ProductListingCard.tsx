@@ -1,26 +1,28 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { useNavigate, Link } from "react-router-dom"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ProductListing } from "@/types/listings"
-import { DollarSign } from "lucide-react"
-import { RatingStars } from "@/components/RatingStars"
-import { FavoriteButton } from "@/components/FavoriteButton"
-import { useDispatch } from "react-redux"
+import { useNavigate, Link   } from "react-router-dom";
+import { Badge   } from "@/components/ui/badge";
+import { Button   } from "@/components/ui/button";
+import { ProductListing   } from "@/types/listings";
+import { DollarSign   } from "lucide-react";
+import { RatingStars   } from "@/components/RatingStars";
+import { FavoriteButton   } from "@/components/FavoriteButton";
+import { useDispatch   } from "react-redux";
 import type { AppDispatch } from "@/store"
-import { addItem } from "@/store/cartSlice"
-// Import next/image
-
+import { addItem   } from "@/store/cartSlice";
+// Import next/image;
 interface ProductListingCardProps {
   listi,
-  n: g: ProductListing
+  n: g: ProductListing;
   view?: 'grid' | 'list',
-  onRequestQuote?: (id: string) => void
+  onRequestQuote?: (id: string) => void;
   /**
-   * Base path for linking to the detail page. Defaults to
+   * Base path for linking to the detail page. Defaults to;
    * `/marketplace/listing` to preserve existing behaviour.
    */
-  detailBasePath?: string
+  detailBasePath?: string;
+}
+}
 }
 
 export function ProductListingCard({
@@ -33,7 +35,7 @@ export function ProductListingCard({
 const navigate = useNavigate()
 const [loading, setLoading] = useState(false)
 const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0
+    listing.images && listing.images.length > 0;
     ? listing.images[0]
     : '/placeholder.svg'
   )
@@ -44,7 +46,7 @@ const formatPrice = () () => {
 },
 
   const handleImageError = () () => {
-    if (!imageError) { // Prevent infinite loops if placeholder also fails
+    if (!imageError) { // Prevent infinite loops if placeholder also fails;
       setImageSrc('/placeholder.svg')
       setImageError(true)
 },
@@ -58,13 +60,16 @@ const handleRequestQuote = (e: React.MouseEvent) () => {
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
+  
+}
+}
       navigate(`/request-quote?listing=${listing.id}`)
 },
   },
 
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
   return (
-    <div
+    <div;
       data-testid="equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10,
   s: m: border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visib,
@@ -84,11 +89,11 @@ const handleRequestQuote = (e: React.MouseEvent) () => {
   }
     >
       {/* Image */}
-      <div
+      <div;
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-        onClick={handleViewListing} // Keep existing onClick for navigation
+        onClick={handleViewListing} // Keep existing onClick for navigation;
         role="button"
-        tabIndex={-1} // Remove from tab order as parent is focusable
+        tabIndex={-1} // Remove from tab order as parent is focusable;
         onKeyDown={(e) () => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
@@ -98,7 +103,7 @@ const handleRequestQuote = (e: React.MouseEvent) () => {
   }
       >
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <img
+          <img;
             src={imageSrc}
             alt={listing.title}
             className="w-full h-full object-cover"
@@ -106,7 +111,7 @@ const handleRequestQuote = (e: React.MouseEvent) () => {
           />
           {listing.featured && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
-              Featured
+              Featured;
             </Badge>
           )}
           <FavoriteButton itemId={listing.id} itemType="product" />
@@ -141,7 +146,7 @@ const handleRequestQuote = (e: React.MouseEvent) () => {
   {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
-                <span
+                <span;
                   key={idx}
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
@@ -169,7 +174,7 @@ const handleRequestQuote = (e: React.MouseEvent) () => {
           </div>
 
           <div className="flex gap-2">
-            <Button
+            <Button;
               size="sm"
               className="bg-primary,
   hove: r: bg-primary/80 text-primary-foreground"
@@ -194,7 +199,7 @@ const handleRequestQuote = (e: React.MouseEvent) () => {
               )}
             </Button>
             {onRequestQuote && (
-              <Button
+              <Button;
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
@@ -202,7 +207,7 @@ const handleRequestQuote = (e: React.MouseEvent) () => {
   hove: r: bg-primary/10 hove,
   r:text-primary-foreground"
               >
-                Request Quote
+                Request Quote;
               </Button>
             )}
           </div>

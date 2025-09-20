@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe     } from "lucide-react";
 export default function AIMarketingAutomationPersonalization() {
   const features = [
   'AI-powered customer segmentation with behavioral analysisDynamic content personalization across all marketing channels'
@@ -100,14 +100,14 @@ export default function AIMarketingAutomationPersonalization() {
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-200">
-                Get Marketing Demo
+                Get Marketing Demo;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a href="htt,
   p: s://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-500,
   hove: r:text-white transition-all duration-200">
-                Visit Site
+                Visit Site;
               </a>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function AIMarketingAutomationPersonalization() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Customer Segmentation</h4>
               <p className="text-slate-300 text-sm">
-                AI-powered behavioral analysis and dynamic segmentation
+                AI-powered behavioral analysis and dynamic segmentation;
               </p>
             </div>
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
@@ -210,7 +210,7 @@ export default function AIMarketingAutomationPersonalization() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Personalization</h4>
               <p className="text-slate-300 text-sm">
-                Dynamic content and offers based on customer behavior
+                Dynamic content and offers based on customer behavior;
               </p>
             </div>
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
@@ -219,7 +219,7 @@ export default function AIMarketingAutomationPersonalization() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Automation</h4>
               <p className="text-slate-300 text-sm">
-                Intelligent campaign orchestration and nurturing sequences
+                Intelligent campaign orchestration and nurturing sequences;
               </p>
             </div>
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
@@ -228,7 +228,7 @@ export default function AIMarketingAutomationPersonalization() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Analytics</h4>
               <p className="text-slate-300 text-sm">
-                Comprehensive ROI tracking and performance optimization
+                Comprehensive ROI tracking and performance optimization;
               </p>
             </div>
           </div>
@@ -295,20 +295,20 @@ export default function AIMarketingAutomationPersonalization() {
             <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-200">
-              Start Free Trial
+              Start Free Trial;
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a href="t,
   e: l:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-500,
   hove: r:text-white transition-all duration-200">
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </a>
           </div>
           <p className="text-slate-400 mt-6">
             Contact us at <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-cyan-400 hove,
-  r:underline">kleber@ziontechgroup.com</a> for enterprise solutions
+  r:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
           </p>
         </div>
       </section>

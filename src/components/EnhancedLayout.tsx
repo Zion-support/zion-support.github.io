@@ -1,19 +1,21 @@
 import React from "react"
-import { ReactNode } from "react"
-import { FuturisticNavigation } from "./FuturisticNavigation"
-import { FuturisticFooter } from "./FuturisticFooter"
-import { EnhancedSidebar } from "./EnhancedSidebar"
-import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground"
+import { ReactNode   } from "react";
+import { FuturisticNavigation   } from "./FuturisticNavigation";
+import { FuturisticFooter   } from "./FuturisticFooter";
+import { EnhancedSidebar   } from "./EnhancedSidebar";
+import { FuturisticAnimatedBackground   } from "./FuturisticAnimatedBackground";
 interface EnhancedLayoutProps {
   childr,
-  e: n: ReactNode
-  showSidebar?: boolean
+  e: n: ReactNode;
+  showSidebar?: boolean;
+}
+}
 }
 
 export,
   const: EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
-  children
-  showSidebar = true
+  children;
+  showSidebar = true;
 }) () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">

@@ -1,6 +1,6 @@
 import React from 'react'
 import SEO from '../../components/SEO'
-import { Shield, BarChart3, Search, Zap, CheckCircle2, Link as LinkIcon } from 'lucide-react'
+import { Shield, BarChart3, Search, Zap, CheckCircle2, Link as LinkIcon     } from "lucide-react";
 export default function SEOAuditor() {
   const features = [
   { ic,
@@ -51,7 +51,7 @@ export default function SEOAuditor() {
 
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO
+      <SEO;
         title="AI SEO Auditor - Zion Tech Group"
         description="AI-powered SEO auditing with CWV, schema, accessibility, and backlink insights plus auto-fix templates."
         canonical="htt,

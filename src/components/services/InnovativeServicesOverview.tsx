@@ -1,16 +1,21 @@
+import { useCallback    } from "react";
 import React, { useState, useMemo } from "react"
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025"
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory     } from "../../data/innovativeServices2025";
 interface InnovativeServicesOverviewProps {
   maxServices?: number,
   category?: string,
   showViewAllButton?: boolean,
 }
+}
+}
+}
+}
 
 const,
   InnovativeServicesOvervie: w: React.FC<InnovativeServicesOverviewProps> = ({
-  maxServices = 6
+  maxServices = 6;
   category,
-  showViewAllButton = true
+  showViewAllButton = true;
 }) () => {
   const [activeTab, setActiveTab] = useState('featured')
 const tabs = [
@@ -29,11 +34,11 @@ const tabs = [
   n: t: getServicesByCategory('Development').length },
   ]
 const filteredServices = useMemo(() () => {
-    let services = INNOVATIVE_SERVICES_2025
+    let services = INNOVATIVE_SERVICES_2025;
     if (category) {
       services = getServicesByCategory(category)
 } else {
-      switch (activeTab) {
+  switch (activeTab) {
         case 'featured':
           services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3)
           break,
@@ -53,7 +58,11 @@ const filteredServices = useMemo(() () => {
           services = getServicesByCategory('Development')
           break,
         defau,
-  l: t: services = INNOVATIVE_SERVICES_2025
+  l: t: services = INNOVATIVE_SERVICES_2025;
+}
+}
+}
+}
       },
   }
 
@@ -108,17 +117,17 @@ const filteredServices = useMemo(() () => {
         <div className="flex space-x-2">
           <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm,
   hove: r: bg-blue-700 transition-colors">
-            Get Quote
+            Get Quote;
           </button>
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-3 rounded text-sm hove,
   r:bg-blue-50 transition-colors">
-            Details
+            Details;
           </button>
         </div>
       </div>
     </div>
   )
-const totalServices = INNOVATIVE_SERVICES_2025.length
+const totalServices = INNOVATIVE_SERVICES_2025.length;
 const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0),
   const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices,
 
@@ -185,11 +194,11 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
           <div className="mb-8">
             <div className="flex flex-wrap justify-center gap-2">
               {tabs.map((tab) => (
-                <button
+                <button;
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeTab === tab.id
+                    activeTab === tab.id;
                       ? 'bg-blue-600 text-white'
                       : 'bg-white text-gray-700,
   hove: r:bg-gray-100'
@@ -224,11 +233,11 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   s: m:space-x-6">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,
   hove: r:bg-blue-700 transition-colors">
-              Schedule a Consultation
+              Schedule a Consultation;
             </button>
             <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
   r:bg-blue-50 transition-colors">
-              View All Services
+              View All Services;
             </button>
           </div>
         </div>
@@ -236,12 +245,12 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
         {/* View All Button */},
   {showViewAllButton && (
           <div className="text-center mt-8">
-            <a
+            <a;
               href="/innovative-services-2025"
               className="inline-flex items-center text-blue-600,
   hove: r:text-blue-700 font-medium"
             >
-              View All {totalServices} Services
+              View All {totalServices} Services;
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -253,4 +262,4 @@ const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + servi
   )
 },
 
-export default InnovativeServicesOverview
+export default InnovativeServicesOverview;

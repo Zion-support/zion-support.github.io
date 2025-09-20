@@ -1,7 +1,7 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { Link } from "react-router-dom"
-import { Brain, Zap, BarChart3, LineChart, Activity, Search, Bot, Wand2 } from "lucide-react"
+import { SEO   } from "@/components/SEO";
+import { Link   } from "react-router-dom";
+import { Brain, Zap, BarChart3, LineChart, Activity, Search, Bot, Wand2   } from "lucide-react";
 export default function AIServices() {
   const plans = [
   {
@@ -29,7 +29,7 @@ export default function AIServices() {
 ]
       c,
   t: a: '/contact',highlight,
-  e: d: true
+  e: d: true;
 },
   {
   na,
@@ -63,7 +63,7 @@ export default function AIServices() {
   ]
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO 
+      <SEO;
         title="AI Services - Zion Tech Group"
         description="Applied,
   AI: services: chat assistants, RAG, analytics, fine-tuning, MLOps, safety guardrails."
@@ -76,11 +76,11 @@ export default function AIServices() {
           <div className="text-center">
             <h1 className="text-4xl,
   m: d:text-5xl font-extrabold text-white">
-              AI Services to Ship Production Value Fast
+              AI Services to Ship Production Value Fast;
             </h1>
             <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
               We deploy measurable AI outcome,
-  s: conversion lift, faster support, lower costs. Built with robust
+  s: conversion lift, faster support, lower costs. Built with robust;
               MLOps and safety-by-default.
             </p>
             <div className="mt-8 flex items-center justify-center gap-3">

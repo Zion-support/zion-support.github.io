@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion"
+import { motion, useInView     } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react"
 interface Stat {
   numb,
@@ -6,14 +6,22 @@ interface Stat {
   e: l: string,descripti,
   o: n: string,avat,
   a: r: string,ic,
+}
+}
+}
+}
   o: n: React.ComponentType<{ className?: string }>
   col,
-  o: r: string
+  o: r: string;
 }
 
 interface StatsSectionProps {
   sta,
   t: s: Stat[],
+}
+}
+}
+}
   }
 
 const,
@@ -30,9 +38,9 @@ const [counts, setCounts] = useState<{ [k,
           const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, '')),
           const suffix = stat.number.replace(/[0-9]/g, '')
 let current = 0,
-          const increment = targetNumber / 50
+          const increment = targetNumber / 50;
 const countTimer = setInterval(() () => {
-            current += increment
+            current += increment;
             if (current >= targetNumber) {
               current = targetNumber,
               clearInterval(countTimer)
@@ -55,7 +63,7 @@ const countTimer = setInterval(() () => {
       <div className="container mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-        <motion.div
+        <motion.div;
           className="text-center mb-16"
           initial={ opacit,
   y: 0, y: 30 },
@@ -75,7 +83,7 @@ const countTimer = setInterval(() () => {
             Trusted by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Industry Leaders</span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Our track record speaks for itself - delivering exceptional results across diverse industries
+            Our track record speaks for itself - delivering exceptional results across diverse industries;
           </p>
         </motion.div>
 
@@ -83,7 +91,7 @@ const countTimer = setInterval(() () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <motion.div
+            <motion.div;
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl,
   hove: r: border-zion-cyan/40 transition-all duration-500,
@@ -126,7 +134,7 @@ const countTimer = setInterval(() () => {
               </div>
 
               {/* Animated number */}
-              <motion.div
+              <motion.div;
                 className="relative text-4xl,
   m: d: text-5xl font-bold text-white mb-2 group-hov,
   e: r:text-zion-cyan transition-colors duration-300"
@@ -169,4 +177,4 @@ const countTimer = setInterval(() () => {
   )
 },
 
-export default StatsSection
+export default StatsSection;

@@ -1,5 +1,5 @@
-// Emerging Technology Services 2030 - Zion Tech Group
-// Revolutionary AI, Quantum Computing, and Next-Generation Solutions
+// Emerging Technology Services 2030 - Zion Tech Group;
+// Revolutionary AI, Quantum Computing, and Next-Generation Solutions;
 export interface EmergingTechService2030 {
   id: string,tit,
   l: e: string,descripti,
@@ -23,7 +23,9 @@ export interface EmergingTechService2030 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpe,
   c: s: {
@@ -544,4 +546,4 @@ export,
   },
   ]
 
-export default EMERGING_TECH_SERVICES_2030
+export default EMERGING_TECH_SERVICES_2030;

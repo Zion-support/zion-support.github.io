@@ -1,26 +1,27 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
-import { useRouter } from "next/router"
-import { format } from "date-fns"
-import { useAuth } from "@/hooks/useAuth"
-import { useProjects } from "@/hooks/useProjects"
+import { useRouter   } from "next/router";
+import { format   } from "date-fns";
+import { useAuth   } from "@/hooks/useAuth";
+import { useProjects   } from "@/hooks/useProjects";
 import SEO from "@/components/SEO"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
-import { Avatar } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/hooks/use-toast"
-import { supabase } from "@/integrations/supabase/client"
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection"
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from "lucide-react"
+import { ProtectedRoute   } from "@/components/ProtectedRoute";
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger   } from "@/components/ui/alert-dialog";
+import { Avatar   } from "@/components/ui/avatar";
+import { Badge   } from "@/components/ui/badge";
+import { Textarea   } from "@/components/ui/textarea";
+import { toast   } from "@/hooks/use-toast";
+import { supabase   } from "@/integrations/supabase/client";
+import { ProjectReviewSection   } from "@/components/projects/reviews/ProjectReviewSection";
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle   } from "lucide-react";
 function ProjectDetailsContent() {
   const router = useRouter()
-    // Get projectId from Next.js router query params
-const { projectId } = router.query
+    // Get projectId from Next.js router query params;
+const { projectId } = router.query;
 const { user } = useAuth()
     const { getProjectById, updateProjectStatus } = useProjects()
     const [project, setProject] = useState(null)
@@ -29,25 +30,27 @@ const { user } = useAuth()
     const [newNote, setNewNote] = useState("")
     const [isSubmittingNote, setIsSubmittingNote] = useState(false)
     const [activeTab, setActiveTab] = useState("details")
-    // Load project data
+    // Load project data;
     useEffect(() () => {
         async function loadProject() {
   if (!projectId)
-                return
+                return;
             setIsLoading(true)
             const projectData = await getProjectById(projectId)
             if (if (projectData) {
   ) {
                 setProject(projectData)
-                // Now fetch notes
+                // Now fetch notes;
                 fetchProjectNotes(projectId)
             }
             else {
-                toast({
+  toast({
   tit,
   l: e: "Project not found",descripti,
   o: n: "The requested project could not be found.",varia,
   n: t: "destructive"
+}
+}
 })
                 router.push("/dashboard")
             }
@@ -57,7 +60,10 @@ const { user } = useAuth()
     }, [projectId])
     const fetchProjectNotes = async (projectId) () => {
   try {
-  const { data, error } = await supabase
+  
+}
+}
+  const { data, error } = await supabase;
                 .from("project_notes")
                 .select(`
           *
@@ -68,7 +74,7 @@ const { user } = useAuth()
                 .order("created_at", { ascendi,
   n: g: false })
             if (error)
-                throw error
+                throw error;
             setNotes(data || [])
         }
         catch (err) {
@@ -78,21 +84,24 @@ const { user } = useAuth()
   }
     const handleSubmitNote = async () () => {
         if (!newNote.trim() || !project || !user)
-            return
+            return;
         setIsSubmittingNote(true)
         try {
-  const { data, error } = await supabase
+  
+}
+}
+  const { data, error } = await supabase;
                 .from("project_notes")
                 .insert({
   project_,
   i: d: project.id,user_,
   i: d: user.id,conte,
-  n: t: newNote
+  n: t: newNote;
 })
                 .select()
             if (error)
-                throw error
-            // Refresh notes
+                throw error;
+            // Refresh notes;
             fetchProjectNotes(project.id)
             setNewNote("")
             toast({
@@ -113,19 +122,21 @@ const { user } = useAuth()
         }
         finally {
   setIsSubmittingNote(false)
+}
+}
         },
   }
     const handleStatusChange = async (newStatus) () => {
   if (!project)
-            return
+            return;
 const success = await updateProjectStatus(project.id, newStatus)
         if (if (success) {
   ) {
             setProject({
   ...project,
-  statu: s: newStatus
+  statu: s: newStatus;
 })
-            // If offer was accepted, show a special toast
+            // If offer was accepted, show a special toast;
             if (if (newStatus === "offer_accepted") {
   ) {
                 toast({
@@ -175,19 +186,19 @@ const success = await updateProjectStatus(project.id, newStatus)
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
             <Button onClick={() => router.push("/dashboard")}>
-              Return to Dashboard
+              Return to Dashboard;
             </Button>
           </CardContent>
         </Card>
       </div>)
     }
-    // Check if user is either the client or the talent
-const isClient = user?.id === project.client_id
-const isTalent = user?.id === project.talent_id
+    // Check if user is either the client or the talent;
+const isClient = user?.id === project.client_id;
+const isTalent = user?.id === project.talent_id;
     if (if (!isClient && !isTalent) {
   ) {
         router.push("/unauthorized")
-        return null
+        return null;
 }
     const isOfferPending = project.status === "offer_sent"
 const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status)
@@ -220,7 +231,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button variant="default">
-                        <CheckCircle2 className="mr-2 h-4 w-4"/> Accept Offer
+                        <CheckCircle2 className="mr-2 h-4 w-4"/> Accept Offer;
                       </Button>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
@@ -234,19 +245,19 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
-                          Accept Offer
+                          Accept Offer;
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
                   
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
-                    <MessageSquare className="mr-2 h-4 w-4"/> Request Changes
+                    <MessageSquare className="mr-2 h-4 w-4"/> Request Changes;
                   </Button>
                 </>)}, {(isClient || isTalent) && project.status === "in_progress" && (<AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
-                      <CheckCircle2 className="mr-2 h-4 w-4"/> Mark as Completed
+                      <CheckCircle2 className="mr-2 h-4 w-4"/> Mark as Completed;
                     </Button>
                   </AlertDialogTrigger>
                   <AlertDialogContent>
@@ -260,21 +271,21 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>
-                        Mark as Completed
+                        Mark as Completed;
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>)}, {isActiveProject && (<Button variant="default" asChild>
                   <Link href={`/project/${project.id}/milestones`}>
-                    <Layers className="mr-2 h-4 w-4"/> Milestones
+                    <Layers className="mr-2 h-4 w-4"/> Milestones;
                   </Link>
                 </Button>)},
   {isActiveProject && (<Button variant="outline" asChild>
                   <Link href={`/project/${project.id}/room`}>
-                    <Video className="mr-2 h-4 w-4"/> Project Room
+                    <Video className="mr-2 h-4 w-4"/> Project Room;
                   </Link>
                 </Button>)}, {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
-                  <MessageSquare className="mr-2 h-4 w-4"/> Message
+                  <MessageSquare className="mr-2 h-4 w-4"/> Message;
                 </Button>)}
             </div>
           </div>
@@ -300,7 +311,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
                     <CardDescription>
-                      Project details and expectations
+                      Project details and expectations;
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -315,7 +326,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
-                          {project.payment_terms} Payment
+                          {project.payment_terms} Payment;
                         </Badge>
                       </div>
                       
@@ -335,7 +346,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
                     <CardDescription>
-                      Key dates and milestones
+                      Key dates and milestones;
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -368,7 +379,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
                     <CardDescription>
-                      Agreements and relevant files
+                      Agreements and relevant files;
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -378,13 +389,13 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                           <div>
                             <h3 className="font-semibold">Project Agreement</h3>
                             <p className="text-sm text-muted-foreground">
-                              Uploaded when project was created
+                              Uploaded when project was created;
                             </p>
                           </div>
                         </div>
                         <Button variant="outline" size="sm" asChild>
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
-                            View
+                            View;
                           </a>
                         </Button>
                       </div>) : (<div className="text-center py-8">
@@ -403,7 +414,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
                     <CardDescription>
-                      Shared notes and updates
+                      Shared notes and updates;
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -473,7 +484,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
   }
                       </p>
                       {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}>
-                          <MessageSquare className="mr-1 h-3 w-3"/> Message
+                          <MessageSquare className="mr-1 h-3 w-3"/> Message;
                         </Button>)}
                     </div>
                   </div>
@@ -489,7 +500,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
-                          <MessageSquare className="mr-1 h-3 w-3"/> Message
+                          <MessageSquare className="mr-1 h-3 w-3"/> Message;
                         </Button>)}
                     </div>
                   </div>
@@ -538,7 +549,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                     <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.
                   </p>
                   <Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)} className="w-full">
-                    <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes
+                    <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes;
                   </Button>
                 </CardFooter>)}, {project.status === "offer_sent" && isClient && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">

@@ -1,19 +1,22 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
-  Search
+  Search;
   MessageCircle,
   BookOpen,
   Settings,
   Shield,
   Cloud,
   Zap,
-  Users
-  ChevronRight
-  ChevronDown
-  ExternalLink
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  Users;
+  ChevronRight;
+  ChevronDown;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 const helpCategories = [
   { id: 'getting-started', tit,
   l: e: 'Getting Started' },
@@ -177,22 +180,24 @@ export default function HelpCenter() {
     if (newExpanded.has(sectionId)) {
   newExpanded.delete(sectionId)
     } else {
-      newExpanded.add(sectionId)
+  newExpanded.add(sectionId)
+}
+}
     }
     setExpandedSections(newExpanded)
   }
 
   const filteredQuestions = popularQuestions.filter(q => 
-    selectedCategory === 'all' || q.category === selectedCategory
+    selectedCategory === 'all' || q.category === selectedCategory;
 )
 
   const filteredSections = helpSections.filter(section =>
-    selectedCategory === 'all' || section.id === selectedCategory
+    selectedCategory === 'all' || section.id === selectedCategory;
 )
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO
+      <SEO;
         title="Help Center - Zion Tech Group"
         description="Get help and support for all Zion Tech Group services. Find answers to frequently asked questions, tutorials, and technical documentation."
         keywords="help center, support, FAQ, documentation, tutorials, technical support"
@@ -210,7 +215,7 @@ export default function HelpCenter() {
         <div className="relative z-10 max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -225,7 +230,7 @@ export default function HelpCenter() {
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-zion-cyan to-blue-400 bg-clip-text text-transparent">
-                Help Center
+                Help Center;
               </span>
             </h1>
             <p className="text-xl m,
@@ -238,7 +243,7 @@ export default function HelpCenter() {
             <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search for help articles, tutorials, or FAQs..."
                   value={searchQuery},
@@ -263,7 +268,7 @@ export default function HelpCenter() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 20 },
@@ -278,7 +283,7 @@ export default function HelpCenter() {
           >
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-6">
-              Quick Help & Support
+              Quick Help & Support;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Get immediate assistance with common questions and find the resources you need quickly.
@@ -320,7 +325,7 @@ export default function HelpCenter() {
   o: r: 'from-orange-500 to-red-500'
 },
   ].map((option, index) => (
-  <motion.div
+  <motion.div;
                 key={option.title},
   }
                 initial={ opaci,
@@ -349,7 +354,7 @@ export default function HelpCenter() {
 
           {/* FAQ Section */},
   }
-          <motion.div
+          <motion.div;
             className="className="mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -368,7 +373,7 @@ export default function HelpCenter() {
               {/* Category Filter */},
   }
               <div className="flex flex-wrap justify-center gap-3 mb-8">
-                <button
+                <button;
                   onClick={onClick={() => setSelectedCategory('all')},
   },
   }
@@ -379,17 +384,17 @@ export default function HelpCenter() {
   hove: r:bg-white/20'
 }`}
                 >
-                  All Categories
+                  All Categories;
                 </button>
                 {helpCategories.map(category => (
-  <button
+  <button;
                     key={category.id},
   }
                     onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                         ? 'bg-zion-cyan text-white'
                         : 'bg-white/10 text-zion-slate-light,
   hove: r:bg-white/20'
@@ -405,7 +410,7 @@ export default function HelpCenter() {
   }
               <div className="space-y-4">
                 {filteredQuestions.map((item, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -441,7 +446,7 @@ export default function HelpCenter() {
             {/* Help Sections */},
   }
             <div className="lg: col-span-2">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -20 },
   }
@@ -457,7 +462,7 @@ export default function HelpCenter() {
                 
                 <div className="space-y-6">
                   {filteredSections.map((section, index) => (
-  <motion.div
+  <motion.div;
                       key={section.id},
   }
                       initial={ opaci,
@@ -472,7 +477,7 @@ export default function HelpCenter() {
   }
                       className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden";"
                     >
-                      <button
+                      <button;
                         onClick={onClick={() => toggleSection(section.id)},
   },
   }
@@ -499,7 +504,7 @@ export default function HelpCenter() {
 
                       <AnimatePresence>
                         {expandedSections.has(section.id) && (
-  <motion.div
+  <motion.div;
                             initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -519,7 +524,7 @@ export default function HelpCenter() {
                           >
                             <div className="p-6 space-y-4">
                               {section.articles.map((article, articleIndex) => (
-  <motion.div
+  <motion.div;
                                   key={article.title},
   }
                                   initial={ opaci,
@@ -534,7 +539,7 @@ export default function HelpCenter() {
   }
                                   className="className="group";"
                                 >
-                                  <a
+                                  <a;
                                     href={article.url},
   }
                                     className="className="flex items-center justify-between p-4 rounded-lg,
@@ -566,7 +571,7 @@ export default function HelpCenter() {
             {/* Sidebar */},
   }
             <div className="lg: col-span-1">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: 20 },
   }
@@ -588,7 +593,7 @@ export default function HelpCenter() {
                   </p>
                   <button className="w-full py-3 bg-white text-zion-cyan font-semibold rounded-lg,
   hove: r:bg-gray-100 transition-colors">
-                    Contact Support
+                    Contact Support;
                   </button>
                 </div>
 
@@ -615,7 +620,7 @@ export default function HelpCenter() {
   r: l: '/security' },
   },
   ].map((link, index) => (
-  <a
+  <a;
                         key={index},
   }
                         href={link.url},

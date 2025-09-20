@@ -1,29 +1,33 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
 import {
-  Zap
+  Zap;
   Brain,
   Shield,
   Cloud,
   Cpu,
   Rocket,
   Atom,
-  Globe
-  CheckCircle
-  ArrowRight
-  Star
-  TrendingUp
-  Users
-  Lock
-  Database
-  Network
-  CpuIcon
-  Server
-  CircuitBoard
-  Microchip
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
+  Globe;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Users;
+  Lock;
+  Database;
+  Network;
+  CpuIcon;
+  Server;
+  CircuitBoard;
+  Microchip;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "@/components/SEO";
 const QuantumComputing = () () => {
   const features = [
   {
@@ -56,25 +60,25 @@ const QuantumComputing = () () => {
   tit,
   l: e: "Financial Modeling",descripti,
   o: n: "Quantum algorithms for risk assessment and portfolio optimization",ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "Drug Discovery",descripti,
   o: n: "Molecular simulation and protein folding for pharmaceutical research",ic,
-  o: n: Brain
+  o: n: Brain;
 },
   {
   tit,
   l: e: "Cryptography",descripti,
   o: n: "Quantum-resistant encryption and secure communications",ic,
-  o: n: Lock
+  o: n: Lock;
 },
   {
   tit,
   l: e: "Optimization",descripti,
   o: n: "Solving complex logistics and supply chain problems",ic,
-  o: n: Network
+  o: n: Network;
 },
   ]
   const technologies = [
@@ -88,7 +92,7 @@ const QuantumComputing = () () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO 
+      <SEO;
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for complex computational problems. AI integration, quantum security, and cloud quantum services."
       />
@@ -103,7 +107,7 @@ const QuantumComputing = () () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -117,14 +121,14 @@ const QuantumComputing = () () => {
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
-              Revolutionary Technology
+              Revolutionary Technology;
             </div>
 
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Quantum Computing
+              Quantum Computing;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Solutions
+                Solutions;
               </span>
             </h1>
             
@@ -135,22 +139,22 @@ const QuantumComputing = () () => {
 
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/20";"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -161,7 +165,7 @@ const QuantumComputing = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -174,7 +178,7 @@ const QuantumComputing = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Features
+              Quantum Computing Features;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Our quantum computing platform combines the latest advances in quantum mechanics with practical business applications.
@@ -185,7 +189,7 @@ const QuantumComputing = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -218,7 +222,7 @@ const QuantumComputing = () () => {
   }
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -231,7 +235,7 @@ const QuantumComputing = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Real-World Applications
+              Real-World Applications;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Discover how quantum computing is transforming industries and solving complex problems.
@@ -241,7 +245,7 @@ const QuantumComputing = () () => {
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.title},
   }
                 initial={ opaci,
@@ -272,7 +276,7 @@ const QuantumComputing = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -285,7 +289,7 @@ const QuantumComputing = () () => {
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Technologies
+              Quantum Technologies;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Our platform leverages the latest quantum computing technologies and methodologies.
@@ -296,7 +300,7 @@ const QuantumComputing = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={tech},
   }
                 initial={ opaci,
@@ -326,7 +330,7 @@ const QuantumComputing = () () => {
   }
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -346,22 +350,22 @@ const QuantumComputing = () () => {
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/20";"
               >
-                Start Your Quantum Journey
+                Start Your Quantum Journey;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                Explore All Services
+                Explore All Services;
               </Link>
             </div>
           </motion.div>
@@ -370,4 +374,4 @@ const QuantumComputing = () () => {
     </div>
   )
 }
-export default QuantumComputing
+export default QuantumComputing;

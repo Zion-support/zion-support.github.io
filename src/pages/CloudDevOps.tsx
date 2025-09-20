@@ -1,51 +1,53 @@
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  Cloud
+  Cloud;
   Brain,
   Zap,
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Lock
-  Database
-  Cpu
-  Network
-  BarChart3
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-  Target
-  Users
-  ArrowRight
-  Key
-  Fingerprint
-  EyeOff
-  Server
-  Globe2
-  ShieldCheck
-  Wifi
-  Smartphone
-  Activity
-  Clock
-  BarChart
-  PieChart
-  GitBranch
-  Code
-  Package
-  Play
-  Settings
-  Monitor
-  Shield
-  Rocket
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Wifi;
+  Smartphone;
+  Activity;
+  Clock;
+  BarChart;
+  PieChart;
+  GitBranch;
+  Code;
+  Package;
+  Play;
+  Settings;
+  Monitor;
+  Shield;
+  Rocket;
+}
+}
+ } from "lucide-react";
 export default function CloudDevOps() {
   const features = [
   {
@@ -103,25 +105,25 @@ export default function CloudDevOps() {
   tit,
   l: e: 'Web Applications',descripti,
   o: n: 'Scalable web apps with automated deployment and scaling',ic,
-  o: n: Globe
+  o: n: Globe;
 },
   {
   tit,
   l: e: 'Microservices',descripti,
   o: n: 'Containerized microservices with orchestration and monitoring',ic,
-  o: n: Package
+  o: n: Package;
 },
   {
   tit,
   l: e: 'Data Platforms',descripti,
   o: n: 'Big data infrastructure with automated processing pipelines',ic,
-  o: n: Database
+  o: n: Database;
 },
   {
   tit,
   l: e: 'Mobile Backends',descripti,
   o: n: 'Scalable mobile app backends with real-time updates',ic,
-  o: n: Smartphone
+  o: n: Smartphone;
 },
   ]
   const devOpsCapabilities = [
@@ -158,7 +160,7 @@ export default function CloudDevOps() {
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="Cloud DevOps - Zion Tech Group"
         description="Revolutionary cloud DevOps platform with automated CI/CD, infrastructure as code, and comprehensive monitoring. Transform your development and deployment processes."
         keywords="cloud DevOps, CI/CD, infrastructure as code, cloud infrastructure, automated deployment, monitoring, cloud optimization"
@@ -170,7 +172,7 @@ export default function CloudDevOps() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -184,26 +186,26 @@ export default function CloudDevOps() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
                 <Cloud className="w-4 h-4" />
-                DevOps Innovation
+                DevOps Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                Cloud
+                Cloud;
                 <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-                  DevOps
+                  DevOps;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform your development and deployment processes with our revolutionary cloud DevOps platform. 
-                Automated CI/CD, infrastructure as code, and comprehensive monitoring that accelerates 
+                Automated CI/CD, infrastructure as code, and comprehensive monitoring that accelerates;
                 your development cycles and ensures reliability.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -215,9 +217,9 @@ export default function CloudDevOps() {
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -228,7 +230,7 @@ export default function CloudDevOps() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  View Demo
+                  View Demo;
                 </motion.button>
               </div>
             </motion.div>
@@ -246,7 +248,7 @@ export default function CloudDevOps() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -263,10 +265,10 @@ export default function CloudDevOps() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Revolutionary DevOps Features
+                Revolutionary DevOps Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our cloud DevOps platform combines cutting-edge technology with best practices 
+                Our cloud DevOps platform combines cutting-edge technology with best practices;
                 to deliver unprecedented automation and efficiency.
               </p>
             </motion.div>
@@ -275,7 +277,7 @@ export default function CloudDevOps() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -322,7 +324,7 @@ export default function CloudDevOps() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -338,19 +340,19 @@ export default function CloudDevOps() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your Development Process
+                  Transform Your Development Process;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our cloud DevOps platform delivers measurable improvements in deployment speed
-                  infrastructure efficiency, and system reliability while reducing operational 
+                  Our cloud DevOps platform delivers measurable improvements in deployment speed;
+                  infrastructure efficiency, and system reliability while reducing operational;
                   overhead and costs.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -375,7 +377,7 @@ export default function CloudDevOps() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -397,7 +399,7 @@ export default function CloudDevOps() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      DevOps Impact
+                      DevOps Impact;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -429,7 +431,7 @@ export default function CloudDevOps() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -446,10 +448,10 @@ export default function CloudDevOps() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                DevOps Capabilities
+                DevOps Capabilities;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform provides comprehensive DevOps capabilities that 
+                Our platform provides comprehensive DevOps capabilities that;
                 streamline your entire development and deployment lifecycle.
               </p>
             </motion.div>
@@ -457,7 +459,7 @@ export default function CloudDevOps() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {devOpsCapabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                   key={capability.name},
   }
                   initial={ opaci,
@@ -506,7 +508,7 @@ export default function CloudDevOps() {
   }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -523,10 +525,10 @@ export default function CloudDevOps() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Cloud DevOps Use Cases
+                Cloud DevOps Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our DevOps platform adapts to various application types and industries
+                Our DevOps platform adapts to various application types and industries;
                 providing tailored solutions for different development needs.
               </p>
             </motion.div>
@@ -534,7 +536,7 @@ export default function CloudDevOps() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -581,7 +583,7 @@ export default function CloudDevOps() {
   }
         <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -602,13 +604,13 @@ export default function CloudDevOps() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading organizations that are already using our cloud DevOps 
+                Join leading organizations that are already using our cloud DevOps;
                 platform to accelerate their development and deployment processes.
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -620,9 +622,9 @@ export default function CloudDevOps() {
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
                 >
-                  Start Today
+                  Start Today;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -633,7 +635,7 @@ export default function CloudDevOps() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>

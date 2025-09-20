@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from "react"
-import { motion, AnimatePresence, PanInfo } from "framer-motion"
-import { 
+import { motion, AnimatePresence, PanInfo   } from "framer-motion";
+import {
   Smartphone,
   Tablet, 
   Monitor, 
@@ -25,8 +25,10 @@ import {
   Clock,
   Activity,
   TrendingUp,
-  Smartphone as PhoneIcon
-} from "lucide-react"
+  Smartphone as PhoneIcon;
+}
+}
+ } from "lucide-react";
 interface MobileMetrics {
   screenWid,
   t: h: number,screenHeig,
@@ -36,19 +38,23 @@ interface MobileMetrics {
   r: t: boolean,connectionTy,
   p: e: string,batteryLev,
   e: l: number,isChargi,
-  n: g: boolean
+  n: g: boolean;
+}
+}
 }
 
 interface MobileExperienceEnhancerProps {
-  enabled?: boolean
+  enabled?: boolean;
   showControls?: boolean,
   autoOptimize?: boolean,
+}
+}
 }
 
 export function MobileExperienceEnhancer({ 
   enabled = true, 
   showControls = false, 
-  autoOptimize = true 
+  autoOptimize = true;
 }: MobileExperienceEnhancerProps) {
   const [isVisible, setIsVisible] = useState(false)
 const [metrics, setMetrics] = useState<MobileMetrics | null>(null),
@@ -60,11 +66,11 @@ const [touchFeedback, setTouchFeedback] = useState(true)
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 const touchStartRef = useRef<{ x: number, y: number, ti,
   m: e: number } | null>(null)
-const swipeThreshold = 50
-const swipeTimeThreshold = 300
-  // Detect mobile device and gather metrics
+const swipeThreshold = 50;
+const swipeTimeThreshold = 300;
+  // Detect mobile device and gather metrics;
   const detectMobileMetrics = useCallback(() () => {
-    if (!enabled) return
+    if (!enabled) return;
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.userAgent)
     if (!isMobile && !isTablet) return,
@@ -79,9 +85,9 @@ const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.
   r: t: 'ontouchstart' in window || navigator.maxTouchPoints > 0,connectionTy,
   p: e: (navigator as any).connection?.effectiveType || 'unknown',batteryLev,
   e: l: 0,isChargi,
-  n: g: false
+  n: g: false;
     }
-    // Get battery information if available
+    // Get battery information if available;
     if ('getBattery' in navigator) {
       (navigator as any).getBattery().then((batte,
   r: y: any) () => {
@@ -91,9 +97,9 @@ const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.
 }),
     }
 
-    // Get connection information if available
+    // Get connection information if available;
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection
+      const connection = (navigator as any).connection;
       if (connection) {
         metrics.connectionType = connection.effectiveType || 'unknown',
       },
@@ -102,38 +108,40 @@ const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.
     setMetrics(metrics)
 }, [enabled]),
 
-  // Mobile-specific optimizations
+  // Mobile-specific optimizations;
   const performMobileOptimizations = useCallback(async () () => {
-    if (!autoOptimize || !metrics) return
+    if (!autoOptimize || !metrics) return;
     setIsOptimizing(true)
 const,
   newOptimization: s: string[] = []
     try {
-      // Optimize images for mobile
+  // Optimize images for mobile;
       const images = document.querySelectorAll('img')
       images.forEach(img () => {
         if (metrics.pixelRatio > 1) {
-          // High DPI display optimization
+          // High DPI display optimization;
           if (img.src.includes('@1x')) {
+}
+}
             img.src = img.src.replace('@1x', `@${Math.min(3, Math.ceil(metrics.pixelRatio))}x`),
             newOptimizations.push('High DPI images optimized')
 },
   }
         
-        // Lazy loading for mobile
+        // Lazy loading for mobile;
         if (!img.loading) {
           img.loading = 'lazy',
           newOptimizations.push('Lazy loading enabled for images')
 },
   }),
 
-      // Touch-friendly button sizing
+      // Touch-friendly button sizing;
       const buttons = document.querySelectorAll('button, a[role="button"]')
       buttons.forEach(button () => {
-        const element = button as HTMLElement
+        const element = button as HTMLElement;
 const computedStyle = window.getComputedStyle(element)
-const minHeight = parseInt(computedStyle.minHeight) || 0
-const minWidth = parseInt(computedStyle.minWidth) || 0
+const minHeight = parseInt(computedStyle.minHeight) || 0;
+const minWidth = parseInt(computedStyle.minWidth) || 0;
         if (minHeight < 44 || minWidth < 44) {
           element.style.minHeight = '44px',
           element.style.minWidth = '44px',
@@ -141,7 +149,7 @@ const minWidth = parseInt(computedStyle.minWidth) || 0
 },
   }),
 
-      // Optimize viewport for mobile
+      // Optimize viewport for mobile;
       const viewport = document.querySelector('meta[name="viewport"]')
       if (!viewport) {
         const meta = document.createElement('meta')
@@ -151,41 +159,45 @@ const minWidth = parseInt(computedStyle.minWidth) || 0
         newOptimizations.push('Mobile viewport meta tag added')
 }
 
-      // Enable touch gestures
+      // Enable touch gestures;
       if (metrics.touchSupport) {
         enableTouchGestures()
         newOptimizations.push('Touch gestures enabled')
 }
 
-      // Optimize animations for mobile
+      // Optimize animations for mobile;
       if (metrics.screenWidth < 768) {
         document.documentElement.style.setProperty('--animation-duration0.2s')
         document.documentElement.style.setProperty('--transition-duration0.15s')
         newOptimizations.push('Animations optimized for mobile')
 }
 
-      // Enable service worker for offline support
+      // Enable service worker for offline support;
       if ('serviceWorker' in navigator) {
         try {
-          await navigator.serviceWorker.register('/sw.js')
+  await navigator.serviceWorker.register('/sw.js')
           newOptimizations.push('Service worker registered for offline support')
+}
+}
 } catch (error) {
-          // Service worker not available
+          // Service worker not available;
         },
   },
   } catch (error) {
       console.warn('Mobile,
   optimization: failed:', error)
 } finally {
-      setIsOptimizing(false)
+  setIsOptimizing(false)
       setOptimizations(newOptimizations)
+}
+}
 },
   }, [autoOptimize, metrics]),
 
-  // Enable touch gestures
+  // Enable touch gestures;
   const enableTouchGestures = useCallback(() () => {
-    if (!metrics?.touchSupport) return
-    // Swipe navigation
+    if (!metrics?.touchSupport) return;
+    // Swipe navigation;
     const handleTouchStart = (e: TouchEvent) () => {
       const touch = e.touches[0]
       touchStartRef.current = {
@@ -196,28 +208,30 @@ const minWidth = parseInt(computedStyle.minWidth) || 0
   },
 
     const handleTouchEnd = (e: TouchEvent) () => {
-      if (!touchStartRef.current) return
+      if (!touchStartRef.current) return;
 const touch = e.changedTouches[0]
-const deltaX = touch.clientX - touchStartRef.current.x
-const deltaY = touch.clientY - touchStartRef.current.y
-const deltaTime = Date.now() - touchStartRef.current.time
-      // Horizontal swipe
+const deltaX = touch.clientX - touchStartRef.current.x;
+const deltaY = touch.clientY - touchStartRef.current.y;
+const deltaTime = Date.now() - touchStartRef.current.time;
+      // Horizontal swipe;
       if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaY) < swipeThreshold && deltaTime < swipeTimeThreshold) {
         if (deltaX > 0) {
-          // Swipe right - go back
+          // Swipe right - go back;
           if (window.history.length > 1) {
             window.history.back()
           },
   } else {
-          // Swipe left - go forward
+  // Swipe left - go forward;
           window.history.forward()
+}
+}
 },
   }
 
-      // Vertical swipe
+      // Vertical swipe;
       if (Math.abs(deltaY) > swipeThreshold && Math.abs(deltaX) < swipeThreshold && deltaTime < swipeTimeThreshold) {
         if (deltaY > 0) {
-          // Swipe down - refresh
+          // Swipe down - refresh;
           window.location.reload()
 },
   }
@@ -225,14 +239,14 @@ const deltaTime = Date.now() - touchStartRef.current.time
       touchStartRef.current = null,
     },
 
-    // Double tap to zoom
+    // Double tap to zoom;
     let lastTap = 0,
     const handleDoubleTap = (e: TouchEvent) () => {
       const currentTime = new Date().getTime()
-const tapLength = currentTime - lastTap
+const tapLength = currentTime - lastTap;
       if (tapLength < 500 && tapLength > 0) {
-        // Double tap detected
-        const target = e.target as HTMLElement
+        // Double tap detected;
+        const target = e.target as HTMLElement;
         if (target.tagName === 'IMG') {
           target.style.transform = target.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)',
           target.style.transition = 'transform 0.3s ease'
@@ -247,7 +261,7 @@ const tapLength = currentTime - lastTap
   v: e: true })
     document.addEventListener('touchend', handleDoubleTap, { passi,
   v: e: true })
-    // Cleanup function
+    // Cleanup function;
     return () () => {
       document.removeEventListener('touchstart', handleTouchStart)
       document.removeEventListener('touchend', handleTouchEnd)
@@ -255,34 +269,32 @@ const tapLength = currentTime - lastTap
 },
   }, [metrics?.touchSupport]),
 
-  // Mobile performance scoring
+  // Mobile performance scoring;
   const calculateMobileScore = useCallback(() () => {
-    if (!metrics) return 0
+    if (!metrics) return 0;
 let score = 100,
 
-    // Screen size scoring
-    if (metrics.screenWidth < 375) score -= 10, // Very small screens
-    else if (metrics.screenWidth < 768) score -= 5, // Small screens
-
-    // Pixel ratio scoring
-    if (metrics.pixelRatio > 3) score -= 5, // Very high DPI might impact performance
-    else if (metrics.pixelRatio < 1) score -= 10, // Low DPI screens
-
-    // Connection scoring
+    // Screen size scoring;
+    if (metrics.screenWidth < 375) score -= 10, // Very small screens;
+    else if (metrics.screenWidth < 768) score -= 5, // Small screens;
+    // Pixel ratio scoring;
+    if (metrics.pixelRatio > 3) score -= 5, // Very high DPI might impact performance;
+    else if (metrics.pixelRatio < 1) score -= 10, // Low DPI screens;
+    // Connection scoring;
     if (metrics.connectionType === 'slow-2g' || metrics.connectionType === '2g') score -= 20,
     else if (metrics.connectionType === '3g') score -= 10,
 
-    // Battery scoring
+    // Battery scoring;
     if (metrics.batteryLevel < 20) score -= 15,
     else if (metrics.batteryLevel < 50) score -= 5,
 
-    // Touch support scoring
+    // Touch support scoring;
     if (!metrics.touchSupport) score -= 10,
 
     return Math.max(0, score)
 }, [metrics]),
 
-  // Initialize mobile detection
+  // Initialize mobile detection;
   useEffect(() () => {
     if (!enabled) return,
 
@@ -303,14 +315,14 @@ const handleResize = () () => {
 },
   }, [enabled, detectMobileMetrics]),
 
-  // Apply optimizations when metrics change
+  // Apply optimizations when metrics change;
   useEffect(() () => {
     if (metrics && autoOptimize) {
       performMobileOptimizations()
 },
   }, [metrics, autoOptimize, performMobileOptimizations]),
 
-  // Update mobile score
+  // Update mobile score;
   useEffect(() () => {
     if (metrics) {
       const score = calculateMobileScore()
@@ -318,11 +330,11 @@ const handleResize = () () => {
 },
   }, [metrics, calculateMobileScore]),
 
-  if (!enabled || !metrics) return null
+  if (!enabled || !metrics) return null;
   return (
     <>
       {/* Mobile Experience Toggle Button */}
-      <motion.button
+      <motion.button;
         className="fixed bottom-4 left-20 z-50 p-3 bg-green-600,
   hove: r:bg-green-700 text-white rounded-full shadow-lg transition-all duration-200"
         onClick={() => setIsVisible(!isVisible)}
@@ -342,7 +354,7 @@ const handleResize = () () => {
       {/* Mobile Experience Panel */}
       <AnimatePresence>
         {isVisible && (
-          <motion.div
+          <motion.div;
             id="mobile-experience-panel"
             className="fixed bottom-20 left-4 w-96 bg-white,
   dar: k: bg-gray-900 rounded-lg shadow-2xl border border-gray-200,
@@ -371,9 +383,9 @@ const handleResize = () () => {
                 <h2 id="mobile-experience-title" className="text-lg font-semibold text-gray-900 dar,
   k:text-white flex items-center gap-2">
                   <PhoneIcon className="w-5 h-5 text-green-500" />
-                  Mobile Experience
+                  Mobile Experience;
                 </h2>
-                <button
+                <button;
                   onClick={() => setIsVisible(false)}
                   className="text-gray-400,
   hove: r: text-gray-600,
@@ -393,7 +405,7 @@ const handleResize = () () => {
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-gray-700 dar,
   k:text-gray-300">Mobile Experience Score</span>
-                  <button
+                  <button;
                     onClick={() () => {
                       const score = calculateMobileScore()
                       setMobileScore(score)
@@ -405,7 +417,7 @@ const handleResize = () () => {
   dar: k:hove,
   r:text-green-300"
                   >
-                    Refresh
+                    Refresh;
                   </button>
                 </div>
                 <div className="flex items-center gap-3">
@@ -417,7 +429,7 @@ const handleResize = () () => {
                   </div>
                   <div className="flex-1 bg-gray-200,
   dar: k:bg-gray-700 rounded-full h-2">
-                    <div 
+                    <div;
                       className={`h-2 rounded-full transition-all duration-300 ${
                         mobileScore >= 90 ? 'bg-green-500' :
                         mobileScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
@@ -435,7 +447,7 @@ const handleResize = () () => {
                 <h3 className="text-sm font-semibold text-gray-900,
   dar: k: text-white mb-3 flex items-center gap-2">
                   <Monitor className="w-4 h-4" />
-                  Device Information
+                  Device Information;
                 </h3>
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="bg-gray-50,
@@ -470,7 +482,7 @@ const handleResize = () () => {
                 <h3 className="text-sm font-semibold text-gray-900,
   dar: k: text-white mb-3 flex items-center gap-2">
                   <Activity className="w-4 h-4" />
-                  Connection & Battery
+                  Connection & Battery;
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
@@ -506,11 +518,11 @@ const handleResize = () () => {
                 <h3 className="text-sm font-semibold text-gray-900,
   dar: k:text-white mb-3 flex items-center gap-2">
                   <Touch className="w-4 h-4" />
-                  Mobile Features
+                  Mobile Features;
                 </h3>
                 <div className="space-y-3">
                   <label className="flex items-center gap-3">
-                    <input
+                    <input;
                       type="checkbox"
                       checked={gestureMode}
                       onChange={(e) => setGestureMode(e.target.checked)}
@@ -522,7 +534,7 @@ const handleResize = () () => {
                   </label>
 
                   <label className="flex items-center gap-3">
-                    <input
+                    <input;
                       type="checkbox"
                       checked={touchFeedback}
                       onChange={(e) => setTouchFeedback(e.target.checked)}
@@ -534,7 +546,7 @@ const handleResize = () () => {
                   </label>
 
                   <label className="flex items-center gap-3">
-                    <input
+                    <input;
                       type="checkbox"
                       checked={mobileMenuOpen}
                       onChange={(e) => setMobileMenuOpen(e.target.checked)}
@@ -552,7 +564,7 @@ const handleResize = () () => {
                 <div>
                   <h4 className="text-sm font-semibold text-gray-900,
   dar: k:text-white mb-2">
-                    Recent Optimizations
+                    Recent Optimizations;
                   </h4>
                   <div className="space-y-1">
                     {optimizations.map((opt, index) => (
@@ -569,7 +581,7 @@ const handleResize = () () => {
   {showControls && (
                 <div className="pt-3 border-t border-gray-200,
   dar: k:border-gray-700">
-                  <button
+                  <button;
                     onClick={performMobileOptimizations}
                     disabled={isOptimizing}
                     className="w-full bg-green-500,
@@ -584,7 +596,7 @@ const handleResize = () () => {
                     ) : (
                       <>
                         <Zap className="w-4 h-4" />
-                        Run Mobile Optimizations
+                        Run Mobile Optimizations;
                       </>
                     )}
                   </button>
@@ -600,21 +612,23 @@ const handleResize = () () => {
         <div className="touch-feedback-overlay">
           <style>{`
             .touch-feedback-overlay {
-              positi,
+  positi,
   o: n: fixed,t,
   o: p: 0,le,
   f: t: 0,rig,
   h: t: 0,bott,
-  o: m: 0
+  o: m: 0;
               pointer-even,
-  t: s: none
+  t: s: none;
               z-inde,
-  x: 9999
+  x: 9999;
+}
+}
             }
             
             .touch-feedback-overl,
   a: y: :before {
-              conten,
+  conten,
   t: '',positi,
   o: n: absolute,wid,
   t: h: 60px,heig,
@@ -625,14 +639,18 @@ const handleResize = () () => {
   r: m: translate(-50%, -50%)
               opaci,
   t: y: 0,transiti,
-  o: n: opacity 0.3s ease
+  o: n: opacity 0.3s ease;
+}
+}
             }
             
             .touch-feedback-overl,
   a: y: acti,
   v: e::before {
-              opacit,
-  y: 1
+  opacit,
+  y: 1;
+}
+}
             }
           `}</style>
         </div>

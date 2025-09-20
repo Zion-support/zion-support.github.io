@@ -1,33 +1,37 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
+import { SEO     } from "../../components/SEO";
 import {
-  Brain
+  Brain;
   Search,
   BookOpen,
   Zap,
   Users,
   Clock,
   TrendingUp,
-  CheckCircle
-  Lightbulb
-  Target
-  Database
-  Lock
-  Globe
-  Smartphone
-  Monitor
-  FileText
-  BarChart3
-  Rocket
-  Atom
-  Flask
-  Microscope
-  Telescope
-  Cpu
-  Network
-  Shield
-  ArrowRight
-} from "lucide-react"
+  CheckCircle;
+  Lightbulb;
+  Target;
+  Database;
+  Lock;
+  Globe;
+  Smartphone;
+  Monitor;
+  FileText;
+  BarChart3;
+  Rocket;
+  Atom;
+  Flask;
+  Microscope;
+  Telescope;
+  Cpu;
+  Network;
+  Shield;
+  ArrowRight;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AIAutonomousResearchAssistan: t: React.FC = () () => {
   const features = [
@@ -122,7 +126,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Autonomous Research Assistant - Zion Tech Group"
         description="Revolutionary AI-powered autonomous research assistant that accelerates discovery, automates analysis, and enables 24/7 research operations across all domains."
       />
@@ -135,15 +139,15 @@ const,
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-purple-400/10 border border-purple-400/20 rounded-full text-purple-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              Autonomous AI Research
+              Autonomous AI Research;
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI Autonomous Research Assistant
+              AI Autonomous Research Assistant;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              The future of research is autonomous. Our AI assistant works independently to discover
-              analyze, and synthesize knowledge across all research domains, accelerating breakthroughs 
+              The future of research is autonomous. Our AI assistant works independently to discover;
+              analyze, and synthesize knowledge across all research domains, accelerating breakthroughs;
               and enabling 24/7 research operations.
             </p>
             <div className="flex flex-col,
@@ -152,11 +156,11 @@ const,
   hove: r:from-purple-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-200">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </div>
@@ -169,10 +173,10 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Autonomous Research Intelligence
+              Autonomous Research Intelligence;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI research assistant operates independently, continuously learning and improving 
+              Our AI research assistant operates independently, continuously learning and improving;
               to deliver unprecedented research capabilities.
             </p>
           </div>
@@ -208,7 +212,7 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Research Capabilities
+              Advanced Research Capabilities;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From hypothesis generation to data analysis, our AI handles every aspect of the research process.
@@ -248,10 +252,10 @@ const,
   l: g:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">
-                Research Across All Domains
+                Research Across All Domains;
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our AI research assistant is designed to work across all research fields
+                Our AI research assistant is designed to work across all research fields;
                 from hard sciences to social sciences, adapting its approach to each domain.
               </p>
               <div className="grid grid-cols-1,
@@ -300,7 +304,7 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Research Process
+              Transform Your Research Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience unprecedented research efficiency and discovery with our autonomous AI assistant.
@@ -332,7 +336,7 @@ const,
             Ready to Accelerate Your Research?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join leading researchers and institutions that are already experiencing 
+            Join leading researchers and institutions that are already experiencing;
             the future of autonomous AI-powered research.
           </p>
           <div className="flex flex-col,
@@ -341,11 +345,11 @@ const,
   hove: r:from-purple-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg">
-              Start Free Trial
+              Start Free Trial;
             </button>
             <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-200">
-              Schedule Demo
+              Schedule Demo;
             </button>
           </div>
         </div>
@@ -353,4 +357,4 @@ const,
     </div>
   )
 }
-export default AIAutonomousResearchAssistant
+export default AIAutonomousResearchAssistant;

@@ -7,8 +7,8 @@ export type ServiceItem = {
   price: billing: 'month' | 'project' | 'hour',featur,
   e: s: string[],ctaLab,
   e: l: string,hr,
-  e: f: string, // internal path or external URL
-	external?: boolean
+  e: f: string, // internal path or external URL;
+	external?: boolean;
 }
 export type ServiceCategory = {
   na,
@@ -344,7 +344,7 @@ export,
   e: f: 'http,
   s://ziontechgroup.com/services'
 }
-			// New Innovative AI Services Added
+			// New Innovative AI Services Added;
 			{
   id: 'quantum-consciousness-simulation-2030',tit,
   l: e: 'Quantum Consciousness Simulation Platform 2030',descripti,
@@ -1428,7 +1428,7 @@ export,
 },
   ],
   }
-	// New Service Categories Added
+	// New Service Categories Added;
 	{
   na,
   m: e: 'Supply Chain & Logistics',sl,

@@ -1,20 +1,22 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
 import {
-  Users
+  Users;
   Target,
   Award,
   Globe,
   Zap,
   Brain,
   Rocket,
-  Shield
-  Heart
-  Star
-  CheckCircle
-  ArrowRight
-} from "lucide-react"
+  Shield;
+  Heart;
+  Star;
+  CheckCircle;
+  ArrowRight;
+}
+}
+ } from "lucide-react";
 export default function About() {
   const stats = [
   { numb,
@@ -91,7 +93,7 @@ export default function About() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions."
       />
@@ -101,7 +103,7 @@ export default function About() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -118,7 +120,7 @@ export default function About() {
               About <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              We are a forward-thinking technology company dedicated to transforming businesses through 
+              We are a forward-thinking technology company dedicated to transforming businesses through;
               innovative AI solutions, quantum computing, and cutting-edge digital technologies.
             </p>
           </motion.div>
@@ -131,7 +133,7 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -147,17 +149,17 @@ export default function About() {
                 <h2 className="text-3xl font-bold text-white">Our Mission</h2>
               </div>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                To democratize access to advanced AI and quantum technologies, enabling businesses of all sizes 
+                To democratize access to advanced AI and quantum technologies, enabling businesses of all sizes;
                 to leverage cutting-edge solutions for growth, efficiency, and competitive advantage.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 We believe that technology should be accessible, understandable, and transformative. 
-                Our team works tirelessly to bridge the gap between complex technological innovations 
+                Our team works tirelessly to bridge the gap between complex technological innovations;
                 and practical business applications.
               </p>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -175,7 +177,7 @@ export default function About() {
                   <h3 className="text-2xl font-bold text-white">Our Vision</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  To be the global leader in AI-powered business solutions, driving the next wave of 
+                  To be the global leader in AI-powered business solutions, driving the next wave of;
                   digital transformation and creating a future where technology serves humanity.
                 </p>
                 <div className="space-y-3">
@@ -202,7 +204,7 @@ export default function About() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -221,7 +223,7 @@ export default function About() {
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-  <motion.div
+  <motion.div;
                 key={stat.label},
   }
                 initial={ opaci,
@@ -251,7 +253,7 @@ export default function About() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -271,7 +273,7 @@ export default function About() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {values.map((value, index) => (
-  <motion.div
+  <motion.div;
                 key={value.title},
   }
                 initial={ opaci,
@@ -301,7 +303,7 @@ export default function About() {
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -320,7 +322,7 @@ export default function About() {
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {team.map((member, index) => (
-  <motion.div
+  <motion.div;
                 key={member.name},
   }
                 initial={ opaci,
@@ -356,7 +358,7 @@ export default function About() {
   }
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -371,28 +373,28 @@ export default function About() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies already leveraging our AI-powered solutions 
+              Join hundreds of companies already leveraging our AI-powered solutions;
               to drive growth and innovation.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg,
   hove: r:from-cyan-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105";"
               >
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a
+              <a;
                 href="/services"
                 className="className="inline-flex items-center px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-200";"
               >
-                Explore Our Services
+                Explore Our Services;
               </a>
             </div>
           </motion.div>

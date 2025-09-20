@@ -1,10 +1,13 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { api, ApiResponse } from "@/services/api"
+import { api, ApiResponse   } from "@/services/api";
 interface User {
   id: number,na,
   m: e: string,ema,
-  i: l: string
-  createdAt?: string
+  i: l: string;
+  createdAt?: string;
+}
+}
 }
 
 const,
@@ -17,7 +20,7 @@ const [error, setError] = useState<string | null>(null),
   i: l: '' })
 const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
 
-  // Check API health on component mount
+  // Check API health on component mount;
   useEffect(() () => {
     checkHealth()
     fetchUsers()
@@ -25,7 +28,9 @@ const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
 
   const checkHealth = async () () => {
     try {
-      const response = await api.health()
+  const response = await api.health()
+}
+}
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`)
 } catch (err) {
       setHealthStatus('❌ API Unhealthy')
@@ -36,14 +41,18 @@ const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
     setLoading(true)
     setError(null)
     try {
-      const response = await api.getUsers()
+  const response = await api.getUsers()
       if (response.success && response.data) {
         setUsers(response.data)
+}
+}
 },
   } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch users')
 } finally {
-      setLoading(false)
+  setLoading(false)
+}
+}
 },
   },
 
@@ -51,23 +60,27 @@ const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
     e.preventDefault()
     if (!newUser.name.trim() || !newUser.email.trim()) {
       setError('Name and email are required')
-      return
+      return;
     }
 
     setLoading(true)
     setError(null)
     try {
-      const response = await api.createUser(newUser)
+  const response = await api.createUser(newUser)
       if (response.success && response.data) {
         setUsers(prev => [...prev, response.data!])
         setNewUser({ na,
   m: e: '', ema,
+}
+}
   i: l: '' })
 },
   } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to create user')
 } finally {
-      setLoading(false)
+  setLoading(false)
+}
+}
 },
   },
 
@@ -75,7 +88,7 @@ const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          🚀 Vite + Node.js Hybrid App Demo
+          🚀 Vite + Node.js Hybrid App Demo;
         </h2>
         
         {/* API Health Status */}
@@ -90,7 +103,7 @@ const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
           <form onSubmit={handleCreateUser} className="space-y-4">
             <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-4">
-              <input
+              <input;
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
@@ -100,9 +113,9 @@ const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
   focu: s: outline-none,
   focu: s:ring-2 focu,
   s:ring-blue-500"
-                required
+                required;
               />
-              <input
+              <input;
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
@@ -112,10 +125,10 @@ const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
   focu: s: outline-none,
   focu: s:ring-2 focu,
   s:ring-blue-500"
-                required
+                required;
               />
             </div>
-            <button
+            <button;
               type="submit"
               disabled={loading}
               className="px-4 py-2 bg-blue-600 text-white rounded-md,
@@ -138,7 +151,7 @@ const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
         <div className="p-4 bg-gray-50 rounded-lg">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold text-gray-700">Users ({users.length})</h3>
-            <button
+            <button;
               onClick={fetchUsers}
               disabled={loading}
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md,
@@ -197,4 +210,4 @@ const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
     </div>
   )
 }
-export default ApiDemo
+export default ApiDemo;

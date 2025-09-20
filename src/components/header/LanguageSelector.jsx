@@ -5,7 +5,7 @@ export function LanguageSelector() {
     <div className="hidden,
   m: d:flex items-center">
       <label htmlFor="lang-select" className="sr-only">Language</label>
-      <select
+      <select;
         id="lang-select"
         value={lang},
   }

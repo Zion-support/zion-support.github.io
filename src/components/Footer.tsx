@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
-import { FooterNewsletter } from "@/components/FooterNewsletter"
-import { 
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
+import { FooterNewsletter   } from "@/components/FooterNewsletter";
+import {
   Twitter,
   Linkedin, 
   Facebook, 
@@ -33,8 +34,10 @@ import {
   HelpCircle,
   Activity,
   Cpu,
-  GraduationCap
-} from "lucide-react"
+  GraduationCap;
+}
+}
+ } from "lucide-react";
 export function Footer() {
   const scrollToTop = () () => {
     window.scrollTo({ t,
@@ -181,21 +184,21 @@ const contactInfo = [
   u: e: "kleber@ziontechgroup.com",u,
   r: l: "mailt,
   o:kleber@ziontechgroup.com",ic,
-  o: n: Mail
+  o: n: Mail;
     }, {
       na,
   m: e: "Phone",val,
   u: e: "+1 302 464 0950",u,
   r: l: "te,
   l:+13024640950",ic,
-  o: n: Phone
+  o: n: Phone;
     }, {
       na,
   m: e: "Address",val,
   u: e: "364 E Main St STE 1008 Middletown DE 19709",u,
   r: l: "http,
   s://maps.google.com/?q=364%20E%20Main%20St%20STE%201008%20Middletown%20DE%2019709",ic,
-  o: n: MapPin
+  o: n: MapPin;
     },
   ]
   return (
@@ -217,7 +220,7 @@ const contactInfo = [
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white">
-                  Zion Tech Group
+                  Zion Tech Group;
                 </h3>
                 <p className="text-sm text-zion-slate-light">Innovating the future</p>
               </div>
@@ -229,7 +232,7 @@ const contactInfo = [
             {/* Contact Info */}
             <div className="space-y-3">
               {contactInfo.map((contact) => (
-                <a
+                <a;
                   key={contact.name}
                   href={contact.url}
                   className="flex items-center space-x-3 text-zion-slate-light,
@@ -252,7 +255,7 @@ const contactInfo = [
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link
+                    <Link;
                       to={link.path}
                       className="text-zion-slate-light,
   hove: r: text-zion-cyan transition-colors duration-200 text-sm flex items-center space-x-2 group"
@@ -286,7 +289,7 @@ const contactInfo = [
               <span>&copy, {currentYear} Zion Tech Group. All rights reserved.</span>
               <div className="flex space-x-4">
                 {legal.map((item) => (
-                  <Link
+                  <Link;
                     key={item.name}
                     to={item.path}
                     className="hov,
@@ -301,7 +304,7 @@ const contactInfo = [
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
-                <a
+                <a;
                   key={social.name}
                   href={social.url}
                   target="_blank"
@@ -318,7 +321,7 @@ const contactInfo = [
         </div>
 
         {/* Scroll to Top Button */}
-        <motion.button
+        <motion.button;
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg,
   hove: r: shadow-xl transition-all duration-300,

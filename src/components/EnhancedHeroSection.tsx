@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
   ArrowRight,
   Play,
@@ -14,8 +15,10 @@ import {
   Brain,
   Rocket,
   Target,
-  TrendingUp
-} from "lucide-react"
+  TrendingUp;
+}
+}
+ } from "lucide-react";
 interface HeroSlide {
   tit,
   l: e: string,subtit,
@@ -30,6 +33,8 @@ interface HeroSlide {
   t: s: { labe,
   l: string, val,
   u: e: string, ic,
+}
+}
   o: n: React.ComponentType<any> },
   [],
   }
@@ -156,7 +161,7 @@ const,
       {/* Enhanced animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10"></div>
-        <motion.div
+        <motion.div;
           className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/20 rounded-full blur-3xl"
           animate={
             sca,
@@ -170,7 +175,7 @@ const,
   a: t: Infinity },
   }
         ></motion.div>
-        <motion.div
+        <motion.div;
           className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/20 rounded-full blur-3xl"
           animate={
             sca,
@@ -185,7 +190,7 @@ const,
   a: y: 1 },
   }
         ></motion.div>
-        <motion.div
+        <motion.div;
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/10 rounded-full blur-3xl"
           animate={
             rota,
@@ -202,7 +207,7 @@ const,
 
         {/* Floating particles */},
   {[...Array(6)].map((_, i) => (
-          <motion.div
+          <motion.div;
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
             style={
@@ -222,7 +227,7 @@ const,
               durati,
   o: n: 3 + i * 0.5,repe,
   a: t: Infinity,del,
-  a: y: i * 0.3
+  a: y: i * 0.3;
             },
   }
           />
@@ -236,7 +241,7 @@ const,
         <div className="grid l,
   g:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: -50 },
   }
@@ -250,7 +255,7 @@ const,
   l: g:text-left"
           >
             <AnimatePresence mode="wait">
-              <motion.div
+              <motion.div;
                 key={currentSlide}
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -266,7 +271,7 @@ const,
   }
               >
                 {/* Icon and category */}
-                <motion.div
+                <motion.div;
                   className="flex items-center justify-center,
   l: g: justify-start mb-6"
                   whileHover={ scal,
@@ -303,7 +308,7 @@ const,
                 <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto,
   l: g:mx-0">
                   {currentSlideData.features.map((feature, index) => (
-                    <motion.div
+                    <motion.div;
                       key={feature}
                       initial={ opaci,
   t: y: 0, x: -20 },
@@ -323,7 +328,7 @@ const,
                 </div>
 
                 {/* CTA Button */}
-                <motion.div
+                <motion.div;
                   whileHover={ sca,
   l: e: 1.05 },
   }
@@ -334,7 +339,7 @@ const,
   s: m: flex-row gap-4 justify-center l,
   g:justify-start"
                 >
-                  <Link
+                  <Link;
                     to={currentSlideData.path}
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl,
   hove: r: shadow-2xl,
@@ -347,7 +352,7 @@ const,
                   <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl,
   hove: r:bg-zion-cyan/10 transition-all duration-300 backdrop-blur-sm">
                     <Play className="mr-2 w-5 h-5" />
-                    Watch Demo
+                    Watch Demo;
                   </button>
                 </motion.div>
               </motion.div>
@@ -355,7 +360,7 @@ const,
           </motion.div>
 
           {/* Right content - Image and stats */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: 50 },
   }
@@ -370,7 +375,7 @@ const,
           >
             {/* Main image */}
             <div className="relative">
-              <motion.div
+              <motion.div;
                 className={`w-full h-96,
   l: g:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
                 whileHover={ sca,
@@ -383,7 +388,7 @@ const,
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <motion.div
+                    <motion.div;
                       className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30"
                       animate={ rota,
   t: e: [0, 360],
@@ -406,7 +411,7 @@ const,
             {/* Enhanced floating stats cards */}
             <div className="absolute -bottom-6 -left-6 space-y-4">
               {currentSlideData.stats.map((stat, index) => (
-                <motion.div
+                <motion.div;
                   key={stat.label}
                   initial={ opaci,
   t: y: 0, y: 20 },
@@ -435,7 +440,7 @@ const,
             </div>
 
             {/* Rating card */}
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -462,7 +467,7 @@ const,
 
         {/* Enhanced slide navigation */}
         <div className="flex items-center justify-center mt-16 space-x-4">
-          <motion.button
+          <motion.button;
             onClick={prevSlide}
             className="p-3 rounded-full bg-white/10,
   hove: r: bg-white/20 transition-colors duration-200 border border-white/20"
@@ -478,11 +483,11 @@ const,
 
           <div className="flex space-x-2">
             {heroSlides.map((_, index) => (
-              <motion.button
+              <motion.button;
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide
+                  index === currentSlide;
                     ? 'bg-zion-cyan w-8'
                     : 'bg-white/30,
   hove: r:bg-white/50'
@@ -494,7 +499,7 @@ const,
             ))}
           </div>
 
-          <motion.button
+          <motion.button;
             onClick={nextSlide}
             className="p-3 rounded-full bg-white/10,
   hove: r: bg-white/20 transition-colors duration-200 border border-white/20"
@@ -511,7 +516,7 @@ const,
       </div>
 
       {/* Enhanced scroll indicator */}
-      <motion.div
+      <motion.div;
         initial={ opaci,
   t: y: 0 },
   }
@@ -523,7 +528,7 @@ const,
   }
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <motion.div
+        <motion.div;
           animate={ y: [0, 10, 0],
   },
   }
@@ -534,7 +539,7 @@ const,
           className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer,
   hove: r: border-zion-cyan transition-colors duration-300"
         >
-          <motion.div
+          <motion.div;
             animate={ ,
   y: [0, 12, 0],
   },

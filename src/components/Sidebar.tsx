@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
-import { 
+import { Link, useLocation   } from "react-router-dom";
+import { motion, AnimatePresence   } from "framer-motion";
+import {
   Menu,
   X, 
   Home, 
@@ -25,14 +26,18 @@ import {
   TrendingUp, 
   Globe,
   ChevronDown,
-  ChevronRight
-} from "lucide-react"
+  ChevronRight;
+}
+}
+ } from "lucide-react";
 interface SidebarItem {
   na,
   m: e: string,hr,
   e: f: string,ic,
   o: n: React.ComponentType<any>
   children?: SidebarItem[],
+}
+}
   }
 
 export,
@@ -60,7 +65,7 @@ const,
   t: h: '/solutions', ic,
   o: n: Rocket, descripti,
   o: n: 'Industry solutions' }
-        // Pricing page currently not implemented
+        // Pricing page currently not implemented;
         { na,
   m: e: 'About Us', pa,
   t: h: '/about', ic,
@@ -195,17 +200,17 @@ const toggleSection = (sectionNa,
   const renderNavItem = (it,
   e: m: SidebarItem, lev,
   e: l: number = 0) () => {
-    const hasChildren = item.children && item.children.length > 0
+    const hasChildren = item.children && item.children.length > 0;
 const isExpanded = expandedSections.includes(item.name.toLowerCase())
 const active = isActive(item.href)
     return (
       <div key={item.name}>
         <div className="flex items-center">
           {hasChildren ? (
-            <button
+            <button;
               onClick={() => toggleSection(item.name.toLowerCase())}
               className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                active 
+                active;
                   ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30' 
                   : 'text-slate-300,
   hove: r: text-white hove,
@@ -221,10 +226,10 @@ const active = isActive(item.href)
               )}
             </button>
           ) : (
-            <Link
+            <Link;
               to={item.href}
               className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                active 
+                active;
                   ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30' 
                   : 'text-slate-300,
   hove: r: text-white hove,
@@ -238,7 +243,7 @@ const active = isActive(item.href)
         </div>
         
         {hasChildren && isExpanded && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -257,7 +262,7 @@ const active = isActive(item.href)
             className="ml-4 mt-1 space-y-1"
           >
             {item.children!.map(child => (
-              <Link
+              <Link;
                 key={child.name}
                 to={child.href}
                 className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -281,7 +286,7 @@ const active = isActive(item.href)
   return (
     <>
       {/* Mobile menu button */}
-      <button
+      <button;
         onClick={() => setIsOpen(true)}
         className="lg: hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800/80 text-slate-300,
   hove: r:text-white hove,
@@ -293,7 +298,7 @@ const active = isActive(item.href)
       {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0 },
   }
@@ -307,13 +312,13 @@ const active = isActive(item.href)
   l: g:hidden"
           >
             {/* Backdrop */}
-            <div 
+            <div;
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
             
             {/* Sidebar */}
-            <motion.div
+            <motion.div;
               initial={ x: '-100%' },
   }
               animate={ x: 0 },
@@ -330,7 +335,7 @@ const active = isActive(item.href)
               {/* Header */}
               <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
                 <h2 className="text-lg font-semibold text-white">Navigation</h2>
-                <button
+                <button;
                   onClick={() => setIsOpen(false)}
                   className="p-2 rounded-md text-slate-400,
   hove: r: text-white hove,
@@ -364,7 +369,7 @@ const active = isActive(item.href)
   r:opacity-75 transition-opacity duration-300"></div>
             </div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
+              Zion Tech Group;
             </h1>
           </Link>
         </div>
@@ -377,14 +382,14 @@ const active = isActive(item.href)
         {/* Footer */}
         <div className="p-4 border-t border-slate-700/50">
           <div className="text-center">
-            <Link
+            <Link;
               to="/contact"
               className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg,
   hove: r: from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-cyan-500/20"
             >
-              Get Started
+              Get Started;
             </Link>
           </div>
         </div>

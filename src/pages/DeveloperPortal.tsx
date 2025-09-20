@@ -1,38 +1,40 @@
 import React from "react"
 import SEO from "../components/SEO"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Code
-  BookOpen
-  Zap
-  Shield
-  Users
-  MessageSquare
-  Github
-  ExternalLink
-  Terminal
-  Webhook
-  Key
-  Mail
-  ArrowRight
-  Check
-  Star
-  Download
-  Play
-  Settings
-  Database
-  Globe
-  Lock
-  Rocket
-  Crown
-  Sparkles
-  ChevronRight
-  Clock
-  BarChart3
-  Target
-  Award
-  Lightbulb
-} from "lucide-react"
+  Code;
+  BookOpen;
+  Zap;
+  Shield;
+  Users;
+  MessageSquare;
+  Github;
+  ExternalLink;
+  Terminal;
+  Webhook;
+  Key;
+  Mail;
+  ArrowRight;
+  Check;
+  Star;
+  Download;
+  Play;
+  Settings;
+  Database;
+  Globe;
+  Lock;
+  Rocket;
+  Crown;
+  Sparkles;
+  ChevronRight;
+  Clock;
+  BarChart3;
+  Target;
+  Award;
+  Lightbulb;
+}
+}
+ } from "lucide-react";
 const,
   DeveloperPorta: l: React.FC = () () => {
   const tools = [
@@ -127,7 +129,7 @@ const,
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Developer Portal - Zion Tech Group"
         description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
       />
@@ -152,12 +154,12 @@ const,
             Developer{' '},
   }
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Portal
+              Portal;
             </span>
           </h1>
           <p className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Build amazing applications with our powerful APIs, comprehensive documentation
+            Build amazing applications with our powerful APIs, comprehensive documentation;
             and developer tools. Everything you need to integrate Zion Tech Group's services.
           </p>
 
@@ -166,12 +168,12 @@ const,
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25">
-              Get Started
+              Get Started;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-              View Documentation
+              View Documentation;
             </button>
           </div>
         </div>
@@ -181,7 +183,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -194,10 +196,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Developer Tools
+              Developer Tools;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful tools to accelerate your development workflow
+              Powerful tools to accelerate your development workflow;
             </p>
           </motion.div>
 
@@ -205,7 +207,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {tools.map((tool, index) => (
-  <motion.div
+  <motion.div;
                 key={tool.title},
   }
                 initial={ opaci,
@@ -262,7 +264,7 @@ const,
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -275,10 +277,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Learning Resources
+              Learning Resources;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive guides and tutorials for all skill levels
+              Comprehensive guides and tutorials for all skill levels;
             </p>
           </motion.div>
 
@@ -286,7 +288,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {apiFeatures.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -319,7 +321,7 @@ const,
 
                   <button className="text-zion-cyan,
   hove: r:text-white transition-colors duration-300 text-sm">
-                    View Docs
+                    View Docs;
                   </button>
                 </div>
               </motion.div>
@@ -335,7 +337,7 @@ const,
           <div className="text-center mb-16">
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Code Examples
+              Code Examples;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Get started quickly with these ready-to-use code examples in your preferred language.
@@ -345,7 +347,7 @@ const,
           <div className="grid grid-cols-1 l,
   g:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {codeExamples.map((example, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -376,7 +378,7 @@ const,
                   <button className="w-full bg-zion-cyan/20 text-zion-cyan border border-zion-cyan py-2 px-4 rounded-lg,
   hove: r: bg-zion-cyan hove,
   r:text-white transition-all duration-300 text-sm font-medium">
-                    Copy Code
+                    Copy Code;
                   </button>
                 </div>
               </motion.div>
@@ -392,7 +394,7 @@ const,
           <div className="text-center mb-16">
             <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-              Developer Resources
+              Developer Resources;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive documentation, tools, and community resources to help you succeed.
@@ -403,7 +405,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {resources.map((resource, index) => (
-  <motion.div
+  <motion.div;
                 key={resource.title},
   }
                 initial={ opaci,
@@ -456,7 +458,7 @@ const,
                   <button className="text-zion-cyan,
   hove: r: text-white transition-colors duration-300 text-sm group-hove,
   r:translate-x-1 transition-transform duration-300">
-                    View Resource
+                    View Resource;
                   </button>
                 </div>
               </motion.div>
@@ -469,7 +471,7 @@ const,
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -482,14 +484,14 @@ const,
             className="className="text-center mb-12";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quick Start
+              Quick Start;
             </h2>
             <p className="text-xl text-gray-300">
-              Get up and running in minutes
+              Get up and running in minutes;
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -531,7 +533,7 @@ const,
   hove: r: from-green-400,
   hove: r:to-emerald-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-green-500/20">
-                Start Building Now
+                Start Building Now;
               </button>
             </div>
           </motion.div>
@@ -547,7 +549,7 @@ const,
             Ready to Build Something Amazing?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Join thousands of developers who are already building innovative applications
+            Join thousands of developers who are already building innovative applications;
             with our powerful APIs and services.
           </p>
 
@@ -556,12 +558,12 @@ const,
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg,
   hove: r:scale-105 transition-all duration-300 shadow-2xl,
   hove: r:shadow-zion-cyan/25">
-              Get API Keys
+              Get API Keys;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300">
-              Join Community
+              Join Community;
             </button>
           </div>
         </div>
@@ -569,4 +571,4 @@ const,
     </div>
   )
 }
-export default DeveloperPortal
+export default DeveloperPortal;

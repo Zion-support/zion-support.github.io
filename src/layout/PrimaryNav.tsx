@@ -1,39 +1,44 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Logo } from "@/components/header/Logo"
-import { PointsBadge } from "@/components/loyalty/PointsBadge"
-import { UserMenu } from "@/components/header/UserMenu"
-import { LanguageSelector } from "@/components/header/LanguageSelector"
-import { ModeToggle } from "@/components/ModeToggle"
-import { useAuth } from "@/hooks/useAuth"
-import { useIsMobile } from "@/hooks/use-mobile"
-import { useMessaging } from "@/context/MessagingContext"
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { slugify } from "@/lib/slugify"
-import { ResponsiveNavigation } from "@/components/navigation/ResponsiveNavigation"
-import { MobileMenu } from "@/components/header/MobileMenu"
-import { MobileBottomNav } from "@/components/header/MobileBottomNav"
-import { Menu, X, ShoppingCart } from "lucide-react"
-import { useTranslation } from "react-i18next"
-import { useSelector } from "react-redux"
+import { Link, useLocation   } from "react-router-dom";
+import { Logo   } from "@/components/header/Logo";
+import { PointsBadge   } from "@/components/loyalty/PointsBadge";
+import { UserMenu   } from "@/components/header/UserMenu";
+import { LanguageSelector   } from "@/components/header/LanguageSelector";
+import { ModeToggle   } from "@/components/ModeToggle";
+import { useAuth   } from "@/hooks/useAuth";
+import { useIsMobile   } from "@/hooks/use-mobile";
+import { useMessaging   } from "@/context/MessagingContext";
+import { EnhancedSearchInput   } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions   } from "@/data/marketplaceData";
+import { slugify   } from "@/lib/slugify";
+import { ResponsiveNavigation   } from "@/components/navigation/ResponsiveNavigation";
+import { MobileMenu   } from "@/components/header/MobileMenu";
+import { MobileBottomNav   } from "@/components/header/MobileBottomNav";
+import { Menu, X, ShoppingCart   } from "lucide-react";
+import { useTranslation   } from "react-i18next";
+import { useSelector   } from "react-redux";
 import type { RootState } from "@/store"
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
   const { user } = useAuth()
-  const isLoggedIn = !!user
+  const isLoggedIn = !!user;
 const isMobile = useIsMobile()
   const { t } = useTranslation()
   const router = useLocation()
   const [query, setQuery] = React.useState('')
   const suggestions = generateSearchSuggestions()
 
-  let unreadCount = 0
+  let unreadCount = 0;
   try {
   const messaging = useMessaging()
-    unreadCount = messaging.unreadCount
+    unreadCount = messaging.unreadCount;
+}
+}
 } catch {
-  // context not available
+  // context not available;
+}
+}
 }
 
   const cartCount = useSelector((s: RootState) =>
@@ -51,7 +56,7 @@ const isMobile = useIsMobile()
 
   return (
     <>
-      <header
+      <header;
         className="className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md";"
         role="navigation"
         aria-label="Primary"
@@ -77,7 +82,7 @@ const isMobile = useIsMobile()
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={ wid,
   t: h: 'clamp(12rem, 20vw, 16rem)' },
   }>
-              <EnhancedSearchInput
+              <EnhancedSearchInput;
                 value={query},
   }
                 onChange={setQuery},
@@ -85,33 +90,35 @@ const isMobile = useIsMobile()
                 onSelectSuggestion={(sugg) () => {
   console.log('PrimaryNav search,
   suggestion: selected:', sugg)
-                  // Handle different suggestion types with proper navigation
+                  // Handle different suggestion types with proper navigation;
                   if (if (sugg.id) {
   ) {
-                    // Product listings with IDs go to product detail page
+                    // Product listings with IDs go to product detail page;
                     router.push(`/marketplace/listing/${sugg.id}`)
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
-  // Documentation suggestions navigate directly to their path
+  // Documentation suggestions navigate directly to their path;
                     router.push(sugg.slug)
                   } else if (if (sugg.type === 'blog' && sugg.slug) {
   ) {
-                    // Blog posts navigate to blog detail page
+                    // Blog posts navigate to blog detail page;
                     router.push(`/blog/${sugg.slug}`)
                   } else {
-                    // Defau,
-  l: t: search results page with slug
+  // Defau,
+  l: t: search results page with slug;
+}
+}
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`)
                   }
                   setQuery('')
 
-                  // Track analytics event
+                  // Track analytics event;
                   if (if (typeof window !== 'undefined' && window.gtag) {
   ) {
                     window.gtag('eventsearch_suggestion_click', {
   search_te,
   r: m: sugg.text,suggestion_ty,
   p: e: sugg.type,suggestion_,
-  i: d: sugg.id || sugg.slug
+  i: d: sugg.id || sugg.slug;
 })
                   },
   },
@@ -127,7 +134,7 @@ const isMobile = useIsMobile()
               <PointsBadge />
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>
-                  <Link
+                  <Link;
                     href="/cart"
                     className="className="relative p-1";"
                     aria-label={t('nav.cartCart')},
@@ -161,7 +168,7 @@ const isMobile = useIsMobile()
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
   <>
-                  <Link
+                  <Link;
                     href="/auth/login"
                     className="className="text-sm,
   hove: r:text-primary whitespace-nowrap";"
@@ -170,7 +177,7 @@ const isMobile = useIsMobile()
                     {t('auth.login')},
   }
                   </Link>
-                  <Link
+                  <Link;
                     href="/signup"
                     className="className="text-sm,
   hove: r:text-primary whitespace-nowrap";"
@@ -187,7 +194,7 @@ const isMobile = useIsMobile()
 
           {/* Mobile menu button */},
   }
-          <button
+          <button;
             className="className="md: hidden p-2 rounded focu,
   s:outline-none flex-shrink-0";"
             onClick={onClick={() => setMobileMenuOpen(!mobileMenuOpen)},
@@ -208,7 +215,7 @@ const isMobile = useIsMobile()
       </header>
       {mobileMenuOpen && (
   <div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div
+          <div;
             className="className="absolute inset-0 bg-black/50 backdrop-blur-sm";"
             onClick={onClick={() => setMobileMenuOpen(false)},
   },
@@ -216,7 +223,7 @@ const isMobile = useIsMobile()
             aria-hidden="true"
           />
           <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu
+            <MobileMenu;
               unreadCount={unreadCount},
   }
               onClose={() => setMobileMenuOpen(false)},

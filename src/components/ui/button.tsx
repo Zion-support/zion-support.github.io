@@ -1,13 +1,18 @@
+import { useCallback    } from "react";
 import React from "react"
   interface ButtonProps {
-    children: React.ReactNode
+  children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link',
   size?: 'sm' | 'md' | 'lg' | 'icon',
   asChild?: boolean,
   className?: string,
   onClick?: () => void,
   type?: 'button' | 'submit' | 'reset',
-  disabled?: boolean
+  disabled?: boolean;
+}
+}
+}
+}
 }
 export function Button({
   children,
@@ -17,7 +22,7 @@ export function Button({
   className = '',
   onClick,
   type = 'button',
-  disabled = false
+  disabled = false;
 }: ButtonProps) {
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2'
 const variantClasses = {
@@ -37,7 +42,7 @@ const sizeClasses = {
     return <span className={classes}>{children}</span>
   }
   return (
-    <button
+    <button;
       type={type}
       className={classes}
       onClick={onClick}
@@ -47,7 +52,7 @@ const sizeClasses = {
     </button>
   )
 }
-// Export button variants for use in other components
+// Export button variants for use in other components;
   export const buttonVariants = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
   outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',

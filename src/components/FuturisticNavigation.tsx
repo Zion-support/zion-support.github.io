@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
-import { MobileSidebarToggle } from "./MobileSidebarToggle"
+import { Link, useLocation   } from "react-router-dom";
+import { motion, AnimatePresence   } from "framer-motion";
+import { MobileSidebarToggle   } from "./MobileSidebarToggle";
 import {
   Menu,
   X,
@@ -177,8 +178,10 @@ import {
   Repeat1Dodecagon,
   Shuffle2Dodecagon,
   SkipBack2Dodecagon,
-  SkipForward2Dodecagon
-} from "lucide-react"
+  SkipForward2Dodecagon;
+}
+}
+ } from "lucide-react";
 export,
   const: FuturisticNavigation: React.FC = () () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -205,7 +208,7 @@ const handleSearch = (e: React.FormEvent) () => {
   w: n: string) () => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
-  // Enhanced service categories with better organization
+  // Enhanced service categories with better organization;
   const serviceCategories = [
     {
       na,
@@ -334,7 +337,7 @@ const handleSearch = (e: React.FormEvent) () => {
   return (
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-        scrolled
+        scrolled;
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
           : 'bg-transparent'
       }`}>
@@ -343,7 +346,7 @@ const handleSearch = (e: React.FormEvent) () => {
   g:px-8">
           <div className="flex h-20 items-center justify-between">
             {/* Enhanced Logo */}
-            <motion.div
+            <motion.div;
               className="flex items-center"
               initial={ opaci,
   t: y: 0, x: -20 },
@@ -369,7 +372,7 @@ const handleSearch = (e: React.FormEvent) () => {
                 <div className="hidden s,
   m:block">
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                    ZION TECH GROUP
+                    ZION TECH GROUP;
                   </h1>
                   <p className="text-xs text-zion-slate-light font-medium">Innovation • Intelligence • Impact</p>
                 </div>
@@ -379,7 +382,7 @@ const handleSearch = (e: React.FormEvent) () => {
             <nav className="hidden,
   l: g:flex items-center space-x-1">
               {/* Main Navigation Links */}
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, y: -20 },
   }
@@ -391,7 +394,7 @@ const handleSearch = (e: React.FormEvent) () => {
   a: y: 0.1 },
   }
               >
-                <Link
+                <Link;
                   to="/about"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300,
   group: hover: text-zion-cyan,
@@ -404,7 +407,7 @@ const handleSearch = (e: React.FormEvent) () => {
                   <span className="font-medium">About</span>
                 </Link>
               </motion.div>
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, y: -20 },
   }
@@ -416,7 +419,7 @@ const handleSearch = (e: React.FormEvent) () => {
   a: y: 0.15 },
   }
               >
-                <Link
+                <Link;
                   to="/partners"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300,
   group: hover: text-zion-cyan,
@@ -432,7 +435,7 @@ const handleSearch = (e: React.FormEvent) () => {
               {/* Service Categories */},
   {serviceCategories.map((category, index) => (
                 <div key={category.name} className="relative">
-                  <motion.button
+                  <motion.button;
                     initial={ opaci,
   t: y: 0, y: -20 },
   }
@@ -445,7 +448,7 @@ const handleSearch = (e: React.FormEvent) () => {
   }
                     onClick={() => toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
-                      activeDropdown === category.name
+                      activeDropdown === category.name;
                         ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20'
                         : 'hov,
   e: r: text-zion-cyan,
@@ -464,7 +467,7 @@ const handleSearch = (e: React.FormEvent) () => {
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === category.name && (
-                      <motion.div
+                      <motion.div;
                         initial={ opaci,
   t: y: 0, y: -10, sca,
   l: e: 0.95 },
@@ -489,7 +492,7 @@ const handleSearch = (e: React.FormEvent) () => {
                           </div>
                           <div className="space-y-2">
                             {category.services.map((service, subIndex) => (
-                              <motion.div
+                              <motion.div;
                                 key={service.name}
                                 initial={ opaci,
   t: y: 0, x: -20 },
@@ -502,7 +505,7 @@ const handleSearch = (e: React.FormEvent) () => {
   a: y: subIndex * 0.05 },
   }
                               >
-                                <Link
+                                <Link;
                                   to={service.href}
                                   className="flex items-start space-x-3 p-3 rounded-lg,
   hove: r: bg-zion-cyan/10 transition-all duration-300 group"
@@ -534,7 +537,7 @@ const handleSearch = (e: React.FormEvent) () => {
               <form onSubmit={handleSearch} className="hidden,
   m: d:block">
                 <div className="relative">
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
@@ -550,7 +553,7 @@ const handleSearch = (e: React.FormEvent) () => {
               </form>
               {/* User actions */}
               <div className="flex items-center space-x-2">
-                <motion.button
+                <motion.button;
                   whileHover={ sca,
   l: e: 1.05 },
   }
@@ -563,7 +566,7 @@ const handleSearch = (e: React.FormEvent) () => {
                 >
                   <Bell className="w-5 h-5" />
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -576,7 +579,7 @@ const handleSearch = (e: React.FormEvent) () => {
                 >
                   <User className="w-5 h-5" />
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }

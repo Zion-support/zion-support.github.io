@@ -1,8 +1,8 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone     } from "lucide-react";
 import SEO from "@/components/SEO"
-import { Link as RouterLink } from "react-router-dom"
+import { Link as RouterLink     } from "react-router-dom";
 export default function Blockchain() {
   const features = [
   {
@@ -59,7 +59,7 @@ export default function Blockchain() {
 ]
       ct,
   a: "Get Started",popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -78,7 +78,7 @@ export default function Blockchain() {
 ]
       ct,
   a: "Start Free Trial",popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -97,7 +97,7 @@ export default function Blockchain() {
 ]
       ct,
   a: "Contact Sales",popul,
-  a: r: false
+  a: r: false;
 },
   ]
   const benefits = [
@@ -160,7 +160,7 @@ export default function Blockchain() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -179,7 +179,7 @@ export default function Blockchain() {
 
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Trust Through
+              Trust Through;
               <span className="text-gradient"> Technology</span>
             </h1>
 
@@ -191,11 +191,11 @@ export default function Blockchain() {
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
-                Start Blockchain Project
+                Start Blockchain Project;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
-                Learn More
+                Learn More;
               </button>
             </div>
           </motion.div>
@@ -210,7 +210,7 @@ export default function Blockchain() {
   }
         <section className="pt-32 pb-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div;
               className="className="text-center max-w-4xl mx-auto";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -224,34 +224,34 @@ export default function Blockchain() {
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
                 <Link className="w-4 h-4 mr-2" />
-                Blockchain Innovation
+                Blockchain Innovation;
               </div>
               <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">Blockchain</span> Solutions for the Future
+                <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">Blockchain</span> Solutions for the Future;
               </h1>
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Leverage the power of blockchain technology to create transparent, secure, and efficient 
+                Leverage the power of blockchain technology to create transparent, secure, and efficient;
                 business processes. From smart contracts to DeFi, we're building the decentralized future.
               </p>
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <RouterLink 
+                <RouterLink;
                   to="/contact"
                   className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg,
   hove: r:from-orange-600,
   hove: r:to-red-600 transition-all duration-300,
   transform: hover:scale-105";"
                 >
-                  Get Started
+                  Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
-                <RouterLink 
+                <RouterLink;
                   to="/request-quote"
                   className="className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hove,
   r:bg-orange-500/10 transition-all duration-300";"
                 >
-                  Request Quote
+                  Request Quote;
                 </RouterLink>
               </div>
             </motion.div>
@@ -262,7 +262,7 @@ export default function Blockchain() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div;
               className="className="text-center mb-16";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -278,17 +278,17 @@ export default function Blockchain() {
   }
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Blockchain Applications
+                Blockchain Applications;
               </h2>
               <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-                Discover how blockchain is transforming industries across the globe
+                Discover how blockchain is transforming industries across the globe;
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   className="className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm,
@@ -331,7 +331,7 @@ export default function Blockchain() {
   }
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div;
               className="className="text-center mb-16";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -350,7 +350,7 @@ export default function Blockchain() {
                 Why Choose Our Blockchain?
               </h2>
               <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-                Our comprehensive approach ensures your blockchain solutions are secure, scalable, and innovative
+                Our comprehensive approach ensures your blockchain solutions are secure, scalable, and innovative;
               </p>
             </motion.div>
 
@@ -358,7 +358,7 @@ export default function Blockchain() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   className="className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm,
@@ -392,7 +392,7 @@ export default function Blockchain() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div;
               className="className="text-center mb-16";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -408,7 +408,7 @@ export default function Blockchain() {
   }
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Transparent Pricing
+                Transparent Pricing;
               </h2>
               <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
                 Choose the plan that fits your blockchain needs. All plans include our core blockchain features.
@@ -418,11 +418,11 @@ export default function Blockchain() {
             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   className={`relative p-8 rounded-2xl ${
-  plan.popular 
+  plan.popular;
                       ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50' 
                       : 'bg-white/5 border border-white/10'
 } backdrop-blur-sm`}
@@ -443,7 +443,7 @@ export default function Blockchain() {
                   {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -467,11 +467,11 @@ export default function Blockchain() {
                     ))}
                   </ul>
 
-                  <RouterLink
+                  <RouterLink;
                     to={plan.name === "Enterprise" ? "/contact" : "/request-quote"},
   }
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-  plan.popular
+  plan.popular;
                         ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white,
   hove: r: from-orange-600,
   hove: r:to-red-600'
@@ -492,7 +492,7 @@ export default function Blockchain() {
   }
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div;
               className="className="text-center mb-16";"
               initial={ opaci,
   t: y: 0, y: 30 },
@@ -508,17 +508,17 @@ export default function Blockchain() {
   }
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Business Benefits
+                Business Benefits;
               </h2>
               <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-                See measurable improvements in your business processes and customer trust
+                See measurable improvements in your business processes and customer trust;
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   className="className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm";"
@@ -553,7 +553,7 @@ export default function Blockchain() {
   }
         <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
           <div className="container-responsive text-center">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -571,26 +571,26 @@ export default function Blockchain() {
                 Ready to Go Blockchain?
               </h2>
               <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-                Join the blockchain revolution with Zion Tech Group's cutting-edge decentralized solutions
+                Join the blockchain revolution with Zion Tech Group's cutting-edge decentralized solutions;
               </p>
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <RouterLink 
+                <RouterLink;
                   to="/contact"
                   className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg,
   hove: r:from-orange-600,
   hove: r:to-red-600 transition-all duration-300,
   transform: hover:scale-105";"
                 >
-                  Start Your Journey
+                  Start Your Journey;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
-                <RouterLink 
+                <RouterLink;
                   to="/request-quote"
                   className="className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hove,
   r:bg-orange-500/10 transition-all duration-300";"
                 >
-                  Get Custom Quote
+                  Get Custom Quote;
                 </RouterLink>
               </div>
             </motion.div>

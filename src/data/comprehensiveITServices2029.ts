@@ -22,7 +22,9 @@ export interface ComprehensiveITService2029 {
   e: string,ema,
   i: l: string,websi,
   t: e: string,addre,
-  s: s: string
+  s: s: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -34,14 +36,14 @@ export interface ComprehensiveITService2029 {
   ],
   }
   competitors?: string[]
-  marketSize?: string
-  demoUrl?: string
-  documentationUrl?: string
+  marketSize?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
 }
 
 export,
   const: COMPREHENSIVE_IT_SERVICES_2029: ComprehensiveITService2029[] = [
-  // Cloud Infrastructure & DevOps
+  // Cloud Infrastructure & DevOps;
   {
   i,
   d: "cloud-infrastructure-optimization",tit,
@@ -127,7 +129,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/cloud-infrastructure-optimization"
 }
-  // Cybersecurity & Compliance
+  // Cybersecurity & Compliance;
   {
   id: "comprehensive-cybersecurity",tit,
   l: e: "Comprehensive Cybersecurity & Compliance",descripti,
@@ -211,7 +213,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/comprehensive-cybersecurity"
 }
-  // Digital Transformation Consulting
+  // Digital Transformation Consulting;
   {
   id: "digital-transformation-consulting",tit,
   l: e: "Digital Transformation Consulting",descripti,
@@ -296,7 +298,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/digital-transformation-consulting"
 }
-  // Data Analytics & Business Intelligence
+  // Data Analytics & Business Intelligence;
   {
   id: "data-analytics-business-intelligence",tit,
   l: e: "Data Analytics & Business Intelligence",descripti,
@@ -380,7 +382,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/data-analytics-business-intelligence"
 }
-  // IT Infrastructure Management
+  // IT Infrastructure Management;
   {
   id: "it-infrastructure-management",tit,
   l: e: "IT Infrastructure Management",descripti,
@@ -465,7 +467,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/it-infrastructure-management"
 }
-  // Software Development & Custom Solutions
+  // Software Development & Custom Solutions;
   {
   id: "custom-software-development",tit,
   l: e: "Custom Software Development",descripti,
@@ -548,7 +550,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/custom-software-development"
 }
-  // Managed IT Services
+  // Managed IT Services;
   {
   id: "managed-it-services",tit,
   l: e: "Managed IT Services",descripti,
@@ -633,7 +635,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/managed-it-services"
 }
-  // Network Security & Firewall Management
+  // Network Security & Firewall Management;
   {
   id: "network-security-firewall",tit,
   l: e: "Network Security & Firewall Management",descripti,
@@ -717,7 +719,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/network-security-firewall"
 }
-  // Cloud Migration & Strategy
+  // Cloud Migration & Strategy;
   {
   id: "cloud-migration-strategy",tit,
   l: e: "Cloud Migration & Strategy",descripti,
@@ -802,4 +804,4 @@ export,
   s://ziontechgroup.com/docs/cloud-migration-strategy"
 },
   ]
-export default COMPREHENSIVE_IT_SERVICES_2029
+export default COMPREHENSIVE_IT_SERVICES_2029;

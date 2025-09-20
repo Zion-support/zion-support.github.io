@@ -1,19 +1,22 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from "lucide-react"
-import { Link, useNavigate } from "react-router-dom"
+import { Button   } from "@/components/ui/button";
+import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap   } from "lucide-react";
+import { Link, useNavigate   } from "react-router-dom";
 function ErrorFallback({ error, resetError, retryCount = 0 }) {
     const navigate = useNavigate()
-    const maxRetries = 3
-    const handleRetry = () => {
+    const maxRetries = 3;
+    const handleRetry = useCallback(handleRetry, [])
         if (retryCount < maxRetries) {
             resetError()
         } else {
-            // After max retries, redirect to home
+  // After max retries, redirect to home;
             navigate('/')
+}
+}
         }
     }
-      const getErrorType = (error) => {
+      const getErrorType = useCallback(getErrorType, [])
         if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
             return 'network'
         }
@@ -67,33 +70,33 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
                         <p className="text-sm text-gray-500 mb-2">
                             Attempt {retryCount + 1} of {maxRetries}
                         </p>
-                        <Button 
+                        <Button;
                             onClick={handleRetry}
                             className="w-full mb-3"
                             variant="default"
                         >
                             <RefreshCw className="w-4 h-4 mr-2" />
-                            Try Again
+                            Try Again;
                         </Button>
                     </div>
                 )}
                 
                 <div className="space-y-2">
-                    <Button 
+                    <Button;
                         onClick={() => window.location.reload()}
                         variant="outline"
                         className="w-full"
                     >
                         <RefreshCw className="w-4 h-4 mr-2" />
-                        Refresh Page
+                        Refresh Page;
                     </Button>
-                    <Button 
+                    <Button;
                         onClick={() => navigate('/')}
                         variant="outline"
                         className="w-full"
                     >
                         <Home className="w-4 h-4 mr-2" />
-                        Go Home
+                        Go Home;
                     </Button>
                 </div>
                 
@@ -118,24 +121,24 @@ function ErrorBoundary({ children, fallback, onError }) {
     const [error, setError] = useState(null)
     const [retryCount, setRetryCount] = useState(0)
       useEffect(() => {
-          const handleError = (event) => {
+          const handleError = useCallback(handleError, [])
             setHasError(true)
             setError(event.error)
             if (onError) {
                 onError(event.error, { componentStack: event.error?.stack })
             }
-            // Log error to console in development
+            // Log error to console in development;
             if (process.env.NODE_ENV === 'development') {
                 console.error('ErrorBoundary caught an error:', event.error)
             }
         }
-        const handleUnhandledRejection = (event) => {
+        const handleUnhandledRejection = useCallback(handleUnhandledRejection, [])
             setHasError(true)
             setError(new Error(event.reason))
             if (onError) {
                 onError(new Error(event.reason), { componentStack: event.reason?.stack })
             }
-            // Log error to console in development
+            // Log error to console in development;
             if (process.env.NODE_ENV === 'development') {
                 console.error('ErrorBoundary caught an unhandled rejection:', event.reason)
             }
@@ -147,33 +150,33 @@ function ErrorBoundary({ children, fallback, onError }) {
             window.removeEventListener('unhandledrejection', handleUnhandledRejection)
         }
     }, [onError])
-    const resetError = () => {
+    const resetError = useCallback(resetError, [])
         setHasError(false)
         setError(null)
         setRetryCount(prev => prev + 1)
     }
     if (hasError) {
         const fallbackComponent = fallback || <ErrorFallback error={error} resetError={resetError} retryCount={retryCount} />
-        return fallbackComponent
+        return fallbackComponent;
     }
 
-    return children
+    return children;
 }
 
-// Custom hook for error handling
+// Custom hook for error handling;
 export function useErrorHandler() {
     const [error, setError] = useState(null)
-      const handleError = (error) => {
+      const handleError = useCallback(handleError, [])
         setError(error)
         console.error('Error caught by useErrorHandler:', error)
     }
-    const clearError = () => {
+    const clearError = useCallback(clearError, [])
         setError(null)
     }
     return { error, handleError, clearError }
 }
 
-// Higher-order component for error handling
+// Higher-order component for error handling;
 export function withErrorBoundary(Component, fallback = null) {
     return function WrappedComponent(props) {
         return (
@@ -184,4 +187,4 @@ export function withErrorBoundary(Component, fallback = null) {
     }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

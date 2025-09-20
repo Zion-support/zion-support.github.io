@@ -1,58 +1,60 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Search
+  Search;
   TrendingUp,
   Target,
   BarChart3,
   Zap,
-  ArrowRight
-  CheckCircle
-  Star
-  Globe
-  Lock
-  Activity
-  Settings
-  Bell
-  Download
-  Upload
-  RefreshCw
-  Monitor
-  Smartphone
-  Server
-  Chip
-  Wifi
-  Satellite
-  Radar
-  Camera
-  Video
-  FileText
-  Calendar
-  Tag
-  PieChart
-  LineChart
-  Scatter
-  Layers
-  Cube
-  Box
-  Package
-  Truck
-  Building
-  Factory
-  Warehouse
-  Home
-  Car
-  Plane
-  Ship
-  Database
-  Cloud
-  Eye
-  Brain
-  Network
-  Rocket
-  Shield
-} from "lucide-react"
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Globe;
+  Lock;
+  Activity;
+  Settings;
+  Bell;
+  Download;
+  Upload;
+  RefreshCw;
+  Monitor;
+  Smartphone;
+  Server;
+  Chip;
+  Wifi;
+  Satellite;
+  Radar;
+  Camera;
+  Video;
+  FileText;
+  Calendar;
+  Tag;
+  PieChart;
+  LineChart;
+  Scatter;
+  Layers;
+  Cube;
+  Box;
+  Package;
+  Truck;
+  Building;
+  Factory;
+  Warehouse;
+  Home;
+  Car;
+  Plane;
+  Ship;
+  Database;
+  Cloud;
+  Eye;
+  Brain;
+  Network;
+  Rocket;
+  Shield;
+}
+}
+ } from "lucide-react";
 export default function AIPoweredSEO() {
   const features = [
   {
@@ -145,7 +147,7 @@ export default function AIPoweredSEO() {
   s: m: px-6,
   l: g:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -159,7 +161,7 @@ export default function AIPoweredSEO() {
           >
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI-Powered SEO Services
+              AI-Powered SEO Services;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your search engine visibility with cutting-edge AI technology. 
@@ -167,7 +169,7 @@ export default function AIPoweredSEO() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500,
   hove: r:from-blue-600,
@@ -178,7 +180,7 @@ export default function AIPoweredSEO() {
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30,
   hove: r:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hove,
@@ -198,7 +200,7 @@ export default function AIPoweredSEO() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -215,10 +217,10 @@ export default function AIPoweredSEO() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              AI SEO Features
+              AI SEO Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO platform combines machine learning with industry expertise 
+              Our AI-powered SEO platform combines machine learning with industry expertise;
               to deliver unprecedented search engine optimization results.
             </p>
           </motion.div>
@@ -227,7 +229,7 @@ export default function AIPoweredSEO() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -264,7 +266,7 @@ export default function AIPoweredSEO() {
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -281,7 +283,7 @@ export default function AIPoweredSEO() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Our SEO Services
+              Our SEO Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive SEO solutions designed to improve your search rankings and drive organic traffic.
@@ -291,7 +293,7 @@ export default function AIPoweredSEO() {
           <div className="grid grid-cols-1 l,
   g:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -339,7 +341,7 @@ export default function AIPoweredSEO() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -356,7 +358,7 @@ export default function AIPoweredSEO() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              AI Technologies
+              AI Technologies;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built with cutting-edge AI technologies for maximum SEO performance and results.
@@ -366,7 +368,7 @@ export default function AIPoweredSEO() {
           <div className="grid grid-cols-2 m,
   d:grid-cols-5 gap-6">
             {technologies.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -401,7 +403,7 @@ export default function AIPoweredSEO() {
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -420,12 +422,12 @@ export default function AIPoweredSEO() {
               Ready to Dominate Search Rankings?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join the AI SEO revolution with Zion Tech Group. Our intelligent optimization solutions 
+              Join the AI SEO revolution with Zion Tech Group. Our intelligent optimization solutions;
               are designed to boost your search visibility and drive sustainable organic growth.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500,
   hove: r:from-blue-600,
@@ -436,7 +438,7 @@ export default function AIPoweredSEO() {
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30,
   hove: r:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hove,

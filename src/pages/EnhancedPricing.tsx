@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Check
+  Check;
   Star,
   TrendingUp,
   Zap,
@@ -18,27 +19,28 @@ import {
   Chip,
   Globe,
   Lock,
-  ShieldCheck
-  Phone
-  Mail
-  Globe as GlobeIcon
-  Award
-  Clock
-  DollarSign
-  Target
-  Handshake
-  Lightbulb
-  ArrowRight
-} from "lucide-react"
-import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from "../data/enhancedMicroSaasServices2025"
-import { SEO } from "../components/SEO"
+  ShieldCheck;
+  Phone;
+  Mail;
+  Globe as GlobeIcon;
+  Award;
+  Clock;
+  DollarSign;
+  Target;
+  Handshake;
+  Lightbulb;
+  ArrowRight;
+}
+}
+ } from "lucide-react";
+import { ENHANCED_MICRO_SAAS_SERVICES_2025   } from "../data/enhancedMicroSaasServices2025";
+import { SEO   } from "../components/SEO";
 const,
   EnhancedPricin: g: React.FC = () () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [sortBy, setSortBy] = useState('price')
 
-  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025
-  
+  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', ic,
@@ -78,19 +80,19 @@ const categories = [
   },
   ]
   const filteredServices = selectedCategory === 'all' 
-    ? allServices 
+    ? allServices;
     : allServices.filter(service => service.category === selectedCategory)
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'roi':
         return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''))
       case 'innovation':
         return b.innovationLevel.localeCompare(a.innovationLevel)
       defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
   const getCategoryIcon = (catego,
@@ -133,7 +135,7 @@ const categories = [
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Micro SAAS Services Pricing - Zion Tech Group"
         description="Comprehensive pricing for our innovative micro SAAS services. Discover competitive pricing for AI, Quantum Computing, Blockchain, IoT, and more with exceptional ROI."
       />
@@ -146,7 +148,7 @@ const categories = [
   s: m: px-6,
   l: g:px-8 py-24">
           <div className="text-center">
-            <motion.h1 
+            <motion.h1;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -159,12 +161,12 @@ const categories = [
               className="className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6";"
             >
-              Transparent Pricing for
+              Transparent Pricing for;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">
-                Innovative Solutions
+                Innovative Solutions;
               </span>
             </motion.h1>
-            <motion.p 
+            <motion.p;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -183,7 +185,7 @@ const categories = [
             
             {/* Contact Information */},
   }
-            <motion.div 
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -231,14 +233,14 @@ const categories = [
   l: g:flex-row gap-4 items-center justify-between">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
-  <button
+  <button;
                   key={category.id},
   }
                   onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg'
                       : 'bg-white/10 text-gray-300,
   hove: r:bg-white/20'
@@ -251,7 +253,7 @@ const categories = [
               ))}
             </div>
             
-            <select
+            <select;
               value={sortBy},
   }
               onChange={(e) => setSortBy(e.target.value)},
@@ -274,7 +276,7 @@ const categories = [
   l: g: grid-cols-2 x,
   l:grid-cols-3">
           {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={service.id},
   }
               initial={ opaci,
@@ -323,7 +325,7 @@ const categories = [
                   <span className="text-sm text-gray-400">R,
   O: I:</span>
                   <span className={`text-sm font-semibold ${getROIColor(service.roi)}`}>
-                    {service.roi} return
+                    {service.roi} return;
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
@@ -377,7 +379,7 @@ const categories = [
               {/* CTA */},
   }
               <div className="text-center">
-                <a
+                <a;
                   href={`mail,
   t: o:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service. Please provide more details about pricing, features, and implementation.`}
                   className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium rounded-lg,
@@ -385,7 +387,7 @@ const categories = [
   hove: r:to-zion-cyan transition-all duration-300 transform hove,
   r:scale-105 w-full justify-center";"
                 >
-                  Get Started
+                  Get Started;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
@@ -395,7 +397,7 @@ const categories = [
 
         {/* Call to Action */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -418,7 +420,7 @@ const categories = [
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg,
@@ -427,16 +429,16 @@ const categories = [
   transform: hover:scale-105";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call for Custom Quote
+                Call for Custom Quote;
               </a>
-              <a
+              <a;
                 href="mailt,
   o:kleber@ziontechgroup.com?subject=Custom Pricing Inquiry&body=Hi, I'm interested in custom pricing for your services. Please provide more details about enterprise options and custom solutions."
                 className="className="inline-flex items-center px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg,
   hove: r: bg-white/20 transition-all duration-300";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Request Custom Quote
+                Request Custom Quote;
               </a>
             </div>
           </div>
@@ -445,4 +447,4 @@ const categories = [
     </div>
   )
 }
-export default EnhancedPricing
+export default EnhancedPricing;

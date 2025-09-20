@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
-import { 
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
+import {
   ArrowRight,
   Play, 
   Star, 
@@ -13,8 +13,10 @@ import {
   TrendingUp,
   Users,
   Globe,
-  Rocket
-} from "lucide-react"
+  Rocket;
+}
+}
+ } from "lucide-react";
 interface HeroProps {
   title?: string,
   subtitle?: string,
@@ -25,7 +27,9 @@ interface HeroProps {
     ic,
   o: n: React.ComponentType<any>,te,
   x: t: string,col,
-  o: r: string
+  o: r: string;
+}
+}
   }>
 }
 
@@ -64,7 +68,7 @@ const interval = setInterval(() () => {
 }, [features.length]),
 
   const handleCTAClick = useCallback(() () => {
-    // Analytics tracking could be added here
+    // Analytics tracking could be added here;
     console.log('Hero CTA clicked')
 }, []),
 
@@ -79,7 +83,7 @@ const interval = setInterval(() () => {
   o: n: {
         duratio,
   n: 0.8,staggerChildr,
-  e: n: 0.2
+  e: n: 0.2;
       },
   },
   }
@@ -111,7 +115,7 @@ const featureVariants = {
       </div>
 
       {/* Main content */}
-      <motion.div
+      <motion.div;
         className="relative z-10 max-w-7xl mx-auto px-4,
   s: m: px-6 l,
   g:px-8 text-center"
@@ -120,7 +124,7 @@ const featureVariants = {
         animate={isVisible ? "visible" : "hidden"}
       >
         {/* Badge */}
-        <motion.div
+        <motion.div;
           className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-8"
           variants={itemVariants}
         >
@@ -129,7 +133,7 @@ const featureVariants = {
         </motion.div>
 
         {/* Main title */}
-        <motion.h1
+        <motion.h1;
           className="text-4xl,
   s: m: text-5xl l,
   g:text-7xl font-bold text-white mb-6 leading-tight"
@@ -141,7 +145,7 @@ const featureVariants = {
         </motion.h1>
 
         {/* Description */}
-        <motion.p
+        <motion.p;
           className="text-xl,
   s: m:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           variants={itemVariants}
@@ -150,12 +154,12 @@ const featureVariants = {
         </motion.p>
 
         {/* CTA Buttons */}
-        <motion.div
+        <motion.div;
           className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center mb-16"
           variants={itemVariants}
         >
-          <Link
+          <Link;
             to={ctaLink}
             onClick={handleCTAClick}
             className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full text-lg shadow-lg,
@@ -172,19 +176,19 @@ const featureVariants = {
           <button className="group inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-full text-lg hove,
   r:bg-cyan-500/10 transition-all duration-300">
             <Play className="mr-2 w-5 h-5" />
-            Watch Demo
+            Watch Demo;
           </button>
         </motion.div>
 
         {/* Features showcase */}
-        <motion.div
+        <motion.div;
           className="grid grid-cols-1,
   s: m: grid-cols-2 l,
   g:grid-cols-4 gap-6 max-w-6xl mx-auto"
           variants={itemVariants}
         >
           {features.map((feature, index) => (
-            <motion.div
+            <motion.div;
               key={index}
               className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-white/10 backdrop-blur-sm,
   hove: r:scale-105 transition-transform duration-300`}
@@ -197,14 +201,14 @@ const featureVariants = {
               </div>
               <h3 className="text-white font-semibold text-lg mb-2">{feature.text}</h3>
               <p className="text-gray-300 text-sm">
-                Cutting-edge solutions for modern businesses
+                Cutting-edge solutions for modern businesses;
               </p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Stats */}
-        <motion.div
+        <motion.div;
           className="mt-16 grid grid-cols-1,
   s: m:grid-cols-3 gap-8 max-w-4xl mx-auto"
           variants={itemVariants}
@@ -226,7 +230,7 @@ const featureVariants = {
 
       {/* Floating elements */}
       <AnimatePresence>
-        <motion.div
+        <motion.div;
           className="absolute top-1/4 right-10 w-2 h-2 bg-cyan-400 rounded-full"
           animate={
             y: [0, -20, 0],
@@ -242,7 +246,7 @@ const featureVariants = {
           },
   }
         />
-        <motion.div
+        <motion.div;
           className="absolute bottom-1/4 left-10 w-3 h-3 bg-blue-400 rounded-full"
           animate={
             y: [0, 20, 0],
@@ -255,7 +259,7 @@ const featureVariants = {
   o: n: 2.5,repe,
   a: t: Infinity,ea,
   s: e: "easeInOut",del,
-  a: y: 1
+  a: y: 1;
           },
   }
         />

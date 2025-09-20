@@ -1,61 +1,64 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
+  Brain;
   Cloud,
   Shield,
   Rocket,
   Zap,
   Users,
   Globe,
-  Cpu
-  Lock
-  Heart
-  Star
-  ArrowRight
-  CheckCircle
-  TrendingUp
-  Code
-  Database
-  Network
-  Smartphone
-  BarChart3
-  MessageSquare
-  FileText
-  ShoppingCart
-  Headphones
-  Mail
-  Search
-  HelpCircle
-  ShieldCheck
-  Globe2
-  Leaf
-  Sparkles
-  Target
-  DollarSign
-  Clock
-  Award
-  Phone
-  Mail as MailIcon
-  MapPin
-  Infinity
-  Filter
-  Grid3X3
-  List
-  Eye
-  ExternalLink
-  X
-} from "lucide-react"
-import { SEO } from "../components/SEO"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSAASServices2025"
+  Cpu;
+  Lock;
+  Heart;
+  Star;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  MessageSquare;
+  FileText;
+  ShoppingCart;
+  Headphones;
+  Mail;
+  Search;
+  HelpCircle;
+  ShieldCheck;
+  Globe2;
+  Leaf;
+  Sparkles;
+  Target;
+  DollarSign;
+  Clock;
+  Award;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
+  Infinity;
+  Filter;
+  Grid3X3;
+  List;
+  Eye;
+  ExternalLink;
+  X;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025   } from "../data/innovativeMicroSAASServices2025";
 export default function InnovativeMicroSAASServices2025() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [sortBy, setSortBy] = useState('rating')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [selectedService, setSelectedService] = useState<any>(null)
-  // Get unique categories from services
+  // Get unique categories from services;
 const categories = [
   { id: 'all', na,
   m: e: 'All Services', cou,
@@ -125,26 +128,26 @@ const categories = [
   },
   ]
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service () => {
-  const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'rating':
-        return b.rating - a.rating
+        return b.rating - a.rating;
       case 'price':
-        return a.price - b.price
+        return a.price - b.price;
       case 'reviews':
-        return b.reviewCount - a.reviewCount
+        return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title)
       defau,
-  l: t: return b.rating - a.rating
+  l: t: return b.rating - a.rating;
 },
   })
   const handleServiceClick = (servi,
@@ -157,7 +160,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
+      <SEO;
         title="Innovative Micro SAAS Services 2025 | Zion Tech Group"
         description="Discover cutting-edge micro SAAS services powered by AI, including business intelligence, marketing automation, cybersecurity, and more. Transform your business with Zion Tech Group."
         keywords="micro SAAS, AI services, business intelligence, marketing automation, cybersecurity, fintech, healthcare AI, legal tech, education AI"
@@ -172,7 +175,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   l: g:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -185,9 +188,9 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           >
             <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Innovative Micro SAAS Services
+              Innovative Micro SAAS Services;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                2025 Edition
+                2025 Edition;
               </span>
             </h1>
             <p className="text-xl m,
@@ -227,7 +230,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               <div className="flex-1 max-w-md">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm},
@@ -246,7 +249,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               {/* Sort */},
   }
               <div className="flex items-center gap-4">
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value)},
@@ -265,7 +268,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 {/* View Mode Toggle */},
   }
                 <div className="flex bg-white/20 rounded-xl p-1">
-                  <button
+                  <button;
                     onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -276,7 +279,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   >
                     <Grid3X3 className="w-5 h-5" />
                   </button>
-                  <button
+                  <button;
                     onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -296,14 +299,14 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             <div className="mt-6">
               <div className="flex flex-wrap gap-3">
                 {categories.map((category) => (
-  <button
+  <button;
                     key={category.id},
   }
                     onClick={onClick={() => setActiveCategory(category.id)},
   },
   }
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-  activeCategory === category.id
+  activeCategory === category.id;
                         ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                         : 'bg-white/10 text-gray-300,
   hove: r: bg-white/20 hove,
@@ -336,7 +339,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
               {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -407,7 +410,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     <div className="mt-4 pt-4 border-t border-white/20">
                       <div className="flex flex-wrap gap-2">
                         {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                             key={tagIndex},
   }
                             className="className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full";"
@@ -418,7 +421,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                         ))},
   {service.tags.length > 3 && (
   <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">
-                            +{service.tags.length - 3} more
+                            +{service.tags.length - 3} more;
                           </span>
                         )}
                       </div>
@@ -443,7 +446,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           ) : (
   <div className="space-y-4">
               {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -498,7 +501,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
                         <div className="flex flex-wrap gap-2">
                           {service.tags.map((tag, tagIndex) => (
-  <span
+  <span;
                               key={tagIndex},
   }
                               className="className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full";"
@@ -553,7 +556,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   s: m: px-6,
   l: g:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -577,7 +580,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl,
   hove: r:from-blue-700,
@@ -585,15 +588,15 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   transform: hover:scale-105";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Contact Us
+                Contact Us;
               </Link>
-              <Link
+              <Link;
                 to="/request-quote"
                 className="className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30,
   hove: r:bg-white/20 transition-all duration-300";"
               >
                 <DollarSign className="w-5 h-5 mr-2" />
-                Get Quote
+                Get Quote;
               </Link>
             </div>
             <div className="mt-8 grid grid-cols-1 m,
@@ -622,7 +625,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   }
       <AnimatePresence>
         {selectedService && (
-  <motion.div
+  <motion.div;
             initial={ opaci,
   t: y: 0 },
   }
@@ -637,7 +640,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   },
   }
           >
-            <motion.div
+            <motion.div;
               initial={ sca,
   l: e: 0.9, opaci,
   t: y: 0 },
@@ -658,7 +661,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               <div className="p-8">
                 <div className="flex items-start justify-between mb-6">
                   <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
-                  <button
+                  <button;
                     onClick={onClick={closeModal},
   },
   }
@@ -744,7 +747,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                           {selectedService.tags.map((t,
   a: g: string, ind,
   e: x: number) => (
-  <span
+  <span;
                               key={index},
   }
                               className="className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full";"
@@ -762,7 +765,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                           {selectedService.integrations.slice(0, 6).map((integrati,
   o: n: string, ind,
   e: x: number) => (
-  <span
+  <span;
                               key={index},
   }
                               className="className="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-full";"
@@ -773,7 +776,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                           ))},
   {selectedService.integrations.length > 6 && (
   <span className="px-3 py-1 bg-gray-500/20 text-gray-300 text-sm rounded-full">
-                              +{selectedService.integrations.length - 6} more
+                              +{selectedService.integrations.length - 6} more;
                             </span>
                           )}
                         </div>
@@ -800,22 +803,22 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   i: l: {selectedService.contactInfo.email}</div>
                     </div>
                     <div className="flex gap-4">
-                      <Link
+                      <Link;
                         to="/contact"
                         className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl,
   hove: r: from-blue-700,
   hove: r:to-purple-700 transition-all duration-300";"
                       >
                         <Phone className="w-4 h-4 mr-2" />
-                        Contact Sales
+                        Contact Sales;
                       </Link>
-                      <Link
+                      <Link;
                         to="/request-quote"
                         className="className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hove,
   r:bg-white/20 transition-all duration-300";"
                       >
                         <DollarSign className="w-4 h-4 mr-2" />
-                        Get Quote
+                        Get Quote;
                       </Link>
                     </div>
                   </div>

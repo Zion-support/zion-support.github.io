@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link   } from "react-router-dom";
 import {
-  Users
+  Users;
   Award,
   Star,
   Target,
@@ -10,17 +10,19 @@ import {
   Zap,
   Shield,
   Brain,
-  Rocket
-  Building
-  Heart
-  Crown
-  Sparkles
-  ArrowRight
-  Linkedin
-  Mail
-  Phone
-  MapPin
-} from "lucide-react"
+  Rocket;
+  Building;
+  Heart;
+  Crown;
+  Sparkles;
+  ArrowRight;
+  Linkedin;
+  Mail;
+  Phone;
+  MapPin;
+}
+}
+ } from "lucide-react";
 import SEO from "../components/SEO"
 export default function Leadership() {
   const leadershipTeam = [
@@ -137,7 +139,7 @@ export default function Leadership() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Leadership - Zion Tech Group"
         description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
       />
@@ -149,9 +151,9 @@ export default function Leadership() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Meet Our
+              Meet Our;
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Leadership</span>
-              <br />Team
+              <br />Team;
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
               Visionary leaders with deep expertise in AI, technology innovation, and business transformation. 
@@ -168,7 +170,7 @@ export default function Leadership() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Executive Leadership
+              Executive Leadership;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Meet the experienced professionals who are driving innovation and growth at Zion Tech Group.
@@ -186,7 +188,7 @@ export default function Leadership() {
   m: d:space-y-0 m,
   d:space-x-6">
                   <div className="flex-shrink-0">
-                    <img 
+                    <img;
                       src={leader.image} 
                       alt={leader.name},
   }
@@ -203,7 +205,7 @@ export default function Leadership() {
   of: Expertise:</h4>
                       <div className="flex flex-wrap gap-2">
                         {leader.expertise.map((skill, skillIndex) => (
-  <span 
+  <span;
                             key={skillIndex},
   }
                             className="className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20";"
@@ -216,7 +218,7 @@ export default function Leadership() {
                     </div>
 
                     <div className="flex items-center space-x-4">
-                      <a
+                      <a;
                         href={leader.linkedin},
   }
                         target="_blank"
@@ -227,7 +229,7 @@ export default function Leadership() {
                         <Linkedin className="w-5 h-5" />
                         <span>LinkedIn</span>
                       </a>
-                      <a
+                      <a;
                         href={`mailt,
   o:${leader.email}`}
                         className="className="flex items-center space-x-2 text-slate-300,
@@ -236,7 +238,7 @@ export default function Leadership() {
                         <Mail className="w-5 h-5" />
                         <span>Email</span>
                       </a>
-                      <a
+                      <a;
                         href={`te,
   l:${leader.phone}`}
                         className="className="flex items-center space-x-2 text-slate-300,
@@ -261,7 +263,7 @@ export default function Leadership() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Our Core Values
+              Our Core Values;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               The principles that guide everything we do and shape our company culture.
@@ -293,7 +295,7 @@ export default function Leadership() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Our Achievements
+              Our Achievements;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Milestones that demonstrate our commitment to excellence and innovation.
@@ -323,30 +325,30 @@ export default function Leadership() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-8">
-              Join Our Mission
+              Join Our Mission;
             </h2>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              We're building a team of passionate innovators who believe in the power of technology 
+              We're building a team of passionate innovators who believe in the power of technology;
               to transform businesses and improve lives. If you share our vision, we'd love to hear from you.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/careers"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-cyan-500/20";"
               >
-                View Open Positions
+                View Open Positions;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hove,
   r:bg-cyan-400/10 transition-all duration-200";"
               >
-                Get in Touch
+                Get in Touch;
               </Link>
             </div>
           </div>
@@ -374,7 +376,7 @@ export default function Leadership() {
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300 text-sm">
                   364 E Main St STE 1008<br />
-                  Middletown DE 19709
+                  Middletown DE 19709;
                 </p>
               </div>
               
@@ -385,7 +387,7 @@ export default function Leadership() {
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300 text-sm">
                   +1 302 464 0950<br />
-                  Mon-Fri 9AM-6PM EST
+                  Mon-Fri 9AM-6PM EST;
                 </p>
               </div>
               
@@ -396,7 +398,7 @@ export default function Leadership() {
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300 text-sm">
                   kleber@ziontechgroup.com<br />
-                  We'll respond within 24 hours
+                  We'll respond within 24 hours;
                 </p>
               </div>
             </div>

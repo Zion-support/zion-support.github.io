@@ -1,18 +1,21 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Cookie
+  Cookie;
   CheckCircle,
   Settings,
   Eye,
   Globe,
   Info,
-  Shield
-  Clock
-  Target
-  ExternalLink
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  Shield;
+  Clock;
+  Target;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 interface CookieType {
   id: string,na,
   m: e: string,descripti,
@@ -20,7 +23,9 @@ interface CookieType {
   o: r: string,ic,
   o: n: React.ComponentType<any>,exampl,
   e: s: string[],alwaysActi,
-  v: e: boolean
+  v: e: boolean;
+}
+}
 }
 
 interface CookieDetail {
@@ -30,6 +35,8 @@ interface CookieDetail {
   o: n: string,provid,
   e: r: string,ty,
   p: e: 'essential' | 'analytics' | 'marketing' | 'functional'
+}
+}
 }
 
 const,
@@ -43,7 +50,7 @@ const,
   o: n: Shield,exampl,
   e: s: ['AuthenticationSecurity', 'Basic navigation']
     alwaysActi,
-  v: e: true
+  v: e: true;
 },
   {
   id: 'analytics',na,
@@ -53,7 +60,7 @@ const,
   o: n: Globe,exampl,
   e: s: ['Page viewsUser behavior', 'Performance metrics']
     alwaysActi,
-  v: e: false
+  v: e: false;
 },
   {
   id: 'marketing',na,
@@ -63,7 +70,7 @@ const,
   o: n: Target,exampl,
   e: s: ['Ad targetingCampaign tracking', 'Conversion analysis']
     alwaysActi,
-  v: e: false
+  v: e: false;
 },
   {
   id: 'functional',na,
@@ -73,7 +80,7 @@ const,
   o: n: Settings,exampl,
   e: s: ['Language preferencesCustom settings', 'Enhanced features']
     alwaysActi,
-  v: e: false
+  v: e: false;
 },
   ]
 const,
@@ -118,15 +125,17 @@ const,
   a: l: true,analyti,
   c: s: false,marketi,
   n: g: false,function,
-  a: l: false
+  a: l: false;
 })
   useEffect(() () => {
-    // Load saved preferences from localStorage
+    // Load saved preferences from localStorage;
 const saved = localStorage.getItem('cookiePreferences')
     if (if (saved) {
   ) {
       try {
   const parsed = JSON.parse(saved)
+}
+}
         setCookiePreferences({ ...cookiePreferences, ...parsed })
       } catch (e) {
   console.error('Failed to parse cookie preferences')
@@ -150,7 +159,7 @@ const saved = localStorage.getItem('cookiePreferences')
   a: l: true,analyti,
   c: s: true,marketi,
   n: g: true,function,
-  a: l: true
+  a: l: true;
 }
     setCookiePreferences(allAccepted)
     localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted))
@@ -162,7 +171,7 @@ const saved = localStorage.getItem('cookiePreferences')
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Cookie Policy - Zion Tech Group"
         description="Learn about how Zion Tech Group uses cookies, manage your preferences, and understand our cookie policy."
       />
@@ -172,7 +181,7 @@ const saved = localStorage.getItem('cookiePreferences')
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -203,7 +212,7 @@ const saved = localStorage.getItem('cookiePreferences')
   }
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -219,7 +228,7 @@ const saved = localStorage.getItem('cookiePreferences')
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4">Cookie Preferences</h2>
                 <p className="text-gray-300">
-                  Manage your cookie preferences and control how we use cookies on our website
+                  Manage your cookie preferences and control how we use cookies on our website;
                 </p>
               </div>
 
@@ -239,7 +248,7 @@ const saved = localStorage.getItem('cookiePreferences')
                       </div>
                       <div className="flex items-center">
                         <label className="relative inline-flex items-center cursor-pointer">
-                          <input
+                          <input;
                             type="checkbox"
                             checked={cookiePreferences[type.id as keyof typeof cookiePreferences],
   },
@@ -289,7 +298,7 @@ const saved = localStorage.getItem('cookiePreferences')
 
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <button
+                <button;
                   onClick={onClick={acceptAll},
   },
   }
@@ -298,16 +307,16 @@ const saved = localStorage.getItem('cookiePreferences')
   hove: r:to-blue-600 transition-all duration-200 hove,
   r:scale-105";"
                 >
-                  Accept All Cookies
+                  Accept All Cookies;
                 </button>
-                <button
+                <button;
                   onClick={onClick={savePreferences},
   },
   }
                   className="className="px-8 py-3 border border-white/20 text-white font-semibold rounded-lg,
   hove: r:bg-white/10 transition-all duration-200";"
                 >
-                  Save Preferences
+                  Save Preferences;
                 </button>
               </div>
             </div>
@@ -319,7 +328,7 @@ const saved = localStorage.getItem('cookiePreferences')
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -333,7 +342,7 @@ const saved = localStorage.getItem('cookiePreferences')
           >
             <h2 className="text-4xl font-bold text-white mb-4">Detailed Cookie Information</h2>
             <p className="text-xl text-gray-300">
-              Comprehensive list of cookies used on our website
+              Comprehensive list of cookies used on our website;
             </p>
           </motion.div>
 
@@ -351,7 +360,7 @@ const saved = localStorage.getItem('cookiePreferences')
                 
                 <div className="space-y-3">
                   {cookieDetails.map((cookie, index) => (
-  <motion.div
+  <motion.div;
                       key={cookie.name},
   }
                       initial={ opaci,
@@ -396,7 +405,7 @@ const saved = localStorage.getItem('cookiePreferences')
   }
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -410,14 +419,14 @@ const saved = localStorage.getItem('cookiePreferences')
           >
             <h2 className="text-4xl font-bold text-white mb-4">Managing Your Cookies</h2>
             <p className="text-xl text-gray-300">
-              Learn how to control cookies in your browser and device settings
+              Learn how to control cookies in your browser and device settings;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-3 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -436,9 +445,9 @@ const saved = localStorage.getItem('cookiePreferences')
                 </div>
                 <h3 className="text-lg font-bold text-white mb-4">Browser Settings</h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  Most browsers allow you to control cookies through their settings menu
+                  Most browsers allow you to control cookies through their settings menu;
                 </p>
-                <a
+                <a;
                   href="#"
                   className="className="text-cyan-400,
   hove: r: text-cyan-300 text-sm font-medium";"
@@ -448,7 +457,7 @@ const saved = localStorage.getItem('cookiePreferences')
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -467,9 +476,9 @@ const saved = localStorage.getItem('cookiePreferences')
                 </div>
                 <h3 className="text-lg font-bold text-white mb-4">Privacy Tools</h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  Use privacy tools and browser extensions to manage cookies
+                  Use privacy tools and browser extensions to manage cookies;
                 </p>
-                <a
+                <a;
                   href="#"
                   className="className="text-purple-400,
   hove: r: text-purple-300 text-sm font-medium";"
@@ -479,7 +488,7 @@ const saved = localStorage.getItem('cookiePreferences')
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -498,9 +507,9 @@ const saved = localStorage.getItem('cookiePreferences')
                 </div>
                 <h3 className="text-lg font-bold text-white mb-4">Global Settings</h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  Configure global privacy settings for all websites
+                  Configure global privacy settings for all websites;
                 </p>
-                <a
+                <a;
                   href="#"
                   className="className="text-green-400,
   hove: r:text-green-300 text-sm font-medium";"
@@ -517,7 +526,7 @@ const saved = localStorage.getItem('cookiePreferences')
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -532,12 +541,12 @@ const saved = localStorage.getItem('cookiePreferences')
               Questions About Cookies?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              If you have any questions about our cookie policy or how we use cookies
+              If you have any questions about our cookie policy or how we use cookies;
               please don't hesitate to contact us.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="mail,
   t: o:privacy@ziontechgroup.com"
                 className="className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-400 to-red-500 text-white font-semibold rounded-lg,
@@ -546,16 +555,16 @@ const saved = localStorage.getItem('cookiePreferences')
   hove: r:scale-105";"
               >
                 <Info className="w-5 h-5 mr-2" />
-                Contact Privacy Team
+                Contact Privacy Team;
               </a>
-              <a
+              <a;
                 href="/privacy"
                 className="className="inline-flex items-center px-8 py-3 border border-orange-400 text-orange-400 font-semibold rounded-lg,
   hove: r:bg-orange-400 hove,
   r:text-white transition-all duration-200";"
               >
                 <Shield className="w-5 h-5 mr-2" />
-                Privacy Policy
+                Privacy Policy;
               </a>
             </div>
           </motion.div>
@@ -564,4 +573,4 @@ const saved = localStorage.getItem('cookiePreferences')
     </div>
   )
 }
-export default Cookies
+export default Cookies;

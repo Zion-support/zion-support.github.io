@@ -1,20 +1,23 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star
-  Server, Cloud, Database, Network, Lock, Code, Rocket, Building
-  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth
-  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign
-  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown
-  Lightbulb, Globe2, FileText, Image, Video, Code, Palette
-  ShoppingCart, MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth
-  Pill, Bandage, Thermometer, Scale, Calculator, ChartBar, PieChart
-  LineChart, Activity, TrendingDown, Minus, Plus, Equal, Divide
-  Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins
-  PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode
-  Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX
-} from "lucide-react"
+  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star;
+  Server, Cloud, Database, Network, Lock, Code, Rocket, Building;
+  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth;
+  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign;
+  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown;
+  Lightbulb, Globe2, FileText, Image, Video, Code, Palette;
+  ShoppingCart, MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth;
+  Pill, Bandage, Thermometer, Scale, Calculator, ChartBar, PieChart;
+  LineChart, Activity, TrendingDown, Minus, Plus, Equal, Divide;
+  Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins;
+  PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode;
+  Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX;
+}
+}
+ } from "lucide-react";
 const itServices2028 = [
   {
   id: 'quantum-cloud-infrastructure',na,
@@ -42,7 +45,7 @@ const itServices2028 = [
   t: e: '320% annual growth',rati,
   n: g: 4.9,revie,
   w: s: 89,custome,
-  r: s: 45
+  r: s: 45;
 },
   {
   id: 'ai-powered-cybersecurity',na,
@@ -70,7 +73,7 @@ const itServices2028 = [
   t: e: '280% annual growth',rati,
   n: g: 4.8,revie,
   w: s: 234,custome,
-  r: s: 156
+  r: s: 156;
 },
   {
   id: 'quantum-database-platform',na,
@@ -98,7 +101,7 @@ const itServices2028 = [
   t: e: '240% annual growth',rati,
   n: g: 4.7,revie,
   w: s: 123,custome,
-  r: s: 67
+  r: s: 67;
 },
   {
   id: 'ai-network-optimization',na,
@@ -126,7 +129,7 @@ const itServices2028 = [
   t: e: '260% annual growth',rati,
   n: g: 4.8,revie,
   w: s: 189,custome,
-  r: s: 98
+  r: s: 98;
 },
   {
   id: 'quantum-devops-automation',na,
@@ -154,7 +157,7 @@ const itServices2028 = [
   t: e: '300% annual growth',rati,
   n: g: 4.9,revie,
   w: s: 267,custome,
-  r: s: 134
+  r: s: 134;
 },
   {
   id: 'ai-data-analytics-platform',na,
@@ -182,7 +185,7 @@ const itServices2028 = [
   t: e: '220% annual growth',rati,
   n: g: 4.6,revie,
   w: s: 156,custome,
-  r: s: 89
+  r: s: 89;
 },
   ]
 const,
@@ -232,7 +235,7 @@ const,
       service.category.toLowerCase().includes(selectedCategory.replace('- '))
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
 })
 
   return (
@@ -242,7 +245,7 @@ const,
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1
+          <motion.h1;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -255,9 +258,9 @@ const,
             className="className="text-5xl,
   m: d: text-7xl font-bold mb-6 text-gradient";"
           >
-            IT Services 2028
+            IT Services 2028;
           </motion.h1>
-          <motion.p
+          <motion.p;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -271,9 +274,9 @@ const,
             className="className="text-xl,
   m: d: text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto";"
           >
-            Cutting-edge IT solutions powered by quantum computing and artificial intelligence
+            Cutting-edge IT solutions powered by quantum computing and artificial intelligence;
           </motion.p>
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -287,13 +290,13 @@ const,
             className="className="flex flex-wrap justify-center gap-4";"
           >
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
-              🚀 Quantum-Ready Infrastructure
+              🚀 Quantum-Ready Infrastructure;
             </div>
             <div className="bg-zion-purple/20 backdrop-blur-sm border border-zion-purple/30 rounded-full px-6 py-3 text-zion-purple font-semibold">
-              🛡️ AI-Powered Security
+              🛡️ AI-Powered Security;
             </div>
             <div className="bg-zion-blue/20 backdrop-blur-sm border border-zion-blue/30 rounded-full px-6 py-3 text-zion-blue font-semibold">
-              💡 Intelligent Automation
+              💡 Intelligent Automation;
             </div>
           </motion.div>
         </div>
@@ -309,7 +312,7 @@ const,
   }
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
-  <motion.button
+  <motion.button;
                   key={category.id},
   }
                   whileHover={ sca,
@@ -322,7 +325,7 @@ const,
   },
   }
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light,
   hove: r:bg-zion-slate/70'
@@ -338,7 +341,7 @@ const,
             {/* Search */},
   }
             <div className="relative">
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery},
@@ -364,7 +367,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -386,7 +389,7 @@ const,
   },
   {service.popular && (
   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
-                    Popular
+                    Popular;
                   </div>
                 )},
   {/* Service Icon */},
@@ -431,7 +434,7 @@ const,
                   ))},
   {service.features.length > 3 && (
   <div className="text-sm text-zion-slate-light">
-                      +{service.features.length - 3} more features
+                      +{service.features.length - 3} more features;
                     </div>
                   )}
                 </div>
@@ -448,13 +451,13 @@ const,
 
                 {/* CTA Button */},
   }
-                <Link
+                <Link;
                   to={`/it-services/${service.id}`}
                   className="className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hov,
   e: r: shadow-lg group-hov,
   e: r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 group-hove,
   r:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -483,7 +486,7 @@ const,
   }
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -498,7 +501,7 @@ const,
           >
             Ready to Transform Your IT Infrastructure?
           </motion.h2>
-          <motion.p
+          <motion.p;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -511,9 +514,9 @@ const,
   }
             className="className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto";"
           >
-            Contact our team of IT experts to discuss how our innovative services can revolutionize your technology infrastructure
+            Contact our team of IT experts to discuss how our innovative services can revolutionize your technology infrastructure;
           </motion.p>
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -527,7 +530,7 @@ const,
             className="className="flex flex-col,
   s: m: flex-row gap-4 justify-center";"
           >
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg,
@@ -535,9 +538,9 @@ const,
   hove: r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";"
             >
               <Phone className="w-5 h-5" />
-              +1 302 464 0950
+              +1 302 464 0950;
             </a>
-            <a
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com"
               className="className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg,
@@ -545,7 +548,7 @@ const,
   r:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";"
             >
               <Mail className="w-5 h-5" />
-              kleber@ziontechgroup.com
+              kleber@ziontechgroup.com;
             </a>
           </motion.div>
         </div>
@@ -553,4 +556,4 @@ const,
     </div>
   )
 }
-export default ITServices2028
+export default ITServices2028;

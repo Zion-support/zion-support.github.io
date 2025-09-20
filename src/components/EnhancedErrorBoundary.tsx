@@ -1,15 +1,20 @@
+import { useCallback  } from "react";
 import React, { Component, ErrorInfo, ReactNode } from "react"
 interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+}
 }
 
 interface State {
   hasError: boolean,
   error: Error | null,
-  errorInfo: ErrorInfo | null
-  errorId: string | null
+  errorInfo: ErrorInfo | null;
+  errorId: string | null;
+}
+}
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -19,14 +24,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: null;
     }
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return { 
-      hasError: true,
+    return {
+  hasError: true,
       error,
+}
+}
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
@@ -34,40 +41,40 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo;
     })
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo)
     }
 
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
     }
 
-    // In production, you might want to send this to an error reporting service
+    // In production, you might want to send this to an error reporting service;
     if (process.env.NODE_ENV === 'production') {
-      // Example: Send to error reporting service
+      // Example: Send to error reporting service;
       // errorReportingService.captureException(error, { extra: errorInfo })
     }
   }
 
-  handleRetry = () => {
+  handleRetry = useCallback(handleRetry, [])
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: null;
     })
   }
-  handleReload = () => {
+  handleReload = useCallback(handleReload, [])
     window.location.reload()
   }
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
       }
 
       return (
@@ -106,26 +113,26 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <button
+              <button;
                 onClick={this.handleRetry}
                 className="bg-blue-600,
   hove: r:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors"
               >
-                Try Again
+                Try Again;
               </button>
-              <button
+              <button;
                 onClick={this.handleReload}
                 className="bg-gray-600,
   hove: r: bg-gray-700 px-6 py-3 rounded-lg font-semibold transition-colors"
               >
-                Reload Page
+                Reload Page;
               </button>
-              <a
+              <a;
                 href="/"
                 className="bg-purple-600,
   hove: r:bg-purple-700 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
               >
-                Go Home
+                Go Home;
               </a>
             </div>
 
@@ -153,8 +160,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       )
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default EnhancedErrorBoundary
+export default EnhancedErrorBoundary;

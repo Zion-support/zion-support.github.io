@@ -1,7 +1,7 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
-import { Link } from "react-router-dom"
-import { Mail, FileText, Link2, BarChart3, Calendar, MessageSquare } from "lucide-react"
+import { SEO   } from "@/components/SEO";
+import { Link   } from "react-router-dom";
+import { Mail, FileText, Link2, BarChart3, Calendar, MessageSquare   } from "lucide-react";
 export default function MicroSaaS() {
   const products = [
   {
@@ -47,7 +47,7 @@ export default function MicroSaaS() {
   ]
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO 
+      <SEO;
         title="Micro SAAS - Zion Tech Group"
         description="Lightweight,
   SaaS: tools: AI email, SEO optimizer, internal linking, reviews, smart surveys."

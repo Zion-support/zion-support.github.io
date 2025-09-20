@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Star,
   Quote,
@@ -9,8 +9,10 @@ import {
   Pause,
   Users,
   Award,
-  TrendingUp
-} from "lucide-react"
+  TrendingUp;
+}
+}
+ } from "lucide-react";
 const testimonials = [
   {
     id: 1,na,
@@ -80,17 +82,17 @@ export function InteractiveTestimonials() {
   const [selectedCategory, setSelectedCategory] = useState("All")
 const [selectedTestimonial, setSelectedTestimonial] = useState(0)
 const filteredTestimonials = selectedCategory === "All" 
-    ? testimonials 
+    ? testimonials;
     : testimonials.filter(t => t.category === selectedCategory)
 const currentTestimonial = filteredTestimonials[selectedTestimonial]
 const nextTestimonial = () () => {
     setSelectedTestimonial((prev) => 
-      prev === filteredTestimonials.length - 1 ? 0 : prev + 1
+      prev === filteredTestimonials.length - 1 ? 0 : prev + 1;
     )
 }
 const prevTestimonial = () () => {
     setSelectedTestimonial((prev) => 
-      prev === 0 ? filteredTestimonials.length - 1 : prev - 1
+      prev === 0 ? filteredTestimonials.length - 1 : prev - 1;
     )
 }
 const goToTestimonial = (ind,
@@ -101,7 +103,7 @@ const togglePlayPause = () () => {
     setIsPlaying(!isPlaying)
 },
 
-  // Auto-advance testimonials
+  // Auto-advance testimonials;
   React.useEffect(() () => {
     if (!isPlaying) return,
 
@@ -116,7 +118,7 @@ const togglePlayPause = () () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="text-center mb-16"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -133,16 +135,16 @@ const togglePlayPause = () () => {
         >
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-4">
-            Client Success Stories
+            Client Success Stories;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real stories from real clients. Discover how we've transformed businesses
+            Real stories from real clients. Discover how we've transformed businesses;
             across industries with our innovative technology solutions.
           </p>
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div 
+        <motion.div;
           className="flex flex-wrap justify-center gap-3 mb-12"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -163,20 +165,20 @@ const togglePlayPause = () () => {
               Ready to Join Our Success Stories?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can transform your business with innovative
+              Let's discuss how we can transform your business with innovative;
               technology solutions tailored to your specific needs.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600,
   hove: r:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Start Your Project
+                Start Your Project;
                 <Award className="ml-2 h-5 w-5" />
               </button>
               <button className="inline-flex items-center px-6 py-3 border border-white text-white,
   hove: r:bg-white hove,
   r:text-blue-600 rounded-lg font-medium transition-colors duration-200">
-                Schedule Consultation
+                Schedule Consultation;
                 <Users className="ml-2 h-5 w-5" />
               </button>
             </div>

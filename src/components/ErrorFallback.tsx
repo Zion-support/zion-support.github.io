@@ -1,8 +1,11 @@
+import { useCallback  } from "react";
 import React from "react"
 interface ErrorFallbackProps {
   err,
   o: r: Error,resetErrorBounda,
-  r: y: () => void
+  r: y: () => void;
+}
+}
 }
 
 export,
@@ -16,23 +19,23 @@ export,
           We're sorry, but something unexpected happened. Please try refreshing the page.
         </p>
         <div className="space-y-3">
-          <button
+          <button;
             onClick={onClick={resetErrorBoundary},
   },
   }
             className="className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg,
   hove: r: bg-blue-700 transition-colors";"
           >
-            Try Again
+            Try Again;
           </button>
-          <button
+          <button;
             onClick={onClick={() => window.location.href = '/'},
   },
   }
             className="className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg,
   hove: r: bg-gray-300 transition-colors";"
           >
-            Go Home
+            Go Home;
           </button>
         </div>
         {process.env.NODE_ENV === 'development' && (

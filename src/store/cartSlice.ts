@@ -1,10 +1,12 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { CartItem } from "@/types/listings"
+import { createSlice, PayloadAction   } from "@reduxjs/toolkit";
+import { CartItem   } from "@/types/listings";
 interface CartState {
   ite,
   m: s: CartItem[],tot,
   a: l: number,itemCou,
-  n: t: number
+  n: t: number;
+}
+}
 }
 
 const,
@@ -13,7 +15,7 @@ const,
   item,
   s: [],tot,
   a: l: 0,itemCou,
-  n: t: 0
+  n: t: 0;
 }
 const cartSlice = createSlice({
   na,
@@ -26,9 +28,11 @@ const cartSlice = createSlice({
   const existingItem = state.items.find(item => item.id === action.payload.id)
       if (if (existingItem) {
   ) {
-        existingItem.quantity += action.payload.quantity
+        existingItem.quantity += action.payload.quantity;
 } else {
-        state.items.push(action.payload)
+  state.items.push(action.payload)
+}
+}
       }
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0)
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0)
@@ -48,7 +52,7 @@ const cartSlice = createSlice({
   const item = state.items.find(item => item.id === action.payload.id)
       if (if (item) {
   ) {
-        item.quantity = action.payload.quantity
+        item.quantity = action.payload.quantity;
         state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0)
         state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0)
       },
@@ -57,11 +61,11 @@ const cartSlice = createSlice({
   r: t: (state) () => {
   state.items = [[],
   ]
-      state.total = 0
-      state.itemCount = 0
+      state.total = 0;
+      state.itemCount = 0;
 },
   },
   })
 
-export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions
-export default cartSlice.reducer
+export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
+export default cartSlice.reducer;

@@ -1,16 +1,17 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from "lucide-react"
+import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES   } from "@/data/expandedServices";
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow   } from "@/components/ui/table";
+import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign   } from "lucide-react";
 import SEO from "@/components/SEO"
 export default function ServicesPricingGuide() {
   const [selectedCategory, setSelectedCategory] = useState('all')
     const filteredServices = selectedCategory === 'all'
-        ? EXPANDED_SERVICES
+        ? EXPANDED_SERVICES;
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory)
     const getPriceTier = (price) () => {
   if (price < 10000)
@@ -52,7 +53,7 @@ export default function ServicesPricingGuide() {
         <div className="container mx-auto text-center">
           <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-            Services Pricing Guide
+            Services Pricing Guide;
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
             Transparent pricing for all our professional IT and AI services. 
@@ -62,12 +63,12 @@ export default function ServicesPricingGuide() {
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r: bg-zion-cyan-light">
               <Mail className="w-5 h-5 mr-2"/>
-              Get Custom Quote
+              Get Custom Quote;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hove,
   r:bg-zion-cyan/10">
               <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </Button>
           </div>
         </div>
@@ -95,7 +96,7 @@ export default function ServicesPricingGuide() {
               <a href="htt,
   p: s: //ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hove,
   r:underline">
-                ziontechgroup.com
+                ziontechgroup.com;
               </a>
             </div>
           </div>
@@ -109,7 +110,7 @@ export default function ServicesPricingGuide() {
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant={selectedCategory === 'all' ? 'default' : 'outline'} onClick={() => setSelectedCategory('all')} className={selectedCategory === 'all' ? 'bg-zion-purple text-white' : 'border-zion-purple/50 text-zion-purple,
   hove: r:bg-zion-purple/10'}>
-              All Services
+              All Services;
             </Button>
             {EXPANDED_SERVICE_CATEGORIES.map(category => (<Button key={category.value} variant={selectedCategory === category.value ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.value)} className={selectedCategory === category.value ? 'bg-zion-purple text-white' : 'border-zion-purple/50 text-zion-purple,
   hove: r:bg-zion-purple/10'}>
@@ -127,10 +128,10 @@ export default function ServicesPricingGuide() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Pricing Tiers Overview
+              Pricing Tiers Overview;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our services are categorized into three main tiers based on complexity and scope
+              Our services are categorized into three main tiers based on complexity and scope;
             </p>
           </div>
 
@@ -143,25 +144,25 @@ export default function ServicesPricingGuide() {
                 </div>
                 <CardTitle className="text-white">Starter Tier</CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  Under $10,000
+                  Under $10,000;
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-zion-slate-light mb-4">
-                  Perfect for small businesses and startups looking to implement basic solutions
+                  Perfect for small businesses and startups looking to implement basic solutions;
                 </p>
                 <ul className="text-sm text-zion-slate-light space-y-2">
                   <li className="flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400"/>
-                    Basic implementation
+                    Basic implementation;
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400"/>
-                    Standard support
+                    Standard support;
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400"/>
-                    Documentation included
+                    Documentation included;
                   </li>
                 </ul>
               </CardContent>
@@ -174,25 +175,25 @@ export default function ServicesPricingGuide() {
                 </div>
                 <CardTitle className="text-white">Professional Tier</CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  $10,000 - $25,000
+                  $10,000 - $25,000;
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-zion-slate-light mb-4">
-                  Ideal for growing businesses requiring comprehensive solutions with advanced features
+                  Ideal for growing businesses requiring comprehensive solutions with advanced features;
                 </p>
                 <ul className="text-sm text-zion-slate-light space-y-2">
                   <li className="flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400"/>
-                    Advanced features
+                    Advanced features;
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400"/>
-                    Priority support
+                    Priority support;
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400"/>
-                    Training included
+                    Training included;
                   </li>
                 </ul>
               </CardContent>
@@ -205,25 +206,25 @@ export default function ServicesPricingGuide() {
                 </div>
                 <CardTitle className="text-white">Enterprise Tier</CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  Over $25,000
+                  Over $25,000;
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-zion-slate-light mb-4">
-                  Comprehensive solutions for large enterprises with complex requirements
+                  Comprehensive solutions for large enterprises with complex requirements;
                 </p>
                 <ul className="text-sm text-zion-slate-light space-y-2">
                   <li className="flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400"/>
-                    Full customization
+                    Full customization;
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400"/>
-                    24/7 dedicated support
+                    24/7 dedicated support;
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400"/>
-                    Ongoing maintenance
+                    Ongoing maintenance;
                   </li>
                 </ul>
               </CardContent>
@@ -300,7 +301,7 @@ export default function ServicesPricingGuide() {
                           <Button size="sm" className="bg-zion-purple,
   hove: r:bg-zion-purple-dark text-white">
                             <Mail className="w-4 h-4 mr-2"/>
-                            Quote
+                            Quote;
                           </Button>
                         </TableCell>
                       </TableRow>))}
@@ -365,7 +366,7 @@ export default function ServicesPricingGuide() {
   hove: r: from-zion-purple-light hove,
   r:to-zion-purple text-white">
                         <Mail className="w-4 h-4 mr-2"/>
-                        Get Quote
+                        Get Quote;
                       </Button>
                     </CardContent>
                   </Card>))}
@@ -390,12 +391,12 @@ export default function ServicesPricingGuide() {
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark,
   hove: r:bg-zion-cyan-light">
               <Mail className="w-5 h-5 mr-2"/>
-              Request Custom Quote
+              Request Custom Quote;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan/10">
               <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </Button>
           </div>
           <div className="mt-8 text-zion-cyan">

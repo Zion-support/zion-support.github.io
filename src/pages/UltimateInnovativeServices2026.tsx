@@ -1,63 +1,66 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
-  Cloud
-  Shield
-  Server
-  Zap
-  Globe
-  Cpu
-  Database
-  Network
-  Lock
-  Code
-  Rocket
-  Users
-  Search
-  Filter
-  Star
-  TrendingUp
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight
-  Play
-  BookOpen
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Globe as GlobeIcon
-  Atom
-  Blockchain
-  Heart
-  Scale
-  Factory
-  Satellite
-  ShoppingCart
-  Building
-  Truck
-  Eye
-  EyeOff
-  ExternalLink
-  Award
-  Target
-  Lightbulb
-  Sparkles
-  Zap as ZapIcon
-  Brain as BrainIcon
-  Dna
-  Space
-  Layers
-  Monitor
-  Smartphone
-  Globe2
-  Leaf
-} from "lucide-react"
+  Brain;
+  Cloud;
+  Shield;
+  Server;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  Search;
+  Filter;
+  Star;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Globe as GlobeIcon;
+  Atom;
+  Blockchain;
+  Heart;
+  Scale;
+  Factory;
+  Satellite;
+  ShoppingCart;
+  Building;
+  Truck;
+  Eye;
+  EyeOff;
+  ExternalLink;
+  Award;
+  Target;
+  Lightbulb;
+  Sparkles;
+  Zap as ZapIcon;
+  Brain as BrainIcon;
+  Dna;
+  Space;
+  Layers;
+  Monitor;
+  Smartphone;
+  Globe2;
+  Leaf;
+}
+}
+ } from "lucide-react";
 import SEO from "@/components/SEO"
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026"
+import { ULTIMATE_INNOVATIVE_SERVICES_2026   } from "@/data/ultimateInnovativeServices2026";
 export default function UltimateInnovativeServices2026() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -165,7 +168,7 @@ export default function UltimateInnovativeServices2026() {
   const getCategoryIcon = (catego,
   r: y: string) () => {
   const cat = categories.find(c => c.id === category)
-    return cat ? cat.icon : Zap
+    return cat ? cat.icon : Zap;
 }
 
   const getCategoryColor = (catego,
@@ -186,15 +189,15 @@ export default function UltimateInnovativeServices2026() {
                         (selectedPriceRange === '10k-20k' && service.price >= 10000 && service.price <= 20000) ||
                         (selectedPriceRange === 'over-20k' && service.price > 20000)
 
-    return matchesSearch && matchesCategory && matchesPrice
+    return matchesSearch && matchesCategory && matchesPrice;
 })
 
   const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price-low':
-        return a.price - b.price
+        return a.price - b.price;
       case 'price-high':
-        return b.price - a.price
+        return b.price - a.price;
       case 'innovation':
 const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 },
   }
@@ -204,7 +207,7 @@ const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 }
 const aROI = parseInt(a.roi.split('-')[0])
         const bROI = parseInt(b.roi.split('-')[0])
         return bROI - aROI,
-  defaul: t: return 0
+  defaul: t: return 0;
 },
   })
   const toggleServiceExpansion = (service,
@@ -213,7 +216,7 @@ const aROI = parseInt(a.roi.split('-')[0])
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO
+      <SEO;
         title="Ultimate Innovative Services 2026 | Zion Tech Group"
         description="Discover our revolutionary micro SAAS services including Quantum AI, Neuromorphic Computing, Synthetic Biology, Space Technology, and more cutting-edge solutions."
         keywords="quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
@@ -226,7 +229,7 @@ const aROI = parseInt(a.roi.split('-')[0])
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -239,10 +242,10 @@ const aROI = parseInt(a.roi.split('-')[0])
           >
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
-              Ultimate Innovative Services
+              Ultimate Innovative Services;
               <span className="block text-6xl,
   m: d:text-8xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                2026
+                2026;
               </span>
             </h1>
             <p className="text-xl m,
@@ -251,7 +254,7 @@ const aROI = parseInt(a.roi.split('-')[0])
               From Quantum AI to Brain-Computer Interfaces, discover the future of innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.div
+              <motion.div;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -263,7 +266,7 @@ const aROI = parseInt(a.roi.split('-')[0])
                 <Sparkles className="w-5 h-5" />
                 <span>12 Revolutionary Services</span>
               </motion.div>
-              <motion.div
+              <motion.div;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -275,7 +278,7 @@ const aROI = parseInt(a.roi.split('-')[0])
                 <Award className="w-5 h-5" />
                 <span>Industry-Leading Innovation</span>
               </motion.div>
-              <motion.div
+              <motion.div;
                 whileHover={ sca,
   l: e: 1.05 },
   }
@@ -305,7 +308,7 @@ const aROI = parseInt(a.roi.split('-')[0])
             <div className="lg:col-span-2">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search innovative services..."
                   value={searchQuery},
@@ -324,7 +327,7 @@ const aROI = parseInt(a.roi.split('-')[0])
             {/* Category Filter */},
   }
             <div>
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -347,7 +350,7 @@ const aROI = parseInt(a.roi.split('-')[0])
             {/* Price Filter */},
   }
             <div>
-              <select
+              <select;
                 value={selectedPriceRange},
   }
                 onChange={(e) => setSelectedPriceRange(e.target.value)},
@@ -374,14 +377,14 @@ const aROI = parseInt(a.roi.split('-')[0])
             <span className="text-zion-slate-300">Sort,
   b: y:</span>
             {sortOptions.map(option => (
-  <button
+  <button;
                 key={option.id},
   }
                 onClick={onClick={() => setSortBy(option.id)},
   },
   }
                 className={`px-4 py-2 rounded-lg transition-all duration-200 ${
-  sortBy === option.id
+  sortBy === option.id;
                     ? 'bg-zion-cyan text-white'
                     : 'bg-white/10 text-zion-slate-300,
   hove: r:bg-white/20'
@@ -404,10 +407,10 @@ const aROI = parseInt(a.roi.split('-')[0])
           <div className="text-center mb-12">
             <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-4">
-              {filteredServices.length} Revolutionary Services Found
+              {filteredServices.length} Revolutionary Services Found;
             </h2>
             <p className="text-zion-slate-300 text-lg">
-              Discover the future of technology with our cutting-edge micro SAAS solutions
+              Discover the future of technology with our cutting-edge micro SAAS solutions;
             </p>
           </div>
 
@@ -416,7 +419,7 @@ const aROI = parseInt(a.roi.split('-')[0])
   g:grid-cols-3 gap-8">
             <AnimatePresence>
               {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -496,7 +499,7 @@ const aROI = parseInt(a.roi.split('-')[0])
   }
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span
+  <span;
                           key={tagIndex},
   }
                           className="className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md";"
@@ -515,7 +518,7 @@ const aROI = parseInt(a.roi.split('-')[0])
 
                     {/* Expand/Collapse Button */},
   }
-                    <button
+                    <button;
                       onClick={onClick={() => toggleServiceExpansion(service.id)},
   },
   }
@@ -525,12 +528,12 @@ const aROI = parseInt(a.roi.split('-')[0])
                       {expandedService === service.id ? (
   <>
                           <EyeOff className="w-4 h-4" />
-                          Show Less
+                          Show Less;
                         </>
                       ) : (
   <>
                           <Eye className="w-4 h-4" />
-                          Learn More
+                          Learn More;
                         </>
                       )}
                     </button>
@@ -539,7 +542,7 @@ const aROI = parseInt(a.roi.split('-')[0])
   }
                     <AnimatePresence>
                       {expandedService === service.id && (
-  <motion.div
+  <motion.div;
                           initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -607,14 +610,14 @@ const aROI = parseInt(a.roi.split('-')[0])
                           {/* Contact Button */},
   }
                           <div className="mt-4">
-                            <Link
+                            <Link;
                               to="/contact"
                               className="className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r: from-zion-blue hove,
   r:to-zion-cyan transition-all duration-200 font-semibold";"
                             >
                               <MessageCircle className="w-4 h-4" />
-                              Get Started
+                              Get Started;
                             </Link>
                           </div>
                         </motion.div>
@@ -635,7 +638,7 @@ const aROI = parseInt(a.roi.split('-')[0])
               <p className="text-zion-slate-300 mb-6">
                 Try adjusting your search criteria or browse all our innovative services.
               </p>
-              <button
+              <button;
                 onClick={() () => {
                   setSearchQuery('')
                   setSelectedCategory('all')
@@ -645,7 +648,7 @@ const aROI = parseInt(a.roi.split('-')[0])
                 className="className="px-6 py-3 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-blue transition-colors";"
               >
-                Clear Filters
+                Clear Filters;
               </button>
             </div>
           )}
@@ -658,7 +661,7 @@ const aROI = parseInt(a.roi.split('-')[0])
         <div className="max-w-4xl mx-auto text-center px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -682,23 +685,23 @@ const aROI = parseInt(a.roi.split('-')[0])
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg,
   hove: r:from-zion-blue,
   hove: r:to-zion-cyan transition-all duration-200 font-semibold text-lg";"
               >
                 <MessageCircle className="w-5 h-5" />
-                Start Your Journey
+                Start Your Journey;
               </Link>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg,
   hove: r:bg-white/20 transition-all duration-200 font-semibold text-lg";"
               >
                 <Phone className="w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
             </div>
             <div className="mt-8 text-zion-slate-400">

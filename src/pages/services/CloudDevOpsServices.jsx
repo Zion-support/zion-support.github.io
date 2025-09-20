@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor     } from "lucide-react";
 const CloudDevOpsServices = () () => {
     const cloudServices = [
   {
@@ -131,11 +131,11 @@ const CloudDevOpsServices = () () => {
   l: g:px-8 text-center">
           <h1 className="text-5xl,
   m: d:text-6xl font-bold mb-6">
-            Cloud & DevOps Services
+            Cloud & DevOps Services;
           </h1>
           <p className="text-xl,
   m: d:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Accelerate your digital transformation with modern cloud infrastructure 
+            Accelerate your digital transformation with modern cloud infrastructure;
             and DevOps practices that drive innovation and efficiency.
           </p>
           <div className="flex flex-col,
@@ -144,12 +144,12 @@ const CloudDevOpsServices = () () => {
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Get Started
+              Get Started;
             </Link>
             <Link to="/request-quote" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-white hove,
   r:text-slate-900 transition-all duration-300">
-              Request Quote
+              Request Quote;
             </Link>
           </div>
         </div>
@@ -163,10 +163,10 @@ const CloudDevOpsServices = () () => {
   g:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Comprehensive Cloud & DevOps Solutions
+              Comprehensive Cloud & DevOps Solutions;
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From cloud migration to DevOps transformation, we provide end-to-end 
+              From cloud migration to DevOps transformation, we provide end-to-end;
               solutions that modernize your infrastructure and accelerate delivery.
             </p>
           </div>
@@ -196,7 +196,7 @@ const CloudDevOpsServices = () () => {
                 </ul>
                 <Link to="/contact" className="inline-flex items-center text-blue-600,
   hove: r:text-blue-700 font-semibold transition-colors duration-200">
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
               </div>))}
@@ -212,10 +212,10 @@ const CloudDevOpsServices = () () => {
   l: g:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Multi-Cloud Expertise
+              Multi-Cloud Expertise;
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We work with all major cloud providers to give you the best solutions 
+              We work with all major cloud providers to give you the best solutions;
               for your specific needs and budget.
             </p>
           </div>
@@ -251,7 +251,7 @@ const CloudDevOpsServices = () () => {
   l: g:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Benefits of Cloud & DevOps
+              Benefits of Cloud & DevOps;
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Transform your organization with modern cloud and DevOps practices.
@@ -279,7 +279,7 @@ const CloudDevOpsServices = () () => {
   l: g:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Technologies We Use
+              Technologies We Use;
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We leverage industry-leading tools and technologies to deliver robust solutions.
@@ -307,7 +307,7 @@ const CloudDevOpsServices = () () => {
             Ready to Modernize Your Infrastructure?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our cloud and DevOps expertise can transform your 
+            Let's discuss how our cloud and DevOps expertise can transform your;
             organization's technology landscape.
           </p>
           <div className="flex flex-col,
@@ -316,16 +316,16 @@ const CloudDevOpsServices = () () => {
   hove: r:from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Start Your Transformation
+              Start Your Transformation;
             </Link>
             <Link to="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
   hove: r:bg-white hove,
   r:text-slate-900 transition-all duration-300">
-              View Case Studies
+              View Case Studies;
             </Link>
           </div>
         </div>
       </section>
     </div>)
 }
-export default CloudDevOpsServices
+export default CloudDevOpsServices;

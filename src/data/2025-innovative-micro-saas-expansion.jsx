@@ -1,5 +1,5 @@
 export const INNOVATIVE_MICRO_SAAS_2025 = [
-  // Emerging Technology Solutions
+  // Emerging Technology Solutions;
   {
   id: "metaverse-platform",tit,
   l: e: "Metaverse Business Platform",descripti,
@@ -61,7 +61,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   r: y: "Finance, Gaming, Art, Real Estate"
 }
   
-  // AI-Powered Business Solutions
+  // AI-Powered Business Solutions;
   {
   id: "ai-customer-success",tit,
   l: e: "AI Customer Success Platform",descripti,
@@ -122,7 +122,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   r: y: "B2B, Enterprise, Sales Teams"
 }
   
-  // Data & Analytics Solutions
+  // Data & Analytics Solutions;
   {
   id: "real-time-analytics",tit,
   l: e: "Real-Time Business Analytics Platform",descripti,
@@ -183,7 +183,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   r: y: "Enterprise, Healthcare, Finance"
 }
   
-  // Security & Compliance
+  // Security & Compliance;
   {
   id: "zero-trust-security",tit,
   l: e: "Zero Trust Security Platform",descripti,
@@ -243,7 +243,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   r: y: "Finance, Healthcare, Legal"
 }
   
-  // Collaboration & Productivity
+  // Collaboration & Productivity;
   {
   id: "ai-collaboration-platform",tit,
   l: e: "AI Collaboration Platform",descripti,
@@ -303,7 +303,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   r: y: "Enterprise, Education, Design"
 }
   
-  // Marketing & Growth
+  // Marketing & Growth;
   {
   id: "ai-marketing-automation",tit,
   l: e: "AI Marketing Automation Platform",descripti,
@@ -363,7 +363,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
   r: y: "E-commerce, Content, Local Business"
 }
   
-  // Financial Technology
+  // Financial Technology;
   {
   id: "ai-accounting-platform",tit,
   l: e: "AI Accounting Platform",descripti,

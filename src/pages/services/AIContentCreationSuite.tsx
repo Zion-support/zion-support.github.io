@@ -1,4 +1,4 @@
-import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from "lucide-react"
+import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield     } from "lucide-react";
 export default function AIContentCreationSuite() {
   const features = [
   'AI-powered text generation and editingAutomated image creation and editing'
@@ -92,11 +92,11 @@ export default function AIContentCreationSuite() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <PenTool className="w-4 h-4 mr-2" /> AI-Powered Content Creation
+            <PenTool className="w-4 h-4 mr-2" /> AI-Powered Content Creation;
           </div>
           <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-4">
-            AI Content Creation Suite
+            AI Content Creation Suite;
           </h1>
           <p className="text-zion-slate-light text-xl">
             Transform your content strategy with AI-powered text, image, and video generation across all channels.
@@ -249,11 +249,11 @@ export default function AIContentCreationSuite() {
   s: m: flex-row gap-4 justify-center">
             <a href="t,
   e: l:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950;
             </a>
             <a href="mail,
   t: o:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
+              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com;
             </a>
           </div>
           <div className="mt-4">

@@ -1,29 +1,33 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  Shield
+  Shield;
   Lock,
   Eye,
   Zap,
   Users,
   Globe,
-  Database
-  Cpu
-  Network
-  Brain
-  Target
-  Award
-  Star
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  AlertTriangle
-  Activity
-  Key
-} from "lucide-react"
+  Database;
+  Cpu;
+  Network;
+  Brain;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  AlertTriangle;
+  Activity;
+  Key;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AICybersecurityElit: e: React.FC = () () => {
   const features = [
@@ -98,7 +102,7 @@ const,
         "API access"
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -161,7 +165,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -179,7 +183,7 @@ const,
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI Cybersecurity Elite
+              AI Cybersecurity Elite;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -188,7 +192,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg,
@@ -196,17 +200,17 @@ const,
   hove: r:to-orange-600 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Secure Your Business
+                Secure Your Business;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hove,
   r:bg-zion-slate-light transition-all duration-300";"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call Security Team
+                Call Security Team;
               </a>
             </div>
           </motion.div>
@@ -219,7 +223,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -235,10 +239,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Military-Grade Security Features
+              Military-Grade Security Features;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI-powered cybersecurity platform combines cutting-edge technology with proven security practices 
+              Our AI-powered cybersecurity platform combines cutting-edge technology with proven security practices;
               to provide comprehensive protection for your digital assets.
             </p>
           </motion.div>
@@ -247,7 +251,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -283,7 +287,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -299,10 +303,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Security Capabilities
+              Advanced Security Capabilities;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Go beyond basic security with our advanced AI-powered cybersecurity features designed 
+              Go beyond basic security with our advanced AI-powered cybersecurity features designed;
               to protect against the most sophisticated threats.
             </p>
           </motion.div>
@@ -310,7 +314,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-2 gap-8">
             {securityFeatures.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -342,7 +346,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -358,10 +362,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Compliance & Standards
+              Industry Compliance & Standards;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform meets and exceeds the highest industry standards for cybersecurity
+              Our platform meets and exceeds the highest industry standards for cybersecurity;
               ensuring your business remains compliant with regulatory requirements.
             </p>
           </motion.div>
@@ -369,7 +373,7 @@ const,
           <div className="grid grid-cols-2,
   m: d:grid-cols-4 gap-6">
             {complianceStandards.map((standard, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -403,7 +407,7 @@ const,
   s: m: px-6,
   l: g:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -419,10 +423,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Security Plans
+              Comprehensive Security Plans;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the security plan that fits your business needs. All plans include our core AI cybersecurity 
+              Choose the security plan that fits your business needs. All plans include our core AI cybersecurity;
               engine and 24/7 threat monitoring.
             </p>
           </motion.div>
@@ -430,7 +434,7 @@ const,
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -447,7 +451,7 @@ const,
   c: e: true },
   }
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
-  plan.popular 
+  plan.popular;
                     ? 'border-red-500 shadow-2xl shadow-red-500/25' 
                     : 'border-zion-slate-light'
 }`}
@@ -455,7 +459,7 @@ const,
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -478,7 +482,7 @@ const,
                   ))}
                 </ul>
 
-                <a
+                <a;
                   href="htt,
   p: s: //ziontechgroup.com/contact"
                   className="className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg,
@@ -486,7 +490,7 @@ const,
   hove: r:to-orange-600 transition-all duration-300 transform hove,
   r:scale-105";"
                 >
-                  Get Protected
+                  Get Protected;
                 </a>
               </motion.div>
             ))}
@@ -500,7 +504,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -519,7 +523,7 @@ const,
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get in touch with our cybersecurity experts to discuss how AI Cybersecurity Elite can protect 
+              Get in touch with our cybersecurity experts to discuss how AI Cybersecurity Elite can protect;
               your organization from evolving cyber threats.
             </p>
           </motion.div>
@@ -531,13 +535,13 @@ const,
                 <Phone className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Call Security Team</h3>
-              <a 
+              <a;
                 href="t,
   e: l:+13024640950" 
                 className="className="text-zion-slate-light,
   hove: r:text-white transition-colors duration-300";"
               >
-                +1 (302) 464-0950
+                +1 (302) 464-0950;
               </a>
             </div>
             
@@ -546,13 +550,13 @@ const,
                 <Mail className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email Security Team</h3>
-              <a 
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com" 
                 className="className="text-zion-slate-light hove,
   r:text-white transition-colors duration-300";"
               >
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             
@@ -563,13 +567,13 @@ const,
               <h3 className="text-xl font-semibold text-white mb-2">Visit Security Center</h3>
               <p className="text-zion-slate-light">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown, DE 19709;
               </p>
             </div>
           </div>
 
           <div className="text-center">
-            <a
+            <a;
               href="htt,
   p: s: //ziontechgroup.com/contact"
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg,
@@ -577,7 +581,7 @@ const,
   hove: r:to-orange-600 transition-all duration-300 transform hove,
   r:scale-105";"
             >
-              Schedule Security Assessment
+              Schedule Security Assessment;
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </div>
@@ -594,30 +598,30 @@ const,
             © 2024 Zion Tech Group. All rights reserved.
           </p>
           <div className="flex justify-center space-x-6">
-            <a 
+            <a;
               href="htt,
   p: s://ziontechgroup.com" 
               className="className="text-zion-slate-light,
   hove: r:text-white transition-colors duration-300";"
             >
-              Visit Website
+              Visit Website;
               <ExternalLink className="inline ml-1 h-4 w-4" />
             </a>
-            <a 
+            <a;
               href="htt,
   p: s://ziontechgroup.com/privacy" 
               className="className="text-zion-slate-light,
   hove: r:text-white transition-colors duration-300";"
             >
-              Privacy Policy
+              Privacy Policy;
             </a>
-            <a 
+            <a;
               href="htt,
   p: s://ziontechgroup.com/terms" 
               className="className="text-zion-slate-light hove,
   r:text-white transition-colors duration-300";"
             >
-              Terms of Service
+              Terms of Service;
             </a>
           </div>
         </div>
@@ -625,4 +629,4 @@ const,
     </div>
   )
 }
-export default AICybersecurityElite
+export default AICybersecurityElite;

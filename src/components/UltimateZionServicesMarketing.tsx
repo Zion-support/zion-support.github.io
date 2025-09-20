@@ -1,6 +1,7 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025"
+import { motion   } from "framer-motion";
+import { ultimateZionServices2025   } from "../data/ultimate-zion-services-2025";
 const,
   UltimateZionServicesMarketin: g: React.FC = () () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -65,7 +66,7 @@ const categories = [
   ]
 const getServicesByCategory = (category,
   I: d: string) () => {
-    if (categoryId === 'all') return ultimateZionServices2025
+    if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId)
   }
 const selectedServices = getServicesByCategory(selectedCategory)
@@ -76,7 +77,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1;
             className="text-4xl,
   m: d:text-6xl font-bold mb-6" 
             initial={ opacit,
@@ -89,14 +90,14 @@ const selectedServices = getServicesByCategory(selectedCategory)
   o: n: 0.6 },
   }
           >
-            Zion Technology Group
+            Zion Technology Group;
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              Ultimate Services Portfolio 2025
+              Ultimate Services Portfolio 2025;
             </span>
           </motion.h1>
           
-          <motion.p 
+          <motion.p;
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" 
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -114,7 +115,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
           </motion.p>
 
           {/* Company Highlights */}
-          <motion.div 
+          <motion.div;
             className="grid grid-cols-1,
   m: d: grid-cols-4 gap-6 mb-12" 
             initial={ opacit,
@@ -151,7 +152,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
           </motion.div>
 
           {/* Contact Information */}
-          <motion.div 
+          <motion.div;
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-4xl mx-auto border border-purple-400/30" 
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -186,7 +187,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
   p: s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" 
                      className="text-blue-400 hove,
   r:text-blue-300 transition-colors">
-                    ziontechgroup.com
+                    ziontechgroup.com;
                   </a>
                 </div>
                 <div className="text-gray-400 text-xs">Live demo available</div>
@@ -194,7 +195,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
             </div>
             <div className="mt-4 text-center">
               <div className="text-gray-400 text-sm">
-                📍 364 E Main St STE 1008 Middletown DE 19709
+                📍 364 E Main St STE 1008 Middletown DE 19709;
               </div>
             </div>
           </motion.div>
@@ -206,7 +207,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="flex flex-wrap gap-4 justify-center" 
             initial={ opacit,
   y: 0, y: 20 },
@@ -219,11 +220,11 @@ const selectedServices = getServicesByCategory(selectedCategory)
   }
           >
             {categories.map((category) => (
-              <button 
+              <button;
                 key={category.id} 
                 onClick={() => setSelectedCategory(category.id)} 
                 className={`px-6 py-3 rounded-xl border transition-all duration-300 ${
-                  selectedCategory === category.id
+                  selectedCategory === category.id;
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 border-purple-400 text-white shadow-lg'
                     : 'bg-white/10 border-white/20 text-gray-300,
   hove: r: bg-white/20 hove,
@@ -246,9 +247,9 @@ const selectedServices = getServicesByCategory(selectedCategory)
           <div className="max-w-7xl mx-auto">
             {(() () => {
               const category = categories.find(c => c.id === selectedCategory)
-              if (!category) return null
+              if (!category) return null;
               return (
-                <motion.div 
+                <motion.div;
                   className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
                   initial={ opacit,
   y: 0, y: 20 },
@@ -292,7 +293,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
+          <motion.h2;
             className="text-3xl,
   m: d:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
             initial={ opacit,
@@ -308,7 +309,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
           </motion.h2>
           
-          <motion.div 
+          <motion.div;
             className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-3 gap-8" 
@@ -323,7 +324,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
   o: n: {
                   staggerChildre,
   n: 0.1,delayChildr,
-  e: n: 0.2
+  e: n: 0.2;
                 },
   },
   },
@@ -335,7 +336,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
   }
           >
             {selectedServices.map((service, index) => (
-              <motion.div 
+              <motion.div;
                 key={service.id} 
                 variants={
                   hidd,
@@ -465,10 +466,10 @@ const selectedServices = getServicesByCategory(selectedCategory)
   hove: r: from-purple-700,
   hove: r:to-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hove,
   r:scale-105">
-                    🚀 Get Started Today
+                    🚀 Get Started Today;
                   </button>
                   <p className="text-xs text-gray-400 mt-2">
-                    Contact us for a personalized demo
+                    Contact us for a personalized demo;
                   </p>
                 </div>
 
@@ -478,12 +479,12 @@ const selectedServices = getServicesByCategory(selectedCategory)
                     📞 <a href="t,
   e: l: +13024640950" className="text-blue-400,
   hove: r:text-blue-300">
-                      +1 302 464 0950
+                      +1 302 464 0950;
                     </a> | 
                     ✉️ <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-blue-400 hove,
   r:text-blue-300">
-                      kleber@ziontechgroup.com
+                      kleber@ziontechgroup.com;
                     </a>
                   </div>
                 </div>
@@ -498,7 +499,7 @@ const selectedServices = getServicesByCategory(selectedCategory)
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div 
+          <motion.div;
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
             initial={ opacit,
   y: 0, y: 20 },
@@ -524,11 +525,11 @@ const selectedServices = getServicesByCategory(selectedCategory)
   hove: r:from-purple-700,
   hove: r:to-pink-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300,
   transform: hover:scale-105">
-                🚀 Schedule a Consultation
+                🚀 Schedule a Consultation;
               </button>
               <button className="bg-white/10 hove,
   r:bg-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                📋 View Full Portfolio
+                📋 View Full Portfolio;
               </button>
             </div>
             <div className="mt-6 text-sm text-gray-400">
@@ -542,4 +543,4 @@ const selectedServices = getServicesByCategory(selectedCategory)
     </div>
   )
 }
-export default UltimateZionServicesMarketing
+export default UltimateZionServicesMarketing;

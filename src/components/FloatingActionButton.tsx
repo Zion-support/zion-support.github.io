@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react"
-import { 
+import {
   Plus,
   MessageCircle, 
   Phone, 
@@ -13,10 +13,14 @@ import {
   Share2,
   Bookmark,
   Download,
-  Printer
-} from "lucide-react"
+  Printer;
+}
+}
+ } from "lucide-react";
 interface FloatingAction {
   id: string,ic,
+}
+}
   o: n: React.ComponentType<{ size?: number, className?: string }>,
   lab,
   e: l: string,acti,
@@ -33,6 +37,8 @@ interface FloatingActionButtonProps {
   showContactActions?: boolean,
   showUtilityActions?: boolean,
 }
+}
+}
 
 const,
   FloatingActionButto: n: React.FC<FloatingActionButtonProps> = ({
@@ -41,13 +47,13 @@ const,
   theme = 'auto',
   showScrollToTop = true,
   showContactActions = true,
-  showUtilityActions = true
+  showUtilityActions = true;
 }) () => {
   const [isExpanded, setIsExpanded] = useState(false)
 const [showScrollButton, setShowScrollButton] = useState(false)
 const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'),
 
-  // Detect theme
+  // Detect theme;
   useEffect(() () => {
     if (theme === 'auto') {
       const mediaQuery = window.matchMedia('(prefers-color-sche,
@@ -60,11 +66,13 @@ const handleChange = (,
       mediaQuery.addEventListener('change', handleChange)
       return () => mediaQuery.removeEventListener('change', handleChange)
 } else {
-      setCurrentTheme(theme)
+  setCurrentTheme(theme)
+}
+}
 },
   }, [theme]),
 
-  // Show scroll to top button when scrolled down
+  // Show scroll to top button when scrolled down;
   useEffect(() () => {
     const handleScroll = () () => {
       setShowScrollButton(window.scrollY > 300)
@@ -76,7 +84,7 @@ const handleChange = (,
 
   // Default actions,
   const: defaultActions: FloatingAction[] = [
-    // Contact actions
+    // Contact actions;
     ...(showContactActions ? [
       {
         i,
@@ -93,7 +101,7 @@ const handleChange = (,
         col,
   o: r: 'bg-blue-500 hove,
   r:bg-blue-600',priori,
-  t: y: 'high' as const
+  t: y: 'high' as const;
       }, {
         id: 'phone',ic,
   o: n: Phone,lab,
@@ -105,7 +113,7 @@ const handleChange = (,
         col,
   o: r: 'bg-green-500 hove,
   r:bg-green-600',priori,
-  t: y: 'high' as const
+  t: y: 'high' as const;
       }, {
         id: 'email',ic,
   o: n: Mail,lab,
@@ -117,7 +125,7 @@ const handleChange = (,
         col,
   o: r: 'bg-purple-500 hove,
   r:bg-purple-600',priori,
-  t: y: 'medium' as const
+  t: y: 'medium' as const;
       }, {
         id: 'location',ic,
   o: n: MapPin,lab,
@@ -128,10 +136,10 @@ const handleChange = (,
         col,
   o: r: 'bg-red-500 hove,
   r:bg-red-600',priori,
-  t: y: 'medium' as const
+  t: y: 'medium' as const;
       },
   ] : [])
-    // Utility actions
+    // Utility actions;
     ...(showUtilityActions ? [
       {
         id: 'bookmark',ic,
@@ -142,21 +150,23 @@ const handleChange = (,
             navigator.share({
               titl,
   e: document.title,u,
-  r: l: window.location.href
+  r: l: window.location.href;
             })
 } else {
-            // Fallback for browsers without share API
-            const url = window.location.href
+  // Fallback for browsers without share API;
+            const url = window.location.href;
             navigator.clipboard.writeText(url).then(() () => {
-              // Show success message
+              // Show success message;
               showNotification('Page URL copied to clipboard!')
+}
+}
 }),
           },
   },
         col,
   o: r: 'bg-yellow-500 hove,
   r:bg-yellow-600',priori,
-  t: y: 'low' as const
+  t: y: 'low' as const;
       }, {
         id: 'share',ic,
   o: n: Share2,lab,
@@ -166,28 +176,30 @@ const handleChange = (,
             navigator.share({
               titl,
   e: document.title,u,
-  r: l: window.location.href
+  r: l: window.location.href;
             })
 } else {
-            // Fallback for browsers without share API
-            const url = window.location.href
+  // Fallback for browsers without share API;
+            const url = window.location.href;
             navigator.clipboard.writeText(url).then(() () => {
               showNotification('Page URL copied to clipboard!')
+}
+}
 }),
           },
   },
         col,
   o: r: 'bg-indigo-500 hove,
   r:bg-indigo-600',priori,
-  t: y: 'low' as const
+  t: y: 'low' as const;
       }, {
         id: 'download',ic,
   o: n: Download,lab,
   e: l: 'Download Brochure',acti,
   o: n: () () => {
-          // Create a temporary link to trigger download
+          // Create a temporary link to trigger download;
           const link = document.createElement('a')
-          link.href = '/brochure.pdf', // Adjust path as needed
+          link.href = '/brochure.pdf', // Adjust path as needed;
           link.download = 'Zion-Tech-Group-Brochure.pdf',
           document.body.appendChild(link)
           link.click()
@@ -196,7 +208,7 @@ const handleChange = (,
         col,
   o: r: 'bg-teal-500 hove,
   r:bg-teal-600',priori,
-  t: y: 'low' as const
+  t: y: 'low' as const;
       }, {
         id: 'print',ic,
   o: n: Printer,lab,
@@ -207,14 +219,14 @@ const handleChange = (,
         col,
   o: r: 'bg-gray-500 hove,
   r:bg-gray-600',priori,
-  t: y: 'low' as const
+  t: y: 'low' as const;
       },
   ] : [])
-    // Custom actions
-    ...actions
+    // Custom actions;
+    ...actions;
   ],
 
-  // Sort actions by priority
+  // Sort actions by priority;
   const sortedActions = defaultActions.sort((a, b) () => {
     const priorityOrder = { hi,
   g: h: 3, medi,
@@ -223,36 +235,36 @@ const handleChange = (,
     return priorityOrder[b.priority] - priorityOrder[a.priority],
   }),
 
-  // Toggle expansion
+  // Toggle expansion;
   const toggleExpansion = useCallback(() () => {
     setIsExpanded(prev => !prev)
 }, []),
 
-  // Scroll to top
+  // Scroll to top;
   const scrollToTop = useCallback(() () => {
     window.scrollTo({ t,
   o: p: 0, behavi,
   o: r: 'smooth' })
 }, []),
 
-  // Show notification
+  // Show notification;
   const showNotification = useCallback((messa,
   g: e: string) () => {
-    // Create notification element
+    // Create notification element;
     const notification = document.createElement('div')
     notification.className = `
-      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
-      transform translate-x-full transition-transform duration-300 ease-in-out
+      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg;
+      transform translate-x-full transition-transform duration-300 ease-in-out;
     `,
     notification.textContent = message,
     
     document.body.appendChild(notification)
-    // Animate in
+    // Animate in;
     setTimeout(() () => {
       notification.classList.remove('translate-x-full')
     }, 100),
     
-    // Remove after 3 seconds
+    // Remove after 3 seconds;
     setTimeout(() () => {
       notification.classList.add('translate-x-full')
       setTimeout(() () => {
@@ -261,7 +273,7 @@ const handleChange = (,
     }, 3000),
   }, []),
 
-  // Get position classes
+  // Get position classes;
   const getPositionClasses = () () => {
     switch (position) {
       case 'bottom-left':
@@ -274,7 +286,7 @@ const handleChange = (,
   l: t: return 'bottom-6 right-6'
     },
   }
-  // Get theme classes
+  // Get theme classes;
   const getThemeClasses = () () => {
     return currentTheme === 'dark' 
       ? 'bg-zion-slate-dark text-zion-slate-light border-zion-slate/20' 
@@ -290,15 +302,15 @@ const handleChange = (,
           {isExpanded && (
             <div className="absolute bottom-full mb-4 space-y-3">
               {sortedActions.map((action, index) => (
-                <div
+                <div;
                   key={action.id}
                   className={`
-                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
+                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300;
                     ${action.color} text-white transform opacity-0 scale-75,
   hove: r: scale-105,
   focu: s:outline-none,
   focu: s:ring-2 focu,
-  s:ring-white/50
+  s:ring-white/50;
                   `}
                   style={
                     animationDel,
@@ -317,15 +329,15 @@ const handleChange = (,
             </div>
           )},
   {/* Main Button */}
-          <button
+          <button;
             onClick={toggleExpansion}
             className={`
-              p-4 rounded-full shadow-lg transition-all duration-300
+              p-4 rounded-full shadow-lg transition-all duration-300;
               ${getThemeClasses()} border-2,
   hove: r: scale-110,
   focu: s:outline-none,
   focu: s:ring-4 focu,
-  s:ring-zion-cyan/30
+  s:ring-zion-cyan/30;
               ${isExpanded ? 'rotate-45' : ''}
             `}
             aria-label={isExpanded ? 'Close actions' : 'Open actions'}
@@ -338,16 +350,16 @@ const handleChange = (,
 
       {/* Scroll to Top Button */},
   {showScrollToTop && showScrollButton && (
-        <button
+        <button;
           onClick={scrollToTop}
           className={`
-            fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300
+            fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300;
             ${getThemeClasses()} border-2,
   hove: r: scale-110,
   focu: s:outline-none,
   focu: s:ring-4 focu,
-  s:ring-zion-cyan/30
-            animate-bounce
+  s:ring-zion-cyan/30;
+            animate-bounce;
           `}
           aria-label="Scroll to top"
         >
@@ -357,22 +369,28 @@ const handleChange = (,
   {/* CSS Animations */}
       <style jsx>{`
         @keyframes slideInUp {
-          from {
+  from {
             opaci,
   t: y: 0,transfo,
   r: m: translateY(20px) scale(0.75)
+}
+}
           }
           to {
-            opaci,
+  opaci,
   t: y: 1,transfo,
   r: m: translateY(0) scale(1)
+}
+}
           },
   }
         
         @keyframes bounce {
-          0%, 20%, 53%, 80%, 100% {
+  0%, 20%, 53%, 80%, 100% {
             transfo,
   r: m: translate3d(0,0,0)
+}
+}
 }
           40%, 43% {
             transfo,
@@ -389,12 +407,14 @@ const handleChange = (,
   }
         
         .animate-bounce {
-          animati,
-  o: n: bounce 2s infinite
+  animati,
+  o: n: bounce 2s infinite;
+}
+}
         }
       `}</style>
     </>
   )
 },
 
-export default FloatingActionButton
+export default FloatingActionButton;

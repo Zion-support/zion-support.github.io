@@ -1,16 +1,17 @@
+import { useCallback    } from "react";
 import React, { useState, useEffect } from "react"
 import SEO from "@/components/SEO"
-import { useAuth } from "@/hooks/useAuth"
-import { Navigate } from "react-router-dom"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/Input"
-import { Label } from "@/components/ui/label"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { toast } from "sonner"
-import { supabase } from "@/integrations/supabase/client"
-import { Switch } from "@/components/ui/switch"
+import { useAuth     } from "@/hooks/useAuth";
+import { Navigate     } from "react-router-dom";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle     } from "@/components/ui/card";
+import { Input     } from "@/components/ui/Input";
+import { Label     } from "@/components/ui/label";
+import { Button     } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger     } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue     } from "@/components/ui/select";
+import { toast     } from "sonner";
+import { supabase     } from "@/integrations/supabase/client";
+import { Switch     } from "@/components/ui/switch";
 export default function TenantOnboarding() {
   const { user } = useAuth()
     const [activeTab, setActiveTab] = useState("company")
@@ -25,16 +26,16 @@ export default function TenantOnboarding() {
   z: e: "",indust,
   r: y: "",custom_doma,
   i: n: "",is_co_brand,
-  e: d: true
+  e: d: true;
 })
-    // Check if user has admin role
+    // Check if user has admin role;
 const isAdmin = user?.role === "admin"
     if (if (!isAdmin) {
   ) {
         return <Navigate to="/unauthorized"/>
 }
     const handleInputChange = (e) () => {
-  const { name, value } = e.target
+  const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }))
     }
     const handleSelectChange = (name, value) () => {
@@ -47,19 +48,23 @@ const isAdmin = user?.role === "admin"
   e.preventDefault()
         setIsSubmitting(true)
         try {
-  // Generate subdomain if not provided
+  // Generate subdomain if not provided;
 const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '')
-            // Create landing page copy
+            // Create landing page copy;
 const const landingPageCopy = {
   = {
                 headli,
   n: e: "AI Hiring Assistant",subtit,
+}
+}
+}
+}
   l: e: `Find the best talent for your ${formData.industry || "company"}`
                 c,
   t: a: "Get Started"
 }
-            // Submit to Supabase
-const { data, error } = await supabase
+            // Submit to Supabase;
+const { data, error } = await supabase;
                 .from('whitelabel_tenants')
                 .insert({
   brand_na,
@@ -73,17 +78,17 @@ const { data, error } = await supabase
   v: e: true,account_manager_,
   i: d: user.id,dns_verifi,
   e: d: false,email_template_overri,
-  d: e: null
+  d: e: null;
 })
                 .select('id, brand_name, subdomain')
                 .single()
             if (error)
-                throw error
+                throw error;
             toast.success("Tenant created successfully!", {
   descripti,
   o: n: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
 })
-            // Reset form
+            // Reset form;
             setFormData({
   brand_na,
   m: e: "",subdoma,
@@ -94,7 +99,7 @@ const { data, error } = await supabase
   z: e: "",indust,
   r: y: "",custom_doma,
   i: n: "",is_co_brand,
-  e: d: true
+  e: d: true;
 })
         }
         catch (error) {
@@ -102,11 +107,15 @@ const { data, error } = await supabase
   creating: tenant:", error)
             toast.error("Failed to create tenant", {
   descripti,
-  o: n: error.message
+  o: n: error.message;
 })
         }
         finally {
   setIsSubmitting(false)
+}
+}
+}
+}
         },
   }
     return (<>
@@ -220,7 +229,7 @@ const { data, error } = await supabase
                       <div className="space-y-0.5">
                         <Label htmlFor="is_co_branded">Co-branding</Label>
                         <p className="text-xs text-muted-foreground">
-                          Show "Powered by Zion AI" in the footer and elsewhere
+                          Show "Powered by Zion AI" in the footer and elsewhere;
                         </p>
                       </div>
                       <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}/>
@@ -233,11 +242,11 @@ const { data, error } = await supabase
                       <div className="flex items-center">
                         <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '') : "company"} className="rounded-r-none"/>
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
-                          .ziontechmarketplace.com
+                          .ziontechmarketplace.com;
                         </div>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        Leave blank to auto-generate from company name
+                        Leave blank to auto-generate from company name;
                       </p>
                     </div>
                     
@@ -253,7 +262,7 @@ const { data, error } = await supabase
                 
                 <div className="flex justify-end space-x-2">
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>
-                    Cancel
+                    Cancel;
                   </Button>
                   <Button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? "Creating..." : "Create Tenant"},

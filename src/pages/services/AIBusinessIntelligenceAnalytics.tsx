@@ -1,38 +1,42 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "@/components/SEO"
+import { motion     } from "framer-motion";
+import { SEO     } from "@/components/SEO";
 import {
-  Brain
+  Brain;
   BarChart3,
   TrendingUp,
   Users,
   Globe,
   Shield,
-  Cloud
-  CheckCircle
-  Star
-  Zap
-  Target
-  Rocket
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Database
-  PieChart
-  LineChart
-  Activity
-  Eye
-  Search
-  Filter
-  Download
-  Share2
-  Settings
-  Bell
-  Calendar
-  DollarSign
-  Percent
-} from "lucide-react"
+  Cloud;
+  CheckCircle;
+  Star;
+  Zap;
+  Target;
+  Rocket;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  Database;
+  PieChart;
+  LineChart;
+  Activity;
+  Eye;
+  Search;
+  Filter;
+  Download;
+  Share2;
+  Settings;
+  Bell;
+  Calendar;
+  DollarSign;
+  Percent;
+}
+}
+}
+}
+ } from "lucide-react";
 const AIBusinessIntelligenceAnalytics = () () => {
   const features = [
   "AI-Powered Predictive Analytics"
@@ -167,7 +171,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white">
-      <SEO 
+      <SEO;
         title="AI Business Intelligence Analytics | Zion Tech Group"
         description="Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence."
         keywords="AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group"
@@ -180,7 +184,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   l: g:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"></div>
         <div className="relative max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -198,11 +202,11 @@ const AIBusinessIntelligenceAnalytics = () () => {
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-8">
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                AI Business Intelligence
+                AI Business Intelligence;
               </span>
               <br />
               <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                Analytics Platform
+                Analytics Platform;
               </span>
             </h1>
             <p className="text-xl m,
@@ -212,7 +216,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg,
@@ -221,9 +225,9 @@ const AIBusinessIntelligenceAnalytics = () () => {
   transform: hover:scale-105";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Get Started Today
+                Get Started Today;
               </a>
-              <a
+              <a;
                 href="mail,
   t: o:kleber@ziontechgroup.com"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg,
@@ -231,7 +235,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   r:text-white transition-all duration-300";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Contact Us
+                Contact Us;
               </a>
             </div>
           </motion.div>
@@ -244,7 +248,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -261,10 +265,10 @@ const AIBusinessIntelligenceAnalytics = () () => {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Revolutionary Features
+              Revolutionary Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of AI-driven business intelligence and analytics
+              Experience the power of AI-driven business intelligence and analytics;
             </p>
           </motion.div>
 
@@ -272,7 +276,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature},
   }
                 initial={ opaci,
@@ -308,7 +312,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -325,17 +329,17 @@ const AIBusinessIntelligenceAnalytics = () () => {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Transformative Benefits
+              Transformative Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See measurable improvements across your entire business operations
+              See measurable improvements across your entire business operations;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={benefit},
   }
                 initial={ opaci,
@@ -369,7 +373,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -386,17 +390,17 @@ const AIBusinessIntelligenceAnalytics = () () => {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Comprehensive Capabilities
+              Comprehensive Capabilities;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end AI-powered business intelligence and analytics solutions
+              End-to-end AI-powered business intelligence and analytics solutions;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {capabilities.map((category, index) => (
-  <motion.div
+  <motion.div;
                 key={category.category},
   }
                 initial={ opaci,
@@ -450,7 +454,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -467,10 +471,10 @@ const AIBusinessIntelligenceAnalytics = () () => {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Business Applications
+              Business Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform every aspect of your business with intelligent analytics
+              Transform every aspect of your business with intelligent analytics;
             </p>
           </motion.div>
 
@@ -478,7 +482,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase},
   }
                 initial={ opaci,
@@ -516,7 +520,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -533,17 +537,17 @@ const AIBusinessIntelligenceAnalytics = () () => {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Investment Plans
+              Investment Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business intelligence needs
+              Choose the perfect plan for your business intelligence needs;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={plan.name},
   }
                 initial={ opaci,
@@ -569,7 +573,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
                 {plan.name === 'Professional' && (
   <div className="text-center mb-4">
                     <span className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -587,7 +591,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
                     </li>
                   ))}
                 </ul>
-                <a
+                <a;
                   href="t,
   e: l: +13024640950"
                   className="className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg,
@@ -595,7 +599,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   hove: r:to-emerald-600 transition-all duration-300 transform hove,
   r:scale-105";"
                 >
-                  Get Started
+                  Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </motion.div>
@@ -610,7 +614,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -630,13 +634,13 @@ const AIBusinessIntelligenceAnalytics = () () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact us today to learn how our AI business intelligence platform can drive growth and efficiency
+              Contact us today to learn how our AI business intelligence platform can drive growth and efficiency;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -657,17 +661,17 @@ const AIBusinessIntelligenceAnalytics = () () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
               <p className="text-gray-300 mb-4">+1 302 464 0950</p>
-              <a 
+              <a;
                 href="t,
   e: l: +13024640950" 
                 className="className="text-green-400,
   hove: r:text-green-300 transition-colors duration-300";"
               >
-                Call Now
+                Call Now;
               </a>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -688,17 +692,17 @@ const AIBusinessIntelligenceAnalytics = () () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
               <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
-              <a 
+              <a;
                 href="mail,
   t: o: kleber@ziontechgroup.com" 
                 className="className="text-green-400,
   hove: r:text-green-300 transition-colors duration-300";"
               >
-                Send Email
+                Send Email;
               </a>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -719,7 +723,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>
               <p className="text-gray-300 mb-4">364 E Main St STE 1008, Middletown DE 19709</p>
-              <a 
+              <a;
                 href="htt,
   p: s: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
                 target="_blank" 
@@ -727,7 +731,7 @@ const AIBusinessIntelligenceAnalytics = () () => {
                 className="className="text-green-400 hove,
   r:text-green-300 transition-colors duration-300";"
               >
-                View on Map
+                View on Map;
               </a>
             </motion.div>
           </div>
@@ -736,4 +740,4 @@ const AIBusinessIntelligenceAnalytics = () () => {
     </div>
   )
 }
-export default AIBusinessIntelligenceAnalytics
+export default AIBusinessIntelligenceAnalytics;

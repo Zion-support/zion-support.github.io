@@ -1,13 +1,13 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
-// import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026"
-// import { enterpriseITInfrastructureServices2026 } from "../data/2025-enterprise-it-infrastructure-services"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
+// import { ultimateInnovativeServices2026   } from "../data/ultimateInnovativeServices2026";
+// import { enterpriseITInfrastructureServices2026   } from "../data/2025-enterprise-it-infrastructure-services";
 const UltimateServicesShowcase2026 = () () => {
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [searchTerm, setSearchTerm] = useState('')
     const [sortBy, setSortBy] = useState('name')
-    // Combine all services
+    // Combine all services;
 const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026],
   ]
     const categories = [
@@ -23,7 +23,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
         'VirtualizationIT Asset Management'
         'Performance Monitoring'
 ]
-    const filteredServices = allServices
+    const filteredServices = allServices;
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -35,7 +35,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
             case 'category':
                 return a.category.localeCompare(b.category)
             case 'rating':
-                return b.rating - a.rating
+                return b.rating - a.rating;
             case 'name':
             defau,
   l: t: return a.name.localeCompare(b.name)
@@ -60,7 +60,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -98,9 +98,9 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   } transition={ durati,
   o: n: 0.8 },
   }>
-            Ultimate
+            Ultimate;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Innovative Services 2026
+              {" "}Innovative Services 2026;
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={ opaci,
@@ -111,7 +111,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   o: n: 0.8, del,
   a: y: 0.2 },
   }>
-            Discover our comprehensive collection of 20+ cutting-edge innovative services
+            Discover our comprehensive collection of 20+ cutting-edge innovative services;
             from AI-powered business solutions to enterprise IT infrastructure. 
             Each service is designed to transform your business and drive innovation with real, market-ready solutions.
           </motion.p>
@@ -131,15 +131,15 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   m: d: grid-cols-3 gap-4 text-sm">
               <div>
                 <strong>Mobi,
-  l: e:</strong> +1 302 464 0950
+  l: e:</strong> +1 302 464 0950;
               </div>
               <div>
                 <strong>Ema,
-  i: l:</strong> kleber@ziontechgroup.com
+  i: l:</strong> kleber@ziontechgroup.com;
               </div>
               <div>
                 <strong>Addre,
-  s: s:</strong> 364 E Main St STE 1008 Middletown DE 19709
+  s: s:</strong> 364 E Main St STE 1008 Middletown DE 19709;
               </div>
             </div>
             <div className="mt-4">
@@ -158,19 +158,19 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   hove: r: from-blue-600,
   hove: r:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300,
   hove: r:scale-105">
-              🚀 All Services
+              🚀 All Services;
             </Link>
             <Link to="/pricing" className="bg-gradient-to-r from-purple-500 to-pink-500,
   hove: r:from-purple-600,
   hove: r:to-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300,
   hove: r:scale-105">
-              💰 Pricing Plans
+              💰 Pricing Plans;
             </Link>
             <Link to="/contact" className="bg-gradient-to-r from-green-500 to-emerald-500,
   hove: r:from-green-600,
   hove: r:to-emerald-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hove,
   r:scale-105">
-              📞 Contact Us
+              📞 Contact Us;
             </Link>
           </div>
         </div>
@@ -245,7 +245,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-4xl">{service.icon}</div>
                     {service.popular && (<span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                        Popular
+                        Popular;
                       </span>)}
                   </div>
 
@@ -323,12 +323,12 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
                     <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500,
   hove: r: from-cyan-600,
   hove: r:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center">
-                      Learn More
+                      Learn More;
                     </a>
                     <Link to="/contact" className="flex-1 bg-white/10,
   hove: r:bg-white/20 text-white text-sm font-semibold py-2 px-4 rounded-lg border border-white/30 hove,
   r:border-cyan-400/50 transition-all duration-300 text-center">
-                      Contact
+                      Contact;
                     </Link>
                   </div>
 
@@ -392,7 +392,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   hove: r: shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30,
   hove: r:border-cyan-500/60">
                   <span className="text-xl">🚀</span>
-                  Get Started Today
+                  Get Started Today;
                   <span className="text-xl">→</span>
                 </Link>
               </motion.div>
@@ -406,7 +406,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   hove: r:border-cyan-400/50 hove,
   r:bg-white/20 transition-all duration-300 shadow-lg">
                   <span className="text-xl">📞</span>
-                  Call Now
+                  Call Now;
                 </a>
               </motion.div>
             </div>
@@ -443,4 +443,4 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
       </section>
     </div>)
 }
-export default UltimateServicesShowcase2026
+export default UltimateServicesShowcase2026;

@@ -1,29 +1,31 @@
 import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Brain
-  Zap
-  Globe
-  Shield
-  Cpu
-  Database
-  Network
-  Lock
-  TrendingUp
-  Users
-  Search
-  Filter
-  Star
-  Clock
-  DollarSign
-  Target
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-} from "lucide-react"
-import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026"
+  Brain;
+  Zap;
+  Globe;
+  Shield;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  TrendingUp;
+  Users;
+  Search;
+  Filter;
+  Star;
+  Clock;
+  DollarSign;
+  Target;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
+import { ADVANCED_INNOVATIVE_SERVICES_2026   } from "../data/advancedInnovativeServices2026";
 const,
   AdvancedInnovativeServicesShowcase202: 6: React.FC = () () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -36,14 +38,14 @@ const,
   }, [])
 
   const filteredServices = useMemo(() () => {
-    let filtered = ADVANCED_INNOVATIVE_SERVICES_2026
-    // Filter by category
+    let filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
+    // Filter by category;
     if (if (selectedCategory !== 'all') {
   ) {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
-    // Filter by search term
+    // Filter by search term;
     if (if (searchTerm) {
   ) {
       filtered = filtered.filter(service =>
@@ -53,7 +55,7 @@ const,
       )
     }
 
-    // Sort services
+    // Sort services;
     filtered.sort((a, b) () => {
   switch (sortBy) {
   case 'innovation':
@@ -61,14 +63,14 @@ const,
         case 'roi':
           return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''))
         case 'price':
-          return a.price - b.price
+          return a.price - b.price;
         case 'delivery':
           return a.estimatedDelivery.localeCompare(b.estimatedDelivery)
         defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
-    return filtered
+    return filtered;
 }, [searchTerm, selectedCategory, sortBy])
 
   const const containerVariants = {
@@ -83,7 +85,7 @@ const,
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
@@ -101,7 +103,7 @@ const,
   t: y: 1,transiti,
   o: n: {
   duratio,
-  n: 0.5
+  n: 0.5;
 },
   },
   }
@@ -109,7 +111,7 @@ const,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */},
   }
-      <motion.div
+      <motion.div;
         className="className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 py-20";"
         initial={ opaci,
   t: y: 0 },
@@ -123,7 +125,7 @@ const,
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1
+          <motion.h1;
             className="className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6";"
             initial={ ,
@@ -138,9 +140,9 @@ const,
   a: y: 0.2 },
   }
           >
-            Advanced Innovative Services 2026
+            Advanced Innovative Services 2026;
           </motion.h1>
-          <motion.p
+          <motion.p;
             className="className="text-xl,
   m: d: text-2xl text-blue-100 max-w-4xl mx-auto mb-8";"
             initial={ ,
@@ -155,9 +157,9 @@ const,
   a: y: 0.4 },
   }
           >
-            Revolutionary AI, Quantum Computing, and Futuristic Technology Solutions
+            Revolutionary AI, Quantum Computing, and Futuristic Technology Solutions;
           </motion.p>
-          <motion.div
+          <motion.div;
             className="className="flex flex-wrap justify-center gap-4 text-sm";"
             initial={ sca,
   l: e: 0.8, opaci,
@@ -173,16 +175,16 @@ const,
   }
           >
             <span className="px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-200">
-              🚀 Quantum AI
+              🚀 Quantum AI;
             </span>
             <span className="px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-200">
-              🧠 Brain-Computer Interfaces
+              🧠 Brain-Computer Interfaces;
             </span>
             <span className="px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-200">
-              🌌 Space Mining
+              🌌 Space Mining;
             </span>
             <span className="px-4 py-2 bg-red-500/20 border border-red-400/30 rounded-full text-red-200">
-              ⚡ Fusion Energy
+              ⚡ Fusion Energy;
             </span>
           </motion.div>
         </div>
@@ -190,7 +192,7 @@ const,
 
       {/* Filter and Search Section */},
   }
-      <motion.div
+      <motion.div;
         className="className="container mx-auto px-4 py-8";"
         initial={ opaci,
   t: y: 0, y: 20 },
@@ -210,7 +212,7 @@ const,
   }
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search innovative services..."
                 value={searchTerm},
@@ -229,7 +231,7 @@ const,
   }
             <div className="flex items-center gap-2">
               <Filter className="text-slate-400 w-5 h-5" />
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) => setSelectedCategory(e.target.value)},
@@ -252,7 +254,7 @@ const,
   }
             <div className="flex items-center gap-2">
               <TrendingUp className="text-slate-400 w-5 h-5" />
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -274,7 +276,7 @@ const,
 
       {/* Services Grid */},
   }
-      <motion.div
+      <motion.div;
         className="className="container mx-auto px-4 pb-20";"
         variants={containerVariants},
   }
@@ -285,7 +287,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
           {filteredServices.map((service) => (
-  <motion.div
+  <motion.div;
               key={service.id},
   }
               className="className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50,
@@ -370,7 +372,7 @@ const,
                   ))},
   {service.features.length > 3 && (
   <span className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300">
-                      +{service.features.length - 3} more
+                      +{service.features.length - 3} more;
                     </span>
                   )}
                 </div>
@@ -388,7 +390,7 @@ const,
                   {service.contactInfo.email},
   }
                 </div>
-                <a
+                <a;
                   href={service.contactInfo.website},
   }
                   target="_blank"
@@ -405,7 +407,7 @@ const,
         </div>
 
         {filteredServices.length === 0 && (
-  <motion.div
+  <motion.div;
             className="className="text-center py-20";"
             initial={ opaci,
   t: y: 0 },
@@ -423,7 +425,7 @@ const,
 
       {/* Contact Section */},
   }
-      <motion.div
+      <motion.div;
         className="className="bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-indigo-900/20 border-t border-slate-700/50";"
         initial={ opaci,
   t: y: 0, y: 50 },
@@ -456,7 +458,7 @@ const,
               <a href="t,
   e: l:+13024640950" className="text-blue-400,
   hove: r:text-blue-300 font-medium">
-                +1 (302) 464-0950
+                +1 (302) 464-0950;
               </a>
             </div>
 
@@ -467,7 +469,7 @@ const,
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-purple-400 hove,
   r:text-purple-300 font-medium">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
 
@@ -477,13 +479,13 @@ const,
               <p className="text-slate-300 mb-3">Come see our innovation center</p>
               <p className="text-green-400 font-medium">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown, DE 19709;
               </p>
             </div>
           </div>
 
           <div className="text-center mt-12">
-            <a
+            <a;
               href="htt,
   p: s: //ziontechgroup.com"
               target="_blank"
@@ -495,7 +497,7 @@ const,
   hove: r:shadow-2xl hove,
   r:shadow-blue-500/25";"
             >
-              Visit Our Website
+              Visit Our Website;
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>
@@ -504,4 +506,4 @@ const,
     </div>
   )
 }
-export default AdvancedInnovativeServicesShowcase2026
+export default AdvancedInnovativeServicesShowcase2026;

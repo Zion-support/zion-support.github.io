@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../../components/SEO"
-import { motion } from "framer-motion"
-import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, Globe, Users, Cpu, Network, BarChart3, Activity, Atom, Rocket } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, Globe, Users, Cpu, Network, BarChart3, Activity, Atom, Rocket     } from "lucide-react";
 const,
   QuantumMachineLearnin: g: React.FC = () () => {
   const features = [
@@ -64,7 +64,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Quantum Machine Learning Services - Zion Tech Group"
         description="Revolutionize your AI with quantum machine learning. Achieve exponential speedup and solve previously intractable problems with quantum computing."
       />
@@ -73,7 +73,7 @@ const,
   }
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -92,14 +92,14 @@ const,
             
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              Quantum
+              Quantum;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-400">
-                Machine Learning
+                Machine Learning;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your AI with quantum machine learning. Achieve exponential speedup and solve 
+              Revolutionize your AI with quantum machine learning. Achieve exponential speedup and solve;
               previously intractable problems with the power of quantum computing.
             </p>
             
@@ -109,11 +109,11 @@ const,
   hove: r:from-purple-400,
   hove: r:to-indigo-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-purple-500/20">
-                Get Started
+                Get Started;
               </button>
               <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hove,
   r:bg-purple-400/10 transition-all duration-200">
-                Learn More
+                Learn More;
               </button>
             </div>
           </motion.div>
@@ -124,7 +124,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -137,10 +137,10 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum ML Features
+              Quantum ML Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful quantum computing capabilities for machine learning
+              Powerful quantum computing capabilities for machine learning;
             </p>
           </motion.div>
 
@@ -148,7 +148,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -180,7 +180,7 @@ const,
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -193,17 +193,17 @@ const,
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform industries with quantum machine learning
+              Transform industries with quantum machine learning;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d:grid-cols-2 gap-8">
             {applications.map((application, index) => (
-  <motion.div
+  <motion.div;
                 key={application.title},
   }
                 initial={ opaci,
@@ -236,7 +236,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -252,13 +252,13 @@ const,
               Why Choose Quantum ML?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Unlock unprecedented AI capabilities with quantum computing
+              Unlock unprecedented AI capabilities with quantum computing;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d: grid-cols-2 gap-8">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, x: -20 },
   }
@@ -281,7 +281,7 @@ const,
               </ul>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, x: 20 },
   }
@@ -295,14 +295,14 @@ const,
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to revolutionize your AI with quantum computing? Our quantum ML experts can help you 
+                Ready to revolutionize your AI with quantum computing? Our quantum ML experts can help you;
                 implement solutions that provide exponential speedup and solve previously impossible problems.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg,
   hove: r: from-purple-400,
   hove: r:to-indigo-500 transition-all duration-200 hove,
   r:scale-105 shadow-lg shadow-purple-500/20">
-                Contact Quantum Experts
+                Contact Quantum Experts;
               </button>
             </motion.div>
           </div>
@@ -313,7 +313,7 @@ const,
   }
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -328,7 +328,7 @@ const,
               Ready for Quantum ML?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your AI with quantum computing capabilities
+              Transform your AI with quantum computing capabilities;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -336,11 +336,11 @@ const,
   hove: r:from-purple-400,
   hove: r:to-indigo-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-purple-500/20">
-                Start Quantum ML Journey
+                Start Quantum ML Journey;
               </button>
               <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hove,
   r:bg-purple-400/10 transition-all duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
@@ -349,4 +349,4 @@ const,
     </div>
   )
 }
-export default QuantumMachineLearning
+export default QuantumMachineLearning;

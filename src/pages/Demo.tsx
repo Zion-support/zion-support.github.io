@@ -1,7 +1,8 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Play, Pause, Square, RotateCcw, Settings, Download, Share2, Eye, EyeOff, Maximize2, Minimize2 } from "lucide-react"
-import { SEO } from "../components/SEO"
+import { motion   } from "framer-motion";
+import { Play, Pause, Square, RotateCcw, Settings, Download, Share2, Eye, EyeOff, Maximize2, Minimize2   } from "lucide-react";
+import { SEO   } from "../components/SEO";
 export default function Demo() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
@@ -56,13 +57,13 @@ export default function Demo() {
   const formatTime = (secon,
   d: s: number) () => {
   const mins = Math.floor(seconds / 60)
-    const secs = seconds % 60
+    const secs = seconds % 60;
     return `${mins}:${secs.toString().padStart(2, '0')}`
 }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Interactive Demos - Zion Tech Group"
         description="Experience our AI-powered solutions in action through interactive demonstrations. See how our technology can transform your business operations."
       />
@@ -74,7 +75,7 @@ export default function Demo() {
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-24">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -88,10 +89,10 @@ export default function Demo() {
           >
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Interactive Demos
+              Interactive Demos;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience our cutting-edge AI solutions firsthand. Watch live demonstrations 
+              Experience our cutting-edge AI solutions firsthand. Watch live demonstrations;
               and see how our technology can transform your business operations.
             </p>
           </motion.div>
@@ -127,7 +128,7 @@ export default function Demo() {
   {showControls && (
   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                 <div className="flex items-center gap-4">
-                  <button
+                  <button;
                     onClick={onClick={handlePlayPause},
   },
   }
@@ -139,7 +140,7 @@ export default function Demo() {
                   </button>
                   
                   <div className="flex-1">
-                    <input
+                    <input;
                       type="range"
                       min="0"
                       max={duration},
@@ -184,17 +185,17 @@ export default function Demo() {
   hove: r: from-blue-700,
   hove: r:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 flex items-center gap-2">
               <Play className="w-5 h-5" />
-              Start Demo
+              Start Demo;
             </button>
             <button className="bg-white/10,
   hove: r:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 border border-white/20 flex items-center gap-2">
               <Download className="w-5 h-5" />
-              Download Demo
+              Download Demo;
             </button>
             <button className="bg-white/10 hove,
   r:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 border border-white/20 flex items-center gap-2">
               <Share2 className="w-5 h-5" />
-              Share Demo
+              Share Demo;
             </button>
           </div>
         </div>
@@ -208,7 +209,7 @@ export default function Demo() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">Available Demonstrations</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI-powered solutions through interactive demonstrations
+            Explore our comprehensive suite of AI-powered solutions through interactive demonstrations;
           </p>
         </div>
 
@@ -216,7 +217,7 @@ export default function Demo() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-6">
           {demos.map((demo, index) => (
-  <motion.div
+  <motion.div;
               key={demo.id},
   }
               initial={ opaci,
@@ -263,7 +264,7 @@ export default function Demo() {
                 <p className="text-gray-400 text-sm mb-4">{demo.description}</p>
                 <button className="w-full bg-white/10,
   hove: r:bg-white/20 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm">
-                  Watch Demo
+                  Watch Demo;
                 </button>
               </div>
             </motion.div>
@@ -322,11 +323,11 @@ export default function Demo() {
   hove: r:from-blue-700,
   hove: r:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200,
   transform: hover:scale-105">
-              Schedule Live Demo
+              Schedule Live Demo;
             </button>
             <button className="bg-white/10,
   hove: r:bg-white/20 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 border border-white/20">
-              Contact Sales Team
+              Contact Sales Team;
             </button>
           </div>
         </div>
@@ -338,23 +339,27 @@ export default function Demo() {
   appearanc,
   e: none,heig,
   h: t: 20px,wid,
-  t: h: 20px
+  t: h: 20px;
           border-radiu,
   s: 50%,backgrou,
   n: d: #3b82f6,curs,
-  o: r: pointer
+  o: r: pointer;
+}
+}
 }
         
         .slid,
   e: r: :-moz-range-thumb {
   heigh,
   t: 20px,wid,
-  t: h: 20px
+  t: h: 20px;
           border-radiu,
   s: 50%,backgrou,
   n: d: #3b82f6,curs,
   o: r: pointer,bord,
-  e: r: none
+  e: r: none;
+}
+}
 }
       `}</style>
     </div>

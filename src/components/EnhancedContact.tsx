@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   Mail,
   Phone,
@@ -10,8 +11,10 @@ import {
   Clock,
   MessageSquare,
   Building,
-  Globe
-} from "lucide-react"
+  Globe;
+}
+}
+ } from "lucide-react";
 interface ContactFormData {
   na,
   m: e: string,ema,
@@ -19,12 +22,16 @@ interface ContactFormData {
   n: e: string,compa,
   n: y: string,servi,
   c: e: string,messa,
-  g: e: string
+  g: e: string;
+}
+}
 }
 
 interface ContactFormErrors {
   [k,
-  e: y: string]: string
+  e: y: string]: string;
+}
+}
 }
 
 export function EnhancedContact() {
@@ -79,7 +86,7 @@ const validateForm = (): boolean () => {
     }
 
     setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
+    return Object.keys(newErrors).length === 0;
 },
 
   const handleInputChange = (fie,
@@ -87,7 +94,7 @@ const validateForm = (): boolean () => {
   u: e: string) () => {
     setFormData(prev => ({ ...prev, [field]: value })),
 
-    // Clear error when user starts typing
+    // Clear error when user starts typing;
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: '' })),
     },
@@ -96,12 +103,12 @@ const validateForm = (): boolean () => {
   const handleSubmit = async (e: React.FormEvent) () => {
     e.preventDefault()
     if (!validateForm()) {
-      return
+      return;
     }
 
     setIsSubmitting(true)
     try {
-      // Simulate API call
+  // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000)),
 
       setIsSubmitted(true)
@@ -113,12 +120,16 @@ const validateForm = (): boolean () => {
   n: y: '',servi,
   c: e: 'general',messa,
   g: e: ''
+}
+}
       })
 } catch (error) {
       console.error('Error,
   submitting: form:', error)
 } finally {
-      setIsSubmitting(false)
+  setIsSubmitting(false)
+}
+}
 },
   },
 
@@ -153,7 +164,7 @@ const validateForm = (): boolean () => {
   ]
   if (isSubmitted) {
     return (
-      <motion.div
+      <motion.div;
         initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -165,7 +176,7 @@ const validateForm = (): boolean () => {
         className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20"
       >
         <div className="max-w-md mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ sca,
   l: e: 0 },
   }
@@ -181,7 +192,7 @@ const validateForm = (): boolean () => {
             <CheckCircle className="w-10 h-10 text-white" />
           </motion.div>
 
-          <motion.h2
+          <motion.h2;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -196,7 +207,7 @@ const validateForm = (): boolean () => {
             Message Sent Successfully!
           </motion.h2>
 
-          <motion.p
+          <motion.p;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -211,7 +222,7 @@ const validateForm = (): boolean () => {
             Thank you for reaching out to us. We'll get back to you within 24 hours.
           </motion.p>
 
-          <motion.button
+          <motion.button;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -226,7 +237,7 @@ const validateForm = (): boolean () => {
   hove: r: from-zion-cyan-dark hove,
   r:to-zion-purple-dark transition-all duration-300 font-medium"
           >
-            Send Another Message
+            Send Another Message;
           </motion.button>
         </div>
       </motion.div>
@@ -239,7 +250,7 @@ const validateForm = (): boolean () => {
   s: m: px-6 l,
   g:px-8">
         {/* Header */}
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -250,10 +261,10 @@ const validateForm = (): boolean () => {
         >
           <h1 className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6">
-            Get in Touch
+            Get in Touch;
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss how our AI-powered solutions
+            Ready to transform your business? Let's discuss how our AI-powered solutions;
             can help you achieve your goals.
           </p>
         </motion.div>
@@ -261,7 +272,7 @@ const validateForm = (): boolean () => {
         <div className="grid l,
   g:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: -50 },
   }
@@ -276,7 +287,7 @@ const validateForm = (): boolean () => {
 
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <motion.div
+                <motion.div;
                   key={info.title}
                   initial={ opaci,
   t: y: 0, x: -20 },
@@ -302,7 +313,7 @@ const validateForm = (): boolean () => {
             </div>
 
             {/* Company Stats */}
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -337,7 +348,7 @@ const validateForm = (): boolean () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, x: 50 },
   }
@@ -357,7 +368,7 @@ const validateForm = (): boolean () => {
                 <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                   Full Name *
                 </label>
-                <input
+                <input;
                   type="text"
                   id="name"
                   value={formData.name}
@@ -366,7 +377,7 @@ const validateForm = (): boolean () => {
   focu: s: outline-none,
   focu: s:ring-2,
   focu: s:ring-zion-cyan ${
-                    errors.name
+                    errors.name;
                       ? 'border-red-500,
   focu: s:ring-red-500'
                       : 'border-zion-slate-light focu,
@@ -376,7 +387,7 @@ const validateForm = (): boolean () => {
                 />
                 <AnimatePresence>
                   {errors.name && (
-                    <motion.p
+                    <motion.p;
                       initial={ opaci,
   t: y: 0, y: -10 },
   }
@@ -400,7 +411,7 @@ const validateForm = (): boolean () => {
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address *
                 </label>
-                <input
+                <input;
                   type="email"
                   id="email"
                   value={formData.email}
@@ -409,7 +420,7 @@ const validateForm = (): boolean () => {
   focu: s: outline-none,
   focu: s:ring-2,
   focu: s:ring-zion-cyan ${
-                    errors.email
+                    errors.email;
                       ? 'border-red-500,
   focu: s:ring-red-500'
                       : 'border-zion-slate-light focu,
@@ -419,7 +430,7 @@ const validateForm = (): boolean () => {
                 />
                 <AnimatePresence>
                   {errors.email && (
-                    <motion.p
+                    <motion.p;
                       initial={ opaci,
   t: y: 0, y: -10 },
   }
@@ -443,9 +454,9 @@ const validateForm = (): boolean () => {
   m: d:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
-                    Phone Number
+                    Phone Number;
                   </label>
-                  <input
+                  <input;
                     type="tel"
                     id="phone"
                     value={formData.phone}
@@ -460,9 +471,9 @@ const validateForm = (): boolean () => {
                 </div>
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                    Company
+                    Company;
                   </label>
-                  <input
+                  <input;
                     type="text"
                     id="company"
                     value={formData.company}
@@ -480,9 +491,9 @@ const validateForm = (): boolean () => {
               {/* Service */}
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
-                  Service of Interest
+                  Service of Interest;
                 </label>
-                <select
+                <select;
                   id="service"
                   value={formData.service}
                   onChange={(e) => handleInputChange('service', e.target.value)}
@@ -505,7 +516,7 @@ const validateForm = (): boolean () => {
                 <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                   Message *
                 </label>
-                <textarea
+                <textarea;
                   id="message"
                   rows={4}
                   value={formData.message}
@@ -514,7 +525,7 @@ const validateForm = (): boolean () => {
   focu: s: outline-none,
   focu: s:ring-2,
   focu: s:ring-zion-cyan resize-none ${
-                    errors.message
+                    errors.message;
                       ? 'border-red-500,
   focu: s:ring-red-500'
                       : 'border-zion-slate-light focu,
@@ -524,7 +535,7 @@ const validateForm = (): boolean () => {
                 />
                 <AnimatePresence>
                   {errors.message && (
-                    <motion.p
+                    <motion.p;
                       initial={ opaci,
   t: y: 0, y: -10 },
   }
@@ -544,7 +555,7 @@ const validateForm = (): boolean () => {
               </div>
 
               {/* Submit Button */}
-              <motion.button
+              <motion.button;
                 type="submit"
                 disabled={isSubmitting}
                 whileHover={ sca,

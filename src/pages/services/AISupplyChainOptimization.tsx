@@ -1,14 +1,14 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
-import { Button } from "../../components/ui/Button"
-import { Card } from "../../components/ui/Card"
-import { Badge } from "../../components/ui/Badge"
-import { CheckCircle, Brain, TrendingUp, Truck, Shield, Zap, Globe, Clock, Phone, Mail, BarChart3, Target, Users, Database } from "lucide-react"
+import { SEO     } from "../../components/SEO";
+import { Button     } from "../../components/ui/Button";
+import { Card     } from "../../components/ui/Card";
+import { Badge     } from "../../components/ui/Badge";
+import { CheckCircle, Brain, TrendingUp, Truck, Shield, Zap, Globe, Clock, Phone, Mail, BarChart3, Target, Users, Database     } from "lucide-react";
 const,
   AISupplyChainOptimizatio: n: React.FC = () () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Supply Chain Optimization Platform - Zion Tech Group"
         description="Revolutionary AI-powered supply chain optimization platform that predicts demand, optimizes inventory, and automates logistics with real-time analytics and predictive insights."
       />
@@ -22,11 +22,11 @@ const,
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain
+              AI-Powered Supply Chain;
             </Badge>
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
-              AI Supply Chain Optimization
+              AI Supply Chain Optimization;
             </h1>
             <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -40,12 +40,12 @@ const,
             <Button size="lg" className="bg-gradient-to-r from-green-600 to-blue-600,
   hove: r:from-green-700,
   hove: r:to-blue-700">
-              Start Free Trial
+              Start Free Trial;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white hove,
   r:text-slate-900">
-              Schedule Demo
+              Schedule Demo;
             </Button>
           </div>
         </div>
@@ -108,7 +108,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Advanced AI Features
+            Advanced AI Features;
           </h2>
           
           <div className="grid grid-cols-1 m,
@@ -192,7 +192,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Industry Applications
+            Industry Applications;
           </h2>
           
           <div className="grid grid-cols-1,
@@ -257,7 +257,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Transparent Pricing
+            Transparent Pricing;
           </h2>
           
           <div className="grid grid-cols-1 m,
@@ -269,35 +269,35 @@ const,
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Up to 5 locations
+                  Up to 5 locations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic AI forecasting
+                  Basic AI forecasting;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard integrations
+                  Standard integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Email support
+                  Email support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Monthly reports
+                  Monthly reports;
                 </li>
               </ul>
               <Button className="w-full bg-green-600,
   hove: r:bg-green-700">
-                Get Started
+                Get Started;
               </Button>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-8 text-center relative">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <Badge variant="secondary" className="bg-blue-600 text-white">
-                  Most Popular
+                  Most Popular;
                 </Badge>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
@@ -306,28 +306,28 @@ const,
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Up to 25 locations
+                  Up to 25 locations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Advanced AI analytics
+                  Advanced AI analytics;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom workflows
+                  Custom workflows;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Priority support
+                  Priority support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Real-time monitoring
+                  Real-time monitoring;
                 </li>
               </ul>
               <Button className="w-full bg-blue-600,
   hove: r:bg-blue-700">
-                Get Started
+                Get Started;
               </Button>
             </Card>
             
@@ -338,28 +338,28 @@ const,
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Unlimited locations
+                  Unlimited locations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Full AI suite
+                  Full AI suite;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  White-label options
+                  White-label options;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Dedicated support
+                  Dedicated support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom integrations
+                  Custom integrations;
                 </li>
               </ul>
               <Button className="w-full bg-purple-600,
   hove: r: bg-purple-700">
-                Contact Sales
+                Contact Sales;
               </Button>
             </Card>
           </div>
@@ -374,7 +374,7 @@ const,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white text-center mb-12">
-            Market Opportunity
+            Market Opportunity;
           </h2>
           
           <div className="grid grid-cols-1 m,
@@ -433,12 +433,12 @@ const,
             <Button size="lg" className="bg-gradient-to-r from-green-600 to-blue-600,
   hove: r:from-green-700,
   hove: r:to-blue-700">
-              Start Free Trial
+              Start Free Trial;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white,
   hove: r:bg-white,
   hove: r:text-slate-900">
-              Schedule Demo
+              Schedule Demo;
             </Button>
           </div>
           
@@ -453,4 +453,4 @@ const,
     </div>
   )
 }
-export default AISupplyChainOptimization
+export default AISupplyChainOptimization;

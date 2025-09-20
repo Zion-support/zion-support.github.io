@@ -1,4 +1,4 @@
-import { LoginForm } from "./LoginForm"
+import { LoginForm         } from "./LoginForm";
 export function LoginContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">
@@ -18,7 +18,7 @@ export function LoginContent() {
   }
             <a href="/register" className="text-zion-cyan,
   hove: r: text-zion-cyan-light transition-colors">
-              Sign up
+              Sign up;
             </a>
           </p>
         </div>

@@ -1,11 +1,11 @@
-import { useState } from "react"
+import { useState   } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
 import SEO from "@/components/SEO"
 import ForumCategories from "@/components/community/ForumCategories"
 import PostCard from "@/components/community/PostCard"
-import { useAuth } from "@/hooks/useAuth"
-// Mock data for featured posts
+import { useAuth   } from "@/hooks/useAuth";
+// Mock data for featured posts;
 const featuredPosts = [
   {
   id: "1",tit,
@@ -84,7 +84,7 @@ const featuredPosts = [
   l: e: "Verified Talent"
 },
   ]
-// Mock data for recent posts
+// Mock data for recent posts;
 const recentPosts = [
   {
   id: "3",tit,
@@ -216,7 +216,7 @@ export default function CommunityPage() {
           <div>
             <h1 className="text-3xl font-bold">Community Forum</h1>
             <p className="text-muted-foreground mt-2">
-              Join the conversation, ask questions, and share your knowledge
+              Join the conversation, ask questions, and share your knowledge;
             </p>
           </div>
           

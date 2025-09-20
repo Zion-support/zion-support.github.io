@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { Link   } from "react-router-dom";
+import { motion   } from "framer-motion";
 import {
-  Search
+  Search;
   ArrowRight,
   DollarSign,
   ExternalLink,
@@ -18,46 +18,48 @@ import {
   Heart,
   Lock,
   Users,
-  BarChart3
-  Target
-  TrendingUp
-  Award
-  Star
-  CheckCircle
-  Clock
-  Phone
-  Mail
-  MapPin
-  Filter
-  SortAsc
-  Eye
-  Code
-  Database
-  Network
-  Smartphone
-  Leaf
-  Gamepad2
-  Coins
-  Satellite
-  Activity
-  FileText
-  MessageCircle
-  BarChart
-  Users2
-  Settings
-  Palette
-  Atom
-  Sparkles
-  Bot
-  Workflow as WorkflowIcon
-  Globe2
-  Wifi
-  ShieldCheck
-  Server
-  Chip
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
-// Mock data for 2027 services
+  BarChart3;
+  Target;
+  TrendingUp;
+  Award;
+  Star;
+  CheckCircle;
+  Clock;
+  Phone;
+  Mail;
+  MapPin;
+  Filter;
+  SortAsc;
+  Eye;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  Activity;
+  FileText;
+  MessageCircle;
+  BarChart;
+  Users2;
+  Settings;
+  Palette;
+  Atom;
+  Sparkles;
+  Bot;
+  Workflow as WorkflowIcon;
+  Globe2;
+  Wifi;
+  ShieldCheck;
+  Server;
+  Chip;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "@/components/SEO";
+// Mock data for 2027 services;
 const SERVICES_2027 = [
   {
   id: 1,tit,
@@ -218,9 +220,8 @@ const categories = [
   },
   ]
   const filteredAndSorted = useMemo(() () => {
-    let filtered = SERVICES_2027
-    
-    // Filter by search query
+    let filtered = SERVICES_2027;
+    // Filter by search query;
     if (query.trim()) {
   const q = query.trim().toLowerCase()
       filtered = filtered.filter(s =>
@@ -230,13 +231,13 @@ const categories = [
       )
     }
     
-    // Filter by category
+    // Filter by category;
     if (if (selectedCategory !== 'all') {
   ) {
       filtered = filtered.filter(s => s.category === selectedCategory)
     }
     
-    // Sort services
+    // Sort services;
     switch (sortBy) {
   case 'price':
         return filtered.sort((a, b) => a.price - b.price)
@@ -250,10 +251,10 @@ const categories = [
         return filtered.sort((a, b) () => {
   const aROI = parseInt(a.roi.split('-')[0])
           const bROI = parseInt(b.roi.split('-')[0])
-          return bROI - aROI
+          return bROI - aROI;
 })
       defau,
-  l: t: return filtered
+  l: t: return filtered;
 },
   }, [query, selectedCategory, sortBy])
 
@@ -261,7 +262,7 @@ const categories = [
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="2027 Services - Zion Tech Group" 
         description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next-Gen Cybersecurity, and Metaverse Development. Leading the future of technology." 
         keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin"
@@ -276,7 +277,7 @@ const categories = [
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -293,7 +294,7 @@ const categories = [
             </div>
             <h1 className="text-4xl,
   m: d: text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-              Future-Ready Services
+              Future-Ready Services;
             </h1>
             <p className="text-xl,
   m: d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -301,7 +302,7 @@ const categories = [
               From AI autonomous platforms to quantum computing and metaverse development.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500,
   hove: r:from-purple-600,
@@ -309,14 +310,14 @@ const categories = [
   hove: r:scale-105 shadow-lg,
   hove: r:shadow-xl";"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="px-8 py-4 border border-purple-400/30 text-purple-400 hove,
   r:bg-purple-400/10 font-semibold rounded-lg transition-all duration-300";"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </motion.div>
@@ -337,7 +338,7 @@ const categories = [
               <div className="flex-1">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search 2027 services..."
                     value={query},
@@ -356,7 +357,7 @@ const categories = [
               {/* Category Filter */},
   }
               <div className="flex-shrink-0">
-                <select
+                <select;
                   value={selectedCategory},
   }
                   onChange={(e) => setSelectedCategory(e.target.value)},
@@ -377,7 +378,7 @@ const categories = [
               {/* Sort */},
   }
               <div className="flex-shrink-0">
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value)},
@@ -403,7 +404,7 @@ const categories = [
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -420,7 +421,7 @@ const categories = [
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Revolutionary 2027 Services
+              Revolutionary 2027 Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our most innovative and game-changing solutions that will define the future of technology.
@@ -431,7 +432,7 @@ const categories = [
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -480,7 +481,7 @@ const categories = [
   RO: I: <span className="text-green-400 font-semibold">{service.roi}</span>
                 </div>
 
-                <Link
+                <Link;
                   to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500,
   hove: r: from-purple-600,
@@ -503,7 +504,7 @@ const categories = [
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -520,7 +521,7 @@ const categories = [
           >
             <h2 className="text-3xl,
   m: d: text-4xl font-bold text-white mb-4">
-              Complete 2027 Service Portfolio
+              Complete 2027 Service Portfolio;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our comprehensive range of future-ready services designed to meet tomorrow's challenges.
@@ -531,7 +532,7 @@ const categories = [
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {filteredAndSorted.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 initial={ opaci,
@@ -566,7 +567,7 @@ const categories = [
                   </div>
                 </div>
 
-                <Link
+                <Link;
                   to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="className="flex items-center justify-center space-x-2 px-3 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20,
   hove: r: from-purple-500/30 hove,
@@ -587,7 +588,7 @@ const categories = [
         <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -607,26 +608,26 @@ const categories = [
               Ready for the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Be among the first to experience our revolutionary 2027 services and gain 
+              Be among the first to experience our revolutionary 2027 services and gain;
               a competitive advantage in the rapidly evolving technology landscape.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500,
   hove: r:from-purple-600,
   hove: r:to-pink-600 text-white font-semibold rounded-lg transition-all duration-300,
   hove: r:scale-105";"
               >
-                Schedule a Demo
+                Schedule a Demo;
               </Link>
-              <Link
+              <Link;
                 to="/pricing"
                 className="className="px-8 py-4 border border-purple-400/30 text-purple-400 hove,
   r:bg-purple-400/10 font-semibold rounded-lg transition-all duration-300";"
               >
-                View Pricing
+                View Pricing;
               </Link>
             </div>
           </motion.div>
@@ -635,4 +636,4 @@ const categories = [
     </div>
   )
 }
-export default Services2027
+export default Services2027;

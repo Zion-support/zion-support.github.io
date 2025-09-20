@@ -1,31 +1,33 @@
 import React from "react"
 import SEO from "../components/SEO"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Code
-  Search
-  Filter
-  ArrowRight
-  Download
-  ExternalLink
-  Brain
-  Cloud
-  Shield
-  Sparkles
-  Zap
-  Globe
-  Target
-  TrendingUp
-  CheckCircle
-  Clock
-  User
-  Star
-  Terminal
-  Key
-  Database
-  Lock
-} from "lucide-react"
+  Code;
+  Search;
+  Filter;
+  ArrowRight;
+  Download;
+  ExternalLink;
+  Brain;
+  Cloud;
+  Shield;
+  Sparkles;
+  Zap;
+  Globe;
+  Target;
+  TrendingUp;
+  CheckCircle;
+  Clock;
+  User;
+  Star;
+  Terminal;
+  Key;
+  Database;
+  Lock;
+}
+}
+ } from "lucide-react";
 const,
   AP: I: React.FC = () () => {
   const endpoints = [
@@ -90,7 +92,7 @@ const,
   l: e: 'Text Analysis',langua,
   g: e: 'Python',descripti,
   o: n: 'Analyze text sentiment and extract insights using our AI API.',co,
-  d: e: `import requests
+  d: e: `import requests;
 response = requests.post('http,
   s://api.ziontechgroup.com/v1/ai/analyze', json={
   "text": "Your text here"
@@ -121,7 +123,7 @@ const createInstance = async () () => {
   z: e: 'medium',regi,
   o: n: 'us-east-1'
 })
-    return response.data
+    return response.data;
 },`
       catego,
   r: y: 'Cloud & DevOps'
@@ -131,7 +133,7 @@ const createInstance = async () () => {
   l: e: 'Security Threat Detection',langua,
   g: e: 'Python',descripti,
   o: n: 'Implement real-time threat detection using our security API.',co,
-  d: e: `import requests
+  d: e: `import requests;
 def check_threat(ip_address):
     url = "http,
   s://api.ziontechgroup.com/v1/security/threat-check"
@@ -139,7 +141,7 @@ def check_threat(ip_address):
   }
 
     response = requests.post(url, json={
-  "ip": ip_address
+  "ip": ip_address;
         "check_type": "comprehensive"
 })
 
@@ -173,7 +175,7 @@ def check_threat(ip_address):
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="API Reference - Zion Tech Group"
         description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
       />
@@ -187,7 +189,7 @@ def check_threat(ip_address):
         <div className="relative max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -206,13 +208,13 @@ def check_threat(ip_address):
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Developer
+              Developer;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400">
-                API Reference
+                API Reference;
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Integrate Zion Tech Group's cutting-edge services into your applications
+              Integrate Zion Tech Group's cutting-edge services into your applications;
               with our comprehensive RESTful APIs. Build, deploy, and scale with confidence.
             </p>
             
@@ -222,11 +224,11 @@ def check_threat(ip_address):
   hove: r:from-blue-400,
   hove: r:to-cyan-500 transition-all duration-200,
   hove: r:scale-105 shadow-lg shadow-blue-500/20">
-                Get API Key
+                Get API Key;
               </button>
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hove,
   r:bg-blue-400/10 transition-all duration-200">
-                View Documentation
+                View Documentation;
               </button>
             </div>
           </motion.div>
@@ -237,7 +239,7 @@ def check_threat(ip_address):
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -250,10 +252,10 @@ def check_threat(ip_address):
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              API Features
+              API Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful tools for developers to build amazing applications
+              Powerful tools for developers to build amazing applications;
             </p>
           </motion.div>
 
@@ -261,7 +263,7 @@ def check_threat(ip_address):
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -293,7 +295,7 @@ def check_threat(ip_address):
   }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -306,10 +308,10 @@ def check_threat(ip_address):
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Code Examples
+              Code Examples;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Get started quickly with our comprehensive code examples
+              Get started quickly with our comprehensive code examples;
             </p>
           </motion.div>
 
@@ -317,7 +319,7 @@ def check_threat(ip_address):
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {codeExamples.map((example, index) => (
-  <motion.div
+  <motion.div;
                 key={example.title},
   }
                 initial={ opaci,
@@ -360,7 +362,7 @@ def check_threat(ip_address):
   }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -373,17 +375,17 @@ def check_threat(ip_address):
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              SDKs & Libraries
+              SDKs & Libraries;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Official SDKs for popular programming languages
+              Official SDKs for popular programming languages;
             </p>
           </motion.div>
 
           <div className="grid,
   m: d:grid-cols-3 gap-8">
             {sdks.map((sdk, index) => (
-  <motion.div
+  <motion.div;
                 key={sdk.name},
   }
                 initial={ opaci,
@@ -404,7 +406,7 @@ def check_threat(ip_address):
                   <sdk.icon className="w-6 h-6 text-blue-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>
-                <a
+                <a;
                   href={sdk.link},
   }
                   target="_blank"
@@ -424,7 +426,7 @@ def check_threat(ip_address):
   }
       <section className="py-20 px-4 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -439,7 +441,7 @@ def check_threat(ip_address):
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of developers building amazing applications with our APIs
+              Join thousands of developers building amazing applications with our APIs;
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
@@ -447,11 +449,11 @@ def check_threat(ip_address):
   hove: r:from-blue-400,
   hove: r:to-cyan-500 transition-all duration-200,
   hove: r:scale-105">
-                Get Your API Key
+                Get Your API Key;
               </button>
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hove,
   r:bg-blue-400/10 transition-all duration-200">
-                View Full Documentation
+                View Full Documentation;
               </button>
             </div>
           </motion.div>
@@ -460,4 +462,4 @@ def check_threat(ip_address):
     </div>
   )
 }
-export default API
+export default API;

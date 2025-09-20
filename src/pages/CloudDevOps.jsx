@@ -1,29 +1,32 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Cloud
+  Cloud;
   Server,
   GitFork,
   Zap,
   Shield,
   CheckCircle,
   ArrowRight,
-  Star
-  Users
-  Award
-  Globe
-  Lock
-  Activity
-  Clock
-  Eye
-  Database
-  Smartphone
-  Monitor
-  Code
-  FileText
-  Truck
-  Wrench
-} from "lucide-react"
+  Star;
+  Users;
+  Award;
+  Globe;
+  Lock;
+  Activity;
+  Clock;
+  Eye;
+  Database;
+  Smartphone;
+  Monitor;
+  Code;
+  FileText;
+  Truck;
+  Wrench;
+}
+}
+ } from "lucide-react";
 const cloudDevOpsSolutions = [
   {
   id: 1,tit,
@@ -250,7 +253,7 @@ export default function CloudDevOps() {
   const categories = [['AllCloud Infrastructure', 'DevOpsContainerization', 'IaCMonitoring', 'Security'],
   ]
   const filteredSolutions = selectedCategory === 'All' 
-    ? cloudDevOpsSolutions 
+    ? cloudDevOpsSolutions;
     : cloudDevOpsSolutions.filter(solution => solution.category === selectedCategory)
   return (
     <div className="min-h-screen bg-futuristic">
@@ -264,7 +267,7 @@ export default function CloudDevOps() {
         </div>
         
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -276,7 +279,7 @@ export default function CloudDevOps() {
   }
             className="className="text-center max-w-4xl mx-auto";"
           >
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -296,7 +299,7 @@ export default function CloudDevOps() {
             
             <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Cloud & DevOps
+              Cloud & DevOps;
               <span className="text-gradient block">Solutions</span>
             </h1>
             
@@ -327,7 +330,7 @@ export default function CloudDevOps() {
   }
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -341,7 +344,7 @@ export default function CloudDevOps() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Cloud Platforms We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive support for leading cloud platforms and technologies
+              Comprehensive support for leading cloud platforms and technologies;
             </p>
           </motion.div>
 
@@ -349,7 +352,7 @@ export default function CloudDevOps() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {cloudPlatforms.map((platform, index) => (
-  <motion.div
+  <motion.div;
                 key={platform.name},
   }
                 initial={ opaci,
@@ -390,7 +393,7 @@ export default function CloudDevOps() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -404,7 +407,7 @@ export default function CloudDevOps() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              A proven methodology that ensures successful cloud and DevOps implementation
+              A proven methodology that ensures successful cloud and DevOps implementation;
             </p>
           </motion.div>
 
@@ -412,7 +415,7 @@ export default function CloudDevOps() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-  <motion.div
+  <motion.div;
                 key={step.step},
   }
                 initial={ opaci,
@@ -453,7 +456,7 @@ export default function CloudDevOps() {
   }
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -467,7 +470,7 @@ export default function CloudDevOps() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Cloud & DevOps Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive solutions designed to modernize your infrastructure and development processes
+              Comprehensive solutions designed to modernize your infrastructure and development processes;
             </p>
           </motion.div>
 
@@ -475,14 +478,14 @@ export default function CloudDevOps() {
   }
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
-  <button
+  <button;
                 key={category},
   }
                 onClick={onClick={() => setSelectedCategory(category)},
   },
   }
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-  selectedCategory === category
+  selectedCategory === category;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20,
   hove: r:border-zion-cyan/40'
@@ -498,7 +501,7 @@ export default function CloudDevOps() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
                 key={solution.id},
   }
                 initial={ opaci,
@@ -535,7 +538,7 @@ export default function CloudDevOps() {
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.platforms.slice(0, 2).map((platform, platIndex) => (
-  <span
+  <span;
                       key={platIndex},
   }
                       className="className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30";"
@@ -572,7 +575,7 @@ export default function CloudDevOps() {
   }
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -586,7 +589,7 @@ export default function CloudDevOps() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Organizations that have transformed their operations with our cloud and DevOps solutions
+              Organizations that have transformed their operations with our cloud and DevOps solutions;
             </p>
           </motion.div>
 
@@ -594,7 +597,7 @@ export default function CloudDevOps() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
-  <motion.div
+  <motion.div;
                 key={story.id},
   }
                 initial={ opaci,
@@ -652,7 +655,7 @@ export default function CloudDevOps() {
   }
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -666,28 +669,28 @@ export default function CloudDevOps() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Infrastructure?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how our cloud and DevOps solutions can modernize your infrastructure
+              Let's discuss how our cloud and DevOps solutions can modernize your infrastructure;
               automate your processes, and scale your applications.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl,
   hove: r:shadow-lg,
   hove: r:shadow-zion-cyan/25 transition-all duration-300,
   transform: hover:scale-105";"
               >
-                Start Your Project
+                Start Your Project;
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </a>
             </div>
           </motion.div>

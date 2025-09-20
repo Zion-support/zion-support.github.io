@@ -1,7 +1,7 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
+import { SEO     } from "@/components/SEO";
 import {
-  Heart
+  Heart;
   Brain,
   Eye,
   CheckCircle,
@@ -10,19 +10,23 @@ import {
   Clock,
   Phone,
   Mail,
-  MapPin
-  Shield
-  TrendingUp
-  BarChart3
-  Activity
-  Stethoscope
-  Microscope
-  X
-  Scan
-  FileText
-  Users
-  Zap
-} from "lucide-react"
+  MapPin;
+  Shield;
+  TrendingUp;
+  BarChart3;
+  Activity;
+  Stethoscope;
+  Microscope;
+  X;
+  Scan;
+  FileText;
+  Users;
+  Zap;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIHealthcareDiagnostics() {
   const features = [
   {
@@ -72,7 +76,7 @@ export default function AIHealthcareDiagnostics() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="AI-Powered Healthcare Diagnostics Platform | Zion Tech Group"
         description="Transform healthcare with AI-powered medical imaging analysis, early disease detection, and clinical decision support. 96% accuracy, HIPAA compliant, and FDA ready."
         keywords="AI healthcare, medical imaging, diagnostics, radiology, clinical AI, medical AI"
@@ -87,11 +91,11 @@ export default function AIHealthcareDiagnostics() {
           <h1 className="text-4xl m,
   d:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent">
-              AI-Powered Healthcare
+              AI-Powered Healthcare;
             </span>
             <br />
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Diagnostics Platform
+              Diagnostics Platform;
             </span>
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
@@ -108,7 +112,7 @@ export default function AIHealthcareDiagnostics() {
               <a href="t,
   e: l:+13024640950" className="hov,
   e: r:text-cyan-400 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -116,14 +120,14 @@ export default function AIHealthcareDiagnostics() {
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="hov,
   e: r:text-cyan-400 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
           </div>
           
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com?subject=AI Healthcare Diagnostics Demo Request"
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg,
@@ -132,9 +136,9 @@ export default function AIHealthcareDiagnostics() {
   transform: hover:scale-105";"
             >
               <ArrowRight className="w-5 h-5 mr-2" />
-              Request Demo
+              Request Demo;
             </a>
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
@@ -142,7 +146,7 @@ export default function AIHealthcareDiagnostics() {
   r:text-white transition-all duration-300";"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call Now
+              Call Now;
             </a>
           </div>
         </div>
@@ -214,14 +218,14 @@ export default function AIHealthcareDiagnostics() {
                 </ul>
 
                 <div className="text-center">
-                  <a
+                  <a;
                     href="mail,
   t: o: kleber@ziontechgroup.com?subject=Healthcare Diagnostics Pricing Inquiry"
                     className="className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg,
   hove: r:from-pink-600 hove,
   r:to-red-700 transition-all duration-300 w-full justify-center";"
                   >
-                    Get Started
+                    Get Started;
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
@@ -247,7 +251,7 @@ export default function AIHealthcareDiagnostics() {
           
           <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-            <a
+            <a;
               href="mail,
   t: o:kleber@ziontechgroup.com?subject=AI Healthcare Diagnostics Demo Request"
               className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg,
@@ -256,9 +260,9 @@ export default function AIHealthcareDiagnostics() {
   transform: hover:scale-105";"
             >
               <ArrowRight className="w-5 h-5 mr-2" />
-              Request Demo
+              Request Demo;
             </a>
-            <a
+            <a;
               href="t,
   e: l:+13024640950"
               className="className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
@@ -266,7 +270,7 @@ export default function AIHealthcareDiagnostics() {
   r:text-white transition-all duration-300";"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </a>
           </div>
         </div>

@@ -1,9 +1,10 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../components/SEO"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
+import { Link   } from "react-router-dom";
 import {
-  Store
+  Store;
   Search,
   Filter,
   Grid,
@@ -30,187 +31,189 @@ import {
   CheckCircle,
   ArrowRight,
   ChevronDown,
-  ChevronUp
-  Zap
-  Globe
-  Target
-  BarChart3
-  Settings
-  Palette
-  Cpu
-  HardDrive
-  Network
-  Lightbulb
-  Settings as Cog
-  FileText
-  Video
-  Headphones
-  Calendar
-  Clock
-  DollarSign
-  Percent
-  Tag
-  ExternalLink
-  Mail
-  Phone
-  MapPin
-  MessageCircle
-  HelpCircle
-  Info
-  AlertTriangle
-  X
-  Plus
-  Minus
-  RefreshCw
-  RotateCcw
-  Maximize2
-  Minimize2
-  Volume2
-  VolumeX
-  Power
-  PowerOff
-  Battery
-  BatteryCharging
-  BatteryFull
-  BatteryLow
-  BatteryMedium
-  BatteryEmpty
-  Wifi
-  WifiOff
-  Signal
-  SignalOff
-  Bluetooth
-  BluetoothOff
-  Lock
-  Unlock
-  Key
-  Fingerprint
-  QrCode
-  Barcode
-  Camera
-  Image
-  File
-  Folder
-  Archive
-  Trash2
-  Edit
-  Copy
-  Share
-  Link as LinkIcon
-  Bookmark
-  BookmarkPlus
-  BookmarkMinus
-  Flag
-  Report
-  ThumbsUp
-  ThumbsDown
-  Smile
-  Frown
-  Meh
-  Heart as HeartIcon
-  HeartOff
-  HeartHandshake
-  Gift
-  CreditCard
-  Wallet
-  Receipt
-  Calculator
-  TrendingDown
-  Activity
-  PieChart
-  LineChart
-  BarChart
-  ScatterChart
-  Radar
-  Gauge
-  Thermometer
-  Droplets
-  Sun
-  Moon
-  Cloud
-  CloudRain
-  CloudLightning
-  CloudSnow
-  Wind
-  Umbrella
-  Snowflake
-  Fire
-  Leaf
-  Tree
-  Flower
-  Seedling
-  Sprout
-  Plant
-  TreePine
-  Mountain
-  MountainSnow
-  Volcano
-  Island
-  Beach
-  Desert
-  Forest
-  Jungle
-  Ocean
-  River
-  Lake
-  Water
-  Fish
-  Bird
-  Cat
-  Dog
-  Horse
-  Cow
-  Pig
-  Sheep
-  Goat
-  Chicken
-  Duck
-  Turkey
-  Eagle
-  Hawk
-  Owl
-  Crow
-  Sparrow
-  Robin
-  Bluebird
-  Cardinal
-  Goldfinch
-  Hummingbird
-  Woodpecker
-  Seagull
-  Pelican
-  Flamingo
-  Penguin
-  Ostrich
-  Emu
-  Kiwi
-  Toucan
-  Parrot
-  Macaw
-  Cockatoo
-  Canary
-  Finch
-  Sparrow
-  Robin
-  Bluebird
-  Cardinal
-  Goldfinch
-  Hummingbird
-  Woodpecker
-  Seagull
-  Pelican
-  Flamingo
-  Penguin
-  Ostrich
-  Emu
-  Kiwi
-  Toucan
-  Parrot
-  Macaw
-  Cockatoo
-  Canary
-  Finch
-} from "lucide-react"
+  ChevronUp;
+  Zap;
+  Globe;
+  Target;
+  BarChart3;
+  Settings;
+  Palette;
+  Cpu;
+  HardDrive;
+  Network;
+  Lightbulb;
+  Settings as Cog;
+  FileText;
+  Video;
+  Headphones;
+  Calendar;
+  Clock;
+  DollarSign;
+  Percent;
+  Tag;
+  ExternalLink;
+  Mail;
+  Phone;
+  MapPin;
+  MessageCircle;
+  HelpCircle;
+  Info;
+  AlertTriangle;
+  X;
+  Plus;
+  Minus;
+  RefreshCw;
+  RotateCcw;
+  Maximize2;
+  Minimize2;
+  Volume2;
+  VolumeX;
+  Power;
+  PowerOff;
+  Battery;
+  BatteryCharging;
+  BatteryFull;
+  BatteryLow;
+  BatteryMedium;
+  BatteryEmpty;
+  Wifi;
+  WifiOff;
+  Signal;
+  SignalOff;
+  Bluetooth;
+  BluetoothOff;
+  Lock;
+  Unlock;
+  Key;
+  Fingerprint;
+  QrCode;
+  Barcode;
+  Camera;
+  Image;
+  File;
+  Folder;
+  Archive;
+  Trash2;
+  Edit;
+  Copy;
+  Share;
+  Link as LinkIcon;
+  Bookmark;
+  BookmarkPlus;
+  BookmarkMinus;
+  Flag;
+  Report;
+  ThumbsUp;
+  ThumbsDown;
+  Smile;
+  Frown;
+  Meh;
+  Heart as HeartIcon;
+  HeartOff;
+  HeartHandshake;
+  Gift;
+  CreditCard;
+  Wallet;
+  Receipt;
+  Calculator;
+  TrendingDown;
+  Activity;
+  PieChart;
+  LineChart;
+  BarChart;
+  ScatterChart;
+  Radar;
+  Gauge;
+  Thermometer;
+  Droplets;
+  Sun;
+  Moon;
+  Cloud;
+  CloudRain;
+  CloudLightning;
+  CloudSnow;
+  Wind;
+  Umbrella;
+  Snowflake;
+  Fire;
+  Leaf;
+  Tree;
+  Flower;
+  Seedling;
+  Sprout;
+  Plant;
+  TreePine;
+  Mountain;
+  MountainSnow;
+  Volcano;
+  Island;
+  Beach;
+  Desert;
+  Forest;
+  Jungle;
+  Ocean;
+  River;
+  Lake;
+  Water;
+  Fish;
+  Bird;
+  Cat;
+  Dog;
+  Horse;
+  Cow;
+  Pig;
+  Sheep;
+  Goat;
+  Chicken;
+  Duck;
+  Turkey;
+  Eagle;
+  Hawk;
+  Owl;
+  Crow;
+  Sparrow;
+  Robin;
+  Bluebird;
+  Cardinal;
+  Goldfinch;
+  Hummingbird;
+  Woodpecker;
+  Seagull;
+  Pelican;
+  Flamingo;
+  Penguin;
+  Ostrich;
+  Emu;
+  Kiwi;
+  Toucan;
+  Parrot;
+  Macaw;
+  Cockatoo;
+  Canary;
+  Finch;
+  Sparrow;
+  Robin;
+  Bluebird;
+  Cardinal;
+  Goldfinch;
+  Hummingbird;
+  Woodpecker;
+  Seagull;
+  Pelican;
+  Flamingo;
+  Penguin;
+  Ostrich;
+  Emu;
+  Kiwi;
+  Toucan;
+  Parrot;
+  Macaw;
+  Cockatoo;
+  Canary;
+  Finch;
+}
+}
+ } from "lucide-react";
 export default function Marketplace() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -266,7 +269,7 @@ export default function Marketplace() {
   },
   ]
   const marketplaceItems = [
-  // AI & Machine Learning
+  // AI & Machine Learning;
     {
   id: 'ai-chatbot',na,
   m: e: 'AI Chatbot Platform',catego,
@@ -345,7 +348,7 @@ export default function Marketplace() {
   o: n: 'http,
   s://docs.ziontechgroup.com/computer-vision'
 }
-    // Cloud Solutions
+    // Cloud Solutions;
     {
   id: 'cloud-migration',na,
   m: e: 'Cloud Migration Service',catego,
@@ -399,7 +402,7 @@ export default function Marketplace() {
   o: n: 'http,
   s://docs.ziontechgroup.com/kubernetes-manager'
 }
-    // Security & Compliance
+    // Security & Compliance;
     {
   id: 'threat-detection',na,
   m: e: 'Advanced Threat Detection',catego,
@@ -453,7 +456,7 @@ export default function Marketplace() {
   o: n: 'http,
   s://docs.ziontechgroup.com/compliance-audit'
 }
-    // Data & Analytics
+    // Data & Analytics;
     {
   id: 'data-warehouse',na,
   m: e: 'Data Warehouse Solution',catego,
@@ -506,7 +509,7 @@ export default function Marketplace() {
   o: n: 'http,
   s://docs.ziontechgroup.com/bi-dashboard'
 }
-    // Development Tools
+    // Development Tools;
     {
   id: 'code-generator',na,
   m: e: 'AI Code Generator',catego,
@@ -559,7 +562,7 @@ export default function Marketplace() {
   o: n: 'http,
   s://docs.ziontechgroup.com/api-gateway'
 }
-    // Hardware & Equipment
+    // Hardware & Equipment;
     {
   id: 'edge-computing',na,
   m: e: 'Edge Computing Device',catego,
@@ -623,15 +626,15 @@ export default function Marketplace() {
   setExpandedItem(expandedItem === itemId ? null : itemId)
   }
   const filteredItems = marketplaceItems.filter(item () => {
-  if (selectedCategory !== 'all' && item.category !== selectedCategory) return false
-    if (selectedType !== 'all' && item.type !== selectedType) return false
+  if (selectedCategory !== 'all' && item.category !== selectedCategory) return false;
+    if (selectedType !== 'all' && item.type !== selectedType) return false;
     if (if (searchQuery) {
   ) {
       return item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
              item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
              item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
     }
-    return true
+    return true;
 })
 
   const getCategoryColor = (catego,
@@ -672,8 +675,7 @@ export default function Marketplace() {
   const stars = [[],
   ]
     const fullStars = Math.floor(rating)
-    const hasHalfStar = rating % 1 !== 0
-    
+    const hasHalfStar = rating % 1 !== 0;
     for (let i = 0, i < fullStars, i++) {
   stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />)
     }
@@ -688,12 +690,12 @@ const emptyStars = 5 - Math.ceil(rating)
   stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />)
     }
     
-    return stars
+    return stars;
 }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Marketplace - Zion Tech Group"
         description="Discover innovative technology solutions, software, services, and hardware in our comprehensive marketplace. Find the perfect tools for your business needs."
       />
@@ -703,7 +705,7 @@ const emptyStars = 5 - Math.ceil(rating)
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -723,7 +725,7 @@ const emptyStars = 5 - Math.ceil(rating)
               Technology <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketplace</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Discover innovative solutions, cutting-edge software, professional services
+              Discover innovative solutions, cutting-edge software, professional services;
               and enterprise hardware to accelerate your digital transformation.
             </p>
           </motion.div>
@@ -742,7 +744,7 @@ const emptyStars = 5 - Math.ceil(rating)
               <div className="flex-1">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search marketplace items..."
                     value={searchQuery},
@@ -761,7 +763,7 @@ const emptyStars = 5 - Math.ceil(rating)
               {/* Category Filter */},
   }
               <div className="lg:w-48">
-                <select
+                <select;
                   value={selectedCategory},
   }
                   onChange={(e) => setSelectedCategory(e.target.value)},
@@ -783,7 +785,7 @@ const emptyStars = 5 - Math.ceil(rating)
               {/* Type Filter */},
   }
               <div className="lg:w-48">
-                <select
+                <select;
                   value={selectedType},
   }
                   onChange={(e) => setSelectedType(e.target.value)},
@@ -805,7 +807,7 @@ const emptyStars = 5 - Math.ceil(rating)
               {/* View Mode Toggle */},
   }
               <div className="flex items-center gap-2">
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -818,7 +820,7 @@ const emptyStars = 5 - Math.ceil(rating)
                 >
                   <Grid className="w-5 h-5" />
                 </button>
-                <button
+                <button;
                   onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -841,7 +843,7 @@ const emptyStars = 5 - Math.ceil(rating)
   }
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -861,7 +863,7 @@ const emptyStars = 5 - Math.ceil(rating)
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {featuredItems.map((item, index) => (
-  <motion.div
+  <motion.div;
                 key={item.id},
   }
                 initial={ opaci,
@@ -944,7 +946,7 @@ const emptyStars = 5 - Math.ceil(rating)
                       ))}
                     </div>
                     
-                    <button
+                    <button;
                       onClick={onClick={() => toggleItemExpansion(item.id)},
   },
   }
@@ -958,7 +960,7 @@ const emptyStars = 5 - Math.ceil(rating)
                     </button>
                     
                     {expandedItem === item.id && (
-  <motion.div
+  <motion.div;
                         initial={ opaci,
   t: y: 0, heig,
   h: t: 0 },
@@ -992,7 +994,7 @@ const emptyStars = 5 - Math.ceil(rating)
                         
                         <div className="flex flex-col,
   s: m:flex-row gap-2">
-                          <a
+                          <a;
                             href={item.demo},
   }
                             target="_blank"
@@ -1001,9 +1003,9 @@ const emptyStars = 5 - Math.ceil(rating)
   hove: r:bg-blue-500/30 transition-all duration-200 text-center";"
                           >
                             <Play className="w-4 h-4 inline mr-1" />
-                            Demo
+                            Demo;
                           </a>
-                          <a
+                          <a;
                             href={item.documentation},
   }
                             target="_blank"
@@ -1012,7 +1014,7 @@ const emptyStars = 5 - Math.ceil(rating)
   hove: r:bg-purple-500/30 transition-all duration-200 text-center";"
                           >
                             <BookOpen className="w-4 h-4 inline mr-1" />
-                            Docs
+                            Docs;
                           </a>
                         </div>
                       </motion.div>
@@ -1029,7 +1031,7 @@ const emptyStars = 5 - Math.ceil(rating)
   }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -1043,7 +1045,7 @@ const emptyStars = 5 - Math.ceil(rating)
           >
             <h2 className="text-4xl font-bold text-white mb-4">All Marketplace Items</h2>
             <p className="text-xl text-gray-300">
-              Browse our complete collection of technology solutions
+              Browse our complete collection of technology solutions;
             </p>
           </motion.div>
 
@@ -1053,7 +1055,7 @@ const emptyStars = 5 - Math.ceil(rating)
   l: g:grid-cols-3 x,
   l:grid-cols-4 gap-6">
               {filteredItems.map((item, index) => (
-  <motion.div
+  <motion.div;
                   key={item.id},
   }
                   initial={ opaci,
@@ -1134,7 +1136,7 @@ const emptyStars = 5 - Math.ceil(rating)
   hove: r: from-green-500,
   hove: r:to-blue-600 transition-all duration-200 hove,
   r:scale-105 text-sm">
-                        View Details
+                        View Details;
                       </button>
                     </div>
                   </div>
@@ -1144,7 +1146,7 @@ const emptyStars = 5 - Math.ceil(rating)
           ) : (
   <div className="space-y-4">
               {filteredItems.map((item, index) => (
-  <motion.div
+  <motion.div;
                   key={item.id},
   }
                   initial={ opaci,
@@ -1237,7 +1239,7 @@ const emptyStars = 5 - Math.ceil(rating)
   hove: r:from-green-500,
   hove: r:to-blue-600 transition-all duration-200 hove,
   r:scale-105">
-                          View Details
+                          View Details;
                         </button>
                       </div>
                     </div>
@@ -1253,7 +1255,7 @@ const emptyStars = 5 - Math.ceil(rating)
   }
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -1278,16 +1280,16 @@ const emptyStars = 5 - Math.ceil(rating)
   hove: r:from-green-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105">
-                Request Custom Solution
+                Request Custom Solution;
               </button>
-              <a
+              <a;
                 href="mail,
   t: o:marketplace@ziontechgroup.com"
                 className="className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg,
   hove: r:bg-green-400 hove,
   r:text-white transition-all duration-200";"
               >
-                Contact Sales Team
+                Contact Sales Team;
               </a>
             </div>
           </motion.div>

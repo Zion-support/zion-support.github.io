@@ -1,28 +1,32 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link     } from "react-router-dom";
 import {
-  Brain
-  Cpu
-  Zap
-  Target
-  Users
-  Shield
-  TrendingUp
-  CheckCircle
-  ArrowRight
-  Play
-  Code
-  Database
-  Cloud
-  Lock
-  BarChart3
-  Eye
-  MessageSquare
-  Heart
-  DollarSign
-  Factory
-  ShoppingCart
-} from "lucide-react"
+  Brain;
+  Cpu;
+  Zap;
+  Target;
+  Users;
+  Shield;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  Code;
+  Database;
+  Cloud;
+  Lock;
+  BarChart3;
+  Eye;
+  MessageSquare;
+  Heart;
+  DollarSign;
+  Factory;
+  ShoppingCart;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function AIServices() {
   const aiServices = [
   {
@@ -128,28 +132,28 @@ export default function AIServices() {
   r: y: "Healthcare",applicatio,
   n: s: ["Medical image analysis", "Drug discovery", "Patient risk prediction"]
       ic,
-  o: n: Heart
+  o: n: Heart;
 },
   {
   indust,
   r: y: "Finance",applicatio,
   n: s: ["Fraud detection", "Credit scoring", "Algorithmic trading"]
       ic,
-  o: n: DollarSign
+  o: n: DollarSign;
 },
   {
   indust,
   r: y: "Manufacturing",applicatio,
   n: s: ["Predictive maintenance", "Quality control", "Supply chain optimization"]
       ic,
-  o: n: Factory
+  o: n: Factory;
 },
   {
   indust,
   r: y: "Retail",applicatio,
   n: s: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"]
       ic,
-  o: n: ShoppingCart
+  o: n: ShoppingCart;
 },
   ]
   return (
@@ -163,31 +167,31 @@ export default function AIServices() {
           <div className="text-center">
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI & Machine Learning
+              AI & Machine Learning;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Solutions
+                Solutions;
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence. From strategy to implementation
+              Transform your business with cutting-edge artificial intelligence. From strategy to implementation;
               we deliver AI solutions that drive real results.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-200";"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-200">
                 <Play className="mr-2 h-5 w-5" />
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </div>
@@ -211,10 +215,10 @@ export default function AIServices() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our AI Services
+              Our AI Services;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Comprehensive AI solutions designed to accelerate your digital transformation journey
+              Comprehensive AI solutions designed to accelerate your digital transformation journey;
             </p>
           </div>
 
@@ -222,7 +226,7 @@ export default function AIServices() {
   m: d:grid-cols-2 l,
   g:grid-cols-2 gap-8">
             {aiServices.map((service, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8,
@@ -255,12 +259,12 @@ export default function AIServices() {
                     <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                     <div className="text-slate-400 text-sm">{service.duration}</div>
                   </div>
-                  <Link
+                  <Link;
                     to="/contact"
                     className="className="px-6 py-2 bg-cyan-600,
   hove: r:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200";"
                   >
-                    Get Quote
+                    Get Quote;
                   </Link>
                 </div>
               </div>
@@ -278,10 +282,10 @@ export default function AIServices() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Cutting-Edge AI Technologies
+              Cutting-Edge AI Technologies;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              We leverage the latest AI frameworks and tools to deliver exceptional results
+              We leverage the latest AI frameworks and tools to deliver exceptional results;
             </p>
           </div>
 
@@ -289,7 +293,7 @@ export default function AIServices() {
   m: d:grid-cols-3 l,
   g:grid-cols-6 gap-8">
             {aiTechnologies.map((tech, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl,
@@ -315,10 +319,10 @@ export default function AIServices() {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              AI Across Industries
+              AI Across Industries;
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Discover how AI is transforming various sectors and creating new opportunities
+              Discover how AI is transforming various sectors and creating new opportunities;
             </p>
           </div>
 
@@ -326,7 +330,7 @@ export default function AIServices() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-  <div
+  <div;
                 key={index},
   }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6,
@@ -363,26 +367,26 @@ export default function AIServices() {
               Ready to Harness the Power of AI?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how AI can transform your business operations and drive growth
+              Let's discuss how AI can transform your business operations and drive growth;
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-700 transition-all duration-200";"
               >
-                Schedule Consultation
+                Schedule Consultation;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-500 hove,
   r:text-white transition-all duration-200";"
               >
-                Explore All Services
+                Explore All Services;
               </Link>
             </div>
           </div>

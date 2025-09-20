@@ -1,5 +1,5 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 interface SkeletonProps {
   className?: string,
   count?: number,
@@ -7,6 +7,10 @@ interface SkeletonProps {
   width?: string,
   rounded?: string | boolean,
   animated?: boolean,
+}
+}
+}
+}
 }
 
 export,
@@ -16,7 +20,7 @@ export,
   height = 'h-4', 
   width = 'w-full', 
   rounded = 'rounded',
-  animated = true
+  animated = true;
 }) () => {
   const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`
   if (animated) {
@@ -24,7 +28,7 @@ export,
       <>
         {Array.from({ leng,
   t: h: count }).map((_, index) => (
-          <motion.div
+          <motion.div;
             key={index}
             className={`animate-pulse ${baseClasses}`}
             animate={
@@ -49,7 +53,7 @@ export,
     <>
       {Array.from({ leng,
   t: h: count }).map((_, index) => (
-        <div
+        <div;
           key={index}
           className={`animate-pulse ${baseClasses}`}
         />
@@ -106,7 +110,11 @@ export,
 interface TableSkeletonProps {
   rows?: number,
   columns?: number,
-  className?: string
+  className?: string;
+}
+}
+}
+}
 }
 
 export function TableSkeleton({ 
@@ -139,7 +147,7 @@ export function TableSkeleton({
             <div className="flex space-x-4">
               {Array.from({ leng,
   t: h: columns }).map((_, colIndex) => (
-                <Skeleton 
+                <Skeleton;
                   key={colIndex} 
                   className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
                 />
@@ -155,13 +163,17 @@ export function TableSkeleton({
 interface ListSkeletonProps {
   items?: number,
   className?: string,
-  showAvatar?: boolean
+  showAvatar?: boolean;
+}
+}
+}
+}
 }
 
 export function ListSkeleton({ 
-  items = 5
+  items = 5;
   className = ''
-  showAvatar = false 
+  showAvatar = false;
 }: ListSkeletonProps) {
   return (
     <div className={`space-y-4 ${className}`}>
@@ -189,12 +201,16 @@ interface GridSkeletonProps {
   className?: string,
   showImage?: boolean,
 }
+}
+}
+}
+}
 
 export function GridSkeleton({ 
-  items = 6
-  columns = 3
+  items = 6;
+  columns = 3;
   className = ''
-  showImage = true 
+  showImage = true;
 }: GridSkeletonProps) {
   return (
     <div className={`grid grid-cols-1,
@@ -202,7 +218,7 @@ export function GridSkeleton({
   g:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ leng,
   t: h: items }).map((_, index) => (
-        <CardSkeleton 
+        <CardSkeleton;
           key={index} 
         />
       ))}

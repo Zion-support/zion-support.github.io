@@ -1,7 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
-import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from "lucide-react"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
+import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star     } from "lucide-react";
 import SEO from "@/components/SEO"
 const features = [
   {
@@ -48,25 +48,25 @@ const useCases = [
   tit,
   l: e: "Enterprise Management",descripti,
   o: n: "Comprehensive business management for large enterprises with multiple departments and complex operations.",ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "Startup Growth",descripti,
   o: n: "Accelerate startup growth with intelligent scaling strategies and market opportunity identification.",ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "E-commerce Optimization",descripti,
   o: n: "Optimize e-commerce operations with AI-driven inventory management and customer behavior analysis.",ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   tit,
   l: e: "Financial Services",descripti,
   o: n: "Enhance financial decision-making with real-time market analysis and risk assessment.",ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   ]
 const testimonials = [
@@ -76,7 +76,7 @@ const testimonials = [
   m: e: "Sarah Chen",ro,
   l: e: "CEO, TechFlow Solutions"
         rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   conte,
@@ -84,7 +84,7 @@ const testimonials = [
   m: e: "Michael Rodriguez",ro,
   l: e: "COO, InnovateCorp"
         rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
 export default function AIAutonomousBusinessManager() {
@@ -108,14 +108,14 @@ export default function AIAutonomousBusinessManager() {
   } className="text-center">
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4"/>
-              AI-Powered Business Management
+              AI-Powered Business Management;
             </div>
             
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              AI Autonomous
+              AI Autonomous;
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Business Manager
+                Business Manager;
               </span>
             </h1>
             
@@ -133,12 +133,12 @@ export default function AIAutonomousBusinessManager() {
   hove: r: shadow-xl,
   hove: r:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 <Play className="w-5 h-5"/>
-                Watch Demo
+                Watch Demo;
               </motion.button>
               <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300 flex items-center gap-2 justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="w-5 h-5"/>
               </Link>
             </div>
@@ -161,7 +161,7 @@ export default function AIAutonomousBusinessManager() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              Intelligent Business Management
+              Intelligent Business Management;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI system provides comprehensive business management capabilities that adapt and learn from your operations.
@@ -171,7 +171,7 @@ export default function AIAutonomousBusinessManager() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {features.map((feature, index) () => {
-  const IconComponent = feature.icon
+  const IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial={ opaci,
   t: y: 0, y: 20 },
   } whileInView={ opaci,
@@ -248,7 +248,7 @@ export default function AIAutonomousBusinessManager() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-5xl font-bold mb-6 text-white">
-              Perfect For Every Business
+              Perfect For Every Business;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From startups to enterprise corporations, our AI system adapts to your specific business needs.
@@ -259,7 +259,7 @@ export default function AIAutonomousBusinessManager() {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {useCases.map((useCase, index) () => {
-  const IconComponent = useCase.icon
+  const IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial={ opaci,
   t: y: 0, y: 20 },
   } whileInView={ opaci,
@@ -294,7 +294,7 @@ export default function AIAutonomousBusinessManager() {
   } className="text-center mb-16">
             <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 text-white">
-              What Our Clients Say
+              What Our Clients Say;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what business leaders have to say about our AI system.
@@ -351,13 +351,13 @@ export default function AIAutonomousBusinessManager() {
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold,
   hove: r:shadow-xl,
   hove: r:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5"/>
               </Link>
               <Link to="/pricing" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-300 flex items-center gap-2 justify-center">
-                View Pricing
+                View Pricing;
                 <ArrowRight className="w-5 h-5"/>
               </Link>
             </div>

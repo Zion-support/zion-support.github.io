@@ -1,20 +1,22 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Factory
+  Factory;
   Cog,
   Bot,
   TrendingUp,
   Shield,
-  Zap
-  BarChart3
-  Network
-  Eye
-  Brain
-  Cloud
-  Star
-} from "lucide-react"
-import { Link } from "react-router-dom"
+  Zap;
+  BarChart3;
+  Network;
+  Eye;
+  Brain;
+  Cloud;
+  Star;
+}
+}
+ } from "lucide-react";
+import { Link   } from "react-router-dom";
 const,
   ManufacturingSolution: s: React.FC = () () => {
   const solutions = [
@@ -73,25 +75,25 @@ const,
   tit,
   l: e: 'Increased Efficiency',descripti,
   o: n: 'Optimize production processes and reduce waste',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: 'Cost Reduction',descripti,
   o: n: 'Lower operational costs through intelligent automation',ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: 'Quality Improvement',descripti,
   o: n: 'Enhanced product quality and consistency',ic,
-  o: n: Star
+  o: n: Star;
 },
   {
   tit,
   l: e: 'Predictive Capabilities',descripti,
   o: n: 'Anticipate and prevent issues before they occur',ic,
-  o: n: Brain
+  o: n: Brain;
 },
   ]
   return (
@@ -105,7 +107,7 @@ const,
         <div className="relative max-w-7xl mx-auto px-4,
   s: m:px-6,
   l: g:px-8 pt-32 pb-16">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -124,7 +126,7 @@ const,
             </div>
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Manufacturing Solutions
+              Manufacturing Solutions;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Transform your manufacturing operations with Zion Tech Group's cutting-edge technology solutions. 
@@ -139,7 +141,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -164,7 +166,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
               key={benefit.title},
   }
               initial={ opaci,
@@ -196,7 +198,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -210,7 +212,7 @@ const,
           className="className="text-center mb-12";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Our Manufacturing Solutions
+            Our Manufacturing Solutions;
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Comprehensive technology solutions designed specifically for modern manufacturing challenges.
@@ -221,7 +223,7 @@ const,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
-  <motion.div
+  <motion.div;
               key={solution.title},
   }
               initial={ opaci,
@@ -273,7 +275,7 @@ const,
       <div className="max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={ opacit,
   y: 0, y: 20 },
   }
@@ -294,22 +296,22 @@ const,
           </p>
           <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg,
   hove: r:from-cyan-600,
   hove: r:to-blue-600 transition-all duration-200,
   transform: hover:scale-105";"
             >
-              Get Started
+              Get Started;
             </Link>
-            <Link
+            <Link;
               to="/services"
               className="className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
   hove: r:bg-cyan-400 hove,
   r:text-white transition-all duration-200";"
             >
-              View All Services
+              View All Services;
             </Link>
           </div>
         </motion.div>
@@ -317,4 +319,4 @@ const,
     </div>
   )
 }
-export default ManufacturingSolutions
+export default ManufacturingSolutions;

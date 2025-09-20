@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link     } from "react-router-dom";
 import SEO from "@/components/SEO"
-import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { motion     } from "framer-motion";
+import { ArrowRight     } from "lucide-react";
 const DigitalTransformation = () () => {
     const transformationServices = [
   {
@@ -109,9 +109,9 @@ const DigitalTransformation = () () => {
   } transition={ durati,
   o: n: 0.8 },
   }>
-            Digital
+            Digital;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Transformation
+              {" "}Transformation;
             </span>
           </motion.h1>
           <motion.p className="text-xl,
@@ -123,7 +123,7 @@ const DigitalTransformation = () () => {
   o: n: 0.8, del,
   a: y: 0.2 },
   }>
-            Embrace the future of business with our comprehensive digital transformation services 
+            Embrace the future of business with our comprehensive digital transformation services;
             designed to modernize your operations and drive sustainable growth.
           </motion.p>
           <motion.div initial={ opaci,
@@ -138,7 +138,7 @@ const DigitalTransformation = () () => {
   hove: r: from-blue-700,
   hove: r:to-cyan-700 transition-all duration-300 transform hove,
   r:scale-105">
-              Start Your Transformation
+              Start Your Transformation;
               <ArrowRight className="w-5 h-5 ml-2"/>
             </Link>
           </motion.div>
@@ -154,10 +154,10 @@ const DigitalTransformation = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our Transformation Capabilities
+              Our Transformation Capabilities;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end digital transformation solutions for modern businesses
+              End-to-end digital transformation solutions for modern businesses;
             </p>
           </div>
 
@@ -206,10 +206,10 @@ const DigitalTransformation = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Benefits of Digital Transformation
+              Benefits of Digital Transformation;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Unlock new opportunities and competitive advantages
+              Unlock new opportunities and competitive advantages;
             </p>
           </div>
           
@@ -283,10 +283,10 @@ const DigitalTransformation = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our Transformation Approach
+              Our Transformation Approach;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              A proven methodology for successful digital transformation
+              A proven methodology for successful digital transformation;
             </p>
           </div>
 
@@ -323,16 +323,16 @@ const DigitalTransformation = () () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how digital transformation can drive your business forward
+            Let's discuss how digital transformation can drive your business forward;
           </p>
           <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg,
   hove: r:from-blue-700 hove,
   r:to-cyan-700 transition-all duration-300">
-            Start Your Transformation
+            Start Your Transformation;
             <ArrowRight className="w-5 h-5 ml-2"/>
           </Link>
         </div>
       </section>
     </div>)
 }
-export default DigitalTransformation
+export default DigitalTransformation;

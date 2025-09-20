@@ -1,8 +1,8 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../../components/SEO"
+import { motion     } from "framer-motion";
+import { SEO     } from "../../components/SEO";
 import {
-  Users
+  Users;
   TrendingUp,
   Target,
   Zap,
@@ -10,21 +10,25 @@ import {
   BarChart3,
   Clock,
   Award,
-  Star
-  Globe
-  Cpu
-  Database
-  Search
-  Filter
-  Download
-  Share2
-  Phone
-  Mail
-  Calendar
-  CheckCircle
-  Shield
-  FileText
-} from "lucide-react"
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  Search;
+  Filter;
+  Download;
+  Share2;
+  Phone;
+  Mail;
+  Calendar;
+  CheckCircle;
+  Shield;
+  FileText;
+}
+}
+}
+}
+ } from "lucide-react";
 const AISalesCopilot = () () => {
   const features = [
   {
@@ -79,37 +83,37 @@ const AISalesCopilot = () () => {
   sta,
   g: e: "Lead Generation",descripti,
   o: n: "AI-powered prospecting and lead identification",ic,
-  o: n: Search
+  o: n: Search;
 },
   {
   sta,
   g: e: "Qualification",descripti,
   o: n: "Intelligent lead scoring and prioritization",ic,
-  o: n: Target
+  o: n: Target;
 },
   {
   sta,
   g: e: "Engagement",descripti,
   o: n: "Personalized communication and relationship building",ic,
-  o: n: MessageCircle
+  o: n: MessageCircle;
 },
   {
   sta,
   g: e: "Proposal",descripti,
   o: n: "AI-generated proposals and pricing optimization",ic,
-  o: n: FileText
+  o: n: FileText;
 },
   {
   sta,
   g: e: "Closing",descripti,
   o: n: "Smart negotiation support and deal acceleration",ic,
-  o: n: CheckCircle
+  o: n: CheckCircle;
 },
   {
   sta,
   g: e: "Retention",descripti,
   o: n: "Customer success and expansion opportunities",ic,
-  o: n: Users
+  o: n: Users;
 },
   ]
   const useCases = [
@@ -142,7 +146,7 @@ const AISalesCopilot = () () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Sales Copilot - Zion Tech Group"
         description="Transform your sales process with AI-powered automation, lead optimization, and intelligent sales insights. Boost revenue and efficiency."
       />
@@ -153,7 +157,7 @@ const AISalesCopilot = () () => {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -172,20 +176,20 @@ const AISalesCopilot = () () => {
             
             <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-              Supercharge Your Sales with
+              Supercharge Your Sales with;
               <span className="bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
-                {" "}AI-Powered Intelligence
+                {" "}AI-Powered Intelligence;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your sales process with intelligent automation, predictive analytics, and 
+              Transform your sales process with intelligent automation, predictive analytics, and;
               AI-driven insights that help your team close more deals and grow revenue faster.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -197,9 +201,9 @@ const AISalesCopilot = () () => {
   hove: r:to-indigo-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -209,7 +213,7 @@ const AISalesCopilot = () () => {
                 className="className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg,
   hove: r:bg-blue-400/10 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -220,7 +224,7 @@ const AISalesCopilot = () () => {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -234,10 +238,10 @@ const AISalesCopilot = () () => {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Intelligent Sales Features
+              Intelligent Sales Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Sales Copilot combines cutting-edge artificial intelligence with proven sales 
+              Our AI Sales Copilot combines cutting-edge artificial intelligence with proven sales;
               methodologies to deliver unprecedented results and efficiency.
             </p>
           </motion.div>
@@ -246,7 +250,7 @@ const AISalesCopilot = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -279,7 +283,7 @@ const AISalesCopilot = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -293,10 +297,10 @@ const AISalesCopilot = () () => {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Measurable Sales Impact
+              Measurable Sales Impact;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See real results with our AI Sales Copilot that delivers quantifiable improvements 
+              See real results with our AI Sales Copilot that delivers quantifiable improvements;
               across all aspects of your sales operations.
             </p>
           </motion.div>
@@ -307,7 +311,7 @@ const AISalesCopilot = () () => {
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -362,7 +366,7 @@ const AISalesCopilot = () () => {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -376,10 +380,10 @@ const AISalesCopilot = () () => {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              End-to-End Sales Process
+              End-to-End Sales Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Sales Copilot optimizes every stage of your sales funnel, from initial 
+              Our AI Sales Copilot optimizes every stage of your sales funnel, from initial;
               lead generation to customer retention and expansion.
             </p>
           </motion.div>
@@ -388,7 +392,7 @@ const AISalesCopilot = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {salesProcess.map((stage, index) => (
-  <motion.div
+  <motion.div;
                 key={stage.stage},
   }
                 initial={ opaci,
@@ -421,7 +425,7 @@ const AISalesCopilot = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -435,10 +439,10 @@ const AISalesCopilot = () () => {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Sales Copilot is designed to work across industries, providing tailored 
+              Our AI Sales Copilot is designed to work across industries, providing tailored;
               sales optimization solutions for your specific business needs.
             </p>
           </motion.div>
@@ -447,7 +451,7 @@ const AISalesCopilot = () () => {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.industry},
   }
                 initial={ opaci,
@@ -480,7 +484,7 @@ const AISalesCopilot = () () => {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -497,12 +501,12 @@ const AISalesCopilot = () () => {
               Ready to Transform Your Sales?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of sales teams that have already revolutionized their operations 
+              Join hundreds of sales teams that have already revolutionized their operations;
               with our AI-powered sales copilot.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -514,9 +518,9 @@ const AISalesCopilot = () () => {
   hove: r:to-indigo-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-blue-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -526,7 +530,7 @@ const AISalesCopilot = () () => {
                 className="className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg,
   hove: r: bg-blue-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>
@@ -535,4 +539,4 @@ const AISalesCopilot = () () => {
     </div>
   )
 }
-export default AISalesCopilot
+export default AISalesCopilot;

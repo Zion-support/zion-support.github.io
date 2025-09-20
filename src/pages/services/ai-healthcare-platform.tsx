@@ -1,27 +1,31 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
+import { SEO     } from "../../components/SEO";
 import {
-  Heart
+  Heart;
   Brain,
   Shield,
   Zap,
   Users,
   Clock,
   TrendingUp,
-  CheckCircle
-  Stethoscope
-  Microscope
-  Pill
-  Activity
-  Database
-  Lock
-  Globe
-  Smartphone
-  Monitor
-  AlertTriangle
-  FileText
-  BarChart3
-} from "lucide-react"
+  CheckCircle;
+  Stethoscope;
+  Microscope;
+  Pill;
+  Activity;
+  Database;
+  Lock;
+  Globe;
+  Smartphone;
+  Monitor;
+  AlertTriangle;
+  FileText;
+  BarChart3;
+}
+}
+}
+}
+ } from "lucide-react";
 const,
   AIHealthcarePlatfor: m: React.FC = () () => {
   const features = [
@@ -108,7 +112,7 @@ const,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Healthcare Platform - Zion Tech Group"
         description="Revolutionary AI-powered healthcare platform with advanced diagnostics, patient monitoring, and clinical decision support. HIPAA compliant and enterprise-ready."
       />
@@ -121,14 +125,14 @@ const,
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-cyan-400/10 border border-cyan-400/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <Heart className="w-4 h-4 mr-2" />
-              Healthcare Technology
+              Healthcare Technology;
             </div>
             <h1 className="text-5xl,
   m: d: text-6xl font-bold text-white mb-6">
-              AI Healthcare Platform
+              AI Healthcare Platform;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionizing healthcare with artificial intelligence. Our platform combines advanced AI
+              Revolutionizing healthcare with artificial intelligence. Our platform combines advanced AI;
               machine learning, and medical expertise to deliver unprecedented diagnostic accuracy,
   patient monitoring, and clinical decision support.
             </p>
@@ -138,11 +142,11 @@ const,
   hove: r:from-cyan-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg">
-                Request Demo
+                Request Demo;
               </button>
               <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-200">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -155,10 +159,10 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Healthcare Intelligence
+              Advanced Healthcare Intelligence;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform delivers cutting-edge healthcare solutions that improve patient outcomes 
+              Our AI platform delivers cutting-edge healthcare solutions that improve patient outcomes;
               and streamline medical operations.
             </p>
           </div>
@@ -194,7 +198,7 @@ const,
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Healthcare Solutions
+              Comprehensive Healthcare Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From diagnostics to patient care, our platform covers every aspect of modern healthcare delivery.
@@ -234,10 +238,10 @@ const,
   l: g:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">
-                Transform Your Healthcare Delivery
+                Transform Your Healthcare Delivery;
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Experience the future of healthcare with our AI-powered platform that delivers 
+                Experience the future of healthcare with our AI-powered platform that delivers;
                 measurable improvements in patient care and operational efficiency.
               </p>
               <div className="space-y-4">
@@ -287,7 +291,7 @@ const,
             Ready to Revolutionize Healthcare?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join leading healthcare institutions that are already transforming patient care 
+            Join leading healthcare institutions that are already transforming patient care;
             with our AI-powered platform.
           </p>
           <div className="flex flex-col,
@@ -296,11 +300,11 @@ const,
   hove: r:from-cyan-500,
   hove: r:to-blue-600 transition-all duration-200,
   hove: r:scale-105 shadow-lg">
-              Schedule Demo
+              Schedule Demo;
             </button>
             <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
   r:bg-slate-700/50 transition-all duration-200">
-              Download Brochure
+              Download Brochure;
             </button>
           </div>
         </div>
@@ -308,4 +312,4 @@ const,
     </div>
   )
 }
-export default AIHealthcarePlatform
+export default AIHealthcarePlatform;

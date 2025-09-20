@@ -21,7 +21,9 @@ export interface ComprehensiveITInfrastructureService2028 {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpe,
   c: s: {
@@ -35,12 +37,12 @@ export interface ComprehensiveITInfrastructureService2028 {
   }
   competito,
   r: s: string[],marketSi,
-  z: e: string
+  z: e: string;
 }
 
 export,
   const: COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructureService2028[] = [
-  // Next-Generation Cloud Infrastructure
+  // Next-Generation Cloud Infrastructure;
   {
   i,
   d: "next-gen-cloud-infrastructure",tit,
@@ -121,7 +123,7 @@ export,
     marketSi,
   z: e: "$1.3 trillion by 2028"
 }
-  // Zero-Trust Network Architecture
+  // Zero-Trust Network Architecture;
   {
   id: "zero-trust-network-architecture",tit,
   l: e: "Zero-Trust Network Architecture Platform",descripti,
@@ -201,7 +203,7 @@ export,
     marketSi,
   z: e: "$51.6 billion by 2028"
 }
-  // Sustainable Green IT Infrastructure
+  // Sustainable Green IT Infrastructure;
   {
   id: "sustainable-green-it-infrastructure",tit,
   l: e: "Sustainable Green IT Infrastructure Platform",descripti,
@@ -281,7 +283,7 @@ export,
     marketSi,
   z: e: "$89.2 billion by 2028"
 }
-  // Edge Computing and IoT Infrastructure
+  // Edge Computing and IoT Infrastructure;
   {
   id: "edge-computing-iot-infrastructure",tit,
   l: e: "Edge Computing and IoT Infrastructure Platform",descripti,
@@ -361,7 +363,7 @@ export,
     marketSi,
   z: e: "$155.9 billion by 2028"
 }
-  // Hybrid Multi-Cloud Management
+  // Hybrid Multi-Cloud Management;
   {
   id: "hybrid-multi-cloud-management",tit,
   l: e: "Hybrid Multi-Cloud Management Platform",descripti,

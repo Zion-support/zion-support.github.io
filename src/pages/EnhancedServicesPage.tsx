@@ -1,34 +1,37 @@
+import { useCallback  } from "react";
 import React, { useState } from "react"
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from "@/data/enhancedServices"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO   } from "@/data/enhancedServices";
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Input   } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue   } from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from "@/components/ui/tabs";
 import {
-  Search
-  Filter
-  Star
-  Clock
-  Globe
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  TrendingUp
-  Shield
-  Cloud
-  Brain
-  Database
-  Code
-  Zap
-  Heart
-  DollarSign
-  Link
-  Users
-  CheckCircle
-} from "lucide-react"
+  Search;
+  Filter;
+  Star;
+  Clock;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  TrendingUp;
+  Shield;
+  Cloud;
+  Brain;
+  Database;
+  Code;
+  Zap;
+  Heart;
+  DollarSign;
+  Link;
+  Users;
+  CheckCircle;
+}
+}
+ } from "lucide-react";
 import SEO from "@/components/SEO"
 export default function EnhancedServicesPage() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -48,7 +51,7 @@ export default function EnhancedServicesPage() {
                         (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
                         (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||
                         (selectedPriceRange === 'premium' && service.price > 25000)
-    return matchesSearch && matchesCategory && matchesPrice
+    return matchesSearch && matchesCategory && matchesPrice;
 })
   const getCategoryIcon = (catego,
   r: y: string) () => {
@@ -94,7 +97,7 @@ export default function EnhancedServicesPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
+      <SEO;
         title="Enhanced IT & AI Services - Zion Tech Group"
         description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness."
         keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group"
@@ -108,23 +111,23 @@ export default function EnhancedServicesPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl,
   m: d: text-6xl font-bold mb-6">
-            Enhanced IT & AI Services
+            Enhanced IT & AI Services;
           </h1>
           <p className="text-xl m,
   d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Comprehensive micro SAAS solutions, IT services, and AI-powered innovations to transform your business
+            Comprehensive micro SAAS solutions, IT services, and AI-powered innovations to transform your business;
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button
+            <Button;
               size="lg"
               className="className="bg-zion-cyan text-zion-blue-dark,
   hove: r: bg-zion-cyan-light";"
               onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavio,
   r: 'smooth' })}
             >
-              Explore Services
+              Explore Services;
             </Button>
-            <Button
+            <Button;
               size="lg"
               variant="outline"
               className="className="border-zion-cyan text-zion-cyan,
@@ -132,7 +135,7 @@ export default function EnhancedServicesPage() {
               onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavio,
   r: 'smooth' })}
             >
-              Get in Touch
+              Get in Touch;
             </Button>
           </div>
         </div>
@@ -143,7 +146,7 @@ export default function EnhancedServicesPage() {
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Service Pricing Tiers
+            Service Pricing Tiers;
           </h2>
           <div className="grid grid-cols-1,
   m: d:grid-cols-4 gap-6">
@@ -258,7 +261,7 @@ export default function EnhancedServicesPage() {
   m: d:flex-row gap-4">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <Input
+              <Input;
                 placeholder="Search services, technologies, or keywords..."
                 value={searchTerm},
   }
@@ -306,10 +309,10 @@ export default function EnhancedServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue mb-4">
-              {filteredServices.length} Services Available
+              {filteredServices.length} Services Available;
             </h2>
             <p className="text-zion-slate text-lg">
-              Find the perfect solution for your business needs
+              Find the perfect solution for your business needs;
             </p>
           </div>
 
@@ -331,7 +334,7 @@ export default function EnhancedServicesPage() {
                     </div>
                     {service.featured && (
   <Badge variant="default" className="bg-zion-purple">
-                        Featured
+                        Featured;
                       </Badge>
                     )}
                   </div>
@@ -387,14 +390,14 @@ export default function EnhancedServicesPage() {
                   <div className="pt-4 border-t border-zion-slate-light">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-zion-slate">By {service.author.name}</span>
-                      <Button
+                      <Button;
                         size="sm"
                         className="className="bg-zion-purple,
   hove: r: bg-zion-purple-dark text-white";"
                         onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavio,
   r: 'smooth' })}
                       >
-                        Get Quote
+                        Get Quote;
                       </Button>
                     </div>
                   </div>
@@ -410,14 +413,14 @@ export default function EnhancedServicesPage() {
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Explore by Category
+            Explore by Category;
           </h2>
           <Tabs defaultValue="ai-ml" className="w-full">
             <TabsList className="grid w-full grid-cols-2,
   m: d: grid-cols-4 l,
   g:grid-cols-6 bg-zion-blue-dark">
               {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
-  <TabsTrigger
+  <TabsTrigger;
                   key={category.value},
   }
                   value={category.value},
@@ -435,7 +438,7 @@ export default function EnhancedServicesPage() {
                 <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
-                  {ENHANCED_SERVICES
+                  {ENHANCED_SERVICES;
                     .filter(service => service.category.toLowerCase().includes(category.value.toLowerCase()))
                     .slice(0, 6)
                     .map(service => (
@@ -453,13 +456,13 @@ export default function EnhancedServicesPage() {
   {service.price?.toLocaleString()},
   }
                             </span>
-                            <Button
+                            <Button;
                               size="sm"
                               variant="outline"
                               className="className="border-zion-cyan text-zion-cyan,
   hove: r:bg-zion-cyan/10";"
                             >
-                              Learn More
+                              Learn More;
                             </Button>
                           </div>
                         </CardContent>
@@ -488,7 +491,7 @@ export default function EnhancedServicesPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Proven Expertise</h3>
               <p className="text-zion-slate-light">
-                Industry-leading solutions with proven track records and customer success stories
+                Industry-leading solutions with proven track records and customer success stories;
               </p>
             </div>
             <div className="text-center">
@@ -497,7 +500,7 @@ export default function EnhancedServicesPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Innovation First</h3>
               <p className="text-zion-slate-light">
-                Cutting-edge AI and emerging technologies to keep you ahead of the competition
+                Cutting-edge AI and emerging technologies to keep you ahead of the competition;
               </p>
             </div>
             <div className="text-center">
@@ -506,7 +509,7 @@ export default function EnhancedServicesPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Dedicated Support</h3>
               <p className="text-zion-slate-light">
-                Personalized service with dedicated account managers and 24/7 technical support
+                Personalized service with dedicated account managers and 24/7 technical support;
               </p>
             </div>
             <div className="text-center">
@@ -515,7 +518,7 @@ export default function EnhancedServicesPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">ROI Focused</h3>
               <p className="text-zion-slate-light">
-                Measurable business outcomes and rapid return on investment for all solutions
+                Measurable business outcomes and rapid return on investment for all solutions;
               </p>
             </div>
           </div>
@@ -531,7 +534,7 @@ export default function EnhancedServicesPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-12">
-              Get in touch with our experts to discuss your needs and discover how our services can drive your success
+              Get in touch with our experts to discuss your needs and discover how our services can drive your success;
             </p>
 
             <div className="grid grid-cols-1,
@@ -561,7 +564,7 @@ export default function EnhancedServicesPage() {
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Button
+              <Button;
                 size="lg"
                 className="className="bg-zion-cyan text-zion-blue-dark,
   hove: r:bg-zion-cyan-light";"
@@ -569,9 +572,9 @@ export default function EnhancedServicesPage() {
   l:${CONTACT_INFO.mobile}`, '_self')}
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now
+                Call Now;
               </Button>
-              <Button
+              <Button;
                 size="lg"
                 variant="outline"
                 className="className="border-zion-cyan text-zion-cyan,
@@ -580,9 +583,9 @@ export default function EnhancedServicesPage() {
   o:${CONTACT_INFO.email}`, '_self')}
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Send Email
+                Send Email;
               </Button>
-              <Button
+              <Button;
                 size="lg"
                 variant="outline"
                 className="className="border-zion-cyan text-zion-cyan,
@@ -592,7 +595,7 @@ export default function EnhancedServicesPage() {
   }
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
-                Visit Website
+                Visit Website;
               </Button>
             </div>
 
@@ -601,13 +604,13 @@ export default function EnhancedServicesPage() {
               <p className="text-zion-slate-light mb-4">
                 For enterprise clients, we offer custom solution development, dedicated support teams, and comprehensive implementation services.
               </p>
-              <Button
+              <Button;
                 className="className="bg-zion-purple,
   hove: r: bg-zion-purple-dark text-white";"
                 onClick={() => window.open(`mailt,
   o:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`, '_self')}
               >
-                Request Enterprise Consultation
+                Request Enterprise Consultation;
               </Button>
             </div>
           </div>

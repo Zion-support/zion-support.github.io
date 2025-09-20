@@ -3,14 +3,18 @@ interface ForumCategoryInfo {
   id: string,na,
   m: e: string,descripti,
   o: n: string,postCou,
-  n: t: number
-  adminOnly?: boolean
-  icon?: string
+  n: t: number;
+  adminOnly?: boolean;
+  icon?: string;
   lastPost?: {
   titl,
   e: string,auth,
   o: r: string,da,
-  t: e: string
+  t: e: string;
+}
+}
+}
+}
 },
   }
 
@@ -124,10 +128,10 @@ export default function ForumCategories() {
         <div className="text-center mb-16">
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-6">
-            Community Forums
+            Community Forums;
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Join discussions, share knowledge, and connect with fellow tech professionals
+            Join discussions, share knowledge, and connect with fellow tech professionals;
           </p>
         </div>
 
@@ -137,7 +141,7 @@ export default function ForumCategories() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-8">
           {categories.map((category) => (
-  <div
+  <div;
               key={category.id},
   }
               className="className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20,
@@ -150,7 +154,7 @@ export default function ForumCategories() {
                 </div>
                 {category.adminOnly && (
   <span className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
-                    Admin Only
+                    Admin Only;
                   </span>
                 )}
               </div>
@@ -169,7 +173,7 @@ export default function ForumCategories() {
               <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
-                  {category.postCount} posts
+                  {category.postCount} posts;
                 </span>
               </div>
 
@@ -196,7 +200,7 @@ export default function ForumCategories() {
         <div className="text-center mt-16">
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Join the Conversation
+              Join the Conversation;
             </h3>
             <p className="text-zion-slate-light mb-6">
               Start contributing to discussions, ask questions, and share your expertise with the community.
@@ -205,7 +209,7 @@ export default function ForumCategories() {
   hove: r: from-zion-cyan-light,
   hove: r:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hove,
   r:scale-105">
-              Start a Discussion
+              Start a Discussion;
             </button>
           </div>
         </div>

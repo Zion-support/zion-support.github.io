@@ -1,36 +1,45 @@
 interface SitemapUrl {
   u,
-  r: l: string
-  lastmod?: string
+  r: l: string;
+  lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number
+  priority?: number;
+}
+}
 }
 
 interface SitemapConfig {
   baseU,
-  r: l: string
+  r: l: string;
   url,
   s: SitemapUrl[]
-  outputPath?: string
+  outputPath?: string;
+}
+}
 }
 
 export class SitemapGenerator {
   private,
-  confi: g: SitemapConfig
+  confi: g: SitemapConfig;
   constructor(confi,
   g: SitemapConfig) {
-    this.config = config
+    this.config = config;
+}
+}
   }
 
   /**
-   * Generate XML sitemap content
+   * Generate XML sitemap content;
    */
   generateXML(): string {
-    const { baseUrl, urls } = this.config
+  
+}
+}
+    const { baseUrl, urls } = this.config;
     const xmlUrls = urls.map(url () => {
       const lastmod = url.lastmod || new Date().toISOString().split('T')[0]
       const changefreq = url.changefreq || 'weekly'
-      const priority = url.priority || 0.5
+      const priority = url.priority || 0.5;
       return `  <url>
     <loc>${baseUrl}${url.url}</loc>
     <lastmod>${lastmod}</lastmod>
@@ -46,19 +55,21 @@ ${xmlUrls}
   }
 
   /**
-   * Generate robots.txt content
+   * Generate robots.txt content;
    */
   generateRobotsTxt(): string {
-    const { baseUrl } = this.config
+  
+}
+}
+    const { baseUrl } = this.config;
     return `User-age,
   n: t: *
 All,
   o: w: /
 
-# Sitemaps
+# Sitemaps;
 Sitema,
-  p: ${baseUrl}/sitemap.xml
-
+  p: ${baseUrl}/sitemap.xml;
 # Disallow admin and private,
   areas: Disallow: /admin/
 Disall,
@@ -77,21 +88,22 @@ All,
   Allo: w: /services,
   Allo: w: /contact,
   Allo: w: /blog,
-  Allo: w: /careers
-
+  Allo: w: /careers;
 # Crawl delay (optional)
 Crawl-dela,
   y: 1`
   }
 
   /**
-   * Generate sitemap index for large sites
+   * Generate sitemap index for large sites;
    */
   generateSitemapIndex(sitema,
   p: s: string[]): string {
-    const sitemapEntries = sitemaps.map(sitemap () => {
+  const sitemapEntries = sitemaps.map(sitemap () => {
       const lastmod = new Date().toISOString().split('T')[0]
       return `  <sitemap>
+}
+}
     <loc>${sitemap}</loc>
     <lastmod>${lastmod}</lastmod>
   </sitemap>`
@@ -104,10 +116,13 @@ ${sitemapEntries}
   }
 
   /**
-   * Generate JSON-LD structured data for sitemap
+   * Generate JSON-LD structured data for sitemap;
    */
   generateStructuredData(): string {
-    const { baseUrl } = this.config
+  
+}
+}
+    const { baseUrl } = this.config;
     const structuredData = {
       "@context": "htt,
   p: s://schema.org",
@@ -133,7 +148,7 @@ ${sitemapEntries}
     return JSON.stringify(structuredData, null, 2)
   }
 
-// Default sitemap configuration for Zion Tech Group
+// Default sitemap configuration for Zion Tech Group;
 export,
   const: defaultSitemapConfig: SitemapConfig = {
   baseU,
@@ -141,7 +156,7 @@ export,
   s://ziontechgroup.com',
   ur,
   l: s: [
-    // Main pages
+    // Main pages;
     { ur,
   l: '/', priori,
   t: y: 1.0, changefr,
@@ -159,7 +174,7 @@ export,
   t: y: 0.6, changefr,
   e: q: 'weekly' },
     
-    // Service pages
+    // Service pages;
     { u,
   r: l: '/services', priori,
   t: y: 0.9, changefr,
@@ -177,7 +192,7 @@ export,
   t: y: 0.8, changefr,
   e: q: 'weekly' },
     
-    // Service showcases
+    // Service showcases;
     { u,
   r: l: '/new-innovative-services-2025', priori,
   t: y: 0.8, changefr,
@@ -195,7 +210,7 @@ export,
   t: y: 0.8, changefr,
   e: q: 'weekly' },
     
-    // Individual service pages
+    // Individual service pages;
     { u,
   r: l: '/services/ai-workflow-orchestrator', priori,
   t: y: 0.7, changefr,
@@ -221,7 +236,7 @@ export,
   t: y: 0.7, changefr,
   e: q: 'monthly' },
     
-    // Solution pages
+    // Solution pages;
     { u,
   r: l: '/ai-solutions', priori,
   t: y: 0.8, changefr,
@@ -235,7 +250,7 @@ export,
   t: y: 0.7, changefr,
   e: q: 'monthly' },
     
-    // Additional pages
+    // Additional pages;
     { u,
   r: l: '/blog', priori,
   t: y: 0.6, changefr,
@@ -274,16 +289,20 @@ export,
   e: q: 'weekly' },
   ]
 }
-// Utility function to generate sitemap
+// Utility function to generate sitemap;
 export function generateSitemap(conf,
   i: g: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config)
   return generator.generateXML()
 }
+}
+}
 
-// Utility function to generate robots.txt
+// Utility function to generate robots.txt;
 export function generateRobotsTxt(conf,
   i: g: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config)
   return generator.generateRobotsTxt()
+}
+}
 }

@@ -1,7 +1,8 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, ShieldCheck, Sparkles, Crown, Flame, Gauge, GitFork, Server, Smartphone, Database, Network, Clock, Truck, Factory, City, CheckCircle, ArrowUpRight, Play, MailIcon, BarChart3, PenTool, Key, Globe2, Car, Home } from "lucide-react"
+import { useCallback  } from "react";
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, ShieldCheck, Sparkles, Crown, Flame, Gauge, GitFork, Server, Smartphone, Database, Network, Clock, Truck, Factory, City, CheckCircle, ArrowUpRight, Play, MailIcon, BarChart3, PenTool, Key, Globe2, Car, Home   } from "lucide-react";
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-import { ThemeToggle } from "../components/ThemeToggle"
+import { Link   } from "react-router-dom";
+import { ThemeToggle   } from "../components/ThemeToggle";
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
@@ -24,10 +25,14 @@ export function AppHeader() {
     if (searchQuery.trim()) {
   setIsSearching(true)
       try {
-  await new Promise(resolve => setTimeout(resolve, 1000)), // Simulate search
+  await new Promise(resolve => setTimeout(resolve, 1000)), // Simulate search;
+}
+}
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`
 } finally {
   setIsSearching(false)
+}
+}
       },
   },
   }
@@ -73,7 +78,7 @@ export function AppHeader() {
   },
   ]
   const services = [
-  // AI & Business Intelligence
+  // AI & Business Intelligence;
     {
   na,
   m: e: 'Innovative Micro SAAS 2025',hr,
@@ -110,7 +115,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-green-500 to-emerald-500'
 }
-    // AI & Healthcare
+    // AI & Healthcare;
     {
   na,
   m: e: 'AI Healthcare Platform',hr,
@@ -129,7 +134,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-purple-500 to-pink-500'
 }
-    // AI & Legal Tech
+    // AI & Legal Tech;
     {
   na,
   m: e: 'AI Legal Contract Analyzer',hr,
@@ -139,7 +144,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-blue-500 to-indigo-500'
 }
-    // AI & Content
+    // AI & Content;
     {
   na,
   m: e: 'AI Creative Studio',hr,
@@ -158,7 +163,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-blue-500 to-indigo-500'
 }
-    // AI & Customer Support
+    // AI & Customer Support;
     {
   na,
   m: e: 'AI Customer Success Platform',hr,
@@ -177,7 +182,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-green-500 to-blue-500'
 }
-    // AI & Research
+    // AI & Research;
     {
   na,
   m: e: 'AI Research Assistant',hr,
@@ -187,7 +192,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-purple-500 to-violet-500'
 }
-    // AI & Education
+    // AI & Education;
     {
   na,
   m: e: 'AI Education Platform',hr,
@@ -197,7 +202,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-blue-500 to-indigo-500'
 }
-    // AI & HR
+    // AI & HR;
     {
   na,
   m: e: 'AI HR Platform',hr,
@@ -207,7 +212,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-indigo-500 to-blue-500'
 }
-    // AI & Entertainment
+    // AI & Entertainment;
     {
   na,
   m: e: 'AI Entertainment Platform',hr,
@@ -217,7 +222,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-purple-500 to-pink-500'
 }
-    // AI & Metaverse
+    // AI & Metaverse;
     {
   na,
   m: e: 'AI Metaverse Platform',hr,
@@ -227,7 +232,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-purple-500 to-indigo-500'
 }
-    // AI & Space Tech
+    // AI & Space Tech;
     {
   na,
   m: e: 'AI Space Technology',hr,
@@ -237,7 +242,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-indigo-500 to-purple-500'
 }
-    // AI & Green Tech
+    // AI & Green Tech;
     {
   na,
   m: e: 'AI Green Technology',hr,
@@ -247,7 +252,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-green-500 to-emerald-500'
 }
-    // Cybersecurity
+    // Cybersecurity;
     {
   na,
   m: e: 'AI Autonomous Cybersecurity',hr,
@@ -266,7 +271,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-green-500 to-blue-500'
 }
-    // Quantum Computing
+    // Quantum Computing;
     {
   na,
   m: e: 'Quantum AI Trading Platform',hr,
@@ -285,7 +290,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-purple-500 to-pink-500'
 }
-    // Blockchain & Web3
+    // Blockchain & Web3;
     {
   na,
   m: e: 'Blockchain Governance Platform',hr,
@@ -295,7 +300,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-yellow-500 to-orange-500'
 }
-    // Cloud & DevOps
+    // Cloud & DevOps;
     {
   na,
   m: e: 'Cloud Infrastructure',hr,
@@ -305,7 +310,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-blue-500 to-cyan-500'
 }
-    // IoT & Edge Computing
+    // IoT & Edge Computing;
     {
   na,
   m: e: 'IoT Edge Computing',hr,
@@ -315,7 +320,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-blue-500 to-cyan-500'
 }
-    // Digital Twin
+    // Digital Twin;
     {
   na,
   m: e: 'Digital Twin Platform',hr,
@@ -325,7 +330,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-blue-500 to-indigo-500'
 }
-    // Data Analytics
+    // Data Analytics;
     {
   na,
   m: e: 'Data Analytics',hr,
@@ -335,7 +340,7 @@ export function AppHeader() {
   e: d: true,col,
   o: r: 'from-green-500 to-emerald-500'
 }
-    // IT Infrastructure
+    // IT Infrastructure;
     {
   na,
   m: e: 'IT Infrastructure',hr,
@@ -485,7 +490,7 @@ export function AppHeader() {
   e: f: '/white-papers',ic,
   o: n: FileText,descripti,
   o: n: 'In-depth research and analysis',featur,
-  e: d: true
+  e: d: true;
 },
   {
   na,
@@ -493,7 +498,7 @@ export function AppHeader() {
   e: f: '/webinars',ic,
   o: n: Users,descripti,
   o: n: 'Expert-led learning sessions',featur,
-  e: d: true
+  e: d: true;
 },
   {
   na,
@@ -501,7 +506,7 @@ export function AppHeader() {
   e: f: '/docs',ic,
   o: n: Code,descripti,
   o: n: 'Technical guides and APIs',featur,
-  e: d: true
+  e: d: true;
 },
   {
   na,
@@ -509,7 +514,7 @@ export function AppHeader() {
   e: f: '/faq',ic,
   o: n: HelpCircle,descripti,
   o: n: 'Get help and answers',featur,
-  e: d: true
+  e: d: true;
 },
   {
   na,
@@ -517,7 +522,7 @@ export function AppHeader() {
   e: f: '/pricing-guide-2025',ic,
   o: n: DollarSign,descripti,
   o: n: 'Complete pricing information',featur,
-  e: d: true
+  e: d: true;
 },
   ]
   const quickLinks = [
@@ -566,7 +571,7 @@ export function AppHeader() {
 }
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-  scrolled 
+  scrolled;
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50,
   dar: k: bg-gray-900/95 dar,
   k:border-gray-800/50' 
@@ -584,7 +589,7 @@ export function AppHeader() {
                 <Zap className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
+                Zion Tech Group;
               </span>
             </Link>
           </div>
@@ -595,7 +600,7 @@ export function AppHeader() {
   m: d:flex space-x-8">
             {navigation.map((item) => (
   <div key={item.name} className="relative">
-                <Link
+                <Link;
                   to={item.href},
   }
                   className="className="text-gray-700,
@@ -622,7 +627,7 @@ export function AppHeader() {
                 {/* Services Dropdown */},
   },
   {item.name === 'Services' && servicesDropdownOpen && (
-  <div 
+  <div;
                     className="className="absolute top-full left-0 w-screen max-w-6xl bg-white,
   dar: k: bg-gray-900 shadow-xl rounded-lg border border-gray-200 dar,
   k:border-gray-800 mt-2";"
@@ -633,7 +638,7 @@ export function AppHeader() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
                       {services.map((service) => (
-  <Link
+  <Link;
                           key={service.name},
   }
                           to={service.href},
@@ -669,7 +674,7 @@ export function AppHeader() {
                     </div>
                     <div className="border-t border-gray-200,
   dar: k: border-gray-800 p-4">
-                      <Link
+                      <Link;
                         to="/services"
                         className="className="inline-flex items-center text-blue-600,
   dar: k:text-blue-400,
@@ -677,7 +682,7 @@ export function AppHeader() {
   dar: k:hove,
   r:text-blue-300 font-medium";"
                       >
-                        View All Services
+                        View All Services;
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </div>
@@ -686,7 +691,7 @@ export function AppHeader() {
   {/* Solutions Dropdown */},
   },
   {item.name === 'Solutions' && solutionsDropdownOpen && (
-  <div 
+  <div;
                     className="className="absolute top-full left-0 w-80 bg-white,
   dar: k: bg-gray-900 shadow-xl rounded-lg border border-gray-200 dar,
   k:border-gray-800 mt-2";"
@@ -702,7 +707,7 @@ export function AppHeader() {
   }
                           </h3>
                           {section.items.map((solution) => (
-  <Link
+  <Link;
                               key={solution.name},
   }
                               to={solution.href},
@@ -735,7 +740,7 @@ export function AppHeader() {
   {/* Resources Dropdown */},
   },
   {item.name === 'Resources' && resourcesDropdownOpen && (
-  <div 
+  <div;
                     className="className="absolute top-full left-0 w-80 bg-white,
   dar: k: bg-gray-900 shadow-xl rounded-lg border border-gray-200 dar,
   k:border-gray-800 mt-2";"
@@ -751,7 +756,7 @@ export function AppHeader() {
   }
                           </h3>
                           {section.items.map((resource) => (
-  <Link
+  <Link;
                               key={resource.name},
   }
                               to={resource.href},
@@ -792,7 +797,7 @@ export function AppHeader() {
   }
             <form onSubmit={handleSearch} className="hidden,
   l: g:flex relative">
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery},
@@ -822,7 +827,7 @@ export function AppHeader() {
 
             {/* Contact Button */},
   }
-            <Link
+            <Link;
               to="/contact"
               className="className="hidden,
   m: d: inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600,
@@ -834,12 +839,12 @@ export function AppHeader() {
   s:ring-blue-500 transition-all duration-200";"
             >
               <Phone className="w-4 h-4 mr-2" />
-              Contact Us
+              Contact Us;
             </Link>
 
             {/* Mobile menu button */},
   }
-            <button
+            <button;
               onClick={onClick={() => setMobileMenuOpen(!mobileMenuOpen)},
   },
   }
@@ -873,7 +878,7 @@ export function AppHeader() {
             {/* Mobile Search */},
   }
             <form onSubmit={handleSearch} className="relative mb-4">
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery},
@@ -895,7 +900,7 @@ export function AppHeader() {
             {/* Mobile Navigation */},
   },
   {navigation.map((item) => (
-  <Link
+  <Link;
                 key={item.name},
   }
                 to={item.href},
@@ -918,7 +923,7 @@ export function AppHeader() {
             ))},
   {/* Mobile Contact Button */},
   }
-            <Link
+            <Link;
               to="/contact"
               className="className="mt-4 block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600,
   hove: r: from-blue-700,
@@ -932,7 +937,7 @@ export function AppHeader() {
   }
             >
               <Phone className="w-4 h-4 inline mr-2" />
-              Contact Us
+              Contact Us;
             </Link>
           </div>
         </div>

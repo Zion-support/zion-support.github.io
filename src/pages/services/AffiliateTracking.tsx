@@ -1,10 +1,10 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion     } from "framer-motion";
+import { Link     } from "react-router-dom";
 import SEO from "@/components/SEO"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from "lucide-react"
+import { Button     } from "@/components/ui/button";
+import { Badge     } from "@/components/ui/badge";
+import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail     } from "lucide-react";
 export default function AffiliateTracking() {
   const,
   feature: s: { titl,
@@ -82,7 +82,7 @@ export default function AffiliateTracking() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO
+      <SEO;
         title="Affiliate Tracking Platform - Zion Tech Group"
         description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM."
         keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
@@ -95,7 +95,7 @@ export default function AffiliateTracking() {
   l: g:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
         <div className="relative max-w-7xl mx-auto">
-          <motion.h1
+          <motion.h1;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -108,7 +108,7 @@ export default function AffiliateTracking() {
             className="className="text-4xl,
   m: d: text-6xl font-bold text-white mb-6";"
           >
-            Affiliate Tracking Platform
+            Affiliate Tracking Platform;
             <span className="block text-zion-cyan text-2xl,
   m: d:text-3xl mt-2">Recruit. Attribute. Reward.</span>
           </motion.h1>
@@ -122,7 +122,7 @@ export default function AffiliateTracking() {
   s: m: flex-row gap-4">
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white">
               <Link to="/request-quote">
-                Request a demo
+                Request a demo;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
@@ -146,7 +146,7 @@ export default function AffiliateTracking() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((f) => (
-  <motion.div
+  <motion.div;
                 key={f.title},
   }
                 initial={ opaci,
@@ -224,7 +224,7 @@ export default function AffiliateTracking() {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {plans.map((plan, i) => (
-  <motion.div
+  <motion.div;
                 key={plan.name},
   }
                 initial={ opaci,
@@ -264,7 +264,7 @@ export default function AffiliateTracking() {
                 </div>
                 <Button asChild className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white">
                   <Link to="/contact">
-                    Get started
+                    Get started;
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
@@ -337,4 +337,4 @@ export default function AffiliateTracking() {
   )
 }
 
-// Duplicate leftover block removed
+// Duplicate leftover block removed;

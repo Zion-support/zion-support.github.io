@@ -1,5 +1,5 @@
 import React from "react"
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 } from "lucide-react"
+import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3     } from "lucide-react";
 const InfrastructureServices = () () => {
   const infrastructureServices = [
   {
@@ -10,7 +10,7 @@ const InfrastructureServices = () () => {
       featur,
   e: s: ["Network architecture design", "Performance optimization", "Security implementation", "24/7 monitoring"]
       ic,
-  o: n: Network
+  o: n: Network;
 },
   {
   tit,
@@ -20,7 +20,7 @@ const InfrastructureServices = () () => {
       featur,
   e: s: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"]
       ic,
-  o: n: Server
+  o: n: Server;
 },
   {
   tit,
@@ -31,7 +31,7 @@ const InfrastructureServices = () () => {
       featur,
   e: s: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"]
       ic,
-  o: n: Database
+  o: n: Database;
 },
   ]
   const technologies = [
@@ -82,15 +82,15 @@ const InfrastructureServices = () () => {
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Server className="w-4 h-4 mr-2"/>
-              IT Infrastructure
+              IT Infrastructure;
             </div>
             <h1 className="text-4xl m,
   d:text-6xl font-bold text-white mb-6">
-              IT Infrastructure
+              IT Infrastructure;
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Build robust, scalable infrastructure that provides the foundation
+              Build robust, scalable infrastructure that provides the foundation;
               for your business growth and digital transformation.
             </p>
             <div className="flex flex-col,
@@ -99,11 +99,11 @@ const InfrastructureServices = () () => {
   hove: r:from-purple-700,
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-                Explore Services
+                Explore Services;
               </a>
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-                Get Started
+                Get Started;
               </a>
             </div>
           </div>
@@ -119,10 +119,10 @@ const InfrastructureServices = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Our Infrastructure Services
+              Our Infrastructure Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive infrastructure solutions designed to provide the
+              Comprehensive infrastructure solutions designed to provide the;
               reliability and performance your business demands.
             </p>
           </div>
@@ -163,10 +163,10 @@ const InfrastructureServices = () () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold text-white mb-4">
-              Technologies We Work With
+              Technologies We Work With;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge technologies and platforms to build robust
+              Cutting-edge technologies and platforms to build robust;
               scalable infrastructure solutions.
             </p>
           </div>
@@ -209,7 +209,7 @@ const InfrastructureServices = () () => {
                 Why Choose Our Infrastructure?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our infrastructure solutions provide the reliability, security
+                Our infrastructure solutions provide the reliability, security;
                 and scalability your business needs to succeed.
               </p>
               <ul className="space-y-3">
@@ -227,7 +227,7 @@ const InfrastructureServices = () () => {
                 <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Infrastructure Excellence</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team has decades of combined experience building and
+                  Our team has decades of combined experience building and;
                   maintaining enterprise-grade infrastructure solutions.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -249,10 +249,10 @@ const InfrastructureServices = () () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl m,
   d:text-4xl font-bold text-white mb-6">
-            Build Your Foundation
+            Build Your Foundation;
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Ready to build a robust, scalable infrastructure that supports
+            Ready to build a robust, scalable infrastructure that supports;
             your business growth and digital transformation?
           </p>
           <div className="flex flex-col,
@@ -261,11 +261,11 @@ const InfrastructureServices = () () => {
   hove: r:from-purple-700,
   hove: r:to-pink-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-xl">
-              Get Started
+              Get Started;
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
   r:bg-white/10 transition-all duration-300">
-              View All Services
+              View All Services;
             </a>
           </div>
         </div>
@@ -273,4 +273,4 @@ const InfrastructureServices = () () => {
     </div>
   )
 }
-export default InfrastructureServices
+export default InfrastructureServices;

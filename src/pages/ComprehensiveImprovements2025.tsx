@@ -1,59 +1,61 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Star
+  Star;
   Zap,
   Brain,
   Shield,
   Cloud,
   Rocket,
   Target,
-  CheckCircle
-  ArrowRight
-  Sparkles
-  Globe
-  Users
-  Award
-  TrendingUp
-  Heart
-  Crown
-  Eye
-  Lock
-  Cpu
-  Database
-  Network
-  Smartphone
-  BarChart3
-  Code
-  Server
-  Chip
-  Wifi
-  ShieldCheck
-  Bot
-  GitFork
-  Phone
-  Mail
-  MapPin
-  Clock
-  DollarSign
-  Atom
-  Leaf
-  Gamepad2
-  Coins
-  Satellite
-  Activity
-  FileText
-  MessageCircle
-  Search
-  BarChart
-  Users2
-  Settings
-  Palette
-  PhoneCall
-  Mail as MailIcon
-  MapPin as MapPinIcon
-} from "lucide-react"
+  CheckCircle;
+  ArrowRight;
+  Sparkles;
+  Globe;
+  Users;
+  Award;
+  TrendingUp;
+  Heart;
+  Crown;
+  Eye;
+  Lock;
+  Cpu;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  Code;
+  Server;
+  Chip;
+  Wifi;
+  ShieldCheck;
+  Bot;
+  GitFork;
+  Phone;
+  Mail;
+  MapPin;
+  Clock;
+  DollarSign;
+  Atom;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  Activity;
+  FileText;
+  MessageCircle;
+  Search;
+  BarChart;
+  Users2;
+  Settings;
+  Palette;
+  PhoneCall;
+  Mail as MailIcon;
+  MapPin as MapPinIcon;
+}
+}
+ } from "lucide-react";
 import EnhancedSEOManager from "../components/EnhancedSEOManager"
 export default function ComprehensiveImprovements2025() {
   const improvements = [
@@ -158,7 +160,7 @@ export default function ComprehensiveImprovements2025() {
   s: s: '364 E Main St STE 1008 Middletown DE 19709'
 }
   return (
-    <EnhancedSEOManager
+    <EnhancedSEOManager;
       seoData={
   tit,
   l: e: 'Comprehensive Improvements 2025 | Zion Tech Group',descripti,
@@ -182,7 +184,7 @@ export default function ComprehensiveImprovements2025() {
   z: e: 50px_50px]"></div>
           
           <div className="relative max-w-7xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -195,39 +197,39 @@ export default function ComprehensiveImprovements2025() {
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-sm font-medium mb-6">
                 <Star className="w-4 h-4 mr-2" />
-                2025 Comprehensive Improvements
+                2025 Comprehensive Improvements;
               </div>
               
               <h1 className="text-4xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-white to-zion-purple bg-clip-text text-transparent">
-                Zion Tech Group
+                Zion Tech Group;
               </h1>
               
               <p className="text-xl m,
   d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Revolutionary AI-powered micro SAAS solutions, cutting-edge IT services, and innovative technology solutions
+                Revolutionary AI-powered micro SAAS solutions, cutting-edge IT services, and innovative technology solutions;
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <Link
+                <Link;
                   to="/new-innovative-services-2025"
                   className="className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold,
   hove: r:from-zion-purple,
   hove: r:to-zion-cyan transition-all duration-300,
   transform: hover:scale-105";"
                 >
-                  Explore New Services
+                  Explore New Services;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 
-                <Link
+                <Link;
                   to="/contact"
                   className="className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-zion-cyan text-zion-cyan font-semibold,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             </motion.div>
@@ -240,7 +242,7 @@ export default function ComprehensiveImprovements2025() {
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -257,10 +259,10 @@ export default function ComprehensiveImprovements2025() {
             >
               <h2 className="text-3xl,
   m: d: text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                What We've Improved
+                What We've Improved;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the comprehensive enhancements we've made to revolutionize your digital experience
+                Discover the comprehensive enhancements we've made to revolutionize your digital experience;
               </p>
             </motion.div>
 
@@ -268,7 +270,7 @@ export default function ComprehensiveImprovements2025() {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8 mb-16">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -307,7 +309,7 @@ export default function ComprehensiveImprovements2025() {
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -324,16 +326,16 @@ export default function ComprehensiveImprovements2025() {
             >
               <h2 className="text-3xl,
   m: d:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Enhanced Service Portfolio
+                Enhanced Service Portfolio;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive suite of AI-powered solutions and innovative services
+                Our comprehensive suite of AI-powered solutions and innovative services;
               </p>
             </motion.div>
 
             <div className="space-y-8">
               {improvements.map((category, index) => (
-  <motion.div
+  <motion.div;
                   key={index},
   }
                   initial={ opaci,
@@ -381,7 +383,7 @@ export default function ComprehensiveImprovements2025() {
   s: m: px-6,
   l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -401,13 +403,13 @@ export default function ComprehensiveImprovements2025() {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Contact us to learn more about our enhanced services and how we can help transform your business
+                Contact us to learn more about our enhanced services and how we can help transform your business;
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1,
   m: d:grid-cols-3 gap-8 mb-12">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, y: 20 },
   }
@@ -428,7 +430,7 @@ export default function ComprehensiveImprovements2025() {
                 <p className="text-gray-300">{contactInfo.phone}</p>
               </motion.div>
 
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -449,7 +451,7 @@ export default function ComprehensiveImprovements2025() {
                 <p className="text-gray-300">{contactInfo.email}</p>
               </motion.div>
 
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -471,7 +473,7 @@ export default function ComprehensiveImprovements2025() {
               </motion.div>
             </div>
 
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -487,14 +489,14 @@ export default function ComprehensiveImprovements2025() {
   }
               className="className="text-center";"
             >
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold,
   hove: r: from-zion-purple,
   hove: r:to-zion-cyan transition-all duration-300 transform hove,
   r:scale-105";"
               >
-                Contact Us Today
+                Contact Us Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </motion.div>
@@ -507,7 +509,7 @@ export default function ComprehensiveImprovements2025() {
   s: m: px-6,
   l: g:px-8 border-t border-gray-700">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -523,30 +525,30 @@ export default function ComprehensiveImprovements2025() {
             >
               <h3 className="text-2xl,
   m: d: text-3xl font-bold mb-4 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Experience the Future of Technology
+                Experience the Future of Technology;
               </h3>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses already leveraging our enhanced AI-powered solutions and futuristic design
+                Join thousands of businesses already leveraging our enhanced AI-powered solutions and futuristic design;
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <Link
+                <Link;
                   to="/services"
                   className="className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold,
   hove: r:from-zion-purple,
   hove: r:to-zion-cyan transition-all duration-300";"
                 >
-                  View All Services
+                  View All Services;
                 </Link>
                 
-                <Link
+                <Link;
                   to="/about"
                   className="className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-zion-cyan text-zion-cyan font-semibold,
   hove: r:bg-zion-cyan hove,
   r:text-white transition-all duration-300";"
                 >
-                  Learn More
+                  Learn More;
                 </Link>
               </div>
             </motion.div>

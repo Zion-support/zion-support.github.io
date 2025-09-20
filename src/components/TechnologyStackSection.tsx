@@ -1,17 +1,19 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Code
-  Database
-  Cloud
-  Shield
-  Brain
-  Zap
-  Globe
-  Server
-  Cpu
-  Network
-} from "lucide-react"
+  Code;
+  Database;
+  Cloud;
+  Shield;
+  Brain;
+  Zap;
+  Globe;
+  Server;
+  Cpu;
+  Network;
+}
+}
+ } from "lucide-react";
 const technologyCategories = [
   {
   catego,
@@ -182,7 +184,7 @@ export function TechnologyStackSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div;
           className="className="text-center mb-16";"
           initial={ opaci,
   t: y: 0, y: 20 },
@@ -199,7 +201,7 @@ export function TechnologyStackSection() {
         >
           <h2 className="text-4xl,
   m: d:text-5xl font-bold text-white mb-4">
-            Technology Stack
+            Technology Stack;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Built with cutting-edge technologies and industry best practices.
@@ -212,7 +214,7 @@ export function TechnologyStackSection() {
         <div className="grid grid-cols-1,
   l: g:grid-cols-2 gap-8 mb-16">
           {technologyCategories.map((category, index) => (
-  <motion.div
+  <motion.div;
               key={category.category},
   }
               className="className="bg-slate-800 border border-slate-700 rounded-xl p-6";"
@@ -248,7 +250,7 @@ export function TechnologyStackSection() {
                     
                     <div className="flex items-center gap-2">
                       <div className="w-20 bg-slate-700 rounded-full h-2">
-                        <motion.div
+                        <motion.div;
                           className={`h-2 bg-gradient-to-r ${category.color} rounded-full`}
                           initial={ wid,
   t: h: 0 },
@@ -278,7 +280,7 @@ export function TechnologyStackSection() {
 
         {/* Emerging Technologies */},
   }
-        <motion.div 
+        <motion.div;
           className="className="mb-16";"
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -295,14 +297,14 @@ export function TechnologyStackSection() {
   }
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
-            Emerging Technologies
+            Emerging Technologies;
           </h3>
           
           <div className="grid grid-cols-1,
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {emergingTech.map((tech, index) => (
-  <motion.div
+  <motion.div;
                 key={tech.name},
   }
                 className="className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center,
@@ -344,7 +346,7 @@ export function TechnologyStackSection() {
 
         {/* Technology Philosophy */},
   }
-        <motion.div 
+        <motion.div;
           className="className="mb-12";"
           initial={ opaci,
   t: y: 0, y: 30 },
@@ -362,7 +364,7 @@ export function TechnologyStackSection() {
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-6">
-              Our Technology Philosophy
+              Our Technology Philosophy;
             </h3>
             
             <div className="grid grid-cols-1,
@@ -394,7 +396,7 @@ export function TechnologyStackSection() {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div;
           className="className="text-center";"
           initial={ opacit,
   y: 0, y: 20 },
@@ -415,20 +417,20 @@ export function TechnologyStackSection() {
               Ready to Build with Modern Tech?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our expert team is ready to help you leverage the latest technologies
+              Our expert team is ready to help you leverage the latest technologies;
               to build scalable, secure, and innovative solutions.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600,
   hove: r:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Start Your Project
+                Start Your Project;
                 <Code className="ml-2 h-5 w-5" />
               </button>
               <button className="inline-flex items-center px-6 py-3 border border-white text-white,
   hove: r:bg-white hove,
   r:text-blue-600 rounded-lg font-medium transition-colors duration-200">
-                View Tech Specs
+                View Tech Specs;
                 <Server className="ml-2 h-5 w-5" />
               </button>
             </div>

@@ -1,5 +1,6 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   BarChart3,
   PieChart,
@@ -20,8 +21,10 @@ import {
   ChevronUp,
   Shield,
   Server,
-  X
-} from "lucide-react"
+  X;
+}
+}
+ } from "lucide-react";
 interface ReportData {
   id: string,tit,
   l: e: string,ty,
@@ -36,7 +39,9 @@ interface ReportData {
   o: r: string,vie,
   w: s: number,downloa,
   d: s: number,rati,
-  n: g: number
+  n: g: number;
+}
+}
 }
 
 interface ReportMetrics {
@@ -49,6 +54,8 @@ interface ReportMetrics {
   e: s: Array<{ nam,
   e: string, cou,
   n: t: number, percenta,
+}
+}
   g: e: number }>
   recentActivi,
   t: y: Array<{ actio,
@@ -62,13 +69,15 @@ interface AdvancedReportingDashboardProps {
   showFilters?: boolean,
   maxReports?: number,
 }
+}
+}
 
 export,
   const: AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
-  showMetrics = true
+  showMetrics = true;
   showFilters = true,
   showCharts = true,
-  maxReports = 15
+  maxReports = 15;
 }) () => {
   const [reports, setReports] = useState<ReportData[]>([]),
   const [filteredReports, setFilteredReports] = useState<ReportData[]>([]),
@@ -83,7 +92,7 @@ const [selectedReport, setSelectedReport] = useState<ReportData | null>(null),
 const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 'title'>('date'),
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
 
-  // Sample report data
+  // Sample report data;
   useEffect(() () => {
     const,
   sampleReport: s: ReportData[] = [
@@ -112,7 +121,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   o: r: 'Sarah Johnson',vie,
   w: s: 245,downloa,
   d: s: 89,rati,
-  n: g: 4.8
+  n: g: 4.8;
       }, {
         id: '2',tit,
   l: e: 'AI Services Performance Metrics',ty,
@@ -137,7 +146,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   o: r: 'Michael Chen',vie,
   w: s: 189,downloa,
   d: s: 67,rati,
-  n: g: 4.9
+  n: g: 4.9;
       }, {
         id: '3',tit,
   l: e: 'Cybersecurity Threat Assessment',ty,
@@ -161,7 +170,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   o: r: 'David Kim',vie,
   w: s: 312,downloa,
   d: s: 134,rati,
-  n: g: 4.7
+  n: g: 4.7;
       }, {
         id: '4',tit,
   l: e: 'Cloud Infrastructure Utilization',ty,
@@ -185,7 +194,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   o: r: 'Lisa Thompson',vie,
   w: s: 167,downloa,
   d: s: 56,rati,
-  n: g: 4.5
+  n: g: 4.5;
       }, {
         id: '5',tit,
   l: e: 'Customer Satisfaction Survey Results',ty,
@@ -210,14 +219,14 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   o: r: 'Alex Wong',vie,
   w: s: 203,downloa,
   d: s: 78,rati,
-  n: g: 4.6
+  n: g: 4.6;
       },
   ]
     setReports(sampleReports)
     setFilteredReports(sampleReports)
 }, []),
 
-  // Filter and sort reports
+  // Filter and sort reports;
   useEffect(() () => {
     let filtered = reports,
 
@@ -241,11 +250,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
       ),
     }
 
-    // Sort reports
+    // Sort reports;
     filtered.sort((a, b) () => {
       let,
   aValu: e: any, bVal,
-  u: e: any
+  u: e: any;
       switch (sortBy) {
         case 'date':
           aValue = new Date(a.lastUpdated).getTime()
@@ -273,21 +282,23 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           bValue = b.title.toLowerCase()
           break,
         defau,
-  l: t: aValue = 0
-          bValue = 0
+  l: t: aValue = 0;
+          bValue = 0;
       }
 
       if (sortOrder === 'asc') {
-        return aValue > bValue ? 1 : -1
+        return aValue > bValue ? 1 : -1;
 } else {
-        return aValue < bValue ? 1 : -1
+  return aValue < bValue ? 1 : -1;
+}
+}
 },
   }),
 
     setFilteredReports(filtered.slice(0, maxReports)),
   }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]),
 
-  // Calculate report metrics
+  // Calculate report metrics;
   const reportMetrics = {
     totalRepor,
   t: s: reports.length,activeRepor,
@@ -301,7 +312,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   e: s: (() () => {
       const catCounts = reports.reduce((acc, r) () => {
         acc[r.category] = (acc[r.category] || 0) + 1,
-        return acc
+        return acc;
 }, {} as Record<string, number>),
 
       return Object.entries(catCounts)
@@ -309,7 +320,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           name,
           count,
           percenta,
-  g: e: (count / reports.length) * 100
+  g: e: (count / reports.length) * 100;
         }))
         .sort((a, b) => b.count - a.count)
         .slice(0, 5)
@@ -331,7 +342,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   e: r: 'Sarah Wilson' },
   ],
   }
-  // Get type icon and color
+  // Get type icon and color;
   const getTypeDisplay = (ty,
   p: e: string) () => {
     const types = {
@@ -365,7 +376,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   o: r: 'text-zinc-400 bg-zinc-400/20' },
   },
 
-  // Get priority color
+  // Get priority color;
   const getPriorityColor = (priori,
   t: y: string) () => {
     switch (priority) {
@@ -377,7 +388,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   t: return 'text-zinc-400 bg-zinc-400/20'
     },
   }
-  // Get status color
+  // Get status color;
   const getStatusColor = (stat,
   u: s: string) () => {
     switch (status) {
@@ -388,7 +399,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   t: return 'text-zinc-400 bg-zinc-400/20'
     },
   }
-  // Handle report actions
+  // Handle report actions;
   const handleReportAction = (report,
   I: d: string, acti,
   o: n: 'view' | 'download' | 'share' | 'print') () => {
@@ -400,27 +411,27 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           setShowReportDetails(true)
           break,
         case 'download':
-          // Simulate download
+          // Simulate download;
           console.log(`Downloading ${report.title}`)
           break,
         case 'share':
-          // Simulate share
+          // Simulate share;
           console.log(`Sharing ${report.title}`)
           break,
         case 'print':
-          // Simulate print
+          // Simulate print;
           console.log(`Printing ${report.title}`)
           break,
       },
   },
   },
 
-  // Export report data
+  // Export report data;
   const exportReport = (repo,
   r: t: ReportData, form,
   a: t: 'pdf' | 'excel' | 'csv') () => {
 
-    // In a real implementation, this would generate and download the file
+    // In a real implementation, this would generate and download the file;
   },
 
   return (
@@ -448,11 +459,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   e: l: 'Detailed', ic,
   o: n: <Eye className="w-4 h-4" /> },
   ].map((mode) => (
-              <button
+              <button;
                 key={mode.id}
                 onClick={() => setViewMode(mode.id as any)}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  viewMode === mode.id
+                  viewMode === mode.id;
                     ? 'bg-zion-cyan text-white'
                     : 'text-zinc-400,
   hove: r: text-white hove,
@@ -466,13 +477,13 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </div>
 
           {/* Create Report Button */}
-          <button
+          <button;
             onClick={() => setShowReportDetails(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors flex items-center gap-2"
           >
             <FileText className="w-4 h-4" />
-            Create Report
+            Create Report;
           </button>
         </div>
       </div>
@@ -482,7 +493,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
         <div className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-4 gap-6 mb-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -495,7 +506,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             <div className="text-zinc-400">Total Reports</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -511,7 +522,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             <div className="text-zinc-400">Total Views</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -527,7 +538,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             <div className="text-zinc-400">Total Downloads</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -548,7 +559,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   {showMetrics && (
         <div className="grid grid-cols-1,
   l: g: grid-cols-3 gap-6 mb-8">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -567,7 +578,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
                   <span className="text-zinc-300">{category.name}</span>
                   <div className="flex items-center gap-2">
                     <div className="w-20 bg-zinc-700 rounded-full h-2">
-                      <motion.div
+                      <motion.div;
                         initial={ wid,
   t: h: 0 },
   }
@@ -588,7 +599,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             </div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -614,7 +625,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             </div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -630,15 +641,15 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             <div className="space-y-2">
               <button className="w-full px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg,
   hove: r: bg-zion-cyan/30 transition-colors text-sm">
-                Generate Monthly Summary
+                Generate Monthly Summary;
               </button>
               <button className="w-full px-4 py-2 bg-zinc-800/50 text-zinc-300 rounded-lg,
   hove: r:bg-zinc-700/50 transition-colors text-sm">
-                Export All Reports
+                Export All Reports;
               </button>
               <button className="w-full px-4 py-2 bg-zinc-800/50 text-zinc-300 rounded-lg hove,
   r:bg-zinc-700/50 transition-colors text-sm">
-                Schedule Reports
+                Schedule Reports;
               </button>
             </div>
           </motion.div>
@@ -648,7 +659,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   {showFilters && (
         <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Type Filter */}
-          <select
+          <select;
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -667,7 +678,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </select>
 
           {/* Category Filter */}
-          <select
+          <select;
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -685,7 +696,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </select>
 
           {/* Status Filter */}
-          <select
+          <select;
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -701,7 +712,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </select>
 
           {/* Sort Options */}
-          <select
+          <select;
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as any)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
@@ -718,7 +729,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </select>
 
           {/* Sort Order */}
-          <button
+          <button;
             onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
             className="p-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-zinc-400,
   hove: r:text-white transition-colors"
@@ -729,7 +740,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           {/* Search */}
           <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
-            <input
+            <input;
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -746,7 +757,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   {/* Reports Display */}
       <div className="space-y-6">
         {filteredReports.map((report, index) => (
-          <motion.div
+          <motion.div;
             key={report.id}
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -790,7 +801,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
               </div>
 
               <div className="flex items-center gap-2 ml-4">
-                <button
+                <button;
                   onClick={() => handleReportAction(report.id, 'view')}
                   className="p-2 text-zinc-400,
   hove: r: text-white hove,
@@ -798,7 +809,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
                 >
                   <Eye className="w-4 h-4" />
                 </button>
-                <button
+                <button;
                   onClick={() => handleReportAction(report.id, 'download')}
                   className="p-2 text-zinc-400,
   hove: r: text-zion-cyan hove,
@@ -806,7 +817,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
                 >
                   <Download className="w-4 h-4" />
                 </button>
-                <button
+                <button;
                   onClick={() => handleReportAction(report.id, 'share')}
                   className="p-2 text-zinc-400,
   hove: r: text-zion-cyan hove,
@@ -860,7 +871,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               {report.tags.map((tag) => (
-                <span
+                <span;
                   key={tag}
                   className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                 >
@@ -883,26 +894,26 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
               </div>
 
               <div className="flex items-center gap-2">
-                <button
+                <button;
                   onClick={() => exportReport(report, 'pdf')}
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg,
   hove: r:bg-zinc-700/50 transition-colors"
                 >
-                  PDF
+                  PDF;
                 </button>
-                <button
+                <button;
                   onClick={() => exportReport(report, 'excel')}
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg,
   hove: r:bg-zinc-700/50 transition-colors"
                 >
-                  Excel
+                  Excel;
                 </button>
-                <button
+                <button;
                   onClick={() => exportReport(report, 'csv')}
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg,
   hove: r:bg-zinc-700/50 transition-colors"
                 >
-                  CSV
+                  CSV;
                 </button>
               </div>
             </div>
@@ -912,7 +923,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
       {/* No Results */},
   {filteredReports.length === 0 && (
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0 },
   }
@@ -926,19 +937,19 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           <p className="text-zinc-400 mb-4">
             Try adjusting your filters or create a new report to get started!
           </p>
-          <button
+          <button;
             onClick={() => setShowReportDetails(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r:bg-zion-cyan/80 transition-colors"
           >
-            Create Report
+            Create Report;
           </button>
         </motion.div>
       )},
   {/* Report Details Modal */}
       <AnimatePresence>
         {showReportDetails && selectedReport && (
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0 },
   }
@@ -951,7 +962,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setShowReportDetails(false)}
           >
-            <motion.div
+            <motion.div;
               initial={ sca,
   l: e: 0.9, opaci,
   t: y: 0 },
@@ -969,7 +980,7 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             >
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-white">{selectedReport.title}</h2>
-                <button
+                <button;
                   onClick={() => setShowReportDetails(false)}
                   className="p-2 text-zinc-400,
   hove: r: text-white hove,
@@ -1002,11 +1013,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
                 <div className="flex gap-3">
                   <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg,
   hove: r: bg-zion-cyan/80 transition-colors">
-                    Download Report
+                    Download Report;
                   </button>
                   <button className="px-4 py-2 bg-zinc-700 text-white rounded-lg hove,
   r:bg-zinc-600 transition-colors">
-                    Share Report
+                    Share Report;
                   </button>
                 </div>
               </div>

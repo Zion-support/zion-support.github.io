@@ -1,32 +1,36 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  BarChart3
+  BarChart3;
   TrendingUp,
   Brain,
   Zap,
   Shield,
   Globe,
   Users,
-  Database
-  PieChart
-  LineChart
-  Activity
-  Target
-  CheckCircle
-  Star
-  ArrowRight
-  Eye
-  Lock
-  Cloud
-  Smartphone
-  Monitor
-  Play
-  Phone
-  Mail
-  MapPin
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Database;
+  PieChart;
+  LineChart;
+  Activity;
+  Target;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Eye;
+  Lock;
+  Cloud;
+  Smartphone;
+  Monitor;
+  Play;
+  Phone;
+  Mail;
+  MapPin;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 const AIBusinessIntelligenceDashboard = () () => {
   const features = [
   {
@@ -83,7 +87,7 @@ const AIBusinessIntelligenceDashboard = () () => {
         "Basic integrations"
 ]
       popula,
-  r: false
+  r: false;
 },
   {
   na,
@@ -102,7 +106,7 @@ const AIBusinessIntelligenceDashboard = () () => {
         "White-label options"
 ]
       popula,
-  r: true
+  r: true;
 },
   {
   na,
@@ -122,7 +126,7 @@ const AIBusinessIntelligenceDashboard = () () => {
         "SLA guarantees"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const useCases = [
@@ -131,28 +135,28 @@ const AIBusinessIntelligenceDashboard = () () => {
   l: e: "Sales Performance Analytics",descripti,
   o: n: "Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights"
       ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: "Customer Behavior Analysis",descripti,
   o: n: "Understand customer patterns, churn prediction, and lifetime value optimization"
       ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: "Financial Performance Tracking",descripti,
   o: n: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts"
       ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: "Operational Efficiency",descripti,
   o: n: "Identify bottlenecks, optimize processes, and improve productivity across teams"
       ic,
-  o: n: Activity
+  o: n: Activity;
 },
   ]
   const testimonials = [
@@ -162,7 +166,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   l: e: "VP of Operations",compa,
   n: y: "TechFlow Solutions",conte,
   n: t: "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -170,7 +174,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   l: e: "Data Scientist",compa,
   n: y: "InnovateCorp",conte,
   n: t: "The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -178,12 +182,12 @@ const AIBusinessIntelligenceDashboard = () () => {
   l: e: "CEO",compa,
   n: y: "StartupXYZ",conte,
   n: t: "This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business.",rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO;
         title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
         description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month."
       />
@@ -194,7 +198,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   s: m: px-6,
   l: g:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -208,13 +212,13 @@ const AIBusinessIntelligenceDashboard = () () => {
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
               <Brain className="w-4 h-4 mr-2 text-cyan-400" />
-              AI-Powered Business Intelligence
+              AI-Powered Business Intelligence;
             </div>
             
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                AI Business Intelligence
+                AI Business Intelligence;
               </span>
               <br />
               <span className="text-white">Dashboard</span>
@@ -228,24 +232,24 @@ const AIBusinessIntelligenceDashboard = () () => {
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300 flex items-center group";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5 group-hov,
   e: r:translate-x-1 transition-transform" />
               </a>
-              <a
+              <a;
                 href="#demo"
                 className="className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hove,
   r:bg-cyan-400/10 transition-all duration-300 flex items-center group";"
               >
                 <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+                Watch Demo;
               </a>
             </div>
           </motion.div>
@@ -265,7 +269,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -283,11 +287,11 @@ const AIBusinessIntelligenceDashboard = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Powerful Features
+                Powerful Features;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to transform your business data into actionable intelligence
+              Everything you need to transform your business data into actionable intelligence;
             </p>
           </motion.div>
           
@@ -295,7 +299,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -343,7 +347,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   s: m: px-6,
   l: g:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -361,18 +365,18 @@ const AIBusinessIntelligenceDashboard = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Use Cases
+                Use Cases;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how businesses are using our AI BI platform to drive growth and efficiency
+              See how businesses are using our AI BI platform to drive growth and efficiency;
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -420,7 +424,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -438,7 +442,7 @@ const AIBusinessIntelligenceDashboard = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Pricing Plans
+                Pricing Plans;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -449,7 +453,7 @@ const AIBusinessIntelligenceDashboard = () () => {
           <div className="grid grid-cols-1 l,
   g:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -470,13 +474,13 @@ const AIBusinessIntelligenceDashboard = () () => {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </div>
                   </div>
                 )}
                 
                 <div className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
-  plan.popular 
+  plan.popular;
                     ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
                     : 'border-white/20,
   hove: r:border-cyan-400/40'
@@ -500,11 +504,11 @@ const AIBusinessIntelligenceDashboard = () () => {
                     ))}
                   </ul>
                   
-                  <a
+                  <a;
                     href="htt,
   p: s: //ziontechgroup.com/contact"
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
-  plan.popular
+  plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white,
   hove: r:from-cyan-400,
   hove: r:to-blue-400'
@@ -512,7 +516,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   r:bg-cyan-400/10'
 }`}
                   >
-                    Start Free Trial
+                    Start Free Trial;
                   </a>
                 </div>
               </motion.div>
@@ -527,7 +531,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   s: m: px-6,
   l: g:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -545,7 +549,7 @@ const AIBusinessIntelligenceDashboard = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                What Our Clients Say
+                What Our Clients Say;
               </span>
             </h2>
           </motion.div>
@@ -553,7 +557,7 @@ const AIBusinessIntelligenceDashboard = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -599,7 +603,7 @@ const AIBusinessIntelligenceDashboard = () () => {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -622,25 +626,25 @@ const AIBusinessIntelligenceDashboard = () () => {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300 flex items-center group";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5 group-hov,
   e: r:translate-x-1 transition-transform" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hove,
   r:bg-cyan-400/10 transition-all duration-300 flex items-center group";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </a>
             </div>
           </motion.div>
@@ -662,7 +666,7 @@ const AIBusinessIntelligenceDashboard = () () => {
               <a href="t,
   e: l:+13024640950" className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -671,7 +675,7 @@ const AIBusinessIntelligenceDashboard = () () => {
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-cyan-400 hove,
   r:text-cyan-300 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -679,7 +683,7 @@ const AIBusinessIntelligenceDashboard = () () => {
               <div className="text-white font-semibold">Address</div>
               <div className="text-gray-300 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </div>
             </div>
           </div>
@@ -688,4 +692,4 @@ const AIBusinessIntelligenceDashboard = () () => {
     </div>
   )
 }
-export default AIBusinessIntelligenceDashboard
+export default AIBusinessIntelligenceDashboard;

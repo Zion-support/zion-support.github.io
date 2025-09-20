@@ -1,15 +1,19 @@
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  ArrowRight
-  Calendar
-  CheckCircle
-  Clock
-  Mail
-  MessageCircle
-  Phone
-  Star
-  Users
-} from "lucide-react"
+  ArrowRight;
+  Calendar;
+  CheckCircle;
+  Clock;
+  Mail;
+  MessageCircle;
+  Phone;
+  Star;
+  Users;
+}
+}
+}
+}
+ } from "lucide-react";
 import React, { useState } from "react"
 export,
   const: ITServiceRequestHero: React.FC = () () => {
@@ -97,7 +101,7 @@ export,
       <div className="max-w-7xl mx-auto">
         {/* Hero Content */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -111,7 +115,7 @@ export,
         >
           <h1 className="text-5xl,
   m: d:text-6xl font-bold text-white mb-6">
-            IT Service Request
+            IT Service Request;
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Get expert IT support and solutions tailored to your business needs. 
@@ -121,7 +125,7 @@ export,
 
         {/* Contact Methods */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -136,7 +140,7 @@ export,
   m: d:grid-cols-3 gap-8 mb-16";"
         >
           {contactMethods.map((method, index) => (
-  <motion.div
+  <motion.div;
               key={method.title},
   }
               initial={ opaci,
@@ -160,7 +164,7 @@ export,
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{method.title}</h3>
               <p className="text-gray-300 mb-4">{method.description}</p>
-              <a
+              <a;
                 href={method.href},
   }
                 className="className="inline-flex items-center px-6 py-3 bg-zion-cyan,
@@ -176,7 +180,7 @@ export,
 
         {/* Quick Actions */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -191,7 +195,7 @@ export,
   m: d:grid-cols-3 gap-6 mb-16";"
         >
           {quickActions.map((action, index) => (
-  <motion.div
+  <motion.div;
               key={action.title},
   }
               initial={ opaci,
@@ -216,7 +220,7 @@ export,
                   <h3 className="text-lg font-semibold text-white mb-1">{action.title}</h3>
                   <p className="text-gray-300 text-sm">{action.description}</p>
                 </div>
-                <a
+                <a;
                   href={action.href},
   }
                   className="className="text-zion-cyan,
@@ -231,7 +235,7 @@ export,
 
         {/* Stats */},
   }
-        <motion.div
+        <motion.div;
           initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -246,7 +250,7 @@ export,
   m: d:grid-cols-4 gap-6";"
         >
           {stats.map((stat, index) => (
-  <motion.div
+  <motion.div;
               key={stat.label},
   }
               initial={ opaci,

@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Heart, Shield, Users, Activity, Microscope, Pill } from "lucide-react"
+import { Link     } from "react-router-dom";
+import { Heart, Shield, Users, Activity, Microscope, Pill     } from "lucide-react";
 const HealthcareSolutions = () () => {
     const solutions = [
   {
@@ -61,19 +61,19 @@ const HealthcareSolutions = () () => {
   tit,
   l: e: 'Improved Patient Outcomes',descripti,
   o: n: 'AI-driven insights lead to better diagnosis and treatment.',ic,
-  o: n: Activity
+  o: n: Activity;
 },
   {
   tit,
   l: e: 'Operational Efficiency',descripti,
   o: n: 'Streamlined workflows reduce costs and improve care delivery.',ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: 'Enhanced Security',descripti,
   o: n: 'HIPAA-compliant solutions protect patient data.',ic,
-  o: n: Shield
+  o: n: Shield;
 },
   ]
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
@@ -85,10 +85,10 @@ const HealthcareSolutions = () () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl m,
   d:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-            Healthcare AI Solutions
+            Healthcare AI Solutions;
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Revolutionizing healthcare with cutting-edge AI technology. Improve patient outcomes
+            Revolutionizing healthcare with cutting-edge AI technology. Improve patient outcomes;
             streamline operations, and ensure compliance with our comprehensive healthcare solutions.
           </p>
           <div className="flex flex-col,
@@ -97,12 +97,12 @@ const HealthcareSolutions = () () => {
   hove: r:from-cyan-400,
   hove: r:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300,
   transform: hover:scale-105">
-              Schedule Healthcare Demo
+              Schedule Healthcare Demo;
             </Link>
             <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400,
   hove: r:bg-cyan-400 hove,
   r:text-black font-semibold rounded-lg transition-all duration-300">
-              Get Healthcare Quote
+              Get Healthcare Quote;
             </Link>
           </div>
         </div>
@@ -116,13 +116,13 @@ const HealthcareSolutions = () () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Healthcare AI Solutions
+            Healthcare AI Solutions;
           </h2>
           
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {solutions.map((solution, index) () => {
-  const Icon = solution.icon
+  const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700,
   hove: r:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
@@ -143,7 +143,7 @@ const HealthcareSolutions = () () => {
                   
                   <Link to={solution.href} className="inline-flex items-center text-cyan-400,
   hove: r: text-cyan-300 transition-colors duration-300">
-                    Learn More
+                    Learn More;
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                     </svg>
@@ -162,13 +162,13 @@ const HealthcareSolutions = () () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl,
   m: d:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Benefits for Healthcare Organizations
+            Benefits for Healthcare Organizations;
           </h2>
           
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {benefits.map((benefit, index) () => {
-  const Icon = benefit.icon
+  const Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white"/>
@@ -190,7 +190,7 @@ const HealthcareSolutions = () () => {
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold mb-6">
-              Transform Healthcare with AI
+              Transform Healthcare with AI;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join leading healthcare organizations using our AI solutions to improve patient care and operational efficiency.
@@ -201,12 +201,12 @@ const HealthcareSolutions = () () => {
   hove: r:from-cyan-400,
   hove: r:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300,
   transform: hover:scale-105">
-                Schedule Healthcare Demo
+                Schedule Healthcare Demo;
               </Link>
               <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400,
   hove: r:bg-cyan-400 hove,
   r:text-black font-semibold rounded-lg transition-all duration-300">
-                Contact Healthcare Team
+                Contact Healthcare Team;
               </Link>
             </div>
           </div>
@@ -214,4 +214,4 @@ const HealthcareSolutions = () () => {
       </div>
     </div>)
 }
-export default HealthcareSolutions
+export default HealthcareSolutions;

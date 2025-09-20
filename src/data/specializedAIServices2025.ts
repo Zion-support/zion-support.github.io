@@ -21,7 +21,9 @@ export interface SpecializedAIService {
   phon,
   e: string,ema,
   i: l: string,websi,
-  t: e: string
+  t: e: string;
+}
+}
 }
   technicalSpecs?: {
   technolo,
@@ -33,14 +35,14 @@ export interface SpecializedAIService {
   ],
   }
   competitors?: string[]
-  marketSize?: string
-  demoUrl?: string
-  documentationUrl?: string
+  marketSize?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
 }
 
 export,
   const: SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
-  // AI-Powered Autonomous Business Operations
+  // AI-Powered Autonomous Business Operations;
   {
   i,
   d: "ai-autonomous-business-operations",tit,
@@ -125,7 +127,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-autonomous-business"
 }
-  // AI-Powered Research Assistant
+  // AI-Powered Research Assistant;
   {
   id: "ai-research-assistant",tit,
   l: e: "AI Research Assistant Platform",descripti,
@@ -209,7 +211,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-research-assistant"
 }
-  // AI-Powered Code Review
+  // AI-Powered Code Review;
   {
   id: "ai-code-review",tit,
   l: e: "AI Code Review Assistant",descripti,
@@ -293,7 +295,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-code-review"
 }
-  // AI-Powered Customer Experience Optimization
+  // AI-Powered Customer Experience Optimization;
   {
   id: "ai-customer-experience-optimization",tit,
   l: e: "AI Customer Experience Optimization Platform",descripti,
@@ -377,7 +379,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-customer-experience"
 }
-  // AI-Powered Customer Success Analytics
+  // AI-Powered Customer Success Analytics;
   {
   id: "ai-customer-success-analytics",tit,
   l: e: "AI Customer Success Analytics Platform",descripti,
@@ -461,7 +463,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-customer-success"
 }
-  // AI-Powered Energy Optimization
+  // AI-Powered Energy Optimization;
   {
   id: "ai-energy-optimization",tit,
   l: e: "AI Energy Optimization Platform",descripti,
@@ -545,7 +547,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-energy-optimization"
 }
-  // AI-Powered Fraud Detection
+  // AI-Powered Fraud Detection;
   {
   id: "ai-fraud-detection",tit,
   l: e: "AI Fraud Detection Platform",descripti,
@@ -629,7 +631,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-fraud-detection"
 }
-  // AI-Powered HR Recruitment
+  // AI-Powered HR Recruitment;
   {
   id: "ai-hr-recruitment",tit,
   l: e: "AI HR Recruitment Suite",descripti,
@@ -713,7 +715,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-hr-recruitment"
 }
-  // AI-Powered Logistics Optimization
+  // AI-Powered Logistics Optimization;
   {
   id: "ai-logistics-optimization",tit,
   l: e: "AI Logistics Optimization Platform",descripti,
@@ -797,7 +799,7 @@ export,
   r: l: "http,
   s://ziontechgroup.com/docs/ai-logistics"
 }
-  // AI-Powered Predictive Maintenance
+  // AI-Powered Predictive Maintenance;
   {
   id: "ai-predictive-maintenance",tit,
   l: e: "AI Predictive Maintenance Platform",descripti,
@@ -882,4 +884,4 @@ export,
   s://ziontechgroup.com/docs/ai-predictive-maintenance"
 },
   ]
-export default SPECIALIZED_AI_SERVICES_2025
+export default SPECIALIZED_AI_SERVICES_2025;

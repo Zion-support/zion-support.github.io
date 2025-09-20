@@ -1,21 +1,23 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  ArrowRight
+  ArrowRight;
   CheckCircle,
   Cloud,
   Shield,
   Zap,
   Brain,
   Users,
-  Target
-  BarChart3
-  Rocket
-  Globe
-  Lock
-} from "lucide-react"
-import { SEO } from "../components/SEO"
+  Target;
+  BarChart3;
+  Rocket;
+  Globe;
+  Lock;
+}
+}
+ } from "lucide-react";
+import { SEO   } from "../components/SEO";
 const features = [
   {
   ic,
@@ -122,14 +124,14 @@ const const containerVariants = {
   y: 1,transiti,
   o: n: {
   staggerChildre,
-  n: 0.1
+  n: 0.1;
 },
   },
   }
 export default function ITConsulting() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO
+      <SEO;
         title="IT Consulting Services - Zion Tech Group"
         description="Expert IT consulting services to transform your business technology strategy, cloud migration, and digital transformation initiatives."
         keywords="IT consulting, technology strategy, cloud migration, digital transformation, security assessment, performance optimization"
@@ -147,7 +149,7 @@ export default function ITConsulting() {
         <div className="relative z-10 max-w-7xl mx-auto px-4,
   s: m: px-6,
   l: g:px-8">
-          <motion.div 
+          <motion.div;
             className="className="text-center";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -162,7 +164,7 @@ export default function ITConsulting() {
             <h1 className="text-5xl,
   m: d: text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-zion-cyan to-blue-400 bg-clip-text text-transparent">
-                Expert IT
+                Expert IT;
               </span>
               <br />
               <span className="text-white">Consulting</span>
@@ -174,7 +176,7 @@ export default function ITConsulting() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-semibold text-lg rounded-xl,
   hove: r:from-zion-cyan-dark,
@@ -183,7 +185,7 @@ export default function ITConsulting() {
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <motion.button
+              <motion.button;
                 className="className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg,
   hove: r:bg-zion-cyan,
   hove: r:text-white transition-all duration-300 flex items-center gap-3";"
@@ -206,7 +208,7 @@ export default function ITConsulting() {
   }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -226,7 +228,7 @@ export default function ITConsulting() {
               Why Choose Our IT Consulting?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our expert consultants bring decades of experience and deep industry knowledge to help you 
+              Our expert consultants bring decades of experience and deep industry knowledge to help you;
               make informed technology decisions and achieve your business objectives.
             </p>
           </motion.div>
@@ -235,7 +237,7 @@ export default function ITConsulting() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -272,7 +274,7 @@ export default function ITConsulting() {
   s: m: px-6,
   l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -289,15 +291,15 @@ export default function ITConsulting() {
           >
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
-              Our Consulting Services
+              Our Consulting Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive consulting solutions designed to address your unique business
+              Comprehensive consulting solutions designed to address your unique business;
               challenges and drive measurable results.
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8";"
@@ -310,7 +312,7 @@ export default function ITConsulting() {
   }
           >
             {consultingServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -342,15 +344,15 @@ export default function ITConsulting() {
                 <ul className="space-y-3">
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                    Strategic planning and analysis
+                    Strategic planning and analysis;
                   </li>
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                    Implementation guidance
+                    Implementation guidance;
                   </li>
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                    Ongoing support and optimization
+                    Ongoing support and optimization;
                   </li>
                 </ul>
               </motion.div>
@@ -365,7 +367,7 @@ export default function ITConsulting() {
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -384,12 +386,12 @@ export default function ITConsulting() {
               Ready to Transform Your Technology Strategy?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our expert IT consulting can help you achieve your business goals 
+              Let's discuss how our expert IT consulting can help you achieve your business goals;
               and stay ahead of the competition.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-semibold text-lg rounded-lg,
   hove: r:from-zion-cyan-dark,
@@ -398,7 +400,7 @@ export default function ITConsulting() {
                 <span>Schedule Consultation</span>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold text-lg rounded-lg,
   hove: r:bg-zion-cyan hove,

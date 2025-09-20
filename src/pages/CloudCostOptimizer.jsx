@@ -1,10 +1,10 @@
 import React from "react"
 import SEO from "@/components/SEO"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Button   } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
+import { Badge   } from "@/components/ui/badge";
+import { Check, Cloud, BarChart3, Globe, Settings   } from "lucide-react";
+import { Link   } from "react-router-dom";
 export default function CloudCostOptimizer() {
   const features = [
   "AI-driven cost optimization algorithms"
@@ -36,7 +36,7 @@ export default function CloudCostOptimizer() {
                 "AWS cost optimization"
 ]
             popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -55,7 +55,7 @@ export default function CloudCostOptimizer() {
                 "Custom cost policies"
 ]
             popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -76,7 +76,7 @@ export default function CloudCostOptimizer() {
                 "Custom reporting"
 ]
             popula,
-  r: false
+  r: false;
 },
   ]
     const optimizationServices = [
@@ -152,16 +152,16 @@ export default function CloudCostOptimizer() {
         <div className="container mx-auto text-center">
           <div className="mb-8">
             <Badge className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 border-blue-500/30 px-4 py-2 text-lg">
-              AI-Powered Cloud Optimization
+              AI-Powered Cloud Optimization;
             </Badge>
           </div>
           <h1 className="text-5xl,
   m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Cloud Cost Optimizer
+            Cloud Cost Optimizer;
           </h1>
           <p className="text-xl,
   m: d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Stop overpaying for cloud services. Our AI-powered platform analyzes your cloud usage and automatically 
+            Stop overpaying for cloud services. Our AI-powered platform analyzes your cloud usage and automatically;
             optimizes resources to reduce costs by up to 40% while maintaining performance.
           </p>
           <div className="flex flex-col,
@@ -169,12 +169,12 @@ export default function CloudCostOptimizer() {
             <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500,
   hove: r:from-blue-600,
   hove: r:to-cyan-600 text-white px-8 py-4 text-lg">
-              Start Free Cost Analysis
+              Start Free Cost Analysis;
             </Button>
             <Button size="lg" variant="outline" className="border-blue-500 text-blue-400 hove,
   r:bg-blue-500/10 px-8 py-4 text-lg">
               <Cloud className="h-5 w-5 mr-2"/>
-              Cost Calculator
+              Cost Calculator;
             </Button>
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function CloudCostOptimizer() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold mb-4 text-white">
-              Proven Cost Savings Results
+              Proven Cost Savings Results;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Our customers consistently achieve significant cost reductions while improving cloud performance.
@@ -218,7 +218,7 @@ export default function CloudCostOptimizer() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold mb-4 text-white">
-              Comprehensive Cloud Optimization
+              Comprehensive Cloud Optimization;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Our platform provides end-to-end cloud cost optimization across all major cloud providers.
@@ -252,7 +252,7 @@ export default function CloudCostOptimizer() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold mb-4 text-white">
-              Multi-Cloud Support
+              Multi-Cloud Support;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Optimize costs across all major cloud providers from a single platform.
@@ -280,7 +280,7 @@ export default function CloudCostOptimizer() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d: text-4xl font-bold mb-4 text-white">
-              Advanced Optimization Features
+              Advanced Optimization Features;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Our AI-powered platform continuously monitors and optimizes your cloud infrastructure for maximum efficiency.
@@ -312,7 +312,7 @@ export default function CloudCostOptimizer() {
           <div className="text-center mb-12">
             <h2 className="text-3xl,
   m: d:text-4xl font-bold mb-4 text-white">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Choose the plan that fits your cloud spending. All plans include our core optimization features.
@@ -325,7 +325,7 @@ export default function CloudCostOptimizer() {
   hove: r:border-blue-500/40 transition-all duration-300`}>
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2">
-                      Most Popular
+                      Most Popular;
                     </Badge>
                   </div>)}
                 <CardHeader className="text-center pb-4">
@@ -345,7 +345,7 @@ export default function CloudCostOptimizer() {
                 <div className="p-6 pt-0">
                   <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-blue-500,
   hove: r:bg-blue-600'}`}>
-                    Get Started
+                    Get Started;
                   </Button>
                 </div>
               </Card>))}
@@ -370,12 +370,12 @@ export default function CloudCostOptimizer() {
             <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500,
   hove: r:from-blue-600,
   hove: r:to-cyan-600 text-white px-8 py-4 text-lg">
-              Free Cost Analysis
+              Free Cost Analysis;
             </Button>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-blue-500 text-blue-400,
   hove: r:bg-blue-500/10 px-8 py-4 text-lg">
-                Contact Sales
+                Contact Sales;
               </Button>
             </Link>
           </div>

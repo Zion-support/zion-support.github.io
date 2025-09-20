@@ -1,53 +1,56 @@
+import { useCallback  } from "react";
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion, AnimatePresence   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
-  Cloud
-  Shield
-  Server
-  Zap
-  Globe
-  Cpu
-  Database
-  Network
-  Lock
-  Code
-  Rocket
-  Users
-  Search
-  Filter
-  Star
-  TrendingUp
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight
-  Play
-  BookOpen
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Globe as GlobeIcon
-  Sparkles
-  Target
-  Award
-  Lightbulb
-  BarChart3
-  Layers
-  Cpu as CpuIcon
-  Shield as ShieldIcon
-  Brain as BrainIcon
-  Rocket as RocketIcon
-  Truck
-  Scale
-  Building
-} from "lucide-react"
+  Brain;
+  Cloud;
+  Shield;
+  Server;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  Search;
+  Filter;
+  Star;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Globe as GlobeIcon;
+  Sparkles;
+  Target;
+  Award;
+  Lightbulb;
+  BarChart3;
+  Layers;
+  Cpu as CpuIcon;
+  Shield as ShieldIcon;
+  Brain as BrainIcon;
+  Rocket as RocketIcon;
+  Truck;
+  Scale;
+  Building;
+}
+}
+ } from "lucide-react";
 import SEO from "@/components/SEO"
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025"
-import { EXPANDED_MICRO_SAAS_SERVICES_2025 } from "@/data/expandedMicroSaasServices2025"
-import { SPECIALIZED_SERVICES_2025 } from "@/data/specializedServices2025"
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES   } from "@/data/innovativeMicroSaasServices2025";
+import { EXPANDED_MICRO_SAAS_SERVICES_2025   } from "@/data/expandedMicroSaasServices2025";
+import { SPECIALIZED_SERVICES_2025   } from "@/data/specializedServices2025";
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -55,11 +58,11 @@ export default function ServicesPage() {
   const [sortBy, setSortBy] = useState('featured')
   const [activeTab, setActiveTab] = useState('all')
 
-  // Combine all services
+  // Combine all services;
 const allServices = [
-  ...INNOVATIVE_MICRO_SAAS_SERVICES_2025
-    ...EXPANDED_MICRO_SAAS_SERVICES_2025
-    ...SPECIALIZED_SERVICES_2025
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+    ...EXPANDED_MICRO_SAAS_SERVICES_2025;
+    ...SPECIALIZED_SERVICES_2025;
 ]
   const categories = [
   { id: 'all', na,
@@ -215,20 +218,20 @@ const allServices = [
                         (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
                         (selectedPriceRange === 'enterprise' && service.price > 5000)
 
-    return matchesSearch && matchesCategory && matchesPrice
+    return matchesSearch && matchesCategory && matchesPrice;
 })
 
-  // Sort services
+  // Sort services;
 const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
   case 'price-low':
-        return a.price - b.price
+        return a.price - b.price;
       case 'price-high':
-        return b.price - a.price
+        return b.price - a.price;
       case 'newest':
         return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime()
       defau,
-  l: t: return 0
+  l: t: return 0;
 },
   })
   const getCategoryIcon = (catego,
@@ -254,7 +257,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
   return (
     <>
-      <SEO
+      <SEO;
         title="Innovative Micro SAAS Services - Zion Tech Group"
         description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with our innovative technology services."
         canonical="/services"
@@ -279,7 +282,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
         <div className="absolute inset-0 bg-neon-grid opacity-5"></div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             className="className="text-center max-w-4xl mx-auto";"
             initial={ opaci,
   t: y: 0, y: 30 },
@@ -291,7 +294,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   o: n: 0.8 },
   }
           >
-            <motion.div
+            <motion.div;
               className="className="mb-6";"
               initial={ opaci,
   t: y: 0, sca,
@@ -318,7 +321,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
               <span className="text-white">Micro SAAS Platform</span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing
+              Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing;
               discover the future of business technology with our comprehensive micro SAAS platform.
             </p>
 
@@ -328,7 +331,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
               <div className="relative group">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 group-hov,
   e: r:text-zion-cyan transition-colors duration-300" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search for services, technologies, or solutions..."
                   value={searchQuery},
@@ -346,7 +349,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
             <div className="grid grid-cols-1,
   m: d: grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <motion.div
+              <motion.div;
                 className="className="text-center";"
                 initial={ opacit,
   y: 0, y: 20 },
@@ -362,7 +365,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
-              <motion.div
+              <motion.div;
                 className="className="text-center";"
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -378,7 +381,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length}+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
-              <motion.div
+              <motion.div;
                 className="className="text-center";"
                 initial={ opaci,
   t: y: 0, y: 20 },
@@ -403,7 +406,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
       <section className="py-8 bg-zion-slate-dark/50 border-b border-zion-cyan/20">
         <div className="container-responsive">
-          <motion.div 
+          <motion.div;
             className="className="flex flex-wrap gap-2 justify-center";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -416,14 +419,14 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
           >
             {tabs.map((tab) => (
-  <button
+  <button;
                 key={tab.id},
   }
                 onClick={onClick={() => setActiveTab(tab.id)},
   },
   }
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
-  activeTab === tab.id
+  activeTab === tab.id;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
                     : 'bg-zion-slate-light/10 text-zion-slate-light,
   hove: r: bg-zion-slate-light/20 hove,
@@ -445,7 +448,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
         <div className="container-responsive">
           {/* Category Pills */},
   }
-          <motion.div
+          <motion.div;
             className="className="flex flex-wrap gap-3 mb-8 justify-center";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -458,14 +461,14 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
           >
             {categories.map((category) => (
-  <button
+  <button;
                 key={category.id},
   }
                 onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 group ${
-  selectedCategory === category.id
+  selectedCategory === category.id;
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-zion-slate-light/10 text-zion-slate-light,
   hove: r: bg-zion-slate-light/20 hove,
@@ -482,7 +485,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
 
           {/* Advanced Filters */},
   }
-          <motion.div
+          <motion.div;
             className="className="flex flex-col,
   m: d: flex-row gap-4 items-center justify-between";"
             initial={ opacit,
@@ -501,7 +504,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
               <div className="flex items-center gap-2">
                 <Filter className="w-4 h-4 text-zion-cyan" />
-                <select
+                <select;
                   value={selectedPriceRange},
   }
                   onChange={(e) => setSelectedPriceRange(e.target.value)},
@@ -521,7 +524,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-zion-cyan" />
-                <select
+                <select;
                   value={sortBy},
   }
                   onChange={(e) => setSortBy(e.target.value)},
@@ -539,7 +542,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
             </div>
 
             <div className="text-zion-slate-light">
-              Showing {sortedServices.length} of {currentServices.length} services
+              Showing {sortedServices.length} of {currentServices.length} services;
             </div>
           </motion.div>
         </div>
@@ -551,7 +554,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
         <div className="container-responsive">
           <AnimatePresence mode="wait">
             {sortedServices.length > 0 ? (
-  <motion.div
+  <motion.div;
                 className="className="grid grid-cols-1,
   m: d: grid-cols-2,
   l: g:grid-cols-3 gap-8";"
@@ -569,7 +572,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
               >
                 {sortedServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                     key={service.id},
   }
                     className="className="card-neon group";"
@@ -593,7 +596,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
                           {(() () => {
                             const IconComponent = getCategoryIcon(service.category)
-                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null
+                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null;
 })()}
                         </div>
                         <div className="text-right">
@@ -682,11 +685,11 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                         </div>
                       </div>
 
-                      <Link
+                      <Link;
                         to={`/services/${service.id}`}
                         className="className="btn-cyber px-4 py-2 text-sm";"
                       >
-                        Learn More
+                        Learn More;
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </div>
@@ -694,7 +697,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 ))}
               </motion.div>
             ) : (
-  <motion.div
+  <motion.div;
                 className="className="text-center py-16";"
                 initial={ opaci,
   t: y: 0 },
@@ -709,9 +712,9 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-zion-slate-light mb-6">
-                  Try adjusting your search criteria or browse all categories
+                  Try adjusting your search criteria or browse all categories;
                 </p>
-                <button
+                <button;
                   onClick={() () => {
                     setSearchQuery('')
                     setSelectedCategory('all')
@@ -720,7 +723,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
                   className="className="btn-futuristic px-6 py-3";"
                 >
-                  View All Services
+                  View All Services;
                 </button>
               </motion.div>
             )}
@@ -732,7 +735,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
       <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             className="className="text-center mb-12";"
             initial={ opaci,
   t: y: 0, y: 20 },
@@ -748,7 +751,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
               <span className="text-gradient">Specialized Solutions</span>
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover our specialized technology solutions designed for specific industries and use cases
+              Discover our specialized technology solutions designed for specific industries and use cases;
             </p>
           </motion.div>
 
@@ -756,7 +759,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   m: d: grid-cols-2 l,
   g:grid-cols-4 gap-6">
             {SPECIALIZED_SERVICES.map((service, index) => (
-  <motion.div
+  <motion.div;
                 key={service.id},
   }
                 className="className="card-futuristic text-center group";"
@@ -793,11 +796,11 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
   }
                 </div>
 
-                <Link
+                <Link;
                   to={`/services/${service.id}`}
                   className="className="btn-neon w-full";"
                 >
-                  Explore Solution
+                  Explore Solution;
                 </Link>
               </motion.div>
             ))}
@@ -805,7 +808,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
         </div>
 
         <div className="container-responsive text-center relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -820,22 +823,22 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Get in touch with our technology experts to discuss your specific needs and discover
+              Get in touch with our technology experts to discuss your specific needs and discover;
               how our innovative solutions can drive your business forward.
             </p>
 
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="className="btn-futuristic px-8 py-4 text-lg group";"
               >
                 <MessageCircle className="w-5 h-5 mr-2 group-hov,
   e: r:scale-110 transition-transform duration-300" />
-                Get Free Consultation
+                Get Free Consultation;
               </Link>
 
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="btn-neon px-8 py-4 text-lg group";"
@@ -843,7 +846,7 @@ const sortedServices = [...filteredServices].sort((a, b) () => {
                 <Phone className="w-5 h-5 mr-2 group-hov,
   e: r:scale-110 transition-transform duration-300" />
                 Call No,
-  w: +1 302 464 0950
+  w: +1 302 464 0950;
               </a>
             </div>
 

@@ -1,36 +1,40 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion     } from "framer-motion";
 import {
-  MessageCircle
+  MessageCircle;
   Bot,
   Brain,
   Zap,
   Shield,
   Globe,
   Users,
-  Clock
-  CheckCircle
-  Star
-  ArrowRight
-  Play
-  Phone
-  Mail
-  MapPin
-  Headphones
-  Smartphone
-  Monitor
-  TrendingUp
-  BarChart3
-  Target
-  Settings
-  Database
-  Cloud
-  AlertCircle
-  FileText
-  Calendar
-  UserCheck
-} from "lucide-react"
-import { SEO } from "../../components/SEO"
+  Clock;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Play;
+  Phone;
+  Mail;
+  MapPin;
+  Headphones;
+  Smartphone;
+  Monitor;
+  TrendingUp;
+  BarChart3;
+  Target;
+  Settings;
+  Database;
+  Cloud;
+  AlertCircle;
+  FileText;
+  Calendar;
+  UserCheck;
+}
+}
+}
+}
+ } from "lucide-react";
+import { SEO     } from "../../components/SEO";
 const AICustomerSupportAutomation = () () => {
   const features = [
   {
@@ -88,7 +92,7 @@ const AICustomerSupportAutomation = () () => {
         "Basic analytics"
 ]
       popul,
-  a: r: false
+  a: r: false;
 },
   {
   na,
@@ -108,7 +112,7 @@ const AICustomerSupportAutomation = () () => {
         "White-label options"
 ]
       popul,
-  a: r: true
+  a: r: true;
 },
   {
   na,
@@ -129,7 +133,7 @@ const AICustomerSupportAutomation = () () => {
         "Custom training"
 ]
       popula,
-  r: false
+  r: false;
 },
   ]
   const useCases = [
@@ -138,28 +142,28 @@ const AICustomerSupportAutomation = () () => {
   l: e: "E-commerce Support",descripti,
   o: n: "Handle order inquiries, returns, and product questions automatically while escalating complex issues to human agents"
       ic,
-  o: n: ShoppingCart
+  o: n: ShoppingCart;
 },
   {
   tit,
   l: e: "SaaS Customer Success",descripti,
   o: n: "Provide instant technical support, onboarding assistance, and feature explanations to improve user adoption"
       ic,
-  o: n: Monitor
+  o: n: Monitor;
 },
   {
   tit,
   l: e: "Financial Services",descripti,
   o: n: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance"
       ic,
-  o: n: DollarSign
+  o: n: DollarSign;
 },
   {
   tit,
   l: e: "Healthcare Support",descripti,
   o: n: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance"
       ic,
-  o: n: Heart
+  o: n: Heart;
 },
   ]
   const benefits = [
@@ -199,7 +203,7 @@ const AICustomerSupportAutomation = () () => {
   l: e: "Customer Success Director",compa,
   n: y: "TechFlow Solutions",conte,
   n: t: "Our AI support automation has transformed customer experience. Response times dropped from 4 hours to under 2 minutes.",rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -208,7 +212,7 @@ const AICustomerSupportAutomation = () () => {
   n: y: "E-commerce Plus",conte,
   n: t: "The chatbot handles 70% of our inquiries automatically, freeing our agents to focus on complex customer issues."
       rati,
-  n: g: 5
+  n: g: 5;
 },
   {
   na,
@@ -216,7 +220,7 @@ const AICustomerSupportAutomation = () () => {
   l: e: "VP of Support",compa,
   n: y: "CloudTech Inc",conte,
   n: t: "Customer satisfaction increased by 35% while reducing support costs by 65%. Game-changing technology.",rati,
-  n: g: 5
+  n: g: 5;
 },
   ]
   const integrations = [
@@ -253,7 +257,7 @@ const AICustomerSupportAutomation = () () => {
   ]
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI-Powered Customer Support Automation - Zion Tech Group"
         description="Transform customer support with AI automation. 24/7 availability, instant responses, and 60-80% cost reduction. Start from $199/month."
       />
@@ -264,7 +268,7 @@ const AICustomerSupportAutomation = () () => {
   s: m: px-6,
   l: g:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -278,13 +282,13 @@ const AICustomerSupportAutomation = () () => {
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
               <Bot className="w-4 h-4 mr-2 text-cyan-400" />
-              AI-Powered Support Automation
+              AI-Powered Support Automation;
             </div>
             
             <h1 className="text-5xl,
   m: d: text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Customer Support
+                Customer Support;
               </span>
               <br />
               <span className="text-white">Automation</span>
@@ -292,30 +296,30 @@ const AICustomerSupportAutomation = () () => {
             
             <p className="text-xl m,
   d:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your customer support with AI automation that provides 24/7 availability
+              Transform your customer support with AI automation that provides 24/7 availability;
               instant responses, and reduces support costs by 60-80% while improving customer satisfaction.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300 flex items-center group";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5 group-hov,
   e: r:translate-x-1 transition-transform" />
               </a>
-              <a
+              <a;
                 href="#demo"
                 className="className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hove,
   r:bg-cyan-400/10 transition-all duration-300 flex items-center group";"
               >
                 <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+                Watch Demo;
               </a>
             </div>
           </motion.div>
@@ -335,7 +339,7 @@ const AICustomerSupportAutomation = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -353,11 +357,11 @@ const AICustomerSupportAutomation = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Proven Results
+                Proven Results;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the measurable impact AI automation can have on your customer support
+              See the measurable impact AI automation can have on your customer support;
             </p>
           </motion.div>
           
@@ -365,7 +369,7 @@ const AICustomerSupportAutomation = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -407,7 +411,7 @@ const AICustomerSupportAutomation = () () => {
   s: m: px-6,
   l: g:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -425,11 +429,11 @@ const AICustomerSupportAutomation = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Powerful Features
+                Powerful Features;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate and optimize your customer support
+              Everything you need to automate and optimize your customer support;
             </p>
           </motion.div>
           
@@ -437,7 +441,7 @@ const AICustomerSupportAutomation = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -485,7 +489,7 @@ const AICustomerSupportAutomation = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -503,18 +507,18 @@ const AICustomerSupportAutomation = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Use Cases
+                Use Cases;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how different industries are transforming customer support with AI automation
+              See how different industries are transforming customer support with AI automation;
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -562,7 +566,7 @@ const AICustomerSupportAutomation = () () => {
   s: m: px-6,
   l: g:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -580,11 +584,11 @@ const AICustomerSupportAutomation = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Seamless Integrations
+                Seamless Integrations;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your existing tools and workflows for maximum efficiency
+              Connect with your existing tools and workflows for maximum efficiency;
             </p>
           </motion.div>
           
@@ -592,7 +596,7 @@ const AICustomerSupportAutomation = () () => {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {integrations.map((integration, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -640,7 +644,7 @@ const AICustomerSupportAutomation = () () => {
   s: m: px-6,
   l: g:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -658,7 +662,7 @@ const AICustomerSupportAutomation = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Pricing Plans
+                Pricing Plans;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -669,7 +673,7 @@ const AICustomerSupportAutomation = () () => {
           <div className="grid grid-cols-1 l,
   g:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -690,13 +694,13 @@ const AICustomerSupportAutomation = () () => {
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </div>
                   </div>
                 )}
                 
                 <div className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
-  plan.popular 
+  plan.popular;
                     ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
                     : 'border-white/20,
   hove: r:border-cyan-400/40'
@@ -720,11 +724,11 @@ const AICustomerSupportAutomation = () () => {
                     ))}
                   </ul>
                   
-                  <a
+                  <a;
                     href="htt,
   p: s: //ziontechgroup.com/contact"
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
-  plan.popular
+  plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white,
   hove: r:from-cyan-400,
   hove: r:to-blue-400'
@@ -732,7 +736,7 @@ const AICustomerSupportAutomation = () () => {
   r:bg-cyan-400/10'
 }`}
                   >
-                    Start Free Trial
+                    Start Free Trial;
                   </a>
                 </div>
               </motion.div>
@@ -747,7 +751,7 @@ const AICustomerSupportAutomation = () () => {
   s: m: px-6,
   l: g:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div;
             className="className="text-center mb-16";"
             initial={ opacit,
   y: 0, y: 30 },
@@ -765,7 +769,7 @@ const AICustomerSupportAutomation = () () => {
             <h2 className="text-4xl,
   m: d: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                What Our Clients Say
+                What Our Clients Say;
               </span>
             </h2>
           </motion.div>
@@ -773,7 +777,7 @@ const AICustomerSupportAutomation = () () => {
           <div className="grid grid-cols-1 m,
   d:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-  <motion.div
+  <motion.div;
                 key={index},
   }
                 initial={ opaci,
@@ -819,7 +823,7 @@ const AICustomerSupportAutomation = () () => {
   s: m: px-6,
   l: g:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 30 },
   }
@@ -842,25 +846,25 @@ const AICustomerSupportAutomation = () () => {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="htt,
   p: s://ziontechgroup.com/contact"
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg,
   hove: r:from-cyan-400,
   hove: r:to-blue-400 transition-all duration-300 flex items-center group";"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="ml-2 w-5 h-5 group-hov,
   e: r:translate-x-1 transition-transform" />
               </a>
-              <a
+              <a;
                 href="t,
   e: l:+13024640950"
                 className="className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hove,
   r:bg-cyan-400/10 transition-all duration-300 flex items-center group";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </a>
             </div>
           </motion.div>
@@ -882,7 +886,7 @@ const AICustomerSupportAutomation = () () => {
               <a href="t,
   e: l:+13024640950" className="text-cyan-400,
   hove: r:text-cyan-300 transition-colors">
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -891,7 +895,7 @@ const AICustomerSupportAutomation = () () => {
               <a href="mail,
   t: o:kleber@ziontechgroup.com" className="text-cyan-400 hove,
   r:text-cyan-300 transition-colors">
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -899,7 +903,7 @@ const AICustomerSupportAutomation = () () => {
               <div className="text-white font-semibold">Address</div>
               <div className="text-gray-300 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
+                Middletown DE 19709;
               </div>
             </div>
           </div>
@@ -909,7 +913,7 @@ const AICustomerSupportAutomation = () () => {
   }
         <div className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-4xl text-center">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -924,11 +928,11 @@ const AICustomerSupportAutomation = () () => {
                 Ready to Transform Your Customer Support?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using AI to provide exceptional customer experiences
+                Join thousands of businesses already using AI to provide exceptional customer experiences;
               </p>
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -939,10 +943,10 @@ const AICustomerSupportAutomation = () () => {
   hove: r: from-blue-600,
   hove: r:to-purple-700 transition-all duration-300 flex items-center justify-center";"
                 >
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -953,7 +957,7 @@ const AICustomerSupportAutomation = () () => {
   hove: r: bg-blue-400 hove,
   r:text-white transition-all duration-300";"
                 >
-                  Contact Sales
+                  Contact Sales;
                 </motion.button>
               </div>
             </motion.div>
@@ -963,7 +967,7 @@ const AICustomerSupportAutomation = () () => {
       </section>
     )
 }
-// Add missing icon components
+// Add missing icon components;
 const ShoppingCart = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
@@ -982,4 +986,4 @@ const Heart = ({ className }: { className?: string }) => (
   </svg>
 )
 
-export default AICustomerSupportAutomation
+export default AICustomerSupportAutomation;

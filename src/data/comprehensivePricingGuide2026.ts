@@ -1,5 +1,5 @@
-// Comprehensive Pricing Guide 2026 - Zion Tech Group
-// Revolutionary Micro SAAS, IT Infrastructure, and AI Services
+// Comprehensive Pricing Guide 2026 - Zion Tech Group;
+// Revolutionary Micro SAAS, IT Infrastructure, and AI Services;
 export interface PricingTier {
   na,
   m: e: string,pri,
@@ -12,7 +12,9 @@ export interface PricingTier {
   o: i: string,setupTi,
   m: e: string,supportLev,
   e: l: string,innovationLev,
-  e: l: string
+  e: l: string;
+}
+}
 }
 
 export interface ServicePricing {
@@ -31,7 +33,9 @@ export interface ServicePricing {
   e: string,ema,
   i: l: string,websi,
   t: e: string,addre,
-  s: s: string
+  s: s: string;
+}
+}
 }
   technicalSpe,
   c: s: {
@@ -859,4 +863,4 @@ export,
   },
   ]
 
-export default COMPREHENSIVE_PRICING_GUIDE_2026
+export default COMPREHENSIVE_PRICING_GUIDE_2026;

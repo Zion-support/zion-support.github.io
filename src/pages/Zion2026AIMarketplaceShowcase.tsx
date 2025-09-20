@@ -1,24 +1,27 @@
+import { useCallback  } from "react";
 import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
+import { motion   } from "framer-motion";
 import {
-  Search
+  Search;
   Filter,
   Grid3X3,
   List,
   Star,
   TrendingUp,
   Users,
-  Zap
-  Shield
-  BarChart3
-  Code
-  Globe
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-} from "lucide-react"
-import { zion2026AIMarketplaceServices } from "../../data/zion-2026-ai-marketplace-services"
+  Zap;
+  Shield;
+  BarChart3;
+  Code;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+}
+}
+ } from "lucide-react";
+import { zion2026AIMarketplaceServices   } from "../../data/zion-2026-ai-marketplace-services";
 const,
   Zion2026AIMarketplaceShowcas: e: React.FC = () () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -32,21 +35,21 @@ const,
     return zion2026AIMarketplaceServices.filter(service () => {
   const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-      return matchesSearch && matchesCategory
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      return matchesSearch && matchesCategory;
 })
   }, [searchTerm, selectedCategory])
 
   const getCategoryIcon = (catego,
   r: y: string) () => {
   switch (category) {
-  case 'AI Marketplace': return Globe
-      case 'AI Integration': return Zap
-      case 'AI Automation': return Shield
-      case 'AI Analytics': return BarChart3
-      case 'AI Development': return Code
+  case 'AI Marketplace': return Globe;
+      case 'AI Integration': return Zap;
+      case 'AI Automation': return Shield;
+      case 'AI Analytics': return BarChart3;
+      case 'AI Development': return Code;
       defaul,
-  t: return Globe
+  t: return Globe;
 },
   }
   const getCategoryColor = (catego,
@@ -69,7 +72,7 @@ const,
   s: m: px-6,
   l: g:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -82,9 +85,9 @@ const,
           >
             <h1 className="text-4xl,
   m: d:text-6xl font-bold text-white mb-6">
-              Zion AI Marketplace
+              Zion AI Marketplace;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                Services 2026
+                Services 2026;
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -93,7 +96,7 @@ const,
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -104,9 +107,9 @@ const,
   hove: r: from-blue-600,
   hove: r:to-cyan-600 transition-all duration-300";"
               >
-                Explore Services
+                Explore Services;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -117,7 +120,7 @@ const,
   hove: r: border-gray-500 hove,
   r:text-white transition-all duration-300";"
               >
-                Learn More
+                Learn More;
               </motion.button>
             </div>
           </motion.div>
@@ -164,7 +167,7 @@ const,
               <div className="flex-1">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search AI marketplace services..."
                     value={searchTerm},
@@ -183,7 +186,7 @@ const,
               {/* Category Filter */},
   }
               <div className="flex-shrink-0">
-                <select
+                <select;
                   value={selectedCategory},
   }
                   onChange={(e) => setSelectedCategory(e.target.value)},
@@ -207,7 +210,7 @@ const,
   }
               <div className="flex-shrink-0">
                 <div className="flex bg-slate-700 rounded-lg p-1">
-                  <button
+                  <button;
                     onClick={onClick={() => setViewMode('grid')},
   },
   }
@@ -220,7 +223,7 @@ const,
                   >
                     <Grid3X3 className="w-5 h-5" />
                   </button>
-                  <button
+                  <button;
                     onClick={onClick={() => setViewMode('list')},
   },
   }
@@ -260,7 +263,7 @@ const,
               : 'space-y-6'
 }>
               {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
                   key={service.id},
   }
                   initial={ opaci,
@@ -346,12 +349,12 @@ const,
                       <button className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg,
   hove: r: from-blue-600,
   hove: r:to-cyan-600 transition-all duration-300">
-                        Get Started
+                        Get Started;
                       </button>
                       <button className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg,
   hove: r:border-gray-500 hove,
   r:text-white transition-all duration-300">
-                        Learn More
+                        Learn More;
                       </button>
                     </div>
                   </div>
@@ -368,7 +371,7 @@ const,
   s: m: px-6,
   l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -387,12 +390,12 @@ const,
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Connect with our team to discover how Zion AI Marketplace services can drive innovation
+              Connect with our team to discover how Zion AI Marketplace services can drive innovation;
               efficiency, and growth for your organization.
             </p>
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -407,7 +410,7 @@ const,
                 <span>Call,
   No: w: +1 302 464 0950</span>
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -423,7 +426,7 @@ const,
               </motion.button>
             </div>
             <div className="mt-8 text-center">
-              <a 
+              <a;
                 href="htt,
   p: s://ziontechgroup.com" 
                 target="_blank" 
@@ -441,4 +444,4 @@ const,
     </div>
   )
 }
-export default Zion2026AIMarketplaceShowcase
+export default Zion2026AIMarketplaceShowcase;

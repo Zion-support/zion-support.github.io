@@ -1,37 +1,39 @@
 import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { motion   } from "framer-motion";
+import { Link   } from "react-router-dom";
 import {
-  Brain
-  Cloud
-  Shield
-  Zap
-  Globe
-  Database
-  Smartphone
-  Rocket
-  Cpu
-  Network
-  Lock
-  BarChart3
-  Users
-  Target
-  Award
-  Star
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  Search
-  Filter
-  TrendingUp
-  DollarSign
-  Clock
-  Shield as ShieldIcon
-} from "lucide-react"
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from "../data/ultimateInnovativeServices2025"
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Globe;
+  Database;
+  Smartphone;
+  Rocket;
+  Cpu;
+  Network;
+  Lock;
+  BarChart3;
+  Users;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Search;
+  Filter;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  Shield as ShieldIcon;
+}
+}
+ } from "lucide-react";
+import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES   } from "../data/ultimateInnovativeServices2025";
 export default function UltimateInnovativeServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all')
@@ -39,7 +41,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
   const [sortBy, setSortBy] = useState<string>('innovation')
 
   const filteredServices = useMemo(() () => {
-    let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025
+    let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
     if (if (selectedCategory !== 'all') {
   ) {
       filtered = filtered.filter(service => service.category === selectedCategory)
@@ -59,39 +61,39 @@ export default function UltimateInnovativeServicesShowcase2025() {
       )
     }
 
-    // Sort services
+    // Sort services;
     switch (sortBy) {
   case 'price-low':
         filtered = [...filtered].sort((a, b) => a.price - b.price)
-        break
+        break;
       case 'price-high':
         filtered = [...filtered].sort((a, b) => b.price - a.price)
-        break
+        break;
       case 'roi':
         filtered = [...filtered].sort((a, b) () => {
   const aRoi = parseInt(a.roi.split('%')[0])
           const bRoi = parseInt(b.roi.split('%')[0])
-          return bRoi - aRoi
+          return bRoi - aRoi;
 })
-        break
+        break;
       case 'delivery':
         filtered = [...filtered].sort((a, b) () => {
   const aWeeks = parseInt(a.estimatedDelivery.split('-')[0])
           const bWeeks = parseInt(b.estimatedDelivery.split('-')[0])
-          return aWeeks - bWeeks
+          return aWeeks - bWeeks;
 })
         break,
-  defaul: t: // innovation
+  defaul: t: // innovation;
         filtered = [...filtered].sort((a, b) () => {
   const innovationOrder = [['RevolutionaryBreakthrough', 'Advanced'],
   ]
           const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0])
           const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0])
-          return aIndex - bIndex
+          return aIndex - bIndex;
 })
     }
 
-    return filtered
+    return filtered;
 }, [selectedCategory, selectedSubcategory, searchTerm, sortBy])
   const getCategoryIcon = (catego,
   r: y: string) () => {
@@ -134,7 +136,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
   s: m: px-6,
   l: g:px-8 py-8">
           <div className="text-center">
-            <motion.h1
+            <motion.h1;
               initial={ opacit,
   y: 0, y: -20 },
   }
@@ -144,9 +146,9 @@ export default function UltimateInnovativeServicesShowcase2025() {
               className="className="text-4xl,
   m: d: text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent";"
             >
-              Ultimate Innovative Services 2025
+              Ultimate Innovative Services 2025;
             </motion.h1>
-            <motion.p
+            <motion.p;
               initial={ opacit,
   y: 0, y: 20 },
   }
@@ -161,7 +163,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
               Discover the future of technology with our revolutionary micro SAAS services.
               From AI and quantum computing to space technology and biotechnology.
             </motion.p>
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, sca,
   l: e: 0.8 },
@@ -204,7 +206,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
   }
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm},
@@ -221,7 +223,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
             {/* Category Filter */},
   }
             <div className="flex gap-2">
-              <select
+              <select;
                 value={selectedCategory},
   }
                 onChange={(e) () => {
@@ -240,7 +242,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 ))}
               </select>
 
-              <select
+              <select;
                 value={selectedSubcategory},
   }
                 onChange={(e) => setSelectedSubcategory(e.target.value)},
@@ -256,7 +258,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 ))}
               </select>
 
-              <select
+              <select;
                 value={sortBy},
   }
                 onChange={(e) => setSortBy(e.target.value)},
@@ -288,7 +290,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
   l: g:grid-cols-2 x,
   l:grid-cols-3 gap-6">
           {filteredServices.map((service, index) => (
-  <motion.div
+  <motion.div;
               key={service.id},
   }
               initial={ opaci,
@@ -360,7 +362,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     ))},
   {service.features.length > 3 && (
   <div className="text-sm text-blue-600 font-medium">
-                        +{service.features.length - 3} more features
+                        +{service.features.length - 3} more features;
                       </div>
                     )}
                   </div>
@@ -419,7 +421,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                   <button className="flex-1 bg-blue-600,
   hove: r: bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">
                     <Phone className="w-4 h-4" />
-                    Contact Sales
+                    Contact Sales;
                   </button>
                   <button className="px-4 py-2 border border-gray-300 hove,
   r:border-gray-400 rounded-lg transition-colors">
@@ -476,16 +478,16 @@ export default function UltimateInnovativeServicesShowcase2025() {
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href={`te,
   l:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.phone}`}
                 className="className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hove: r: bg-gray-100 transition-colors flex items-center justify-center gap-2";"
               >
                 <Phone className="w-5 h-5" />
-                Call Now
+                Call Now;
               </a>
-              <a
+              <a;
                 href={`mailt,
   o:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.email}`}
                 className="className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
@@ -493,7 +495,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
   r:text-blue-600 transition-colors flex items-center justify-center gap-2";"
               >
                 <Mail className="w-5 h-5" />
-                Email Us
+                Email Us;
               </a>
             </div>
             <div className="mt-8 text-blue-100">

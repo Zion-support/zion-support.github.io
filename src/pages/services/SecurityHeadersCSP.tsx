@@ -1,30 +1,34 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { SEO } from "../../components/SEO"
+import { motion     } from "framer-motion";
+import { SEO     } from "../../components/SEO";
 import {
-  Shield
+  Shield;
   Lock,
   Target,
   Zap,
   BarChart3,
   Clock,
   Award,
-  Star
-  Globe
-  Cpu
-  Database
-  CheckCircle
-  Eye
-  Users
-  AlertTriangle
-  TrendingUp
-  Search
-  Download
-  Upload
-  Calendar
-  Server
-  FileText
-} from "lucide-react"
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  CheckCircle;
+  Eye;
+  Users;
+  AlertTriangle;
+  TrendingUp;
+  Search;
+  Download;
+  Upload;
+  Calendar;
+  Server;
+  FileText;
+}
+}
+}
+}
+ } from "lucide-react";
 export default function SecurityHeadersCSP() {
   const features = [
   {
@@ -78,37 +82,37 @@ export default function SecurityHeadersCSP() {
   head,
   e: r: "Content Security Policy (CSP)",descripti,
   o: n: "Prevent XSS attacks by controlling resource loading",ic,
-  o: n: Shield
+  o: n: Shield;
 },
   {
   head,
   e: r: "X-Frame-Options",descripti,
   o: n: "Protect against clickjacking attacks",ic,
-  o: n: Lock
+  o: n: Lock;
 },
   {
   head,
   e: r: "X-Content-Type-Options",descripti,
   o: n: "Prevent MIME type sniffing attacks",ic,
-  o: n: FileText
+  o: n: FileText;
 },
   {
   head,
   e: r: "Strict-Transport-Security (HSTS)",descripti,
   o: n: "Enforce HTTPS connections and prevent downgrade attacks",ic,
-  o: n: Server
+  o: n: Server;
 },
   {
   head,
   e: r: "X-XSS-Protection",descripti,
   o: n: "Enable browser XSS filtering",ic,
-  o: n: AlertTriangle
+  o: n: AlertTriangle;
 },
   {
   head,
   e: r: "Referrer-Policy",descripti,
   o: n: "Control referrer information in HTTP requests",ic,
-  o: n: Eye
+  o: n: Eye;
 },
   ]
   const useCases = [
@@ -140,7 +144,7 @@ export default function SecurityHeadersCSP() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Security Headers CSP - Zion Tech Group"
         description="Harden your web security with AI-powered security headers, content security policy, and comprehensive web protection solutions."
       />
@@ -151,7 +155,7 @@ export default function SecurityHeadersCSP() {
   l: g: py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
+          <motion.div;
             initial={ opacit,
   y: 0, y: 20 },
   }
@@ -170,20 +174,20 @@ export default function SecurityHeadersCSP() {
             
             <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-              Harden Your Web Security with
+              Harden Your Web Security with;
               <span className="bg-gradient-to-r from-red-400 via-orange-500 to-yellow-600 bg-clip-text text-transparent">
-                {" "}AI-Powered Protection
+                {" "}AI-Powered Protection;
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your web security posture with intelligent security headers, advanced 
+              Transform your web security posture with intelligent security headers, advanced;
               content security policies, and AI-powered threat detection and prevention.
             </p>
             
             <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -195,9 +199,9 @@ export default function SecurityHeadersCSP() {
   hove: r:to-orange-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-red-500/25";"
               >
-                Start Security Audit
+                Start Security Audit;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -207,7 +211,7 @@ export default function SecurityHeadersCSP() {
                 className="className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg,
   hove: r:bg-red-400/10 transition-all duration-300";"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>
             </div>
           </motion.div>
@@ -218,7 +222,7 @@ export default function SecurityHeadersCSP() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -232,10 +236,10 @@ export default function SecurityHeadersCSP() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Advanced Security Features
+              Advanced Security Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered security platform combines cutting-edge artificial intelligence 
+              Our AI-powered security platform combines cutting-edge artificial intelligence;
               with proven security methodologies to deliver comprehensive web protection.
             </p>
           </motion.div>
@@ -244,7 +248,7 @@ export default function SecurityHeadersCSP() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                 key={feature.title},
   }
                 initial={ opaci,
@@ -277,7 +281,7 @@ export default function SecurityHeadersCSP() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -291,10 +295,10 @@ export default function SecurityHeadersCSP() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Measurable Security Impact
+              Measurable Security Impact;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See real results with our AI-powered security solutions that deliver quantifiable 
+              See real results with our AI-powered security solutions that deliver quantifiable;
               improvements across all aspects of your web security posture.
             </p>
           </motion.div>
@@ -305,7 +309,7 @@ export default function SecurityHeadersCSP() {
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                     key={index},
   }
                     initial={ opaci,
@@ -360,7 +364,7 @@ export default function SecurityHeadersCSP() {
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -374,10 +378,10 @@ export default function SecurityHeadersCSP() {
           >
             <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-              Comprehensive Security Headers
+              Comprehensive Security Headers;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our security platform implements and manages all OWASP-recommended security 
+              Our security platform implements and manages all OWASP-recommended security;
               headers to provide comprehensive web application protection.
             </p>
           </motion.div>
@@ -386,7 +390,7 @@ export default function SecurityHeadersCSP() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {securityHeaders.map((header, index) => (
-  <motion.div
+  <motion.div;
                 key={header.header},
   }
                 initial={ opaci,
@@ -419,7 +423,7 @@ export default function SecurityHeadersCSP() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -433,10 +437,10 @@ export default function SecurityHeadersCSP() {
           >
             <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered security solutions are designed to work across industries, providing 
+              Our AI-powered security solutions are designed to work across industries, providing;
               tailored protection strategies for your specific security needs.
             </p>
           </motion.div>
@@ -445,7 +449,7 @@ export default function SecurityHeadersCSP() {
   m: d: grid-cols-2 l,
   g:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                 key={useCase.industry},
   }
                 initial={ opaci,
@@ -478,7 +482,7 @@ export default function SecurityHeadersCSP() {
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={ opaci,
   t: y: 0, y: 20 },
   }
@@ -495,12 +499,12 @@ export default function SecurityHeadersCSP() {
               Ready to Harden Your Security?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of organizations that have already transformed their web security 
+              Join hundreds of organizations that have already transformed their web security;
               with our AI-powered protection solutions.
             </p>
             <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -512,9 +516,9 @@ export default function SecurityHeadersCSP() {
   hove: r:to-orange-600 transition-all duration-300 shadow-lg,
   hove: r:shadow-red-500/25";"
               >
-                Start Free Trial
+                Start Free Trial;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={ scal,
   e: 1.05 },
   }
@@ -524,7 +528,7 @@ export default function SecurityHeadersCSP() {
                 className="className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg,
   hove: r: bg-red-400/10 transition-all duration-300";"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>
             </div>
           </motion.div>

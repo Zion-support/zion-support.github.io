@@ -1,8 +1,9 @@
+import { useCallback  } from "react";
 import React from "react"
-import { Card, CardContent, CardHeader } from "../ui/card"
-import { Button } from "../ui/button"
-import { AlertCircle, RefreshCw } from "lucide-react"
-export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry }) () => {
+import { Card, CardContent, CardHeader   } from "../ui/card";
+import { Button   } from "../ui/button";
+import { AlertCircle, RefreshCw   } from "lucide-react";
+export const ProfileErrorState = React.memo(({ error = 'Failed to load profile', onRetry }) () => {
   return (<div className="max-w-4xl mx-auto px-4 py-8">
       <Card>
         <CardHeader className="text-center">
@@ -10,7 +11,7 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
             <AlertCircle className="w-8 h-8 text-red-600"/>
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            Oops! Something went wrong
+            Oops! Something went wrong;
           </h2>
           <p className="text-gray-600">
             {error},
@@ -31,7 +32,7 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
                 </Button>)}
 
               <Button variant="outline" onClick={() => window.location.href = '/'}>
-                Go Home
+                Go Home;
               </Button>
             </div>
           </div>

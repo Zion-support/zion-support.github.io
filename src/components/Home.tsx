@@ -83,7 +83,7 @@ const services = useMemo(() => [
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
-            <div
+            <div;
               key={i}
               className="absolute w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"
                 style={{
@@ -105,7 +105,7 @@ const services = useMemo(() => [
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 <h1 className="text-6xl,
   m: d: text-8xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Zion
+                  Zion;
                 </h1>
                 <p className="text-2xl m,
   d:text-3xl mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -117,12 +117,12 @@ const services = useMemo(() => [
   hove: r:from-purple-700,
   hove: r:to-pink-700 px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300,
   transform: hover:scale-105 shadow-lg">
-                    Explore Solutions
+                    Explore Solutions;
                   </button>
                   <button className="border-2 border-purple-400 text-purple-400,
   hove: r:bg-purple-400 hove,
   r:text-white px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300">
-                    View Portfolio
+                    View Portfolio;
                   </button>
                 </div>
               </div>
@@ -135,13 +135,13 @@ const services = useMemo(() => [
               <div className={`transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 <h2 className="text-5xl,
   m: d: text-6xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Our Services
+                  Our Services;
                 </h2>
                 <div className="grid grid-cols-1,
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
                   {services.map((service, index) => (
-                    <div
+                    <div;
                       key={service.title}
                       className={`group bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8,
   hove: r: bg-gray-700/50 transition-all duration-500,
@@ -217,7 +217,7 @@ const services = useMemo(() => [
               <div className={`transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Latest News & Updates
+                  Latest News & Updates;
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
@@ -240,7 +240,7 @@ const services = useMemo(() => [
                       category: "Research"
                     },
   ].map((news, index) => (
-                    <div
+                    <div;
                       key={index}
                       className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                     >
@@ -270,7 +270,7 @@ const services = useMemo(() => [
               <div className={`transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  What Our Clients Say
+                  What Our Clients Say;
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
@@ -278,22 +278,22 @@ const services = useMemo(() => [
                       name: "Sarah Johnson",
                         role: "CTO, TechCorp",
                         content: "Zion's AI solutions transformed our operations completely. The results exceeded our expectations.",
-                      rating: 5
+                      rating: 5;
                     },
                     {
                       name: "Michael Chen",
                       role: "CEO, InnovateLab",
                       content: "Their quantum computing expertise gave us a competitive edge we never thought possible.",
-                      rating: 5
+                      rating: 5;
                     },
                     {
                       name: "Emily Rodriguez",
                       role: "VP Engineering, SpaceTech",
                       content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",
-                      rating: 5
+                      rating: 5;
                     },
   ].map((testimonial, index) => (
-                    <div
+                    <div;
                       key={index}
                       className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6,
   hove: r: bg-gray-700/50 transition-all duration-300 transform hove,
@@ -323,7 +323,7 @@ const services = useMemo(() => [
                 <h2 className="text-4xl,
   m: d: text-5xl font-bold mb-8">Ready to Transform Your Business?</h2>
                 <p className="text-xl text-gray-300 mb-12">
-                  Join hundreds of companies already using our cutting-edge technology solutions
+                  Join hundreds of companies already using our cutting-edge technology solutions;
                 </p>
                 <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
@@ -331,12 +331,12 @@ const services = useMemo(() => [
   hove: r:from-purple-700,
   hove: r:to-pink-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300,
   transform: hover:scale-105 shadow-lg">
-                    Start Your Project
+                    Start Your Project;
                   </button>
                   <button className="border-2 border-purple-400 text-purple-400,
   hove: r:bg-purple-400 hove,
   r:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
-                    View Case Studies
+                    View Case Studies;
                   </button>
                 </div>
               </div>
@@ -347,4 +347,4 @@ const services = useMemo(() => [
     </div>
   )
 }
-export default Home
+export default Home;

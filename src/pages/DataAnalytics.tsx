@@ -1,57 +1,59 @@
 import React from "react"
-import { SEO } from "../components/SEO"
-import { motion } from "framer-motion"
+import { SEO   } from "../components/SEO";
+import { motion   } from "framer-motion";
 import {
-  BarChart3
+  BarChart3;
   Brain,
   Zap,
-  CheckCircle
-  Star
-  TrendingUp
-  Award
-  Lock
-  Database
-  Cpu
-  Network
-  FileText
-  MessageCircle
-  Phone
-  Mail
-  MapPin
-  Building
-  Video
-  Eye
-  Target
-  Users
-  ArrowRight
-  Key
-  Fingerprint
-  EyeOff
-  Server
-  Globe2
-  ShieldCheck
-  Wifi
-  Smartphone
-  Activity
-  Clock
-  BarChart
-  PieChart
-  GitBranch
-  Code
-  Package
-  Play
-  Settings
-  Monitor
-  Shield
-  Rocket
-  Globe
-  Factory
-  Car
-  Heart
-  LineChart
-  Scatter
-  Layers
-} from "lucide-react"
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Wifi;
+  Smartphone;
+  Activity;
+  Clock;
+  BarChart;
+  PieChart;
+  GitBranch;
+  Code;
+  Package;
+  Play;
+  Settings;
+  Monitor;
+  Shield;
+  Rocket;
+  Globe;
+  Factory;
+  Car;
+  Heart;
+  LineChart;
+  Scatter;
+  Layers;
+}
+}
+ } from "lucide-react";
 export default function DataAnalytics() {
   const features = [
   {
@@ -108,25 +110,25 @@ export default function DataAnalytics() {
   tit,
   l: e: 'Business Intelligence',descripti,
   o: n: 'Comprehensive BI dashboards and reporting',ic,
-  o: n: BarChart3
+  o: n: BarChart3;
 },
   {
   tit,
   l: e: 'Customer Analytics',descripti,
   o: n: 'Deep customer insights and behavior analysis',ic,
-  o: n: Users
+  o: n: Users;
 },
   {
   tit,
   l: e: 'Financial Analytics',descripti,
   o: n: 'Risk assessment and financial performance analysis',ic,
-  o: n: TrendingUp
+  o: n: TrendingUp;
 },
   {
   tit,
   l: e: 'Operational Analytics',descripti,
   o: n: 'Process optimization and performance monitoring',ic,
-  o: n: Activity
+  o: n: Activity;
 },
   ]
   const analyticsCapabilities = [
@@ -162,7 +164,7 @@ export default function DataAnalytics() {
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="Data Analytics - Zion Tech Group"
         description="Revolutionary data analytics platform with AI-powered insights, real-time processing, and comprehensive visualization. Transform your data into actionable business intelligence."
         keywords="data analytics, business intelligence, AI analytics, big data, predictive analytics, data visualization, real-time analytics"
@@ -174,7 +176,7 @@ export default function DataAnalytics() {
         <section className="relative overflow-hidden py-20,
   l: g: py-32">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opacit,
   y: 0, y: 30 },
   }
@@ -188,26 +190,26 @@ export default function DataAnalytics() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 rounded-full text-indigo-400 text-sm font-medium mb-6">
                 <BarChart3 className="w-4 h-4" />
-                Analytics Innovation
+                Analytics Innovation;
               </div>
               
               <h1 className="text-4xl,
   l: g:text-6xl font-bold text-white mb-6">
-                Data
+                Data;
                 <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Analytics
+                  Analytics;
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform your data into actionable insights with our revolutionary analytics platform. 
-                AI-powered analysis, real-time processing, and beautiful visualizations that 
+                AI-powered analysis, real-time processing, and beautiful visualizations that;
                 drive better business decisions and outcomes.
               </p>
               
               <div className="flex flex-col,
   s: m: flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -219,9 +221,9 @@ export default function DataAnalytics() {
   hove: r:to-purple-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-indigo-500/25";"
                 >
-                  Get Started
+                  Get Started;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -232,7 +234,7 @@ export default function DataAnalytics() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  View Demo
+                  View Demo;
                 </motion.button>
               </div>
             </motion.div>
@@ -250,7 +252,7 @@ export default function DataAnalytics() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -267,10 +269,10 @@ export default function DataAnalytics() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Revolutionary Analytics Features
+                Revolutionary Analytics Features;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our data analytics platform combines cutting-edge technology with practical 
+                Our data analytics platform combines cutting-edge technology with practical;
                 applications to deliver unprecedented insights and intelligence.
               </p>
             </motion.div>
@@ -279,7 +281,7 @@ export default function DataAnalytics() {
   m: d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-  <motion.div
+  <motion.div;
                   key={feature.title},
   }
                   initial={ opaci,
@@ -326,7 +328,7 @@ export default function DataAnalytics() {
           <div className="container-responsive">
             <div className="grid grid-cols-1,
   l: g: grid-cols-2 gap-16 items-center">
-              <motion.div
+              <motion.div;
                 initial={ opacit,
   y: 0, x: -30 },
   }
@@ -342,19 +344,19 @@ export default function DataAnalytics() {
               >
                 <h2 className="text-3xl,
   l: g:text-4xl font-bold text-white mb-6">
-                  Transform Your Data Strategy
+                  Transform Your Data Strategy;
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our data analytics platform delivers measurable improvements in decision-making 
-                  speed, business performance, and operational efficiency while providing 
+                  Our data analytics platform delivers measurable improvements in decision-making;
+                  speed, business performance, and operational efficiency while providing;
                   comprehensive insights from all your data sources.
                 </p>
                 
                 <div className="grid grid-cols-1,
   s: m:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
-  <motion.div
+  <motion.div;
                       key={benefit},
   }
                       initial={ opaci,
@@ -379,7 +381,7 @@ export default function DataAnalytics() {
                 </div>
               </motion.div>
               
-              <motion.div
+              <motion.div;
                 initial={ opaci,
   t: y: 0, x: 30 },
   }
@@ -401,7 +403,7 @@ export default function DataAnalytics() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Analytics Impact
+                      Analytics Impact;
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -433,7 +435,7 @@ export default function DataAnalytics() {
   }
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -450,10 +452,10 @@ export default function DataAnalytics() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Analytics Capabilities
+                Analytics Capabilities;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform provides comprehensive analytics capabilities that 
+                Our platform provides comprehensive analytics capabilities that;
                 transform raw data into actionable business intelligence.
               </p>
             </motion.div>
@@ -461,7 +463,7 @@ export default function DataAnalytics() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {analyticsCapabilities.map((capability, index) => (
-  <motion.div
+  <motion.div;
                   key={capability.name},
   }
                   initial={ opaci,
@@ -510,7 +512,7 @@ export default function DataAnalytics() {
   }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -527,10 +529,10 @@ export default function DataAnalytics() {
             >
               <h2 className="text-3xl,
   l: g: text-4xl font-bold text-white mb-4">
-                Data Analytics Use Cases
+                Data Analytics Use Cases;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our analytics platform adapts to various business needs and industries
+                Our analytics platform adapts to various business needs and industries;
                 providing tailored solutions for different analytical requirements.
               </p>
             </motion.div>
@@ -538,7 +540,7 @@ export default function DataAnalytics() {
             <div className="grid grid-cols-1 m,
   d:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-  <motion.div
+  <motion.div;
                   key={useCase.title},
   }
                   initial={ opaci,
@@ -585,7 +587,7 @@ export default function DataAnalytics() {
   }
         <section className="py-20 bg-gradient-to-r from-indigo-500/10 to-purple-500/10">
           <div className="container-responsive">
-            <motion.div
+            <motion.div;
               initial={ opaci,
   t: y: 0, y: 30 },
   }
@@ -606,13 +608,13 @@ export default function DataAnalytics() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading organizations that are already using our data analytics 
+                Join leading organizations that are already using our data analytics;
                 platform to unlock insights and drive better business decisions.
               </p>
               
               <div className="flex flex-col,
   s: m:flex-row gap-4 justify-center">
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -624,9 +626,9 @@ export default function DataAnalytics() {
   hove: r:to-purple-700 transition-all duration-300 shadow-lg,
   hove: r:shadow-indigo-500/25";"
                 >
-                  Start Today
+                  Start Today;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={ scal,
   e: 1.05 },
   }
@@ -637,7 +639,7 @@ export default function DataAnalytics() {
   hove: r: border-gray-500 hove,
   r:bg-gray-800/50 transition-all duration-300";"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </motion.button>
               </div>
             </motion.div>
