@@ -1,1 +1,0 @@
-interface RequestInfo {}; interface RequestInit {};
