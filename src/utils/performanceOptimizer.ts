@@ -1,4 +1,3 @@
-
 import React from "react";
 /**
  * Performance Optimization Utilities
@@ -28,19 +27,17 @@ class PerformanceOptimizer {
 
   private initializeObservers(): void {
     // Observe navigation timing
-    if (typeof window !== "undefined" && "PerformanceObserver" in window) {
-      const navObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === "navigation") {
-            const navEntry = entry as PerformanceNavigationTiming;
-            this.metrics.loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
-            this.updateMemoryUsage();
-          }
-        });
-      });
-
+    if ("PerformanceObserver" in window) {
       try {
+        const navObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (entry.entryType === "navigation") {
+              const navEntry = entry as PerformanceNavigationTiming;
+              this.metrics.loadTime = navEntry.loadEventEnd - navEntry.fetchStart;
+            }
+          });
+        });
         navObserver.observe({ entryTypes: ["navigation"] });
         this.observers.push(navObserver);
       } catch (error) {
@@ -49,47 +46,30 @@ class PerformanceOptimizer {
     }
   }
 
-  debounce<T extends (...args: any[]) => any>(
-    func: T,
-    wait: number
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout;
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
+  public getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
   }
 
-  throttle<T extends (...args: any[]) => any>(
-    func: T,
-    limit: number
-  ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean;
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
-      }
-    };
+  public calculatePerformanceScore(): number {
+    const { loadTime, renderTime, memoryUsage } = this.metrics;
+    
+    // Simple scoring algorithm (0-100)
+    let score = 100;
+    
+    if (loadTime > 3000) score -= 20;
+    else if (loadTime > 2000) score -= 10;
+    
+    if (renderTime > 1000) score -= 20;
+    else if (renderTime > 500) score -= 10;
+    
+    if (memoryUsage > 50) score -= 15;
+    else if (memoryUsage > 30) score -= 8;
+    
+    return Math.max(0, score);
   }
 
-  optimizeImages(): void {
-    const images = document.querySelectorAll("img");
-    images.forEach((img) => {
-      if (!img.loading) {
-        img.loading = "lazy";
-      }
-      if (!img.decoding) {
-        img.decoding = "async";
-      }
-    });
-  }
-
-  preloadCriticalResources(urls: string[]): void {
-    if (typeof document === "undefined") return;
-
-    urls.forEach((url) => {
+  public preloadResources(urls: string[]): void {
+    urls.forEach(url => {
       const link = document.createElement("link");
       link.rel = "preload";
       link.href = url;
@@ -98,11 +78,33 @@ class PerformanceOptimizer {
     });
   }
 
-if (document.readyState === "complete") {runTasks()} else {window.addEventListener("load", runTasks)}
-if (document.readyState === "complete") {
-runTasks()} else {
-window.addEventListener("load", runTasks)}loadTime: 0; renderTime: 0; memoryUsage: 0;,
-bundleSize: 0});
+  private getResourceType(url: string): string {
+    const extension = url.split('.').pop()?.toLowerCase();
+    switch (extension) {
+      case 'js': return 'script';
+      case 'css': return 'style';
+      case 'png':
+      case 'jpg':
+      case 'jpeg':
+      case 'gif':
+      case 'webp': return 'image';
+      case 'woff':
+      case 'woff2': return 'font';
+      default: return 'fetch';
+    }
+  }
+
+  public cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+}
+
+// Initialize the optimizer
+const performanceOptimizer = new PerformanceOptimizer();
+
+// React hook for performance monitoring
+export const usePerformanceMetrics = () => {
   const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
@@ -117,8 +119,7 @@ bundleSize: 0});
     return () => clearInterval(interval);
   }, []);
 
-  return { score, metrics };
+  return { score, metrics: performanceOptimizer.getMetrics() };
 };
 
 export default performanceOptimizer;
-

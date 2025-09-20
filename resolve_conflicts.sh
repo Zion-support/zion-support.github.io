@@ -1,56 +1,44 @@
 #!/bin/bash
-set -e
 
-        /^>>>>>>>/ { in_other = 0; next }
-        in_head { print; next }
-        !in_other { print }
-        ' "$file" > "$temp_file"
-        
-        # Replace the original file
-        mv "$temp_file" "$file"
-    fi
-done
-
-echo "Merge conflicts resolved!"
-=======
+# Script to resolve merge conflicts by choosing HEAD version
 echo "Resolving merge conflicts..."
-=======
-echo "Resolving merge conflicts automatically..."
 
-# Function to resolve conflicts by choosing HEAD version
-resolve_conflicts() {
-    local file="$1"
-    if [ -f "$file" ]; then
-        echo "Resolving conflicts in $file"
-        # Use git checkout to choose HEAD version for conflicted files
-        git checkout --ours "$file" 2>/dev/null || true
-        git add "$file" 2>/dev/null || true
-    fi
-}
+# Find all files with merge conflicts
+files_with_conflicts=$(find src/ -name "*.ts" -o -name "*.tsx" | xargs grep -l "<<<<<<< HEAD")
 
-# Get list of conflicted files
-conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
-
-if [ -n "$conflicted_files" ]; then
-    echo "Found conflicted files:"
-    echo "$conflicted_files"
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
     
-    # Resolve each conflicted file
-    while IFS= read -r file; do
-        if [ -n "$file" ]; then
-            resolve_conflicts "$file"
-        fi
-    done <<< "$conflicted_files"
+    # Create a temporary file
+    temp_file=$(mktemp)
     
-    sed -i '/^=======/,/^>>>>>>>/d' "$file"
-    sed -i '/^>>>>>>>/d' "$file"
+    # Process the file to resolve conflicts
+    awk '
+    /^<<<<<<< HEAD/ {
+        in_head = 1
+        next
+    }
+    /^=======/ {
+        in_head = 0
+        in_other = 1
+        next
+    }
+    /^>>>>>>> / {
+        in_other = 0
+        next
+    }
+    in_head == 1 {
+        print
+    }
+    in_other == 0 && in_head == 0 {
+        print
+    }
+    ' "$file" > "$temp_file"
     
-    echo "Resolved: $file"
+    # Replace the original file
+    mv "$temp_file" "$file"
+    
+    echo "Resolved conflicts in: $file"
 done
 
-echo "All merge conflicts resolved!"
-=======
-    echo "All conflicts resolved automatically"
-else
-    echo "No conflicts found"
-fi
+echo "Merge conflict resolution complete!"
