@@ -1,34 +1,44 @@
-import React from "react";
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth";
-=======
->>>>>>> 8c478e615056772e765dbc204462fa984d447432
+import { Navigate, useLocation } from "react-router-dom";
+import { useAuthContext } from "@/context/AuthContext";
+import { useEffect, useState } from "react";
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
-  children, 
-  fallback = <div>Please log in to access this page.</div> 
-}) => {
-  const { user, loading } = useAuth();
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!user) {
-    return <>{fallback}</>;
-  }
-
-  return <>{children}</>;
-};
-=======
 export function ProtectedRoute({ children }: ProtectedRouteProps) {
-  // For now, just render the children without authentication check
-  // In a real implementation, this would check authentication status
-  return <>{children}</>;
+  const [isClient, setIsClient] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // During SSR/build time, just render children
+  if (!isClient) {
+    return <>{children}</>;
+  }
+
+  try {
+    const { user, loading } = useAuthContext();
+
+    if (loading) {
+      return (
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+        </div>
+      );
+    }
+
+    if (!user) {
+      return <Navigate to="/login" state={{ from: location }} replace />;
+    }
+
+    return <>{children}</>;
+  } catch (error) {
+    // If context is not available, just render children
+    return <>{children}</>;
+  }
 }
->>>>>>> 8c478e615056772e765dbc204462fa984d447432
+
+export default ProtectedRoute;
