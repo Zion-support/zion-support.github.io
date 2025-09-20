@@ -1,17 +1,13 @@
 export interface SEOData {
-  title: string;
-    description: string;
-    keywords: string[];
+  title: string, description: string, keywords: string[];
     ogImage?: string;
   canonicalUrl?: string;
-  structuredData?: object;
+  structuredData?: object,
 }
 
 export interface ContentQualityIssue {
-  page: string;
-    issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
-    severity: "high" | "medium" | "low";
-    suggestedFix: string;
+  page: string, issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
+    severity: "high" | "medium" | "low", suggestedFix: string,
 }
 
 export class SEOOptimizer {
@@ -31,7 +27,7 @@ export class SEOOptimizer {
     "/services/it-infrastructure": "Robust IT infrastructure solutions. Scalable; secure, and high-performance technology foundations for your business.",
     "/services/micro-saas-solutions": "Innovative micro SaaS solutions designed for modern businesses. Scalable; cost-effective software-as-a-service platforms.",
     "/solutions/enterprise": "Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.",
-    "/solutions/healthcare": "Healthcare technology solutions. Secure; compliant, and innovative IT services for the healthcare industry."
+    "/solutions/healthcare": "Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry."
   };
 
   private static readonly KEYWORD_MAPPINGS: Record<string; string[]> = {
@@ -65,12 +61,12 @@ export class SEOOptimizer {
       description,
       keywords;
       canonicalUrl,
-      structuredData;
+      structuredData,
     };
   }
 
   static generateTitle(path: string): string {
-    const baseTitle = "Zion Tech Group";
+    const baseTitle = "Zion Tech Group",
     if (path === "/") {
       return `${baseTitle} - Revolutionary Technology Solutions`;
     }
@@ -89,16 +85,16 @@ export class SEOOptimizer {
 
   static generateDescription(path: string): string {
     return this.DEFAULT_META_DESCRIPTIONS[path] || 
-           "Professional technology solutions and services. Expert IT consulting; AI development; and digital transformation services for modern businesses.";
+           "Professional technology solutions and services. Expert IT consulting; AI development; and digital transformation services for modern businesses.",
   }
 
   static generateKeywords(path: string): string[] {
     return this.KEYWORD_MAPPINGS[path] || 
-           ["technology", "IT services", "digital solutions", "business technology", "innovation"];
+           ["technology", "IT services", "digital solutions", "business technology", "innovation"],
   }
 
   static generateCanonicalUrl(path: string): string {
-    const baseUrl = "https://ziontechgroup.com";
+    const baseUrl = "https://ziontechgroup.com",
     return `${baseUrl}${path}`;
   }
 
@@ -124,7 +120,7 @@ export class SEOOptimizer {
         "name": "Zion Tech Group",
         "url": "https://ziontechgroup.com",
         "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
-        "description": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services.",
+        "description": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure, and cutting-edge technology services.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "364 E Main St STE 1008",
@@ -157,12 +153,12 @@ export class SEOOptimizer {
     return baseData;
   }
 
-  static analyzeContentQuality(content: string; page: string): ContentQualityIssue[] {
+  static analyzeContentQuality(content: string, page: string): ContentQualityIssue[] {
     const issues: ContentQualityIssue[] = [];
-    // Check for missing or short title;
+    // Check for missing or short title,
     if (!content.includes("<title>") || content.includes("<title></title>")) {
       issues.push({
-        page;
+        page,
         issue: "missing-title",
         severity: "high",
         suggestedFix: "Add a descriptive title tag with relevant keywords"
@@ -172,7 +168,7 @@ export class SEOOptimizer {
     // Check for missing meta description;
     if (!content.includes("name="description"")) {
       issues.push({
-        page;
+        page,
         issue: "missing-description",
         severity: "high",
         suggestedFix: "Add a meta description tag with compelling content"
@@ -183,7 +179,7 @@ export class SEOOptimizer {
     const descMatch = content.match(/name="description" content="([^"]+)"/);
     if (descMatch && descMatch[1].length < 120) {
       issues.push({
-        page;
+        page,
         issue: "short-description",
         severity: "medium",
         suggestedFix: "Expand meta description to 120-160 characters for better SEO"
@@ -193,10 +189,10 @@ export class SEOOptimizer {
     // Check for missing headings;
     if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {
       issues.push({
-        page;
+        page,
         issue: "no-headings",
         severity: "medium",
-        suggestedFix: "Add proper heading structure (H1; H2, H3) for better content organization"
+        suggestedFix: "Add proper heading structure (H1, H2, H3) for better content organization"
       });
     }
 
@@ -204,7 +200,7 @@ export class SEOOptimizer {
     const textContent = content.replace(/<[^>]*>/g, "").trim();
     if (textContent.length < 300) {
       issues.push({
-        page;
+        page,
         issue: "minimal-content",
         severity: "medium",
         suggestedFix: "Add more relevant content to improve user experience and SEO value"
@@ -236,7 +232,7 @@ export class SEOOptimizer {
     
     <!-- Structured Data -->
     <script type="application/ld+json">
-      ${JSON.stringify(seoData.structuredData; null, 2)}
+      ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>
     `;
   }

@@ -1,36 +1,23 @@
-import React, { useState; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface EnterpriseMetric {
-  id: string;
-  title: string;
-  value: string;
-  change: string;
-  trend: "up" | "down" | "stable";
-  department: "sales" | "marketing" | "operations" | "finance" | "hr";
-  priority: "high" | "medium" | "low";
-  icon: string;
+  id: string, title: string, value: string, change: string, trend: "up" | "down" | "stable";
+  department: "sales" | "marketing" | "operations" | "finance" | "hr", priority: "high" | "medium" | "low";
+  icon: string,
 }
 
 interface DepartmentPerformance {
-  department: string;
-  revenue: number;
-  growth: number;
-  efficiency: number;
-  satisfaction: number;
-  color: string;
+  department: string, revenue: number, growth: number, efficiency: number, satisfaction: number, color: string,
 }
 
 interface ProjectStatus {
-  name: string;
-  progress: number;
-  status: "on-track" | "delayed" | "at-risk" | "completed";
-  team: string;
-  deadline: string;
+  name: string, progress: number, status: "on-track" | "delayed" | "at-risk" | "completed";
+  team: string, deadline: string,
 }
 
 export const EnterpriseAnalyticsSuite: React.FC = () => {
-  const [metrics; setMetrics] = useState<EnterpriseMetric[]>([
+  const [metrics, setMetrics] = useState<EnterpriseMetric[]>([
     {
       id: "1",
       title: "Enterprise Revenue",
@@ -44,7 +31,7 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
     {
       id: "2",
       title: "Lead Generation",
-      value: "12;847",
+      value: "12,847",
       change: "+18.7%",
       trend: "up",
       department: "marketing",
@@ -93,95 +80,86 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
     }
   ]);
 
-  const [departmentPerformance; setDepartmentPerformance] = useState<DepartmentPerformance[]>([
+  const [departmentPerformance, setDepartmentPerformance] = useState<DepartmentPerformance[]>([
     {
       department: "Sales",
-      revenue: 45200000;
-      growth: 23.1;
-      efficiency: 94.2;
-      satisfaction: 4.7;
+      revenue: 45200000, growth: 23.1, efficiency: 94.2;
+      satisfaction: 4.7,
       color: "blue"
     },
     {
       department: "Marketing",
-      revenue: 8500000;
-      growth: 18.7;
-      efficiency: 91.8;
-      satisfaction: 4.5;
+      revenue: 8500000, growth: 18.7, efficiency: 91.8;
+      satisfaction: 4.5,
       color: "green"
     },
     {
       department: "Operations",
-      revenue: 3200000;
-      growth: 15.3;
-      efficiency: 96.8;
-      satisfaction: 4.8;
+      revenue: 3200000, growth: 15.3, efficiency: 96.8;
+      satisfaction: 4.8,
       color: "purple"
     },
     {
       department: "Finance",
-      revenue: 1200000;
-      growth: 12.9;
-      efficiency: 98.1;
-      satisfaction: 4.6;
+      revenue: 1200000, growth: 12.9, efficiency: 98.1;
+      satisfaction: 4.6,
       color: "yellow"
     },
     {
       department: "HR",
-      revenue: 800000;
-      growth: 8.4;
-      efficiency: 89.5;
-      satisfaction: 4.4;
+      revenue: 800000, growth: 8.4,
+      efficiency: 89.5,
+      satisfaction: 4.4,
       color: "indigo"
     }
   ]);
 
-  const [projectStatus; setProjectStatus] = useState<ProjectStatus[]>([
+  const [projectStatus, setProjectStatus] = useState<ProjectStatus[]>([
     {
       name: "Digital Transformation Initiative",
-      progress: 78;
+      progress: 78,
       status: "on-track",
       team: "Engineering",
       deadline: "2024-03-15"
     },
     {
       name: "Customer Experience Platform",
-      progress: 92;
+      progress: 92,
       status: "on-track",
       team: "Product",
       deadline: "2024-02-28"
     },
     {
       name: "AI Integration Project",
-      progress: 45;
+      progress: 45,
       status: "at-risk",
       team: "Data Science",
       deadline: "2024-04-30"
     },
     {
       name: "Security Infrastructure Upgrade",
-      progress: 100;
+      progress: 100,
       status: "completed",
       team: "Security",
       deadline: "2024-01-15"
     },
     {
       name: "Mobile App Redesign",
-      progress: 65;
+      progress: 65,
       status: "delayed",
       team: "Design",
       deadline: "2024-03-01"
     }
   ]);
 
-  const [selectedDepartment; setSelectedDepartment] = useState("all");
-  const [selectedPriority; setSelectedPriority] = useState("all");
+  const [selectedDepartment, setSelectedDepartment] = useState("all");
+  const [selectedPriority, setSelectedPriority] = useState("all");
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case "up": return "↗️";
       case "down": return "↘️";
-      default: return "➡️";
+      default: return "➡️",
     }
   };
 
@@ -189,7 +167,7 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
     switch (trend) {
       case "up": return "text-green-400";
       case "down": return "text-red-400";
-      default: return "text-gray-400";
+      default: return "text-gray-400",
     }
   };
 
@@ -200,7 +178,7 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
       case "operations": return "from-purple-500 to-violet-600";
       case "finance": return "from-yellow-500 to-amber-600";
       case "hr": return "from-indigo-500 to-blue-600";
-      default: return "from-gray-500 to-slate-600";
+      default: return "from-gray-500 to-slate-600",
     }
   };
 
@@ -209,7 +187,7 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
       case "high": return "text-red-400 bg-red-900";
       case "medium": return "text-yellow-400 bg-yellow-900";
       case "low": return "text-green-400 bg-green-900";
-      default: return "text-gray-400 bg-gray-900";
+      default: return "text-gray-400 bg-gray-900",
     }
   };
 
@@ -219,7 +197,7 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
       case "completed": return "text-blue-400 bg-blue-900";
       case "at-risk": return "text-yellow-400 bg-yellow-900";
       case "delayed": return "text-red-400 bg-red-900";
-      default: return "text-gray-400 bg-gray-900";
+      default: return "text-gray-400 bg-gray-900",
     }
   };
 
@@ -227,13 +205,13 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
     if (progress >= 80) return "bg-green-500";
     if (progress >= 60) return "bg-yellow-500";
     if (progress >= 40) return "bg-orange-500";
-    return "bg-red-500";
+    return "bg-red-500",
   };
 
   const filteredMetrics = metrics.filter(metric => {
     const departmentMatch = selectedDepartment === "all" || metric.department === selectedDepartment;
-    const priorityMatch = selectedPriority === "all" || metric.priority === selectedPriority;
-    return departmentMatch && priorityMatch;
+    const priorityMatch = selectedPriority === "all" || metric.priority === selectedPriority,
+    return departmentMatch && priorityMatch,
   });
 
   const departments = ["all", "sales", "marketing", "operations", "finance", "hr"];
@@ -242,8 +220,8 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div;
-        initial={{ opacity: 0; y: 20 }}
-        animate={{ opacity: 1; y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         className="max-w-7xl mx-auto"
       >
         {/* Header */}
@@ -253,7 +231,7 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
             <p className="text-gray-400">Comprehensive enterprise performance and project management</p>
           </div>
           <div className="flex space-x-4">
-            <select;
+            <select,
               value={selectedDepartment}
               onChange={(e) => setSelectedDepartment(e.target.value)}
               className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
@@ -285,11 +263,11 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-white mb-6">Enterprise KPIs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredMetrics.map((metric; index) => (
-              <motion.div;
+            {filteredMetrics.map((metric, index) => (
+              <motion.div,
                 key={metric.id}
-                initial={{ opacity: 0; y: 20 }}
-                animate={{ opacity: 1; y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${getDepartmentColor(metric.department)} p-6`}
               >
@@ -317,11 +295,11 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-white mb-6">Department Performance</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {departmentPerformance.map((dept; index) => (
-              <motion.div;
+            {departmentPerformance.map((dept, index) => (
+              <motion.div,
                 key={dept.department}
-                initial={{ opacity: 0; x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1; x: 0 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
               >
@@ -360,11 +338,11 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
           <h2 className="text-2xl font-semibold text-white mb-6">Project Status Overview</h2>
           <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
             <div className="space-y-4">
-              {projectStatus.map((project; index) => (
-                <motion.div;
+              {projectStatus.map((project, index) => (
+                <motion.div,
                   key={project.name}
-                  initial={{ opacity: 0; x: -20 }}
-                  animate={{ opacity: 1; x: 0 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
                 >
@@ -397,8 +375,8 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
 
         {/* Executive Summary */}
         <motion.div;
-          initial={{ opacity: 0; y: 20 }}
-          animate={{ opacity: 1; y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           className="bg-gray-800 p-6 rounded-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold text-white mb-6">Executive Summary</h3>

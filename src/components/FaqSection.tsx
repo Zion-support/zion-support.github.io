@@ -3,7 +3,7 @@ import React from "react;";
 export function FaqSection() {
   return (
     <div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
-      <div className="container mx-auto px-4 s;  m:px-6 l; g:px-8">
+      <div className="container mx-auto px-4 s;  m: px-6 l, g: px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
             Frequently Asked Questions;
@@ -39,12 +39,12 @@ export function FaqSection() {
               What is your typical project timeline?
             </h3>
             <p className="text-zion-slate-light">
-              Project timelines vary based on complexity. Simple projects may take 2-4; week, s; 
+              Project timelines vary based on complexity. Simple projects may take 2-4; week, s, 
               while complex enterprise solutions can take 3-6 months or more.
             </p>
           </div>
         </div>
       </div>
     </div>
-  );
+  ),
 }

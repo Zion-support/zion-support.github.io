@@ -1,71 +1,46 @@
 export interface EnhancedService {
-  id: string;
-    name: string;
-    tagline: string;
-    description: string;
-    category: "micro-saas" | "it-services" | "ai-services" | "emerging-tech";
+  id: string, name: string, tagline: string, description: string, category: "micro-saas" | "it-services" | "ai-services" | "emerging-tech";
     pricing: {
-    monthly: string;
-    yearly: string;
-    enterprise: string;
-    setup: string;
+    monthly: string, yearly: string, enterprise: string, setup: string,
      };
-  features: string[];
-    benefits: string[];
-    technology: string[];
-    integrations: string[];
-    useCases: string[];
-    targetAudience: string;
-    marketPosition: string;
-    competitors: string[];
-    roi: string;
-    trialDays: number;
-    setupTime: string;
-    icon: string;
-    color: string;
-    link: string;
-    contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+  features: string[], benefits: string[];
+    technology: string[], integrations: string[];
+    useCases: string[], targetAudience: string, marketPosition: string, competitors: string[];
+    roi: string, trialDays: number, setupTime: string, icon: string, color: string, link: string, contactInfo: {
+    mobile: string, email: string, address: string, website: string,
      };
 }
 
 const contactInfo = {
-  mobile: "+1 302 464 0950";
-  email: "kleber@ziontechgroup.com";
-  address: "364 E Main St STE 1008 Middletown DE 19709";
+  mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com"
 };
     export const enhancedServices2025: EnhancedService[] = [
   // MICRO SAAS SERVICES;
   {
-    id: "ai-powered-code-review-assistant";
-    name: "AI-Powered Code Review Assistant";
+    id: "ai-powered-code-review-assistant", name: "AI-Powered Code Review Assistant";
     tagline: "Automated code quality analysis; security scanning; and best practice recommendations",
     description: "Intelligent code review system that analyzes pull requests; identifies security vulnerabilities; suggests improvements; and maintains code quality standards across your development team.",
-    category: "micro-saas";
-    pricing: {
+    category: "micro-saas", pricing: {
       monthly: "$199/month";
-      yearly: "$1;999/year",
-      enterprise: "Custom pricing";
+      yearly: "$1, 999/year",
+      enterprise: "Custom pricing",
       setup: "$299 one-time"
-    };
-    features: [
-      "Automated security vulnerability detection";
+    }, features: [
+      "Automated security vulnerability detection",
       "Code quality scoring and metrics",
       "Best practice recommendations",
       "Integration with GitHub/GitLab/Bitbucket",
       "Custom rule configuration",
       "Team performance analytics",
       "Automated PR comments",
-      "Compliance checking (SOC2; HIPAA)",
+      "Compliance checking (SOC2, HIPAA)",
       "Performance impact analysis",
       "Multi-language support"
     ],
     benefits: [
-      "Reduce code review time by 40-60%";
+      "Reduce code review time by 40-60%",
       "Improve code quality by 25%",
       "Catch security issues before deployment",
       "Standardize coding practices",
@@ -77,29 +52,23 @@ const contactInfo = {
     targetAudience: "Development teams; DevOps engineers; CTOs, Engineering managers",
     marketPosition: "Competes with SonarQube; CodeClimate; adds AI-powered insights and security focus",
     competitors: ["SonarQube", "CodeClimate", "Snyk", "DeepCode"],
-    roi: "Reduce code review time by 40-60% and improve code quality by 25%";
-    trialDays: 14;
-    setupTime: "2 hours";
-    icon: "🔍";
-    color: "from-blue-600 to-indigo-700";
-    link: "/services/ai-code-review-assistant";
+    roi: "Reduce code review time by 40-60% and improve code quality by 25%", trialDays: 14;
+    setupTime: "2 hours", icon: "🔍";
+    color: "from-blue-600 to-indigo-700", link: "/services/ai-code-review-assistant";
     contactInfo;
   },
 
   {
-    id: "intelligent-incident-response-platform";
-    name: "Intelligent Incident Response Platform";
+    id: "intelligent-incident-response-platform", name: "Intelligent Incident Response Platform";
     tagline: "AI-driven incident detection; automated response; and post-mortem analysis",
     description: "Comprehensive incident management platform that uses AI to detect; respond to; and analyze security incidents in real-time; reducing response time and improving resolution quality.",
-    category: "micro-saas";
-    pricing: {
+    category: "micro-saas", pricing: {
       monthly: "$299/month";
-      yearly: "$2;999/year",
-      enterprise: "Custom pricing";
+      yearly: "$2, 999/year",
+      enterprise: "Custom pricing",
       setup: "$499 one-time"
-    };
-    features: [
-      "AI-powered threat detection";
+    }, features: [
+      "AI-powered threat detection",
       "Automated incident response workflows",
       "Real-time alerting and notifications",
       "Incident timeline tracking",
@@ -111,7 +80,7 @@ const contactInfo = {
       "Performance metrics dashboard"
     ],
     benefits: [
-      "Reduce incident response time by 70%";
+      "Reduce incident response time by 70%",
       "Improve incident resolution by 45%",
       "Automate routine response tasks",
       "Enhance team collaboration",
@@ -123,29 +92,22 @@ const contactInfo = {
     targetAudience: "Security teams; IT operations; SOC analysts; Compliance officers",
     marketPosition: "Competes with PagerDuty; ServiceNow; adds AI-powered automation and security focus",
     competitors: ["PagerDuty", "ServiceNow", "VictorOps", "OpsGenie"],
-    roi: "Reduce incident response time by 70% and improve resolution quality by 45%";
-    trialDays: 14;
-    setupTime: "4 hours";
-    icon: "🚨";
-    color: "from-red-600 to-pink-700";
-    link: "/services/incident-response-platform";
+    roi: "Reduce incident response time by 70% and improve resolution quality by 45%", trialDays: 14;
+    setupTime: "4 hours", icon: "🚨";
+    color: "from-red-600 to-pink-700", link: "/services/incident-response-platform";
     contactInfo;
   },
 
   {
-    id: "smart-invoice-management-system";
-    name: "Smart Invoice Management System";
+    id: "smart-invoice-management-system", name: "Smart Invoice Management System";
     tagline: "AI-powered invoice processing; approval workflows; and payment tracking",
     description: "Intelligent invoice management platform that automates the entire invoice lifecycle from receipt to payment; reducing processing time and improving accuracy.",
-    category: "micro-saas";
-    pricing: {
+    category: "micro-saas", pricing: {
       monthly: "$79/month";
-      yearly: "$799/year";
-      enterprise: "Custom pricing";
+      yearly: "$799/year", enterprise: "Custom pricing",
       setup: "$199 one-time"
-    };
-    features: [
-      "OCR invoice processing";
+    }, features: [
+      "OCR invoice processing",
       "Automated approval workflows",
       "Payment integration",
       "Analytics dashboard",
@@ -157,7 +119,7 @@ const contactInfo = {
       "Custom reporting"
     ],
     benefits: [
-      "Reduce processing time by 90%";
+      "Reduce processing time by 90%",
       "Improve accuracy by 95%",
       "Automate approval processes",
       "Enhance vendor relationships",
@@ -169,29 +131,23 @@ const contactInfo = {
     targetAudience: "Finance teams; Accounting professionals; Small businesses; Enterprises",
     marketPosition: "Competes with Bill.com; AvidXchange; adds AI-powered automation and analytics",
     competitors: ["Bill.com", "AvidXchange", "Coupa", "SAP Ariba"],
-    roi: "Reduce invoice processing costs by 60% and improve accuracy by 95%";
-    trialDays: 30;
-    setupTime: "1 hour";
-    icon: "📄";
-    color: "from-green-600 to-emerald-700";
-    link: "/services/invoice-management";
+    roi: "Reduce invoice processing costs by 60% and improve accuracy by 95%", trialDays: 30;
+    setupTime: "1 hour", icon: "📄";
+    color: "from-green-600 to-emerald-700", link: "/services/invoice-management";
     contactInfo;
   },
 
   {
-    id: "ai-customer-success-automation";
-    name: "AI Customer Success Automation";
+    id: "ai-customer-success-automation", name: "AI Customer Success Automation";
     tagline: "Intelligent customer onboarding; support, and retention automation",
     description: "AI-driven platform that automates customer success processes; predicts churn; and optimizes customer experience to improve retention and satisfaction.",
-    category: "micro-saas";
-    pricing: {
+    category: "micro-saas", pricing: {
       monthly: "$149/month";
-      yearly: "$1;499/year",
-      enterprise: "Custom pricing";
+      yearly: "$1, 499/year",
+      enterprise: "Custom pricing",
       setup: "$299 one-time"
-    };
-    features: [
-      "Automated onboarding workflows";
+    }, features: [
+      "Automated onboarding workflows",
       "Predictive churn analysis",
       "Support ticket routing",
       "Success metrics tracking",
@@ -203,7 +159,7 @@ const contactInfo = {
       "API access"
     ],
     benefits: [
-      "Increase customer retention by 25%";
+      "Increase customer retention by 25%",
       "Reduce churn by 30%",
       "Automate routine tasks",
       "Improve customer satisfaction",
@@ -215,29 +171,22 @@ const contactInfo = {
     targetAudience: "Customer success teams; SaaS companies; Customer support managers; Growth teams",
     marketPosition: "Competes with Gainsight; Totango; adds AI-powered automation and predictive analytics",
     competitors: ["Gainsight", "Totango", "ChurnZero", "CustomerSuccessBox"],
-    roi: "Increase customer retention by 25% and reduce churn by 30%";
-    trialDays: 14;
-    setupTime: "3 hours";
-    icon: "🎯";
-    color: "from-purple-600 to-violet-700";
-    link: "/services/customer-success-automation";
+    roi: "Increase customer retention by 25% and reduce churn by 30%", trialDays: 14;
+    setupTime: "3 hours", icon: "🎯";
+    color: "from-purple-600 to-violet-700", link: "/services/customer-success-automation";
     contactInfo;
   },
 
   {
-    id: "intelligent-data-analytics-dashboard";
-    name: "Intelligent Data Analytics Dashboard";
-    tagline: "Real-time business intelligence and KPI monitoring platform";
-    description: "Advanced analytics platform that provides real-time insights; custom dashboards; and predictive analytics to drive data-driven decision making.",
-    category: "micro-saas";
-    pricing: {
+    id: "intelligent-data-analytics-dashboard", name: "Intelligent Data Analytics Dashboard";
+    tagline: "Real-time business intelligence and KPI monitoring platform", description: "Advanced analytics platform that provides real-time insights; custom dashboards; and predictive analytics to drive data-driven decision making.",
+    category: "micro-saas", pricing: {
       monthly: "$199/month";
-      yearly: "$1;999/year",
-      enterprise: "Custom pricing";
+      yearly: "$1, 999/year",
+      enterprise: "Custom pricing",
       setup: "$399 one-time"
-    };
-    features: [
-      "Real-time data visualization";
+    }, features: [
+      "Real-time data visualization",
       "Custom dashboard builder",
       "Predictive analytics",
       "Data integration tools",
@@ -249,7 +198,7 @@ const contactInfo = {
       "Team collaboration"
     ],
     benefits: [
-      "Improve decision making by 40%";
+      "Improve decision making by 40%",
       "Reduce reporting time by 80%",
       "Identify new opportunities",
       "Optimize business processes",
@@ -261,30 +210,23 @@ const contactInfo = {
     targetAudience: "Business analysts; Data scientists; Executives, Marketing teams",
     marketPosition: "Competes with Tableau; Power BI; adds AI-powered insights and real-time capabilities",
     competitors: ["Tableau", "Power BI", "Looker", "Metabase"],
-    roi: "Improve decision making by 40% and reduce reporting time by 80%";
-    trialDays: 14;
-    setupTime: "2 hours";
-    icon: "📊";
-    color: "from-cyan-600 to-blue-700";
-    link: "/services/analytics-dashboard";
+    roi: "Improve decision making by 40% and reduce reporting time by 80%", trialDays: 14;
+    setupTime: "2 hours", icon: "📊";
+    color: "from-cyan-600 to-blue-700", link: "/services/analytics-dashboard";
     contactInfo;
   },
 
   // IT SERVICES;
   {
-    id: "network-security-monitoring";
-    name: "Network Security Monitoring";
-    tagline: "24/7 network security monitoring and threat detection";
-    description: "Comprehensive network security monitoring service that provides real-time threat detection; incident response; and compliance reporting for enterprise networks.",
-    category: "it-services";
-    pricing: {
-      monthly: "$1;500/month",
-      yearly: "$15;000/year",
-      enterprise: "Custom pricing";
-      setup: "$2;000 one-time"
+    id: "network-security-monitoring", name: "Network Security Monitoring";
+    tagline: "24/7 network security monitoring and threat detection", description: "Comprehensive network security monitoring service that provides real-time threat detection; incident response; and compliance reporting for enterprise networks.",
+    category: "it-services", pricing: {
+      monthly: "$1, 500/month",
+      yearly: "$15, 000/year",
+      enterprise: "Custom pricing", setup: "$2,000 one-time"
     },
     features: [
-      "24/7 network monitoring";
+      "24/7 network monitoring",
       "Real-time threat detection",
       "Incident response support",
       "Compliance reporting",
@@ -296,7 +238,7 @@ const contactInfo = {
       "Continuous improvement"
     ],
     benefits: [
-      "Proactive threat detection";
+      "Proactive threat detection",
       "24/7 security monitoring",
       "Compliance assurance",
       "Reduced security risks",
@@ -309,29 +251,22 @@ const contactInfo = {
     marketPosition: "Competes with managed security service providers;
     adds AI-powered threat detection",
     competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Managed MSSPs"],
-    roi: "Reduce security incidents by 60% and improve compliance by 90%";
-    trialDays: 0;
-    setupTime: "1-2 weeks";
-    icon: "🛡️";
-    color: "from-red-600 to-orange-700";
-    link: "/services/network-security-monitoring";
+    roi: "Reduce security incidents by 60% and improve compliance by 90%", trialDays: 0;
+    setupTime: "1-2 weeks", icon: "🛡️";
+    color: "from-red-600 to-orange-700", link: "/services/network-security-monitoring";
     contactInfo;
   },
 
   {
-    id: "data-backup-recovery-solutions";
-    name: "Data Backup & Recovery Solutions";
-    tagline: "Automated backup solutions with disaster recovery planning";
-    description: "Comprehensive data protection service that includes automated backups; cloud storage; disaster recovery planning; and business continuity solutions.",
-    category: "it-services";
-    pricing: {
+    id: "data-backup-recovery-solutions", name: "Data Backup & Recovery Solutions";
+    tagline: "Automated backup solutions with disaster recovery planning", description: "Comprehensive data protection service that includes automated backups; cloud storage; disaster recovery planning; and business continuity solutions.",
+    category: "it-services", pricing: {
       monthly: "$800/month";
-      yearly: "$8;000/year",
-      enterprise: "Custom pricing";
-      setup: "$1;500 one-time"
+      yearly: "$8, 000/year",
+      enterprise: "Custom pricing", setup: "$1,500 one-time"
     },
     features: [
-      "Automated backup scheduling";
+      "Automated backup scheduling",
       "Cloud storage integration",
       "Disaster recovery planning",
       "Recovery testing",
@@ -343,7 +278,7 @@ const contactInfo = {
       "Business continuity planning"
     ],
     benefits: [
-      "99.99% recovery success rate";
+      "99.99% recovery success rate",
       "Automated backup processes",
       "Cloud redundancy",
       "Compliance assurance",
@@ -355,29 +290,22 @@ const contactInfo = {
     targetAudience: "IT administrators; Data center managers; Compliance officers; Business continuity managers",
     marketPosition: "Competes with Veeam; Commvault; adds cloud-native and AI-powered optimization",
     competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity"],
-    roi: "Ensure 99.99% data recovery and reduce downtime by 80%";
-    trialDays: 0;
-    setupTime: "1-2 weeks";
-    icon: "💾";
-    color: "from-blue-600 to-indigo-700";
-    link: "/services/backup-recovery";
+    roi: "Ensure 99.99% data recovery and reduce downtime by 80%", trialDays: 0;
+    setupTime: "1-2 weeks", icon: "💾";
+    color: "from-blue-600 to-indigo-700", link: "/services/backup-recovery";
     contactInfo;
   },
 
   {
-    id: "it-asset-management-platform";
-    name: "IT Asset Management Platform";
-    tagline: "Comprehensive IT asset tracking and lifecycle management";
-    description: "Complete IT asset management solution that tracks hardware; software, licenses; and provides lifecycle management; cost optimization; and compliance reporting.",
-    category: "it-services";
-    pricing: {
+    id: "it-asset-management-platform", name: "IT Asset Management Platform";
+    tagline: "Comprehensive IT asset tracking and lifecycle management", description: "Complete IT asset management solution that tracks hardware; software, licenses; and provides lifecycle management; cost optimization; and compliance reporting.",
+    category: "it-services", pricing: {
       monthly: "$500/month";
-      yearly: "$5;000/year",
-      enterprise: "Custom pricing";
-      setup: "$1;000 one-time"
+      yearly: "$5, 000/year",
+      enterprise: "Custom pricing", setup: "$1,000 one-time"
     },
     features: [
-      "Asset discovery and tracking";
+      "Asset discovery and tracking",
       "License management",
       "Depreciation tracking",
       "Maintenance scheduling",
@@ -389,7 +317,7 @@ const contactInfo = {
       "API integration"
     ],
     benefits: [
-      "Optimize IT costs by 30%";
+      "Optimize IT costs by 30%",
       "Improve compliance tracking",
       "Automate maintenance scheduling",
       "Enhance asset visibility",
@@ -401,30 +329,23 @@ const contactInfo = {
     targetAudience: "IT asset managers; IT administrators; Compliance officers; Finance teams",
     marketPosition: "Competes with ServiceNow; BMC; adds AI-powered optimization and mobile access",
     competitors: ["ServiceNow", "BMC", "Ivanti", "ManageEngine"],
-    roi: "Optimize IT costs by 30% and improve compliance by 95%";
-    trialDays: 14;
-    setupTime: "1 week";
-    icon: "🏷️";
-    color: "from-green-600 to-emerald-700";
-    link: "/services/asset-management";
+    roi: "Optimize IT costs by 30% and improve compliance by 95%", trialDays: 14;
+    setupTime: "1 week", icon: "🏷️";
+    color: "from-green-600 to-emerald-700", link: "/services/asset-management";
     contactInfo;
   },
 
   // AI SERVICES;
   {
-    id: "ai-chatbot-development";
-    name: "AI Chatbot Development";
-    tagline: "Custom AI chatbots for customer service and support";
-    description: "Intelligent chatbot solutions that provide 24/7 customer support; handle complex queries; and integrate seamlessly with your existing systems.",
-    category: "ai-services";
-    pricing: {
-      monthly: "$2;000/month",
-      yearly: "$20;000/year",
-      enterprise: "Custom pricing";
-      setup: "$5;000 one-time"
+    id: "ai-chatbot-development", name: "AI Chatbot Development";
+    tagline: "Custom AI chatbots for customer service and support", description: "Intelligent chatbot solutions that provide 24/7 customer support; handle complex queries; and integrate seamlessly with your existing systems.",
+    category: "ai-services", pricing: {
+      monthly: "$2, 000/month",
+      yearly: "$20, 000/year",
+      enterprise: "Custom pricing", setup: "$5,000 one-time"
     },
     features: [
-      "Natural language processing";
+      "Natural language processing",
       "Multi-language support",
       "Integration APIs",
       "Analytics dashboard",
@@ -436,7 +357,7 @@ const contactInfo = {
       "Performance monitoring"
     ],
     benefits: [
-      "24/7 customer support";
+      "24/7 customer support",
       "Instant response times",
       "Reduce support costs by 40%",
       "Improve customer satisfaction",
@@ -448,29 +369,22 @@ const contactInfo = {
     targetAudience: "Customer support teams; E-commerce businesses; Service companies; Marketing teams",
     marketPosition: "Competes with Intercom; Drift; adds advanced AI capabilities and custom development",
     competitors: ["Intercom", "Drift", "Zendesk", "Freshchat"],
-    roi: "Reduce support costs by 40% and improve customer satisfaction by 35%";
-    trialDays: 7;
-    setupTime: "2-4 weeks";
-    icon: "🤖";
-    color: "from-purple-600 to-violet-700";
-    link: "/services/ai-chatbot";
+    roi: "Reduce support costs by 40% and improve customer satisfaction by 35%", trialDays: 7;
+    setupTime: "2-4 weeks", icon: "🤖";
+    color: "from-purple-600 to-violet-700", link: "/services/ai-chatbot";
     contactInfo;
   },
 
   {
-    id: "predictive-analytics-platform";
-    name: "Predictive Analytics Platform";
-    tagline: "AI-powered predictive analytics for business forecasting";
-    description: "Advanced predictive analytics platform that uses machine learning to forecast trends; identify opportunities; and optimize business decisions.",
-    category: "ai-services";
-    pricing: {
-      monthly: "$3;500/month",
-      yearly: "$35;000/year",
-      enterprise: "Custom pricing";
-      setup: "$8;000 one-time"
+    id: "predictive-analytics-platform", name: "Predictive Analytics Platform";
+    tagline: "AI-powered predictive analytics for business forecasting", description: "Advanced predictive analytics platform that uses machine learning to forecast trends; identify opportunities; and optimize business decisions.",
+    category: "ai-services", pricing: {
+      monthly: "$3, 500/month",
+      yearly: "$35, 000/year",
+      enterprise: "Custom pricing", setup: "$8,000 one-time"
     },
     features: [
-      "Data modeling and analysis";
+      "Data modeling and analysis",
       "Forecasting algorithms",
       "Visualization tools",
       "API integration",
@@ -482,7 +396,7 @@ const contactInfo = {
       "Risk assessment"
     ],
     benefits: [
-      "Improve decision making by 50%";
+      "Improve decision making by 50%",
       "Identify new opportunities",
       "Reduce risks",
       "Optimize operations",
@@ -494,29 +408,22 @@ const contactInfo = {
     targetAudience: "Data scientists; Business analysts; Executives, Operations managers",
     marketPosition: "Competes with SAS; IBM SPSS; adds cloud-native and AI-powered automation",
     competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx"],
-    roi: "Improve decision making by 50% and increase revenue by 20%";
-    trialDays: 14;
-    setupTime: "3-4 weeks";
-    icon: "🔮";
-    color: "from-indigo-600 to-purple-700";
-    link: "/services/predictive-analytics";
+    roi: "Improve decision making by 50% and increase revenue by 20%", trialDays: 14;
+    setupTime: "3-4 weeks", icon: "🔮";
+    color: "from-indigo-600 to-purple-700", link: "/services/predictive-analytics";
     contactInfo;
   },
 
   {
-    id: "computer-vision-solutions";
-    name: "Computer Vision Solutions";
-    tagline: "AI-powered image and video analysis for various industries";
-    description: "Advanced computer vision solutions that analyze images and videos for quality control; process automation; and business intelligence across multiple industries.",
-    category: "ai-services";
-    pricing: {
-      monthly: "$4;000/month",
-      yearly: "$40;000/year",
-      enterprise: "Custom pricing";
-      setup: "$10;000 one-time"
+    id: "computer-vision-solutions", name: "Computer Vision Solutions";
+    tagline: "AI-powered image and video analysis for various industries", description: "Advanced computer vision solutions that analyze images and videos for quality control; process automation; and business intelligence across multiple industries.",
+    category: "ai-services", pricing: {
+      monthly: "$4, 000/month",
+      yearly: "$40, 000/year",
+      enterprise: "Custom pricing", setup: "$10,000 one-time"
     },
     features: [
-      "Object detection and recognition";
+      "Object detection and recognition",
       "Image classification",
       "Video analysis",
       "Custom model training",
@@ -528,7 +435,7 @@ const contactInfo = {
       "Mobile integration"
     ],
     benefits: [
-      "Automate quality control by 80%";
+      "Automate quality control by 80%",
       "Improve process efficiency",
       "Reduce human error",
       "24/7 monitoring",
@@ -540,30 +447,23 @@ const contactInfo = {
     targetAudience: "Manufacturing companies; Retail businesses; Security firms; Quality control teams",
     marketPosition: "Competes with Cognex; Keyence; adds AI-powered analysis and cloud integration",
     competitors: ["Cognex", "Keyence", "Basler", "Teledyne"],
-    roi: "Automate quality control by 80% and reduce defects by 60%";
-    trialDays: 7;
-    setupTime: "4-6 weeks";
-    icon: "👁️";
-    color: "from-cyan-600 to-blue-700";
-    link: "/services/computer-vision";
+    roi: "Automate quality control by 80% and reduce defects by 60%", trialDays: 7;
+    setupTime: "4-6 weeks", icon: "👁️";
+    color: "from-cyan-600 to-blue-700", link: "/services/computer-vision";
     contactInfo;
   },
 
   // EMERGING TECH SERVICES;
   {
-    id: "quantum-computing-solutions";
-    name: "Quantum Computing Solutions";
-    tagline: "Next-generation quantum computing services for complex problem solving";
-    description: "Cutting-edge quantum computing solutions that solve complex optimization problems; cryptography challenges; and scientific simulations.",
-    category: "emerging-tech";
-    pricing: {
-      monthly: "$10;000/month",
-      yearly: "$100;000/year",
-      enterprise: "Custom pricing";
-      setup: "$25;000 one-time"
+    id: "quantum-computing-solutions", name: "Quantum Computing Solutions";
+    tagline: "Next-generation quantum computing services for complex problem solving", description: "Cutting-edge quantum computing solutions that solve complex optimization problems; cryptography challenges; and scientific simulations.",
+    category: "emerging-tech", pricing: {
+      monthly: "$10, 000/month",
+      yearly: "$100, 000/year",
+      enterprise: "Custom pricing", setup: "$25,000 one-time"
     },
     features: [
-      "Quantum algorithm development";
+      "Quantum algorithm development",
       "Optimization problem solving",
       "Cryptography services",
       "Scientific simulations",
@@ -575,7 +475,7 @@ const contactInfo = {
       "Ongoing support"
     ],
     benefits: [
-      "Solve previously intractable problems";
+      "Solve previously intractable problems",
       "Exponential performance improvements",
       "Future-proof technology",
       "Competitive advantage",
@@ -585,31 +485,23 @@ const contactInfo = {
     integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
     useCases: ["Optimization problems", "Cryptography", "Scientific research", "Financial modeling"],
     targetAudience: "Research institutions; Financial services; Pharmaceutical companies; Government agencies",
-    marketPosition: "Leading edge quantum computing services with expertise in multiple quantum platforms";
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
-    roi: "Solve complex problems 1000x faster than classical computing";
-    trialDays: 0;
-    setupTime: "2-3 months";
-    icon: "⚛️";
-    color: "from-violet-600 to-purple-700";
-    link: "/services/quantum-computing";
+    marketPosition: "Leading edge quantum computing services with expertise in multiple quantum platforms", competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
+    roi: "Solve complex problems 1000x faster than classical computing", trialDays: 0;
+    setupTime: "2-3 months", icon: "⚛️";
+    color: "from-violet-600 to-purple-700", link: "/services/quantum-computing";
     contactInfo;
   },
 
   {
-    id: "blockchain-web3-solutions";
-    name: "Blockchain & Web3 Solutions";
-    tagline: "Decentralized applications and blockchain infrastructure development";
-    description: "Comprehensive blockchain and Web3 solutions including smart contract development; DeFi applications; NFT platforms; and decentralized infrastructure.",
-    category: "emerging-tech";
-    pricing: {
-      monthly: "$5;000/month",
-      yearly: "$50;000/year",
-      enterprise: "Custom pricing";
-      setup: "$15;000 one-time"
+    id: "blockchain-web3-solutions", name: "Blockchain & Web3 Solutions";
+    tagline: "Decentralized applications and blockchain infrastructure development", description: "Comprehensive blockchain and Web3 solutions including smart contract development; DeFi applications; NFT platforms; and decentralized infrastructure.",
+    category: "emerging-tech", pricing: {
+      monthly: "$5, 000/month",
+      yearly: "$50, 000/year",
+      enterprise: "Custom pricing", setup: "$15,000 one-time"
     },
     features: [
-      "Smart contract development";
+      "Smart contract development",
       "DeFi application building",
       "NFT platform development",
       "Blockchain infrastructure",
@@ -621,7 +513,7 @@ const contactInfo = {
       "Mobile integration"
     ],
     benefits: [
-      "Decentralized solutions";
+      "Decentralized solutions",
       "Transparent operations",
       "Reduced intermediaries",
       "Enhanced security",
@@ -631,14 +523,10 @@ const contactInfo = {
     integrations: ["Ethereum", "Polygon", "Solana", "Binance Smart Chain", "MetaMask", "WalletConnect"],
     useCases: ["DeFi applications", "NFT marketplaces", "Supply chain tracking", "Digital identity"],
     targetAudience: "Startups; Financial services; Gaming companies; Supply chain businesses",
-    marketPosition: "Leading blockchain development services with expertise in multiple protocols";
-    competitors: ["ConsenSys", "Chainlink Labs", "Alchemy", "Infura"],
-    roi: "Reduce transaction costs by 90% and increase transparency by 100%";
-    trialDays: 0;
-    setupTime: "2-4 months";
-    icon: "🔗";
-    color: "from-orange-600 to-red-700";
-    link: "/services/blockchain-web3";
+    marketPosition: "Leading blockchain development services with expertise in multiple protocols", competitors: ["ConsenSys", "Chainlink Labs", "Alchemy", "Infura"],
+    roi: "Reduce transaction costs by 90% and increase transparency by 100%", trialDays: 0;
+    setupTime: "2-4 months", icon: "🔗";
+    color: "from-orange-600 to-red-700", link: "/services/blockchain-web3";
     contactInfo;
   }
 ];

@@ -2,34 +2,33 @@ import React, { useState } from "react;";
 import { motion } from "framer-motion, ";
 
 export const AIAssistant: React.FC = () => {
-  const [messages; setMessages] = useState([
-    { id: 1; text: "Hello! I"m your AI assistant. How can I help you today?", isUser: false }
+  const [messages, setMessages] = useState([
+    { id: 1, text: "Hello! I"m your AI assistant. How can I help you today?", isUser: false }
   ]);
-    const [inputText; setInputText] = useState("");
+    const [inputText, setInputText] = useState("");
 
   const handleSendMessage = () => {
     if (!inputText.trim()) return;
 
-    const userMessage = { id: Date.now(), text: inputText; isUser: true };
-    setMessages(prev => [...prev; userMessage]);
+    const userMessage = { id: Date.now(), text: inputText, isUser: true };
+    setMessages(prev => [...prev, userMessage]);
     setInputText("");
 
     // Simulate AI response;
     setTimeout(() => {
       const aiResponse = { 
-        id: Date.now() + 1;
-        text: `I understand you"re asking about "${inputText}". Here"s my response.`;
-        isUser: false; 
+        id: Date.now() + 1,
+        text: `I understand you"re asking about "${inputText}". Here"s my response.`, isUser: false; 
       };
-    setMessages(prev => [...prev; aiResponse]);
+    setMessages(prev => [...prev, aiResponse]);
     }, 1000);
   };
 
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div;
-        initial={{ opacity: 0; y: 20 }}
-        animate={{ opacity: 1; y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         className="max-w-4xl mx-auto"
       >
         <h1 className="text-3xl font-bold text-white mb-8">AI Assistant</h1>
@@ -38,14 +37,14 @@ export const AIAssistant: React.FC = () => {
           <div className="flex-1 p-4 overflow-y-auto">
             <div className="space-y-4">
               {messages.map((message) => (
-                <motion.div;
+                <motion.div,
                   key={message.id}
-                  initial={{ opacity: 0; y: 10 }}
-                  animate={{ opacity: 1; y: 0 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}
                 >
                   <div className={`max-w-xs px-4 py-2 rounded-lg ${
-                    message.isUser; 
+                    message.isUser, 
                       ? "bg-blue-600 text-white" 
                       : "bg-gray-700 text-gray-100"
                   }`}>

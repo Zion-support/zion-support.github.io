@@ -16,7 +16,7 @@ export function AppHeader() {
         </div>
       </div>
     </header>
-  );
+  ),
 
 import { useState } from "react";
 import { useMessaging } from "@/context/MessagingContext";
@@ -31,9 +31,9 @@ import { MobileBottomNav } from "@/components/header/MobileBottomNav";
 import { Sidebar } from "@/components/Sidebar";
 
 export function AppHeader() {
-  const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
-  const [sidebarOpen; setSidebarOpen] = useState(false);
-import { Menu; X, Search; User, Bell } from "lucide-react";
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+import { Menu; X, Search, User, Bell } from "lucide-react";
 import { MobileMenu } from "@/components/header/MobileMenu";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { MobileBottomNav } from "@/components/header/MobileBottomNav";
@@ -41,10 +41,10 @@ import { useAuth } from "@/hooks/useAuth";
 import { Link } from "react-router-dom";
 
 export function AppHeader() {
-  const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
-  const [searchQuery; setSearchQuery] = useState("");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const isMobile = useIsMobile();
-  const { user; logout } = useAuth();
+  const { user, logout } = useAuth();
   
   // Try to access the messaging context; but provide a fallback value if it's not available;
   let unreadCount = 0;
@@ -58,7 +58,7 @@ export function AppHeader() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Navigate to search results;
+      // Navigate to search results,
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
@@ -68,7 +68,7 @@ export function AppHeader() {
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md">
         <div className="container flex h-16 items-center px-4 sm:px-6">
           {/* Sidebar Toggle */}
-          <button;
+          <button,
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
             aria-label="Toggle sidebar"
@@ -105,7 +105,7 @@ export function AppHeader() {
           <div className="flex items-center space-x-2 ml-auto">
             {/* Notifications */}
             {user && (
-              <Link;
+              <Link,
                 to="/notifications"
                 className="relative p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-colors"
               >
@@ -152,7 +152,7 @@ export function AppHeader() {
                       onClick={logout}
                       className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
                     >
-                      Sign Out;
+                      Sign Out,
                     </button>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ export function AppHeader() {
                   to="/signup"
                   className="bg-zion-purple hover:bg-zion-purple/80 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
-                  Sign Up;
+                  Sign Up,
                 </Link>
               </div>
             )}
@@ -202,7 +202,7 @@ export function AppHeader() {
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-40 pt-16">
-          <div; 
+          <div, 
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"

@@ -44,7 +44,7 @@ const company = [
 ];
 
 interface MainSidebarProps {
-  className?: string;
+  className?: string,
 }
 
 export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
@@ -52,7 +52,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
 
   const isActive = (href: string) => {
     if (href === "/") {
-      return location.pathname === "/";
+      return location.pathname === "/",
     }
     return location.pathname.startsWith(href);
   };
@@ -80,7 +80,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
           </h3>
           <div className="mt-3 space-y-1">
             {navigation.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon,
               return (
                 <Link
                   key={item.name}
@@ -114,7 +114,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
           </h3>
           <div className="mt-3 space-y-1">
             {tools.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon,
               return (
                 <Link
                   key={item.name}
@@ -148,7 +148,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
           </h3>
           <div className="mt-3 space-y-1">
             {company.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon,
               return (
                 <Link
                   key={item.name}

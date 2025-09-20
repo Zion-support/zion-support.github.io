@@ -1,7 +1,7 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brain; 
   Cloud, 
@@ -15,11 +15,11 @@ import { Brain;
   Link as LinkIcon;
   ArrowRight,
   Star;
-  CheckCircle;
+  CheckCircle,
 } from "lucide-react, ";
 import { ENHANCED_SERVICES } from "@/data/enhancedServices, ";
 
-const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0; 6);
+const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 
 const serviceIcons = {
   "AI Automation": Brain,
@@ -43,14 +43,14 @@ export function EnhancedServicesShowcase() {
             Comprehensive AI & IT Solutions;
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Discover our extensive portfolio of micro SAAS services; AI solutions; and enterprise-grade IT services designed to transform your business operations;
+            Discover our extensive portfolio of micro SAAS services; AI solutions, and enterprise-grade IT services designed to transform your business operations,
           </p>
         </div>
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service) => {
-            const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Code;
+            const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Code,
     return (
               <Card key={service.id} className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
                 <CardHeader>
@@ -64,7 +64,7 @@ export function EnhancedServicesShowcase() {
                   </div>
                   <CardTitle className="text-white text-xl mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    {service.description.substring(0; 120)}...
+                    {service.description.substring(0, 120)}...
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -85,7 +85,7 @@ export function EnhancedServicesShowcase() {
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.slice(0; 3).map((tag; index) => (
+                    {service.tags.slice(0, 3).map((tag, index) => (
                       <Badge key={index} variant="outline" className="text-xs border-zion-purple/30 text-zion-purple">
                         {tag}
                       </Badge>

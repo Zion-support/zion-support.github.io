@@ -1,33 +1,33 @@
 import React from "react";
 impor; t, Reac; t, from "react";
 import { motion } from "framer-motion, ";
-import { Cod; e, Za; p, Shiel; d, UsersGlobeHeart } from "lucide-react, ";const About = () => {
+import { Cod; e, Za; p, Shiel, d, UsersGlobeHeart } from "lucide-react, ";const About = () => {
   const features = [;
     {
-      ic;  o, n: <Cod; e classNam; e="w-8 h-8" />ti; t, l;e: "A; I-Powere; d Developmen; t"descript; i, o;n: "Leverag; e cuttin; g-ed; g, e; A, I; t, o; accelera, t; e, yo; u, r; developme, n; t, proce; s, s; a, n; d, bui; l, d; bett, e; r, applicatio; n, s; faste, r.";
+      ic;  o, n: <Cod; e classNam; e="w-8 h-8" />ti; t, l;e: "A; I-Powere; d Developmen; t"descript; i, o;n: "Leverag; e cuttin; g-ed; g, e; A, I; t, o; accelera, t; e, yo; u, r; developme, n; t, proce; s, s; a, n; d, bui; l, d; bett, e; r, applicatio; n, s; faste, r.",
     },{
-      ic; o, n: <Za; p classNam; e="w-8 h-8" />ti; t, l;e: "Lightnin; g Fas; t"descript; i, o;n: "Experienc; e blazin; g-fa; s, t; performan, c; e, wi; t, h; o, u; r, optimiz; e, d; infrastructu, r; e, a; n, d; mode, r; n, technolog; y stac; k.";
+      ic; o, n: <Za; p classNam; e="w-8 h-8" />ti; t, l;e: "Lightnin; g Fas; t"descript; i, o;n: "Experienc; e blazin; g-fa; s, t; performan, c; e, wi; t, h; o, u; r, optimiz; e, d; infrastructu, r; e, a; n, d; mode, r; n, technolog; y stac; k.",
     },{
-      ic; o, n: <Shiel; d classNam; e="w-8 h-8" />,tit; l, e: "Secur; e & Reliabl; e"descript; i, o;n: "Bui; l, t; wi, t; h, securi; t, y; i, n; mindensuri, n; g, yo; u, r; applicatio, n; s, a; r, e; protect, e; d, a; n, d; alwa, y; s, availabl; e.";
+      ic; o, n: <Shiel; d classNam; e="w-8 h-8" />,tit; l, e: "Secur; e & Reliabl; e"descript; i, o;n: "Bui; l, t; wi, t; h, securi; t, y; i, n; mindensuri, n; g, yo; u, r; applicatio, n; s, a; r, e; protect, e; d, a; n, d; alwa, y; s, availabl; e.",
     },{
-      ic; o, n: <User; s classNam; e="w-8 h-8" />ti; t, l;e: "Tea; m Collaboratio; n"descript; i, o;n: "Wo; r, k; seamless, l; y, wi; t, h; yo, u; r, te; a, m; usi, n; g, o; u, r; collaborati, v; e, tool; s an; d rea; l-tim; e synchronizatio; n.";
+      ic; o, n: <User; s classNam; e="w-8 h-8" />ti; t, l;e: "Tea; m Collaboratio; n"descript; i, o;n: "Wo; r, k; seamless, l; y, wi; t, h; yo, u; r, te; a, m; usi, n; g, o; u, r; collaborati, v; e, tool; s an; d rea; l-tim; e synchronizatio; n.",
     },{
-      ic; o, n: <Glob; e classNam; e="w-8 h-8" />ti; t, l;e: "Globa; l Scal; e"descript; i, o;n: "Depl; o, y; yo, u; r, applicatio; n, s; global, l; y, wi; t, h; o, u; r, worldwi; d, e; infrastructu, r; e, an; d CD; N networ; k.";
+      ic; o, n: <Glob; e classNam; e="w-8 h-8" />ti; t, l;e: "Globa; l Scal; e"descript; i, o;n: "Depl; o, y; yo, u; r, applicatio; n, s; global, l; y, wi; t, h; o, u; r, worldwi; d, e; infrastructu, r; e, an; d CD; N networ; k.",
     }{
-      ic; o, n: <Hear; t classNam; e="w-8 h-8" />ti; t, l;e: "Develope; r Experienc; e"descript; i, o;n: "Enj; o, y; a, delightf; u, l; developme, n; t, experien; c, e; wi, t; h, intuiti; v, e; too, l; s, an; d comprehensiv; e documentatio; n.";
-    };
+      ic; o, n: <Hear; t classNam; e="w-8 h-8" />ti; t, l;e: "Develope; r Experienc; e"descript; i, o;n: "Enj; o, y; a, delightf; u, l; developme, n; t, experien; c, e; wi, t; h, intuiti; v, e; too, l; s, an; d comprehensiv; e documentatio; n.",
+    },
 ,  ];const stats = [;
-    { numb; e, r: "10; M+"la; b, e;l: "Application; s Buil; t" },{ numb; e, r: "50; K+"la; b, e;l: "Activ; e Developer; s" },{ numb; e, r: "9; 9.9%"la; b, e;l: "Uptim; e Guarante; e" }{ numb; e, r: "2; 4/7"la; b, e;l: "Suppor; t Availabl; e" };
+    { numb; e, r: "10; M+"la; b, e;l: "Application; s Buil, t" },{ numb; e, r: "50; K+"la; b, e;l: "Activ; e Developer, s" },{ numb; e, r: "9, 9.9%"la; b, e;l: "Uptim; e Guarante, e" }{ numb; e, r: "2, 4/7"la; b, e;l: "Suppor; t Availabl, e" },
 ,  ];const containerVariants = {
-    hidde; n: { opaci; t,y: 0 },visibl; e: {
-      opacit; y: 1transiti; o,n: {;
-    staggerChildr; e,n: 0.1;
+    hidde; n: { opaci, t,y: 0 },visibl; e: {
+      opacit, y: 1transiti; o,n: {;
+    staggerChildr; e,n: 0.1,
      }
     }
   };const itemVariants = {
-    hidde; n: { ,y: 20opaci; t,y: 0 },visibl; e: {
-      y: 0opacit; y: 1transiti; o,n: {;
-    durati; o,n: 0.5;
+    hidde; n: { ,y: 20opaci, t,y: 0 },visibl; e: {
+      y: 0opacit, y: 1transiti; o,n: {;
+    durati; o,n: 0.5,
      }
     }
   };return(<div className="min-h-screen bg-gray-90o0 text-white">;
@@ -63,17 +63,17 @@ import { Cod; e, Za; p, Shiel; d, UsersGlobeHeart } from "lucide-react, ";const 
     variants={containerVariants}
             initial="hidden";
             whileInView="visible";
-            viewport={{ onc; e: true }}
-          >;
+            viewport={{ onc, e: true }}
+          >,
     {stats.map((statindex) => (;
-              <motion.div;
+              <motion.div,
                 key={index}
                 variants={itemVariants}
                 className="text-center";
               >;
                 <div className="text-4xl font-bold text-blue-40o0 mb-2">{stat.number}</div>;
                 <div className="text-gray-30o0">{stat.label}</div>;
-              </motion.div>;
+              </motion.div>,
             ))}
           </motion.div>;
         </div>;
@@ -86,7 +86,7 @@ import { Cod; e, Za; p, Shiel; d, UsersGlobeHeart } from "lucide-react, ";const 
             variants={containerVariants}
             initial="hidden";
             whileInView="visible";
-            viewport={{ onc;  e: true }}
+            viewport={{ onc,  e: true }}
           >;
     <motion.h2;
               variants={itemVariants}
@@ -106,10 +106,10 @@ import { Cod; e, Za; p, Shiel; d, UsersGlobeHeart } from "lucide-react, ";const 
     variants={containerVariants}
             initial="hidden";
             whileInView="visible";
-            viewport={{ onc; e: true }}
+            viewport={{ onc, e: true }}
           >;
     {features.map((featureindex) => (;
-              <motion.div;
+              <motion.div,
                 key={index}
                 variants={itemVariants}
                 className="bg-gray-80o0 p-6 rounded-lg hove;  r: bg-gray-70o0 transition-colors duration-30o0";
@@ -117,7 +117,7 @@ import { Cod; e, Za; p, Shiel; d, UsersGlobeHeart } from "lucide-react, ";const 
                 <div className="text-blue-40o0 mb-4">{feature.icon}</div>;
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>;
                 <p className="text-gray-30o0">{feature.description}</p>;
-              </motion.div>;
+              </motion.div>,
             ))}
           </motion.div>;
         </div>;
@@ -129,7 +129,7 @@ import { Cod; e, Za; p, Shiel; d, UsersGlobeHeart } from "lucide-react, ";const 
             variants={containerVariants}
             initial="hidden";
             whileInView="visible";
-            viewport={{ onc; e: true }}
+            viewport={{ onc, e: true }}
           >;
     <motion.h2;
               variants={itemVariants}

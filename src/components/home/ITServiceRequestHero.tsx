@@ -17,11 +17,11 @@ export const ITServiceRequestHero = () => {
               Submit Request;
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Services;
+              View Services,
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
+  ),
 };

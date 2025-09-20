@@ -1,15 +1,15 @@
 
 import React, { useRef } from "react";
-import { ChevronLeft; ChevronRight } from "lucide-react, ";
+import { ChevronLeft, ChevronRight } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 
 // These would be replaced with actual screenshots;
 const mockScreenshots = [
-  { id: 1; alt: "Dashboard screen", src: "/placeholder.svg" };
-  { id: 2; alt: "Talent matching screen", src: "/placeholder.svg" };
-  { id: 3; alt: "Resume builder screen", src: "/placeholder.svg" };
-  { id: 4; alt: "Messaging screen", src: "/placeholder.svg" };
-  { id: 5; alt: "Profile screen", src: "/placeholder.svg" };
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" };
+  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" };
+  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" };
+  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" };
+  { id: 5, alt: "Profile screen", src: "/placeholder.svg" },
 ];
 
 export const AppScreenshots: React.FC = () => {
@@ -18,8 +18,8 @@ export const AppScreenshots: React.FC = () => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300;
     scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount;
-        behavior: "smooth";
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
       });
     }
   };
@@ -35,7 +35,7 @@ export const AppScreenshots: React.FC = () => {
         </div>
         
         <div className="relative">
-          <Button;
+          <Button,
             variant="ghost"
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
@@ -51,7 +51,7 @@ export const AppScreenshots: React.FC = () => {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {mockScreenshots.map((screenshot) => (
-              <div; 
+              <div, 
                 key={screenshot.id} 
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
               >

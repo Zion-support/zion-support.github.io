@@ -5,14 +5,14 @@ interface ReplyCardProps {
   reply: ForumReply;
     className?: string;
   onMarkAnswer?: () => void;
-  canMarkAnswer?: boolean;
+  canMarkAnswer?: boolean,
 }
 
-export default function ReplyCard({ reply; className = "", onMarkAnswer; canMarkAnswer }: ReplyCardProps) {
+export default function ReplyCard({ reply, className = "", onMarkAnswer, canMarkAnswer }: ReplyCardProps) {
   return (
     <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}>
       <div className="flex items-start space-x-3">
-        <img;
+        <img,
           src={reply.author.avatar}
           alt={reply.author.name}
           className="w-8 h-8 rounded-full"
@@ -25,7 +25,7 @@ export default function ReplyCard({ reply; className = "", onMarkAnswer; canMark
             </span>
             {reply.isSolution && (
               <span className="text-xs bg-green-500 text-white px-2 py-1 rounded">
-                Solution;
+                Solution,
               </span>
             )}
           </div>
@@ -34,11 +34,11 @@ export default function ReplyCard({ reply; className = "", onMarkAnswer; canMark
             <button className="hover: text-zion-cyan">Like ({reply.likes})</button>
             <button className="hover:text-zion-cyan">Reply</button>
             {canMarkAnswer && onMarkAnswer && (
-              <button; 
+              <button, 
                 onClick={onMarkAnswer}
                 className="hover:text-zion-cyan text-green-500"
               >
-                Mark as Answer;
+                Mark as Answer,
               </button>
             )}
           </div>

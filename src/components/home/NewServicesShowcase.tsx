@@ -1,10 +1,10 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { MICRO_SAAS_SERVICES; 
-  SERVICE_CATEGORIES; 
+  SERVICE_CATEGORIES, 
 } from "@/data/microSaasServices, ";
 import { Sparkles; 
   Zap, 
@@ -13,14 +13,14 @@ import { Sparkles;
   Star;
   CheckCircle,
   Globe;
-  MessageCircle;
+  MessageCircle,
 } from "lucide-react, ";
 
 export function NewServicesShowcase() {
   // Get featured services from each category;
   const featuredServices = SERVICE_CATEGORIES.map(category => 
     category.services[0]
-  ).filter(Boolean);
+  ).filter(Boolean),
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate relative overflow-hidden">
@@ -50,8 +50,8 @@ export function NewServicesShowcase() {
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredServices.map((service; index) => (
-            <Card; 
+          {featuredServices.map((service, index) => (
+            <Card, 
               key={service.id} 
               className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20"
               style={{ animationDelay: `${index * 200}ms` }}
@@ -103,7 +103,7 @@ export function NewServicesShowcase() {
                 <div>
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
                   <div className="space-y-1">
-                    {service.features.slice(0; 3).map((feature; idx) => (
+                    {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-zion-slate-light">
                         <CheckCircle className="w-3 h-3 text-zion-cyan" />
                         <span className="truncate">{feature}</span>
@@ -142,8 +142,8 @@ export function NewServicesShowcase() {
 
         {/* Category Overview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {SERVICE_CATEGORIES.map((category; index) => (
-            <div; 
+          {SERVICE_CATEGORIES.map((category, index) => (
+            <div, 
               key={category.name}
               className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 hover: border-zion-cyan/30 transition-all duration-300 hover:scale-105"
               style={{ animationDelay: `${index * 300}ms` }}
@@ -157,7 +157,7 @@ export function NewServicesShowcase() {
               <Button; 
                 variant="outline" 
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"
-                asChild;
+                asChild,
               >
                 <Link to="/micro-saas-services">
                   Explore {category.name}

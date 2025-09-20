@@ -1,40 +1,10 @@
 export interface MicroSaasService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  marketPrice: string;
-  website: string;
-  contactEmail: string;
-  marketPrice: string;
-  website: string;
-  contactEmail: string;
-  marketPrice: string;
-  website: string;
-  contactEmail: string;
-  tags: string[];
-  aiScore: number;
-  rating: number;
-  reviewCount: number;
-  featured: boolean;
-  location: string;
-  availability: string;
-  featured: boolean;
-  location: string;
-  availability: string;
-  featured: boolean;
-  location: string;
-  availability: string;
-  author: {
-    name: string;
-    id: string;
+  id: string, title: string, description: string, category: string, marketPrice: string, website: string, contactEmail: string, marketPrice: string, website: string, contactEmail: string, marketPrice: string, website: string, contactEmail: string, tags: string[], aiScore: number, rating: number, reviewCount: number, featured: boolean, location: string, availability: string, featured: boolean, location: string, availability: string, featured: boolean, location: string, availability: string, author: {
+    name: string, id: string;
     avatarUrl?: string;
-    verified: boolean;
-    verified: boolean;
-    verified: boolean;
+    verified: boolean, verified: boolean, verified: boolean,
   };
-  images: string[];
-  createdAt: string;
+  images: string[], createdAt: string;
 }
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
@@ -45,14 +15,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "No-code AI chatbot creation platform with advanced NLP; multi-language support; and seamless integrations. Perfect for customer service; sales, and support automation.",
     category: "AI Services",
     subcategory: "Chatbots & Conversational AI",
-    price: 99;
+    price: 99,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Drag & drop chatbot builder",
       "Advanced NLP processing",
       "Multi-language support (50+ languages)",
-      "CRM integrations (Salesforce; HubSpot)",
+      "CRM integrations (Salesforce, HubSpot)",
       "Analytics dashboard",
       "Custom branding",
       "API access",
@@ -70,17 +40,13 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     website: "https://ziontechgroup.com/ai-chatbot-builder",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["AI Chatbot", "NLP", "Customer Service", "Automation"],
-    aiScore: 95;
-    rating: 4.8;
-    reviewCount: 156;
-    featured: true;
-    location: "Global",
+    aiScore: 95, rating: 4.8, reviewCount: 156, featured: true, location: "Global",
     availability: "Immediate",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true;
+      verified: true,
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
@@ -91,14 +57,13 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Advanced AI-powered content creation platform for blogs; social media; marketing copy; and product descriptions. Includes SEO optimization and brand voice customization.",
     category: "AI Services",
     subcategory: "Content Creation",
-    price: 79;
-    currency: "$",
+    price: 79, currency: "$",
     pricingModel: "monthly",
     features: [
       "AI-powered content generation",
       "SEO optimization tools",
       "Brand voice customization",
-      "Multi-format output (blog; social, email)",
+      "Multi-format output (blog, social, email)",
       "Plagiarism checker",
       "Content calendar",
       "Team collaboration",
@@ -116,16 +81,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     website: "https://ziontechgroup.com/ai-content-generator",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["Content Generation", "AI Writing", "SEO", "Marketing"],
-    aiScore: 92;
-    rating: 4.7;
-    reviewCount: 234;
-    featured: true;
-    location: "Global",
+    aiScore: 92, rating: 4.7, reviewCount: 234, featured: true, location: "Global",
     availability: "Immediate",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      verified: true;
+      verified: true,
     },
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-20T14:30:00.000Z"
@@ -136,8 +97,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Intelligent data analytics platform that transforms raw data into actionable insights. Features predictive analytics; automated reporting; and real-time dashboards.",
     category: "AI Services",
     subcategory: "Data Analytics",
-    price: 149;
-    currency: "$",
+    price: 149, currency: "$",
     pricingModel: "monthly",
     features: [
       "Real-time data processing",
@@ -161,16 +121,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     website: "https://ziontechgroup.com/ai-analytics",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["Business Intelligence", "Data Analytics", "Predictive Analytics", "Reporting"],
-    aiScore: 94;
-    rating: 4.9;
-    reviewCount: 89;
-    featured: true;
-    location: "Global",
+    aiScore: 94, rating: 4.9, reviewCount: 89, featured: true, location: "Global",
     availability: "Immediate",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      verified: true;
+      verified: true,
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-01T09:15:00.000Z"
@@ -181,8 +137,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Intelligent coding companion that helps developers write; debug, and optimize code. Supports 50+ programming languages with advanced AI-powered suggestions.",
     category: "AI Services",
     subcategory: "Developer Tools",
-    price: 29;
-    currency: "$",
+    price: 29, currency: "$",
     pricingModel: "monthly",
     features: [
       "AI code completion",
@@ -206,16 +161,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     website: "https://ziontechgroup.com/ai-code-assistant",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["Code Generation", "Developer Tools", "AI Programming", "Productivity"],
-    aiScore: 96;
-    rating: 4.8;
-    reviewCount: 567;
-    featured: true;
-    location: "Global",
+    aiScore: 96, rating: 4.8, reviewCount: 567, featured: true, location: "Global",
     availability: "Immediate",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      verified: true;
+      verified: true,
     },
     images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T11:45:00.000Z"
@@ -226,8 +177,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Professional AI image creation platform for marketing; design, and content creation. Generate high-quality images from text descriptions with advanced customization options.",
     category: "AI Services",
     subcategory: "Image Generation",
-    price: 49;
-    currency: "$",
+    price: 49, currency: "$",
     pricingModel: "monthly",
     features: [
       "Text-to-image generation",
@@ -251,16 +201,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     website: "https://ziontechgroup.com/ai-image-generator",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["Image Generation", "AI Art", "Design", "Marketing"],
-    aiScore: 93;
-    rating: 4.6;
-    reviewCount: 312;
-    featured: false;
-    location: "Global",
+    aiScore: 93, rating: 4.6, reviewCount: 312, featured: false, location: "Global",
     availability: "Immediate",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      verified: true;
+      verified: true,
     },
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-05T16:20:00.000Z"
@@ -272,8 +218,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Comprehensive cloud migration solution with automated assessment; planning, and execution tools. Supports AWS; Azure, and Google Cloud with zero-downtime migration.",
     category: "IT Services",
     subcategory: "Cloud Solutions",
-    price: 299;
-    currency: "$",
+    price: 299, currency: "$",
     pricingModel: "monthly",
     features: [
       "Automated migration assessment",
@@ -297,16 +242,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     website: "https://ziontechgroup.com/cloud-migration",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["Cloud Migration", "AWS", "Azure", "DevOps"],
-    aiScore: 91;
-    rating: 4.7;
-    reviewCount: 78;
-    featured: true;
-    location: "Global",
+    aiScore: 91, rating: 4.7, reviewCount: 78, featured: true, location: "Global",
     availability: "2-4 weeks",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      verified: true;
+      verified: true,
     },
     images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-25T13:10:00.000Z"
@@ -317,8 +258,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Advanced cybersecurity monitoring platform with AI-powered threat detection; automated response; and 24/7 security operations center (SOC) services.",
     category: "IT Services",
     subcategory: "Cybersecurity",
-    price: 199;
-    currency: "$",
+    price: 199, currency: "$",
     pricingModel: "monthly",
     features: [
       "AI threat detection",
@@ -342,16 +282,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     website: "https://ziontechgroup.com/cybersecurity",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["Cybersecurity", "Threat Detection", "SOC", "Compliance"],
-    aiScore: 95;
-    rating: 4.9;
-    reviewCount: 134;
-    featured: true;
-    location: "Global",
+    aiScore: 95, rating: 4.9, reviewCount: 134, featured: true, location: "Global",
     availability: "Immediate",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      verified: true;
+      verified: true,
     },
     images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-10T08:30:00.000Z"
@@ -362,8 +298,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Complete DevOps automation solution with CI/CD pipelines; infrastructure as code; monitoring, and deployment automation. Accelerate development cycles and improve reliability.",
     category: "IT Services",
     subcategory: "DevOps",
-    price: 179;
-    currency: "$",
+    price: 179, currency: "$",
     pricingModel: "monthly",
     features: [
       "CI/CD pipeline automation",
@@ -387,16 +322,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     website: "https://ziontechgroup.com/devops-automation",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["DevOps", "CI/CD", "Automation", "Infrastructure"],
-    aiScore: 93;
-    rating: 4.8;
-    reviewCount: 95;
-    featured: false;
-    location: "Global",
+    aiScore: 93, rating: 4.8, reviewCount: 95, featured: false, location: "Global",
     availability: "1-2 weeks",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      verified: true;
+      verified: true,
     },
     images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-30T15:45:00.000Z"
@@ -407,8 +338,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Comprehensive data protection solution with automated backup; disaster recovery; and business continuity planning. Supports hybrid cloud environments with zero data loss guarantee.",
     category: "IT Services",
     subcategory: "Data Protection",
-    price: 129;
-    currency: "$",
+    price: 129, currency: "$",
     pricingModel: "monthly",
     features: [
       "Automated backup scheduling",
@@ -432,16 +362,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     website: "https://ziontechgroup.com/data-backup",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["Data Backup", "Disaster Recovery", "Business Continuity", "Cloud Storage"],
-    aiScore: 90;
-    rating: 4.7;
-    reviewCount: 67;
-    featured: false;
-    location: "Global",
+    aiScore: 90, rating: 4.7, reviewCount: 67, featured: false, location: "Global",
     availability: "Immediate",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      verified: true;
+      verified: true,
     },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-15T12:00:00.000Z"
@@ -453,8 +379,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Intelligent customer support platform with AI-powered ticket routing; automated responses; sentiment analysis; and customer satisfaction tracking.",
     category: "Business Solutions",
     subcategory: "Customer Support",
-    price: 89;
-    currency: "$",
+    price: 89, currency: "$",
     pricingModel: "monthly",
     features: [
       "AI ticket routing",
@@ -464,17 +389,12 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Multi-channel support",
       "Knowledge base",
   pricing: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    features: string[];
+    monthly: number, yearly: number, currency: string,
+    features: string[],
   };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  integration: string[];
-  support: string[];
+  features: string[], benefits: string[];
+  useCases: string[], targetAudience: string[];
+  integration: string[], support: string[];
   link: string;
   badge?: string;
   icon: string;
@@ -487,8 +407,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Generate high-quality; SEO-optimized content for blogs; social media; and marketing campaigns using advanced AI.",
     category: "Content & Marketing",
     pricing: {
-      monthly: 29;
-      yearly: 290;
+      monthly: 29,
+      yearly: 290,
       currency: "$",
       features: ["Unlimited content generation", "SEO optimization", "Multi-language support", "Brand voice customization"]
     },
@@ -526,8 +446,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Automated invoice processing; expense tracking; and financial reporting for small to medium businesses.",
     category: "Finance & Accounting",
     pricing: {
-      monthly: 19;
-      yearly: 190;
+      monthly: 19, yearly: 190,
       currency: "$",
       features: ["Unlimited invoices", "Expense tracking", "Financial reports", "Multi-currency support"]
     },
@@ -564,8 +483,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Streamlined project management with real-time collaboration; task tracking; and team communication tools.",
     category: "Project Management",
     pricing: {
-      monthly: 25;
-      yearly: 250;
+      monthly: 25, yearly: 250,
       currency: "$",
       features: ["Unlimited projects", "Team collaboration", "File sharing", "Time tracking"]
     },
@@ -603,8 +521,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Intelligent customer support automation with chatbots; ticket management; and analytics.",
     category: "Customer Support",
     pricing: {
-      monthly: 39;
-      yearly: 390;
+      monthly: 39, yearly: 390,
       currency: "$",
       features: ["Unlimited conversations", "AI chatbot", "Ticket management", "Analytics dashboard"]
     },
@@ -641,8 +558,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Comprehensive data analytics and visualization platform for business intelligence and decision making.",
     category: "Analytics & BI",
     pricing: {
-      monthly: 49;
-      yearly: 490;
+      monthly: 49, yearly: 490,
       currency: "$",
       features: ["Unlimited data sources", "Custom dashboards", "Real-time analytics", "Advanced reporting"]
     },
@@ -679,8 +595,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Intelligent hiring platform that automates candidate screening; matching, and interview scheduling.",
     category: "HR & Recruitment",
     pricing: {
-      monthly: 35;
-      yearly: 350;
+      monthly: 35, yearly: 350,
       currency: "$",
       features: ["Unlimited job postings", "AI candidate matching", "Interview scheduling", "Analytics dashboard"]
     },
@@ -718,8 +633,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Real-time threat detection; vulnerability assessment; and security compliance monitoring.",
     category: "Cybersecurity",
     pricing: {
-      monthly: 45;
-      yearly: 450;
+      monthly: 45, yearly: 450,
       currency: "$",
       features: ["Threat monitoring", "Vulnerability scanning", "Compliance reporting", "Security alerts"]
     },
@@ -756,8 +670,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Intelligent cloud cost management and optimization for AWS; Azure, and Google Cloud platforms.",
     category: "Cloud Management",
     pricing: {
-      monthly: 30;
-      yearly: 300;
+      monthly: 30, yearly: 300,
       currency: "$",
       features: ["Multi-cloud monitoring", "Cost optimization", "Resource management", "Budget alerts"]
     },
@@ -794,8 +707,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Intelligent marketing automation with AI-powered personalization; campaign optimization; and analytics.",
     category: "Marketing Automation",
     pricing: {
-      monthly: 55;
-      yearly: 550;
+      monthly: 55, yearly: 550,
       currency: "$",
       features: ["Unlimited campaigns", "AI personalization", "Advanced analytics", "Multi-channel marketing"]
     },
@@ -833,8 +745,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Comprehensive API development; testing, monitoring; and documentation platform for developers.",
     category: "Developer Tools",
     pricing: {
-      monthly: 40;
-      yearly: 400;
+      monthly: 40, yearly: 400,
       currency: "$",
       features: ["Unlimited APIs", "Testing tools", "Performance monitoring", "Developer portal"]
     },
@@ -868,13 +779,13 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
 ];
 
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
-  return MICRO_SAAS_SERVICES.find(service => service.id === id);
+  return MICRO_SAAS_SERVICES.find(service => service.id === id),
 };
 
 export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
-  return MICRO_SAAS_SERVICES.filter(service => service.category === category);
+  return MICRO_SAAS_SERVICES.filter(service => service.category === category),
 };
 
 export const getMicroSaasCategories = (): string[] => {
-  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
+  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))],
 };

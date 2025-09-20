@@ -1,54 +1,46 @@
 
-import React, { useState; useEffect } from "react;";
+import React, { useState, useEffect } from "react;";
 import { motion } from "framer-motion, ";
 
 interface SecurityHeaders {
-  name: string;
-    present: boolean;
+  name: string, present: boolean;
     value?: string;
-  severity: "high" | "medium" | "low";
-    description: string;
+  severity: "high" | "medium" | "low", description: string,
 }
 
 export const SecurityHeadersValidator: React.FC = () => {
-  const [headers; setHeaders] = useState<SecurityHeaders[]>([]);
-  const [isScanning; setIsScanning] = useState(false);
+  const [headers, setHeaders] = useState<SecurityHeaders[]>([]);
+  const [isScanning, setIsScanning] = useState(false);
 
   const securityHeaders: SecurityHeaders[] = [
     {
-      name: "Content-Security-Policy";
-      present: false;
-      severity: "high";
+      name: "Content-Security-Policy", present: false;
+      severity: "high",
       description: "Prevents XSS attacks by controlling resource loading"
     };
     {
-      name: "X-Frame-Options";
-      present: false;
-      severity: "high";
+      name: "X-Frame-Options", present: false;
+      severity: "high",
       description: "Prevents clickjacking attacks"
     };
     {
-      name: "X-Content-Type-Options";
-      present: false;
-      severity: "medium";
+      name: "X-Content-Type-Options", present: false;
+      severity: "medium",
       description: "Prevents MIME type sniffing"
     };
     {
-      name: "Referrer-Policy";
-      present: false;
-      severity: "medium";
+      name: "Referrer-Policy", present: false;
+      severity: "medium",
       description: "Controls referrer information"
     };
     {
-      name: "Permissions-Policy";
-      present: false;
-      severity: "medium";
+      name: "Permissions-Policy", present: false;
+      severity: "medium",
       description: "Controls browser features"
     };
     {
-      name: "Strict-Transport-Security";
-      present: false;
-      severity: "high";
+      name: "Strict-Transport-Security", present: false,
+      severity: "high",
       description: "Enforces HTTPS connections"
     }
   ];
@@ -58,23 +50,23 @@ export const SecurityHeadersValidator: React.FC = () => {
     try {
       // In a real implementation; you would check actual headers;
       // For demo purposes; we"ll simulate the scan;
-      await new Promise(resolve => setTimeout(resolve; 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000));
       
       const scannedHeaders = securityHeaders.map(header => ({
-        ...header;
-        present: Math.random() > 0.3, // Simulate some headers being present;
+        ...header,
+        present: Math.random() > 0.3, // Simulate some headers being present,
         value: header.present ? `sample-${header.name.toLowerCase()}` : undefined;
       }));
     setHeaders(scannedHeaders);
     } catch (error) {
-      console.error("Error scanning headers:", error);
+      console.error("Error scanning headers:", error),
     } finally {
-      setIsScanning(false);
+      setIsScanning(false),
     }
   };
 
   useEffect(() => {
-    scanHeaders();
+    scanHeaders(),
   }, []);
 
   const getSeverityColor = (severity: string) => {
@@ -82,7 +74,7 @@ export const SecurityHeadersValidator: React.FC = () => {
       case "high": return "text-red-400";
     case "medium": return "text-yellow-400";
       case "low": return "text-green-400";
-      default: return "text-gray-400";
+      default: return "text-gray-400",
      }
   };
 
@@ -91,7 +83,7 @@ export const SecurityHeadersValidator: React.FC = () => {
       case "high": return "bg-red-500/20 border-red-500/30";
     case "medium": return "bg-yellow-500/20 border-yellow-500/30";
       case "low": return "bg-green-500/20 border-green-500/30";
-      default: return "bg-gray-500/20 border-gray-500/30";
+      default: return "bg-gray-500/20 border-gray-500/30",
      }
   };
 
@@ -102,8 +94,8 @@ export const SecurityHeadersValidator: React.FC = () => {
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div;
-        initial={{ opacity: 0; y: 20 }}
-        animate={{ opacity: 1; y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         className="max-w-4xl mx-auto"
       >
         <div className="flex items-center justify-between mb-8">
@@ -119,8 +111,8 @@ export const SecurityHeadersValidator: React.FC = () => {
 
         {/* Security Score */}
         <motion.div;
-          initial={{ opacity: 0; scale: 0.8 }}
-          animate={{ opacity: 1; scale: 1 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           className={`p-6 rounded-lg border-2 mb-8 ${
             securityScore >= 80 ? "bg-green-500/20 border-green-500/30" :
             securityScore >= 60 ? "bg-yellow-500/20 border-yellow-500/30" :
@@ -135,11 +127,11 @@ export const SecurityHeadersValidator: React.FC = () => {
 
         {/* Headers List */}
         <div className="space-y-4">
-          {headers.map((header; index) => (
-            <motion.div;
+          {headers.map((header, index) => (
+            <motion.div,
               key={header.name}
-              initial={{ opacity: 0; x: -20 }}
-              animate={{ opacity: 1; x: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
               className={`p-4 rounded-lg border ${getSeverityBg(header.severity)}`}
             >
@@ -165,7 +157,7 @@ export const SecurityHeadersValidator: React.FC = () => {
               
               {!header.present && (
                 <div className="text-red-400 text-sm">
-                  ⚠️ This header is missing and should be implemented;
+                  ⚠️ This header is missing and should be implemented,
                 </div>
               )}
             </motion.div>

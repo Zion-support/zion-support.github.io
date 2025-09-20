@@ -47,7 +47,7 @@ export default function TermsOfService() {
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">4. Limitations</h2>
           <p>
-            In no event shall Zion Tech Group or its suppliers be liable for any damages (including; without limitation; damages for loss of data or profit; or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group"s website; even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
+            In no event shall Zion Tech Group or its suppliers be liable for any damages (including; without limitation; damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group"s website; even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
           </p>
         </section>
 

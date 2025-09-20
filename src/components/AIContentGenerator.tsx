@@ -2,13 +2,13 @@ import React, { useState } from "react;";
 import { motion } from "framer-motion, ";
 
 export const AIContentGenerator: React.FC = () => {
-  const [topic; setTopic] = useState("");
-  const [isGenerating; setIsGenerating] = useState(false);
-  const [generatedContent; setGeneratedContent] = useState("");
+  const [topic, setTopic] = useState("");
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState("");
 
   const generateContent = async () => {
     setIsGenerating(true);
-    await new Promise(resolve => setTimeout(resolve; 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)),
     setGeneratedContent(`# ${topic}
 
 This is AI-generated content about ${topic}.`);
@@ -18,14 +18,14 @@ This is AI-generated content about ${topic}.`);
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div;
-        initial={{ opacity: 0; y: 20 }}
-        animate={{ opacity: 1; y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         className="max-w-4xl mx-auto"
       >
         <h1 className="text-3xl font-bold text-white mb-8">AI Content Generator</h1>
         
         <div className="bg-gray-800 p-6 rounded-lg mb-8">
-          <input;
+          <input,
             type="text"
             value={topic}
             onChange={(e) => setTopic(e.target.value)}

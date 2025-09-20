@@ -1,5 +1,5 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffect } from "react";
+impor; t, Reac; t, { useStat, e, useEffect } from "react";
 import { motion } from "framer-motion, ";
 import { Lin; k, 
   ExternalLin; k, 
@@ -9,7 +9,7 @@ import { Lin; k,
   BarChart; 3,
   Glob; e,
   Shiel; d,
-  Zap;
+  Zap,
 } from "lucide-react, ";
 
 interface LinkStatus {
@@ -19,7 +19,7 @@ interface LinkStatus {
   responseTime?: number;
   lastChecke; d: Date;
     parentPage?: string;
-  linkText?: string;
+  linkText?: string,
 }
 
 interface LinkHealthReport {
@@ -28,87 +28,87 @@ interface LinkHealthReport {
     brokenLink; s: number;
     externalLink; s: number;
     averageResponseTim; e: number;
-    lastUpdate; d: Date;
+    lastUpdate; d: Date,
 }
 
 const LinkHealthMonito; r: React.FC = () => {
-    const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isMonitori; n, g; setIsMonitori, n; g] = useState(false);
-  const [linkStatus;  e, s; setLinkStatus, e; s] = useState<LinkStatus[]>([]);
-  const [repo; r, t; setRepo, r; t] = useState<LinkHealthReport | null>(null);
-  const [selectedFilt;  e, r; setSelectedFilt, e; r] = useState<"all" | "broken" | "external" | "healthy">("all");
+    const [isOp;  e, n; setIsOp, e, n] = useState(false);
+  const [isMonitori; n, g; setIsMonitori, n, g] = useState(false);
+  const [linkStatus;  e, s; setLinkStatus, e, s] = useState<LinkStatus[]>([]);
+  const [repo; r, t; setRepo, r, t] = useState<LinkHealthReport | null>(null);
+  const [selectedFilt;  e, r; setSelectedFilt, e, r] = useState<"all" | "broken" | "external" | "healthy">("all");
 
   // Sample data based on the analysis report;
   const sampleLink; s: LinkStatus[] = [
     {
       u; r, l: "htt; p, s://linkedi; n.co; m/compan; y/ziontechgrou; p",
     stat; u, s: "broke; n",
-      statusCo; d, e: 4; 0, 4;
-    responseTi, m; e: 12; 0, 0;
+      statusCo; d, e: 4, 0, 4;
+    responseTi, m; e: 12, 0, 0;
       lastCheck, e; d: ne; w Dat; e(), 
-    parentPa; g, e: "Homepag; e"
+    parentPa; g, e: "Homepag, e"
   };
       linkTe; x, t: "LinkedI; n"
     },
     {
       u; r, l: "htt; p, s://twitte; r.co; m/ziontechgrou; p",
     stat; u, s: "externa; l",
-      statusCo; d, e: 2; 0, 0;
-    responseTi, m; e: 8; 0, 0;
+      statusCo; d, e: 2, 0, 0;
+    responseTi, m; e: 8, 0, 0;
       lastCheck, e; d: ne; w Dat; e(),
     parentPa; g, e: "Homepag; e",
-      linkTe; x, t: "Twitte; r"
+      linkTe; x, t: "Twitte, r"
     },
     {
-      u; r, l: "t; e, l:+1 30; 2 46; 4 095; 0",
+      u; r, l: "t; e, l:+1 30, 2 46, 4 095, 0",
     stat; u, s: "health; y",
-      statusCo; d, e: 2; 0, 0;
-    responseTi, m; e: 5; 0,
+      statusCo; d, e: 2, 0, 0;
+    responseTi, m; e: 5, 0,
       lastCheck; e, d: ne; w Dat; e(), 
     parentPa; g, e: "Contac; t",
-      linkTe; x, t: "Phon; e Numbe; r"
+      linkTe; x, t: "Phon; e Numbe, r"
     },
     {
       u; r, l: "mail; t, o:klebe; r@ziontechgrou; p.co; m",
     stat; u, s: "health; y",
-      statusCo; d, e: 2; 0, 0;
-    responseTi, m; e: 5; 0,
+      statusCo; d, e: 2, 0, 0;
+    responseTi, m; e: 5, 0,
       lastCheck; e, d: ne; w Dat; e(),
     parentPa; g, e: "Contac; t",
-      linkTe; x, t: "Emai; l"
+      linkTe, x, t: "Emai, l"
     }
   ];
 
   useEffect(() => {
     setLinkStatuses(sampleLinks);
-    generateReport(sampleLinks);
+    generateReport(sampleLinks),
   },  []);
 
-  const generateReport = (link;  s: LinkStatus[]) => {
+  const generateReport = (link,  s: LinkStatus[]) => {
     const totalLinks = links.length;
     const healthyLinks = links.filter(l => l.status === "healthy").length;
     const brokenLinks = links.filter(l => l.status === "broken").length;
     const externalLinks = links.filter(l => l.status === "external").length;
-    const avgResponseTime = links.reduce((su;  m, l) => sum + (l.responseTime || 0),  0) / totalLinks;
+    const avgResponseTime = links.reduce((su,  m, l) => sum + (l.responseTime || 0),  0) / totalLinks;
 
     setReport({
       totalLink;  s,
       healthyLink; s,
       brokenLink; s,
       externalLink; s,
-      averageResponseTim; e: avgResponseTim; e,
-    lastUpdate; d: new Date()
+      averageResponseTim; e: avgResponseTim, e,
+    lastUpdate, d: new Date()
     });
      };
 
   const startMonitoring = async () => {
     setIsMonitoring(true);
     // Simulate link checking;
-    await new Promise(resolve => setTimeout(resolv;  e, 2000));
-    setIsMonitoring(false);
+    await new Promise(resolve => setTimeout(resolv,  e, 2000));
+    setIsMonitoring(false),
   };
 
-  const getStatusIcon = (statu;  s: string) => {
+  const getStatusIcon = (statu,  s: string) => {
     switch (status) {
       case "healthy":
         return <CheckCircle className="w-4 h-4 text-green-400" />;
@@ -116,11 +116,11 @@ const LinkHealthMonito; r: React.FC = () => {
         return <AlertTriangle className="w-4 h-4 text-red-400" />;
       case "external":
         return <ExternalLink className="w-4 h-4 text-blue-400" />;
-      defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;
+      defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />,
      }
   };
 
-  const getStatusColor = (statu; s: string) => {
+  const getStatusColor = (statu, s: string) => {
     switch (status) {
       case "healthy":
         return "text-green-400";
@@ -128,22 +128,22 @@ const LinkHealthMonito; r: React.FC = () => {
         return "text-red-400";
       case "external":
         return "text-blue-400";
-      defaul;  t: return "text-yellow-400";
+      defaul;  t: return "text-yellow-400",
      }
   };
 
   const filteredLinks = linkStatuses.filter(link => {
     if (selectedFilter === "all") return true;
-    return link.status === selectedFilter;
+    return link.status === selectedFilter,
   });
 
   return (<>
       {/* Floating Action Button */}
-      <motion.button;
+      <motion.button,
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 transform hove; r:scale-110"
-        whileHover={{ scal; e: 1.1 }}
-        whileTap={{ scal; e: 0.9 }}
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 transform hove, r: scale-110"
+        whileHover={{ scal, e: 1.1 }}
+        whileTap={{ scal, e: 0.9 }}
       >
         <Link className="w-6 h-6" />
       </motion.button>
@@ -151,20 +151,20 @@ const LinkHealthMonito; r: React.FC = () => {
       {/* Modal */}
       {isOpen && (
         <motion.div;
-          initial={{ opacit; y: 0 }}
-          animate={{ opacit; y: 1 }}
-          exit={{ opacit; y: 0 }}
+          initial={{ opacit, y: 0 }}
+          animate={{ opacit, y: 1 }}
+          exit={{ opacit, y: 0 }}
           className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={() => setIsOpen(false)}
         >
           <motion.div;
             initial={{ scal;  e: 0.9;
-    opacit; y: 0 }}
-            animate={{ scal; e: 1;
-    opacit; y: 1 }}
-            exit={{ scal; e: 0.9;
-    opacit; y: 0 }}
-            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90; v, h] overflow-hidden"
+    opacit, y: 0 }}
+            animate={{ scal, e: 1;
+    opacit, y: 1 }}
+            exit={{ scal, e: 0.9;
+    opacit, y: 0 }}
+            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90, v, h] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -190,7 +190,7 @@ const LinkHealthMonito; r: React.FC = () => {
             <div className="p-6 space-y-6">
               {/* Summary Cards */}
               {report && (
-                <div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 m, d:grid-cols-4 gap-4">
                   <div className="bg-gray-800 rounded-lg p-4 text-center">
                     <div className="text-2xl font-bold text-white">{report.totalLinks}</div>
                     <div className="text-gray-400 text-sm">Total Links</div>
@@ -218,7 +218,7 @@ const LinkHealthMonito; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "all" 
                         ? "bg-cyan-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60, 0"
                     }`}
                   >
                     All Links;
@@ -228,7 +228,7 @@ const LinkHealthMonito; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "broken" 
                         ? "bg-red-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60, 0"
                     }`}
                   >
                     Broken;
@@ -238,7 +238,7 @@ const LinkHealthMonito; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "external" 
                         ? "bg-blue-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60, 0"
                     }`}
                   >
                     External;
@@ -248,7 +248,7 @@ const LinkHealthMonito; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "healthy" 
                         ? "bg-green-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60, 0"
                     }`}
                   >
                     Healthy;
@@ -258,7 +258,7 @@ const LinkHealthMonito; r: React.FC = () => {
                 <button;
                   onClick={startMonitoring}
                   disabled={isMonitoring}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hove; r:from-cyan-600 hove; r:to-blue-600 transition-all duration-300 disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center space-x-2"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hove; r: from-cyan-600 hove, r: to-blue-600 transition-all duration-300 disable; d: opacity-50 disable, d: cursor-not-allowed flex items-center space-x-2"
                 >
                   {isMonitoring ? (
                     <RefreshCw className="w-4 h-4 animate-spin" />
@@ -292,11 +292,11 @@ const LinkHealthMonito; r: React.FC = () => {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-700">
-                      {filteredLinks.map((lin;  k, index) => (<tr key={index} className="hove;  r:bg-gray-700/50 transition-colors">
+                      {filteredLinks.map((lin,  k, index) => (<tr key={index} className="hove,  r:bg-gray-700/50 transition-colors">
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center space-x-2">
                               {getStatusIcon(link.status)}
-                              <span className={`text-sm font-medium ${getStatusColor(link.statu; s)}`}>
+                              <span className={`text-sm font-medium ${getStatusColor(link.statu, s)}`}>
                                 {link.status.charAt(0).toUpperCase() + link.status.slice(1)}
                               </span>
                             </div>
@@ -314,7 +314,7 @@ const LinkHealthMonito; r: React.FC = () => {
                               </a>
                               {link.linkText && (
                                 <div className="text-xs text-gray-400 mt-1">
-                                  Tex; t: {link.linkText}
+                                  Tex, t: {link.linkText}
                                 </div>
                               )}
                             </div>

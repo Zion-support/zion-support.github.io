@@ -1,81 +1,58 @@
 import React, { useState } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { Brain; Zap, Shield; Globe, Rocket; Star, 
-  ArrowRight; CheckCircle, TrendingUp; Users, Award;
+  ArrowRight; CheckCircle, TrendingUp; Users, Award,
 } from "lucide-react, ";
 
 interface Service {
-  id: string;
-    name: string;
-    description: string;
-    icon: React.ReactNode;
-    color: string;
-    price: string;
-    features: string[];
-    popular?: boolean;
+  id: string, name: string, description: string, icon: React.ReactNode, color: string, price: string, features: string[];
+    popular?: boolean,
 }
 
 const services: Service[] = [
   {
-    id: "ai-automation";
-    name: "AI & Automation";
-    description: "Revolutionary AI platforms with consciousness and emotional intelligence";
-    icon: <Brain className="w-8 h-8" />;
-    color: "from-purple-500 to-pink-500";
-    price: "$199/month";
+    id: "ai-automation", name: "AI & Automation";
+    description: "Revolutionary AI platforms with consciousness and emotional intelligence", icon: <Brain className="w-8 h-8" />;
+    color: "from-purple-500 to-pink-500", price: "$199/month",
     features: ["AI Code Review", "Testing Automation", "DevOps Intelligence", "Security Automation"],
-    popular: true;
+    popular: true,
   };
   {
-    id: "micro-saas";
-    name: "Micro SaaS Solutions";
+    id: "micro-saas", name: "Micro SaaS Solutions";
     description: "Scalable; focused software solutions for specific business needs",
-    icon: <Zap className="w-8 h-8" />;
-    color: "from-cyan-500 to-blue-500";
-    price: "$99/month";
+    icon: <Zap className="w-8 h-8" />, color: "from-cyan-500 to-blue-500";
+    price: "$99/month",
     features: ["Custom Development", "API Integration", "Cloud Deployment", "24/7 Support"]
   },
   {
-    id: "cloud-infrastructure";
-    name: "Cloud & Infrastructure";
-    description: "Robust cloud solutions for scalability and reliability";
-    icon: <Globe className="w-8 h-8" />;
-    color: "from-green-500 to-emerald-500";
-    price: "$299/month";
+    id: "cloud-infrastructure", name: "Cloud & Infrastructure";
+    description: "Robust cloud solutions for scalability and reliability", icon: <Globe className="w-8 h-8" />;
+    color: "from-green-500 to-emerald-500", price: "$299/month",
     features: ["AWS/Azure/GCP", "Container Orchestration", "Serverless Architecture", "Disaster Recovery"]
   },
   {
-    id: "cybersecurity";
-    name: "Cybersecurity";
-    description: "Advanced security solutions to protect your digital assets";
-    icon: <Shield className="w-8 h-8" />;
-    color: "from-red-500 to-pink-500";
-    price: "$399/month";
+    id: "cybersecurity", name: "Cybersecurity";
+    description: "Advanced security solutions to protect your digital assets", icon: <Shield className="w-8 h-8" />;
+    color: "from-red-500 to-pink-500", price: "$399/month",
     features: ["Threat Detection", "Penetration Testing", "Compliance Auditing", "Incident Response"]
   },
   {
-    id: "quantum-computing";
-    name: "Quantum Computing";
-    description: "Next-generation quantum solutions for complex problems";
-    icon: <Rocket className="w-8 h-8" />;
-    color: "from-indigo-500 to-purple-500";
-    price: "$599/month";
+    id: "quantum-computing", name: "Quantum Computing";
+    description: "Next-generation quantum solutions for complex problems", icon: <Rocket className="w-8 h-8" />;
+    color: "from-indigo-500 to-purple-500", price: "$599/month",
     features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Research Support"]
   },
   {
-    id: "blockchain-web3";
-    name: "Blockchain & Web3";
-    description: "Decentralized solutions for the future of the internet";
-    icon: <Star className="w-8 h-8" />;
-    color: "from-yellow-500 to-orange-500";
-    price: "$249/month";
+    id: "blockchain-web3", name: "Blockchain & Web3";
+    description: "Decentralized solutions for the future of the internet", icon: <Star className="w-8 h-8" />;
+    color: "from-yellow-500 to-orange-500", price: "$249/month",
     features: ["Smart Contracts", "DeFi Platforms", "NFT Marketplaces", "DAO Governance"]
   }
 ];
 
 export default function FuturisticServicesShowcase() {
-  const [hoveredService; setHoveredService] = useState<string | null>(null);
-  const [selectedCategory; setSelectedCategory] = useState<string>("all");
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
 
   const categories = [
     { id: "all", name: "All Services", icon: <Star className="w-4 h-4" /> };
@@ -83,7 +60,7 @@ export default function FuturisticServicesShowcase() {
     { id: "micro-saas", name: "Micro SaaS", icon: <Zap className="w-4 h-4" /> };
     { id: "cloud-infrastructure", name: "Cloud & Infrastructure", icon: <Globe className="w-4 h-4" /> };
     { id: "cybersecurity", name: "Cybersecurity", icon: <Shield className="w-4 h-4" /> };
-    { id: "quantum-computing", name: "Quantum Computing", icon: <Rocket className="w-4 h-4" /> };
+    { id: "quantum-computing", name: "Quantum Computing", icon: <Rocket className="w-4 h-4" /> },
     { id: "blockchain-web3", name: "Blockchain & Web3", icon: <Star className="w-4 h-4" /> }
   ];
     const filteredServices = selectedCategory === "all" 
@@ -96,14 +73,14 @@ export default function FuturisticServicesShowcase() {
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px;rgba(6;182,212;0.1)_1px;transparent_0)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px;rgba(6, 182,212,0.1)_1px,transparent_0)] bg-[size:50px_50px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div;
-          initial={{ opacity: 0; y: 30 }}
-          whileInView={{ opacity: 1; y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -123,17 +100,17 @@ export default function FuturisticServicesShowcase() {
 
         {/* Category Filter */}
         <motion.div;
-          initial={{ opacity: 0; y: 30 }}
-          whileInView={{ opacity: 1; y: 0 }}
-          transition={{ duration: 0.8; delay: 0.2 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category) => (
-            <button;
+            <button,
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                selectedCategory === category.id;
+                selectedCategory === category.id,
                   ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25"
                   : "bg-white/5 border border-cyan-500/20 text-gray-300 hover:bg-cyan-500/10 hover:border-cyan-500/40"
               }`}
@@ -147,13 +124,13 @@ export default function FuturisticServicesShowcase() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="wait">
-            {filteredServices.map((service; index) => (
-              <motion.div;
+            {filteredServices.map((service, index) => (
+              <motion.div,
                 key={service.id}
-                initial={{ opacity: 0; y: 30; scale: 0.9 }}
-                animate={{ opacity: 1; y: 0; scale: 1 }}
-                exit={{ opacity: 0; y: -30; scale: 0.9 }}
-                transition={{ duration: 0.5; delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -30, scale: 0.9 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
                 className={`relative group cursor-pointer ${
@@ -166,7 +143,7 @@ export default function FuturisticServicesShowcase() {
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
-                        Most Popular;
+                        Most Popular,
                       </div>
                     </div>
                   )}
@@ -193,7 +170,7 @@ export default function FuturisticServicesShowcase() {
 
                   {/* Features */}
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature; featureIndex) => (
+                    {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -216,14 +193,14 @@ export default function FuturisticServicesShowcase() {
                   {hoveredService === service.id && (
                     <>
                       <motion.div;
-                        initial={{ opacity: 0; scale: 0 }}
-                        animate={{ opacity: 1; scale: 1 }}
-                        exit={{ opacity: 0; scale: 0 }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0 }}
                         className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-ping" />
                       <motion.div;
-                        initial={{ opacity: 0; scale: 0 }}
-                        animate={{ opacity: 1; scale: 1 }}
-                        exit={{ opacity: 0; scale: 0 }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0 }}
                         className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
                     </>
                   )}
@@ -235,9 +212,9 @@ export default function FuturisticServicesShowcase() {
 
         {/* Bottom CTA */}
         <motion.div;
-          initial={{ opacity: 0; y: 30 }}
-          whileInView={{ opacity: 1; y: 0 }}
-          transition={{ duration: 0.8; delay: 0.4 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">

@@ -1,10 +1,9 @@
-import React, { useState; useRef, useEffect } from "react;";
+import React, { useState, useRef, useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {
-  src: string;
-    alt: string;
+  src: string, alt: string;
     width?: number;
   height?: number;
   className?: string;
@@ -18,7 +17,7 @@ interface OptimizedImageProps {
   aspectRatio?: "square" | "video" | "auto" | number;
   objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
   blur?: boolean;
-  quality?: number;
+  quality?: number,
 }
 
 export function OptimizedImage({
@@ -36,12 +35,12 @@ export function OptimizedImage({
   onError,
   aspectRatio = "auto",
   objectFit = "cover",
-  blur = false;
-  quality = 75;
+  blur = false,
+  quality = 75,
 }: OptimizedImageProps) {
-  const [isLoaded; setIsLoaded] = useState(false);
-  const [hasError; setHasError] = useState(false);
-  const [isInView; setIsInView] = useState(priority);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLImageElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -53,31 +52,30 @@ export function OptimizedImage({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observerRef.current?.disconnect();
+          observerRef.current?.disconnect(),
         }
       },
       {
-        rootMargin: "50px";
-        threshold: 0.1;
+        rootMargin: "50px", threshold: 0.1,
       }
     );
     observerRef.current.observe(imgRef.current);
 
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect();
+        observerRef.current.disconnect(),
       }
     };
   }, [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
+    onLoad?.(),
   };
 
   const handleError = () => {
     setHasError(true);
-    onError?.();
+    onError?.(),
   };
 
   const getAspectRatioClass = () => {
@@ -90,7 +88,7 @@ export function OptimizedImage({
         return "aspect-square";
       case "video":
         return "aspect-video";
-      default: return "";
+      default: return "",
      }
   };
 
@@ -106,7 +104,7 @@ export function OptimizedImage({
         return "object-none";
       case "scale-down":
         return "object-scale-down";
-      default: return "object-cover";
+      default: return "object-cover",
      }
   };
 
@@ -116,12 +114,12 @@ export function OptimizedImage({
     const baseUrl = imageSrc.split("?")[0];
     const params = new URLSearchParams(imageSrc.split("?")[1] || "");
     
-    const widths = [320; 640, 768; 1024, 1280; 1920];
+    const widths = [320, 640, 768, 1024, 1280, 1920];
     const srcSet = widths;
       .filter(w => !width || w <= width)
       .map(w => {
         params.set("w", w.toString());
-        params.set("q", quality.toString());
+        params.set("q", quality.toString()),
         return `${baseUrl}?${params.toString()} ${w}w`;
       })
       .join(", ");
@@ -133,20 +131,19 @@ export function OptimizedImage({
   const srcSet = generateSrcSet(currentSrc);
 
   return (
-    <div;
+    <div,
       className={cn(
         "relative overflow-hidden",
         getAspectRatioClass(),
-        className;
+        className,
       )}
       style={{
-        width: width ? `${width}px` : "auto";
-        height: height ? `${height}px` : "auto"
+        width: width ? `${width}px` : "auto", height: height ? `${height}px` : "auto"
       }}
     >
       <AnimatePresence mode="wait">
         {!isLoaded && (
-          <motion.div;
+          <motion.div,
             key="placeholder"
             className="absolute inset-0 bg-zion-slate-light/20 animate-pulse"
             initial={{ opacity: 1 }}
@@ -163,7 +160,7 @@ export function OptimizedImage({
         width={width}
         height={height}
         className={cn(
-          "w-full h-full transition-opacity duration-300";
+          "w-full h-full transition-opacity duration-300",
           getObjectFitClass(),
           isLoaded ? "opacity-100" : "opacity-0"
         )}
@@ -205,18 +202,17 @@ export function AvatarImage({
   alt,
   size = "md",
   className,
-  ...props;
+  ...props,
 }: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "sm" | "md" | "lg" | "xl",
 }) {
   const sizeClasses = {
-    sm: "w-8 h-8";
-    md: "w-10 h-10";
-    lg: "w-12 h-12";
+    sm: "w-8 h-8", md: "w-10 h-10";
+    lg: "w-12 h-12",
     xl: "w-16 h-16"
   };
     return (
-    <OptimizedImage;
+    <OptimizedImage,
       src={src}
       alt={alt}
       aspectRatio="square"
@@ -229,13 +225,13 @@ export function AvatarImage({
 
 // Hero image component;
 export function HeroImage({
-  src;
+  src,
   alt,
   className,
-  ...props;
+  ...props,
 }: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
   return (
-    <OptimizedImage;
+    <OptimizedImage,
       src={src}
       alt={alt}
       aspectRatio="video"

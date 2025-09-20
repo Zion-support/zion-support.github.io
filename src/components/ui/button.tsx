@@ -8,7 +8,7 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
-  disabled?: boolean;
+  disabled?: boolean,
 }
 
 export function Button({ 
@@ -17,11 +17,11 @@ export function Button({
   size = "md",
   asChild = false;
   className = "", 
-  onClick;
+  onClick,
   type = "button",
-  disabled = false;
+  disabled = false,
 }: ButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
+  const baseClasses = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2",
   
   const variantClasses = {
     default: "bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan",
@@ -44,7 +44,7 @@ export function Button({
   }
 
   return (
-    <button;
+    <button,
       type={type}
       className={classes}
       onClick={onClick}
@@ -55,5 +55,5 @@ export function Button({
   );
 }
 // Re-export from Button.tsx for backward compatibility;
-export { Button; buttonVariants } from "./Button";
+export { Button, buttonVariants } from "./Button";
 export type { ButtonProps } from "./Button";
