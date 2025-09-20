@@ -41,6 +41,17 @@ export default defineConfig({
         browserName: 'webkit',
         ...devices['iPhone 12']
       }
+import { defineConfig, devices } from '@playwright/test';
+use: {,
+browserName: 'firefox'
+}
+    }
+    {
+use: {,
+browserName: 'webkit'
+}
+    }
+    {
     }
   ],
   reporter: [

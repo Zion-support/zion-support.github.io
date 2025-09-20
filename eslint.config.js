@@ -13,6 +13,10 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
+    files: ["**/*.{js,jsx}"],
+    languageOptions: {,
+ecmaVersion: 2021,
+      sourceType: "module",
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -28,10 +32,10 @@ export default [
         clearTimeout: 'readonly',
         clearInterval: 'readonly'
       },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
+      parserOptions: {,
+ecmaFeatures: {
+          jsx: true,
+}
       }
     },
     plugins: {
@@ -39,6 +43,8 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
+      "react-hooks": reactHooks,
+},
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
@@ -185,3 +191,68 @@ export default [
     ]
   }
 ];
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {,
+ecmaVersion: 2021,
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: "readonly",
+        jest: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly"
+      },
+      parser: tsparser,
+      parserOptions: {,
+ecmaFeatures: {
+          jsx: true,
+}
+      }
+    },
+    plugins: {
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+    },
+    settings: {,
+react: {
+        version: "detect"
+      }
+    }
+  },
+  {
+    files: [
+      "**/*.cjs",
+      "**/scripts/**/*.js",
+      "**/automation/**/*.js",
+      "**/pm2/**/*.js"
+    ],
+    languageOptions: {,
+ecmaVersion: 2021,
+      sourceType: "script",
+      globals: {
+        ...globals.node,
+        console: "readonly",
+        process: "readonly",
+        require: "readonly",
+        module: "readonly",
+        exports: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        Buffer: "readonly",
+        global: "readonly"
+      }
+    },
+    rules: {
+      "no-unused-vars": "warn",
+      "no-console": "warn",

@@ -67,3 +67,4 @@ className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400"
 );
 };
 <//section><///section>;
+import { Star,  } from 'lucide-react'

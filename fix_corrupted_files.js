@@ -8,6 +8,12 @@ function fixCorruptedFile(filePath) {
 
     // Fix common corruption patterns
     content = content
+// Function to fix corrupted TypeScript files,
+function fixCorruptedFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    // Fix common corruption patterns,
+content = content
       // Fix import statements with extra commas
       .replace(
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,
@@ -35,6 +41,8 @@ function fixCorruptedFile(filePath) {
       // Fix export statements
       .replace(/export,\s*default,\s*(\w+);/g, "export default $1;")
 
+      // Fix export statements,
+export default $1;");
       // Fix return statements
       .replace(/retu,\s*r,\s*n\s*\(/g, "return (")
 
@@ -68,6 +76,15 @@ function fixCorruptedFile(filePath) {
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
+    return false}
+}
+// Function to recursively find and fix corrupted files,
+function files = fs.readdirSync(directory);
+  for (const filePath = path.join(directory, file);
+    const stat = fs.statSync(filePath);
+    if (stat.isDirectory()) {
+      fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") |file.endsWith(".ts")) {
+      fixCorruptedFile(filePath)}
   }
 }
 
