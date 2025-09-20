@@ -6,6 +6,9 @@ import AdvancedAIChatbot from './components/AdvancedAIChatbot'
 import PerformanceOptimizer from './components/PerformanceOptimizer'
 import InteractiveFeatureShowcase from './components/InteractiveFeatureShowcase'
 import EnhancedTestimonials from './components/EnhancedTestimonials'
+import AISolutionsComparison from './components/AISolutionsComparison'
+import ProjectManagementDashboard from './components/ProjectManagementDashboard'
+import RealTimeCollaboration from './components/RealTimeCollaboration'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ziontechgroup.com'),
@@ -156,6 +159,15 @@ export default function HomePage() {
 
       {/* Modern Analytics Dashboard */}
       <ModernAnalyticsDashboard />
+
+      {/* AI Solutions Comparison Tool */}
+      <AISolutionsComparison />
+
+      {/* Project Management Dashboard */}
+      <ProjectManagementDashboard />
+
+      {/* Real-Time Collaboration Workspace */}
+      <RealTimeCollaboration />
 
       {/* Performance Optimizer */}
       <PerformanceOptimizer enableMonitoring={true} showMetrics={false} />
