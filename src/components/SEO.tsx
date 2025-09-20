@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 interface SEOProps {
 title: string;,
 description: string;
@@ -22,5 +23,23 @@ return (
 </>;
 );
 };
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 
-export default SEO;
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+}
+
+export function SEO({ title, description, keywords, canonical }: SEOProps) {
+  return (
+    <>
+      {title && <title>{title}</title>}
+      {description && <meta name="description" content={description} />}
+      {keywords && <meta name="keywords" content={keywords} />}
+      {canonical && <link rel="canonical" href={canonical} />}
+    </>
+  );
+}

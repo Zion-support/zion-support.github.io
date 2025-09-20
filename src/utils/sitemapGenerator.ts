@@ -2,6 +2,7 @@ import React from "react";
 
 interface SitemapUrl {url: string;
 lastmod?: string;
+<<<<<<< HEAD
 }
 changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";}
 priority?: number}
@@ -111,3 +112,5 @@ return generator.generateXML()}
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
 const generator = new SitemapGenerator(config);
 return generator.generateRobotsTxt()}
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

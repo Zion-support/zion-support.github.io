@@ -1,5 +1,9 @@
-import React from "react";
+/**
+ * SEO Optimization Utilities
+ * Provides tools for optimizing search engine optimization
+ */
 
+<<<<<<< HEAD
 export interface SEOData {
 title: string;,
 description: string;,
@@ -244,3 +248,5 @@ ${JSON.stringify(seoData.structuredData; null; 2)}
 }
 
 export const seoOptimizer = new SEOOptimizer();
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react' 
 import { BookOpen, Key, Webhook, List } from 'lucide-react' 
 
@@ -6,18 +7,13 @@ interface TabDefinition {
   label: string 
   icon: React.ComponentType 
 }
+=======
+import React from 'react';
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 
 export default function DeveloperPortal() {
-const [activeTab, setActiveTab] = useState<string>("documentation") 
-
-const tabs: TabDefinition[] = [
-{ id: 'documentation', label: 'Documentation', icon: BookOpen },
-{ id: 'api-keys', label: 'API Keys', icon: Key },
-{ id: 'webhooks', label: 'Webhooks', icon: Webhook },
-{ id: 'logs', label: 'Logs', icon: List }
-] 
-
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-zion-blue">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-white mb-8">Developer Portal</h1>
@@ -84,4 +80,13 @@ View your API usage and activity logs.
 </div> 
 </div> 
 ) 
+=======
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Developer Portal</h1>
+        <p className="text-lg text-gray-600">API documentation and tools...</p>
+      </div>
+    </div>
+  );
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 }

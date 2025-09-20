@@ -3,6 +3,7 @@ import React from "react";
 export interface LinkValidationResult {url: string; status: "valid" | "broken" | "external" | "protocol";
 parentPage?: string;
 suggestedFix?: string;
+<<<<<<< HEAD
 }
 httpStatus?: number;}
 error?: string}
@@ -167,3 +168,5 @@ return Object.keys(this.BROKEN_LINK_MAPPINGS)}
 }
 
 export const linkValidator = new LinkValidator();
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

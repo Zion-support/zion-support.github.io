@@ -1,4 +1,5 @@
 export class SitemapGenerator {
+  
     config;
     constructor(config) {
         this.config = {
@@ -17,9 +18,9 @@ export class SitemapGenerator {
         const urlElements = urls.map(url => {
             const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
-        ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
-        ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
-        ${url.priority ? `<priority>${url.priority}</priority>` : ''}
+        ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''};
+        ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''};
+        ${url.priority ? `<priority>${url.priority}</priority>` : ''};
       </url>`;
             return urlElement.replace(/\s+/g, ' ').trim();
         }).join('');
@@ -33,9 +34,9 @@ export class SitemapGenerator {
         const sitemapindexOpen = '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
     const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
-            return `<sitemap>
-        <loc>${sitemap}</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
+            return `<sitemap>;
+        <loc>${sitemap}</loc>;
+        <lastmod>${new Date().toISOString()}</lastmod>;
       </sitemap>`;
         }).join('');
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
@@ -66,6 +67,7 @@ Allow: /blog/
 Allow: /careers/
 
 # Crawl delay (optional)
+<<<<<<< HEAD
 Crawl-delay: 1`;
      }
 Crawl-delay: 1`;}
@@ -281,3 +283,5 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {con
     }
 };
 export default SitemapGenerator;
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

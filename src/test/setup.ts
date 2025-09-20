@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Test setup file for Jest;
 import "@testing-library/jest-dom"
 // Mock window.matchMedia,;
@@ -61,3 +62,6 @@ afterAll(() => {
 afterAll(() => {console.error = originalError;
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 console.warn = originalWarn})
+=======
+// Test setup file for Jest,
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

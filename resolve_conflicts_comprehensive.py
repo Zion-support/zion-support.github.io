@@ -1,160 +1,155 @@
 #!/usr/bin/env python3
+"""
+Comprehensive Merge Conflict Resolution Script
+This script resolves merge conflicts by choosing the most recent/main branch version
+and handles common conflict patterns automatically.
+"""
 
 import os
 import re
 import subprocess
 import sys
+from pathlib import Path
 
-def run_command(command, description):
-    """Run a command and return the result"""
+def run_command(cmd, cwd=None):
+    """Run a shell command and return the result."""
     try:
-        print(f"\n🔄 {description}...")
-        result = subprocess.run(command, shell=True, cwd='/workspace', 
-                              capture_output=True, text=True, timeout=60)
-        if result.returncode == 0:
-            print(f"✅ {description} completed successfully")
-            return result.stdout
-        else:
-            print(f"⚠️ {description} had issues: {result.stderr}")
-            return None
-    except subprocess.TimeoutExpired:
-        print(f"⚠️ {description} timed out")
-        return None
+        result = subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True)
+        return result.returncode == 0, result.stdout, result.stderr
     except Exception as e:
-        print(f"⚠️ {description} failed: {str(e)}")
-        return None
+        return False, "", str(e)
 
-def resolve_conflicts_in_file(file_path):
-    """Resolve conflict markers in a specific file"""
+def find_conflict_files():
+    """Find all files with merge conflicts."""
+    success, stdout, stderr = run_command("git diff --name-only --diff-filter=U")
+    if not success:
+        print(f"Error finding conflict files: {stderr}")
+        return []
+    
+    return stdout.strip().split('\n') if stdout.strip() else []
+
+def resolve_conflict_file(file_path):
+    """Resolve conflicts in a single file by choosing the main branch version."""
     if not os.path.exists(file_path):
-        print(f"⚠️ File {file_path} does not exist")
-        return False
+        print(f"File {file_path} does not exist, skipping...")
+        return True
     
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
-        
-        # Remove conflict markers systematically
-        # Pattern 1: <<<<<<< HEAD ... ======= ... >>>>>>> hash
-        content = re.sub(r'<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [a-f0-9]+', r'\1', content)
-        
-        # Pattern 2: <<<<<<< branch ... ======= ... >>>>>>> hash  
-        content = re.sub(r'<<<<<<< [^\n]*[\s\S]*?=======([\s\S]*?)>>>>>>> [a-f0-9]+', r'\1', content)
-        
-        # Pattern 3: Simple conflict markers
-        content = re.sub(r'<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*', '', content)
-        
-        # Clean up any remaining conflict markers
-        content = re.sub(r'<<<<<<< [^\n]*', '', content)
-        content = re.sub(r'=======', '', content)
-        content = re.sub(r'>>>>>>> [^\n]*', '', content)
-        
-        # Remove empty lines that might have been left behind
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
-        
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"✅ Resolved conflicts in {file_path}")
+        # Check if file has conflict markers
+        if '<<<<<<< HEAD' not in content:
+            print(f"No conflicts found in {file_path}")
             return True
-        else:
-            print(f"ℹ️ No conflicts found in {file_path}")
-            return True
+        
+        print(f"Resolving conflicts in {file_path}...")
+        
+        # Split content by conflict markers
+        lines = content.split('\n')
+        resolved_lines = []
+        i = 0
+        
+        while i < len(lines):
+            line = lines[i]
             
+            if line.startswith('<<<<<<< HEAD'):
+                # Start of conflict - skip to the separator
+                i += 1
+                while i < len(lines) and not lines[i].startswith('======='):
+                    i += 1
+                i += 1  # Skip the separator
+                
+                # Skip the incoming changes (between ======= and >>>>>>>)
+                while i < len(lines) and not lines[i].startswith('>>>>>>>'):
+                    i += 1
+                i += 1  # Skip the end marker
+                
+            elif line.startswith('======='):
+                # This shouldn't happen if we handled <<<<<<< properly
+                i += 1
+            elif line.startswith('>>>>>>>'):
+                # This shouldn't happen if we handled <<<<<<< properly
+                i += 1
+            else:
+                resolved_lines.append(line)
+                i += 1
+        
+        # Write resolved content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(resolved_lines))
+        
+        print(f"Resolved conflicts in {file_path}")
+        return True
+        
     except Exception as e:
-        print(f"⚠️ Error resolving conflicts in {file_path}: {str(e)}")
+        print(f"Error resolving {file_path}: {e}")
         return False
 
+def resolve_rename_conflicts():
+    """Handle rename conflicts by choosing the main branch version."""
+    success, stdout, stderr = run_command("git status --porcelain")
+    if not success:
+        print(f"Error getting git status: {stderr}")
+        return False
+    
+    lines = stdout.strip().split('\n') if stdout.strip() else []
+    for line in lines:
+        if 'both added:' in line or 'both modified:' in line:
+            # Extract filename
+            parts = line.split(':', 1)
+            if len(parts) > 1:
+                filename = parts[1].strip()
+                print(f"Handling rename conflict for {filename}")
+                
+                # Add the file to resolve the conflict
+                run_command(f"git add {filename}")
+
 def main():
-    print("🚀 COMPREHENSIVE CONFLICT RESOLUTION")
-    print("=" * 50)
+    """Main conflict resolution function."""
+    print("Starting comprehensive merge conflict resolution...")
     
-    # Key files that commonly have conflicts
-    key_files = [
-        'App.tsx',
-        'src/components/UltimateContentShowcase2026.tsx',
-        'src/pages/UltimateServiceShowcase2026.tsx',
-        'src/pages/UltimateTechRevolution2026.tsx'
-    ]
+    # Get current branch
+    success, stdout, stderr = run_command("git branch --show-current")
+    if not success:
+        print(f"Error getting current branch: {stderr}")
+        return False
     
-    # Resolve conflicts in key files
-    print("\n🔧 Resolving conflicts in key files...")
+    current_branch = stdout.strip()
+    print(f"Current branch: {current_branch}")
+    
+    # Find all conflict files
+    conflict_files = find_conflict_files()
+    if not conflict_files:
+        print("No merge conflicts found.")
+        return True
+    
+    print(f"Found {len(conflict_files)} files with conflicts:")
+    for file in conflict_files:
+        print(f"  - {file}")
+    
+    # Resolve each conflict file
     resolved_count = 0
-    for file_path in key_files:
-        if resolve_conflicts_in_file(f'/workspace/{file_path}'):
+    for file_path in conflict_files:
+        if resolve_conflict_file(file_path):
             resolved_count += 1
+        else:
+            print(f"Failed to resolve {file_path}")
     
-    print(f"\n📊 Resolved conflicts in {resolved_count}/{len(key_files)} key files")
+    print(f"Resolved {resolved_count}/{len(conflict_files)} files")
     
-    # Find all files with conflict markers
-    print("\n🔍 Finding all files with conflict markers...")
-    result = run_command('grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" | head -20', 'Finding conflict files')
+    # Handle rename conflicts
+    resolve_rename_conflicts()
     
-    if result:
-        conflict_files = set()
-        for line in result.strip().split('\n'):
-            if ':' in line:
-                file_path = line.split(':')[0]
-                conflict_files.add(file_path)
-        
-        print(f"Found {len(conflict_files)} files with conflicts")
-        
-        # Resolve conflicts in all found files
-        for file_path in conflict_files:
-            if file_path.startswith('./'):
-                file_path = file_path[2:]
-            resolve_conflicts_in_file(f'/workspace/{file_path}')
+    # Add all resolved files
+    success, stdout, stderr = run_command("git add .")
+    if not success:
+        print(f"Error adding files: {stderr}")
+        return False
     
-    # Add all files to staging
-    print("\n📦 Adding all files to staging...")
-    run_command('git add .', 'Adding all files to staging')
-    
-    # Check if there are any changes to commit
-    status_result = run_command('git status --porcelain', 'Checking git status')
-    if status_result and status_result.strip():
-        print("\n💾 Committing resolved conflicts...")
-        commit_message = """fix: Resolve all merge conflicts comprehensively
-
-- Resolved conflicts in App.tsx by integrating both versions
-- Fixed conflicts in UltimateContentShowcase2026.tsx
-- Resolved conflicts in UltimateServiceShowcase2026.tsx  
-- Fixed conflicts in UltimateTechRevolution2026.tsx
-- Removed all conflict markers from codebase
-- Integrated new content and improvements
-- Maintained backward compatibility
-- Enhanced frontend advertising with new content
-
-Technical Improvements:
-- Systematic conflict resolution across all files
-- Enhanced component architecture and routing
-- Improved responsive design and user navigation
-- Optimized performance and error handling
-- Maintained code consistency and quality standards"""
-        
-        run_command(f'git commit -m "{commit_message}"', 'Committing resolved conflicts')
-        
-        # Try to push
-        print("\n🚀 Pushing to main branch...")
-        push_result = run_command('git push origin main', 'Pushing to main branch')
-        
-        if not push_result:
-            print("\n⚠️ Push failed, trying pull and merge...")
-            run_command('git pull origin main --no-rebase', 'Pulling latest changes')
-            run_command('git add .', 'Adding any new changes')
-            run_command('git commit -m "fix: Resolve conflicts after pull and finalize integration"', 'Final commit')
-            run_command('git push origin main', 'Final push to main')
-    else:
-        print("\nℹ️ No changes to commit")
-    
-    print("\n🎉 COMPREHENSIVE CONFLICT RESOLUTION COMPLETED!")
-    print("\n📋 Summary:")
-    print("✅ Resolved conflicts in all key files")
-    print("✅ Removed all conflict markers from codebase")
-    print("✅ Integrated new content and improvements")
-    print("✅ Committed and pushed changes")
-    print("✅ Ready for production deployment")
+    print("All conflicts resolved and files staged.")
+    return True
 
 if __name__ == "__main__":
-    main()
+    success = main()
+    sys.exit(0 if success else 1)

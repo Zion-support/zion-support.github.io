@@ -3,6 +3,7 @@ id: string;,
 name: string;
 }
 
+<<<<<<< HEAD
 // Performance optimization utilities;
 export const optimizeImages: any = () => {;
 const images = document.querySelectorAll("img");
@@ -37,3 +38,5 @@ return { loadComponent }
 };
 link.rel = "preload";
 link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font";
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

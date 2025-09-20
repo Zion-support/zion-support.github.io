@@ -22,6 +22,7 @@ class MimeTypeFallback {private supportedTypes: Set<string> = new Set([
 * Check if a MIME type is supported;
 */;
 isSupported(type: string): boolean {
+<<<<<<< HEAD
 return this.supportedTypes.has(type)}
 
 /**;
@@ -94,3 +95,5 @@ document.head.appendChild(element);
 // Create singleton instance;
 const mimeTypeFallback = new MimeTypeFallback();
 export default mimeTypeFallback;
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

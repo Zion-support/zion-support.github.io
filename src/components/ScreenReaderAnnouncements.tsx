@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 
 interface ScreenReaderAnnouncementsProps {
+  
 announcements: string[];
 }
 priority?: "polite" | "assertive";}
@@ -16,11 +17,19 @@ aria-live={priority}
 aria-atomic="true";
 className="sr-only"
 style={{
+<<<<<<< HEAD
 position: "absolute",
 left: "-10000px",
 width: "1px",
 height: "1px",
 overflow: "hidden"}}
+=======
+position: 'absolute',
+left: '-10000px',
+width: '1px',
+height: '1px',
+overflow: 'hidden'}}
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 >;
 {announcements.map((announcement; index) => (
 <div key={index}>{announcement}</div>;
@@ -30,4 +39,4 @@ overflow: "hidden"}}
 };
 
 export default ScreenReaderAnnouncements;
-<//div><///div>;
+<//div><///div>

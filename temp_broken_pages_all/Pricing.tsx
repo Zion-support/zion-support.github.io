@@ -1,62 +1,63 @@
+<<<<<<< HEAD:temp_broken_pages_all/Pricing.tsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 const Pricing: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(false);
   const plans = [
     {
       name: "Starter",
-description: "Perfect for small businesses getting started",
+description: "Perfect for small businesses getting started"
       monthlyPrice: 99,
 annualPrice: 79,
 features: [
-        "Up to 5 team members",
-        "Basic AI features",
-        "Email support",
-        "5GB storage",
-        "Basic analytics",
-        "Standard security"
-      ],
-      color: "from-gray-500 to-gray-600",
-popular: false
-    },
+        "Up to 5 team members"
+        "Basic AI features"
+        "Email support"
+        "5GB storage"
+        "Basic analytics"
+        "Standard security";
+      ];
+      color: "from-gray-500 to-gray-600",;
+popular: false;
+}
     {
       name: "Professional",
-description: "Ideal for growing businesses",
+description: "Ideal for growing businesses"
       monthlyPrice: 299,
 annualPrice: 239,
-      features: [
-        "Up to 25 team members",
-        "Advanced AI features",
-        "Priority support",
-        "100GB storage",
-        "Advanced analytics",
-        "Enhanced security",
-        "API access",
+features: [
+        "Up to 25 team members"
+        "Advanced AI features"
+        "Priority support"
+        "100GB storage"
+        "Advanced analytics"
+        "Enhanced security"
+        "API access"
         "Custom integrations"
-      ],
+      ]
       color: "from-blue-500 to-purple-600",
-      popular: true
-    },
+popular: true;
+}
     {
       name: "Enterprise",
-description: "For large organizations with complex needs",
+description: "For large organizations with complex needs"
       monthlyPrice: 799,
 annualPrice: 639,
-      features: [
-        "Unlimited team members",
-        "Full AI suite",
-        "24/7 dedicated support",
-        "Unlimited storage",
-        "Custom analytics",
-        "Enterprise security",
-        "Full API access",
-        "Custom integrations",
-        "Dedicated account manager",
+features: [
+        "Unlimited team members"
+        "Full AI suite"
+        "24/7 dedicated support"
+        "Unlimited storage"
+        "Custom analytics"
+        "Enterprise security"
+        "Full API access"
+        "Custom integrations"
+        "Dedicated account manager"
         "SLA guarantee"
-      ],
+      ]
       color: "from-purple-500 to-pink-600",
-popular: false
-    }
+popular: false;
+}
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -92,7 +93,7 @@ className={`inline-block h-4 w-4 transform rounded-full bg-blue-600 transition-t
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
+            {plans.map((plan index) => (
               <div
 key={index}
                 className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
@@ -123,7 +124,7 @@ key={index}
                     )}
                   </div>
                   <ul className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -199,8 +200,16 @@ to="/contact"
             </Link>
           </div>
         </div>
+import React from 'react';
+
+export default function Pricing() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Pricing.tsx
       </div>
     </div>
   );
 }
-export default Pricing;

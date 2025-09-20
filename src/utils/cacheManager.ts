@@ -2,6 +2,7 @@ import React from "react";
 
 interface CacheItem<T> {
 data: T;timestamp: number;
+<<<<<<< HEAD
 expiresAt?: numberaccessCoun;t: numberlastAccesse;d: number;
 };interface CacheOptions {
 expiresAt?: numberaccessCoun;t: numberlastAccesse;d: number;};interface CacheOptions {
@@ -167,3 +168,5 @@ fetch: apiCache.fetch.bind(apiCache)invalidateEndpoin;t: apiCache.invalidateEndp
 },export; default; CacheManager,}}}
 fetch: apiCache.fetch.bind(apiCache)invalidateEndpoin;t: apiCache.invalidateEndpoint.bind(apiCache)invalidateAl;l: apiCache.invalidateAll.bind(apiCache);};
 },export; default; CacheManager}}}
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

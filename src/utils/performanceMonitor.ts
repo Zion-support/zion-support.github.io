@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 interface PerformanceMetric {name: string; startTime: number;
 }
 endTime?: number;}
@@ -53,10 +54,13 @@ this.logMetric("CLS", clsValue);
 clsObserver.observe({ entryTypes: ["layout-shift"] });
 this.observers.push(clsObserver);
 } catch (error) {console.warn("CLS observer failed: ", error)}
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 }
 }
 
 startTiming(name: string): void {const metric: PerformanceMetric = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 name;
 } catch (error) {
@@ -154,3 +158,5 @@ cleanup: performanceMonitor.cleanup.bind(performanceMonitor),;
 };
 
 export default performanceMonitor;
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

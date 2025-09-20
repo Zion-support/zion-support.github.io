@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 interface Service {
@@ -12,3 +13,5 @@ console.log("Checking accessibility...");
 export const validateAriaLabels: any = () => {;
 console.log("Validating ARIA labels...");
 }
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

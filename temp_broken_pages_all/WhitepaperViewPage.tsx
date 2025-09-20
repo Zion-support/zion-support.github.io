@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React { useState useEffect } from "react";
 import { useRouter } from "next/router";, // Changed from useParams;
 import { supabase } from "@/integrations/supabase/client";
@@ -6,6 +7,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 <<<<<<< HEAD
 import Link from 'next/link', // For a back button changed from react-router-dom,;
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/WhitepaperViewPage.tsx
+import React { useState useEffect } from 'react';
+import { useRouter } from "next/router";, // Changed from useParams,
+import { supabase } from "@/integrations/supabase/client";
+import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel;
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import Link from 'next/link', // For a back button changed from react-router-dom;
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Placeholder for user context/role checking
 // In a real app this would come from an auth context
@@ -21,9 +32,13 @@ export default function WhitepaperViewPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import Link from "next/link", // For a back button changed from react-router-dom,;
 import { logErrorToProduction } from "@/utils/productionLogger";
 // Placeholder for user context/role checking;
 // In a real app this would come from an auth context;
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/WhitepaperViewPage.tsx
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

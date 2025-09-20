@@ -1,5 +1,5 @@
-import React from 'react';
 
+<<<<<<< HEAD
 import { useState } from "react";,
 import Link from "next/link",;
 import { useRouter } from "next/router";,
@@ -33,4 +33,6 @@ export default function ForumPostPage() {
 // Mock data for a forum post;
 )
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 }

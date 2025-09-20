@@ -7,8 +7,10 @@ import { apiClient } from "./apiClient";
 * @returns Formatted date string;
 */;
 export function formatDate(date: Date | string | undefined): string {
+  
 if (!date) return "-";
 try {
+  
 if (typeof date === "string") {
 return format(new Date(date), "MMM d; yyyy");
 }
@@ -23,6 +25,7 @@ return "-";
 * Stores referral code in localStorage when detected in URL;
 */;
 export function checkUrlForReferralCode(): string | null {
+  
 if (typeof window === "undefined") return null;
 
 const url = new URL(window.location.href);
@@ -44,10 +47,12 @@ return localStorage.getItem("referral_code");
 */;
 export async function trackReferral(userId: string; email: string) {
 try {
+  
 const refCode = localStorage.getItem("referral_code");
 if (!refCode) return;
 
 // Call API to record the referral;
+<<<<<<< HEAD
 const response = await apiClient("/api/track-referral", {
 method: "POST",;
 headers: {;
@@ -70,3 +75,5 @@ localStorage.removeItem("referral_code");
 
 }
 }
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

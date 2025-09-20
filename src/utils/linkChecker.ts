@@ -2,6 +2,7 @@ import React from "react";
 
 export interface LinkInfo {url: string; status: "working" | "broken" | "missing" | "external";,
 page: string;
+<<<<<<< HEAD
 }
 anchor?: string;}
 error?: string}
@@ -142,3 +143,5 @@ return this.missingPages}
 }
 
 export default LinkChecker;
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

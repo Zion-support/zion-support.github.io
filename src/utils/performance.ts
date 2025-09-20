@@ -1,6 +1,7 @@
 import React from "react";
 
 interface Service {
+<<<<<<< HEAD
 id: string;,
 name: string;
 }
@@ -53,3 +54,5 @@ const metrics = getPerformanceMetrics();
 console.log("Performance Metrics:", metrics)};
 // TypeScript file;
 export const placeholder = "placeholder";
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

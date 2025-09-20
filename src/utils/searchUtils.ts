@@ -1,6 +1,7 @@
 import { SearchSuggestion } from "@/types/search, ";
 
 export interface SearchResult {
+<<<<<<< HEAD
 id: string;
 title: string;,
 description: string;,
@@ -366,3 +367,7 @@ hasActiveFilters;
 getActiveFilterCount;
 getDefaultFilters;
 };
+=======
+  
+id: string;
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

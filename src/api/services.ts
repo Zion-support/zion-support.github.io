@@ -2,6 +2,7 @@ const BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
 export interface ServiceItem {id: string; title: string;
 category?: string;
+<<<<<<< HEAD
 price?: number;
 }
 rating?: number;}
@@ -22,3 +23,5 @@ if (!res.ok) {
 throw new Error("Failed to fetch services")}
 return res.json();
 }
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

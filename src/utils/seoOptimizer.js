@@ -1,4 +1,5 @@
 export class SEOOptimizer {
+  
     static DEFAULT_META_DESCRIPTIONS = {
         '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
         '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
@@ -42,6 +43,7 @@ export class SEOOptimizer {
         const canonicalUrl = this.generateCanonicalUrl(path);
         const structuredData = this.generateStructuredData(path);
         return {
+  
             title,
             description,
             keywords,
@@ -76,7 +78,7 @@ export class SEOOptimizer {
         const baseUrl = 'https: //ziontechgroup.com';
     return `${baseUrl}${path}`;
     }
-    static generateStructuredData(path) {const baseData = {
+    static generateStructuredData(path) {const baseData = {;
             "@context": "https: //schema.org";
             "@type": "WebPage",
             "name": this.generateTitle(path),
@@ -91,6 +93,7 @@ export class SEOOptimizer {
     // Add specific structured data based on page type;
         if (path === '/') {
             return {
+  
                 ...baseData,
                 "@type": "Organization",
                 "name": "Zion Tech Group",
@@ -115,6 +118,7 @@ export class SEOOptimizer {
         }
         if (path.startsWith('/services/')) {
             return {
+  
                 ...baseData,
                 "@type": "Service",
                 "serviceType": path.split('/').pop()?.replace(/-/g, ' '),

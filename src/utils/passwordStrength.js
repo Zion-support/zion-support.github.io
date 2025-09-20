@@ -21,7 +21,10 @@ export function getStrengthLabel(score) {
     case 2: return "Fair";
     case 3: return "Good";
     case 4: return "Strong";
+<<<<<<< HEAD
     default: return "";
      }
     default: return "";}
 }
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

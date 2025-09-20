@@ -1,6 +1,7 @@
 import React from "react";
 
 interface ResourceError {
+<<<<<<< HEAD
 url: string;
 type: "script" | "stylesheet" | "image" | "font" | "other";,
 error: string;,
@@ -174,3 +175,7 @@ return summary;
 // Create singleton instance;
 const resourceMonitor = new ResourceMonitor();
 export default resourceMonitor;
+=======
+  
+url: string;
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

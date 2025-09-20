@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -30,18 +31,25 @@ export function CategoryCard({ title, description, icon, href }: CategoryCardPro
   );
 }
 import { Card, CardContent } from '@/components/ui/card';
+=======
+import React from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+interface Category {
+  id: string;
+  name: string;
+  description: string;
+  icon: React.ReactNode;
+  count: number;
+}
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 
 interface CategoryCardProps {
-category: {
-id: string;
-name: string;
-description: string;,
-icon: React.ComponentType;,
-count: number;
-};
-href: string;
+  category: Category;
+  className?: string;
 }
 
+<<<<<<< HEAD
 export function CategoryCard({ category, href }: CategoryCardProps) {
 const IconComponent = category.icon;
 
@@ -68,3 +76,29 @@ className="group block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transit
 );
 }
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+=======
+export function CategoryCard({ category, className = '' }: CategoryCardProps) {
+  return (
+    <Card className={`bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-200 ${className}`}>
+      <CardHeader>
+        <div className="flex items-center justify-between">
+          <div className="text-blue-400">
+            {category.icon}
+          </div>
+          <span className="text-sm text-gray-300">
+            {category.count} items
+          </span>
+        </div>
+        <CardTitle className="text-white text-lg">
+          {category.name}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-gray-300 text-sm">
+          {category.description}
+        </p>
+      </CardContent>
+    </Card>
+  );
+}
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

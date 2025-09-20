@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import React { useState useEffect } from "react";
 import useJobDetails from "@/hooks/useJobDetails";
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/JobDetails.tsx
+import React { useState useEffect } from 'react';
+import useJobDetails from '@/hooks/useJobDetails';
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 import { ApplyToJobModal } from "@/components/messaging/job-application";
 import { SEO } from "@/components/SEO";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 import { JobDetailsSkeleton } from "@/components/jobs";
 interface Job {
+<<<<<<< HEAD
 id: string;
 title: string;
 description: string;
@@ -12,11 +19,24 @@ company_name?: string;
 client_id: string;
 skills?: string[];,
 created_at: string;,
+=======
+  
+  id: string;
+title: string;
+  description: string;
+  company_name?: string;
+client_id: string;
+  skills?: string[];
+  created_at: string;
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 category: string;
 }
 }
 isOpen={isApplyModalOpen}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
           onClose={() => setIsApplyModalOpen(false)}        />
       )}
 </>
@@ -30,6 +50,7 @@ export default function JobDetails() {
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
     </div>
+<<<<<<< HEAD
   );
 =======
 onClose={() => setIsApplyModalOpen(false)}        />;
@@ -67,4 +88,8 @@ isWhitelabel ? brandName : "Zion AI Marketplace" ;
 }"";
 }
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/JobDetails.tsx
+  );
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 }

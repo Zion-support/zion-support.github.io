@@ -1,6 +1,7 @@
 import React from "react";
 
 let nodeSentry: any;
+<<<<<<< HEAD
 try {// Optional dependency for server-side logging;
 nodeSentry = require("@sentry/node")} catch {nodeSentry = null}
 try {
@@ -21,3 +22,5 @@ if (typeof window !== "undefined" && (window as any).Sentry?.captureException) {
 nodeSentry.captureException(error)}
 }
 }
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

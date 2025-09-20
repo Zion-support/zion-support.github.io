@@ -1,4 +1,5 @@
 interface RequestInfo {}; interface RequestInit {};
+<<<<<<< HEAD
 import { apiCache } from "./AdvancedCacheManager, ";interface ApiClientConfig {;
 baseURL: string;
 timeout: number;,
@@ -308,3 +309,5 @@ baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3retry
 });export { ApiError };
 baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3retryDelay: 10o00cacheEnable;d: truecacheTT;L: 5 * 60 * 10o00;});export { ApiError };
 export; default; EnhancedApiClient;
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

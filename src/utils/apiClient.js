@@ -1,4 +1,5 @@
 export class ApiError extends Error {
+  
     status;
     data;
     constructor(message, status, data) {
@@ -11,13 +12,16 @@ export async function apiClient(input, init, retries = 3) {
     let lastError;
     for (let attempt = 0; attempt < retries; attempt++) {
         try {
+  
             const response = await fetch(input, init);
             if (!response.ok) {
                 let data;
                 try {
+  
                     data = await response.clone().json();
                 }
                 catch {
+  
                     data = undefined;
                 }
                 const message = data?.error || data?.message || response.statusText;

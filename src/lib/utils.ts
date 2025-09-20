@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { type ClassValue; clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -64,3 +65,11 @@ export function cn(...inputs: ClassValue[]) {
 return twMerge(clsx(inputs))
 }
 ;
+=======
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

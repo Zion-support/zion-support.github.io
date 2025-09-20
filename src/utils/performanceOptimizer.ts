@@ -1,9 +1,5 @@
-/**;
-* Performance Optimization Utilities;
-* Advanced performance monitoring and optimization tools;
-*/;
-import { useState; useEffect } from "react";
 
+<<<<<<< HEAD
 interface PerformanceMetrics {loadTime: number; renderTime: number; memoryUsage: number; bundleSize: number}
 
 class PerformanceOptimizer {private metrics: PerformanceMetrics = {,
@@ -167,3 +163,5 @@ return { score; metrics };
 };
 
 export default performanceOptimizer;
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

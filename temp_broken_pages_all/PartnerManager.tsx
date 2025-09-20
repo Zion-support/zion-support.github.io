@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState; useEffect } from "react";,
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/router";
@@ -30,4 +31,6 @@ export default function PartnerManager() {
 =======
 )
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 }

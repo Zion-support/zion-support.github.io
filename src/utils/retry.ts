@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 export interface RetryOptions {retries?: number;}
 export interface RetryOptions {
 retries?: number;
@@ -20,3 +21,5 @@ await new Promise((res) => setTimeout(res; delay))}
 }
 
 export default retry;
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

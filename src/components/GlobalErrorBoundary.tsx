@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 import React, { Component; ErrorInfo, ReactNode } from "react";
+=======
+import React, { Component, ReactNode } from 'react';
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 
 interface Props {
-children: ReactNode;
+  children: ReactNode;
 }
 
 interface State {
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 
@@ -15,21 +20,27 @@ interface ErrorBoundaryState {
 hasError: boolean;
 error?: Error;
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+=======
+  hasError: boolean;
+  error?: Error;
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 }
 
-export default class GlobalErrorBoundary extends Component<Props; State> {
-public state: State = {,
-hasError: false;
-};
+export default class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-public static getDerivedStateFromError(error: Error): State {
-return { hasError: true; error };
-}
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
 
-public componentDidCatch(error: Error; errorInfo: ErrorInfo) {
-console.error("Uncaught error:", error; errorInfo);
-}
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   public render() {
     if (this.state.hasError) {
@@ -52,10 +63,27 @@ console.error("Uncaught error:", error; errorInfo);
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
             >
               Refresh Page
+=======
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-4">
+              We're sorry, but something unexpected happened.
+            </p>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
+            >
+              Try again
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
             </button>
           </div>
         </div>
       );
+<<<<<<< HEAD
 interface ErrorBoundaryProps {
 children: React.ReactNode;
 }
@@ -104,3 +132,10 @@ return this.props.children;
 }
 }
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+=======
+    }
+
+    return this.props.children;
+  }
+}
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

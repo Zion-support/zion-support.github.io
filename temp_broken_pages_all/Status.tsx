@@ -1,4 +1,5 @@
 import { SEO } from "@/components/SEO";,
+<<<<<<< HEAD
 import { useState; useEffect } from "react";,
 import { AlertCircle; CheckCircle, Clock; ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";,
@@ -22,4 +23,15 @@ export default function Status() {
 =======
 )}
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+=======
+import { useState, useEffect } from "react";,
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";,
+import Link from "next/link";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { logWarn } from "@/utils/productionLogger";
+interface ServiceStatus {
+  
+  )}
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
 }

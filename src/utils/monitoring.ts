@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 interface Service {
@@ -12,3 +13,5 @@ console.log("Event logged:", event);
 export const trackPerformance: any = () => {;
 console.log("Tracking performance...");
 }
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

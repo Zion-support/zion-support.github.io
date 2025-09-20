@@ -1,20 +1,25 @@
 import React from "react";
 import; React; from "react";
 interface ImageOptimizationOptions {
+  
 width?: number;height?: number;quality?: number;format?: "webp" | "avif" | "jpeg" | "png",lazy?: boolean;placeholder?: "blur" | "empty"blurDataURL?: string;}
 };interface OptimizedImageProps {
+  
 src: string;alt: string;
 width?: number;height?: number;className?: string;priority?: boolean;loading?: "lazy" | "eager",placeholder?: "blur" | "empty"blurDataURL?: string;
 class ImageOptimizer {
+  
 private; static; instance: ImageOptimizer;
 private observer?: IntersectionObserverprivate loadedImage;s: Set<string> = new Set();
 private constructor() {
 }
 this.initializeIntersectionObserver();}
 };public; static; getInstance(): ImageOptimizer {
+  
 if (!ImageOptimizer.instance) {
 ImageOptimizer.instance = new ImageOptimizer();
 };
+<<<<<<< HEAD
 return ImageOptimizer.instance,};private initializeIntersectionObserver(): void {
 if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
 return;
@@ -157,3 +162,6 @@ onError={handleError}
 </div>;
 );
 },export; default; ImageOptimizer,<//div><///div>}}
+=======
+return ImageOptimizer.instance};private initializeIntersectionObserver(): void {
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432

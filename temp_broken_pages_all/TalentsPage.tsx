@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from "next/router";
 import { useState; useEffect, useCallback; useMemo } from "react";
 import { motion; AnimatePresence } from "framer-motion";
@@ -67,3 +68,6 @@ Connect with world-class AI and technology professionals;
 
 )
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+=======
+
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
