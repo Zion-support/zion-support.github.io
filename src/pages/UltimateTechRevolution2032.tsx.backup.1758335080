@@ -124,7 +124,6 @@ const UltimateTechRevolution2032: React.FC = () => {
                 <div className="space-y-2">
                   {innovation.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-purple-300">
-                      <Zap className="w-4 h-4" />
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
@@ -136,6 +135,15 @@ const UltimateTechRevolution2032: React.FC = () => {
       </section>
 
       {/* Success Stories */}
+<<<<<<< HEAD
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
+            See how our revolutionary technologies have transformed businesses and societies worldwide
+          </p>
+=======
       <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -151,6 +159,7 @@ const UltimateTechRevolution2032: React.FC = () => {
               Real-world applications transforming industries
             </p>
           </motion.div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-35d7
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
@@ -198,7 +207,8 @@ const UltimateTechRevolution2032: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
