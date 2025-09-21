@@ -20,7 +20,7 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
-  
+
   const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]);
   
   useEffect(() => {
@@ -36,24 +36,29 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
     
     const timeoutId = setTimeout(async () => {
       try {
-        const results = await Promise.all(
+        const newTranslations: Record<string, string> = {};
+        
+        // Translate to each target language
+        await Promise.all(
           targets.map(async (target) => {
             const translation = await translateTextViaAI(text, target);
-            return [target, translation] as [string, string];
+            newTranslations[target] = translation;
           })
         );
         
-        const translationMap = Object.fromEntries(results);
-        setTranslations(translationMap);
+        setTranslations(newTranslations);
+        setError(undefined);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Translation failed');
       } finally {
         setLoading(false);
       }
     }, debounceMs);
-    
-    return () => clearTimeout(timeoutId);
-  }, [text, targets, debounceMs]);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [key, debounceMs]);
   
   return {
     translations,
