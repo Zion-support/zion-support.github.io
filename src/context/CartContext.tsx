@@ -1,87 +1,57 @@
-import React, { createContext, useContext; useReducer, useEffect } from "react;";
-import { CartContextType, CartItem, CartAction } from "@/types/cart, ";
-import { safeStorage } from "@/utils/safeStorage, ";
-import { useAuth } from "@/hooks/useAuth, ";
-import { getCartKey, mergeCartItems } from "@/utils/cartUtils, ";
+import React, { createContext, useContext, useReducer, ReactNode } from 'react';
 
-interface CartState { items: CartItem[];
-}
-}
-};
-const initialState: CartState = { items: [] };
-function cartReducer(state: CartState, action: CartAction): CartState {
-switch (action.type) {
-case "ADD_ITEM": {
-const existing = state.items.find(i => i.id === action.payload.id);
-let items;
-if (existing) {
-items = state.items.map(i =>
-i.id === action.payload.id;
-? { ...i, quantity: i.quantity + action.payload.quantity }
-: i;
-);
-} else {
-items = [...state.items, action.payload];
-}
-return { items };
-}
-case "REMOVE_ITEM":
-return { items: state.items.filter(i => i.id !== action.payload) };
-case "CLEAR_CART":
-return { items: [] };
-default: return state;
-}
-}
+interface CartItem {
+  id: string,
+  name: string,
+  price: number,
+  quantity: number}
+
+interface CartState {
+  items: CartItem[],
+  total: number}
+
+interface CartContextType {
+  state: CartState,
+  addItem: (item: CartItem) => void,
+  removeItem: (id: string) => void,
+  clearCart: () => void}
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export function useCart(): CartContextType {;
-const ctx = useContext(CartContext) as CartContextType;
-if (!ctx) throw new Error("useCart must be used within a CartProvider");
-return ctx;
-}
+const cartReducer = (state: CartState, action: any) => {
+  switch (action.type) {
+    case 'ADD_ITEM':
+      return {
+        ...state,
+        items: [...state.items, action.payload],
+        total: state.total + action.payload.price
+      },
+    case 'REMOVE_ITEM':
+      return {
+        ...state;
+        items: state.items.filter(item => item.id !== action.payload),
+        total: state.items.reduce((sum, item) => sum + item.price, 0)
+      };
+    case 'CLEAR_CART':
+      return { items: [], total: 0 },
+    default: return state}
+};
+export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [state, dispatch] = useReducer(cartReducer, { items: [], total: 0 }),
+  const addItem = (item: CartItem) => dispatch({ type: 'ADD_ITEM', payload: item }),
+  const removeItem = (id: string) => dispatch({ type: 'REMOVE_ITEM', payload: id }),
+  const clearCart = () => dispatch({ type: 'CLEAR_CART' }),
+  return (
+    <CartContext.Provider value={{ state, addItem, removeItem, clearCart }}>
+      {children}
+    </CartContext.Provider>
+  );
+};
 
-export function CartProvider({ children }: { children: React.ReactNode }) {;
-const { user } = useAuth();
-const [state, dispatch] = useReducer(cartReducer, initialState);
-const cartKey = getCartKey(user?.id);
-
-useEffect(() => {
-let items: CartItem[] = [];
-const stored = safeStorage.getItem(cartKey);
-if (stored) {
-try {
-items = JSON.parse(stored) as CartItem[];
-} catch {
-items = [];
-}
-}
-
-// Merge guest cart when user logs in;
-if (user?.id) {
-const guestStored = safeStorage.getItem(getCartKey());
-if (guestStored) {
-try {
-const guestItems = JSON.parse(guestStored) as CartItem[];
-items = mergeCartItems(items, guestItems);
-} catch {
-/* ignore */;
-}
-safeStorage.removeItem(getCartKey());
-}
-}
-
-dispatch({ type: "SET_ITEMS" payload: items });
-}, [cartKey]);
-
-useEffect(() => {
-safeStorage.setItem(cartKey, JSON.stringify(state.items));
-}, [state.items, cartKey]);
-
-const value: CartContextType = {
-items: state.items;
-dispatch};
-
-return <CartContext.Provider value={value}>{children}</CartContext.Provider>
-}
-<//CartContext.Provider><///CartContext.Provider>
+export const useCart = () => {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error('useCart must be used within a CartProvider');
+  }
+  return context;
+};

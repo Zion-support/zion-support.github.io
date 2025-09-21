@@ -1,359 +1,291 @@
-import { SearchSuggestion } from "@/types/search, ";
-
 export interface SearchResult {
-id: string;
-title: string;,
-description: string;,
-type: "product" | "talent" | "blog" | "service" | "doc";
-category?: string;
-url?: string;
-image?: string;
-price?: number;
-currency?: string;
-rating?: number;
-tags?: string[];
-}
-date?: string;}
+  id: string,
+  title: string,
+  description: string,
+  type: "product" | "talent" | "blog" | "service" | "doc",
+  category?: string;
+  url?: string;
+  image?: string;
+  price?: number;
+  currency?: string;
+  rating?: number;
+  tags?: string[];
+  date?: string;
 }
 
 export interface SearchFilters {
-types: string[];
-category: string;
-minPrice: number;
-maxPrice: number;,
-minRating: number;,
-sort: string;
-}
-}
-}
+  types: string[],
+  category: string,
+  minPrice: number,
+  maxPrice: number,
+  minRating: number,
+  sort: string}
 
-export interface SearchMetrics {
-totalResults: number;,
-searchTime: number;,
-topCategories: Array<{ category: string;
-}
-}
-count: number }>;
-averagePrice: number;,
-averageRating: number;
-}
+export interface SearchSuggestion {
+  text: string,
+  type: "recent" | "category" | "tag" | "popular",
+  id: string}
 
-/**;
-* Highlight search terms in text with HTML mark tags;
-*/;
-export const highlightSearchTerms: any = (text: string, searchTerm: string): string => {
-if (!searchTerm.trim()) return text;
-const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-const regex = new RegExp(`(${escaped})`, "gi");
+/**
+ * Highlight search terms in text with HTML mark tags
+ */
+export const highlightSearchTerms = (text: string, searchTerm: string): string => {
+  if (!searchTerm.trim()) return text,
+  const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(`(${escaped})`, "gi");
 
-return text.replace(regex, "<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>");
+  return text.replace(regex, "<mark class=\"bg-yellow-200 text-black px-1 rounded\">$1</mark>");
 };
 
-/**;
-* Check if a text contains the search term (case-insensitive)
-*/;
-export const matchesSearchTerm: any = (text: string | undefined, searchTerm: string): boolean => {
-if (!text || !searchTerm.trim()) return false;
-return text.toLowerCase().includes(searchTerm.toLowerCase());
+/**
+ * Check if a text contains the search term (case-insensitive)
+ */
+export const matchesSearchTerm = (text: string | undefined, searchTerm: string): boolean => {
+  if (!text || !searchTerm.trim()) return false,
+  return text.toLowerCase().includes(searchTerm.toLowerCase());
 };
 
-/**;
-* Calculate relevance score for search results;
-*/;
-export const calculateRelevanceScore: any = (result: SearchResult, searchTerm: string): number => {
-let score = 0;
-const term = searchTerm.toLowerCase();
-const title = result.title.toLowerCase();
-const description = result.description.toLowerCase();
+/**
+ * Calculate search relevance score based on multiple factors
+ */
+export const calculateRelevanceScore = (
+  item: SearchResult,
+  searchTerm: string
+): number => {
+  let score = 0,
+  const term = searchTerm.toLowerCase();
 
-// Exact title match gets highest score;
-if (title === term) score += 100;
+  // Title match (highest weight)
+  if (item.title.toLowerCase().includes(term)) {
+    score += 10;
+    if (item.title.toLowerCase().startsWith(term)) {
+      score += 5; // Bonus for title starting with search term
+    }
+  }
 
-// Title starts with search term;
-else if (title.startsWith(term)) score += 80;
+  // Description match
+  if (item.description.toLowerCase().includes(term)) {
+    score += 5;
+  }
 
-// Title contains search term;
-else if (title.includes(term)) score += 60;
+  // Category match
+  if (item.category && item.category.toLowerCase().includes(term)) {
+    score += 3;
+  }
 
-// Description contains search term;
-if (description.includes(term)) score += 30;
+  // Tags match
+  if (item.tags) {
+    const tagMatches = item.tags.filter(tag => 
+      tag.toLowerCase().includes(term)
+    ).length;
+    score += tagMatches * 2;
+  }
 
-// Tag matches;
-if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
-score += 20;
-}
+  // Type match
+  if (item.type.toLowerCase().includes(term)) {
+    score += 2;
+  }
 
-// Category match;
-if (result.category?.toLowerCase().includes(term)) {
-score += 15;
-}
-
-// Boost score based on rating;
-if (result.rating) {
-score += result.rating * 2;
-}
-
-// Recent content gets slight boost;
-if (result.date) {
-const dateScore = Math.max(0; 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
-score += dateScore;
-}
-
-return score;
+  return score;
 };
 
-/**;
-* Sort search results based on sort option;
-*/;
-export const sortSearchResults: any = (results: SearchResult[] sortBy: string, searchTerm: string): SearchResult[] => {
-const sortedResults = [...results];
-switch (sortBy) {
-case "price_asc":
-return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
+/**
+ * Sort search results by relevance and other factors
+ */
+export const sortSearchResults = (
+  results: SearchResult[],
+  searchTerm: string,
+  sortBy: string = "relevance"
+): SearchResult[] => {
+  const sortedResults = [...results],
+  switch (sortBy) {
+    case "relevance":
+      return sortedResults.sort((a, b) => {
+        const scoreA = calculateRelevanceScore(a, searchTerm);
+        const scoreB = calculateRelevanceScore(b, searchTerm);
+        return scoreB - scoreA;
+      });
 
-case "price_desc":
-return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
+    case "price-low":
+      return sortedResults.sort((a, b) => (a.price || 0) - (b.price || 0));
+    case "price-high":
+      return sortedResults.sort((a, b) => (b.price || 0) - (a.price || 0));
+    case "rating":
+      return sortedResults.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    case "date-newest":
+      return sortedResults.sort((a, b) => {
+        const dateA = new Date(a.date || 0).getTime();
+        const dateB = new Date(b.date || 0).getTime();
+        return dateB - dateA;
+      });
 
-case "rating":
-return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+    case "date-oldest":
+      return sortedResults.sort((a, b) => {
+        const dateA = new Date(a.date || 0).getTime();
+        const dateB = new Date(b.date || 0).getTime();
+        return dateA - dateB;
+      });
 
-case "date":
-return sortedResults.sort((a, b) => {
-const dateA = a.date ? new Date(a.date).getTime() : 0;
-const dateB = b.date ? new Date(b.date).getTime() : 0;
-return dateB - dateA;
-});
+    default: return sortedResults}
+};
+/**
+ * Filter search results based on criteria
+ */
+export const filterSearchResults = (
+  results: SearchResult[],
+  filters: SearchFilters
+): SearchResult[] => {
+  return results.filter(item => {
+    // Type filter
+    if (filters.types.length > 0 && !filters.types.includes(item.type)) {
+      return false}
 
-case "alphabetical":
-return sortedResults.sort((a, b) => a.title.localeCompare(b.title));
+    // Category filter
+    if (filters.category && item.category !== filters.category) {
+      return false;
+    }
 
-case "relevance":
-default:
-return sortedResults.sort((a, b) => {
-const scoreA = calculateRelevanceScore(a, searchTerm);
-const scoreB = calculateRelevanceScore(b, searchTerm);
-return scoreB - scoreA;
-});
-}
+    // Price filter
+    if (item.price !== undefined) {
+      if (item.price < filters.minPrice || item.price > filters.maxPrice) {
+        return false;
+      }
+    }
+
+    // Rating filter
+    if (item.rating !== undefined && item.rating < filters.minRating) {
+      return false;
+    }
+
+    return true;
+  });
 };
 
-/**;
-* Filter search results based on active filters;
-*/;
-export const filterSearchResults: any = (results: SearchResult[] filters: SearchFilters): SearchResult[] => {;
-let filteredResults = [...results];
-// Filter by type;
-if (filters.types.length > 0) {
-filteredResults = filteredResults.filter(result =>;
-filters.types.includes(result.type)
-);
-}
-
-// Filter by category;
-if (filters.category) {
-filteredResults = filteredResults.filter(result =>;
-result.category?.toLowerCase() === filters.category.toLowerCase()
-);
-}
-
-// Filter by price range;
-if (filters.minPrice > 0 || filters.maxPrice < 10000) {
-filteredResults = filteredResults.filter(result => {
-const price = result.price ?? 0;
-return price >= filters.minPrice && price <= filters.maxPrice;
-});
-}
-
-// Filter by minimum rating;
-if (filters.minRating > 0) {
-filteredResults = filteredResults.filter(result =>;
-(result.rating ?? 0) >= filters.minRating;
-);
-}
-
-return filteredResults;
-};
-
-/**;
-* Generate search suggestions based on query;
-*/;
-export const generateDynamicSuggestions: any = (;,
-query: string;,
-recentSearches: string[] = []
-availableCategories: string[] = []
-availableTags: string[] = [];
+/**
+ * Generate search suggestions based on query and available data
+ */
+export const generateDynamicSuggestions = (
+  query: string,
+  recentSearches: string[] = [],
+  availableCategories: string[] = [],
+  availableTags: string[] = []
 ): SearchSuggestion[] => {
-const suggestions: SearchSuggestion[] = [];
-const lowerQuery = query.toLowerCase();
+  const suggestions: SearchSuggestion[] = [],
+  const lowerQuery = query.toLowerCase();
 
-// Add exact query as first suggestion;
-if (query.trim()) {
-suggestions.push({,
-text: query;,
-type: "recent"
-id: `query-${query}`;
-});
-}
+  // Add current query as recent search suggestion
+  if (query.trim()) {
+    suggestions.push({
+      text: query,
+      type: "recent",
+      id: `query-${query}`
+    })}
 
-// Add matching categories;
-availableCategories;
-.filter(category => category.toLowerCase().includes(lowerQuery))
-.slice(0; 3)
-.forEach(category => {
-suggestions.push({
-text: category;,
-type: "category"
-id: `category-${category}`;
-});
-});
+  // Category suggestions
+  availableCategories
+    .filter(category => category.toLowerCase().includes(lowerQuery))
+    .slice(0, 3)
+    .forEach(category => {
+      suggestions.push({
+        text: category,
+        type: "category",
+        id: `category-${category}`
+      })});
 
-// Add matching tags;
-availableTags;
-.filter(tag => tag.toLowerCase().includes(lowerQuery))
-.slice(0; 3)
-.forEach(tag => {
-suggestions.push({
-text: tag;,
-type: "tag"
-id: `tag-${tag}`;
-});
-});
+  // Tag suggestions
+  availableTags
+    .filter(tag => tag.toLowerCase().includes(lowerQuery))
+    .slice(0, 3)
+    .forEach(tag => {
+      suggestions.push({
+        text: tag,
+        type: "tag",
+        id: `tag-${tag}`
+      })});
 
-// Add recent searches that match;
-recentSearches;
-.filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
-.slice(0; 3)
-.forEach(search => {
-suggestions.push({
-text: search;,
-type: "recent"
-id: `recent-${search}`;
-});
-});
+  // Recent searches suggestions
+  recentSearches
+    .filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
+    .slice(0, 3)
+    .forEach(search => {
+      suggestions.push({
+        text: search,
+        type: "recent",
+        id: `recent-${search}`
+      })});
 
-return suggestions.slice(0; 8); // Limit to 8 suggestions;
+  return suggestions;
 };
 
-/**;
-* Calculate search metrics for analytics;
-*/;
-export const calculateSearchMetrics: any = (results: SearchResult[] searchTime: number): SearchMetrics => {;
-const totalResults = results.length;
-// Calculate top categories;
-const categoryCount = new Map<string, number>();
-results.forEach(result => {
-if (result.category) {
-categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
-}
-});
+/**
+ * Perform fuzzy search on a collection of items
+ */
+export const fuzzySearch = (
+  items: SearchResult[],
+  searchTerm: string,
+  threshold: number = 0.6
+): SearchResult[] => {
+  if (!searchTerm.trim()) return items,
+  const term = searchTerm.toLowerCase();
+  const results: Array<{ item: SearchResult; score: number }> = [],
+  items.forEach(item => {
+    const searchableText = [
+      item.title;
+      item.description;
+      item.category,
+      ...(item.tags || [])
+    ].join(" ").toLowerCase();
 
-const topCategories = Array.from(categoryCount.entries());
-.map(([category, count]) => ({ category, count }))
-.sort((a, b) => b.count - a.count)
-.slice(0; 5);
+    // Simple fuzzy matching based on character sequence
+    const score = calculateFuzzyScore(searchableText, term);
+    
+    if (score >= threshold) {
+      results.push({ item, score });
+    }
+  });
 
-// Calculate average price;
-const pricesResults = results.filter(r => r.price && r.price > 0);
-const averagePrice = pricesResults.length > 0;
-? pricesResults.reduce((sum, r) => sum + (r.price || 0), 0) / pricesResults.length;
-: 0;
-
-// Calculate average rating;
-const ratedResults = results.filter(r => r.rating && r.rating > 0);
-const averageRating = ratedResults.length > 0;
-? ratedResults.reduce((sum, r) => sum + (r.rating || 0), 0) / ratedResults.length;
-: 0;
-
-return {
-totalResults;
-searchTime;
-topCategories;
-averagePrice;
-averageRating;
-};
+  return results
+    .sort((a, b) => b.score - a.score)
+    .map(result => result.item);
 };
 
-/**;
-* Debounce function for search input;
-*/;
-export const debounce = <T extends (...args: any[]) => any>(;,
-func: T;,
-wait: number;
-): ((...args: Parameters<T>) => void) => {
-let timeout: ReturnType<typeof setTimeout>;
-return (...args: Parameters<T>) => {
-clearTimeout(timeout);
-timeout = setTimeout(() => func(...args), wait);
-};
-};
+/**
+ * Calculate fuzzy matching score between two strings
+ */
+const calculateFuzzyScore = (text: string, pattern: string): number => {
+  if (pattern.length === 0) return 1,
+  if (text.length === 0) return 0;
+  let matches = 0;
+  let patternIndex = 0;
 
-/**;
-* Extract keywords from search query for better matching;
-*/;
-export const extractKeywords: any = (query: string): string[] => {;
-return query;
-.toLowerCase()
-.split(/[\s,.-]+/)
-.filter(word => word.length > 2)
-.filter(word => !["and", "or", "the", "for", "with", "from"].includes(word));
+  for (let i = 0; i < text.length && patternIndex < pattern.length; i++) {
+    if (text[i] === pattern[patternIndex]) {
+      matches++;
+      patternIndex++;
+    }
+  }
+
+  return patternIndex === pattern.length ? matches / pattern.length : 0;
 };
 
-/**;
-* Format search query for display;
-*/;
-export const formatSearchQuery: any = (query: string): string => {;
-return query.trim().replace(/\s+/g, " ");
-};
-
-/**;
-* Check if filters are active (not default values)
-*/;
-export const hasActiveFilters: any = (filters: SearchFilters): boolean => {
-return (
-filters.types.length > 0 ||;
-filters.category !== "" ||;
-filters.minPrice > 0 ||;
-filters.maxPrice < 10000 ||;
-filters.minRating > 0 ||;
-filters.sort !== "relevance";
-);
-};
-
-/**;
-* Get filter count for display;
-*/;
-export const getActiveFilterCount: any = (filters: SearchFilters): number => {;
-let count = 0;
-if (filters.types.length > 0) count += filters.types.length;
-if (filters.category) count += 1;
-if (filters.minPrice > 0 || filters.maxPrice < 10000) count += 1;
-if (filters.minRating > 0) count += 1;
-if (filters.sort !== "relevance") count += 1;
-
-return count;
-};
-
-/**;
-* Reset filters to default values;
-*/;
-export const getDefaultFilters: any = (): SearchFilters => ({types: []
-category: "";
-minPrice: 0;
-maxPrice: 10000;,
-minRating: 0;,
-sort: "relevance"});
+/**
+ * Default search filters
+ */
+export const defaultSearchFilters: SearchFilters = {
+  types: [],
+  category: "",
+  minPrice: 0,
+  maxPrice: 10000,
+  minRating: 0,
+  sort: "relevance"
+},
 export default {
-highlightSearchTerms;
-matchesSearchTerm;
-calculateRelevanceScore;
-sortSearchResults;
-filterSearchResults;
-generateDynamicSuggestions;
-calculateSearchMetrics;
-debounce;
-extractKeywords;
-formatSearchQuery;
-hasActiveFilters;
-getActiveFilterCount;
-getDefaultFilters;
+  highlightSearchTerms;
+  matchesSearchTerm;
+  calculateRelevanceScore,
+  sortSearchResults,
+  filterSearchResults,
+  generateDynamicSuggestions,
+  fuzzySearch,
+  defaultSearchFilters
 };

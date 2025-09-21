@@ -15,6 +15,4 @@ describe("ZkBallot", function () {"  it("creates proposal and accepts vote", asy
     await ethers.provider.send("evm_increaseTime", [3 * 24 * 60 * 60]),"    await ethers.provider.send("evm_mine", []),"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
     await ballot.finalize(id),
     const proposal = await ballot.proposals(id),
-    expect(proposal.executed).to.equal(true),
-  }),
-}),
+    expect(proposal.executed).to.equal(true)})}),

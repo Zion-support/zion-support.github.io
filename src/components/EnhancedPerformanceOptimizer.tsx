@@ -1,0 +1,3 @@
+, import import React,{ useEffect;useState;useCallback;useMemo } from "react" import import { motion;AnimatePresence} from "framer-motionimport import { Zap;Gauge;HardDrive;Network;Cpu;HardDriveIcon;Battery;Wifi;WifiOff;RefreshCw;TrendingUp;TrendingDown;AlertTriangle;CheckCircle;Info } from lucide-react"; interface PerformanceMetrics { fcp: "number," }
+, import import React,{ useEffect;useState;useCallback;useMemo } from "react" import import { motion;AnimatePresence } from "framer-motionimport import { Zap;Gauge;HardDrive;Network;Cpu;HardDriveIcon;Battery;Wifi;WifiOff;RefreshCw;TrendingUp;TrendingDown;AlertTriangle;CheckCircle;Info } from lucide-react"; interface PerformanceMetrics { "fcp": "number," }
+;

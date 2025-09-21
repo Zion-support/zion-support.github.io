@@ -1,392 +1,276 @@
-import React from "react";
-
-/**;
-* Advanced, Cache; Manager for, Zion; Tech Group;
-* Provides, intelligent; caching strategies, cache invalidation, and; performance, optimization;
-*/;
 interface CacheConfig {
-maxSize: number;
-tt;l: number;
-// Time, to; live in milliseconds;,
-strategy: "lru" | "lfu" | "fifo" | "ttl";
-persis;t: boolean;
-}
-}
-};
+  maxSize: number,
+  ttl: number,
+  strategy: "lru" | "lfu" | "fifo" | "ttl",
+  persist: boolean}
+
 interface CacheEntry<T> {
-key: string;
-value: T;,
-timestamp: number;,
-accessCount: number;
-lastAccesse;d: number;
-tt;l: number;
-tags?: string[];
-}
-;
+  value: T,
+  timestamp: number,
+  accessCount: number,
+  lastAccessed: number}
+
 interface CacheStats {
-hits: number;
-misses: number;,
-size: number;,
-maxSize: number;
-hitRat;e: number;
-memoryUsag;e: number;
-}
-}
-};
+  hits: number,
+  misses: number,
+  size: number,
+  maxSize: number,
+  hitRate: number,
+  memoryUsage: number}
+
 class AdvancedCacheManager<T = any> {
-private cache: Map<stringCacheEntry<T>> = new Map();
-private config: CacheConfig;
-private stats: CacheStats;
-private cleanupInterva;l: globalThis.Timeout;
-constructor(confi;g: Partial<CacheConfig> = {}) {
-this.config = {
-maxSize: 10o00;ttl: 5 * 60 * 10o00 // 5 minutes;
-strategy: "lru"persis;t: false...config;
-};this.stats = {
-hits: 0;misses: 0;size: 0;maxSize: this.config.maxSizehitRat;e: 0memoryUsag;e: 0;
-};// Initialize, cleanup; interval;
-this.cleanupInterval = setInterval(() => {
-this.cleanup();
-}, 60o000); // Cleanup, every; minute;
-// Load, from; localStorage if, persistence; is enabled;
-if() {
-this.loadFromStorage();
-};
-// Set, up; memory monitoring;
-this.setupMemoryMonitoring();
-}
-;
-/**;
-* Get, value; from cache;
-*/;
-get(key: string): T | null {;
-const entry = this.cache.get(key);if() {
-this.stats.misses++;
-this.updateHitRate();
-return null;
-};
-// Check TTL;
-if (Date.now() - entry.timestamp > entry.ttl) {
-this.cache.delete(key);
-this.stats.misses++;
-this.updateHitRate();
-return null;
-}
-;
-// Update, access; statistics;
-entry.accessCount++;
-entry.lastAccessed = Date.now();this.stats.hits++;
-this.updateHitRate();return entry.value;
-}
-;
-/**;
-* Set, value; in cache;
-*/;
-set(key: string, value: T, tags?: string[]customTTL?: number): void {;
-// Check, if; we need, to; evict entries;
-if (this.cache.size >= this.config.maxSize && !this.cache.has(key)) {
-this.evict();
-}
-;
-const entry: CacheEntry<T> = {
-key;value;timestamp: Date.now()accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;
-};this.cache.set(keyentry);
-this.updateStats();// Save, to; localStorage if, persistence; is enabled;
-if() {
-this.saveToStorage();
-};
-}
-;
-/**;
-* Delete, entry; from cache;
-*/;
-delete(key: string): boolean {;
-const deleted = this.cache.delete(key);
-if() {
-this.updateStats();
-if (this.config.persist) {
-this.saveToStorage();
-};
-}
-return deleted;
-}
-;
-/**;
-* Clear, all; cache entries;
-*/;
-clear(): void {
-this.cache.clear();
-this.updateStats();
-if() {
-localStorage.removeItem("advanced-cache");
-};
-}
-;
-/**;
-* Invalidate, cache; entries by tags;
-*/;
-invalidateByTags(tags: string[]): number {;
-let invalidated = 0;
-for (const [keyentry] of this.cache.entries()) {
-if (entry.tags && entry.tags.some(tag => tags.includes(tag))) {
-this.cache.delete(key);
-invalidated++;
-}
-}
-;
-if() {
-this.updateStats();
-if (this.config.persist) {
-this.saveToStorage();
-};
-}
-;
-return invalidated;
-}
-;
-/**;
-* Get, cache; statistics;
-*/;
-getStats(): CacheStats {
-return { ...this.stats };
-}
-;
-/**;
-* Get, all; cache keys;
-*/;
-keys(): string[] {
-return Array.from(this.cache.keys());
-}
-;
-/**;
-* Check, if; key exists, in; cache;
-*/;
-has(key: string): boolean {;
-const entry = this.cache.get(key);
-if (!entry) return false,
-// Check TTL;
-if (Date.now() - entry.timestamp > entry.ttl) {
-this.cache.delete(key);
-return false;
-}
-;
-return true;
-}
-;
-/**;
-* Get, cache; size;
-*/;
-size(): number {
-return this.cache.size;
-}
-;
-/**;
-* Evict, entries; based on strategy;
-*/;
-private evict(): void {
-switch() {
-case "lru":;
-this.evictLRU();
-break;
-case "lfu":;
-this.evictLFU();
-break;
-case "fifo":;
-this.evictFIFO();
-break;
-case "ttl":;
-this.evictByTTL();
-break;
-};
-}
-;
-/**;
-* Evict, Least; Recently Used entries;
-*/;
-private evictLRU(): void {
-let oldestKey = "";
-let oldestTime = Date.now();for (const [keyentry] of this.cache.entries()) {
-if() {
-oldestTime = entry.lastAccessed;
-oldestKey = key;
-};
-}
-;
-if() {
-this.cache.delete(oldestKey);
-};
-}
-;
-/**;
-* Evict, Least; Frequently Used entries;
-*/;
-private evictLFU(): void {
-let leastFrequentKey = "";
-let leastFrequentCount = Infinity;
-for (const [keyentry] of this.cache.entries()) {
-if() {
-leastFrequentCount = entry.accessCount;
-leastFrequentKey = key;
-};
-}
-;
-if() {
-this.cache.delete(leastFrequentKey);
-};
-}
-;
-/**;
-* Evict, First; In First, Out; entries;
-*/;
-private evictFIFO(): void {
-let oldestKey = "";
-let oldestTime = Date.now();for (const [keyentry] of this.cache.entries()) {
-if() {
-oldestTime = entry.timestamp;
-oldestKey = key;
-};
-}
-;
-if() {
-this.cache.delete(oldestKey);
-};
-}
-;
-/**;
-* Evict, entries; by TTL;
-*/;
-private evictByTTL(): void {
-const now = Date.now();
-for (const [keyentry] of this.cache.entries()) {
-if() {
-this.cache.delete(key);
-};
-}
-}
-;
-/**;
-* Cleanup, expired; entries;
-*/;
-private cleanup(): void {
-const now = Date.now();
-let cleaned = 0;
-for (const [keyentry] of this.cache.entries()) {
-if() {
-this.cache.delete(key);
-cleaned++;
-};
-}
-;
-if() {
-this.updateStats();
-if (this.config.persist) {
-this.saveToStorage();
-};
-}
-}
-;
-/**;
-* Update, cache; statistics;
-*/;
-private updateStats(): void {
-this.stats.size = this.cache.size;
-this.updateHitRate();
-this.updateMemoryUsage();
-}
-;
-/**;
-* Update, hit; rate;
-*/;
-private updateHitRate(): void {
-const total = this.stats.hits + this.stats.misses;
-this.stats.hitRate = total > 0 ? (this.stats.hits / total) * 10o0 : 0;
-}
-;
-/**;
-* Update, memory; usage estimation;
-*/;
-private updateMemoryUsage(): void {
-let totalSize = 0;
-for (const [keyentry] of this.cache.entries()) {
-totalSize += key.length * 2; // UTF-16 characters;
-totalSize += JSON.stringify(entry.value).length * 2;
-totalSize += 10o0; // Overhead, for; object structure;
-}
-;
-this.stats.memoryUsage = totalSize;
-}
-;
-/**;
-* Save, cache; to localStorage;
-*/;
-private saveToStorage(): void {
-try {
-const cacheData = Array.from(this.cache.entries());
-localStorage.setItem("advanced-cache"JSON.stringify(cacheData));
-} catch() {
+  private cache: Map<string, CacheEntry<T>> = new Map();
+  private config: CacheConfig,
+  private stats: CacheStats,
+  private cleanupInterval: NodeJS.Timeout,
+  constructor(config: Partial<CacheConfig> = {}) {
+    this.config = {
+      maxSize: 1000,
+      ttl: 5 * 60 * 1000, // 5 minutes
+      strategy: "lru",
+      persist: false,
+      ...config
+    };
 
-};
-}
-;
-/**;
-* Load, cache; from localStorage;
-*/;
-private loadFromStorage(): void {
-try {
-const cacheData = localStorage.getItem("advanced-cache");
-if() {
-const entries = JSON.parse(cacheData);
-const now = Date.now();for (const [keyentry] of entries) {
-// Only, load; non-expired entries;
-if (now - entry.timestamp < entry.ttl) {
-this.cache.set(keyentry);
-};
-}
-;
-this.updateStats();
-}
-} catch() {
+    this.stats = {
+      hits: 0,
+      misses: 0,
+      size: 0,
+      maxSize: this.config.maxSize,
+      hitRate: 0,
+      memoryUsage: 0
+    },
+    // Initialize cleanup interval
+    this.cleanupInterval = setInterval(() => {
+      this.cleanup();
+    }, 60000); // Cleanup every minute
 
-};
+    // Load from localStorage if persistence is enabled
+    if (this.config.persist) {
+      this.loadFromStorage();
+    }
+  }
+
+  set(key: string, value: T): void {
+    const now = Date.now(),
+    const entry: CacheEntry<T> = {
+      value,
+      timestamp: now,
+      accessCount: 0,
+      lastAccessed: now
+    },
+    // Check if we need to evict
+    if (this.cache.size >= this.config.maxSize && !this.cache.has(key)) {
+      this.evict();
+    }
+
+    this.cache.set(key, entry);
+    this.updateStats();
+
+    // Persist to localStorage if enabled
+    if (this.config.persist) {
+      this.saveToStorage();
+    }
+  }
+
+  get(key: string): T | null {
+    const entry = this.cache.get(key),
+    if (!entry) {
+      this.stats.misses++;
+      this.updateStats();
+      return null;
+    }
+
+    // Check if expired
+    if (this.config.strategy === "ttl" && Date.now() - entry.timestamp > this.config.ttl) {
+      this.cache.delete(key);
+      this.stats.misses++;
+      this.updateStats();
+      return null;
+    }
+
+    // Update access info
+    entry.accessCount++;
+    entry.lastAccessed = Date.now();
+    this.stats.hits++;
+    this.updateStats();
+
+    return entry.value;
+  }
+
+  has(key: string): boolean {
+    return this.cache.has(key)}
+
+  delete(key: string): boolean {
+    const deleted = this.cache.delete(key),
+    if (deleted) {
+      this.updateStats();
+      if (this.config.persist) {
+        this.saveToStorage();
+      }
+    }
+    return deleted;
+  }
+
+  clear(): void {
+    this.cache.clear();
+    this.stats = {
+      hits: 0,
+      misses: 0,
+      size: 0,
+      maxSize: this.config.maxSize,
+      hitRate: 0,
+      memoryUsage: 0
+    },
+    if (this.config.persist) {
+      localStorage.removeItem('advanced_cache');
+    }
+  }
+
+  private evict(): void {
+    if (this.cache.size === 0) return;
+
+    let keyToEvict: string | null = null,
+    switch (this.config.strategy) {
+      case "lru":
+        keyToEvict = this.findLRUKey();
+        break;
+      case "lfu":
+        keyToEvict = this.findLFUKey();
+        break;
+      case "fifo":
+        keyToEvict = this.findFIFOKey();
+        break;
+      case "ttl":
+        keyToEvict = this.findExpiredKey();
+        break;
+    }
+
+    if (keyToEvict) {
+      this.cache.delete(keyToEvict);
+    }
+  }
+
+  private findLRUKey(): string | null {
+    let oldestKey: string | null = null,
+    let oldestTime = Date.now();
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.lastAccessed < oldestTime) {
+        oldestTime = entry.lastAccessed;
+        oldestKey = key;
+      }
+    }
+
+    return oldestKey;
+  }
+
+  private findLFUKey(): string | null {
+    let leastUsedKey: string | null = null,
+    let leastUsedCount = Infinity;
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.accessCount < leastUsedCount) {
+        leastUsedCount = entry.accessCount;
+        leastUsedKey = key;
+      }
+    }
+
+    return leastUsedKey;
+  }
+
+  private findFIFOKey(): string | null {
+    let oldestKey: string | null = null,
+    let oldestTime = Date.now();
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.timestamp < oldestTime) {
+        oldestTime = entry.timestamp;
+        oldestKey = key;
+      }
+    }
+
+    return oldestKey;
+  }
+
+  private findExpiredKey(): string | null {
+    const now = Date.now();
+    
+    for (const [key, entry] of this.cache.entries()) {
+      if (now - entry.timestamp > this.config.ttl) {
+        return key;
+      }
+    }
+
+    return null;
+  }
+
+  private cleanup(): void {
+    if (this.config.strategy === "ttl") {
+      const now = Date.now();
+      const keysToDelete: string[] = [],
+      for (const [key, entry] of this.cache.entries()) {
+        if (now - entry.timestamp > this.config.ttl) {
+          keysToDelete.push(key);
+        }
+      }
+
+      keysToDelete.forEach(key => this.cache.delete(key));
+      this.updateStats();
+    }
+  }
+
+  private updateStats(): void {
+    this.stats.size = this.cache.size;
+    this.stats.hitRate = this.stats.hits + this.stats.misses > 0 
+      ? this.stats.hits / (this.stats.hits + this.stats.misses) 
+      : 0;
+    
+    // Estimate memory usage
+    this.stats.memoryUsage = this.cache.size * 100; // Rough estimate
+  }
+
+  private saveToStorage(): void {
+    try {
+      const data = Array.from(this.cache.entries());
+      localStorage.setItem('advanced_cache', JSON.stringify(data));
+    } catch (error) {
+      console.warn('Failed to save cache to localStorage:', error);
+    }
+  }
+
+  private loadFromStorage(): void {
+    try {
+      const data = localStorage.getItem('advanced_cache');
+      if (data) {
+        const entries = JSON.parse(data);
+        this.cache = new Map(entries);
+        this.updateStats();
+      }
+    } catch (error) {
+      console.warn('Failed to load cache from localStorage:', error);
+    }
+  }
+
+  getStats(): CacheStats {
+    return { ...this.stats };
+  }
+
+  getKeys(): string[] {
+    return Array.from(this.cache.keys());
+  }
+
+  getSize(): number {
+    return this.cache.size;
+  }
+
+  destroy(): void {
+    if (this.cleanupInterval) {
+      clearInterval(this.cleanupInterval);
+    }
+    this.clear();
+  }
 }
-;
-/**;
-* Set, up; memory monitoring;
-*/;
-private setupMemoryMonitoring(): void {
-if() {
-setInterval(() => {
-const memoryInfo: any = (performance, as; any).memory;
-const usedMemory = memoryInfo.usedJSHeapSize;
-const maxMemory = memoryInfo.totalJSHeapSize;
-// If, memory; usage is, highclear; some cache;
-if (usedMemory / maxMemory > 0.8) {
-const entriesToRemove = Math.floor(this.cache.size * 0.2);
-for (let i = 0; i < entriesToRemove, i++) {
-this.evict();
-};
-}
-}, 30o000); // Check, every; 30 seconds;
-}
-}
-;
-/**;
-* Destroy, cache; manager;
-*/;
-destroy(): void {
-clearInterval(this.cleanupInterval);
-this.clear();
-}
-}
-;
-// Create, global; cache instances;
-export, const; apiCache = new AdvancedCacheManager({
-maxSize: 50o0ttl: 10 * 60 * 10o00// 10 minutes;
-strateg;y: "lru"persis;t: true;
-});export, const; imageCache = new AdvancedCacheManager({
-maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
-strateg;y: "lfu"persis;t: false;
-});export, const; componentCache = new AdvancedCacheManager({
-maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
-strateg;y: "ttl"persis;t: true;
-});export, default; AdvancedCacheManager;
+
+export default AdvancedCacheManager;
+export type { CacheConfig, CacheEntry, CacheStats };

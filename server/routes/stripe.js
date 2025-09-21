@@ -2,13 +2,10 @@ const express = require('express'),const router = express.Router(),
 const stripe = require('stripe'), // Import the stripe library'const User = require('../models/User'), // Assuming you have a User model'const Subscription = require('../models/Subscription'), // Assuming you have a Subscription model',
 const PROD_DOMAIN = app.ziontechgroup.com',function isProdDomain() {,
   const context = process.env.CONTEXT,
-  if (context && context !== 'production') {'    return false,
-  }
+  if (context && context !== 'production') {'    return false}
   const url = process.env.URL || ,  try {,
-    return new URL(url).hostname === PROD_DOMAIN,
-  } catch {,
-    return false,
-  }
+    return new URL(url).hostname === PROD_DOMAIN} catch {,
+    return false}
 }
 ,
 const liveKey = process.env.STRIPE_SECRET_KEY || ,const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey,
@@ -38,10 +35,8 @@ router.post('/webhook', express.raw({ type: 'application/json' }), (req, res) =>
   let event,
   try {,
     // req.body is the raw Buffer from express.raw(),
-    event = stripeInstance.webhooks.constructEvent(req.body, sig, webhookSecret),
-  } catch {,
-    // process.stdout.write(`Webhook signature verification failed: ${'Error occurred'}`),    return res.status(400).send(`Webhook Error: ${err.message}`),
-  }
+    event = stripeInstance.webhooks.constructEvent(req.body, sig, webhookSecret)} catch {,
+    // process.stdout.write(`Webhook signature verification failed: ${'Error occurred'}`),    return res.status(400).send(`Webhook Error: ${err.message}`)}
 ,
   // Successfully verified webhook,
   // Handle the event,
@@ -75,10 +70,8 @@ router.post('/webhook', express.raw({ type: 'application/json' }), (req, res) =>
             // Update user's plan status'            user.planStatus = subscription.status,
             user.stripeSubscriptionId = subscription.id, // Ensure this is linked on the user,
             await user.save(),
-            // process.stdout.write(`User ${user.email} plan status updated to ${subscription.status}.`),
-          } catch {,
-            // process.stdout.write(`Error processing invoice.payment_succeeded for subscription: ${'Error occurred'}`),            // Don't send 500 to Stripe, as it will retry. Log error and investigate.'            return res.status(200).json({ received: true, error: `Error processing: ${err.message}` }),
-          }
+            // process.stdout.write(`User ${user.email} plan status updated to ${subscription.status}.`)} catch {,
+            // process.stdout.write(`Error processing invoice.payment_succeeded for subscription: ${'Error occurred'}`),            // Don't send 500 to Stripe, as it will retry. Log error and investigate.'            return res.status(200).json({ received: true, error: `Error processing: ${err.message}` })}
         } else {,
           // process.stdout.write(`Invoice ${invoice.id} is not related to a subscription. Skipping subscription update.`),
           // Handle non-subscription payments if necessary
@@ -87,8 +80,7 @@ router.post('/webhook', express.raw({ type: 'application/json' }), (req, res) =>
         // process.stdout.write(`Invoice ${invoice.id} with reason ${invoice.billing_reason} not handled for subscription update.`),
         // Handle other invoice reasons if necessary
       }
-      break,
-    }
+      break}
     case customer.subscription.created':'    case customer.subscription.updated': {'      const subscription = event.data.object,
       try {,
         const user = await User.findOne({ stripeCustomerId: subscription.customer }),
@@ -117,13 +109,10 @@ router.post('/webhook', express.raw({ type: 'application/json' }), (req, res) =>
         // Update user's plan status'        user.planStatus = subscription.status,
         user.stripeSubscriptionId = subscription.id, // Link current subscription to user,
         await user.save(),
-        // process.stdout.write(`User ${user.email} plan status updated to ${subscription.status}.`),
-      } catch {,
+        // process.stdout.write(`User ${user.email} plan status updated to ${subscription.status}.`)} catch {,
         // process.stdout.write(`Error processing ${event.type}: ${err.message}`),
-        return res.status(200).json({ received: true, error: `Error processing: ${err.message}` }),
-      }
-      break,
-    }
+        return res.status(200).json({ received: true, error: `Error processing: ${err.message}` })}
+      break}
     case customer.subscription.deleted': {'      const subscription = event.data.object, // This is the Stripe Subscription object,
       try {,
         const subInDb = await Subscription.findOne({ stripeSubscriptionId: subscription.id }),
@@ -141,22 +130,16 @@ router.post('/webhook', express.raw({ type: 'application/json' }), (req, res) =>
           if (user.stripeSubscriptionId === subscription.id) {,
             user.planStatus = null, // Or canceled', depending on desired state'            user.stripeSubscriptionId = null, // Remove link to this subscription,
             await user.save(),
-            // process.stdout.write(`User ${user.email} plan status updated due to subscription deletion.`),
-          }
+            // process.stdout.write(`User ${user.email} plan status updated due to subscription deletion.`)}
         } else {,
-            // process.stdout.write(`Webhook Warning: User ${subInDb.userId} not found for deleted subscription ${subscription.id}`),
-        }
+            // process.stdout.write(`Webhook Warning: User ${subInDb.userId} not found for deleted subscription ${subscription.id}`)}
 
       } catch {,
-        // process.stdout.write(`Error processing customer.subscription.deleted: ${'Error occurred'}`),        return res.status(200).json({ received: true, error: `Error processing: ${err.message}` }),
-      }
-      break,
-    }
+        // process.stdout.write(`Error processing customer.subscription.deleted: ${'Error occurred'}`),        return res.status(200).json({ received: true, error: `Error processing: ${err.message}` })}
+      break}
     default:  ,
-      // process.stdout.write(`Unhandled event type ${event.type}`),
-  }
+      // process.stdout.write(`Unhandled event type ${event.type}`)}
 ,
   // Acknowledge receipt of the event to Stripe,
-  res.status(200).json({ received: true }),
-}),
+  res.status(200).json({ received: true })}),
 module.exports = router,

@@ -1,18 +1,18 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit, ";
+import React from "react";
 
-interface AuthState {isLoggedIn: boolean}
+interface AuthState {
+isLoggedIn: boolean}
 
-const initialState: AuthState = {
-isLoggedIn: false};
+const initialState: AuthState = {,
+isLoggedIn: false}
 
 const authSlice = createSlice({;
-name: "auth";
-initialState;,
+name: "
+initialState;;
 reducers: {
-setLoggedIn(state, action: PayloadAction<boolean>) {
-state.isLoggedIn = action.payload},
-},
-});
+setLoggedIn(state; action: PayloadAction<boolean>) {
+state.isLoggedIn = action.payload};
+}})
 
-export const { setLoggedIn } = authSlice.actions;
-export default authSlice.reducer;
+export export const { setLoggedIn } = authSlice.actions;
+export export default authSlice.reducer;

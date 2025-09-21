@@ -14,8 +14,7 @@ exports.handler = async function(event, context) {,
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) }}
 ,
     const linkHealth = await fetchJsonFromRepo(repo, 'data/link-health.json', branch, token),
     const promos = await fetchJsonFromRepo(repo, 'data/homepage-promos.json', branch, token),
@@ -29,26 +28,21 @@ exports.handler = async function(event, context) {,
       if (failing.length) {,
         md += `| Route | Status | Error |\n|---|---:|---|\n`,
         for (const f of failing) md += `| ${mdEscape(f.route)} | ${f.status} | ${mdEscape(f.error||'')} |\n`,
-        md += `\n`,
-      }
+        md += `\n`}
     }
     if (promos) {,
       md += `## Homepage Promos\n\n`,
       for (const p of (promos.promos||[])) {,
-        md += `- ${p.title} (${p.href})\n`,
-      }
-      md += `\n`,
-    }
+        md += `- ${p.title} (${p.href})\n`}
+      md += `\n`}
     if (seo) {,
       md += `## SEO Audit\n\n`,
       md += `Pages: ${seo.totals?.pages||0}, With Title: ${seo.totals?.withTitle||0}, With Meta Description: ${seo.totals?.withMetaDesc||0}\n\n`,
       if (seo.issues && seo.issues.length) {,
         md += `Top issues (first 10):\n\n`,
         for (const issue of seo.issues.slice(0,10)) {,
-          md += `- ${issue.path} — ${issue.hasTitle?'':'missing <title>'} ${issue.hasMetaDesc?'':'missing meta description'}\n`,
-        }
-        md += `\n`,
-      }
+          md += `- ${issue.path} — ${issue.hasTitle?'':'missing <title>'} ${issue.hasMetaDesc?'':'missing meta description'}\n`}
+        md += `\n`}
     }
 ,
     const reportPath = `data/reports/daily-${date}.md`,
@@ -61,8 +55,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const resReport = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(reportPath)}`, {,
@@ -72,8 +65,6 @@ exports.handler = async function(event, context) {,
     }),
     const jsonReport = await resReport.json(),
     if (!resReport.ok) return { statusCode: resReport.status, body: JSON.stringify({ error: jsonReport }) },
-    return { statusCode: 200, body: JSON.stringify({ ok: true, report: reportPath, commit: jsonReport.commit && jsonReport.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, report: reportPath, commit: jsonReport.commit && jsonReport.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

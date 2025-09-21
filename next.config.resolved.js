@@ -12,8 +12,7 @@ const nextConfig = {
   }
   "experimental": {
     optimizeCss: true
-    "scrollRestoration": true,
-}
+    "scrollRestoration": true}
   "typescript": { ignoreBuildErrors: true }
   "eslint": { ignoreDuringBuilds: true }
   async headers() {

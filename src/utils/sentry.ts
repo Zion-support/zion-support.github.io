@@ -1,15 +1,44 @@
-import React from "react";
-
-let nodeSentry: any;
-try {// Optional dependency for server-side logging;
-nodeSentry = require("@sentry/node")} catch {nodeSentry = null}
-
-export function captureException(error: unknown) {
-if (process.env.NODE_ENV === "development") {
-if (typeof console !== "undefined") {
-
+let nodeSentry: any = null,
+try {
+  // Optional dependency for server-side logging
+  nodeSentry = require("@sentry/node");
+} catch {
+  nodeSentry = null;
 }
-} else {if (typeof window !== "undefined" && (window as any).Sentry?.captureException) {
-(window as any).Sentry.captureException(error)} else if (nodeSentry?.captureException) {nodeSentry.captureException(error)}
-}
-}
+
+export const initializeSentry = (dsn?: string) => {
+  if (typeof window !== "undefined" && dsn) {
+    // Client-side Sentry initialization
+    import("@sentry/browser").then(({ init, captureException }) => {
+      init({
+        dsn,
+        environment: process.env.NODE_ENV || "development",
+        tracesSampleRate: 1.0});
+    });
+  }
+};
+
+export const logError = (error: Error, context?: Record<string, any>) => {
+  if (typeof window !== "undefined") {
+    // Client-side error logging
+    import("@sentry/browser").then(({ captureException }) => {
+      captureException(error, { extra: context })});
+  } else if (nodeSentry) {
+    // Server-side error logging
+    nodeSentry.captureException(error, { extra: context })} else {
+    // Fallback to console
+    console.error("Error:", error, "Context:", context);
+  }
+};
+
+export const logMessage = (message: string, level: "info" | "warning" | "error" = "info") => {
+  if (typeof window !== "undefined") {
+    import("@sentry/browser").then(({ captureMessage }) => {
+      captureMessage(message, level);
+    });
+  } else if (nodeSentry) {
+    nodeSentry.captureMessage(message, level);
+  } else {
+    console.log(`[${level.toUpperCase()}] ${message}`);
+  }
+};

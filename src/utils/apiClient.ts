@@ -1,35 +1,28 @@
-import React from "react";
-
-interface RequestInfo {}; interface RequestInit {};
-export class ApiError extends Error {status: number;
-data?: unknown;
-
-constructor(message: string, status: number, data?: unknown) {
-super(message);
-this.status = status;
-this.data = data}
+// Simple API client utility
+class ApiError extends Error {
+  constructor(message: string, public status?: number, public data?: any) {
+    super(message);
+    this.name = 'ApiError';
+  }
 }
 
-export async function apiClient(input: RequestInfo | URL;
-init?: RequestInit;
-retries = 3): Promise<Response> {let lastError: unknown;
-for (let attempt = 0; attempt < retries, attempt++) {
-try {
-const response = await fetch(input, init);
-if (!response.ok) {
-let data: any;
-try {
-data = await response.clone().json()} catch {data = undefined}
-const message = data?.error || data?.message || response.statusText;
-throw new ApiError(message, response.status, data);
-}
-return response;
-} catch (err) {lastError = err;
-// Network errors are usually TypeError;
-if (err instanceof TypeError && attempt < retries - 1) {
-continue}
-throw err;
-}
-}
-throw lastError;
-}
+export const apiClient = {
+  async request(url: string, options: RequestInit = {}) {
+    const response = await fetch(url, options);
+    
+    if (!response.ok) {
+      let data;
+      try {
+        data = await response.clone().json();
+      } catch {
+        data = undefined;
+      }
+      const message = data?.error || data?.message || response.statusText;
+      throw new ApiError(message, response.status, data);
+    }
+    
+    return response;
+  }
+};
+
+export { ApiError };

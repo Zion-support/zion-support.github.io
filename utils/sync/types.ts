@@ -10,12 +10,12 @@ export interface InstanceMeta {
 export interface Proposal {
   id: string, // globally unique (instance-prefixed)
   title: string,
-  description?: string,
+  description?: string;
   createdAt: number, // epoch ms
   updatedAt: number, // epoch ms
   status: "draft" | "active" | "closed",
   daoId: string,
-  authorId?: string,
+  authorId?: string;
   tags?: string[],
   version: number, // monotonic version
 }
@@ -42,7 +42,7 @@ export interface TokenTransfer {
 export interface TalentMove {
   id: string,
   personId: string,
-  fromNation?: string,
+  fromNation?: string;
   toNation: string,
   role: string,
   startDate: number,
@@ -53,7 +53,7 @@ export interface Endorsement {
   id: string,
   fromDaoId: string,
   toDaoId: string,
-  resolutionId?: string,
+  resolutionId?: string;
   message?: string,
   timestamp: number
 }
@@ -78,7 +78,7 @@ export interface SyncEnvelope {
   from: InstanceMeta,
   scope: SyncScope,
   timestamp: number,
-  proposals?: Proposal[],
+  proposals?: Proposal[];
   votes?: Vote[],
   tokenTransfers?: TokenTransfer[],
   talentMoves?: TalentMove[],

@@ -16,11 +16,10 @@ export function calculatePasswordStrength(password) {
 }
 export function getStrengthLabel(score) {
     switch (score) {
-        case 0: return "Very weak";
-    case 1: return "Weak";
-    case 2: return "Fair";
-    case 3: return "Good";
-    case 4: return "Strong";
-    default: return "";
-     }
+        case 0: return "
+    case 1: return "
+    case 2: return "
+    case 3: return "
+    case 4: return "
+    default: return "}
 }

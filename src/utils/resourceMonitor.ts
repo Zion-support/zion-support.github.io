@@ -1,174 +1,123 @@
-import React from "react";
-
 interface ResourceError {
-url: string;
-type: "script" | "stylesheet" | "image" | "font" | "other";,
-error: string;,
-timestamp: number;
-}
-}
-}
+  url: string,
+  type: "script" | "stylesheet" | "image" | "font" | "other",
+  error: string,
+  timestamp: number}
 
 class ResourceMonitor {
-private errors: ResourceError[] = [];
-private isMonitoring = false;
-private retryAttempts = new Map<string, number>();
-private maxRetries = 3;
+  private errors: ResourceError[] = [],
+  private retryAttempts: Map<string, number> = new Map();
+  private maxRetries: number = 3,
+  constructor() {
+    this.initializeMonitoring();
+  }
 
-start() {
-if (this.isMonitoring) return;
-this.isMonitoring = true;
-this.setupErrorListeners();
-this.setupResourceObservers();
-this.monitorCriticalResources();
+  private initializeMonitoring(): void {
+    if (typeof window === "undefined") return;
+
+    // Monitor resource loading errors
+    window.addEventListener('error', (event) => {
+      if (event.target !== window) {
+        const target = event.target as HTMLElement;
+        const url = this.getResourceUrl(target);
+        if (url) {
+          const resourceError: ResourceError = {
+            url,
+            type: this.getResourceTypeFromUrl(url),
+            error: event.message || 'Resource failed to load',
+            timestamp: Date.now()
+          },
+          this.errors.push(resourceError);
+        }
+      }
+    }, true);
+
+    // Monitor resource load failures
+    window.addEventListener('unhandledrejection', (event) => {
+      if (event.reason && typeof event.reason === 'string') {
+        this.recordError('unknown', event.reason);
+      }
+    });
+  }
+
+  private getResourceUrl(element: HTMLElement): string | null {
+    if (element instanceof HTMLScriptElement) {
+      return element.src} else if (element instanceof HTMLLinkElement) {
+      return element.href;
+    } else if (element instanceof HTMLImageElement) {
+      return element.src;
+    }
+    return null;
+  }
+
+  private recordError(url: string, errorMessage: string): void {
+    const resourceError: ResourceError = {
+      url,
+      type: this.getResourceTypeFromUrl(url),
+      error: errorMessage,
+      timestamp: Date.now()
+    },
+    this.errors.push(resourceError);
+  }
+
+  private getResourceTypeFromUrl(url: string): ResourceError["type"] {
+    if (url.includes(".js")) return "script",
+    if (url.includes(".css")) return "stylesheet";
+    if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) return "image";
+    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return "font";
+    return "other";
+  }
+
+  private handleRetry(url: string): void {
+    const attempts = this.retryAttempts.get(url) || 0,
+    if (attempts < this.maxRetries) {
+      this.retryAttempts.set(url, attempts + 1);
+      // Implement retry logic here if needed
+    }
+  }
+
+  getErrors(): ResourceError[] {
+    return [...this.errors];
+  }
+
+  clearErrors(): void {
+    this.errors = [];
+    this.retryAttempts.clear();
+  }
+
+  getErrorSummary(): {
+    total: number,
+    byType: Record<string, number>;
+    recent: number} {
+    const summary = {
+      total: this.errors.length,
+      byType: {} as Record<string, number>,
+      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute
+    },
+    // Count errors by type
+    this.errors.forEach(error => {
+      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
+    });
+
+    return summary;
+  }
+
+  getErrorsByType(type: ResourceError["type"]): ResourceError[] {
+    return this.errors.filter(error => error.type === type)}
+
+  getRecentErrors(minutes: number = 5): ResourceError[] {
+    const cutoff = Date.now() - (minutes * 60 * 1000),
+    return this.errors.filter(error => error.timestamp > cutoff);
+  }
+
+  isResourceHealthy(url: string): boolean {
+    const recentErrors = this.getRecentErrors(5),
+    return !recentErrors.some(error => error.url === url);
+  }
 }
 
-stop() {
-this.isMonitoring = false;
-}
-
-private setupErrorListeners() {
-window.addEventListener("error", (event) => {
-if (event.target && event.target !== window) {
-this.handleResourceError(event.target as HTMLElement, event.message);
-}
-});
-
-window.addEventListener("unhandledrejection", (event) => {
-this.handleResourceError(window, event.reason);
-});
-}
-
-private setupResourceObservers() {
-if ("PerformanceObserver" in window) {
-const observer = new PerformanceObserver((list) => {;
-list.getEntries().forEach((entry) => {;
-if (entry.entryType === "resource" && entry.duration > 5000) {;
-this.handleSlowResource(entry as PerformanceResourceTiming);
-}
-});
-});
-observer.observe({ entryTypes: ["resource"] });
-}
-}
-
-private monitorCriticalResources() {
-const criticalSelectors = [
-"script[src]",
-"link[rel="stylesheet"]",;
-"img[src]",;
-"link[rel="preload"]";
-];
-
-criticalSelectors.forEach(selector => {
-const elements = document.querySelectorAll(selector);
-elements.forEach(element => {
-this.monitorElement(element as HTMLElement);
-});
-});
-}
-
-private monitorElement(element: HTMLElement) {
-const url = this.getElementUrl(element);
-if (!url) return;
-
-const resourceType = this.getResourceType(element);
-
-// Check if resource loads successfully;
-if (element.tagName === "IMG") {
-(element as HTMLImageElement).onerror = () => {
-this.handleResourceError(element, "Failed to load image");
-};
-} else if (element.tagName === "SCRIPT") {
-(element as HTMLScriptElement).onerror = () => {
-this.handleResourceError(element, "Failed to load script");
-};
-} else if (element.tagName === "LINK") {
-(element as HTMLLinkElement).onerror = () => {
-this.handleResourceError(element, "Failed to load stylesheet");
-};
-}
-}
-
-private getElementUrl(element: HTMLElement): string | null {
-if (element instanceof HTMLImageElement) return element.src;
-if (element instanceof HTMLScriptElement) return element.src;
-if (element instanceof HTMLLinkElement) return element.href;
-return null;
-}
-
-private getResourceType(element: HTMLElement): ResourceError["type"] {
-if (element.tagName === "SCRIPT") return "script";
-if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "stylesheet") return "stylesheet";
-if (element.tagName === "IMG") return "image";
-if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "preload") return "font";
-return "other";
-}
-
-private handleResourceError(element: HTMLElement, error: string) {const url = this.getElementUrl(element) || "unknown";
-const resourceType = this.getResourceType(element);
-
-const resourceError: ResourceError = {
-url;,
-type: resourceType;
-error;,
-timestamp: Date.now()};
-
-this.errors.push(resourceError);
-this.handleRetry(url);
-}
-
-private handleSlowResource(entry: PerformanceResourceTiming) {
-const resourceError: ResourceError = {
-url: entry.name;,
-type: this.getResourceTypeFromUrl(entry.name)
-error: `Slow resource: ${entry.duration}ms`
-timestamp: Date.now()
-};
-
-this.errors.push(resourceError);
-}
-
-private getResourceTypeFromUrl(url: string): ResourceError["type"] {
-if (url.includes(".js")) return "script";
-if (url.includes(".css")) return "stylesheet";
-if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) return "image";
-if (url.match(/\.(woff|woff2|ttf|eot)$/)) return "font";
-return "other";
-}
-
-private handleRetry(url: string) {
-const attempts = this.retryAttempts.get(url) || 0;
-if (attempts < this.maxRetries) {
-this.retryAttempts.set(url, attempts + 1);
-// Implement retry logic here if needed;
-}
-}
-
-getErrors(): ResourceError[] {
-return [...this.errors];
-}
-
-clearErrors() {
-this.errors = [];
-this.retryAttempts.clear();
-}
-
-getErrorSummary() {
-const summary = {;
-total: this.errors.length;,
-byType: {} as Record<string, number>,
-recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
-};
-
-this.errors.forEach(error => {
-summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
-});
-
-return summary;
-}
-}
-
-// Create singleton instance;
-const resourceMonitor = new ResourceMonitor();
+// Export instances for backward compatibility
+export const resourceMonitor = new ResourceMonitor();
 export default resourceMonitor;
+export { ResourceMonitor };
+export type { ResourceError };

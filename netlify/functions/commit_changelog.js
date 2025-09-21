@@ -14,8 +14,7 @@ exports.handler = async function(event, context) {,
     let md = `# Changelog — ${date}\n\n`,
     for (const c of (Array.isArray(commits)?commits: [])) {,
       const msg = c.commit?.message?.split('\n')[0] || 'Update',
-      md += `- ${msg} (${c.sha.substring(0,7)}) — ${c.commit?.author?.name} at ${c.commit?.author?.date}\n`,
-    }
+      md += `- ${msg} (${c.sha.substring(0,7)}) — ${c.commit?.author?.name} at ${c.commit?.author?.date}\n`}
 ,
     const path = `data/changelogs/${date}.md`,
     // Fetch existing sha,
@@ -26,8 +25,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const b64 = Buffer.from(md, 'utf8').toString('base64'),
@@ -38,8 +36,6 @@ exports.handler = async function(event, context) {,
     }),
     const jsonPut = await resPut.json(),
     if (!resPut.ok) return { statusCode: resPut.status, body: JSON.stringify({ error: jsonPut }) },
-    return { statusCode: 200, body: JSON.stringify({ ok: true, path, commit: jsonPut.commit && jsonPut.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, path, commit: jsonPut.commit && jsonPut.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

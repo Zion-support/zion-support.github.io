@@ -1,228 +1,275 @@
-import React from "react";
+// Service Worker type declarations
+declare const self: any,
+// Service Worker event types
+interface ExtendableEvent extends Event {
+  waitUntil(promise: Promise<any>): void}
 
-// Enhanced Service Worker for Zion Tech Group;
-// Provides offline support, caching strategies, and performance optimizations;
-const CACHE_NAME = "zion-tech-group-v2.0.0";
-const STATIC_CACHE = "zion-static-v2.0.0";
-const DYNAMIC_CACHE = "zion-dynamic-v2.0.0";
-const API_CACHE = "zion-api-v2.0.0";
+interface FetchEvent extends Event {
+  request: Request,
+  respondWith(response: Promise<Response> | Response): void}
 
-// Cache strategies;
+interface SyncEvent extends Event {
+  tag: string,
+  waitUntil(promise: Promise<any>): void}
+
+interface PushEvent extends Event {
+  data?: any;
+  waitUntil(promise: Promise<any>): void}
+
+interface NotificationEvent extends Event {
+  notification: Notification,
+  action?: string;
+  waitUntil(promise: Promise<any>): void}
+
+const CACHE_NAMES = {
+  STATIC: "static-cache-v1",
+  DYNAMIC: "dynamic-cache-v1",
+  API: "api-cache-v1"
+},
 const CACHE_STRATEGIES = {
-STATIC: "cache-first"
-DYNAMIC: "stale-while-revalidate"
-API: "network-first";
-IMAGES: "cache-first";
-FONTS: "cache-first";
-};
-
-// Static assets to cache;
+  STATIC: "cache-first",
+  DYNAMIC: "stale-while-revalidate",
+  API: "network-first",
+  IMAGES: "cache-first",
+  FONTS: "cache-first"
+},
+// Static assets to cache
 const STATIC_ASSETS = [
-"/index.html",
-"/static/js/bundle.js",
-"/static/css/main.css",
-"/manifest.json",
-"/favicon.ico",;
-"/logo192.png",;
-"/logo512.png";
+  "/index.html";
+  "/static/js/bundle.js";
+  "/static/css/main.css",
+  "/manifest.json",
+  "/favicon.ico",
+  "/logo192.png",
+  "/logo512.png"
 ];
 
-// Dynamic routes to cache;
+// Dynamic routes to cache
 const DYNAMIC_ROUTES = [
-"/about",
-"/services",
-"/contact",
-"/ai-services",
-"/it-services",
-"/micro-saas",;
-"/blog",;
-"/careers";
+  "/about",
+  "/services",
+  "/contact",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/blog",
+  "/careers"
 ];
 
-// API endpoints to cache;
+// API endpoints to cache
 const API_ENDPOINTS = [
-"/api/services",
-"/api/contact",;
-"/api/blog",;
-"/api/careers";
+  "/api/services",
+  "/api/contact",
+  "/api/blog",
+  "/api/careers"
 ];
 
-// Install event - cache static assets;
-self.addEventListener("install", (event: ExtendableEvent) => {event.waitUntil(
-Promise.all([
-caches.open(STATIC_CACHE).then(cache => {
-return cache.addAll(STATIC_ASSETS)}),
-caches.open(DYNAMIC_CACHE).then(cache => {
-return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`)),
-})
-]).then(() => {return self.skipWaiting()})
-);
+// Install event - cache static assets
+self.addEventListener("install", (event: ExtendableEvent) => {
+  event.waitUntil(
+    Promise.all([
+      caches.open(CACHE_NAMES.STATIC).then(cache => {
+        return cache.addAll(STATIC_ASSETS)});
+      caches.open(CACHE_NAMES.DYNAMIC).then(cache => {
+        return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`));
+      })
+    ]).then(() => {
+      return self.skipWaiting();
+    })
+  );
 });
 
-// Activate event - clean up old caches;
-self.addEventListener("activate", (event: ExtendableEvent) => {event.waitUntil(
-caches.keys().then(cacheNames => {
-return Promise.all(
-cacheNames.map(cacheName => {
-if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE && cacheName !== API_CACHE) {
-console.log("Deleting old cache:", cacheName);
-return caches.delete(cacheName)}
-})
-);
-}).then(() => {return self.clients.claim()})
-);
+// Activate event - clean up old caches
+self.addEventListener("activate", (event: ExtendableEvent) => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (!Object.values(CACHE_NAMES).includes(cacheName)) {
+            return caches.delete(cacheName)}
+        })
+      );
+    }).then(() => {
+      return self.clients.claim();
+    })
+  );
 });
 
-// Fetch event - implement caching strategies;
+// Fetch event - implement caching strategies
 self.addEventListener("fetch", (event: FetchEvent) => {
-const { request } = event;
-const url = new URL(request.url);
+  const { request } = event,
+  const url = new URL(request.url);
 
-// Skip non-GET requests;
-if (request.method !== "GET") {return}
-
-// Handle different types of requests;
-if (isStaticAsset(request)) {event.respondWith(cacheFirst(request, STATIC_CACHE))} else if (isDynamicRoute(request)) {event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE))} else if (isAPIRequest(request)) {event.respondWith(networkFirst(request, API_CACHE))} else if (isImage(request)) {event.respondWith(cacheFirst(request, DYNAMIC_CACHE))} else if (isFont(request)) {event.respondWith(cacheFirst(request, STATIC_CACHE))} else {event.respondWith(networkFirst(request, DYNAMIC_CACHE))}
+  // Handle different types of requests
+  if (isStaticAsset(request)) {
+    event.respondWith(cacheFirst(request, CACHE_NAMES.STATIC));
+  } else if (isAPIRequest(request)) {
+    event.respondWith(networkFirst(request, CACHE_NAMES.API));
+  } else if (isImageRequest(request)) {
+    event.respondWith(cacheFirst(request, CACHE_NAMES.STATIC));
+  } else {
+    event.respondWith(staleWhileRevalidate(request, CACHE_NAMES.DYNAMIC));
+  }
 });
 
-// Cache First Strategy;
-async function cacheFirst(request: Request, cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
-const cachedResponse = await cache.match(request);
+// Helper functions to determine request types
+function isStaticAsset(request: Request): boolean {
+  return request.destination === "script" ||
+         request.destination === "style" ||
+         request.destination === "manifest" ||
+         STATIC_ASSETS.some(asset => request.url.includes(asset))}
 
-if (cachedResponse) {
-return cachedResponse}
+function isAPIRequest(request: Request): boolean {
+  return request.url.includes("/api/") ||
+         API_ENDPOINTS.some(endpoint => request.url.includes(endpoint))}
 
-try {const networkResponse = await fetch(request);
-if (networkResponse.ok) {
-cache.put(request, networkResponse.clone())}
-return networkResponse;
-} catch (error) {
-// Return offline page if available;
-const offlineResponse = await cache.match("/offline.html");
-return offlineResponse || new Response("Offline", { status: 503 });
-}
-}
+function isImageRequest(request: Request): boolean {
+  return request.destination === "image" ||
+         /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(request.url)}
 
-// Stale While Revalidate Strategy;
-async function staleWhileRevalidate(request: Request, cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
-const cachedResponse = await cache.match(request);
+// Cache strategies
+async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
+  const cachedResponse = await caches.match(request),
+  if (cachedResponse) {
+    return cachedResponse;
+  }
 
-// Return cached response immediately if available;
-if (cachedResponse) {
-// Update cache in background;
-fetch(request).then(response => {
-if (response.ok) {
-cache.put(request, response)}
-});
-return cachedResponse;
-}
-
-try {const networkResponse = await fetch(request);
-if (networkResponse.ok) {
-cache.put(request, networkResponse.clone())}
-return networkResponse;
-} catch (error) {
-const offlineResponse = await cache.match("/offline.html");
-return offlineResponse || new Response("Offline", { status: 503 });
-}
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(cacheName);
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    throw error;
+  }
 }
 
-// Network First Strategy;
-async function networkFirst(request: Request, cacheName: string): Promise<Response> {try {
-const networkResponse = await fetch(request);
-if (networkResponse.ok) {
-const cache = await caches.open(cacheName);
-cache.put(request, networkResponse.clone())}
-return networkResponse;
-} catch (error) {
-const cache = await caches.open(cacheName);
-const cachedResponse = await cache.match(request);
-return cachedResponse || new Response("Offline", { status: 503 });
+async function networkFirst(request: Request, cacheName: string): Promise<Response> {
+  try {
+    const networkResponse = await fetch(request),
+    if (networkResponse.ok) {
+      const cache = await caches.open(cacheName);
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    throw error;
+  }
 }
+
+async function staleWhileRevalidate(request: Request, cacheName: string): Promise<Response> {
+  const cachedResponse = await caches.match(request),
+  const fetchPromise = fetch(request).then(networkResponse => {
+    if (networkResponse.ok) {
+      const cache = caches.open(cacheName);
+      cache.then(c => c.put(request, networkResponse.clone()));
+    }
+    return networkResponse;
+  });
+
+  return cachedResponse || fetchPromise;
 }
 
-// Helper functions;
-function isStaticAsset(request: Request): boolean {const url = new URL(request.url);
-return STATIC_ASSETS.some(asset => url.pathname === asset)}
-
-function isDynamicRoute(request: Request): boolean {const url = new URL(request.url);
-return DYNAMIC_ROUTES.some(route => url.pathname.startsWith(route))}
-
-function isAPIRequest(request: Request): boolean {const url = new URL(request.url);
-return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))}
-
-function isImage(request: Request): boolean {const url = new URL(request.url);
-return /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(url.pathname)}
-
-function isFont(request: Request): boolean {const url = new URL(request.url);
-return /\.(woff|woff2|ttf|eot)$/i.test(url.pathname)}
-
-// Background sync for offline actions;
-self.addEventListener("sync", (event: SyncEvent) => {if (event.tag === "background-sync") {
-event.waitUntil(doBackgroundSync())}
+// Background sync for offline actions
+self.addEventListener("sync", (event: SyncEvent) => {
+  if (event.tag === "background-sync") {
+    event.waitUntil(doBackgroundSync())}
 });
 
-async function doBackgroundSync(): Promise<void> {// Handle background sync tasks;
-console.log("Performing background sync")}
+async function doBackgroundSync(): Promise<void> {
+  // Handle offline actions when connection is restored
+  try {
+    const pendingActions = await getPendingActions();
+    for (const action of pendingActions) {
+      await processPendingAction(action);
+    }
+  } catch (error) {
+    console.error("Background sync failed:", error);
+  }
+}
 
-// Push notifications;
-self.addEventListener("push", (event: PushEvent) => {if (event.data) {
-const data = event.data.json();
-const options = {;,
-body: data.body, icon: "/icon-192x192.png"
-badge: "/badge-72x72.png"
-vibrate: [100; 50; 100],
-data: {
-dateOfArrival: Date.now()
-primaryKey: 1}
+async function getPendingActions(): Promise<any[]> {
+  // Retrieve pending actions from IndexedDB or localStorage
+  return [];
+}
+
+async function processPendingAction(action: any): Promise<void> {
+  // Process individual pending action
+  console.log("Processing pending action:", action);
+}
+
+// Push notifications
+self.addEventListener("push", (event: PushEvent) => {
+  if (event.data) {
+    const data = event.data.json(),
+    const options = {
+      body: data.body,
+      icon: "/logo192.png",
+      badge: "/logo192.png",
+      vibrate: [100, 50, 100],
+      data: data.data || {},
+      actions: [
+        {
+          action: "explore",
+          title: "View Details",
+          icon: "/logo192.png"
+        },
+        {
+          action: "close",
+          title: "Close",
+          icon: "/logo192.png"
+        }
+      ]
+    },
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
+});
+
+// Notification click handler
+self.addEventListener("notificationclick", (event: NotificationEvent) => {
+  event.notification.close(),
+  if (event.action === "explore") {
+    event.waitUntil(
+      self.clients.openWindow("/")
+    );
+  }
+});
+
+// Message handler for communication with main thread
+self.addEventListener("message", (event: MessageEvent) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting()}
+});
+
+// Utility functions for cache management
+export const cacheUtils = {
+  clearAllCaches: async () => {
+    const cacheNames = await caches.keys(),
+    return Promise.all(
+      cacheNames.map(cacheName => caches.delete(cacheName))
+    );
+  };
+  getCacheSize: async (cacheName: string) => {
+    const cache = await caches.open(cacheName),
+    const keys = await cache.keys();
+    return keys.length;
+  };
+  addToCache: async (cacheName: string, request: Request, response: Response) => {
+    const cache = await caches.open(cacheName),
+    return cache.put(request, response);
+  }
 };
 
-event.waitUntil(
-self.registration.showNotification(data.title, options)
-);
-}
-});
-
-// Notification click handler;
-self.addEventListener("notificationclick", (event: NotificationEvent) => {event.notification.close();
-
-event.waitUntil(
-clients.openWindow("/")
-)});
-
-// Periodic background sync;
-self.addEventListener("periodicsync", (event: PeriodicSyncEvent) => {if (event.tag === "content-sync") {
-event.waitUntil(updateContent())}
-});
-
-async function updateContent(): Promise<void> {// Update content in background;
-console.log("Updating content")}
-
-// Export functions for use in the main app;
-export function registerServiceWorker(): void {if ("serviceWorker" in navigator) {
-window.addEventListener("load", () => {
-navigator.serviceWorker.register("/sw.js")
-.then(registration => {
-console.log("SW registered: " registration);
-
-registration.addEventListener("updatefound", () => {
-const newWorker = registration.installing;
-if (newWorker) {
-newWorker.addEventListener("statechange", () => {
-if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
-// New content is available, reload the page;
-window.location.reload()}
-});
-}
-});
-})
-.catch(registrationError => {console.log("SW registration failed: " registrationError)});
-});
-}
-}
-
-export function unregisterServiceWorker(): void {if ("serviceWorker" in navigator) {
-navigator.serviceWorker.ready.then(registration => {
-registration.unregister()});
-}
-}
+export default {
+  CACHE_NAMES,
+  CACHE_STRATEGIES,
+  cacheUtils
+};

@@ -1,23 +1,22 @@
 {
-  "timestamp": "2025-09-20T17:12:25.908Z",
+  "timestamp": "2025-09-20T19:13:22.033Z",
   "metrics": {
-    "buildTime": 9040,
-    "bundleSize": 8110207,
-    "pageCount": 45,
-    "timestamp": "2025-09-20T17:12:00.145Z",
-    "buildTimeSeconds": 9,
-    "bundleSizeMB": 7.73,
-    "pagesPerSecond": 4.98
+    "buildTime": 13248,
+    "bundleSize": 7150161,
+    "pageCount": 17,
+    "timestamp": "2025-09-20T19:13:07.985Z",
+    "buildTimeSeconds": 13,
+    "bundleSizeMB": 6.82,
+    "pagesPerSecond": 1.28
   },
   "optimizations": [
     "Cleared build cache",
     "Cleared node modules cache",
     "Checked dependencies",
     "Optimized 4 images",
-    "Optimized 59 JavaScript files",
+    "Optimized 1 CSS files",
+    "Optimized 22 JavaScript files",
     "Validated build artifacts: .next, out"
   ],
-  "recommendations": [
-    "Excellent build performance! Consider implementing CI/CD optimizations"
-  ]
+  "recommendations": []
 }

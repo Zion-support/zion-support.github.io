@@ -2,24 +2,21 @@ function analyzeTsx(content) {,
   const hasHead = /<Head[\s>]/.test(content),
   const hasTitle = /<title>[^<]+<\/title>/.test(content),
   const hasMetaDesc = /<meta[^>]+name=["']description["'][^>]*>/i.test(content),
-  return { hasHead, hasTitle, hasMetaDesc },
-}
+  return { hasHead, hasTitle, hasMetaDesc }}
 ,
 async function getRepoTree(repo, ref, token) {,
   const res = await fetch(`https: //api.github.com/repos/${repo}/git/trees/${encodeURIComponent(ref)}?recursive=1`, {,
     headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot' }
   }),
   if (!res.ok) throw new Error(`tree fetch failed: ${res.status}`),
-  return res.json(),
-}
+  return res.json()}
 ,
 async function getFileContent(repo, path, ref, token) {,
   const res = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}?ref=${ref}`, {,
     headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotAccept': 'application/vnd.github.v3.raw' }
   }),
   if (!res.ok) throw new Error(`content fetch failed: ${res.status}`),
-  return res.text(),
-}
+  return res.text()}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -27,8 +24,7 @@ exports.handler = async function(event, context) {,
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, cannot audit via GitHub API' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, cannot audit via GitHub API' }) }}
 ,
     const tree = await getRepoTree(repo, branch, token),
     const pageFiles = tree.tree.filter(t => t.type === 'blob' && t.path.startsWith('pages/') && t.path.endsWith('.tsx')),
@@ -37,10 +33,8 @@ exports.handler = async function(event, context) {,
       try {,
         const content = await getFileContent(repo, file.path, branch, token),
         const a = analyzeTsx(content),
-        report.push({ path: file.path, ...a }),
-      } catch (e) {,
-        report.push({ path: file.path, error: String(e) }),
-      }
+        report.push({ path: file.path, ...a })} catch (e) {,
+        report.push({ path: file.path, error: String(e) })}
     }
 ,
     const summary = {,
@@ -61,8 +55,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const resCommit = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`, {,
@@ -75,11 +68,8 @@ exports.handler = async function(event, context) {,
     }),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) {,
-      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
-    }
+      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) }}
 ,
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

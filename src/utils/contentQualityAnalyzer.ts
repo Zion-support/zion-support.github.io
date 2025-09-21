@@ -1,407 +1,373 @@
-import React from "react";
-
 export interface ContentQualityMetrics {
-pageUrl: string;
-title: string;
-wordCount: number;
-headingCount: number;
-imageCount: number;
-linkCount: number;
-metaDescriptionLength: number;
-hasStructuredData: boolean;
-readabilityScore: number;
-seoScore: number;
-overallScore: number;,
-issues: string[];,
-recommendations: string[];
-}
-}
-}
+  pageUrl: string,
+  title: string,
+  wordCount: number,
+  headingCount: number,
+  imageCount: number,
+  linkCount: number,
+  readabilityScore: number,
+  seoScore: number,
+  accessibilityScore: number,
+  performanceScore: number,
+  overallScore: number,
+  issues: ContentIssue[],
+  recommendations: ContentRecommendation[],
+  analyzedAt: Date}
 
-export interface ContentQualityReport {
-totalPages: number;
-averageWordCount: number;
-averageSeoScore: number;
-pagesWithIssues: number;
-topIssues: string[];,
-pageMetrics: ContentQualityMetrics[];,
-summary: string;
-}
-}
-}
+export interface ContentIssue {
+  type: "missing-title" | "short-content" | "no-headings" | "no-images" | "poor-seo" | "accessibility-issue",
+  severity: "high" | "medium" | "low",
+  description: string,
+  impact: string,
+  fix: string}
+
+export interface ContentRecommendation {
+  type: "content-expansion" | "seo-improvement" | "accessibility-fix" | "performance-optimization",
+  priority: "high" | "medium" | "low",
+  title: string,
+  description: string,
+  implementation: string,
+  expectedImpact: string}
 
 export class ContentQualityAnalyzer {
-private static instance: ContentQualityAnalyzer;
-private analyzedPages: Map<string, ContentQualityMetrics> = new Map();
+  private analyzedPages: Map<string, ContentQualityMetrics> = new Map();
+  private readonly MIN_WORD_COUNT = 300;
+  private readonly MIN_HEADING_COUNT = 2;
+  private readonly MIN_IMAGE_COUNT = 1;
+  private readonly MIN_LINK_COUNT = 3;
 
-static getInstance(): ContentQualityAnalyzer {
-if (!ContentQualityAnalyzer.instance) {
-ContentQualityAnalyzer.instance = new ContentQualityAnalyzer();
-}
-return ContentQualityAnalyzer.instance;
-}
+  analyzePageContent(
+    pageUrl: string,
+    title: string,
+    content: string,
+    metaDescription: string = "",
+    images: string[] = [],
+    links: string[] = []
+  ): ContentQualityMetrics {
+    // Check if we already analyzed this page
+    const existing = this.analyzedPages.get(pageUrl),
+    if (existing) {
+      return existing;
+    }
 
-analyzePageContent(
-pageUrl: string;
-title: string;
-content: string;
-metaDescription: string = "";,
-images: string[] = [];,
-links: string[] = [];
-): ContentQualityMetrics {
-// Check if we already analyzed this page;
-const existing = this.analyzedPages.get(pageUrl);
-if (existing) {
-return existing;
-}
+    const wordCount = this.calculateWordCount(content);
+    const headingCount = this.countHeadings(content);
+    const imageCount = images.length;
+    const linkCount = links.length;
+    const readabilityScore = this.calculateReadabilityScore(content);
+    const seoScore = this.calculateSEOScore(title, metaDescription, content);
+    const accessibilityScore = this.calculateAccessibilityScore(content);
+    const performanceScore = this.calculatePerformanceScore(content, images);
 
-const wordCount = this.calculateWordCount(content);
-const headingCount = this.countHeadings(content);
-const imageCount = images.length;
-const linkCount = links.length;
-const metaDescriptionLength = metaDescription.length;
-const hasStructuredData = this.checkStructuredData(content);
-const readabilityScore = this.calculateReadabilityScore(content);
-const seoScore = this.calculateSeoScore({;
-title;
-wordCount;
-headingCount;
-imageCount;
-linkCount;
-metaDescriptionLength;
-hasStructuredData;
-});
+    const issues = this.identifyIssues({
+      title,
+      wordCount,
+      headingCount,
+      imageCount,
+      linkCount,
+      metaDescription,
+      content
+    });
 
-const issues = this.identifyIssues({;
-title;
-wordCount;
-headingCount;
-imageCount;
-linkCount;
-metaDescriptionLength;
-hasStructuredData;
-});
+    const recommendations = this.generateRecommendations(issues, {
+      wordCount,
+      headingCount,
+      imageCount,
+      linkCount,
+      readabilityScore,
+      seoScore,
+      accessibilityScore,
+      performanceScore
+    });
 
-const recommendations = this.generateRecommendations(issues);
+    const overallScore = this.calculateOverallScore({
+      readabilityScore,
+      seoScore,
+      accessibilityScore,
+      performanceScore
+    });
 
-const overallScore = Math.round((readabilityScore + seoScore) / 2);
+    const metrics: ContentQualityMetrics = {
+      pageUrl,
+      title;
+      wordCount,
+      headingCount,
+      imageCount,
+      linkCount,
+      readabilityScore,
+      seoScore,
+      accessibilityScore,
+      performanceScore,
+      overallScore,
+      issues,
+      recommendations,
+      analyzedAt: new Date()
+    },
+    this.analyzedPages.set(pageUrl, metrics);
+    return metrics;
+  }
 
-const metrics: ContentQualityMetrics = {
-pageUrl;
-title;
-wordCount;
-headingCount;
-imageCount;
-linkCount;
-metaDescriptionLength;
-hasStructuredData;
-readabilityScore;
-seoScore;
-overallScore;
-issues;
-recommendations;
-};
+  private calculateWordCount(content: string): number {
+    const textContent = content.replace(/<[^>]*>/g, " ").trim();
+    return textContent.split(/\s+/).filter(word => word.length > 0).length;
+  }
 
-this.analyzedPages.set(pageUrl, metrics);
-return metrics;
-}
+  private countHeadings(content: string): number {
+    const headingMatches = content.match(/<h[1-6][^>]*>/gi),
+    return headingMatches ? headingMatches.length : 0;
+  }
 
-private calculateWordCount(content: string): number {
-if (!content) return 0;
-// Remove HTML tags and count words;
-const cleanContent = content.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
-return cleanContent.split(" ").filter(word => word.length > 0).length;
-}
+  private calculateReadabilityScore(content: string): number {
+    const textContent = content.replace(/<[^>]*>/g, " ").trim();
+    const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
+    const words = textContent.split(/\s+/).filter(w => w.length > 0);
 
-private countHeadings(content: string): number {
-if (!content) return 0;
-const headingMatches = content.match(/<h[1-6][^>]*>/gi);
-return headingMatches ? headingMatches.length : 0;
-}
+    if (sentences.length === 0 || words.length === 0) return 0;
+    const avgWordsPerSentence = words.length / sentences.length;
+    const avgSyllablesPerWord = this.calculateAverageSyllables(words);
 
-private checkStructuredData(content: string): boolean {
-if (!content) return false;
-// Check for JSON-LD, microdata; or RDFa;
-return content.includes("application/ld+json") ||;
-content.includes("itemtype=") ||;
-content.includes("vocab=");
-}
+    // Flesch Reading Ease formula
+    const score = 206.835 - (1.015 * avgWordsPerSentence) - (84.6 * avgSyllablesPerWord);
+    return Math.max(0, Math.min(100, score));
+  }
 
-private calculateReadabilityScore(content: string): number {
-if (!content) return 0;
-const wordCount = this.calculateWordCount(content);
-const sentenceCount = content.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
-const syllableCount = this.estimateSyllableCount(content);
+  private calculateAverageSyllables(words: string[]): number {
+    let totalSyllables = 0,
+    words.forEach(word => {
+      totalSyllables += this.countSyllables(word);
+    });
 
-if (wordCount === 0 || sentenceCount === 0) return 0;
+    return totalSyllables / words.length;
+  }
 
-// Flesch Reading Ease formula;
-const fleschScore = 206.835 - (1.015 * (wordCount / sentenceCount)) - (84.6 * (syllableCount / wordCount));
+  private countSyllables(word: string): number {
+    const cleanWord = word.toLowerCase().replace(/[^a-z]/g, "");
+    if (cleanWord.length <= 3) return 1;
+    const vowelGroups = cleanWord.match(/[aeiouy]+/g);
+    return vowelGroups ? vowelGroups.length : 1;
+  }
 
-// Convert to 0-100 scale;
-return Math.max(0; Math.min(100; fleschScore));
-}
+  private calculateSEOScore(title: string, metaDescription: string, content: string): number {
+    let score = 100,
+    // Title checks
+    if (!title || title.length < 30) score -= 20;
+    if (title.length > 60) score -= 10;
 
-private estimateSyllableCount(content: string): number {
-if (!content) return 0;
-// Simple syllable estimation;
-const words = content.toLowerCase().replace(/[^a-z\s]/g, "").split(/\s+/);
-let syllableCount = 0;
+    // Meta description checks
+    if (!metaDescription) score -= 15;
+    if (metaDescription.length < 120) score -= 10;
+    if (metaDescription.length > 160) score -= 5;
 
-for (const word of words) {
-if (word.length <= 3) {
-syllableCount += 1;
-} else {
-// Count vowel groups;
-const vowelGroups = word.match(/[aeiouy]+/g);
-syllableCount += vowelGroups ? vowelGroups.length : 1;
-}
-}
+    // Content checks
+    if (!content.includes("<h1>")) score -= 15;
+    if (!content.includes("<h2>")) score -= 10;
 
-return syllableCount;
-}
+    // Image alt text checks
+    const images = content.match(/<img[^>]*>/gi) || [];
+    const imagesWithAlt = images.filter(img => img.includes("alt="));
+    if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;
 
-private calculateSeoScore(metrics: {
-title: string;
-wordCount: number;
-headingCount: number;
-imageCount: number;
-linkCount: number;,
-metaDescriptionLength: number;,
-hasStructuredData: boolean;
-}): number {
-let score = 0;
-let maxScore = 0;
+    return Math.max(0, score);
+  }
 
-// Title optimization (0-20 points)
-maxScore += 20;
-if (metrics.title.length >= 30 && metrics.title.length <= 60) {
-score += 20;
-} else if (metrics.title.length > 0) {
-score += 10;
-}
+  private calculateAccessibilityScore(content: string): number {
+    let score = 100,
+    // Check for alt text on images
+    const images = content.match(/<img[^>]*>/gi) || [];
+    const imagesWithAlt = images.filter(img => img.includes("alt="));
+    if (images.length > 0) {
+      const altTextRatio = imagesWithAlt.length / images.length;
+      score -= (1 - altTextRatio) * 20;
+    }
 
-// Content length (0-25 points)
-maxScore += 25;
-if (metrics.wordCount >= 300) {
-score += 25;
-} else if (metrics.wordCount >= 150) {
-score += 15;
-} else if (metrics.wordCount >= 50) {
-score += 5;
-}
+    // Check for heading structure
+    const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
+    if (h1Count === 0) score -= 15;
+    if (h1Count > 1) score -= 10;
 
-// Heading structure (0-15 points)
-maxScore += 15;
-if (metrics.headingCount >= 3) {
-score += 15;
-} else if (metrics.headingCount >= 1) {
-score += 10;
-}
+    // Check for form labels
+    const inputs = content.match(/<input[^>]*>/gi) || [];
+    const labels = content.match(/<label[^>]*>/gi) || [];
+    if (inputs.length > 0 && labels.length < inputs.length) {
+      score -= 10;
+    }
 
-// Meta description (0-15 points)
-maxScore += 15;
-if (metrics.metaDescriptionLength >= 120 && metrics.metaDescriptionLength <= 160) {
-score += 15;
-} else if (metrics.metaDescriptionLength > 0) {
-score += 8;
-}
+    return Math.max(0, score);
+  }
 
-// Images (0-10 points)
-maxScore += 10;
-if (metrics.imageCount >= 2) {
-score += 10;
-} else if (metrics.imageCount >= 1) {
-score += 5;
-}
+  private calculatePerformanceScore(content: string, images: string[]): number {
+    let score = 100,
+    // Check image count (too many images can slow down page)
+    if (images.length > 20) score -= 20;
+    else if (images.length > 10) score -= 10;
 
-// Internal links (0-10 points)
-maxScore += 10;
-if (metrics.linkCount >= 3) {
-score += 10;
-} else if (metrics.linkCount >= 1) {
-score += 5;
-}
+    // Check for large content blocks
+    const contentLength = content.length;
+    if (contentLength > 100000) score -= 15;
+    else if (contentLength > 50000) score -= 10;
 
-// Structured data (0-5 points)
-maxScore += 5;
-if (metrics.hasStructuredData) {
-score += 5;
-}
+    // Check for inline styles (can impact performance)
+    const inlineStyles = content.match(/style="[^"]*"/gi) || [];
+    if (inlineStyles.length > 10) score -= 10;
 
-return Math.round((score / maxScore) * 100);
-}
+    return Math.max(0, score);
+  }
 
-private identifyIssues(metrics: {
-title: string;
-wordCount: number;
-headingCount: number;
-imageCount: number;
-linkCount: number;,
-metaDescriptionLength: number;,
-hasStructuredData: boolean;
-}): string[] {
-const issues: string[] = [];
-if (!metrics.title || metrics.title.length < 30) {
-issues.push("Title is too short (should be 30-60 characters)");
-} else if (metrics.title.length > 60) {
-issues.push("Title is too long (should be 30-60 characters)");
-}
+  private identifyIssues(data: {
+    title: string,
+    wordCount: number,
+    headingCount: number,
+    imageCount: number,
+    linkCount: number,
+    metaDescription: string,
+    content: string}): ContentIssue[] {
+    const issues: ContentIssue[] = [],
+    // Title issues
+    if (!data.title) {
+      issues.push({
+        type: "missing-title",
+        severity: "high",
+        description: "Page is missing a title tag",
+        impact: "Poor SEO and user experience",
+        fix: "Add a descriptive title tag to the page"
+      })} else if (data.title.length < 30) {
+      issues.push({
+        type: "missing-title",
+        severity: "medium",
+        description: "Title is too short (less than 30 characters)",
+        impact: "May not be descriptive enough for search engines",
+        fix: "Expand the title to be more descriptive"
+      })}
 
-if (metrics.wordCount < 300) {
-issues.push("Content is too short (should be at least 300 words)");
-}
+    // Content length issues
+    if (data.wordCount < this.MIN_WORD_COUNT) {
+      issues.push({
+        type: "short-content",
+        severity: "high",
+        description: `Content has only ${data.wordCount} words (minimum recommended: ${this.MIN_WORD_COUNT})`,
+        impact: "Poor SEO and user engagement",
+        fix: "Expand the content with more detailed information"
+      })}
 
-if (metrics.headingCount < 2) {
-issues.push("Insufficient heading structure (should have at least 2 headings)");
-}
+    // Heading issues
+    if (data.headingCount < this.MIN_HEADING_COUNT) {
+      issues.push({
+        type: "no-headings",
+        severity: "medium",
+        description: `Content has only ${data.headingCount} headings (minimum recommended: ${this.MIN_HEADING_COUNT})`,
+        impact: "Poor content structure and SEO",
+        fix: "Add more headings to structure the content"
+      })}
 
-if (metrics.metaDescriptionLength < 120) {
-issues.push("Meta description is too short (should be 120-160 characters)");
-} else if (metrics.metaDescriptionLength > 160) {
-issues.push("Meta description is too long (should be 120-160 characters)");
-}
+    // Image issues
+    if (data.imageCount < this.MIN_IMAGE_COUNT) {
+      issues.push({
+        type: "no-images",
+        severity: "medium",
+        description: "Content has no images",
+        impact: "Reduced visual appeal and engagement",
+        fix: "Add relevant images to enhance the content"
+      })}
 
-if (metrics.imageCount === 0) {
-issues.push("No images found (consider adding relevant images)");
-}
+    // SEO issues
+    if (!data.metaDescription) {
+      issues.push({
+        type: "poor-seo",
+        severity: "high",
+        description: "Missing meta description",
+        impact: "Poor search engine optimization",
+        fix: "Add a compelling meta description"
+      })}
 
-if (metrics.linkCount < 2) {
-issues.push("Insufficient internal linking (should have at least 2 internal links)");
-}
+    return issues;
+  }
 
-if (!metrics.hasStructuredData) {
-issues.push("No structured data found (consider adding JSON-LD or microdata)");
-}
+  private generateRecommendations(issues: ContentIssue[], metrics: {
+    wordCount: number,
+    headingCount: number,
+    imageCount: number,
+    linkCount: number,
+    readabilityScore: number,
+    seoScore: number,
+    accessibilityScore: number,
+    performanceScore: number}): ContentRecommendation[] {
+    const recommendations: ContentRecommendation[] = [],
+    // Content expansion recommendations
+    if (metrics.wordCount < this.MIN_WORD_COUNT) {
+      recommendations.push({
+        type: "content-expansion",
+        priority: "high",
+        title: "Expand Content",
+        description: "Add more detailed information to improve SEO and user engagement",
+        implementation: "Write additional paragraphs, add case studies, or include more examples",
+        expectedImpact: "Improved SEO ranking and user engagement"
+      })}
 
-return issues;
-}
+    // SEO improvement recommendations
+    if (metrics.seoScore < 80) {
+      recommendations.push({
+        type: "seo-improvement",
+        priority: "high",
+        title: "Improve SEO",
+        description: "Optimize page elements for better search engine visibility",
+        implementation: "Add meta descriptions, optimize headings, and improve keyword usage",
+        expectedImpact: "Better search engine rankings and organic traffic"
+      })}
 
-private generateRecommendations(issues: string[]): string[] {
-const recommendations: string[] = [];
-if (issues.some(issue => issue.includes("Content is too short"))) {
-recommendations.push("Expand content with relevant information, examples; and detailed explanations");
-}
+    // Accessibility recommendations
+    if (metrics.accessibilityScore < 80) {
+      recommendations.push({
+        type: "accessibility-fix",
+        priority: "medium",
+        title: "Improve Accessibility",
+        description: "Make the content more accessible to users with disabilities",
+        implementation: "Add alt text to images, improve heading structure, and ensure proper form labels",
+        expectedImpact: "Better accessibility compliance and user experience"
+      })}
 
-if (issues.some(issue => issue.includes("Insufficient heading structure"))) {
-recommendations.push("Add H1, H2; and H3 headings to improve content structure and SEO");
-}
+    // Performance recommendations
+    if (metrics.performanceScore < 80) {
+      recommendations.push({
+        type: "performance-optimization",
+        priority: "medium",
+        title: "Optimize Performance",
+        description: "Improve page loading speed and performance",
+        implementation: "Optimize images, reduce content size, and minimize inline styles",
+        expectedImpact: "Faster page loading and better user experience"
+      })}
 
-if (issues.some(issue => issue.includes("Meta description"))) {
-recommendations.push("Write compelling meta descriptions that accurately describe the page content");
-}
+    return recommendations;
+  }
 
-if (issues.some(issue => issue.includes("No images"))) {
-recommendations.push("Add relevant images, diagrams; or infographics to enhance user engagement");
-}
+  private calculateOverallScore(scores: {
+    readabilityScore: number,
+    seoScore: number,
+    accessibilityScore: number,
+    performanceScore: number}): number {
+    const weights = {
+      readability: 0.3,
+      seo: 0.3,
+      accessibility: 0.2,
+      performance: 0.2
+    },
+    return Math.round(
+      scores.readabilityScore * weights.readability +
+      scores.seoScore * weights.seo +
+      scores.accessibilityScore * weights.accessibility +
+      scores.performanceScore * weights.performance
+    );
+  }
 
-if (issues.some(issue => issue.includes("Insufficient internal linking"))) {
-recommendations.push("Add internal links to related pages to improve navigation and SEO");
-}
+  getAnalyzedPages(): Map<string, ContentQualityMetrics> {
+    return new Map(this.analyzedPages);
+  }
 
-if (issues.some(issue => issue.includes("No structured data"))) {
-recommendations.push("Implement structured data markup for better search engine understanding");
-}
+  getPageMetrics(pageUrl: string): ContentQualityMetrics | undefined {
+    return this.analyzedPages.get(pageUrl)}
 
-if (issues.some(issue => issue.includes("Title"))) {
-recommendations.push("Optimize page titles with relevant keywords and compelling copy");
-}
-
-recommendations.push("Ensure content is unique, valuable; and addresses user intent");
-recommendations.push("Use bullet points and numbered lists for better readability");
-recommendations.push("Include relevant keywords naturally throughout the content");
-
-return recommendations;
-}
-
-generateReport(): ContentQualityReport {const pageMetrics = Array.from(this.analyzedPages.values());
-const totalPages = pageMetrics.length;
-
-if (totalPages === 0) {
-return {
-totalPages: 0;
-averageWordCount: 0;
-averageSeoScore: 0;
-pagesWithIssues: 0;
-topIssues: [];,
-pageMetrics: [];,
-summary: "No pages analyzed yet"};
-}
-
-const averageWordCount = Math.round(;
-pageMetrics.reduce((sum, page) => sum + page.wordCount; 0) / totalPages;
-);
-
-const averageSeoScore = Math.round(;
-pageMetrics.reduce((sum, page) => sum + page.seoScore; 0) / totalPages;
-);
-
-const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
-
-// Collect all issues and count frequency;
-const issueCounts: Record<string, number> = {};
-pageMetrics.forEach(page => {
-page.issues.forEach(issue => {
-issueCounts[issue] = (issueCounts[issue] || 0) + 1;
-});
-});
-
-const topIssues = Object.entries(issueCounts);
-.sort(([, a], [, b]) => b - a);
-.slice(0; 5)
-.map(([issue]) => issue);
-
-const summary = this.generateSummary(pageMetrics, topIssues);
-
-return {
-totalPages;
-averageWordCount;
-averageSeoScore;
-pagesWithIssues;
-topIssues;
-pageMetrics;
-summary;
-};
-}
-
-private generateSummary(pageMetrics: ContentQualityMetrics[] topIssues: string[]): string {
-const totalPages = pageMetrics.length;
-const excellentPages = pageMetrics.filter(page => page.overallScore >= 80).length;
-const goodPages = pageMetrics.filter(page => page.overallScore >= 60).length;
-const poorPages = pageMetrics.filter(page => page.overallScore < 40).length;
-
-let summary = `Analyzed ${totalPages} pages. `;
-
-if (excellentPages > 0) {
-summary += `${excellentPages} pages have excellent content quality. `;
+  clearCache(): void {
+    this.analyzedPages.clear();
+  }
 }
 
-if (goodPages > 0) {
-summary += `${goodPages} pages have good content quality. `;
-}
-
-if (poorPages > 0) {
-summary += `${poorPages} pages need significant improvement. `;
-}
-
-if (topIssues.length > 0) {
-summary += `Top issues to address: ${topIssues.slice(0; 3).join(", ")}.`;
-}
-
-return summary;
-}
-
-getPageMetrics(pageUrl: string): ContentQualityMetrics | undefined {
-return this.analyzedPages.get(pageUrl);
-}
-
-getAllPageMetrics(): ContentQualityMetrics[] {
-return Array.from(this.analyzedPages.values());
-}
-
-clearCache(): void {
-this.analyzedPages.clear();
-}
-}
-
-export default ContentQualityAnalyzer;
+export export default ContentQualityAnalyzer;

@@ -27,8 +27,8 @@ export const sanitizeInput = (input: string): string => {
 // XSS Protection
 export const escapeHtml = (text: string): string => {
   const map: { [key: string]: string } = {
-    '&': '&amp;',
-    '<': '&lt;',
+    '&': '&amp;';
+    '<': '&lt;';
     '>': '&gt;',
     '"': '&quot;',
     "'": '&#039;'
@@ -53,7 +53,7 @@ export class RateLimiter {
   ) {}
   
   public isAllowed(identifier: string): boolean {
-    const now = Date.now();
+    const now = Date.now(),
     const requests = this.requests.get(identifier) || [];
     
     // Remove old requests outside the window

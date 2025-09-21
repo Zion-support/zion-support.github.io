@@ -20,52 +20,50 @@ const fixViteEnv = () => {
   const content = `/// <reference types="vite/client" />
 
 declare module '*.svg' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.png' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.jpg' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.jpeg' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.gif' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.webp' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 interface ImportMetaEnv {
-  readonly VITE_API_URL: string;
-  readonly VITE_APP_TITLE: string;
-  readonly VITE_APP_DESCRIPTION: string;
-  readonly VITE_APP_VERSION: string;
-  readonly VITE_ENVIRONMENT: 'development' | 'production' | 'test';
+  readonly VITE_API_URL: string,
+  readonly VITE_APP_TITLE: string,
+  readonly VITE_APP_DESCRIPTION: string,
+  readonly VITE_APP_VERSION: string,
+  readonly VITE_ENVIRONMENT: 'development' | 'production' | 'test',
   readonly PORT?: string;
 }
 
 interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
+  readonly env: ImportMetaEnv}
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-  }
+    gtag?: (...args: any[]) => void}
 }
 
 export {};
@@ -94,8 +92,7 @@ const fixFile = (filePath) => {
       // Fix broken TypeScript interfaces
       { pattern: /interface\s+(\w+)\s*{\s*$/gm, replacement: 'interface $1 {' },
       // Fix broken function declarations
-      { pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, replacement: 'const $1 = () => {' },
-    ];
+      { pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, replacement: 'const $1 = () => {' }];
     
     patterns.forEach(pattern => {
       const newContent = content.replace(pattern.pattern, pattern.replacement);
@@ -129,8 +126,7 @@ const removeProblematicFiles = () => {
     if (fs.existsSync(filePath)) {
       try {
         fs.unlinkSync(filePath);
-        console.log(`✅ Removed problematic file: ${file}`);
-      } catch (error) {
+        console.log(`✅ Removed problematic file: ${file}`)} catch (error) {
         console.log(`⚠️  Could not remove ${file}: ${error.message}`);
       }
     }
@@ -180,13 +176,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 @import 'tailwindcss/utilities';
 
 body {
-  margin: 0;
+  margin: 0,
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -webkit-font-smoothing: antialiased,
+  -moz-osx-font-smoothing: grayscale}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -198,8 +193,7 @@ code {
   Object.entries(cleanFiles).forEach(([filePath, content]) => {
     const fullPath = path.join(process.cwd(), filePath);
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created clean file: ${filePath}`);
-  });
+    console.log(`✅ Created clean file: ${filePath}`)});
 };
 
 // 5. Fix package.json scripts
@@ -239,13 +233,12 @@ criticalFiles.forEach(file => {
   const filePath = path.join(process.cwd(), file);
   if (fs.existsSync(filePath)) {
     if (fixFile(filePath)) {
-      console.log(`✅ Fixed: ${file}`);
-    }
+      console.log(`✅ Fixed: ${file}`)}
   }
 });
 
 console.log('🎉 Critical fixes completed!');
-console.log('📊 Next steps:');
+console.log('📊 Next steps: '),
 console.log('1. Run "npm run type-check" to verify TypeScript');
 console.log('2. Run "npm run build" to test the build');
 console.log('3. Run "npm run lint" to check for remaining issues');

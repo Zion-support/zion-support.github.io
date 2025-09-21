@@ -1,20 +1,23 @@
-interface Service {
-id: string;,
-name: string;
-}
-}
+// Stripe utility functions
+export function isProdDomain(): boolean {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+  
+  const hostname = window.location.hostname;
+  return hostname === 'ziontechgroup.com' || hostname === 'www.ziontechgroup.com';
 }
 
-import { loadStripe, Stripe } from "@stripe/stripe-js, ";
-
-let stripePromise: Promise<Stripe | null>;
-export function getStripe() {
-if (!stripePromise) {
-const key =
-process.env.NODE_ENV === "production";
-? (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string)
-: (import.meta.env.NEXT_PUBLIC_STRIPE_TEST_KEY as string),;
-stripePromise = loadStripe(key, { advancedFraudSignals: false });
+export function getStripePublishableKey(): string {
+  if (isProdDomain()) {
+    return process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_PROD || '';
+  }
+  return process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_TEST || '';
 }
-return stripePromise;
+
+export function getStripeSecretKey(): string {
+  if (isProdDomain()) {
+    return process.env.STRIPE_SECRET_KEY_PROD || '';
+  }
+  return process.env.STRIPE_SECRET_KEY_TEST || '';
 }
