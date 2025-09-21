@@ -1,5 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<<< HEAD:pages/_app.js
+========
+import PerformanceOptimizer from '../components/PerformanceOptimizer.tsx';
+import MobileOptimizer from '../components/MobileOptimizer.tsx';
+import EnhancedAnalytics from '../components/EnhancedAnalytics.tsx';
+import ErrorBoundary from '../components/ErrorBoundary.tsx';
+>>>>>>>> 8c3523662b30e8937eabdd7a7ce8f5bc1ebedcec:pages/_app.jsx
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }) {

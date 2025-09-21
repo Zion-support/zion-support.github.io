@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+<<<<<<<< HEAD:pages/services.js
+========
+
+>>>>>>>> 8c3523662b30e8937eabdd7a7ce8f5bc1ebedcec:pages/services.jsx
 export default function ServicesPage() {
   const [selectedService, setSelectedService] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -252,6 +256,58 @@ export default function ServicesPage() {
         </section>
       </main>
 
+<<<<<<<< HEAD:pages/services.js
+========
+      {/* Service Details Modal */}
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={selectedService?.name}
+        size="lg"
+      >
+        {selectedService && (
+          <div>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              {selectedService.description}
+            </p>
+            
+            <div className="mb-6">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Features:</h4>
+              <ul className="space-y-2">
+                {selectedService.features.map((feature, index) => (
+                  <li key={index} className="flex items-center text-gray-600 dark:text-gray-400">
+                    <span className="text-green-500 mr-2">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mb-6">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Pricing:</h4>
+              <p className="text-lg text-cyan-600 dark:text-cyan-400 font-semibold">
+                {selectedService.pricing}
+              </p>
+            </div>
+
+            <div className="flex gap-4">
+              <a
+                href="/contact"
+                className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Get Quote
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="flex-1 border-2 border-cyan-500 text-cyan-500 px-6 py-3 rounded-lg text-center font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                Call Now
+              </a>
+            </div>
+          </div>
+        )}
+      </Modal>
+>>>>>>>> 8c3523662b30e8937eabdd7a7ce8f5bc1ebedcec:pages/services.jsx
     </div>
   );
 }
