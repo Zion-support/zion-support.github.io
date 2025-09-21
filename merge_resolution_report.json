@@ -1,0 +1,257 @@
+{
+  "total": 50,
+  "successful": 49,
+  "failed": 1,
+  "details": [
+    {
+      "branch": "0nylrk-codex/fix-footer-contact-link",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "0parff-codex/centralize-api-error-handling-and-add-errorboundary",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "0smfo8-codex/fix-404-error-for-non-existent-route",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "0t8m4m-codex/update-project-color-palette",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "0une71-codex/fix-unsupported-shell-syntax-in-setup.sh",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "14gqd5-codex/implement-checkout-flow-with-auth-redirect",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "1dcwqi-codex/implement-global-pricing-with-currency-selection",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "1fjs4s-codex/implement-instant-messaging-for-negotiations",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "1m9jcs-codex/fix-client-side-rendering-and-javascript-errors",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "1nc0kn-codex/fix-blank-screen-on-app-load",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "1nq1ky-codex/render-talent-profiles-with-error-states",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "1ry69n-codex/fix-npm-eio-error-during-install",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "1sqc9r-codex/implement-light/dark-theme-with-persistence",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "1tg4fy-codex/support-metric--imperial-units",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "1wzbwr-codex/fix-typescript-errors-in-files",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "2025-comprehensive-services-expansion",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "22xuo1-codex/implement-wishlist-functionality",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "24727i-codex/implement-stripe-checkout-flow",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "2503nr-codex/fix-ts2614-error-with-suspense-import",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "26ywwb-codex/fix-client-side-rendering-and-javascript-errors",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "2enrzx-codex/implement-feature-flags-and-a/b-testing",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "2k1ucv-codex/integrate-stripe-test-mode-checkout",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "2qzh01-codex/fix-npm-eio-error-during-install",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "2xbrce-codex/introduce-automated-testing-with-jest-and-cypress",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "2zlocq-codex/fix-login-form-submission",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "306ipd-codex/add-new-products-page-with-10-items",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "306l03-codex/fix-blank-screen-issue",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "3bk25l-codex/fix-test-expectation-for-fetch-rejection",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "3bssgk-codex/disable-theme-toggle-and-set-default-dark-theme",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "3c7ooo-codex/enable-offline-support-with-pwa",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "3fnye9-codex/create-signup-component-and-route",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "3ycx6d-codex/implement-global-error-boundary-with-toasts",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "42l7l1-codex/check-logs-and-fix-errors",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "42zrxf-codex/improve-discoverability-with-seo-features",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "4b9zsu-codex/surface-api-errors-across-the-app",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "4cssl2-codex/fix-typescript-errors-in-components",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "4d93zy-codex/fix-npm-eio-error-during-install",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "4fu9r9-codex/check-logs-and-fix-errors",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "4o9pcp-codex/add-test-for-failed-login-toast",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "4pkscj-codex/disable-theme-toggle-and-set-default-dark-theme",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "4xe4ab-codex/fix--settheme--not-found-in-usetheme",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "51ryr1-codex/implement-eprivacy-directive-consent-banner",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "54lu0e-codex/fix-component-not-using-api-data",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "591ea5-codex/fix-talent-profile-rendering-issues",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "5dtq58-codex/implement-analytics-and-error-tracking",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "5i6q3p-codex/add-i18n-support-with-next-i18next",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "5smo5s-codex/check-logs-and-fix-errors",
+      "success": true,
+      "reason": "merged_successfully"
+    },
+    {
+      "branch": "5usi8s-codex/debug-persistent-login-failure",
+      "success": false,
+      "reason": "checkout_failed"
+    }
+  ]
+}
