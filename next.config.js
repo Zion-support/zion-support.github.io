@@ -4,7 +4,6 @@ import path from 'path';
 const nextConfig = {
   reactStrictMode: false,
   trailingSlash: true,
-  distDir: 'out',
   
   // Static export configuration
   output: 'export',
