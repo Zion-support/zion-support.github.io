@@ -6,24 +6,74 @@ if (typeof globalThis === 'undefined') {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  distDir: '.next',
+  trailingSlash: true,
+  
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  
+  // Image optimization
   images: {
+    unoptimized: true, // Required for static export
     domains: ["localhost"],
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  
+  // Disable ESLint and TypeScript checking during build to avoid parsing issues
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    scrollRestoration: true,
+  typescript: {
+    ignoreBuildErrors: true,
+    tsconfigPath: './tsconfig.json',
   },
-  webpack: (config, { isServer }) => {
+  
+  // Experimental features for performance
+  experimental: {
+    optimizeCss: false,
+    scrollRestoration: true,
+    esmExternals: false,
+  },
+  
+  // Webpack configuration
+  webpack: (config, { dev, isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
+        crypto: require.resolve('crypto-browserify'),
+      };
+    }
+    
+    // Configure webpack extensions
+    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
+    
+    // Add path alias resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': require('path').resolve(__dirname, '.'),
+    };
+    
+    // Exclude problematic directories from compilation
+    config.module.rules.push({
+      test: /\.ts$/,
+      include: require('path').resolve(__dirname, 'contracts'),
+      use: 'ignore-loader'
+    });
+    
+    if (!dev && !isServer) {
+      // Optimize bundle size
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[/]node_modules[/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
       };
     }
     
@@ -36,6 +86,33 @@ const nextConfig = {
     );
     
     return config;
+  },
+  
+  // Headers for better security and performance
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+    ];
   },
 };
 
