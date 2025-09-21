@@ -145,7 +145,7 @@ export default function ServicesPage() {
     }
   ];
 
-  const handleServiceClick = (service: any) => {
+  const handleServiceClick = (service) => {
     setSelectedService(service);
     setIsModalOpen(true);
   };
@@ -281,7 +281,7 @@ export default function ServicesPage() {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Features:</h4>
               <ul className="space-y-2">
-                {selectedService.features.map((feature: string, index: number) => (
+                {selectedService.features.map((feature, index) => (
                   <li key={index} className="flex items-center text-gray-600 dark:text-gray-400">
                     <span className="text-green-500 mr-2">✓</span>
                     {feature}
