@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export const FloatingCTA = () => {
-=======
 import React, { useState, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
@@ -28,7 +23,6 @@ export const FloatingCTA = () => {
   if (!isVisible || isClosed) {
     return null, }
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <div className="bg-blue-600 text-white p-4 rounded-xl shadow-lg max-w-sm">
@@ -46,9 +40,4 @@ export const FloatingCTA = () => {
         </button>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-};
-=======
   );;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54

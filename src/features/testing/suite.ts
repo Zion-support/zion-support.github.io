@@ -160,14 +160,8 @@ export class AutomatedTestingSuite {
         this.updateTestCaseResult(suiteId, testCaseId, result);
     } catch (error) {
       console.error(`Failed to run test case ${testCaseId}:`, error);
-<<<<<<< HEAD
-      testCase.status = 'failed';
-      testCase.error = error.message;
-    }
-=======
       testCase.status = 'failed',
       testCase.error = error instanceof Error ? error.message : String(error);
->>>>>>> 9ee1fd993ee01f42a22ebcab9abb5e26a3a2bb3a
     
     this.notifyListeners();
   

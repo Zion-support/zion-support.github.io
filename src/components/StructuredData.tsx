@@ -1,27 +1,11 @@
 
-<<<<<<< HEAD
-import React from 'react';
-
-=======
 import import React from 'react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';
   data: any;
 }
 
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
-<<<<<<< HEAD
-  const getStructuredData = () => {
-    const baseStructure = {
-      '@context': 'https://schema.org',
-      '@type': type,
-      ...data
-    };
-
-    return baseStructure;
-  };
-=======
 const getStructuredData: any = () => {
 const baseStructure = {
 '@context': 'https://schema.org',;
@@ -29,7 +13,6 @@ const baseStructure = {
 ...data, }
 
 return baseStructure, }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 
   return (
     <script
@@ -43,46 +26,6 @@ return baseStructure, }
 
 // Predefined structured data templates
 export const OrganizationSchema = {
-<<<<<<< HEAD
-  name: 'Zion Tech Group',
-  url: 'https://ziontechgroup.com',
-  logo: 'https://ziontechgroup.com/logo.png',
-  description: 'Leading provider of AI, quantum computing, and advanced technology solutions',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '364 E Main St STE 1008',
-    addressLocality: 'Middletown',
-    addressRegion: 'DE',
-    postalCode: '19709',
-    addressCountry: 'US'
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    telephone: '+1-302-464-0950',
-    contactType: 'customer service',
-    email: 'kleber@ziontechgroup.com'
-  },
-  sameAs: [
-    'https://twitter.com/ziontechgroup',
-    'https://linkedin.com/company/ziontechgroup',
-    'https://github.com/ziontechgroup'
-  ]
-};
-
-export const WebSiteSchema = {
-  name: 'Zion Tech Group',
-  url: 'https://ziontechgroup.com',
-  description: 'Advanced technology solutions and services',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}'
-    },
-    'query-input': 'required name=search_term_string'
-  }
-};
-=======
 name: 'Zion Tech Group',
 url: 'https://ziontechgroup.com',
 logo: 'https://ziontechgroup.com/logo.png',
@@ -117,6 +60,5 @@ target: {
 urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}', },;
 'query-input': 'required name=search_term_string', }
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 
 export default StructuredData;

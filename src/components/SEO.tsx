@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface SEOProps {
-  title: string;
-  description: string;
-  canonical?: string;
-  url?: string;
-  image?: string;
-}
-=======
 import React from "react";
 interface SEOProps {
   title?: string;
@@ -17,7 +6,6 @@ interface SEOProps {
   image?: string;
   url?: string;
   canonical?: string, }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 
 export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, image }) => {
   return (
@@ -34,7 +22,3 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <meta name="twitter:description" content={description} />
     </>
   );
-<<<<<<< HEAD
-};
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54

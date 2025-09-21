@@ -1,45 +1,4 @@
 export interface InnovativeITService2024 {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-=======
   id: string,
   name: string,
   tagline: string,
@@ -48,7 +7,6 @@ export interface InnovativeITService2024 {
   features: string[],
   rating: number,
   customers: string, }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {

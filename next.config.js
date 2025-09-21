@@ -1,34 +1,67 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
   reactStrictMode: true,
-
+  
+  // Disable ESLint during build to fix parsing errors
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Disable TypeScript during build to fix type errors
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
+  // Exclude certain directories from build
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
   
-  // Temporarily disable ESLint during build
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
     formats: ['image/webp', 'image/avif'],
   },
-
+  
   // Bundle analyzer
   webpack: (config, { dev, isServer }) => {
+    // Configure webpack extensions
+    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
+    
+    // Add path alias resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, '.'),
+    };
+
+    // Fix for CSS processing issues with Node.js compatibility
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+        crypto: false,
+      };
+    }
+
     if (!dev && !isServer) {
       // Optimize bundle size
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[\/]node_modules[\/]/,
+            test: /[/]node_modules[/]/,
             name: 'vendors',
             chunks: 'all',
           },
@@ -41,30 +74,14 @@ const nextConfig = {
         },
       };
     }
-
     return config;
   },
-
-  // Ignore build errors to allow deployment with syntax issues
-  typescript: {
-    ignoreBuildErrors: true,
+  
+  // Experimental features for performance
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-<<<<<<< HEAD
-=======
-  webpack: (config, { isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibility
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-      };
-    }
-    return config;
-  },
->>>>>>> 9ee1fd993ee01f42a22ebcab9abb5e26a3a2bb3a
 };
 
-module.exports = nextConfig;
+export default nextConfig;

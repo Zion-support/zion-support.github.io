@@ -5,4 +5,3 @@ export const generateMetaTags = () => {
 export const optimizeHeadings = () => {
   console.log('Optimizing headings...')
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

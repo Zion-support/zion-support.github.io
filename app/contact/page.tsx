@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 'use client';
 import { useState } from 'react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

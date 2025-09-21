@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export const CategoriesSection = () => {
-=======
 interface Service {
 id: string,
 name: string, }
@@ -105,7 +100,6 @@ link: "/services - comparison"
       </section>
     )
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
   return (
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,11 +126,6 @@ link: "/services - comparison"
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-};
-=======
     </section>
   )
   switch (iconName) {
@@ -187,4 +176,3 @@ icon: getIcon (cat.iconName)
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
