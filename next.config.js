@@ -15,9 +15,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  swcMinify: true,
   experimental: {
-    esmExternals: false,
+    scrollRestoration: true,
   },
   webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
