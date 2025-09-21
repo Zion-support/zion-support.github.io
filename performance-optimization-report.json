@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-09-21T14:13:45.286Z",
+  "optimizations": [
+    {
+      "type": "bundle-analysis",
+      "current": 9862714,
+      "recommendation": "Bundle size is acceptable"
+    },
+    {
+      "type": "image-optimization",
+      "found": 0,
+      "recommendation": "Image count is reasonable"
+    },
+    {
+      "type": "dependencies",
+      "production": 33,
+      "development": 31,
+      "recommendation": "Dependency count is reasonable"
+    },
+    {
+      "type": "code-quality",
+      "largeFiles": 39,
+      "recommendation": "Consider splitting large files into smaller modules"
+    }
+  ],
+  "recommendations": [],
+  "summary": {
+    "totalOptimizations": 4,
+    "criticalIssues": 2,
+    "status": "good"
+  }
+}
