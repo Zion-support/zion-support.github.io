@@ -2,10 +2,10 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 
-console.log('🔄 Continue PR Merges');
-console.log('=====================');
+console.log('🔧 Fix Divergent Branches');
+console.log('==========================');
 
-class ContinuePRMerges {
+class DivergentBranchFixer {
   constructor() {
     this.processedBranches = [];
     this.mergedBranches = [];
@@ -19,14 +19,15 @@ class ContinuePRMerges {
     console.log(logEntry);
   }
 
-  async runCommand(command, description) {
+  async runCommand(command, description, options = {}) {
     try {
       this.log(`Running: ${description}`);
       const result = execSync(command, { 
         encoding: 'utf8', 
         stdio: 'pipe',
         cwd: process.cwd(),
-        timeout: 30000
+        timeout: 30000,
+        ...options
       });
       this.log(`✅ ${description} completed successfully`, 'success');
       return result;
@@ -36,22 +37,14 @@ class ContinuePRMerges {
     }
   }
 
-  async getAllRemoteBranches() {
+  async configureGit() {
     try {
-      const result = await this.runCommand('git branch -r', 'Getting all remote branches');
-      const branches = result.split('\n')
-        .map(branch => branch.trim())
-        .filter(branch => branch && !branch.includes('HEAD') && branch.startsWith('origin/'))
-        .map(branch => branch.replace('origin/', ''))
-        .filter(branch => branch !== 'main')
-        .filter(branch => !branch.includes('cursor/fix-netlify-build-and-merge-to-main')) // Skip our current branch
-        .slice(20, 50); // Process branches 20-50
-      
-      this.log(`Found ${branches.length} remote branches to process`);
-      return branches;
+      // Configure git to use merge strategy for pulls
+      await this.runCommand('git config pull.rebase false', 'Configuring git pull strategy to merge');
+      await this.runCommand('git config merge.ours.driver true', 'Configuring merge strategy');
+      this.log('✅ Git configuration completed', 'success');
     } catch (error) {
-      this.log(`Error getting remote branches: ${error.message}`, 'error');
-      return [];
+      this.log(`Warning: Could not configure git: ${error.message}`, 'warning');
     }
   }
 
@@ -69,12 +62,12 @@ class ContinuePRMerges {
       // Reset to clean state
       await this.runCommand('git reset --hard HEAD', 'Resetting branch to clean state');
 
-      // Try to merge main into the branch
+      // Try to pull main with merge strategy
       try {
-        await this.runCommand('git merge origin/main', `Merging main into ${branchName}`);
-        this.log(`✅ Successfully merged main into ${branchName}`, 'success');
-      } catch (mergeError) {
-        this.log(`Merge conflicts detected in ${branchName}, resolving...`, 'warning');
+        await this.runCommand('git pull origin main --no-rebase', `Pulling main into ${branchName}`);
+        this.log(`✅ Successfully pulled main into ${branchName}`, 'success');
+      } catch (pullError) {
+        this.log(`Pull conflicts detected in ${branchName}, resolving...`, 'warning');
         
         // Resolve conflicts automatically
         await this.resolveConflicts(branchName);
@@ -91,10 +84,10 @@ class ContinuePRMerges {
       await this.runCommand('git checkout main', 'Switching back to main');
 
       // Pull latest changes
-      await this.runCommand('git pull origin main', 'Pulling latest main changes');
+      await this.runCommand('git pull origin main --no-rebase', 'Pulling latest main changes');
 
       // Merge the branch into main
-      await this.runCommand(`git merge ${branchName}`, `Merging ${branchName} into main`);
+      await this.runCommand(`git merge ${branchName} --no-ff`, `Merging ${branchName} into main`);
       
       // Push main
       await this.runCommand('git push origin main', 'Pushing updated main');
@@ -145,12 +138,24 @@ class ContinuePRMerges {
 
   async resolveFileConflicts(filePath) {
     try {
+      if (!fs.existsSync(filePath)) {
+        this.log(`File ${filePath} does not exist, skipping`, 'warning');
+        return;
+      }
+
       const content = fs.readFileSync(filePath, 'utf8');
       let resolvedContent = content;
 
-      // Strategy: Keep our changes (HEAD) for most conflicts
-      // Remove conflict markers and keep the HEAD version
+      // Strategy: Keep HEAD changes for most conflicts
       resolvedContent = resolvedContent.replace(
+        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*/g,
+        '$1'
+      );
+
+      // Clean up any remaining conflict markers
+      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n/g, '');
+      resolvedContent = resolvedContent.replace(/=======\n/g, '');
+      resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]*\n/g, '');
       
       // Write the resolved content
       fs.writeFileSync(filePath, resolvedContent);
@@ -161,31 +166,50 @@ class ContinuePRMerges {
     }
   }
 
-  async runAutomation() {
+  async runFix() {
     try {
-      this.log('Starting continue PR merge automation...');
+      this.log('Starting divergent branch fix...');
 
-      // Get all remote branches
-      const branches = await this.getAllRemoteBranches();
-      
-      if (branches.length === 0) {
-        this.log('No branches to process', 'info');
-        return;
-      }
+      // Configure git first
+      await this.configureGit();
+
+      // List of branches that failed due to divergent branches
+      const failedBranches = [
+        '0parff-codex/centralize-api-error-handling-and-add-errorboundary',
+        '0smfo8-codex/fix-404-error-for-non-existent-route',
+        '0t8m4m-codex/update-project-color-palette',
+        '0une71-codex/fix-unsupported-shell-syntax-in-setup.sh',
+        '14gqd5-codex/implement-checkout-flow-with-auth-redirect',
+        '1dcwqi-codex/implement-global-pricing-with-currency-selection',
+        '1fjs4s-codex/implement-instant-messaging-for-negotiations',
+        '1m9jcs-codex/fix-client-side-rendering-and-javascript-errors',
+        '1nc0kn-codex/fix-blank-screen-on-app-load',
+        '1nq1ky-codex/render-talent-profiles-with-error-states',
+        '1ry69n-codex/fix-npm-eio-error-during-install',
+        '1sqc9r-codex/implement-light/dark-theme-with-persistence',
+        '1tg4fy-codex/support-metric--imperial-units',
+        '1wzbwr-codex/fix-typescript-errors-in-files',
+        '22xuo1-codex/implement-wishlist-functionality',
+        '24727i-codex/implement-stripe-checkout-flow',
+        '2503nr-codex/fix-ts2614-error-with-suspense-import',
+        '26ywwb-codex/fix-client-side-rendering-and-javascript-errors'
+      ];
+
+      this.log(`Processing ${failedBranches.length} branches that failed due to divergent branches`);
 
       // Process branches one by one
-      for (const branch of branches) {
+      for (const branch of failedBranches) {
         await this.processBranch(branch);
         
         // Small delay between branches
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 3000));
       }
 
       // Generate final report
       this.generateReport();
 
     } catch (error) {
-      this.log(`Automation failed: ${error.message}`, 'error');
+      this.log(`Divergent branch fix failed: ${error.message}`, 'error');
     }
   }
 
@@ -207,11 +231,11 @@ class ContinuePRMerges {
     };
 
     // Save report to file
-    fs.writeFileSync('continue-pr-merge-report.json', JSON.stringify(report, null, 2));
+    fs.writeFileSync('divergent-branch-fix-report.json', JSON.stringify(report, null, 2));
 
     // Display summary
-    console.log('\n🎉 Continue PR Merges Complete!');
-    console.log('================================');
+    console.log('\n🎉 Divergent Branch Fix Complete!');
+    console.log('==================================');
     console.log(`Total branches processed: ${this.processedBranches.length}`);
     console.log(`Successfully merged: ${this.mergedBranches.length}`);
     console.log(`Failed branches: ${this.failedBranches.length}`);
@@ -224,15 +248,15 @@ class ContinuePRMerges {
       });
     }
 
-    console.log('\n📊 Detailed report saved to: continue-pr-merge-report.json');
+    console.log('\n📊 Detailed report saved to: divergent-branch-fix-report.json');
   }
 }
 
-// Run the automation
-const automation = new ContinuePRMerges();
-automation.runAutomation().then(() => {
-  console.log('\n🚀 Continue PR merge automation completed!');
+// Run the fixer
+const fixer = new DivergentBranchFixer();
+fixer.runFix().then(() => {
+  console.log('\n🚀 Divergent branch fix completed!');
 }).catch(error => {
-  console.error('Automation failed:', error.message);
+  console.error('Divergent branch fix failed:', error.message);
   process.exit(1);
 });

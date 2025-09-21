@@ -1,29 +1,51 @@
+// Polyfill for globalThis
+if (typeof globalThis === 'undefined') {
+  global.globalThis = global;
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
   output: 'export',
   trailingSlash: true,
+  distDir: 'out',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
+  
+  // Image optimization
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for static export
+    domains: ["localhost"],
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
   },
+  
+  // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
-    // tsconfigPath: './tsconfig.json',
   },
+  
+  // ESLint configuration
   eslint: {
     ignoreDuringBuilds: true,
   },
+  
+  // Experimental features for performance
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
+    optimizeCss: false,
+    scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
+  
+  // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
-  // Typed routes configuration
-  typedRoutes: false,
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
+  },
   
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
@@ -38,9 +60,6 @@ const nextConfig = {
       };
     }
     
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
     // Add path alias resolution
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -54,10 +73,57 @@ const nextConfig = {
       use: 'ignore-loader'
     });
     
+    if (!dev && !isServer) {
+      // Optimize bundle size
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[/]node_modules[/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    
+    // Add globalThis polyfill
+    config.plugins = config.plugins || [];
+    config.plugins.push(
+      new (require('webpack')).DefinePlugin({
+        'globalThis': 'global',
+      })
+    );
+    
     return config;
   },
   
-  // Headers are handled by netlify.toml for static export
+  // Headers for better security and performance
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

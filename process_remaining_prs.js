@@ -2,14 +2,15 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 
-console.log('🔄 Continue PR Merges');
-console.log('=====================');
+console.log('🚀 Processing Remaining PRs');
+console.log('===========================');
 
-class ContinuePRMerges {
+class PRProcessor {
   constructor() {
     this.processedBranches = [];
     this.mergedBranches = [];
     this.failedBranches = [];
+    this.conflictsResolved = 0;
     this.startTime = Date.now();
   }
 
@@ -26,7 +27,7 @@ class ContinuePRMerges {
         encoding: 'utf8', 
         stdio: 'pipe',
         cwd: process.cwd(),
-        timeout: 30000
+        timeout: 60000 // 60 second timeout
       });
       this.log(`✅ ${description} completed successfully`, 'success');
       return result;
@@ -44,8 +45,9 @@ class ContinuePRMerges {
         .filter(branch => branch && !branch.includes('HEAD') && branch.startsWith('origin/'))
         .map(branch => branch.replace('origin/', ''))
         .filter(branch => branch !== 'main')
-        .filter(branch => !branch.includes('cursor/fix-netlify-build-and-merge-to-main')) // Skip our current branch
-        .slice(20, 50); // Process branches 20-50
+        .filter(branch => !branch.includes('cursor/fix-netlify-build-and-merge-to-main'))
+        .filter(branch => branch.includes('codex/') || branch.includes('cursor/'))
+        .slice(0, 50); // Process up to 50 branches
       
       this.log(`Found ${branches.length} remote branches to process`);
       return branches;
@@ -82,6 +84,7 @@ class ContinuePRMerges {
         // Commit the resolved conflicts
         await this.runCommand('git add .', 'Adding resolved files');
         await this.runCommand(`git commit -m "Resolve merge conflicts with main branch"`, 'Committing resolved conflicts');
+        this.conflictsResolved++;
       }
 
       // Push the updated branch
@@ -151,6 +154,14 @@ class ContinuePRMerges {
       // Strategy: Keep our changes (HEAD) for most conflicts
       // Remove conflict markers and keep the HEAD version
       resolvedContent = resolvedContent.replace(
+        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*/g,
+        '$1'
+      );
+
+      // Handle any remaining conflict markers
+      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n/g, '');
+      resolvedContent = resolvedContent.replace(/=======\n/g, '');
+      resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]*\n/g, '');
       
       // Write the resolved content
       fs.writeFileSync(filePath, resolvedContent);
@@ -163,7 +174,7 @@ class ContinuePRMerges {
 
   async runAutomation() {
     try {
-      this.log('Starting continue PR merge automation...');
+      this.log('Starting PR processing automation...');
 
       // Get all remote branches
       const branches = await this.getAllRemoteBranches();
@@ -173,12 +184,12 @@ class ContinuePRMerges {
         return;
       }
 
-      // Process branches one by one
+      // Process branches one by one to avoid conflicts
       for (const branch of branches) {
         await this.processBranch(branch);
         
         // Small delay between branches
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 2000));
       }
 
       // Generate final report
@@ -198,6 +209,7 @@ class ContinuePRMerges {
         totalBranches: this.processedBranches.length,
         successfullyMerged: this.mergedBranches.length,
         failedBranches: this.failedBranches.length,
+        conflictsResolved: this.conflictsResolved,
         duration: `${duration} seconds`
       },
       processedBranches: this.processedBranches,
@@ -207,14 +219,15 @@ class ContinuePRMerges {
     };
 
     // Save report to file
-    fs.writeFileSync('continue-pr-merge-report.json', JSON.stringify(report, null, 2));
+    fs.writeFileSync('pr-processing-report.json', JSON.stringify(report, null, 2));
 
     // Display summary
-    console.log('\n🎉 Continue PR Merges Complete!');
-    console.log('================================');
+    console.log('\n🎉 PR Processing Complete!');
+    console.log('==========================');
     console.log(`Total branches processed: ${this.processedBranches.length}`);
     console.log(`Successfully merged: ${this.mergedBranches.length}`);
     console.log(`Failed branches: ${this.failedBranches.length}`);
+    console.log(`Conflicts resolved: ${this.conflictsResolved}`);
     console.log(`Duration: ${duration} seconds`);
     
     if (this.failedBranches.length > 0) {
@@ -224,14 +237,14 @@ class ContinuePRMerges {
       });
     }
 
-    console.log('\n📊 Detailed report saved to: continue-pr-merge-report.json');
+    console.log('\n📊 Detailed report saved to: pr-processing-report.json');
   }
 }
 
 // Run the automation
-const automation = new ContinuePRMerges();
+const automation = new PRProcessor();
 automation.runAutomation().then(() => {
-  console.log('\n🚀 Continue PR merge automation completed!');
+  console.log('\n🚀 PR processing automation completed!');
 }).catch(error => {
   console.error('Automation failed:', error.message);
   process.exit(1);

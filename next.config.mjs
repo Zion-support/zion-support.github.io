@@ -14,7 +14,7 @@ const nextConfig = {
   },
   swcMinify: false,
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
+    esmExternals: false,
   },
   webpack: (config, { isServer }) => {
     // Minimal webpack configuration
