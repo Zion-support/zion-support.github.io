@@ -10,32 +10,32 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/">
-            <a className="text-2xl font-bold text-white">
+            <span className="text-2xl font-bold text-white">
               Zion Tech Group
-            </a>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/">
-              <a className="text-gray-300 hover:text-white transition-colors">
+              <span className="text-gray-300 hover:text-white transition-colors">
                 Home
-              </a>
+              </span>
             </Link>
             <Link href="/services">
-              <a className="text-gray-300 hover:text-white transition-colors">
+              <span className="text-gray-300 hover:text-white transition-colors">
                 Services
-              </a>
+              </span>
             </Link>
             <Link href="/contact">
-              <a className="text-gray-300 hover:text-white transition-colors">
+              <span className="text-gray-300 hover:text-white transition-colors">
                 Contact
-              </a>
+              </span>
             </Link>
             <Link href="/contact">
-              <a className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+              <span className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
                 Get Started
-              </a>
+              </span>
             </Link>
           </nav>
 
@@ -55,24 +55,24 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-white/10">
             <nav className="flex flex-col space-y-4">
               <Link href="/">
-                <a className="text-gray-300 hover:text-white transition-colors">
+                <span className="text-gray-300 hover:text-white transition-colors">
                   Home
-                </a>
+                </span>
               </Link>
               <Link href="/services">
-                <a className="text-gray-300 hover:text-white transition-colors">
+                <span className="text-gray-300 hover:text-white transition-colors">
                   Services
-                </a>
+                </span>
               </Link>
               <Link href="/contact">
-                <a className="text-gray-300 hover:text-white transition-colors">
+                <span className="text-gray-300 hover:text-white transition-colors">
                   Contact
-                </a>
+                </span>
               </Link>
               <Link href="/contact">
-                <a className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors text-center">
+                <span className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors text-center">
                   Get Started
-                </a>
+                </span>
               </Link>
             </nav>
           </div>

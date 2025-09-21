@@ -1,5 +1,15 @@
 import { useEffect, useMemo, useState } from 'react';
 
+// Stub translation function
+const translateTextViaAI = async (text: string, target: string): Promise<string> => {
+  // Simulate API call
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`${text} (${target})`);
+    }, 100);
+  });
+};
+
 export type UseAutoTranslateResult = {
   translations: Record<string, string>;
   loading: boolean;
@@ -10,38 +20,49 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
-  
+
   const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]);
   
   useEffect(() => {
     if (!text || targets.length === 0) {
       setTranslations({});
+      setLoading(false);
+      setError(undefined);
       return;
     }
-
-    let cancelled = false;
-    const timer = setTimeout(async () => {
+    
+    setLoading(true);
+    setError(undefined);
+    
+    const timeoutId = setTimeout(async () => {
       try {
-        setLoading(true);
+        const newTranslations: Record<string, string> = {};
+        
+        // Translate to each target language
+        await Promise.all(
+          targets.map(async (target) => {
+            const translation = await translateTextViaAI(text, target);
+            newTranslations[target] = translation;
+          })
+        );
+        
+        setTranslations(newTranslations);
         setError(undefined);
-        // Mock translation function - replace with actual implementation
-        const res: Record<string, string> = {};
-        targets.forEach(target => {
-          res[target] = `${text} (translated to ${target})`;
-        });
-        if (!cancelled) setTranslations(res);
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Translation failed');
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Translation failed');
       } finally {
-        if (!cancelled) setLoading(false);
+        setLoading(false);
       }
     }, debounceMs);
-    
+
     return () => {
-      cancelled = true;
-      clearTimeout(timer);
+      clearTimeout(timeoutId);
     };
   }, [key, debounceMs]);
   
-  return { translations, loading, error };
+  return {
+    translations,
+    loading,
+    error
+  };
 }
