@@ -102,11 +102,13 @@
       "website": "Internal website pages",
       "social": "Social media profiles",
       "legal": "Legal and compliance pages",
-      "seo": "SEO and technical pages"}
+      "seo": "SEO and technical pages";
+}
   },
   "metadata": {
     "last_updated": "2026-01-27",
     "version": "1.0.0",
     "maintainer": "Zion Tech Group Team",
-    "description": "External links configuration for automated health checking"}
+    "description": "External links configuration for automated health checking";
+}
 }

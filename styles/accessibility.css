@@ -1,3 +1,118 @@
+/* Accessibility Enhancements */
+
+/* High Contrast Mode */
+.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #000000;
+  --border-color: #ffffff;
+  --accent-color: #ffff00;
+}
+
+.high-contrast * {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.high-contrast button,
+.high-contrast a {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+.high-contrast button:hover,
+.high-contrast a:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Font Size Adjustments */
+.font-small {
+  font-size: 0.875rem;
+}
+
+.font-small h1 { font-size: 1.5rem; }
+.font-small h2 { font-size: 1.25rem; }
+.font-small h3 { font-size: 1.125rem; }
+.font-small h4 { font-size: 1rem; }
+.font-small h5 { font-size: 0.875rem; }
+.font-small h6 { font-size: 0.75rem; }
+
+.font-normal {
+  font-size: 1rem;
+}
+
+.font-normal h1 { font-size: 2.25rem; }
+.font-normal h2 { font-size: 1.875rem; }
+.font-normal h3 { font-size: 1.5rem; }
+.font-normal h4 { font-size: 1.25rem; }
+.font-normal h5 { font-size: 1.125rem; }
+.font-normal h6 { font-size: 1rem; }
+
+.font-large {
+  font-size: 1.125rem;
+}
+
+.font-large h1 { font-size: 2.5rem; }
+.font-large h2 { font-size: 2rem; }
+.font-large h3 { font-size: 1.75rem; }
+.font-large h4 { font-size: 1.5rem; }
+.font-large h5 { font-size: 1.25rem; }
+.font-large h6 { font-size: 1.125rem; }
+
+.font-extra-large {
+  font-size: 1.25rem;
+}
+
+.font-extra-large h1 { font-size: 3rem; }
+.font-extra-large h2 { font-size: 2.5rem; }
+.font-extra-large h3 { font-size: 2rem; }
+.font-extra-large h4 { font-size: 1.75rem; }
+.font-extra-large h5 { font-size: 1.5rem; }
+.font-extra-large h6 { font-size: 1.25rem; }
+
+/* Reduced Motion */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus Indicators */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.high-contrast *:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Screen Reader Only */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -10,75 +125,55 @@
   border: 0;
 }
 
-.sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: inherit;
-  margin: inherit;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
+/* High contrast focus for interactive elements */
+.high-contrast button:focus,
+.high-contrast a:focus,
+.high-contrast input:focus,
+.high-contrast textarea:focus,
+.high-contrast select:focus {
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: 3px !important;
 }
 
-.focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
+/* Ensure sufficient color contrast */
+.high-contrast .text-gray-500,
+.high-contrast .text-gray-400,
+.high-contrast .text-gray-300 {
+  color: var(--text-primary) !important;
 }
 
-@media (prefers-contrast: high) {
-  .text-gray-600 {
-    color: #000000;
-  }
-  .bg-gray-100 {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-  }
+/* High contrast for borders and dividers */
+.high-contrast .border-gray-200,
+.high-contrast .border-gray-300,
+.high-contrast .border-gray-400 {
+  border-color: var(--border-color) !important;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+/* High contrast for backgrounds */
+.high-contrast .bg-gray-50,
+.high-contrast .bg-gray-100,
+.high-contrast .bg-gray-200 {
+  background-color: var(--bg-primary) !important;
 }
 
-.skip-to-content {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 1000;
+.high-contrast .bg-white {
+  background-color: var(--bg-secondary) !important;
 }
 
-.skip-to-content:focus {
-  top: 6px;
+/* Ensure text is always readable */
+.high-contrast p,
+.high-contrast span,
+.high-contrast div {
+  color: var(--text-primary) !important;
 }
 
-.focus-trap {
-  position: relative;
+/* High contrast for links */
+.high-contrast a {
+  color: var(--accent-color) !important;
+  text-decoration: underline !important;
 }
 
-.focus-trap::before,
-.focus-trap::after {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-[aria-live] {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.high-contrast a:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--text-secondary) !important;
 }
