@@ -209,7 +209,10 @@ class SecurityAuditor {
     const authFiles = [
       'pages/api/auth',
       'utils/auth',
-      'middleware.ts'
+      'middleware.ts',
+      'src/lib/auth.js',
+      'src/components/LoginForm.jsx',
+      'src/components/ProtectedRoute.jsx'
     ];
     
     let hasAuth = false;
