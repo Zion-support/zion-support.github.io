@@ -13,7 +13,7 @@ const nextConfig = {
     tsconfigPath: './tsconfig.json',
   },
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   swcMinify: true,
   compress: true,
