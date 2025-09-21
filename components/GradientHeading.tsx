@@ -3,9 +3,10 @@ interface GradientHeadingProps {
   children?: React.ReactNode;
   title?: string;
   subtitle?: string;
-  level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
+  level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   className?: string;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6', }
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+}
 
 export function GradientHeading({ 
   children,
@@ -30,4 +31,6 @@ export function GradientHeading({
           {subtitle}
         </p>
       )}
-    </div>  );
+    </div>
+  );
+}

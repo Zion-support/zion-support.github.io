@@ -5,7 +5,8 @@ interface SEOProps {
   keywords?: string;
   image?: string;
   url?: string;
-  canonical?: string, }
+  canonical?: string;
+}
 
 export function SEO({ 
   title = "Zion Holdings - AI-Powered Solutions", 
@@ -32,3 +33,4 @@ export function SEO({
       <meta name="twitter:image" content={image} />
     </>
   );
+}

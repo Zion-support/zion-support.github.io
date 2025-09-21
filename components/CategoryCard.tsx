@@ -1,10 +1,11 @@
-import React from 'react',
-import Link from 'next/link',
+import React from 'react';
+import Link from 'next/link';
 interface CategoryCardProps {
-  title: string,
-  description: string,
+  title: string;
+  description: string;
   icon: React.ReactNode;
-  link?: string, }
+  link?: string;
+}
 
 export function CategoryCard({ title, description, icon, link }: CategoryCardProps) {
   const content = (
@@ -25,5 +26,7 @@ export function CategoryCard({ title, description, icon, link }: CategoryCardPro
         {content}
       </Link>
     );
+  }
 
-  return content, }
+  return content;
+}
