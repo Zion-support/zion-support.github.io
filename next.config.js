@@ -35,9 +35,6 @@ const nextConfig = {
     scrollRestoration: true,
   },
   
-  // Typed routes configuration
-  typedRoutes: false,
-  
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
@@ -47,7 +44,7 @@ const nextConfig = {
         fs: false,
         net: false,
         tls: false,
-        crypto: require.resolve('crypto-browserify'),
+        crypto: false,
       };
     }
     
@@ -87,33 +84,6 @@ const nextConfig = {
     );
     
     return config;
-  },
-  
-  // Headers for better security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-    ];
   },
 };
 
