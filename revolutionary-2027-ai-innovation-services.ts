@@ -214,7 +214,7 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     competitors: ['IBM QuantumGoogle Quantum', 'Microsoft Azure QuantumRigetti', 'D-Wave'],
     marketSize: '$18.7B market',
     growthRate: '350% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     competitors: ['MaxarPlanet Labs', 'SpaceXBlue Origin', 'Virgin Galactic'],
     marketSize: '$28.9B market',
     growthRate: '265% annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

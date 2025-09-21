@@ -120,7 +120,7 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     competitors: ['EthereumSolana', 'PolkadotCardano', 'Avalanche'],
     marketSize: '$19.8B market',
     growthRate: '320% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     competitors: ['IBM Food TrustSAP Blockchain', 'Oracle BlockchainVeChain', 'Walmart Blockchain'],
     marketSize: '$25.3B market',
     growthRate: '285% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

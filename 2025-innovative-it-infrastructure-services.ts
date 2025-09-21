@@ -80,7 +80,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     competitors: ['AWS, Azure, Google Cloud, IBM Cloud'],
     marketSize: '$45.2B cloud infrastructure market',
     growthRate: '28% annual growth',
-    variant: 'quantum-secure-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -133,7 +133,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'],
     marketSize: '$15.8B edge computing market',
     growthRate: '35% annual growth',
-    variant: 'edge-computing-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -186,7 +186,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, Custom solutions'],
     marketSize: '$2.1B neuromorphic computing market',
     growthRate: '65% annual growth',
-    variant: 'neuromorphic-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -239,7 +239,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave'],
     marketSize: '$3.2B quantum computing market',
     growthRate: '55% annual growth',
-    variant: 'hybrid-quantum-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -292,7 +292,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     competitors: ['Schneider Electric, Siemens, Johnson Controls, Custom solutions'],
     marketSize: '$18.5B data center management market',
     growthRate: '22% annual growth',
-    variant: 'autonomous-infrastructure-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

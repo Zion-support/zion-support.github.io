@@ -120,7 +120,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     competitors: ['Research DNA computing: $100,000+/monthMolecular platforms: $50,000+/month', 'Biological computing: $75,000+/month'],
     marketSize: '$2.8B DNA computing market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     competitors: ['Traditional supercomputing: $50,000+/monthPhotonic research: $75,000+/month', 'High-performance computing: $30,000+/month'],
     marketSize: '$4.2B photonic computing market',
     growthRate: '280% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     competitors: ['Traditional secure networks: $40,000+/monthQuantum research: $75,000+/month', 'Security platforms: $25,000+/month'],
     marketSize: '$15B quantum internet market',
     growthRate: '350% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

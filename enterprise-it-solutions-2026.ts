@@ -73,7 +73,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     competitors: ['Traditional network securityCustom security solutions', 'Government security systems'],
     marketSize: '$40B market',
     growthRate: '300% annual growth',
-    variant: 'enterprise-futuristic',
+    variant: 'enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     competitors: ['Traditional cloud managementCustom orchestration solutions', 'Basic edge computing tools'],
     marketSize: '$30B market',
     growthRate: '350% annual growth',
-    variant: 'enterprise-futuristic',
+    variant: 'enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     competitors: ['Traditional network providersCustom network solutions', 'Government network systems'],
     marketSize: '$45B market',
     growthRate: '400% annual growth',
-    variant: 'enterprise-futuristic',
+    variant: 'enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     competitors: ['Specialized blockchain solutionsCustom blockchain development', 'Traditional financial systems'],
     marketSize: '$35B market',
     growthRate: '320% annual growth',
-    variant: 'enterprise-futuristic',
+    variant: 'enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     competitors: ['Traditional IT managementCustom automation solutions', 'Basic monitoring tools'],
     marketSize: '$40B market',
     growthRate: '350% annual growth',
-    variant: 'enterprise-futuristic',
+    variant: 'enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

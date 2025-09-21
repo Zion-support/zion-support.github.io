@@ -130,7 +130,7 @@ export const revolutionary2026AIServices: Revolutionary2026AIService[] = [
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'AWS Braket'],
     marketSize: '$2.5B market',
     growthRate: '250% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -334,7 +334,7 @@ export const revolutionary2026AIServices: Revolutionary2026AIService[] = [
     competitors: ['No direct competitors', 'Research institutions developing similar concepts'],
     marketSize: '$25B emerging market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -385,7 +385,7 @@ export const revolutionary2026AIServices: Revolutionary2026AIService[] = [
     competitors: ['SpaceX', 'Blue Origin', 'Planetary Resources', 'NASA', 'ESA'],
     marketSize: '$20B market',
     growthRate: '300% annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -436,7 +436,7 @@ export const revolutionary2026AIServices: Revolutionary2026AIService[] = [
     competitors: ['ID Quantique', 'Toshiba Quantum', 'Quantum Xchange', 'IBM Quantum', 'Microsoft Quantum'],
     marketSize: '$12B market',
     growthRate: '250% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

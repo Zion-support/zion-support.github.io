@@ -73,7 +73,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     competitors: ['AlchemyInfura', 'QuickNodeChainstack', 'BlockdaemonConsenSys'],
     marketSize: '$19.9B market',
     growthRate: '280% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     competitors: ['Yearn FinanceHarvest Finance', 'Beefy FinancePickle Finance', 'Badger DAOConvex Finance'],
     marketSize: '$8.5B market',
     growthRate: '350% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     competitors: ['OpenSeaRarible', 'FoundationSuperRare', 'Nifty GatewayMagic Eden'],
     marketSize: '$13.6B market',
     growthRate: '400% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     competitors: ['Auth0Okta', 'Microsoft Azure ADCognito', 'Firebase AuthSupabase Auth'],
     marketSize: '$15.8B market',
     growthRate: '220% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     competitors: ['IBM Food TrustSAP Blockchain', 'Oracle BlockchainVeChain', 'Walmart BlockchainMaersk TradeLens'],
     marketSize: '$9.8B market',
     growthRate: '250% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

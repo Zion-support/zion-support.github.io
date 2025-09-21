@@ -1,4 +1,4 @@
-import { ServiceVariant } from './src/types/service-variants',
+import { ServiceVariant } from './src/types/service-variants';
 export interface EmergingTechnologyService {
   id: string,
   name: string,
@@ -73,7 +73,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     competitors: ['IBM Quantum, Amazon Braket, Google Quantum, Azure Quantum'],
     marketSize: '$1.8B quantum computing market',
     growthRate: '45% annual growth',
-    variant: 'quantum-computing-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     competitors: ['Alchemy, Infura, QuickNode, AWS Blockchain'],
     marketSize: '$19.9B blockchain market',
     growthRate: '87% annual growth',
-    variant: 'blockchain-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'],
     marketSize: '$11.2B edge computing market',
     growthRate: '37% annual growth',
-    variant: 'edge-computing-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     competitors: ['Unity, Unreal Engine, Roblox Studio, Decentraland'],
     marketSize: '$47.5B metaverse market',
     growthRate: '42% annual growth',
-    variant: 'metaverse-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     competitors: ['Maxar, Planet, Airbus, SpaceX'],
     marketSize: '$469B space economy',
     growthRate: '8% annual growth',
-    variant: 'space-technology-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

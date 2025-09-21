@@ -119,7 +119,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     competitors: ['AffectivaEmotient', 'RealeyesTraditional emotion AI'],
     marketSize: '$2.8B market',
     growthRate: '250% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -165,7 +165,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     competitors: ['NeuralinkKernel', 'Academic research toolsMedical device platforms'],
     marketSize: '$1.2B market',
     growthRate: '400% annual growth',
-    variant: 'neural-quantum',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -212,7 +212,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     competitors: ['TerraformAnsible', 'Traditional cloud managementMulti-cloud platforms'],
     marketSize: '$8.5B market',
     growthRate: '180% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -305,7 +305,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     competitors: ['UnityUnreal Engine', 'RobloxTraditional game engines'],
     marketSize: '$3.2B market',
     growthRate: '350% annual growth',
-    variant: 'metaverse-futuristic',
+    variant: 'metaverse',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -351,7 +351,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     competitors: ['AWS IoTAzure IoT', 'Traditional IoT platformsSecurity solutions'],
     marketSize: '$4.8B market',
     growthRate: '280% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -444,7 +444,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     competitors: ['BloombergThomson Reuters', 'Traditional financial toolsPortfolio management systems'],
     marketSize: '$18.5B market',
     growthRate: '320% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

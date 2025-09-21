@@ -73,7 +73,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     competitors: ['Cisco Smart CitiesSiemens Smart Cities', 'IBM Smart CitiesMicrosoft Smart Cities', 'Oracle Smart Cities'],
     marketSize: '$78.5B market',
     growthRate: '320% annual growth',
-    variant: 'iot-futuristic',
+    variant: 'iot',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     competitors: ['GE DigitalSiemens Mindsphere', 'PTC ThingWorxRockwell Automation', 'ABB Ability'],
     marketSize: '$42.8B market',
     growthRate: '285% annual growth',
-    variant: 'iot-futuristic',
+    variant: 'iot',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     competitors: ['Philips HealthcareMedtronic', 'GE HealthcareSiemens Healthineers', 'Johnson & Johnson'],
     marketSize: '$58.9B market',
     growthRate: '310% annual growth',
-    variant: 'iot-futuristic',
+    variant: 'iot',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     competitors: ['John DeereTrimble', 'RavenAGCO', 'CNH Industrial'],
     marketSize: '$22.8B market',
     growthRate: '295% annual growth',
-    variant: 'iot-futuristic',
+    variant: 'iot',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     competitors: ['AWS OutpostsAzure Stack', 'Google AnthosVMware', 'Red Hat'],
     marketSize: '$28.5B market',
     growthRate: '275% annual growth',
-    variant: 'edge-futuristic',
+    variant: 'edge-computing',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

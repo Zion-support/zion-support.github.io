@@ -80,7 +80,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     competitors: ['Clearscope, MarketMuse, Frase, SurferSEO'],
     marketSize: '$15B+ content marketing market',
     growthRate: '150%+ annual growth',
-    variant: 'ai-creative',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -133,7 +133,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     competitors: ['ID Quantique, Toshiba Quantum, Quantum Xchange'],
     marketSize: '$8B+ quantum security market',
     growthRate: '400%+ annual growth',
-    variant: 'quantum-security',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -239,7 +239,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail'],
     marketSize: '$18B+ blockchain supply chain market',
     growthRate: '250%+ annual growth',
-    variant: 'supply-chain-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -292,7 +292,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     competitors: ['Roblox, Decentraland, The Sandbox, Meta'],
     marketSize: '$12B+ metaverse market',
     growthRate: '300%+ annual growth',
-    variant: 'metaverse-futuristic',
+    variant: 'metaverse',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -345,7 +345,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
     marketSize: '$35B+ financial technology market',
     growthRate: '500%+ annual growth',
-    variant: 'quantum-ai-finance',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -398,7 +398,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, NVIDIA Clara'],
     marketSize: '$45B+ AI healthcare market',
     growthRate: '350%+ annual growth',
-    variant: 'ai-healthcare',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -451,7 +451,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, VMware Edge'],
     marketSize: '$20B+ edge computing market',
     growthRate: '280%+ annual growth',
-    variant: 'edge-futuristic',
+    variant: 'edge-computing',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

@@ -133,7 +133,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
     competitors: ['Signal Enterprise, Wickr Enterprise, Wire Pro, Traditional encryption providers'],
     marketSize: '$8B market',
     growthRate: '300% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -292,7 +292,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
     competitors: ['IBM Quantum, Google Quantum AI, Amazon Braket, Microsoft Azure Quantum, D-Wave'],
     marketSize: '$12B market',
     growthRate: '600% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

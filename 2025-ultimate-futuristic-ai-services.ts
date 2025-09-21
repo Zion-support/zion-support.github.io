@@ -73,7 +73,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     competitors: ['No direct competitors - breakthrough technology'],
     marketSize: 'Emerging market - estimated $5B potential',
     growthRate: '100% annual growth (new market)',
-    variant: 'ai-consciousness-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     competitors: ['Traditional research tools, Academic platforms, Research databases'],
     marketSize: '$15B research tools market',
     growthRate: '40% annual growth',
-    variant: 'autonomous-research-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     competitors: ['Basic AI training tools, Emotion recognition APIs, Social AI platforms'],
     marketSize: '$8B AI training market',
     growthRate: '35% annual growth',
-    variant: 'ai-eq-training-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     competitors: ['SAP, Oracle, Microsoft Dynamics, NetSuite'],
     marketSize: '$45B ERP market',
     growthRate: '30% annual growth',
-    variant: 'ai-business-automation-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     competitors: ['Epic, Cerner, Allscripts, Athenahealth'],
     marketSize: '$28B healthcare AI market',
     growthRate: '45% annual growth',
-    variant: 'ai-healthcare-prediction-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     competitors: ['GitHub Copilot, Tabnine, Kite, Traditional development tools'],
     marketSize: '$15B development tools market',
     growthRate: '40% annual growth',
-    variant: 'ai-code-generation-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -355,7 +355,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'],
     marketSize: '$25B marketing automation market',
     growthRate: '35% annual growth',
-    variant: 'ai-marketing-automation-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     competitors: ['Salesforce, HubSpot Sales, Pipedrive, Close'],
     marketSize: '$18B sales automation market',
     growthRate: '30% annual growth',
-    variant: 'ai-sales-automation-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -449,7 +449,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     competitors: ['Intercom, Zendesk, Freshdesk, Help Scout'],
     marketSize: '$18B customer service software market',
     growthRate: '25% annual growth',
-    variant: 'ai-customer-service-automation-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

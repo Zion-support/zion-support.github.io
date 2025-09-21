@@ -80,7 +80,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     competitors: ['HashiCorp, Terraform Cloud, CloudBolt, RightScale'],
     marketSize: '$25B multi-cloud management market',
     growthRate: '35% annual growth',
-    variant: 'multi-cloud-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -133,7 +133,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     competitors: ['Traditional network security vendors, Zero-trust startups'],
     marketSize: '$40B network security market',
     growthRate: '30% annual growth in zero-trust segment',
-    variant: 'zero-trust-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -186,7 +186,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     competitors: ['GitLab, GitHub Actions, Jenkins, CircleCI, Travis CI'],
     marketSize: '$8B DevOps market',
     growthRate: '28% annual growth',
-    variant: 'ai-devops-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -239,7 +239,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     competitors: ['Traditional storage vendors, Quantum-resistant startups'],
     marketSize: '$50B data storage market',
     growthRate: '40% annual growth in quantum-resistant segment',
-    variant: 'quantum-storage-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -292,7 +292,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     competitors: ['Schneider Electric, Siemens, Honeywell, Johnson Controls'],
     marketSize: '$12B data center management market',
     growthRate: '32% annual growth',
-    variant: 'intelligent-datacenter-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -345,7 +345,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     competitors: ['Traditional AI platforms, Federated learning startups'],
     marketSize: '$3B federated learning market',
     growthRate: '50% annual growth',
-    variant: 'federated-learning-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -398,7 +398,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     competitors: ['ServiceNow, BMC Helix, Jira Service Management, Zendesk'],
     marketSize: '$35B IT operations market',
     growthRate: '30% annual growth',
-    variant: 'autonomous-itops-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -451,7 +451,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     competitors: ['Traditional networking vendors, Quantum networking startups'],
     marketSize: '$1.2B quantum networking market',
     growthRate: '70% annual growth',
-    variant: 'quantum-internet-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

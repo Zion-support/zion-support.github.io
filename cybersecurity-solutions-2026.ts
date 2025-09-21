@@ -73,7 +73,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     competitors: ['Specialized security toolsCustom threat intelligence', 'Traditional security solutions'],
     marketSize: '$35B market',
     growthRate: '350% annual growth',
-    variant: 'security-futuristic',
+    variant: 'cybersecurity',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     competitors: ['Traditional encryptionCustom cryptography solutions', 'Government research projects'],
     marketSize: '$25B market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     competitors: ['Traditional vulnerability scannersCustom detection solutions', 'Basic security tools'],
     marketSize: '$30B market',
     growthRate: '320% annual growth',
-    variant: 'security-futuristic',
+    variant: 'cybersecurity',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     competitors: ['Traditional identity systemsCustom blockchain solutions', 'Basic authentication tools'],
     marketSize: '$35B market',
     growthRate: '380% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

@@ -120,7 +120,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     competitors: ['Planetary ResourcesDeep Space Industries', 'AstroForgeTransAstra', 'Kleos SpaceAsteroid Mining Corporation'],
     marketSize: '$3.8B market',
     growthRate: '500% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

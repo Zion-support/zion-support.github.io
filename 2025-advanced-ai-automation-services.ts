@@ -80,7 +80,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     competitors: ['SonarQube, CodeClimate, DeepCode, Snyk'],
     marketSize: '$2.8B code quality tools market',
     growthRate: '28% annual growth',
-    variant: 'ai-automation-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -133,7 +133,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'],
     marketSize: '$4.2B marketing automation market',
     growthRate: '32% annual growth',
-    variant: 'ai-marketing-automation',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -186,7 +186,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     competitors: ['Zendesk, Intercom, Freshdesk, Help Scout'],
     marketSize: '$3.5B customer support software market',
     growthRate: '25% annual growth',
-    variant: 'ai-support-automation',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -239,7 +239,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     competitors: ['Bloomberg, Thomson Reuters, FactSet, Refinitiv'],
     marketSize: '$8.5B financial analytics market',
     growthRate: '22% annual growth',
-    variant: 'ai-financial-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -292,7 +292,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     competitors: ['GE Healthcare, Siemens Healthineers, Philips Healthcare, IBM Watson Health'],
     marketSize: '$12.5B AI healthcare market',
     growthRate: '45% annual growth',
-    variant: 'ai-healthcare-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

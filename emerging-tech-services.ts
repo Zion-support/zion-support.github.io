@@ -73,7 +73,7 @@ export const emergingTechServices: EmergingTechService[] = [
     competitors: ['No direct competitorsTraditional encryption vendors', 'Custom solutions'],
     marketSize: '$15B quantum security market',
     growthRate: '800% annual growth',
-    variant: 'quantum-advanced',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const emergingTechServices: EmergingTechService[] = [
     competitors: ['NeuralinkCTRL-labs', 'OpenBCICustom solutions'],
     marketSize: '$8B neural interface market',
     growthRate: '600% annual growth',
-    variant: 'neural-quantum',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const emergingTechServices: EmergingTechService[] = [
     competitors: ['WaymoCruise', 'Tesla AutopilotCustom solutions'],
     marketSize: '$65B autonomous vehicle market',
     growthRate: '450% annual growth',
-    variant: 'neural-cyberpunk',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const emergingTechServices: EmergingTechService[] = [
     competitors: ['InsitroRecursion', 'AtomwiseCustom solutions'],
     marketSize: '$95B biotech market',
     growthRate: '350% annual growth',
-    variant: 'neural-quantum',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

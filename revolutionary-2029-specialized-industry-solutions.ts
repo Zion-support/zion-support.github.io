@@ -77,7 +77,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['IBM Watson HealthGoogle Health AI', 'Microsoft Healthcare'],
     marketSize: '$100B Healthcare AI',
     growthRate: '25% CAGR',
-    variant: 'healthcare-ai',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -126,7 +126,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['StripePlaid', 'Marqeta'],
     marketSize: '$150B Fintech',
     growthRate: '30% CAGR',
-    variant: 'fintech-platform',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -175,7 +175,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['SiemensGE Digital', 'Rockwell Automation'],
     marketSize: '$80B Smart Manufacturing',
     growthRate: '22% CAGR',
-    variant: 'manufacturing-ai',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -223,7 +223,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['ShopifySalesforce Commerce', 'Adobe Commerce'],
     marketSize: '$60B Retail Technology',
     growthRate: '18% CAGR',
-    variant: 'retail-tech',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -272,7 +272,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['CanvasBlackboard', 'Moodle'],
     marketSize: '$40B EdTech',
     growthRate: '20% CAGR',
-    variant: 'education-tech',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -320,7 +320,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['LexisNexisWestlaw', 'Clio'],
     marketSize: '$25B Legal Tech',
     growthRate: '18% CAGR',
-    variant: 'legal-tech',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -369,7 +369,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['ZillowRedfin', 'Compass'],
     marketSize: '$30B Real Estate Tech',
     growthRate: '16% CAGR',
-    variant: 'real-estate-tech',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -417,7 +417,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['Manhattan AssociatesOracle Transportation', 'SAP Logistics'],
     marketSize: '$45B Logistics Technology',
     growthRate: '20% CAGR',
-    variant: 'logistics-tech',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -466,7 +466,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['Siemens EnergyGE Digital', 'Schneider Electric'],
     marketSize: '$50B Energy Technology',
     growthRate: '18% CAGR',
-    variant: 'energy-tech',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -514,7 +514,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     competitors: ['John DeereClimate Corporation', 'Farmers Edge'],
     marketSize: '$35B AgTech',
     growthRate: '25% CAGR',
-    variant: 'agriculture-tech',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

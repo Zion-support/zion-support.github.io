@@ -166,7 +166,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     competitors: ['Enterprise blockchainTraditional blockchain', 'Government blockchainFinancial blockchain'],
     marketSize: '$60B blockchain market',
     growthRate: '400% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -213,7 +213,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     competitors: ['Medical AI toolsGenetic analysis platforms', 'Drug discovery toolsClinical research platforms'],
     marketSize: '$80B personalized medicine market',
     growthRate: '350% annual growth',
-    variant: 'ai-healthcare',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -260,7 +260,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     competitors: ['City management platformsInfrastructure tools', 'Urban planning softwareGovernment platforms'],
     marketSize: '$100B smart city market',
     growthRate: '450% annual growth',
-    variant: 'it-futuristic',
+    variant: 'it-infrastructure',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
