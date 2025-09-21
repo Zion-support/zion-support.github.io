@@ -6,6 +6,11 @@ import { GradientButton } from '../components/ui/GradientButton';
 import { FloatingElements } from '../components/ui/FloatingElements';
 import { TypewriterEffect } from '../components/ui/TypewriterEffect';
 import { SEOHead } from '../components/ui/SEOHead';
+import { LazyImage } from '../components/ui/LazyImage';
+import { PerformanceMonitor } from '../components/PerformanceMonitor';
+import { Analytics } from '../components/Analytics';
+import { ThemeToggle } from '../components/ThemeToggle';
+import { ScrollToTop } from '../components/ScrollToTop';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -104,6 +109,10 @@ export default function Home() {
         />
       </Head>
 
+      {/* Analytics and Performance Monitoring */}
+      <Analytics />
+      <PerformanceMonitor />
+
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
         <FloatingElements />
         {/* Navigation */}
@@ -115,15 +124,19 @@ export default function Home() {
                   Zion Tech Group
                 </span>
               </Link>
-              <div className="hidden md:flex space-x-8">
+              <div className="hidden md:flex items-center space-x-6">
                 <Link href="/"><span className="text-white font-semibold">Home</span></Link>
                 <Link href="/about"><span className="text-gray-300 hover:text-white transition-colors">About</span></Link>
                 <Link href="/services"><span className="text-gray-300 hover:text-white transition-colors">Services</span></Link>
                 <Link href="/contact"><span className="text-gray-300 hover:text-white transition-colors">Contact</span></Link>
+                <ThemeToggle />
               </div>
-              <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Call Now
-              </a>
+              <div className="flex items-center space-x-4">
+                <ThemeToggle />
+                <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                  Call Now
+                </a>
+              </div>
             </div>
           </div>
         </nav>
@@ -326,6 +339,9 @@ export default function Home() {
           </div>
         </footer>
       </main>
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 }

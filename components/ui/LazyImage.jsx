@@ -9,11 +9,11 @@ export const LazyImage = ({
   onError
 }) => {
   const [imageSrc, setImageSrc] = useState(placeholder);
-  const [imageRef, setImageRef] = useState<HTMLImageElement | null>(null);
+  const [imageRef, setImageRef] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    let observer: IntersectionObserver;
+    let observer;
     if (imageRef && imageSrc === placeholder) {
       observer = new IntersectionObserver(
         entries => {
@@ -33,7 +33,7 @@ export const LazyImage = ({
     }
     return () => {
       if (observer && observer.unobserve) {
-        observer.unobserve(imageRef!);
+        observer.unobserve(imageRef);
       }
     };
   }, [imageRef, imageSrc, placeholder, src]);
