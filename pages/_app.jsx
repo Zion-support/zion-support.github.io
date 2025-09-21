@@ -33,6 +33,9 @@ export default function App({ Component, pageProps }) {
             font-family: 'Inter', sans-serif;
           }
         `}</style>
+        
+        {/* Accessibility styles */}
+        <link rel="stylesheet" href="/styles/accessibility.css" />
       </Head>
       
       <ErrorBoundary>
