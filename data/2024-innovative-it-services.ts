@@ -21,6 +21,10 @@ export interface InnovativeITService2024 {
   marketPosition?: string;
   targetAudience?: string;
   trialDays?: number;
+  setupTime?: string;
+  category?: string;
+  realService?: boolean;
+  technology?: string[];
   company?: {
     name: string;
     website: string;

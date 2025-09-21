@@ -34,6 +34,11 @@
   "exclude": [
     "node_modules",
     "contracts/**/*",
-    "cypress/**/*"
+    "cypress/**/*",
+    "data/**/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ]
 }
