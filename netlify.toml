@@ -1,10 +1,20 @@
 [build]
+<<<<<<< HEAD
   command = "npm ci --legacy-peer-deps && npm run build"
   publish = "out"
 
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
+=======
+  command = "npm install --legacy-peer-deps --ignore-scripts && NODE_OPTIONS='--openssl-legacy-provider' npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--legacy-peer-deps --ignore-scripts"
+  NODE_OPTIONS = "--openssl-legacy-provider"
+>>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
