@@ -119,41 +119,41 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
     /
     if (query.trim()) {
         suggestions.push({
-            text: query;
-            type: 'recent';
+            text: query,
+            type: 'recent',
             id: `query-${query}`
         })
      }
     /
-    availableCategories;
+    availableCategories,
         .filter(category => category.toLowerCase().includes(lowerQuery))
         .slice(0, 3)
         .forEach(category => {
         suggestions.push({
-            text: category;
-            type: 'category';
+            text: category,
+            type: 'category',
             id: `category-${category}`
         })
      })
     /
-    availableTags;
+    availableTags,
         .filter(tag => tag.toLowerCase().includes(lowerQuery))
         .slice(0, 3)
         .forEach(tag => {
         suggestions.push({
-            text: tag;
-            type: 'tag';
+            text: tag,
+            type: 'tag',
             id: `tag-${tag}`
         })
      })
     /
-    recentSearches;
+    recentSearches,
         .filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
         .slice(0, 3)
         .forEach(search => {
         suggestions.push({
-            text: search;
-            type: 'recent';
+            text: search,
+            type: 'recent',
             id: `recent-${search}`
         })
      })
@@ -252,12 +252,11 @@ export const getActiveFilterCount = (filters) => {
  */
 export const getDefaultFilters = () => ({
     types: [[];]
-    category: '';
-    minPrice: 0;
-    maxPrice: 10000;
-    minRating: 0;
-    sort: 'relevance',
-})
+    category: '',
+    minPrice: 0,
+    maxPrice: 10000,
+    minRating: 0,
+    sort: 'relevance'})
     export default {
     highlightSearchTerms,
     matchesSearchTerm,

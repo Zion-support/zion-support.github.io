@@ -10,35 +10,29 @@ import React from 'react';
 
 const whyWork = `At Zion, we're building the future of AI and technology. Join a team of passionate innovators who are creating groundbreaking solutions that will shape tomorrow's digital landscape.
 
-We offer:
-• Competitive compensation and equity packages
+We offer: • Competitive compensation and equity packages
 • Flexible remote work opportunities
 • Cutting-edge technology stack
 • Collaborative and inclusive culture
-• Professional development opportunities`;
-
+• Professional development opportunities`,
 const benefits = [
   {
     title: 'Competitive Compensation',
     description: 'Attractive salaries and performance-based bonuses.',
-    icon: <DollarSign className='h-6 w-6 text-zion-purple' />,
-  },
+    icon: <DollarSign className='h-6 w-6 text-zion-purple' />};
   {
     title: 'Health & Wellness',
     description: 'Comprehensive health, dental, and vision plans.',
-    icon: <Heart className='h-6 w-6 text-zion-purple' />,
-  },
+    icon: <Heart className='h-6 w-6 text-zion-purple' />};
   {
     title: 'Professional Growth',
     description: 'Opportunities for learning, development, and career advancement.',
-    icon: <Lightbulb className='h-6 w-6 text-zion-purple' />,
-  },
+    icon: <Lightbulb className='h-6 w-6 text-zion-purple' />};
   {
     title: 'Innovative Environment',
     description: 'Work on cutting-edge AI and technology projects.',
-    icon: <Briefcase className='h-6 w-6 text-zion-purple' />,
-  },
-];
+    icon: <Briefcase className='h-6 w-6 text-zion-purple' />}
+  ];
 
 function Careers() {
   const jobs = CAREER_JOBS.reduce((acc, job) => {
@@ -143,7 +137,7 @@ key={department}
                   {jobList.map((job, index) => (
                     <Card
 key={index}
-                      className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
+                      className='bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-colors'
                     >
                       <CardContent className='p-6'>
                         <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>
@@ -187,10 +181,10 @@ asChild
             </h2>
             <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
               We're always looking for talented individuals who are passionate,
-about AI and technology. Send us your resume and let's start a,
+about AI and technology. Send us your resume and let's start a;
 conversation. You can also apply directly by emailing us at
               <a
-href={`mailto:${applyEmail}`}
+href={`mailto: ${applyEmail}`}
                 className='text-zion-cyan hover:text-zion-purple transition-colors'
               >
                 {applyEmail}
@@ -207,6 +201,5 @@ asChild
         </div>
       </main>
     </>
-  );
-}
+  )}
 export default Careers;

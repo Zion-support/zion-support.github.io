@@ -6,31 +6,28 @@ import { Label } from "@/components/ui/label";
 import { TalentProfile } from "@/types/talent";
 
 export interface ContractFormValues {
-  projectTitle: string;
-  description: string;
-  deliverables: string;
-  timeline: string;
-  budget: number;
-  paymentTerms: string;
-  startDate: string;
-  endDate: string;
-}
+  projectTitle: string,
+  description: string,
+  deliverables: string,
+  timeline: string,
+  budget: number,
+  paymentTerms: string,
+  startDate: string,
+  endDate: string}
 
 interface ContractFormProps {
-  talent: TalentProfile;
-  clientName: string;
+  talent: TalentProfile,
+  clientName: string,
   initialValues?: ContractFormValues;
-  onFormValuesChange: (values: ContractFormValues) => void;
-  onContractGenerated: (contract: string) => void;
-}
+  onFormValuesChange: (values: ContractFormValues) => void,
+  onContractGenerated: (contract: string) => void}
 
 export function ContractForm({
-  talent,
-  clientName,
+  talent;
+  clientName;
   initialValues,
   onFormValuesChange,
-  onContractGenerated,
-}: ContractFormProps) {
+  onContractGenerated}: ContractFormProps) {
   const [formData, setFormData] = useState<ContractFormValues>(
     initialValues || {
       projectTitle: "",
@@ -40,8 +37,7 @@ export function ContractForm({
       budget: 0,
       paymentTerms: "",
       startDate: "",
-      endDate: "",
-    }
+      endDate: ""}
   );
 
   const handleInputChange = (field: keyof ContractFormValues, value: string | number) => {
@@ -54,7 +50,7 @@ export function ContractForm({
     const contract = `
 # Contract Agreement
 
-**Project:** ${formData.projectTitle}
+**Project: ** ${formData.projectTitle}
 **Client:** ${clientName}
 **Talent:** ${talent.name}
 
@@ -84,8 +80,7 @@ ${formData.paymentTerms}
 **Client Signature:** _________________ Date: _________
 
 **Talent Signature:** _________________ Date: _________
-    `;
-    
+    `,
     onContractGenerated(contract);
   };
 

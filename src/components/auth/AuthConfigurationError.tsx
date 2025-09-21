@@ -71,7 +71,7 @@ export function AuthConfigurationError({
           <div className="flex items-start">
             <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 mr-3" />
             <div className="text-sm text-blue-800">
-              <p className="font-medium mb-1">Quick Setup Checklist:</p>
+              <p className="font-medium mb-1">Quick Setup Checklist: </p>
               <ul className="list-disc list-inside space-y-1 text-blue-700">
                 <li>Verify environment variables are set</li>
                 <li>Check authentication provider configuration</li>
@@ -83,5 +83,4 @@ export function AuthConfigurationError({
         </div>
       </div>
     </div>
-  );
-}
+  )}

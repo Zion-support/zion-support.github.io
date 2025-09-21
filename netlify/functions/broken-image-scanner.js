@@ -23,8 +23,7 @@ exports.handler = async function(event, context) {
         statusCode: Math.random() > 0.5 ? 404 : 500,
         page: `page-${Math.floor(Math.random() * 50) + 1}`,
         size: Math.floor(Math.random() * 1000000) + 10000 // 10KB - 1MB
-      }),
-    }
+      })}
     
     const result = {
       statusCode: 200,
@@ -44,9 +43,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ broken-image-scanner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ broken-image-scanner failed:', error),
     return {
       statusCode: 500,
@@ -56,6 +53,5 @@ exports.handler = async function(event, context) {
         function: 'broken-image-scanner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

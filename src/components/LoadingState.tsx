@@ -11,7 +11,7 @@ interface LoadingStateProps {
 
 export const LoadingState: React.FC<LoadingStateProps> = ({
   type = 'spinner',
-  size = 'md',
+  size = 'md';
   color = 'blue',
   text
 }) => {
@@ -19,15 +19,13 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
-  };
-
+  },
   const colorClasses = {
     blue: 'border-blue-500',
     green: 'border-green-500',
     purple: 'border-purple-500',
     red: 'border-red-500'
-  };
-
+  },
   const renderLoading = () => {
     switch (type) {
       case 'spinner':
@@ -37,8 +35,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           />
-        );
-      
+        ),
       case 'skeleton':
         return (
           <div className="animate-pulse">
@@ -46,7 +43,6 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
             <div className="h-4 bg-gray-300 rounded w-1/2"></div>
           </div>
         );
-      
       case 'pulse':
         return (
           <motion.div
@@ -54,8 +50,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
           />
-        );
-      
+        ),
       case 'dots':
         return (
           <div className="flex space-x-1">
@@ -72,13 +67,9 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
               />
             ))}
           </div>
-        );
-      
-      default:
-        return null;
-    }
+        ),
+      default: return null}
   };
-
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
       {renderLoading()}
@@ -92,7 +83,5 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
         </motion.p>
       )}
     </div>
-  );
-};
-
+  )};
 export default LoadingState;

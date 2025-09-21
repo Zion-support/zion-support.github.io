@@ -2,10 +2,9 @@ import React from 'react';
 import { LucideIcon } from 'lucide-react';
 
 interface TabDefinition {
-  id: string;
-  label: string;
-  icon: LucideIcon;
-}
+  id: string,
+  label: string,
+  icon: LucideIcon}
 
 export default function DeveloperPortal() {
   return (

@@ -20,13 +20,11 @@ function main() {
     console.error('Error: Coverage summary JSON path not provided.'),
     // Try to write status even on early exit, to indicate failure cause
     writeTestStatus({ passed: 0, failed: 0, total: 0, coverage: 0, error: 'Coverage summary path missing' }),
-    process.exit(1),
-  }
+    process.exit(1)}
 
   let coverageData,
   try {
-    coverageData = JSON.parse(fs.readFileSync(coverageSummaryPath, 'utf-8')),
-  } catch (err) {
+    coverageData = JSON.parse(fs.readFileSync(coverageSummaryPath, 'utf-8'))} catch (err) {
     console.error(`Error: Could not read or parse coverage summary at ${coverageSummaryPath}`, err),
     writeTestStatus({ passed: 0, failed: 0, total: 0, coverage: 0, error: `Failed to parse coverage summary: ${err.message}` }),
     process.exit(1), // Exit, as coverage check is a primary function
@@ -45,15 +43,12 @@ function main() {
         numPassedTests: jestOutput.numPassedTests || 0,
         numFailedTests: jestOutput.numFailedTests || 0,
         numTotalTests: jestOutput.numTotalTests || 0
-      },
-    } else {
+      }} else {
       testCountsError = `Jest results file not found at ${JEST_RESULTS_FILE}. Test counts set to zero.`,
-      console.warn(testCountsError),
-    }
+      console.warn(testCountsError)}
   } catch (err) {
     testCountsError = `Error parsing Jest results file ${JEST_RESULTS_FILE}: ${err.message}. Test counts set to zero.`,
-    console.error(testCountsError),
-  }
+    console.error(testCountsError)}
 
   const testStatusPayload = {
     passed: jestResultsData.numPassedTests,
@@ -76,10 +71,8 @@ function main() {
   console.log(`Coverage: ${coveragePct}% (Threshold: ${COVERAGE_THRESHOLD}%)`),
   if (coveragePct < COVERAGE_THRESHOLD) {
     console.error(`Error: Coverage (${coveragePct}%) is below threshold of ${COVERAGE_THRESHOLD}%.`),
-    process.exit(1),
-  } else {
-    console.log('Coverage check passed.'),
-  }
+    process.exit(1)} else {
+    console.log('Coverage check passed.')}
 }
 
 function writeTestStatus(statusData) {
@@ -100,8 +93,7 @@ function writeTestStatus(statusData) {
     }
 
     fs.writeFileSync(TEST_STATUS_FILE, JSON.stringify(finalPayload, null, 2)),
-    console.log(`Test status written to ${TEST_STATUS_FILE}`),
-  } catch (err) {
+    console.log(`Test status written to ${TEST_STATUS_FILE}`)} catch (err) {
     console.error(`Error writing test status to ${TEST_STATUS_FILE}:`, err),
     // If this write fails, the gather script won't find the file.
   }
@@ -115,7 +107,6 @@ process.on('unhandledRejection', (reason, promise) => {
     passed: 0, failed: 0, total: 0, coverage: 0,
     error: 'Unhandled rejection in check_coverage_and_notify.js'
   }),
-  process.exit(1),
-}),
+  process.exit(1)}),
 
 main(),

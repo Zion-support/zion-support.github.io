@@ -47,12 +47,11 @@ export const ServicesShowcase = () => {
               </div>
               <div className="text-lg font-bold text-blue-600">$8,000</div>
             </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+            <button className="w-full bg-blue-600 hover: bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
               Learn More
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )};

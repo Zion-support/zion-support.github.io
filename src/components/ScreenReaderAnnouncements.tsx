@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 
 interface ScreenReaderAnnouncementsProps {
-  announcements: string[];
+  announcements: string[],
   priority?: 'polite' | 'assertive';
 }
 

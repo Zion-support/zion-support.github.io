@@ -7,20 +7,18 @@ import { Label } from "@/components/ui/label";
 import { TalentProfile } from "@/types/talent";
 
 interface SmartContractBuilderProps {
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string;
-  onContractGenerated: (contract: string) => void;
-}
+  isOpen: boolean,
+  onClose: () => void,
+  talent: TalentProfile,
+  clientName: string,
+  onContractGenerated: (contract: string) => void}
 
 export function SmartContractBuilder({
-  isOpen,
-  onClose,
+  isOpen;
+  onClose;
   talent,
   clientName,
-  onContractGenerated,
-}: SmartContractBuilderProps) {
+  onContractGenerated}: SmartContractBuilderProps) {
   const [contractCode, setContractCode] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
 
@@ -76,8 +74,7 @@ contract TalentContract {
             description: _description,
             value: _value,
             isCompleted: false
-        });
-    }
+        })}
     
     function completeMilestone(uint256 _milestoneId) public {
         require(msg.sender == client, "Only client can complete milestones");

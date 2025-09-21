@@ -1,7 +1,6 @@
 export class StringUtils {
   public static capitalize(str: string): string {
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-  }
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()}
 
   public static capitalizeWords(str: string): string {
     return str.replace(/\w\S*/g, (txt) => 
@@ -37,8 +36,7 @@ export class StringUtils {
 
   public static truncate(str: string, length: number, suffix: string = "..."): string {
     if (str.length <= length) {
-      return str;
-    }
+      return str}
     return str.substring(0, length - suffix.length) + suffix;
   }
 
@@ -52,7 +50,7 @@ export class StringUtils {
   }
 
   public static stripHtml(html: string): string {
-    const div = document.createElement("div");
+    const div = document.createElement("div"),
     div.innerHTML = html;
     return div.textContent || div.innerText || "";
   }
@@ -62,7 +60,7 @@ export class StringUtils {
   }
 
   public static unescapeHtml(html: string): string {
-    const div = document.createElement("div");
+    const div = document.createElement("div"),
     div.innerHTML = html;
     return div.textContent || div.innerText || "";
   }
@@ -72,8 +70,7 @@ export class StringUtils {
   }
 
   public static reverse(str: string): string {
-    return str.split("").reverse().join("");
-  }
+    return str.split("").reverse().join("")}
 
   public static isPalindrome(str: string): boolean {
     const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -81,16 +78,13 @@ export class StringUtils {
   }
 
   public static countWords(str: string): number {
-    return str.trim().split(/\s+/).filter(word => word.length > 0).length;
-  }
+    return str.trim().split(/\s+/).filter(word => word.length > 0).length}
 
   public static countCharacters(str: string): number {
-    return str.length;
-  }
+    return str.length}
 
   public static countLines(str: string): number {
-    return str.split("\n").length;
-  }
+    return str.split("\n").length}
 
   public static padStart(str: string, length: number, padString: string = " "): string {
     return str.padStart(length, padString);
@@ -101,7 +95,7 @@ export class StringUtils {
   }
 
   public static randomString(length: number, charset: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"): string {
-    let result = "";
+    let result = "",
     for (let i = 0; i < length; i++) {
       result += charset.charAt(Math.floor(Math.random() * charset.length));
     }
@@ -120,21 +114,18 @@ export class StringUtils {
     return num.toLocaleString("en-US", {
       minimumFractionDigits: decimals,
       maximumFractionDigits: decimals
-    });
-  }
+    })}
 
   public static formatCurrency(amount: number, currency: string = "USD"): string {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: currency
-    }).format(amount);
-  }
+    }).format(amount)}
 
   public static formatPercentage(value: number, decimals: number = 0): string {
     return new Intl.NumberFormat("en-US", {
       style: "percent",
       minimumFractionDigits: decimals,
       maximumFractionDigits: decimals
-    }).format(value / 100);
-  }
+    }).format(value / 100)}
 }

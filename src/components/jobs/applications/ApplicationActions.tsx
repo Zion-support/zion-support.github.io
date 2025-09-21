@@ -1,8 +1,7 @@
-import { Eye,,, ChevronDown,,, Loader2,,  } from 'lucide-react'
+import { Eye,,, ChevronDown,,, Loader2,} from 'lucide-react'
 import React from "react";
 interface ApplicationActionsProps {
-onStatusChange,
-}: ApplicationActionsProps) {
+onStatusChange}: ApplicationActionsProps) {
   return (
     <div className='flex items-center justify-end gap-2'>
       <Button
@@ -13,8 +12,8 @@ variant='outline'
       <Button
 variant="outline"
         size="sm"
-        onClick = {(,) => onViewApplication(application.id),}
-        disabled = {!!application.viewed_at,}
+        onClick = {() => onViewApplication(application.id)}
+        disabled = {!!application.viewed_at}
       >
         <Eye className='h-4 w-4' />
       </Button>
@@ -49,11 +48,11 @@ onClick={() => onStatusChange(application.id, 'hired')}          >
             Shortlist
           </DropdownMenuItem>
           <DropdownMenuItem
-onClick = {() => onStatusChange(application.id, "interview"),}          >
+onClick = {() => onStatusChange(application.id, "interview")}          >
             Schedule Interview
           </DropdownMenuItem>
           <DropdownMenuItem
-onClick = {() => onStatusChange(application.id, "hired"),}
+onClick = {() => onStatusChange(application.id, "hired")}
           >
             Hire
           </DropdownMenuItem>

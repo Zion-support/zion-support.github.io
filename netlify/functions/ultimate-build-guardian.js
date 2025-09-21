@@ -30,8 +30,7 @@ exports.handler = async function() {
           performance: buildHealth.performance
         }
       })
-    },
-  } catch (error) {
+    }} catch (error) {
     // Log error for monitoring
     console.error('Ultimate Build Guardian error:', {
       error: error.message,
@@ -58,8 +57,7 @@ exports.handler = async function() {
           }
         }
       })
-    },
-  }
+    }}
 },
 
 async function checkUltimateBuildHealth() {
@@ -98,5 +96,4 @@ async function checkUltimateBuildHealth() {
       buildOptimization: 'enabled',
       caching: 'active'
     }
-  },
-}
+  }}

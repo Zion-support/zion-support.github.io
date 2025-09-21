@@ -6,7 +6,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         description: "Complete GitOps platform that automates infrastructure deployment, configuration management, and application delivery using Git as the single source of truth.",
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -45,8 +45,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -55,7 +54,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         description: "Unified multi-cloud management platform that provides centralized monitoring, cost optimization, and governance across AWS, Azure, GCP, and other cloud providers.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -94,8 +93,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -104,7 +102,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         description: "Comprehensive Kubernetes management platform that simplifies cluster operations, monitoring, security, and application deployment across multiple clusters.",
         category: "
         subcategory: "
-        price: 2500;
+        price: 2500,
         currency: "
         pricingModel: "
         features: [
@@ -143,8 +141,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -153,7 +150,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         description: "Comprehensive observability platform that provides unified monitoring, logging, tracing, and alerting across applications, infrastructure, and business metrics.",
         category: "
         subcategory: "
-        price: 2100;
+        price: 2100,
         currency: "
         pricingModel: "
         features: [
@@ -192,8 +189,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -202,7 +198,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         description: "End-to-end serverless development platform that simplifies building, testing, deploying, and monitoring serverless applications across multiple cloud providers.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -241,7 +237,6 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];

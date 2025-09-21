@@ -9,8 +9,7 @@ export async function fetchWithRetry(
 ): Promise<Response> {
   const { retries = 3, retryDelay = 1000, ...fetchOptions } = options;
   
-  let lastError: Error;
-  
+  let lastError: Error,
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const response = await fetch(url, fetchOptions);

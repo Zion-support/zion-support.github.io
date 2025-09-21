@@ -9,18 +9,15 @@ class LintAutomation {,
   constructor() {,
     this.logFile = path.join(process.cwd(), 'logslint-automation.log'),
     this.fixedCount = 0,
-    this.errorCount = 0,
-  }
+    this.errorCount = 0}
 ,
   log(message, level = 'INFO') {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,
     console.log(logMessage.trim()),
     try {,
-      fs.appendFileSync(this.logFile, logMessage),
-    } catch (error) {,
-      console.error('Failed to write to log file:', error.message),
-    }
+      fs.appendFileSync(this.logFile, logMessage)} catch (error) {,
+      console.error('Failed to write to log file:', error.message)}
   }
 ,
   async runLintFix() {,
@@ -32,11 +29,9 @@ class LintAutomation {,
         cwd: process.cwd(),
         stdio: 'pipe'}),
       this.fixedCount++,
-      this.log(`Lint fix completed successfully. Fixed ${this.fixedCount} issues.`),
-    } catch (error) {,
+      this.log(`Lint fix completed successfully. Fixed ${this.fixedCount} issues.`)} catch (error) {,
       this.errorCount++,
-      this.log(`Lint fix failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Lint fix failed: ${error.message}`, 'ERROR')}
   }
 ,
   async run() {,
@@ -44,15 +39,13 @@ class LintAutomation {,
     // Create logs directory if it doesn't exist,
     const logsDir = path.join(process.cwd(), 'logs'),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true }),
-    }
+      fs.mkdirSync(logsDir, { recursive: true })}
 ,
     // Run initial lint fix,
     await this.runLintFix(),
     // Set up interval for continuous lint fixing,
     setInterval(async () => {,
-      await this.runLintFix(),
-    }, 600000), // Run every 10 minutes
+      await this.runLintFix()}, 600000), // Run every 10 minutes
   }
 }
 ,

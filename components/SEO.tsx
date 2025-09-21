@@ -22,7 +22,7 @@ export function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       {canonical && <link rel="canonical" href={canonical} />}
-      {url && <meta property="og:url" content={url} />}
+      {url && <meta property="og: url" content={url} />}
       {title && <meta property="og:title" content={title} />}
       {description && <meta property="og:description" content={description} />}
       {keywords && <meta name="keywords" content={keywords} />}
@@ -33,5 +33,4 @@ export function SEO({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
     </>
-  );
-}
+  )}

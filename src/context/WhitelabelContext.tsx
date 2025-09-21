@@ -1,19 +1,18 @@
 import React, { createContext, useContext, useState } from 'react';
 
 interface WhitelabelContextType {
-  isWhitelabel: boolean;
-  primaryColor: string;
-  setPrimaryColor: (color: string) => void;
-  brandName: string;
-  setBrandName: (name: string) => void;
-  logo: string;
-  setLogo: (logo: string) => void;
-}
+  isWhitelabel: boolean,
+  primaryColor: string,
+  setPrimaryColor: (color: string) => void,
+  brandName: string,
+  setBrandName: (name: string) => void,
+  logo: string,
+  setLogo: (logo: string) => void}
 
 const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
 
 export function WhitelabelProvider({ children }: { children: React.ReactNode }) {
-  const [isWhitelabel] = useState(false);
+  const [isWhitelabel] = useState(false),
   const [primaryColor, setPrimaryColor] = useState('#8B5CF6');
   const [brandName, setBrandName] = useState('Zion Tech Group');
   const [logo, setLogo] = useState('');

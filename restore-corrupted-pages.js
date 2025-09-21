@@ -9,8 +9,7 @@ if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
     // Create a backup of the current corrupted file
-corruptedBackup: corruptedBackupPath,
-}
+corruptedBackup: corruptedBackupPath}
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
@@ -27,13 +26,11 @@ console.log(`   Reason: ${result.reason}`)
         }
         results.details.push({
           file: fullPath
-          ...result,
-})
+          ...result})
       }
     }
   }
-return results,
-}
+return results}
 // Run the restoration if this script is executed directly,
 if ({
   restoreAllCorruptedPages()

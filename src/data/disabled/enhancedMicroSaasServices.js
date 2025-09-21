@@ -6,7 +6,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "Real-time business intelligence platform powered by AI that transforms raw data into actionable insights, predictive analytics, and automated reporting.",
         category: "
         subcategory: "
-        price: 2500;
+        price: 2500,
         currency: "
         pricingModel: "
         features: [
@@ -47,13 +47,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Node.js", "Python", "TensorFlow", "PostgreSQL", "Redis"],
         integrations: ["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft Teams", "Zapier"],
         compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"],
-        roi: "300% within 12 months",
-    }
+        roi: "300% within 12 months"}
     /
     {
         id: "
@@ -61,7 +59,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "Comprehensive marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -102,13 +100,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Vue.js", "Python", "Machine Learning", "MongoDB", "AWS", "SendGrid"],
         integrations: ["HubSpot", "Mailchimp", "Facebook Ads", "Google Ads", "LinkedIn", "Twitter"],
         compliance: ["GDPR", "CAN-SPAM", "CCPA", "SOC 2"],
-        roi: "250% within 8 months",
-    }
+        roi: "250% within 8 months"}
     /
     {
         id: "
@@ -116,7 +112,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "Intelligent HR platform that automates recruitment, employee management, and HR processes using AI to find the best talent and optimize workforce performance.",
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -157,13 +153,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Python", "Natural Language Processing", "PostgreSQL", "Redis", "Docker"],
         integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack", "Microsoft 365"],
         compliance: ["EEOC", "ADA", "FMLA", "SOC 2", "ISO 27001"],
-        roi: "280% within 10 months",
-    }
+        roi: "280% within 10 months"}
     /
     {
         id: "
@@ -171,7 +165,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "Advanced legal technology platform that automates document review, contract analysis, and legal research using AI to increase efficiency and reduce costs.",
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -212,13 +206,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Python", "BERT", "TensorFlow", "PostgreSQL", "Elasticsearch"],
         integrations: ["Clio", "PracticePanther", "MyCase", "DocuSign", "Adobe Sign", "Microsoft Office"],
         compliance: ["SOC 2", "ISO 27001", "HIPAA", "GDPR", "CCPA"],
-        roi: "400% within 15 months",
-    }
+        roi: "400% within 15 months"}
     /
     {
         id: "
@@ -226,7 +218,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 4500;
+        price: 4500,
         currency: "
         pricingModel: "
         features: [
@@ -267,13 +259,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Python", "Quantum Algorithms", "PostgreSQL", "Kubernetes", "AWS"],
         integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "PCI DSS", "HIPAA", "FedRAMP"],
-        roi: "350% within 18 months",
-    }
+        roi: "350% within 18 months"}
     /
     {
         id: "
@@ -281,7 +271,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -322,13 +312,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Node.js", "Hyperledger Fabric", "IoT sensors", "PostgreSQL", "Redis"],
         integrations: ["ERP systems", "WMS", "TMS", "IoT platforms", "Analytics tools"],
         compliance: ["ISO 9001", "HACCP", "FDA", "EU regulations", "SOC 2"],
-        roi: "320% within 14 months",
-    }
+        roi: "320% within 14 months"}
     /
     {
         id: "
@@ -336,7 +324,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "Intelligent edge computing platform that processes IoT data locally for real-time insights, reduced latency, and improved security.",
         category: "
         subcategory: "
-        price: 3200;
+        price: 3200,
         currency: "
         pricingModel: "
         features: [
@@ -377,13 +365,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Python", "TensorFlow Lite", "Kubernetes", "PostgreSQL", "MQTT"],
         integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Industrial protocols", "Analytics platforms"],
         compliance: ["ISO 27001", "SOC 2", "NIST", "Industry-specific standards"],
-        roi: "380% within 16 months",
-    }
+        roi: "380% within 16 months"}
     /
     {
         id: "
@@ -391,7 +377,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "Advanced financial analytics platform that uses AI to provide real-time insights, risk assessment, and predictive modeling for financial decision-making.",
         category: "
         subcategory: "
-        price: 3800;
+        price: 3800,
         currency: "
         pricingModel: "
         features: [
@@ -432,13 +418,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis", "Apache Kafka"],
         integrations: ["Bloomberg", "Reuters", "Trading platforms", "Risk management systems", "Compliance tools"],
         compliance: ["SOX", "Basel III", "Dodd-Frank", "SOC 2", "ISO 27001"],
-        roi: "450% within 20 months",
-    }
+        roi: "450% within 20 months"}
     /
     {
         id: "
@@ -446,7 +430,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "Comprehensive healthcare platform that uses AI for patient monitoring, diagnosis assistance, and healthcare management to improve patient outcomes.",
         category: "
         subcategory: "
-        price: 4200;
+        price: 4200,
         currency: "
         pricingModel: "
         features: [
@@ -487,13 +471,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Python", "TensorFlow", "PostgreSQL", "HL7 FHIR", "DICOM"],
         integrations: ["EMR systems", "PACS", "Lab systems", "Pharmacy systems", "Insurance systems"],
         compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA regulations"],
-        roi: "400% within 18 months",
-    }
+        roi: "400% within 18 months"}
     /
     {
         id: "
@@ -501,7 +483,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         description: "Intelligent education platform that personalizes learning experiences, provides adaptive content, and tracks student progress using AI.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -542,13 +524,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Python", "Machine Learning", "PostgreSQL", "Redis", "WebRTC"],
         integrations: ["LMS systems", "Video conferencing", "Assessment tools", "Analytics platforms", "Content libraries"],
         compliance: ["FERPA", "COPPA", "SOC 2", "ISO 27001", "Accessibility standards"],
-        roi: "300% within 12 months",
-    }
+        roi: "300% within 12 months"}
 ];
     export const getServiceById = (id) => {
     return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id)

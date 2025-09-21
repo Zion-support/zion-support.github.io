@@ -35,14 +35,13 @@ export function TabsTrigger({ value, children, className = '' }) {
   return (
     <button
       onClick={() => setActiveTab(value)}
-      className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${
+      className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all focus: outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${
         isActive ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'
       } ${className}`}
     >
       {children}
     </button>
-  );
-}
+  )}
 
 // TabsContent component
 export function TabsContent({ value, children, className = '' }) {
@@ -51,10 +50,8 @@ export function TabsContent({ value, children, className = '' }) {
   
   const { activeTab } = context;
   if (activeTab !== value) return null;
-  
   return (
-    <div className={`mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}>
+    <div className={`mt-2 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}>
       {children}
     </div>
-  );
-}
+  )}

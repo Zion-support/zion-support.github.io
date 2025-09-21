@@ -21,18 +21,18 @@ console.log('Merge conflict resolution complete!')
         }
       }
 }
-,);
+);
 console.log('\nMerge conflict fixing complete!');
 console.log('\nMerge conflict fixing complete!');
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
-,);    }
+);    }
   }
   }
 }
 console.log('\nMerge conflict fixing complete!')
 console.log('\nMerge conflict fixing complete!')
 console.log(`Fixed merge conflicts in ${fixedCount} files`)
-,)
+)
 }
   traverse(dir);
   return files}
@@ -57,7 +57,7 @@ console.log(`Fixed merge conflicts in ${fixedCount} files`);
 // Run TypeScript check to see remaining errors,
 console.log('\nRunning TypeScript check...');
 try {
-  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });
+  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' }),
   console.log('TypeScript check passed!');
 } catch (error) {
   console.log('TypeScript check found some issues, but continuing...');

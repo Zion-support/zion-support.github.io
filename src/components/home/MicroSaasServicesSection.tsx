@@ -1,7 +1,6 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
 import React from "react";
 import React from "react";
@@ -17,7 +16,7 @@ const ServiceCard: any = ({ service }: { service: any }) => (
 <div className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-zion-purple/20">
 {/* Featured Badge */}
 <div className="absolute -top-2 -right-2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
-Featured;
+Featured,
 </div>
 
 {/* Service Icon */}
@@ -69,12 +68,12 @@ Featured;
 </div>
 
 {/* Learn More Button */}
-<Button;
+<Button,
 asChild;
-className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:shadow-lg group-hover:shadow-zion-purple/20 transition-all duration-300"
+className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white group-hover:shadow-lg group-hover:shadow-zion-purple/20 transition-all duration-300"
 >
 <Link to={service.website} target="_blank" rel="noopener noreferrer">
-Learn More;
+Learn More,
 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
 </Link>
 </Button>
@@ -94,8 +93,8 @@ return (
 <Zap className="w-5 h-5 text-zion-cyan" />
 <span className="text-zion-cyan font-medium">Featured Services</span>
 </div>
-<h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-6">
-Micro SAAS Solutions;
+<h2 className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-6">
+Micro SAAS Solutions,
 </h2>
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
 Transform your business with our cutting-edge micro SAAS services. From AI-powered automation;
@@ -104,7 +103,7 @@ to enterprise IT solutions; we provide innovative tools that drive growth and ef
 </div>
 
 {/* Featured Services Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
 {featuredServices.map((service) => (
 <ServiceCard key={service.id} service={service} />
 ))}
@@ -146,7 +145,7 @@ to enterprise IT solutions; we provide innovative tools that drive growth and ef
 <div className="text-center">
 <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-purple-dark/50 border border-zion-blue-light/20 rounded-2xl p-8 max-w-4xl mx-auto">
 <h3 className="text-2xl font-bold text-white mb-4">
-Ready to Get Started?;
+Ready to Get Started?,
 </h3>
 <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
 Explore our complete range of micro SAAS services and find the perfect solution for your business needs.;
@@ -156,10 +155,10 @@ Our team is ready to help you implement and optimize these tools.;
 <Button;
 asChild;
 size="
-className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover:from-zion-purple-light hover:to-zion-cyan-light shadow-lg shadow-zion-purple/20"
+className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple-light hover:to-zion-cyan-light shadow-lg shadow-zion-purple/20"
 >
 <Link to="/micro-saas-services">
-View All Services;
+View All Services,
 <ArrowRight className="w-5 h-5 ml-2" />
 </Link>
 </Button>
@@ -167,10 +166,10 @@ View All Services;
 asChild;
 size="
 variant="outline"
-className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"
+className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan hover:text-white"
 >
 <Link to="/contact">
-Get Consultation;
+Get Consultation,
 </Link>
 </Button>
 </div>

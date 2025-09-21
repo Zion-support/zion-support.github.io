@@ -7,5 +7,4 @@ export function getStripe() {
             : import.meta.env.NEXT_PUBLIC_STRIPE_TEST_KEY;
         stripePromise = loadStripe(key, { advancedFraudSignals: false })
      }
-    return stripePromise;
-}
+    return stripePromise}

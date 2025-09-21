@@ -6,7 +6,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         description: "Revolutionary platform that combines quantum computing with AI to solve complex optimization problems in real-time, enabling unprecedented computational power for enterprise applications.",
         category: "
         subcategory: "
-        price: 2500;
+        price: 2500,
         currency: "
         pricingModel: "
         features: [
@@ -47,16 +47,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Qiskit", "TensorFlow", "Python", "Rust", "Quantum Hardware"],
         integrations: ["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
         roi: "
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
         launchDate: "
-        betaAccess: true,
-    }
+        betaAccess: true}
     /
     {
         id: "
@@ -64,7 +62,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         description: "Complete AI-powered business automation platform that runs entire business operations autonomously, from decision-making to execution, with human oversight capabilities.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -105,16 +103,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
         integrations: ["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft 365"],
         compliance: ["SOC 2", "GDPR", "ISO 27001"],
         roi: "
         competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
         launchDate: "
-        betaAccess: true,
-    }
+        betaAccess: true}
     /
     {
         id: "
@@ -122,7 +118,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         description: "Cutting-edge platform for developing brain-computer interfaces and neural network applications, enabling direct communication between human brain and digital systems.",
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -163,16 +159,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "PyTorch", "C++", "CUDA"],
         integrations: ["Medical devices", "Research platforms", "Gaming engines"],
         compliance: ["FDA", "HIPAA", "ISO 13485", "CE Mark"],
         roi: "
         competitors: ["Neuralink", "Kernel", "CTRL-labs"],
         launchDate: "
-        betaAccess: false,
-    }
+        betaAccess: false}
     /
     {
         id: "
@@ -180,7 +174,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         description: "Next-generation 3D holographic workspace that enables teams to collaborate in immersive virtual environments, revolutionizing remote work and creative collaboration.",
         category: "
         subcategory: "
-        price: 1200;
+        price: 1200,
         currency: "
         pricingModel: "
         features: [
@@ -221,16 +215,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Unity", "Unreal Engine", "WebGL", "WebXR", "Three.js"],
         integrations: ["Slack", "Microsoft Teams", "Zoom", "Figma", "Autodesk"],
         compliance: ["GDPR", "SOC 2", "ISO 27001"],
         roi: "
         competitors: ["Microsoft Mesh", "Meta Horizon", "Spatial"],
         launchDate: "
-        betaAccess: true,
-    }
+        betaAccess: true}
     /
     {
         id: "
@@ -238,7 +230,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         description: "Advanced cybersecurity platform that creates a distributed security mesh using AI to protect digital assets across all environments, from edge to cloud.",
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -279,16 +271,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "Kubernetes", "Docker", "Elasticsearch"],
         integrations: ["SIEM systems", "EDR solutions", "Cloud platforms", "Identity providers"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         roi: "
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
         launchDate: "
-        betaAccess: true,
-    }
+        betaAccess: true}
     /
     {
         id: "
@@ -296,7 +286,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         description: "Comprehensive platform for developing and deploying sustainable technology solutions, including green computing, renewable energy optimization, and environmental impact tracking.",
         category: "
         subcategory: "
-        price: 1500;
+        price: 1500,
         currency: "
         pricingModel: "
         features: [
@@ -337,15 +327,13 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "IoT platforms", "Blockchain", "Machine Learning", "Cloud Computing"],
         integrations: ["Energy management systems", "IoT sensors", "Sustainability platforms"],
         compliance: ["ISO 14001", "LEED", "BREEAM", "Green Building Standards"],
         roi: "
         competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
         launchDate: "
-        betaAccess: true,
-    }
+        betaAccess: true}
 ];
     export export default nextGenInnovativeServices2025;

@@ -5,8 +5,8 @@ import { Input } from '@/components/ui/input';
 import { useDebounce } from '@/hooks/useDebounce';
 
 interface SearchBarProps {
-  value: string;
-  onChange: (value: string) => void;
+  value: string,
+  onChange: (value: string) => void,
   placeholder?: string;
 }
 
@@ -37,14 +37,14 @@ export function SearchBar({ value, onChange, placeholder = "Search..." }: Search
   }, [debouncedValue]);
 
   const handleSelect = (suggestion: string) => {
-    onChange(suggestion);
+    onChange(suggestion),
     setFocused(false);
     setHighlightedIndex(-1);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowDown') {
-      e.preventDefault();
+      e.preventDefault(),
       setHighlightedIndex(prev => 
         prev < suggestions.length - 1 ? prev + 1 : prev
       );
@@ -93,7 +93,7 @@ export function SearchBar({ value, onChange, placeholder = "Search..." }: Search
           {suggestions.map((suggestion, index) => (
             <button
               key={suggestion}
-              className={`w-full text-left px-4 py-2 hover:bg-zion-purple/20 ${
+              className={`w-full text-left px-4 py-2 hover: bg-zion-purple/20 ${
                 index === highlightedIndex ? 'bg-zion-purple/20' : ''
               }`}
               onClick={() => handleSelect(suggestion)}
@@ -104,5 +104,4 @@ export function SearchBar({ value, onChange, placeholder = "Search..." }: Search
         </div>
       )}
     </div>
-  );
-}
+  )}

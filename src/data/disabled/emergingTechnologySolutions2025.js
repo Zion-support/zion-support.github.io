@@ -6,7 +6,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         description: "Comprehensive blockchain and Web3 platform that enables enterprises to build decentralized applications, implement smart contracts, and leverage blockchain technology for business transformation and innovation.",
         category: "
         subcategory: "
-        price: 1299;
+        price: 1299,
         currency: "
         pricingModel: "
         features: [
@@ -49,8 +49,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Ethereum", "Polygon", "Solana", "React", "Node.js", "Web3.js"],
         integrations: ["Enterprise systems", "Payment gateways", "Cloud platforms", "Financial systems", "IoT platforms"],
         compliance: ["SOC 2", "GDPR", "Financial regulations", "Blockchain compliance"],
@@ -62,8 +61,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Financial Services", "Manufacturing", "Healthcare", "Supply Chain", "Real Estate"],
         scalability: "
         customizationLevel: "
-        innovationLevel: "Cutting-edge Web3 and blockchain technology",
-    }
+        innovationLevel: "Cutting-edge Web3 and blockchain technology"}
     /
     {
         id: "
@@ -71,7 +69,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         description: "Advanced quantum computing platform that provides quantum algorithms, quantum machine learning, and quantum optimization solutions for complex computational problems that are impossible to solve with classical computers.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -114,8 +112,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators", "Cloud quantum platforms"],
         integrations: ["Research platforms", "Scientific computing tools", "Financial modeling systems", "Cloud platforms", "HPC systems"],
         compliance: ["Research standards", "Data security", "Intellectual property protection"],
@@ -127,8 +124,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Research", "Pharmaceuticals", "Finance", "Technology", "Government"],
         scalability: "
         customizationLevel: "
-        innovationLevel: "Revolutionary quantum computing technology",
-    }
+        innovationLevel: "Revolutionary quantum computing technology"}
     /
     {
         id: "
@@ -136,7 +132,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         description: "Comprehensive edge computing and IoT platform that processes data at the edge, reduces latency, improves performance, and enables real-time decision making for connected devices and smart systems.",
         category: "
         subcategory: "
-        price: 799;
+        price: 799,
         currency: "
         pricingModel: "
         features: [
@@ -179,8 +175,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Docker", "MQTT", "React", "Python", "Edge frameworks"],
         integrations: ["Cloud platforms", "IoT devices", "Data centers", "Network infrastructure", "Security systems"],
         compliance: ["SOC 2", "ISO 27001", "IoT security standards", "Data privacy regulations"],
@@ -192,8 +187,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Smart Cities", "Manufacturing", "Healthcare", "Transportation", "Retail"],
         scalability: "
         customizationLevel: "
-        innovationLevel: "Advanced edge computing and IoT technology",
-    }
+        innovationLevel: "Advanced edge computing and IoT technology"}
     /
     {
         id: "
@@ -201,7 +195,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         description: "Advanced 5G and connectivity platform that provides ultra-fast wireless communication, low-latency networking, and advanced connectivity solutions for businesses, IoT devices, and emerging technologies.",
         category: "
         subcategory: "
-        price: 999;
+        price: 999,
         currency: "
         pricingModel: "
         features: [
@@ -244,8 +238,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["5G NR", "Network slicing", "Edge computing", "React", "Python", "Network protocols"],
         integrations: ["Network infrastructure", "Cloud platforms", "IoT platforms", "Security systems", "Analytics platforms"],
         compliance: ["5G standards", "Network security", "Data privacy", "Telecommunications regulations"],
@@ -257,8 +250,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Telecommunications", "Healthcare", "Transportation", "Manufacturing", "Smart Cities"],
         scalability: "
         customizationLevel: "
-        innovationLevel: "Cutting-edge 5G and connectivity technology",
-    }
+        innovationLevel: "Cutting-edge 5G and connectivity technology"}
     /
     {
         id: "
@@ -266,7 +258,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         description: "Comprehensive augmented reality and virtual reality platform that provides immersive experiences, training simulations, virtual collaboration, and AR/VR solutions for enterprise applications and business transformation.",
         category: "
         subcategory: "
-        price: 899;
+        price: 899,
         currency: "
         pricingModel: "
         features: [
@@ -309,8 +301,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Unity", "Unreal Engine", "WebXR", "React", "Three.js", "AR/VR frameworks"],
         integrations: ["Learning management systems", "Video conferencing platforms", "3D modeling tools", "Analytics platforms", "Content management systems"],
         compliance: ["Data privacy", "Accessibility standards", "Security requirements"],
@@ -322,8 +313,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Manufacturing", "Healthcare", "Education", "Retail", "Real Estate"],
         scalability: "
         customizationLevel: "
-        innovationLevel: "Advanced immersive technology solutions",
-    }
+        innovationLevel: "Advanced immersive technology solutions"}
     /
     {
         id: "
@@ -331,7 +321,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         description: "Advanced robotics and automation platform that provides intelligent automation, robotic process automation (RPA), and autonomous systems for manufacturing, logistics, healthcare, and other industries.",
         category: "
         subcategory: "
-        price: 1199;
+        price: 1199,
         currency: "
         pricingModel: "
         features: [
@@ -374,8 +364,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["ROS", "Computer Vision", "Machine Learning", "Python", "C++", "Robotics frameworks"],
         integrations: ["Manufacturing systems", "ERP platforms", "Quality management systems", "Safety systems", "Analytics platforms"],
         compliance: ["Safety standards", "ISO certifications", "Industry regulations", "Quality standards"],
@@ -387,8 +376,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Manufacturing", "Logistics", "Healthcare", "Automotive", "Electronics"],
         scalability: "
         customizationLevel: "
-        innovationLevel: "Advanced robotics and automation technology",
-    }
+        innovationLevel: "Advanced robotics and automation technology"}
     /
     {
         id: "
@@ -396,7 +384,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         description: "Comprehensive digital twin and simulation platform that creates virtual replicas of physical systems, enables predictive modeling, and provides real-time monitoring and optimization for complex systems and processes.",
         category: "
         subcategory: "
-        price: 999;
+        price: 999,
         currency: "
         pricingModel: "
         features: [
@@ -439,8 +427,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Unity", "Unreal Engine", "Python", "React", "3D modeling", "Simulation engines"],
         integrations: ["IoT platforms", "CAD systems", "PLM platforms", "Analytics platforms", "Cloud platforms"],
         compliance: ["Data security", "Industry standards", "Quality requirements"],
@@ -452,8 +439,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Manufacturing", "Infrastructure", "Energy", "Healthcare", "Smart Cities"],
         scalability: "
         customizationLevel: "
-        innovationLevel: "Advanced digital twin and simulation technology",
-    }
+        innovationLevel: "Advanced digital twin and simulation technology"}
     /
     {
         id: "
@@ -461,7 +447,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         description: "Comprehensive green technology and sustainability platform that provides renewable energy solutions, carbon footprint tracking, environmental monitoring, and sustainable business practices for organizations committed to environmental responsibility.",
         category: "
         subcategory: "
-        price: 699;
+        price: 699,
         currency: "
         pricingModel: "
         features: [
@@ -504,8 +490,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["IoT sensors", "Machine Learning", "React", "Python", "Analytics platforms", "Green tech APIs"],
         integrations: ["Energy management systems", "Environmental monitoring", "Sustainability platforms", "Reporting systems", "Compliance platforms"],
         compliance: ["Environmental regulations", "Sustainability standards", "Carbon reporting", "Green certifications"],
@@ -517,7 +502,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Manufacturing", "Real Estate", "Energy", "Transportation", "Retail"],
         scalability: "
         customizationLevel: "
-        innovationLevel: "Advanced green technology and sustainability solutions",
-    }
+        innovationLevel: "Advanced green technology and sustainability solutions"}
 ];
     export export default EMERGING_TECHNOLOGY_SOLUTIONS_2025;

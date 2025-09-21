@@ -26,8 +26,7 @@ exports.handler = async function(event, context) {
         deadCodeType: ['unused-functionunused-variable', 'unused-importcommented-code'][Math.floor(Math.random() * 4)],
         severity: ['lowmedium', 'high'][Math.floor(Math.random() * 3)],
         estimatedSavings: Math.floor(Math.random() * 1000) + 100 // 100-1100 bytes
-      }),
-    }
+      })}
     
     const result = {
       statusCode: 200,
@@ -53,9 +52,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ dead-code-report completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ dead-code-report failed:', error),
     return {
       statusCode: 500,
@@ -65,6 +62,5 @@ exports.handler = async function(event, context) {
         function: 'dead-code-report',
         status: 'error'
       })
-    },
-  }
+    }}
 },

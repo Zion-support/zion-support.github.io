@@ -14,12 +14,11 @@ export default function Unauthorized() {
             You don't have permission to access this page.
           </p>
           <Link href="/">
-            <Button className="bg-white text-zion-blue hover:bg-gray-100">
+            <Button className="bg-white text-zion-blue hover: bg-gray-100">
               Go Home
             </Button>
           </Link>
         </div>
       </div>
     </div>
-  );
-}
+  )}

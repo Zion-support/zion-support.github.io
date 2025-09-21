@@ -3,17 +3,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { TrendingUp, DollarSign, Clock, CheckCircle } from 'lucide-react';
 
 interface QuotesStatsProps {
-  totalQuotes: number;
-  pendingQuotes: number;
-  approvedQuotes: number;
-  totalValue: number;
-  averageValue: number;
-  conversionRate: number;
-}
+  totalQuotes: number,
+  pendingQuotes: number,
+  approvedQuotes: number,
+  totalValue: number,
+  averageValue: number,
+  conversionRate: number}
 
 export const QuotesStats: React.FC<QuotesStatsProps> = ({
   totalQuotes,
-  pendingQuotes,
+  pendingQuotes;
   approvedQuotes,
   totalValue,
   averageValue,
@@ -62,12 +61,11 @@ export const QuotesStats: React.FC<QuotesStatsProps> = ({
       color: 'text-emerald-600',
       bgColor: 'bg-emerald-100'
     }
-  ];
-
+  ],
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-6">
       {stats.map((stat, index) => (
-        <Card key={index} className="hover:shadow-md transition-shadow">
+        <Card key={index} className="hover: shadow-md transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">
               {stat.title}
@@ -84,5 +82,4 @@ export const QuotesStats: React.FC<QuotesStatsProps> = ({
         </Card>
       ))}
     </div>
-  );
-};
+  )};

@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors"
+                  className="w-full bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors"
                 >
                   Send Message
                 </button>
@@ -60,5 +60,4 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

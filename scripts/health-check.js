@@ -20,16 +20,13 @@ class HealthChecker {,
     this.results = {,
       passed: 0,
       failed: 0,
-      warnings: 0},
-  }
+      warnings: 0}}
 ,
   log(message, color = 'reset') {,
-    console.log(`${colors[color]}${message}${colors.reset}`),
-  }
+    console.log(`${colors[color]}${message}${colors.reset}`)}
 ,
   addCheck(name, checkFn) {,
-    this.checks.push({ name, checkFn }),
-  }
+    this.checks.push({ name, checkFn })}
 ,
   async runChecks() {,
     this.log('🏥 Starting health checks...cyan'),
@@ -38,22 +35,17 @@ class HealthChecker {,
         const result = await check.checkFn(),
         if (result.status === 'pass') {,
           this.log(`✅ ${check.name}`, 'green'),
-          this.results.passed++,
-        } else if (result.status === 'warning') {,
+          this.results.passed++} else if (result.status === 'warning') {,
           this.log(`⚠️  ${check.name}: ${result.message}`, 'yellow'),
-          this.results.warnings++,
-        } else {,
+          this.results.warnings++} else {,
           this.log(`❌ ${check.name}: ${result.message}`, 'red'),
-          this.results.failed++,
-        }
+          this.results.failed++}
       } catch (error) {,
         this.log(`❌ ${check.name}: ${error.message}`, 'red'),
-        this.results.failed++,
-      }
+        this.results.failed++}
     }
 ,
-    this.generateReport(),
-  }
+    this.generateReport()}
 ,
   generateReport() {,
     const total = this.results.passed + this.results.failed + this.results.warnings,
@@ -64,32 +56,24 @@ class HealthChecker {,
     this.log(`   ❌ Failed: ${this.results.failed}`, 'red'),
     const healthScore = Math.round((this.results.passed / total) * 100),
     if (healthScore >= 90) {,
-      this.log(`\n🎉 Health Score: ${healthScore}% - Excellent!`, 'green'),
-    } else if (healthScore >= 70) {,
-      this.log(`\n👍 Health Score: ${healthScore}% - Good!`, 'blue'),
-    } else if (healthScore >= 50) {,
-      this.log(`\n⚠️  Health Score: ${healthScore}% - Needs attention`, 'yellow'),
-    } else {,
-      this.log(`\n🚨 Health Score: ${healthScore}% - Critical issues found`, 'red'),
-    }
+      this.log(`\n🎉 Health Score: ${healthScore}% - Excellent!`, 'green')} else if (healthScore >= 70) {,
+      this.log(`\n👍 Health Score: ${healthScore}% - Good!`, 'blue')} else if (healthScore >= 50) {,
+      this.log(`\n⚠️  Health Score: ${healthScore}% - Needs attention`, 'yellow')} else {,
+      this.log(`\n🚨 Health Score: ${healthScore}% - Critical issues found`, 'red')}
   }
 ,
   // Health check functions,
   checkPackageJson() {,
     if (!existsSync('package.json')) {,
-      return { status: 'fail', message: 'package.json not found' },
-    }
+      return { status: 'fail', message: 'package.json not found' }}
 ,
     try {,
       const pkg = JSON.parse(readFileSync('package.jsonutf8')),
       if (!pkg.name || !pkg.version) {,
-        return { status: 'warning', message: 'Missing name or version in package.json' },
-      }
+        return { status: 'warning', message: 'Missing name or version in package.json' }}
 ,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Invalid package.json format' },
-    }
+      return { status: 'pass' }} catch (error) {,
+      return { status: 'fail', message: 'Invalid package.json format' }}
   }
 ,
   checkBuildFiles() {,
@@ -97,16 +81,13 @@ class HealthChecker {,
     const missingFiles = [],
     for (const file of requiredFiles) {,
       if (!existsSync(file)) {,
-        missingFiles.push(file),
-      }
+        missingFiles.push(file)}
     }
 ,
     if (missingFiles.length > 0) {,
-      return { status: 'fail', message: `Missing build files: ${missingFiles.join()}` },
-    }
+      return { status: 'fail', message: `Missing build files: ${missingFiles.join()}` }}
 ,
-    return { status: 'pass' },
-  }
+    return { status: 'pass' }}
 ,
   checkDependencies() {,
     try {,
@@ -114,86 +95,66 @@ class HealthChecker {,
       const deps = Object.keys(pkg.dependencies || {}),
       const devDeps = Object.keys(pkg.devDependencies || {}),
       if (deps.length === 0) {,
-        return { status: 'warning', message: 'No production dependencies found' },
-      }
+        return { status: 'warning', message: 'No production dependencies found' }}
 ,
       if (devDeps.length === 0) {,
-        return { status: 'warning', message: 'No development dependencies found' },
-      }
+        return { status: 'warning', message: 'No development dependencies found' }}
 ,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Could not check dependencies' },
-    }
+      return { status: 'pass' }} catch (error) {,
+      return { status: 'fail', message: 'Could not check dependencies' }}
   }
 ,
   checkNodeModules() {,
     if (!existsSync('node_modules')) {,
-      return { status: 'fail', message: 'node_modules directory not found. Run npm install' },
-    }
+      return { status: 'fail', message: 'node_modules directory not found. Run npm install' }}
 ,
     try {,
       const stats = statSync('node_modules'),
       if (!stats.isDirectory()) {,
-        return { status: 'fail', message: 'node_modules is not a directory' },
-      }
+        return { status: 'fail', message: 'node_modules is not a directory' }}
 ,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Could not access node_modules' },
-    }
+      return { status: 'pass' }} catch (error) {,
+      return { status: 'fail', message: 'Could not access node_modules' }}
   }
 ,
   checkViteConfig() {,
     if (!existsSync('vite.config.ts') && !existsSync('vite.config.js')) {,
-      return { status: 'warning', message: 'No Vite configuration file found' },
-    }
+      return { status: 'warning', message: 'No Vite configuration file found' }}
 ,
-    return { status: 'pass' },
-  }
+    return { status: 'pass' }}
 ,
   checkTypeScriptConfig() {,
     if (!existsSync('tsconfig.json')) {,
-      return { status: 'warning', message: 'No TypeScript configuration found' },
-    }
+      return { status: 'warning', message: 'No TypeScript configuration found' }}
 ,
     try {,
       const config = JSON.parse(readFileSync('tsconfig.jsonutf8')),
       if (!config.compilerOptions) {,
-        return { status: 'warning', message: 'TypeScript config missing compilerOptions' },
-      }
+        return { status: 'warning', message: 'TypeScript config missing compilerOptions' }}
 ,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Invalid TypeScript configuration' },
-    }
+      return { status: 'pass' }} catch (error) {,
+      return { status: 'fail', message: 'Invalid TypeScript configuration' }}
   }
 ,
   checkNetlifyConfig() {,
     if (!existsSync('netlify.toml') && !existsSync('_redirects')) {,
-      return { status: 'warning', message: 'No Netlify configuration found' },
-    }
+      return { status: 'warning', message: 'No Netlify configuration found' }}
 ,
-    return { status: 'pass' },
-  }
+    return { status: 'pass' }}
 ,
   checkEnvironmentFiles() {,
     const envFiles = ['.env.env.local.env.production'],
     const foundEnvFiles = envFiles.filter(file => existsSync(file)),
     if (foundEnvFiles.length === 0) {,
-      return { status: 'warning', message: 'No environment files found' },
-    }
+      return { status: 'warning', message: 'No environment files found' }}
 ,
-    return { status: 'pass' },
-  }
+    return { status: 'pass' }}
 ,
   checkGitConfig() {,
     if (!existsSync('.git')) {,
-      return { status: 'warning', message: 'Not a Git repository' },
-    }
+      return { status: 'warning', message: 'Not a Git repository' }}
 ,
-    return { status: 'pass' },
-  }
+    return { status: 'pass' }}
 ,
   checkBuildScripts() {,
     try {,
@@ -202,13 +163,10 @@ class HealthChecker {,
       const requiredScripts = ['builddev'],
       const missingScripts = requiredScripts.filter(script => !scripts[script]),
       if (missingScripts.length > 0) {,
-        return { status: 'warning', message: `Missing scripts: ${missingScripts.join()}` },
-      }
+        return { status: 'warning', message: `Missing scripts: ${missingScripts.join()}` }}
 ,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Could not check build scripts' },
-    }
+      return { status: 'pass' }} catch (error) {,
+      return { status: 'fail', message: 'Could not check build scripts' }}
   }
 ,
   async run() {,
@@ -223,10 +181,9 @@ class HealthChecker {,
     this.addCheck('Environment files', () => this.checkEnvironmentFiles()),
     this.addCheck('Git repository', () => this.checkGitConfig()),
     this.addCheck('Build scripts', () => this.checkBuildScripts()),
-    await this.runChecks(),
-  }
+    await this.runChecks()}
 }
 ,
 // Run the health checker,
 const checker = new HealthChecker(),
-checker.run().catch(console.error),]]]]]]]
+checker.run().catch(console.error)]]]]]]]
