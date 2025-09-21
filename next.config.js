@@ -23,8 +23,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
-  // Typed routes configuration
-  typedRoutes: false,
+  // Typed routes configuration removed - not a valid Next.js option
   
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
