@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-09-21T13:02:19.580Z",
+  "timestamp": "2025-09-21T13:34:42.298Z",
   "optimizations": [
     {
       "type": "bundle-analysis",
-      "current": 18081324,
+      "current": 9862714,
       "recommendation": "Bundle size is acceptable"
     },
     {
