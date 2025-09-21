@@ -1,216 +1,197 @@
 #!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 
-console.log('🎯 Final Merge Solution - Complete Resolution');
-console.log('==============================================');
+console.log('🚀 Starting final merge solution...');
 
-class FinalMergeSolution {
-  constructor() {
-    this.mergedBranches = [];
-    this.failedBranches = [];
-    this.startTime = Date.now();
-  }
+// Configuration
+const MAX_BRANCHES = 20; // Process fewer branches for reliability
+const DELAY_BETWEEN_BRANCHES = 3000; // 3 seconds between branches
 
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
-  }
+// Results tracking
+const results = {
+  summary: {
+    totalBranches: 0,
+    successfullyMerged: 0,
+    failedBranches: 0,
+    startTime: new Date().toISOString(),
+    endTime: null,
+    duration: null
+  },
+  processedBranches: [],
+  mergedBranches: [],
+  failedBranches: []
+};
 
-  async runCommand(command, description, options = {}) {
-    try {
-      this.log(`Running: ${description}`);
-      const result = execSync(command, { 
-        encoding: 'utf8', 
-        stdio: 'pipe',
-        cwd: process.cwd(),
-        timeout: 20000,
-        ...options
-      });
-      this.log(`✅ ${description} completed successfully`, 'success');
-      return result;
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      throw error;
-    }
-  }
-
-  async cleanAndReset() {
-    this.log('Cleaning and resetting repository...', 'info');
-    
-    try {
-      // Kill any running git processes
-      try {
-        execSync('pkill -f git', { stdio: 'pipe' });
-      } catch (e) {
-        // Ignore if no processes to kill
-      }
-      
-      // Remove lock files
-      const lockFiles = [
-        '/workspace/.git/index.lock',
-        '/workspace/.git/refs/heads/main.lock',
-        '/workspace/.git/refs/remotes/origin/main.lock'
-      ];
-      
-      for (const lockFile of lockFiles) {
-        try {
-          if (fs.existsSync(lockFile)) {
-            fs.unlinkSync(lockFile);
-            this.log(`Removed ${lockFile}`, 'success');
-          }
-        } catch (e) {
-          // Ignore errors
-        }
-      }
-      
-      // Reset repository completely
-      await this.runCommand('git reset --hard HEAD', 'Reset to clean state');
-      await this.runCommand('git clean -fd', 'Clean untracked files');
-      await this.runCommand('git checkout main', 'Checkout main branch');
-      await this.runCommand('git pull origin main', 'Pull latest changes');
-      
-      this.log('Repository cleaned and reset successfully', 'success');
-    } catch (error) {
-      this.log(`Clean and reset failed: ${error.message}`, 'error');
-      throw error;
-    }
-  }
-
-  async mergeAllBranches() {
-    this.log('Starting comprehensive merge process...', 'info');
-    
-    // Get all branches
-    const branches = execSync('git branch -r | grep -E "(cursor|codex)" | grep -v "origin/main" | head -100', { 
-      encoding: 'utf8' 
-    }).split('\n').filter(branch => branch.trim()).map(branch => branch.trim().replace('origin/', ''));
-    
-    this.log(`Found ${branches.length} branches to process`, 'info');
-    
-    for (const branch of branches) {
-      try {
-        this.log(`Processing: ${branch}`, 'info');
-        
-        // Stash any local changes
-        try {
-          await this.runCommand('git stash', 'Stash local changes');
-        } catch (e) {
-          // Ignore if no changes to stash
-        }
-        
-        // Checkout branch
-        await this.runCommand(`git checkout ${branch}`, `Checkout ${branch}`);
-        
-        // Pull latest changes
-        try {
-          await this.runCommand(`git pull origin ${branch}`, `Pull latest changes for ${branch}`);
-        } catch (e) {
-          // Ignore if branch doesn't exist on remote
-        }
-        
-        // Merge with main using ours strategy
-        await this.runCommand(`git merge main --strategy=ours -m "Merge main into ${branch}"`, `Merge main into ${branch}`);
-        
-        // Add and commit any changes
-        await this.runCommand('git add .', `Stage changes for ${branch}`);
-        await this.runCommand(`git commit -m "Resolve conflicts for ${branch}"`, `Commit changes for ${branch}`);
-        
-        // Merge into main
-        await this.runCommand('git checkout main', 'Checkout main');
-        await this.runCommand(`git merge ${branch} --no-ff -m "Merge ${branch} into main"`, `Merge ${branch} into main`);
-        
-        this.mergedBranches.push(branch);
-        this.log(`✅ Successfully merged ${branch}`, 'success');
-        
-      } catch (error) {
-        this.failedBranches.push({
-          branch: branch,
-          error: error.message
-        });
-        this.log(`❌ Failed to merge ${branch}: ${error.message}`, 'error');
-        
-        // Reset and continue
-        try {
-          await this.runCommand('git checkout main', 'Reset to main');
-          await this.runCommand('git reset --hard HEAD', 'Reset to clean state');
-        } catch (e) {
-          // Ignore reset errors
-        }
-      }
-    }
-  }
-
-  async pushChanges() {
-    try {
-      this.log('Pushing changes to remote...', 'info');
-      await this.runCommand('git push origin main', 'Push to main branch');
-      this.log('Successfully pushed changes', 'success');
-    } catch (error) {
-      this.log(`Push failed, trying force push: ${error.message}`, 'warn');
-      try {
-        await this.runCommand('git push origin main --force', 'Force push to main branch');
-        this.log('Successfully force pushed changes', 'success');
-      } catch (forceError) {
-        this.log(`Force push failed: ${forceError.message}`, 'error');
-        throw forceError;
-      }
-    }
-  }
-
-  generateReport() {
-    const duration = Math.round((Date.now() - this.startTime) / 1000);
-    const report = {
-      summary: {
-        totalBranches: this.mergedBranches.length + this.failedBranches.length,
-        successfullyMerged: this.mergedBranches.length,
-        failedBranches: this.failedBranches.length,
-        duration: `${duration} seconds`,
-        successRate: `${Math.round((this.mergedBranches.length / (this.mergedBranches.length + this.failedBranches.length)) * 100)}%`
-      },
-      mergedBranches: this.mergedBranches,
-      failedBranches: this.failedBranches,
-      timestamp: new Date().toISOString()
+// Utility functions
+function execCommand(command, options = {}) {
+  try {
+    const result = execSync(command, { 
+      encoding: 'utf8', 
+      timeout: 45000, // 45 second timeout
+      ...options 
+    });
+    return { success: true, output: result };
+  } catch (error) {
+    return { 
+      success: false, 
+      error: error.message,
+      output: error.stdout || error.stderr || ''
     };
-    
-    fs.writeFileSync('final-merge-solution-report.json', JSON.stringify(report, null, 2));
-    this.log(`Report saved to final-merge-solution-report.json`, 'info');
-    
-    return report;
-  }
-
-  async run() {
-    try {
-      this.log('Starting final merge solution...', 'info');
-      
-      // Clean and reset
-      await this.cleanAndReset();
-      
-      // Merge all branches
-      await this.mergeAllBranches();
-      
-      // Push changes
-      await this.pushChanges();
-      
-      // Generate report
-      const report = this.generateReport();
-      
-      this.log('Final merge solution completed!', 'success');
-      this.log(`Successfully merged: ${this.mergedBranches.length} branches`, 'success');
-      this.log(`Failed branches: ${this.failedBranches.length}`, this.failedBranches.length > 0 ? 'warn' : 'info');
-      
-      return report;
-      
-    } catch (error) {
-      this.log(`Fatal error: ${error.message}`, 'error');
-      throw error;
-    }
   }
 }
 
-// Run the final solution
-const solution = new FinalMergeSolution();
-solution.run().catch(error => {
-  console.error('Final merge solution failed:', error);
-  process.exit(1);
-});
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function processBranch(branchName) {
+  console.log(`🔧 Processing branch: ${branchName}`);
+  
+  try {
+    // Step 1: Configure git
+    execCommand('git config pull.rebase false');
+    
+    // Step 2: Ensure main is up to date
+    execCommand('git checkout main');
+    execCommand('git pull origin main');
+    
+    // Step 3: Try direct merge
+    const mergeResult = execCommand(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`);
+    
+    if (mergeResult.success) {
+      console.log(`✅ Successfully merged ${branchName}`);
+      return true;
+    } else {
+      console.log(`⚠️  Direct merge failed for ${branchName}, trying alternative approach...`);
+      
+      // Step 4: Alternative approach - checkout branch and merge main into it
+      const checkoutResult = execCommand(`git checkout ${branchName}`);
+      if (!checkoutResult.success) {
+        console.log(`❌ Failed to checkout ${branchName}`);
+        return false;
+      }
+      
+      // Reset to origin version
+      execCommand(`git reset --hard origin/${branchName}`);
+      
+      // Merge main into branch
+      const pullResult = execCommand('git pull origin main --no-rebase --strategy=recursive -X ours');
+      
+      if (pullResult.success) {
+        // Push updated branch
+        execCommand(`git push origin ${branchName}`);
+        
+        // Switch back to main and merge
+        execCommand('git checkout main');
+        const finalMergeResult = execCommand(`git merge ${branchName} --no-ff -m "Merge ${branchName} into main"`);
+        
+        if (finalMergeResult.success) {
+          console.log(`✅ Successfully merged ${branchName} using alternative approach`);
+          return true;
+        }
+      }
+      
+      console.log(`❌ All approaches failed for ${branchName}`);
+      return false;
+    }
+    
+  } catch (error) {
+    console.log(`❌ Error processing branch ${branchName}: ${error.message}`);
+    return false;
+  }
+}
+
+async function main() {
+  try {
+    console.log('🔧 Initial Git configuration...');
+    execCommand('git config pull.rebase false');
+    execCommand('git config merge.tool vimdiff');
+    execCommand('git config merge.conflictstyle diff3');
+    
+    console.log('📥 Fetching latest changes...');
+    execCommand('git fetch origin');
+    
+    console.log('🔄 Ensuring main is up to date...');
+    execCommand('git checkout main');
+    execCommand('git pull origin main');
+    
+    // Get list of branches to process
+    console.log('📋 Getting branch list...');
+    const branchResult = execCommand('git branch -r --format="%(refname:short)"');
+    
+    if (!branchResult.success) {
+      console.log('❌ Failed to get branch list');
+      return;
+    }
+    
+    const allBranches = branchResult.output
+      .split('\n')
+      .filter(branch => 
+        branch && 
+        !branch.includes('origin/main') && 
+        !branch.includes('origin/HEAD') &&
+        branch.startsWith('origin/')
+      )
+      .map(branch => branch.replace('origin/', ''))
+      .slice(0, MAX_BRANCHES);
+    
+    console.log(`📊 Found ${allBranches.length} branches to process`);
+    results.summary.totalBranches = allBranches.length;
+    
+    // Process each branch
+    for (const branch of allBranches) {
+      results.processedBranches.push(branch);
+      
+      console.log(`\n🌿 Processing branch: ${branch}`);
+      
+      const success = await processBranch(branch);
+      
+      if (success) {
+        results.mergedBranches.push(branch);
+        results.summary.successfullyMerged++;
+        console.log(`✅ Successfully processed ${branch}`);
+      } else {
+        results.failedBranches.push({
+          branch: branch,
+          error: 'Failed to merge branch into main'
+        });
+        results.summary.failedBranches++;
+        console.log(`❌ Failed to process ${branch}`);
+      }
+      
+      // Delay between branches
+      await sleep(DELAY_BETWEEN_BRANCHES);
+    }
+    
+    // Final push
+    console.log('\n🚀 Pushing all changes to origin...');
+    const pushResult = execCommand('git push origin main');
+    if (pushResult.success) {
+      console.log('✅ Successfully pushed all changes to origin');
+    } else {
+      console.log('❌ Failed to push changes to origin:', pushResult.error);
+    }
+    
+  } catch (error) {
+    console.log('❌ Fatal error:', error.message);
+  } finally {
+    // Generate final report
+    results.summary.endTime = new Date().toISOString();
+    results.summary.duration = new Date(results.summary.endTime) - new Date(results.summary.startTime);
+    results.summary.duration = `${Math.round(results.summary.duration / 1000)} seconds`;
+    
+    const reportPath = 'final-merge-solution-report.json';
+    fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
+    
+    console.log('\n📊 Final Results:');
+    console.log(`✅ Successfully merged: ${results.summary.successfullyMerged}`);
+    console.log(`❌ Failed branches: ${results.summary.failedBranches}`);
+    console.log(`⏱️  Total duration: ${results.summary.duration}`);
+    console.log(`📄 Report saved to: ${reportPath}`);
+  }
+}
+
+// Run the script
+main().catch(console.error);
