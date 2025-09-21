@@ -11,7 +11,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
     // tsconfigPath: './tsconfig.json',
+<<<<<<< HEAD
   },
+=======
+  },origin/main
+>>>>>>> 74tfm8-codex/implement-instant-messaging-for-negotiations
   eslint: {
     ignoreDuringBuilds: true,
   },
