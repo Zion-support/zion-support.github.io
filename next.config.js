@@ -33,9 +33,10 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
-    esmExternals: false,
-    typedRoutes: false,
   },
+  
+  // Typed routes configuration
+  typedRoutes: false,
   
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
