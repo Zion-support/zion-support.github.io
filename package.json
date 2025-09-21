@@ -11,7 +11,6 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next build && next export",
-    "build:static": "next build",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
@@ -141,8 +140,8 @@
   "devDependencies": {
     "@eslint/js": "^9.32.0",
     "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^13.4.0",
-    "@types/node": "^24.5.2",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^16.18.126",
     "@types/node-cron": "^3.0.11",
     "@types/react": "^17.0.88",
     "@types/react-dom": "^17.0.26",
@@ -161,7 +160,7 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
-    "typescript": "^4.9.5",
+    "typescript": "^5.9.2",
     "vite": "^5.4.10",
     "web-vitals": "^3.0.0"
   }

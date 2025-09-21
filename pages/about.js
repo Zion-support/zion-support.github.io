@@ -62,10 +62,6 @@ export default function About() {
                 </span>
               </Link>
               <div className="hidden md:flex space-x-8">
-                <Link href="/"><span className="text-gray-300 hover:text-white transition-colors">Home</span></Link>
-                <Link href="/about"><span className="text-white font-semibold">About</span></Link>
-                <Link href="/services"><span className="text-gray-300 hover:text-white transition-colors">Services</span></Link>
-                <Link href="/contact"><span className="text-gray-300 hover:text-white transition-colors">Contact</span></Link>
               </div>
               <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Call Now
