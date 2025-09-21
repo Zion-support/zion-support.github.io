@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -22,7 +21,9 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "target": "ES2017",
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "**/*.ts",
@@ -34,10 +35,11 @@
   "exclude": [
     "node_modules",
     "contracts/**/*",
-    "dao/**/*",
-    "automation/**/*",
-    "scripts/**/*",
     "cypress/**/*",
-    "data/**/*"
+    "data/**/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ]
 }

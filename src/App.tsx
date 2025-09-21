@@ -29,7 +29,10 @@ const Header = () => (
         <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
         <Link href="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
       </nav>
-    </div>
+    
+      <RealTimePerformanceMonitor />
+
+      </div>
   </header>
 )
 
