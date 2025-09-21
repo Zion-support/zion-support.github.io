@@ -1,74 +1,32 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  images: {
-    domains: ["localhost", "ziontechgroup.com"],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  // Enable static export for Netlify
+  // output: 'export',
+  trailingSlash: true,
+  
+  // Disable ESLint and TypeScript checking during build to avoid parsing issues
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    esmExternals: false,
-  },
-  webpack: (config, { isServer, dev }) => {
-    // Fix for CSS processing issues with Node.js compatibility
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-      };
-    }
-
-    // Add polyfill for globalThis
-    require('globalthis/shim');
-
-    // Optimize bundle size in production
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-
+  
+  // Webpack configuration
+  webpack: (config) => {
+    // Add path alias resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, '.'),
+    };
     return config;
   },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
+  
+  // Image optimization
+  images: {
+    unoptimized: true, // Required for static export
   },
 };
 

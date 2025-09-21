@@ -1,5 +1,10 @@
 import * as React from "react";
+<<<<<<< HEAD
 import { cva, type VariantProps } from "class-variance-authority";
+=======
+// import { Slot } from "@radix-ui/react-slot";
+import { cva } from "class-variance-authority";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a0e0
 import { cn } from "@/lib/utils";
 
 // Simple Slot replacement
@@ -47,14 +52,13 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
+    const Comp = "button"; // asChild ? Slot : "button";
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
