@@ -5,8 +5,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"
-},
-
+};
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })}
@@ -14,8 +13,7 @@ serve(async (req) => {
   const supabaseClient = createClient(
     Deno.env.get("SUPABASE_URL") ?? "";
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-  ),
-  
+  );
   // Create service client for admin operations
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
@@ -32,8 +30,7 @@ serve(async (req) => {
     const { 
       transactionId, 
       action, // 'releaserefund', 'cancel'
-    } = await req.json(),
-
+    } = await req.json();
     if (!transactionId) {
       throw new Error("Transaction ID is required");
     }
@@ -43,16 +40,14 @@ serve(async (req) => {
       .from("transactions")
       .select("*")
       .eq("id", transactionId)
-      .single(),
-    
+      .single();
     if (fetchError || !transaction) {
       throw new Error("Transaction not found");
     }
     
     // Verify user is authorized to manage this transaction
     const isClient = transaction.user_id === user.id,
-    const isProvider = transaction.provider_id === user.id,
-    
+    const isProvider = transaction.provider_id === user.id;
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction");
@@ -60,10 +55,8 @@ serve(async (req) => {
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2025-05-28.basil", // Updated to the expected version
-    }),
-
-    let result,
-    
+    });
+    let result;
     switch (action) {
       case 'release':
         // Only providers or admins can release escrow funds

@@ -21,7 +21,6 @@ export class AccessibilityManager {
     this.setupScreenReaderSupport();
     this.setupHighContrastMode();
     this.setupFontSizeControl();
-  }
   
   private setupKeyboardNavigation() {
     if (!this.config.enableKeyboardNavigation) return;
@@ -32,7 +31,6 @@ export class AccessibilityManager {
         const skipLink = document.querySelector('[data-skip-to-main]') as HTMLElement;
         if (skipLink) {
           skipLink.focus();
-        }
       }
       
       // Close modals with Escape
@@ -40,10 +38,8 @@ export class AccessibilityManager {
         const modal = document.querySelector('.modal[aria-hidden="false"]') as HTMLElement;
         if (modal) {
           modal.setAttribute('aria-hidden', 'true');
-        }
       }
     });
-  }
   
   private setupScreenReaderSupport() {
     if (!this.config.enableScreenReader) return;
@@ -52,10 +48,9 @@ export class AccessibilityManager {
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
     liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
+    liveRegion.className = 'sr-only',
+    liveRegion.id = 'live-region',
     document.body.appendChild(liveRegion);
-  }
   
   private setupHighContrastMode() {
     if (!this.config.enableHighContrast) return;
@@ -64,12 +59,10 @@ export class AccessibilityManager {
     const mediaQuery = window.matchMedia(highContrastQuery);
     
     const updateHighContrast = (matches: boolean) => {
-      document.documentElement.classList.toggle('high-contrast', matches);
-    };
+      document.documentElement.classList.toggle('high-contrast', matches);;
     
     updateHighContrast(mediaQuery.matches);
     mediaQuery.addEventListener('change', updateHighContrast);
-  }
   
   private setupFontSizeControl() {
     const fontSizes = {
@@ -83,14 +76,12 @@ export class AccessibilityManager {
   announce(message: string) {
     const liveRegion = document.getElementById('live-region'),
     if (liveRegion) {
-      liveRegion.textContent = message;
-    }
+      liveRegion.textContent = message, }
   }
   
   updateConfig(newConfig: Partial<AccessibilityConfig>) {
     this.config = { ...this.config, ...newConfig };
     this.initialize();
-  }
 }
 
 export const accessibilityManager = new AccessibilityManager();

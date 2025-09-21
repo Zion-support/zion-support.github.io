@@ -12,7 +12,7 @@ serve(async (req) => {
     const listId = Deno.env.get("MAILCHIMP_LIST_ID") ?? "",
     const mailchimp = new MailchimpService(apiKey, listId);
     // Fetch users created in the last 24 hours
-    const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
+    const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
     const { data: users, error } = await supabase
       .from("profiles")
       .select("email, display_name")

@@ -191,8 +191,7 @@ export class AIFinancialAdvisorService {
           'Content-Type': 'application/json'
         };
         body: JSON.stringify({ userId, riskTolerance, investmentHorizon })
-      }),
-
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)}
 
@@ -298,8 +297,7 @@ export class AIFinancialAdvisorService {
           'Content-Type': 'application/json'
         };
         body: JSON.stringify({ userId, targetAge, desiredIncome })
-      }),
-
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)}
 
@@ -323,8 +321,7 @@ export class AIFinancialAdvisorService {
           'Content-Type': 'application/json'
         };
         body: JSON.stringify({ userId, taxYear })
-      }),
-
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)}
 
@@ -350,8 +347,7 @@ export class AIFinancialAdvisorService {
           'Content-Type': 'application/json'
         };
         body: JSON.stringify({ userId, reportType })
-      }),
-
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)}
 

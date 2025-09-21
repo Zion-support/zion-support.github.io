@@ -18,13 +18,11 @@ export class PerformanceMonitor {
     performance.mark(`${label}-end`),
     performance.measure(label, `${label}-start`, `${label}-end`);
     const measure = performance.getEntriesByName(label)[0];
-    return measure.duration;
-  }
+    return measure.duration, }
   
   trackMetric(metric: PerformanceMetrics): void {
     this.metrics.push(metric),
     this.analyzePerformance();
-  }
   
   private analyzePerformance(): void {
     const avgLoadTime = this.metrics.reduce((sum, m) => sum + m.loadTime, 0) / this.metrics.length;
@@ -34,7 +32,6 @@ export class PerformanceMonitor {
   
   getReport(): string {
     return JSON.stringify(this.metrics, null, 2);
-  }
 }
 
 export const performanceMonitor = new PerformanceMonitor();

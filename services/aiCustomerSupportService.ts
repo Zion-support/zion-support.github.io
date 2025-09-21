@@ -275,23 +275,23 @@ class AICustomerSupportService {
     return ticket}
 
   async assignTicket(ticketId: string, agentId: string): Promise<void> {
-    const ticket = this.tickets.find(t => t.id === ticketId),
+    const ticket = this.tickets.find(t => t.id === ticketId);
     if (ticket) {
       ticket.assignedAgentId = agentId;
       ticket.status = 'in_progress',
-      ticket.updatedAt = new Date(),
+      ticket.updatedAt = new Date();
       this.updateAnalytics()
     }
   }
 
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
-    const ticket = this.tickets.find(t => t.id === ticketId),
+    const ticket = this.tickets.find(t => t.id === ticketId);
     if (ticket) {
       ticket.status = status;
       ticket.updatedAt = new Date(),
       
       if (status === 'resolved') {
-        ticket.resolvedAt = new Date(),
+        ticket.resolvedAt = new Date();
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
         }
@@ -325,7 +325,7 @@ class AICustomerSupportService {
   async startChatbotSession(customerId: string): Promise<ChatbotSession> {
     const session: ChatbotSession = {
       id: `chat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      customerId,
+      customerId;
       startTime: new Date(),
       messages: [],
       intent: '',
@@ -368,7 +368,7 @@ class AICustomerSupportService {
   }
 
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
-    const session = this.chatbotSessions.find(s => s.id === sessionId),
+    const session = this.chatbotSessions.find(s => s.id === sessionId);
     if (session) {
       session.endTime = new Date();
       session.resolved = resolved,
@@ -392,7 +392,7 @@ class AICustomerSupportService {
     return article}
 
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
-    const lowerQuery = query.toLowerCase(),
+    const lowerQuery = query.toLowerCase();
     return this.knowledgeBase.filter(article => 
       article.title.toLowerCase().includes(lowerQuery) ||
       article.content.toLowerCase().includes(lowerQuery) ||
@@ -458,15 +458,13 @@ class AICustomerSupportService {
   private updateAnalytics(): void {
     const totalTickets = this.tickets.length,
     const openTickets = this.tickets.filter(t => ['openin_progress', 'waiting_customer'].includes(t.status)).length,
-    const resolvedTickets = this.tickets.filter(t => t.status === 'resolved').length,
-
+    const resolvedTickets = this.tickets.filter(t => t.status === 'resolved').length;
     const resolutionTimes = this.tickets
       .filter(t => t.resolutionTime)
       .map(t => t.resolutionTime!);
     const averageResolutionTime = resolutionTimes.length > 0 
       ? resolutionTimes.reduce((sum, time) => sum + time, 0) / resolutionTimes.length 
-      : 0,
-
+      : 0;
     const responseTimes = this.tickets
       .filter(t => t.firstResponseTime)
       .map(t => t.firstResponseTime!);
@@ -539,4 +537,4 @@ class AICustomerSupportService {
     return this.analytics}
 }
 
-export const aiCustomerSupportService = new AICustomerSupportService(),
+export const aiCustomerSupportService = new AICustomerSupportService();

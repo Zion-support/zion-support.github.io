@@ -1,5 +1,5 @@
-// Simple translation utility
+// Translation utility module
 export async function translateTextViaAI(text: string, targetLanguage: string): Promise<string> {
-  // Placeholder implementation - in a real app, this would call an AI translation service
-  return text;
+  // Simple stub implementation
+  return `[${targetLanguage}] ${text}`;
 }

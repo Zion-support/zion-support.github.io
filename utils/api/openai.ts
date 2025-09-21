@@ -36,13 +36,13 @@ export const scoreResumeWithGPT = async (args: {
     messages: [
       { role: "system", content: system },
       { role: "user", content: user }
-    ],
+    ];
     temperature: 0.2
   }),
   const content = completion.choices?.[0]?.message?.content || "{}";
   const parsed = JSON.parse(content);
   // Basic validation/fallbacks
-  const score = Math.max(0, Math.min(100, Number(parsed.score ?? 0))),
+  const score = Math.max(0, Math.min(100, Number(parsed.score ?? 0)));
   const suggestedAction: ScoreResult["suggestedAction"] =
     score >= 80 ? "Shortlist" : score >= 55 ? "Needs Review" : "Low Match",
   return {

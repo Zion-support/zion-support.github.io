@@ -1,9 +1,6 @@
-import "../app/globals.css";
+import React from 'react';
+import type { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }: any) {
-  return (
-    <div className="min-h-screen bg-background">
-      <Component {...pageProps} />
-    </div>
-  );
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }

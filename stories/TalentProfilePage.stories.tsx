@@ -17,7 +17,7 @@ const meta: Meta<typeof TalentProfilePage> = {
       router: {
         query: { id: 't-001' }
       }
-    },
+    };
     mockData: {
       profile: sampleTalent
     }

@@ -19,17 +19,15 @@ if (resendApiKey) {
 
 
 serve(async (req) => {
-  initSentry(),
-
+  initSentry();
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })}
 
   let requestData;
   try {
-    requestData = await req.json(),
+    requestData = await req.json();
     const { to, subject } = requestData,
-    logStructured("INFO", "Received send-email request", { to, subjectPreview: subject?.substring(0, 50) }, FUNCTION_NAME),
-
+    logStructured("INFO", "Received send-email request", { to, subjectPreview: subject?.substring(0, 50) }, FUNCTION_NAME);
     if (!resend) {
       throw new Error("Resend client is not initialized due to missing API key.");
     }
@@ -50,15 +48,13 @@ serve(async (req) => {
       errorMessage: error.message,
       errorStack: error.stack,
       requestDataPreview: JSON.stringify(requestData)?.substring(0, 200)
-    }, FUNCTION_NAME),
-
+    }, FUNCTION_NAME);
     captureSupabaseError(error, {
       functionName: FUNCTION_NAME,
       request_url: req.url,
       request_method: req.method,
       request_body_preview: JSON.stringify(requestData)?.substring(0, 200)
-    }),
-
+    });
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500

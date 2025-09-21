@@ -45,8 +45,7 @@ class QRCodeService {
     H: { level: 'H', name: 'High', capacity: 0.30 }
   },
   async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult> {
-    const finalOptions = { ...this.DEFAULT_OPTIONS, ...options },
-    
+    const finalOptions = { ...this.DEFAULT_OPTIONS, ...options };
     // Validate options
     this.validateOptions(finalOptions);
     // Generate QR code data URL
@@ -198,9 +197,8 @@ class QRCodeService {
     // For now, we'll generate a placeholder SVG
     
     const size = options.size!,
-    const margin = options.margin!,
-    const contentSize = size - (margin * 2),
-    
+    const margin = options.margin!;
+    const contentSize = size - (margin * 2);
     const svg = `
       <svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
         <rect width="${size}" height="${size}" fill="${options.backgroundColor}"/>
@@ -298,4 +296,4 @@ class QRCodeService {
   }
 }
 
-export const qrCodeService = new QRCodeService(),
+export const qrCodeService = new QRCodeService();

@@ -6,11 +6,9 @@ test.describe('Smoke Tests', () => {
     // Check page loads without errors
     await expect(page).toHaveTitle(/Zion/);
     // Check for critical content
-    await expect(page.locator('h1')).toBeVisible(),
-    
+    await expect(page.locator('h1')).toBeVisible();
     // Check for navigation elements - use first() to handle multiple nav elements
-    await expect(page.locator('nav').first()).toBeVisible(),
-    
+    await expect(page.locator('nav').first()).toBeVisible();
     // Check for footer
     await expect(page.locator('footer')).toBeVisible()}),
 
@@ -45,8 +43,7 @@ test.describe('Smoke Tests', () => {
   test('search functionality works', async ({ page }) => {
     await page.goto('/');
     // Look for search input
-    const searchInput = page.locator('input[type="search"], input[placeholder*="search"], input[name*="search"]').first(),
-    
+    const searchInput = page.locator('input[type="search"], input[placeholder*="search"], input[name*="search"]').first();
     if (await searchInput.isVisible()) {
       await searchInput.fill('test');
       await searchInput.press('Enter');
@@ -64,8 +61,7 @@ test.describe('Smoke Tests', () => {
       const firstLink = navLinks.first(),
       const href = await firstLink.getAttribute('href');
       if (href && href !== '/') {
-        await firstLink.click(),
-        
+        await firstLink.click();
         // Should navigate to new page
         await expect(page).toHaveURL(href);
         // Page should load - use first() to handle multiple main elements

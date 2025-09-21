@@ -6,15 +6,14 @@ interface TenantInfo {
   subdomain: string,
   custom_domain: string | null,
   primary_color: string,
-  logo_url: string | null,
+  logo_url: string | null;
   theme_preset: string
 }
 
 // Enhanced CORS headers with specific allowed origins and methods
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-info, apikey, X-Client-InfoAccess-Control-Max-Age': '86400Access-Control-Expose-Headers': 'Content-LengthAccess-Control-Allow-Credentials': 'true'
-},
-
+};
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get('SUPABASE_URL');
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
@@ -39,8 +38,7 @@ serve(async (req) => {
     const forwardedHost = req.headers.get('x-forwarded-host');
     const hostname = hostnameParam || 
       (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) ||
-      url.hostname,
-
+      url.hostname;
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided');
     }
@@ -54,8 +52,7 @@ serve(async (req) => {
         .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
         .eq('subdomain', subdomainParam)
         .eq('is_active', true)
-        .single(),
-
+        .single();
       if (error) {
         console.error('Database error:', error);
         throw new Error(`Database error: ${error.message}`)}
@@ -68,19 +65,17 @@ serve(async (req) => {
         .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
         .eq('custom_domain', hostname)
         .eq('is_active', true)
-        .single(),
-
+        .single();
       // If no match on custom domain, try subdomain
       if (!data && !error) {
-        const subdomain = hostname.split('.')[0],
+        const subdomain = hostname.split('.')[0];
         if (subdomain && !['wwwapp', 'locallocalhost'].includes(subdomain)) {
           const subdomainResult = await supabase
             .from('whitelabel_tenants')
             .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
             .eq('subdomain', subdomain)
             .eq('is_active', true)
-            .single(),
-
+            .single();
           if (!subdomainResult.error) {
             tenantInfo = subdomainResult.data as TenantInfo}
         }
@@ -93,7 +88,7 @@ serve(async (req) => {
       JSON.stringify({
         tenant: tenantInfo,
         status: 'success'
-      }),
+      });
       {
         headers: {
           'Content-Type': 'application/json',
@@ -109,7 +104,7 @@ serve(async (req) => {
         status: 'error',
         timestamp: new Date().toISOString(),
         details: error.stack
-      }),
+      });
       {
         status: error.message.includes('No hostname') ? 400 : 500,
         headers: {

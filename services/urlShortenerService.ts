@@ -41,10 +41,9 @@ export interface CreateShortUrlRequest {
 }
 
 class UrlShortenerService {
-  private urls: Map<string, ShortUrl> = new Map(),
-  private analytics: Map<string, UrlAnalytics> = new Map(),
-  private clicks: Map<string, ClickEvent[]> = new Map(),
-
+  private urls: Map<string, ShortUrl> = new Map();
+  private analytics: Map<string, UrlAnalytics> = new Map();
+  private clicks: Map<string, ClickEvent[]> = new Map();
   async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {
     const shortCode = request.customCode || this.generateShortCode(),
     if (this.urls.has(shortCode)) {
@@ -99,8 +98,7 @@ class UrlShortenerService {
     const analytics = this.analytics.get(shortCode);
     if (analytics) {
       analytics.totalClicks++,
-      analytics.lastClicked = new Date(),
-      
+      analytics.lastClicked = new Date();
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer);
       }
@@ -164,4 +162,4 @@ class UrlShortenerService {
   }
 }
 
-export const urlShortenerService = new UrlShortenerService(),
+export const urlShortenerService = new UrlShortenerService();

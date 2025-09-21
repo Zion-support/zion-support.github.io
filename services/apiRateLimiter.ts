@@ -229,8 +229,7 @@ export class APIRateLimiterService {
           'Content-Type': 'application/json'
         };
         body: JSON.stringify({ name, permissions, rateLimit })
-      }),
-
+      });
       if (!response.ok) {
         throw new Error(`Failed to create API key: ${response.statusText}`)}
 
@@ -379,7 +378,7 @@ export class APIRateLimiterService {
           requests: stat.totalRequests,
           blocked: stat.blockedRequests,
           averageResponseTime: stat.averageResponseTime
-        })),
+        }));
       violations: {
         total: violations.length,
         byReason: violationsByReason,
@@ -424,4 +423,4 @@ export const API_RATE_LIMITER_PRICING = {
       'SLA guarantee'
     ]
   }
-},
+};

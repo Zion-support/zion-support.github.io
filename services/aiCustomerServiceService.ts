@@ -107,7 +107,7 @@ export class AICustomerServiceService {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`
-        },
+        };
         body: JSON.stringify(request)
       }),
       if (!response.ok) {
@@ -150,7 +150,7 @@ export class AICustomerServiceService {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`
-        },
+        };
         body: JSON.stringify(updates)
       }),
       if (!response.ok) {
@@ -177,7 +177,7 @@ export class AICustomerServiceService {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`
-        },
+        };
         body: JSON.stringify(message)
       }),
       if (!response.ok) {
@@ -296,10 +296,9 @@ export class AICustomerServiceService {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`
-        },
+        };
         body: JSON.stringify({ timeframe, format })
-      }),
-
+      });
       if (!response.ok) {
         throw new Error(`Generate report API error: ${response.statusText}`)}
 
