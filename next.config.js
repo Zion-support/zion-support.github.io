@@ -3,7 +3,6 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true,
   trailingSlash: true,
   distDir: 'out',
   
@@ -30,15 +29,16 @@ const nextConfig = {
     optimizeCss: false, // Disabled due to missing critters dependency
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
-    esmExternals: false,
     gzipSize: true,
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
+  },
+  
+  // Turbopack configuration (moved from experimental.turbo)
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
       },
     },
   },

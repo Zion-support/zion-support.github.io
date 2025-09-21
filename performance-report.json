@@ -110,5 +110,53 @@
         "staticExport": true
       }
     }
+  },
+  {
+    "timestamp": "2025-09-21T13:56:55.203Z",
+    "buildTime": 0,
+    "bundleSize": "41M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 9,
+      "timestamp": "2025-09-21T13:56:55.211Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": true,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:58:10.340Z",
+    "buildTime": 0,
+    "bundleSize": "740K",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 8,
+      "timestamp": "2025-09-21T13:58:10.347Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": true,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:58:40.039Z",
+    "buildTime": 0,
+    "bundleSize": "740K",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 8,
+      "timestamp": "2025-09-21T13:58:40.045Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": true,
+        "minification": false,
+        "staticExport": true
+      }
+    }
   }
 ]
