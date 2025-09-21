@@ -13,11 +13,12 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  transpilePackages: [],
   eslint: {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     scrollRestoration: true,
     esmExternals: false,
   },
@@ -31,7 +32,7 @@ const nextConfig = {
     }
 
     // Add polyfill for globalThis
-    require('globalthis/shim');
+    // Note: globalthis polyfill is handled by the package import
 
     // Optimize bundle size in production
     if (!dev && !isServer) {
