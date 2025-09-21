@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-interface MobileOptimizerProps {
-  children: React.ReactNode;
-}
 
-const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
+const MobileOptimizer = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTouch, setIsTouch] = useState(false);
 

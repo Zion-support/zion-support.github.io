@@ -1,18 +1,12 @@
 import React from 'react';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
-  text?: string;
-  className?: string;
-}
 
 export default function LoadingSpinner({
   size = 'md',
   color = 'primary',
   text,
   className = ''
-}: LoadingSpinnerProps) {
+}) {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
