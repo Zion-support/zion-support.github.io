@@ -54,22 +54,10 @@ export default function Contact() {
                 </span>
               </Link>
               <div className="hidden md:flex space-x-8">
-<<<<<<< HEAD
                 <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
                 <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
                 <Link href="/contact" className="text-white font-semibold">Contact</Link>
-=======
-                <Link href="/">
-                  <span className="text-gray-300 hover:text-white transition-colors cursor-pointer">Home</span>
-                </Link>
-                <Link href="/about">
-                  <span className="text-gray-300 hover:text-white transition-colors cursor-pointer">About</span>
-                </Link>
-                <Link href="/contact">
-                  <span className="text-white font-semibold cursor-pointer">Contact</span>
-                </Link>
->>>>>>> eb27c99c79d217f9b0efb8a5696b9ac45618d951
               </div>
               <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Call Now
